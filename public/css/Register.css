@@ -1,0 +1,40 @@
+.modal-content {
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 0px;
+    
+  }
+
+  .text-center {
+    text-align: center!important;
+    margin-bottom: 45px;
+    margin-top: -40px;
+}
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 40px;
+}
+ .btn-light {
+width: 100%;
+background-color: #ff0067;
+margin-bottom: 20px;
+color: white;
+}
+.teacher{
+    margin-top: 20px;
+}
+.titel{
+    font-family: 'Roboto', sans-serif!important;
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    margin: -42px 0 29px;
+    padding: 0;
+    text-transform: none;
+    line-height: 40px;
+}
+/* .modal {
+    background: rgba(0,0,0,0.6);
+} */

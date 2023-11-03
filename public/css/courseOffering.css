@@ -1,0 +1,98 @@
+.list-inline .active,
+.learning .list-inline .active {
+    background-color: #8c52ff !important;
+}
+
+
+.text-col .textP {
+    /* transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s); */
+    margin-top: 135px;
+    padding: 10px;
+    /* padding-right: 100px; */
+    /* padding-left: 35px; */
+    text-align: center;
+    font-size: 15px;
+
+}
+
+
+
+.text-col .btndemo {
+    padding-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+
+.learningBtn .btndemo .step {
+    background-color: #737373 !important;
+    line-height: 32px !important;
+    font-size: 15px !important;
+    padding: 12px 24px !important;
+
+}
+
+/* start now btn */
+/* .btndemo.start{
+    padding: 10px 40px;
+
+} */
+.learningBtn .list-inline-item:not(:last-child) {
+    margin-right: 6.5rem;
+}
+
+.danceimg {
+    width: 100%;
+}
+
+/* new added */
+.btnSection .list-inline .dancetypes.yoga {
+    padding: 0px !important;
+    line-height: 56px !important;
+
+}
+
+body {
+    background-color: #fad32c;
+}
+
+.row.typesOfDance-tab>ul>li {
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+    margin-top: 15px !important;
+    font-size: 13px;
+}
+
+.row.typesOfDance-tab .nav-pills .nav-link {
+    border-radius: 28px !important;
+    width: 162px !important;
+    height: 60px !important;
+    background-color: #737373;
+}
+
+.row.typesOfDance-tab .nav-pills .nav-link.active,
+.row.typesOfDance-tab .nav-pills .nav-link.big.active,
+.modulesec .monthtypes.active {
+    background-color: #8C52FF;
+
+}
+
+.row.typesOfDance-tab .nav-pills .nav-link:hover {
+    color: white !important;
+}
+
+.danceimg.home {
+    height: 400px;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    width: 373px;
+}
+
+.btnSection .nav-link {
+    font-weight: 400;
+
+}

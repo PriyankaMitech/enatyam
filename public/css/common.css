@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+.line {
+    background-color: #ff0067;
+    display: block;
+    width: 50px;
+    height:2px;
+    text-align: center;
+    margin: auto;
+  }
+  .heading-div h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    font-family: 'Roboto Slab', serif!important;
+}  
+.text{
+    font-family: 'Roboto Slab', serif!important;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+.shop-now-btn {
+  color: #fff;
+  background: #8c52ff;
+  padding: 14px 30px!important;
+  border-radius: 40px!important;
+  margin-top: 40px;
+  font-size:15px!important;
+  transition: 0.5s;
+}

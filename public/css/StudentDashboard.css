@@ -1,0 +1,113 @@
+#videoSection {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevent wrapping to the next row */
+    overflow-x: auto;
+    /* Add horizontal scroll if needed */
+    gap: 20px;
+    /* Spacing between video columns */
+    padding: 20px;
+    /* Padding for the video section */
+}
+
+/* Style for each video column */
+#videoSection .col-lg-4 {
+    flex: 0 0 calc(33.33% - 20px);
+    /* Set the width of each video column */
+    max-width: calc(33.33% - 20px);
+    padding-left: 0px;
+    position: relative;
+    transition: transform 0.2s;
+    /* Add a smooth transition effect */
+}
+
+/* Hover effect for each video column */
+#videoSection .col-lg-4:hover {
+    transform: scale(1.05);
+    /* Scale up the video on hover */
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add a shadow on hover */
+}
+
+/* Style for the embedded video iframes */
+#videoSection iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hide the horizontal scrollbar for the video section */
+#videoSection::-webkit-scrollbar {
+    display: none;
+}
+
+#uploadForm {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style for the file inputs */
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Style for the submit buttons */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+.video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.video {
+    flex: 0 0 calc(33.33% - 10px);
+    /* Adjust the width as needed */
+    margin-bottom: 20px;
+    /* Add margin for spacing between videos */
+}
+.profile-photo {
+    float: right; /* Position the photo to the right */
+    margin-left: 10px; /* Add some margin for separation */
+    max-width: 100px; /* Adjust the width as needed */
+}
+
+.faculty-info {
+    text-align: center;
+}
+.profile-card {
+background-color: #fff;
+border: 19px solid #ccc;
+padding: 20px;
+border-radius: 64px;
+text-align: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.Profile_border {
+width: 300px; /* Adjust the width as needed */
+height: 300px; /* Adjust the height as needed to make it square */
+border: 2px solid #000; /* Adjust border properties as needed */
+text-align: center;
+margin: 0 auto; /* Center the div horizontally */
+padding: 20px;
+border-radius: 10px; /* Optional: Add rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

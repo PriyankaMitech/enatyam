@@ -1,0 +1,298 @@
+.pageContainer {
+    width: 77%;
+    margin: 0 auto;
+    padding: 1px;
+    margin-top: 5px;
+    float: unset;
+    padding-bottom: 30px;
+    text-align: center;
+    background: #d5eeec;
+    min-height: 580px;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.languageQualificationBlock {
+    width: 540px;
+    margin: auto;
+}
+
+.pageNote {
+    max-width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 1.57;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+}
+
+.howItWrkSteps {
+    margin: 20px auto;
+    max-width: 100%;
+    text-align: center;
+    font-size: 0px;
+}
+
+.indStep {
+    position: relative;
+    display: inline-block;
+}
+
+.activeStep .stepNum {
+    font-size: 22px;
+    font-weight: 700;
+    background-color: #ff8213;
+    color: #fff;
+    border: none;
+    width: 50px;
+    line-height: 50px;
+}
+
+.howItWrkSteps .stepNum {
+    display: inline-block;
+    border-radius: 100%;
+}
+
+.stepLine {
+    border: solid 1px rgba(52, 52, 52, 0.2);
+    width: 7%;
+    display: inline-block;
+    vertical-align: 4px;
+    margin: 0;
+}
+
+.howItWrkSteps .stepNum {
+    display: inline-block;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    background-color: #fff;
+    border: solid 1px #d0d0d0;
+    color: #b1b1b1;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.stepsToast {
+    margin-top: 55px;
+}
+
+.blackToastMsg {
+    width: auto;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    max-width: 450px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+
+}
+
+.topicDetailFormContainer .topicDetailForm:first-child {
+    display: block;
+}
+
+p.errorMsg.commonError {
+    text-align: left;
+}
+
+p.errorMsg.commonError {
+    font-weight: 600;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.errorMsg {
+    display: none;
+    font-size: 12px;
+}
+
+.topicDetailLabel {
+    font-weight: 600;
+}
+
+.inputRequired {
+    color: #f00;
+    padding-left: 2px;
+}
+
+.quickSelect {
+    text-align: left;
+}
+
+.quickSelectTxt {
+    display: inline-block;
+}
+
+.quickSelectOptions {
+    display: inline-flex;
+    margin-left: 14px;
+}
+
+element.style {
+    width: 70%;
+}
+
+.quickSelectOptions {
+    display: inline-flex;
+    margin-left: 14px;
+}
+
+.blueColor {
+    color: #0072ff !important;
+    text-decoration: none;
+}
+
+.topLanguage {
+    margin-right: 32px;
+    text-align: left;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.languageHolder {
+    border: solid 1px #dcdcdc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.languageHolder .languageBlock:last-child {
+    border-bottom: none;
+}
+
+
+.languageBlock {
+    display: flex;
+}
+
+.languageBlock .languageRow {
+    border-right: 1px solid #dcdcdc;
+}
+
+.languageRow {
+    margin: 0;
+    display: inline-block;
+    width: 50%;
+}
+
+.languageHolder input {
+    border: none;
+    width: 100%;
+    padding: 12px 10px;
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.proficiencyCol {
+    margin: 0;
+    display: inline-block;
+    width: 50%;
+   
+}
+select:required:invalid {
+    color: #aaa;
+}
+.selectProv {
+    padding: 12px 52px 12px 8px;
+    width: 100%;
+}
+option {
+    color: #333;
+}
+.removeLink {
+    color: #0072ff;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+.none {
+    display: none;
+}
+.floatLeft {
+    float: left !important;
+}
+.addLink{
+    color: #0072ff;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+.floatRight {
+    float: right;
+}
+.qualificationBlock {
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.input-block .selectProv{
+    width: 88%;
+}
+.topicContainer {
+    border: 5px solid #7e858536;
+    border-radius: 4px;
+    color: #323639;
+    font-size: 14px;
+    text-align: left;
+        background: #e1d3d9;
+}
+.topicAttributeContainer {
+    padding: 19px 26px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.topicDetailLabel {
+    font-weight: 600;
+    margin-bottom: 19px;
+}
+.mCustomScrollbar.mCS_no_scrollbar {
+    touch-action: auto;
+}
+.topicContainer ul {
+    list-style: none;
+    margin-left: 0px;
+}
+.mCustomScrollBox {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: 0;
+    direction: ltr;
+}
+
+input[type="checkbox"] {
+    vertical-align: text-top;;
+ 
+}
+.btnstart{
+    margin-bottom: 30px;
+    font-size: 13px!important;
+    font-weight: 400!important;
+    background-color: #8c52ff!important;
+    line-height: 30px!important;
+    padding: 5px 40px!important;
+    border-radius: 25px!important;
+    color: #ffffff!important;
+    margin-top: 10px;
+    text-decoration: none;
+}

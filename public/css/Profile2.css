@@ -1,0 +1,424 @@
+.site-content {
+    padding: var(--thim-padding-content-pdtop-desktop, 60px) 15px var(--thim-padding-content-pdbottom-desktop, 90px);
+}
+
+.col-sm-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+}
+
+
+#learn-press-profile.lp-user-profile {
+    overflow: visible;
+}
+
+.lp-user-profile {
+    position: relative;
+    background: #fff;
+}
+
+#learn-press-profile.lp-user-profile .lp-content-area {
+    width: 100%;
+}
+
+.learnpress-v4 .lp-content-area {
+    padding-bottom: 35px;
+}
+
+.lp-content-area {
+
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+#learn-press-profile.lp-user-profile #profile-sidebar {
+    margin-top: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.lp-user-profile #profile-sidebar {
+    float: left;
+    width: 270px;
+
+    background: #fff;
+
+}
+
+#learn-press-profile.lp-user-profile .wrap-fullwidth {
+    margin: 0;
+}
+
+#learn-press-profile.lp-user-profile .wrapper-profile-header {
+    background: transparent;
+    color: inherit;
+    padding: 20px;
+}
+
+.lp-user-profile .wrapper-profile-header {
+
+    position: relative;
+}
+
+#learn-press-profile.lp-user-profile .wrapper-profile-header .lp-profile-content-area {
+    min-height: inherit;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: block;
+}
+
+#learn-press-profile.lp-user-profile .lp-content-area {
+    width: 100%;
+}
+
+.lp-user-profile .lp-profile-content-area {
+    position: relative;
+    align-items: center;
+}
+
+.lp-content-area {
+
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+#learn-press-profile.lp-user-profile .wrapper-profile-header .lp-profile-left {
+    bottom: 0;
+    position: static;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 0 0 20px 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 15px;
+    align-items: center;
+    min-width: inherit;
+    max-width: inherit;
+}
+
+.lp-user-profile .lp-profile-left {
+    border-radius: 3px;
+}
+
+#learn-press-profile.lp-user-profile .wrapper-profile-header .lp-profile-left .lp-user-profile-avatar {
+    width: 70px;
+}
+
+.lp-user-profile .lp-user-profile-avatar img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: unset;
+    display: block;
+}
+
+.wrap-fullwidth img {
+    max-width: 100%;
+
+}
+
+#learn-press-profile.lp-user-profile .wrapper-profile-header .lp-profile-left .lp-profile-username {
+    font-weight: 500;
+    line-height: 1.3em;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+.lp-user-profile .lp-profile-username {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.lp-user-profile #profile-nav .lp-profile-nav-tabs {
+    margin: 0;
+}
+
+.learnpress .entry-content ul {
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+#learn-press-profile.lp-user-profile #profile-sidebar #profile-nav .lp-profile-nav-tabs li.active {
+    background: unset;
+}
+
+#learn-press-profile.lp-user-profile #profile-sidebar #profile-nav .lp-profile-nav-tabs li {
+    position: relative;
+}
+
+.lp-user-profile #profile-nav .lp-profile-nav-tabs>li {
+    margin: 0;
+    border-top: 1px solid rgba(204, 204, 204, 0.3);
+}
+
+#learn-press-profile.lp-user-profile li {
+    list-style: none;
+}
+
+.lp-user-profile #profile-nav .lp-profile-nav-tabs>li.active a {
+    padding-left: 52px;
+}
+
+
+#learn-press-profile.lp-user-profile #profile-sidebar #profile-nav .lp-profile-nav-tabs li.active>a {
+    color: #333;
+}
+
+#learn-press-profile.lp-user-profile #profile-sidebar #profile-nav .lp-profile-nav-tabs>li>a>i {
+    font-size: 16px;
+    left: 20px;
+}
+
+#learn-press-profile #profile-nav .lp-profile-nav-tabs>li>a>i {
+    color: var#ff0067(--thim-body-primary-color, #ffb606) !important;
+}
+
+#learn-press-profile.lp-user-profile #profile-content {
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+.lp-user-profile .lp-profile-content {
+    float: right;
+    width: calc(100% - 300px);
+}
+
+#learn-press-profile.lp-user-profile #profile-content #dashboard-general-statistic {
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    border-bottom-color: var(--thim-border-color, #eee);
+}
+
+.lp-user-profile #dashboard-general-statistic {
+    border-bottom: 1px solid #ddd;
+}
+
+.lp-user-profile .dashboard-general-statistic__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#learn-press-profile.lp-user-profile #profile-content #dashboard-general-statistic .dashboard-general-statistic__row .statistic-box {
+    width: calc(20% - 20px);
+    padding: 12px 20px;
+    margin: 0 10px 20px 10px;
+    border-radius: 0;
+    border: none;
+    min-width: 120px;
+}
+
+.lp-user-profile .dashboard-general-statistic__row .statistic-box {
+    background: #f9fafc;
+    text-align: center;
+}
+
+#learn-press-profile.lp-user-profile #profile-content #dashboard-general-statistic .dashboard-general-statistic__row .statistic-box .statistic-box__number {
+    font-size: 2em;
+    margin: 15px 0 10px 0;
+    display: inherit;
+}
+
+.lp-user-profile .statistic-box .statistic-box__number {
+    color: #333;
+    font-weight: 500;
+    line-height: 1;
+}
+
+#learn-press-profile.lp-user-profile #profile-content #dashboard-general-statistic .dashboard-general-statistic__row .statistic-box .statistic-box__text {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    line-height: 1.3em;
+}
+
+.lp-user-profile .statistic-box .statistic-box__text {
+    margin: 0 0 7px 0;
+    padding: 0;
+    color: #666;
+}
+
+#learn-press-profile.lp-user-profile #profile-content .learn-press-profile-course__tab__inner {
+    background: #f4f4f5;
+}
+
+.learnpress .entry-content ul {
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.learn-press-profile-course__tab__inner {
+    display: flex;
+    margin: 40px 0 0 0 !important;
+}
+
+.learn-press-profile-course__tab__inner a.active {
+    background: #fff;
+}
+
+.learn-press-profile-course__tab__inner a {
+    display: inline-block;
+    position: relative;
+}
+
+#learn-press-profile.lp-user-profile #profile-content .learn-press-profile-course__tab__inner a.active {
+    border-top-color: var#ff0067(--thim-body-primary-color, #ffb606);
+    color: var#ff0067(--thim-body-primary-color, #ffb606);
+}
+
+#learn-press-profile.lp-user-profile #profile-content .learn-press-subtab-content a {
+    cursor: pointer;
+}
+
+.learn-press-profile-course__tab .learn-press-profile-course__tab__inner a {
+    padding: 10px 30px;
+    font-weight: normal;
+}
+
+.learn-press-profile-course__tab__inner a.active::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: var(--lp-primary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+}
+
+.learnpress .entry-content ul {
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.learn-press-course-tab-filters .learn-press-filters {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.learn-press-filters {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.learn-press-filters>li {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.learn-press-profile-course__tab .learn-press-filters>li>a {
+    font-weight: normal;
+}
+
+.learn-press-filters>li a {
+    color: #333;
+    display: inline-block;
+}
+
+.learn-press-filters>li::after {
+    margin: 0 35px;
+    color: #ccc;
+    content: "|";
+}
+
+#learn-press-profile.lp-user-profile #profile-content .learn-press-course-tab-filters .learn-press-filters a.active {
+    color: var#ff0067(--thim-body-primary-color, #ffb606);
+}
+
+.lp-ajax-message {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #059601;
+    border-radius: 9px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.lp-user-profile #profile-nav .lp-profile-nav-tabs li>ul {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 100%;
+    min-width: 150px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.05);
+    list-style: none;
+}
+
+.aside {
+    display: block;
+}
+
+.lp-user-profile #profile-nav .lp-profile-nav-tabs>li a {
+    display: block;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.quizzes a {
+    color: #333;
+    padding-left: 52px;
+}
+
+.orders a{
+    color: #333;
+    padding-left: 52px;
+}
+
+.lp_orders_woocommerce a{
+    color: #333;
+    padding-left: 52px;
+}
+
+.settings a{
+    color: #333;
+    padding-left: 52px;
+}
+
+.logout a{
+    color: #333;
+    padding-left: 52px;
+}
+.lp-user-profile #profile-nav .lp-profile-nav-tabs>li>a>i {
+    display: inline-block;
+    position: absolute;
+    width: 28px;
+    line-height: 53px;
+    text-align: left;
+}
+[class*=" tk-"]{
+    font-family: thim-ekits!important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+}
+.lp-content-area a{
+    text-decoration: none;
+}
+#learn-press-profile.lp-user-profile #profile-sidebar #profile-nav .lp-profile-nav-tabs li.has-child>a::after {
+    display: block;
+}
+.lp-user-profile #profile-nav .lp-profile-nav-tabs>li>a::after {
+    float: right;
+    margin-right: 4px;
+    color: #999;
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+    font-weight: 900;
+    content: "\f054";
+}

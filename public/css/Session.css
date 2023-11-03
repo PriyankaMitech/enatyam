@@ -1,0 +1,223 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif !important;background-color:#FAD32C!important;
+}
+
+ 
+   
+ 
+  .price-card-body h4 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Roboto slab', serif !important;
+    margin: 25px 0px
+  }
+.container h4{ font-family: 'Roboto slab', serif !important;margin-top: 160px ;}
+.button-content{transition:0.5s;background:#EB1E63;padding:10px 30px;color:#fff;border:1px solid ;border-radius:5px;font-size:15px;}
+.w-100 {margin-left: 70px;}
+
+.place-btn a{color: #fff;text-decoration: none;}
+.faculty-content {
+  text-align: center;
+}
+
+.faculty-section {
+  background: #FAD32C;
+  /* padding-top: 175px; */
+  border-bottom: 1px solid rgba(0, 0, 0, .02);
+  margin-top: opx;
+  
+}
+
+.faculty-div img {
+  /* border-radius: 50%; */
+  border: none;
+  padding: 7px;
+  position: relative;
+}
+
+.faculty-div1::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  /* background: rgba(0, 0, 0, 0.5); */
+  border-radius: 50%;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 8px;
+  display:block;
+  transition: 0.5s;
+  /* bottom: 0; */
+  padding: 0;
+}
+
+.faculty-div1 {
+  position: relative;
+  transition: 0.5s;
+}
+
+.faculty-div1:hover::before {
+  display: none;
+}
+
+.faculty-content-team__member-name {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--e-global-color-text);
+  margin-bottom: 8px;
+}
+
+/* .faculty-content-team__member-position {
+  color: rgb(102, 102, 102);
+  font-size: 15px;
+} */
+
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+  display: none!important;
+}
+
+
+.owl-carousel .owl-prev span {
+  display: none !important;
+}
+
+.owl-carousel .owl-next span {
+  display: none !important;
+}
+
+.owl-next i,
+.owl-prev i {
+  color: rgb(255, 0, 103);
+  font-size: 28px;
+}
+
+.owl-prev i {
+  position: absolute;
+  left: -31px;
+  top: 130px;
+}
+
+.owl-next i {
+  position: absolute;
+  right: -31px;
+  top: 130px;
+}
+
+/* css for mobile */
+@media only screen and (max-width:767px) {
+
+  .owl-prev i {
+    left: 0 !important
+  }
+
+  .owl-next i {
+    right: 0 !important
+  }
+
+  .faculty-div1::before {
+
+    width: 312px !important;
+    height: 312px !important;
+
+    /* bottom: 0; */
+  }
+}
+
+
+.accordion-item{background: transparent!important;border:none!important}
+
+
+.owl-carousel .owl-dot span{background: #7e006f!important;}
+.owl-carousel .owl-dot.active span{transform: scale(0.6);}
+
+
+video::-webkit-media-controls {
+  display: none!important;
+}
+
+/* vidio section text and image */
+.video-section{position: absolute;
+  width: 100%;
+  bottom: 84px;
+  z-index: 999999;background:none;
+ 
+}
+
+.video-row{color: white;text-align: center;
+  margin: auto;
+}
+/* .button-content {
+  background-color: #F68535;
+  border-radius: 50px 50px 50px 50px;
+  padding: 6px 28px;
+  box-sizing: border-box;
+  border:none;
+  color: white;
+} */
+.col-md-9{width: 100%;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply desired styles to the faculty section */
+.faculty-section {
+  padding: 40px 0;
+  background-color: #FAD32C;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faculty-div {
+  background-color: #FAD32C;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faculty-div img {
+  max-width: 100%;
+  height: auto;
+}
+
+.faculty-content-team__member-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.faculty-content-team__member-position {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+.del-price {
+  display: inline-block;
+  font-size: 16px;
+  color: #737373 !important;
+  margin-left: 173px!important;
+  display: inline-block;
+}
+
+.del-price del {
+  color: #888;
+  text-decoration: line-through;
+}
+
+.del-price b {
+  color: #f00; /* or any color you prefer for the discounted price */
+  font-weight: bold;
+  margin-left: 10px; /* Adjust as needed to create space between original and discounted prices */
+  ;font-size: 24px;
+}
+.social-div h3{margin-top: 10px;}

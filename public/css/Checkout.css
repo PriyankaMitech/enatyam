@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+html,body{font-family: 'Roboto', sans-serif!important;width:100%;height:100%;margin:0px}
+
+.contactus{background-image:linear-gradient(45deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),url("../images/contactus.jpg");background-size: cover;padding-top:200px;padding-left:70px;padding-bottom:110px;background-position: center;}
+.contactus h1{    font-size: 45px;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Roboto Slab', serif!important;
+    color: #fff;position: relative;}
+
+    .contactus h1::before {
+        content: "";
+        width: 3px;
+        height: 65px;
+        position: absolute;
+        background: #EB1E63;
+        left: -21px;
+    }
+    .cont-width{width:1140px!important}
+    .cont-main-section{background:#FAD32C;padding:20px 0px}
+
+    .breadcrumb-ul{margin:0px;list-style-type: none;border-bottom: 1px solid #eee;padding-bottom: 20px;}
+    .breadcrumb-ul li{display: inline-block;padding-right:15px;font-size: 14px;color:#000}
+    .breadcrumb-ul li i{font-size: 10px;}
+    .breadcrumb-ul li a{color:#000;text-decoration: none;}
+    .breadcrumb-ul li a:hover{color:#EB1E63}
+
+    /* body */
+    body{background-color: #FAD32C!important;}
+
+    /* .payment-logo{margin-right:570px;} */
+    .form-group-submit {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        background: #FF0067;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-radius: 5px 5px 5px 5px;
+        border: none;
+    }
+    .pay-method{box-sizing: border-box;
+        width: 100%;
+        padding: 1em;
+        margin: 1em 0;
+        font-size: .92em;
+        border-radius: 2px;
+        line-height: 1.5;
+        background-color: #dfdcde;
+        color: #515151;}
+
+
+        .cont-shop{background: #000;color:#fff!important;text-decoration: none;padding:8px;font-size: 14px;}
+        .cont-shop:hover{background: #EB1E63;}
+        .check-cont p{margin-bottom: 0px;}
+
+        .cont-shop1{color:#EB1E63!important;text-decoration: none;padding-left:10px;cursor: pointer;}
+
+        .check-form{margin:40px 0px}
+        .check-form h5{font-size:18px;font-family: 'Roboto Slab', serif!important;font-weight:600}
+.check-form sup{color:red!important;font-weight:600}
+        .check-form label{color:#515151;font-size:14px;margin-bottom: 15px;margin-top:15px}
+        .form-check-label{margin:0!important}
+
+        .navbar.bg-body-tertiary{background: #d9edf7!important;border-radius: 5px;}
+        .navbar.bg-body-tertiary p{color:#31708f}
+        .navbar.bg-body-tertiary1{background: #ebe9eb;}
+
+        .navbar.bg-body-tertiary1 .button-content{transition:0.5s;background:#EB1E63;padding:10px 30px;color:#fff;border:1px solid ;border-radius:5px;font-size:15px;}
+        .navbar.bg-body-tertiary1 .button-content:hover{background-color: #e6a303;}
+
+
+        .check-table td, .check-table tr, .check-table th{background-color:transparent!important;}
+.pay-method  p{margin-bottom: 0px;}
+.pay-method{position: relative}
+
+.pay-method::before{content: "";
+    display: block;
+    border: 1em solid #dfdcde;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    margin: -1em 0 0 2em;
+}
+
+.pay-method-1 p{color: #666666;
+    font-size: 15px;}
+    .pay-method-1 a{margin-left:6px;text-decoration: none;}
+    .f-label{font-size: 13px;}
+    .f-label a{color:#EB1E63;text-decoration: none;margin-left: 5px;}
+
+    .place-btn{margin-top:20px;text-align: right;}
+
+    .heading-order{font-size: 16px; font-weight: 600; margin:30px 0px;font-family: 'Roboto Slab', serif!important;}
+
+
+    .login-div{border:1px solid #eee;padding:30px;margin:20px 0px }
+    .login-div button{background:#e6a303;color:#fff!important;padding:10px 30px;transition: 0.4s; width:100%;font-weight:600}
+    .login-div button:hover{background: #EB1E63;}
+    .login-div a{text-decoration: none;}
+    .login-div sup{color:red;font-size: 15px;}
+    .login-div label{font-size: 13px;}
+    .login-div p{color:#666666;font-size: 15px;}
+    .login-div {display:none}

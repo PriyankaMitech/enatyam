@@ -1,0 +1,172 @@
+.list-inline .dancetypes {
+    /* margin-left: 100px; */
+    font-size: 13px;
+    font-weight: 400;
+    /* background-color: #8c52ff; */
+    line-height: 38px;
+    padding: 10px 25px;
+    /* padding: 1em 1.5em; */
+    /* border-radius: 25px; */
+    /* color: #ffffff; */
+    justify-content: center;
+    width: 162px;
+    margin: 0px 28px 30px 28px;
+    background-color: #737373;
+    color: #F3ECE8;
+    border-radius: 50px 50px 50px 50px;
+    height: 60px;
+    align-items: center;
+    text-align: center;
+    /* background: none; */
+
+}
+
+.list-inline .active,
+.learning .list-inline .active {
+    background-color: #8c52ff !important;
+}
+
+.list-inline .bigger {
+    background-color: #737373 !important;
+    width: 310px !important;
+
+}
+
+.text-col .textP {
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+    margin-top: 135px;
+    padding: 10px;
+    /* padding-right: 100px; */
+    /* padding-left: 35px; */
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.text-col .btndemo {
+    padding-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.secbr {
+    width: 300px;
+}
+
+.learningBtn .btndemo .step {
+    background-color: #737373 !important;
+    line-height: 32px !important;
+    font-size: 15px !important;
+    padding: 12px 24px !important;
+
+}
+
+.learningBtn .list-inline-item:not(:last-child) {
+    margin-right: 6.5rem;
+}
+
+.danceimg {
+    width: 100%;
+}
+
+.learningsec .textP {
+    font-size: 15px !important;
+}
+
+.learningsec ul ,.module-text ul {
+    list-style: none;
+    font-size: 15px;
+}
+
+.learningsec .list-icon i {
+    color: #7E006F;
+    width: 1.25em;
+    font-size: 24px;
+}
+
+.month-row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.list-inline .monthtypes {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 38px;
+    justify-content: center;
+    width: 109px;
+    padding: 10px 20px 10px 20px;
+    margin: 0px 16px 20px 0px;
+    background-color: #737373;
+    color: #F3ECE8;
+    border-radius: 50px 50px 50px 50px;
+    height: 60px;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.content  {
+    margin-left: 30px;
+    margin-top: 17px;
+    margin-right: 17px;
+    margin-bottom: 17px;
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+}
+.module-text i {
+    padding-right: 10px;
+    color: #8c52ff;
+    padding-top: 5px;
+}
+.module-text {
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+}
+.module-text .icon-list-items{
+    font-size: inherit;
+    padding-left: 15px;
+    
+}
+.MonthHeading {
+    font-family: Roboto slab;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+    margin-left: 18px;
+}
+.carousel {
+    margin-top: 50px;
+}
+
+.carousel-inner {
+    height: 100px;
+  
+}
+
+.carousel-caption {
+    /* color: #fff; */
+    color: #666666;
+    top: 50%;
+    font-size: 15px;
+}
+.btnSection .list-inline .dancetypes.yoga{
+    padding: 0px!important;
+    line-height: 56px!important;
+
+}
+
+.learningsec ul, .module-text ul {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 400;
+   
+}
+.learningsec ul{
+    margin-top: 130px;
+    color: rgb(51, 51, 51);
+}
+.learningBtn a:hover{
+    color: white!important;
+}

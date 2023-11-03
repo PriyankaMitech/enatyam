@@ -1,0 +1,374 @@
+ERROR - 2023-08-22 04:10:10 --> mysqli_sql_exception: Column 'email' cannot be null in C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fr...', 0)
+#1 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fr...')
+#2 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fr...')
+#3 C:\xampp\htdocs\enatyam\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fr...', Array, false)
+#4 C:\xampp\htdocs\enatyam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\enatyam\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\enatyam\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\enatyam\app\Controllers\DemoController.php(22): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(932): App\Controllers\DemoController->bookDemo()
+#9 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#10 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\enatyam\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-22 04:10:10 --> Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'\', NULL, \'\', \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'\', NULL, \'\', \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'\', NULL, \'\', \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (:name:, :email:, :phone:, :course:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\DemoController.php(22): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DemoController->bookDemo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-22 04:37:52 --> mysqli_sql_exception: Column 'email' cannot be null in C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fr...', 0)
+#1 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fr...')
+#2 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fr...')
+#3 C:\xampp\htdocs\enatyam\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fr...', Array, false)
+#4 C:\xampp\htdocs\enatyam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\enatyam\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\enatyam\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\enatyam\app\Controllers\DemoController.php(22): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(932): App\Controllers\DemoController->bookDemo()
+#9 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#10 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\enatyam\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-22 04:37:52 --> Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'w\', NULL, \'y\', \'Dance\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'w\', NULL, \'y\', \'Dance\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'w\', NULL, \'y\', \'Dance\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (:name:, :email:, :phone:, :course:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\DemoController.php(22): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DemoController->bookDemo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-22 04:38:40 --> mysqli_sql_exception: Column 'email' cannot be null in C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fr...', 0)
+#1 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fr...')
+#2 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fr...')
+#3 C:\xampp\htdocs\enatyam\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fr...', Array, false)
+#4 C:\xampp\htdocs\enatyam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\enatyam\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\enatyam\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\enatyam\app\Controllers\DemoController.php(22): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(932): App\Controllers\DemoController->bookDemo()
+#9 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#10 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\enatyam\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-22 04:38:40 --> Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'anhjd\', NULL, \'9325623328\', \'Dance\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'anhjd\', NULL, \'9325623328\', \'Dance\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'anhjd\', NULL, \'9325623328\', \'Dance\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (:name:, :email:, :phone:, :course:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\DemoController.php(22): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DemoController->bookDemo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-22 04:39:25 --> mysqli_sql_exception: Duplicate entry 'jskl@gmail.com' for key 'email' in C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fr...', 0)
+#1 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fr...')
+#2 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fr...')
+#3 C:\xampp\htdocs\enatyam\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fr...', Array, false)
+#4 C:\xampp\htdocs\enatyam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\enatyam\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\enatyam\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\enatyam\app\Controllers\DemoController.php(22): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(932): App\Controllers\DemoController->bookDemo()
+#9 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#10 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\enatyam\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-22 04:39:25 --> Duplicate entry 'jskl@gmail.com' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'anhjd\', \'jskl@gmail.com\', \'9325623328\', \'Music\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'anhjd\', \'jskl@gmail.com\', \'9325623328\', \'Music\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (\'anhjd\', \'jskl@gmail.com\', \'9325623328\', \'Music\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `free_demo_table` (`name`, `email`, `phone`, `course`) VALUES (:name:, :email:, :phone:, :course:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\DemoController.php(22): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DemoController->bookDemo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 05:06:50 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 05:09:02 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 05:09:52 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 05:12:12 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:02:48 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:09:20 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:14:05 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:14:56 --> Undefined variable $name
+in APPPATH\Controllers\cart.php on line 22.
+ 1 APPPATH\Controllers\cart.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $name', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:17:57 --> Undefined variable $demoModel
+in APPPATH\Controllers\cart.php on line 40.
+ 1 APPPATH\Controllers\cart.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $demoModel', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:18:22 --> Allowed fields must be specified for model: "App\Models\ProductModel"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ProductModel')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\cart.php(40): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-22 06:19:32 --> mysqli_sql_exception: Column 'name' cannot be null in C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `Ad...', 0)
+#1 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `Ad...')
+#2 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `Ad...')
+#3 C:\xampp\htdocs\enatyam\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `Ad...', Array, false)
+#4 C:\xampp\htdocs\enatyam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\enatyam\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\enatyam\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\enatyam\app\Controllers\cart.php(40): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+#9 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+#10 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\enatyam\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-22 06:19:32 --> Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (:name:, :description:, :image:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\cart.php(40): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-22 06:22:22 --> mysqli_sql_exception: Column 'name' cannot be null in C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `Ad...', 0)
+#1 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `Ad...')
+#2 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `Ad...')
+#3 C:\xampp\htdocs\enatyam\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `Ad...', Array, false)
+#4 C:\xampp\htdocs\enatyam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\enatyam\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\enatyam\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\enatyam\app\Controllers\cart.php(40): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+#9 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+#10 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\enatyam\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-22 06:22:22 --> Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (:name:, :description:, :image:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\cart.php(40): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-22 06:22:55 --> mysqli_sql_exception: Column 'name' cannot be null in C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\enatyam\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `Ad...', 0)
+#1 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `Ad...')
+#2 C:\xampp\htdocs\enatyam\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `Ad...')
+#3 C:\xampp\htdocs\enatyam\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `Ad...', Array, false)
+#4 C:\xampp\htdocs\enatyam\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\enatyam\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\enatyam\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\enatyam\app\Controllers\cart.php(40): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+#9 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+#10 C:\xampp\htdocs\enatyam\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\enatyam\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-22 06:22:55 --> Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `Add_to_Cart` (`name`, `description`, `image`) VALUES (:name:, :description:, :image:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\cart.php(40): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:23:40 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:24:18 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:25:30 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:26:30 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:36:16 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:39:04 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:39:19 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:45:34 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:46:02 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:47:22 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 06:48:23 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 09:37:14 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 09:39:16 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-22 09:40:06 --> Attempt to read property "name" on null
+in APPPATH\Controllers\cart.php on line 16.
+ 1 APPPATH\Controllers\cart.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'C:\\xampp\\htdocs\\enatyam\\app\\Controllers\\cart.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\cart->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\cart))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

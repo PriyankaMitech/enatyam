@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+html,
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.comming-section {
+  background-color: #fad32c;
+  padding: 50px 0px;
+}
+
+.css-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* .col-lg-4 {
+  width: 44.33%;
+} */
+
+.text-right {
+  text-align: right;
+}
+
+.cs-row {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px;
+  /* Add margin to the entire row */
+}
+
+.accordion-item {
+  background-color: transparent;
+  color: hsl(0, 0%, 7%);
+  margin: 1rem 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+  /* Reset default margin for the ul element */
+  color: var(--e-global-color-text);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+li {
+  margin-bottom: 30px;
+  /* Add some space between list items */
+}
+
+.coming-soon-ul {
+  list-style-type: disc;
+  background-image: url("../images/rocket2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.comming-soon-p {
+  font-size: 16px;
+  color: #000 !important;
+  line-height: 28px;
+  letter-spacing: 0.29px;
+}
+
+.comming-soon-p a {
+  color: #000;
+  text-decoration: none;
+}
+
+.coming-soon-img {
+  margin: 20px 0px;
+}
+
+.cont-width {
+  width: 1140px !important;
+}
+
+.pic-width {
+  border-radius: 100% 100% 100% 100%;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  background-color: #fad32c;
+}
+
+.HomeShop-section {
+  background-color: #fad32c;
+}
+
+.shop-sec {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop-sec .col-lg-2 {
+  width: 20% !important;
+}
+
+.shop-sec h3 {
+  color: #000;
+  text-align: center;
+  font-size: 25px !important;
+  font-family: "Roboto Slab", serif !important;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.shop-now-btn {
+  color: #fff !important;
+  background-color: #8c52ff !important;
+  padding: 14px 30px !important;
+  border-radius: 40px !important;
+  margin-top: 40px;
+  font-size: 15px !important;
+  transition: 0.5s;
+}
+
+.shop-now-btn:hover {
+  background-color: #737373 !important;
+  color: #fff !important;
+}
+
+.HomeShop-section {
+  padding-top: 50px;
+}
+
+.heading-div h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Roboto Slab", serif !important;
+  margin-top: 36px;
+}
+
+.heading-div {
+  margin-bottom: 60px;
+}
+
+.line {
+  background-color: #ff0067;
+  display: block;
+  width: 50px;
+  height: 2px;
+  text-align: center;
+  margin: auto;
+}
+
+/* pricing section css */
+
+.pricing-section {
+  background-color: #fad32c;
+}
+
+.price-btn p:last-child {
+  margin-bottom: 0px;
+}
+
+.price-btn {
+  display: block;
+  width: 100%;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff !important;
+  border-radius: 50px;
+
+  background: #ff0067;
+  transition: 0.5s;
+  border: none !important;
+}
+
+.price-btn.active {
+  background: #8c52ff;
+}
+
+a,
+a:hover {
+  text-decoration: none !important;
+}
+
+.price-btn p {
+  margin-bottom: 4px !important;
+
+  font-size: 20px;
+}
+
+.price-btn-2:hover {
+  background: #8c52ff;
+  color: #fff !important;
+}
+
+.pricing-card-section {
+  margin-top: 30px !important;
+}
+
+.pricing-card-section .card {
+  border-radius: 15px;
+  padding: 15px !important;
+}
+
+.card-1 {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #8c52ff 0%, #ff8161 100%);
+}
+
+.price-card-head h3 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Roboto slab", serif !important;
+}
+
+.price-card-head .line {
+  background: #000 !important;
+  width: 40px !important;
+}
+
+.price-card-body h2 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Roboto slab", serif !important;
+}
+
+.price-card-body h4 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Roboto slab", serif !important;
+  margin: 25px 0px;
+}
+
+.del-price {
+  color: #737373 !important;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.price-card-body ul li {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 10px;
+}
+
+.price-card-body .fa-check-circle-o {
+  width: 3.5rem;
+  font-size: 28px;
+  color: #00c661;
+}
+
+.price-card-body span:last-child {
+  color: #000;
+  font-size: 15px;
+  font-weight: normal;
+  /* margin: auto */
+  text-align: justify;
+}
+.card-2 .price-card-body span:last-child {
+  color: #fff !important;
+}
+
+.price-card-body .fa-times-circle-o {
+  color: #ff0000;
+  width: 3.5rem;
+  font-size: 28px;
+}
+
+.card-3 {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #c420a2 0%, #ffadee 100%);
+  font-family: "Roboto slab", serif !important;
+}
+
+.card-2 {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #191103 0%, #9d6a07 100%);
+  font-family: "Roboto slab", serif !important;
+}
+
+/* superstar css */
+
+.faculty-content {
+  text-align: center;
+}
+
+.faculty-section {
+  background: #fad32c;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.faculty-div img {
+  border-radius: 50%;
+  border: 2px dashed #bba0a0;
+  padding: 7px;
+  position: relative;
+}
+
+.faculty-div1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0px;
+  display: none;
+  transition: 0.5s;
+  padding: 0;
+  /* bottom: 0; */
+}
+
+.faculty-div1 {
+  position: relative;
+  transition: 0.5s;
+}
+
+.faculty-div1:hover::before {
+  display: block;
+}
+
+.faculty-content-team__member-name {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--e-global-color-text);
+  margin-bottom: 8px;
+}
+
+.faculty-content-team__member-position {
+  color: rgb(102, 102, 102);
+  font-size: 15px;
+}
+
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+  display: none !important;
+}
+
+.owl-carousel .owl-prev span {
+  display: none !important;
+}
+
+.owl-carousel .owl-next span {
+  display: none !important;
+}
+
+.owl-next i,
+.owl-prev i {
+  color: rgb(255, 0, 103);
+  font-size: 28px;
+}
+
+.owl-prev i {
+  position: absolute;
+  left: -31px;
+  top: 130px;
+}
+
+.owl-next i {
+  position: absolute;
+  right: -31px;
+  top: 130px;
+}
+
+/* css for mobile */
+@media only screen and (max-width: 767px) {
+  .owl-prev i {
+    left: 0 !important;
+  }
+
+  .owl-next i {
+    right: 0 !important;
+  }
+
+  .faculty-div1::before {
+    width: 312px !important;
+    height: 312px !important;
+
+    /* bottom: 0; */
+  }
+}
+
+.accordion-item {
+  background: transparent !important;
+  border: none !important;
+}
+
+.btndemo a {
+  color: #fff;
+}
