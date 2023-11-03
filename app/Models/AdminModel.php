@@ -20,7 +20,7 @@ class AdminModel extends Model
         // $today = date('Y-m-d');
         // return $this->where('DATE(Date)', $today)->findAll();
         $today = date('Y-m-d');
-        return $this->where('DATE(`Book_Date_Time`) =', $today)
+        return $this->where('DATE(`Book_Date`) =', $today)
                     ->findAll();
        
        

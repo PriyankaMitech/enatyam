@@ -1629,7 +1629,27 @@ window.addEventListener('load', () => {
 </script>
 
 
+<script>
+    // JavaScript to handle time input validation
+    var startTimeInput = document.getElementById("start-time");
+    var endTimeInput = document.getElementById("end-time");
 
+    startTimeInput.addEventListener("change", validateTimeInput);
+    endTimeInput.addEventListener("change", validateTimeInput);
+
+    function validateTimeInput() {
+        var startTime = startTimeInput.value;
+        var endTime = endTimeInput.value;
+
+        if (startTime > endTime) {
+            document.getElementById("demo_class-timespanid").textContent = "Start time must be before end time.";
+            // You can disable the form submission or take other actions as needed.
+        } else {
+            document.getElementById("demo_class-timespanid").textContent = "";
+            // The times are valid; you can proceed with form submission.
+        }
+    }
+</script>
 
     
 </body>
