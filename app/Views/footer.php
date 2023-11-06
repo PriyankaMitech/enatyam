@@ -1730,13 +1730,13 @@ window.addEventListener('scroll', () => {
 
     prevScrollPos = currentScrollPos;
 });
-
 // Ensure initial state is transparent if at the top
 window.addEventListener('load', () => {
     if (window.pageYOffset === 0) {
         navbar.style.backgroundColor = 'transparent';
     }
 });
+</script>
 
 <script>
     // JavaScript to handle time input validation
@@ -1758,8 +1758,6 @@ window.addEventListener('load', () => {
             // The times are valid; you can proceed with form submission.
         }
     }
-    </script>
-
 
 
     function validateTimeInput() {
