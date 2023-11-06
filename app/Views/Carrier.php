@@ -96,7 +96,7 @@
                 </div>
 
             </div>
-            <form action="carrier_h" method="post">
+            <form action="carrier_h" method="post" enctype="multipart/form-data">
                 <div class="card">
                     <div id="headingOne">
                     </div>
@@ -180,11 +180,17 @@
 
 
                                 <div class="col-lg-12 " style="padding-left:0px" width="100%">
+
+
+
                                     <div class="demo-form">
                                         <div class="position-relative">
                                             <h5 class="title">
                                                 <u>What would you like to Teach?</u>
                                             </h5>
+
+
+
                                             <div class="f-info">
 
                                                 <ul class="greenCheckbox multiSelectContainer scrollForAttribute mCustomScrollbar _mCS_1 mCS_no_scrollbar">
@@ -515,16 +521,16 @@
 
                                         <div class="form-group mt-3">
                                             <label class="mr-4">Upload your CV:</label>
-                                            <input type="file" name="file">
+                                            <input type="file" name="Cv">
                                         </div>
 
                                         <div class="form-group mt-3">
                                             <label class="mr-4">Upload your Education certificates:</label>
-                                            <input type="file" name="file">
+                                            <input type="file" name="EducationCertificates">
                                         </div>
                                         <div class="form-group mt-3">
                                             <label class="mr-4">Upload your course related certificates:</label>
-                                            <input type="file" name="file">
+                                            <input type="file" name="courseCertificates">
                                         </div>
 
                                         <div style="text-align: center;">

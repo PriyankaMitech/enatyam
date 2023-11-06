@@ -421,12 +421,21 @@
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="card-body">
+
+
+
+
                             <div class="demo-form">
                                 <div class="position-relative">
                                     <h5 class="title">
                                         <u>Select Your Age</u>
                                     </h5>
+
+
+
                                     <div class="f-info">
+
+
                                         <ul class="greenCheckbox multiSelectContainer ">
 
                                             <li>
@@ -509,7 +518,12 @@
                                         <u>Select Your Locality</u>
                                     </h5>
 
+
+
                                     <div class="f-info">
+
+
+
 
                                         <div class="form-group col-md-10">
                                             <label for="inputcountry">Country:</label>
@@ -591,19 +605,20 @@
                                             <span style="color:red;" id="Districtspanid">
 
                                             </span>
-
                                         </div>
-
-
                                         <div class="date_time">
-                                            <P>Choose your Demo Class Date & Time </P>
-                                            <input type="datetime-local" id="demo_class-time" name="Book_Date_Time" dateControl.value="2017-06-01T08:30" ; style="margin: 0.4rem 0;" />
+                                            <p>Choose your Demo Class Date & Time</p>
+                                            <input type="date" id="demo_class-date" name="Book_Date" style="margin: 0.4rem 0;" min="<?= date('Y-m-d', strtotime('+1 day')) ?>">
                                             <br>
-                                            <span style="color:red;" id="demo_class-timespanid">
-
-                                            </span>
-
+                                            <label for="start-time">Start Time:</label>
+                                            <input type="time" name="Start_Time">
+                                            <br>
+                                            <label for="end-time">End Time:</label>
+                                            <input type="time" name="End_Time">
+                                            <br>
+                                            <span style="color:red;" id="demo_class-timespanid"></span>
                                         </div>
+
                                         <input class="form-group-submit" type="submit" value="Book Demo">
                                     </div>
                                 </div>
@@ -615,5 +630,4 @@
         </div>
     </div>
 </div>
-
 <?php include('footer.php'); ?>

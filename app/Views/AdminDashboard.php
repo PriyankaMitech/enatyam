@@ -105,13 +105,15 @@
                     <a href="#" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?php echo base_url();?>" class="nav-link">Home</a></li>
-                             
-             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url(); ?>"class="nav-link">Logout</a></li>
+                    <a href="<?php echo base_url();?>" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="<?php echo base_url(); ?>" class="nav-link">Logout</a>
+                </li>
 
             </ul>
-            
+
 
         </nav>
         <!-- /.navbar -->
@@ -267,7 +269,7 @@
                                         <div class="card demo-card">
                                             <h4><?= count($ConductedDemo) ?></h4>
                                             <h3>Conducted Demo</h3>
-                                            <i class="fas fa-long-arrow-alt-right "></i>
+                                            <i class="fas fa-long-arrow-alt-right coundd_demo"></i>
                                         </div>
                                     </div>
 
@@ -279,19 +281,37 @@
                                             <i class="fas fa-long-arrow-alt-right comp-payment"></i>
                                         </div>
                                     </div>
+                                   <!--  -->
+
+                                   <div class="col-lg-12">
+                                        <table id="coundd_demo-payment-table" class="table" style="display:none">
+                                       
+                                            <?php foreach ($ConductedDemo as $faculty): ?>
+                                            <tr>
+                                                <td><?= $faculty->name; ?></td>
+                                                <td><?= $faculty->email; ?></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                       
+                                            
+                                        </table>
+
+
+                                    </div>
+                                   <!--  -->
                                     <div class="col-lg-12">
                                         <table id="comp-payment-table" class="table" style="display:none">
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Payment Date</th>
+                                                <th>course</th>
+                                                <th>Demo Date</th>
 
                                             </tr>
-                                            <?php foreach ($getPaymentstatus as $status): ?>
+                                            <?php foreach ($getAllDemoList as $status): ?>
                                             <tr>
-                                                <td><?= $status->full_name;?></td>
-                                                <td><?= $status->email;?></td>
-                                                <td></td>
+                                                <td><?= $status->name;?></td>
+                                                <td><?= $status->course;?></td>
+                                                <td><?= $status->Book_Date;?></td>
                                             </tr>
                                             <?php endforeach; ?>
                                         </table>
@@ -417,7 +437,7 @@
                                         </table>
                                     </td>
                                     <td id="toggle-table7"><b><?= count($ConductedDemo) ?></b>
-                                        <table id="faculty-table7" style="display: none;" class="table">
+                                        <table id="faculty-table7" style="display:none;" class="table">
                                             <?php foreach ($ConductedDemo as $faculty): ?>
                                             <tr>
                                                 <td><?= $faculty->name; ?></td>
@@ -626,10 +646,10 @@
 
 
         });
-        $("#toggle-table7").click(function() {
-            $("#faculty-table7").toggle("");
-
-
+        $(".coundd_demo").click(function() {
+            $("#coundd_demo-payment-table").toggle("");
+            $("#pending-demo-table").hide();
+            $("#comp-payment-table").hide();
 
         });
 
@@ -637,13 +657,14 @@
         $(".pend-demo").click(function() {
             $("#pending-demo-table").toggle("");
             $("#comp-payment-table").hide();
+            $("#coundd_demo-payment-table").hide();
 
 
         });
         $(".comp-payment").click(function() {
             $("#comp-payment-table").toggle("");
             $("#pending-demo-table").hide();
-
+            $("#coundd_demo-payment-table").hide();
 
         });
 
@@ -657,27 +678,7 @@
 
     });
     </script>
-    <!-- <script>
-    function showStudentTable(button) {
-        // Get the row of the clicked button
-        const row = button.parentNode.parentNode;
 
-        // Clone the student assignment table
-        const studentTable = document.getElementById("student-assignment-table").cloneNode(true);
-
-        // Append the cloned table to the clicked row
-        row.appendChild(studentTable);
-
-        // Display the cloned table
-        studentTable.style.display = "table";
-    }
-</script> -->
-    <!-- <script>
-    function myFunction() {
-        // Add your code here for what should happen when the button is clicked.
-        alert(" teacher assigned successfully to students!");
-    }
-    </script> -->
     <script>
     function showStudentTable(button) {
         // Hide all tables with class "table"
@@ -691,16 +692,6 @@
     }
     </script>
 
-    <!-- <script>
-    function toggleFacultyList(id) {
-        var facultyList = document.getElementById('faculty-list-' + id);
-        if (facultyList.style.display === 'none') {
-            facultyList.style.display = 'table-row';
-        } else {
-            facultyList.style.display = 'none';
-        }
-    }
-    </script> -->
 
 
     <script>
@@ -721,7 +712,7 @@
     </script>
 
 
-
+   
 
 
 
