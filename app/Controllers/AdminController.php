@@ -117,7 +117,7 @@ public function getAdminSideBarAll()
     $data['PendingDemo'] = $model->getPendingDemoList();
      $data['resheduleDemo'] = $model->getresheduleDemo();
      $data['Faculty'] = $model->getFaculty();
-   // echo "<pre>"; print_r($data['PendingDemo']);echo "</pre>"; die();
+   // echo "<pre>"; print_r($data['resheduleDemo']);echo "</pre>"; die();
     return view('AdminSideBar/Demo', $data);
     }
 

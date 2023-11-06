@@ -120,7 +120,7 @@
                     <?php
                 // Sort the $PendingDemo array by Book_Date_Time
                 usort($PendingDemo, function ($a, $b) {
-                    return strtotime($a->Book_Date_Time) - strtotime($b->Book_Date_Time);
+                    return strtotime($a->Book_Date) - strtotime($b->Book_Date);
                 });
 
                 foreach ($PendingDemo as $PDemo):
@@ -131,10 +131,10 @@
                         <td><?= $PDemo->course ?>/<?= $PDemo->sub_course ?></td>
                         <td><?= $PDemo->email ?></td>
                         <td><?= $PDemo->phone ?></td>
-                        <td><?= $PDemo->Book_Date_Time ?></td>
+                        <td><?= $PDemo->Book_Date ?></td>
                         <td> <?php
                 $today = date('Y-m-d');
-                $demoDate = date('Y-m-d', strtotime($PDemo->Book_Date_Time));
+                $demoDate = date('Y-m-d', strtotime($PDemo->Book_Date));
 
                 if ($demoDate < $today) {
                     echo '<form method="post" action="DemoController/resheduleDemo">';

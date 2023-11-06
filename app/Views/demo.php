@@ -711,17 +711,16 @@
                                             <span style="color:red;" id="Districtspanid">
 
                                             </span>
-
                                         </div>
-
-
                                         <div class="date_time">
                                             <p>Choose your Demo Class Date & Time</p>
                                             <input type="date" id="demo_class-date" name="Book_Date"
                                                 style="margin: 0.4rem 0;"
                                                 min="<?= date('Y-m-d', strtotime('+1 day')) ?>">
+                                                <br>
                                             <label for="start-time">Start Time:</label>
                                             <input type="time" name="Start_Time">
+                                            <br>
                                             <label for="end-time">End Time:</label>
                                             <input type="time"  name="End_Time">
                                             <br>
