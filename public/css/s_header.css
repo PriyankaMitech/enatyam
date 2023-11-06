@@ -1,577 +1,515 @@
 /* Header CSS  */
 .s_header-section {
-    background-color: hsl(49, 95%, 58%);
-
+  background-color: hsl(49, 95%, 58%);
 }
 
 .form-group {
-
-    margin-bottom: 10px;
-
+  margin-bottom: 10px;
 }
 
 .form-control {
-    border: 1px solid var(--thim-border-color, #eee);
-    padding: 8px 10px;
-    box-shadow: none;
-    text-shadow: none;
-    font-size: 13px;
-    margin: 0 0 10px;
+  border: 1px solid var(--thim-border-color, #eee);
+  padding: 8px 10px;
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 13px;
+  margin: 0 0 10px;
 }
 
 .button-text {
-    font-size: 18px;
-    flex-grow: 1;
-    order: 10;
-    display: inline-block;
-    padding: 14px 40px;
-    color: #eee !important;
+  font-size: 18px;
+  flex-grow: 1;
+  order: 10;
+  display: inline-block;
+  padding: 14px 40px;
+  color: #eee !important;
 }
 
 .button-content {
-    background-color: #F68535;
-    border-radius: 50px 50px 50px 50px;
-    padding: 0px 0px;
-    box-sizing: border-box;
-    border-color: #fad32c;
+  background-color: #f68535;
+  border-radius: 50px 50px 50px 50px;
+  padding: 0px 0px;
+  box-sizing: border-box;
+  border-color: #fad32c;
 }
 
 .title {
-    position: relative;
-    padding: 22px 30px 70px;
-    line-height: 34px;
-    text-align: center;
-    font-size: 22px;
-    overflow: hidden;
-    margin: 0 0 23px;
-    color: #fff;
-    border-radius: 4px;
+  position: relative;
+  padding: 22px 30px 70px;
+  line-height: 34px;
+  text-align: center;
+  font-size: 22px;
+  overflow: hidden;
+  margin: 0 0 23px;
+  color: #fff;
+  border-radius: 4px;
 }
 
 .button-content-wrapper {
-    background-color: #F68535;
-    border-radius: 50px 50px 50px 50px;
+  background-color: #f68535;
+  border-radius: 50px 50px 50px 50px;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .form-group-submit {
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    background: #111;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px 5px 5px 5px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background: #111;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .title:before {
-    height: 820px;
-    content: "";
-    border-radius: 50%;
-    bottom: 20px;
-    right: auto;
-    width: 820px;
-    z-index: -1;
-    position: absolute;
-    left: calc(50% - 410px);
-    left: -webkit-calc(50% - 410px);
-    left: -moz-calc(50% - 410px);
-    background: #ff0067;
+  height: 820px;
+  content: "";
+  border-radius: 50%;
+  bottom: 20px;
+  right: auto;
+  width: 820px;
+  z-index: -1;
+  position: absolute;
+  left: calc(50% - 410px);
+  left: -webkit-calc(50% - 410px);
+  left: -moz-calc(50% - 410px);
+  background: #ff0067;
 }
 
 .title-pc {
-    margin-top: 0;
-    margin-bottom: 0cm;
-    font-size: 13px;
+  margin-top: 0;
+  margin-bottom: 0cm;
+  font-size: 13px;
 }
 
 .img-bt {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2cm;
-    margin-top: -2cm;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2cm;
+  margin-top: -2cm;
 }
 
 .demo-form {
-    position: relative;
-    width: 100%;
-    flex-wrap: wrap;
-    align-items: center;
-    display: flex;
-    justify-content: right;
-    margin: 61px 0;
-    z-index: 100;
-    margin-top: 85px;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  margin: 61px 0;
+  z-index: 100;
+  margin-top: 85px;
 }
 
 .position-relative {
-    margin: 61px 0;
-    z-index: 100;
-    background: #fff;
-    max-width: 400px;
-    float: right;
-    min-height: 453px;
-    min-height: auto !important;
+  margin: 61px 0;
+  z-index: 100;
+  background: #fff;
+  max-width: 400px;
+  float: right;
+  min-height: 453px;
+  min-height: auto !important;
 }
 
 .f-info {
-
-    padding: 0 50px 25px;
-    position: relative;
+  padding: 0 50px 25px;
+  position: relative;
 }
 
 .footer_row {
-    border-top: 1px solid #c8c8c8;
-    padding-top: 30px;
-    margin-bottom: 20px;
+  border-top: 1px solid #c8c8c8;
+  padding-top: 30px;
+  margin-bottom: 20px;
 }
 
-
-
-
-
-
-
 .howenatyamWorks {
-    background: #fad32c;
-    padding-top: 20px;
+  background: #fad32c;
+  padding-top: 20px;
 }
 
 .howenatyamWorks h2 {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 0.2px;
-    color: #3b3b3b;
-    margin-bottom: 6px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #3b3b3b;
+  margin-bottom: 6px;
 }
 
 .workSections.text-center {
-    text-align: center !important;
-    margin-bottom: 45px;
-    margin-top: 0px;
+  text-align: center !important;
+  margin-bottom: 45px;
+  margin-top: 0px;
 }
 
-
 .howItWorkSteps {
-    margin: 50px 0 30px;
-    text-align: center;
+  margin: 50px 0 30px;
+  text-align: center;
 }
 
 .indStep {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .howItWorkSteps .stepNum {
-    display: inline-flex;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    background-color: #ff0067;
-    color: hsl(0, 0%, 3%);
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #ff0067;
+  color: hsl(0, 0%, 3%);
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
 }
 
 .stepLine {
-    border: solid 1px rgba(59, 59, 59, 0.12);
-    width: 26%;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 2%;
+  border: solid 1px rgba(59, 59, 59, 0.12);
+  width: 26%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2%;
 }
 
 .howWorkBlock {
-    display: inline-block;
-    width: 28.9%;
-    margin: 0 2%;
+  display: inline-block;
+  width: 28.9%;
+  margin: 0 2%;
 }
 
 .howWorkBlock img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
 
 .lazyImage {
-    transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .howWorkBlock .hwTitle {
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    color: #3b3b3b;
-    margin: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #3b3b3b;
+  margin: 10px 0;
 }
 
 .howWorkBlock .hwDesc {
-    font-size: 14px;
-    color: #777;
+  font-size: 14px;
+  color: #777;
 }
 
 .textAlignCen {
-    text-align: center !important;
-    color: white;
-
+  text-align: center !important;
+  color: white;
 }
 
 .btnstart {
-    margin-bottom: 30px;
-    font-size: 13px !important;
-    font-weight: 400 !important;
-    background-color: #8c52ff !important;
-    line-height: 38px !important;
-    padding: 5px 25px !important;
-    border-radius: 25px !important;
-    color: #ffffff !important;
-    /* margin-left: 572px!important; */
-    margin-left: 618px !important;
+  margin-bottom: 30px;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  background-color: #8c52ff !important;
+  line-height: 38px !important;
+  padding: 5px 25px !important;
+  border-radius: 25px !important;
+  color: #ffffff !important;
 }
-
 
 .heading {
-    font-size: 30px;
-    font-weight: 600;
-    color: #000;
-    font-family: 'Roboto Slab', serif !important;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Roboto Slab", serif !important;
 }
-
-
-
-
-
-
-
-
 
 /* Stories That Inspire - Section CSS */
 
 .e_line {
-    width: 100%;
-    border-top: 0.1px solid rgba(0, 0, 0, .01);
-
+  width: 100%;
+  border-top: 0.1px solid rgba(0, 0, 0, 0.01);
 }
-
 
 .heading-div h3 {
-    font-size: 30px;
-    font-weight: 600;
-    color: #000;
-    font-family: 'Roboto Slab', serif !important;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Roboto Slab", serif !important;
 }
-
-
-
 
 /* Stories CSS  */
 
 .stories-section {
-    background-color: #fad32c;
-
+  background-color: #fad32c;
 }
 
 .sc_heading {
-    font-size: 34px;
-    font-weight: 600;
-    color: #000;
-    font-family: 'Roboto Slab', serif !important;
-    margin-top: 65px;
-
-
+  font-size: 34px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Roboto Slab", serif !important;
+  margin-top: 65px;
 }
-
-
-
 
 /*! ST_Inspire - v3.11.5 - 14-03-2023 */
 .ST_Inspire-widget-video .ST_Inspire-widget-container {
-    overflow: hidden;
-    transform: translateZ(0);
-    padding: 0px 0px 10px 0px;
-    border-radius: 5px 5px 20px 20px;
+  overflow: hidden;
+  transform: translateZ(0);
+  padding: 0px 0px 10px 0px;
+  border-radius: 5px 5px 20px 20px;
 }
-
 
 .ST_Inspire-widget-video .ST_Inspire-wrapper iframe,
 .ST_Inspire-widget-video .ST_Inspire-wrapper video {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    border: none;
-    background-color: #000;
-    height: 6cm;
-
-
+  height: 100%;
+  width: 100%;
+  display: flex;
+  border: none;
+  background-color: #000;
+  height: 6cm;
 }
 
 .ST_Inspire-widget-video .ST_Inspire-open-inline .ST_Inspire-custom-embed-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: 50%
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50%;
 }
 
 .ST_Inspire-widget-video .ST_Inspire-custom-embed-image-overlay {
-    cursor: pointer;
-    text-align: center
+  cursor: pointer;
+  text-align: center;
 }
 
 .ST_Inspire-widget-video .ST_Inspire-custom-embed-image-overlay:hover .ST_Inspire-custom-embed-play i {
-    opacity: 1
+  opacity: 1;
 }
 
 .ST_Inspire-widget-video .ST_Inspire-custom-embed-image-overlay img {
-    display: block;
-    width: 100%
+  display: block;
+  width: 100%;
 }
 
 .ST_Inspire-widget-video .e-hosted-video .ST_Inspire-video {
-    -o-object-fit: cover;
-    object-fit: cover
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .e-con-inner>.ST_Inspire-widget-video,
 .e-con>.ST_Inspire-widget-video {
-    width: var(--container-widget-width);
-    --flex-grow: var(--container-widget-flex-grow)
+  width: var(--container-widget-width);
+  --flex-grow: var(--container-widget-flex-grow);
 }
 
 .ST_Inspire-container {
-    max-width: 1320px;
+  max-width: 1320px;
 }
 
 .line_1 {
-    max-width: 1320px;
-    margin-top: 60px;
-
-
+  max-width: 1320px;
+  margin-top: 60px;
 }
 
 .line_2 {
-    max-width: 1320px;
-    margin-top: 12px;
-    margin-bottom: 25px;
+  max-width: 1320px;
+  margin-top: 12px;
+  margin-bottom: 25px;
 }
 
 .line {
-    background-color: #ff0067;
-    display: block;
-    width: 50px;
-    height: 2px;
-    text-align: center;
-    margin: auto;
+  background-color: #ff0067;
+  display: block;
+  width: 50px;
+  height: 2px;
+  text-align: center;
+  margin: auto;
 }
 
-
-
-
 .sc_heading.line {
-    height: 2px;
-    background-color: var(--e-global-color-primary)#ff0067;
+  height: 2px;
+  background-color: var(--e-global-color-primary) #ff0067;
 }
 
 .join-now-btn {
-    /* line-height: 30px; */
-    color: #fff;
-    background: #8c52ff !important;
-    padding: 0px 24px;
-    border-radius: 50px !important;
-    display: inline-block;
+  /* line-height: 30px; */
+  color: #fff;
+  background: #8c52ff !important;
+  padding: 10px 24px;
+  border-radius: 50px !important;
+  display: inline-block;
 
-    font-size: 20px !important;
+  font-size: 20px !important;
 
-    width: 180px;
+  width: 275px;
 }
 
 .ST_Inspire-widget-container2 {
-    height: 84px;
-    display: flex;
-    justify-content: center;
-
+  height: 84px;
+  display: flex;
+  justify-content: center;
 }
-
-
-
 
 /* Indias Most Loved Art learning Platform CSS */
 
-
 .learning_Platform-section {
-    background-color: #fad32c;
+  background-color: #fad32c;
 }
 
 .Alp-number-wrapper {
-    display: flex;
-    font-size: 69px;
-    font-weight: 600;
-    line-height: 1;
-    color: #FFFFFF;
+  display: flex;
+  font-size: 69px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
 }
 
-
 .Alp-number-prefix {
-    text-align: right;
-    flex-grow: 1;
-    white-space: pre-wrap;
+  text-align: right;
+  flex-grow: 1;
+  white-space: pre-wrap;
 }
 
 .Alp-number-suffix {
-    text-align: left;
-    font-size: 35px;
-    flex-grow: 1;
-    white-space: pre-wrap;
+  text-align: left;
+  font-size: 35px;
+  flex-grow: 1;
+  white-space: pre-wrap;
 }
 
 .Alp-title {
-    text-align: center;
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 2.5;
-    color: #FFFFFF;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 3.5;
+  color: #ffffff;
 }
 
 .counter-value {
-
-    font-size: 40px;
+  font-size: 40px;
 }
 
-.Alp {
-    margin-top: 40px;
-}
+/* .Alp {
+  margin-top: 40px;
+} */
 
 .Alp-main {
-    background-image: url("../images/s_shape.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 20% !important;
-    min-height: 1px;
-    position: relative;
-    --widgets-spacing: 20px;
-    padding: 15px;
-    margin-bottom: 30px;
+  background-image: url("../images/s_shape.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* width: 20% !important; */
+  min-height: 1px;
+  position: relative;
+  --widgets-spacing: 20px;
+  padding: 25px;
+  /* margin-bottom: 30px; */
 }
 
 .Alp-populated {
-    padding: 15px;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 15px;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
 
 .title_4 {
-    font-family: "Roboto Slab", Sans-serif !important;
-    line-height: 1.6em;
-    margin-top: 30px;
-
+  font-family: "Roboto Slab", Sans-serif !important;
+  line-height: 1.6em;
+  margin-top: 30px;
 }
 
 .heading_new {
-    font-size: 34px;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: 30px;
-    margin-top: 65px;
-
+  font-size: 34px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 30px;
+  margin-top: 65px;
 }
-
-
 
 /* <!-- How To Get Started CSS --> */
 
-
 .how_Started-section {
-    background-color: #fad32c;
+  background-color: #fad32c;
 }
 
-
 .icon {
-    background-color: #8c52ff;
+  background-color: #8c52ff;
 
-    font-size: 20px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    border-style: none;
-    margin-left: 56px;
-    border-radius: 100% 100% 100% 100%;
+  font-size: 20px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-style: none;
+  margin-left: 56px;
+  border-radius: 100% 100% 100% 100%;
 }
 
 .fas {
-    color: #FFFFFF;
-    font-weight: 900;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 2;
+  color: #ffffff;
+  font-weight: 900;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 2;
 }
 
 .heading__primary {
-    text-transform: none;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    margin-top: 4px;
-    margin-bottom: 15px;
-
+  text-transform: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-top: 4px;
+  margin-bottom: 15px;
 }
 
 .desc-content {
-    text-transform: none;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 25px;
-    margin-top: 4px;
-    margin-bottom: 50px;
-    font-family: "Roboto Slab", Sans-serif;
-    color: #47625a;
+  text-transform: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  margin-top: 4px;
+  margin-bottom: 50px;
+  font-family: "Roboto Slab", Sans-serif;
+  color: #47625a;
 }
 
 .col-12 col-sm-4 col-lg-2 {
-    width: 20%;
+  width: 20%;
 }
-
 
 /* for cource offering */
 .btnSection {
-    padding: 60px 0px 0px 0px;
-    margin-top: -100px;
+  padding: 60px 0px 0px 0px;
+  margin-top: -100px;
 }
 
-
-
 .list-inline .dancetypes {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 38px;
-    padding: 10px 25px;
-    justify-content: center;
-    width: 162px;
-    margin: 0px 28px 30px 28px;
-    background-color: #737373;
-    color: #F3ECE8;
-    border-radius: 50px 50px 50px 50px;
-    height: 60px;
-    align-items: center;
-    text-align: center;
-
-
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 38px;
+  padding: 10px 25px;
+  justify-content: center;
+  width: 162px;
+  margin: 0px 28px 30px 28px;
+  background-color: #737373;
+  color: #f3ece8;
+  border-radius: 50px 50px 50px 50px;
+  height: 60px;
+  align-items: center;
+  text-align: center;
 }
 
 .list-inline .active,
 .learning .list-inline .active {
-    background-color: #8c52ff !important;
-
+  background-color: #8c52ff !important;
 }
 
 .textP {
-    margin-top: 88px;
-    margin-bottom: 1rem;
-    padding: 5px 1px;
+  margin-top: 88px;
+  margin-bottom: 1rem;
+  padding: 5px 1px;
 }

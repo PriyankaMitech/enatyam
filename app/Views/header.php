@@ -13,7 +13,9 @@ $page = $uri->getSegment(count($pages));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enatyam</title>
-    <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard') { ?>
+    <?php if ($page == 'enatyam' || $page == 'Home') {
+
+    ?>
 
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
 
@@ -477,45 +479,3 @@ $page = $uri->getSegment(count($pages));
 
 
     <!-- model  -->
-    <script>
-        function showRegistrationModal() {
-            // Hide the login modal
-            $('#loginformpopup').modal('hide');
-            // Show the registration modal
-            $('#registerformpopup').modal('show');
-        }
-
-        function showLoginModal() {
-            // Hide the registration modal
-            $('#registerformpopup').modal('hide');
-            // Show the login modal
-            $('#loginformpopup').modal('show');
-        }
-    </script>
-    <!-- headerr -->
-    <script>
-        let prevScrollPos = window.pageYOffset;
-        const navbar = document.querySelector('.tophead');
-
-        window.addEventListener('scroll', () => {
-            const currentScrollPos = window.pageYOffset;
-
-            if (currentScrollPos > prevScrollPos) {
-                // Scrolling down
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                // Scrolling up or at the top
-                navbar.style.transform = 'translateY(0)';
-                navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-            }
-
-            prevScrollPos = currentScrollPos;
-        });
-
-        // Ensure initial state is transparent if at the top
-        window.addEventListener('load', () => {
-            if (window.pageYOffset === 0) {
-                navbar.style.backgroundColor = 'transparent';
-            }
-        });
-    </script>

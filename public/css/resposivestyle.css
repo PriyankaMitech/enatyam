@@ -1,0 +1,86 @@
+@media only screen and (max-width: 360px) {
+  /* .hide {
+    display: none;
+  }
+  .pd0 {
+    padding: 0px 13px !important;
+  }
+  .thim-logo {
+    display: none;
+  } */
+
+  .howWorkBlock .hwTitle {
+    font-size: 12px !important;
+  }
+  .howWorkBlock .hwDesc {
+    font-size: 9px !important;
+  }
+
+  .workSections.text-center {
+    margin-bottom: -6px !important;
+  }
+  .heading {
+    font-size: 25px !important;
+  }
+  .heading-div h3 {
+    font-size: 25px !important;
+    margin-top: 17px !important;
+  }
+  .btnstart {
+    font-size: 10px !important;
+  }
+  .btnSection {
+    padding: 0px 0px 0px 0px !important;
+  }
+  .hide {
+    display: none;
+  }
+  .text-col .textP {
+    margin-top: 28px;
+    text-align: justify;
+  }
+  .heading {
+    font-size: 23px;
+    font-weight: 400;
+    padding: 7px;
+  }
+  .scm {
+    margin-bottom: -18px !important;
+  }
+  .join-now-btn {
+    width: 330px;
+  }
+  .counter-value {
+    font-size: 16px;
+  }
+  .Alp-number-suffix {
+    font-size: 12px;
+  }
+  .Alp-title {
+    font-size: 12px;
+  }
+  .imlalp {
+    margin-bottom: 11px !important;
+  }
+  .Alp-title {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .icon {
+    margin-left: 27px;
+  }
+  .heading__primary {
+    font-size: 13px;
+  }
+  .title_4 {
+    margin-top: 0px;
+  }
+  .desc-content {
+    font-size: 11px;
+    font-weight: 200;
+    line-height: 15px;
+    margin-top: 4px;
+    margin-bottom: 33px;
+  }
+}

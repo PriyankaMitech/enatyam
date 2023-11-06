@@ -75,9 +75,9 @@ li {
   margin: 20px 0px;
 }
 
-.cont-width {
+/* .cont-width {
   width: 1140px !important;
-}
+} */
 
 .pic-width {
   border-radius: 100% 100% 100% 100%;
@@ -133,11 +133,11 @@ li {
   font-weight: 600;
   color: #000;
   font-family: "Roboto Slab", serif !important;
-  margin-top: 36px;
+  margin-top: 0px;
 }
 
 .heading-div {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .line {
