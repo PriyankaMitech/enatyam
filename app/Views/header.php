@@ -13,7 +13,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enatyam</title>
-    <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard'  ) { ?>
+    <?php if ($page == 'enatyam' || $page == 'Home') {
+
+        ?>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -120,13 +122,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
         integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    
-
-
-
-      </script>
+    </script>
     
     <?php }else if ($page == 'music'){ ?>
 
@@ -275,22 +271,63 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <?php } ?>
+        <?php }else if($page == 'Contactus'){ 
+            
+      
+            ?>
+                <link rel="stylesheet" href="public/css/headerStyle.css">
+
+            <link rel="stylesheet" href="public/css/footer.css">
+    <link rel="stylesheet" href="public/css/contactus.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- fontawesome icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+       
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/demo.css">
+    <link rel="stylesheet" href="public/css/demo1.css">
+    <link rel="stylesheet" href="public/css/headerStyle.css">
+    <link rel="stylesheet" href="public/css/demoprofile.css">
+    <link rel="stylesheet" href="public/css/Carrier.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+       <?php }
+                // echo $page;exit();
+        ?>
 
     <link rel="stylesheet" href="public/css/headerStyle.css">
     <link rel="stylesheet" href="public/css/footer.css">
     <link rel="stylesheet" href="public/css/Login.css">
     <link rel="stylesheet" href="public/css/Register.css">
+    <link rel="stylesheet" href="public/css/resposivestyle.css">
+    
 </head>
 <body>
 <section class="tophead ">
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        <div class="container-fluid  pd0">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li>
@@ -323,11 +360,11 @@
         </div>
     </nav>
 
-    <div class="nav-container">
+    <div class="nav-container" >
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler hide" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -341,7 +378,7 @@
                         <a class="nav-link px-2" href="<?php echo base_url('music');?>">Music</a>
                         <a class="nav-link px-2" href="<?php echo base_url('Yoga');?>">Yoga</a>
                         <a class="nav-link px-2" href="<?php echo base_url('Instruments');?>">Instrumetents</a>
-                        <a class="nav-link px-2" href="<?php echo base_url('Carrier');?>">Carrier</a>
+                        <a class="nav-link px-2" href="<?php echo base_url('Carrier');?>">Career</a>
                     </div>
                     <div class="navbar-nav">
 
@@ -545,45 +582,3 @@
 
 
 <!-- model  -->
-<script>
-function showRegistrationModal() {
-    // Hide the login modal
-    $('#loginformpopup').modal('hide');
-    // Show the registration modal
-    $('#registerformpopup').modal('show');
-}
-
-function showLoginModal() {
-    // Hide the registration modal
-    $('#registerformpopup').modal('hide');
-    // Show the login modal
-    $('#loginformpopup').modal('show');
-}
-    </script>
-    <!-- headerr -->
-    <script>
-let prevScrollPos = window.pageYOffset;
-const navbar = document.querySelector('.tophead');
-
-window.addEventListener('scroll', () => {
-    const currentScrollPos = window.pageYOffset;
-
-    if (currentScrollPos > prevScrollPos) {
-        // Scrolling down
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up or at the top
-        navbar.style.transform = 'translateY(0)';
-        navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-    }
-
-    prevScrollPos = currentScrollPos;
-});
-
-// Ensure initial state is transparent if at the top
-window.addEventListener('load', () => {
-    if (window.pageYOffset === 0) {
-        navbar.style.backgroundColor = 'transparent';
-    }
-});
-    </script>

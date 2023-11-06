@@ -1,3 +1,4 @@
+
 <footer>
    <div class="container cont-width">
      
@@ -8,35 +9,42 @@
          </div>
          <div class="col-lg-4 col-xs-6 col-sm-4 footer-div">
             <ul>
-               <li>
-                  <a href="#">Dance</a>
+            <li>
+                  <a href="Home">Home</a>
                </li>
                <li>
-                  <a href="#">Music</a>
+                  <a href="Dance">Dance</a>
                </li>
                <li>
-                  <a href="#">Instruments</a>
+                  <a href="music">Music</a>
                </li>
                <li>
-                  <a href="#">Yoga</a>
+                  <a href="Yoga">Yoga</a>
                </li>
+              
+<!--             
                <li>
                   <a href="#">Sanskrit Chanting</a>
                </li>
                <li>
                   <a href="#">Shopping</a>
-               </li>
+               </li> -->
             </ul>
          </div>
          <div class="col-lg-4 col-xs-6 col-sm-4 footer-div">
             <ul>
+            <li>
+                  <a href="Instruments">Instruments</a>
+               </li>
+          
                <li>
                   <a href="<?php echo base_url('Contactus');?>"> Contact Us</a>   
                </li>
                <li>
-                  <a href="<?php echo base_url('Career');?>">Career</a>
+                  <a href="<?php echo base_url('Carrier');?>">Career</a>
                </li>
-               <li>
+              
+               <!-- <li>
                   <a href="<?php echo base_url('PrivacyPolicy');?>">Privacy Policy</a>
                </li>
                <li> 
@@ -45,7 +53,7 @@
                <li>
                   <a href="<?php echo base_url('RefundPolicy');?>">Refund Policy</a>
                </li>
-               <li>
+               <li> -->
                   <a href="#">Blog</a>
                </li>
             </ul>
@@ -976,15 +984,15 @@ function handleSubmit(collapse_val)
                 integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
             </script>
 
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-            </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            </script> -->
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
                 integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-            </script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            </script> -->
+            <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
                 integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
-            </script>
+            </script> -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script>
 function handleSubmit(collapse_val)
@@ -1485,11 +1493,70 @@ function handleSubmit(collapse_val)
         });
     </script>
 
+    <?php }else if($page == 'Contactus'){ ?>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+<script>
+
+    <script>
+let prevScrollPos = window.pageYOffset;
+const navbar = document.querySelector('.tophead');
+
+window.addEventListener('scroll', () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (currentScrollPos > prevScrollPos) {
+        // Scrolling down
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling up or at the top
+        navbar.style.transform = 'translateY(0)';
+        navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+    }
+
+    prevScrollPos = currentScrollPos;
+});
+
+// Ensure initial state is transparent if at the top
+window.addEventListener('load', () => {
+    if (window.pageYOffset === 0) {
+        navbar.style.backgroundColor = 'transparent';
+    }
+});
+</script>
+
+
     <?php } ?>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
     $(document).ready(function() {
@@ -1627,6 +1694,50 @@ window.addEventListener('load', () => {
     }
 });
 </script>
+
+
+<script>
+function showRegistrationModal() {
+    // Hide the login modal
+    $('#loginformpopup').modal('hide');
+    // Show the registration modal
+    $('#registerformpopup').modal('show');
+}
+
+function showLoginModal() {
+    // Hide the registration modal
+    $('#registerformpopup').modal('hide');
+    // Show the login modal
+    $('#loginformpopup').modal('show');
+}
+    </script>
+    <!-- headerr -->
+    <script>
+let prevScrollPos = window.pageYOffset;
+const navbar = document.querySelector('.tophead');
+
+window.addEventListener('scroll', () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (currentScrollPos > prevScrollPos) {
+        // Scrolling down
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling up or at the top
+        navbar.style.transform = 'translateY(0)';
+        navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+    }
+
+    prevScrollPos = currentScrollPos;
+});
+
+// Ensure initial state is transparent if at the top
+window.addEventListener('load', () => {
+    if (window.pageYOffset === 0) {
+        navbar.style.backgroundColor = 'transparent';
+    }
+});
+    </script>
 
 
 

@@ -1,7 +1,7 @@
 <section class="pricing-section ">
     <form action="/sessions/store" method="post">
         <div class="container ">
-            <div class="row heading-div ">
+            <div class="row heading-div m-0">
                 <div class="col-lg-12 text-center">
                     <h3>Our Pricing
                     </h3>

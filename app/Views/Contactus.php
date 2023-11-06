@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="public/css/footer.css">
-    <link rel="stylesheet" href="public/css/contactus.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <!-- fontawesome icon cdn -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- jQuery library -->
-   
-
-</head>
-
+<?php include('header.php')?>
 <body>
     <section class="contactus">
 
@@ -57,14 +38,10 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="card cont-card text-center cont-card1">
-                        <img src="public/images/mobile-phone.png" />
+                        <img class="iconc" src="public/images/mobile-phone.png"  />
 
                         <h3><a href="tel:70205 09962">Call Us</a> </h3>
-                        <p><a href="tel:70205 09962">+91 70205 09962
-
-
-
-                            </a></p>
+                        <p><a href="tel:70205 09962">+91 70205 09962</a></p>
 
                     </div>
 
@@ -72,7 +49,7 @@
 
                 <div class="col-lg-4">
                     <div class="card cont-card text-center cont-card2">
-                        <img src="public/images/mail.png" />
+                        <img class="iconc" src="public/images/mail.png" />
 
                         <h3><a href="mailTo:contact@enatyam.com">Mail Us</a> </h3>
                         <p><a href="mailTo:contact@enatyam.com">contact@enatyam.com
@@ -87,7 +64,7 @@
 
                 <div class="col-lg-4">
                     <div class="card cont-card text-center cont-card3">
-                        <img src="public/images/pin.png" />
+                        <img class="iconc" src="public/images/pin.png" />
 
                         <h3><a href="mailTo:contact@enatyam.com">Address</a> </h3>
                         <p style="visibility:hidden"><a href="mailTo:contact@enatyam.com">contact@enatyam.com
@@ -138,9 +115,4 @@
 
 
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</body>
-<?php include('footer.php'); ?>
-</html>
+    <?php include('footer.php')?>
