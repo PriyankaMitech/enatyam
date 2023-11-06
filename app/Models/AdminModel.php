@@ -20,7 +20,7 @@ class AdminModel extends Model
         // $today = date('Y-m-d');
         // return $this->where('DATE(Date)', $today)->findAll();
         $today = date('Y-m-d');
-        return $this->where('DATE(`Book_Date_Time`) =', $today)
+        return $this->where('DATE(`Book_Date`) =', $today)
                     ->findAll();
        
        
@@ -136,15 +136,13 @@ class AdminModel extends Model
       
     }
 
-    // public function studentassignstatus()
-    // {
-    //     return $this->db
-    //     ->table('register')
-    //  //   ->select('*') // Select all columns, you can specify the columns you need
-    //     ->where('Assign_Techer_id >', 0)
-    //     ->get()
-    //     ->getResult();
-    // }
+    public function getAllDemoData()
+    {
+        return $this->db->table('free_demo_table')
+        ->select('*')
+        ->get()
+        ->getResult();
+    }
 
     public function getFacultyData()
     {

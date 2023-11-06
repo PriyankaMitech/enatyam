@@ -1523,34 +1523,34 @@ function handleSubmit(collapse_val)
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
-<script>
 
     <script>
-let prevScrollPos = window.pageYOffset;
-const navbar = document.querySelector('.tophead');
+        
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector('.tophead');
 
-window.addEventListener('scroll', () => {
-    const currentScrollPos = window.pageYOffset;
+        window.addEventListener('scroll', () => {
+        const currentScrollPos = window.pageYOffset;
 
-    if (currentScrollPos > prevScrollPos) {
-        // Scrolling down
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up or at the top
-        navbar.style.transform = 'translateY(0)';
-        navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-    }
+            if (currentScrollPos > prevScrollPos) {
+                // Scrolling down
+                navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up or at the top
+                    navbar.style.transform = 'translateY(0)';
+                    navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+                }
 
-    prevScrollPos = currentScrollPos;
-});
+                prevScrollPos = currentScrollPos;
+        });
 
-// Ensure initial state is transparent if at the top
-window.addEventListener('load', () => {
-    if (window.pageYOffset === 0) {
-        navbar.style.backgroundColor = 'transparent';
-    }
-});
-</script>
+        // Ensure initial state is transparent if at the top
+        window.addEventListener('load', () => {
+            if (window.pageYOffset === 0) {
+                navbar.style.backgroundColor = 'transparent';
+         }
+        });
+    </script>
 
 
     <?php } ?>
@@ -1737,10 +1737,44 @@ window.addEventListener('load', () => {
         navbar.style.backgroundColor = 'transparent';
     }
 });
+
+<script>
+    // JavaScript to handle time input validation
+    var startTimeInput = document.getElementById("start-time");
+    var endTimeInput = document.getElementById("end-time");
+
+    startTimeInput.addEventListener("change", validateTimeInput);
+    endTimeInput.addEventListener("change", validateTimeInput);
+
+    function validateTimeInput() {
+        var startTime = startTimeInput.value;
+        var endTime = endTimeInput.value;
+
+        if (startTime > endTime) {
+            document.getElementById("demo_class-timespanid").textContent = "Start time must be before end time.";
+            // You can disable the form submission or take other actions as needed.
+        } else {
+            document.getElementById("demo_class-timespanid").textContent = "";
+            // The times are valid; you can proceed with form submission.
+        }
+    }
     </script>
 
 
 
+    function validateTimeInput() {
+        var startTime = startTimeInput.value;
+        var endTime = endTimeInput.value;
+
+        if (startTime > endTime) {
+            document.getElementById("demo_class-timespanid").textContent = "Start time must be before end time.";
+            // You can disable the form submission or take other actions as needed.
+        } else {
+            document.getElementById("demo_class-timespanid").textContent = "";
+            // The times are valid; you can proceed with form submission.
+        }
+    }
+</script>
 
     
 </body>
