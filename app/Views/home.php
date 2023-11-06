@@ -556,7 +556,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-4 Alp-main">
+            <div class="col-md-2 col-6 Alp-main">
                 <div class="Alp-populated">
                     <div class="Alp">
                         <div class="Alp-number-wrapper">
@@ -568,7 +568,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-4 Alp-main">
+            <div class="col-md-2 col-6 Alp-main">
                 <div class="Alp-populated">
 
                     <div class="Alp">
@@ -919,14 +919,14 @@
 <section class="comming-section">
    <div class="container cont-width">
       <div class="row">
-         <div class="col-lg-12 mt-3 text-center coming-soon-img "><img src="public/images/logo3.png" width="15%" /></div>
+         <div class="col-lg-12 text-center coming-soon-img "><img src="public/images/logo3.png" width="15%" class="commingsoonimg"/></div>
          <div class="col-lg-12" style="padding-left:opx">
             <div class="accordion-item">
             </div>
-            <div class="row coms-row ">
+            <div class="row coms-row">
                <div class="col-lg-6 col-xs-6 col-sm-4">
                   <ul class="coming-soon-ul">
-                     <li> Super Speaker : Public Speaking</li>
+                     <li > Super Speaker : Public Speaking</li>
                      <li>Young Shakespeare : Creative Writing</li>
                      <li>Super Coder : Coding for Kids</li>
                      <li>Video Editing</li>
@@ -955,8 +955,10 @@
 
 
     <div class="row ">
-         <div class="col-lg-12 text-center">
+         <div class="col-md-6 col-12 text-center">
             <a href="<?php echo base_url('demo');?>" class="btnnew btn-book">Book your Free demo now</a>
+         </div>
+         <div class="col-md-6 col-12 text-center">
             <a href="<?php echo base_url('Contactus');?>" class="btnnew btn-request">Not sure ?? Request a call back</a>
          </div>
       </div>
