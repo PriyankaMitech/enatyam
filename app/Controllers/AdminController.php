@@ -27,12 +27,13 @@ class AdminController extends BaseController
          $data['PendingDemo'] = $model->getPendingDemo();
          $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
          $data['getPaymentstatus']=$model->Paymentstatus();
+         $data['getAllDemoList']=$model->getAllDemoData();
   //       $data['getassignstudentstatus']=$model->studentassignstatus();
         
   
   //  print_r($data);die;
-   //print_r($data['ConductedDemo']);die;
-  // echo "<pre>"; print_r($data['PendingDemo']);echo "</pre>"; die();
+   //print_r($data['getAllDemoList']);die;
+  // echo "<pre>"; print_r($data['ConductedDemo']);echo "</pre>"; die();
 
         return view('AdminDashboard', $data);
     }
