@@ -83,4 +83,38 @@
     margin-top: 4px;
     margin-bottom: 33px;
   }
+
+  .price-btn p {
+    font-size: 10px !important;
+  }
+  .op {
+    margin-bottom: 30px !important;
+  }
+  .comming-section {
+    padding: 0px 0px px !important;
+  }
+  .commingsoonimg {
+    width: 100%;
+  }
+  .coming-soon-ul li {
+    margin-bottom: 10px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+  }
+  .comming-soon-p {
+    text-align: justify;
+  }
+  .opman {
+    display: none !important;
+  }
+  .btnnew {
+    font-size: 13px !important;
+  }
+  .btn-book,
+  .btn-request {
+    margin: 0px;
+  }
+  footer {
+    padding: 0px 0px;
+  }
 }

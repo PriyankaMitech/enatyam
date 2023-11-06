@@ -3,12 +3,12 @@
    <div class="container cont-width">
      
       <div class="row">
-         <div class="col-lg-4 col-sm-4 footer-div">
+         <div class="col-md-4 col-12 footer-div">
             <img src="public/images/logo.png" />
             <p class=" mt-2">At Enatyam, we are providing you with professional training of dance forms originating from the Indian subcontinent. Our talented mentors have been trained to provide you with an amazing dancing experience.</p>
          </div>
-         <div class="col-lg-4 col-xs-6 col-sm-4 footer-div">
-            <ul>
+         <div class="col-md-4 col-6 footer-div">
+            <ul class="row">
             <li>
                   <a href="Home">Home</a>
                </li>
@@ -31,80 +31,74 @@
                </li> -->
             </ul>
          </div>
-         <div class="col-lg-4 col-xs-6 col-sm-4 footer-div">
+         <div class="col-md-4 col-6 footer-div">
             <ul>
-            <li>
-                  <a href="Instruments">Instruments</a>
-               </li>
-          
-               <li>
-                  <a href="<?php echo base_url('Contactus');?>"> Contact Us</a>   
-               </li>
-               <li>
-                  <a href="<?php echo base_url('Carrier');?>">Career</a>
-               </li>
-              
-               <!-- <li>
-                  <a href="<?php echo base_url('PrivacyPolicy');?>">Privacy Policy</a>
-               </li>
-               <li> 
-                  <a href="<?php echo base_url('TermsAndConditions');?>">Terms and Conditions</a>
-               </li>
-               <li>
-                  <a href="<?php echo base_url('RefundPolicy');?>">Refund Policy</a>
-               </li>
-               <li> -->
-                  <a href="#">Blog</a>
-               </li>
+                <li>
+                    <a href="Instruments">Instruments</a>
+                </li>
+            
+                <li>
+                    <a href="<?php echo base_url('Contactus');?>"> Contact Us</a>   
+                </li>
+                <li>
+                    <a href="<?php echo base_url('Carrier');?>">Career</a>
+                </li>
+                
+                <!-- <li>
+                    <a href="<?php echo base_url('PrivacyPolicy');?>">Privacy Policy</a>
+                </li>
+                <li> 
+                    <a href="<?php echo base_url('TermsAndConditions');?>">Terms and Conditions</a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url('RefundPolicy');?>">Refund Policy</a>
+                </li>
+                <li> -->
+                    <a href="#">Blog</a>
+                </li>
             </ul>
-           
-
-
-
-
-
          </div>
       </div>
 
 	  <div class="row">
-		<div class="col-lg-12 mt-3">
+		<div class="col-md-12 col-12 mt-3">
 			<div class="social-div text-center">
 				<a href="https://www.instagram.com/enatyam.india/" class="insta-div"><i class="fa fa-instagram"></i></a>
 				<a href="https://twitter.com/e_natyam?s=08" class="twitter-div"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 				<a href="https://m.facebook.com/enatyam/" class="facebook-div"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 				<a href="#" class="youtube-div"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-       </div>
-       </div>
+            </div>
+        </div>
 
-    <div class="col-lg-12 mt-3">
-        <div class="footer-links text-center">
-            <a href="">Pune</a>                           
-            <a href="">Bangalore</a>
-            <a href="">Hyderabad</a>
-            <a href="">Chennai</a>
-        <a href="">Mumbai</a>
-        <a href="">Delhi</a>
-        <a href="">Kolkata</a>
-        <a href="">Lucknow</a>
-        <a href="">Ahmedabad</a>
-    </div>
-    </div>
+        <div class="col-md-12 col-12 mt-3">
+            <div class="footer-links text-center">
+                <a href="">Pune</a>                           
+                <a href="">Bangalore</a>
+                <a href="">Hyderabad</a>
+                <a href="">Chennai</a>
+            <a href="">Mumbai</a>
+            <a href="">Delhi</a>
+            <a href="">Kolkata</a>
+            <a href="">Lucknow</a>
+            <a href="">Ahmedabad</a>
+            </div>
+        </div>
 
-    <div class="col-lg-12 mt-3">
-        <div class="footer-links-sub text-center">
-            <a href="">USA</a>
-            <a href="">Canada</a>
-            <a href="">UK</a>
-            <a href="">Germany</a>
-        <a href="">Singapore</a>
-        <a href="">Australia</a>
-        <a href="">New Zealand</a>
-        <a href="">India</a>
-        <a href="">Dubai</a>
-    </div>
-    </div>
+        <div class="col-md-12 col-12 mt-3">
+            <div class="footer-links-sub text-center">
+                <a href="">USA</a>
+                <a href="">Canada</a>
+                <a href="">UK</a>
+                <a href="">Germany</a>
+            <a href="">Singapore</a>
+            <a href="">Australia</a>
+            <a href="">New Zealand</a>
+            <a href="">India</a>
+            <a href="">Dubai</a>
+            </div>
+        </div>
 
-    </div> 
+      </div> 
 
 
     <div class="footer-row row">
@@ -116,6 +110,7 @@
     </div>
 </footer>
 <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard') { ?>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -127,6 +122,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
 
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
     <!-- owl carousel js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
