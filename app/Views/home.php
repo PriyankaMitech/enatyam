@@ -955,11 +955,11 @@
 
 
     <div class="row ">
-         <div class="col-md-6 col-12 text-center">
-            <a href="<?php echo base_url('demo');?>" class="btnnew btn-book">Book your Free demo now</a>
+         <div class="col-md-6 col-12 text-end mb-2">
+            <a href="<?php echo base_url('demo');?>" class="btnnew btn-book text-center">Book your Free demo now</a>
          </div>
-         <div class="col-md-6 col-12 text-center">
-            <a href="<?php echo base_url('Contactus');?>" class="btnnew btn-request">Not sure ?? Request a call back</a>
+         <div class="col-md-6 col-12 text-star">
+            <a href="<?php echo base_url('Contactus');?>" class="btnnew btn-request text-center">Not sure ?? Request a call back</a>
          </div>
       </div>
       <hr>
