@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,9 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
+
 <body>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- /:\xampp\htdocs\MISdashboard\public\assets\plugins\fontawesome-free\css\all.min.css -->
@@ -21,7 +23,7 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  
+
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -31,16 +33,16 @@
     </a>
 
     <!-- Sidebar -->
-   
+
 
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
         <div class="image">
           <img src="public/AdmoinLogo.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?php echo base_url()?>StudentDashboard" class="d-block">Student</a>
+          <a href="<?php echo base_url() ?>StudentDashboard" class="d-block"><?= $username = session()->get('user_name'); ?></a>
         </div>
       </div>
 
@@ -49,7 +51,7 @@
         <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
-          
+
           </div>
         </div>
       </div>
@@ -59,11 +61,11 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          
-          
-            </a>     
-         
-              <li class="nav-item">
+
+
+          </a>
+
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class=" nav-icon fa fa-calendar"></i>
               <p>
@@ -85,34 +87,34 @@
                   <p>Reshedule</p>
                 </a>
               </li>
-             
+
             </ul>
           </li>
-             
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon 	fa fa-child"></i>
               <p>
-               Faculty
+                Faculty
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url()?>UplodeVideo" class="nav-link">
+                <a href="<?php echo base_url() ?>UplodeVideo" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p> Uplode Video</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url()?>StudentSideBarVideo" class="nav-link">
+                <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Faculty uploded Video</p>
                 </a>
               </li>
             </ul>
           </li>
-          
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon 	fa fa-credit-card"></i>
@@ -129,14 +131,14 @@
                   </p>
                 </a>
               </li>
-                          
-           </ul>
+
+            </ul>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-comment-dots"></i>
               <p>
-               Massages
+                Massages
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -154,7 +156,7 @@
                   <p>Email</p>
                 </a>
               </li>
-              
+
             </ul>
           </li>
           </li>
@@ -162,18 +164,19 @@
       </nav>
       <!-- /.sidebar-menu -->
     </div>
-    
+
     <!-- /.sidebar -->
   </aside>
   </div>
   <script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
 </body>
+
 </html>

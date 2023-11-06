@@ -1,6 +1,5 @@
-
-    <?php include('header.php');?>
-    <section class="s_header-section">
+<?php include('header.php'); ?>
+<section class="s_header-section">
     <div class="container-fluid">
 
         <!-- image & button -->
@@ -81,7 +80,7 @@
         </div>
 
     </div>
-    <div class="btn btnstart"><a href="<?php echo base_url('demo');?>" class="textAlignCen">Get Started</a> </div>
+    <div class="btn btnstart"><a href="<?php echo base_url('demo'); ?>" class="textAlignCen">Get Started</a> </div>
 
     <!-- <a href="" class="textAlignCen">Get Started</a>
     </div> -->
@@ -94,7 +93,7 @@
 <!-- Line Sepretor Part -->
 
 
-<div class="row heading-div ">
+<div class="row heading-div">
     <div class="col-lg-12 text-center">
         <h3>Courses Offering
         </h3>
@@ -326,19 +325,11 @@
                 <div class="col-lg-4" style="padding-left:0px">
 
 
-                    <div class="ST_Inspire-element ST_Inspire-element-3e3fada ST_Inspire-widget ST_Inspire-widget-video"
-                        data-id="3e3fada" data-element_type="widget"
-                        data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/LxDF2EzI-8Y&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}"
-                        data-widget_type="video.default">
+                    <div class="ST_Inspire-element ST_Inspire-element-3e3fada ST_Inspire-widget ST_Inspire-widget-video" data-id="3e3fada" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/LxDF2EzI-8Y&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                         <div class="ST_Inspire-widget-container">
 
                             <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    title="enatyam kathak student feedback II Swara USA  II kathak for beginners II"
-                                    width="640" height="360"
-                                    src="https://www.youtube.com/embed/LxDF2EzI-8Y?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=1"
-                                    id="widget2"></iframe>
+                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="enatyam kathak student feedback II Swara USA  II kathak for beginners II" width="640" height="360" src="https://www.youtube.com/embed/LxDF2EzI-8Y?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=1" id="widget2"></iframe>
                             </div>
                         </div>
                     </div>
@@ -347,18 +338,10 @@
                 <div class="col-lg-4" style="padding-left:0px">
 
 
-                    <div class="ST_Inspire-element ST_Inspire-element-6ca1fbd ST_Inspire-widget ST_Inspire-widget-video"
-                        data-id="6ca1fbd" data-element_type="widget"
-                        data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/qXWNN-sakqk&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}"
-                        data-widget_type="video.default">
+                    <div class="ST_Inspire-element ST_Inspire-element-6ca1fbd ST_Inspire-widget ST_Inspire-widget-video" data-id="6ca1fbd" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/qXWNN-sakqk&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                         <div class="ST_Inspire-widget-container">
                             <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    title="enatyam kathak student feedback and progressII kids beginners kathak batch II Roohi Delhi"
-                                    width="640" height="360"
-                                    src="https://www.youtube.com/embed/qXWNN-sakqk?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=3"
-                                    id="widget4"></iframe>
+                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="enatyam kathak student feedback and progressII kids beginners kathak batch II Roohi Delhi" width="640" height="360" src="https://www.youtube.com/embed/qXWNN-sakqk?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=3" id="widget4"></iframe>
                             </div>
 
                         </div>
@@ -368,17 +351,10 @@
                 <div class="col-lg-4" style="padding-left:0px">
 
 
-                    <div class="ST_Inspire-element ST_Inspire-element-66164fa ST_Inspire-widget ST_Inspire-widget-video"
-                        data-id="66164fa" data-element_type="widget"
-                        data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/96eSNaPxFBc&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}"
-                        data-widget_type="video.default">
+                    <div class="ST_Inspire-element ST_Inspire-element-66164fa ST_Inspire-widget ST_Inspire-widget-video" data-id="66164fa" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/96eSNaPxFBc&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                         <div class="ST_Inspire-widget-container">
                             <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    title="Enatyam student's father feedback" width="640" height="360"
-                                    src="https://www.youtube.com/embed/96eSNaPxFBc?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=5"
-                                    id="widget6"></iframe>
+                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Enatyam student's father feedback" width="640" height="360" src="https://www.youtube.com/embed/96eSNaPxFBc?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=5" id="widget6"></iframe>
                             </div>
                         </div>
 
@@ -390,35 +366,20 @@
             <div class="row">
                 <div class="col-lg-4" style="padding-left:0px">
 
-                    <div class="ST_Inspire-element ST_Inspire-element-6b952c1 ST_Inspire-widget ST_Inspire-widget-video"
-                        data-id="6b952c1" data-element_type="widget"
-                        data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/XLAu2-6zcxQ&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}"
-                        data-widget_type="video.default">
+                    <div class="ST_Inspire-element ST_Inspire-element-6b952c1 ST_Inspire-widget ST_Inspire-widget-video" data-id="6b952c1" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/XLAu2-6zcxQ&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                         <div class="ST_Inspire-widget-container">
                             <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    title="fatema learning experience on enatyam platform testimonial" width="640"
-                                    height="360"
-                                    src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=7"
-                                    id="widget8"></iframe>
+                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="fatema learning experience on enatyam platform testimonial" width="640" height="360" src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=7" id="widget8"></iframe>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4" style="padding-left:0px">
 
-                    <div class="ST_Inspire-element ST_Inspire-element-c74e2f6 ST_Inspire-widget ST_Inspire-widget-video"
-                        data-id="c74e2f6" data-element_type="widget"
-                        data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/djM1jTlnLlk&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}"
-                        data-widget_type="video.default">
+                    <div class="ST_Inspire-element ST_Inspire-element-c74e2f6 ST_Inspire-widget ST_Inspire-widget-video" data-id="c74e2f6" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/djM1jTlnLlk&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                         <div class="ST_Inspire-widget-container">
                             <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    title="kathak online class #enatyam" width="640" height="360"
-                                    src="https://www.youtube.com/embed/djM1jTlnLlk?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=9"
-                                    id="widget10"></iframe>
+                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="kathak online class #enatyam" width="640" height="360" src="https://www.youtube.com/embed/djM1jTlnLlk?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=9" id="widget10"></iframe>
                             </div>
                         </div>
                     </div>
@@ -429,18 +390,10 @@
 
                 <div class="col-lg-4" style="padding-left:0px">
 
-                    <div class="ST_Inspire-element ST_Inspire-element-aa0bc0c ST_Inspire-widget ST_Inspire-widget-video"
-                        data-id="aa0bc0c" data-element_type="widget"
-                        data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/aV_xErXRUYE&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}"
-                        data-widget_type="video.default">
+                    <div class="ST_Inspire-element ST_Inspire-element-aa0bc0c ST_Inspire-widget ST_Inspire-widget-video" data-id="aa0bc0c" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/aV_xErXRUYE&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                         <div class="ST_Inspire-widget-container">
                             <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    title="Kathak online learning expereince on enatyam II Tia Canada II kids kathak learning from beginners"
-                                    width="640" height="360"
-                                    src="https://www.youtube.com/embed/aV_xErXRUYE?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=11"
-                                    id="widget12"></iframe>
+                                <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Kathak online learning expereince on enatyam II Tia Canada II kids kathak learning from beginners" width="640" height="360" src="https://www.youtube.com/embed/aV_xErXRUYE?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=11" id="widget12"></iframe>
                             </div>
                         </div>
                     </div>
@@ -652,218 +605,218 @@
 </section>
 <!-- superstar slide -->
 <section class="faculty-section">
-   <div class="container cont-width">
-      <div class="row heading-div ">
-         <div class="col-lg-12 text-center">
-            <h3>Super Star Faculty
-            </h3>
-            <span class="line"></span>
+    <div class="container cont-width">
+        <div class="row heading-div ">
+            <div class="col-lg-12 text-center">
+                <h3>Super Star Faculty
+                </h3>
+                <span class="line"></span>
 
-         </div>
-
-      </div>
-      <div class="row">
-         <div class="col-lg-12">
-            <div class="owl-carousel owl-theme">
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/veera.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Veera</div>
-                        <div class="faculty-content-team__member-position">
-                           Yoga
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/priti.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Priti</div>
-                        <div class="faculty-content-team__member-position">
-                           Kathak Dance
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/neha.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Neha</div>
-                        <div class="faculty-content-team__member-position">
-                           Semi Classical Dance
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/priyanka.jpeg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Priyanka</div>
-                        <div class="faculty-content-team__member-position">
-                           Kathak Dance
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/priya.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Priya</div>
-                        <div class="faculty-content-team__member-position">
-                           Yoga
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/sweta.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">sweta</div>
-                        <div class="faculty-content-team__member-position">
-                           Carnatic Music
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/jaya.png" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Jaya</div>
-                        <div class="faculty-content-team__member-position">
-                           Bharatanatyam Dance
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/ketki.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">ketki</div>
-                        <div class="faculty-content-team__member-position">
-                           Hindustani Music
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/Koyali.png" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Koyali</div>
-                        <div class="faculty-content-team__member-position">
-                           Hindustani Music
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/krutika.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">krutika</div>
-                        <div class="faculty-content-team__member-position">
-                           Semi Classical Dance
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/Anila.jpeg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Anila</div>
-                        <div class="faculty-content-team__member-position">
-                           Bollywood Dance
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/Anika.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Anika</div>
-                        <div class="faculty-content-team__member-position">
-                           Yoga
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/Ila.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Ila</div>
-                        <div class="faculty-content-team__member-position">
-                           Bollywood Singing
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/Samira.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Samira</div>
-                        <div class="faculty-content-team__member-position">
-                           Yoga
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="faculty-div">
-                     <div class="faculty-div1">
-                        <img src="public/images/sanjay.jpg" />
-                     </div>
-                     <div class="faculty-content mt-lg-4">
-                        <div class="faculty-content-team__member-name">Sanjay</div>
-                        <div class="faculty-content-team__member-position">
-                           Yoga
-                        </div>
-                     </div>
-                  </div>
-               </div>
             </div>
-         </div>
-      </div>
-   </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/veera.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Veera</div>
+                                <div class="faculty-content-team__member-position">
+                                    Yoga
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/priti.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Priti</div>
+                                <div class="faculty-content-team__member-position">
+                                    Kathak Dance
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/neha.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Neha</div>
+                                <div class="faculty-content-team__member-position">
+                                    Semi Classical Dance
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/priyanka.jpeg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Priyanka</div>
+                                <div class="faculty-content-team__member-position">
+                                    Kathak Dance
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/priya.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Priya</div>
+                                <div class="faculty-content-team__member-position">
+                                    Yoga
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/sweta.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">sweta</div>
+                                <div class="faculty-content-team__member-position">
+                                    Carnatic Music
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/jaya.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Jaya</div>
+                                <div class="faculty-content-team__member-position">
+                                    Bharatanatyam Dance
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/ketki.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">ketki</div>
+                                <div class="faculty-content-team__member-position">
+                                    Hindustani Music
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/Koyali.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Koyali</div>
+                                <div class="faculty-content-team__member-position">
+                                    Hindustani Music
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/krutika.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">krutika</div>
+                                <div class="faculty-content-team__member-position">
+                                    Semi Classical Dance
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/Anila.jpeg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Anila</div>
+                                <div class="faculty-content-team__member-position">
+                                    Bollywood Dance
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/Anika.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Anika</div>
+                                <div class="faculty-content-team__member-position">
+                                    Yoga
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/Ila.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Ila</div>
+                                <div class="faculty-content-team__member-position">
+                                    Bollywood Singing
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/Samira.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Samira</div>
+                                <div class="faculty-content-team__member-position">
+                                    Yoga
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="public/images/sanjay.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name">Sanjay</div>
+                                <div class="faculty-content-team__member-position">
+                                    Yoga
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -878,50 +831,48 @@
 
 <!-- comming soon -->
 <section class="comming-section">
-   <div class="container cont-width">
-      <div class="row">
-         <div class="col-lg-12 mt-3 text-center coming-soon-img "><img src="public/images/logo3.png" width="15%" /></div>
-         <div class="col-lg-12" style="padding-left:opx">
-            <div class="accordion-item">
-            </div>
-            <div class="row coms-row ">
-               <div class="col-lg-6 col-xs-6 col-sm-4">
-                  <ul class="coming-soon-ul">
-                     <li> Super Speaker : Public Speaking</li>
-                     <li>Young Shakespeare : Creative Writing</li>
-                     <li>Super Coder : Coding for Kids</li>
-                     <li>Video Editing</li>
-                     <li>Art & Craft</li>
-                     <li>Creative Thinking</li>
-                     <li>Vedic Mathematics</li>
-                     <li>Language Learning</li>
-                  </ul>
-               </div>
-               <div class="col-lg-6  mt-3 text-center ">
-                  <p class="comming-soon-p">Exciting times ahead! We are thrilled to announce that a new <br>subject tailored specifically for kids is on its way to our eLearning<br> platform. Currently in the test phase, this engaging and educational <br> content is designed to spark curiosity and fuel young minds. Stay <br> tuned as we prepare to
-                     launch an enriching learning experience for<br> children everywhere!</p>
-                  <P class="comming-soon-p">
-                     Join our exclusive test run program and experience the future of education firsthand. Limited spots available!
-                  </P>
-                  <P class="comming-soon-p">
-                     write us to be the part of our test run program :<br><b><a href="mailTo:hello@enatyam.com"> hello@enatyam.com</a></b>
-                  </p>
-               </div>
-            </div>
+    <div class="container cont-width">
+        <div class="row">
+            <div class="col-lg-12 mt-3 text-center coming-soon-img "><img src="public/images/logo3.png" width="15%" /></div>
+            <div class="col-lg-12" style="padding-left:opx">
+                <div class="accordion-item">
+                </div>
+                <div class="row coms-row ">
+                    <div class="col-lg-6 col-xs-6 col-sm-4">
+                        <ul class="coming-soon-ul">
+                            <li> Super Speaker : Public Speaking</li>
+                            <li>Young Shakespeare : Creative Writing</li>
+                            <li>Super Coder : Coding for Kids</li>
+                            <li>Video Editing</li>
+                            <li>Art & Craft</li>
+                            <li>Creative Thinking</li>
+                            <li>Vedic Mathematics</li>
+                            <li>Language Learning</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6  mt-3 text-center ">
+                        <p class="comming-soon-p">Exciting times ahead! We are thrilled to announce that a new <br>subject tailored specifically for kids is on its way to our eLearning<br> platform. Currently in the test phase, this engaging and educational <br> content is designed to spark curiosity and fuel young minds. Stay <br> tuned as we prepare to
+                            launch an enriching learning experience for<br> children everywhere!</p>
+                        <P class="comming-soon-p">
+                            Join our exclusive test run program and experience the future of education firsthand. Limited spots available!
+                        </P>
+                        <P class="comming-soon-p">
+                            write us to be the part of our test run program :<br><b><a href="mailTo:hello@enatyam.com"> hello@enatyam.com</a></b>
+                        </p>
+                    </div>
+                </div>
 </section>
- 
 
 
 
 
 
-    <div class="row ">
-         <div class="col-lg-12 text-center">
-            <a href="<?php echo base_url('demo');?>" class="btnnew btn-book">Book your Free demo now</a>
-            <a href="<?php echo base_url('Contactus');?>" class="btnnew btn-request">Not sure ?? Request a call back</a>
-         </div>
-      </div>
 
-    <?php include('footer.php');?>
+<div class="row ">
+    <div class="col-lg-12 text-center">
+        <a href="<?php echo base_url('demo'); ?>" class="btnnew btn-book">Book your Free demo now</a>
+        <a href="<?php echo base_url('Contactus'); ?>" class="btnnew btn-request">Not sure ?? Request a call back</a>
+    </div>
+</div>
 
-  
+<?php include('footer.php'); ?>

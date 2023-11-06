@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,9 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
+
 <body>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- /:\xampp\htdocs\MISdashboard\public\assets\plugins\fontawesome-free\css\all.min.css -->
@@ -21,7 +23,7 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  
+
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -31,7 +33,7 @@
     </a>
 
     <!-- Sidebar -->
-   
+
 
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
@@ -40,7 +42,7 @@
           <img src="public/AdmoinLogo.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?php echo base_url()?>today" class="d-block">Admin</a>
+          <a href="<?php echo base_url() ?>today" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -61,11 +63,11 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          
-          
-            </a>     
-         
-              <li class="nav-item">
+
+
+          </a>
+
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class=" nav-icon fa fa-calendar"></i>
               <p>
@@ -74,39 +76,40 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url()?>Getcalender" class="nav-link">
+              <!-- <li class="nav-item">
+                <a href="<?php //echo base_url() 
+                          ?>Getcalender" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p>Monthly Calendar
                   </p>
                 </a>
-              </li>
+              </li> -->
               <li class="nav-item">
-                <a href="<?php echo base_url()?>getDemoDetails" class="nav-link">
+                <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Demo</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url()?>DailyClass" class="nav-link">
+                <a href="<?php echo base_url() ?>DailyClass" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Class</p>
                 </a>
               </li>
             </ul>
           </li>
-             
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon 	fa fa-child"></i>
               <p>
-               Student
+                Student
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url()?>StudentDate" class="nav-link">
+                <a href="<?php echo base_url() ?>StudentDate" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Profile</p>
                 </a>
@@ -124,7 +127,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url()?>UplodedvideoByStudent" class="nav-link">
+                <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
                   <i class="nav-icon far fa-image"></i>
                   <p>Videos/Images</p>
                 </a>
@@ -141,13 +144,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url()?>getAdminSideBarAll" class="nav-link">
+                <a href="<?php echo base_url() ?>getAdminSideBarAll" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Profile</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url()?>FacultysidebarShedule" class="nav-link">
+                <a href="<?php echo base_url() ?>FacultysidebarShedule" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p>Schedule</p>
                 </a>
@@ -159,9 +162,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url()?>NewFacultyApplication" class="nav-link">
+                <a href="<?php echo base_url() ?>NewFacultyApplication" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
-                  <p>NEW ENVIRONMENT</p>
+                  <p>New Enrollment</p>
                 </a>
               </li>
             </ul>
@@ -188,14 +191,14 @@
                   <p>Student Payments</p>
                 </a>
               </li>
-              
+
             </ul>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-comment-dots"></i>
               <p>
-               Massages
+                Massages
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -213,7 +216,7 @@
                   <p>Email</p>
                 </a>
               </li>
-              
+
             </ul>
           </li>
           </li>
@@ -221,18 +224,19 @@
       </nav>
       <!-- /.sidebar-menu -->
     </div>
-    
+
     <!-- /.sidebar -->
   </aside>
   </div>
   <script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
 </body>
+
 </html>

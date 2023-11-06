@@ -6,6 +6,7 @@
     position: relative;
     margin-top: 182px;
 }
+
 .step-button {
     width: 50px;
     height: 50px;
@@ -14,48 +15,59 @@
     background-color: #b1b1b1;
     transition: .4s;
 }
+
 .step-button[aria-expanded="true"] {
     width: 60px;
     height: 60px;
-    background-color:#b1b1b1;
+    background-color: #b1b1b1;
     color: #fff;
 }
+
 .done {
-    background-color:#ff0067;
+    background-color: #ff0067;
     color: #fff;
 }
+
 .step-item {
     z-index: 10;
     text-align: center;
 }
+
 #progress {
-  appearance:none;
+    appearance: none;
     position: absolute;
     width: 95%;
     z-index: 5;
     height: 10px;
     margin-left: 18px;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
+    margin-bottom: 80px;
 }
+
 /* to customize progress bar */
 #progress::-webkit-progress-value {
-    background-color:#ff0067;
+    background-color: #ff0067;
     transition: .5s ease;
 }
+
 #progress::-webkit-progress-bar {
     background-color: #b1b1b1;
 
 }
-.card{
-    background-color: #fad32c!important;
+
+.card {
+    background-color: #fad32c !important;
 }
-.demo_page{
+
+.demo_page {
     background-color: #fad32c;
 }
+
 #progress::-webkit-progress-value {
-    background-color:#ff0067;
+    background-color: #ff0067;
     transition: .5s ease;
 }
+
 .E_Container {
     border: 5px solid #7e858536;
     border-radius: 4px;
@@ -64,12 +76,14 @@
     text-align: left;
     background: #e1d3d9;
 }
-.qualification_Block h1{
+
+.qualification_Block h1 {
     text-align: center;
     margin-top: 20px;
 }
-.topic_Container{
-      border: 5px solid #7e858536;
+
+.topic_Container {
+    border: 5px solid #7e858536;
     border-radius: 4px;
     color: #323639;
     font-size: 14px;
@@ -78,25 +92,30 @@
     margin-left: 300px;
     margin-right: 300px;
 }
+
 /* .greenCheckbox {
    
 } */
-.About label{
+.About label {
     margin-right: 40px;
     margin-left: 20px;
 }
-.About input{
+
+.About input {
     margin-inline: 10px;
 }
-.About h5{
+
+.About h5 {
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
-.md-6{
+
+.md-6 {
     width: 100%;
     padding: 7px;
 }
-.About{
+
+.About {
     text-align: center
 }
