@@ -67,7 +67,7 @@ class CarrierController extends BaseController
             'State' => $this->request->getPost('State'),
             'District' => $this->request->getPost('District'),
             'Result_of_application' => 'Pending',
-            'Stetus' => 'N',
+            'Status' => 'N',
             'cv_filename' => $cvFileName,
             'education_certificates_filename' => $educationCertificatesFileName,
             'course_certificates_filename' => $courseCertificatesFileName,

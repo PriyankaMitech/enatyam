@@ -16,7 +16,7 @@
 
     </section>
  <section class="cont-main-section">
-        <div class="container cont-width">
+        <!-- <div class="container cont-width">
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="breadcrumb-ul">
@@ -31,13 +31,13 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
         <div class="container cont-width contact-card-section">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="card cont-card text-center cont-card1">
+                    <div class="cont-card text-center cont-card1">
                         <img class="iconc" src="public/images/mobile-phone.png"  />
 
                         <h3><a href="tel:70205 09962">Call Us</a> </h3>
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="card cont-card text-center cont-card2">
+                    <div class="cont-card text-center cont-card2">
                         <img class="iconc" src="public/images/mail.png" />
 
                         <h3><a href="mailTo:contact@enatyam.com">Mail Us</a> </h3>
@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="card cont-card text-center cont-card3">
+                    <div class="cont-card text-center cont-card3">
                         <img class="iconc" src="public/images/pin.png" />
 
                         <h3><a href="mailTo:contact@enatyam.com">Address</a> </h3>
