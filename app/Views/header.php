@@ -332,6 +332,7 @@
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Login.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Register.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/resposivestyle.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/hederresponsive.css">
    
 </head>
 
