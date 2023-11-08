@@ -271,6 +271,29 @@ public function getdate()
 
     return $tableHtml;
 }
+
+public function AdduserByadmin()
+{
+     //  print_r($_POST);die;
+    $email = $this->request->getPost('email');
+    $password = $this->request->getPost('password');
+    $mo_number = $this->request->getPost('password');
+    //  print_r($email);die;
+   $model = new AdminModel();
+   $data = [
+    'full_name' => $this->request->getVar('full_name'),
+    'email' => $email,
+    'mobile_no' =>$mo_number ,
+    'role' => 'Admin',
+    'password' => $password,
+    'confirm_pass' =>$password,
+    'is_register_done' => 'Y',
+];
+//print_r($data);die;
+    $model->AddUserByAdmin($data);
+    return redirect()->to('Getcalender');
+
+}
     }
 
     

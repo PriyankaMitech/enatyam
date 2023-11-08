@@ -63,7 +63,7 @@ $routes->get('AdminDashboard', 'Home::AdminDashboard');
 $routes->get('register', 'LoginController::register');
 $routes->post('register', 'LoginController::register');
 $routes->post('saveUser', 'LoginController::saveUser');
-
+$routes->get('ModelForLogin', 'LoginController::ModelForLogin');
 $routes->get('update_profile_data', 'LoginController::update_profile_data');
 $routes->post('update_profile_data', 'LoginController::update_profile_data');
 
@@ -90,7 +90,7 @@ $routes->post('save-event', 'AdminCalenderController::saveEvent');
 $routes->get('getDemoDetails', 'AdminController::getDemoDetails');
 $routes->get('DailyClass', 'AdminController::GetClasses');
 $routes->get('FacultysidebarShedule', 'AdminController::FacultysidebarShedule');
-
+$routes->post('AdduserByadmin', 'AdminController::AdduserByadmin');
 $routes->post('AdminController/Steusupdate', 'AdminController::Steusupdate');
 $routes->post('AdminController/backtoApplication', 'AdminController::backtoApplication');
 $routes->post('AdminController/createpassword', 'AdminController::createpassword');

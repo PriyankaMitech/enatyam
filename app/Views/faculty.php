@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Dashboard </title>
-    <?php include(APPPATH.'views/FacultySidebar2.php');?>
     <style>
     #studentTable {
         width: 100%;
@@ -83,6 +82,8 @@
 </head>
 
 <body class="hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+    
+<?php include('FacultySidebar2.php');?>
     <div class="wrapper">
 
         <!-- Preloader -->

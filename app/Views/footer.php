@@ -1769,6 +1769,32 @@ window.addEventListener('load', () => {
         }
     }
 </script>
+<script>
+jQuery(document).ready(function(){
+jQuery("#menu-icon").click(function(){
+
+jQuery("#fixed-menu").addClass("fixed-menu");
+jQuery("body").addClass("overflow-hidden");
+jQuery("#overlay").toggle();
+});
+
+});
+
+
+jQuery(document).ready(function(){
+jQuery(".header-closed i").click(function(){
+
+jQuery("#fixed-menu").removeClass("fixed-menu");
+jQuery("body").removeClass("overflow-hidden");
+jQuery("#overlay").toggle();
+
+});
+
+});
+
+
+
+    </script>
 
     
 </body>

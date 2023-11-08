@@ -62,16 +62,17 @@ class LoginController extends BaseController
                 'email' => $emailProvided,
                 'mobile_no' => $mobileNoProvided,
                 'role' => 'Student',
-                'password' => $this->request->getVar('password'),
-                'confirm_pass' => $this->request->getVar('confirm_pass'),
+                // 'password' => $this->request->getVar('password'),
+                // 'confirm_pass' => $this->request->getVar('confirm_pass'),
                 'register_id' => $last_insert_id,
                 'is_register_done' => 'Y',
             ];
             // Set session variables and redirect as needed
-            $this->session->set('user_id', $this->request->getVar($last_insert_id));
-            $this->session->set('username', $this->request->getVar('full_name'));
-            $this->session->set('email', $emailProvided);
-            $this->session->set('role','Student');
+            // $this->session->set('user_id', $this->request->getVar($last_insert_id));
+            // $this->session->set('username', $this->request->getVar('full_name'));
+            // $this->session->set('email', $emailProvided);
+            // $this->session->set('role','Student');
+            $this->session->set($getdata);
     
             $loginModel->setFacultyName($data);
             $loginModel->setStudentName($getdata);
@@ -114,15 +115,14 @@ class LoginController extends BaseController
     {
         $request = \Config\Services::request();
         $loginModel = new LoginModel();
-
-
+      
+      
             $email = $this->request->getPost('email');
             $mobile_no = $this->request->getPost('mobile_no');
             $password = $this->request->getPost('password');
     
             if (!empty($email)) {
                 $result = $loginModel->getUserByEmailAndPassword($email, $password);
-                // echo "<pre>";print_r($result);exit();
             } elseif (!empty($mobile_no)) {
                 $result = $loginModel->getUserByMobileNoAndPassword($mobile_no, $password);
             }
@@ -131,10 +131,8 @@ class LoginController extends BaseController
                 if ($result['role'] == 'Admin') {
                     return redirect()->to('today');
                 } else if ($result['role'] == 'Faculty') {
-                    $this->session->set($result);
                     return redirect()->to('FacultyDashboard');
                 } else if ($result['role'] == 'Student') {
-                    $this->session->set($result);
                     return redirect()->to('uploadMedia');
                 }
             } else {

@@ -170,6 +170,7 @@ public function fetchTofacultyShuduleSidebar()
   //  echo "<pre>"; print_r( $data);echo "</pre>"; die();  
  
 
+    return view('FacultySchedule', $data); 
     return view('FacultysideBar/Monthlyshedule',  $data);
 }
 }
