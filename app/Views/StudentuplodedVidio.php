@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
    
-    <?php include(APPPATH . 'views/FacultySidebar2.php'); ?>
 <style>.video-row {
     display: flex;
     justify-content: space-between; /* Distribute videos evenly within the row */
@@ -29,6 +28,7 @@
 
 <body>
     
+<?php include('FacultySidebar2.php'); ?>
 <div class="center" style="margin-left: 260px;">
     <div class="video-container" style="max-width: 1000px;"> <!-- Adjust max-width as needed -->
         <?php if (!empty($results)): ?>

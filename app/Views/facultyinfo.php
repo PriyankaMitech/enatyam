@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>information</title>
-    <?php include(APPPATH . 'views/Navbar.php'); ?>
-    <?php include(APPPATH.'views/FacultySidebar2.php');?>
 </head>
 
 <body>
+    <?php include(APPPATH . 'Navbar.php'); ?>
+    <?php include(APPPATH.'FacultySidebar2.php');?>
     <div class="container" style="margin-left: 265px;">
         <div class="row">
             <div class="col-12 col-sm-6">

@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule</title>
-    <?php include(APPPATH.'views/FacultySidebar2.php');?>
 
     <link rel="stylesheet" href="dist/css/style.css">
   
 </head>
 <body class="hold-transition sidebar-mini">
+  <?php echo view('FacultySidebar2'); 
+  // include('FacultySidebar2.php');?>
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
