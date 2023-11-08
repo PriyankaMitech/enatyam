@@ -14,7 +14,11 @@ class AdminModel extends Model
     protected $primaryKey = 'D_id';
     protected $allowedFields = ['Date','Conducted_Demo','name','course','AssignTecher_id',''];
 
-
+   public function AddUserByAdmin($data)
+   {
+ //   print_r($email);die;
+    $this->db->table('register')->insert($data);
+   }
     public function getTodayRecords()
     {
         // $today = date('Y-m-d');
@@ -234,13 +238,6 @@ class AdminModel extends Model
     }
     public function getdate($date)
     {
-       
-        // return $this->db->table('schedule')
-        // ->select('*')
-        // ->get()
-        // ->getResult();
- 
-
         $result = $this->db->table('schedule')
         ->where('date', $date)
         ->get()

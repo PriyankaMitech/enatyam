@@ -237,18 +237,12 @@ $faculty_data = [
 
  }
  public function getUserByEmailAndPassword($email, $password) {
-    // echo "$email";
-    // echo "$password";exit();
-    
     $session = session();
     $result = $this->db
         ->table('register')
         ->where(["email" => $email, "password" => $password])
         ->get()
         ->getRow();
-
-
-        // echo "<pre>";print_r($result);exit();
 
     if($result) {
         $sessiondata = [
@@ -259,12 +253,13 @@ $faculty_data = [
             'cpassword'          => $result->confirm_pass,
             'user_name'          => $result->full_name,
             'mobile_no'          => $result->mobile_no,
+            'Payment_status'     => $result->Payment_status,
         ];
 
         $session->set('sessiondata', $sessiondata); 
         return $sessiondata;
     } else {
-        return null; // Indicates user not found
+        return null;
     }
 }
 
@@ -328,7 +323,15 @@ public function get_user_data($id){
                     return $result; 
 
 }
-
+public function checkStudentPaymentStatus($studentId){
+    $result = $this->db
+    ->table('register')
+    ->select('Payment_status')
+    ->where(['id' => $studentId, 'Payment_status' => 'Y'])
+    ->get()
+    ->getRow();
+   return !empty($result);
+}
 
 
 }

@@ -62,8 +62,8 @@
           
           
             </a>     
-         
-              <li class="nav-item">
+            <?php if ($_SESSION['sessiondata']['Payment_status'] =='Y') { ?>
+            <li class="nav-item">
             <a href="#" class="nav-link">
               <i class=" nav-icon fa fa-calendar"></i>
               <p>
@@ -154,7 +154,18 @@
                   <p>Email</p>
                 </a>
               </li>
-              
+              <?php } ?>
+
+              <?php
+              if ($_SESSION['sessiondata']['Payment_status'] =='N') { ?>
+                  <li class="nav-item">
+                      <a href="<?php echo base_url()?>StudentSideBarVideo" class="nav-link">
+                          <i class="nav-icon fas fa-th"></i>
+                          <p>Plan details</p>
+                      </a>
+                  </li>
+              <?php } ?>
+
             </ul>
           </li>
           </li>
