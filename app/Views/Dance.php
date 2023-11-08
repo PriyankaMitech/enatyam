@@ -9,17 +9,15 @@
 
             <div class="video-section">
                 <div class="row video-row">
-                    <div class="col-4 video-col1">
-                        <P>We are commited to your</P>
-                        commitment.
-                        <div class="col-12 col-md-9 ">
-                            <button class="button-content" role="button">
+                <div class="col-4 video-col1">
+                        <P>We are commited to your </p>
+                        <p>commitment.</P>
+                 
+                   
+                      <a class="btn btn-dark btnstrt p-2" href="<?php echo base_url('StartNowPricing'); ?>"> <span class="button-text">Start Now </span></a> 
 
-                                <span class="button-text"><a href="<?php echo base_url('StartNowPricing'); ?>">Start Now if you are <br> commited </a> </span>
-
-                            </button>
-                        </div>
-                    </div>
+                          
+                    </div>  
 
                     <div class="col-4">
                         <p>30 minutes of Music a day will</p>
@@ -27,49 +25,54 @@
                     </div>
                     <div class="col-4">
                         <p>Your time @ Your Place .</p>
-                        <img src="public/images/music/vidioimg.svg">
+                        <img src="public/images/bhangra-3-e1687254641497-132x100.png">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <section class="btnSection">
+    <section class="mt-4">
         <div class="container">
 
             <!-- pills -->
-            <div class="row typesOfDance-tab">
+            <div class="typesOfDance-tab">
 
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="col-lg-1 nav-item hide" >
+                </li>
                     <!-- Kathak -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-3  col-6 nav-item p-2" role="presentation">
                         <button class="nav-link active" id="pills-Kathak-tab" data-bs-toggle="pill" data-bs-target="#pills-Kathak" type="button" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</button>
                     </li>
                     <!-- Bharatnatyam -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-3  col-6 nav-item p-2" role="presentation">
                         <button class="nav-link" id="pills-Bharatnatyam-tab" data-bs-toggle="pill" data-bs-target="#pills-Bharatnatyam" type="button" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</button>
                     </li>
                     <!-- Odissi -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-3  col-6 nav-item p-2" role="presentation">
                         <button class="nav-link" id="pills-Odissi-tab" data-bs-toggle="pill" data-bs-target="#pills-Odissi" type="button" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</button>
                     </li>
                     <!-- Bollywood -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-3  col-6 nav-item p-2" role="presentation">
                         <button class="nav-link" id="pills-Bollywood-tab" data-bs-toggle="pill" data-bs-target="#pills-Bollywood" type="button" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</button>
                     </li>
+             
                     <!-- Western -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-3  col-6 nav-item p-2" role="presentation">
                         <button class="nav-link" id="pills-Western-tab" data-bs-toggle="pill" data-bs-target="#pills-Western" type="button" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</button>
                     </li>
+                    <li class="col-lg-1 nav-item hide" >
+                </li>
                     <!-- Semi-classical -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-4 col-md-3  col-6 nav-item p-2" role="presentation">
                         <button class="nav-link big" id="pills-Semiclassical-tab" data-bs-toggle="pill" data-bs-target="#pills-Semiclassical" type="button" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</button>
                     </li>
                     <!-- Bhangra -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-4 col-md-3  col-6 nav-item p-2" role="presentation">
                         <button class="nav-link big" id="pills-Bhangra-tab" data-bs-toggle="pill" data-bs-target="#pills-Bhangra" type="button" role="tab" aria-controls="pills-Bhangra" aria-selected="false">Bhangra</button>
                     </li>
                     <!-- Folk -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-4  col-md-3  col-6 nav-item p-2" role="presentation">
                         <button class="nav-link big" id="pills-Folk-tab" data-bs-toggle="pill" data-bs-target="#pills-Folk" type="button" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</button>
                     </li>
                 </ul>
@@ -77,10 +80,10 @@
                     <!-- Kathak -->
                     <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-6">
                                 <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
                             </div>
-                            <div class="col-6 textPara-col">
+                            <div class="col-lg-6 col-6 textPara-col">
                                 <p class="textPara">
                                     Looking for the best online Kathak classes with a comprehensive syllabus? Look no further than our platform! Our online Kathak classes are designed to provide you with an immersive learning experience that will help you master this beautiful dance form. Our syllabus covers everything from the basics of footwork and hand gestures to complex choreography and improvisation techniques. With our experienced instructors and state-of-the-art technology, you can learn Kathak from the comfort of your own home and at your own pace. Join us today and discover the joy of Kathak dancing!
                                 </p>

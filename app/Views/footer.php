@@ -3,11 +3,11 @@
    <div class="container cont-width">
      
       <div class="row">
-         <div class="col-md-4 col-12 footer-div">
+         <div class="col-md-6 col-12 footer-div">
             <img src="public/images/logo.png" />
             <p class=" mt-2">At Enatyam, we are providing you with professional training of dance forms originating from the Indian subcontinent. Our talented mentors have been trained to provide you with an amazing dancing experience.</p>
          </div>
-         <div class="col-md-4 col-6 footer-div">
+         <div class="col-md-3 col-6 footer-div pt-4">
             <ul class="row">
             <li>
                   <a href="Home">Home</a>
@@ -31,7 +31,7 @@
                </li> -->
             </ul>
          </div>
-         <div class="col-md-4 col-6 footer-div">
+         <div class="col-md-3 col-6 footer-div pt-4">
             <ul>
                 <li>
                     <a href="Instruments">Instruments</a>

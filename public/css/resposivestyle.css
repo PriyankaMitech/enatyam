@@ -1,3 +1,8 @@
+.btnstrt {
+  background-color: #f68535 !important;
+  border-radius: 50px 50px 50px 50px !important;
+}
+
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
   /* .hide {
@@ -25,10 +30,11 @@
   }
   .heading-div h3 {
     font-size: 25px !important;
-    margin-top: 17px !important;
+    margin-top: 9px !important;
   }
   .btnstart {
-    font-size: 10px !important;
+    font-size: 8px !important;
+    line-height: 24px !important;
   }
   .btnSection {
     padding: 0px 0px 0px 0px !important;
@@ -43,13 +49,16 @@
   .heading {
     font-size: 23px;
     font-weight: 400;
-    padding: 7px;
+    padding: 0px;
   }
-  .scm {
+  /* .scm {
     margin-bottom: -18px !important;
+  } */
+  .learning_Platform-section {
+    margin-top: 20px;
   }
   .join-now-btn {
-    width: 330px;
+    width: 185px;
   }
   .counter-value {
     font-size: 16px;
@@ -118,6 +127,85 @@
   footer {
     padding: 0px 0px;
   }
+  .video-section {
+    display: none;
+  }
+  #danceVideo {
+    width: 100%;
+    height: auto;
+  }
+  .howWorkBlock {
+    height: 200px;
+  }
+
+  .Alp-populated {
+    padding: 5px;
+  }
+
+  .howItWorkSteps {
+    margin: -20px 0 9px;
+  }
+  .howWorkBlock1 {
+    padding-left: calc(var(--bs-gutter-x) * 0);
+  }
+  .howWorkBlock3 {
+    padding-right: calc(var(--bs-gutter-x) * 0);
+  }
+  .co {
+    margin-bottom: 6px;
+  }
+  .stories-section {
+    margin-top: 20%;
+  }
+
+  .line_1 {
+    max-width: 1320px;
+    margin-top: 42px;
+  }
+  .join-now-btn {
+    padding: 10px 21px;
+
+    font-size: 20px !important;
+    width: 275px;
+  }
+
+  .heading_new {
+    margin-top: -4px !important;
+    margin-bottom: 14px !important;
+  }
+  .icon1 {
+    margin-left: 32px !important;
+  }
+  .sc_heading {
+    font-size: 31px !important;
+  }
 }
 
 /* For Tablet Screen max-width: 991 min-width: 768*/
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .hide {
+    display: none;
+  }
+
+  .join-now-btn {
+    width: 212px;
+  }
+
+  .price-btn p {
+    margin-bottom: 3px !important;
+    font-size: 16px;
+  }
+  .commingsoonimg {
+    width: 30%;
+  }
+  .comming-soon-p {
+    text-align: justify;
+  }
+  footer {
+    padding: 0px 0px;
+  }
+  .howWorkBlock {
+    height: 200px;
+  }
+}

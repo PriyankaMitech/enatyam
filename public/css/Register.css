@@ -12,8 +12,13 @@
 
 .text-center {
   align-items: center;
-  margin-bottom: 45px;
+  /* margin-bottom: 45px; */
+  margin-bottom: 35px;
+
   margin-top: -40px;
+}
+.htgs {
+  margin-top: 35px;
 }
 .modal-body {
   position: relative;
@@ -43,3 +48,25 @@
 /* .modal {
     background: rgba(0,0,0,0.6);
 } */
+.icon1 {
+  margin-left: 89px !important;
+}
+
+.icon2 {
+  margin-left: 39px !important;
+}
+
+.icon3 {
+  margin-left: 38px !important;
+}
+.icon4 {
+  margin-left: 40px !important;
+}
+
+.icon5 {
+  margin-left: 33px !important;
+}
+
+.pricing-section {
+  margin-top: 55px !important;
+}
