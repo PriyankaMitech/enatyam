@@ -38,7 +38,7 @@
 </section>
 
 
-<div class="howenatyamWorks ">
+<div class="howenatyamWorks mt-5">
     <div class="heading text-center">
         <b<h3 class="title-3">How enatyam Works?</h3></b><span class="line"></span>
     </div>
@@ -62,8 +62,8 @@
 
     <div>
 
-        <div class="row workSections text-center">
-            <div class="col-md-4 col-4 howWorkBlock">
+        <div class="row workSections text-center m-0">
+            <div class="col-md-4 col-4 howWorkBlock howWorkBlock1">
                 <img src="public/images/hew1.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">1</span> <span>Book a Demo</span></p>
                 <p class="hwDesc">Book a Free Demo Class with a Tutor.</p>
@@ -74,14 +74,14 @@
                 <p class="hwDesc">Attend the Demo class as scheduled.</p>
             </div>
            
-            <div class="col-md-4 col-4 howWorkBlock ">
+            <div class="col-md-4 col-4 howWorkBlock howWorkBlock3">
                 <img src="public/images/hew3.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">3</span> <span>Pay and Start</span></p>
                 <p class="hwDesc">Use enatyam SecurePay to pay and start your Classes.</p>
             </div>
-            <div class="col-md-4 col-4 " ></div>
-            <div class="col-md-4 col-4  "><a href="<?php echo base_url('demo');?>" class="btn btnstart textAlignCen">Get Started</a> </div>
-            <div class="col-md-4 col-4 " ></div>
+            <div class="col-md-4 col-4" ></div>
+            <div class="col-md-4 col-4"><a href="<?php echo base_url('demo');?>" class="btn btnstart textAlignCen">Get Started</a> </div>
+            <div class="col-md-4 col-4" ></div>
         </div>
 
     </div>
@@ -98,8 +98,8 @@
 <!-- Line Sepretor Part -->
 
 
-<div class="row heading-div">
-    <div class="col-lg-12 text-center">
+<div class="row heading-div m-0 pt-5">
+    <div class="col-lg-12 text-center co">
         <h3>Courses Offering</h3>
         <span class="line"></span>
     </div>
@@ -112,58 +112,58 @@
 
             <ul class="row nav nav-pills" id="pills-tab" role="tablist">
                 <!-- Kathak -->
-                <li class="col-md-1 nav-item hide" >
+                <li class="col-lg-1 nav-item hide" >
                 </li>
-                <li class="col-md-2 col-6 nav-item " role="presentation">
+                <li class="col-lg-2 col-md-3  col-6 nav-item " role="presentation">
                     <button class="nav-link active" id="pills-Kathak-tab" data-bs-toggle="pill" data-bs-target="#pills-Kathak" type="button" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</button>
                 </li>
                 <!-- Bharatnatyam -->
-                <li class="col-md-2 col-6 nav-item" role="presentation">
+                <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Bharatnatyam-tab" data-bs-toggle="pill" data-bs-target="#pills-Bharatnatyam" type="button" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</button>
                 </li>
                 <!-- Bollywood Dance -->
-                <li class="col-md-2 col-6 nav-item" role="presentation">
+                <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-BollywoodDance-tab" data-bs-toggle="pill" data-bs-target="#pills-BollywoodDance" type="button" role="tab" aria-controls="pills-BollywoodDance" aria-selected="false">Bollywood Dance</button>
                 </li>
                 <!-- Hindustani Vocal -->
-                <li class="col-md-2 col-6 nav-item" role="presentation">
+                <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-HindustaniVocal-tab" data-bs-toggle="pill" data-bs-target="#pills-HindustaniVocal" type="button" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="false">Hindustani Vocal</button>
                 </li>
                 <!-- Carnatic Vocal -->
-                <li class="col-md-2 col-6 av-item" role="presentation">
+                <li class="col-lg-2 col-md-3 col-6 av-item" role="presentation">
                     <button class="nav-link" id="pills-CarnaticVocal-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocal" type="button" role="tab" aria-controls="pills-CarnaticVocal" aria-selected="false">Carnatic Vocal</button>
                 </li>
                 <!-- Western Singing -->
-                <li class="col-md-1 nav-item hide" >
+                <li class="col-lg-1 nav-item hide" >
                 </li>
-                <li class="col-md-1 nav-item hide" >
+                <li class="col-lg-1 nav-item hide" >
                 </li>
                 <!-- Western Singing -->
-                <li class="col-md-2 col-6 nav-item" role="presentation">
+                <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-WesternSinging-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternSinging" type="button" role="tab" aria-controls="pills-WesternSinging" aria-selected="false">Western Singing</button>
                 </li>
                 <!-- Guitar -->
-                <li class="col-md-2 col-6 nav-item" role="presentation">
+                <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Guitar-tab" data-bs-toggle="pill" data-bs-target="#pills-Guitar" type="button" role="tab" aria-controls="pills-Guitar" aria-selected="false">Guitar</button>
                 </li>
                 <!-- Keyboard -->
-                <li class="col-md-2 col-6 nav-item" role="presentation">
+                <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Keyboard-tab" data-bs-toggle="pill" data-bs-target="#pills-Keyboard" type="button" role="tab" aria-controls="pills-Keyboard" aria-selected="false">Keyboard</button>
                 </li>
                 <!-- Yoga --> 
-                <li class="col-md-2 col-6 nav-item" role="presentation">
+                <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Yoga-tab" data-bs-toggle="pill" data-bs-target="#pills-Yoga" type="button" role="tab" aria-controls="pills-Yoga" aria-selected="false">Yoga</button>
                 </li>
                 <!-- Coming Soon -->
-                <li class="col-md-2 col-6 nav-item" role="presentation">
+                <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-ComingSoon-tab" data-bs-toggle="pill" data-bs-target="#pills-ComingSoon" type="button" role="tab" aria-controls="pills-ComingSoon" aria-selected="false">Coming Soon</button>
                 </li>
-                <li class="col-md-1 nav-item hide" >
+                <li class="col-lg-1 nav-item hide" >
                 </li>
        
             </ul>
     
-            <div class="tab-content mt-5" id="pills-tabContent">
+            <div class="tab-content mt-1" id="pills-tabContent">
                 <!-- Kathak -->
                 <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row">
@@ -171,7 +171,7 @@
                             <img src="public/images/Home/kathak.svg" class="danceimg home">
                         </div>
                      
-                        <div class="col-md-6 col-12 text-col mt-5">
+                        <div class="col-md-6 col-12 text-col mt-1">
                         <h3 class="heading"> - Kathak</h3>
                             <p class="">
                           
@@ -191,7 +191,7 @@
                             <img src="public/images/Home/bharatnatyam.svg" class="danceimg home">
                         </div>
               
-                        <div class="col-md-6 col-12 text-col mt-5">
+                        <div class="col-md-6 col-12 text-col mt-1">
                         <h3 class="heading"> - Bharatnatyam</h3>
                             <p >
                                 Experience the grace and beauty of Bharatanatyam with our online dance classes! Our syllabus covers the fundamentals of this ancient Indian classical dance form, from basic postures and hand gestures to complex choreography and improvisation techniques. Our experienced instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn Bharatanatyam from the comfort of your own home and at your own pace. Join our community of dancers today and discover the rich cultural heritage and artistry of Bharatanatyam! </p>
@@ -208,7 +208,7 @@
                             <img src="public/images/Home/bollywood-dance.png" class="danceimg home">
                         </div>
                     
-                        <div class="col-md-6 col-12 text-col mt-5">
+                        <div class="col-md-6 col-12 text-colmt-1">
                         <h3 class="heading"> - Bollywood Dance</h3>
 
                             <p >
@@ -226,7 +226,7 @@
                             <img src="public/images/Home/hindustani-vocal.png" class="danceimg home">
                         </div>
                  
-                        <div class="col-md-6 col-12 text-col mt-5">
+                        <div class="col-md-6 col-12 text-col mt-1">
                         <h3 class="heading"> - Hindustani Vocal</h3>
                             <p>
 
@@ -244,7 +244,7 @@
                             <img src="public/images/Home/carnatic-vocal.svg" class="danceimg home">
                         </div>
              
-                        <div class="col-md-6 col-12 text-col mt-5">
+                        <div class="col-md-6 col-12 text-colmt-1">
                         <h3 class="heading"> - Carnatic Vocal</h3>
 
                             <p >
@@ -262,7 +262,7 @@
                             <img src="public/images/Home/western.png" class="danceimg home">
                         </div>
               
-                        <div class="col-md-6 col-12 text-col mt-5">
+                        <div class="col-md-6 col-12 text-col mt-1">
                         <h3 class="heading"> - Western Singing</h3>
 
                             <p >
@@ -281,7 +281,7 @@
                             <img src="public/images/Home/guitar.svg" class="danceimg home">
                         </div>
                   
-                        <div class="col-md-6 col-12 text-col mt-5">
+                        <div class="col-md-6 col-12 text-col mt-1">
                         <h3 class="heading"> - Guitar</h3>
 
                             <p >
@@ -299,7 +299,7 @@
                             <img src="public/images/Home/keyboard.svg" class="danceimg home">
                         </div>
                     
-                        <div class="col-md-6 col-12 text-col mt-5">
+                        <div class="col-md-6 col-12 text-col mt-1">
                         <h3 class="heading"> - Keyboard</h3>
                             <p >
                                 Unlock the magic of the keyboard with our online keyboard course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this versatile instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering keyboard techniques, music theory, and popular repertoire. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of playing your favorite songs, exploring different genres, or even composing your own music, our online keyboard course offers convenience, ﬂexibility, and expert guidance to help you become a skilled keyboardist. <br><br>
@@ -317,7 +317,7 @@
                             <img src="public/images/Home/yoga.svg" class="danceimg home">
                         </div>
                  
-                        <div class="col-md-6 col-12 text-col mt-5">
+                        <div class="col-md-6 col-12 text-col mt-1">
                         <h3 class="heading"> - Yoga</h3>
 
                             <p >
@@ -350,7 +350,7 @@
         <div class="row">
 
             <div class="sc_heading text-center scm">
-                <b<h3 class="title-3">Stories That Inspire</h3></b><span class="line"></span>
+               Stories That Inspire<span class="line"></span>
             </div>
 
         </div>
@@ -514,13 +514,13 @@
             </div>
         </div>
         <div class="row ">
-        <div class="col-md-1">
+        <div class="col-lg-1">
         </div>
 
 
-            <div class="col-md-2 col-4 Alp-main">
+            <div class="col-lg-2 col-md-4 col-4 Alp-main">
                 <div class="Alp-populated">
-                    <div class="Alp">
+                    <div class="Alp pt-3">
                         <div class="Alp-number-wrapper">
                             <span class="Alp-number-prefix"></span>
                             <span class="counter-value">10000</span>
@@ -532,9 +532,9 @@
             </div>
 
 
-            <div class="col-md-2 col-4 Alp-main">
+            <div class="col-lg-2 col-md-4 col-4 Alp-main">
                 <div class="Alp-populated">
-                    <div class="Alp">
+                    <div class="Alp pt-3">
                         <div class="Alp-number-wrapper">
                             <span class="Alp-number-prefix"></span>
                             <span class="counter-value">100</span>
@@ -544,9 +544,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-4 Alp-main">
+            <div class="col-lg-2 col-md-4 col-4 Alp-main">
                 <div class="Alp-populated">
-                    <div class="Alp">
+                    <div class="Alp pt-3">
                         <div class="Alp-number-wrapper">
                             <span class="Alp-number-prefix"></span>
                             <span class="counter-value">25</span>
@@ -556,9 +556,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-6 Alp-main">
+            <div class="col-lg-2 col-md-6 col-6 Alp-main">
                 <div class="Alp-populated">
-                    <div class="Alp">
+                    <div class="Alp pt-3">
                         <div class="Alp-number-wrapper">
                             <span class="Alp-number-prefix"></span>
                             <span class="counter-value">50</span>
@@ -568,10 +568,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-6 Alp-main">
+            <div class="col-lg-2 col-md-6 col-6 Alp-main">
                 <div class="Alp-populated">
 
-                    <div class="Alp">
+                    <div class="Alp pt-3">
                         <div class="Alp-number-wrapper">
                             <span class="Alp-number-prefix"></span>
                             <span class="counter-value">5</span>
@@ -581,7 +581,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1">
+            <div class="col-lg-1">
             </div>
         </div>
 
@@ -598,7 +598,7 @@
 
 <section class="how_Started-section">
     <div class="container">
-        <div class="row ">
+        <div class="row m-0">
             <div class="heading_new text-center">
                 <b>
                     <h3 class="title_4"> How To Get Started? <span class="line"></span></h3>
@@ -606,12 +606,11 @@
             </div>
         </div>
 
-        <div class="row justify-content-center ">
+        <div class="row justify-content-center htgs">
 
-            <div  class="col-md-1 " ></div>
-            <div class="col-md-2 col-6 text-center mb-4 mb-lg-0" >
+            <div class="col-lg-3 col-md-4 col-6 text-center mb-4 mb-lg-0" >
                 <!-- Icon box -->
-                <div class="icon icon-shape icon-shape-secondary rounded-circle">
+                <div class="icon icon-shape icon-shape-secondary rounded-circle icon1">
                     <span class="fas fa-bell"></span>
                 </div>
                 <div class="sc-heading">
@@ -624,9 +623,9 @@
             </div>
 
 
-            <div class="col-md-2 col-6 text-center mb-4 mb-lg-0" >
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0" >
                 <!-- Icon box -->
-                <div class="icon icon-shape icon-shape-secondary rounded-circle">
+                <div class="icon icon-shape icon-shape-secondary rounded-circle icon2">
                     <span class="fas fa-book-reader"></span>
                 </div>
                 <div class="sc-heading">
@@ -638,9 +637,9 @@
                 <!-- End of Icon box -->
             </div>
 
-            <div class="col-md-2 col-6 text-center mb-4 mb-lg-0" >
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0" >
                 <!-- Icon box -->
-                <div class="icon icon-shape icon-shape-secondary rounded-circle">
+                <div class="icon icon-shape icon-shape-secondary rounded-circle icon3">
                     <span class="fas fa-pen"></span>
                 </div>
                 <div class="sc-heading">
@@ -652,9 +651,9 @@
                 <!-- End of Icon box -->
             </div>
 
-            <div class="col-md-2 col-6 text-center mb-4 mb-lg-0" >
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0" >
                 <!-- Icon box -->
-                <div class="icon icon-shape icon-shape-secondary rounded-circle">
+                <div class="icon icon-shape icon-shape-secondary rounded-circle icon4">
                     <span class="fas fa-search-plus"></span>
                 </div>
                 <div class="sc-heading">
@@ -668,9 +667,9 @@
             </div>
 
 
-            <div class="col-md-2 col-6 text-center mb-4 mb-lg-0" >
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0" >
                 <!-- Icon box -->
-                <div class="icon icon-shape icon-shape-secondary rounded-circle">
+                <div class="icon icon-shape icon-shape-secondary rounded-circle icon5">
                     <span class="fas fa-certificate"></span>
                 </div>
                 <div class="sc-heading">
@@ -683,7 +682,7 @@
                 <!-- End of Icon box -->
             </div>
 
-            <div  class="col-md-1 " ></div>
+            <div  class="col-lg-2" ></div>
 
         </div>
 
@@ -924,7 +923,7 @@
             <div class="accordion-item">
             </div>
             <div class="row coms-row">
-               <div class="col-lg-6 col-xs-6 col-sm-4">
+               <div class="col-lg-6 col-md-7 col-xs-6 col-sm-4">
                   <ul class="coming-soon-ul">
                      <li > Super Speaker : Public Speaking</li>
                      <li>Young Shakespeare : Creative Writing</li>
@@ -936,7 +935,7 @@
                      <li>Language Learning</li>
                   </ul>
                </div>
-               <div class="col-lg-6  mt-3 text-center ">
+               <div class="col-lg-6 col-md-5  ">
                   <p class="comming-soon-p">Exciting times ahead! We are thrilled to announce that a new <br>subject tailored specifically for kids is on its way to our eLearning<br> platform. Currently in the test phase, this engaging and educational <br> content is designed to spark curiosity and fuel young minds. Stay <br> tuned as we prepare to
                      launch an enriching learning experience for<br> children everywhere!</p>
                   <P class="comming-soon-p">
@@ -954,12 +953,12 @@
 
 
 
-    <div class="row ">
-         <div class="col-md-6 col-12 text-center">
-            <a href="<?php echo base_url('demo');?>" class="btnnew btn-book">Book your Free demo now</a>
+    <div class="row m-0">
+         <div class="col-md-6 col-12 text-end mb-2">
+            <a href="<?php echo base_url('demo');?>" class="btnnew btn-book text-center">Book your Free demo now</a>
          </div>
-         <div class="col-md-6 col-12 text-center">
-            <a href="<?php echo base_url('Contactus');?>" class="btnnew btn-request">Not sure ?? Request a call back</a>
+         <div class="col-md-6 col-12 text-star">
+            <a href="<?php echo base_url('Contactus');?>" class="btnnew btn-request text-center">Not sure ?? Request a call back</a>
          </div>
       </div>
       <hr>

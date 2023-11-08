@@ -1,4 +1,4 @@
-<section class="pricing-section mt-5">
+<section class="pricing-section ">
     <form action="/sessions/store" method="post">
         <div class="container ">
             <div class="row heading-div m-0">

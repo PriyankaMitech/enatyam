@@ -173,8 +173,8 @@
 }
 .howWorkBlock {
   display: inline-block;
-  width: 28.9%;
-  margin: 0 2%;
+  /* width: 28.9%;
+  margin: 0 2%; */
 }
 .howWorkBlock img {
   width: 100px;
@@ -309,8 +309,11 @@
 
 .line_1 {
   max-width: 1320px;
-  margin-top: 60px;
+  /* margin-top: 60px; */
+  margin-top: 0px !important;
 }
+
+
 
 .line_2 {
   max-width: 1320px;
@@ -382,7 +385,7 @@
   text-align: center;
   font-size: 19px;
   font-weight: 400;
-  line-height: 3.5;
+  line-height: 1.5;
   color: #ffffff;
 }
 
