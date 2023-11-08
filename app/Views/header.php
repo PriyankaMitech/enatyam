@@ -2,7 +2,9 @@
    $uri = new \CodeIgniter\HTTP\URI(current_url(true));
    $pages = $uri->getSegments();
    $page = $uri->getSegment(count($pages));
+
  ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,15 +22,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-
-
-    <link rel="stylesheet" href="public/css/commingsoon.css">
-    <link rel="stylesheet" href="public/css/faq.css">
-    <link rel="stylesheet" href="public/css/footer.css">
-    <link rel="stylesheet" href="public/css/s_header.css">
-    <link rel="stylesheet" href="public/css/headerStyle.css">
-    <link rel="stylesheet" href="public/css/courseOffering.css">
-
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/faq.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/s_header.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/courseOffering.css">
+  
 
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
@@ -81,12 +81,12 @@
     <?php }else if ($page == 'Dance'){ ?>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/dancepage.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/dancepage.css">
 
-    <link rel="stylesheet" href="public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
 
-    <link rel="stylesheet" href="public/css/Dancefaq.css">
-    <link rel="stylesheet" href="public/css/DanceInstructer.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Dancefaq.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/DanceInstructer.css">
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
@@ -100,13 +100,13 @@
         crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="public/css/Instruments.css">
-    <link rel="stylesheet" href="public/css/dancepage.css">
-    <link rel="stylesheet" href="public/css/Instrumentsfaq.css">
-    <link rel="stylesheet" href="public/css/Instrumentpage.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instruments.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/dancepage.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instrumentsfaq.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instrumentpage.css">
 
-    <link rel="stylesheet" href="public/css/commingsoon.css">
-
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -131,10 +131,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url() ?>public/css/headerStyle.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>public/css/dancepage.css">
-    <link rel="stylesheet" href="public/css/Instrumentsfaq.css">
-    <link rel="stylesheet" href="public/css/DanceInstructer.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instrumentsfaq.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/DanceInstructer.css">
 
-    <link rel="stylesheet" href="public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
@@ -176,12 +176,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="public/css/dancepage.css"> -->
-    <link rel="stylesheet" href="public/css/Yogapage.css">
+    <!-- <link rel="stylesheet" href="<?=base_url(); ?>public/css/dancepage.css"> -->
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Yogapage.css">
 
 
-    <link rel="stylesheet" href="public/css/Dancefaq.css">
-    <link rel="stylesheet" href="public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Dancefaq.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -211,13 +211,12 @@
         crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="public/css/Instruments.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instruments.css">
 
-    <link rel="stylesheet" href="public/css/Instrumentsfaq.css">
-    <link rel="stylesheet" href="public/css/Instrumentpage.css">
-
-    <link rel="stylesheet" href="public/css/commingsoon.css">
-
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instrumentsfaq.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instrumentpage.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -258,11 +257,11 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/demo.css">
-    <link rel="stylesheet" href="public/css/demo1.css">
-    <link rel="stylesheet" href="public/css/headerStyle.css">
-    <link rel="stylesheet" href="public/css/demoprofile.css">
-    <link rel="stylesheet" href="public/css/Carrier.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo1.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demoprofile.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Carrier.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -274,10 +273,10 @@
     <?php }else if($page == 'demo'){ ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/demo.css">
-    <link rel="stylesheet" href="public/css/demo1.css">
-    <link rel="stylesheet" href="public/css/demoprofile.css">
-    <link rel="stylesheet" href="public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo1.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demoprofile.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
@@ -290,14 +289,13 @@
             
       
             ?>
-    <link rel="stylesheet" href="public/css/headerStyle.css">
+       <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
 
-    <link rel="stylesheet" href="public/css/footer.css">
-    <link rel="stylesheet" href="public/css/contactus.css">
+            <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/contactus.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css"
-        integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <!-- fontawesome icon cdn -->
@@ -313,11 +311,11 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/demo.css">
-    <link rel="stylesheet" href="public/css/demo1.css">
-    <link rel="stylesheet" href="public/css/headerStyle.css">
-    <link rel="stylesheet" href="public/css/demoprofile.css">
-    <link rel="stylesheet" href="public/css/Carrier.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo1.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demoprofile.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Carrier.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -329,14 +327,12 @@
     <?php }
                 // echo $page;exit();
         ?>
-
-    <link rel="stylesheet" href="public/css/headerStyle.css">
-    <link rel="stylesheet" href="public/css/footer.css">
-    <link rel="stylesheet" href="public/css/Login.css">
-    <link rel="stylesheet" href="public/css/Register.css">
-    <link rel="stylesheet" href="public/css/resposivestyle.css">
-    <link rel="stylesheet" href="public/css/hederresponsive.css">
-
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Login.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Register.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/resposivestyle.css">
+   
 </head>
 
 <body>
