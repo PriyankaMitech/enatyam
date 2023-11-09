@@ -45,7 +45,6 @@ class AdminController extends BaseController
         return redirect()->to(base_url());
     }
 }
-  //   print_r($_POST);die;
   public function AssignTecherForDemo()
   {  
     // print_r($_POST);die;

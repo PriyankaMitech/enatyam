@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/s_header.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/courseOffering.css">
-  
+
 
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
@@ -106,7 +106,7 @@
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instrumentpage.css">
 
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -216,7 +216,7 @@
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instrumentsfaq.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Instrumentpage.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -289,12 +289,14 @@
             
       
             ?>
-       <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
 
-            <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/contactus.css">
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css"
+        integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
@@ -333,7 +335,7 @@
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Register.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/resposivestyle.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/hederresponsive.css">
-   
+
 </head>
 
 <body>
@@ -427,7 +429,7 @@
 
             </div>
 
-            <div id="fixed-menu" >
+            <div id="fixed-menu">
                 <div class="header-closed">
                     <i class="fa fa-times"></i>
                 </div>
@@ -501,11 +503,6 @@
 
                             <div class="teacher">
 
-                                <label for="become_teacher">
-
-                                    <input type="checkbox" name="become_teacher" id="become_teacher">
-
-                                    Want to become an instructor? </label>
 
                             </div>
 
@@ -544,27 +541,19 @@
 
                         <form name="loginForm" onsubmit="return validateFormLogin()"
                             action="<?php echo base_url();?>login" id="loginform" method="post">
-                            <div class="form-group  m-2">
-                                <input type="email" name="email" id="email" class="form-control" aria-required="true"
-                                    placeholder="Email">
-                                <span id="emailError1" style="color: red;"></span>
-                            </div>
                             <div class="form-group m-2">
-                                <input type="text" name="mobile_no" id="mobile_no" class="form-control"
-                                    aria-required="true" placeholder="Mobile number">
-                                <span id="mobile_noError1" style="color: red;"></span>
+                                <input type="text" name="username" id="username" class="form-control"
+                                    aria-required="true" placeholder="Email or Mobile number">
+                                <span id="usernameError" style="color: red;"></span>
                             </div>
+
                             <div class="form-group  m-2">
                                 <input type="password" name="password" id="password" class="form-control"
                                     aria-required="true" placeholder="Password">
                                 <span id="passwordError1" style="color: red;"></span>
                             </div>
                             <div class="forgetmenot login-remember">
-                                <label for="popupRememberme">
-                                    <input name="rememberme" type="checkbox" value="forever" id="popupRememberme">
-                                    Remember
-                                    Me
-                                </label>
+                               
                                 <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password"
                                     onclick="showLostPasswordModal()">Lost your password?</a>
                             </div>

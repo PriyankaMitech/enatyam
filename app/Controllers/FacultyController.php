@@ -26,25 +26,31 @@ class FacultyController extends BaseController
 
     public function fetchDataByAssignTeacherId()
     {
- //   print_r($this->session->get('id'));die;
+      print_r($_SESSION);die;
+      if (isset($_SESSION['sessiondata'])) {
+        $sessionData = $_SESSION['sessiondata'];
 
-      $teacherId = $this->session->get('id');
-    
- 
-    $facultymodel = new facultymodel();
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
 
-   
-   
-    $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
- 
- //print_r($data);die;
+        if ($email !== null && $password !== null) {
+         
+            $teacherId = $this->session->get('id');
+           
+            $facultymodel = new Facultymodel();
+            $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
 
- //session()->set('data', $data);
- 
-   return view('faculty', ['data' => $data]);
-
- //  return redirect()->route('fetchstudyVideouplodeFromstudent', ['data' => $data]);
- 
+            if (!empty($data)) {
+                return view('faculty', ['data' => $data]);
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
+    } else {
+        return redirect()->to(base_url());
+    }
     }
 
 

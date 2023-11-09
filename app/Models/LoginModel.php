@@ -280,6 +280,7 @@ public function getUserByMobileNoAndPassword($mobile_no, $password){
             'cpassword'          => $result->confirm_pass,
             'user_name'          => $result->full_name,
             'mobile_no'          => $result->mobile_no,
+            'Payment_status'     => $result->Payment_status,
         ];
     
 
