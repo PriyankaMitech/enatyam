@@ -159,7 +159,7 @@
               <?php
               if ($_SESSION['sessiondata']['Payment_status'] =='N') { ?>
                   <li class="nav-item">
-                      <a href="<?php echo base_url()?>StudentSideBarVideo" class="nav-link">
+                      <a href="<?php echo base_url()?>ModelForLogin" class="nav-link">
                           <i class="nav-icon fas fa-th"></i>
                           <p>Plan details</p>
                       </a>

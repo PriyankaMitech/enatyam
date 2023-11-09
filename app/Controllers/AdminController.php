@@ -16,27 +16,35 @@ class AdminController extends BaseController
     
     public function today()
     {
-        $model = new AdminModel();
-        $data['records'] = $model->getTodayRecords();
-        $data['SessionData'] = $model->findAll();
-         $data['count'] = $model->getRowCount();
-       
-         $data['admins'] = $model->getAdmins();
-         $data['Faculty'] = $model->getFaculty();
-         $data['ConductedDemo'] = $model->getConductedDemo();
-         $data['PendingDemo'] = $model->getPendingDemo();
-         $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
-         $data['getPaymentstatus']=$model->Paymentstatus();
-         $data['getAllDemoList']=$model->getAllDemoData();
-  //       $data['getassignstudentstatus']=$model->studentassignstatus();
-        
   
-  //  print_r($data);die;
-   //print_r($data['getAllDemoList']);die;
-  // echo "<pre>"; print_r($data['ConductedDemo']);echo "</pre>"; die();
+    if (isset($_SESSION['sessiondata'])) {
+        $sessionData = $_SESSION['sessiondata'];
+    
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
 
-        return view('AdminDashboard', $data);
+        if ($email !== null && $password !== null) {
+            $model = new AdminModel();
+            $data['records'] = $model->getTodayRecords();
+            $data['SessionData'] = $model->findAll();
+            $data['count'] = $model->getRowCount();
+          
+            $data['admins'] = $model->getAdmins();
+            $data['Faculty'] = $model->getFaculty();
+            $data['ConductedDemo'] = $model->getConductedDemo();
+            $data['PendingDemo'] = $model->getPendingDemo();
+            $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
+            $data['getPaymentstatus'] = $model->Paymentstatus();
+            $data['getAllDemoList'] = $model->getAllDemoData();
+
+            return view('AdminDashboard', $data);  
+        } else { 
+            return redirect()->to(base_url());
+        }
+    } else {
+        return redirect()->to(base_url());
     }
+}
   //   print_r($_POST);die;
   public function AssignTecherForDemo()
   {  
