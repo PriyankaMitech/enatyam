@@ -1,104 +1,210 @@
-
-#fixed-menu{
-
-    display: none;
+#fixed-menu {
+  display: none;
 }
 /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
 @media (max-width: 767px) {
+  .fa-bars {
+    color: #fff;
+    font-size: 20px;
+  }
+  #fixed-menu {
+    position: fixed;
+    top: 0;
+    background: #000;
+    height: 100vh;
+    left: -700px;
+    width: 300px;
+    transition: 1s;
+    z-index: 9999;
+    display: block !important;
+  }
+  .header-closed i {
+    color: #fff;
+    font-size: 20px;
+  }
+  .header-closed {
+    text-align: right;
+    background-color: #1a1a1a;
+    padding: 11px;
+  }
 
-    .fa-bars{color:#fff;font-size: 20px;}
-    #fixed-menu{
-        position: fixed;
-        top: 0;
-        background: #000;
-        height: 100vh;
-        left: -700px;
-        width:300px;
-        transition:1s;
-        z-index: 9999;
-        display: block !important;
-    }
-    .header-closed i{color:#fff;font-size: 20px;}
-    .header-closed {
-        text-align: right;
-        background-color: #1a1a1a;
-        padding: 11px;
-    }
-    
-    #fixed-menu a{margin-left:20px}
-    .fixed-menu{left:0!important}
-    .overflow-hidden{position: fixed;width: 100%;overflow: hidden;}
-    #overlay{position: fixed;width: 100%;top:0;
-    height: 100%;background: rgba(0,0,0,0.5);display:none;z-index: 99;}
-    
-    .thim-logo img {
-            width: 100%;
-            height: auto; 
-            /* margin-left: 14px; */
-        }
-        .navbar-toggler {
-          position: absolute;
-          top: 10px; 
-          right: 10px; 
-      }
-      .navbar {
-        top: 0;
-        left: 0;
-        width: auto;
-    }
-    
-    .container-fluid.pd0 {
-        padding: 0;
-    }
-    .navbar-toggler-icon {
-      position: absolute;
-      top: 20px;
-      right: 29px; 
-    }
-    
-     .collapse.navbar-collapse {
-            background-color: black;
-           
-          
-        }
-    
-        /* Move the navigation links to the right */
-        .navbar-nav.main.menu.ms-auto {
-            margin-left: auto;
-        }
-    
-       
-        .navbar-nav li .text {
-            display: none;
-          
-           
-        }
-       .navbar-nav {
-        display:block;
-            flex-direction: row;
-            
-       }
-      
-       .tophead .navbar ul li{
-        margin: 0px 0px 0px 0px;
-       }
-       .col-lg-12 img
-       {margin-top:84px;}
-       
-    #navbarSupportedContent{
-        display: block;
-        background-color:transparent;
-        display: flex; 
-        align-items: center;}
-    
-       
-    
-     
-    }
-    
-    
-    
-    
-    
-    
-    
+  #fixed-menu a {
+    margin-left: 20px;
+  }
+  .fixed-menu {
+    left: 0 !important;
+  }
+  .overflow-hidden {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
+  #overlay {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 99;
+  }
+
+  .thim-logo img {
+    width: 100%;
+    height: auto;
+    /* margin-left: 14px; */
+  }
+  .navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .navbar {
+    top: 0;
+    left: 0;
+    width: auto;
+  }
+
+  .container-fluid.pd0 {
+    padding: 0;
+  }
+  .navbar-toggler-icon {
+    position: absolute;
+    top: 20px;
+    right: 29px;
+  }
+
+  .collapse.navbar-collapse {
+    background-color: black;
+  }
+
+  /* Move the navigation links to the right */
+  .navbar-nav.main.menu.ms-auto {
+    margin-left: auto;
+  }
+
+  .navbar-nav li .text {
+    display: none;
+  }
+  .navbar-nav {
+    display: block;
+    flex-direction: row;
+  }
+
+  .tophead .navbar ul li {
+    margin: 0px 0px 0px 0px;
+  }
+  .col-lg-12 .banner {
+    margin-top: 84px;
+  }
+
+  #navbarSupportedContent {
+    display: block;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .fa-bars {
+    color: #fff;
+    font-size: 20px;
+  }
+  #fixed-menu {
+    position: fixed;
+    top: 0;
+    background: #000;
+    height: 100vh;
+    left: -700px;
+    width: 300px;
+    transition: 1s;
+    z-index: 9999;
+    display: block !important;
+  }
+  .header-closed i {
+    color: #fff;
+    font-size: 20px;
+  }
+  .header-closed {
+    text-align: right;
+    background-color: #1a1a1a;
+    padding: 11px;
+  }
+
+  #fixed-menu a {
+    margin-left: 20px;
+  }
+  .fixed-menu {
+    left: 0 !important;
+  }
+  .overflow-hidden {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
+  #overlay {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 99;
+  }
+
+  .thim-logo img {
+    width: 100%;
+    height: auto;
+    /* margin-left: 14px; */
+  }
+  .navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .navbar {
+    top: 0;
+    left: 0;
+    width: auto;
+  }
+
+  .container-fluid.pd0 {
+    padding: 0;
+  }
+  .navbar-toggler-icon {
+    position: absolute;
+    top: 20px;
+    right: 29px;
+  }
+
+  .collapse.navbar-collapse {
+    background-color: black;
+  }
+
+  /* Move the navigation links to the right */
+  .navbar-nav.main.menu.ms-auto {
+    margin-left: auto;
+  }
+
+  .navbar-nav li .text {
+    display: none;
+  }
+  .navbar-nav {
+    display: block;
+    flex-direction: row;
+  }
+
+  .tophead .navbar ul li {
+    margin: 0px 0px 0px 0px;
+  }
+  .col-lg-12 .banner {
+    margin-top: 84px;
+  }
+
+  #navbarSupportedContent {
+    display: block;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+  }
+}

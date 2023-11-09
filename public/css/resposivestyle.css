@@ -30,7 +30,7 @@
   }
   .heading-div h3 {
     font-size: 25px !important;
-    margin-top: 9px !important;
+    margin-top: 31px !important;
   }
   .btnstart {
     font-size: 8px !important;
@@ -179,6 +179,63 @@
   .sc_heading {
     font-size: 31px !important;
   }
+  .typesOfDance-tab .nav-pills .nav-link.big {
+    width: 162px !important;
+    height: 60px !important;
+  }
+  .kathakp {
+    margin-top: 6%;
+  }
+  .start {
+    font-size: 12px !important;
+    line-height: 23px !important;
+  }
+  .step {
+    width: 100%;
+  }
+  .list-inline-item {
+    padding: 5px;
+  }
+  .mkathak {
+    width: 100% !important;
+  }
+  .month-row .month-list .dancetypes .monthbtn,
+  .typesOfDance-tab .nav-pills .nav-link.kathak {
+    width: 100% !important;
+  }
+  .modulesec .monthtypes {
+    margin: 0px 0px 10px 0px;
+  }
+  .carousel {
+    margin-top: -130px;
+  }
+  .carousel-inner {
+    height: 424px;
+  }
+  .testimonialsp {
+    height: 187px;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    width: 9px !important;
+    height: 9px !important;
+    margin: 5px 5px !important;
+  }
+  .price-btn {
+    padding: 15px 0px;
+  }
+  .faqd {
+    padding: 10px;
+    text-align: center;
+  }
+  .dancefimg {
+    width: 50% !important;
+  }
+  .pricing-card-section .card {
+    margin-bottom: 54px;
+  }
+  .mftm {
+    padding-top: 20px;
+  }
 }
 
 /* For Tablet Screen max-width: 991 min-width: 768*/
@@ -222,5 +279,48 @@
   }
   .icon5 {
     margin-left: 59px !important;
+  }
+  .typesOfDance-tab .nav-pills .nav-link.big {
+    width: 162px !important;
+    height: 60px !important;
+  }
+  .step {
+    width: 100%;
+  }
+  .kathakp {
+    margin-top: 6%;
+  }
+  .mkathak {
+    width: 20% !important;
+  }
+  .carousel {
+    margin-top: 0px;
+  }
+  .carousel-control-prev {
+    height: 87%;
+  }
+  .carousel-control-next {
+    height: 87%;
+  }
+  .testimonials {
+    height: 430px !important;
+  }
+  .card {
+    margin-bottom: 65px;
+  }
+  .opman {
+    display: none;
+  }
+  .pricing-section {
+    margin-top: 9% !important;
+  }
+  .byfd {
+    width: 100%;
+  }
+  .nsracb {
+    width: 97%;
+  }
+  .mftm {
+    padding-top: 20px;
   }
 }

@@ -403,7 +403,7 @@
                             <a class="nav-link px-2" href="<?php echo base_url('Career');?>">Career</a>
                         </div>
                         <div class="navbar-nav">
-                            <a href="<?php echo base_url('demo');?>" class="btn btndemo">BOOK YOUR FREE DEMO</a>
+                            <a href="<?php echo base_url('demo');?>" class="btn btndemoh" style="width: auto;">BOOK YOUR FREE DEMO</a>
                         </div>
                     </div>
                 </div>
@@ -439,7 +439,7 @@
                 <a class="nav-link px-2" href="<?php echo base_url('Yoga');?>">Yoga</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Instruments');?>">Instruments</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Career');?>">Career</a>
-                <a href="<?php echo base_url('demo');?>" class="btn btndemo mt-2">BOOK YOUR FREE DEMO</a>
+                <a href="<?php echo base_url('demo');?>" class="btn btndemoh mt-2">BOOK YOUR FREE DEMO</a>
 
             </div>
             <div id="overlay"></div>

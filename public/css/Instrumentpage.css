@@ -264,9 +264,9 @@ body {
   font-weight: 400 !important;
 }
 
-.tab-pane.fade .modulesec .CombTwoMonths {
+/* .tab-pane.fade .modulesec .CombTwoMonths {
   width: 238px !important;
-}
+} */
 .mkathak {
   width: 12% !important;
   /* margin-left: 100px; */
@@ -306,4 +306,7 @@ body {
 
 .semicolone-active {
   color: #fff; /* Change this to your desired color */
+}
+.faculty-section {
+  margin-top: 6% !important;
 }

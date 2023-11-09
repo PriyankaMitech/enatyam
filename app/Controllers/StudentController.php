@@ -58,10 +58,10 @@ public function uploadMedia()
     $result = session();
   
     $registerId = $result->get('id');
- //   print_r($registerId);die;
+//    print_r($registerId);die;
     $StudentModel = new StudentModel();
     $registerData = $StudentModel->getAllRegisterData($registerId, ['full_name', 'Assign_Techer_id']);
- //   print_r($registerData);die;
+//    print_r($registerData);die;
     $assignTeacherId = $registerData[0]->Assign_Techer_id;
     $full_name = $registerData[0]->full_name;
 // print_r($assignTeacherId);die;
