@@ -66,6 +66,7 @@ class LoginController extends BaseController
                 'confirm_pass' => $this->request->getVar('confirm_pass'),
                 'register_id' => $last_insert_id,
                 'is_register_done' => 'Y',
+                
             ];
             // Set session variables and redirect as needed
             $this->session->set('user_id', $this->request->getVar($last_insert_id));
@@ -84,67 +85,65 @@ class LoginController extends BaseController
         }
     }
     
-    public function login()
-    {
-        $rules = [
+    // public function login()
+    // {
+    //     $rules = [
            
-            'email'    => 'required',
-            'password'  => 'required',
+    //         'email'    => 'required',
+    //         'password'  => 'required',
            
-        ];
+    //     ];
 
-        if($this->validate($rules)){
-            $data = [
+    //     if($this->validate($rules)){
+    //         $data = [
                 
-                'email'  => $this->request->getVar('email'),
-                'password'  => $this->request->getVar('password'),
+    //             'email'  => $this->request->getVar('email'),
+    //             'password'  => $this->request->getVar('password'),
                 
-            ];
-            // echo "Inside iff";
+    //         ];
+    //         // echo "Inside iff";
             
-            return redirect()->to('dashboard');
-        }else{
-            // echo "Inside else";
-            $data['validation'] = $this->validator;
-            echo view('home', $data);
-        }
-    }
+    //         return redirect()->to('dashboard');
+    //     }else{
+    //         // echo "Inside else";
+    //         $data['validation'] = $this->validator;
+    //         echo view('home', $data);
+    //     }
+    // }
 
     public function checkLoginDetails()
     {
-        $request = \Config\Services::request();
-        $loginModel = new LoginModel();
+         $request = \Config\Services::request();
+         $loginModel = new LoginModel();
 
+         $username = $request->getPost('username');
+         $password = $request->getPost('password');
 
-            $email = $this->request->getPost('email');
-            $mobile_no = $this->request->getPost('mobile_no');
-            $password = $this->request->getPost('password');
-    
-            if (!empty($email)) {
-                $result = $loginModel->getUserByEmailAndPassword($email, $password);
-                // echo "<pre>";print_r($result);exit();
-            } elseif (!empty($mobile_no)) {
-                $result = $loginModel->getUserByMobileNoAndPassword($mobile_no, $password);
-            }
-    
-            if (!empty($result)) {
-                if ($result['role'] == 'Admin') {
-                    return redirect()->to('today');
-                } else if ($result['role'] == 'Faculty') {
-                    $this->session->set($result);
-                    return redirect()->to('FacultyDashboard');
-                } else if ($result['role'] == 'Student') {
-                    $this->session->set($result);
-                    return redirect()->to('uploadMedia');
-                }
-            } else {
-                return redirect()->to('Home');
-            }
+         if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
+         $result = $loginModel->getUserByEmailAndPassword($username, $password);
+          } else {
       
-    
-    }
-    
-    
+        $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
+        }
+
+        if (!empty($result)) {
+        switch ($result['role']) {
+            case 'Admin':
+                return redirect()->to('today');
+            case 'Faculty':
+                $this->session->set($result);
+                return redirect()->to('FacultyDashboard');
+            case 'Student':
+                $this->session->set($result);
+                return redirect()->to('uploadMedia');
+            default:
+                return redirect()->to('Home');
+           }
+           } else {
+           return redirect()->to('Home');
+         }
+     }
+      
       public function ModelForLogin()
      {
        return view('ModelForLogin');
@@ -153,14 +152,8 @@ class LoginController extends BaseController
    public function logout(){
   //   print_r($_SESSION);die;
     session()->destroy();
-  
-
     return redirect()->to(base_url());
     }
-
-
-
-
 
     public function update_profile_data()
 	{    
@@ -173,15 +166,11 @@ class LoginController extends BaseController
             'confirm_pass'  => $this->request->getVar('cpassword'),
             
         ];
-
-
         $studentdata = [
            
             'student_name'  => $this->request->getVar('name'),
             'email'  => $this->request->getVar('email'),
-            'mobile_no'  => $this->request->getVar('mobile_no'),
-           
-            
+            'mobile_no'  => $this->request->getVar('mobile_no'),          
         ];
 
 	 $db = \Config\Database::Connect();
@@ -196,10 +185,7 @@ class LoginController extends BaseController
 
         $update_studentdata = $db->table('student')->where('register_id',$this->request->getVar('id'));
 		$update_studentdata->update($studentdata);
-	}
-
-
-	
+	}	
 		return redirect()->to('profilemanagment'); 
 
 	}
