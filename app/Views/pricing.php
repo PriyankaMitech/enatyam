@@ -2,7 +2,7 @@
     <form action="/sessions/store" method="post">
         <div class="container ">
             <div class="row heading-div m-0">
-                <div class="col-lg-12 text-center op">
+                <div class="col-lg-12 text-center op" id="pricing-section">
                     <h3>Our Pricing
                     </h3>
                     <span class="line"></span>
