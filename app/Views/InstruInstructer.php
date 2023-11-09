@@ -1,7 +1,7 @@
-<section class="faculty-section" id="Instructors">
+<section class="faculty-section " id="Instructors">
    <div class="container cont-width">
       <div class="row heading-div ">
-         <div class="col-lg-12 text-center">
+         <div class="col-lg-12 text-center ssf">
             <h3>Super Star Faculty
             </h3>
             <span class="line"></span>

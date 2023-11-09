@@ -3,11 +3,11 @@
    <div class="container cont-width">
      
       <div class="row">
-         <div class="col-md-6 col-12 footer-div">
+         <div class="col-md-4 col-12 footer-div">
             <img src="public/images/logo.png" />
             <p class=" mt-2">At Enatyam, we are providing you with professional training of dance forms originating from the Indian subcontinent. Our talented mentors have been trained to provide you with an amazing dancing experience.</p>
          </div>
-         <div class="col-md-3 col-6 footer-div pt-4">
+         <div class="col-md-4 col-6 footer-div pt-4">
             <ul class="row">
             <li>
                   <a href="Home">Home</a>
@@ -31,7 +31,7 @@
                </li> -->
             </ul>
          </div>
-         <div class="col-md-3 col-6 footer-div pt-4">
+         <div class="col-md-4 col-6 footer-div pt-4">
             <ul>
                 <li>
                     <a href="Instruments">Instruments</a>
@@ -101,12 +101,13 @@
       </div> 
 
 
-    <div class="footer-row row">
-        <div class="col-lg-12 copyright-p">
-            <p>© Enatyam / Designed and Developed by <a href="https://www.marketingintelligence.tech">MI Tech Solutions Pvt. Ltd. </a></p>
-    </div>
+
 
     </div>
+    </div>
+    <div class="footer-row text-center ">
+        <div class="copyright-p">
+            <p>© Enatyam / Designed and Developed by <a href="https://www.marketingintelligence.tech">MI Tech Solutions Pvt. Ltd. </a></p>
     </div>
 </footer>
 <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard') { ?>
@@ -349,6 +350,23 @@ function isValidEmail(email) {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous">
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+  $('.carousel-item').on('mouseover', function() {
+    if ($(this).hasClass('active')) {
+      $(this).find('.semicolone').addClass('semicolone-active');
+    }
+  });
+
+  $('.carousel-item').on('mouseout', function() {
+    if ($(this).hasClass('active')) {
+      $(this).find('.semicolone').removeClass('semicolone-active');
+    }
+  });
+});
+
     </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
