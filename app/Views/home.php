@@ -7,7 +7,7 @@
         <div class="row">
 
             <div class="col-lg-12" style="padding-left:0px">
-                <img src="public/images/image1.png" width="100%" />
+                <img src="public/images/image1.png" class="banner" width="100%" />
                 <div class="row">
 
 
@@ -953,15 +953,9 @@
 
 
 
-    <div class="row m-0">
-         <div class="col-md-6 col-12 text-end mb-2">
-            <a href="<?php echo base_url('demo');?>" class="btnnew btn-book text-center">Book your Free demo now</a>
-         </div>
-         <div class="col-md-6 col-12 text-star">
-            <a href="<?php echo base_url('Contactus');?>" class="btnnew btn-request text-center">Not sure ?? Request a call back</a>
-         </div>
-      </div>
-      <hr>
+
+      <?php include('bookdemocallb.php');?>
+     
 
     <?php include('footer.php');?>
 
