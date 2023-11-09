@@ -76,14 +76,37 @@ class FacultyController extends BaseController
     $facultyModel = new FacultyModel();
 
     // Retrieve the uploaded video file
-    $videoFile = $this->request->getFile('videoFile');
+    // $videoFile = $this->request->getFile('videoFile');
+    // print_r($videoFile);
+    // die;
 
     // Get the client's original video file name
-    $videoFilename = $videoFile->getName();
+    // $videoFilename = $videoFile->getName();
+    // print_r($videoFilename);
+    // die;
 
     // Move the video file to the 'public/videos/' directory
-    $uploadDir = WRITEPATH . 'uploads/';
-    $videoFile->move($uploadDir, $videoFilename);
+    // $uploadDir = WRITEPATH . 'uploads/';
+
+    //changing path
+
+    $videoFile = $this->request->getFile('videoFile');
+
+    if (!$videoFile->isValid()) {
+      // return $this->fail($videoFile->getErrorString());
+    }
+
+    $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
+
+    $videoFilename = $videoFile->getName();
+    // print_r($videoFilename);
+    // die;
+
+    // print_r($uploadDir);
+    // die;
+
+    // $file->move(ROOTPATH . 'public\uploads\documents');
+    // $videoFile->move($uploadDir, $videoFilename);
 
     // Call the method to update the student's video information
     $facultyModel->updateStudentVideo($studentId, $registerId, $videoFilename);
@@ -98,7 +121,9 @@ class FacultyController extends BaseController
     $registerId = $studentId->get('id');
     $facultyModel = new FacultyModel();
     $videos = $facultyModel->getVideosByRegisterId($registerId);
-    //    print_r ($videos);die;
+    // echo "<pre>";
+    // print_r($videos);
+    // die;
     return view('StudentSideBarVideo', ['videos' => $videos]);
   }
 

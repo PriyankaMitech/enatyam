@@ -5,61 +5,61 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Dashboard </title>
-    <?php include(APPPATH.'views/FacultySidebar2.php');?>
+    <?php include(APPPATH . 'views/FacultySidebar2.php'); ?>
     <style>
-    #studentTable {
-        width: 100%;
-        /* Set the table width to 100% of its container */
-        border-collapse: collapse;
-        /* Collapse table borders */
-    }
+        #studentTable {
+            width: 100%;
+            /* Set the table width to 100% of its container */
+            border-collapse: collapse;
+            /* Collapse table borders */
+        }
 
-    #studentTable th,
-    #studentTable td {
-        padding: 10px;
-        /* Adjust cell padding to increase cell size */
-        text-align: center;
-        /* Center-align cell content */
-        border: 1px solid #ccc;
-        /* Add borders to cells */
-    }
+        #studentTable th,
+        #studentTable td {
+            padding: 10px;
+            /* Adjust cell padding to increase cell size */
+            text-align: center;
+            /* Center-align cell content */
+            border: 1px solid #ccc;
+            /* Add borders to cells */
+        }
 
-    /* Style table header cells */
-    #studentTable th {
-        background-color: #f2f2f2;
-        /* Background color for header cells */
-        font-weight: bold;
-        /* Make header text bold */
-    }
+        /* Style table header cells */
+        #studentTable th {
+            background-color: #f2f2f2;
+            /* Background color for header cells */
+            font-weight: bold;
+            /* Make header text bold */
+        }
 
-    .button {
-        display: inline-block;
-        padding: 10px 20px;
-        /* Adjust padding as needed */
-        background-color: #0074D9;
-        /* Your desired background color */
-        color: #fff;
-        /* Text color */
-        text-decoration: none;
-        /* Remove underlines from the link */
-        border-radius: 5px;
-        /* Add rounded corners */
-        font-weight: bold;
-        /* Make the text bold */
-    }
-    #toggle-content {
-    /* Add your styling here */
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #f9f9f9;
-    width: 404px;
-    height: 122px;
-}
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            /* Adjust padding as needed */
+            background-color: #0074D9;
+            /* Your desired background color */
+            color: #fff;
+            /* Text color */
+            text-decoration: none;
+            /* Remove underlines from the link */
+            border-radius: 5px;
+            /* Add rounded corners */
+            font-weight: bold;
+            /* Make the text bold */
+        }
+
+        #toggle-content {
+            /* Add your styling here */
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            width: 404px;
+            height: 122px;
+        }
     </style>
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -126,7 +126,7 @@
                                 <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
                                 <li class="breadcrumb-item active">Dashboard </li>
-                                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>home">Logout</a></li>
+                                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>logout">Logout</a></li>
 
                             </ol>
                         </div><!-- /.col -->
@@ -154,8 +154,7 @@
                         </div> -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-danger elevation-1"><i
-                                        class='fas fa-chalkboard-teacher'></i></span>
+                                <span class="info-box-icon bg-danger elevation-1"><i class='fas fa-chalkboard-teacher'></i></span>
                                 <div class="info-box-content">
                                     <span class="info-box-text" id="toggle-button">Today's Sessions</span>
                                     <span class="info-box-number"></span>
@@ -175,8 +174,7 @@
 
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fa fa-calendar"
-                                        aria-hidden="true"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Availability</span>
                                     <!-- <button type="button" class="btn btn-primary" data-toggle="collapse"
@@ -202,7 +200,7 @@
                                 <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
                                 <div class="info-box-content">
                                     <a class="icon-link"> <span class="info-box-text">conducted classes
-                                           
+
                                         </span></a>
                                     <span class="info-box-number">
                                     </span>
@@ -222,25 +220,24 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($data as $row) : ?>
-                                <tr>
-                                    <td><?php echo $row['student_name'];?></td>
-                                    <td><?php echo $row['email']; ?></td>
-                                    <!-- <td> <a href="<?php  echo base_url()?>facultyinfo">View Profile</td> -->
-                                    <!-- <td>
+                                    <tr>
+                                        <td><?php echo $row['student_name']; ?></td>
+                                        <td><?php echo $row['email']; ?></td>
+                                        <!-- <td> <a href="<?php echo base_url() ?>facultyinfo">View Profile</td> -->
+                                        <!-- <td>
                                         <a
-                                            href="<?php echo base_url()?>facultyinfo?student_id=<?php echo $row['student_id']; ?>">Uplode Video
+                                            href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>">Uplode Video
                                             </a>
                                     </td> -->
-                                    <td>
-                                        <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>"
-                                            class="button">Upload Video</a>
-                                    </td>
-                                </tr>
+                                        <td>
+                                            <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>" class="button">Upload Video</a>
+                                        </td>
+                                    </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
 
-                        
+
                         <!-- </form> -->
 
 
@@ -259,37 +256,38 @@
                         <label for="sessiontime">Session (date and time):</label>
                         <input type="datetime-local" id="sessiontime" name="sessiontime">
                     </div>
-                    <?php if(!empty($Studentdata)){ ?>
-                    <div id="StudentList" class="">
-                        <p class="info-box-number h3 text-center"><b> Student List</b></p>
+                    <?php if (!empty($Studentdata)) { ?>
+                        <div id="StudentList" class="">
+                            <p class="info-box-number h3 text-center"><b> Student List</b></p>
 
-                        <table id="studentList-table" class="table">
-                            <thead>
-                                <tr>
-                                    <th>Sr.no</th>
-                                    <th>Student Name</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php 
-                                         $i=1;
-                                        foreach($Studentdata as $data){ ?>
-                                <tr>
-                                    <td><?=$i;?></td>
-                                    <td><?=$data->student_name;?></td>
-                                    <td>
-                                        <a class="btn btn-primary mr-4" href="#">Edit</a>
-                                        <a class="btn btn-danger mr-4" href="#">Delete</a>
-                                        <a class="btn btn-warning mr-4" href="#">Upload</a>
-                                    </td>
-                                </tr>
-                                <?php $i++; } ?>
+                            <table id="studentList-table" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Sr.no</th>
+                                        <th>Student Name</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $i = 1;
+                                    foreach ($Studentdata as $data) { ?>
+                                        <tr>
+                                            <td><?= $i; ?></td>
+                                            <td><?= $data->student_name; ?></td>
+                                            <td>
+                                                <a class="btn btn-primary mr-4" href="#">Edit</a>
+                                                <a class="btn btn-danger mr-4" href="#">Delete</a>
+                                                <a class="btn btn-warning mr-4" href="#">Upload</a>
+                                            </td>
+                                        </tr>
+                                    <?php $i++;
+                                    } ?>
 
-                            </tbody>
+                                </tbody>
 
-                        </table>
-                    </div>
+                            </table>
+                        </div>
                     <?php } ?>
 
                     <!-- datepicker mdb -->
@@ -301,7 +299,7 @@
                         <p id="startDate">Start Date:</p>
                         <p id="endDate">End Date:</p>
                         <script>
-                        $("input[name='datetimes']").daterangepicker();
+                            $("input[name='datetimes']").daterangepicker();
                         </script>
 
 
@@ -341,53 +339,53 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard2.js"></script>
     <script>
-    // Get the elements
-    //   var from_input = $('#startingDate').pickadate(),
-    //     from_picker = from_input.pickadate('picker')
-    //   var to_input = $('#endingDate').pickadate(),
-    //     to_picker = to_input.pickadate('picker')
+        // Get the elements
+        //   var from_input = $('#startingDate').pickadate(),
+        //     from_picker = from_input.pickadate('picker')
+        //   var to_input = $('#endingDate').pickadate(),
+        //     to_picker = to_input.pickadate('picker')
 
-    // Check if there’s a “from” or “to” date to start with and if so, set their appropriate properties.
-    //   if (from_picker.get('value')) {
-    //     to_picker.set('min', from_picker.get('select'))
-    //   }
-    //   if (to_picker.get('value')) {
-    //     from_picker.set('max', to_picker.get('select'))
-    //   }
+        // Check if there’s a “from” or “to” date to start with and if so, set their appropriate properties.
+        //   if (from_picker.get('value')) {
+        //     to_picker.set('min', from_picker.get('select'))
+        //   }
+        //   if (to_picker.get('value')) {
+        //     from_picker.set('max', to_picker.get('select'))
+        //   }
 
-    // Apply event listeners in case of setting new “from” / “to” limits to have them update on the other end. If ‘clear’ button is pressed, reset the value.
-    //   from_picker.on('set', function (event) {
-    //     if (event.select) {
-    //       to_picker.set('min', from_picker.get('select'))
-    //     } else if ('clear' in event) {
-    //       to_picker.set('min', false)
-    //     }
-    //   })
-    //   to_picker.on('set', function (event) {
-    //     if (event.select) {
-    //       from_picker.set('max', to_picker.get('select'))
-    //     } else if ('clear' in event) {
-    //       from_picker.set('max', false)
-    //     }
-    //   })
+        // Apply event listeners in case of setting new “from” / “to” limits to have them update on the other end. If ‘clear’ button is pressed, reset the value.
+        //   from_picker.on('set', function (event) {
+        //     if (event.select) {
+        //       to_picker.set('min', from_picker.get('select'))
+        //     } else if ('clear' in event) {
+        //       to_picker.set('min', false)
+        //     }
+        //   })
+        //   to_picker.on('set', function (event) {
+        //     if (event.select) {
+        //       from_picker.set('max', to_picker.get('select'))
+        //     } else if ('clear' in event) {
+        //       from_picker.set('max', false)
+        //     }
+        //   })
     </script>
 
 
 
     <script type="text/javascript">
-    $(document).ready(function() {
-        $("input[name='datetimes']").daterangepicker({},
-            function(start, end, label) {
-                let startDate = start.format("YYYY-MM-DD").toString();
-                let endDate = end.format("YYYY-MM-DD").toString();
+        $(document).ready(function() {
+            $("input[name='datetimes']").daterangepicker({},
+                function(start, end, label) {
+                    let startDate = start.format("YYYY-MM-DD").toString();
+                    let endDate = end.format("YYYY-MM-DD").toString();
 
-                document.getElementById("startDate").innerHTML =
-                    "Start date: " + startDate;
-                document.getElementById("endDate").innerHTML = "End date: " + endDate;
+                    document.getElementById("startDate").innerHTML =
+                        "Start date: " + startDate;
+                    document.getElementById("endDate").innerHTML = "End date: " + endDate;
 
-            }
-        );
-    });
+                }
+            );
+        });
     </script>
 
     <!-- <script type="text/javascript">
@@ -398,28 +396,30 @@ $(function() {
 
 
     <script>
-    document.getElementById('showTableLink').addEventListener('click', function() {
-        var table = document.getElementById('studentTable');
-        if (table.style.display === 'none') {
-            table.style.display = 'table';
-        } else {
-            table.style.display = 'none';
-        }
-    });
+        document.getElementById('showTableLink').addEventListener('click', function() {
+            var table = document.getElementById('studentTable');
+            if (table.style.display === 'none') {
+                table.style.display = 'table';
+            } else {
+                table.style.display = 'none';
+            }
+        });
     </script>
 
-<script>document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("toggle-button");
-    const toggleContent = document.getElementById("toggle-content");
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById("toggle-button");
+            const toggleContent = document.getElementById("toggle-content");
 
-    toggleButton.addEventListener("click", function () {
-        if (toggleContent.style.display === "none") {
-            toggleContent.style.display = "block";
-        } else {
-            toggleContent.style.display = "none";
-        }
-    });
-});</script>
+            toggleButton.addEventListener("click", function() {
+                if (toggleContent.style.display === "none") {
+                    toggleContent.style.display = "block";
+                } else {
+                    toggleContent.style.display = "none";
+                }
+            });
+        });
+    </script>
 
 </body>
 

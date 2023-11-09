@@ -97,10 +97,10 @@ class AdminController extends BaseController
 
     public function UplodedvideoByStudent()
     {
-
+        $db = \Config\Database::connect();
         $model = new AdminModel();
-        $data['studentVideoData'] = $model->getStudeyVideoUplodeByStudent();
-        $data['FacultyVideoData'] = $model->getStudeyVideoUplodeByFaculty();
+        $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
+        $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
         // echo "<pre>"; print_r($data['FacultyVideoData']);echo "</pre>"; die();
         return view('AdminSideBar/StudentVideo', $data);
     }
@@ -266,5 +266,25 @@ class AdminController extends BaseController
         }
 
         return $tableHtml;
+    }
+    public function getFacultyName_StudentVideo($faculty)
+    {
+        $db = \Config\Database::connect();
+        // Assuming $faculty->Faculty_id contains the ID of the faculty member
+        $register_id = $faculty->Faculty_id;
+
+        $query = $db->table('register')
+            ->select('full_name')
+            ->where('id', $register_id)
+            ->get();
+
+        if ($query->getNumRows() > 0) {
+            $row = $query->getRow();
+            $full_name = $row->full_name;
+            print_r($full_name);
+            // Now $full_name contains the full name of the faculty member
+        } else {
+            // Handle the case where no matching record was found
+        }
     }
 }

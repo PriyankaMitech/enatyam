@@ -914,11 +914,5 @@
 </div>
 <hr>
 
-<div class="row ">
-    <div class="col-lg-12 text-center">
-        <a href="<?php echo base_url('demo'); ?>" class="btnnew btn-book">Book your Free demo now</a>
-        <a href="<?php echo base_url('Contactus'); ?>" class="btnnew btn-request">Not sure ?? Request a call back</a>
-    </div>
-</div>
 
 <?php include('footer.php'); ?>

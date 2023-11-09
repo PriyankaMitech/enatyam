@@ -154,20 +154,60 @@ class AdminModel extends Model
             ->getResult();
     }
 
-    public function getStudeyVideoUplodeByStudent()
+    public function getStudyVideoUplodedByStudent()
     {
-        return $this->db->table('uplode_study_video_from_student')
-            ->select('*')
+        // $VideoDetails = $this->db->table('uplode_study_video_from_student')
+        //     ->select('*')
+        //     ->get()
+        //     ->getResult();
+
+        $VideoDetails = $this->db->table('uplode_study_video_from_student')
+            ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
+            ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id')
             ->get()
             ->getResult();
+
+        // echo "<pre>";
+        // print_r($VideoDetails);
+        // exit();
+
+
+        // $faculty_ids = array(); // Initialize an empty array to store faculty IDs
+
+        // foreach ($VideoDetails as $video) {
+        //     $faculty_ids[] = $video->Faculty_id; // Add each Faculty_id to the array
+        // }
+
+        // // Now $faculty_ids will contain an array of Faculty IDs
+        // print_r($faculty_ids);
+        return  $VideoDetails;
     }
 
-    public function getStudeyVideoUplodeByFaculty()
+    public function getStudyVideoUplodedByFaculty()
     {
-        return $this->db->table('uplode_video_to_student')
-            ->select('*')
+        // return $this->db->table('uplode_video_to_student')
+        //     ->select('*')
+        //     ->get()
+        //     ->getResult();
+
+        $VideoDetails = $this->db->table('uplode_video_to_student')
+            ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
+            ->join('student', 'student.student_id = uplode_video_to_student.student_id')
+            ->join('register', 'register.id = uplode_video_to_student.register_faculty_id')
             ->get()
             ->getResult();
+        // $VideoDetails = $this->db->table('uplode_video_to_student')
+        //     ->select('uplode_video_to_student.*, student.student_name as student_name, faculty.faculty_name as faculty_name')
+        //     ->join('student', 'student.student_id = uplode_video_to_student.student_id')
+        //     ->join('faculty', 'faculty.faculty_id = uplode_video_to_student.register_faculty_id')
+        //     ->get()
+        //     ->getResult();
+
+
+        // echo "<pre>";
+        // print_r($VideoDetails);
+        // exit();
+        return  $VideoDetails;
     }
 
     public function getcarreerBookByfaculty()
