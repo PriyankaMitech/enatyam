@@ -231,7 +231,25 @@ $page = $uri->getSegment(count($pages));
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <?php } else if ($page == 'Checkout' || $page == 'BillingInformation') { ?>
+
+        <link rel="stylesheet" href="public/css/Checkout.css">
+
+        <link href="<?php echo base_url(); ?>public/extcss/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="<?php echo base_url(); ?>public/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+            .error {
+                color: red !important;
+            }
+        </style>
+
+
+
     <?php } ?>
+
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/headerStyle.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/footer.css">
@@ -472,7 +490,7 @@ $page = $uri->getSegment(count($pages));
                     </div>
                 </div>
             </div>
-               
+
         </div>
     </div>
     </div>

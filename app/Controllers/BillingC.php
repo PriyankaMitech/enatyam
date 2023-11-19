@@ -39,7 +39,18 @@ class BillingC extends BaseController
             $this->session->setFlashdata('success', 'Order Placed successfully.');
         }
 
-        return redirect()->to('OrderDetails'); // Load a view after form submission
+        $id = $this->session->get('PricingType_Id');
+        // echo $id;
+        // die;
+        $billingModel = new BillingM();
+        $matchingRecords = $billingModel->getSessionPricingData($id);
+        // Pass the data to the view
+        $data['matchingRecords'] = $matchingRecords;
+        // print_r($data);
+        // die;
+
+        // return redirect()->to('OrderDetails'); // Load a view after form submission
+        return view('OrderDetails', $data);
     }
 
     public function Checkout()
@@ -51,7 +62,7 @@ class BillingC extends BaseController
 
         if (!(session()->get('sessiondata'))) {
 
-
+            echo "Not set session";
             //  $("#loginformpopup").modal('toggle');
         } else {
             // echo $id;
@@ -59,14 +70,19 @@ class BillingC extends BaseController
             $billingModel = new BillingM(); // Load the model
             // $matchingRecords['SessionPricingData'] = $matchModel->getSessionPricingData($id);
             $matchingRecords = $billingModel->getSessionPricingData($id);
-            // $arr->{0}->slug
+
             $PricingId = $matchingRecords[0]->PricingType_Id;
             $res = $this->session->set('PricingType_Id', $PricingId);
 
-            echo $this->session->get('PricingType_Id');
-            die;
+            // print_r($matchingRecords);
+            // die;
+            // echo $this->session->get('PricingType_Id');
+            // die;
 
-            return view('Checkout', $matchingRecords);
+            // Pass the data to the view
+            $data['matchingRecords'] = $matchingRecords;
+
+            return view('Checkout', $data);
         }
     }
 }

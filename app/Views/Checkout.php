@@ -1,39 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
-    <link rel="stylesheet" href="public/css/headerStyle.css">
-    <link rel="stylesheet" href="public/css/footer.css">
-    <link rel="stylesheet" href="public/css/Checkout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css"
-        integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- fontawesome icon cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- jQuery library -->
-
-</head>
+<?php include('header.php'); ?>
 
 <body>
-    <?php include('header.php');?>
-    <?php if (session()->getFlashdata('success')): ?>
-    <div class="alert alert-success">
-        <?= session()->getFlashdata('success') ?>
-    </div>
+
+
+    <?php if (session()->getFlashdata('success')) : ?>
+        <div class="alert alert-success">
+            <?= session()->getFlashdata('success') ?>
+        </div>
     <?php endif; ?>
     <section class="contactus">
 
@@ -41,12 +14,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Checkout</h1>
-
-
                 </div>
-
             </div>
-
         </div>
 
     </section>
@@ -76,7 +45,7 @@
                     <div class="container-fluid check-cont">
                         <p>Kathak Lehanga has been added to your cart.</p>
 
-                        <a href="<?php echo base_url('shop');?>" class="cont-shop">CONTINUE SHOPPING</a>
+                        <a href="<?php echo base_url('shop'); ?>" class="cont-shop">CONTINUE SHOPPING</a>
                     </div>
                 </nav>
 
@@ -85,124 +54,32 @@
 
 
     </div> -->
-    <div class="container cont-width">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar bg-body-tertiary">
-                    <div class="container-fluid check-cont justify-content-start">
-                        <p>Returning customer?
-                        </p>
-
-                        <a class="cont-shop1" id="log-btn">Click here to login</a>
-                    </div>
-                </nav>
-
-                <div class="login-div">
-
-                    <p>If you have shopped with us before, please enter your details below. If you are a new customer,
-                        please proceed to the Billing section.
-
-                    </p>
-
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-6 mb-4">
-                                <label>Username or email <sup>*</sup></label>
-                                <input type="text" class="form-control" />
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <label>Password<sup>*</sup></label>
-                                <input type="password" class="form-control" />
-                            </div>
-                            <div class="col-lg-2 ">
-                                <button type="submit" class="btn log-btn">LOGIN</button>
-                            </div>
-                            <div class="col-lg-10 my-auto ">
-                                <input type="checkbox" id="rembme"> <label> Remember me</label>
-                            </div>
-
-                            <div class="col-lg-12 mt-3">
-                                <a href="">Lost your password?</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
 
 
-    </div>
-    <div class="container cont-width">
-        <div class="row">
-            <div class="col-lg-12 mt-3">
-                <nav class="navbar bg-body-tertiary">
-                    <div class="container-fluid check-cont justify-content-start">
-                        <p>Have a coupon?
-                        </p>
-
-                        <a id="log-btn1" class="cont-shop1">Click here to enter your code
-                        </a>
-                    </div>
-                </nav>
-
-
-                <div class="login-div log-div">
-
-                    <p>If you have a coupon code, please apply it below.
-
-
-
-                    </p>
-
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-6 my-auto">
-
-                                <input type="text" class="form-control" placeholder="Coupon Code" />
-                            </div>
-
-                            <div class="col-lg-3 ">
-                                <button type="submit" class="btn log-btn">APPLY COUPOUN</button>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <div class="container cont-width">
         <div class="row">
 
             <div class="col-lg-12  ">
-                <form class="check-form" action="BillingInformation" method="post">
-
-
+                <form class="check-form" action="<?php echo base_url(); ?>BillingInformation" method="post" id="checkoutForm">
                     <div class="row">
                         <div class="col-lg-6">
                             <h5>BILLING DETAILS</h5>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label>First name <sup>*</sup></label>
-                                    <input type="text" name="Fname" class="form-control" />
-
+                                    <input type="text" name="Fname" class="form-control" id="Fname" />
+                                    <!-- <span id="message" class="error"></span> -->
                                 </div>
                                 <div class="col-lg-6">
-
                                     <label>Last name <sup>*</sup></label>
-                                    <input type="text" name="Lname" class="form-control" />
+                                    <input type="text" name="Lname" class="form-control" id="Lname" />
                                 </div>
-
                                 <div class="col-lg-12">
-
                                     <label>Country/Region <sup>*</sup></label>
-                                    <select class="form-select form-control" name="country"
-                                        aria-label="Default select example">
+                                    <select class="form-select form-control required" name="country" aria-label="Default select example" id="country">
 
-                                        <option selected>Open this select menu</option>
+                                        <option value="">Open this select menu</option>
                                         <option value="1">Afghanistan</option>
                                         <option value="2">Åland Islands</option>
                                         <option value="3">Albania</option>
@@ -443,28 +320,26 @@
                                         <option value="3">Vietnam</option>
                                         <option value="3">Virgin Islands (U.S.)</option>
                                         <option value="3"> West Bank and Gaza</option>
-                                          <option value="3">Yemen, Rep.</option>
+                                        <option value="3">Yemen, Rep.</option>
                                         <option value="3">Zambia</option>
                                         <option value="3">Zimbabwe</option>
-                                        
+
                                     </select>
                                 </div>
 
                                 <div class="col-lg-12">
 
                                     <label>Street address <sup>*</sup></label>
-                                    <input type="address" name="address" placeholder="House number and street name"
-                                        id="address" class="form-control" aria-describedby="addHelpBlock">
+                                    <input type="address" name="address" placeholder="House number and street name" id="address" class="form-control">
                                 </div>
 
                                 <div class="col-lg-12">
 
                                     <label>Town / City <sup>*</sup></label>
-                                    <input type="address" name="city" placeholder="House number and street name"
-                                        id="address" class="form-control" aria-describedby="addHelpBlock">
+                                    <input type="address" name="city" placeholder="House number and street name" id="city" class="form-control">
                                 </div>
 
-<!-- 
+                                <!-- 
                                 <div class="col-lg-12">
 
                                     <label>State/County <sup>*</sup></label>
@@ -494,123 +369,47 @@
 
 
                                 <div class="col-lg-12">
-
                                     <label>Postcode/ZIP <sup>*</sup></label>
-                                    <input type="pincode" name="pincode" placeholder="Pincode number and Zip"
-                                        id="pincode" class="form-control" aria-describedby="addHelpBlock">
+                                    <input type="pincode" name="pincode" placeholder="Pincode number and Zip" id="pincode" class="form-control">
                                 </div>
-
-
-
                                 <div class="col-lg-12">
-
-                                    <label>Phone<sup>*</sup></label>
-                                    <input type="phone" name="phone" placeholder="Enter Your Phone number" id="phone"
-                                        class="form-control" aria-describedby="addHelpBlock">
+                                    <label>Mobile Number<sup>*</sup></label>
+                                    <input type="phone" name="phone" placeholder="Enter Your Mobile number" id="phone" class="form-control" pattern="[0-9]{10}">
                                 </div>
-
-
                                 <div class="col-lg-12">
-
                                     <label>Email<sup>*</sup></label>
-                                    <input type="Email" name="email" placeholder="Enter Your Email " id="Email"
-                                        class="form-control" aria-describedby="addHelpBlock">
+                                    <input type="Email" name="email" placeholder="Enter Your Email " id="Email" class="form-control">
                                 </div>
-
-
                                 <div class="col-lg-12 mt-3">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Create an account?
                                     </label>
                                 </div>
-
-
                             </div>
-
-
-
                         </div>
 
                         <div class="col-lg-6">
                             <h5>ADDITIONAL DETAILS</h5>
-
                             <label>Order notes (optional)
                             </label>
-                            <textarea class="form-control " name="notes"
-                                placeholder="Notes about your order, e.g. special notes for delivery.">
-
-
-
+                            <textarea class="form-control " name="notes" placeholder="Notes about your order, e.g. special notes for delivery.">
                            </textarea>
-
-
                         </div>
-
+                        <div class=" mt-3 text-center">
+                            <button class="btn btn-success" type="submit" id="checkoutButton">Submit</button>
+                        </div>
                     </div>
-
-            </div>
-        </div>
-
-
-
-
-    </div>
-
-
-    <div class="container cont-width">
-        <div class="row">
-            <div class="col-lg-12">
-
-                <h4 class="heading-order">YOUR ORDER</h4>
-                <table class="table table-bordered check-table" style="background-color:transparent!important">
-                    <thead>
-                        <tr>
-                            <th class="product-name">Product</th>
-                            <th class="product-total">Subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="cart_item">
-                            <td class="product-name">
-                                Kathak Lehanga&nbsp; <strong class="product-quantity">×&nbsp;1</strong> </td>
-                            <td class="product-total">
-                                <span class="woocommerce-Price-amount amount"><span
-                                        class="woocommerce-Price-currencySymbol">₹</span>12,000.00</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-
-                        <tr class="cart-subtotal">
-
-                            <td colspan="2" style="text-align:center"> <span
-                                    class="woocommerce-Price-amount amount"><b>Subtotal</b> <span class=""
-                                        style="margin-left:10px">₹</span>12,000.00</span></td>
-                        </tr>
-
-
-
-
-
-
-                        <tr class="order-total">
-                            <td colspan="2" style="text-align:center"> <span
-                                    class="woocommerce-Price-amount amount"><b>Total</b> <span class=""
-                                        style="margin-left:10px">₹</span>12,000.00</span></td>
-
-                        </tr>
-
-
-                    </tfoot>
-                </table>
+                </form>
             </div>
         </div>
     </div>
 
 
 
-    <div class="container cont-width mt-4">
+
+
+    <!-- <div class="container cont-width mt-4">
         <div class="row">
             <div class="col-lg-12 mt-3">
                 <nav class="navbar bg-body-tertiary1 p-3">
@@ -632,13 +431,12 @@
             </div>
             <div class="pay-method-1">
                 <p>Your personal data will be used to process your order, support your experience throughout this
-                    website, and for other purposes described in our<a
-                        href="<?php echo base_url('privacypolicy');?>">privacy policy</a> </p>
+                    website, and for other purposes described in our<a href="<?php echo base_url('privacypolicy'); ?>">privacy policy</a> </p>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label f-label" for="flexCheckDefault">
-                    I have read and agree to the website <a href="<?php echo base_url('privacypolicy');?>"> terms
+                    I have read and agree to the website <a href="<?php echo base_url('privacypolicy'); ?>"> terms
                         and conditions *</a>
                 </label>
             </div>
@@ -651,42 +449,9 @@
                 </button>
             </div>
 
-            </nav>
-            </form>
+        </nav>
+        </form>
         </div>
-
-
-    </div>
+    </div> -->
 
     <?php include('footer.php'); ?>
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <script>
-    jQuery(document).ready(function() {
-        jQuery("#log-btn").click(function() {
-
-            jQuery(".login-div").toggle("");
-        })
-
-    });
-
-    jQuery(document).ready(function() {
-        jQuery("#log-btn1").click(function() {
-
-            jQuery(".log-div").toggle("");
-        })
-
-    });
-    </script>
-
-
-
-</body>
-
-
-</html>

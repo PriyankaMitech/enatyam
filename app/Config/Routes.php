@@ -128,8 +128,8 @@ $routes->get('profilemanagment', 'StudentController::profilemanagment');
 $routes->post('profilemanagment', 'StudentController::profilemanagment');
 
 // 
-$routes->get('register', 'LoginController::register');
-$routes->post('register', 'LoginController::register');
+// $routes->get('register', 'LoginController::register');
+// $routes->post('register', 'LoginController::register');
 $routes->get('login', 'LoginController::checkLoginDetails');
 $routes->post('login', 'LoginController::checkLoginDetails');
 $routes->get('my_account', 'Home::my_account');
@@ -147,6 +147,7 @@ $routes->post('uploadMedia', 'StudentController::uploadMedia');
 
 $routes->get('StudentProfile', 'StudentController::StudentProfile');
 $routes->get('UplodeVideo', 'StudentController::UplodeVideo');
+$routes->get('OrderDetails', 'BillingC::OrderDetails');
 
 
 
