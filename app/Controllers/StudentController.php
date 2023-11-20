@@ -39,16 +39,26 @@ public function profilemanagment(){
 }
 public function UplodeVideo()
 {
-    $session = session();
-    if ($session->has('id')) {
-    $user_id = $session->get('id');
+    if (isset($_SESSION['sessiondata'])) {
+        $sessionData = $_SESSION['sessiondata'];
     
-    // echo "$user_id"; exit();
-    $login_model = new LoginModel();
- 
-    $data['user_data'] = $login_model->get_user_data($user_id); 
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
 
-    return view('StudentSidebar/UplodeVideo',$data);
+        if ($email !== null && $password !== null) {
+          
+            $session = session();
+          if ($session->has('id')) {
+          $user_id = $session->get('id');
+         $login_model = new LoginModel();
+        $data['user_data'] = $login_model->get_user_data($user_id); 
+         return view('StudentSidebar/UplodeVideo',$data);
+        } else { 
+            return redirect()->to(base_url());
+        }
+    } else {
+        return redirect()->to(base_url());
+    }
 }else{
     return view('home');
 }
@@ -191,5 +201,49 @@ public function lostpassword()
        $update_data = $db->table('register')->where('email',$email);
        $update_data->update($data);
        return redirect()->back();
+    }
+    public function ScheduleStudent()
+    {
+        $session = session();       
+        $user_id = $session->get('id');     
+        $model = new LoginModel();
+        $data['SessionCount'] = $model->get_user_Session($user_id); 
+   // print_r($data['SessionCount']);die;
+        return view('StudentSidebar/ScheduleStudent',$data);
+    }
+
+    public function StudentSelectClassDates() {
+
+        $result = session();       
+        $registerId = $result->get('id');
+         return view('StudentSidebar/StudentSelectClassDates',['registerId' => $registerId]);
+        
+    }
+
+    public function selectStudentSchedule()
+    {
+        if ($this->request->getMethod() === 'post') {
+            // Get the data from the form
+            $student_register_Id = $this->request->getPost('register_student_id');
+            $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
+          // print_r($selectedAppointments);die;
+          $StudentModel = new StudentModel();
+    
+            // Prepare an array of data for batch insertion
+            $data = [];
+            foreach ($selectedAppointments as $appointment) {
+                $data[] = [
+                  'register_student_id' => $student_register_Id,
+                    'date' => $appointment['date'],
+                    'start_time' => $appointment['formTime'],
+                    'end_time' => $appointment['toTime'],
+                ];
+            }
+      //print_r($data);die;
+            $StudentModel->insertSelectedSlotdByStudents($data);
+           return redirect()->to('StudentSelectClassDates'); 
+        } else {
+            // Handle non-POST requests (optional).
+        }
     }
 }

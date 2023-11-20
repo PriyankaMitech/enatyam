@@ -36,5 +36,13 @@ class StudentModel extends Model
             ->get()
             ->getRow();
         }
- 
+        public function insertSelectedSlotdByStudents($data)
+        {
+            if (!empty($data) && is_array($data)) {
+                $this->db->table('Student_Slots_tbl')->insertBatch($data);
+                return true; // Success
+            } else {
+                return false; // Failed to insert data
+            }
+        }
 }

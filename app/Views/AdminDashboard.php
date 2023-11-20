@@ -108,9 +108,9 @@
                     <a href="<?php echo base_url();?>" class="nav-link">Home</a>
                 </li>
 
-               <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-            </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+                </li>
 
             </ul>
 
@@ -281,24 +281,33 @@
                                             <i class="fas fa-long-arrow-alt-right comp-payment"></i>
                                         </div>
                                     </div>
-                                   <!--  -->
+                                    <!--  -->
 
-                                   <div class="col-lg-12">
+                                    <div class="col-lg-12">
                                         <table id="coundd_demo-payment-table" class="table" style="display:none">
-                                       
+
                                             <?php foreach ($ConductedDemo as $faculty): ?>
                                             <tr>
-                                                <td><?= $faculty->name; ?></td>
-                                                <td><?= $faculty->email; ?></td>
+                                                <form action="<?= base_url('AdminController/addStudent'); ?>"
+                                                    method="post">
+                                                    <td><?= $faculty->name; ?></td>
+                                                    <td><?= $faculty->email; ?></td>
+                                                    <td>
+                                                        <input type="hidden" name="email"
+                                                            value="<?= $faculty->email; ?>">
+                                                        <button class="btn btn-primary" type="submit">Add
+                                                            Student</button>
+                                                    </td>
+                                                </form>
                                             </tr>
                                             <?php endforeach; ?>
-                                       
-                                            
+
+
                                         </table>
 
 
                                     </div>
-                                   <!--  -->
+                                    <!--  -->
                                     <div class="col-lg-12">
                                         <table id="comp-payment-table" class="table" style="display:none">
                                             <tr>
@@ -712,7 +721,7 @@
     </script>
 
 
-   
+
 
 
 

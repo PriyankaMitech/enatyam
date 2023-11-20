@@ -10,10 +10,8 @@ class DemoController extends BaseController
     public function bookDemo()
     {
       
-        $demoModel = new DemoModel();
-
-        //if ($this->request->getMethod() === 'post') {
-            $data = [
+               $demoModel = new DemoModel();
+                $data = [
                 'name' => $this->request->getPost('name'),
                 'email' => $this->request->getPost('email'),
                 'phone' => $this->request->getPost('phone'),
@@ -30,26 +28,33 @@ class DemoController extends BaseController
                  'End_Time' => $this->request->getPost('End_Time'),
                 
             ];
-       //   print_r($data);die;
             $demoModel->save($data);
             return redirect()->to('Home');
         }
 
         public function todayDemo()
         {
-             $result = session();
-             $registerId = $result->get('id');
-        //    print_r($registerId);die;
-             $demoModel = new DemoModel();
-             $currentDate = date('Y-m-d');
-
-             $data['data'] = $demoModel->getTodayDemo($currentDate, $registerId);
-      //   echo "<pre>"; print_r($data['data']);echo "</pre>"; die();
-             $data['allData'] = $demoModel->getAssignTecherData($registerId);
-        //  echo "<pre>"; print_r($data['allData']);echo "</pre>"; die();
+            if (isset($_SESSION['sessiondata'])) {
+                $sessionData = $_SESSION['sessiondata'];
+            
+                $email = $sessionData['email'] ?? null;
+                $password = $sessionData['password'] ?? null;
         
-     
-         return view('FacultySchedule', $data);
+                if ($email !== null && $password !== null) {
+                  
+                    $result = session();
+                    $registerId = $result->get('id');
+                    $demoModel = new DemoModel();
+                     $currentDate = date('Y-m-d');
+                    $data['data'] = $demoModel->getTodayDemo($currentDate, $registerId);
+                  $data['allData'] = $demoModel->getAssignTecherData($registerId);   
+                 return view('FacultySchedule', $data);
+                } else { 
+                    return redirect()->to(base_url());
+                }
+            } else {
+                return redirect()->to(base_url());
+            }
      
         }
         

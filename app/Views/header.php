@@ -209,6 +209,7 @@
         font-size: 15px !important;
         font-weight: 400 !important;
     }
+    
     </style>
     <?php }else if($page == 'Instruments') { ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -263,9 +264,11 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo1.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
+
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/demoprofile.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Carrier.css">
+    <!-- <link rel="stylesheet" href="<?=base_url(); ?>public/css/Career.css"> -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -273,6 +276,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
         integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
 
     <?php }else if($page == 'demo'){ ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -333,16 +341,18 @@
     <?php }
                 // echo $page;exit();
         ?>
+
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Login.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Register.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/resposivestyle.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/hederresponsive.css">
 
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/resposivestyle.css">
+   
 </head>
 
-<body>
+<body class="overlap">
     <section class="tophead ">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid  pd0">
@@ -407,7 +417,8 @@
                             <a class="nav-link px-2" href="<?php echo base_url('Career');?>">Career</a>
                         </div>
                         <div class="navbar-nav">
-                            <a href="<?php echo base_url('demo');?>" class="btn btndemoh" style="width: auto;">BOOK YOUR FREE DEMO</a>
+                            <a href="<?php echo base_url('demo');?>" class="btn btndemoh" style="width: auto;">BOOK YOUR
+                                FREE DEMO</a>
                         </div>
                     </div>
                 </div>
@@ -426,7 +437,7 @@
                             <img src="public/images/logo1.png" alt="Enatyam">
                         </a>
                     </div>
-                    <div class="col-6 text-right my-auto">
+                    <div class="col-6 text-right my-auto menub">
                         <i class="fa fa-bars" id="menu-icon"></i>
                     </div>
                 </div>
@@ -449,32 +460,31 @@
             <div id="overlay"></div>
     </section>
 
+    <form name="registrationForm" onsubmit="return validateForm()" method="post"
+        action="<?php echo base_url();?>register">
+        <div class="modal fade" id="registerformpopup" tabindex="-1" aria-labelledby="ModalFormLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
 
-    <div class="modal fade" id="registerformpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+                <div class="modal-content">
 
-        <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-body">
+                        <div class="register_form">
+                            <h4 class="titel pt-3">Registration</h4>
 
-            <div class="modal-content">
+                            <form name="registrationForm" onsubmit="return validateForm()" method="post"
+                                action="<?php echo base_url();?>register" id="registerform">
+                                <div class="form-group m-2">
+                                    <input type="text" name="full_name" id="full_name" class="form-control"
+                                        aria-required="true" placeholder="Username">
+                                    <span id="nameError" class="d-none" style="color: red;"></span>
+                                </div>
 
-                <div class="modal-body">
-
-
-                    <div class="register_form">
-                        <h4 class="titel pt-3">Register a new account</h4>
-
-                        <form name="registrationForm" onsubmit="return validateForm()" method="post"
-                            action="<?php echo base_url();?>register" id="registerform">
-                            <div class="form-group m-2">
-                                <input type="text" name="full_name" id="full_name" class="form-control"
-                                    aria-required="true" placeholder="Username">
-                                <span id="nameError" class="d-none" style="color: red;"></span>
-                            </div>
-
-                            <div class="form-group m-2">
-                                <input type="email" name="email" id="email" class="form-control" aria-required="true"
-                                    placeholder="Email">
-                                <span id="emailError" style="color: red;"></span>
-                            </div>
+                                <div class="form-group m-2">
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        aria-required="true" placeholder="Email">
+                                    <span id="emailError" style="color: red;"></span>
+                                </div>
 
                             <div class="form-group m-2">
                                 <input type="mobile_no" name="mobile_no" id="mobile_no" class="form-control"
@@ -515,15 +525,17 @@
 
                             </div>
 
+                                <button type="button" class="btn btn-light mt-3" onclick="formmodel()">
+                                    Next
+                                </button>
 
+                                <input type="button" onclickt="return validateForm()"  id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
+                                <p>Are you a member?<a class="Login" href="javascript:void(0);"
+                                        onclick="showLoginModal()" data-bs-toggle="modal"
+                                        data-bs-target="#loginformpopup">Login</a></p>
+                                <!-- </form> -->
 
-                            <input type="button" onclickt="return validateForm()"  id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
-                            <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()"
-                                    data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
-                        </form>
-
-
-
+                        </div>
 
                     </div>
 
@@ -532,8 +544,64 @@
             </div>
 
         </div>
+        <div class="modal fade" id="formpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="login_form">
+                            <h4 class="titel pt-3" style="color: black;">Help us understand you better by sharing few
+                                details like</h4>
 
-    </div>
+                            <div class="form-group">
+                                <select class="form-control" id="course" aria-required="true" aria-invalid="false"
+                                    name="course">
+                                    <option value="">Book Demo for*</option>
+                                    <option id="" value="Dance">Dance</option>
+                                    <option id="" value="Music">Music</option>
+                                    <option id="" value="Yoga">Yoga</option>
+                                    <option id="" value="Instruments">Instruments</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+
+                                <select class="form-control" id="course" aria-required="true" aria-invalid="false"
+                                    name="sub_course">
+                                    <option value="">selectCource*</option>
+                                    <option id="" value="Dance">Kathak</option>
+                                    <option id="" value="Music">Ouuu</option>
+                                    <option id="" value="Yoga">Yoagagag</option>
+                                    <option id="" value="Instruments">Tablea</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+
+                                <input type="number" name="age" id="age" class="form-control" aria-required="true"
+                                    placeholder="Enter Youe Age">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Are you practicing this art (any experience in this sector)?</label><br>
+                                <label style="margin-left: 100px;" for="yes">Yes</label>
+                                <input type="radio" name="experience" id="yes" value="yes">
+                                <label style="margin-left: 100px;" for="no">No</label>
+                                <input type="radio" name="experience" id="no" value="no">
+                            </div>
+
+                            <div class="form-group" id="experienceDetails" style="display: none;">
+                                <label for="experienceInput">Please provide details of your experience:</label>
+                                <input type="text" name="experienceInput" id="experienceInput" class="form-control">
+                            </div>
+                            <input type="submit" value="Sign Up" class="btn btn-light mt-3">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 
     <div class="modal fade" id="loginformpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
 
@@ -562,7 +630,7 @@
                                 <span id="passwordError1" style="color: red;"></span>
                             </div>
                             <div class="forgetmenot login-remember">
-                               
+
                                 <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password"
                                     onclick="showLostPasswordModal()">Lost your password?</a>
                             </div>

@@ -73,7 +73,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url()?>ScheduleStudent" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p> Schedule
                   </p>
@@ -83,6 +83,12 @@
                 <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Reshedule</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url()?>StudentSelectClassDates" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Giveslots</p>
                 </a>
               </li>
              
