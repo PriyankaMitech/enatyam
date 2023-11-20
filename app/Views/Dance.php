@@ -38,7 +38,7 @@
             <div class="typesOfDance-tab">
 
                 <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="col-lg-1 col-md-1 nav-item " >
+                <li class="col-lg-1 col-md-1 dancebthide " >
                 </li>
                     <!-- Kathak -->
                     <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
@@ -61,7 +61,7 @@
                     <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
                         <button class="nav-link " id="pills-Western-tab" data-bs-toggle="pill" data-bs-target="#pills-Western" type="button" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</button>
                     </li>
-                    <li class="col-lg-1 col-md-1 nav-item " >
+                    <li class="col-lg-1 col-md-1 dancebthide " >
                     </li>
                     <!-- Semi-classical -->
                     <li class="col-lg-4 col-md-4 col-6 nav-item p-2" role="presentation">
@@ -195,7 +195,7 @@
                         <section class="modulesec mft" id="mod-kathak">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak dancemodul" >Modules</button></span>
                                  
                                 </div>
                                 <div class="month-row">
@@ -582,7 +582,7 @@
                             <div class="container">
                                 <div class="row">
                                     
-                                  <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
+                                  <span class="text-center"> <button type="button" class="btn step mkathak dancemodul" >Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
@@ -971,7 +971,7 @@
                         <section class="modulesec mft" id="mod-odissi">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak dancemodul" >Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
@@ -1267,7 +1267,7 @@
                         <section class="modulesec mft" id="mod-Bollywood">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak dancemodul" >Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
@@ -1542,7 +1542,7 @@
                         <section class="modulesec mft" id="mod-Western">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak dancemodul" >Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
@@ -1934,7 +1934,7 @@
                         <section class="modulesec mft" id="mod-Semiclassical">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak dancemodul" >Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
@@ -2263,7 +2263,7 @@
                         <section class="modulesec mft" id="mod-Bhangra">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak dancemodul" >Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
@@ -2658,7 +2658,7 @@
                         <section class="modulesec mft" id="mod-Folk">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak dancemodul" >Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
@@ -2915,62 +2915,62 @@
                         <!-- slider -->
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item mot active">
+                                <div class="carousel-item motd active">
                                     <div class="carousel-caption">
                                         <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I've learned so much about Kathak dance through this online platform. The instructors are knowledgeable and patient, and the course materials are well-organized.</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot">
+                                <div class="carousel-item motd">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I'm so glad I found this online platform for learning Kathak dance. The lessons are easy to follow and I've improved so much since I started!</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot">
+                                <div class="carousel-item motd">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>This online platform has been a game-changer for my Kathak dance practice. The instructors are top-notch and the community is so supportive.</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot">
+                                <div class="carousel-item motd">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I highly recommend this online platform for anyone interested in learning Kathak dance. It's user-friendly and the instructors are excellent.</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot">
+                                <div class="carousel-item motd">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>Learning Kathak dance through this online platform has been a wonderful experience. The quality of the instruction is unmatched!</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot">
+                                <div class="carousel-item motd">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>This online platform for Kathak dance is simply amazing. The lessons are comprehensive and the instructors are passionate about what they do. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot">
+                                <div class="carousel-item motd">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I've tried other online platforms for learning Kathak dance, but this one is by far the best. The instructors are skilled and the community is so encouraging. </p>
                                     </div>
                                 </div>
 
-                                <div class="carousel-item mot">
+                                <div class="carousel-item motd">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p class="testimonialPara">Thanks to this online platform, I've been able to improve my Kathak dance skills from the comfort of my own home. The instruction is top-notch! </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot">
+                                <div class="carousel-item motd">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>Learning Kathak dance through this online platform has been a truly transformative experience. The instructors are excellent and the lessons are so engaging. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot">
+                                <div class="carousel-item motd">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I can't say enough good things about this online platform for Kathak dance. The instruction is outstanding and the
