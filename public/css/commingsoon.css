@@ -379,13 +379,6 @@ a:hover {
   .owl-next i {
     right: 0 !important;
   }
-
-  .faculty-div1::before {
-    width: 312px !important;
-    height: 312px !important;
-
-    /* bottom: 0; */
-  }
 }
 
 .accordion-item {

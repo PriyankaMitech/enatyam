@@ -208,6 +208,9 @@ footer a:hover {
 .copyright-p a {
   color: #7316e6;
 }
+.fdl {
+  padding-top: 8% !important;
+}
 
 /* mobile screen media query */
 

@@ -35,15 +35,15 @@
     left: 0 !important;
   }
   .overflow-hidden {
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    overflow: hidden;
+    overflow: auto !important;
   }
   #overlay {
     position: fixed;
     width: 100%;
     top: 0;
-    height: 100%;
+    height: 1000%;
     background: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 99;
@@ -103,6 +103,12 @@
     background-color: transparent;
     display: flex;
     align-items: center;
+  }
+  .tophead .navbar ul li a {
+    padding: 0px 10px 0px 13px;
+  }
+  .tophead .loginmenu a {
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 991px) and (min-width: 768px) {
@@ -138,22 +144,22 @@
     left: 0 !important;
   }
   .overflow-hidden {
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    overflow: hidden;
+    overflow: auto !important;
   }
   #overlay {
     position: fixed;
     width: 100%;
     top: 0;
-    height: 100%;
+    height: 1000%;
     background: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 99;
   }
 
   .thim-logo img {
-    width: 100%;
+    width: 40%;
     height: auto;
     /* margin-left: 14px; */
   }
@@ -206,5 +212,28 @@
     background-color: transparent;
     display: flex;
     align-items: center;
+  }
+  .video-section {
+    z-index: -0;
+  }
+  .tophead .loginmenu a {
+    padding: 0px 10px 0px 10px;
+    font-size: 11px;
+  }
+  .tophead .navbar ul li a {
+    padding: 0px 10px 0px 10px;
+    font-weight: 400 !important;
+    font-size: 11px;
+  }
+  .video-col1 p {
+    font-size: 13px !important;
+    line-height: 6px;
+  }
+  .btnstrt {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .video-col1 img {
+    width: 50%;
   }
 }
