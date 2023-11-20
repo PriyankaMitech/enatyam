@@ -47,7 +47,7 @@ ul {
   font-weight: 600;
 }
 
-li {
+.coming-soon-ul li {
   margin-bottom: 30px;
   /* Add some space between list items */
 }
@@ -378,13 +378,6 @@ a:hover {
 
   .owl-next i {
     right: 0 !important;
-  }
-
-  .faculty-div1::before {
-    width: 312px !important;
-    height: 312px !important;
-
-    /* bottom: 0; */
   }
 }
 

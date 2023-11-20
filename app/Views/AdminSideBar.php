@@ -80,7 +80,7 @@
                 <a href="<?php //echo base_url() 
                           ?>Getcalender" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
-                  <p>Monthly Calendar
+                  <p>Add New User
                   </p>
                 </a>
               </li> -->
@@ -112,6 +112,12 @@
                 <a href="<?php echo base_url() ?>StudentDate" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Profile</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url()?>StudentList" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>StudentList</p>
                 </a>
               </li>
               <li class="nav-item">

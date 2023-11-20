@@ -9,12 +9,22 @@ class AdminModel extends Model
     protected $table1 = 'register';
     protected $table2 = 'student';
     protected $table3 = 'faculty';
-
+    protected $tableStudents = 'student_slots_tbl';
+    protected $tableTeachers = 'schedule';
     protected $table = 'free_demo_table';
     protected $primaryKey = 'D_id';
     protected $allowedFields = ['Date', 'Conducted_Demo', 'name', 'course', 'AssignTecher_id', ''];
 
+   public function AddUserByAdmin($data)
+   {
+ //   print_r($email);die;
+    $this->db->table('register')->insert($data);
+   }
+   public function AddStudentByAdmin($insertData)
+   {
 
+    $this->db->table('register')->insert($insertData);
+   }
     public function getTodayRecords()
     {
         // $today = date('Y-m-d');
@@ -22,12 +32,89 @@ class AdminModel extends Model
         $today = date('Y-m-d');
         return $this->where('DATE(`Book_Date`) =', $today)
             ->findAll();
+
+    }
+    public function getGroupSessionStudents() {
+        return $this->db->table('register')->where('SessionType', 'GroupSession')->get()->getResult();
+     
+    }
+    public function getOneToOneSessionStudents() {
+        return $this->db->table('register')->where('SessionType', 'OneToOneSession')->get()->getResult();
+     
     }
     public function getConductedDemo()
     {
 
         return $this->db->table('free_demo_table')->where('Conducted_Demo', 'Y')->get()->getResult();
+    
     }
+    public function getStudents()
+    {
+        // Assuming "user_type" is a field indicating students
+      
+        return $this->db->table('register')->where('role', 'Student')->get()->getResult();
+    }
+
+    public function getFacultyrole()
+    {
+       
+        return $this->db->table('register')->where('role', 'Faculty')->get()->getResult();
+    }
+    public function getTeachersByStudent($studentId)
+    {
+     // print_r($studentId);die;
+     $assignTeacherId = $this->db->table('register')
+     ->select('Assign_Techer_id')
+     ->where('id', $studentId)
+     ->get()
+     ->getRow()
+     ->Assign_Techer_id;
+    return $this->db->table('register')
+     ->select('id as Assign_Techer_id, full_name')
+     ->where('id', $assignTeacherId)
+     ->get()
+     ->getResult();
+}
+public function getStudentAndTeacherData($studentId, $teacherId)
+{  
+   
+    $studentData = $this->db->table('student_slots_tbl')->where('register_student_id', $studentId)->get()->getResultArray();
+    $teacherData = $this->db->table('schedule')->where('faculty_register_id', $teacherId)->get()->getResultArray();
+
+    $data = [
+        'studentData' => $studentData,
+        'teacherData' => $teacherData,
+    ];
+
+    return $data;
+    
+   
+}
+
+    // public function getPaymentStatusForEmail($email)
+    // {
+    //     return $this->db->table('register')
+    //         ->select('payment_status')
+    //         ->where('email', $email)
+    //         ->get()
+    //         ->getRow('payment_status');
+    // }
+    public function getStudentDataByEmail($email)
+    {
+        return $this->db->table('free_demo_table')
+            ->where('email', $email)
+            ->get()
+            ->getRow();
+    }
+
+    // public function getPaymentStatusForEmail($email)
+    // {
+    //     return $this->db->table('register')
+    //         ->select('payment_status')
+    //         ->where('email', $email)
+    //         ->get()
+    //         ->getRow('payment_status');
+    // }
     public function getPendingDemo()
     {
         return $this->db->table('free_demo_table')->where('Conducted_Demo', 'N')->get()->getResult();
@@ -270,13 +357,6 @@ class AdminModel extends Model
     }
     public function getdate($date)
     {
-
-        // return $this->db->table('schedule')
-        // ->select('*')
-        // ->get()
-        // ->getResult();
-
-
         $result = $this->db->table('schedule')
             ->where('date', $date)
             ->get()

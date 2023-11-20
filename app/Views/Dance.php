@@ -2,74 +2,77 @@
 <?php include('header.php');?>
     <div class="wrapper-container">
         <div class="video-container">
-            <video class="video-dance" controls="1" autoplay="0" loop="0" id="danceVideo">
+            <video class="video-dance musicv" controls="1" autoplay="0" loop="0">
                 <source src="public/images/Dance/DanceVidio.mp4" type="video/mp4">
 
             </video>
 
             <div class="video-section">
                 <div class="row video-row">
+                <div class="col-4 video-col1">
+                        <P>We are commited to your </p>
+                        <p>commitment.</P>
+                 
+                   
+                      <a class="btn btn-dark btnstrt p-2" href="<?php echo base_url('StartNowPricing'); ?>"> <span class="button-text">Start Now </span></a> 
+
+                          
+                    </div>  
+
                     <div class="col-4 video-col1">
-                        <P>We are commited to your</P>
-                        commitment.
-                        <div class="col-12 col-md-9 ">
-                            <button class="button-content" role="button">
-
-                                <span class="button-text"><a href="<?php echo base_url('StartNowPricing'); ?>">Start Now if you are <br> commited </a> </span>
-
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
                         <p>30 minutes of Music a day will</p>
-                        change your life.
+                        <p>change your life.</p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 video-col1">
                         <p>Your time @ Your Place .</p>
-                        <img src="public/images/music/vidioimg.svg">
+                        <img src="public/images/bhangra-3-e1687254641497-132x100.png">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <section class="btnSection">
+    <section class="mt-4 ">
         <div class="container">
 
             <!-- pills -->
-            <div class="row typesOfDance-tab">
+            <div class="typesOfDance-tab">
 
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="col-lg-1 col-md-1 nav-item " >
+                </li>
                     <!-- Kathak -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-Kathak-tab" data-bs-toggle="pill" data-bs-target="#pills-Kathak" type="button" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</button>
+                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                        <button class="nav-link  active" id="pills-Kathak-tab" data-bs-toggle="pill" data-bs-target="#pills-Kathak" type="button" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</button>
                     </li>
                     <!-- Bharatnatyam -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-Bharatnatyam-tab" data-bs-toggle="pill" data-bs-target="#pills-Bharatnatyam" type="button" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</button>
+                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                        <button class="nav-link " id="pills-Bharatnatyam-tab" data-bs-toggle="pill" data-bs-target="#pills-Bharatnatyam" type="button" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</button>
                     </li>
                     <!-- Odissi -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-Odissi-tab" data-bs-toggle="pill" data-bs-target="#pills-Odissi" type="button" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</button>
+                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                        <button class="nav-link " id="pills-Odissi-tab" data-bs-toggle="pill" data-bs-target="#pills-Odissi" type="button" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</button>
                     </li>
                     <!-- Bollywood -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-Bollywood-tab" data-bs-toggle="pill" data-bs-target="#pills-Bollywood" type="button" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</button>
+                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                        <button class="nav-link " id="pills-Bollywood-tab" data-bs-toggle="pill" data-bs-target="#pills-Bollywood" type="button" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</button>
                     </li>
+             
                     <!-- Western -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-Western-tab" data-bs-toggle="pill" data-bs-target="#pills-Western" type="button" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</button>
+                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                        <button class="nav-link " id="pills-Western-tab" data-bs-toggle="pill" data-bs-target="#pills-Western" type="button" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</button>
+                    </li>
+                    <li class="col-lg-1 col-md-1 nav-item " >
                     </li>
                     <!-- Semi-classical -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-4 col-md-4 col-6 nav-item p-2" role="presentation">
                         <button class="nav-link big" id="pills-Semiclassical-tab" data-bs-toggle="pill" data-bs-target="#pills-Semiclassical" type="button" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</button>
                     </li>
                     <!-- Bhangra -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-4 col-md-4 col-6 nav-item p-2" role="presentation">
                         <button class="nav-link big" id="pills-Bhangra-tab" data-bs-toggle="pill" data-bs-target="#pills-Bhangra" type="button" role="tab" aria-controls="pills-Bhangra" aria-selected="false">Bhangra</button>
                     </li>
                     <!-- Folk -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-4 col-md-4 col-6 nav-item p-2" role="presentation">
                         <button class="nav-link big" id="pills-Folk-tab" data-bs-toggle="pill" data-bs-target="#pills-Folk" type="button" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</button>
                     </li>
                 </ul>
@@ -77,48 +80,82 @@
                     <!-- Kathak -->
                     <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
                             </div>
-                            <div class="col-6 textPara-col">
-                                <p class="textPara">
+                            <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
+                            <h3 class="heading"> - Kathak</h3>
+                                <p >
                                     Looking for the best online Kathak classes with a comprehensive syllabus? Look no further than our platform! Our online Kathak classes are designed to provide you with an immersive learning experience that will help you master this beautiful dance form. Our syllabus covers everything from the basics of footwork and hand gestures to complex choreography and improvisation techniques. With our experienced instructors and state-of-the-art technology, you can learn Kathak from the comfort of your own home and at your own pace. Join us today and discover the joy of Kathak dancing!
                                 </p>
-                                <div class="text-center">
-                                    <button type="button" class="btn btndemo step start m-5">START NOW</button>
-                                </div>
+                                <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                             </div>
                         </div>
-                        <hr class="secbr">
+                     
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                                <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnKathak" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-kathak" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
 
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnKathak">
                             <div class="container">
                                 <div class="row mt-5">
-                                    <div class="col-6">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3> - What you will learn</h3>
+                                        <p class="">
                                             Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                         </p>
                                         <ul class="list-group">
@@ -148,73 +185,74 @@
 
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <img src="public/images/Dance/kathakImg2.svg" class="danceimg">
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <hr>
-                        <section class="modulesec">
+                
+                        <section class="modulesec mft" id="mod-kathak">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
+                                 
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Dance/kathakImg3.svg" class="danceimg">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center ">
+                                            <img src="public/images/Dance/kathakImg3.svg" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12 kathakp">
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-KathakMonth1-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth1" type="button" role="tab" aria-controls="pills-KathakMonth1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth2-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth2" type="button" role="tab" aria-controls="pills-KathakMonth2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth3-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth3" type="button" role="tab" aria-controls="pills-KathakMonth3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth4-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth4" type="button" role="tab" aria-controls="pills-KathakMonth4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth5-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth5" type="button" role="tab" aria-controls="pills-KathakMonth5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth6-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth6" type="button" role="tab" aria-controls="pills-KathakMonth6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth7-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth7" type="button" role="tab" aria-controls="pills-KathakMonth7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth8-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth8" type="button" role="tab" aria-controls="pills-KathakMonth8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth9-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth9" type="button" role="tab" aria-controls="pills-KathakMonth9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth10-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth10" type="button" role="tab" aria-controls="pills-KathakMonth10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth11-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth11" type="button" role="tab" aria-controls="pills-KathakMonth11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-KathakMonth12-tab" data-bs-toggle="pill" data-bs-target="#pills-KathakMonth12" type="button" role="tab" aria-controls="pills-KathakMonth12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -236,7 +274,7 @@
 
                                                         <div class="tab-content" id="pills-tabContent">
                                                             <!-- Month 1 -->
-                                                            <div class="tab-pane fade show active" id="pills-Month1" role="tabpanel" aria-labelledby="pills-Month1-tab">
+                                                            <div class="tab-pane fade show active" id="pills-KathakMonth1" role="tabpanel" aria-labelledby="pills-KathakMonth1-tab">
                                                                 <div class="month-text">
                                                                     <h5 class="MonthHeading">Month 1 :</h5>
                                                                     <ul class="icon-list-items">
@@ -249,7 +287,7 @@
                                                             </div>
 
                                                             <!-- Month 2 -->
-                                                            <div class="tab-pane fade" id="pills-Month2" role="tabpanel" aria-labelledby="pills-Month2-tab">
+                                                            <div class="tab-pane fade" id="pills-KathakMonth2" role="tabpanel" aria-labelledby="pills-KathakMonth2-tab">
                                                                 <div class="month-text">
                                                                     <h5 class="MonthHeading">Month 2 :</h5>
                                                                     <ul class="icon-list-items">
@@ -265,7 +303,7 @@
                                                             </div>
 
                                                             <!-- Month 3 -->
-                                                            <div class="tab-pane fade" id="pills-Month3" role="tabpanel" aria-labelledby="pills-Month3-tab">
+                                                            <div class="tab-pane fade" id="pills-KathakMonth3" role="tabpanel" aria-labelledby="pills-KathakMonth3-tab">
                                                                 <div class="month-text">
                                                                     <h5 class="MonthHeading">Month 3 :</h5>
                                                                     <ul class="icon-list-items">
@@ -428,47 +466,81 @@
                     <!-- Bharatnatyam -->
                     <div class="tab-pane fade" id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <img src="public/images/Dance/Bharatnatyam.svg" class="danceimg">
                             </div>
-                            <div class="col-6 textPara-col">
-                                <p  class="textPara" >
+                            <div class="col-lg-6 col-md-6 col-12 textPara-col">
+                            <h3 class="heading"> - Bharatnatyam</h3>
+                                <p  >
                                     Experience the grace and beauty of Bharatanatyam with our online dance classes! Our syllabus covers the fundamentals of this ancient Indian classical dance form, from basic postures and hand gestures to complex choreography and improvisation techniques. Our experienced instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn Bharatanatyam from the comfort of your own home and at your own pace. Join our community of dancers today and discover the rich cultural heritage and artistry of Bharatanatyam!
                                 </p>
-                                <div class="text-center">
-                                    <button type="button" class="btn btndemo step start">START NOW</button>
-                                </div>
+                                <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                             </div>
                         </div>
-                        <hr class="secbr">
+                     
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6 ">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnbharatnatyam" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-bharatnatyam" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnbharatnatyam">
                             <div class="container">
                                 <div class="row mt-5">
-                                    <div class="col-6">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 > - What you will learn</h3>
+                                        <p >
                                             Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                         </p>
                                         <ul class="list-group">
@@ -498,76 +570,77 @@
 
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <img src="public/images/Dance/2.svg" class="danceimg">
                                     </div>
                                 </div>
                             </div>
                         </section>
 
-                        <hr>
-                        <section class="modulesec">
+               
+                        <section class="modulesec mft" id="mod-bharatnatyam">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    
+                                  <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Dance/bharatnatyam-3.svg" class="danceimg">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                            <img src="public/images/Dance/bharatnatyam-3.svg" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
 
 
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-BharatnatyamMonth1-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth1" type="button" role="tab" aria-controls="pills-BharatnatyamMonth1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth2-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth2" type="button" role="tab" aria-controls="pills-BharatnatyamMonth2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth3-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth3" type="button" role="tab" aria-controls="pills-BharatnatyamMonth3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth4-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth4" type="button" role="tab" aria-controls="pills-BharatnatyamMonth4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth5-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth5" type="button" role="tab" aria-controls="pills-BharatnatyamMonth5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth6-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth6" type="button" role="tab" aria-controls="pills-BharatnatyamMonth6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth7-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth7" type="button" role="tab" aria-controls="pills-BharatnatyamMonth7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth8-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth8" type="button" role="tab" aria-controls="pills-BharatnatyamMonth8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth9-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth9" type="button" role="tab" aria-controls="pills-BharatnatyamMonth9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth10-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth10" type="button" role="tab" aria-controls="pills-BharatnatyamMonth10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth11-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth11" type="button" role="tab" aria-controls="pills-BharatnatyamMonth11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth12-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth12" type="button" role="tab" aria-controls="pills-BharatnatyamMonth12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -783,47 +856,81 @@
                     <!-- Odissi -->
                     <div class="tab-pane fade" id="pills-Odissi" role="tabpanel" aria-labelledby="pills-Odissi-tab">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <img src="public/images/Dance/odissi.png" class="danceimg">
                             </div>
-                            <div class="col-6 textPara-col">
-                                <p class="textPara">
+                            <div class="col-lg-6 col-md-6 col-12 textPara-col">
+                            <h3 class="heading"> - Odissi</h3>
+                                <p >
                                     Explore the captivating rhythms and movements of Odissi with our online dance classes! Our expert instructors offer a comprehensive syllabus that covers the basics of this traditional Indian classical dance form, from footwork and hand gestures to complex choreography and storytelling techniques. Our personalized approach and state-of-the-art technology allow you to learn Odissi from anywhere in the world, at your own pace. Whether you’re a beginner or an experienced dancer, our online Odissi classes provide a fun and engaging way to develop your skills and deepen your appreciation of this beautiful art form. Join us today and discover the magic of Odissi!
                                 </p>
-                                <div class="text-center">
-                                    <button type="button" class="btn btndemo step start">START NOW</button>
-                                </div>
+                                <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                             </div>
                         </div>
-                        <hr class="secbr">
+                    
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6 ">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnodissi" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-odissi" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnodissi">
                             <div class="container">
                                 <div class="row mt-5">
-                                    <div class="col-6">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3> - What you will learn</h3>
+                                        <p >
                                             Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                         </p>
                                         <ul class="list-group">
@@ -853,49 +960,49 @@
 
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <!-- Odissi -->
                                         <img src="public/images/Dance/odissi-3.png" class="danceimg">
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <hr>
-                        <section class="modulesec">
+                 
+                        <section class="modulesec mft" id="mod-odissi">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Dance/odissi-4.png" class="danceimg">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                            <img src="public/images/Dance/odissi-4.png" class="danceimg danceimg5">
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 & 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes CombTwoMonths" id="pills-OdissiMonth1-2-tab" data-bs-toggle="pill" data-bs-target="#pills-OdissiMonth1-2" type="button" role="tab" aria-controls="pills-OdissiMonth1-2" aria-selected="true">Month 1-2</button>
                                                 </li>
                                                 <!-- Month 3 & 4-->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-OdissiMonth3-4-tab" data-bs-toggle="pill" data-bs-target="#pills-OdissiMonth3-4" type="button" role="tab" aria-controls="pills-OdissiMonth3-4" aria-selected="false">Month 3-4</button>
                                                 </li>
                                                 <!-- Month 5 & 6-->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6  nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-OdissiMonth5-6-tab" data-bs-toggle="pill" data-bs-target="#pills-OdissiMonth5-6" type="button" role="tab" aria-controls="pills-OdissiMonth5-6" aria-selected="false">Month 5-6</button>
                                                 </li>
                                                 <!-- Month  7 & 8  -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6  nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-Month7-8-tab" data-bs-toggle="pill" data-bs-target="#pills-OdissiMonth7-8" type="button" role="tab" aria-controls="pills-OdissiMonth7-8" aria-selected="false">Month 7-8 </button>
                                                 </li>
                                                 <!-- Month 9 & 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-Month9-10-tab" data-bs-toggle="pill" data-bs-target="#pills-OdissiMonth9-10" type="button" role="tab" aria-controls="pills-OdissiMonth9-10" aria-selected="false">Month 9-10</button>
                                                 </li>
                                                 <!-- Month  11 & 12  -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6  nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-Month11-12-tab" data-bs-toggle="pill" data-bs-target="#pills-OdissiMonth11-12" type="button" role="tab" aria-controls="pills-OdissiMonth11-12" aria-selected="false">Month 11-12 </button>
                                                 </li>
 
@@ -1046,47 +1153,81 @@
                     <!-- Bollywood -->
                     <div class="tab-pane fade" id="pills-Bollywood" role="tabpanel" aria-labelledby="pills-Bollywood-tab">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <img src="public/images/Dance/bollywood-dance.png" class="danceimg">
                             </div>
-                            <div class="col-6 textPara-col">
-                                <p class="textPara">
+                            <div class="col-lg-6 col-md-6 col-12 textPara-col">
+                            <h3 class="heading"> - Bollywood</h3>
+                                <p >
                                     Ready to add some Bollywood ﬂair to your dance routine? Our online Bollywood dance classes have got you covered! Our expert instructors will guide you through everything from basic steps to complex choreography, helping you master the signature moves of Bollywood dance. Our comprehensive syllabus includes techniques for Bollywood-style footwork, hand gestures, and facial expressions, as well as tips for incorporating your own personal style into your dancing. With our ﬂexible scheduling and convenient online platform, you can learn Bollywood dance from anywhere, at any time. Join us today and start moving to the beat of Bollywood!
                                 </p>
-                                <div class="text-center">
-                                    <button type="button" class="btn btndemo step start">START NOW</button>
-                                </div>
+                                <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                             </div>
                         </div>
-                        <hr class="secbr">
+                      
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnBollywood" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-Bollywood" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnBollywood">
                             <div class="container">
                                 <div class="row mt-5">
-                                    <div class="col-6">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 > - What you will learn</h3>
+                                        <p >
                                             Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                         </p>
                                         <ul class="list-group">
@@ -1115,49 +1256,49 @@
                                         </ul>
                                     </div>
 
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <!-- Bollywood -->
                                         <img src="public/images/Dance/bollywood-21.png" class="danceimg">
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <hr>
-                        <section class="modulesec">
+                  
+                        <section class="modulesec mft" id="mod-Bollywood">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Dance/bollywood-3.png" class="danceimg">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                            <img src="public/images/Dance/bollywood-3.png" class="danceimg danceimg5">
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 & 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes CombTwoMonths" id="pills-BollywoodMonth1-2-tab" data-bs-toggle="pill" data-bs-target="#pills-BollywoodMonth1-2" type="button" role="tab" aria-controls="pills-BollywoodMonth1-2" aria-selected="true">Month 1-2</button>
                                                 </li>
                                                 <!-- Month 3 & 4-->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-BollywoodMonth3-4-tab" data-bs-toggle="pill" data-bs-target="#pills-BollywoodMonth3-4" type="button" role="tab" aria-controls="pills-BollywoodMonth3-4" aria-selected="false">Month 3-4</button>
                                                 </li>
                                                 <!-- Month 5 & 6-->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-BollywoodMonth5-6-tab" data-bs-toggle="pill" data-bs-target="#pills-BollywoodMonth5-6" type="button" role="tab" aria-controls="pills-BollywoodMonth5-6" aria-selected="false">Month 5-6</button>
                                                 </li>
                                                 <!-- Month  7 & 8  -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-BollywoodMonth7-8-tab" data-bs-toggle="pill" data-bs-target="#pills-BollywoodMonth7-8" type="button" role="tab" aria-controls="pills-BollywoodMonth7-8" aria-selected="false">Month 7-8 </button>
                                                 </li>
                                                 <!-- Month 9 & 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-BollywoodMonth9-10-tab" data-bs-toggle="pill" data-bs-target="#pills-BollywoodMonth9-10" type="button" role="tab" aria-controls="pills-BollywoodMonth9-10" aria-selected="false">Month 9-10</button>
                                                 </li>
                                                 <!-- Month  11 & 12  -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-BollywoodMonth11-12-tab" data-bs-toggle="pill" data-bs-target="#pills-BollywoodMonth11-12" type="button" role="tab" aria-controls="pills-BollywoodMonth11-12" aria-selected="false">Month 11-12 </button>
                                                 </li>
                                             </ul>
@@ -1282,48 +1423,82 @@
                     <!-- Western -->
                     <div class="tab-pane fade" id="pills-Western" role="tabpanel" aria-labelledby="pills-Western-tab">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <img src="public/images/Dance/western-dance.png" class="danceimg">
                             </div>
-                            <div class="col-6 textPara-col">
-                                <p class="textPara">
+                            <div class="col-lg-6 col-md-6 col-12 textPara-col">
+                            <h3 class="heading"> - Western</h3>
+                                <p >
                                     Get ready to move to the rhythm of Western dance with our online classes! Our syllabus covers a variety of styles, from contemporary and jazz to hip-hop and tap dance. Our expert instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our state-of-the-art technology and convenient online platform, you can learn Western dance from anywhere in the world, at your own pace. Whether you’re a beginner or an experienced dancer, our online classes provide a fun and engaging way to explore the richness of Western dance culture. Join us today and let’s dance!
                                 </p>
-                                <div class="text-center">
-                                    <button type="button" class="btn btndemo step start">START NOW</button>
-                                </div>
+                                <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                             </div>
                         </div>
-                        <hr class="secbr">
+                  
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnWestern" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-Western" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
 
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnWestern">
                             <div class="container">
                                 <div class="row mt-5">
-                                    <div class="col-6">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 > - What you will learn</h3>
+                                        <p >
                                             Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                         </p>
                                         <ul class="list-group">
@@ -1353,7 +1528,7 @@
 
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
 
 
                                         <!-- Western -->
@@ -1364,68 +1539,68 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="modulesec">
+                        <section class="modulesec mft" id="mod-Western">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Dance/western-dance-2.png" class="danceimg">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                            <img src="public/images/Dance/western-dance-2.png" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
 
 
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-WesternMonth1-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth1" type="button" role="tab" aria-controls="pills-WesternMonth1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth2-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth2" type="button" role="tab" aria-controls="pills-WesternMonth2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth3-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth3" type="button" role="tab" aria-controls="pills-WesternMonth3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth4-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth4" type="button" role="tab" aria-controls="pills-WesternMonth4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth5-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth5" type="button" role="tab" aria-controls="pills-WesternMonth5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth6-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth6" type="button" role="tab" aria-controls="pills-WesternMonth6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth7-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth7" type="button" role="tab" aria-controls="pills-WesternMonth7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth8-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth8" type="button" role="tab" aria-controls="pills-WesternMonth8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth9-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth9" type="button" role="tab" aria-controls="pills-WesternMonth9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth10-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth10" type="button" role="tab" aria-controls="pills-WesternMonth10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth11-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth11" type="button" role="tab" aria-controls="pills-WesternMonth11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-WesternMonth12-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternMonth12" type="button" role="tab" aria-controls="pills-WesternMonth12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -1638,48 +1813,83 @@
                     <!-- Semi-classical -->
                     <div class="tab-pane fade" id="pills-Semiclassical" role="tabpanel" aria-labelledby="pills-Semiclassical-tab">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
                             </div>
-                            <div class="col-6 textPara-col">
-                                <p class="textPara">
+                            <div class="col-lg-6 col-md-6 col-12 textPara-col">
+                            <h3 class="heading"> - Semi-classical</h3>
+
+                                <p >
                                     Unleash your inner artist with our online semi-classical dance classes! Our syllabus covers the fusion of classical and contemporary dance styles, blending the grace and elegance of classical dance with the energy and excitement of modern dance. Our expert instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn semi-classical dance from the comfort of your own home and at your own pace. Whether you’re a beginner or an experienced dancer, our online classes provide a fun and engaging way to explore the richness of Indian dance culture. Join us today and let’s dance!
                                 </p>
-                                <div class="text-center">
-                                    <button type="button" class="btn btndemo step start">START NOW</button>
-                                </div>
+                                <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                             </div>
                         </div>
-                        <hr class="secbr">
+                  
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnSemiclassical" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-Semiclassical" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
 
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnSemiclassical">
                             <div class="container">
                                 <div class="row mt-5">
-                                    <div class="col-6">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 > - What you will learn</h3>
+                                        <p >
                                             Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                         </p>
                                         <ul class="list-group">
@@ -1709,7 +1919,7 @@
 
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
 
 
                                         <!-- Semi-classical  -->
@@ -1720,44 +1930,44 @@
                                 </div>
                             </div>
                         </section>
-                        <hr>
-                        <section class="modulesec">
+             
+                        <section class="modulesec mft" id="mod-Semiclassical">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Dance/kathakImg3.svg" class="danceimg">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                            <img src="public/images/Dance/kathakImg3.svg" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12 mftm">
 
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 & 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes CombTwoMonths" id="pills-Month1_2-tab" data-bs-toggle="pill" data-bs-target="#pills-Month1_2" type="button" role="tab" aria-controls="pills-Month1_2" aria-selected="true">Month 1-2</button>
                                                 </li>
                                                 <!-- Month 3 & 4-->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-Month3_4-tab" data-bs-toggle="pill" data-bs-target="#pills-Month3_4" type="button" role="tab" aria-controls="pills-Month3_4" aria-selected="false">Month 3-4</button>
                                                 </li>
                                                 <!-- Month 5 & 6-->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-Month5_6-tab" data-bs-toggle="pill" data-bs-target="#pills-Month5_6" type="button" role="tab" aria-controls="pills-Month5_6" aria-selected="false">Month 5-6</button>
                                                 </li>
                                                 <!-- Month  7 & 8  -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-Month7_8-tab" data-bs-toggle="pill" data-bs-target="#pills-Month7_8" type="button" role="tab" aria-controls="pills-Month7_8" aria-selected="false">Month 7-8 </button>
                                                 </li>
                                                 <!-- Month 9 & 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-Month9_10-tab" data-bs-toggle="pill" data-bs-target="#pills-Month9_10" type="button" role="tab" aria-controls="pills-Month9_10" aria-selected="false">Month 9-10</button>
                                                 </li>
                                                 <!-- Month  11 & 12  -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-4 col-md-4 col-6 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes CombTwoMonths" id="pills-Month11_12-tab" data-bs-toggle="pill" data-bs-target="#pills-Month11_12" type="button" role="tab" aria-controls="pills-Month11_12" aria-selected="false">Month 11-12 </button>
                                                 </li>
 
@@ -1931,49 +2141,84 @@
                     <!-- Bhangra -->
                     <div class="tab-pane fade" id="pills-Bhangra" role="tabpanel" aria-labelledby="pills-Bhangra-tab">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <img src="public/images/Dance/bhangra.png" class="danceimg">
                             </div>
-                            <div class="col-6 textPara-col">
-                                <p class="textPara">
+                            <div class="col-lg-6 col-md-6 col-12 textPara-col">
+                            <h3 class="heading"> - Bhangra</h3>
+
+                                <p >
                                     Get ready to experience the vibrant energy and infectious rhythm of Bhangra with our online dance classes! Our syllabus covers the basics of this traditional Punjabi dance form, from footwork and hand gestures to the high-energy movements that make Bhangra so exhilarating. Our expert instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our state-of-the-art technology and convenient online platform, you can learn Bhangra dance from anywhere in the world, at your own pace. Whether you’re a beginner or an experienced dancer, our online classes provide a fun and engaging way to explore the richness of Bhangra dance culture.
                                     Join us today and let’s dance to the beat of Bhangra!
                                 </p>
-                                <div class="text-center">
-                                    <button type="button" class="btn btndemo step start">START NOW</button>
-                                </div>
+                                <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                             </div>
                         </div>
-                        <hr class="secbr">
+                 
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnBhangra" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-Bhangra" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
 
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnBhangra">
                             <div class="container">
                                 <div class="row mt-5">
-                                    <div class="col-6">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 > - What you will learn</h3>
+                                        <p >
                                             Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                         </p>
                                         <ul class="list-group">
@@ -2003,7 +2248,7 @@
 
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
 
 
                                         <!-- Bhangra -->
@@ -2014,69 +2259,69 @@
                                 </div>
                             </div>
                         </section>
-                        <hr>
-                        <section class="modulesec">
+            
+                        <section class="modulesec mft" id="mod-Bhangra">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Dance/bhangra-2-1.png" class="danceimg">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                            <img src="public/images/Dance/bhangra-2-1.png" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
 
 
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-BhangraMonth1-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth1" type="button" role="tab" aria-controls="pills-BharatnatyamMonth1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth2-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth2" type="button" role="tab" aria-controls="pills-BharatnatyamMonth2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth3-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth3" type="button" role="tab" aria-controls="pills-BharatnatyamMonth3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth4-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth4" type="button" role="tab" aria-controls="pills-BharatnatyamMonth4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth5-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth5" type="button" role="tab" aria-controls="pills-BharatnatyamMonth5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth6-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth6" type="button" role="tab" aria-controls="pills-BharatnatyamMonth6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth7-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth7" type="button" role="tab" aria-controls="pills-BharatnatyamMonth7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth8-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth8" type="button" role="tab" aria-controls="pills-BharatnatyamMonth8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth9-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth9" type="button" role="tab" aria-controls="pills-BharatnatyamMonth9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth10-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth10" type="button" role="tab" aria-controls="pills-BharatnatyamMonth10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth11-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth11" type="button" role="tab" aria-controls="pills-BharatnatyamMonth11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BhangraMonth12-tab" data-bs-toggle="pill" data-bs-target="#pills-BhangraMonth12" type="button" role="tab" aria-controls="pills-BharatnatyamMonth12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -2296,48 +2541,84 @@
                     <!-- Folk -->
                     <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <img src="public/images/Dance/folk-dance.png" class="danceimg">
                             </div>
-                            <div class="col-6 textPara-col">
-                                <p class="textPara">
+                            <div class="col-lg-6 col-md-6 col-12 textPara-col">
+                            <h3 class="heading"> - Folk</h3>
+
+                                <p >
                                     Explore the richness and diversity of traditional folk dances with our online classes! Our syllabus covers a variety of styles from different regions of India, including Garba, Bihu, Dandiya, and more. Our expert instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn these dynamic and expressive folk dances from the comfort of your own home and at your own pace. Whether you’re a beginner or an experienced dancer, our online classes provide a fun and engaging way to discover the beauty and richness of Indian folk dance culture.
                                     Join us today and let’s dance to the rhythm of tradition!
                                 </p>
-                                <div class="text-center">
-                                    <button type="button" class="btn btndemo step start">START NOW</button>
-                                </div>
+                                <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                             </div>
                         </div>
-                        <hr class="secbr">
+              
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnFolk" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-Folk" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
+
                                 </ul>
                             </div>
                         </section>
 
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnFolk">
                             <div class="container">
                                 <div class="row mt-5">
-                                    <div class="col-6">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 > - What you will learn</h3>    
+                                    <p >
                                             Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                         </p>
                                         <ul class="list-group">
@@ -2366,76 +2647,76 @@
                                         </ul>
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <!-- Folk -->
                                         <img src="public/images/Dance/folk-dance-2.png" class="danceimg">
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <hr>
-                        <section class="modulesec">
+                 
+                        <section class="modulesec mft" id="mod-Folk">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center"> <button type="button" class="btn step mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Dance/folk-dance.png" class="danceimg">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                            <img src="public/images/Dance/folk-dance.png" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
 
 
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-FolkMonth1-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth1" type="button" role="tab" aria-controls="pills-FolkMonth1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth2-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth2" type="button" role="tab" aria-controls="pills-FolkMonth2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth3-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth3" type="button" role="tab" aria-controls="pills-FolkMonth3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth4-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth4" type="button" role="tab" aria-controls="pills-FolkMonth4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth5-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth5" type="button" role="tab" aria-controls="pills-FolkMonth5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth6-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth6" type="button" role="tab" aria-controls="pills-FolkMonth6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth7-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth7" type="button" role="tab" aria-controls="pills-FolkMonth7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth8-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth8" type="button" role="tab" aria-controls="pills-FolkMonth8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth9-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth9" type="button" role="tab" aria-controls="pills-FolkMonth9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth10-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth10" type="button" role="tab" aria-controls="pills-FolkMonth10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth11-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth11" type="button" role="tab" aria-controls="pills-FolkMonth11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-FolkMonth12-tab" data-bs-toggle="pill" data-bs-target="#pills-FolkMonth12" type="button" role="tab" aria-controls="pills-FolkMonth12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -2622,373 +2903,96 @@
             </div>
         </div>
     </section>
-
-    <hr>
-    <!-- <section class="modulesec">
+    <!-- </section> -->    
+    <section class="testimonials mft" id="testimonials">
         <div class="container">
             <div class="row">
-                <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                <span class="text-center"> <button type="button" class="btn step mkathak">Testimonials</button></span>
             </div>
             <div class="month-row">
                 <div class="row">
-                    <div class="col-6">
-                        <img src="public/images/Dance/kathakImg3.svg" class="danceimg">
-
-                    </div>
-                    <div class="col-6">-->
-
-
-    <!-- trying new tab  -->
-    <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist"> -->
-    <!-- Month 1 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link active monthtypes" id="pills-Month1-tab" data-bs-toggle="pill" data-bs-target="#pills-Month1" type="button" role="tab" aria-controls="pills-Month1" aria-selected="true">Month 1</button>
-                            </li> -->
-    <!-- Month 2 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month2-tab" data-bs-toggle="pill" data-bs-target="#pills-Month2" type="button" role="tab" aria-controls="pills-Month2" aria-selected="false">Month 2</button>
-                            </li> -->
-    <!-- Month 3 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month3-tab" data-bs-toggle="pill" data-bs-target="#pills-Month3" type="button" role="tab" aria-controls="pills-Month3" aria-selected="false">Month 3</button>
-                            </li> -->
-    <!-- Month 4 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month4-tab" data-bs-toggle="pill" data-bs-target="#pills-Month4" type="button" role="tab" aria-controls="pills-Month4" aria-selected="false">Month 4 </button>
-                            </li> -->
-    <!-- Month 5 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month5-tab" data-bs-toggle="pill" data-bs-target="#pills-Month5" type="button" role="tab" aria-controls="pills-Month5" aria-selected="false">Month 5 </button>
-                            </li> -->
-    <!-- Month 6 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month6-tab" data-bs-toggle="pill" data-bs-target="#pills-Month6" type="button" role="tab" aria-controls="pills-Month6" aria-selected="false">Month 6 </button>
-                            </li> -->
-    <!-- Month 7 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month7-tab" data-bs-toggle="pill" data-bs-target="#pills-Month7" type="button" role="tab" aria-controls="pills-Month7" aria-selected="false">Month 7</button>
-                            </li> -->
-    <!-- Month 8 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month8-tab" data-bs-toggle="pill" data-bs-target="#pills-Month8" type="button" role="tab" aria-controls="pills-Month8" aria-selected="false">Month 8</button>
-                            </li> -->
-    <!-- Month 9 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month9-tab" data-bs-toggle="pill" data-bs-target="#pills-Month9" type="button" role="tab" aria-controls="pills-Month9" aria-selected="false">Month 9</button>
-                            </li> -->
-    <!-- Month 10 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month10-tab" data-bs-toggle="pill" data-bs-target="#pills-Month10" type="button" role="tab" aria-controls="pills-Month10" aria-selected="false">Month 10</button>
-                            </li> -->
-    <!-- Month 11 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month11-tab" data-bs-toggle="pill" data-bs-target="#pills-Month11" type="button" role="tab" aria-controls="pills-Month11" aria-selected="false">Month 11</button>
-                            </li> -->
-    <!-- Month 12 -->
-    <!-- <li class="nav-item" role="presentation">
-                                <button class="nav-link monthtypes" id="pills-Month12-tab" data-bs-toggle="pill" data-bs-target="#pills-Month12" type="button" role="tab" aria-controls="pills-Month12" aria-selected="false">Month 12</button>
-                            </li> -->
-    <!-- </ul> -->
-    <!-- <div class="contentSec">
-                            <div class="">
-                                <div class="content">
-                                    <img src="public/images/Dance/icons8.png">
-                                    Live Private class -8
-                                </div>
-                                <div class="content">
-                                    <img src="public/images/Dance/icons8.png">
-                                    Practice video -6
-                                </div>
-                                <div class="content">
-                                    <img src="public/images/Dance/icons8-literature.png">
-                                    Reading content/Quiz - 2
-                                </div>
-                                <div class="module-text">
-
-                                    <div class="tab-content" id="pills-tabContent"> -->
-    <!-- Month 1 -->
-    <!-- <div class="tab-pane fade show active" id="pills-Month1" role="tabpanel" aria-labelledby="pills-Month1-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 1 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Kathak Dance Style.</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Footwork Techniques.</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Hand Gestures (Mudras).</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding Rhythm and Timing.</li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
-
-    <!-- Month 2 -->
-    <!-- <div class="tab-pane fade" id="pills-Month2" role="tabpanel" aria-labelledby="pills-Month2-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 2 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Chakkar (Spins).
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Introduction to Tatkar (Footwork with Bells). </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Simple Hand and Feet Coordination.</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Kathak postures. Rhythm and Timing.</li>
-                                                </ul>
-
-                                            </div>
-                                        </div> -->
-
-    <!-- Month 3 -->
-    <!-- <div class="tab-pane fade" id="pills-Month3" role="tabpanel" aria-labelledby="pills-Month3-tab">
-
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 3 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Pirouette Technique.
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Introduction to Kavitt (Narrative Dance). </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Hastak (Hand Movement) Exercises.</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Basic Kathak Compositions.</li>
-                                                </ul>
-
-                                            </div>
-
-                                        </div> -->
-
-    <!-- Month 4 -->
-    <!-- <div class="tab-pane fade" id="pills-Month4" role="tabpanel" aria-labelledby="pills-Month4-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 4 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Tihai (A Three-fold Repetition).
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Introduction to Teen Taal (16-Beat Rhythm Cycle). </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Expression Techniques (Abhinaya).</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Basic Kathak Compositions.</li>
-                                                </ul>
-
-                                            </div>
-
-                                        </div> -->
-
-    <!-- Month 5 -->
-    <!-- <div class="tab-pane fade" id="pills-Month5" role="tabpanel" aria-labelledby="pills-Month5-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 5 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Footwork Techniques.
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Intermediate Chakkar (Spins). </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Hand and Feet Coordination.</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Intermediate Kathak Compositions.</li>
-                                                </ul>
-
-                                            </div>
-
-                                        </div> -->
-
-    <!-- Month 6 -->
-    <!-- <div class="tab-pane fade" id="pills-Month6" role="tabpanel" aria-labelledby="pills-Month6-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 6 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Advanced Footwork Techniques.
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Advanced Chakkar (Spins). </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Advanced Hand and Feet Coordination.</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Advanced Kathak Compositions.</li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
-
-    <!-- Month 7 -->
-    <!-- <div class="tab-pane fade" id="pills-Month7" role="tabpanel" aria-labelledby="pills-Month7-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 7 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Vilambit Laya (Slow Tempo).
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Introduction to Ek Taal (12-Beat Rhythm Cycle). </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Bandish (Lyrics).</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Vilambit Kathak Compositions.</li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
-
-    <!-- Month 8 -->
-    <!-- <div class="tab-pane fade" id="pills-Month8" role="tabpanel" aria-labelledby="pills-Month8-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 8 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Drut Laya (Fast Tempo).
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Introduction to Jhap Taal (10-Beat Rhythm Cycle). </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Tukda (Short Compositions).</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Drut Laya Kathak Compositions.</li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
-
-    <!-- Month 9 -->
-    <!-- <div class="tab-pane fade" id="pills-Month9" role="tabpanel" aria-labelledby="pills-Month9-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 9 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Advanced Expression Techniques (Abhinaya).
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Practice of Advanced Kathak Compositions. </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Kavit (Poetry).</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Kavit-Based Kathak Compositions.</li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
-
-    <!-- Month 10 -->
-    <!-- <div class="tab-pane fade" id="pills-Month10" role="tabpanel" aria-labelledby="pills-Month10-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 10 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Tarana (Musical Composition).
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Practice of Tarana-Based Kathak Compositions. </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Advanced Practice of Footwork and Hand Gestures.</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Guru-Shishya Tradition.</li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
-
-    <!-- Month 11 -->
-    <!-- <div class="tab-pane fade" id="pills-Month11" role="tabpanel" aria-labelledby="pills-Month11-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 11:</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Thaat (Posture).
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Introduction to Jaati (Complex Rhythm Patterns). </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Advanced Practice of Kathak Compositions.</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Choreography for Stage Performances.</li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
-
-    <!-- Month 12 -->
-    <!-- <div class="tab-pane fade" id="pills-Month12" role="tabpanel" aria-labelledby="pills-Month12-tab">
-                                            <div class="month-text">
-                                                <h5 class="MonthHeading">Month 12 :</h5>
-                                                <ul class="icon-list-items">
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Kathak Compositions for Stage Performances.
-                                                    </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                        Review and Recap of Techniques and Compositions. </li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Abhinaya.</li>
-                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Final Performance and Certiﬁcation.</li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
-    <!-- <div class=" row  mt-3 Notediv">
-
-                                            <p class="Notepara">
-                                                <strong>Note : </strong>
-                                                Each month could have more speciﬁc topics and exercises, depending on the level and goals of the students. Additionally, it is important to have regular assessments and feedback to ensure progress and adaptation to the individual needs of the students.
-                                            </p>
-
-                                        </div> -->
-
-    <!-- </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
-    <!-- </section> -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="row">
-                <span class="text-center"> <button type="button" class="btn btndemo step">Testimonials</button></span>
-            </div>
-            <div class="month-row">
-                <div class="row">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-md-6 col-12 testimonialsp">
                         <!-- slider -->
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
+                                <div class="carousel-item mot active">
                                     <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I've learned so much about Kathak dance through this online platform. The instructors are knowledgeable and patient, and the course materials are well-organized.</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot">
                                     <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I'm so glad I found this online platform for learning Kathak dance. The lessons are easy to follow and I've improved so much since I started!</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot">
                                     <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>This online platform has been a game-changer for my Kathak dance practice. The instructors are top-notch and the community is so supportive.</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot">
                                     <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I highly recommend this online platform for anyone interested in learning Kathak dance. It's user-friendly and the instructors are excellent.</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot">
                                     <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>Learning Kathak dance through this online platform has been a wonderful experience. The quality of the instruction is unmatched!</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot">
                                     <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>This online platform for Kathak dance is simply amazing. The lessons are comprehensive and the instructors are passionate about what they do. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot">
                                     <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I've tried other online platforms for learning Kathak dance, but this one is by far the best. The instructors are skilled and the community is so encouraging. </p>
                                     </div>
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item mot">
                                     <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p class="testimonialPara">Thanks to this online platform, I've been able to improve my Kathak dance skills from the comfort of my own home. The instruction is top-notch! </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot">
                                     <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>Learning Kathak dance through this online platform has been a truly transformative experience. The instructors are excellent and the lessons are so engaging. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot">
                                     <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <p>I can't say enough good things about this online platform for Kathak dance. The instruction is outstanding and the
                                             community is so supportive.
                                     </div>
                                 </div>
 
                             </div>
+                            
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span  aria-hidden="true"><i class="fa fa-arrow-left" ></i></span>
                                 <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span  aria-hidden="true"><i class="fa fa-arrow-right" ></i></span>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
 
 
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-md-6 col-12">
                         <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
                     </div>
 
@@ -3000,7 +3004,7 @@
         </div>
         </div>
     </section>
-    <hr>
+   
     <?php include('InstruInstructer.php');?>
 
     <?php include('pricing.php'); ?>
@@ -3009,8 +3013,9 @@
 
 
 <?php include('Dancefaq.php'); ?>
-
+<?php include('bookdemocallb.php');?>
 
     <?php include('footer.php'); ?>
+
 
 

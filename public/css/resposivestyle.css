@@ -1,4 +1,10 @@
-@media only screen and (max-width: 360px) {
+.btnstrt {
+  background-color: #f68535 !important;
+  border-radius: 50px 50px 50px 50px !important;
+}
+
+/* For Mobile Screen max-width: 767*/
+@media only screen and (max-width: 767px) {
   /* .hide {
     display: none;
   }
@@ -24,10 +30,11 @@
   }
   .heading-div h3 {
     font-size: 25px !important;
-    margin-top: 17px !important;
+    margin-top: 31px !important;
   }
   .btnstart {
-    font-size: 10px !important;
+    font-size: 8px !important;
+    line-height: 24px !important;
   }
   .btnSection {
     padding: 0px 0px 0px 0px !important;
@@ -42,13 +49,16 @@
   .heading {
     font-size: 23px;
     font-weight: 400;
-    padding: 7px;
+    padding: 0px;
   }
-  .scm {
+  /* .scm {
     margin-bottom: -18px !important;
+  } */
+  .learning_Platform-section {
+    margin-top: 20px;
   }
   .join-now-btn {
-    width: 330px;
+    width: 185px;
   }
   .counter-value {
     font-size: 16px;
@@ -82,5 +92,680 @@
     line-height: 15px;
     margin-top: 4px;
     margin-bottom: 33px;
+  }
+
+  .price-btn p {
+    font-size: 10px !important;
+  }
+  .op {
+    margin-bottom: 30px !important;
+  }
+  .comming-section {
+    padding: 0px 0px px !important;
+  }
+  .commingsoonimg {
+    width: 100%;
+  }
+  .coming-soon-ul li {
+    margin-bottom: 10px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+  }
+  .comming-soon-p {
+    text-align: justify;
+  }
+  .opman {
+    display: none !important;
+  }
+  .btnnew {
+    font-size: 13px !important;
+  }
+  .btn-book,
+  .btn-request {
+    margin: 0px;
+  }
+  footer {
+    padding: 5% 0px;
+  }
+  .modulesec {
+    margin-top: 13%;
+  }
+  .video-section {
+    display: none;
+  }
+  #danceVideo {
+    width: 100%;
+    height: auto;
+  }
+  .howWorkBlock {
+    height: 200px;
+  }
+
+  .Alp-populated {
+    padding: 5px;
+  }
+
+  .howItWorkSteps {
+    margin: -20px 0 9px;
+  }
+  .howWorkBlock1 {
+    padding-left: calc(var(--bs-gutter-x) * 0);
+  }
+  .howWorkBlock3 {
+    padding-right: calc(var(--bs-gutter-x) * 0);
+  }
+  .co {
+    margin-bottom: 6px;
+  }
+  .stories-section {
+    margin-top: 20%;
+  }
+
+  .line_1 {
+    max-width: 1320px;
+    margin-top: 42px;
+  }
+  .join-now-btn {
+    padding: 10px 21px;
+
+    font-size: 20px !important;
+    width: 275px;
+  }
+
+  .heading_new {
+    margin-top: -4px !important;
+    margin-bottom: 14px !important;
+  }
+  .icon1 {
+    margin-left: 32px !important;
+  }
+  .sc_heading {
+    font-size: 31px !important;
+  }
+  .typesOfDance-tab .nav-pills .nav-link.big {
+    width: 162px !important;
+    height: 60px !important;
+  }
+  .kathakp {
+    margin-top: 6%;
+  }
+  .start {
+    font-size: 12px !important;
+    line-height: 23px !important;
+  }
+  .step {
+    width: 100%;
+  }
+  .list-inline-item {
+    padding: 5px;
+  }
+  .mkathak {
+    width: 100% !important;
+  }
+  .month-row .month-list .dancetypes .monthbtn,
+  .typesOfDance-tab .nav-pills .nav-link.kathak {
+    width: 100% !important;
+  }
+  .modulesec .monthtypes {
+    margin: 0px 0px 10px 0px;
+  }
+  .carousel {
+    margin-top: -130px;
+  }
+  .carousel-inner {
+    height: 424px;
+  }
+  .testimonialsp {
+    height: 187px;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    width: 9px !important;
+    height: 9px !important;
+    margin: 5px 5px !important;
+  }
+  .price-btn {
+    padding: 15px 0px;
+  }
+  .faqd {
+    padding: 10px;
+    text-align: center;
+  }
+  .dancefimg {
+    width: 50% !important;
+  }
+  .pricing-card-section .card {
+    margin-bottom: 54px;
+  }
+  .mftm {
+    padding-top: 20px !important;
+  }
+  .video-dance {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .typesOfDance-tab .nav-pills .nav-link {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0px 5px 0px;
+    background-color: #737373;
+  }
+  .mot {
+    margin-top: 33%;
+  }
+  .mta {
+    top: 27% !important;
+  }
+  .month-row {
+    margin-top: 13px;
+  }
+  .musicp {
+    margin-top: -3%;
+  }
+  .list-inline-item:not(:last-child) {
+    margin-right: 0rem;
+  }
+  .typesOfYoga-tab .nav-pills .nav-link.kathak {
+    width: 100% !important;
+  }
+  .mtfyogm {
+    margin-top: 18%;
+  }
+  .tyoga {
+    margin-bottom: 10%;
+  }
+  .hidey {
+    display: none;
+  }
+  .hidefi {
+    display: none;
+  }
+  .tmm {
+    margin-top: 22% !important;
+  }
+  .mbfmi {
+    margin-bottom: 0px !important;
+  }
+  .ittm {
+    margin-top: 22% !important;
+  }
+  .mbft {
+    margin-bottom: 0px !important;
+  }
+  .mzfm {
+    margin-bottom: 33px !important;
+  }
+  .mbfim {
+    margin-bottom: 13px !important;
+  }
+  .contactus h1::before {
+    height: 44px !important;
+
+    left: -21px !important;
+  }
+  .contactus h1 {
+    font-size: 32px !important;
+  }
+  .contactus {
+    padding-top: 125px !important;
+    padding-left: 39px !important;
+    padding-bottom: 36px !important;
+  }
+  .career-main-section h3 {
+    font-size: 20px !important;
+    margin-top: 9% !important;
+  }
+  .career-main-section {
+    padding: 0px 0px !important;
+  }
+  .step-button[aria-expanded="true"] {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .progressbarcarrier {
+    width: 89% !important;
+  }
+  .step-button {
+    margin-bottom: 17px !important;
+  }
+  .step-title {
+    font-size: 12px !important;
+  }
+  .position-relative {
+    margin: 0px 0px !important;
+  }
+  .demo-form {
+    margin: 0px 0px !important;
+  }
+  .demopage {
+    padding-bottom: 6% !important;
+  }
+  .title {
+    padding: 22px 24px 59px !important;
+    line-height: 26px !important;
+    font-size: 18px !important;
+    margin: 0px 0 0px !important;
+  }
+  .topicAttributeContainer {
+    padding: 0px 0px !important;
+  }
+  .greenCheckbox {
+    padding-left: 0rem !important;
+  }
+  .greenCheckbox li {
+    line-height: 34px !important;
+  }
+  .saveEnrollTopic {
+    font-size: 14px !important;
+    line-height: 23px !important;
+    margin-bottom: 10% !important;
+  }
+
+  .position-relative {
+    max-width: 309px !important;
+  }
+  /* .fdcd {
+    padding: 0 12px 0px;
+  } */
+  .updloaddata {
+    margin-bottom: 10px !important;
+    margin-left: 6px !important;
+  }
+  .slcs {
+    width: 300px !important;
+    /* padding: 0px 13px 0px !important; */
+  }
+  .f-info {
+    padding: 0 10px 0px !important;
+  }
+  .slcsfields {
+    margin-left: 0px !important;
+  }
+  .form-group-submit {
+    width: 100% !important;
+
+    padding: 8px !important;
+    margin-bottom: 22px !important;
+    margin-top: 14px !important;
+    margin-left: 0px !important;
+  }
+  .cont-cardcp {
+    margin-bottom: 5% !important;
+  }
+  .iconc {
+    width: 21%;
+  }
+  .cont-card {
+    margin-bottom: 15% !important;
+  }
+  .contact-card-section {
+    padding-bottom: 10px;
+  }
+  .cont-form h2 {
+    font-size: 22px;
+  }
+  .titleofcf {
+    margin-bottom: 0px !important;
+  }
+  .button-content {
+    margin-top: 18px;
+
+    padding: 0px 0px;
+  }
+  .submitbc {
+    text-align: end;
+  }
+  .goglemap1 {
+    display: block;
+  }
+  .goglemap2 {
+    display: none;
+  }
+  .fdl ul {
+    padding-left: 0rem !important;
+  }
+  .progressbar {
+    margin-bottom: 46px !important;
+    width: 91% !important;
+  }
+  .greenCheckbox li {
+    list-style-type: none;
+  }
+  .About input {
+    margin-inline: 0px !important;
+  }
+  .slcsfieldsd {
+    margin-left: 0px !important;
+  }
+  .date_time {
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  .stepsdemo {
+    margin-top: 129px !important;
+  }
+  .menub {
+    text-align: end !important;
+  }
+}
+
+/* For Tablet Screen max-width: 991 min-width: 768*/
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .hide {
+    display: none;
+  }
+
+  .join-now-btn {
+    width: 212px;
+  }
+
+  .price-btn p {
+    margin-bottom: 3px !important;
+    font-size: 16px;
+  }
+  .commingsoonimg {
+    width: 30%;
+  }
+  .comming-soon-p {
+    text-align: justify;
+  }
+  footer {
+    padding: 0px 0px;
+  }
+  .howWorkBlock {
+    height: 200px;
+  }
+  .icon1 {
+    margin-left: 59px !important;
+  }
+  .icon2 {
+    margin-left: 62px !important;
+  }
+  .icon3 {
+    margin-left: 62px !important;
+  }
+  .icon4 {
+    margin-left: 64px !important;
+  }
+  .icon5 {
+    margin-left: 59px !important;
+  }
+  /* .typesOfDance-tab .nav-pills .nav-link.big {
+    width: 142px !important;
+    height: 42px !important;
+  } */
+  .step {
+    width: 100%;
+  }
+  .kathakp {
+    margin-top: 6%;
+  }
+  .mkathak {
+    width: 20% !important;
+  }
+  .carousel {
+    margin-top: 0px;
+  }
+  .carousel-control-prev {
+    height: 87%;
+  }
+  .carousel-control-next {
+    height: 87%;
+  }
+  .testimonials {
+    height: 430px !important;
+  }
+  .card {
+    margin-bottom: 65px;
+  }
+  .cards {
+    margin-bottom: 0px;
+  }
+  .opman {
+    display: none;
+  }
+  .pricing-section {
+    margin-top: 9% !important;
+  }
+  .byfd {
+    width: 100%;
+  }
+  .nsracb {
+    width: 97%;
+  }
+  .mftm {
+    padding-top: 20px;
+  }
+  .video-dance {
+    height: 20%;
+  }
+  .typesOfDance-tab > ul > li {
+    /* margin-top: 15px !important; */
+    font-size: 10px;
+  }
+  .typesOfDance-tab .nav-pills .nav-link {
+    width: 114px !important;
+    height: 42px !important;
+  }
+  .typesOfDance-tab .nav-pills .nav-link.big {
+    width: 214px !important;
+    height: 42px !important;
+  }
+  p {
+    font-size: 10px;
+  }
+  .btndemoh {
+    font-size: 11px !important;
+    line-height: 20px !important;
+  }
+  .btndemo {
+    font-size: 11px !important;
+    line-height: 23px !important;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .list-group .list-text {
+    font-size: 11px;
+  }
+  .learningsec .list-icon i {
+    font-size: 14px;
+  }
+  .typesOfDance-tab .nav-pills .nav-link.kathak {
+    width: 80px !important;
+  }
+  .typesOfDance-tab .nav-pills .nav-link.kathak {
+    width: 150px !important;
+    font-size: 12px;
+  }
+  .danceimg5 {
+    width: 50%;
+  }
+  .content {
+    margin-left: 13px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    color: rgb(51, 51, 51);
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .month-text > ul > li.icon-list-item {
+    margin-bottom: 6px !important;
+    font-size: 12px;
+  }
+  .mot {
+    margin-top: 12%;
+  }
+  .mot1 {
+    margin-top: 0px;
+  }
+  .carousel-control-prev {
+    height: 44%;
+  }
+  .carousel-control-next {
+    height: 44%;
+  }
+  .carousel {
+    margin-top: 43px;
+  }
+  .heading-div h3 {
+    font-size: 23px;
+  }
+
+  .mkathak {
+    font-size: 12px !important;
+
+    line-height: 31px !important;
+    margin-bottom: 31px;
+  }
+  .mtt {
+    margin-bottom: 8%;
+  }
+  .mtfyogm {
+    margin-top: 7%;
+  }
+  .typesOfYoga-tab .nav-pills .nav-link {
+    width: 113px !important;
+  }
+  .list-inline-item:not(:last-child) {
+    margin-right: 0rem !important;
+  }
+  .typesOfYoga-tab .nav-pills .nav-link.kathak {
+    width: 100%;
+  }
+  .danceimgy {
+    width: 50%;
+  }
+  .cify {
+    top: 29px !important;
+  }
+  .mimg1 {
+    width: 50%;
+  }
+  .miic {
+    text-align: center;
+  }
+  .ittm {
+    margin-top: 10%;
+  }
+  .mot2 {
+    margin-top: -131px;
+  }
+  .mbft {
+    margin-bottom: 0px !important;
+  }
+  .demo-form {
+    margin: 0px 0;
+  }
+  .position-relative {
+    margin: 28px 0;
+  }
+  .f-info {
+    padding: 0 0px 0px;
+    width: 400px;
+  }
+  .fdcd {
+    padding: 0 15px 0px !important;
+  }
+  .uploadinfo {
+    padding: 0px 16px 0px !important;
+  }
+  .fdl {
+    padding-top: 5.5rem !important;
+  }
+  .contactus {
+    padding-top: 119px !important;
+    padding-left: 70px !important;
+    padding-bottom: 86px !important;
+  }
+  .contactus h1 {
+    font-size: 30px !important;
+  }
+  .contactus h1::before {
+    height: 40px !important;
+  }
+  .career-main-section h3 {
+    font-size: 24px !important;
+    margin-top: 9% !important;
+  }
+  .light-grey {
+    margin-top: 10px !important;
+  }
+  .career-main-section {
+    padding: 0px 0px;
+  }
+  .aanidiv {
+    margin-bottom: 0px !important;
+  }
+  .step-button {
+    margin-bottom: 10px !important;
+  }
+  .demopage {
+    margin-bottom: 2%;
+  }
+  .goglemap1 {
+    display: block;
+  }
+  .goglemap2 {
+    display: none;
+  }
+  .iconc {
+    width: 60px;
+  }
+  .cont-form h2 {
+    font-size: 22px;
+
+    letter-spacing: 0.3px;
+  }
+  .titleofcf {
+    margin-bottom: 0px !important;
+  }
+  .button-content {
+    margin-top: 18px;
+
+    padding: 0px 0px;
+  }
+  .submitbc {
+    text-align: end;
+  }
+  .menub {
+    text-align: end !important;
+  }
+  .demofdc {
+    padding: 0 20px 0px;
+  }
+  .About input {
+    margin-inline: 0px;
+  }
+  .syademo {
+    padding: 0 20px 0px;
+  }
+  .syldemo {
+    padding: 0 20px 0px;
+  }
+  .date_time {
+    margin-left: 0px;
+  }
+  .slcsfieldsd {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .bookdemosubmit {
+    width: 100% !important;
+
+    margin-left: 0px !important;
+    margin-top: 5% !important;
+  }
+  .cards {
+    margin-bottom: 0px;
+  }
+  .topicAttributeContainer {
+    border-bottom: 0px solid #dcdcdc;
+  }
+  .progressbar {
+    margin-bottom: 47px !important;
   }
 }

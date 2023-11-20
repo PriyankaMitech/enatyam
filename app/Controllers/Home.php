@@ -182,18 +182,33 @@ class Home extends BaseController
     }
     public function StudentDashboard()
     {
-        $session = session();
-        if ($session->has('id')) {
-        $user_id = $session->get('id');
-        
-        // echo "$user_id"; exit();
-        $login_model = new LoginModel();
+       // print_r($_SESSION['sessiondata']);die;
+     if (isset($_SESSION['sessiondata'])) {
+        $sessionData = $_SESSION['sessiondata'];
+
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
+
+        if ($email !== null && $password !== null) {
+            $session = session();
+            
+            if ($session->has('id')) {
+                $user_id = $session->get('id');
+
+                // echo "$user_id"; exit();
+                $login_model = new LoginModel();
      
-        $data['user_data'] = $login_model->get_user_data($user_id); 
+                $data['user_data'] = $login_model->get_user_data($user_id); 
         
-        return view('StudentDashboard',$data);
-    }else{
-        return view('home');
+                return view('StudentDashboard', $data);
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
+    } else {
+        return redirect()->to(base_url());
     }
-    }
+}
 }

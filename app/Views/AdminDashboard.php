@@ -108,7 +108,7 @@
                 </li>
 
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
+                    <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
                 </li>
 
             </ul>
@@ -281,11 +281,20 @@
                                     <div class="col-lg-12">
                                         <table id="coundd_demo-payment-table" class="table" style="display:none">
 
-                                            <?php foreach ($ConductedDemo as $faculty) : ?>
-                                                <tr>
+                                            <?php foreach ($ConductedDemo as $faculty): ?>
+                                            <tr>
+                                                <form action="<?= base_url('AdminController/addStudent'); ?>"
+                                                    method="post">
                                                     <td><?= $faculty->name; ?></td>
                                                     <td><?= $faculty->email; ?></td>
-                                                </tr>
+                                                    <td>
+                                                        <input type="hidden" name="email"
+                                                            value="<?= $faculty->email; ?>">
+                                                        <button class="btn btn-primary" type="submit">Add
+                                                            Student</button>
+                                                    </td>
+                                                </form>
+                                            </tr>
                                             <?php endforeach; ?>
 
 
@@ -686,20 +695,20 @@
 
 
     <script>
-        const assignButtons = document.querySelectorAll('.assign-button');
+    const assignButtons = document.querySelectorAll('.assign-button');
 
-        assignButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const row = this.closest('tr');
-                const dropdown = row.querySelector('.teacher-dropdown');
+    assignButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const row = this.closest('tr');
+            const dropdown = row.querySelector('.teacher-dropdown');
 
-                if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-                    dropdown.style.display = 'block';
-                } else {
-                    dropdown.style.display = 'none';
-                }
-            });
+            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
         });
+    });
     </script>
 
 
