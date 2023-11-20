@@ -62,6 +62,7 @@ $routes->get('AdminDashboard', 'Home::AdminDashboard');
 
 $routes->get('register', 'LoginController::register');
 $routes->post('register', 'LoginController::register');
+$routes->post('verifymobile', 'LoginController::verifymobile');
 $routes->post('saveUser', 'LoginController::saveUser');
 $routes->get('ModelForLogin', 'LoginController::ModelForLogin');
 $routes->get('update_profile_data', 'LoginController::update_profile_data');
