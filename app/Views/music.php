@@ -1,6 +1,6 @@
 
 <?php include('header.php');?>
-    <div class="wrapper-container ">
+    <!-- <div class="wrapper-container ">
         <div class="video-container">
             <video class="video-dance" controls="0" autoplay="1" loop="1" id="danceVideo">
                 <source src="public/images/Music/music.mp4" type="video/mp4">
@@ -17,34 +17,70 @@
                 </div>
             </video>
         </div>
-    </div>
-    <section class="btnSection">
+    </div> -->
+    
+    <div class="wrapper-container">
+        <div class="video-container">
+            <video class="video-dance musicv" controls="1" autoplay="0" loop="0">
+                <source src="public/images/Music/music.mp4" type="video/mp4">
+            </video>
+
+            <div class="video-section">
+                <div class="row video-row">
+                <div class="col-4 video-col1">
+                        <P>We are commited to your </p>
+                        <p>commitment.</P>
+                
+                
+                    <a class="btn btn-dark btnstrt p-2" href="<?php echo base_url('StartNowPricing'); ?>"> <span class="button-text">Start Now if you are</span></a> 
+
+                        
+                    </div>  
+
+                    <div class="col-4 video-col1">
+                        <p>30 minutes of Music a day will</p>
+                        <p>change your life.</p>
+                    </div>
+                    <div class="col-4 video-col1">
+                        <p>Your time @ Your Place .</p>
+                        <img src="public/images/banner.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <section class="btnSection mftm pl-0 ">
         <div class="container">
        
             <!-- pills -->
-            <div class="row typesOfDance-tab">
+            <div class="typesOfDance-tab">
 
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="col-lg-1 col-md-1">
+                </li>
+                       
                     <!-- Hindustani Vocal -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                         <button class="nav-link active " id="pills-HindustaniVocal-tab" data-bs-toggle="pill" data-bs-target="#pills-HindustaniVocal" type="button" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="true">Hindustani Vocal</button>
                     </li>
                     <!-- Carnatic Vocal -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                         <button class="nav-link" id="pills-CarnaticVocal-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocal" type="button" role="tab" aria-controls="pills-CarnaticVocal" aria-selected="false">Carnatic Vocal</button>
                     </li>
                     <!-- Semi Classical -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                         <button class="nav-link" id="pills-SemiClassical-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassical" type="button" role="tab" aria-controls="pills-SemiClassical" aria-selected="false">Semi Classical</button>
                     </li>
                     <!-- Western Singing -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                         <button class="nav-link" id="pills-WesternSinging-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternSinging" type="button" role="tab" aria-controls="pills-WesternSinging" aria-selected="false">Western Singing</button>
                     </li>
                     <!-- Playback Singing -->
-                    <li class="nav-item" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                         <button class="nav-link" id="pills-PlaybackSinging-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackSinging" type="button" role="tab" aria-controls="pills-PlaybackSinging" aria-selected="false">Playback Singing </button>
                     </li>
+                    <li class="col-lg-1 col-md-1">
+                </li>
 
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
@@ -54,12 +90,13 @@
                         <section class="dancedesc">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <img src="public/images/Music/musicImg1.svg" class="danceimg">
                                     </div>
                                  
-                                    <div class="col-6 text-center text-col">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
+                                    <h3 class="heading"> - Hindustani Vocal</h3>
+                                        <p >
                                             Looking for an immersive and authentic Hindustani vocal learning experience?
                                             Join our Online Hindustani Vocal Class today! Unlock the rich heritage of Indian classical music from the comfort of your home.
                                             Our expert instructors provide comprehensive lessons tailored to all skill levels, whether you’re a beginner or advanced learner.
@@ -68,42 +105,75 @@
                                             Embark on a soulful journey into the realm of Hindustani music.
                                             Enroll in our Online Hindustani Vocal Class and discover the beauty of this ancient art form.
                                         </p>
-                                        <div class="btn btndemo">START NOW</div>
+                                        <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
 
-                        <!-- 2nd section :  what will you learn(buttons) and learning section -->
-                        <hr class="secbr">
+                
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnmusic" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-music" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnmusic">
                             <div class="container">
-                                <div class="row mt-5">
-                                    <div class="col-6">
-                                       
+                                <div class="row kathakp">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3> 
                                         <ul class="list-group">
                                             <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                                 <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
@@ -128,73 +198,71 @@
 
                                         </ul>
                                     </div>
-                                    <div class="col-6 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                    <div class="col-lg-6 col-md-6 col-12"><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
                                 </div>
                             </div>
                         </section>
                         <!--  3rd section : modules section (month) -->
-                        <section class="modulesec">
+                        <section class="modulesec" id="mod-music">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Music/musicImg3.svg" class="danceimg">
+<div class="col-lg-6 col-md-12 col-12 text-center mbfim">
+                                            <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
-
-
+                                        <div class="col-lg-6 col-md-12 col-12">
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-Month1-tab" data-bs-toggle="pill" data-bs-target="#pills-Month1" type="button" role="tab" aria-controls="pills-Month1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month2-tab" data-bs-toggle="pill" data-bs-target="#pills-Month2" type="button" role="tab" aria-controls="pills-Month2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month3-tab" data-bs-toggle="pill" data-bs-target="#pills-Month3" type="button" role="tab" aria-controls="pills-Month3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month4-tab" data-bs-toggle="pill" data-bs-target="#pills-Month4" type="button" role="tab" aria-controls="pills-Month4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month5-tab" data-bs-toggle="pill" data-bs-target="#pills-Month5" type="button" role="tab" aria-controls="pills-Month5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month6-tab" data-bs-toggle="pill" data-bs-target="#pills-Month6" type="button" role="tab" aria-controls="pills-Month6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month7-tab" data-bs-toggle="pill" data-bs-target="#pills-Month7" type="button" role="tab" aria-controls="pills-Month7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month8-tab" data-bs-toggle="pill" data-bs-target="#pills-Month8" type="button" role="tab" aria-controls="pills-Month8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month9-tab" data-bs-toggle="pill" data-bs-target="#pills-Month9" type="button" role="tab" aria-controls="pills-Month9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month10-tab" data-bs-toggle="pill" data-bs-target="#pills-Month10" type="button" role="tab" aria-controls="pills-Month10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month11-tab" data-bs-toggle="pill" data-bs-target="#pills-Month11" type="button" role="tab" aria-controls="pills-Month11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-Month12-tab" data-bs-toggle="pill" data-bs-target="#pills-Month12" type="button" role="tab" aria-controls="pills-Month12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -412,51 +480,87 @@
                         <section class="dancedesc">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <img src="public/images/Music/musicImg1.svg" class="danceimg">
                                     </div>
-                                    <div class="col-6 text-center text-col">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
+                                    <h3 class="heading"> - Carnatic Vocal</h3>
+                                        <p >
                                             Embark on a melodious journey through the divine sounds of Carnatic music with our Online Carnatic Vocal Class.
                                             Discover the rich heritage and intricate nuances of this classical South Indian art form from the comfort of your own home.
                                             Our experienced instructors provide comprehensive lessons for all skill levels, from beginners to advanced learners.
                                             Dive deep into the world of ragas, talas, and improvisation, while refining your vocal technique and expression.
                                             With interactive virtual sessions, personalized guidance, and a supportive community, you’ll witness remarkable progress in your Carnatic vocal skills.
                                             Enroll in our Online Carnatic Vocal Class today and unleash your musical talent.
-                                        <div class="btn btndemo">START NOW</div>
+                                            <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
                         <!-- 2nd section :  what will you learn(buttons) and learning section -->
-                        <hr class="secbr">
+                   
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learncarnatic" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-carnatic" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
-                        <section class="learningsec">
+                        <section class="learningsec" id="learncarnatic">
                             <div class="container">
-                                <div class="row mt-5">
-                                    <div class="col-6">
+                                <div class="row kathakp">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3> 
 
                                         <ul class="list-group">
                                             <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -482,74 +586,74 @@
 
                                         </ul>
                                     </div>
-                                    <div class="col-6 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                    <div class="col-lg-6 col-md-6 col-12 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
                                 </div>
                             </div>
                         </section>
                         <!--  3rd section : modules section (month) -->
-                        <hr>
-                        <section class="modulesec">
+                      
+                        <section class="modulesec" id="mod-carnatic">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Music/musicImg3.svg" class="danceimg">
+<div class="col-lg-6 col-md-12 col-12 text-center mbfim">
+                                            <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
 
 
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-CarnaticVocalMonth1-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth1" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth2-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth2" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth3-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth3" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth4-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth4" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth5-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth5" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth6-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth6" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth7-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth7" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth8-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth8" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth9-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth9" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth10-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth10" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth11-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth11" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-CarnaticVocalMonth12-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocalMonth12" type="button" role="tab" aria-controls="pills-CarnaticVocalMonth12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -754,51 +858,87 @@
                         <section class="dancedesc">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <img src="public/images/Music/musicImg1.svg" class="danceimg">
                                     </div>
-                                    <div class="col-6 text-center text-col">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
+                                    <h3 class="heading"> - Semi Classical</h3>
+                                        <p >
                                             Unlock the mesmerizing blend of classical and contemporary music with our Online Semi-Classical Singing Class.
                                             Dive into the world of semi-classical music, where traditional Indian melodies meet modern compositions.
                                             Whether you’re a beginner or an experienced singer, our expert instructors will guide you through the intricacies of semi-classical techniques, including thumri, ghazal, and bhajan.
                                             Enhance your vocal range, expression, and improvisation skills while exploring the soulful melodies of this captivating genre. With interactive virtual sessions, personalized feedback, and a supportive community, you’ll witness remarkable growth in your semi-classical singing abilities.
                                             Enroll in our Online Semi-Classical Singing Class today and unleash your artistic prowess.
                                         </p>
-                                        <div class="btn btndemo">START NOW</div>
+                                        <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
                         <!-- 2nd section :  what will you learn(buttons) and learning section -->
-                        <hr class="secbr">
+                      
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnsemi" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-semi" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnsemi">
                             <div class="container">
-                                <div class="row mt-5">
-                                    <div class="col-6">
+                                <div class="row kathakp">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3> 
 
                                         <ul class="list-group">
                                             <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -824,74 +964,74 @@
 
                                         </ul>
                                     </div>
-                                    <div class="col-6 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                    <div class="col-lg-6 col-md-6 col-12 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
                                 </div>
                             </div>
                         </section>
                         <!--  3rd section : modules section (month) -->
-                        <hr>
-                        <section class="modulesec">
+                
+                        <section class="modulesec" id="mod-semi">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Music/musicImg3.svg" class="danceimg">
+<div class="col-lg-6 col-md-12 col-12 text-center mbfim">
+                                            <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
 
 
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-SemiClassicalMonth1-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth1" type="button" role="tab" aria-controls="pills-SemiClassicalMonth1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth2-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth2" type="button" role="tab" aria-controls="pills-SemiClassicalMonth2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth3-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth3" type="button" role="tab" aria-controls="pills-SemiClassicalMonth3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth4-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth4" type="button" role="tab" aria-controls="pills-SemiClassicalMonth4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth5-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth5" type="button" role="tab" aria-controls="pills-SemiClassicalMonth5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth6-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth6" type="button" role="tab" aria-controls="pills-SemiClassicalMonth6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth7-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth7" type="button" role="tab" aria-controls="pills-SemiClassicalMonth7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth8-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth8" type="button" role="tab" aria-controls="pills-SemiClassicalMonth8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth9-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth9" type="button" role="tab" aria-controls="pills-SemiClassicalMonth9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth10-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth10" type="button" role="tab" aria-controls="pills-SemiClassicalMonth10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth11-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth11" type="button" role="tab" aria-controls="pills-SemiClassicalMonth11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-SemiClassicalMonth12-tab" data-bs-toggle="pill" data-bs-target="#pills-SemiClassicalMonth12" type="button" role="tab" aria-controls="pills-SemiClassicalMonth12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -1102,11 +1242,12 @@
                         <section class="dancedesc">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <img src="public/images/Music/musicImg1.svg" class="danceimg">
                                     </div>
-                                    <div class="col-6 text-center text-col">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
+                                    <h3 class="heading"> - Western Singing</h3>
+                                        <p >
                                             Unleash your inner diva and elevate your singing skills with our Online Western Singing Class.
                                             Whether you’re a beginner or an experienced vocalist, our comprehensive virtual lessons cater to all skill levels.
                                             Discover the fundamentals of Western singing, including vocal technique, breath control, pitch, and expression.
@@ -1114,40 +1255,75 @@
                                             With interactive sessions, personalized feedback, and a supportive community, you’ll witness remarkable progress in your vocal abilities.
                                             Enroll in our Online Western Singing Class today and let your voice soar to new heights.
                                         </p>
-                                        <div class="btn btndemo">START NOW</div>
+                                        <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
                         <!-- 2nd section :  what will you learn(buttons) and learning section -->
-                        <hr class="secbr">
+               
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnwestern" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-western" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnwestern">
                             <div class="container">
-                                <div class="row mt-5">
-                                    <div class="col-6">
+                                <div class="row kathakp">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3> 
 
                                         <ul class="list-group">
                                             <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1173,74 +1349,74 @@
 
                                         </ul>
                                     </div>
-                                    <div class="col-6 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                    <div class="col-lg-6 col-md-6 col-12 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
                                 </div>
                             </div>
                         </section>
                         <!--  3rd section : modules section (month) -->
-                        <hr>
-                        <section class="modulesec">
+                    
+                        <section class="modulesec" id="mod-western">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Music/musicImg3.svg" class="danceimg">
+<div class="col-lg-6 col-md-12 col-12 text-center mbfim">
+                                            <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
 
 
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-BharatnatyamMonth1-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth1" type="button" role="tab" aria-controls="pills-BharatnatyamMonth1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth2-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth2" type="button" role="tab" aria-controls="pills-BharatnatyamMonth2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth3-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth3" type="button" role="tab" aria-controls="pills-BharatnatyamMonth3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth4-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth4" type="button" role="tab" aria-controls="pills-BharatnatyamMonth4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth5-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth5" type="button" role="tab" aria-controls="pills-BharatnatyamMonth5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth6-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth6" type="button" role="tab" aria-controls="pills-BharatnatyamMonth6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth7-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth7" type="button" role="tab" aria-controls="pills-BharatnatyamMonth7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth8-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth8" type="button" role="tab" aria-controls="pills-BharatnatyamMonth8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth9-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth9" type="button" role="tab" aria-controls="pills-BharatnatyamMonth9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth10-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth10" type="button" role="tab" aria-controls="pills-BharatnatyamMonth10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth11-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth11" type="button" role="tab" aria-controls="pills-BharatnatyamMonth11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-BharatnatyamMonth12-tab" data-bs-toggle="pill" data-bs-target="#pills-BharatnatyamMonth12" type="button" role="tab" aria-controls="pills-BharatnatyamMonth12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -1454,11 +1630,12 @@
                         <section class="dancedesc">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-12">
                                         <img src="public/images/Music/musicImg1.svg" class="danceimg">
                                     </div>
-                                    <div class="col-6 text-center text-col">
-                                        <p class="textP">
+                                    <div class="col-lg-6 col-md-6 col-12 text-col musicp">
+                                    <h3 class="heading"> - Playback Singing </h3>
+                                        <p >
                                             Unleash your inner playback singer and bring your favorite melodies to life with our Online Playback Singing Class.
                                             Perfect for aspiring singers and enthusiasts alike, our comprehensive virtual lessons will help you master the art of playback singing.
                                             Learn the techniques and nuances required to convey emotion, modulate your voice, and synchronize with the on-screen performances.
@@ -1466,40 +1643,75 @@
                                             With interactive sessions, personalized feedback, and a supportive community, you’ll witness remarkable growth in your playback singing skills.
                                             Enroll in our Online Playback Singing Class today and embark on a journey towards becoming a versatile and expressive playback singer.
                                         </p>
-                                        <div class="btn btndemo">START NOW</div>
+                                        <!-- <div class="btn btndemoh">START NOW</div> -->
+                                        <div class="text-end mt-4">
+                                <button type="button" class="btn btndemoh">START NOW</button>
+                            </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
                            <!-- 2nd section :  what will you learn(buttons) and learning section -->
-                           <hr class="secbr">
                         <section class="learningBtn">
                             <div class="container">
-                                <ul class="list-inline">
+                            <ul class="list-inline row ">
+                                <li class="col-lg-1 ">
+                                      
+                                    </li>
 
-                                    <li class="list-inline-item ">
-                                        <button type="button" class="btn btndemo step">What you will learn</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
+                                        <a href="#learnplay" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">What you will learn</span>
+                                            </span>
+					                </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Modules</button>
+                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Modules</button> -->
+                                        <a href="#mod-play" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Modules</span>
+                                        	</span>
+					                    </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Testimonials</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Testimonials</button> -->
+                                        <a href="#testimonials" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Testimonials</span>
+                                            </span>
+                                        </a>
+
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Instructors</button>
+                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
+                                        <a href="#Instructors" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Instructors</span>
+                                            </span>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <button type="button" class="btn btndemo step">Pricing</button>
+                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                        <!-- <button type="button" class="btn btndemo step">Pricing</button> -->
+                                        <a href="#pricing" class="btn btndemo step" role="button">
+                                            <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Pricing</span>
+                                            </span>
+                                        </a>
                                     </li>
+                                    <li class="col-lg-1 ">
+                                      
+                                      </li>
 
                                 </ul>
                             </div>
                         </section>
-                        <section class="learningsec">
+                        <section class="learningsec" id="learnplay">
                             <div class="container">
-                                <div class="row mt-5">
-                                    <div class="col-6">
+                                <div class="row kathakp">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3> 
 
                                         <ul class="list-group">
                                             <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1525,75 +1737,74 @@
 
                                         </ul>
                                     </div>
-                                    <div class="col-6 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                    <div class="col-lg-6 col-md-6 col-12 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
                                 </div>
                             </div>
                         </section>
                         <!--  3rd section : modules section (month) -->
 
-                        <hr>
-                        <section class="modulesec">
+                        <section class="modulesec" id="mod-play">
                             <div class="container">
                                 <div class="row">
-                                    <span class="text-center"> <button type="button" class="btn btndemo step">Modules</button></span>
+                                    <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <img src="public/images/Music/musicImg3.svg" class="danceimg">
+<div class="col-lg-6 col-md-12 col-12 text-center mbfim">
+                                            <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-md-12 col-12">
 
 
                                             <!-- trying new tab  -->
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <!-- Month 1 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link active monthtypes kathak" id="pills-PlaybackMonth1-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth1" type="button" role="tab" aria-controls="pills-PlaybackMonth1" aria-selected="true">Month 1</button>
                                                 </li>
                                                 <!-- Month 2 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth2-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth2" type="button" role="tab" aria-controls="pills-PlaybackMonth2" aria-selected="false">Month 2</button>
                                                 </li>
                                                 <!-- Month 3 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth3-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth3" type="button" role="tab" aria-controls="pills-PlaybackMonth3" aria-selected="false">Month 3</button>
                                                 </li>
                                                 <!-- Month 4 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth4-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth4" type="button" role="tab" aria-controls="pills-PlaybackMonth4" aria-selected="false">Month 4 </button>
                                                 </li>
                                                 <!-- Month 5 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth5-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth5" type="button" role="tab" aria-controls="pills-PlaybackMonth5" aria-selected="false">Month 5 </button>
                                                 </li>
                                                 <!-- Month 6 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth6-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth6" type="button" role="tab" aria-controls="pills-PlaybackMonth6" aria-selected="false">Month 6 </button>
                                                 </li>
                                                 <!-- Month 7 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth7-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth7" type="button" role="tab" aria-controls="pills-PlaybackMonth7" aria-selected="false">Month 7</button>
                                                 </li>
                                                 <!-- Month 8 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth8-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth8" type="button" role="tab" aria-controls="pills-PlaybackMonth8" aria-selected="false">Month 8</button>
                                                 </li>
                                                 <!-- Month 9 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth9-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth9" type="button" role="tab" aria-controls="pills-PlaybackMonth9" aria-selected="false">Month 9</button>
                                                 </li>
                                                 <!-- Month 10 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth10-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth10" type="button" role="tab" aria-controls="pills-PlaybackMonth10" aria-selected="false">Month 10</button>
                                                 </li>
                                                 <!-- Month 11 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth11-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth11" type="button" role="tab" aria-controls="pills-PlaybackMonth11" aria-selected="false">Month 11</button>
                                                 </li>
                                                 <!-- Month 12 -->
-                                                <li class="nav-item" role="presentation">
+                                                <li class="col-lg-3 col-md-3 col-4 nav-item" role="presentation">
                                                     <button class="nav-link monthtypes kathak" id="pills-PlaybackMonth12-tab" data-bs-toggle="pill" data-bs-target="#pills-PlaybackMonth12" type="button" role="tab" aria-controls="pills-PlaybackMonth12" aria-selected="false">Month 12</button>
                                                 </li>
                                             </ul>
@@ -1810,216 +2021,262 @@
 
    
 <!-- Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials mftm mtt" id="testimonials">
         <div class="container">
             <div class="row">
-                <span class="text-center"> <button type="button" class="btn btndemo step">Testimonials</button></span>
+                <span class="text-center mb-0"> <button type="button" class="btn btndemo step mkathak">Testimonials</button></span>
             </div>
             <div class="month-row">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-md-6 col-12">
                         <!-- slider -->
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
+                            <div class="carousel-item mot1 active">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Amrita (USA)</p>
-                                        <p>
-                                            I can't thank this online singing class enough for the incredible transformation it has brought to my voice. The
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                        <h4>Amrita (USA)</h4>
+                                        <p>  I can't thank this online singing class enough for the incredible transformation it has brought to my voice. The
                                             structured lessons, personalized feedback, and supportive community have made all the difference. Highly
-                                            recommended!
-                                        </p>
+                                            recommended!</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name"> Mahima (UK)</p>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <h4>Mahima (UK)</h4>
                                         <p>
                                             This online singing class is a hidden gem! The instructor's expertise and the comprehensive curriculum have taken my singing to new heights. The e-learning platform is user-friendly, making learning a breeze.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Riddhi M ( USA)</p>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <h4>Riddhi M ( USA)</h4>
                                         <p>
                                             I'm amazed at how quickly I've improved my vocal range and control through this online singing class. The instructor's
                                             guidance and the interactive sessions have been invaluable.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Shivi ( Australia )</p>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <h4>Shivi ( Australia )</h4>
                                         <p>
+                                        
                                             If you're looking for a top-notch online singing class, look no further! The professionalism, attention to detail, and
                                             passion for teaching are unmatched. I couldn't be happier with my progress. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Amelia (Canada)</p>
-                                        <p>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <h4>Amelia (Canada)</h4>
+                                        <p> 
+
                                             I've tried several online singing classes, and this one is by far the best. The curriculum is well-structured, the instructor is knowledgeable, and the support from fellow students is incredible. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Scarlett ( UK)</p>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <h4>Scarlett ( UK)</h4>
                                         <p>
+                                        
                                             This online singing class has helped me overcome my stage fright and build confidence in my voice. The techniques taught are practical and effective. I'm grateful for this transformative experience. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Sanjana (Bangalore)</p>
-                                        <p>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <h4>Sanjana (Bangalore)</h4>
+                                        <p> 
                                             As a beginner, this online singing class has been a perfect fit for me. The step-by-step approach and patient guidance have allowed me to progress at my own pace.
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Lakshmi (Hyderabad)</p>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <h4>Lakshmi (Hyderabad)</h4>
                                         <p class="testimonialPara">
                                             I've always dreamt of singing professionally, and this online class is helping me turn that dream into a reality. The instructor's mentorship and the comprehensive curriculum have been invaluable.
                                     </div>
                                     </p>
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Abhinav ( Germany )</p>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <h4>Abhinav ( Germany )</h4>
                                         <p>
+                                        
                                             The convenience of learning from home combined with the expert instruction of this online singing class is a winning combination. I'm amazed at my progress and excited to continue this journey.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Pratibha S( Singapore )</p>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <h4>Pratibha S( Singapore )</h4>
+                                        <p>
+                                        
+                                        I've taken several online courses, but this singing class stands out for its exceptional quality. The instructor's passion, knowledge, and dedication make it worth every penny. </p>
                                     </div>
 
-                                    <p>
-                                        I've taken several online courses, but this singing class stands out for its exceptional quality. The instructor's passion, knowledge, and dedication make it worth every penny. </p>
+                                   
 
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Wanna (Dubai)</p>
-                                    </div>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
+                                       
+                                    <h4>Wanna (Dubai)</h4>
                                     <p>
+                                    
+
                                         This online singing class has opened doors for me that I never thought possible. The networking opportunities and industry insights provided have been priceless.
                                     </p>
+                                    </div>
 
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Lucy (USA)</p>
-                                    </div>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
-                                    <p>
+                                      
+                                   
+                                    <h4>Lucy (USA)</h4>
+                                    <p>     
                                         The supportive community within this online singing class is second to none. The friendships I've formed and the encouragement I've received have made the learning experience even more enjoyable.
                                     </p>
-
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Shidharth ( Dubai )</p>
                                     </div>
-                                    <p>
+                                </div>
+                                <div class="carousel-item mot1">
+                                    <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <h4>Shidharth ( Dubai )</h4>
+                                    <p> 
                                         I never thought online learning could be this engaging and effective until I joined this singing class. The interactive
                                         sessions and personalized attention make it feel like a one-on-one lesson.
                                     </p>
+                                    </div>
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Sanjay S ( Canada)</p>
-                                    </div>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
+                                  
+                                    <h4>Sanjay S ( Canada)</h4>
                                     <p>
+                                    
                                         I'm impressed by the diversity of genres covered in this online singing class. From classical to contemporary, the
                                         curriculum caters to all musical interests.
                                     </p>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Fathima (Dubai)</p>
                                     </div>
 
+                                </div>
+                                <div class="carousel-item mot1">
+                                    <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                        
+                                  
+                                    <h4>Fathima (Dubai)</h4>
                                     <p>
+                                    
                                         The flexibility of this online singing class has allowed me to pursue my passion without disrupting my busy schedule. I<br />can learn at my own pace and revisit lessons whenever I need.</p>
-
+                                        </div>
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Isabella (UK)</p>
-                                    </div>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
+                                  
+                                    <h4>Isabella (UK)</h4>
                                     <p>
+                                    
                                         I'm thrilled with the progress I've made in just a few months of joining this online singing class. The step-by-step approach and systematic exercises have been incredibly effective.</p>
 
+                                        </div>
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Gayathri (Bangalore)</p>
-                                    </div>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
+                                      
+                                  
+                                    <h4>Gayathri (Bangalore)</h4>
                                     <p>
+                                    
+
                                         This online singing class provides a holistic learning experience. Along with vocal techniques, it focuses on
                                         performance skills, stage presence, and even music theory. </p>
-
+                                        </div>
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Jassi (Canada)</p>
-                                    </div>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <h4>Jassi (Canada)</h4>
 
                                     <p>
+                                  
                                         I've always wanted to sing with confidence, and this online class has helped me achieve just that. The instructor's support and the nurturing environment have boosted my self-belief.</p>
                                     </p>
-
+                                    </div>
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item mot1">
                                     <div class="carousel-caption">
-                                        <p class="thim-ekits-testimonial__name">Victoria ( New Zealand)</p>
-                                    </div>
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                 
+                                    <h4>Victoria ( New Zealand)</h4>
 
                                     <p>
                                         The e-learning platform used for this singing class is intuitive and visually appealing. It enhances the learning experience and keeps me motivated to practice consistently. </p>
 
                                 </div>
+                                </div>
                             </div>
 
                         
 
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                            <a class="carousel-control-prev mta" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span  aria-hidden="true"><i class="fa fa-arrow-left" ></i></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next mta" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span  aria-hidden="true"><i class="fa fa-arrow-right" ></i></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                     </div>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-lg-6 col-md-6 col-12">
                         <img src="public/images/Music/musicImg4.png" class="danceimg">
                     </div>
                 </div>
             </div>
            </div> 
     </section>
-    <hr>
+
     <?php include('InstruInstructer.php');?>
     <?php include('pricing.php'); ?>
     <?php include('Instrumentsfaq.php'); ?>
