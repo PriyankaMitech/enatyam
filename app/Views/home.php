@@ -371,7 +371,7 @@
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     title="enatyam kathak student feedback II Swara USA  II kathak for beginners II"
                                     width="640" height="360"
-                                    src="https://www.youtube.com/embed/LxDF2EzI-8Y?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=1"
+                                    src="https://www.youtube.com/embed/LxDF2EzI-8Y?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Finfobeckon.com&amp;widgetid=1"
                                     id="widget2"></iframe>
                             </div>
                         </div>

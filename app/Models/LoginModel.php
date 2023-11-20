@@ -6,7 +6,7 @@ class LoginModel extends Model
   
     protected $table = 'register';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['full_name', 'email', 'mobile_no','role','password','confirm_pass','is_register_done','course','sub_course','age','experienceInput',];
+    protected $allowedFields = ['full_name', 'email', 'mobile_no','role','password','confirm_pass','otp','is_register_done'];
    
     
     public function insertTable1Data($registerData)  {
@@ -18,11 +18,9 @@ class LoginModel extends Model
         return $this->db->table('register')->where('id', $insertedID)->get()->getRowArray();
     }
 
-
-     public function setFacultyName($data){
-     //   print_r($data);
+    public function setFacultyName($data){
         $faculty_name=array('faculty_name'=>$data['full_name'],'email'=>$data['email']);
-   //     print_r($faculty_name);die;
+        // print_r($faculty_name);die;
         $facultyData = [
        'faculty_name'   => $faculty_name['faculty_name'],
         'email'          => $faculty_name['email'],   
@@ -37,8 +35,9 @@ class LoginModel extends Model
         else{
             echo "error while inserting in faculty table";
         }
+        }
     }
-    }
+
     public function getProfile($data){
       //  print_r($data);
         $db      = \Config\Database::connect();
@@ -55,8 +54,8 @@ class LoginModel extends Model
             else{
                 echo "false";
             }
+        }
     }
-}
 
     public function setStudentName($getdata){
         // print_r($data);exit();
@@ -83,7 +82,7 @@ class LoginModel extends Model
         else{
             echo "error in inserting in student table";
         }
-    }
+        }
 
     }
 
@@ -196,12 +195,12 @@ class LoginModel extends Model
         $session = session();
         // print_r($session->get('faculty_id'));die;
         
-$faculty_data = [
-    'qualification' => $data['qualification'],
-    'experience'  => $data['experience'],
-    'country'  => $data['country'],
-    'convenient_time'  => $data['convenient_time'],
-];
+        $faculty_data = [
+            'qualification' => $data['qualification'],
+            'experience'  => $data['experience'],
+            'country'  => $data['country'],
+            'convenient_time'  => $data['convenient_time'],
+        ];
         $db  = \Config\Database::connect();
         $builder = $db->table('faculty');
         $builder->set('qualification', $data['qualification']);
@@ -213,129 +212,174 @@ $faculty_data = [
         // $data['lastQuery'] = $this->db->getLastQuery();
         // print_r($data['lastQuery']);    
 
-// if ($result == '1') {
-// return view((FacultyDashboard));
-// }else {
-// return false;
-// }
+        // if ($result == '1') {
+        // return view((FacultyDashboard));
+        // }else {
+        // return false;
+        // }
 
     }
 
 
- public function add($data){
-   // print_r($data); 
-    echo $data['email'];
-    // $email = $this->session->get('email');
-//    $username =  $this->session->get('username');
-    // print_r($email);die;
-    $result = $this->db
-    ->table('register')
-    ->where(["email" => $data['email']])
-    ->get()
-    ->getRow();
-    // print_r($result);die;
-
- }
- public function getUserByEmailAndPassword($email, $password) {
-    $session = session();
-    $result = $this->db
+    public function add($data){
+        // $email = $this->session->get('email');
+        //    $username =  $this->session->get('username');
+        // print_r($email);die;
+        $result = $this->db
         ->table('register')
-        ->where(["email" => $email, "password" => $password])
+        ->where(["email" => $data['email']])
         ->get()
         ->getRow();
+        // print_r($result);die;
 
-    if($result) {
-        $sessiondata = [
-            'id'                 => $result->id,
-            'role'               => $result->role,
-            'email'              => $result->email,
-            'password'           => $result->password,
-            'cpassword'          => $result->confirm_pass,
-            'user_name'          => $result->full_name,
-            'mobile_no'          => $result->mobile_no,
-            'Payment_status'     => $result->Payment_status,
-        ];
-
-        $session->set('sessiondata', $sessiondata); 
-        return $sessiondata;
-    } else {
-        return null;
     }
-}
+    public function getUserByEmailAndPassword($email, $password) {
+        $session = session();
+        $result = $this->db
+            ->table('register')
+            ->where(["email" => $email, "password" => $password])
+            ->get()
+            ->getRow();
 
-public function getUserByMobileNoAndPassword($mobile_no, $password){
-    $session = session();
-    $result = $this->db
+        if($result) {
+            $sessiondata = [
+                'id'                 => $result->id,
+                'role'               => $result->role,
+                'email'              => $result->email,
+                'password'           => $result->password,
+                'cpassword'          => $result->confirm_pass,
+                'user_name'          => $result->full_name,
+                'mobile_no'          => $result->mobile_no,
+                'Payment_status'     => $result->Payment_status,
+            ];
+
+            $session->set('sessiondata', $sessiondata); 
+            return $sessiondata;
+        } else {
+            return null;
+        }
+    }
+
+    public function getUserByMobileNoAndPassword($mobile_no, $password){
+        $session = session();
+        $result = $this->db
+            ->table('register')
+            ->where(["mobile_no" => $mobile_no, "password" => $password])
+            ->get()
+            ->getRow();
+
+        if($result) {
+            $sessiondata = [
+                'id'                 => $result->id,
+                'role'               => $result->role,
+                'email'              => $result->email,
+                'password'           => $result->password,
+                'cpassword'          => $result->confirm_pass,
+                'user_name'          => $result->full_name,
+                'mobile_no'          => $result->mobile_no,
+                'Payment_status'     => $result->Payment_status,
+            ];
+        
+
+            $session->set('sessiondata', $sessiondata); 
+            return $sessiondata;
+        } else {
+            return null; // Indicates user not found
+        }
+    }
+
+    public function getStudentList(){
+        $session = session();
+    
+        $sessiondata= $session->get('sessiondata');
+        // print_r($sessiondata['id']);
+        $result1 = $this->db
+                        ->table('faculty')
+                        ->where([ "register_id" => $sessiondata['id']])
+                        ->get()
+                        ->getRow();
+        // print_r($result->faculty_id);
+        $session->set('faculty_id', $result1->faculty_id);
+        // echo " Faculty id :" .$session->get('faculty_id');
+        $result = $this->db
+                    ->table('student')
+                    ->where(["fk_faculty_id" => $session->get('faculty_id')])
+                    ->get()
+                    ->getResult();
+        //    echo "<pre>"; print_r($result);
+        return $result;
+    }
+
+    public function get_user_data($id){
+        $result = $this->db
+                        ->table('register')
+                        ->where(["id" => $id])
+                        ->get()
+                        ->getRow();
+
+                        return $result; 
+
+    }
+
+    public function checkStudentPaymentStatus($studentId){
+        $result = $this->db
         ->table('register')
-        ->where(["mobile_no" => $mobile_no, "password" => $password])
+        ->select('Payment_status')
+        ->where(['id' => $studentId, 'Payment_status' => 'Y'])
         ->get()
         ->getRow();
-
-    if($result) {
-        $sessiondata = [
-            'id'                 => $result->id,
-            'role'               => $result->role,
-            'email'              => $result->email,
-            'password'           => $result->password,
-            'cpassword'          => $result->confirm_pass,
-            'user_name'          => $result->full_name,
-            'mobile_no'          => $result->mobile_no,
-            'Payment_status'     => $result->Payment_status,
-        ];
-    
-
-        $session->set('sessiondata', $sessiondata); 
-        return $sessiondata;
-    } else {
-        return null; // Indicates user not found
+        return !empty($result);
     }
-}
 
+    public function get_user_Session($user_id){
+        
+        return $this->db->table('register')->select('SessionsCount')->where('id', $user_id)->get()->getRow();
+     }
 
+    public function checkexist($value, $column) {
+        $result = $this->db
+        ->table('register')
+        ->select($column)
+        ->where([$column => ''.$value.''])
+        ->get()->getRow();
+        
+        return !empty($result);
+    }
 
-public function getStudentList(){
-    $session = session();
-   
-    $sessiondata= $session->get('sessiondata');
-    // print_r($sessiondata['id']);
-    $result1 = $this->db
-                    ->table('faculty')
-                    ->where([ "register_id" => $sessiondata['id']])
-                    ->get()
-                    ->getRow();
-    // print_r($result->faculty_id);
-    $session->set('faculty_id', $result1->faculty_id);
-    // echo " Faculty id :" .$session->get('faculty_id');
-    $result = $this->db
-                   ->table('student')
-                   ->where(["fk_faculty_id" => $session->get('faculty_id')])
-                   ->get()
-                   ->getResult();
-//    echo "<pre>"; print_r($result);
-   return $result;
-}
-public function get_user_data($id){
-    $result = $this->db
-                    ->table('register')
-                    ->where(["id" => $id])
-                    ->get()
-                    ->getRow();
+    public function check_otp($otp, $mobile_no) {
+        $result = $this->db
+        ->table('register')
+        ->select('otp')
+        ->where(['mobile_no' => $mobile_no])
+        ->get()->getRow();
+        // print_r($otp);die;
+        if ($otp == $result->otp) {
+            $updateData = [
+                'is_mobile_verified' => 'Y',
+                'is_register_done' => 'Y'
+            ];
 
-                    return $result; 
-
-}
-public function checkStudentPaymentStatus($studentId){
-    $result = $this->db
-    ->table('register')
-    ->select('Payment_status')
-    ->where(['id' => $studentId, 'Payment_status' => 'Y'])
-    ->get()
-    ->getRow();
-   return !empty($result);
-}
- public function get_user_Session($user_id){
-    
-    return $this->db->table('register')->select('SessionsCount')->where('id', $user_id)->get()->getRow();
- }
+            $this->db
+            ->table('register')
+            ->where(["mobile_no" => $mobile_no])
+            ->set($updateData)
+            ->update();
+            
+            $data = array(
+                'msg' => 'Email verified',
+                'status' => '200'
+            );
+            
+            return $data;
+        }else {
+            $data = array(
+                'msg' => 'Enter correct otp',
+                'status' => '203'
+            );
+            
+            return $data;
+        }
+        
+    }
 
 }
