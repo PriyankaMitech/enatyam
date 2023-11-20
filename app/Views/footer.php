@@ -1681,6 +1681,25 @@ function showLoginModal() {
     $('#loginformpopup').modal('show');
 }
 </script>
+<script>
+    // JavaScript function to open the lost password recovery modal
+    function formmodel() {
+        $('#registerformpopup').modal('hide');
+        // Show the lost password modal
+        $('#formpopup').modal('show');
+    }
+</script>
+<script>
+    // JavaScript to show/hide experience details input based on radio button selection
+    $('input[name="experience"]').change(function () {
+        if ($(this).val() === 'yes') {
+            $('#experienceDetails').show();
+        } else {
+            $('#experienceDetails').hide();
+        }
+    });
+</script>
+
 <!-- headerr -->
 <script>
 let prevScrollPos = window.pageYOffset;

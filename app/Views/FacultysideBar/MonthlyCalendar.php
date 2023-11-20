@@ -24,6 +24,10 @@
         <a href="<?=base_url(); ?>/index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+            </li>
+
+      <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
@@ -236,7 +240,7 @@
 
                 <div class="col-md-12 " >
                 <form action="FacultyController/selectfacultySchedule" method="post" id="appointmentForm">
-                <input type="hidden" name="faculty_id" value="<?= $registerId; ?>">
+                <input type="hidden" name="faculty_register_id" value="<?= $registerId; ?>">
                   <div class="card">
                     <div class="card-header">
                       <h3 class="card-title">Shedule Data</h3>

@@ -76,7 +76,9 @@ $routes->get('demo1', 'Home::demo1');
 $routes->get('demo', 'Home::demo');
 
 //routes for admin
+$routes->post('AdminController/addStudent', 'AdminController::addStudent');
 $routes->get('givestudent', 'AdminController::givestudent');
+$routes->get('StudentList', 'AdminController::StudentList');
 $routes->get('Getcalender', 'AdminController::Getcalender');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
 $routes->get('today', 'AdminController::today');
@@ -91,6 +93,9 @@ $routes->get('getDemoDetails', 'AdminController::getDemoDetails');
 $routes->get('DailyClass', 'AdminController::GetClasses');
 $routes->get('FacultysidebarShedule', 'AdminController::FacultysidebarShedule');
 $routes->post('AdduserByadmin', 'AdminController::AdduserByadmin');
+$routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
+$routes->post('AdminController/processSelection', 'AdminController::processSelection');
+
 $routes->post('AdminController/Steusupdate', 'AdminController::Steusupdate');
 $routes->post('AdminController/backtoApplication', 'AdminController::backtoApplication');
 $routes->post('AdminController/createpassword', 'AdminController::createpassword');
@@ -98,12 +103,13 @@ $routes->post('AdminController/ResheduleByadmin', 'AdminController::ResheduleBya
 $routes->post('lostpassword', 'StudentController::lostpassword');
 $routes->post('otpvalidate', 'StudentController::otpvalidate');
 $routes->post('newpassword', 'StudentController::newpassword');
+$routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule');
 
 // Routes for Faculty
 $routes->get('FacultyProfile', 'Home::FacultyProfile');
 $routes->get('FacultySchedule', 'DemoController::todayDemo');
 $routes->post('DemoController/resheduleDemo', 'DemoController::resheduleDemo');
-$routes->get('MonthlyCalendar', 'FacultyController::MonthlyCalendar');
+$routes->get('selectfacultySchedule', 'FacultyController::MonthlyCalendar');
 $routes->get('StudentuplodedVidio', 'FacultyController::StudentuplodedVidio');
 $routes->post('FacultyController/selectfacultySchedule', 'FacultyController::selectfacultySchedule');
    $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
@@ -124,7 +130,8 @@ $routes->get('fetchTofacultyShuduleSidebar', 'FacultyController::fetchTofacultyS
  $routes->get('StudentDashboard', 'Home::StudentDashboard');
  $routes->get('profilemanagment', 'StudentController::profilemanagment');
 $routes->post('profilemanagment', 'StudentController::profilemanagment');
- 
+$routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
+$routes->get('StudentSelectClassDates', 'StudentController::StudentSelectClassDates');
 // 
 $routes->get('register', 'LoginController::register');
 $routes->post('register', 'LoginController::register');

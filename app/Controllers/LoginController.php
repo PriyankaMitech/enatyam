@@ -17,7 +17,7 @@ class LoginController extends BaseController
 
     public function register()
     {
-        
+   //     print_r($_POST);die;
         $validation = \Config\Services::validation(); // Get the validation instance
         $loginModel = new LoginModel();
         
@@ -42,8 +42,7 @@ class LoginController extends BaseController
         }
     
         if ($validation->withRequest($this->request)->run()) {
-            // Validation passed, save data to the database
-            // echo "$mobileNoProvided";exit();
+         
             $data = [
                 'full_name' => $this->request->getVar('full_name'),
                 'email' => $emailProvided,
@@ -52,6 +51,11 @@ class LoginController extends BaseController
                 'password' => $this->request->getVar('password'),
                 'confirm_pass' => $this->request->getVar('confirm_pass'),
                 'is_register_done' => 'Y',
+                'course'=>$this->request->getVar('course'),
+                'sub_course'=>$this->request->getVar('sub_course'),
+                'age'=>$this->request->getVar('age'),
+                'experienceInput'=>$this->request->getVar('experienceInput'),
+
             ];
         //   echo "<pre>";print_r($data);exit();
             // Save data to the database
@@ -66,6 +70,10 @@ class LoginController extends BaseController
                 'confirm_pass' => $this->request->getVar('confirm_pass'),
                 'register_id' => $last_insert_id,
                 'is_register_done' => 'Y',
+                'course'=>$this->request->getVar('course'),
+                'sub_course'=>$this->request->getVar('sub_course'),
+                'age'=>$this->request->getVar('age'),
+                'experienceInput'=>$this->request->getVar('experienceInput'),
                 
             ];
             // Set session variables and redirect as needed

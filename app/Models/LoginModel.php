@@ -6,7 +6,7 @@ class LoginModel extends Model
   
     protected $table = 'register';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['full_name', 'email', 'mobile_no','role','password','confirm_pass','is_register_done'];
+    protected $allowedFields = ['full_name', 'email', 'mobile_no','role','password','confirm_pass','is_register_done','course','sub_course','age','experienceInput',];
    
     
     public function insertTable1Data($registerData)  {
@@ -333,6 +333,9 @@ public function checkStudentPaymentStatus($studentId){
     ->getRow();
    return !empty($result);
 }
-
+ public function get_user_Session($user_id){
+    
+    return $this->db->table('register')->select('SessionsCount')->where('id', $user_id)->get()->getRow();
+ }
 
 }
