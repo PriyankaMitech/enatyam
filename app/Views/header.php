@@ -282,15 +282,26 @@ $page = $uri->getSegment(count($pages));
                         </li>
                     </ul>
 
+
                     <div>
                         <div class="">
-                            <div class="loginmenu">
-                                <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
 
+                            <!-- <?php //print_r($session->get('sessiondata'));
+                                    //die; 
+                                    ?> -->
+                            <?php if (!(session()->get('sessiondata'))) : ?>
 
-
-                                <a class="login" href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
-                            </div>
+                                <div class="loginmenu">
+                                    <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                                    <a class="login" href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
+                                </div>
+                            <?php else : ?>
+                                <div class="loginmenu">
+                                    <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
+                                    <a class="Dashboard" href="<?php echo base_url('Dashboard'); ?>">Dashboard</a>
+                                    <a class="logout" href="<?php echo base_url('logout'); ?>">Logout</a>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

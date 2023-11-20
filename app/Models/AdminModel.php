@@ -50,6 +50,8 @@ class AdminModel extends Model
             ->where("MONTH(date) = $currentMonth") // Replace 'date_column' with the actual column name containing the date
             ->get()
             ->getResult();
+        // print_r($result);
+        // die;
 
         return $result;
     }

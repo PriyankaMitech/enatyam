@@ -149,6 +149,10 @@ $routes->get('StudentProfile', 'StudentController::StudentProfile');
 $routes->get('UplodeVideo', 'StudentController::UplodeVideo');
 $routes->get('OrderDetails', 'BillingC::OrderDetails');
 
+// Routes for Dashboard after login
+$routes->get('Dashboard', 'DashboardController::displayDashboard');
+
+
 
 
 
