@@ -83,7 +83,7 @@
                 <a href="index3.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url(); ?>home" class="nav-link">Logout</a>
+                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="<?php echo base_url(); ?>FacultyDashboard" class="nav-link">Dashboard</a>

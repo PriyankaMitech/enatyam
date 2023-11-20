@@ -417,7 +417,8 @@
                             <a class="nav-link px-2" href="<?php echo base_url('Career');?>">Career</a>
                         </div>
                         <div class="navbar-nav">
-                            <a href="<?php echo base_url('demo');?>" class="btn btndemoh" style="width: auto;">BOOK YOUR FREE DEMO</a>
+                            <a href="<?php echo base_url('demo');?>" class="btn btndemoh" style="width: auto;">BOOK YOUR
+                                FREE DEMO</a>
                         </div>
                     </div>
                 </div>
@@ -459,32 +460,31 @@
             <div id="overlay"></div>
     </section>
 
+    <form name="registrationForm" onsubmit="return validateForm()" method="post"
+        action="<?php echo base_url();?>register">
+        <div class="modal fade" id="registerformpopup" tabindex="-1" aria-labelledby="ModalFormLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
 
-    <div class="modal fade" id="registerformpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+                <div class="modal-content">
 
-        <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-body">
+                        <div class="register_form">
+                            <h4 class="titel pt-3">Registration</h4>
 
-            <div class="modal-content">
+                            <form name="registrationForm" onsubmit="return validateForm()" method="post"
+                                action="<?php echo base_url();?>register" id="registerform">
+                                <div class="form-group m-2">
+                                    <input type="text" name="full_name" id="full_name" class="form-control"
+                                        aria-required="true" placeholder="Username">
+                                    <span id="nameError" class="d-none" style="color: red;"></span>
+                                </div>
 
-                <div class="modal-body">
-
-
-                    <div class="register_form">
-                        <h4 class="titel pt-3">Register a new account</h4>
-
-                        <form name="registrationForm" onsubmit="return validateForm()" method="post"
-                            action="<?php echo base_url();?>register" id="registerform">
-                            <div class="form-group m-2">
-                                <input type="text" name="full_name" id="full_name" class="form-control"
-                                    aria-required="true" placeholder="Username">
-                                <span id="nameError" class="d-none" style="color: red;"></span>
-                            </div>
-
-                            <div class="form-group m-2">
-                                <input type="email" name="email" id="email" class="form-control" aria-required="true"
-                                    placeholder="Email">
-                                <span id="emailError" style="color: red;"></span>
-                            </div>
+                                <div class="form-group m-2">
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        aria-required="true" placeholder="Email">
+                                    <span id="emailError" style="color: red;"></span>
+                                </div>
 
                             <div class="form-group m-2">
                                 <input type="mobile_no" name="mobile_no" id="mobile_no" class="form-control"
@@ -525,15 +525,17 @@
 
                             </div>
 
+                                <button type="button" class="btn btn-light mt-3" onclick="formmodel()">
+                                    Next
+                                </button>
 
+                                <input type="button" onclickt="return validateForm()"  id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
+                                <p>Are you a member?<a class="Login" href="javascript:void(0);"
+                                        onclick="showLoginModal()" data-bs-toggle="modal"
+                                        data-bs-target="#loginformpopup">Login</a></p>
+                                <!-- </form> -->
 
-                            <input type="button" onclickt="return validateForm()"  id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
-                            <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()"
-                                    data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
-                        </form>
-
-
-
+                        </div>
 
                     </div>
 
@@ -542,8 +544,64 @@
             </div>
 
         </div>
+        <div class="modal fade" id="formpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="login_form">
+                            <h4 class="titel pt-3" style="color: black;">Help us understand you better by sharing few
+                                details like</h4>
 
-    </div>
+                            <div class="form-group">
+                                <select class="form-control" id="course" aria-required="true" aria-invalid="false"
+                                    name="course">
+                                    <option value="">Book Demo for*</option>
+                                    <option id="" value="Dance">Dance</option>
+                                    <option id="" value="Music">Music</option>
+                                    <option id="" value="Yoga">Yoga</option>
+                                    <option id="" value="Instruments">Instruments</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+
+                                <select class="form-control" id="course" aria-required="true" aria-invalid="false"
+                                    name="sub_course">
+                                    <option value="">selectCource*</option>
+                                    <option id="" value="Dance">Kathak</option>
+                                    <option id="" value="Music">Ouuu</option>
+                                    <option id="" value="Yoga">Yoagagag</option>
+                                    <option id="" value="Instruments">Tablea</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+
+                                <input type="number" name="age" id="age" class="form-control" aria-required="true"
+                                    placeholder="Enter Youe Age">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Are you practicing this art (any experience in this sector)?</label><br>
+                                <label style="margin-left: 100px;" for="yes">Yes</label>
+                                <input type="radio" name="experience" id="yes" value="yes">
+                                <label style="margin-left: 100px;" for="no">No</label>
+                                <input type="radio" name="experience" id="no" value="no">
+                            </div>
+
+                            <div class="form-group" id="experienceDetails" style="display: none;">
+                                <label for="experienceInput">Please provide details of your experience:</label>
+                                <input type="text" name="experienceInput" id="experienceInput" class="form-control">
+                            </div>
+                            <input type="submit" value="Sign Up" class="btn btn-light mt-3">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 
     <div class="modal fade" id="loginformpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
 
@@ -572,7 +630,7 @@
                                 <span id="passwordError1" style="color: red;"></span>
                             </div>
                             <div class="forgetmenot login-remember">
-                               
+
                                 <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password"
                                     onclick="showLostPasswordModal()">Lost your password?</a>
                             </div>
