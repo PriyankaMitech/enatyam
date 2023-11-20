@@ -15,6 +15,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enatyam</title>
+    <style>
+        div:where(.swal2-container) {
+            display: grid!important;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
     <?php if ($page == 'enatyam' || $page == 'Home') {
 
         ?>
@@ -42,9 +48,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
         integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <style>
@@ -459,11 +463,11 @@
                         <h4 class="titel pt-3">Register a new account</h4>
 
                         <form name="registrationForm" onsubmit="return validateForm()" method="post"
-                            action="<?php echo base_url();?>register">
+                            action="<?php echo base_url();?>register" id="registerform">
                             <div class="form-group m-2">
                                 <input type="text" name="full_name" id="full_name" class="form-control"
                                     aria-required="true" placeholder="Username">
-                                <span id="nameError" style="color: red;"></span>
+                                <span id="nameError" class="d-none" style="color: red;"></span>
                             </div>
 
                             <div class="form-group m-2">
@@ -501,6 +505,11 @@
                                 <span id="confirmpasswordError" style="color: red;"></span>
                             </div>
 
+                            <div class="form-group m-2">
+                                <input type="text" name="otp" id="otp" class="form-control d-none" placeholder="Enter otp">
+                                <span id="otpError" style="color: red;"></span>
+                            </div>
+
                             <div class="teacher">
 
 
@@ -508,7 +517,7 @@
 
 
 
-                            <input type="submit" value="Sign Up" class="btn btn-light mt-3">
+                            <input type="button" onclickt="return validateForm()"  id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
                             <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()"
                                     data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
                         </form>

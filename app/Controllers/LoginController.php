@@ -4,9 +4,9 @@ use App\Models\LoginModel;
 class LoginController extends BaseController
 {
     public function __construct()
-{
-    $this->db = \Config\Database::connect();
-}
+    {
+        $this->db = \Config\Database::connect();
+    }
     public function index() {
         helper(['form']);
         $data = [];
@@ -32,7 +32,6 @@ class LoginController extends BaseController
         // Either email or mobile_no should be provided
         $emailProvided = $this->request->getVar('email');
         $mobileNoProvided = $this->request->getVar('mobile_no');
-        // echo "$mobileNoProvided";
     
         if (empty($emailProvided) && empty($mobileNoProvided)) {
             $validation->setError('email', 'Either Email or Mobile no is required.');
@@ -53,11 +52,10 @@ class LoginController extends BaseController
                 'confirm_pass' => $this->request->getVar('confirm_pass'),
                 'is_register_done' => 'Y',
             ];
-        //   echo "<pre>";print_r($data);exit();
             // Save data to the database
             $loginModel->insert($data);
-             $last_insert_id = $this->db->insertID();
-             $getdata = [
+            $last_insert_id = $this->db->insertID();
+            $getdata = [
                 'full_name' => $this->request->getVar('full_name'),
                 'email' => $emailProvided,
                 'mobile_no' => $mobileNoProvided,
@@ -77,12 +75,57 @@ class LoginController extends BaseController
             $loginModel->setFacultyName($data);
             $loginModel->setStudentName($getdata);
     
-            return redirect()->to('dashboard');
+            // return redirect()->to('dashboard');
         } else {
             // Validation failed
             $data['validation'] = $validation;
             return redirect()->to('Home');
         }
+    }
+
+    public function verifymobile() {
+        $loginModel = new LoginModel();
+        $otp = rand(999, 9999);
+        if ($_POST['otp'] == '') {
+            $loginModel = new LoginModel();
+            $result['mobileexist'] = $loginModel->checkexist($_POST['mobile_no'], 'mobile_no');
+            $result['emailexist'] = $loginModel->checkexist($_POST['email'], 'email');
+
+            if ($result['mobileexist'] == '' && $result['emailexist'] == '') {
+                $insert = $this->savedata($_POST, $otp);
+                $sms = 'Dear customer, your OTP for registration is '.$otp.'. do not share to anyone. Thank you OTPIMS';
+                $output = sendSMS($_POST['mobile_no'], $sms);
+                // print_r($output);die;
+                $result['mobileno'] = $_POST['mobile_no'];
+                $result['otp'] = $insert;
+                echo json_encode($result);
+                
+            }else {
+                echo json_encode($result);
+            }
+        }else {
+            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['mobile_no']);
+            echo json_encode($checkotp);
+        }
+    }
+
+    public function savedata($postdata, $otp) {
+        $loginModel = new LoginModel();
+
+        $data = [
+            'full_name' => $postdata['full_name'],
+            'email' => $postdata['email'],
+            'mobile_no' => $postdata['mobile_no'],
+            'role' => 'Student',
+            'otp' => $otp,
+            'is_register_done' => 'N',
+        ];
+        $result = $loginModel->insert($data);
+        if ($result) {
+            return $otp;
+        }else 
+            return false;
+            
     }
     
     // public function login()
@@ -127,32 +170,31 @@ class LoginController extends BaseController
         }
 
         if (!empty($result)) {
-        switch ($result['role']) {
-            case 'Admin':
-                return redirect()->to('today');
-            case 'Faculty':
-                $this->session->set($result);
-                return redirect()->to('FacultyDashboard');
-            case 'Student':
-                $this->session->set($result);
-                return redirect()->to('uploadMedia');
-            default:
-                return redirect()->to('Home');
-           }
-           } else {
-           return redirect()->to('Home');
-         }
-     }
+            switch ($result['role']) {
+                case 'Admin':
+                    return redirect()->to('today');
+                case 'Faculty':
+                    $this->session->set($result);
+                    return redirect()->to('FacultyDashboard');
+                case 'Student':
+                    $this->session->set($result);
+                    return redirect()->to('uploadMedia');
+                default:
+                    return redirect()->to('Home');
+            }
+        } else {
+        return redirect()->to('Home');
+        }
+    }
       
-      public function ModelForLogin()
-     {
-       return view('ModelForLogin');
-     }
+    public function ModelForLogin()
+    {
+        return view('ModelForLogin');
+    }
   
-   public function logout(){
-  //   print_r($_SESSION);die;
-    session()->destroy();
-    return redirect()->to(base_url());
+    public function logout(){
+        session()->destroy();
+        return redirect()->to(base_url());
     }
 
     public function update_profile_data()
@@ -173,19 +215,19 @@ class LoginController extends BaseController
             'mobile_no'  => $this->request->getVar('mobile_no'),          
         ];
 
-	 $db = \Config\Database::Connect();
+        $db = \Config\Database::Connect();
 
-	 if($this->request->getVar('id') == ""){
-	
-		$add_data = $db->table('tbl_tax');
-		$add_data->insert($data);
-	}else{
-		$update_data = $db->table('register')->where('id',$this->request->getVar('id'));
-		$update_data->update($data);
+        if($this->request->getVar('id') == ""){
+        
+            $add_data = $db->table('tbl_tax');
+            $add_data->insert($data);
+        }else{
+            $update_data = $db->table('register')->where('id',$this->request->getVar('id'));
+            $update_data->update($data);
 
-        $update_studentdata = $db->table('student')->where('register_id',$this->request->getVar('id'));
-		$update_studentdata->update($studentdata);
-	}	
+            $update_studentdata = $db->table('student')->where('register_id',$this->request->getVar('id'));
+            $update_studentdata->update($studentdata);
+        }	
 		return redirect()->to('profilemanagment'); 
 
 	}
