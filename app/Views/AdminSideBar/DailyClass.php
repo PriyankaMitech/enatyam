@@ -34,13 +34,15 @@
     #teacherDropdown {
         font-size: 20px;
     }
+
     table {
         border-collapse: collapse;
         width: 40%;
         margin-bottom: 20px;
     }
 
-    th, td {
+    th,
+    td {
         border: 1px solid #ddd;
         padding: 8px;
         text-align: left;
@@ -49,7 +51,6 @@
     th {
         background-color: #f2f2f2;
     }
-
     </style>
 </head>
 
@@ -96,42 +97,42 @@
                     aria-label=".form-select-lg example">
 
                 </select>
-                <button id="submitButton">Submit</button>
+                <button id="submitButton">View</button>
             </div>
         </div>
         <div class="row" style=" display: flex; justify-content: space-around; margin: 20px;">
-        <table id="studentTable" style="border: 1px;">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>End Time</th>
-                    <!-- Add more columns as needed for students -->
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Data for students will be inserted here dynamically -->
-            </tbody>
-        </table>
+            <table id="studentTable" style="border: 1px;margin-left: 231px;">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>End Time</th>
+                        <!-- Add more columns as needed for students -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data for students will be inserted here dynamically -->
+                </tbody>
+            </table>
 
-        <table id="teacherTable" style="border: 1px;">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Start Time</th>
-                    <th>End Time</th>
-                    <!-- Add more columns as needed for teachers -->
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Data for teachers will be inserted here dynamically -->
-            </tbody>
-        </table>
+            <table id="teacherTable" style="border: 1px;">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <!-- Add more columns as needed for teachers -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data for teachers will be inserted here dynamically -->
+                </tbody>
+            </table>
         </div>
     </div>
-   
-        
-    
+
+
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
     $('#studentDropdown').on('change', function() {
@@ -178,12 +179,14 @@
                 // Append new rows based on the response
                 $.each(response.studentData, function(key, studentRow) {
                     $('#studentTable tbody').append('<tr><td>' + studentRow.date +
-                        '</td><td>' + studentRow.start_time + '</td></tr>'+ studentRow.end_time + '</td></tr>');
+                        '</td><td>' + studentRow.start_time + '</td><td>' + studentRow
+                        .end_time + '</td></tr>');
                 });
 
                 $.each(response.teacherData, function(key, teacherRow) {
                     $('#teacherTable tbody').append('<tr><td>' + teacherRow.date +
-                        '</td><td>' + teacherRow.start_time + '</td></tr>'+ teacherRow.end_time + '</td></tr>');
+                        '</td><td>' + teacherRow.start_time + '</td><td>' + teacherRow
+                        .end_time + '</td></tr>');
                 });
             },
             error: function(xhr, status, error) {
