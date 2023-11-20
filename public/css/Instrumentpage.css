@@ -165,7 +165,7 @@ body {
 .carousel-caption {
   /* color: #fff; */
   color: #666666;
-  top: 50%;
+  top: 146px;
   font-size: 15px;
 }
 
@@ -188,7 +188,7 @@ body {
 }
 
 .month-row .month-list .dancetypes .monthbtn,
-.row.typesOfYoga-tab .nav-pills .nav-link.kathak {
+.typesOfYoga-tab .nav-pills .nav-link.kathak {
   width: 109px !important;
   height: 60px;
 }
@@ -205,34 +205,32 @@ body {
   z-index: -100;
 }
 
-.row.typesOfYoga-tab > ul > li {
-  margin-right: 30px !important;
-  margin-left: 30px !important;
+.typesOfYoga-tab > ul > li {
   margin-top: 15px !important;
   font-size: 13px;
 }
 
-.row.typesOfYoga-tab .nav-pills .nav-link {
+.typesOfYoga-tab .nav-pills .nav-link {
   border-radius: 28px !important;
   width: 162px !important;
   height: 60px !important;
   background-color: #737373;
 }
 
-.row.typesOfYoga-tab .nav-pills .nav-link.active,
-.row.typesOfYoga-tab .nav-pills .nav-link.big.active,
+.typesOfYoga-tab .nav-pills .nav-link.active,
+.typesOfYoga-tab .nav-pills .nav-link.big.active,
 .modulesec .monthtypes.active {
   background-color: #8c52ff;
 }
 
-.row.typesOfYoga-tab .nav-pills .nav-link.big {
+.typesOfYoga-tab .nav-pills .nav-link.big {
   border-radius: 28px !important;
   width: 312px !important;
   height: 60px !important;
   background-color: #737373;
 }
 
-.row.typesOfYoga-tab .nav-pills .nav-link:hover,
+.typesOfYoga-tab .nav-pills .nav-link:hover,
 .modulesec .monthtypes:hover {
   color: white !important;
 }
@@ -257,7 +255,7 @@ body {
   margin-bottom: 6px !important;
 }
 
-.row.typesOfYoga-tab > div.tab-content > p.textPara1 {
+.typesOfYoga-tab > div.tab-content > p.textPara1 {
   margin-top: 175px !important;
   margin-bottom: 1rem;
   font-size: 15px !important;
@@ -304,9 +302,24 @@ body {
   font-weight: 900;
 }
 
-.semicolone-active {
-  color: #fff; /* Change this to your desired color */
+.semicolone:hover {
+  color: #fff !important; /* Change this to your desired color */
 }
-.faculty-section {
+/* .faculty-section {
   margin-top: 6% !important;
+} */
+.mfi {
+  width: 100px !important;
+}
+.nav-item1 {
+  margin-top: 3%;
+}
+.ittm {
+  margin-top: 7%;
+}
+.tmm {
+  margin-top: 7%;
+}
+.ptfi {
+  padding-top: 3%;
 }

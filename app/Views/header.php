@@ -209,6 +209,7 @@
         font-size: 15px !important;
         font-weight: 400 !important;
     }
+    
     </style>
     <?php }else if($page == 'Instruments') { ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -263,9 +264,11 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo1.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
+
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/demoprofile.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Carrier.css">
+    <!-- <link rel="stylesheet" href="<?=base_url(); ?>public/css/Career.css"> -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -273,6 +276,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
         integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
 
     <?php }else if($page == 'demo'){ ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -333,16 +341,18 @@
     <?php }
                 // echo $page;exit();
         ?>
+
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Login.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Register.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/resposivestyle.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/hederresponsive.css">
 
+    <link rel="stylesheet" href="<?=base_url(); ?>public/css/resposivestyle.css">
+   
 </head>
 
-<body>
+<body class="overlap">
     <section class="tophead ">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid  pd0">
@@ -427,7 +437,7 @@
                             <img src="public/images/logo1.png" alt="Enatyam">
                         </a>
                     </div>
-                    <div class="col-6 text-right my-auto">
+                    <div class="col-6 text-right my-auto menub">
                         <i class="fa fa-bars" id="menu-icon"></i>
                     </div>
                 </div>

@@ -71,7 +71,8 @@
   margin-top: 55px !important;
 }
 .tab-pane {
-  margin-top: 33px;
+  /* margin-top: 33px; */
+  margin-top: 0px;
 }
 .imlalp {
   margin-bottom: 14px !important;

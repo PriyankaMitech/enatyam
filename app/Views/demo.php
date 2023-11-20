@@ -2,8 +2,8 @@
 <div class="demo_page">
     <div class="container">
         <div class="accordion" id="accordionExample">
-            <div class="steps">
-                <progress id="progress" value=0 max=100></progress>
+            <div class="steps stepsdemo">
+                <progress id="progress" class="progressbar" value=0 max=100></progress>
                 <div class="step-item">
                     <button class="step-button text-center" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -43,7 +43,7 @@
 
             </div>
             <form action="bookDemo" method="post">
-                <div class="card">
+                <div class="card cards">
                     <div id="headingOne">
                     </div>
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
@@ -55,7 +55,7 @@
                                         <h5 class="title">
                                             <u>Free Demo Class</u>
                                         </h5>
-                                        <div class="f-info">
+                                        <div class="f-info demofdc">
                                             <div>
                                                 <input class="form-control" size="40" aria-required="true"
                                                     aria-invalid="false" id="name" placeholder="Your Name *" value=""
@@ -126,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card cards">
                     <div id="headingTwo">
 
                     </div>
@@ -448,7 +448,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card cards">
                     <div id="headingThree">
 
                     </div>
@@ -467,7 +467,7 @@
 
 
 
-                                    <div class="f-info">
+                                    <div class="f-info syademo">
 
 
                                         <ul class="greenCheckbox multiSelectContainer ">
@@ -548,7 +548,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card cards">
                     <div id="headingFour">
                     </div>
 
@@ -564,14 +564,14 @@
 
 
 
-                                    <div class="f-info">
+                                    <div class="f-info syldemo">
 
 
 
 
-                                        <div class="form-group col-md-10">
+                                        <div class="form-group slcsfieldsd col-md-10">
                                             <label for="inputcountry">Country:</label>
-                                            <select class="form-control" id="inputCountry" name="Country">
+                                            <select class="form-select" id="inputCountry" name="Country">
                                                 <option value="SelectCountry">Select Country</option>
                                                 <option value="Bharat">Bharat</option>
 
@@ -582,9 +582,9 @@
                                             </select>
 
                                         </div>
-                                        <div class="form-group col-md-10">
+                                        <div class="form-group slcsfieldsd col-md-10">
                                             <label for="inputState">State:</label>
-                                            <select class="form-control" id="inputState" name="State">
+                                            <select class="form-select" id="inputState" name="State">
                                                 <option value="SelectState">Select State</option>
                                                 <option value="Andra Pradesh">Andra Pradesh</option>
                                                 <option value="Arunachal Pradesh">Arunachal Pradesh
@@ -640,9 +640,9 @@
 
 
                                         </div>
-                                        <div class="form-group col-md-10">
+                                        <div class="form-group slcsfieldsd col-md-10">
                                             <label for="inputDistrict">District:</label>
-                                            <select class="form-control" id="inputDistrict" name="District">
+                                            <select class="form-select" id="inputDistrict" name="District">
                                                 <option value="">Select District</option>
                                             </select>
 
@@ -652,20 +652,21 @@
                                         </div>
                                         <div class="date_time">
                                             <p>Choose your Demo Class Date & Time</p>
-                                            <input type="date" id="demo_class-date" name="Book_Date"
-                                                style="margin: 0.4rem 0;"
+                                            <input class="form-control" type="date" id="demo_class-date" name="Book_Date"
+                                               
                                                 min="<?= date('Y-m-d', strtotime('+1 day')) ?>">
-                                                <br>
+                                              
                                             <label for="start-time">Start Time:</label>
-                                            <input type="time" name="Start_Time">
-                                            <br>
+                                            <input class="form-control" type="time" name="Start_Time">
+                                           
                                             <label for="end-time">End Time:</label>
-                                            <input type="time"  name="End_Time">
-                                            <br>
+                                            <input class="form-control" type="time"  name="End_Time">
+                                           
                                             <span style="color:red;" id="demo_class-timespanid"></span>
+                                            
                                         </div>
 
-                                        <input class="form-group-submit" type="submit" value="Book Demo">
+                                        <input class="form-group-submit bookdemosubmit" type="submit" value="Book Demo">
                                     </div>
                                 </div>
                             </div>
