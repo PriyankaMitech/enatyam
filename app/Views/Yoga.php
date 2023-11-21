@@ -3636,7 +3636,7 @@
     <section class="testimonials tyoga" id="testimonials">
         <div class="container">
         <div class="row">
-                <span class="text-center mb-0"> <button type="button" class="btn btndemo step mkathakty" fdprocessedid="43q1ao">Testimonials</button></span>
+                <span class="text-center mb-0"> <button type="button" class="btn btndemo step ttm" fdprocessedid="43q1ao">Testimonials</button></span>
             </div>
             <div class="">
                 <div class="row">
