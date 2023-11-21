@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule</title>
-    <?php include(APPPATH.'views/FacultySidebar2.php');?>
     <style>
            .row {
         margin-left: 213px;
@@ -59,6 +58,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
+    <?php  echo view('FacultySidebar2.php');?>
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
@@ -74,8 +74,9 @@
 
 
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url(); ?>" class="nav-link">Logout</a>
+                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
             </li>
+
 
         </ul>
 
@@ -288,7 +289,7 @@
                
                 start     : '<?=$data->date; ?>T<?=$data->start_time; ?>',
                 end       : '<?=$data->date; ?>T<?=$data->end_time; ?>',
-                faculty_id     : '<?=$data->faculty_id; ?>',
+                faculty_id     : '<?=$data->faculty_register_id; ?>',
             },
     <?php }} ?>
 ];

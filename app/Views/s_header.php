@@ -4,7 +4,7 @@
         <!-- image & button -->
         <div class="row">
 
-            <div class="col-lg-12" style="padding-left:0px">
+            <div class="col-lg-12 img"  style="padding-left:0px">
                 <img src="public/images/image1.png" width="100%" />
                 <div class="row">
 

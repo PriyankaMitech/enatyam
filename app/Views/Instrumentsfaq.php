@@ -1,8 +1,8 @@
 <section class="faq-section">
     <div class="container cont-width">
         <div class="row">
-            <div class="col-lg-1 " style="padding-left:0px"><img src="public/images/logo2.png" width="100%" /></div>
-            <div class="col-lg-12" style="padding-left:100px">
+            <div class="col-lg-1 col-md-1 col-12 faqd" ><img src="public/images/logo2.png" class="dancefimg" /></div>
+            <div class="col-lg-12 col-md-12 col-12" >
 
                 <div class="accordion">
                     <div class="accordion-item">

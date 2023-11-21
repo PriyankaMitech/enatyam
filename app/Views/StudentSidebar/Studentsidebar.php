@@ -61,11 +61,11 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-
-
-          </a>
-
-          <li class="nav-item">
+          
+          
+            </a>     
+            <?php if ($_SESSION['sessiondata']['Payment_status'] =='Y') { ?>
+            <li class="nav-item">
             <a href="#" class="nav-link">
               <i class=" nav-icon fa fa-calendar"></i>
               <p>
@@ -75,7 +75,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url()?>ScheduleStudent" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p> Schedule
                   </p>
@@ -87,7 +87,13 @@
                   <p>Reshedule</p>
                 </a>
               </li>
-
+              <li class="nav-item">
+                <a href="<?php echo base_url()?>StudentSelectClassDates" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Giveslots</p>
+                </a>
+              </li>
+             
             </ul>
           </li>
 
@@ -156,6 +162,17 @@
                   <p>Email</p>
                 </a>
               </li>
+              <?php } ?>
+
+              <?php
+              if ($_SESSION['sessiondata']['Payment_status'] =='N') { ?>
+                  <li class="nav-item">
+                      <a href="<?php echo base_url()?>ModelForLogin" class="nav-link">
+                          <i class="nav-icon fas fa-th"></i>
+                          <p>Plan details</p>
+                      </a>
+                  </li>
+              <?php } ?>
 
             </ul>
           </li>

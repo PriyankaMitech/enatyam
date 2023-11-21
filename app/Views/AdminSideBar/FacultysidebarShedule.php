@@ -80,11 +80,15 @@
       </li>
 
 
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+            </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="<?php echo base_url(); ?>" class="nav-link">Logout</a>
       </li>
 
-    </ul>
+
+        </ul>
 
   </nav>
   <!-- <div class="container">
@@ -258,7 +262,7 @@
 
       ini_events($('#external-events div.external-event'))
 
-      /* initialize the calendar
+       /* initialize the calendar
        -----------------------------------------------------------------*/
       //Date for the calendar events (dummy data)
       var date = new Date()
@@ -401,11 +405,177 @@
         // Add draggable funtionality
         ini_events(event)
 
-        // Remove event from text input
-        $('#new-event').val('')
+    var Calendar = FullCalendar.Calendar;
+    var Draggable = FullCalendar.Draggable;
+
+    var containerEl = document.getElementById('external-events');
+    var checkbox = document.getElementById('drop-remove');
+    var calendarEl = document.getElementById('calendar');
+
+    // initialize the external events
+    // -----------------------------------------------------------------
+
+    new Draggable(containerEl, {
+      itemSelector: '.external-event',
+      eventData: function(eventEl) {
+        return {
+          title: eventEl.innerText,
+          backgroundColor: window.getComputedStyle( eventEl ,null).getPropertyValue('background-color'),
+          borderColor: window.getComputedStyle( eventEl ,null).getPropertyValue('background-color'),
+          textColor: window.getComputedStyle( eventEl ,null).getPropertyValue('color'),
+        };
+      }
+    });
+
+    var facultyEvents = [
+    <?php if(!empty($FacultysheduleData)) {
+        foreach($FacultysheduleData as $data) { ?>
+          {
+              title      : '<?=$data->faculty_name; ?> - <?=$data->start_time; ?> to <?=$data->end_time; ?>',
+              start      : '<?=$data->date; ?>T<?=$data->start_time; ?>',
+              end        : '<?=$data->date; ?>T<?=$data->end_time; ?>',
+              faculty_id : '<?=$data->faculty_id; ?>',
+          },
+    <?php }} ?>
+];
+
+
+var colorMap = {};
+
+facultyEvents.forEach(function(event) {
+    var facultyId = event.faculty_id;
+
+    if (!colorMap[facultyId]) {
+        colorMap[facultyId] = getRandomColor();
+    }
+
+    event.backgroundColor = colorMap[facultyId];
+    event.borderColor = colorMap[facultyId];
+    event.textColor = getContrastColor(colorMap[facultyId]); // Set text color
+});
+
+function getContrastColor(hexColor) {
+    var r = parseInt(hexColor.substring(1, 3), 16);
+    var g = parseInt(hexColor.substring(3, 5), 16);
+    var b = parseInt(hexColor.substring(5, 7), 16);
+    var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+
+    return brightness > 128 ? '#000000' : '#FFFFFF';
+}
+
+// Rest of your code remains the same...
+
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// var calendar = new Calendar(calendarEl, {
+//   headerToolbar: {
+//     left  : 'prev,next today',
+//     center: 'title',
+//     right : 'dayGridMonth,timeGridWeek,timeGridDay'
+//   },
+//   themeSystem: 'bootstrap',
+//   events: facultyEvents,
+//   editable  : true,
+//   droppable : true,
+//   drop      : function(info) {
+//     if (checkbox.checked) {
+//       info.draggedEl.parentNode.removeChild(info.draggedEl);
+//     }
+//   }
+
+
+  var calendar = new Calendar(calendarEl, {
+        headerToolbar: {
+            left  : 'prev,next today',
+            center: 'title',
+            right : 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        themeSystem: 'bootstrap',
+        events: facultyEvents,
+        editable  : true,
+        droppable : true,
+        drop      : function(info) {
+            if (checkbox.checked) {
+                info.draggedEl.parentNode.removeChild(info.draggedEl);
+            }
+        },
+        eventContent: function(arg) {
+        var eventColor = arg.event.backgroundColor || ''; // Ensure eventColor is defined
+        var textColor = getContrastColor(eventColor); // Calculate text color based on background brightness
+        return {
+            html: '<div class="fc-content" style="background-color:' + eventColor + '; padding: 2%; border-radius: 5%">' +
+                  '<span class="fc-title" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: ' + textColor + ';" title="' + arg.event.title + '">' +
+                    '<div class="event-title">' + arg.event.title.split(' - ')[0] + '</div>' +
+                    '<div class="event-time">' + arg.event.title.split(' - ')[1] + '</div>' +
+                  '</span>' +
+                  '</div>',
+        };
+    },
+  
+  
+});
+function getContrastColor(hexColor) {
+    var r = parseInt(hexColor.substring(1, 3), 16);
+    var g = parseInt(hexColor.substring(3, 5), 16);
+    var b = parseInt(hexColor.substring(5, 7), 16);
+    var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+
+    return brightness > 128 ? '#000000' : '#FFFFFF';
+}
+
+calendar.render();
+
+
+
+    // $('#calendar').fullCalendar()
+
+    /* ADDING EVENTS */
+    var currColor = '#3c8dbc' //Red by default
+    // Color chooser button
+    $('#color-chooser > li > a').click(function (e) {
+      e.preventDefault()
+      // Save color
+      currColor = $(this).css('color')
+      // Add color effect to button
+      $('#add-new-event').css({
+        'background-color': currColor,
+        'border-color'    : currColor
       })
     })
-  </script>
+    $('#add-new-event').click(function (e) {
+      e.preventDefault()
+      // Get value and make sure it is not null
+      var val = $('#new-event').val()
+      if (val.length == 0) {
+        return
+      }
+
+      // Create events
+      var event = $('<div />')
+      event.css({
+        'background-color': currColor,
+        'border-color'    : currColor,
+        'color'           : '#fff'
+      }).addClass('external-event')
+      event.text(val)
+      $('#external-events').prepend(event)
+
+      // Add draggable funtionality
+      ini_events(event)
+
+      // Remove event from text input
+      $('#new-event').val('')
+    })
+  })
+</script>
 </body>
 
 </html>

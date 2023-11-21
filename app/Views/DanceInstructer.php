@@ -1,4 +1,4 @@
-<section class="faculty-section">
+<section class="faculty-section ">
     <div class="container cont-width">
        <div class="row heading-div ">
          <div class="row">

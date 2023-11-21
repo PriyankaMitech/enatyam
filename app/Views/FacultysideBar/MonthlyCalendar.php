@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule</title>
-    <?php include(APPPATH.'views/FacultySidebar2.php');?>
 
     <link rel="stylesheet" href="dist/css/style.css">
   
 </head>
 <body class="hold-transition sidebar-mini">
+  <?php echo view('FacultySidebar2'); 
+  // include('FacultySidebar2.php');?>
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -22,6 +23,10 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="<?=base_url(); ?>/index3.html" class="nav-link">Home</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+            </li>
+
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
@@ -235,7 +240,7 @@
 
                 <div class="col-md-12 " >
                 <form action="FacultyController/selectfacultySchedule" method="post" id="appointmentForm">
-                <input type="hidden" name="faculty_id" value="<?= $registerId; ?>">
+                <input type="hidden" name="faculty_register_id" value="<?= $registerId; ?>">
                   <div class="card">
                     <div class="card-header">
                       <h3 class="card-title">Shedule Data</h3>

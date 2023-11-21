@@ -5,16 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <?php include(APPPATH . 'views/FacultySidebar2.php'); ?>
-    <style>
-        .video-row {
-            display: flex;
-            justify-content: space-between;
-            /* Distribute videos evenly within the row */
-            margin-bottom: 20px;
-            /* Add some space between rows */
-        }
+   
+<style>.video-row {
+    display: flex;
+    justify-content: space-between; /* Distribute videos evenly within the row */
+    margin-bottom: 20px; /* Add some space between rows */
+}
 
         .video-card {
             width: 30%;
@@ -31,43 +27,56 @@
 </head>
 
 <body>
+    
+<?php include('FacultySidebar2.php'); ?>
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url()?>today" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
 
-    <div class="center" style="margin-left: 260px;">
-        <div class="video-container" style="max-width: 1000px;">
-            <!-- Adjust max-width as needed -->
-            <?php if (!empty($results)) : ?>
-                <div class="video-row">
-                    <?php $videoCount = 0; ?>
-                    <?php foreach ($results as $result) : ?>
-                        <div class="video-card" style="width: 19%; margin: 1%;">
-                            <!-- Adjust width and margin as needed -->
-                            <video width="100%" height="auto" controls>
-                                <!-- Adjust the video size -->
-                                <source src="<?= base_url('public/uploads/StudentStudyvideos/' . $result->name) ?>" type="video/mp4">
-                            </video>
-                            <div class="video-info">
-                                <!-- Create a container for video information -->
-                                <b>
-                                    <p>Uploaded by: <?= $result->Student_name ?></p>
-                                </b>
-                                <b>
-                                    <p>Uploaded Date/Time: <?= $result->DateTime ?></p>
-                                </b>
-                            </div>
+
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+            </li>
+        </ul>
+
+    </nav>
+<div class="center" style="margin-left: 260px;">
+    <div class="video-container" style="max-width: 1000px;"> <!-- Adjust max-width as needed -->
+        <?php if (!empty($results)): ?>
+            <div class="video-row">
+                <?php $videoCount = 0; ?>
+                <?php foreach ($results as $result): ?>
+                    <div class="video-card" style="width: 19%; margin: 1%;"> <!-- Adjust width and margin as needed -->
+                        <video width="100%" height="auto" controls> <!-- Adjust the video size -->
+                            <source src="<?= base_url('public/uploads/StudentStudyvideos/' . $result->name) ?>" type="video/mp4">
+                        </video>
+                        <div class="video-info"> <!-- Create a container for video information -->
+                            <b><p>Uploaded by: <?= $result->Student_name ?></p></b>
+                            <b><p>Uploaded Date/Time: <?= $result->DateTime ?></p></b>
                         </div>
-                        <?php
-                        $videoCount++;
-                        if ($videoCount % 5 == 0) { // Display 5 videos in one row
-                            echo '</div><div class="video-row">';
-                        }
-                        ?>
-                    <?php endforeach; ?>
-                </div>
-            <?php else : ?>
-                <p>No videos found.</p>
-            <?php endif; ?>
-        </div>
+                    </div>
+                    <?php
+                    $videoCount++;
+                    if ($videoCount % 5 == 0) { // Display 5 videos in one row
+                        echo '</div><div class="video-row">';
+                    }
+                    ?>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <p>No videos found.</p>
+        <?php endif; ?>
     </div>
+</div>
 
 
 </body>
