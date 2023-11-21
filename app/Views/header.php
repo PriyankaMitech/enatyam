@@ -471,7 +471,7 @@
                     <div class="modal-body">
                         <div class="register_form">
                             <h4 class="titel pt-3">Registration</h4>
-
+ 
                             <form name="registrationForm" onsubmit="return validateForm()" method="post"
                                 action="<?php echo base_url();?>register" id="registerform">
                                 <div class="form-group m-2">
