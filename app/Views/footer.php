@@ -2581,220 +2581,6 @@ document.getElementById("newPasswordForm").addEventListener("submit", function(e
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
 
-<<<<<<< HEAD
-    <script>
-        let prevScrollPos = window.pageYOffset;
-        const navbar = document.querySelector('.tophead');
-
-        window.addEventListener('scroll', () => {
-            const currentScrollPos = window.pageYOffset;
-
-            if (currentScrollPos > prevScrollPos) {
-                // Scrolling down
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                // Scrolling up or at the top
-                navbar.style.transform = 'translateY(0)';
-                navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-            }
-
-            prevScrollPos = currentScrollPos;
-        });
-
-        // Ensure initial state is transparent if at the top
-        window.addEventListener('load', () => {
-            if (window.pageYOffset === 0) {
-                navbar.style.backgroundColor = 'transparent';
-            }
-        });
-    </script>
-    <?php } else if ($page == 'Checkout') { ?>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="<?php echo base_url() ?>public/js/jquery.validate.min.js"></script>
-
-
-<script>
-    $.validator.addMethod('lettersOnly', function(value, element) {
-        return /^[a-zA-Z\s]*$/.test(value); // This regex allows only letters and spaces
-    }, 'Please enter letters only');
-
-        // $(document).ready(function() {
-        //             // Function to validate mobile number
-        //             function validateMobileNumber(mobile) {
-        //                 var regex = /^[0-9]{10}$/;
-        //                 return regex.test(mobile);
-        //             }
-
-        //             // Function to validate pin code
-        //             function validatePincode(pincode) {
-        //                 var regex = /^[0-9]{6}$/;
-        //                 return regex.test(pincode);
-        //             }
-
-        $(document).ready(function() {
-            // Add custom method for letters only validation
-            $.validator.addMethod("lettersOnly", function(value, element) {
-                return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
-            }, "Please enter letters only.");
-
-            // Add custom method for mobile number validation
-            $.validator.addMethod("validMobileNumber", function(value, element) {
-                return this.optional(element) || /^[0-9]{10}$/i.test(value);
-            }, "Please enter a valid 10-digit mobile number.");
-
-            // Add custom method for pin code validation
-            $.validator.addMethod("validPincode", function(value, element) {
-                return this.optional(element) || /^[0-9]{6}$/i.test(value);
-            }, "Please enter a valid 6-digit pin code.");
-
-
-
-            // Initialize form validation
-            $('#checkoutForm').validate({
-                rules: {
-                    Fname: {
-                        required: true,
-                        lettersOnly: true
-                    },
-                    Lname: {
-                        required: true,
-                        lettersOnly: true
-                    },
-                    email: {
-                        required: true,
-                        pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
-                    },
-                    country: {
-                        required: true
-                    },
-                    address: {
-                        required: true
-                    },
-                    city: {
-                        required: true
-                    },
-                    pincode: {
-                        required: true,
-                        validPincode: true
-                    },
-                    phone: {
-                        required: true,
-                        validMobileNumber: true
-                    }
-                },
-                messages: {
-                    Fname: {
-                        required: 'Please enter your first name.',
-                        lettersOnly: 'Please enter letters only.' // Custom error message
-                    },
-                    Lname: {
-                        required: 'Please enter your last name.',
-                        lettersOnly: 'Please enter letters only.' // Custom error message
-                    },
-
-                    country: {
-                        required: 'Please enter your Country.'
-                    },
-                    address: {
-                        required: 'Please enter your Street address.'
-                    },
-                    city: {
-                        required: 'Please enter your City.'
-                    },
-                    pincode: {
-                        required: 'Please enter your Pincode.'
-                    },
-                    phone: {
-                        required: 'Please enter your Mobile number.'
-                    },
-                    email: {
-                        required: 'Please enter your email address.',
-                        pattern: 'Please enter a valid email address.'
-                    },
-
-                    pincode: {
-                        required: 'Please enter your Pincode.'
-                    },
-                    phone: {
-                        required: 'Please enter your Mobile number.'
-                    }
-
-                }
-            });
-        });
-
-=======
-  
->>>>>>> 4fe8ef7ffb2d368b0d5d7164749dc50903422ea5
-
-
-        // $(document).ready(function() {
-        //     $('#checkoutForm').validate({
-        //         rules: {
-        //             Fname: {
-        //                 required: true,
-        //                 lettersOnly: true // Use the custom method here
-        //             },
-        //             Lname: {
-        //                 required: true,
-        //                 lettersOnly: true // Use the custom method here
-        //             },
-        //             email: {
-        //                 required: true,
-        //                 email: true
-        //             },
-        //             country: {
-        //                 required: true
-        //             },
-        //             address: {
-        //                 required: true
-        //             },
-        //             city: {
-        //                 required: true
-        //             },
-        //             pincode: {
-        //                 required: true
-        //             },
-        //             phone: {
-        //                 required: true
-        //             }
-
-        //         },
-        //         messages: {
-        //             Fname: {
-        //                 required: 'Please enter your first name.',
-        //                 lettersOnly: 'Please enter letters only.' // Custom error message
-        //             },
-        //             Lname: {
-        //                 required: 'Please enter your last name.',
-        //                 lettersOnly: 'Please enter letters only.' // Custom error message
-        //             },
-
-        //             country: {
-        //                 required: 'Please enter your Country.'
-        //             },
-        //             address: {
-        //                 required: 'Please enter your Street address.'
-        //             },
-        //             city: {
-        //                 required: 'Please enter your City.'
-        //             },
-        //             pincode: {
-        //                 required: 'Please enter your Pincode.'
-        //             },
-        //             phone: {
-        //                 required: 'Please enter your Mobile number.'
-        //             },
-        //             email: {
-        //                 required: 'Please enter your email address.',
-        //                 email: 'Please enter a valid email address.'
-        //             },
-        //         }
-        //     });
-        // });
-    </script>
-
     <?php }elseif($page == 'Career'){ ?>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
@@ -2813,11 +2599,8 @@ document.getElementById("newPasswordForm").addEventListener("submit", function(e
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
-    <script>
+   
         function handleSubmit(collapse_val)
-
-
-        // Step-1 validation
         {
             if (collapse_val == "collapseOne") {
                 var phoneno_regx = /^\d{10}$/;
@@ -2954,10 +2737,10 @@ document.getElementById("newPasswordForm").addEventListener("submit", function(e
         //         $("#collapseTwo").collapse('hide');
         //     }
         // }
-    </script>
 
 
-    <script>
+
+
         const stepButtons = document.querySelectorAll('.step-button');
         const progress = document.querySelector('#progress');
 
@@ -2976,8 +2759,8 @@ document.getElementById("newPasswordForm").addEventListener("submit", function(e
                 })
             })
         })
-    </script>
-    <script>
+
+
         var AndraPradesh = ["Anantapur", "Chittoor", "East Godavari", "Guntur", "Kadapa", "Krishna",
             "Kurnool", "Prakasam", "Nellore", "Srikakulam", "Visakhapatnam", "Vizianagaram",
             "West Godavari"
@@ -3267,22 +3050,22 @@ document.getElementById("newPasswordForm").addEventListener("submit", function(e
             $("#inputDistrict").html(htmlString);
 
         });
-    </script>
+    
 
-    <script>
+
         $(function() {
             $('#course').change(function() {
                 $('.selectCourse').hide();
                 $('#' + $(this).val()).show();
             });
         });
-    </script>
+
 
     <?php } ?>
 
 
 
-<script>
+
     $(document).ready(function() {
         $(document).ready(function() {
             $('#otpValidateForm').submit(function(e) {
@@ -3338,7 +3121,6 @@ document.getElementById("newPasswordForm").addEventListener("submit", function(e
         // Show the "Lost Password" modal
         $('#lostpasswordmodal').modal('show');
     }
-});
 
 
 $(document).ready(function() {
@@ -3371,45 +3153,11 @@ $(document).ready(function() {
         });
     });
 });
-</script>
-<script>
-function showLostPasswordModal() {
-    $('#loginformpopup').modal('hide');
 
-<<<<<<< HEAD
-    $('#lostpasswordmodal').modal('show');
-}
 
 function showLostPasswordModal() {
     $('#loginformpopup').modal('hide');
 
-    $('#lostpasswordmodal').modal('show');
-}
-</script>
-<script>
-let prevScrollPos = window.pageYOffset;
-const navbar = document.querySelector('.tophead');
-
-window.addEventListener('scroll', () => {
-    const currentScrollPos = window.pageYOffset;
-
-    if (currentScrollPos > prevScrollPos) {
-        // Scrolling down
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up or at the top
-        navbar.style.transform = 'translateY(0)';
-        navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-    }
-
-    prevScrollPos = currentScrollPos;
-});
-
-// Ensure initial state is transparent if at the top
-window.addEventListener('load', () => {
-    if (window.pageYOffset === 0) {
-        navbar.style.backgroundColor = 'transparent';
-=======
     function showLoginModal() {
         // Hide the registration modal
         $('#registerformpopup').modal('hide');
@@ -3423,9 +3171,8 @@ window.addEventListener('load', () => {
         $('#loginformpopup').modal('hide');
         // Show the registration modal
         $('#registerformpopup').modal('show');
->>>>>>> 4fe8ef7ffb2d368b0d5d7164749dc50903422ea5
     }
-});
+
 
 // function showRegistrationModal() {
 //     $('#loginformpopup').modal('hide');
@@ -3450,28 +3197,12 @@ window.addEventListener('scroll', () => {
         navbar.style.transform = 'translateY(0)';
         navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
     }
-<<<<<<< HEAD
-
-    prevScrollPos = currentScrollPos;
-});
-// Ensure initial state is transparent if at the top
-window.addEventListener('load', () => {
-    if (window.pageYOffset === 0) {
-        navbar.style.backgroundColor = 'transparent';
-    }
-});
-
-// JavaScript to handle time input validation
-var startTimeInput = document.getElementById("start-time");
-var endTimeInput = document.getElementById("end-time");
-=======
     
 
     
     // JavaScript to handle time input validation
     var startTimeInput = document.getElementById("start-time");
     var endTimeInput = document.getElementById("end-time");
->>>>>>> 4fe8ef7ffb2d368b0d5d7164749dc50903422ea5
 
 startTimeInput.addEventListener("change", validateTimeInput);
 endTimeInput.addEventListener("change", validateTimeInput);
@@ -3502,8 +3233,7 @@ function validateTimeInput() {
         // The times are valid; you can proceed with form submission.
     }
 }
-</script>
-<script>
+
 $(document).ready(function() {
     $("#menu-icon").click(function() {
         $("#fixed-menu").addClass("fixed-menu");
@@ -3623,8 +3353,7 @@ $(document).ready(function() {
     });
 
 });
-</script>
-<script>
+
 function showRegistrationModal() {
     // Hide the login modal
     $('#loginformpopup').modal('hide');
@@ -3639,11 +3368,9 @@ function showLoginModal() {
     // Show the login modal
     $('#loginformpopup').modal('show');
 }
-</script>
 
-<<<<<<< HEAD
-=======
-<script>
+
+
     let prevScrollPos = window.pageYOffset;
     const navbar = document.querySelector('.tophead');
 
@@ -3668,11 +3395,10 @@ function showLoginModal() {
             navbar.style.backgroundColor = 'transparent';
         }
     });
-    </script>
+
 
 
     
->>>>>>> 4fe8ef7ffb2d368b0d5d7164749dc50903422ea5
 </body>
 
 
