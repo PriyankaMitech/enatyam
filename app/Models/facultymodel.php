@@ -65,7 +65,7 @@ public function fetchshedule($registerId)
 {
     $slots = $this->db->table('schedule')
       ->select('*')
-        ->where('faculty_id', $registerId)
+        ->where('faculty_register_id', $registerId)
         ->get()
         ->getResult();
 return $slots;

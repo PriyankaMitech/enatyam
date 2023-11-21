@@ -289,7 +289,7 @@
                
                 start     : '<?=$data->date; ?>T<?=$data->start_time; ?>',
                 end       : '<?=$data->date; ?>T<?=$data->end_time; ?>',
-                faculty_id     : '<?=$data->faculty_id; ?>',
+                faculty_id     : '<?=$data->faculty_register_id; ?>',
             },
     <?php }} ?>
 ];
