@@ -1,4 +1,4 @@
-<?php include('header.php');?>
+<?php include('header.php'); ?>
 <section class="contactus">
 
     <div class="container cont-width">
@@ -63,8 +63,7 @@
             <div class="steps">
                 <progress id="progress" value=0 max=100></progress>
                 <div class="step-item">
-                    <button class="step-button text-center" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="step-button text-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         1
                     </button>
                     <div class="step-title">
@@ -72,8 +71,7 @@
                     </div>
                 </div>
                 <div class="step-item">
-                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         2
                     </button>
                     <div class="step-title">
@@ -81,8 +79,7 @@
                     </div>
                 </div>
                 <div class="step-item">
-                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         3
                     </button>
                     <div class="step-title">
@@ -90,8 +87,7 @@
                     </div>
                 </div>
                 <div class="step-item">
-                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         4
                     </button>
                     <div class="step-title">
@@ -105,8 +101,7 @@
                     <div id="headingOne">
                     </div>
 
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="card-body">
                             <div class="col-lg-12 " style="padding-left:0px" width="100%">
 
@@ -119,29 +114,22 @@
                                         </h5>
                                         <div class="f-info">
                                             <div>
-                                                <input class="form-control" size="40" aria-required="true"
-                                                    aria-invalid="false" id="name" placeholder="Your Name *" value=""
-                                                    type="text" name="name">
+                                                <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="name" placeholder="Your Name *" value="" type="text" name="name">
                                                 <span style="color:red;" id="namespanid"></span> </span>
                                             </div>
 
                                             <div>
-                                                <input class="form-control" size="40" aria-required="true"
-                                                    aria-invalid="false" id="femail" placeholder="Email *" value=""
-                                                    type="email" name="email">
+                                                <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="femail" placeholder="Email *" value="" type="email" name="email">
                                                 <span style="color:red;" id="emailspanid"></span>
                                             </div>
 
                                             <div>
-                                                <input class="form-control" size="40" aria-required="true"
-                                                    aria-invalid="false" id="phone" pattern="[0-9]{10}"
-                                                    placeholder="Phone *" value="" type="tel" name="phone" required>
+                                                <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="phone" pattern="[0-9]{10}" placeholder="Phone *" value="" type="tel" name="phone" required>
                                                 <span style="color:red;" id="phonespanid"></span>
                                             </div>
 
                                             <div>
-                                                <select class="form-control" id="course" aria-required="true"
-                                                    aria-invalid="false" name="course">
+                                                <select class="form-control" id="course" aria-required="true" aria-invalid="false" name="course">
                                                     <option value="">Position Applying For*</option>
                                                     <option value="Dance">Dance</option>
                                                     <option value="Music">Music</option>
@@ -154,10 +142,7 @@
                                             <div>
                                                 <!-- <input class="form-group-submit" type="submit" value="Next"> -->
                                                 <div style="text-align: center;">
-                                                    <input class="btn btnstart saveEnrollTopic"
-                                                        onclick="handleSubmit('collapseOne')"
-                                                        data-bs-target="#collapseTwo" type="button" name="next"
-                                                        value="Next" />
+                                                    <input class="btn btnstart saveEnrollTopic" onclick="handleSubmit('collapseOne')" data-bs-target="#collapseTwo" type="button" name="next" value="Next" />
 
                                                     <!-- <a onclick="handleSubmit()" class="btn btnstart saveEnrollTopic"
                                                             data-bs-toggle="collapse"
@@ -177,8 +162,7 @@
                     <div id="headingTwo">
 
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="card-body">
 
                             <input type="hidden" value="9182491" name="id" id="branchTopic">
@@ -209,109 +193,78 @@
 
                                             <div class="f-info">
 
-                                                <ul
-                                                    class="greenCheckbox multiSelectContainer scrollForAttribute mCustomScrollbar _mCS_1 mCS_no_scrollbar">
-                                                    <div id="mCSB_1"
-                                                        class="mCustomScrollBox mCS-light3 mCSB_vertical mCSB_inside"
-                                                        tabindex="0">
+                                                <ul class="greenCheckbox multiSelectContainer scrollForAttribute mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+                                                    <div id="mCSB_1" class="mCustomScrollBox mCS-light3 mCSB_vertical mCSB_inside" tabindex="0">
 
                                                         <!-- new for each course - change subcourse  -->
-                                                        <div id="mCSB_1_container"
-                                                            class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-                                                            style="position:relative; top:0; left:0;" dir="ltr">
+                                                        <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
 
                                                             <div id="Dance" class="selectCourse" style="display:none">
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Bollywood Dance Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Bollywood Dance Classes,"><span></span>
                                                                         Bollywood Dance Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Bharatanatyam Dance Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Bharatanatyam Dance Classes,"><span></span>
                                                                         Bharatanatyam Dance Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Kathak Dance Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Kathak Dance Classes,"><span></span>
                                                                         Kathak Dance Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Odissi Dance Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Odissi Dance Classes,"><span></span>
                                                                         Odissi Dance Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Western Dance Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Western Dance Classes,"><span></span>
                                                                         Western Dance Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Semi classical Dance Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Semi classical Dance Classes,"><span></span>
                                                                         Semi classical Dance Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Bhangara Dance Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Bhangara Dance Classes,"><span></span>
                                                                         Bhangara Dance Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Folk Dance Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Folk Dance Classes,"><span></span>
                                                                         Folk Dance Classes</label>
                                                                 </li>
                                                             </div>
                                                             <div id="Music" class="selectCourse" style="display:none">
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Hindustani Vocal Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Hindustani Vocal Classes,"><span></span>
                                                                         Hindustani Vocal Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Carnatic Vocal Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Carnatic Vocal Classes,"><span></span>
                                                                         Carnatic Vocal Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Semi Classical Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Semi Classical Classes,"><span></span>
                                                                         Semi Classical Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Western Singing Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Western Singing Classes,"><span></span>
                                                                         Western Singing Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Playback Singing Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Playback Singing Classes,"><span></span>
                                                                         Playback Singing Classes</label>
                                                                 </li>
 
@@ -321,147 +274,106 @@
                                                             <div id="Yoga" class="selectCourse" style="display:none">
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Prenatal Yoga Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Prenatal Yoga Classes,"><span></span>
                                                                         Prenatal Yoga Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Stress Reduction Yoga Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Stress Reduction Yoga Classes,"><span></span>
                                                                         Stress Reduction Yoga Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Flexibility Yoga Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Flexibility Yoga Classes,"><span></span>
                                                                         Flexibility Yoga Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Weight Loss Yoga Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Weight Loss Yoga Classes,"><span></span>
                                                                         Weight Loss Yoga Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Everyday Yoga Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Everyday Yoga Classes,"><span></span>
                                                                         Everyday Yoga Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Yoga for chronic disease Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Yoga for chronic disease Classes,"><span></span>
                                                                         Yoga for chronic disease Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Yoga for Kids Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Yoga for Kids Classes,"><span></span>
                                                                         Yoga for Kids Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Meditation Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Meditation Classes,"><span></span>
                                                                         Meditation Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Customise your Yoga Plan Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Customise your Yoga Plan Classes,"><span></span>
                                                                         Customise your Yoga Plan Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Nutrition Counselling Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Nutrition Counselling Classes,"><span></span>
                                                                         Nutrition Counselling Classes</label>
                                                                 </li>
 
                                                             </div>
-                                                            <div id="Instruments" class="selectCourse"
-                                                                style="display:none">
+                                                            <div id="Instruments" class="selectCourse" style="display:none">
 
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Guitar Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Guitar Classes,"><span></span>
                                                                         Guitar Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Flute Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Flute Classes,"><span></span>
                                                                         Flute Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Tabla Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Tabla Classes,"><span></span>
                                                                         Tabla Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Sitar Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Sitar Classes,"><span></span>
                                                                         Sitar Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Veena Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Veena Classes,"><span></span>
                                                                         Veena Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Piano Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Piano Classes,"><span></span>
                                                                         Piano Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Violin Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Violin Classes,"><span></span>
                                                                         Violin Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Drum Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Drum Classes,"><span></span>
                                                                         Drum Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Keyborad Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Keyborad Classes,"><span></span>
                                                                         Keyborad Classes</label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Harmonium Classes,"><span></span>
+                                                                        <input type="checkbox" class="checkboxCondition" name="sub_course" value="Harmonium Classes,"><span></span>
                                                                         Harmonium Classes</label>
                                                                 </li>
                                                                 <span style="color:red;" id="sub_coursespanid"></span>
@@ -542,23 +454,16 @@
                                                             </div> -->
                                                         <div style="text-align: center;">
                                                             <!-- <input class="btn btnstart saveEnrollTopic" onclick="handlePrevious('collapseTwo')" type="button" name="previous" value="Previous" /> -->
-                                                            <input class="btn btnstart saveEnrollTopic"
-                                                                onclick="handleSubmit('collapseTwo')" type="button"
-                                                                name="next" value="Next" />
+                                                            <input class="btn btnstart saveEnrollTopic" onclick="handleSubmit('collapseTwo')" type="button" name="next" value="Next" />
                                                             <!-- <a onclick="handleSubmit()"
                                                                     class="btn btnstart saveEnrollTopic"
                                                                     data-bs-toggle="collapse"
                                                                     data-bs-target="#collapseThree">Next</a> -->
                                                         </div>
-                                                        <div id="mCSB_1_scrollbar_vertical"
-                                                            class="mCSB_scrollTools mCSB_1_scrollbar mCS-light3 mCSB_scrollTools_vertical"
-                                                            style="display: none;">
+                                                        <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light3 mCSB_scrollTools_vertical" style="display: none;">
                                                             <div class="mCSB_draggerContainer">
-                                                                <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
-                                                                    style="position: absolute; min-height: 30px; height: 0px; top: 0px;"
-                                                                    oncontextmenu="return false;">
-                                                                    <div class="mCSB_dragger_bar"
-                                                                        style="line-height: 30px;">
+                                                                <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 0px; top: 0px;" oncontextmenu="return false;">
+                                                                    <div class="mCSB_dragger_bar" style="line-height: 30px;">
                                                                     </div>
                                                                 </div>
                                                                 <div class="mCSB_draggerRail"></div>
@@ -579,8 +484,7 @@
                     <div id="headingThree">
 
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="card-body">
 
 
@@ -631,9 +535,7 @@
 
                                         <div style="text-align: center;">
 
-                                            <input class="btn btnstart saveEnrollTopic"
-                                                onclick="handleSubmit('collapseThree')" type="button" name="next"
-                                                value="Next" />
+                                            <input class="btn btnstart saveEnrollTopic" onclick="handleSubmit('collapseThree')" type="button" name="next" value="Next" />
 
                                         </div>
 
@@ -649,8 +551,7 @@
                     <div id="headingFour">
                     </div>
 
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                         <div class="card-body">
 
                             <div class="demo-form">

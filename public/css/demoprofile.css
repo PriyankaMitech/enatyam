@@ -207,70 +207,86 @@ element.style {
     margin: 0;
     display: inline-block;
     width: 50%;
-   
+
 }
+
 select:required:invalid {
     color: #aaa;
 }
+
 .selectProv {
     padding: 12px 52px 12px 8px;
     width: 100%;
 }
+
 option {
     color: #333;
 }
+
 .removeLink {
     color: #0072ff;
     font-weight: 600;
     font-size: 13px;
     cursor: pointer;
 }
+
 .none {
     display: none;
 }
+
 .floatLeft {
     float: left !important;
 }
-.addLink{
+
+.addLink {
     color: #0072ff;
     font-weight: 600;
     font-size: 13px;
     cursor: pointer;
 }
+
 .floatRight {
     float: right;
 }
+
 .qualificationBlock {
     border: 1px solid #dcdcdc;
     border-radius: 4px;
     overflow: hidden;
 }
-.input-block .selectProv{
+
+.input-block .selectProv {
     width: 88%;
 }
+
 .topicContainer {
     border: 5px solid #7e858536;
     border-radius: 4px;
     color: #323639;
     font-size: 14px;
     text-align: left;
-        background: #e1d3d9;
+    background: #e1d3d9;
 }
+
 .topicAttributeContainer {
     padding: 19px 26px;
     border-bottom: 1px solid #dcdcdc;
 }
+
 .topicDetailLabel {
     font-weight: 600;
     margin-bottom: 19px;
 }
+
 .mCustomScrollbar.mCS_no_scrollbar {
     touch-action: auto;
 }
+
 .topicContainer ul {
     list-style: none;
     margin-left: 0px;
 }
+
 .mCustomScrollBox {
     position: relative;
     overflow: hidden;
@@ -281,18 +297,20 @@ option {
 }
 
 input[type="checkbox"] {
-    vertical-align: text-top;;
- 
+    vertical-align: text-top;
+    ;
+
 }
-.btnstart{
+
+.btnstart {
     margin-bottom: 30px;
-    font-size: 13px!important;
-    font-weight: 400!important;
-    background-color: #8c52ff!important;
-    line-height: 30px!important;
-    padding: 5px 40px!important;
-    border-radius: 25px!important;
-    color: #ffffff!important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    background-color: #8c52ff !important;
+    line-height: 30px !important;
+    padding: 5px 40px !important;
+    border-radius: 25px !important;
+    color: #ffffff !important;
     margin-top: 10px;
     text-decoration: none;
 }

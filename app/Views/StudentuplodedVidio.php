@@ -12,18 +12,18 @@
     margin-bottom: 20px; /* Add some space between rows */
 }
 
-.video-card {
-    width: 30%; 
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
+        .video-card {
+            width: 30%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
 
-.video-info {
-    margin-top: 10px;
-}
-</style>
+        .video-info {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>

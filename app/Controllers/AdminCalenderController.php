@@ -14,6 +14,8 @@ class AdminCalenderController extends BaseController
         $title = $request->getPost('title');
         $start = $request->getPost('start');
         $end = $request->getPost('end');
+        print_r($end);
+        die;
 
         $eventModel = new AdminCalenderM();
         $eventModel->insert([

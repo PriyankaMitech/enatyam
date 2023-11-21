@@ -5,11 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Dashboard </title>
-    <?php include(APPPATH.'views/StudentSidebar/Studentsidebar.php');?>
+    <?php include(APPPATH . 'views/StudentSidebar/Studentsidebar.php'); ?>
     <link rel="stylesheet" href="public/css/StudentDashboard.css">
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -66,8 +65,7 @@
                     <div class="navbar-search-block">
                         <form class="form-inline">
                             <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                                    aria-label="Search">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
                                 <div class="input-group-append">
                                     <button class="btn btn-navbar" type="submit">
                                         <i class="fas fa-search"></i>
@@ -91,8 +89,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user1-128x128.jpg" alt="User Avatar"
-                                    class="img-size-50 mr-3 img-circle">
+                                <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Brad Diesel
@@ -108,8 +105,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user8-128x128.jpg" alt="User Avatar"
-                                    class="img-size-50 img-circle mr-3">
+                                <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         John Pierce
@@ -125,13 +121,11 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user3-128x128.jpg" alt="User Avatar"
-                                    class="img-size-50 img-circle mr-3">
+                                <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Nora Silvester
-                                        <span class="float-right text-sm text-warning"><i
-                                                class="fas fa-star"></i></span>
+                                        <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
                                     </h3>
                                     <p class="text-sm">The subject goes here</p>
                                     <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
@@ -193,13 +187,13 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                          
+
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                              
-                                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>Home">Logout</a></li>
+
+                                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>logout">Logout</a></li>
 
                             </ol>
                         </div><!-- /.col -->
@@ -211,8 +205,8 @@
 
             </ul>
             <!-- Main content -->
-            
-               
+
+
         </div>
 
     </div>
@@ -241,74 +235,74 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard2.js"></script>
     <script>
-    function toggleUploadForm() {
-        var uploadForm = document.getElementById("uploadForm");
-        if (uploadForm.style.display === "none") {
-            uploadForm.style.display = "block";
-        } else {
-            uploadForm.style.display = "none";
+        function toggleUploadForm() {
+            var uploadForm = document.getElementById("uploadForm");
+            if (uploadForm.style.display === "none") {
+                uploadForm.style.display = "block";
+            } else {
+                uploadForm.style.display = "none";
+            }
         }
-    }
     </script>
 
 
     <script type="text/javascript">
-    $(document).ready(function() {
-        $("input[name='datetimes']").daterangepicker({},
-            function(start, end, label) {
-                let startDate = start.format("YYYY-MM-DD").toString();
-                let endDate = end.format("YYYY-MM-DD").toString();
+        $(document).ready(function() {
+            $("input[name='datetimes']").daterangepicker({},
+                function(start, end, label) {
+                    let startDate = start.format("YYYY-MM-DD").toString();
+                    let endDate = end.format("YYYY-MM-DD").toString();
 
-                document.getElementById("startDate").innerHTML =
-                    "Start date: " + startDate;
-                document.getElementById("endDate").innerHTML = "End date: " + endDate;
+                    document.getElementById("startDate").innerHTML =
+                        "Start date: " + startDate;
+                    document.getElementById("endDate").innerHTML = "End date: " + endDate;
 
-            }
-        );
-    });
+                }
+            );
+        });
     </script>
 
     <!-- show video sections -->
     <script>
-    // Get a reference to the "Upload recording" text element by its id
-    var uploadText = document.getElementById("uploadRecording");
+        // Get a reference to the "Upload recording" text element by its id
+        var uploadText = document.getElementById("uploadRecording");
 
-    // Get a reference to the video section container by its id
-    var videoSection = document.getElementById("videoSection");
+        // Get a reference to the video section container by its id
+        var videoSection = document.getElementById("videoSection");
 
-    // Add a click event listener to the "Upload recording" text
-    uploadText.addEventListener("click", function() {
-        // Toggle the visibility of the video section
-        if (videoSection.style.display === "none") {
-            videoSection.style.display = "block";
-        } else {
-            videoSection.style.display = "none";
-        }
-    });
+        // Add a click event listener to the "Upload recording" text
+        uploadText.addEventListener("click", function() {
+            // Toggle the visibility of the video section
+            if (videoSection.style.display === "none") {
+                videoSection.style.display = "block";
+            } else {
+                videoSection.style.display = "none";
+            }
+        });
     </script>
 
     <script>
-    document.getElementById("uploadLink").addEventListener("click", function() {
-        var uploadForm = document.getElementById("uploadForm");
-       
-        if (uploadForm.style.display === "none" || uploadForm.style.display === "") {
-            uploadForm.style.display = "block";
-          
-        } else {
-            uploadForm.style.display = "none";
-         
-        }
-    });
+        document.getElementById("uploadLink").addEventListener("click", function() {
+            var uploadForm = document.getElementById("uploadForm");
+
+            if (uploadForm.style.display === "none" || uploadForm.style.display === "") {
+                uploadForm.style.display = "block";
+
+            } else {
+                uploadForm.style.display = "none";
+
+            }
+        });
     </script>
     <script>
-    function toggleFacultyProfile() {
-        const facultyProfile = document.getElementById("faculty-profile");
-        facultyProfile.classList.toggle("hidden");
-        $("#uploadForm").hide();
+        function toggleFacultyProfile() {
+            const facultyProfile = document.getElementById("faculty-profile");
+            facultyProfile.classList.toggle("hidden");
+            $("#uploadForm").hide();
 
-    }
+        }
     </script>
-   
+
 </body>
 
 </html>

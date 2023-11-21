@@ -1,6 +1,9 @@
-<?php 
+<?php
+
 namespace App\Controllers;
+
 use App\Models\LoginModel;
+
 class LoginController extends BaseController
 {
     public function __construct()
@@ -10,17 +13,15 @@ class LoginController extends BaseController
     public function index() {
         helper(['form']);
         $data = [];
-        echo view('register',$data);
+        echo view('register', $data);
     }
- 
-   
 
     public function register()
     {
-   //     print_r($_POST);die;
+
         $validation = \Config\Services::validation(); // Get the validation instance
         $loginModel = new LoginModel();
-        
+
         // Define validation rules
         $validation->setRules([
             'full_name' => 'required',
@@ -28,10 +29,12 @@ class LoginController extends BaseController
             'password' => 'required|min_length[8]',
             'confirm_pass' => 'required|alpha_numeric|matches[password]',
         ]);
-    
+
         // Either email or mobile_no should be provided
         $emailProvided = $this->request->getVar('email');
         $mobileNoProvided = $this->request->getVar('mobile_no');
+        // echo "$mobileNoProvided";
+
     
         if (empty($emailProvided) && empty($mobileNoProvided)) {
             $validation->setError('email', 'Either Email or Mobile no is required.');
@@ -39,7 +42,7 @@ class LoginController extends BaseController
         } else if (!empty($emailProvided) && !filter_var($emailProvided, FILTER_VALIDATE_EMAIL)) {
             $validation->setError('email', 'Invalid email format.');
         }
-    
+
         if ($validation->withRequest($this->request)->run()) {
          
             $data = [
@@ -78,8 +81,8 @@ class LoginController extends BaseController
             $this->session->set('user_id', $this->request->getVar($last_insert_id));
             $this->session->set('username', $this->request->getVar('full_name'));
             $this->session->set('email', $emailProvided);
-            $this->session->set('role','Student');
-    
+            $this->session->set('role', 'Student');
+
             $loginModel->setFacultyName($data);
             $loginModel->setStudentName($getdata);
     
@@ -199,25 +202,31 @@ class LoginController extends BaseController
     {
         return view('ModelForLogin');
     }
-  
-    public function logout(){
-        session()->destroy();
-        return redirect()->to(base_url());
+
+
+
+    public function logout()
+    {
+        $session = session();
+        // session_destroy();
+        $session->destroy();
+        // print_r($_SESSION);die;
+        return redirect()->to('/');
     }
 
     public function update_profile_data()
-	{    
+    {
         $data = [
-            'role'  => $this->request->getVar('role'), 
+            'role'  => $this->request->getVar('role'),
             'full_name'  => $this->request->getVar('name'),
             'email'  => $this->request->getVar('email'),
             'mobile_no'  => $this->request->getVar('mobile_no'),
             'password'  => $this->request->getVar('password'),
             'confirm_pass'  => $this->request->getVar('cpassword'),
-            
+
         ];
         $studentdata = [
-           
+
             'student_name'  => $this->request->getVar('name'),
             'email'  => $this->request->getVar('email'),
             'mobile_no'  => $this->request->getVar('mobile_no'),          
