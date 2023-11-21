@@ -129,8 +129,8 @@
                                                         <!-- <a class="btn shop-now-btn" href="<?php //echo base_url('Checkout'); 
                                                                                                 ?>" type="button">Book Now</a> -->
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="javascript:void(0);" onclick="showbooknowLoginModal()" data-bs-toggle="modal" data-bs-target="#bookloginformpopup">Book Now</a>
-
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                            <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
                                                         <?php else : ?>
                                                             <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
 
@@ -230,13 +230,13 @@
                                                         </li>
 
                                                     </ul>
-
-
                                                     <div>
-
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Book Now</a>
+                                                        <?php if (!(session()->get('sessiondata'))) : ?>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                        <?php else : ?>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Book Now</a>
+                                                        <?php endif; ?>
                                                     </div>
-
                                                 </div>
 
                                             </div>
@@ -330,12 +330,13 @@
 
                                                     </ul>
 
-
                                                     <div>
-
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Book Now</a>
+                                                        <?php if (!(session()->get('sessiondata'))) : ?>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                        <?php else : ?>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Book Now</a>
+                                                        <?php endif; ?>
                                                     </div>
-
                                                 </div>
 
                                             </div>
@@ -448,9 +449,14 @@
 
 
                                                     <div>
+                                                        <?php if (!(session()->get('sessiondata'))) : ?>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                        <?php else : ?>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Book Now</a>
 
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?> ?id=4" type="button">Book Now</a>
+                                                        <?php endif; ?>
                                                     </div>
+
 
                                                 </div>
 
@@ -546,11 +552,14 @@
                                                         </li>
 
                                                     </ul>
-
-
                                                     <div>
 
-                                                        <a class="btn shop-now-btn" type="submit" href="<?php echo base_url('Checkout'); ?> ?id=5" type="button">Book Now</a>
+                                                        <?php if (!(session()->get('sessiondata'))) : ?>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                        <?php else : ?>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Book Now</a>
+
+                                                        <?php endif; ?>
                                                     </div>
                                                 </div>
 
@@ -645,11 +654,13 @@
                                                     </ul>
 
                                                     <div>
-
-                                                        <a class="btn shop-now-btn" id="bookNowButton" type="submit" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Book Now</a>
+                                                        <?php if (!(session()->get('sessiondata'))) : ?>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                        <?php else : ?>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Book Now</a>
+                                                        <?php endif; ?>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
 
