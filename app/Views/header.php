@@ -460,7 +460,7 @@
             <div id="overlay"></div>
     </section>
 
-    <form name="registrationForm" onsubmit="return validateForm()" method="post"
+    <form name="registrationForm" id="registerform" onsubmit="return validateForm()" method="post"
         action="<?php echo base_url();?>register">
         <div class="modal fade" id="registerformpopup" tabindex="-1" aria-labelledby="ModalFormLabel"
             aria-hidden="true">
