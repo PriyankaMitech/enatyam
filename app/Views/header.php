@@ -16,9 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enatyam</title>
     <style>
-        div:where(.swal2-container) {
-            display: grid!important;
-        }
+    div:where(.swal2-container) {
+        display: grid !important;
+    }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
     <?php if ($page == 'enatyam' || $page == 'Home') {
@@ -48,7 +48,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
         integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <style>
@@ -209,7 +210,6 @@
         font-size: 15px !important;
         font-weight: 400 !important;
     }
-    
     </style>
     <?php }else if($page == 'Instruments') { ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -349,7 +349,7 @@
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/hederresponsive.css">
 
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/resposivestyle.css">
-   
+
 </head>
 
 <body class="overlap">
@@ -486,13 +486,13 @@
                                     <span id="emailError" style="color: red;"></span>
                                 </div>
 
-                            <div class="form-group m-2">
-                                <input type="mobile_no" name="mobile_no" id="mobile_no" class="form-control"
-                                    aria-required="true" placeholder="mobile number">
-                                <span id="mobile_noError" style="color: red;"></span>
-                            </div>
+                                <div class="form-group m-2">
+                                    <input type="mobile_no" name="mobile_no" id="mobile_no" class="form-control"
+                                        aria-required="true" placeholder="mobile number">
+                                    <span id="mobile_noError" style="color: red;"></span>
+                                </div>
 
-                            <!-- <div class="form-group m-2">
+                                <!-- <div class="form-group m-2">
                             <select class="form-control required" name="role" id="role" aria-required="true">
                                 <option value="">Open this to select Role </option>
                                 <option value="Admin">Admin</option>
@@ -503,33 +503,35 @@
                         </div> -->
 
 
-                            <div class="form-group m-2">
-                                <input type="password" name="password" id="password" class="form-control"
-                                    aria-required="true" placeholder="Password">
-                                <span id="passwordError" style="color: red;"></span>
-                            </div>
+                                <div class="form-group m-2">
+                                    <input type="password" name="password" id="password" class="form-control"
+                                        aria-required="true" placeholder="Password">
+                                    <span id="passwordError" style="color: red;"></span>
+                                </div>
 
-                            <div class="form-group m-2">
-                                <input type="password" name="confirm_pass" id="confirm_pass" class="form-control"
-                                    aria-required="true" placeholder="Repeat password">
-                                <span id="confirmpasswordError" style="color: red;"></span>
-                            </div>
+                                <div class="form-group m-2">
+                                    <input type="password" name="confirm_pass" id="confirm_pass" class="form-control"
+                                        aria-required="true" placeholder="Repeat password">
+                                    <span id="confirmpasswordError" style="color: red;"></span>
+                                </div>
 
-                            <div class="form-group m-2">
-                                <input type="text" name="otp" id="otp" class="form-control d-none" placeholder="Enter otp">
-                                <span id="otpError" style="color: red;"></span>
-                            </div>
+                                <div class="form-group m-2">
+                                    <input type="text" name="otp" id="otp" class="form-control d-none"
+                                        placeholder="Enter otp">
+                                    <span id="otpError" style="color: red;"></span>
+                                </div>
 
-                            <div class="teacher">
+                                <div class="teacher">
 
 
-                            </div>
+                                </div>
 
-                                <button type="button" class="btn btn-light mt-3" onclick="formmodel()">
+                                <!-- <button type="button" class="btn btn-light mt-3" onclick="formmodel()">
                                     Next
-                                </button>
+                                </button> -->
 
-                                <input type="button" onclickt="return validateForm()"  id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
+                                <input type="button" onclickt="return validateForm()" id="signupbtn" value="Sign Up"
+                                    class="btn btn-light mt-3">
                                 <p>Are you a member?<a class="Login" href="javascript:void(0);"
                                         onclick="showLoginModal()" data-bs-toggle="modal"
                                         data-bs-target="#loginformpopup">Login</a></p>
@@ -544,65 +546,63 @@
             </div>
 
         </div>
-        <div class="modal fade" id="formpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="login_form">
-                            <h4 class="titel pt-3" style="color: black;">Help us understand you better by sharing few
-                                details like</h4>
+    </form>
+    <div class="modal fade" id="userformmodal" tabindex="-1" aria-labelledby="userformmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userformmodalLabel">User Form</h5>
 
-                            <div class="form-group">
-                                <select class="form-control" id="course" aria-required="true" aria-invalid="false"
-                                    name="course">
-                                    <option value="">Book Demo for*</option>
-                                    <option id="" value="Dance">Dance</option>
-                                    <option id="" value="Music">Music</option>
-                                    <option id="" value="Yoga">Yoga</option>
-                                    <option id="" value="Instruments">Instruments</option>
+                </div>
+                <div class="modal-body">
+                    <!-- Your User Form goes here -->
+                    <form action="saveuserdata" method="post">
+                    <input type="hidden" name="email" id="hiddenEmail">
+                        <div class="form-group">
+                            <select class="form-control" id="course" aria-required="true" aria-invalid="false"
+                                name="course">
+                                <option value="">Book Demo for*</option>
+                                <option id="" value="Dance">Dance</option>
+                                <option id="" value="Music">Music</option>
+                                <option id="" value="Yoga">Yoga</option>
+                                <option id="" value="Instruments">Instruments</option>
 
-                                </select>
-                            </div>
-                            <div class="form-group">
-
-                                <select class="form-control" id="course" aria-required="true" aria-invalid="false"
-                                    name="sub_course">
-                                    <option value="">selectCource*</option>
-                                    <option id="" value="Dance">Kathak</option>
-                                    <option id="" value="Music">Ouuu</option>
-                                    <option id="" value="Yoga">Yoagagag</option>
-                                    <option id="" value="Instruments">Tablea</option>
-
-                                </select>
-                            </div>
-                            <div class="form-group">
-
-                                <input type="number" name="age" id="age" class="form-control" aria-required="true"
-                                    placeholder="Enter Youe Age">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Are you practicing this art (any experience in this sector)?</label><br>
-                                <label style="margin-left: 100px;" for="yes">Yes</label>
-                                <input type="radio" name="experience" id="yes" value="yes">
-                                <label style="margin-left: 100px;" for="no">No</label>
-                                <input type="radio" name="experience" id="no" value="no">
-                            </div>
-
-                            <div class="form-group" id="experienceDetails" style="display: none;">
-                                <label for="experienceInput">Please provide details of your experience:</label>
-                                <input type="text" name="experienceInput" id="experienceInput" class="form-control">
-                            </div>
-                            <input type="submit" value="Sign Up" class="btn btn-light mt-3">
-
-
+                            </select>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <select class="form-control" id="sub_course" aria-required="true" aria-invalid="false"
+                                name="sub_course">
+                                <option value="">select subCource*</option>
+                                <option value="Dance">Kathak</option>
+                                <option value="Music">Ouuu</option>
+                                <option value="Yoga">Yoagagag</option>
+                                <option value="Instruments">Tablea</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="age" id="age" class="form-control" aria-required="true"
+                                placeholder="Enter Your Age">
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 14px;">Are you practicing this art (any experience in this
+                                sector)?</label><br>
+                            <label style="margin-left: 100px;" for="yes">Yes</label>
+                            <input type="radio" name="experience" id="yes" value="yes" class="experience-radio">
+                            <label style="margin-left: 100px;" for="no">No</label>
+                            <input type="radio" name="experience" id="no" value="no" class="experience-radio">
+                        </div>
+                        <div class="form-group" id="experienceDetails" style="display: none;">
+                            <label for="experienceInput">Please provide details of your experience:</label>
+                            <input type="text" name="experienceInput" id="experienceInput" class="form-control">
+                        </div>
+                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>
+                        <input type="submit" class="btn btn-light mt-3">
+                    </form>
+                    <!-- End of User Form -->
                 </div>
             </div>
         </div>
-    </form>
-
+    </div>
     <div class="modal fade" id="loginformpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
 
         <div class="modal-dialog modal-dialog-centered">
@@ -679,9 +679,9 @@
                             method="post">
                             <div id="passwordField" style="display: none;">
                                 <div class="form-group">
-                                    <input type="password" name="new_password" id="new_password" class="form-control"
+                                    <input type="password" name="password" id="new_password" class="form-control"
                                         aria-required="true" placeholder="Enter New Password">
-                                    <input type="password" name="conf_password" id="conf_password" class="form-control"
+                                    <input type="password" name="confirm_pass" id="conf_password" class="form-control"
                                         aria-required="true" placeholder="Confirm Password">
                                     <span id="password_match_error" style="color: red;"></span>
                                 </div>
@@ -689,6 +689,10 @@
                             </div>
                         </form>
                         <!-- New Password input field (hidden initially) -->
+
+
+                        <!-- user informationform from -->
+
 
                     </div>
                 </div>

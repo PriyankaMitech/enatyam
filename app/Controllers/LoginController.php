@@ -17,7 +17,6 @@ class LoginController extends BaseController
 
     public function register()
     {
-   //     print_r($_POST);die;
         $validation = \Config\Services::validation(); // Get the validation instance
         $loginModel = new LoginModel();
         
@@ -105,6 +104,7 @@ class LoginController extends BaseController
                 $output = sendSMS($_POST['mobile_no'], $sms);
                 // print_r($output);die;
                 $result['mobileno'] = $_POST['mobile_no'];
+                $result['email'] = $_POST['email'];
                 $result['otp'] = $insert;
                 echo json_encode($result);
                 
@@ -112,7 +112,7 @@ class LoginController extends BaseController
                 echo json_encode($result);
             }
         }else {
-            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['mobile_no']);
+            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['mobile_no'], $_POST['email']);
             echo json_encode($checkotp);
         }
     }
@@ -124,6 +124,8 @@ class LoginController extends BaseController
             'full_name' => $postdata['full_name'],
             'email' => $postdata['email'],
             'mobile_no' => $postdata['mobile_no'],
+            'confirm_pass' => $postdata['confirm_pass'],
+            'password' => $postdata['password'],
             'role' => 'Student',
             'otp' => $otp,
             'is_register_done' => 'N',
@@ -135,7 +137,31 @@ class LoginController extends BaseController
             return false;
             
     }
-    
+    public function saveuserdata()
+   { 
+   
+    //   print_r($_POST);die;
+       $email = $this->request->getPost('email');
+       $course = $this->request->getPost('course');
+       $sub_course = $this->request->getPost('sub_course');
+       $age = $this->request->getPost('age');
+       $experience = $this->request->getPost('experience');
+       $experienceInput = $this->request->getPost('experienceInput');
+       $loginModel = new LoginModel();
+
+   
+       // Prepare the data to be updated
+       $data = [
+           'course' => $course,
+           'sub_course' => $sub_course,
+           'age' => $age,
+           'is_register_done'=> 'Y',
+           'experience' => $experience,
+           'experienceInput' => $experienceInput,
+       ];
+       $affectedRows = $loginModel->updateUserByEmail($email, $data);
+       return redirect()->to('Home');
+   }  
     // public function login()
     // {
     //     $rules = [
@@ -239,7 +265,7 @@ class LoginController extends BaseController
 		return redirect()->to('profilemanagment'); 
 
 	}
-
+ 
     
 
 }

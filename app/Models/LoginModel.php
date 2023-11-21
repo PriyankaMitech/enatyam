@@ -6,9 +6,8 @@ class LoginModel extends Model
   
     protected $table = 'register';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['full_name', 'email', 'mobile_no','role','password','confirm_pass','otp','is_register_done'];
+    protected $allowedFields = ['full_name', 'email', 'mobile_no','role','password','confirm_pass','otp','is_register_done','course','sub_course','age','experience','experienceInput'];  
    
-    
     public function insertTable1Data($registerData)  {
 
         $this->db->table('register')->insert($registerData);
@@ -346,40 +345,47 @@ class LoginModel extends Model
         return !empty($result);
     }
 
-    public function check_otp($otp, $mobile_no) {
+    public function check_otp($otp, $mobile_no, $email) {
         $result = $this->db
-        ->table('register')
-        ->select('otp')
-        ->where(['mobile_no' => $mobile_no])
-        ->get()->getRow();
-        // print_r($otp);die;
+            ->table('register')
+            ->select('otp')
+            ->where(['mobile_no' => $mobile_no])
+            ->get()
+            ->getRow();
+    
         if ($otp == $result->otp) {
             $updateData = [
-                'is_mobile_verified' => 'Y',
-                'is_register_done' => 'Y'
+                'is_mobile_verified' => 'Y'
             ];
-
+    
             $this->db
-            ->table('register')
-            ->where(["mobile_no" => $mobile_no])
-            ->set($updateData)
-            ->update();
-            
+                ->table('register')
+                ->where(["mobile_no" => $mobile_no])
+                ->set($updateData)
+                ->update();
+    
             $data = array(
                 'msg' => 'Email verified',
-                'status' => '200'
+                'status' => '200',
+                'email' => $email  
             );
-            
+    
             return $data;
-        }else {
+        } else {
             $data = array(
                 'msg' => 'Enter correct otp',
                 'status' => '203'
             );
-            
+    
             return $data;
         }
-        
     }
-
+    public function updateUserByEmail($email, $data)
+    {
+     //  print_r($data);die;
+      
+        return $this->db->table('register')
+        ->select('*')->where('email', $email)->update($data);
+   
+    }
 }
