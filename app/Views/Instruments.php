@@ -2,7 +2,7 @@
 <?php include('header.php');?>
     <div class="wrapper-container ">
         <div class="video-container">
-        <video class="video-dance" controls="false" autoplay="1" loop="1" id="danceVideo">
+        <video class="video-dance banerforinstuments" controls="false" autoplay="1" loop="1" id="danceVideo">
                 <source src="public/images/instrument/instrument-video-1.mp4" type="video/mp4">
                 </video>
                 <div class="video-section">
