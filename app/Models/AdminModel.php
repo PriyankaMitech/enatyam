@@ -311,11 +311,11 @@ public function getStudentAndTeacherData($studentId, $teacherId)
     public function getrejectedList()
     {
         return $this->db->table('carrier')
-            ->select('*')
-            ->where('Status', 'N')
-            ->Where('Result_of_application', 'decline')
-            ->get()
-            ->getResult();
+        ->select('*')
+        ->where('Status', 'N')
+        ->Where('Result_of_application', 'decline')
+        ->get()
+        ->getResult();
     }
 
 

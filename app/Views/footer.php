@@ -2581,6 +2581,7 @@ document.getElementById("newPasswordForm").addEventListener("submit", function(e
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
 
+<<<<<<< HEAD
     <script>
         let prevScrollPos = window.pageYOffset;
         const navbar = document.querySelector('.tophead');
@@ -2723,6 +2724,9 @@ document.getElementById("newPasswordForm").addEventListener("submit", function(e
             });
         });
 
+=======
+  
+>>>>>>> 4fe8ef7ffb2d368b0d5d7164749dc50903422ea5
 
 
         // $(document).ready(function() {
@@ -3372,6 +3376,7 @@ $(document).ready(function() {
 function showLostPasswordModal() {
     $('#loginformpopup').modal('hide');
 
+<<<<<<< HEAD
     $('#lostpasswordmodal').modal('show');
 }
 
@@ -3404,6 +3409,21 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
     if (window.pageYOffset === 0) {
         navbar.style.backgroundColor = 'transparent';
+=======
+    function showLoginModal() {
+        // Hide the registration modal
+        $('#registerformpopup').modal('hide');
+        // Show the login modal
+        $('#loginformpopup').modal('show');
+    }
+
+    
+    function showRegistrationModal() {
+        // Hide the login modal
+        $('#loginformpopup').modal('hide');
+        // Show the registration modal
+        $('#registerformpopup').modal('show');
+>>>>>>> 4fe8ef7ffb2d368b0d5d7164749dc50903422ea5
     }
 });
 
@@ -3430,6 +3450,7 @@ window.addEventListener('scroll', () => {
         navbar.style.transform = 'translateY(0)';
         navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
     }
+<<<<<<< HEAD
 
     prevScrollPos = currentScrollPos;
 });
@@ -3443,6 +3464,14 @@ window.addEventListener('load', () => {
 // JavaScript to handle time input validation
 var startTimeInput = document.getElementById("start-time");
 var endTimeInput = document.getElementById("end-time");
+=======
+    
+
+    
+    // JavaScript to handle time input validation
+    var startTimeInput = document.getElementById("start-time");
+    var endTimeInput = document.getElementById("end-time");
+>>>>>>> 4fe8ef7ffb2d368b0d5d7164749dc50903422ea5
 
 startTimeInput.addEventListener("change", validateTimeInput);
 endTimeInput.addEventListener("change", validateTimeInput);
@@ -3612,6 +3641,38 @@ function showLoginModal() {
 }
 </script>
 
+<<<<<<< HEAD
+=======
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector('.tophead');
+
+    window.addEventListener('scroll', () => {
+        const currentScrollPos = window.pageYOffset;
+
+        if (currentScrollPos > prevScrollPos) {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up or at the top
+            navbar.style.transform = 'translateY(0)';
+            navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+        }
+
+        prevScrollPos = currentScrollPos;
+    });
+
+    // Ensure initial state is transparent if at the top
+    window.addEventListener('load', () => {
+        if (window.pageYOffset === 0) {
+            navbar.style.backgroundColor = 'transparent';
+        }
+    });
+    </script>
+
+
+    
+>>>>>>> 4fe8ef7ffb2d368b0d5d7164749dc50903422ea5
 </body>
 
 
