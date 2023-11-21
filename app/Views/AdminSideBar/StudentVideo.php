@@ -54,6 +54,7 @@
 </head>
 
 <body>
+
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
@@ -82,7 +83,8 @@
     </div>
 
     <div class="container" id="videoContainer" style="display: none;">
-        <?php if (!empty($studentVideoData)) { ?>
+        <?php if (!empty($studentVideoData)) {
+        ?>
             <div class="row">
                 <?php foreach ($studentVideoData as $faculty) { ?>
                     <?php

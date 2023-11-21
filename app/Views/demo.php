@@ -138,67 +138,6 @@
                                             <div class="f-info">
                                                 <ul class="greenCheckbox multiSelectContainer scrollForAttribute mCustomScrollbar _mCS_1 mCS_no_scrollbar">
                                                     <div id="mCSB_1" class="mCustomScrollBox mCS-light3 mCSB_vertical mCSB_inside" tabindex="0">
-                                                        <!-- <div id="mCSB_1_container"
-                                                                class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
-                                                                style="position:relative; top:0; left:0;" dir="ltr">
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Bollywood Dance Classes,"><span></span>
-                                                                        Bollywood Dance Classes</label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Bharatanatyam Dance Classes,"><span></span>
-                                                                        Bharatanatyam Dance Classes</label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Kathak Dance Classes,"><span></span>
-                                                                        Kathak Dance Classes</label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Odissi Dance Classes,"><span></span>
-                                                                        Odissi Dance Classes</label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Western Dance Classes,"><span></span>
-                                                                        Western Dance Classes</label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Semi classical Dance Classes,"><span></span>
-                                                                        Semi classical Dance Classes</label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Bhangara Dance Classes,"><span></span>
-                                                                        Bhangara Dance Classes</label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" class="checkboxCondition"
-                                                                            name="sub_course"
-                                                                            value="Folk Dance Classes,"><span></span>
-                                                                        Folk Dance Classes</label>
-                                                                </li>
-                                                                <span style="color:red;" id="sub_coursespanid"></span>
-                                                            </div> -->
 
 
                                                         <!-- new for each course - change subcourse  -->
