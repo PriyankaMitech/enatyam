@@ -17,10 +17,12 @@
         margin-left: 213px;
         height: auto;
         width: auto;
+        background-color: antiquewhite;
     }
 
     .list {
-        margin-left: 50px;
+        margin-top: 10px;
+        margin-left: 172px;
     }
 
     #studentDropdown {
@@ -33,6 +35,7 @@
 
     #teacherDropdown {
         font-size: 20px;
+        width: 100px;
     }
 
     table {
@@ -43,7 +46,7 @@
 
     th,
     td {
-        border: 1px solid #ddd;
+        border: 3px solid #ddd;
         padding: 8px;
         text-align: left;
     }
@@ -51,6 +54,8 @@
     th {
         background-color: #f2f2f2;
     }
+    #studentTable{border: 1px;margin-left: 231px;}
+    #submitButton{font-size: 14px;width: 100px;}
     </style>
 </head>
 
@@ -97,15 +102,19 @@
                     aria-label=".form-select-lg example">
 
                 </select>
-                <button id="submitButton">View</button>
+                <button id="submitButton" class="btn btn-success">View</button>
             </div>
         </div>
-        <div class="row" style=" display: flex; justify-content: space-around; margin: 20px;">
-            <table id="studentTable" style="border: 1px;margin-left: 231px;">
+      <div class="row" style="background-color: #98901b;">
+        <div class="heding" style="display: flex;"> <b><h1 style="margin-left: 300px;font-size: 1.5rem;">* Student Slots *</h1></b> <b><h1 style="margin-left:234px;font-size: 1.5rem;">* Faculty Slots *</h1></b></div>
+         
+      </div>
+            <div class="row" style="display:flex; justify-content: space-around; margin: 20px;">          
+                  <table id="studentTable">
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Time</th>
+                        <th>Start Time</th>
                         <th>End Time</th>
                         <!-- Add more columns as needed for students -->
                     </tr>
@@ -129,6 +138,7 @@
                 </tbody>
             </table>
         </div>
+        
     </div>
 
 

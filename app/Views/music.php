@@ -2032,7 +2032,7 @@
                         <!-- slider -->
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
-                            <div class="carousel-item mot1 active">
+                            <div class="carousel-item motmusic active">
                                     <div class="carousel-caption">
                                         <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                         <h4>Amrita (USA)</h4>
@@ -2042,7 +2042,7 @@
                                     </div>
                                 </div>
                 
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2052,7 +2052,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2063,7 +2063,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                     <h4>Shivi ( Australia )</h4>
@@ -2073,7 +2073,7 @@
                                             passion for teaching are unmatched. I couldn't be happier with my progress. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2083,7 +2083,7 @@
                                             I've tried several online singing classes, and this one is by far the best. The curriculum is well-structured, the instructor is knowledgeable, and the support from fellow students is incredible. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2093,7 +2093,7 @@
                                             This online singing class has helped me overcome my stage fright and build confidence in my voice. The techniques taught are practical and effective. I'm grateful for this transformative experience. </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                     <h4>Sanjana (Bangalore)</h4>
@@ -2103,7 +2103,7 @@
                                     </div>
                                 </div>
 
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                     <h4>Lakshmi (Hyderabad)</h4>
@@ -2113,7 +2113,7 @@
                                     </p>
                                 </div>
 
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                     <h4>Abhinav ( Germany )</h4>
@@ -2123,7 +2123,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
                                     <h4>Pratibha S( Singapore )</h4>
@@ -2135,7 +2135,7 @@
                                    
 
                                 </div>
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2150,7 +2150,7 @@
 
                                 </div>
 
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2162,7 +2162,7 @@
                                     </p>
                                     </div>
                                 </div>
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2174,7 +2174,7 @@
                                     </div>
                                 </div>
 
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2188,7 +2188,7 @@
                                     </div>
 
                                 </div>
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2201,7 +2201,7 @@
                                         </div>
                                 </div>
 
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2214,7 +2214,7 @@
                                         </div>
                                 </div>
 
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2229,7 +2229,7 @@
                                         </div>
                                 </div>
 
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
@@ -2242,7 +2242,7 @@
                                     </div>
                                 </div>
 
-                                <div class="carousel-item mot1">
+                                <div class="carousel-item motmusic">
                                     <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
