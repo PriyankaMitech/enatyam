@@ -2028,72 +2028,178 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
         return /^[a-zA-Z\s]*$/.test(value); // This regex allows only letters and spaces
     }, 'Please enter letters only');
 
+        // $(document).ready(function() {
+        //             // Function to validate mobile number
+        //             function validateMobileNumber(mobile) {
+        //                 var regex = /^[0-9]{10}$/;
+        //                 return regex.test(mobile);
+        //             }
 
-    $(document).ready(function() {
-        $('#checkoutForm').validate({
-            rules: {
-                Fname: {
-                    required: true,
-                    lettersOnly: true // Use the custom method here
+        //             // Function to validate pin code
+        //             function validatePincode(pincode) {
+        //                 var regex = /^[0-9]{6}$/;
+        //                 return regex.test(pincode);
+        //             }
+
+        $(document).ready(function() {
+            // Add custom method for letters only validation
+            $.validator.addMethod("lettersOnly", function(value, element) {
+                return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
+            }, "Please enter letters only.");
+
+            // Add custom method for mobile number validation
+            $.validator.addMethod("validMobileNumber", function(value, element) {
+                return this.optional(element) || /^[0-9]{10}$/i.test(value);
+            }, "Please enter a valid 10-digit mobile number.");
+
+            // Add custom method for pin code validation
+            $.validator.addMethod("validPincode", function(value, element) {
+                return this.optional(element) || /^[0-9]{6}$/i.test(value);
+            }, "Please enter a valid 6-digit pin code.");
+
+
+
+            // Initialize form validation
+            $('#checkoutForm').validate({
+                rules: {
+                    Fname: {
+                        required: true,
+                        lettersOnly: true
+                    },
+                    Lname: {
+                        required: true,
+                        lettersOnly: true
+                    },
+                    email: {
+                        required: true,
+                        pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+                    },
+                    country: {
+                        required: true
+                    },
+                    address: {
+                        required: true
+                    },
+                    city: {
+                        required: true
+                    },
+                    pincode: {
+                        required: true,
+                        validPincode: true
+                    },
+                    phone: {
+                        required: true,
+                        validMobileNumber: true
+                    }
                 },
-                Lname: {
-                    required: true,
-                    lettersOnly: true // Use the custom method here
-                },
-                email: {
-                    required: true,
-                    email: true
-                },
-                country: {
-                    required: true
-                },
-                address: {
-                    required: true
-                },
-                city: {
-                    required: true
-                },
-                pincode: {
-                    required: true
-                },
-                phone: {
-                    required: true
+                messages: {
+                    Fname: {
+                        required: 'Please enter your first name.',
+                        lettersOnly: 'Please enter letters only.' // Custom error message
+                    },
+                    Lname: {
+                        required: 'Please enter your last name.',
+                        lettersOnly: 'Please enter letters only.' // Custom error message
+                    },
+
+                    country: {
+                        required: 'Please enter your Country.'
+                    },
+                    address: {
+                        required: 'Please enter your Street address.'
+                    },
+                    city: {
+                        required: 'Please enter your City.'
+                    },
+                    pincode: {
+                        required: 'Please enter your Pincode.'
+                    },
+                    phone: {
+                        required: 'Please enter your Mobile number.'
+                    },
+                    email: {
+                        required: 'Please enter your email address.',
+                        pattern: 'Please enter a valid email address.'
+                    },
+
+                    pincode: {
+                        required: 'Please enter your Pincode.'
+                    },
+                    phone: {
+                        required: 'Please enter your Mobile number.'
+                    }
+
                 }
-
-            },
-            messages: {
-                Fname: {
-                    required: 'Please enter your first name.',
-                    lettersOnly: 'Please enter letters only.' // Custom error message
-                },
-                Lname: {
-                    required: 'Please enter your last name.',
-                    lettersOnly: 'Please enter letters only.' // Custom error message
-                },
-
-                country: {
-                    required: 'Please enter your Country.'
-                },
-                address: {
-                    required: 'Please enter your Street address.'
-                },
-                city: {
-                    required: 'Please enter your City.'
-                },
-                pincode: {
-                    required: 'Please enter your Pincode.'
-                },
-                phone: {
-                    required: 'Please enter your Mobile number.'
-                },
-                email: {
-                    required: 'Please enter your email address.',
-                    email: 'Please enter a valid email address.'
-                },
-            }
+            });
         });
-    });
-</script>
+
+
+
+        // $(document).ready(function() {
+        //     $('#checkoutForm').validate({
+        //         rules: {
+        //             Fname: {
+        //                 required: true,
+        //                 lettersOnly: true // Use the custom method here
+        //             },
+        //             Lname: {
+        //                 required: true,
+        //                 lettersOnly: true // Use the custom method here
+        //             },
+        //             email: {
+        //                 required: true,
+        //                 email: true
+        //             },
+        //             country: {
+        //                 required: true
+        //             },
+        //             address: {
+        //                 required: true
+        //             },
+        //             city: {
+        //                 required: true
+        //             },
+        //             pincode: {
+        //                 required: true
+        //             },
+        //             phone: {
+        //                 required: true
+        //             }
+
+        //         },
+        //         messages: {
+        //             Fname: {
+        //                 required: 'Please enter your first name.',
+        //                 lettersOnly: 'Please enter letters only.' // Custom error message
+        //             },
+        //             Lname: {
+        //                 required: 'Please enter your last name.',
+        //                 lettersOnly: 'Please enter letters only.' // Custom error message
+        //             },
+
+        //             country: {
+        //                 required: 'Please enter your Country.'
+        //             },
+        //             address: {
+        //                 required: 'Please enter your Street address.'
+        //             },
+        //             city: {
+        //                 required: 'Please enter your City.'
+        //             },
+        //             pincode: {
+        //                 required: 'Please enter your Pincode.'
+        //             },
+        //             phone: {
+        //                 required: 'Please enter your Mobile number.'
+        //             },
+        //             email: {
+        //                 required: 'Please enter your email address.',
+        //                 email: 'Please enter a valid email address.'
+        //             },
+        //         }
+        //     });
+        // });
+    </script>
 
     <?php }elseif($page == 'Career'){ ?>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
