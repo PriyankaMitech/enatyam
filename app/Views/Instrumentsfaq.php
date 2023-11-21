@@ -2,7 +2,7 @@
     <div class="container cont-width">
         <div class="row">
             <div class="col-lg-1 col-md-1 col-12 faqd" ><img src="public/images/logo2.png" class="dancefimg" /></div>
-            <div class="col-lg-12 col-md-12 col-12" >
+            <div class="col-lg-12 col-md-12 col-12 faqdance" >
 
                 <div class="accordion">
                     <div class="accordion-item">

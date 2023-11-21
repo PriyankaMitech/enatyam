@@ -13,7 +13,7 @@ class AdminModel extends Model
     protected $tableTeachers = 'schedule';
     protected $table = 'free_demo_table';
     protected $primaryKey = 'D_id';
-    protected $allowedFields = ['Date','Conducted_Demo','name','course','AssignTecher_id',''];
+    protected $allowedFields = ['Date', 'Conducted_Demo', 'name', 'course', 'AssignTecher_id', ''];
 
    public function AddUserByAdmin($data)
    {
@@ -31,9 +31,8 @@ class AdminModel extends Model
         // return $this->where('DATE(Date)', $today)->findAll();
         $today = date('Y-m-d');
         return $this->where('DATE(`Book_Date`) =', $today)
-                    ->findAll();
-       
-       
+            ->findAll();
+
     }
     public function getGroupSessionStudents() {
         return $this->db->table('register')->where('SessionType', 'GroupSession')->get()->getResult();
@@ -45,9 +44,9 @@ class AdminModel extends Model
     }
     public function getConductedDemo()
     {
-        
+
         return $this->db->table('free_demo_table')->where('Conducted_Demo', 'Y')->get()->getResult();
-       
+    
     }
     public function getStudents()
     {
@@ -107,6 +106,15 @@ public function getStudentAndTeacherData($studentId, $teacherId)
             ->get()
             ->getRow();
     }
+
+    // public function getPaymentStatusForEmail($email)
+    // {
+    //     return $this->db->table('register')
+    //         ->select('payment_status')
+    //         ->where('email', $email)
+    //         ->get()
+    //         ->getRow('payment_status');
+    // }
     public function getPendingDemo()
     {
         return $this->db->table('free_demo_table')->where('Conducted_Demo', 'N')->get()->getResult();
@@ -114,30 +122,31 @@ public function getStudentAndTeacherData($studentId, $teacherId)
     public function getPendingDemoList()
     {
         return $this->db->table('free_demo_table')
-        ->where('Conducted_Demo', 'N')
-        ->where('Reshedule_date', null)
-        ->get()
-        ->getResult();
+            ->where('Conducted_Demo', 'N')
+            ->where('Reshedule_date', null)
+            ->get()
+            ->getResult();
     }
     public function getFacultyShedule()
     {
         $currentMonth = date('m'); // Get the current month in the format 'mm'
-        
+
         $result = $this->db->table('schedule')
             ->select('schedule.*, faculty.faculty_name') // Select the required columns, including faculty_name
             ->join('faculty', 'faculty.faculty_id = schedule.faculty_id') // Join the faculties table
             ->where("MONTH(date) = $currentMonth") // Replace 'date_column' with the actual column name containing the date
             ->get()
             ->getResult();
-    
+        // print_r($result);
+        // die;
+
         return $result;
     }
-   
+
     public function getRowCount()
     {
-      
-       return $this->countAllResults();
-         
+
+        return $this->countAllResults();
     }
     public function getEmployees()
     {
@@ -150,32 +159,31 @@ public function getStudentAndTeacherData($studentId, $teacherId)
     public function getFaculty()
     {
         return $this->db->table('register')->where('role', 'Faculty')->get()->getResult();
-        
     }
     public function getAllSessionData()
     {
         return $this->findAll();
     }
-    public function edit($data) {
+    public function edit($data)
+    {
 
-      //  echo $data['faculty_name'];die;
-		$result = $this->table('free_demo_table')
-                        ->where(["D_id" => $data['studentid']])
-                        ->set('AssignTecher_id',$data['faculty_name'])
-                        ->update();
+        //  echo $data['faculty_name'];die;
+        $result = $this->table('free_demo_table')
+            ->where(["D_id" => $data['studentid']])
+            ->set('AssignTecher_id', $data['faculty_name'])
+            ->update();
         if ($result == '1') {
             return true;
-        }else {
+        } else {
             return false;
         }
-                       
-	}
+    }
 
 
     public function add($data)
     {
-      
-      //  print_r($data['studentid']);die;
+
+        //  print_r($data['studentid']);die;
         $builder = $this->db->table($this->table2);
 
         $builder->set('Assign_Techer_id', $data['faculty_name']);
@@ -197,9 +205,9 @@ public function getStudentAndTeacherData($studentId, $teacherId)
             return false;
         }
     }
-        
-  
-    
+
+
+
     public function getConductedDemoStatus()
     {
         return $this->db->table('free_demo_table')->where('AssignTecher_id >', 0)->get()->getResult();
@@ -209,90 +217,130 @@ public function getStudentAndTeacherData($studentId, $teacherId)
     public function Paymentstatus()
     {
         return $this->db->table('register')->where('Payment_status', 'Y')->get()->getResult();
-      
     }
 
     public function getAllDemoData()
     {
         return $this->db->table('free_demo_table')
-        ->select('*')
-        ->get()
-        ->getResult();
+            ->select('*')
+            ->get()
+            ->getResult();
     }
 
     public function getFacultyData()
     {
         return $this->db->table('faculty')
-        ->select('*')
-        ->get()
-        ->getResult();
+            ->select('*')
+            ->get()
+            ->getResult();
     }
 
     public function getStudentData()
     {
         return $this->db->table('student')
-        ->select('*')
-        ->get()
-        ->getResult();
+            ->select('*')
+            ->get()
+            ->getResult();
     }
 
-    public function getStudeyVideoUplodeByStudent()
+    public function getStudyVideoUplodedByStudent()
     {
-        return $this->db->table('uplode_study_video_from_student')
-        ->select('*')
-        ->get()
-        ->getResult();
+        // $VideoDetails = $this->db->table('uplode_study_video_from_student')
+        //     ->select('*')
+        //     ->get()
+        //     ->getResult();
+
+        $VideoDetails = $this->db->table('uplode_study_video_from_student')
+            ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
+            ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id')
+            ->get()
+            ->getResult();
+
+        // echo "<pre>";
+        // print_r($VideoDetails);
+        // exit();
+
+
+        // $faculty_ids = array(); // Initialize an empty array to store faculty IDs
+
+        // foreach ($VideoDetails as $video) {
+        //     $faculty_ids[] = $video->Faculty_id; // Add each Faculty_id to the array
+        // }
+
+        // // Now $faculty_ids will contain an array of Faculty IDs
+        // print_r($faculty_ids);
+        return  $VideoDetails;
     }
 
-    public function getStudeyVideoUplodeByFaculty()
+    public function getStudyVideoUplodedByFaculty()
     {
-        return $this->db->table('uplode_video_to_student')
-        ->select('*')
-        ->get()
-        ->getResult();
+        // return $this->db->table('uplode_video_to_student')
+        //     ->select('*')
+        //     ->get()
+        //     ->getResult();
+
+        $VideoDetails = $this->db->table('uplode_video_to_student')
+            ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
+            ->join('student', 'student.student_id = uplode_video_to_student.student_id')
+            ->join('register', 'register.id = uplode_video_to_student.register_faculty_id')
+            ->get()
+            ->getResult();
+        // $VideoDetails = $this->db->table('uplode_video_to_student')
+        //     ->select('uplode_video_to_student.*, student.student_name as student_name, faculty.faculty_name as faculty_name')
+        //     ->join('student', 'student.student_id = uplode_video_to_student.student_id')
+        //     ->join('faculty', 'faculty.faculty_id = uplode_video_to_student.register_faculty_id')
+        //     ->get()
+        //     ->getResult();
+
+
+        // echo "<pre>";
+        // print_r($VideoDetails);
+        // exit();
+        return  $VideoDetails;
     }
 
     public function getcarreerBookByfaculty()
     {
         return $this->db->table('carrier')
-        ->select('*')
-        ->where('Result_of_application', 'Pending')
-        ->get()
-        ->getResult();
+            ->select('*')
+            ->where('Result_of_application', 'Pending')
+            ->get()
+            ->getResult();
     }
 
     public function getrejectedList()
     {
         return $this->db->table('carrier')
-        ->select('*')
-        ->where('Stetus', 'N')
-        ->Where('Result_of_application', 'decline')
-        ->get()
-        ->getResult();
+            ->select('*')
+            ->where('Status', 'N')
+            ->Where('Result_of_application', 'decline')
+            ->get()
+            ->getResult();
     }
 
 
-    public function updateCarrierData($D_id, $action) {
+    public function updateCarrierData($D_id, $action)
+    {
         return $this->db->table('carrier')
             ->where('D_id', $D_id)
             ->update(['Result_of_application' => $action]);
     }
- 
+
     public function getNullPasswordRecords()
     {
         return $this->db->table('register')
-        ->where('password', '')
-        ->get()
-        ->getResult();
+            ->where('password', '')
+            ->get()
+            ->getResult();
     }
 
-    public function updatePassword($id, $password) {
+    public function updatePassword($id, $password)
+    {
         return $this->db->table('register')
             ->where('id', $id)
             ->update(['password' => $password]);
-            
     }
-    public function BackToprndinglistofdemo($D_id,$result,$date,$time)
+    public function BackToprndinglistofdemo($D_id, $result, $date, $time)
     {
         return $this->db->table('free_demo_table')
             ->where('D_id', $D_id)
@@ -304,31 +352,30 @@ public function getStudentAndTeacherData($studentId, $teacherId)
     }
     public function getresheduleDemo()
     {
-        
+
         return $this->db->table('free_demo_table')->where('Conducted_Demo', 'Reschedule')->get()->getResult();
-       
     }
     public function getdate($date)
     {
         $result = $this->db->table('schedule')
-        ->where('date', $date)
-        ->get()
-        ->getResult();
+            ->where('date', $date)
+            ->get()
+            ->getResult();
         // echo "<pre>";print_r($result);exit();
 
-return $result;
+        return $result;
     }
     public function getmonthdata()
     {
         $currentMonth = date('Y-m');
-        
+
         $result = $this->db->table('schedule')
             ->select('*')
             ->where('date >=', $currentMonth . '-01')
             ->where('date <=', $currentMonth . '-31')
             ->get()
             ->getResult();
-    
+
         return $result;
     }
 }

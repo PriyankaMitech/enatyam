@@ -6,6 +6,7 @@
   position: relative;
   margin-top: 182px;
 }
+
 .step-button {
   width: 50px;
   height: 50px;
@@ -14,20 +15,24 @@
   background-color: #b1b1b1;
   transition: 0.4s;
 }
+
 .step-button[aria-expanded="true"] {
   width: 60px;
   height: 60px;
   background-color: #b1b1b1;
   color: #fff;
 }
+
 .done {
   background-color: #ff0067;
   color: #fff;
 }
+
 .step-item {
   z-index: 10;
   text-align: center;
 }
+
 #progress {
   appearance: none;
   position: absolute;
@@ -37,11 +42,13 @@
   margin-left: 18px;
   margin-bottom: 78px;
 }
+
 /* to customize progress bar */
 #progress::-webkit-progress-value {
   background-color: #ff0067;
   transition: 0.5s ease;
 }
+
 #progress::-webkit-progress-bar {
   background-color: #b1b1b1;
 }
@@ -51,10 +58,12 @@
 .demo_page {
   background-color: #fad32c;
 }
+
 #progress::-webkit-progress-value {
   background-color: #ff0067;
   transition: 0.5s ease;
 }
+
 .E_Container {
   border: 5px solid #7e858536;
   border-radius: 4px;
@@ -77,6 +86,7 @@
   margin-left: 300px;
   margin-right: 300px;
 }
+
 /* .greenCheckbox {
    
 } */
