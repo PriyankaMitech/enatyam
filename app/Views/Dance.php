@@ -41,38 +41,38 @@
                 <li class="col-lg-1 col-md-1 dancebthide " >
                 </li>
                     <!-- Kathak -->
-                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item " role="presentation">
                         <button class="nav-link  active" id="pills-Kathak-tab" data-bs-toggle="pill" data-bs-target="#pills-Kathak" type="button" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</button>
                     </li>
                     <!-- Bharatnatyam -->
-                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item " role="presentation">
                         <button class="nav-link " id="pills-Bharatnatyam-tab" data-bs-toggle="pill" data-bs-target="#pills-Bharatnatyam" type="button" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</button>
                     </li>
                     <!-- Odissi -->
-                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item " role="presentation">
                         <button class="nav-link " id="pills-Odissi-tab" data-bs-toggle="pill" data-bs-target="#pills-Odissi" type="button" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</button>
                     </li>
                     <!-- Bollywood -->
-                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item " role="presentation">
                         <button class="nav-link " id="pills-Bollywood-tab" data-bs-toggle="pill" data-bs-target="#pills-Bollywood" type="button" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</button>
                     </li>
              
                     <!-- Western -->
-                    <li class="col-lg-2 col-md-2 col-6 nav-item p-2" role="presentation">
+                    <li class="col-lg-2 col-md-2 col-6 nav-item " role="presentation">
                         <button class="nav-link " id="pills-Western-tab" data-bs-toggle="pill" data-bs-target="#pills-Western" type="button" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</button>
                     </li>
                     <li class="col-lg-1 col-md-1 dancebthide " >
                     </li>
                     <!-- Semi-classical -->
-                    <li class="col-lg-4 col-md-4 col-6 nav-item p-2" role="presentation">
+                    <li class="col-lg-4 col-md-4 col-6 nav-item " role="presentation">
                         <button class="nav-link big" id="pills-Semiclassical-tab" data-bs-toggle="pill" data-bs-target="#pills-Semiclassical" type="button" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</button>
                     </li>
                     <!-- Bhangra -->
-                    <li class="col-lg-4 col-md-4 col-6 nav-item p-2" role="presentation">
+                    <li class="col-lg-4 col-md-4 col-6 nav-item " role="presentation">
                         <button class="nav-link big" id="pills-Bhangra-tab" data-bs-toggle="pill" data-bs-target="#pills-Bhangra" type="button" role="tab" aria-controls="pills-Bhangra" aria-selected="false">Bhangra</button>
                     </li>
                     <!-- Folk -->
-                    <li class="col-lg-4 col-md-4 col-6 nav-item p-2" role="presentation">
+                    <li class="col-lg-4 col-md-4 col-6 nav-item " role="presentation">
                         <button class="nav-link big" id="pills-Folk-tab" data-bs-toggle="pill" data-bs-target="#pills-Folk" type="button" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</button>
                     </li>
                 </ul>

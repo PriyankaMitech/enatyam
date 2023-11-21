@@ -14,6 +14,19 @@
   .thim-logo {
     display: none;
   } */
+  .typesOfDance-tab > ul > li {
+    margin-top: 0px !important;
+  }
+  .accordion-item {
+    margin: 0rem !important;
+  }
+  .accordion {
+    margin: 0rem !important;
+  }
+
+  .testimonialsdiv {
+    margin-bottom: 0px !important;
+  }
 
   .howWorkBlock .hwTitle {
     font-size: 12px !important;
@@ -183,8 +196,11 @@
     font-size: 31px !important;
   }
   .typesOfDance-tab .nav-pills .nav-link.big {
-    width: 162px !important;
-    height: 60px !important;
+    width: 100%;
+    height: 50px;
+  }
+  .pricing-section {
+    margin-top: 10% !important;
   }
   .kathakp {
     margin-top: 6%;
@@ -636,7 +652,7 @@
     height: 20%;
   }
   .typesOfDance-tab > ul > li {
-    /* margin-top: 15px !important; */
+    margin-top: 15px !important;
     font-size: 10px;
   }
   .typesOfDance-tab .nav-pills .nav-link {

@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="plugins/fullcalendar/main.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <?php include(APPPATH.'views/AdminSidebar.php');?>
-</head>
+    <?php include(APPPATH.'Views/AdminSideBar.php');?></head>
 
 <body>
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">

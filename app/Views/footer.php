@@ -1423,34 +1423,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
 
-    <script>
-        
-        let prevScrollPos = window.pageYOffset;
-        const navbar = document.querySelector('.tophead');
-
-        window.addEventListener('scroll', () => {
-        const currentScrollPos = window.pageYOffset;
-
-            if (currentScrollPos > prevScrollPos) {
-                // Scrolling down
-                navbar.style.transform = 'translateY(-100%)';
-                } else {
-                    // Scrolling up or at the top
-                    navbar.style.transform = 'translateY(0)';
-                    navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-                }
-
-                prevScrollPos = currentScrollPos;
-        });
-
-        // Ensure initial state is transparent if at the top
-        window.addEventListener('load', () => {
-            if (window.pageYOffset === 0) {
-                navbar.style.backgroundColor = 'transparent';
-         }
-        });
-    </script>
-
+  
 
     <?php }elseif($page == 'Career'){ ?>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -2037,31 +2010,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
         // Show the login modal
         $('#loginformpopup').modal('show');
     }
-    
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector('.tophead');
 
-    window.addEventListener('scroll', () => {
-        const currentScrollPos = window.pageYOffset;
-
-        if (currentScrollPos > prevScrollPos) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up or at the top
-            navbar.style.transform = 'translateY(0)';
-            navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-        }
-
-        prevScrollPos = currentScrollPos;
-    });
-
-    // Ensure initial state is transparent if at the top
-    window.addEventListener('load', () => {
-        if (window.pageYOffset === 0) {
-            navbar.style.backgroundColor = 'transparent';
-     }
-    });
     
     function showRegistrationModal() {
         // Hide the login modal
@@ -2077,29 +2026,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
         $('#loginformpopup').modal('show');
     }
     
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector('.tophead');
 
-    window.addEventListener('scroll', () => {
-        const currentScrollPos = window.pageYOffset;
-
-        if (currentScrollPos > prevScrollPos) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up or at the top
-            navbar.style.transform = 'translateY(0)';
-            navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-        }
-
-        prevScrollPos = currentScrollPos;
-    });
-    // Ensure initial state is transparent if at the top
-    window.addEventListener('load', () => {
-        if (window.pageYOffset === 0) {
-            navbar.style.backgroundColor = 'transparent';
-        }
-    });
     
     // JavaScript to handle time input validation
     var startTimeInput = document.getElementById("start-time");
@@ -2226,6 +2153,34 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
     });
 </script>
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector('.tophead');
+
+    window.addEventListener('scroll', () => {
+        const currentScrollPos = window.pageYOffset;
+
+        if (currentScrollPos > prevScrollPos) {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up or at the top
+            navbar.style.transform = 'translateY(0)';
+            navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+        }
+
+        prevScrollPos = currentScrollPos;
+    });
+
+    // Ensure initial state is transparent if at the top
+    window.addEventListener('load', () => {
+        if (window.pageYOffset === 0) {
+            navbar.style.backgroundColor = 'transparent';
+        }
+    });
+    </script>
+
 
     
 </body>

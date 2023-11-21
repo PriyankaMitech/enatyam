@@ -193,7 +193,7 @@ class AdminModel extends Model
     {
         return $this->db->table('carrier')
         ->select('*')
-        ->where('Stetus', 'N')
+        ->where('Status', 'N')
         ->Where('Result_of_application', 'decline')
         ->get()
         ->getResult();
