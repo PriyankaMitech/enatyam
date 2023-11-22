@@ -115,7 +115,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url()?>StudentList" class="nav-link">
+                <a href="<?php echo base_url()?>StudentListToAdmin" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>StudentList</p>
                 </a>

@@ -5,13 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo</title>
-    <?php include(APPPATH.'Views/AdminSideBar.php');?>
-        <style>
-    .row {
-        margin-left: 213px;
-        height: auto;
-        width: auto;
-    }
+    <?php include(APPPATH.'views/AdminSidebar.php');?>
+    <style>
+    
 
     table {
         width: 100%;
@@ -70,26 +66,60 @@
 
     </nav>
 
-    <button type="button" class="btn btn-secondary" id="showVideoContainer">Conducted Demo</button>
-    <button type="button" class="btn btn-warning" id="showImageContainer">pending Demo</button>
-    <button type="button" class="btn btn-danger" id="showRescheduleContainer">Reschedule please</button>
-    <!-- <button type="button" class="btn btn-success" id="showReschedule">Reschedule Demo</button> -->
-    <div class="container" id="videoContainer" style="display: none;">
+    <div class="content-wrapper" style="min-height: 1172.73px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Demo Details</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Demo Details</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+   <section class="content">
+      <div class="container-fluid">
         <div class="row">
-            <table>
-                <h4>Conducted Demo</h4>
-                <thead>
-                    <tr>
-                        <th>Name</th>
+          <div class="col-md-12">
+            <div class="sticky-top mb-3">
+                <div class="card card-primary card-outline card-outline-tabs">
+                <div class="card-header p-0 border-bottom-0">
+                    <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="false">Conducted Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="true">pending Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-four-messages-tab" data-toggle="pill" href="#custom-tabs-four-messages" role="tab" aria-controls="custom-tabs-four-messages" aria-selected="false">Reschedule please</a>
+                    </li>
+                
+                    </ul>
+                </div>
+        <div class="card-body">
+            <div class="tab-content" id="custom-tabs-four-tabContent">
+                <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel"               aria-labelledby="custom-tabs-four-home-tab">
+             <table class="table table-bordered">
+                  <thead>
+                     <tr>
+                     <th>Name</th>
                         <th>Cource/Subcource</th>
                         <th>Email</th>
                         <th>Contact Number</th>
                         <th>Conducted Demo Date</th>
 
-
-                    </tr>
-                </thead>
-                <tbody>
+                     </tr>
+                    </thead>
+                    <tbody>
                     <?php foreach ($ConductedDemo as $Demo): ?>
                     <tr>
                         <td><?= $Demo->name ?></td>
@@ -100,24 +130,21 @@
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="container" id="imageContainer" style="display: none;">
-        <div class="row">
-            <table>
-                <h4>Pending Demo</h4>
-                <thead>
-                    <tr>
-                        <th>Name</th>
+          </table>
+                    </div>
+                    <div class="tab-pane fade " id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+                    <table class="table table-bordered">
+                      <thead>
+                      <tr>
+                      <th>Name</th>
                         <th>Course/Subcourse</th>
                         <th>Email</th>
                         <th>Contact Number</th>
                         <th>Book Demo Date</th>
                         <th>Action</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     <?php
                 // Sort the $PendingDemo array by Book_Date_Time
                 usort($PendingDemo, function ($a, $b) {
@@ -158,26 +185,22 @@
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div class="container" id="rescheduleContainer" style="display: none;">
-        <div class="row">
-        <table>
-    <h4>Reschedule Demo</h4>
-    <thead>
-        <tr>
-            <th>Name</th>
+          </table>
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
+                    <table class="table table-bordered">
+                      <thead>
+                      <tr>
+                      <th>Name</th>
             <th>Course/Subcourse</th>
             <th>Email</th>
             <th>Contact Number</th>
            
             <th>Reshedule date/Time</th>
             <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
+                    </tr>
+                    </thead>
+                    <tbody> 
         <?php
         // Sort the $resheduleDemo array by Book_Date_Time
         usort($resheduleDemo, function ($a, $b) {
@@ -210,18 +233,24 @@
                 </form>
             </tr>
         <?php endforeach; ?>
-    </tbody>
-</table>
-
-        </div>
-    </div>
-    <!-- <div class="container" id="getrescheduleContainer" style="display: none;">
-        <div class="row">
-            <table>
-
+    
+                   
             </table>
+                    </div>
+                    
+                    </div>
+                </div>
+              
+                </div>
+            </div>
+          </div>
         </div>
-    </div> -->
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+
+  </div>
+
     <script>
     document.getElementById("showVideoContainer").addEventListener("click", function() {
         document.getElementById("videoContainer").style.display = "block";

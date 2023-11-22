@@ -543,6 +543,62 @@
 
         </div>
 
+                </div>
+                <div class="modal-body">
+                    <!-- Your User Form goes here -->
+                    <form action="saveuserdata" method="post"> 
+                        <input type="hidden" name="email" id="hiddenEmail">
+                        <div class="form-group">
+                            <select class="form-control" id="course" aria-required="true" aria-invalid="false"
+                                name="course">
+                                <option value="">Book Demo for*</option>
+                                <option id="" value="Dance">Dance</option>
+                                <option id="" value="Music">Music</option>
+                                <option id="" value="Yoga">Yoga</option>
+                                <option id="" value="Instruments">Instruments</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="sub_course" aria-required="true" aria-invalid="false"
+                                name="sub_course">
+                                <option value="">select subCource*</option>
+                                <option value="Dance">Kathak</option>
+                                <option value="Music">Ouuu</option>
+                                <option value="Yoga">Yoagagag</option>
+                                <option value="Instruments">Tablea</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="age" id="age" class="form-control" aria-required="true"
+                                placeholder="Enter Your Age">
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 14px;">Are you practicing this art (any experience in this
+                                sector)?</label><br>
+                            <label style="margin-left: 100px;" for="yes">Yes</label>
+                            <input type="radio" name="experience" id="yes" value="yes" class="experience-radio">
+                            <label style="margin-left: 100px;" for="no">No</label>
+                            <input type="radio" name="experience" id="no" value="no" class="experience-radio">
+                        </div>
+                        <div class="form-group" id="experienceDetails" style="display: none;">
+                            <label for="experienceInput">Please provide details of your experience:</label>
+                            <input type="text" name="experienceInput" id="experienceInput" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 14px;">Select Class Types</label><br>
+                            <label style="margin-top: 15px;margin-left: 13px;">GroupSession</label>
+                            <input type="radio" name="SessionType" value="GroupSession" class="experience-radio">   
+                        <label style="margin-left: 100px;">OneToOneSession</label>
+                            <input type="radio" name="SessionType" value="OneToOneSession" class="experience-radio">
+                        </div>
+                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>
+                        <input type="submit" class="btn btn-light mt-3">
+                    </form>
+                    <!-- End of User Form -->
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="modal fade" id="loginformpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">

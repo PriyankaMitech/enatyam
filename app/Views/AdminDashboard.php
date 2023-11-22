@@ -465,36 +465,43 @@
                                     <th>Assign Faculty stetus</th>
                                     <th>Assign</th>
                                 </tr>
-                                <?php foreach ($admins as $admin) : ?>
-                                    <tr>
-                                        <form action="<?php echo base_url('AssignTecherToStudent'); ?>" method="POST">
-                                            <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
-                                            <td><?= $admin->full_name; ?></td>
-                                            <td><?= $admin->email; ?></td>
-                                            <td><?= $admin->course; ?></td>
-                                            <td>
-                                                <select name="faculty_name">
-                                                    <?php foreach ($Faculty as $facultyItem) : ?>
-                                                        <option value="<?= $facultyItem->id; ?>">
-                                                            <?= $facultyItem->full_name; ?>
-                                                        </option>
-                                                    <?php endforeach; ?>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <?php if ($admin->Assign_Techer_id > 0) : ?>
-                                                    AssignTeacher Successfully
-                                                <?php else : ?>
-                                                    Not AssignTeacher
-                                                <?php endif; ?>
-                                            </td>
-                                            <td>
-                                                <?php if ($admin->Assign_Techer_id <= 0) : ?>
-                                                    <button type="submit" name="assign_button" class="btn btn-warning">Assign</button>
-                                                <?php endif; ?>
-                                            </td>
-                                        </form>
-                                    </tr>
+                                <?php foreach ($admins as $admin): ?>
+                                <tr>
+                                    <form action="<?php echo base_url('AssignTecherToStudent'); ?>" method="POST">
+                                        <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
+                                        <td><?= $admin->full_name; ?></td>
+                                        <td><?= $admin->email; ?></td>
+                                        <td><?= $admin->course; ?></td>
+                                        <td>
+                                            <select name="faculty_name">
+                                            <option value="" selected>Select Faculty</option>
+                                                <?php foreach ($Faculty as $facultyItem): ?>
+                                                <option value="<?= $facultyItem->id; ?>">
+                                                    <?= $facultyItem->full_name; ?>
+                                                </option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <?php if ($admin->Assign_Techer_id > 0): ?>
+                                            AssignTeacher Successfully
+                                            <?php else: ?>
+                                            Not AssignTeacher
+                                            <?php endif; ?>
+                                        </td>
+                                        <td>
+                                            <?php if ($admin->Assign_Techer_id > 0): ?>
+                                            <!-- Show "Change Faculty" button -->
+                                            <button type="submit" name="change_faculty_button"
+                                                class="btn btn-info" style="font-size: 13px;">NewFaculty</button>
+                                            <?php else: ?>
+                                            <!-- Show "Assign" button -->
+                                            <button type="submit" name="assign_button"
+                                                class="btn btn-warning" style="font-size: 13px;">Assign</button>
+                                            <?php endif; ?>
+                                        </td>
+                                    </form>
+                                </tr>
                                 <?php endforeach; ?>
                             </table>
 

@@ -7,16 +7,10 @@
     <title>Career</title>
     <?php include(APPPATH.'Views/AdminSideBar.php');?>
     <style>
-        .row {
-            margin-left: 213px;
-            height: auto;
-            width: auto;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
 
         table,
         th,
@@ -34,19 +28,16 @@
             background-color: antiquewhite;
         }
 
-        .approve-button {
-            background-color: green;
-            width: 69px;
-        }
+    .approve-button {
+        background-color: green;
+        width: 79px
+    }
 
-        .decline-button {
-            background-color: red;
-            width: 69px;
-        }
-
-        .btn-secondary {
-            margin-left: 255px;
-        }
+    .decline-button {
+        background-color: red;
+        width: 79px
+    }
+    .btn-secondary{margin-left:255px ;}
     </style>
 </head>
 
@@ -73,35 +64,69 @@
         </ul>
 
     </nav>
-    <button type="button" class="btn btn-secondary" id="showVideoContainer">Pending Application</button>
-    <button type="button" class="btn btn-warning" id="showImageContainer">Rejected List</button>
-    <button type="button" class="btn btn-warning" id="showFaculty">create password For Faculty</button>
-    <div class="container" id="videoContainer" style="display: none;">
+    <div class="content-wrapper" style="min-height: 1172.73px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Faculty Application</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Faculty Application</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+   <section class="content">
+      <div class="container-fluid">
         <div class="row">
-            <h1><b> New Applicant List</b></h1>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th> Date</th>
-
-                        <th> Applicant Name</th>
-                        <th> Contact Number</th>
-                        <th> Email</th>
-                        <th> Course/Subcourse</th>
-
-                        <th> Resume</th>
-                        <th> Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($carrer as $faculty) : ?>
-                        <tr>
-                            <?php
-
-                            $dateTime = new DateTime($faculty->Booking_Date_Time);
-                            $date = $dateTime->format('Y-m-d');
-
-                            ?>
+          <div class="col-md-12">
+            <div class="sticky-top mb-3">
+                <div class="card card-primary card-outline card-outline-tabs">
+                <div class="card-header p-0 border-bottom-0">
+                    <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="false">Pending Application</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="true">Rejected List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-four-messages-tab" data-toggle="pill" href="#custom-tabs-four-messages" role="tab" aria-controls="custom-tabs-four-messages" aria-selected="false">Create Password</a>
+                    </li>
+                
+                    </ul>
+                </div>
+        <div class="card-body">
+            <div class="tab-content" id="custom-tabs-four-tabContent">
+                <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel"               aria-labelledby="custom-tabs-four-home-tab">
+             <table class="table table-bordered">
+                  <thead>
+                     <tr>
+                     <th> Date</th>
+                     <th> Applicant Name</th>
+                     <th> Contact Number</th>
+                     <th> Email</th>
+                     <th> Course/Subcourse</th>
+                     <th> Resume</th>
+                     <th> Action</th>
+                     </tr>
+                    </thead>
+                  <tbody>
+                       <?php foreach ($carrer as $faculty): ?>
+                 <tr>
+                        <?php
+                      
+                        $dateTime = new DateTime($faculty->Booking_Date_Time);
+                        $date = $dateTime->format('Y-m-d');
+                       
+                        ?>
 
                             <td><?= $date ?></td>
 
@@ -128,109 +153,98 @@
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="container" id="imageContainer" style="display: none;">
-
-        <div class="row">
-            <h1><b> Rejected List</b></h1>
-            <table class="table">
-                <thead>
-                    <tr>
+          </table>
+                    </div>
+                    <div class="tab-pane fade " id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+                    <table class="table table-bordered">
+                      <thead>
+                      <tr>
                         <th> Date</th>
-
                         <th> Applicant Name</th>
                         <th> Contact Number</th>
                         <th> Email</th>
                         <th> Course/Subcourse</th>
-
                         <th> Resume</th>
                         <th> Action</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($cansalList as $facult) : ?>
-                        <tr>
-                            <?php
-
-                            $dateTime = new DateTime($facult->Booking_Date_Time);
-                            $date = $dateTime->format('Y-m-d');
-
-                            ?>
-
-                            <td><?= $date ?></td>
-
-                            <td><?= $facult->name ?></td>
-                            <td><?= $facult->phone ?></td>
-                            <td><?= $facult->email ?></td>
-                            <td><?= $facult->course ?>/<?= $facult->sub_course ?></td>
-
-                            <td></td>
-                            <td>
-
-                                <form method="POST" action="AdminController/backtoApplication">
-                                    <input type="hidden" name="action" value="Pending">
-                                    <input type="hidden" name="D_id" value="<?= $facult->D_id ?>">
-                                    <button class="approve-button" type="submit">Back </button>
-                                </form>
-
-
-                            </td>
-                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($cansalList as $facult): ?>
+                    <tr>
+                        <?php                 
+                        $dateTime = new DateTime($facult->Booking_Date_Time);
+                        $date = $dateTime->format('Y-m-d');      
+                        ?>
+                        <td><?= $date ?></td>
+                        <td><?= $facult->name ?></td>
+                        <td><?= $facult->phone ?></td>
+                        <td><?= $facult->email ?></td>
+                        <td><?= $facult->course ?>/<?= $facult->sub_course ?></td>
+                        <td></td>
+                        <td>                  
+                            <form method="POST" action="AdminController/backtoApplication">
+                                <input type="hidden" name="action" value="Pending">
+                                <input type="hidden" name="D_id" value="<?= $facult->D_id ?>">
+                                <button class="approve-button" type="submit">Back </button>
+                            </form>                
+                        </td>
+                    </tr>
                     <?php endforeach; ?>
                 </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="container" id="facultyContainer" style="display: none;">
-        <div class="row">
-            <h1><b> Create password</b></h1>
-            <table class="table">
-                <thead>
-                    <tr>
+          </table>
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
+                    <table class="table table-bordered">
+                      <thead>
+                      <tr>
                         <th> Date</th>
-
-                        <th> Applicant Name</th>
-
+                        <th> Applicant Name</th>          
                         <th> Email</th>
-
-
                         <th>Enter Password</th>
                         <th> Action</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($createPassword as $Password) : ?>
-                        <tr>
-                            <?php
-
-                            $dateTime = new DateTime($Password->created_at);
-                            $date = $dateTime->format('Y-m-d');
-
-                            ?>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($createPassword as $Password): ?>
+                    <tr>
+                        <?php          
+                        $dateTime = new DateTime($Password->created_at);
+                        $date = $dateTime->format('Y-m-d');                 
+                        ?>
 
                             <td><?= $date ?></td>
 
-                            <td><?= $Password->full_name ?></td>
-
-                            <td><?= $Password->email ?></td>
-
-                            <form method="POST" action="AdminController/createpassword">
-                                <td> <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Password"></td>
-                                <td>
-
-                                    <input type="hidden" name="id" value="<?= $Password->id ?>">
-                                    <button class="btn btn-info" type="submit">update Password </button>
-
-                                </td>
-                            </form>
-                        </tr>
+                        <td><?= $Password->full_name ?></td>
+                       
+                        <td><?= $Password->email ?></td>
+                       
+                        <form method="POST" action="AdminController/createpassword">
+                        <td>  <input type="password" class="form-control" id="passwordInput" name="password"  placeholder="Password"></td>
+                        <td>
+                         
+                        <input type="hidden" name="id" value="<?= $Password->id ?>">
+                       <button class="btn btn-info" type="submit">update Password </button>
+                           
+                        </td>
+                        </form>
+                    </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+                    </div>
+                    
+                    </div>
+                </div>
+                <!-- /.card -->
+                </div>
+            </div>
+          </div>
         </div>
-    </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+
+  </div>
     <script>
         document.getElementById("showVideoContainer").addEventListener("click", function() {
             document.getElementById("videoContainer").style.display = "block";
