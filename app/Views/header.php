@@ -557,7 +557,7 @@
                 <div class="modal-body">
                     <!-- Your User Form goes here -->
                     <form action="saveuserdata" method="post">
-                    <input type="hidden" name="email" id="hiddenEmail">
+                        <input type="hidden" name="email" id="hiddenEmail">
                         <div class="form-group">
                             <select class="form-control" id="course" aria-required="true" aria-invalid="false"
                                 name="course">
@@ -594,6 +594,13 @@
                         <div class="form-group" id="experienceDetails" style="display: none;">
                             <label for="experienceInput">Please provide details of your experience:</label>
                             <input type="text" name="experienceInput" id="experienceInput" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 14px;">Select Class Types</label><br>
+                            <label style="margin-top: 15px;margin-left: 13px;">GroupSession</label>
+                            <input type="radio" name="SessionType" value="GroupSession" class="experience-radio">   
+                        <label style="margin-left: 100px;">OneToOneSession</label>
+                            <input type="radio" name="SessionType" value="OneToOneSession" class="experience-radio">
                         </div>
                         <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>
                         <input type="submit" class="btn btn-light mt-3">

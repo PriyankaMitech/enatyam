@@ -36,7 +36,7 @@ class AdminController extends BaseController
             $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
             $data['getPaymentstatus'] = $model->Paymentstatus();
             $data['getAllDemoList'] = $model->getAllDemoData();
-            return view('AdminDashboard', $data);  
+            return view('AdminDashboard', $data);    
         } else { 
             return redirect()->to(base_url());
         }
@@ -58,6 +58,7 @@ class AdminController extends BaseController
 
 public function AssignTecherToStudent()
 {
+   // print_r($_POST);die;
     $model = new AdminModel();
 
     if ($this->request->getMethod() === 'post') {
@@ -439,7 +440,7 @@ public function addStudent()
     } 
 
     }
-    public function StudentList(){
+    public function StudentListToAdmin(){
 
         $model = new AdminModel();
         $data['groupSessionStudents'] = $model->getGroupSessionStudents();

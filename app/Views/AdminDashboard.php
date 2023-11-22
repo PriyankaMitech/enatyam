@@ -481,6 +481,7 @@
                                         <td><?= $admin->course; ?></td>
                                         <td>
                                             <select name="faculty_name">
+                                            <option value="" selected>Select Faculty</option>
                                                 <?php foreach ($Faculty as $facultyItem): ?>
                                                 <option value="<?= $facultyItem->id; ?>">
                                                     <?= $facultyItem->full_name; ?>
@@ -496,9 +497,14 @@
                                             <?php endif; ?>
                                         </td>
                                         <td>
-                                            <?php if ($admin->Assign_Techer_id <= 0): ?>
+                                            <?php if ($admin->Assign_Techer_id > 0): ?>
+                                            <!-- Show "Change Faculty" button -->
+                                            <button type="submit" name="change_faculty_button"
+                                                class="btn btn-info" style="font-size: 13px;">NewFaculty</button>
+                                            <?php else: ?>
+                                            <!-- Show "Assign" button -->
                                             <button type="submit" name="assign_button"
-                                                class="btn btn-warning">Assign</button>
+                                                class="btn btn-warning" style="font-size: 13px;">Assign</button>
                                             <?php endif; ?>
                                         </td>
                                     </form>

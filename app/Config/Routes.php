@@ -80,7 +80,7 @@ $routes->get('demo', 'Home::demo');
 //routes for admin
 $routes->post('AdminController/addStudent', 'AdminController::addStudent');
 $routes->get('givestudent', 'AdminController::givestudent');
-$routes->get('StudentList', 'AdminController::StudentList');
+$routes->get('StudentListToAdmin', 'AdminController::StudentListToAdmin');
 $routes->get('Getcalender', 'AdminController::Getcalender');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
 $routes->get('today', 'AdminController::today');

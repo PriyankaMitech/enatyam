@@ -146,6 +146,7 @@ class LoginController extends BaseController
        $sub_course = $this->request->getPost('sub_course');
        $age = $this->request->getPost('age');
        $experience = $this->request->getPost('experience');
+       $SessionType = $this->request->getPost('SessionType');
        $experienceInput = $this->request->getPost('experienceInput');
        $loginModel = new LoginModel();
 
@@ -158,6 +159,7 @@ class LoginController extends BaseController
            'is_register_done'=> 'Y',
            'experience' => $experience,
            'experienceInput' => $experienceInput,
+           'SessionType' => $SessionType,
        ];
        $affectedRows = $loginModel->updateUserByEmail($email, $data);
        return redirect()->to('Home');
