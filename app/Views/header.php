@@ -401,8 +401,8 @@
             <nav class="navbar navbar-expand-lg d-none d-lg-block">
                 <div class="container">
                     <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
+                <span class="navbar-toggler-icon"></span>
+                </button> -->
                     <a href="https://infobeckon.com/enatyam/"
                         title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
                         <img src="public/images/logo1.png" alt="Enatyam">
@@ -543,11 +543,19 @@
 
         </div>
 
+    </div>
+
+    <div class="modal fade" id="userformmodal" tabindex="-1" aria-labelledby="userformmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userformmodalLabel">User Form</h5>
+
                 </div>
                 <div class="modal-body">
                     <!-- Your User Form goes here -->
-                    <form action="saveuserdata" method="post"> 
-                        <input type="hidden" name="email" id="hiddenEmail">
+                    <form action="saveuserdata" method="post">
+                    <input type="hidden" name="email" id="hiddenEmail">
                         <div class="form-group">
                             <select class="form-control" id="course" aria-required="true" aria-invalid="false"
                                 name="course">
@@ -599,7 +607,9 @@
                 </div>
             </div>
         </div>
+
     </div>
+                
 
     <div class="modal fade" id="loginformpopup" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
 
