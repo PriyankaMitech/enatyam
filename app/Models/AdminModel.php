@@ -133,7 +133,7 @@ public function getStudentAndTeacherData($studentId, $teacherId)
 
         $result = $this->db->table('schedule')
             ->select('schedule.*, faculty.faculty_name') // Select the required columns, including faculty_name
-            ->join('faculty', 'faculty.faculty_id = schedule.faculty_id') // Join the faculties table
+            ->join('faculty', 'faculty.faculty_id = schedule.faculty_register_id') // Join the faculties table
             ->where("MONTH(date) = $currentMonth") // Replace 'date_column' with the actual column name containing the date
             ->get()
             ->getResult();
