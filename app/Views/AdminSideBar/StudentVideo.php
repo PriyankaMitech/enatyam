@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+<?php include(APPPATH.'Views/AdminSideBar.php');?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video</title>
-    <?php include(APPPATH . 'views/AdminSidebar.php'); ?>
+   
     <style>
         .row {
             margin-left: 213px;
@@ -54,7 +55,8 @@
 </head>
 
 <body>
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item">

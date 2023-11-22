@@ -210,8 +210,8 @@ body {
 
 .typesOfDance-tab .nav-pills .nav-link {
   border-radius: 28px !important;
-  width: 162px !important;
-  height: 60px !important;
+  width: 162px;
+  height: 60px;
   background-color: #737373;
 }
 
@@ -220,11 +220,14 @@ body {
 .modulesec .monthtypes.active {
   background-color: #8c52ff;
 }
+.typesOfDance-tab > ul > li {
+  margin-top: 15px !important;
+}
 
 .typesOfDance-tab .nav-pills .nav-link.big {
   border-radius: 28px !important;
-  width: 312px !important;
-  height: 60px !important;
+  width: 312px;
+  height: 60px;
   background-color: #737373;
 }
 

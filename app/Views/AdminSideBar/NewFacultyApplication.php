@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career</title>
-    <?php include(APPPATH . 'views/AdminSidebar.php'); ?>
+    <?php include(APPPATH.'Views/AdminSideBar.php');?>
     <style>
     table {
         border-collapse: collapse;
