@@ -221,7 +221,7 @@
                                 </div>
                                 <div class="month-row">
                                     <div class="row ">
-                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                             <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
                                         </div>
@@ -637,7 +637,7 @@
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                             <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
                                         </div>
@@ -1043,7 +1043,7 @@
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                             <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
                                         </div>
@@ -1458,7 +1458,7 @@
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                             <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
                                         </div>
@@ -1871,7 +1871,7 @@
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                             <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
                                         </div>
@@ -2283,7 +2283,7 @@
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                             <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
                                         </div>
@@ -2695,7 +2695,7 @@
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                             <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
                                         </div>
@@ -3328,7 +3328,7 @@
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-12 text-center">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                             <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
                                         </div>

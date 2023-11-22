@@ -8,20 +8,20 @@ use CodeIgniter\Controller;
 class FacultyController extends BaseController
 {
 
- 
-    public function facultyinfo()
-    {
-        $studentId = $this->request->getVar('student_id');
-        $facultymodel = new facultymodel();
-      
-        $studentData = $facultymodel ->getStudentData($studentId);
 
-        // Pass the student data to the view
-     //   print_r($studentData);die;
-        return view('facultyinfo', ['studentData' => $studentData]);
-       
-       // return view('facultyinfo');
-    }
+  public function facultyinfo()
+  {
+    $studentId = $this->request->getVar('student_id');
+    $facultymodel = new facultymodel();
+
+    $studentData = $facultymodel->getStudentData($studentId);
+
+    // Pass the student data to the view
+    //   print_r($studentData);die;
+    return view('facultyinfo', ['studentData' => $studentData]);
+
+    // return view('facultyinfo');
+  }
 
 
     public function fetchDataByAssignTeacherId()
@@ -54,45 +54,67 @@ class FacultyController extends BaseController
     }
 
 
-    public function index()
-    {
-        return view('sendEmail');
-        
-    }
-  
+  public function index()
+  {
+    return view('sendEmail');
+  }
 
-    public function uploadVideo()
-{
+
+  public function uploadVideo()
+  {
     // Retrieve student_id and register_id from session
- //   $session = session();
-//  $data = session()->get('data');
+    //   $session = session();
+    //  $data = session()->get('data');
     $data = session();
- //   print_r($data);die;
-   $studentId = $this->request->getPost('student_id');
+    //   print_r($data);die;
+    $studentId = $this->request->getPost('student_id');
 
-  // $this->session->set($studentId);
+    // $this->session->set($studentId);
     $registerId =  $data->get('id');
-// print_r($studentId);die;
-//print_r($registerId);die;
+    // print_r($studentId);die;
+    //print_r($registerId);die;
     // Create an instance of the FacultyModel
     $facultyModel = new FacultyModel();
 
     // Retrieve the uploaded video file
-    $videoFile = $this->request->getFile('videoFile');
-    
+    // $videoFile = $this->request->getFile('videoFile');
+    // print_r($videoFile);
+    // die;
+
     // Get the client's original video file name
-    $videoFilename = $videoFile->getName();
+    // $videoFilename = $videoFile->getName();
+    // print_r($videoFilename);
+    // die;
 
     // Move the video file to the 'public/videos/' directory
-    $uploadDir = WRITEPATH . 'uploads/';
-    $videoFile->move($uploadDir, $videoFilename);
+    // $uploadDir = WRITEPATH . 'uploads/';
+
+    //changing path
+
+    $videoFile = $this->request->getFile('videoFile');
+
+    if (!$videoFile->isValid()) {
+      // return $this->fail($videoFile->getErrorString());
+    }
+
+    $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
+
+    $videoFilename = $videoFile->getName();
+    // print_r($videoFilename);
+    // die;
+
+    // print_r($uploadDir);
+    // die;
+
+    // $file->move(ROOTPATH . 'public\uploads\documents');
+    // $videoFile->move($uploadDir, $videoFilename);
 
     // Call the method to update the student's video information
     $facultyModel->updateStudentVideo($studentId, $registerId, $videoFilename);
 
     return redirect()->to('FacultyDashboard');
-  //  session_destroy();
-}
+    //  session_destroy();
+  }
 
     public function fetchvideotostudentdashboard()
     {
@@ -144,7 +166,6 @@ class FacultyController extends BaseController
         return redirect()->to(base_url());
     }
     }
-   
   }
   public function  MonthlyCalendar() {
 
@@ -167,15 +188,16 @@ class FacultyController extends BaseController
     }
     
   }
-  
-  public function selectfacultySchedule() {
-   // print_r($_POST);die;
+
+  public function selectfacultySchedule()
+  {
+    // print_r($_POST);die;
     if ($this->request->getMethod() === 'post') {
-        // Get the data from the form
-        $facultyId = $this->request->getPost('faculty_id');
-        $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
+      // Get the data from the form
+      $facultyId = $this->request->getPost('faculty_id');
+      $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
       // print_r($selectedAppointments);die;
-        $facultyModel = new FacultyModel();
+      $facultyModel = new FacultyModel();
 
         // Prepare an array of data for batch insertion
         $data = [];
@@ -191,9 +213,9 @@ class FacultyController extends BaseController
         // Insert all the data as a batch
         $facultyModel->insertAppointments($data);
 
-       return redirect()->to('MonthlyCalendar'); 
+      return redirect()->to('MonthlyCalendar');
     } else {
-        // Handle non-POST requests (optional).
+      // Handle non-POST requests (optional).
     }
 }
 public function fetchTofacultyShuduleSidebar()

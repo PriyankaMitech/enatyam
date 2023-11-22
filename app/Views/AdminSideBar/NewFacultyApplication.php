@@ -5,28 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career</title>
-    <?php include(APPPATH.'views/AdminSidebar.php');?>
+    <?php include(APPPATH . 'views/AdminSidebar.php'); ?>
     <style>
     table {
         border-collapse: collapse;
         width: 100%;
     }
 
-    table,
-    th,
-    td {
-        border: 1px solid black;
-    }
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
 
-    th,
-    td {
-        padding: 8px;
-        text-align: left;
-    }
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
 
-    thead {
-        background-color: antiquewhite;
-    }
+        thead {
+            background-color: antiquewhite;
+        }
 
     .approve-button {
         background-color: green;
@@ -49,7 +49,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url()?>today" class="nav-link">Home</a>
+                <a href="<?php echo base_url() ?>today" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
@@ -57,7 +57,7 @@
 
 
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+                <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
             </li>
 
 
@@ -128,29 +128,29 @@
                        
                         ?>
 
-                        <td><?= $date ?></td>
+                            <td><?= $date ?></td>
 
-                        <td><?= $faculty->name ?></td>
-                        <td><?= $faculty->phone ?></td>
-                        <td><?= $faculty->email ?></td>
-                        <td><?= $faculty->course ?>/<?= $faculty->sub_course ?></td>
+                            <td><?= $faculty->name ?></td>
+                            <td><?= $faculty->phone ?></td>
+                            <td><?= $faculty->email ?></td>
+                            <td><?= $faculty->course ?>/<?= $faculty->sub_course ?></td>
 
-                        <td></td>
-                        <td>
-                          
-                            <form method="POST" action="AdminController/Steusupdate">
-                                <input type="hidden" name="action" value="approve">
-                                <input type="hidden" name="D_id" value="<?= $faculty->D_id ?>">
-                                <button class="approve-button" type="submit">Approve</button>
-                            </form>
-                            <form method="POST" action="AdminController/Steusupdate">
-                                <input type="hidden" name="action" value="decline">
-                                <input type="hidden" name="D_id" value="<?= $faculty->D_id ?>">
-                                <button class="decline-button" type="submit">Decline</button>
-                            </form>
-                           
-                        </td>
-                    </tr>
+                            <td></td>
+                            <td>
+
+                                <form method="POST" action="AdminController/Steusupdate">
+                                    <input type="hidden" name="action" value="approve">
+                                    <input type="hidden" name="D_id" value="<?= $faculty->D_id ?>">
+                                    <button class="approve-button" type="submit">Approve</button>
+                                </form>
+                                <form method="POST" action="AdminController/Steusupdate">
+                                    <input type="hidden" name="action" value="decline">
+                                    <input type="hidden" name="D_id" value="<?= $faculty->D_id ?>">
+                                    <button class="decline-button" type="submit">Decline</button>
+                                </form>
+
+                            </td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
           </table>
@@ -212,7 +212,7 @@
                         $date = $dateTime->format('Y-m-d');                 
                         ?>
 
-                        <td><?= $date ?></td>
+                            <td><?= $date ?></td>
 
                         <td><?= $Password->full_name ?></td>
                        
@@ -246,24 +246,24 @@
 
   </div>
     <script>
-document.getElementById("showVideoContainer").addEventListener("click", function() {
-    document.getElementById("videoContainer").style.display = "block";
-    document.getElementById("imageContainer").style.display = "none";
-    document.getElementById("facultyContainer").style.display = "none";
-});
+        document.getElementById("showVideoContainer").addEventListener("click", function() {
+            document.getElementById("videoContainer").style.display = "block";
+            document.getElementById("imageContainer").style.display = "none";
+            document.getElementById("facultyContainer").style.display = "none";
+        });
 
-document.getElementById("showImageContainer").addEventListener("click", function() {
-    document.getElementById("imageContainer").style.display = "block";
-    document.getElementById("videoContainer").style.display = "none";
-    document.getElementById("facultyContainer").style.display = "none";
-});
+        document.getElementById("showImageContainer").addEventListener("click", function() {
+            document.getElementById("imageContainer").style.display = "block";
+            document.getElementById("videoContainer").style.display = "none";
+            document.getElementById("facultyContainer").style.display = "none";
+        });
 
-document.getElementById("showFaculty").addEventListener("click", function() {
-    document.getElementById("facultyContainer").style.display = "block";
-    document.getElementById("videoContainer").style.display = "none";
-    document.getElementById("imageContainer").style.display = "none";
-});
-</script>
+        document.getElementById("showFaculty").addEventListener("click", function() {
+            document.getElementById("facultyContainer").style.display = "block";
+            document.getElementById("videoContainer").style.display = "none";
+            document.getElementById("imageContainer").style.display = "none";
+        });
+    </script>
 </body>
 
 </html>

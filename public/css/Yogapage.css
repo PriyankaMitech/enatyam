@@ -185,7 +185,7 @@ body {
 
 .month-row .month-list .dancetypes .monthbtn,
 .typesOfYoga-tab .nav-pills .nav-link.kathak {
-  width: 109px !important;
+  width: 109px;
   height: 60px;
 }
 

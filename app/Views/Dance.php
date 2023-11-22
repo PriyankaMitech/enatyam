@@ -200,7 +200,7 @@
                                 </div>
                                 <div class="month-row">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12 col-12 text-center ">
+                                        <div class="col-lg-6 col-md-12 col-12 text-center imgmodule">
                                             <img src="public/images/Dance/kathakImg3.svg" class="danceimg danceimg5">
 
                                         </div>
@@ -2907,7 +2907,7 @@
     <section class="testimonials mft" id="testimonials">
         <div class="container">
             <div class="row">
-                <span class="text-center"> <button type="button" class="btn step mkathak">Testimonials</button></span>
+                <span class="text-center testimonialsdiv"> <button type="button" class="btn step mkathak">Testimonials</button></span>
             </div>
             <div class="month-row">
                 <div class="row">

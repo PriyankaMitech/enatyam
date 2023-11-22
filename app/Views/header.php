@@ -8,8 +8,8 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php  $session = \Config\Services::session(); ?>
-<?php   $validation = \Config\Services::validation(); ?>
+<?php $session = \Config\Services::session(); ?>
+<?php $validation = \Config\Services::validation(); ?>
 
 <head>
     <meta charset="UTF-8">
@@ -23,23 +23,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
     <?php if ($page == 'enatyam' || $page == 'Home') {
 
-        ?>
+    ?>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
 
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/faq.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/s_header.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/courseOffering.css">
+        <link rel="stylesheet" href="<?php echo base_url();
+                                        ?>public/extcss/bootstrap.min.css">
 
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/faq.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/footer.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/s_header.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/headerStyle.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/courseOffering.css">
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <!-- fontawesome icon cdn -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
         integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
@@ -80,6 +77,54 @@
         background-color: #ff0067;
         opacity: 1;
         font-size: 15px;
+
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <link rel="stylesheet" href="<?php //echo base_url(); -->
+                                            ?>public/extcss/all.min.css"> -->
+        <!-- fontawesome icon cdn -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <link rel="stylesheet" href="<?php //echo base_url(); 
+                                            ?>public/extcss/font-awesome.css"> -->
+
+        <!-- owl carousel css -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/extcss/owl.carousel.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/extcss/owl.theme.default.css">
+
+        <style>
+            .cart-a sup {
+                background: #FF0067;
+                border-radius: 50%;
+                /* padding: 5px; */
+                width: 23px;
+                height: 23px;
+                display: inline-block;
+                text-align: center;
+                line-height: 23px;
+                font-size: 11px;
+                font-weight: 600;
+            }
+
+            .btn-close-dark {
+                position: absolute;
+                right: -12px;
+                top: -14px;
+                /* background: crimson; */
+                /* opacity: 1; */
+                /* color: #fff!important; */
+                break-after: avoid;
+                border: 1px solid #000;
+                padding: 6px;
+                border-radius: 30px;
+                background-color: #ff0067;
+                opacity: 1;
+                font-size: 15px;
+
 
     }
     </style>
@@ -177,16 +222,18 @@
     </style>
 
 
-    <?php }else if ($page == 'Yoga'){ ?>
+    <?php } else if ($page == 'Yoga') { ?>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="<?=base_url(); ?>public/css/dancepage.css"> -->
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Yogapage.css">
+        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"> -->
+        <!-- <link rel="stylesheet" href="<?=base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?php echo base_url(); ?><?=base_url(); ?>public/css/Yogapage.css">
 
 
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/Dancefaq.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/commingsoon.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -227,34 +274,32 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- owl carousel css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <style>
-    .month-row .month-list .dancetypes .monthbtn {
-        width: 109px !important;
-        height: 60px;
-    }
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
 
-    body {
-        background-color: #fad32c;
-    }
+            body {
+                background-color: #fad32c;
+            }
 
-    #danceVideo {
+            #danceVideo {
 
         width: 100%;
 
         object-fit: cover;
         z-index: -100;
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
 
     }
     </style>
@@ -294,61 +339,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
         integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <?php }else if($page == 'Contactus'){ 
-            
-      
-            ?>
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
+    <?php } else if ($page == 'demo') { ?>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/demo.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/demo1.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/demoprofile.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/headerStyle.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/contactus.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css"
-        integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <?php } else if ($page == 'Checkout' || $page == 'BillingInformation') { ?>
+
+        <link rel="stylesheet" href="public/css/Checkout.css">
+
+        <link href="<?php echo base_url(); ?>public/extcss/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="<?php echo base_url(); ?>public/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+            .error {
+                color: red !important;
+            }
+        </style>
 
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-    <!-- fontawesome icon cdn -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <?php } ?>
 
 
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demo1.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/demoprofile.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Carrier.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <?php }
-                // echo $page;exit();
-        ?>
-
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/headerStyle.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/footer.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Login.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/Register.css">
-    <link rel="stylesheet" href="<?=base_url(); ?>public/css/hederresponsive.css">
-
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/footer.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/Login.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/Register.css">
     <link rel="stylesheet" href="<?=base_url(); ?>public/css/resposivestyle.css">
+
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"> -->
 
 </head>
 
@@ -467,11 +501,11 @@
             <div class="modal-dialog modal-dialog-centered">
 
                 <div class="modal-content">
-
+ 
                     <div class="modal-body">
                         <div class="register_form">
                             <h4 class="titel pt-3">Registration</h4>
-
+ 
                             <form name="registrationForm" onsubmit="return validateForm()" method="post"
                                 action="<?php echo base_url();?>register" id="registerform">
                                 <div class="form-group m-2">
@@ -509,6 +543,7 @@
                                     <span id="passwordError" style="color: red;"></span>
                                 </div>
 
+
                                 <div class="form-group m-2">
                                     <input type="password" name="confirm_pass" id="confirm_pass" class="form-control"
                                         aria-required="true" placeholder="Repeat password">
@@ -522,6 +557,13 @@
                                 </div>
 
                                 <div class="teacher">
+
+                            <div class="form-group m-2">
+                                <input type="password" name="confirm_pass" id="confirm_pass" class="form-control" aria-required="true" placeholder="Repeat password">
+                                <span id="confirmpasswordError" style="color: red;"></span>
+                            </div>
+
+                            <div class="teacher">
 
 
                                 </div>
@@ -645,6 +687,14 @@
 
                     <input type="submit" value="Login" class="btn btn-light mt-3">
                     <p>Not a member yet?
+                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                    </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+                    <input type="submit" value="Login" class="btn btn-light mt-3">
+                    <p>Not a member yet?
                         <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()"
                             data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
                     </p>
@@ -696,6 +746,17 @@
                             </div>
                         </form>
                         <!-- New Password input field (hidden initially) -->
+                        <form name="newPasswordForm" action="<?php echo base_url(); ?>newpassword" id="newPasswordForm" method="post">
+                            <div id="passwordField" style="display: none;">
+                                <div class="form-group">
+                                    <input type="password" name="new_password" id="new_password" class="form-control" aria-required="true" placeholder="Enter New Password">
+                                    <input type="password" name="conf_password" id="conf_password" class="form-control" aria-required="true" placeholder="Confirm Password">
+                                    <span id="password_match_error" style="color: red;"></span>
+                                </div>
+                                <button type="submit" class="btn btn-light mt-3">Submit New Password</button>
+                            </div>
+                        </form>
+                        <!-- New Password input field (hidden initially) -->
 
 
                         <!-- user informationform from -->
@@ -709,5 +770,9 @@
     </div>
     </div>
 
+
+<!-- model  -->
+
+    <!-- model  -->
 
     <!-- model  -->

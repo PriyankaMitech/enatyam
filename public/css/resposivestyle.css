@@ -496,7 +496,33 @@
   }
 
   .join-now-btn {
-    width: 212px;
+    width: 163px;
+    height: 73px;
+    font-size: 17px !important;
+    padding: 10px 0px;
+  }
+  .heading_new {
+    margin-top: -60px;
+  }
+  .title_4 {
+    font-size: 23px;
+    font-weight: 600;
+  }
+  .learning_Platform-section {
+    margin-top: 1rem;
+  }
+  .how_Started-section {
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+  }
+  .Alp-title {
+    font-size: 18px;
+  }
+  .counter-value {
+    font-size: 30px;
+  }
+  .Alp-number-suffix {
+    font-size: 20px;
   }
 
   .price-btn p {
@@ -556,7 +582,7 @@
     height: 87%;
   }
   .testimonials {
-    height: 430px !important;
+    height: 395px !important;
   }
   .card {
     margin-bottom: 65px;
@@ -568,7 +594,34 @@
     display: none;
   }
   .pricing-section {
-    margin-top: 9% !important;
+    margin-top: 6rem !important;
+    margin-bottom: 2rem;
+  }
+  .price-btn {
+    padding: 5px 5px;
+  }
+  .imgmodule {
+    margin-bottom: 0px !important;
+  }
+  .testimonialsdiv {
+    margin-bottom: 0px !important;
+  }
+  .mft {
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+  }
+
+  .coming-soon-ul li {
+    margin-bottom: 10px;
+  }
+  .comming-soon-p {
+    font-size: 15px;
+    color: #000 !important;
+    line-height: 23px;
+    letter-spacing: 0.29px;
+  }
+  .imlalp {
+    margin-bottom: 28px !important;
   }
   .byfd {
     width: 100%;
@@ -587,7 +640,7 @@
     font-size: 10px;
   }
   .typesOfDance-tab .nav-pills .nav-link {
-    width: 114px !important;
+    width: 100% !important;
     height: 42px !important;
   }
   .typesOfDance-tab .nav-pills .nav-link.big {
@@ -663,16 +716,21 @@
     font-size: 12px !important;
 
     line-height: 31px !important;
-    margin-bottom: 31px;
+    margin-bottom: 3rem;
   }
   .mtt {
-    margin-bottom: 8%;
+    margin-bottom: 6rem;
+  }
+  .ttm {
+    font-size: 16px !important;
+    line-height: 31px !important;
   }
   .mtfyogm {
     margin-top: 7%;
   }
-  .typesOfYoga-tab .nav-pills .nav-link {
-    width: 113px !important;
+  .month-row .month-list .dancetypes .monthbtn,
+  .typesOfYoga-tab .nav-pills .nav-link.kathak {
+    width: 100% !important;
   }
   .list-inline-item:not(:last-child) {
     margin-right: 0rem !important;
@@ -814,5 +872,42 @@
   }
   .slcs {
     padding: 0 20px 0px !important;
+  }
+  .sc_heading {
+    font-size: 23px !important;
+  }
+  .faqdance {
+    padding: 0px 0px 0px 100px;
+  }
+  .modulesec {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .month-row {
+    margin-top: 1%;
+  }
+  .accordion-item {
+    margin: 0rem 0;
+  }
+  .accordion {
+    margin: 0rem auto;
+  }
+  .faq-section {
+    margin-bottom: 3rem;
+  }
+  .learningsec .list-group .mb-4 {
+    margin-bottom: 0.5rem !important;
+  }
+  .muduleimg {
+    margin-bottom: 1rem !important;
+  }
+  .faqd img {
+    width: 100px;
+  }
+  .typesOfYoga-tab .nav-pills .nav-link {
+    width: 115px !important;
+  }
+  .banerforinstuments {
+    height: auto !important;
   }
 }

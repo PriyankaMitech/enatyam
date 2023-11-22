@@ -30,7 +30,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('Contactus', 'Home::Contactus'); 
+$routes->get('Contactus', 'Home::Contactus');
 $routes->get('RefundPolicy', 'Home::RefundPolicy');
 $routes->get('TermsAndConditions', 'Home::TermsAndConditions');
 $routes->get('Career', 'Home::Career');
@@ -46,17 +46,19 @@ $routes->get('Yoga', 'Home::Yoga');
 $routes->get('profile', 'Home::Profile');
 $routes->get('StartNowPricing', 'Home::StartNowPricing');
 $routes->get('home', 'Home::returnhome');
-$routes->get('shop', 'Home::shop');//i remove for cart issue 
-$routes->get('Checkout', 'Home::Checkout');
+$routes->get('shop', 'Home::shop'); //i remove for cart issue 
+// $routes->get('Checkout', 'Home::Checkout');
+
+$routes->get('Checkout', 'BillingC::Checkout');
 $routes->get('getLogin', 'Home::getLogin');
 $routes->get('Session', 'Home::Session');
 $routes->get('cart', 'Home::gocart');
-$routes->post('bookDemo', 'DemoController::bookDemo');//for freedemo
+$routes->post('bookDemo', 'DemoController::bookDemo'); //for freedemo
 $routes->post('BillingInformation', 'BillingC::BillingInformation');
 $routes->get('Cart', 'ProductController::showData');
-$routes->post('AddToCart', 'ProductController::AddToCart');//add to cart
-$routes->get('showData', 'ProductController::showData');//fetch data from database
-$routes->get('removeProduct/(:num)', 'ProductController::removeProduct/$1');//removev cart item
+$routes->post('AddToCart', 'ProductController::AddToCart'); //add to cart
+$routes->get('showData', 'ProductController::showData'); //fetch data from database
+$routes->get('removeProduct/(:num)', 'ProductController::removeProduct/$1'); //removev cart item
 $routes->post('sessions/store', 'SessionsController::store');
 $routes->get('AdminDashboard', 'Home::AdminDashboard');
 
@@ -114,29 +116,29 @@ $routes->post('DemoController/resheduleDemo', 'DemoController::resheduleDemo');
 $routes->get('selectfacultySchedule', 'FacultyController::MonthlyCalendar');
 $routes->get('StudentuplodedVidio', 'FacultyController::StudentuplodedVidio');
 $routes->post('FacultyController/selectfacultySchedule', 'FacultyController::selectfacultySchedule');
-   $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
-  // $routes->get('fetchstudyVideouplodeFromstudent', 'FacultyController::fetchstudyVideouplodeFromstudent');
-  $routes->get('facultyinfo', 'FacultyController::facultyinfo');
-  // $routes->get('facu', 'FacultyController::index');//email
-  $routes->get('sendEmail', 'EmailController::sendEmail');//email
-  $routes->post('send_mail','EmailController::send_mail');
+$routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
+// $routes->get('fetchstudyVideouplodeFromstudent', 'FacultyController::fetchstudyVideouplodeFromstudent');
+$routes->get('facultyinfo', 'FacultyController::facultyinfo');
+// $routes->get('facu', 'FacultyController::index');//email
+$routes->get('sendEmail', 'EmailController::sendEmail'); //email
+$routes->post('send_mail', 'EmailController::send_mail');
 $routes->post('insertProfile', 'DashboardController::insertProfile');
 
-$routes->get('logout', 'LoginController::logout'); 
-$routes->get('studentList', 'DashboardController::studentList'); 
+$routes->get('logout', 'LoginController::logout');
+$routes->get('studentList', 'DashboardController::studentList');
 
 $routes->post('uploadVideo', 'FacultyController::uploadVideo');
 
 $routes->get('fetchTofacultyShuduleSidebar', 'FacultyController::fetchTofacultyShuduleSidebar');
 //Routes for Student
- $routes->get('StudentDashboard', 'Home::StudentDashboard');
- $routes->get('profilemanagment', 'StudentController::profilemanagment');
+$routes->get('StudentDashboard', 'Home::StudentDashboard');
+$routes->get('profilemanagment', 'StudentController::profilemanagment');
 $routes->post('profilemanagment', 'StudentController::profilemanagment');
 $routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
 $routes->get('StudentSelectClassDates', 'StudentController::StudentSelectClassDates');
 // 
-$routes->get('register', 'LoginController::register');
-$routes->post('register', 'LoginController::register');
+// $routes->get('register', 'LoginController::register');
+// $routes->post('register', 'LoginController::register');
 $routes->get('login', 'LoginController::checkLoginDetails');
 $routes->post('login', 'LoginController::checkLoginDetails');
 $routes->get('my_account', 'Home::my_account');
@@ -152,8 +154,13 @@ $routes->get('uploadMedia', 'StudentController::uploadMedia');
 $routes->post('uploadMedia', 'StudentController::uploadMedia');
 //  $routes->get('StudentSideBarVideo', 'StudentController::StudentSideBarVideo');
 
- $routes->get('StudentProfile', 'StudentController::StudentProfile');
- $routes->get('UplodeVideo', 'StudentController::UplodeVideo');
+$routes->get('StudentProfile', 'StudentController::StudentProfile');
+$routes->get('UplodeVideo', 'StudentController::UplodeVideo');
+$routes->get('OrderDetails', 'BillingC::OrderDetails');
+
+// Routes for Dashboard after login
+$routes->get('Dashboard', 'DashboardController::displayDashboard');
+
 
 
 
@@ -172,5 +179,5 @@ $routes->post('uploadMedia', 'StudentController::uploadMedia');
  * needing to reload it.
  */
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
-    require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
+  require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }

@@ -13,7 +13,7 @@ class AdminController extends BaseController
     {
         return view('givestudent');
     }
-    
+
     public function today()
     {
   
@@ -56,28 +56,28 @@ class AdminController extends BaseController
     }
 
 
-public function AssignTecherToStudent()
-{
-   // print_r($_POST);die;
-    $model = new AdminModel();
+    public function AssignTecherToStudent()
+    { 
+        $model = new AdminModel();
 
-    if ($this->request->getMethod() === 'post') {
-        $postData = $this->request->getPost();
-        
-       
-        $result = $model->add($postData);
+        if ($this->request->getMethod() === 'post') {
+            $postData = $this->request->getPost();
 
-        if ($result) {
-          
-            return redirect()->to('today'); // Change 'success' to your desired URL
-        } else {
-          
-            return redirect()->to('error'); // Change 'error' to your error handling URL
+
+            $result = $model->add($postData);
+
+            if ($result) {
+
+                return redirect()->to('today'); // Change 'success' to your desired URL
+            } else {
+
+                return redirect()->to('error'); // Change 'error' to your error handling URL
+            }
         }
+        
     }
 
-  
-}
+ 
 
 public function Getcalender()
 {
@@ -99,7 +99,7 @@ public function Getcalender()
 }
 
 
-public function getAdminSideBarAll()
+    public function getAdminSideBarAll()
     {
 
         if (isset($_SESSION['sessiondata'])) {
@@ -257,99 +257,99 @@ public function getAdminSideBarAll()
         }
     }
 
-    public function Steusupdate(){
-    
-     //   print_r($_POST);die;
+    public function Steusupdate()
+    {
+
+        //   print_r($_POST);die;
         $action = $this->request->getPost('action');
-        $D_id = $this->request->getPost('D_id');  
+        $D_id = $this->request->getPost('D_id');
         if ($D_id && ($action === 'approve' || $action === 'decline')) {
-            $model = new CarrierModel();      
-          $careerRecord = $model->getcarreerByfaculty($D_id);
-   //       echo "<pre>"; print_r($careerRecord);echo "</pre>"; die();  
-         
+            $model = new CarrierModel();
+            $careerRecord = $model->getcarreerByfaculty($D_id);
+            //       echo "<pre>"; print_r($careerRecord);echo "</pre>"; die();  
+
             if ($careerRecord) {
-        
+
                 $data = [
                     'Result_of_application' => $action,
-                    'Stetus' => 'N',
+                    'Status' => 'N',
                 ];
-            //  print_r($data);die;
+                //  print_r($data);die;
                 $model->update($D_id, $data);
 
-                
+
                 if ($action === 'approve') {
-                    $model2 = new LoginModel();     
+                    $model2 = new LoginModel();
                     $model = new CarrierModel();
                     $lastUpdatedCareerData = $model->getresultofResultofapplication($D_id);
-             
+
                     if ($lastUpdatedCareerData) {
-                     
+
                         $registerData = [
                             'full_name' => $lastUpdatedCareerData['name'],
                             'email' => $lastUpdatedCareerData['email'],
                             'is_register_done' => 'Y',
                             'role' => 'Faculty',
                         ];
-                  
-                    // $model2->insertTable1Data($registerData);
 
-                    $lastInsertedData = $model2->insertTable1Data($registerData);            
-                 $lastInsertedData = [
-                            
-                            'faculty_name' =>$lastUpdatedCareerData['name'], 
-                            'email' =>$lastUpdatedCareerData['email'], 
-                            'register_id'=>$lastInsertedData['id'],
+                        // $model2->insertTable1Data($registerData);
+
+                        $lastInsertedData = $model2->insertTable1Data($registerData);
+                        $lastInsertedData = [
+
+                            'faculty_name' => $lastUpdatedCareerData['name'],
+                            'email' => $lastUpdatedCareerData['email'],
+                            'register_id' => $lastInsertedData['id'],
                         ];
 
-                    //  print_r($lastInsertedData);die; 
-                      
+                        //  print_r($lastInsertedData);die; 
+
                         $model->insertTable2Data($lastInsertedData);
                     }
                 }
-    
+
                 return redirect()->to('NewFacultyApplication');
             }
-   
-}  
-}
+        }
+    }
 
-     public function backtoApplication()  {
- // print_r($_POST);die;
- 
-     $action = $this->request->getPost('action');
-    $D_id = $this->request->getPost('D_id');  
- 
-     $model = new AdminModel();      
- 
-    $result = $model->updateCarrierData($D_id, $action);
-    return redirect()->to('NewFacultyApplication');
-}
-  public function createpassword()
-  {
-  //  print_r($_POST);die;
+    public function backtoApplication()
+    {
+        // print_r($_POST);die;
 
-    $password = $this->request->getPost('password');
-    $id = $this->request->getPost('id');  
-    $model = new AdminModel();
-    $result = $model->updatePassword( $id, $password);
-  
-    return redirect()->to('NewFacultyApplication');
+        $action = $this->request->getPost('action');
+        $D_id = $this->request->getPost('D_id');
 
-  }
-  public function ResheduleByadmin()
-  {
-    //   print_r($_POST);die;
-    $date = $this->request->getPost('Reshedule_date');
-    $time = $this->request->getPost('Reshedule_Time');
-    $result = $this->request->getPost('action');
-    $D_id = $this->request->getPost('D_id');  
-    $model = new AdminModel();
-    $result = $model->BackToprndinglistofdemo($D_id,$result, $date,$time);
+        $model = new AdminModel();
 
-    return redirect()->to('getDemoDetails');
-  }
+        $result = $model->updateCarrierData($D_id, $action);
+        return redirect()->to('NewFacultyApplication');
+    }
+    public function createpassword()
+    {
+        //  print_r($_POST);die;
 
-  public function FacultysidebarShedule()
+        $password = $this->request->getPost('password');
+        $id = $this->request->getPost('id');
+        $model = new AdminModel();
+        $result = $model->updatePassword($id, $password);
+
+        return redirect()->to('NewFacultyApplication');
+    }
+    public function ResheduleByadmin()
+    {
+        //   print_r($_POST);die;
+        $date = $this->request->getPost('Reshedule_date');
+        $time = $this->request->getPost('Reshedule_Time');
+        $result = $this->request->getPost('action');
+        $D_id = $this->request->getPost('D_id');
+        $model = new AdminModel();
+        $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time);
+
+        return redirect()->to('getDemoDetails');
+    }
+
+    public function FacultysidebarShedule()
     {
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
@@ -360,6 +360,7 @@ public function getAdminSideBarAll()
             if ($email !== null && $password !== null) {
               
                 $model = new AdminModel();
+
                 $data['FacultysheduleData'] = $model->getFacultyShedule();   
                 
                  return view('AdminSideBar/FacultysidebarShedule', $data);
@@ -371,31 +372,58 @@ public function getAdminSideBarAll()
             return redirect()->to(base_url());
         }
 
-}
-public function getdate()
-{
-    $model = new AdminModel();
-    $date = $this->request->getPost('date');
-    $tableHtml = ''; // Initialize an empty string to store the HTML table
+        $data['FacultysheduleData'] = $model->getFacultyShedule();
+        //    echo "<pre>"; print_r($data);echo "</pre>"; die();  
 
-    if ($date) {
-        $dateData = $model->getdate($date);
-        
-        if (!empty($dateData)) {
-            $tableHtml = '<div class="table-container"><table class="custom-table"><thead><tr><th>Sr.no</th><th>Date</th><th>Time</th></tr></thead><tbody>';
 
-            foreach ($dateData as $data) {
-                $tableHtml .= '<tr><td>' . $data->faculty_id . '</td><td>' . $data->date . '</td><td>' . $data->time . '</td></tr>';
+        return view('AdminSideBar/FacultysidebarShedule', $data);
+    }
+    public function getdate()
+    {
+        $model = new AdminModel();
+        $date = $this->request->getPost('date');
+        $tableHtml = ''; // Initialize an empty string to store the HTML table
+
+        if ($date) {
+            $dateData = $model->getdate($date);
+
+            if (!empty($dateData)) {
+                $tableHtml = '<div class="table-container"><table class="custom-table"><thead><tr><th>Sr.no</th><th>Date</th><th>Time</th></tr></thead><tbody>';
+
+                foreach ($dateData as $data) {
+                    $tableHtml .= '<tr><td>' . $data->faculty_id . '</td><td>' . $data->date . '</td><td>' . $data->time . '</td></tr>';
+                }
+
+                $tableHtml .= '</tbody></table></div>';
             }
-
-            $tableHtml .= '</tbody></table></div>';
+        } else {
+            $tableHtml = json_encode([]); // Return an empty JSON if there's no data
         }
-    } else {
-        $tableHtml = json_encode([]); // Return an empty JSON if there's no data
+
+        return $tableHtml;
     }
 
-    return $tableHtml;
-}
+    public function getFacultyName_StudentVideo($faculty)
+    {
+        $db = \Config\Database::connect();
+        // Assuming $faculty->Faculty_id contains the ID of the faculty member
+        $register_id = $faculty->Faculty_id;
+
+        $query = $db->table('register')
+            ->select('full_name')
+            ->where('id', $register_id)
+            ->get();
+
+        if ($query->getNumRows() > 0) {
+            $row = $query->getRow();
+            $full_name = $row->full_name;
+            print_r($full_name);
+            // Now $full_name contains the full name of the faculty member
+        } else {
+            // Handle the case where no matching record was found
+        }
+    }
+
 
 public function AdduserByadmin()
 {
