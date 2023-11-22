@@ -2132,9 +2132,14 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
                                 $('#emailError').removeClass('d-none').text('Email already exist.')
                             }else {
                                 if (response.status == '200') {
-                                    $('#otperror').addClass('d-none');    
-                                    swal.fire("Success", "Registration successfull!", "success");
-                                    window.location.href = "Home";   
+                                    // $('#otperror').addClass('d-none');    
+                                    // swal.fire("Success", "Registration successfull!", "success");
+                                    // window.location.href = "Home"; 
+                                    $('#otperror').addClass('d-none');
+                                    $('#registerformpopup').modal('hide');
+                                    $('#userformmodal').modal('show');
+                                    $('#hiddenEmail').val(response.email);
+                                    $('#yourFormId').submit();  
                                 }else {
                                     $('#otp').removeClass('d-none').after('<span id="otperror">Enter otp sent to your mobile no.</span>')
                                 }
@@ -2151,6 +2156,25 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
             }
         })
 
+        $('#backToRegister').on('click', function() {
+            // Hide the current modal
+            $('#userformmodal').modal('hide');
+
+            // Show the register modal
+            $('#registerformpopup').modal('show');
+        });
+
+        $('.experience-radio').on('change', function() {
+            if ($('#yes').is(':checked')) {
+                $('#experienceDetails').show(); // Show the input field
+            } else {
+                $('#experienceDetails').hide(); // Hide the input field
+            }
+        });
+        $('#backToRegister').on('click', function() {
+            $('#userForm')[0].reset();
+            $('#experienceDetails').hide();
+        });
     });
 </script>
 
