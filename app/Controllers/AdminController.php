@@ -234,13 +234,13 @@ public function Getcalender()
     {
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
-        
+            $model = new AdminModel();
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
     
             if ($email !== null && $password !== null) {
               
-                $model = new AdminModel();
+               
                 $allCareerData = $model->getcarreerBookByfaculty();
                 $filteredCareerData = array_filter($allCareerData, function ($careerRecord) {
                 return $careerRecord->Result_of_application === 'Pending';
