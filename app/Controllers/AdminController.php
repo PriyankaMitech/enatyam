@@ -351,6 +351,7 @@ public function Getcalender()
 
     public function FacultysidebarShedule()
     {
+        $model = new AdminModel();
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
         
@@ -359,7 +360,6 @@ public function Getcalender()
     
             if ($email !== null && $password !== null) {
               
-                $model = new AdminModel();
 
                 $data['FacultysheduleData'] = $model->getFacultyShedule();   
                 
