@@ -37,8 +37,6 @@ class LoginModel extends Model
                 echo "error while inserting in faculty table";
             }
         }
-        }
-    }
     }
 
     public function getProfile($data){
@@ -390,5 +388,4 @@ class LoginModel extends Model
         ->select('*')->where('email', $email)->update($data);
    
     }
-}
 }
