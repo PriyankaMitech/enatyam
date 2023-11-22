@@ -312,7 +312,7 @@ public function getStudentAndTeacherData($studentId, $teacherId)
     {
         return $this->db->table('carrier')
         ->select('*')
-        ->where('Status', 'N')
+        ->where('Stetus', 'N')
         ->Where('Result_of_application', 'decline')
         ->get()
         ->getResult();
