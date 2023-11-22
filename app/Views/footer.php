@@ -26,20 +26,20 @@
                     <li>
                         <a href="Instruments">Instruments</a>
                     </li>
-                
+
                     <li>
-                        <a href="<?php echo base_url('Contactus');?>"> Contact Us</a>   
+                        <a href="<?php echo base_url('Contactus'); ?>"> Contact Us</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('Carrier');?>">Career</a>
+                        <a href="<?php echo base_url('Carrier'); ?>">Career</a>
                     </li>
-                        <a href="#">Blog</a>
+                    <a href="#">Blog</a>
                     </li>
                 </ul>
             </div>
         </div>
 
-	    <div class="row">
+        <div class="row">
             <div class="col-md-12 col-12 mt-3">
                 <div class="social-div text-center">
                     <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><i class="fa fa-instagram"></i></a>
@@ -51,15 +51,15 @@
 
             <div class="col-md-12 col-12 mt-3">
                 <div class="footer-links text-center">
-                    <a href="">Pune</a>                           
+                    <a href="">Pune</a>
                     <a href="">Bangalore</a>
                     <a href="">Hyderabad</a>
                     <a href="">Chennai</a>
-                <a href="">Mumbai</a>
-                <a href="">Delhi</a>
-                <a href="">Kolkata</a>
-                <a href="">Lucknow</a>
-                <a href="">Ahmedabad</a>
+                    <a href="">Mumbai</a>
+                    <a href="">Delhi</a>
+                    <a href="">Kolkata</a>
+                    <a href="">Lucknow</a>
+                    <a href="">Ahmedabad</a>
                 </div>
             </div>
 
@@ -69,15 +69,15 @@
                     <a href="">Canada</a>
                     <a href="">UK</a>
                     <a href="">Germany</a>
-                <a href="">Singapore</a>
-                <a href="">Australia</a>
-                <a href="">New Zealand</a>
-                <a href="">India</a>
-                <a href="">Dubai</a>
+                    <a href="">Singapore</a>
+                    <a href="">Australia</a>
+                    <a href="">New Zealand</a>
+                    <a href="">India</a>
+                    <a href="">Dubai</a>
                 </div>
             </div>
 
-        </div> 
+        </div>
     </div>
     <div class="footer-row text-center ">
         <div class="copyright-p">
@@ -121,7 +121,7 @@
                 }
             }
         })
-        
+
         $(document).ready(function() {
 
             jQuery(".owl-prev").append("<i ></i>");
@@ -155,32 +155,31 @@
         });
 
         const accordionItemHeaders = document.querySelectorAll(
-        ".accordion-item-header"
+            ".accordion-item-header"
         );
 
         accordionItemHeaders.forEach((accordionItemHeader) => {
             accordionItemHeader.addEventListener("click", (event) => {
-        
+
                 const currentlyActiveAccordionItemHeader = document.querySelector(
-                ".accordion-item-header.active"
+                    ".accordion-item-header.active"
                 );
                 if (
-                currentlyActiveAccordionItemHeader &&
-                currentlyActiveAccordionItemHeader !== accordionItemHeader
+                    currentlyActiveAccordionItemHeader &&
+                    currentlyActiveAccordionItemHeader !== accordionItemHeader
                 ) {
-                currentlyActiveAccordionItemHeader.classList.toggle("active");
-                currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+                    currentlyActiveAccordionItemHeader.classList.toggle("active");
+                    currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
                 }
                 accordionItemHeader.classList.toggle("active");
                 const accordionItemBody = accordionItemHeader.nextElementSibling;
                 if (accordionItemHeader.classList.contains("active")) {
-                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+                    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
                 } else {
-                accordionItemBody.style.maxHeight = 0;
+                    accordionItemBody.style.maxHeight = 0;
                 }
             });
         });
-
     </script>
 
     <script>
@@ -202,13 +201,13 @@
             var valid = true;
 
             // Confirm password == password
-            if(password !== cpassword){
+            if (password !== cpassword) {
                 document.getElementById("confirmpasswordError").textContent = "Password does not match";
                 valid = false;
             }
 
             // Password length check
-            if(password.length <= 7){
+            if (password.length <= 7) {
                 document.getElementById("passwordError").textContent = "You have to enter at least 8 characters!";
                 valid = false;
             }
@@ -290,7 +289,7 @@
         }
     </script>
 
-<?php }else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga'){ ?>
+<?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga') { ?>
 
 
 
@@ -301,62 +300,61 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous">
     </script>
-    
+
     <script>
         $(document).ready(function() {
-        $('.carousel-item').on('mouseover', function() {
-            if ($(this).hasClass('active')) {
-            $(this).find('.semicolone').addClass('semicolone-active');
-            }
-        });
+            $('.carousel-item').on('mouseover', function() {
+                if ($(this).hasClass('active')) {
+                    $(this).find('.semicolone').addClass('semicolone-active');
+                }
+            });
 
-        $('.carousel-item').on('mouseout', function() {
-            if ($(this).hasClass('active')) {
-            $(this).find('.semicolone').removeClass('semicolone-active');
-            }
+            $('.carousel-item').on('mouseout', function() {
+                if ($(this).hasClass('active')) {
+                    $(this).find('.semicolone').removeClass('semicolone-active');
+                }
+            });
         });
-        });
-
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script>
-            $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:false,
-            dots:true,
-            autoplay:true,
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            autoplay: true,
             slideTransition: 'linear',
             autoplaySpeed: 3000,
             slideSpeed: 3000,
             paginationSpeed: 3000,
-            responsive:{
-                0:{
-                    items:1
+            responsive: {
+                0: {
+                    items: 1
                 },
-                600:{
-                    items:3
+                600: {
+                    items: 3
                 },
-                1000:{
-                items:3
+                1000: {
+                    items: 3
                 }
             }
-            })
+        })
 
-            $(document).ready(function(){
+        $(document).ready(function() {
 
-                jQuery( ".owl-prev" ).append( "<i ></i>" );
-                jQuery( ".owl-prev i" ).attr( "class" ,"fa fa-arrow-left" );
-                jQuery( ".owl-next" ).append( "<i ></i>" );
-                jQuery( ".owl-next i" ).attr( "class" ,"fa fa-arrow-right" );
-
-
-            });
-        </script>
+            jQuery(".owl-prev").append("<i ></i>");
+            jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+            jQuery(".owl-next").append("<i ></i>");
+            jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
 
 
-<?php }else if($page == 'Instruments'){ ?>
+        });
+    </script>
+
+
+<?php } else if ($page == 'Instruments') { ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
@@ -365,42 +363,42 @@
 
     <script>
         $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:false,
-        dots:true,
-        autoplay:true,
-        slideTransition: 'linear',
-        autoplaySpeed: 3000,
-        slideSpeed: 3000,
-        paginationSpeed: 3000,
-        responsive:{
-             0:{
-                 items:1
-             },
-             600:{
-                 items:3
-             },
-             1000:{
-            items:3
-             }
-         }
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            slideTransition: 'linear',
+            autoplaySpeed: 3000,
+            slideSpeed: 3000,
+            paginationSpeed: 3000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            }
         })
-        
-        $(document).ready(function(){
 
-            jQuery( ".owl-prev" ).append( "<i ></i>" );
-            jQuery( ".owl-prev i" ).attr( "class" ,"fa fa-arrow-left" );
-            jQuery( ".owl-next" ).append( "<i ></i>" );
-            jQuery( ".owl-next i" ).attr( "class" ,"fa fa-arrow-right" );
+        $(document).ready(function() {
+
+            jQuery(".owl-prev").append("<i ></i>");
+            jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+            jQuery(".owl-next").append("<i ></i>");
+            jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
 
 
         });
     </script>
 
-      
- 
-<?php }else if($page == 'instuments'){ ?>
+
+
+<?php } else if ($page == 'instuments') { ?>
     <!-- <script>
 const accordionItemHeaders = document.querySelectorAll(
     ".accordion-item-header"
@@ -434,7 +432,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
 
 
-<?php }else if($page == 'Carrier'){ ?>
+<?php } else if ($page == 'Carrier') { ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -446,9 +444,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
     <script>
-
-        function handleSubmit(collapse_val)
-        {
+        function handleSubmit(collapse_val) {
             if (collapse_val == "collapseOne") {
                 var phoneno_regx = /^\d{10}$/;
                 var name_error_msg = "Name field is required";
@@ -598,7 +594,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
                 })
             })
         })
-        
+
         var AndraPradesh = ["Anantapur", "Chittoor", "East Godavari", "Guntur", "Kadapa", "Krishna",
             "Kurnool", "Prakasam", "Nellore", "Srikakulam", "Visakhapatnam", "Vizianagaram",
             "West Godavari"
@@ -888,7 +884,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
             $("#inputDistrict").html(htmlString);
 
         });
-        
+
 
         $(function() {
             $('#course').change(function() {
@@ -899,18 +895,16 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
     </script>
 
 
-<?php }else if($page == 'demo'){ ?>
+<?php } else if ($page == 'demo') { ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
-    
-    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-        function handleSubmit(collapse_val)
-        {
+    <script>
+        function handleSubmit(collapse_val) {
             if (collapse_val == "collapseOne") {
                 var phoneno_regx = /^\d{10}$/;
                 var name_error_msg = "Name field is required";
@@ -1049,7 +1043,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
                 }
 
                 // Validate the Date & Time field
-                
+
                 var selectedDate = new Date($("#demo_class-time").val());
                 var currentDate = new Date();
 
@@ -1074,7 +1068,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
                 }
             });
         }
-        
+
         const stepButtons = document.querySelectorAll('.step-button');
         const progress = document.querySelector('#progress');
 
@@ -1093,7 +1087,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
                 })
             })
         })
-        
+
         var AndraPradesh = ["Anantapur", "Chittoor", "East Godavari", "Guntur", "Kadapa", "Krishna",
             "Kurnool", "Prakasam", "Nellore", "Srikakulam", "Visakhapatnam", "Vizianagaram",
             "West Godavari"
@@ -1383,7 +1377,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
             $("#inputDistrict").html(htmlString);
 
         });
-        
+
         $(function() {
             $('#course').change(function() {
                 $('.selectCourse').hide();
@@ -1392,41 +1386,34 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
         });
     </script>
 
-    <?php }else if($page == 'Contactus'){ ?>
+<?php } else if ($page == 'Contactus') { ?>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
 
-  
 
-    <?php }elseif($page == 'Career'){ ?>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<?php } elseif ($page == 'Career') { ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -1906,9 +1893,9 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
                 $('#' + $(this).val()).show();
             });
         });
-    </script>
+    </script>
 
-    <?php } ?>
+<?php } ?>
 
 
 
@@ -1957,14 +1944,14 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
             event.preventDefault(); // Prevent form submission
         }
     });
-    
+
     function showLostPasswordModal() {
         // Hide the login modal
         $('#loginformpopup').modal('hide');
         // Show the "Lost Password" modal
         $('#lostpasswordmodal').modal('show');
     }
-    
+
     $(document).ready(function() {
         $('#lostpasswordform').submit(function(e) {
             e.preventDefault(); // Prevent the default form submission
@@ -1995,7 +1982,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
             });
         });
     });
-    
+
     function showRegistrationModal() {
         // Hide the login modal
         $('#loginformpopup').modal('hide');
@@ -2011,7 +1998,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
         $('#loginformpopup').modal('show');
     }
 
-    
+
     function showRegistrationModal() {
         // Hide the login modal
         $('#loginformpopup').modal('hide');
@@ -2025,9 +2012,9 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
         // Show the login modal
         $('#loginformpopup').modal('show');
     }
-    
 
-    
+
+
     // JavaScript to handle time input validation
     var startTimeInput = document.getElementById("start-time");
     var endTimeInput = document.getElementById("end-time");
@@ -2063,21 +2050,21 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
     }
 </script>
 <script>
-    $(document).ready(function(){
-        $("#menu-icon").click(function(){
+    $(document).ready(function() {
+        $("#menu-icon").click(function() {
             $("#fixed-menu").addClass("fixed-menu");
             $("body").addClass("overflow-hidden");
             $("#overlay").toggle();
         });
-    
-        $(".header-closed i").click(function(){
+
+        $(".header-closed i").click(function() {
             $("#fixed-menu").removeClass("fixed-menu");
             $("body").removeClass("overflow-hidden");
             $("#overlay").toggle();
 
         });
 
-        $("#signupbtn").click(function(){
+        $("#signupbtn").click(function() {
             var formData = $('#registerform').serialize()
             var full_name = $('#full_name').val()
             var email = $('#email').val()
@@ -2086,13 +2073,13 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
             var confirm_pass = $('#confirm_pass').val()
             var valid = true
             $('#confirmpasswordError, #passwordError, #nameError, #emailError, #mobile_noError').addClass('d-none')
-            if(password !== confirm_pass){
+            if (password !== confirm_pass) {
                 $("#confirmpasswordError").removeClass('d-none').text("Password does not match")
                 valid = false
             }
 
             // Password length check
-            if(password.length <= 7){
+            if (password.length <= 7) {
                 $("#passwordError").removeClass('d-none').text("You have to enter at least 8 characters!")
                 valid = false;
             }
@@ -2117,20 +2104,20 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
                     type: "POST",
                     data: formData,
                     dataType: "JSON",
-                    success: function(response){
+                    success: function(response) {
                         console.log(response)
                         $('#mobile_noError').addClass('d-none');
                         $('#otperror').addClass('d-none');
                         if (response.status == '203') {
-                            $('#otp').removeClass('d-none').after('<span id="otperror">'+response.msg+'</span>')
-                        }else {
+                            $('#otp').removeClass('d-none').after('<span id="otperror">' + response.msg + '</span>')
+                        } else {
                             if (response.mobileexist == true) {
                                 $('#mobile_noError').addClass('d-none');
                                 $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
-                            }else if (response.emailexist == true) {
+                            } else if (response.emailexist == true) {
                                 $('#emailError').addClass('d-none');
                                 $('#emailError').removeClass('d-none').text('Email already exist.')
-                            }else {
+                            } else {
                                 if (response.status == '200') {
                                     // $('#otperror').addClass('d-none');    
                                     // swal.fire("Success", "Registration successfull!", "success");
@@ -2139,15 +2126,15 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
                                     $('#registerformpopup').modal('hide');
                                     $('#userformmodal').modal('show');
                                     $('#hiddenEmail').val(response.email);
-                                    $('#yourFormId').submit();  
-                                }else {
+                                    $('#yourFormId').submit();
+                                } else {
                                     $('#otp').removeClass('d-none').after('<span id="otperror">Enter otp sent to your mobile no.</span>')
                                 }
                             }
                         }
-                        
+
                     },
-                    error: function(response){
+                    error: function(response) {
                         console.log(response)
                         swal.fire("Warning", "Login to checkout!", "warning");
                     }
@@ -2203,11 +2190,10 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
             navbar.style.backgroundColor = 'transparent';
         }
     });
-    </script>
+</script>
 
 
-    
+
 </body>
-
 
 </html>
