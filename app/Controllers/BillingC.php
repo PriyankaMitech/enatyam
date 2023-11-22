@@ -70,8 +70,10 @@ class BillingC extends BaseController
             $billingModel = new BillingM(); // Load the model
             // $matchingRecords['SessionPricingData'] = $matchModel->getSessionPricingData($id);
             $matchingRecords = $billingModel->getSessionPricingData($id);
+            // print_r($matchingRecords);
+            // die;
 
-            $PricingId = $matchingRecords[0]->PricingType_Id;
+            $PricingId = $matchingRecords->PricingType_Id;
             $res = $this->session->set('PricingType_Id', $PricingId);
 
             // print_r($matchingRecords);
