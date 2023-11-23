@@ -240,24 +240,27 @@
                 </thead>
                 <tbody>
                     <tr class="cart_item">
-                        <td class="product-name">
-                            <?php echo $matchingRecords[0]->Name ?>
-                        </td>
-                        <td class="product-No_of_Sessions">
-                            <?php echo $matchingRecords[0]->No_of_Sessions  ?>
-                        </td>
+                        <?php if (!empty($matchingRecords)) : ?>
+                            <td class="product-name">
 
-                        <td class="product-Duration">
-                            <?php echo $matchingRecords[0]->Duration  ?>
-                        </td>
+                                <?php echo $matchingRecords->Name; ?>
 
-                        <td class="product-PerSession-Price">
-                            ₹</span><?php echo $matchingRecords[0]->Per_Session_Price  ?>
-                        </td>
+                            </td>
+                            <td class="product-No_of_Sessions">
+                                <?php echo $matchingRecords->No_of_Sessions  ?>
+                            </td>
 
-                        <td class="product-total">
-                            ₹</span><?php echo $matchingRecords[0]->Total_Price   ?>
-                        </td>
+                            <td class="product-Duration">
+                                <?php echo $matchingRecords->Duration  ?>
+                            </td>
+
+                            <td class="product-PerSession-Price">
+                                ₹</span><?php echo $matchingRecords->Per_Session_Price  ?>
+                            </td>
+
+                            <td class="product-total">
+                                ₹</span><?php echo $matchingRecords->Total_Price   ?>
+                            </td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -268,9 +271,10 @@
                     </tr>
                     <tr class="order-total">
                         <td colspan="4" style=""> <span class="woocommerce-Price-amount amount"><b>Total</b> </td>
-                        <td><b>₹<?php echo $matchingRecords[0]->Total_Price ?></b></td>
+                        <td><b>₹<?php echo $matchingRecords->Total_Price ?></b></td>
                     </tr>
 
+                <?php endif; ?>
                 </tfoot>
             </table>
 

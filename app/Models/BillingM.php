@@ -17,9 +17,16 @@ class BillingM extends Model
             ->select('*')
             ->where('PricingType_Id', $id)
             ->get()
-            ->getResult();
+            ->getRow();
 
-        $PricingType_Id = ($sessionPricingData[0]->PricingType_Id);
+
+        if (!empty($sessionPricingData)) {
+            // print_r($sessionPricingData);
+            // die;
+
+
+            $PricingType_Id = ($sessionPricingData->PricingType_Id);
+        }
         // echo $PricingType_Id;
         // die;
 

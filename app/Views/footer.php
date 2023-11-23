@@ -1894,8 +1894,118 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
             });
         });
     </script>
+<?php } else if ($page == 'Checkout') { ?>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="<?php echo base_url() ?>public/js/jquery.validate.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            // Add custom method for letters only validation
+            $.validator.addMethod("lettersOnly", function(value, element) {
+                return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
+            }, "Please enter letters only.");
+
+            // Add custom method for mobile number validation
+            $.validator.addMethod("validMobileNumber", function(value, element) {
+                return this.optional(element) || /^[0-9]{10}$/i.test(value);
+            }, "Please enter a valid 10-digit mobile number.");
+
+            // Add custom method for pin code validation
+            $.validator.addMethod("validPincode", function(value, element) {
+                return this.optional(element) || /^[0-9]{6}$/i.test(value);
+            }, "Please enter a valid 6-digit pin code.");
+
+            $.validator.addMethod("validEmail", function(value, element) {
+                // Use a regular expression for basic email validation
+                return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value);
+            }, "Please enter a valid email address.");
+
+
+
+            // Initialize form validation
+            $('#checkoutForm').validate({
+                rules: {
+                    Fname: {
+                        required: true,
+                        lettersOnly: true
+                    },
+                    Lname: {
+                        required: true,
+                        lettersOnly: true
+                    },
+                    email: {
+                        required: true,
+                        validEmail: true // Use the custom method here
+                    },
+
+                    country: {
+                        required: true
+                    },
+                    address: {
+                        required: true
+                    },
+                    city: {
+                        required: true
+                    },
+                    pincode: {
+                        required: true,
+                        validPincode: true
+                    },
+                    phone: {
+                        required: true,
+                        validMobileNumber: true
+                    }
+                },
+                messages: {
+                    Fname: {
+                        required: 'Please enter your first name.',
+                        lettersOnly: 'Please enter letters only.' // Custom error message
+                    },
+                    Lname: {
+                        required: 'Please enter your last name.',
+                        lettersOnly: 'Please enter letters only.' // Custom error message
+                    },
+
+                    country: {
+                        required: 'Please enter your Country.'
+                    },
+                    address: {
+                        required: 'Please enter your Street address.'
+                    },
+                    city: {
+                        required: 'Please enter your City.'
+                    },
+                    pincode: {
+                        required: 'Please enter your Pincode.'
+                    },
+                    phone: {
+                        required: 'Please enter your Mobile number.'
+                    },
+                    email: {
+                        required: 'Please enter your email address.',
+                        validEmail: 'Please enter a valid email address.' // Custom error message
+                    },
+
+                    pincode: {
+                        required: 'Please enter your Pincode.'
+                    },
+                    phone: {
+                        required: 'Please enter your Mobile number.'
+                    }
+
+                }
+            });
+        });
+    </script>
+
+
+
+
 
 <?php } ?>
+
 
 
 

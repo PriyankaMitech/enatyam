@@ -351,12 +351,7 @@
                                     <label>Email<sup>*</sup></label>
                                     <input type="email" name="email" placeholder="Enter Your Email " id="Email" class="form-control">
                                 </div>
-                                <div class="col-lg-12 mt-3">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Create an account?
-                                    </label>
-                                </div>
+
                             </div>
                         </div>
 
