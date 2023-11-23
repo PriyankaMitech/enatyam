@@ -80,5 +80,5 @@ public function fetchshedule($registerId)
         ->get()
         ->getResult();
 return $slots;
-}
+
 }

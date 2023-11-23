@@ -114,18 +114,24 @@
                   <p>Profile</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="<?php echo base_url()?>StudentListToAdmin" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>StudentList</p>
                 </a>
-              </li>
-              <li class="nav-item">
+              </li> -->
+              <!-- <li class="nav-item">
+                <a href="<?php echo base_url()?>StudentGroups" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>StudentGroups</p>
+                </a>
+              </li> -->
+              <!-- <li class="nav-item">
                 <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Payments</p>
                 </a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a href="" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
@@ -138,6 +144,30 @@
                   <p>Videos/Images</p>
                 </a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa fa-child"></i>
+              <p>
+                Groups
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="<?php echo base_url()?>StudentGroups" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Groups</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url()?>StudentListToAdmin" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Groups List</p>
+                </a>
+              </li>
+
             </ul>
           </li>
           <li class="nav-item">
@@ -197,7 +227,12 @@
                   <p>Student Payments</p>
                 </a>
               </li>
-
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Payments</p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
