@@ -91,12 +91,16 @@ $routes->get('StudentDate', 'AdminController::StudentDate');
 $routes->get('NewFacultyApplication', 'AdminController::NewFacultyApplication');
 $routes->get('UplodedvideoByStudent', 'AdminController::UplodedvideoByStudent');
 $routes->post('AssignTecherForDemo', 'AdminController::AssignTecherForDemo');
+$routes->post('AssignFacultyToGroup', 'AdminController::AssignFacultyToGroup');
 $routes->post('AssignTecherToStudent', 'AdminController::AssignTecherToStudent');
 $routes->post('save-event', 'AdminCalenderController::saveEvent');
 $routes->get('getDemoDetails', 'AdminController::getDemoDetails');
 $routes->get('DailyClass', 'AdminController::GetClasses');
+$routes->get('StudentGroups', 'AdminController::StudentGroups');
 $routes->get('FacultysidebarShedule', 'AdminController::FacultysidebarShedule');
 $routes->post('AdduserByadmin', 'AdminController::AdduserByadmin');
+$routes->post('SelectedForGroup', 'AdminController::SelectedForGroup');
+
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');
 
