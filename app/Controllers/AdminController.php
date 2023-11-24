@@ -16,48 +16,46 @@ class AdminController extends BaseController
 
     public function today()
     {
-  
-    if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
-    
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
 
-        if ($email !== null && $password !== null) {
-            $model = new AdminModel();
-            $data['records'] = $model->getTodayRecords();
-            $data['SessionData'] = $model->findAll();
-            $data['count'] = $model->getRowCount();
-          
-            $data['admins'] = $model->getAdmins();
-            $data['Faculty'] = $model->getFaculty();
-            $data['ConductedDemo'] = $model->getConductedDemo();         
-            $data['PendingDemo'] = $model->getPendingDemo();
-            $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
-            $data['getPaymentstatus'] = $model->Paymentstatus();
-            $data['getAllDemoList'] = $model->getAllDemoData();
-            return view('AdminDashboard', $data);    
-        } else { 
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
+
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+
+            if ($email !== null && $password !== null) {
+                $model = new AdminModel();
+                $data['records'] = $model->getTodayRecords();
+                $data['SessionData'] = $model->findAll();
+                $data['count'] = $model->getRowCount();
+
+                $data['admins'] = $model->getAdmins();
+                $data['Faculty'] = $model->getFaculty();
+                $data['ConductedDemo'] = $model->getConductedDemo();
+                $data['PendingDemo'] = $model->getPendingDemo();
+                $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
+                $data['getPaymentstatus'] = $model->Paymentstatus();
+                $data['getAllDemoList'] = $model->getAllDemoData();
+                return view('AdminDashboard', $data);
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
             return redirect()->to(base_url());
         }
-    } else {
-        return redirect()->to(base_url());
     }
-}
-  public function AssignTecherForDemo()
-  {  
-  
-         $model = new AdminModel();
-         $postData = $this->request->getPost();
-         $model->edit($postData); 
-          return redirect()->to('today');
-         
-   
+    public function AssignTecherForDemo()
+    {
+
+        $model = new AdminModel();
+        $postData = $this->request->getPost();
+        $model->edit($postData);
+        return redirect()->to('today');
     }
 
 
     public function AssignTecherToStudent()
-    { 
+    {
         $model = new AdminModel();
 
         if ($this->request->getMethod() === 'post') {
@@ -74,29 +72,28 @@ class AdminController extends BaseController
                 return redirect()->to('error'); // Change 'error' to your error handling URL
             }
         }
-        
     }
 
- 
 
-public function Getcalender()
-{
-    if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
-    
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
 
-        if ($email !== null && $password !== null) {
-          
-            return view('AdminCalender');
-        } else { 
+    public function Getcalender()
+    {
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
+
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+
+            if ($email !== null && $password !== null) {
+
+                return view('AdminCalender');
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
             return redirect()->to(base_url());
         }
-    } else {
-        return redirect()->to(base_url());
     }
-}
 
 
     public function getAdminSideBarAll()
@@ -104,58 +101,59 @@ public function Getcalender()
 
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
-        
+
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
-    
+
             if ($email !== null && $password !== null) {
-              
+
                 $model = new AdminModel();
                 $data['facultyData'] = $model->getFacultyData();
                 return view('AdminSideBar/FacultyProfile', $data);
-            } else { 
+            } else {
                 return redirect()->to(base_url());
             }
         } else {
             return redirect()->to(base_url());
         }
-       
     }
     public function StudentDate()
-    {if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
-    
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
+    {
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
 
-        if ($email !== null && $password !== null) {
-            $model = new AdminModel();
-        $data['facultyData'] = $model->getStudentData();
-      return view('AdminSideBar/StudentProfile', $data);
-        } else { 
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+
+            if ($email !== null && $password !== null) {
+                $model = new AdminModel();
+                $data['facultyData'] = $model->getStudentData();
+                return view('AdminSideBar/StudentProfile', $data);
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
             return redirect()->to(base_url());
         }
-    } else {
-        return redirect()->to(base_url());
-    }
     }
 
-    public function UplodedvideoByStudent() {
+    public function UplodedvideoByStudent()
+    {
 
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
-        
+
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
-    
+
             if ($email !== null && $password !== null) {
-              
+
                 $model = new AdminModel();
                 $data['studentVideoData'] = $model->getStudeyVideoUplodeByStudent();
                 $data['FacultyVideoData'] = $model->getStudeyVideoUplodeByFaculty();
                 // echo "<pre>"; print_r($data['FacultyVideoData']);echo "</pre>"; die();
-                return view('AdminSideBar/StudentVideo', $data);      
-            } else { 
+                return view('AdminSideBar/StudentVideo', $data);
+            } else {
                 return redirect()->to(base_url());
             }
         } else {
@@ -167,35 +165,35 @@ public function Getcalender()
     {
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
-        
+
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
-    
+
             if ($email !== null && $password !== null) {
-        $model = new AdminModel();
-  
-      $data['ConductedDemo'] = $model->getConductedDemo();
-      $data['PendingDemo'] = $model->getPendingDemoList();
-      $data['resheduleDemo'] = $model->getresheduleDemo();
-      $data['Faculty'] = $model->getFaculty();
- 
-      return view('AdminSideBar/Demo', $data);
-              }  else { 
-        return redirect()->to(base_url());
-         }
-   }   
-    else {
-           return redirect()->to(base_url());
-         }
+                $model = new AdminModel();
+
+                $data['ConductedDemo'] = $model->getConductedDemo();
+                $data['PendingDemo'] = $model->getPendingDemoList();
+                $data['resheduleDemo'] = $model->getresheduleDemo();
+                $data['Faculty'] = $model->getFaculty();
+
+                return view('AdminSideBar/Demo', $data);
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
     }
 
-    public function GetClasses() {
+    public function GetClasses()
+    {
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
-        
+
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
-    
+
             if ($email !== null && $password !== null) {
                 $model = new AdminModel();
 
@@ -203,9 +201,9 @@ public function Getcalender()
                 $data['StudentList'] = $model->getStudents();
                 $data['facultyList'] = $model->getFacultyrole();
 
-             // print_r($data['facultyList']);die;
-                return view('AdminSideBar/DailyClass',$data);
-            } else { 
+                // print_r($data['facultyList']);die;
+                return view('AdminSideBar/DailyClass', $data);
+            } else {
                 return redirect()->to(base_url());
             }
         } else {
@@ -219,17 +217,15 @@ public function Getcalender()
         $teachers = $model->getTeachersByStudent($studentId);
         return $this->response->setJSON($teachers);
     }
-  public function processSelection()
-  {
-    // print_r($_POST);die;
-    $studentId = $this->request->getPost('studentId');
-    $teacherId = $this->request->getPost('teacherId');
-    $model = new AdminModel();
-    $result = $model->getStudentAndTeacherData($studentId, $teacherId);
-    return $this->response->setJSON($result);
- 
-   
-  }
+    public function processSelection()
+    {
+        // print_r($_POST);die;
+        $studentId = $this->request->getPost('studentId');
+        $teacherId = $this->request->getPost('teacherId');
+        $model = new AdminModel();
+        $result = $model->getStudentAndTeacherData($studentId, $teacherId);
+        return $this->response->setJSON($result);
+    }
     public function NewFacultyApplication()
     {
         if (isset($_SESSION['sessiondata'])) {
@@ -237,19 +233,19 @@ public function Getcalender()
             $model = new AdminModel();
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
-    
+
             if ($email !== null && $password !== null) {
-              
-               
+
+
                 $allCareerData = $model->getcarreerBookByfaculty();
                 $filteredCareerData = array_filter($allCareerData, function ($careerRecord) {
-                return $careerRecord->Result_of_application === 'Pending';
-                 });
+                    return $careerRecord->Result_of_application === 'Pending';
+                });
                 $data['carrer'] = $filteredCareerData;
                 $data['cansalList'] = $model->getrejectedList();
-                $data['createPassword'] = $model->getNullPasswordRecords(); 
+                $data['createPassword'] = $model->getNullPasswordRecords();
                 return view('AdminSideBar/NewFacultyApplication', $data);
-            } else { 
+            } else {
                 return redirect()->to(base_url());
             }
         } else {
@@ -327,7 +323,8 @@ public function Getcalender()
     }
     public function createpassword()
     {
-        //  print_r($_POST);die;
+        // print_r($_POST);
+        // die;
 
         $password = $this->request->getPost('password');
         $id = $this->request->getPost('id');
@@ -354,18 +351,17 @@ public function Getcalender()
         $model = new AdminModel();
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
-        
+
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
-    
-            if ($email !== null && $password !== null) {
-              
 
-                $data['FacultysheduleData'] = $model->getFacultyShedule();   
-                
-                 return view('AdminSideBar/FacultysidebarShedule', $data);
-       
-            } else { 
+            if ($email !== null && $password !== null) {
+
+
+                $data['FacultysheduleData'] = $model->getFacultyShedule();
+
+                return view('AdminSideBar/FacultysidebarShedule', $data);
+            } else {
                 return redirect()->to(base_url());
             }
         } else {
@@ -425,59 +421,54 @@ public function Getcalender()
     }
 
 
-public function AdduserByadmin()
-{
-     //  print_r($_POST);die;
-    $email = $this->request->getPost('email');
-    $password = $this->request->getPost('password');
-    $mo_number = $this->request->getPost('password');
-    //  print_r($email);die;
-   $model = new AdminModel();
-   $data = [
-    'full_name' => $this->request->getVar('full_name'),
-    'email' => $email,
-    'mobile_no' =>$mo_number ,
-    'role' => 'Admin',
-    'password' => $password,
-    'confirm_pass' =>$password,
-    'is_register_done' => 'Y',
-];
-//print_r($data);die;
-    $model->AddUserByAdmin($data);
-    return redirect()->to('Getcalender');
-
-}
-public function addStudent()
-{
-  //  print_r($_POST);die;
-    $email = $this->request->getPost('email');
-    $model = new AdminModel();
-    $studentData = $model->getStudentDataByEmail($email);
-  //print_r($studentData);die;
-    if ($studentData) {
-        $insertData = [
-            'full_name' => $studentData->name, 
-            'email'     => $studentData->email, 
-            'role'      => 'Student',
-            'is_register_done' =>'Y',
-            'course'    => $studentData->course,
-           'sub_course' => $studentData->sub_course,
+    public function AdduserByadmin()
+    {
+        //  print_r($_POST);die;
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        $mo_number = $this->request->getPost('password');
+        //  print_r($email);die;
+        $model = new AdminModel();
+        $data = [
+            'full_name' => $this->request->getVar('full_name'),
+            'email' => $email,
+            'mobile_no' => $mo_number,
+            'role' => 'Admin',
+            'password' => $password,
+            'confirm_pass' => $password,
+            'is_register_done' => 'Y',
         ];
-        $model->AddStudentByAdmin($insertData);   
-        return redirect()->to('today');
-    } 
-
+        //print_r($data);die;
+        $model->AddUserByAdmin($data);
+        return redirect()->to('Getcalender');
     }
-    public function StudentListToAdmin(){
+    public function addStudent()
+    {
+        //  print_r($_POST);die;
+        $email = $this->request->getPost('email');
+        $model = new AdminModel();
+        $studentData = $model->getStudentDataByEmail($email);
+        //print_r($studentData);die;
+        if ($studentData) {
+            $insertData = [
+                'full_name' => $studentData->name,
+                'email'     => $studentData->email,
+                'role'      => 'Student',
+                'is_register_done' => 'Y',
+                'course'    => $studentData->course,
+                'sub_course' => $studentData->sub_course,
+            ];
+            $model->AddStudentByAdmin($insertData);
+            return redirect()->to('today');
+        }
+    }
+    public function StudentListToAdmin()
+    {
 
         $model = new AdminModel();
         $data['groupSessionStudents'] = $model->getGroupSessionStudents();
         $data['OneToOneSession'] = $model->getOneToOneSessionStudents();
-     //  print_r($data['OneToOneSession']);die;
-        return view('AdminSideBar/StudentList', $data);      
+        //  print_r($data['OneToOneSession']);die;
+        return view('AdminSideBar/StudentList', $data);
     }
-
-    }
-
-    
-    
+}
