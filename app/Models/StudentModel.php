@@ -66,5 +66,12 @@ class StudentModel extends Model
             ->where('id', $userId)
             ->update();
         }
+        public function changeCountry($registerId,$Country)
+        {
+            return $this->db->table('register')
+            ->set('country' , $Country,)
+            ->where('id', $registerId)
+            ->update();
+        }
 }
 

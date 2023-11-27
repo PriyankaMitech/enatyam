@@ -150,6 +150,7 @@ class LoginController extends BaseController
        $age = $this->request->getPost('age');
        $experience = $this->request->getPost('experience');
        $SessionType = $this->request->getPost('SessionType');
+       $country = $this->request->getPost('country');
        $experienceInput = $this->request->getPost('experienceInput');
        $loginModel = new LoginModel();
 
@@ -161,6 +162,7 @@ class LoginController extends BaseController
            'age' => $age,
            'is_register_done'=> 'Y',
            'Payment_status'=> 'Y',
+           'country'=> $country,
            'experience' => $experience,
            'experienceInput' => $experienceInput,
            'SessionType' => $SessionType,

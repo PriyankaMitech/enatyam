@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <?php include(APPPATH . 'views/StudentSidebar/Studentsidebar.php'); ?>
+
 </head>
 
 <body>
@@ -16,7 +17,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url()?>today" class="nav-link">Home</a>
+                <a href="<?php echo base_url()?>StudentDashboard" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
@@ -152,161 +153,42 @@
                                     </div>
                                     <!-- /.tab-pane -->
                                     <div class="tab-pane" id="timeline">
-                                        <!-- The timeline -->
-                                        <div class="timeline timeline-inverse">
-                                            <!-- timeline time label -->
-                                            <div class="time-label">
-                                                <span class="bg-danger">
-                                                    10 Feb. 2014
-                                                </span>
-                                            </div>
-                                            <!-- /.timeline-label -->
-                                            <!-- timeline item -->
-                                            <div>
-                                                <i class="fas fa-envelope bg-primary"></i>
-
-                                                <div class="timeline-item">
-                                                    <span class="time"><i class="far fa-clock"></i> 12:05</span>
-
-                                                    <h3 class="timeline-header"><a href="#">Support Team</a> sent you an
-                                                        email</h3>
-
-                                                    <div class="timeline-body">
-                                                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                                                        weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                                                        jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo
-                                                        kaboodle
-                                                        quora plaxo ideeli hulu weebly balihoo...
+                                        <?php foreach ($profileData as $country): ?>
+                                        <form action="<?= base_url('changeCountry') ?>" method="post">
+                                            <div class="timeline-item">
+                                                <div class="timeline-item-content">
+                                                    <div class="preCountry" style="margin-left: 85%;">
+                                                        <h3 class="timeline-country"><?= $country->country ?></h3>
                                                     </div>
-                                                    <div class="timeline-footer">
-                                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
-                                                        <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                                    <div class="change-country">
+                                                        <label for="changeCountry">Change Country:</label>
+                                                        <select id="changeCountry" name="changeCountry"
+                                                            class="form-control">
+                                                            <!-- Populate this dropdown with your country options -->
+                                                            <option value="USA" data-country-code="us"
+                                                                class="flag flag-us">USA</option>
+                                                            <option value="Canada" data-country-code="ca"
+                                                                class="flag flag-ca">Canada</option>
+                                                            <option value="UK" data-country-code="gb"
+                                                                class="flag flag-gb">United Kingdom</option>
+                                                            <option value="India" data-country-code="In"
+                                                                class="flag flag-gb">India</option>
+                                                            <!-- Add more countries as needed -->
+                                                        </select>
+                                                        <div class="chngec" style="margin-top: 10px;">
+                                                            <button type="submit" class="btn btn-primary">Change
+                                                                Country</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- END timeline item -->
-                                            <!-- timeline item -->
-                                            <div>
-                                                <i class="fas fa-user bg-info"></i>
-
-                                                <div class="timeline-item">
-                                                    <span class="time"><i class="far fa-clock"></i> 5 mins ago</span>
-
-                                                    <h3 class="timeline-header border-0"><a href="#">Sarah Young</a>
-                                                        accepted your friend request
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <!-- END timeline item -->
-                                            <!-- timeline item -->
-                                            <div>
-                                                <i class="fas fa-comments bg-warning"></i>
-
-                                                <div class="timeline-item">
-                                                    <span class="time"><i class="far fa-clock"></i> 27 mins ago</span>
-
-                                                    <h3 class="timeline-header"><a href="#">Jay White</a> commented on
-                                                        your post</h3>
-
-                                                    <div class="timeline-body">
-                                                        Take me to your leader!
-                                                        Switzerland is small and neutral!
-                                                        We are more like Germany, ambitious and misunderstood!
-                                                    </div>
-                                                    <div class="timeline-footer">
-                                                        <a href="#" class="btn btn-warning btn-flat btn-sm">View
-                                                            comment</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- END timeline item -->
-                                            <!-- timeline time label -->
-                                            <div class="time-label">
-                                                <span class="bg-success">
-                                                    3 Jan. 2014
-                                                </span>
-                                            </div>
-                                            <!-- /.timeline-label -->
-                                            <!-- timeline item -->
-                                            <div>
-                                                <i class="fas fa-camera bg-purple"></i>
-
-                                                <div class="timeline-item">
-                                                    <span class="time"><i class="far fa-clock"></i> 2 days ago</span>
-
-                                                    <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new
-                                                        photos</h3>
-
-                                                    <div class="timeline-body">
-                                                        <img src="https://placehold.it/150x100" alt="...">
-                                                        <img src="https://placehold.it/150x100" alt="...">
-                                                        <img src="https://placehold.it/150x100" alt="...">
-                                                        <img src="https://placehold.it/150x100" alt="...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- END timeline item -->
-                                            <div>
-                                                <i class="far fa-clock bg-gray"></i>
-                                            </div>
-                                        </div>
+                                        </form>
+                                        <?php endforeach; ?>
                                     </div>
                                     <!-- /.tab-pane -->
 
                                     <div class="tab-pane" id="settings">
-                                        <form class="form-horizontal">
-                                            <div class="form-group row">
-                                                <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-                                                <div class="col-sm-10">
-                                                    <input type="email" class="form-control" id="inputName"
-                                                        placeholder="Name">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                                                <div class="col-sm-10">
-                                                    <input type="email" class="form-control" id="inputEmail"
-                                                        placeholder="Email">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">Name</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="inputName2"
-                                                        placeholder="Name">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="inputExperience"
-                                                    class="col-sm-2 col-form-label">Experience</label>
-                                                <div class="col-sm-10">
-                                                    <textarea class="form-control" id="inputExperience"
-                                                        placeholder="Experience"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="inputSkills"
-                                                        placeholder="Skills">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <div class="offset-sm-2 col-sm-10">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> I agree to the <a href="#">terms and
-                                                                conditions</a>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <div class="offset-sm-2 col-sm-10">
-                                                    <button type="submit" class="btn btn-danger">Submit</button>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        
                                     </div>
                                     <!-- /.tab-pane -->
                                 </div>

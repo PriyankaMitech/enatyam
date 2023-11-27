@@ -2274,7 +2274,21 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
         });
     });
 </script>
+<script>
+    // Array of country names (replace this with your actual list of countries)
+    var countries = ["USA", "Canada", "UK", "Germany", "France", "Australia", "Japan","India",];
 
+    // Reference to the country dropdown
+    var countryDropdown = document.getElementById("country");
+
+    // Loop through the countries array and create options
+    for (var i = 0; i < countries.length; i++) {
+        var option = document.createElement("option");
+        option.value = countries[i];
+        option.text = countries[i];
+        countryDropdown.add(option);
+    }
+</script>
 <script>
     let prevScrollPos = window.pageYOffset;
     const navbar = document.querySelector('.tophead');
