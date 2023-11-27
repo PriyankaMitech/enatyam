@@ -12,9 +12,9 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 
-require 'src/Exception.php';
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
+require_once 'src/Exception.php';
+require_once 'src/PHPMailer.php';
+require_once 'src/SMTP.php';
 class StudentController extends BaseController
 {
 public function StudentVideouplode()
@@ -246,4 +246,43 @@ public function lostpassword()
             // Handle non-POST requests (optional).
         }
     }
+    public function StudentProfile() {
+        $result = session();       
+        $registerId = $result->get('id');
+        $StudentModel = new StudentModel();
+      $data['profileData'] =  $StudentModel->fetchProfileDate($registerId);
+   //   print_r($data['profileData']);die;
+        return view('StudentSidebar/StudentProfile',$data);
+    }
+    public function Studentpasswordupdate()
+    {
+   //    print_r($_POST);die;
+   $StudentModel = new StudentModel(); // Replace YourModel with the actual name of your model
+
+   $userEmail = $this->request->getPost('user_email');
+   $oldPassword = $this->request->getPost('old-password');
+   $newPassword = $this->request->getPost('new-password');
+   $confirmPassword = $this->request->getPost('confirm-password');
+
+   $user = $StudentModel->getStudendByEmail($userEmail);
+   $databaseOldPassword = $user->password;
+   if ($user && isset($user->password)) {
+    
+    if (is_string($oldPassword) && $oldPassword === $databaseOldPassword) {
+        // Check if $newPassword and $confirmPassword are valid strings and match
+        if (is_string($newPassword) && is_string($confirmPassword) && $newPassword == $confirmPassword) {
+            $newPassword = $newPassword;
+            $StudentModel->updatePassword($user->id, $newPassword);
+
+            echo json_encode(['success' => true, 'message' => 'Password updated successfully.']);
+        } else {
+            echo json_encode(['success' => false, 'error' => 'New password and confirm password must be valid strings and match.']);
+        }
+    } else {
+        echo json_encode(['success' => false, 'error' => 'Old password does not match.']);
+    }
+} else {
+    echo json_encode(['success' => false, 'error' => 'User not found or invalid password data.']);
+}
+}
 }
