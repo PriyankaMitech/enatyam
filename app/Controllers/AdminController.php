@@ -468,7 +468,49 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $data['groupSessionStudents'] = $model->getGroupSessionStudents();
         $data['OneToOneSession'] = $model->getOneToOneSessionStudents();
-        //  print_r($data['OneToOneSession']);die;
-        return view('AdminSideBar/StudentList', $data);
+      
+        return view('AdminSideBar/StudentList', $data);      
+    }
+            public function SelectedForGroup()
+            {
+            //  print_r($_POST);die;
+                $groupName = $this->request->getPost('groupName');
+                $selectedRowIds = $this->request->getPost('selectedRowIds');
+            if (empty($selectedRowIds)) {
+                echo 'No row IDs selected for update';
+                return;
+            }
+            if (is_array($selectedRowIds)) {
+                $selectedRowIds = implode(',', $selectedRowIds);
+            }
+            $rowIdsArray = explode(',', $selectedRowIds);
+            $model = new AdminModel();
+            $model->updateGroupName($rowIdsArray, $groupName);
+            return redirect()->to('today');
+        }
+    public function StudentGroups()
+    {
+        $model = new AdminModel();
+        $data['groups'] = $model->getAllGroupNames();
+        $data['Faculty'] = $model->getFaculty();
+        $data['records'] = [];
+        foreach ($data['groups'] as $group) {
+            $groupName = $group['groupName'];
+            $records = $model->getRecordsByGroupName($groupName);
+            $data['records'][$groupName] = $records;
+        }
+        // echo "<pre>"; print_r($data['records']); echo "</pre>";die();
+
+        return view('AdminSideBar/StudentGroup', $data);
+    }
+    public function AssignFacultyToGroup()
+    {
+       // print_r($_POST);die;
+        $groupName = $this->request->getPost('group');
+        $facultyId = $this->request->getPost('faculty');
+        $model = new AdminModel();
+        $model->updateFacultyForGroup($groupName, $facultyId);
+        return redirect()->to('StudentGroups');
+    
     }
 }

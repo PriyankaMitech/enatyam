@@ -40,6 +40,7 @@ class AdminModel extends Model
     public function getOneToOneSessionStudents()
     {
         return $this->db->table('register')->where('SessionType', 'OneToOneSession')->get()->getResult();
+
     }
     public function getConductedDemo()
     {
@@ -281,17 +282,6 @@ class AdminModel extends Model
             ->join('register', 'register.id = uplode_video_to_student.register_faculty_id')
             ->get()
             ->getResult();
-        // $VideoDetails = $this->db->table('uplode_video_to_student')
-        //     ->select('uplode_video_to_student.*, student.student_name as student_name, faculty.faculty_name as faculty_name')
-        //     ->join('student', 'student.student_id = uplode_video_to_student.student_id')
-        //     ->join('faculty', 'faculty.faculty_id = uplode_video_to_student.register_faculty_id')
-        //     ->get()
-        //     ->getResult();
-
-
-        // echo "<pre>";
-        // print_r($VideoDetails);
-        // exit();
         return  $VideoDetails;
     }
 
@@ -313,7 +303,13 @@ class AdminModel extends Model
             ->get()
             ->getResult();
     }
-
+    public function updateGroupName($rowIdsArray, $groupName)
+    {
+        return $this->db->table('register')
+        ->whereIn('id', $rowIdsArray)
+        ->set(['groupName' => $groupName])
+        ->update();
+    }
 
     public function updateCarrierData($D_id, $action)
     {
@@ -374,4 +370,32 @@ class AdminModel extends Model
 
         return $result;
     }
+
+    public function getAllGroupNames()
+    {
+       
+        return $this->db->table('register')->distinct()
+            ->select('groupName')
+            ->where('groupName IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
+            ->get()
+            ->getResultArray();
+    }
+    public function getRecordsByGroupName($groupName)
+    {
+        return $this->db->table('register')
+              ->where('groupName', $groupName)
+                    ->where('SessionType', 'GroupSession')
+                    ->get()
+                    ->getResult();
+    }
+
+    public function updateFacultyForGroup($groupName, $facultyId)
+    {
+        return $this->db->table('register')
+        ->where('groupName', $groupName)
+         ->set(['Assign_Techer_id' => $facultyId])
+        ->update();
+    }
+
+   
 }
