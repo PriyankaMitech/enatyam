@@ -138,6 +138,7 @@ $routes->get('fetchTofacultyShuduleSidebar', 'FacultyController::fetchTofacultyS
 $routes->get('StudentDashboard', 'Home::StudentDashboard');
 $routes->get('profilemanagment', 'StudentController::profilemanagment');
 $routes->post('profilemanagment', 'StudentController::profilemanagment');
+$routes->post('changeCountry', 'StudentController::changeCountry');
 $routes->post('Studentpasswordupdate', 'StudentController::Studentpasswordupdate');
 $routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
 $routes->get('StudentSelectClassDates', 'StudentController::StudentSelectClassDates');
