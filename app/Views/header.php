@@ -77,6 +77,62 @@ $page = $uri->getSegment(count($pages));
 
             }
         </style>
+
+        <script language="javascript" type="text/javascript">
+            function dynamicdropdown(listindex) {
+                document.getElementById("subcategory").length = 0;
+                switch (listindex) {
+                    case "Dance":
+                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                        document.getElementById("subcategory").options[1] = new Option("Bollywood Dance Classes", "Bollywood Dance Classes");
+                        document.getElementById("subcategory").options[2] = new Option("Bharatanatyam Dance Classes", "Bharatanatyam Dance Classes");
+                        document.getElementById("subcategory").options[3] = new Option("Kathak Dance Classes", "Kathak Dance Classes");
+                        document.getElementById("subcategory").options[4] = new Option("Odissi Dance Classes", "Odissi Dance Classes");
+                        document.getElementById("subcategory").options[5] = new Option("Western Dance Classes", "Western Dance Classes");
+                        document.getElementById("subcategory").options[6] = new Option("Semi classical Dance Classes", "Semi classical Dance Classes");
+                        document.getElementById("subcategory").options[7] = new Option("Bhangara Dance Classes", "Bhangara Dance Classes");
+                        document.getElementById("subcategory").options[8] = new Option("Folk Dance Classes", "Folk Dance Classes");
+                        break;
+
+                    case "Music":
+                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                        document.getElementById("subcategory").options[1] = new Option("Hindustani Vocal Classes", "Hindustani Vocal Classes");
+                        document.getElementById("subcategory").options[2] = new Option("Carnatic Vocal Classes", "Carnatic Vocal Classes");
+                        document.getElementById("subcategory").options[3] = new Option("Semi Classical Classes", "Semi Classical Classes");
+                        document.getElementById("subcategory").options[4] = new Option("Western Singing Classes", "Western Singing Classes");
+                        document.getElementById("subcategory").options[5] = new Option("Playback Singing Classes", "Playback Singing Classes");
+                        break;
+                    case "Yoga":
+                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                        document.getElementById("subcategory").options[1] = new Option("Prenatal Yoga Classes", "Prenatal Yoga Classes");
+                        document.getElementById("subcategory").options[2] = new Option("Stress Reduction Yoga Classes", "Stress Reduction Yoga Classes");
+                        document.getElementById("subcategory").options[3] = new Option("Flexibility Yoga Classes", "Flexibility Yoga Classes");
+                        document.getElementById("subcategory").options[4] = new Option("Weight Loss Yoga Classes", "Weight Loss Yoga Classes");
+                        document.getElementById("subcategory").options[5] = new Option("Everyday Yoga Classes", "Everyday Yoga Classes");
+                        document.getElementById("subcategory").options[6] = new Option("Yoga for chronic disease Classes", "Yoga for chronic disease Classes");
+                        document.getElementById("subcategory").options[7] = new Option("Yoga for Kids Classes", "Yoga for Kids Classes");
+                        document.getElementById("subcategory").options[8] = new Option("Meditation Classes", "Meditation Classes");
+                        document.getElementById("subcategory").options[9] = new Option("Customise your Yoga Plan Classes", "Customise your Yoga Plan Classes");
+                        document.getElementById("subcategory").options[10] = new Option("Nutrition Counselling Classes", "Nutrition Counselling Classes");
+                        break;
+                    case "Instruments":
+                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                        document.getElementById("subcategory").options[1] = new Option("Guitar Classes", "Guitar Classes");
+                        document.getElementById("subcategory").options[2] = new Option("Flute Classes", "Flute Classes");
+                        document.getElementById("subcategory").options[3] = new Option("Tabla Classes", "Tabla Classes");
+                        document.getElementById("subcategory").options[4] = new Option("Sitar Classes", "Sitar Classes");
+                        document.getElementById("subcategory").options[5] = new Option("Veena Classes", "Veena Classes");
+                        document.getElementById("subcategory").options[6] = new Option("Piano Classes", "Piano Classes");
+                        document.getElementById("subcategory").options[7] = new Option("Violin Classes", "Violin Classes");
+                        document.getElementById("subcategory").options[8] = new Option("Drum Classes", "Drum Classes");
+                        document.getElementById("subcategory").options[9] = new Option("Keyborad Classes", "Keyborad Classes");
+                        document.getElementById("subcategory").options[10] = new Option("Harmonium Classes", "Harmonium Classes");
+
+                        break;
+                }
+                return true;
+            }
+        </script>
     <?php } else if ($page == 'Dance') { ?>
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
@@ -516,7 +572,44 @@ $page = $uri->getSegment(count($pages));
                     <!-- Your User Form goes here -->
                     <form action="saveuserdata" method="post">
                         <input type="hidden" name="email" id="hiddenEmail">
-                        <div class="form-group">
+                        <!-- <div class="form-group"> -->
+                        <div class="form-group" id="category_div">Please specify Course:
+                            <select name="category" class="required-entry form-control" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                                <option value="">Select Course</option>
+                                <option value="Dance">Dance</option>
+                                <option value="Music">Music</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Instruments">Instruments</option>
+                            </select>
+                        </div>
+                        <!-- </div> -->
+                        <div class="sub_category_div form-group" id="sub_category_div">
+                            <label for="subcategory">Please select Subcourse:</label>
+
+                            <select name="subcategory" id="subcategory" class="form-control">
+                                <!-- <option value="">Please select Subcategory</option> -->
+                                <script type="text/javascript" language="JavaScript">
+                                    document.write('<select name="subcategory" id="subcategory"></select>')
+                                </script>
+
+                                <!-- Add your options here -->
+                            </select>
+                        </div>
+
+                        <!-- <div class="sub_category_div form-group" id="sub_category_div">Please select Subcategory:
+                            <script type="text/javascript" language="JavaScript">
+                                document.write('<select name="subcategory" id="subcategory"><option value="">Please select Subcategory</option></select>')
+                            </script>
+                            <noscript>
+                                <select name="subcategory" id="subcategory" class="form-control">
+                                    <option value="">Please select Subcourse</option>
+                                </select>
+                            </noscript>
+                        </div> -->
+
+
+
+                        <!-- <div class="form-group">
                             <select class="form-control" id="course" aria-required="true" aria-invalid="false" name="course">
                                 <option value="">Book Demo for*</option>
                                 <option id="" value="Dance">Dance</option>
@@ -525,8 +618,17 @@ $page = $uri->getSegment(count($pages));
                                 <option id="" value="Instruments">Instruments</option>
 
                             </select>
-                        </div>
-                        <div class="form-group">
+                            <span style="color:red;" id="coursespanid"></span> -->
+                        <!-- <select class="form-control" id="course" aria-required="true" aria-invalid="false" name="course">
+                                <option value="">Book Demo for*</option>
+                                <option id="" value="Dance">Dance</option>
+                                <option id="" value="Music">Music</option>
+                                <option id="" value="Yoga">Yoga</option>
+                                <option id="" value="Instruments">Instruments</option>
+
+                            </select> -->
+                        <!-- </div> -->
+                        <!-- <div class="form-group">
                             <select class="form-control" id="sub_course" aria-required="true" aria-invalid="false" name="sub_course">
                                 <option value="">select subCource*</option>
                                 <option value="Dance">Kathak</option>
@@ -534,8 +636,9 @@ $page = $uri->getSegment(count($pages));
                                 <option value="Yoga">Yoagagag</option>
                                 <option value="Instruments">Tablea</option>
                             </select>
-                        </div>
+                        </div> -->
                         <div class="form-group">
+                            <label> Please enter Your Age</label>
                             <input type="number" name="age" id="age" class="form-control" aria-required="true" placeholder="Enter Your Age">
                         </div>
                         <div class="form-group">

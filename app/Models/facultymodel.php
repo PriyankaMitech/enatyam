@@ -65,20 +65,11 @@ class facultymodel extends Model
     public function fetchshedule($registerId)
     {
         $slots = $this->db->table('schedule')
-            ->select('*')
-            ->where('faculty_id', $registerId)
+          ->select('*')
+            ->where('faculty_register_id', $registerId)
             ->get()
             ->getResult();
         return $slots;
-    }
-}
-public function fetchshedule($registerId)
-{
-    $slots = $this->db->table('schedule')
-      ->select('*')
-        ->where('faculty_register_id', $registerId)
-        ->get()
-        ->getResult();
-return $slots;
 
+    }
 }
