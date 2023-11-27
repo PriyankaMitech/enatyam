@@ -36,6 +36,13 @@ class StudentModel extends Model
             ->get()
             ->getRow();
         }
+
+        public function fetchProfileDate($registerId){
+            return $this->db->table($this->table1)
+            ->where('id', $registerId)
+            ->get()
+            ->getResult();
+            }
         public function insertSelectedSlotdByStudents($data)
         {
             if (!empty($data) && is_array($data)) {
@@ -45,4 +52,19 @@ class StudentModel extends Model
                 return false; // Failed to insert data
             }
         }
+
+        public function getStudendByEmail($email)
+        {
+            return $this->db->table($this->table1)->where('email', $email)->get()->getRow();
+        }
+    
+        // Function to update the password
+        public function updatePassword($userId, $newPassword)
+        {
+            return $this->db->table('register')
+            ->set(['password' => $newPassword, 'confirm_pass' => $newPassword])
+            ->where('id', $userId)
+            ->update();
+        }
 }
+

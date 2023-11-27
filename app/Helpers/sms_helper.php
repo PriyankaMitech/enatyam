@@ -1,5 +1,13 @@
 <?php
 
+use CodeIgniter\Controller;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception as PHPMailerException;;
+
+require 'src/Exception.php';
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
     function sendSMS($mobile_number, $msg)
     {
 
@@ -40,3 +48,31 @@
         curl_close($ch);
         return true;
     }
+
+    function sendConfirmationEmail($email, $msg)
+    {
+        try {
+            $mail = new PHPMailer(true);
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'siddheshkadgemitech@gmail.com';
+            $mail->Password   = 'lxnpuyvyefpbcukr';
+            $mail->SMTPSecure = 'tls';
+            $mail->Port       = 587;
+            $mail->setFrom('siddheshkadgemitech@gmail.com', 'Payment Confirmation');
+            $mail->addAddress($email, 'Recipient Name');
+            $mail->isHTML(true);
+            $mail->Subject = 'Email Verification Code';
+            $mail->Body = "Payment Confirmation <br><br> Thank you for your payment ";
+            $mail->send();
+        } catch (Exception $e) {
+            echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            return false;
+        }
+    
+       
+	
+}
+
+    

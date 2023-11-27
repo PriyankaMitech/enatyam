@@ -141,12 +141,13 @@
                                     </div>
                                 </div>
                                 <form action="<?= base_url('SelectedForGroup') ?>" method="post">
-                                <div class="form-group">
-        <label for="groupName">Group Name:</label>
-        <input type="text" class="form-control" id="groupName" name="groupName" required>
-        <!-- Display validation error for groupName if it exists -->
-        <?= isset($validation) ? $validation->getError('groupName') : ''; ?>
-    </div>
+                                    <div class="form-group">
+                                        <label for="groupName">Group Name:</label>
+                                        <input type="text" class="form-control" id="groupName" name="groupName"
+                                            required>
+                                        <!-- Display validation error for groupName if it exists -->
+                                        <?= isset($validation) ? $validation->getError('groupName') : ''; ?>
+                                    </div>
                                     <table class="table table-bordered" id="selectedRowsTable">
                                         <thead>
                                             <tr>
