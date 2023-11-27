@@ -9,6 +9,7 @@ class LoginController extends BaseController
     public function __construct()
     {
         $this->db = \Config\Database::connect();
+        $this->load->library('google'); 
     }
     public function index() {
         helper(['form']);

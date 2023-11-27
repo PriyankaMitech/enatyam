@@ -167,7 +167,7 @@ $routes->get('OrderDetails', 'BillingC::OrderDetails');
 // Routes for Dashboard after login
 $routes->get('Dashboard', 'DashboardController::displayDashboard');
 
-
+$routes->post('payment', 'PaymentController::payment');
 
 
 

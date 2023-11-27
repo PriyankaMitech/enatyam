@@ -87,6 +87,8 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="<?php echo base_url()?>public/js/custom.js"></script>
 <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard') { ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -400,34 +402,34 @@
 
 <?php } else if ($page == 'instuments') { ?>
     <!-- <script>
-const accordionItemHeaders = document.querySelectorAll(
-    ".accordion-item-header"
-);
+    const accordionItemHeaders = document.querySelectorAll(
+        ".accordion-item-header"
+    );
 
-accordionItemHeaders.forEach((accordionItemHeader) => {
-    accordionItemHeader.addEventListener("click", (event) => {
-        // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
+    accordionItemHeaders.forEach((accordionItemHeader) => {
+        accordionItemHeader.addEventListener("click", (event) => {
+            // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
 
-        const currentlyActiveAccordionItemHeader = document.querySelector(
-            ".accordion-item-header.active"
-        );
-        if (
-            currentlyActiveAccordionItemHeader &&
-            currentlyActiveAccordionItemHeader !== accordionItemHeader
-        ) {
-            currentlyActiveAccordionItemHeader.classList.toggle("active");
-            currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-        }
-        accordionItemHeader.classList.toggle("active");
-        const accordionItemBody = accordionItemHeader.nextElementSibling;
-        if (accordionItemHeader.classList.contains("active")) {
-            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-        } else {
-            accordionItemBody.style.maxHeight = 0;
-        }
+            const currentlyActiveAccordionItemHeader = document.querySelector(
+                ".accordion-item-header.active"
+            );
+            if (
+                currentlyActiveAccordionItemHeader &&
+                currentlyActiveAccordionItemHeader !== accordionItemHeader
+            ) {
+                currentlyActiveAccordionItemHeader.classList.toggle("active");
+                currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+            }
+            accordionItemHeader.classList.toggle("active");
+            const accordionItemBody = accordionItemHeader.nextElementSibling;
+            if (accordionItemHeader.classList.contains("active")) {
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+            } else {
+                accordionItemBody.style.maxHeight = 0;
+            }
+        });
     });
-});
-</script> -->
+    </script> -->
 
 
 

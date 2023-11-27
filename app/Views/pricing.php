@@ -1,5 +1,17 @@
+<?php
+$description        = "Product Description";
+$txnid              = date("YmdHis");     
+$key_id             = "rzp_live_jNHwGY4NBVWWah";
+$currency_code      = 'INR';            
+$total              = (1* 100); // 100 = 1 indian rupees
+$amount             = 1;
+$merchant_order_id  = "ABC-".date("YmdHis");
+$card_holder_name   = 'Junaid Shaikh';
+$email              = 'coexistech@gmail.com';
+$phone              = '9158876092';
+$name               = "RazorPay Infovistar";
+?>
 <section class="pricing-section " id="pricing">
-    <form action="/sessions/store" method="post">
         <div class="container ">
             <div class="row heading-div m-0">
                 <div class="col-lg-12 text-center op" id="pricing-section">
@@ -33,318 +45,325 @@
                         <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <div class="row pricing-card-section">
-                                        <div class="col-lg-4">
-                                            <div class="card text-center card-1">
-                                                <div class="price-card-head">
-                                                    <h3>Basic</h3>
-                                                    <span class="line"></span>
-                                                </div>
+                                    <form name="razorpay-form" id="razorpay-form" action="<?php echo base_url() ?>payment" method="POST">
+                                    <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id" />
+                                    <input type="hidden" name="merchant_order_id" id="merchant_order_id" value="<?php echo $merchant_order_id; ?>"/>
+                                    <input type="hidden" name="merchant_trans_id" id="merchant_trans_id" value="<?php echo $txnid; ?>"/>
+                                    <input type="hidden" name="merchant_product_info_id" id="merchant_product_info_id" value="<?php echo $description; ?>"/>
+                                    <input type="hidden" name="merchant_surl_id" id="merchant_surl_id" value="<?php //echo $surl; ?>"/>
+                                    <input type="hidden" name="merchant_furl_id" id="merchant_furl_id" value="<?php //echo $furl; ?>"/>
+                                    <input type="hidden" name="card_holder_name_id" id="card_holder_name_id" value="<?php echo $card_holder_name; ?>"/>
+                                    <input type="hidden" name="merchant_total" id="merchant_total" value="<?php echo $total; ?>"/>
+                                    <input type="hidden" name="merchant_amount" id="merchant_amount" value="<?php echo $amount; ?>"/>
+                                </form>
+                                        <div class="row pricing-card-section sd">
+                                            <div class="col-lg-4">
+                                                <div class="card text-center card-1">
+                                                    <div class="price-card-head">
+                                                        <h3>Basic</h3>
+                                                        <span class="line"></span>
+                                                    </div>
 
-                                                <div class="price-card-body">
-                                                    <h2>8 Sessions
-                                                    </h2>
-                                                    <h4>₹ 1200 per session</h4>
-                                                    <h4>Total Price: 9600 <span class="del-price"><del>10105 </del></span></h4>
+                                                    <div class="price-card-body">
+                                                        <h2>8 Sessions
+                                                        </h2>
+                                                        <h4>₹ 1200 per session</h4>
+                                                        <h4>Total Price: 9600 <span class="del-price"><del>10105 </del></span></h4>
 
-                                                    <img src="public/images/price-coupn.png" />
-                                                    <p style="color:#000;font-size:16px;margin:20px 0px">Duration : 60 Days</p>
+                                                        <img src="public/images/price-coupn.png" />
+                                                        <p style="color:#000;font-size:16px;margin:20px 0px">Duration : 60 Days</p>
 
-                                                    <ul style="padding-left:0px!important">
+                                                        <ul style="padding-left:0px!important">
 
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
 
-                                                            </span>
-                                                            <span>
-                                                                One on One Private Live Class.
+                                                                </span>
+                                                                <span>
+                                                                    One on One Private Live Class.
 
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
 
-                                                            </span>
-                                                            <span>
-                                                                Practice Video- weekly 2 Video.
+                                                                </span>
+                                                                <span>
+                                                                    Practice Video- weekly 2 Video.
 
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
 
-                                                            </span>
-                                                            <span>
-                                                                Time Slot preference.
+                                                                </span>
+                                                                <span>
+                                                                    Time Slot preference.
 
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
 
-                                                            </span>
-                                                            <span>
-                                                                Weekly -quiz.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                </span>
+                                                                <span>
+                                                                    Weekly -quiz.
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
 
-                                                            </span>
-                                                            <span>
-                                                                Learn Any 1 subject.
+                                                                </span>
+                                                                <span>
+                                                                    Learn Any 1 subject.
 
-                                                            </span>
-                                                        </li>
+                                                                </span>
+                                                            </li>
 
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
 
-                                                            </span>
-                                                            <span>
-                                                                Learn at your own Pace - customisation.
+                                                                </span>
+                                                                <span>
+                                                                    Learn at your own Pace - customisation.
 
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
 
-                                                            </span>
-                                                            <span>
-                                                                24 X 7 unlimited support for content & doubt clearing.
+                                                                </span>
+                                                                <span>
+                                                                    24 X 7 unlimited support for content & doubt clearing.
 
-                                                            </span>
-                                                        </li>
-                                                    </ul>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
 
 
-                                                    <div>
-                                                        <!-- <a class="btn shop-now-btn" href="<?php //echo base_url('Checkout'); 
-                                                                                                ?>" type="button">Book Now</a> -->
-                                                        <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
-                                                            <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
-                                                        <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
+                                                        <div>
+                                                            <?php if ((session()->get('sessiondata'))) : ?>
+                                                                <input class="btn shop-now-btn" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+                                                            <?php else : ?>
+                                                                <input class="btn shop-now-btn" onclick="razorpaySubmit(this);" type="submit" value="Book Now">
 
-                                                        <?php endif; ?>
+                                                            <?php endif; ?>
+                                                        </div>
+
                                                     </div>
 
                                                 </div>
 
                                             </div>
-
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="card text-center card-2">
-                                                <div class="price-card-head">
-                                                    <h3>Pro</h3>
-                                                    <span class="line"></span>
-                                                </div>
-
-                                                <div class="price-card-body">
-                                                    <h2>21 Sessions
-                                                    </h2>
-                                                    <h4>₹ 1090 per session</h4>
-                                                    <h4>Total Price: 22890 <span class="del-price"><del>24880 </del></span></h4>
-
-                                                    <img src="public/images/pro.png" />
-                                                    <p style="color:#fff;font-size:16px;margin:20px 0px">Duration : 120 Days</p>
-
-                                                    <ul class="" style="padding-left:0px!important">
-
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                One on One Private Live Class.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Practice Video- Unlimited.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Time Slot preference.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Weekly -quiz.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Learn as many subject as you want.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Learn at your own Pace - customisation.
-                                                            </span>
-                                                        </li>
-
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                24 X 7 unlimited support for content & doubt clearing.
-
-                                                            </span>
-                                                        </li>
-
-                                                    </ul>
-                                                    <div>
-                                                        <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
-                                                        <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Book Now</a>
-                                                        <?php endif; ?>
+                                            <div class="col-lg-4">
+                                                <div class="card text-center card-2">
+                                                    <div class="price-card-head">
+                                                        <h3>Pro</h3>
+                                                        <span class="line"></span>
                                                     </div>
+
+                                                    <div class="price-card-body">
+                                                        <h2>21 Sessions
+                                                        </h2>
+                                                        <h4>₹ 1090 per session</h4>
+                                                        <h4>Total Price: 22890 <span class="del-price"><del>24880 </del></span></h4>
+
+                                                        <img src="public/images/pro.png" />
+                                                        <p style="color:#fff;font-size:16px;margin:20px 0px">Duration : 120 Days</p>
+
+                                                        <ul class="" style="padding-left:0px!important">
+
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    One on One Private Live Class.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Practice Video- Unlimited.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Time Slot preference.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Weekly -quiz.
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Learn as many subject as you want.
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Learn at your own Pace - customisation.
+                                                                </span>
+                                                            </li>
+
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    24 X 7 unlimited support for content & doubt clearing.
+
+                                                                </span>
+                                                            </li>
+
+                                                        </ul>
+                                                        <div>
+                                                            <?php if (!(session()->get('sessiondata'))) : ?>
+                                                                <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                            <?php else : ?>
+                                                                <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Book Now</a>
+                                                            <?php endif; ?>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
 
                                             </div>
-
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="card text-center card-3">
-                                                <div class="price-card-head">
-                                                    <h3>Elite</h3>
-                                                    <span class="line"></span>
-                                                </div>
-
-                                                <div class="price-card-body">
-                                                    <h2>51 Sessions</h2>
-                                                    <h4>₹ 975 per session</h4>
-                                                    <h4>Total Price: 49725 <span class="del-price"><del>59910 </del></span></h4>
-
-                                                    <img src="public/images/Elite.png" />
-                                                    <p style="color:#000;font-size:16px;margin:20px 0px">Duration : 360 Days</p>
-
-                                                    <ul style="padding-left:0px!important">
-
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                One on One Private Live Class.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Practice Video- Unlimited.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Time Slot preference.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Weekly -quiz.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Learn as many subject as you want.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Learn at your own Pace - customisation.
-                                                            </span>
-                                                        </li>
-
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                24 X 7 unlimited support for content & doubt clearing.
-
-                                                            </span>
-                                                        </li>
-
-                                                    </ul>
-
-                                                    <div>
-                                                        <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
-                                                        <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Book Now</a>
-                                                        <?php endif; ?>
+                                            <div class="col-lg-4">
+                                                <div class="card text-center card-3">
+                                                    <div class="price-card-head">
+                                                        <h3>Elite</h3>
+                                                        <span class="line"></span>
                                                     </div>
+
+                                                    <div class="price-card-body">
+                                                        <h2>51 Sessions</h2>
+                                                        <h4>₹ 975 per session</h4>
+                                                        <h4>Total Price: 49725 <span class="del-price"><del>59910 </del></span></h4>
+
+                                                        <img src="public/images/Elite.png" />
+                                                        <p style="color:#000;font-size:16px;margin:20px 0px">Duration : 360 Days</p>
+
+                                                        <ul style="padding-left:0px!important">
+
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    One on One Private Live Class.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Practice Video- Unlimited.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Time Slot preference.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Weekly -quiz.
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Learn as many subject as you want.
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Learn at your own Pace - customisation.
+                                                                </span>
+                                                            </li>
+
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    24 X 7 unlimited support for content & doubt clearing.
+
+                                                                </span>
+                                                            </li>
+
+                                                        </ul>
+
+                                                        <div>
+                                                            <?php if (!(session()->get('sessiondata'))) : ?>
+                                                                <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                            <?php else : ?>
+                                                                <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Book Now</a>
+                                                            <?php endif; ?>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
 
                                             </div>
-
                                         </div>
-
-
-                                    </div>
+                                    </form>
                                 </div>
                                 <div class="col-lg-2">
                                     <img src="public/images/price.png" width="100%" class="opman" />
@@ -356,6 +375,7 @@
 
                             <div class="row">
                                 <div class="col-lg-10">
+                                <form name="razorpay-form" id="razorpay-form" action="<?php echo base_url() ?>payment" method="POST">
                                     <div class="row pricing-card-section">
                                         <div class="col-lg-4">
                                             <div class="card text-center card-1">
@@ -666,6 +686,7 @@
 
 
                                     </div>
+                                </form>
                                 </div>
 
                                 <div class="col-lg-2">
@@ -684,7 +705,5 @@
             </div>
         </div>
 
-
-    </form>
 
 </section>
