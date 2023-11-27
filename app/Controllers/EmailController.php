@@ -26,11 +26,11 @@ class EmailController extends BaseController
 {
 
    
-$verification_code = mt_rand(100000, 999999);
+		$verification_code = mt_rand(100000, 999999);
 
-$email = $this->request->getPost('email');
+		$email = $this->request->getPost('email');
 
-$zoomMeetingLink = 'https://zoom.us/meeting/your-meeting-id';
+		$zoomMeetingLink = 'https://zoom.us/meeting/your-meeting-id';
 
 	try {
 		// Create a new PHPMailer instance
@@ -56,8 +56,8 @@ $zoomMeetingLink = 'https://zoom.us/meeting/your-meeting-id';
 		$mail->send();
 
 		session()->setFlashdata('success', 'Email sent successfully.');
-//  echo "<pre>";print_r($verification_code);exit();
-return redirect()->to('FacultyDashboard');
+     //  echo "<pre>";print_r($verification_code);exit();
+      return redirect()->to('FacultyDashboard');
 
 	} catch (Exception $e) {
 		// echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

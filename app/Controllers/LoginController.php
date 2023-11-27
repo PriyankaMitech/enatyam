@@ -160,39 +160,22 @@ class LoginController extends BaseController
            'sub_course' => $sub_course,
            'age' => $age,
            'is_register_done'=> 'Y',
+           'Payment_status'=> 'Y',
            'experience' => $experience,
            'experienceInput' => $experienceInput,
            'SessionType' => $SessionType,
        ];
        $affectedRows = $loginModel->updateUserByEmail($email, $data);
+
+       // Check if Payment_status is 'Y'
+       if ($affectedRows > 0 && $data['Payment_status'] == 'Y') {
+           // Call the email helper method
+           sendConfirmationEmail($email, 'Payment Confirmation', 'Thank you for your payment.');
+       }
+   
        return redirect()->to('Home');
    }  
-    // public function login()
-    // {
-    //     $rules = [
-           
-    //         'email'    => 'required',
-    //         'password'  => 'required',
-           
-    //     ];
-
-    //     if($this->validate($rules)){
-    //         $data = [
-                
-    //             'email'  => $this->request->getVar('email'),
-    //             'password'  => $this->request->getVar('password'),
-                
-    //         ];
-    //         // echo "Inside iff";
-            
-    //         return redirect()->to('dashboard');
-    //     }else{
-    //         // echo "Inside else";
-    //         $data['validation'] = $this->validator;
-    //         echo view('home', $data);
-    //     }
-    // }
-
+   
     public function checkLoginDetails()
     {
          $request = \Config\Services::request();
