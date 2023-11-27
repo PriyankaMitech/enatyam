@@ -164,6 +164,14 @@
                 </a>
               </li>
 
+              <li class="nav-item">
+                <a href="<?=base_url(); ?>chat" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Chat</p>
+                </a>
+              </li>
+
+
             </ul>
           </li>
           </li>
