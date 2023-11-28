@@ -728,7 +728,7 @@ $page = $uri->getSegment(count($pages));
                     <div class="login_form">
                         <h4 class="titel pt-3" color="black">Login with your site account</h4>
 
-                        <form name="loginForm" onsubmit="return validateFormLogin()" action="#" id="loginform" method="post">
+                        <form name="loginForm" onsubmit="return validateFormLogin()" action="<?php echo base_url(); ?>login" id="loginform" method="post">
                             <div class="form-group m-2">
                                 <input type="text" name="username" id="username" class="form-control"
                                     aria-required="true" placeholder="Email or Mobile number">
@@ -746,7 +746,7 @@ $page = $uri->getSegment(count($pages));
                                     onclick="showLostPasswordModal()">Lost your password?</a>
                             </div>
 
-                            <input type="button" value="Login" class="btn btn-light mt-3">
+                            <input type="submit" value="Login" class="btn btn-light mt-3">
                             <p>Not a member yet?
                                 <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()"
                             data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
