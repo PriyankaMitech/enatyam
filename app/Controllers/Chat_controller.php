@@ -11,6 +11,9 @@ class Chat_controller extends BaseController
 {
     public function chat()
     {
-        return view('chat');
+        $db = \Config\Database::connect();
+
+        $data['db'] = $db;
+        return view('chat',$data);
     }
 }
