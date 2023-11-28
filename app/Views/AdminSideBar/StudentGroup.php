@@ -55,7 +55,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url()?>today" class="nav-link">Home</a>
+                <a href="<?php echo base_url()?>Admindashboard" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
@@ -161,7 +161,7 @@
                                                         <?php if ($record->Assign_Techer_id !== null): ?>
                                                         <!-- If Assign_Techer_id is not null, show this button -->
                                                         <button type="submit" id="facultyButton"
-                                                            class="btn btn-primary">Change Faculty</button>
+                                                            class="btn btn-primary">Change FacultyAssign Teacher</button>
                                                         <?php else: ?>
                                                         <!-- If Assign_Techer_id is null, show this button -->
                                                         <button type="submit" id="postSelectedRows"

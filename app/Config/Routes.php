@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\AdminController;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -83,9 +85,9 @@ $routes->get('demo', 'Home::demo');
 $routes->post('AdminController/addStudent', 'AdminController::addStudent');
 $routes->get('givestudent', 'AdminController::givestudent');
 $routes->get('StudentListToAdmin', 'AdminController::StudentListToAdmin');
-$routes->get('Getcalender', 'AdminController::Getcalender');
+$routes->get('AddNewUser', 'AdminController::Getcalender');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
-$routes->get('today', 'AdminController::today');
+$routes->get('Admindashboard', 'AdminController::Admindashboard');
 $routes->get('getAdminSideBarAll', 'AdminController::getAdminSideBarAll');
 $routes->get('StudentDate', 'AdminController::StudentDate');
 $routes->get('NewFacultyApplication', 'AdminController::NewFacultyApplication');
@@ -142,6 +144,7 @@ $routes->get('fetchTofacultyShuduleSidebar', 'FacultyController::fetchTofacultyS
 $routes->get('StudentDashboard', 'Home::StudentDashboard');
 $routes->get('profilemanagment', 'StudentController::profilemanagment');
 $routes->post('profilemanagment', 'StudentController::profilemanagment');
+$routes->post('changeCountry', 'StudentController::changeCountry');
 $routes->post('Studentpasswordupdate', 'StudentController::Studentpasswordupdate');
 $routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
 $routes->get('StudentSelectClassDates', 'StudentController::StudentSelectClassDates');
@@ -169,8 +172,13 @@ $routes->get('OrderDetails', 'BillingC::OrderDetails');
 
 // Routes for Dashboard after login
 $routes->get('Dashboard', 'DashboardController::displayDashboard');
+$routes->get('Attendance', 'AdminController::studentAttendance');
 
-
+$routes->post('payment', 'PaymentController::payment');
+// $routes->post('googlelogin', 'LoginController::googlelogin');
+$routes->get('googlelogin', 'LoginController::googlelogin');
+$routes->get('User_authentication', 'LoginController::index');
+$routes->get('LoginController/callback', 'LoginController::callback');
 
 
 

@@ -3,17 +3,51 @@
 namespace App\Controllers;
 
 use App\Models\LoginModel;
+use CodeIgniter\Controller;
+use League\OAuth2\Client\Provider\Google;
 
 class LoginController extends BaseController
 {
-    public function __construct()
-    {
-        $this->db = \Config\Database::connect();
-    }
+    // public function __construct()
+    // {
+    //     $this->db = \Config\Database::connect();
+    //  //   $this->load->library('google'); 
+    // }
     public function index() {
         helper(['form']);
         $data = [];
         echo view('register', $data);
+    }
+
+    public function googlelogin()
+    {
+        // Configure the OAuth2 client
+        $provider = new Google([
+            'clientId'     => '451275634997-cmtkbhpah3rebm2sdbvqeiuq18rcavfg',
+            'clientSecret' => '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',
+            'redirectUri'  => base_url('LoginController/callback'),
+        ]);
+        $authorizationUrl = $provider->getAuthorizationUrl();
+
+        // echo '<pre>';print_r($provider);die;
+        return redirect()->to($authorizationUrl);
+    }
+
+    public function callback()
+    {
+        $provider = new Google([
+            'clientId'     => '451275634997-cmtkbhpah3rebm2sdbvqeiuq18rcavfg',
+            'clientSecret' => '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',
+            'redirectUri'  => base_url('LoginController/callback'),
+        ]);
+        
+        $token = $provider->getAccessToken('authorization_code', [
+            'code' => $this->request->getGet('code'),
+        ]);
+
+        $user = $provider->getResourceOwner($token);
+
+        return redirect()->to('Dance');
     }
 
     public function register()
@@ -143,13 +177,14 @@ class LoginController extends BaseController
     public function saveuserdata()
    { 
    
-    //   print_r($_POST);die;
+        //   print_r($_POST);die;
        $email = $this->request->getPost('email');
        $course = $this->request->getPost('course');
        $sub_course = $this->request->getPost('sub_course');
        $age = $this->request->getPost('age');
        $experience = $this->request->getPost('experience');
        $SessionType = $this->request->getPost('SessionType');
+       $country = $this->request->getPost('country');
        $experienceInput = $this->request->getPost('experienceInput');
        $loginModel = new LoginModel();
 
@@ -161,6 +196,7 @@ class LoginController extends BaseController
            'age' => $age,
            'is_register_done'=> 'Y',
            'Payment_status'=> 'Y',
+           'country'=> $country,
            'experience' => $experience,
            'experienceInput' => $experienceInput,
            'SessionType' => $SessionType,
@@ -194,7 +230,7 @@ class LoginController extends BaseController
         if (!empty($result)) {
             switch ($result['role']) {
                 case 'Admin':
-                    return redirect()->to('today');
+                    return redirect()->to('Admindashboard');
                 case 'Faculty':
                     $this->session->set($result);
                     return redirect()->to('FacultyDashboard');

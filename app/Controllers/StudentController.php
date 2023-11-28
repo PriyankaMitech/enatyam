@@ -257,32 +257,42 @@ public function lostpassword()
     public function Studentpasswordupdate()
     {
    //    print_r($_POST);die;
-   $StudentModel = new StudentModel(); // Replace YourModel with the actual name of your model
+            $StudentModel = new StudentModel(); // Replace YourModel with the actual name of your model
 
-   $userEmail = $this->request->getPost('user_email');
-   $oldPassword = $this->request->getPost('old-password');
-   $newPassword = $this->request->getPost('new-password');
-   $confirmPassword = $this->request->getPost('confirm-password');
+            $userEmail = $this->request->getPost('user_email');
+            $oldPassword = $this->request->getPost('old-password');
+            $newPassword = $this->request->getPost('new-password');
+            $confirmPassword = $this->request->getPost('confirm-password');
 
-   $user = $StudentModel->getStudendByEmail($userEmail);
-   $databaseOldPassword = $user->password;
-   if ($user && isset($user->password)) {
-    
+            $user = $StudentModel->getStudendByEmail($userEmail);
+            $databaseOldPassword = $user->password;
+            if ($user && isset($user->password)) {
+                
     if (is_string($oldPassword) && $oldPassword === $databaseOldPassword) {
         // Check if $newPassword and $confirmPassword are valid strings and match
         if (is_string($newPassword) && is_string($confirmPassword) && $newPassword == $confirmPassword) {
             $newPassword = $newPassword;
             $StudentModel->updatePassword($user->id, $newPassword);
 
-            echo json_encode(['success' => true, 'message' => 'Password updated successfully.']);
+                echo json_encode(['success' => true, 'message' => 'Password updated successfully.']);
+            } else {
+                echo json_encode(['success' => false, 'error' => 'New password and confirm password must be valid strings and match.']);
+            }
         } else {
-            echo json_encode(['success' => false, 'error' => 'New password and confirm password must be valid strings and match.']);
+            echo json_encode(['success' => false, 'error' => 'Old password does not match.']);
         }
     } else {
-        echo json_encode(['success' => false, 'error' => 'Old password does not match.']);
+        echo json_encode(['success' => false, 'error' => 'User not found or invalid password data.']);
     }
-} else {
-    echo json_encode(['success' => false, 'error' => 'User not found or invalid password data.']);
 }
-}
+        public function changeCountry()
+        {
+    
+           $Country = $this->request->getPost('changeCountry');
+            $result = session();       
+            $registerId = $result->get('id');
+            $StudentModel = new StudentModel();
+            $Changecountry =  $StudentModel->changeCountry($registerId,$Country);
+            return redirect()->to('StudentProfile'); 
+        }
 }

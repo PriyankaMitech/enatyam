@@ -38,7 +38,7 @@ require 'src/SMTP.php';
         ));
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        // $output = curl_exec($ch);
+        $output = curl_exec($ch);
         
         if (curl_errno($ch)) {
            return false;
