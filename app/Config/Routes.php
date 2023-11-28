@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\AdminController;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -166,6 +168,7 @@ $routes->get('OrderDetails', 'BillingC::OrderDetails');
 
 // Routes for Dashboard after login
 $routes->get('Dashboard', 'DashboardController::displayDashboard');
+$routes->get('Attendance', 'AdminController::studentAttendance');
 
 $routes->post('payment', 'PaymentController::payment');
 // $routes->post('googlelogin', 'LoginController::googlelogin');

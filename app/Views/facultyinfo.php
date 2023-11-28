@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <?php include(APPPATH . 'Navbar.php'); ?>
-    <?php include(APPPATH.'FacultySidebar2.php');?>
+    <?php include('Navbar.php'); ?>
+    <?php include('FacultySidebar2.php'); ?>
     <div class="container" style="margin-left: 265px;">
         <div class="row">
             <div class="col-12 col-sm-6">
@@ -23,19 +23,13 @@
                                     aria-selected="true"> Profile</a>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill"
-                                    href="#custom-tabs-two-profile" role="tab" aria-controls="custom-tabs-two-profile"
-                                    aria-selected="false">Upload Video</a>
+                                <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill" href="#custom-tabs-two-profile" role="tab" aria-controls="custom-tabs-two-profile" aria-selected="false">Upload Video</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill"
-                                    href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages"
-                                    aria-selected="false">Messages</a>
+                                <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages" aria-selected="false">Messages</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill"
-                                    href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings"
-                                    aria-selected="false">Settings</a>
+                                <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings" aria-selected="false">Settings</a>
                             </li>
                         </ul>
                     </div>
@@ -75,10 +69,8 @@
 
 
 
-                            <div class="tab-pane fade" id="custom-tabs-two-profile" role="tabpanel"
-                                aria-labelledby="custom-tabs-two-profile-tab">
-                                <form action="<?= site_url('uploadVideo'); ?>" method="post"
-                                    enctype="multipart/form-data">
+                            <div class="tab-pane fade" id="custom-tabs-two-profile" role="tabpanel" aria-labelledby="custom-tabs-two-profile-tab">
+                                <form action="<?= site_url('uploadVideo'); ?>" method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="student_id" value="<?= $studentData['student_id']; ?>">
                                     <div class="form-group">
                                         <label for="videoFile">Upload Video:</label>
@@ -87,12 +79,10 @@
                                     <button type="submit" class="btn btn-primary">Upload</button>
                                 </form>
                             </div>
-                            <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel"
-                                aria-labelledby="custom-tabs-two-messages-tab">
-                               
+                            <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel" aria-labelledby="custom-tabs-two-messages-tab">
+
                             </div>
-                            <div class="tab-pane fade" id="custom-tabs-two-settings" role="tabpanel"
-                                aria-labelledby="custom-tabs-two-settings-tab">
+                            <div class="tab-pane fade" id="custom-tabs-two-settings" role="tabpanel" aria-labelledby="custom-tabs-two-settings-tab">
                                 Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus
                                 turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis
                                 vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum
@@ -106,7 +96,7 @@
                 </div>
             </div>
         </div>
-        <a href="<?php echo base_url()?>FacultyDashboard" class="btn btn-primary mb-3">Back to Faculty Page</a>
+        <a href="<?php echo base_url() ?>FacultyDashboard" class="btn btn-primary mb-3">Back to Faculty Page</a>
 
     </div>
 </body>

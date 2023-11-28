@@ -115,13 +115,13 @@
                 </a>
               </li>
               <!-- <li class="nav-item">
-                <a href="<?php echo base_url()?>StudentListToAdmin" class="nav-link">
+                <a href="<?php echo base_url() ?>StudentListToAdmin" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>StudentList</p>
                 </a>
               </li> -->
               <!-- <li class="nav-item">
-                <a href="<?php echo base_url()?>StudentGroups" class="nav-link">
+                <a href="<?php echo base_url() ?>StudentGroups" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>StudentGroups</p>
                 </a>
@@ -133,7 +133,7 @@
                 </a>
               </li> -->
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url() ?>Attendance" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p>Attendance</p>
                 </a>
@@ -155,14 +155,14 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-            <li class="nav-item">
-                <a href="<?php echo base_url()?>StudentGroups" class="nav-link">
+              <li class="nav-item">
+                <a href="<?php echo base_url() ?>StudentGroups" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Groups List</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url()?>StudentListToAdmin" class="nav-link">
+                <a href="<?php echo base_url() ?>StudentListToAdmin" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Create Groups</p>
                 </a>
@@ -192,7 +192,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="<?php echo base_url() ?>Attendance" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p>Attendance</p>
                 </a>

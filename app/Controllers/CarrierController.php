@@ -32,12 +32,18 @@ class CarrierController extends BaseController
     public function carrier_h()
     {
         $carrierModel = new CarrierModel();
+        // print_r($_POST);
+        // die;
 
         if ($this->request->getMethod() === 'post') {
+            // print_r($_FILES);
+            // die;
             // Handle file uploads
-            $cvFile = $this->request->getFile('Cv');
-            $educationCertificatesFile = $this->request->getFile('EducationCertificates');
-            $courseCertificatesFile = $this->request->getFile('courseCertificates');
+            $cvFile = $this->request->getFile('cvFile');
+            $educationCertificatesFile = $this->request->getFile('educaionCertificateFile');
+            $courseCertificatesFile = $this->request->getFile('courseCertificateFile');
+            // print_r($cvFile);
+            // die;
 
             // Check if the files were uploaded and are valid
             if ($cvFile && $cvFile->isValid() && $educationCertificatesFile && $educationCertificatesFile->isValid() && $courseCertificatesFile && $courseCertificatesFile->isValid()) {
@@ -45,6 +51,8 @@ class CarrierController extends BaseController
                 $uploadPath = FCPATH . 'public/uploads/cv';
                 $uploadPath1 = FCPATH . 'public/uploads/educationCertificates';
                 $uploadPath2 = FCPATH . 'public/uploads/courseCertificates';
+                // print_r($uploadPath);
+                // die;
 
                 // Get the original file names
                 $cvFileName = $cvFile->getName();
@@ -72,7 +80,8 @@ class CarrierController extends BaseController
                     'education_certificates_filename' => $educationCertificatesFileName,
                     'course_certificates_filename' => $courseCertificatesFileName,
                 ];
-                //print_r($data);die;
+                // print_r($data);
+                // die;
                 $carrierModel->save($data);
                 return redirect()->to('Home');
             }

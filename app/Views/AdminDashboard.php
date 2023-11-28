@@ -92,7 +92,9 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <?php include('AdminSideBar.php');?>
+
+    <?php include('AdminSideBar.php'); ?>
+
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -107,18 +109,13 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
+
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
                 </li>
 
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+                    <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
                 </li>
 
             </ul>
@@ -295,20 +292,18 @@
                                     <div class="col-lg-12">
                                         <table id="coundd_demo-payment-table" class="table" style="display:none">
 
-                                            <?php foreach ($ConductedDemo as $faculty): ?>
-                                            <tr>
-                                                <form action="<?= base_url('AdminController/addStudent'); ?>"
-                                                    method="post">
-                                                    <td><?= $faculty->name; ?></td>
-                                                    <td><?= $faculty->email; ?></td>
-                                                    <td>
-                                                        <input type="hidden" name="email"
-                                                            value="<?= $faculty->email; ?>">
-                                                        <button class="btn btn-primary" type="submit">Add
-                                                            Student</button>
-                                                    </td>
-                                                </form>
-                                            </tr>
+                                            <?php foreach ($ConductedDemo as $faculty) : ?>
+                                                <tr>
+                                                    <form action="<?= base_url('AdminController/addStudent'); ?>" method="post">
+                                                        <td><?= $faculty->name; ?></td>
+                                                        <td><?= $faculty->email; ?></td>
+                                                        <td>
+                                                            <input type="hidden" name="email" value="<?= $faculty->email; ?>">
+                                                            <button class="btn btn-primary" type="submit">Add
+                                                                Student</button>
+                                                        </td>
+                                                    </form>
+                                                </tr>
                                             <?php endforeach; ?>
 
 
@@ -503,6 +498,7 @@
                                     <th>Assign Faculty stetus</th>
                                     <th>Assign</th>
                                 </tr>
+
                                 <?php foreach ($admins as $admin): ?>
                                 <tr>
                                     <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
@@ -799,20 +795,20 @@
 
 
     <script>
-    const assignButtons = document.querySelectorAll('.assign-button');
+        const assignButtons = document.querySelectorAll('.assign-button');
 
-    assignButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const row = this.closest('tr');
-            const dropdown = row.querySelector('.teacher-dropdown');
+        assignButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const row = this.closest('tr');
+                const dropdown = row.querySelector('.teacher-dropdown');
 
-            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-                dropdown.style.display = 'block';
-            } else {
-                dropdown.style.display = 'none';
-            }
+                if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                    dropdown.style.display = 'block';
+                } else {
+                    dropdown.style.display = 'none';
+                }
+            });
         });
-    });
     </script>
 
 </body>
