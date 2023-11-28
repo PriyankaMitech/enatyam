@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Dashboard</title>
-   
+
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -83,7 +83,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-<?php include('AdminSideBar.php');?>
+    <?php include('AdminSideBar.php'); ?>
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -98,18 +98,13 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
+
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
                 </li>
 
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+                    <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
                 </li>
 
             </ul>
@@ -282,20 +277,18 @@
                                     <div class="col-lg-12">
                                         <table id="coundd_demo-payment-table" class="table" style="display:none">
 
-                                            <?php foreach ($ConductedDemo as $faculty): ?>
-                                            <tr>
-                                                <form action="<?= base_url('AdminController/addStudent'); ?>"
-                                                    method="post">
-                                                    <td><?= $faculty->name; ?></td>
-                                                    <td><?= $faculty->email; ?></td>
-                                                    <td>
-                                                        <input type="hidden" name="email"
-                                                            value="<?= $faculty->email; ?>">
-                                                        <button class="btn btn-primary" type="submit">Add
-                                                            Student</button>
-                                                    </td>
-                                                </form>
-                                            </tr>
+                                            <?php foreach ($ConductedDemo as $faculty) : ?>
+                                                <tr>
+                                                    <form action="<?= base_url('AdminController/addStudent'); ?>" method="post">
+                                                        <td><?= $faculty->name; ?></td>
+                                                        <td><?= $faculty->email; ?></td>
+                                                        <td>
+                                                            <input type="hidden" name="email" value="<?= $faculty->email; ?>">
+                                                            <button class="btn btn-primary" type="submit">Add
+                                                                Student</button>
+                                                        </td>
+                                                    </form>
+                                                </tr>
                                             <?php endforeach; ?>
 
 
@@ -465,43 +458,41 @@
                                     <th>Assign Faculty stetus</th>
                                     <th>Assign</th>
                                 </tr>
-                                <?php foreach ($admins as $admin): ?>
-                                <tr>
-                                    <form action="<?php echo base_url('AssignTecherToStudent'); ?>" method="POST">
-                                        <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
-                                        <td><?= $admin->full_name; ?></td>
-                                        <td><?= $admin->email; ?></td>
-                                        <td><?= $admin->course; ?></td>
-                                        <td>
-                                            <select name="faculty_name">
-                                            <option value="" selected>Select Faculty</option>
-                                                <?php foreach ($Faculty as $facultyItem): ?>
-                                                <option value="<?= $facultyItem->id; ?>">
-                                                    <?= $facultyItem->full_name; ?>
-                                                </option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <?php if ($admin->Assign_Techer_id > 0): ?>
-                                            AssignTeacher Successfully
-                                            <?php else: ?>
-                                            Not AssignTeacher
-                                            <?php endif; ?>
-                                        </td>
-                                        <td>
-                                            <?php if ($admin->Assign_Techer_id > 0): ?>
-                                            <!-- Show "Change Faculty" button -->
-                                            <button type="submit" name="change_faculty_button"
-                                                class="btn btn-info" style="font-size: 13px;">NewFaculty</button>
-                                            <?php else: ?>
-                                            <!-- Show "Assign" button -->
-                                            <button type="submit" name="assign_button"
-                                                class="btn btn-warning" style="font-size: 13px;">Assign</button>
-                                            <?php endif; ?>
-                                        </td>
-                                    </form>
-                                </tr>
+                                <?php foreach ($admins as $admin) : ?>
+                                    <tr>
+                                        <form action="<?php echo base_url('AssignTecherToStudent'); ?>" method="POST">
+                                            <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
+                                            <td><?= $admin->full_name; ?></td>
+                                            <td><?= $admin->email; ?></td>
+                                            <td><?= $admin->course; ?></td>
+                                            <td>
+                                                <select name="faculty_name">
+                                                    <option value="" selected>Select Faculty</option>
+                                                    <?php foreach ($Faculty as $facultyItem) : ?>
+                                                        <option value="<?= $facultyItem->id; ?>">
+                                                            <?= $facultyItem->full_name; ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <?php if ($admin->Assign_Techer_id > 0) : ?>
+                                                    AssignTeacher Successfully
+                                                <?php else : ?>
+                                                    Not AssignTeacher
+                                                <?php endif; ?>
+                                            </td>
+                                            <td>
+                                                <?php if ($admin->Assign_Techer_id > 0) : ?>
+                                                    <!-- Show "Change Faculty" button -->
+                                                    <button type="submit" name="change_faculty_button" class="btn btn-info" style="font-size: 13px;">NewFaculty</button>
+                                                <?php else : ?>
+                                                    <!-- Show "Assign" button -->
+                                                    <button type="submit" name="assign_button" class="btn btn-warning" style="font-size: 13px;">Assign</button>
+                                                <?php endif; ?>
+                                            </td>
+                                        </form>
+                                    </tr>
                                 <?php endforeach; ?>
                             </table>
 
@@ -703,20 +694,20 @@
 
 
     <script>
-    const assignButtons = document.querySelectorAll('.assign-button');
+        const assignButtons = document.querySelectorAll('.assign-button');
 
-    assignButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const row = this.closest('tr');
-            const dropdown = row.querySelector('.teacher-dropdown');
+        assignButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const row = this.closest('tr');
+                const dropdown = row.querySelector('.teacher-dropdown');
 
-            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-                dropdown.style.display = 'block';
-            } else {
-                dropdown.style.display = 'none';
-            }
+                if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                    dropdown.style.display = 'block';
+                } else {
+                    dropdown.style.display = 'none';
+                }
+            });
         });
-    });
     </script>
 
 
