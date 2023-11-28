@@ -599,17 +599,6 @@ $page = $uri->getSegment(count($pages));
                                 <span id="mobile_noError" style="color: red;"></span>
                             </div>
 
-                            <!-- <div class="form-group m-2">
-                            <select class="form-control required" name="role" id="role" aria-required="true">
-                                <option value="">Open this to select Role </option>
-                                <option value="Admin">Admin</option>
-                                <option value="Student">Student</option>
-                                <option value="Faculty">Faculty</option>
-                            </select>
-                            <span id="roleerror" style="color: red;"></span>
-                        </div> -->
-
-
                             <div class="form-group m-2">
                                 <input type="password" name="password" id="password" class="form-control"
                                     aria-required="true" placeholder="Password">
@@ -627,12 +616,6 @@ $page = $uri->getSegment(count($pages));
                                     placeholder="Enter otp">
                                 <span id="otpError" style="color: red;"></span>
                             </div>
-
-                            <div class="teacher">
-
-
-                            </div>
-
 
                             <input type="button" onclickt="return validateForm()" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
                             <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
@@ -745,8 +728,7 @@ $page = $uri->getSegment(count($pages));
                     <div class="login_form">
                         <h4 class="titel pt-3" color="black">Login with your site account</h4>
 
-                        <form name="loginForm" onsubmit="return validateFormLogin()"
-                            action="<?php echo base_url(); ?>login" id="loginform" method="post">
+                        <form name="loginForm" onsubmit="return validateFormLogin()" action="#" id="loginform" method="post">
                             <div class="form-group m-2">
                                 <input type="text" name="username" id="username" class="form-control"
                                     aria-required="true" placeholder="Email or Mobile number">
@@ -763,14 +745,14 @@ $page = $uri->getSegment(count($pages));
                                 <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password"
                                     onclick="showLostPasswordModal()">Lost your password?</a>
                             </div>
-                    </div>
 
-                    <input type="submit" value="Login" class="btn btn-light mt-3">
-                    <p>Not a member yet?
-                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()"
+                            <input type="button" value="Login" class="btn btn-light mt-3">
+                            <p>Not a member yet?
+                                <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()"
                             data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
-                    </p>
-                    </form>
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
