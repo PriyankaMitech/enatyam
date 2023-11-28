@@ -14,7 +14,7 @@ class AdminController extends BaseController
         return view('givestudent');
     }
 
-    public function today()
+    public function Admindashboard()
     {
 
         if (isset($_SESSION['sessiondata'])) {
@@ -36,6 +36,9 @@ class AdminController extends BaseController
                 $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
                 $data['getPaymentstatus'] = $model->Paymentstatus();
                 $data['getAllDemoList'] = $model->getAllDemoData();
+                $data['UnattendedDemoList'] = $model->UnattendedDemoList();
+                $data['Facultydatails'] = $model->getFaculty();
+            //    echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -50,7 +53,7 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $postData = $this->request->getPost();
         $model->edit($postData);
-        return redirect()->to('today');
+        return redirect()->to('Admindashboard');
     }
 
 
@@ -66,7 +69,7 @@ class AdminController extends BaseController
 
             if ($result) {
 
-                return redirect()->to('today'); // Change 'success' to your desired URL
+                return redirect()->to('Admindashboard'); // Change 'success' to your desired URL
             } else {
 
                 return redirect()->to('error'); // Change 'error' to your error handling URL
@@ -440,7 +443,7 @@ class AdminController extends BaseController
         ];
         //print_r($data);die;
         $model->AddUserByAdmin($data);
-        return redirect()->to('Getcalender');
+        return redirect()->to('AddNewUser');
     }
     public function addStudent()
     {
@@ -459,7 +462,7 @@ class AdminController extends BaseController
                 'sub_course' => $studentData->sub_course,
             ];
             $model->AddStudentByAdmin($insertData);
-            return redirect()->to('today');
+            return redirect()->to('Admindashboard');
         }
     }
     public function StudentListToAdmin()
@@ -486,7 +489,7 @@ class AdminController extends BaseController
             $rowIdsArray = explode(',', $selectedRowIds);
             $model = new AdminModel();
             $model->updateGroupName($rowIdsArray, $groupName);
-            return redirect()->to('today');
+            return redirect()->to('StudentListToAdmin');
         }
     public function StudentGroups()
     {

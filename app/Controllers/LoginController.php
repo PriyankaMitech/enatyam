@@ -8,11 +8,11 @@ use League\OAuth2\Client\Provider\Google;
 
 class LoginController extends BaseController
 {
-    public function __construct()
-    {
-        $this->db = \Config\Database::connect();
-        // $this->load->library('google'); 
-    }
+    // public function __construct()
+    // {
+    //     $this->db = \Config\Database::connect();
+    //  //   $this->load->library('google'); 
+    // }
     public function index() {
         helper(['form']);
         $data = [];
@@ -230,7 +230,7 @@ class LoginController extends BaseController
         if (!empty($result)) {
             switch ($result['role']) {
                 case 'Admin':
-                    return redirect()->to('today');
+                    return redirect()->to('Admindashboard');
                 case 'Faculty':
                     $this->session->set($result);
                     return redirect()->to('FacultyDashboard');

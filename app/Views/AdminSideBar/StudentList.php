@@ -22,7 +22,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url()?>today" class="nav-link">Home</a>
+                <a href="<?php echo base_url()?>Admindashboard" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
@@ -76,13 +76,12 @@
                                     <div class="tab-content" id="custom-tabs-four-tabContent">
                                         <div class="tab-pane fade active show" id="custom-tabs-four-home"
                                             role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
-                                            <div>
-                                                <!-- Add search inputs for Course and Sub Course -->
+                                            <!-- <div>
                                                 <label for="courseSearch">Search by Course:</label>
                                                 <input type="text" id="courseSearch">
                                                 <label for="subCourseSearch">Search by Sub Course:</label>
                                                 <input type="text" id="subCourseSearch">
-                                            </div>
+                                            </div> -->
                                             <table id="groupSessionTable" class="table table-bordered">
                                                 <thead>
                                                     <tr>
@@ -109,6 +108,31 @@
                                                     <?php endforeach; ?>
                                                 </tbody>
                                             </table>
+                                            <form action="<?= base_url('SelectedForGroup') ?>" method="post">
+                                    <div class="form-group">
+                                        <label for="groupName">Group Name:</label>
+                                        <input type="text" class="form-control" id="groupName" name="groupName"
+                                            required>
+                                        <!-- Display validation error for groupName if it exists -->
+                                        <?= isset($validation) ? $validation->getError('groupName') : ''; ?>
+                                    </div>
+                                    <table class="table table-bordered" id="selectedRowsTable">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Course</th>
+                                                <th>Sub Course</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="selectedRowsBody"></tbody>
+                                    </table>
+                                    <div class="text-right" style="margin-right: 41px;">
+                                        <button type="submit" id="postSelectedRows" class="btn btn-primary">Create
+                                            Group</button>
+                                    </div>
+                                </form>
                                         </div>
                                         <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel"
                                             aria-labelledby="custom-tabs-four-profile-tab">
@@ -140,31 +164,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form action="<?= base_url('SelectedForGroup') ?>" method="post">
-                                    <div class="form-group">
-                                        <label for="groupName">Group Name:</label>
-                                        <input type="text" class="form-control" id="groupName" name="groupName"
-                                            required>
-                                        <!-- Display validation error for groupName if it exists -->
-                                        <?= isset($validation) ? $validation->getError('groupName') : ''; ?>
-                                    </div>
-                                    <table class="table table-bordered" id="selectedRowsTable">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Course</th>
-                                                <th>Sub Course</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="selectedRowsBody"></tbody>
-                                    </table>
-                                    <div class="text-right" style="margin-right: 41px;">
-                                        <button type="submit" id="postSelectedRows" class="btn btn-primary">Create
-                                            Group</button>
-                                    </div>
-                                </form>
+                               
                             </div>
                         </div>
                     </div>

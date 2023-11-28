@@ -35,6 +35,8 @@ $page = $uri->getSegment(count($pages));
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/courseOffering.css">
 
+<link rel="stylesheet" href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
+<link rel="stylesheet" href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
 
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
@@ -585,7 +587,6 @@ $page = $uri->getSegment(count($pages));
                                     aria-required="true" placeholder="Username">
                                 <span id="nameError" class="d-none" style="color: red;"></span>
                             </div>
-
                             <div class="form-group m-2">
                                 <input type="email" name="email" id="email" class="form-control" aria-required="true"
                                     placeholder="Email">
