@@ -168,6 +168,10 @@ $routes->get('OrderDetails', 'BillingC::OrderDetails');
 $routes->get('Dashboard', 'DashboardController::displayDashboard');
 
 $routes->post('payment', 'PaymentController::payment');
+// $routes->post('googlelogin', 'LoginController::googlelogin');
+$routes->get('googlelogin', 'LoginController::googlelogin');
+$routes->get('User_authentication', 'LoginController::index');
+$routes->get('LoginController/callback', 'LoginController::callback');
 
 
 

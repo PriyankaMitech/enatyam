@@ -3,18 +3,51 @@
 namespace App\Controllers;
 
 use App\Models\LoginModel;
+use CodeIgniter\Controller;
+use League\OAuth2\Client\Provider\Google;
 
 class LoginController extends BaseController
 {
     public function __construct()
     {
         $this->db = \Config\Database::connect();
-        $this->load->library('google'); 
+        // $this->load->library('google'); 
     }
     public function index() {
         helper(['form']);
         $data = [];
         echo view('register', $data);
+    }
+
+    public function googlelogin()
+    {
+        // Configure the OAuth2 client
+        $provider = new Google([
+            'clientId'     => '451275634997-cmtkbhpah3rebm2sdbvqeiuq18rcavfg',
+            'clientSecret' => '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',
+            'redirectUri'  => base_url('LoginController/callback'),
+        ]);
+        $authorizationUrl = $provider->getAuthorizationUrl();
+
+        // echo '<pre>';print_r($provider);die;
+        return redirect()->to($authorizationUrl);
+    }
+
+    public function callback()
+    {
+        $provider = new Google([
+            'clientId'     => '451275634997-cmtkbhpah3rebm2sdbvqeiuq18rcavfg',
+            'clientSecret' => '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',
+            'redirectUri'  => base_url('LoginController/callback'),
+        ]);
+        
+        $token = $provider->getAccessToken('authorization_code', [
+            'code' => $this->request->getGet('code'),
+        ]);
+
+        $user = $provider->getResourceOwner($token);
+
+        return redirect()->to('Dance');
     }
 
     public function register()
@@ -144,7 +177,7 @@ class LoginController extends BaseController
     public function saveuserdata()
    { 
    
-    //   print_r($_POST);die;
+        //   print_r($_POST);die;
        $email = $this->request->getPost('email');
        $course = $this->request->getPost('course');
        $sub_course = $this->request->getPost('sub_course');
