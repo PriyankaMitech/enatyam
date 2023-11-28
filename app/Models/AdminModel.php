@@ -30,8 +30,7 @@ class AdminModel extends Model
         // $today = date('Y-m-d');
         // return $this->where('DATE(Date)', $today)->findAll();
         $today = date('Y-m-d');
-        return $this->where('DATE(`Book_Date`) =', $today)
-            ->findAll();
+        return $this->where('DATE(`Booking_Date_Time`) =', $today)->findAll();
     }
     public function getGroupSessionStudents()
     {
@@ -120,7 +119,7 @@ class AdminModel extends Model
     {
          $today = date('Y-m-d');
         return $this->db->table('free_demo_table')
-            ->where('Book_Date <', $today)
+            ->where('Booking_Date_Time <', $today)
             ->get()
             ->getResult();
     }

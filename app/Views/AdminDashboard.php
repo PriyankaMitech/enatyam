@@ -324,7 +324,7 @@
                                             <tr>
                                                 <td><?= $status->name; ?></td>
                                                 <td><?= $status->course; ?></td>
-                                                <td><?= $status->Book_Date; ?></td>
+                                                <td><?= $status->Booking_Date_Time; ?></td>
                                             </tr>
                                             <?php endforeach; ?>
                                         </table>
@@ -346,7 +346,7 @@
                                                 <td><?= $status->name; ?></td>
                                                 <td><?= $status->email; ?></td>
                                                 <td><?= $status->course; ?></td>
-                                                <td><?= $status->Book_Date; ?></td>
+                                                <td><?= $status->Booking_Date_Time; ?></td>
                                             </tr>
                                             <?php endforeach; ?>
                                         </table>
@@ -488,59 +488,7 @@
                             <!--  -->
 
                             <!-- assign techers to student -->
-                            <!-- <table id="faculty-table" style="display: none;" class="table">
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>course</th>
-                                    <th>sub course</th>
-                                    <th>Assign Faculty</th>
-                                    <th>Assign Faculty stetus</th>
-                                    <th>Assign</th>
-                                </tr>
-
-                                <?php foreach ($admins as $admin): ?>
-                                <tr>
-                                    <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
-                                        <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
-                                        <td><?= $admin->full_name; ?></td>
-                                        <td><?= $admin->email; ?></td>
-                                        <td><?= $admin->course; ?></td>
-                                        <td><?= $admin->sub_course; ?></td>
-                                        <td>
-                                            <select name="faculty_name">
-                                                <option value="" selected>Select Faculty</option>
-                                                <?php foreach ($Faculty as $facultyItem): ?>
-                                                <?php if ($facultyItem->course == $admin->course && $facultyItem->sub_course == $admin->sub_course): ?>
-                                                <option value="<?= $facultyItem->id; ?>">
-                                                    <?= $facultyItem->full_name; ?>
-                                                </option>
-                                                <?php endif; ?>
-                                                <?php endforeach; ?>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <?php if ($admin->Assign_Techer_id > 0): ?>
-                                            AssignTeacher Successfully
-                                            <?php else: ?>
-                                            Not AssignTeacher
-                                            <?php endif; ?>
-                                        </td>
-                                        <td>
-                                            <?php if ($admin->Assign_Techer_id > 0): ?>
-                                         
-                                            <button type="submit" name="change_faculty_button" class="btn btn-info"
-                                                style="font-size: 13px;">NewFaculty</button>
-                                            <?php else: ?>
-                                           
-                                            <button type="submit" name="assign_button" class="btn btn-warning"
-                                                style="font-size: 13px;">Assign</button>
-                                            <?php endif; ?>
-                                        </td>
-                                    </form>
-                                </tr>
-                                <?php endforeach; ?>
-                            </table> -->
+                            
     <table id="faculty-table" class="table">
             <tr>
                 <th>Name</th>

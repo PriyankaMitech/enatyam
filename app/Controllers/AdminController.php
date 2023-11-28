@@ -38,7 +38,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-            //    echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
+                //    echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -491,14 +491,14 @@ class AdminController extends BaseController
             $model->updateGroupName($rowIdsArray, $groupName);
             return redirect()->to('StudentListToAdmin');
 
-        }
-        if (is_array($selectedRowIds)) {
-            $selectedRowIds = implode(',', $selectedRowIds);
-        }
-        $rowIdsArray = explode(',', $selectedRowIds);
-        $model = new AdminModel();
-        $model->updateGroupName($rowIdsArray, $groupName);
-        return redirect()->to('today');
+        // }
+        // if (is_array($selectedRowIds)) {
+        //     $selectedRowIds = implode(',', $selectedRowIds);
+        // }
+        // $rowIdsArray = explode(',', $selectedRowIds);
+        // $model = new AdminModel();
+        // $model->updateGroupName($rowIdsArray, $groupName);
+        // return redirect()->to('today');
     }
     public function StudentGroups()
     {
