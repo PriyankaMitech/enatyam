@@ -116,6 +116,14 @@ class AdminModel extends Model
     {
         return $this->db->table('free_demo_table')->where('Conducted_Demo', 'N')->get()->getResult();
     }
+    public function UnattendedDemoList()
+    {
+         $today = date('Y-m-d');
+        return $this->db->table('free_demo_table')
+            ->where('Book_Date <', $today)
+            ->get()
+            ->getResult();
+    }
     public function getPendingDemoList()
     {
         return $this->db->table('free_demo_table')
@@ -151,7 +159,14 @@ class AdminModel extends Model
     }
     public function getAdmins()
     {
-        return $this->db->table('register')->where('role', 'Student')->get()->getResult();
+        // return $this->db->table('register')->where('role', 'Student')->get()->getResult();
+        $query = $this->db->table('register AS students')
+        ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name')
+        ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
+        ->where('students.role', 'Student')
+        ->get();
+
+    return $query->getResult();
     }
     public function getFaculty()
     {
