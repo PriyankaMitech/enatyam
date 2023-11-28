@@ -7,7 +7,8 @@
     <title>Admin Dashboard</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
@@ -27,63 +28,73 @@
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
     <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
 
-        th,
-        td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
+    th,
+    td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
 
-        th {
-            background-color: #f2f2f2;
+    th {
+        background-color: #f2f2f2;
 
-        }
+    }
 
-        .demo-card {
-            padding: 10px;
-        }
+    .demo-card {
+        padding: 10px;
+    }
 
-        .demo-card h3 {
-            color: #28a745 !important;
-            font-size: 18px
-        }
+    .demo-card h3 {
+        color: #28a745 !important;
+        font-size: 18px
+    }
 
-        .demo-card h4 {
-            color: #17a2b8 !important;
-            font-weight: 600
-        }
+    .demo-card h4 {
+        color: #17a2b8 !important;
+        font-weight: 600
+    }
 
-        .demo-card i {
-            color: #ffc107 !important;
-            float: right;
-            display: block;
-            text-align: right;
-            width: 30px;
-            height: 30px;
-            background: #ffc10733;
-            line-height: 30px;
-            text-align: center;
-            margin-left: auto;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.5s;
-        }
+    .demo-card i {
+        color: #ffc107 !important;
+        float: right;
+        display: block;
+        text-align: right;
+        width: 30px;
+        height: 30px;
+        background: #ffc10733;
+        line-height: 30px;
+        text-align: center;
+        margin-left: auto;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.5s;
+    }
 
-        .demo-card i:hover {
-            color: #fff !important;
+    .demo-card i:hover {
+        color: #fff !important;
 
-            background: #ffc107;
-        }
+        background: #ffc107;
+    }
+    .hidden {
+    display: none;
+}
+
+.show {
+    display: block; /* or inline, flex, etc. based on your layout */
+}
+
     </style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+
     <?php include('AdminSideBar.php'); ?>
+
     <div class="wrapper">
 
         <!-- Preloader -->
@@ -145,11 +156,11 @@
                             <div class="small-box bg-info">
                                 <div class="inner">
                                     <?php if (!empty($records)) : ?>
-                                        <h3><?= count($records) ?></h3>
+                                    <h3><?= count($records) ?></h3>
 
 
                                     <?php else : ?>
-                                        <h3>0</h3>
+                                    <h3>0</h3>
                                     <?php endif; ?>
                                     <p>Today Demo Session</p>
 
@@ -157,7 +168,8 @@
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right" id="toggle-table5"></i></a>
+                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"
+                                        id="toggle-table5"></i></a>
                                 <table id="faculty-table5" class="table" style="display: none;">
                                     <thead>
                                         <tr>
@@ -167,10 +179,10 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach ($records as $row) : ?>
-                                            <tr>
-                                                <td><?= $row['name'] ?></td>
-                                                <td><?= $row['course'] ?></td>
-                                            </tr>
+                                        <tr>
+                                            <td><?= $row['name'] ?></td>
+                                            <td><?= $row['course'] ?></td>
+                                        </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
@@ -190,7 +202,8 @@
                                 <div class="icon">
                                     <i class="ion ion-stats-bars"></i>
                                 </div>
-                                <a href="#" class="small-box-footer book-more-info" id="toggle-table2">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="#" class="small-box-footer book-more-info" id="toggle-table2">More info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
                             </div>
 
                         </div>
@@ -201,7 +214,7 @@
                             <div class="small-box bg-warning">
                                 <div class="inner">
                                     <?php if (!empty($admins)) : ?>
-                                        <h3><?= count($admins) ?></h3>
+                                    <h3><?= count($admins) ?></h3>
                                     <?php else : ?>
                                     <?php endif; ?>
                                     <p>Students</p>
@@ -209,7 +222,8 @@
                                 <div class="icon">
                                     <i class="ion ion-person-add"></i>
                                 </div>
-                                <a href="#" class="small-box-footer stud-more-info" id="toggle-table">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="#" class="small-box-footer stud-more-info" id="toggle-table">More info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
                             </div>
 
                         </div>
@@ -219,7 +233,7 @@
                             <div class="small-box bg-danger">
                                 <div class="inner">
                                     <?php if (!empty($Faculty)) : ?>
-                                        <h3><?= count($Faculty) ?></h3>
+                                    <h3><?= count($Faculty) ?></h3>
                                     <?php else : ?>
                                     <?php endif; ?>
                                     <p>Teachers</p>
@@ -227,7 +241,8 @@
                                 <div class="icon">
                                     <i class="ion ion-pie-graph"></i>
                                 </div>
-                                <a href="#" class="small-box-footer teach-more-info" id="toggle-table4">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="#" class="small-box-footer teach-more-info" id="toggle-table4">More info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
                             </div>
 
 
@@ -241,9 +256,9 @@
                                 <div class="row">
                                     <div class="col-lg-3">
                                         <div class="card demo-card">
-                                            <h4>0</h4>
+                                            <h4><?= count($UnattendedDemoList) ?></h4>
                                             <h3>Unattended Demo List</h3>
-                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                            <i class="fas fa-long-arrow-alt-right UnattendedList"></i>
                                         </div>
                                     </div>
 
@@ -306,17 +321,38 @@
 
                                             </tr>
                                             <?php foreach ($getAllDemoList as $status) : ?>
-                                                <tr>
-                                                    <td><?= $status->name; ?></td>
-                                                    <td><?= $status->course; ?></td>
-                                                    <td><?= $status->Book_Date; ?></td>
-                                                </tr>
+                                            <tr>
+                                                <td><?= $status->name; ?></td>
+                                                <td><?= $status->course; ?></td>
+                                                <td><?= $status->Book_Date; ?></td>
+                                            </tr>
                                             <?php endforeach; ?>
                                         </table>
 
 
                                     </div>
+                                    <!-- unattended DemoList -->
+                                    <div class="col-lg-12">
+                                        <table id="unattended-tabal" class="table" style="display:none">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>course</th>
+                                                <th>Demo Date</th>
 
+                                            </tr>
+                                            <?php foreach ($UnattendedDemoList as $status) : ?>
+                                            <tr>
+                                                <td><?= $status->name; ?></td>
+                                                <td><?= $status->email; ?></td>
+                                                <td><?= $status->course; ?></td>
+                                                <td><?= $status->Book_Date; ?></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                        </table>
+
+
+                                    </div>
                                     <div class="col-lg-12">
                                         <table id="pending-demo-table" class="table" style="display:none">
                                             <tr>
@@ -331,41 +367,43 @@
                                             </tr>
                                             <?php foreach ($PendingDemo as $facult) : ?>
 
-                                                <tr>
-                                                    <form action="<?php echo base_url('AssignTecherForDemo'); ?>" method="POST">
-                                                        <input type="hidden" name="studentid" value="<?= $facult->D_id; ?>">
-                                                        <td><?= $facult->name; ?></td>
-                                                        <td><?= $facult->email; ?></td>
-                                                        <td><?= $facult->Date; ?></td>
+                                            <tr>
+                                                <form action="<?php echo base_url('AssignTecherForDemo'); ?>"
+                                                    method="POST">
+                                                    <input type="hidden" name="studentid" value="<?= $facult->D_id; ?>">
+                                                    <td><?= $facult->name; ?></td>
+                                                    <td><?= $facult->email; ?></td>
+                                                    <td><?= $facult->Date; ?></td>
 
-                                                        <td>
-                                                            <select name="faculty_name" class="form-control">
+                                                    <td>
+                                                        <select name="faculty_name" class="form-control">
 
-                                                                <?php foreach ($Faculty as $faculty) : ?>
-                                                                    <option value="<?= $faculty->id; ?>">
-                                                                        <?= $faculty->full_name; ?>
-                                                                    </option>
-                                                                <?php endforeach; ?>
-                                                            </select>
-                                                        </td>
-                                                        <td><?= $facult->course; ?></td>
-                                                        <td><?= $facult->sub_course; ?></td>
-                                                        <td>
-                                                            <?php if ($facult->AssignTecher_id > 0) : ?>
-                                                                <p>Assign</p>
-                                                            <?php else : ?>
-                                                                <p>Not Assign</p>
-                                                            <?php endif; ?>
-                                                        </td>
-                                                        <td>
-                                                            <?php if ($facult->AssignTecher_id > 0) : ?>
-                                                                <!-- Do nothing or display alternative content when the condition is true -->
-                                                            <?php else : ?>
-                                                                <button type="submit" name="assign_button" class="btn btn-info">Assign</button>
-                                                            <?php endif; ?>
-                                                        </td>
-                                                    </form>
-                                                </tr>
+                                                            <?php foreach ($Faculty as $faculty) : ?>
+                                                            <option value="<?= $faculty->id; ?>">
+                                                                <?= $faculty->full_name; ?>
+                                                            </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </td>
+                                                    <td><?= $facult->course; ?></td>
+                                                    <td><?= $facult->sub_course; ?></td>
+                                                    <td>
+                                                        <?php if ($facult->AssignTecher_id > 0) : ?>
+                                                        <p>Assign</p>
+                                                        <?php else : ?>
+                                                        <p>Not Assign</p>
+                                                        <?php endif; ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php if ($facult->AssignTecher_id > 0) : ?>
+                                                        <!-- Do nothing or display alternative content when the condition is true -->
+                                                        <?php else : ?>
+                                                        <button type="submit" name="assign_button"
+                                                            class="btn btn-info">Assign</button>
+                                                        <?php endif; ?>
+                                                    </td>
+                                                </form>
+                                            </tr>
                                             <?php endforeach; ?>
                                         </table>
 
@@ -399,45 +437,46 @@
                                             </tr>
                                             <?php foreach ($PendingDemo as $facult) : ?>
 
-                                                <tr>
-                                                    <form action="<?php echo base_url('AssignTecherForDemo'); ?>" method="POST">
-                                                        <input type="hidden" name="studentid" value="<?= $facult->D_id; ?>">
-                                                        <td><?= $facult->name; ?></td>
-                                                        <td><?= $facult->email; ?></td>
-                                                        <td><?= $facult->Date; ?></td>
+                                            <tr>
+                                                <form action="<?php echo base_url('AssignTecherForDemo'); ?>"
+                                                    method="POST">
+                                                    <input type="hidden" name="studentid" value="<?= $facult->D_id; ?>">
+                                                    <td><?= $facult->name; ?></td>
+                                                    <td><?= $facult->email; ?></td>
+                                                    <td><?= $facult->Date; ?></td>
 
-                                                        <td>
-                                                            <select name="faculty_name">
+                                                    <td>
+                                                        <select name="faculty_name">
 
-                                                                <?php foreach ($Faculty as $faculty) : ?>
-                                                                    <option value="<?= $faculty->id; ?>">
-                                                                        <?= $faculty->full_name; ?>
-                                                                    </option>
-                                                                <?php endforeach; ?>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <button type="submit" name="assign_button">Assign</button>
-                                                        </td>
-                                                        <td>
-                                                            <?php if ($ConductedDemoStatus >= 0) : ?>
-                                                                <p>AssignTecher Succesfully</p>
-                                                            <?php else : ?>
-                                                                <p>Not AssignTecher</p>
-                                                            <?php endif; ?>
-                                                        </td>
-                                                    </form>
-                                                </tr>
+                                                            <?php foreach ($Faculty as $faculty) : ?>
+                                                            <option value="<?= $faculty->id; ?>">
+                                                                <?= $faculty->full_name; ?>
+                                                            </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <button type="submit" name="assign_button">Assign</button>
+                                                    </td>
+                                                    <td>
+                                                        <?php if ($ConductedDemoStatus >= 0) : ?>
+                                                        <p>AssignTecher Succesfully</p>
+                                                        <?php else : ?>
+                                                        <p>Not AssignTecher</p>
+                                                        <?php endif; ?>
+                                                    </td>
+                                                </form>
+                                            </tr>
                                             <?php endforeach; ?>
                                         </table>
                                     </td>
                                     <td id="toggle-table7"><b><?= count($ConductedDemo) ?></b>
                                         <table id="faculty-table7" style="display:none;" class="table">
                                             <?php foreach ($ConductedDemo as $faculty) : ?>
-                                                <tr>
-                                                    <td><?= $faculty->name; ?></td>
-                                                    <td><?= $faculty->email; ?></td>
-                                                </tr>
+                                            <tr>
+                                                <td><?= $faculty->name; ?></td>
+                                                <td><?= $faculty->email; ?></td>
+                                            </tr>
                                             <?php endforeach; ?>
                                         </table>
                                     </td>
@@ -449,52 +488,111 @@
                             <!--  -->
 
                             <!-- assign techers to student -->
-                            <table id="faculty-table" style="display: none;" class="table">
+                            <!-- <table id="faculty-table" style="display: none;" class="table">
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>course</th>
+                                    <th>sub course</th>
                                     <th>Assign Faculty</th>
                                     <th>Assign Faculty stetus</th>
                                     <th>Assign</th>
                                 </tr>
-                                <?php foreach ($admins as $admin) : ?>
-                                    <tr>
-                                        <form action="<?php echo base_url('AssignTecherToStudent'); ?>" method="POST">
-                                            <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
-                                            <td><?= $admin->full_name; ?></td>
-                                            <td><?= $admin->email; ?></td>
-                                            <td><?= $admin->course; ?></td>
-                                            <td>
-                                                <select name="faculty_name">
-                                                    <option value="" selected>Select Faculty</option>
-                                                    <?php foreach ($Faculty as $facultyItem) : ?>
-                                                        <option value="<?= $facultyItem->id; ?>">
-                                                            <?= $facultyItem->full_name; ?>
-                                                        </option>
-                                                    <?php endforeach; ?>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <?php if ($admin->Assign_Techer_id > 0) : ?>
-                                                    AssignTeacher Successfully
-                                                <?php else : ?>
-                                                    Not AssignTeacher
+
+                                <?php foreach ($admins as $admin): ?>
+                                <tr>
+                                    <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
+                                        <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
+                                        <td><?= $admin->full_name; ?></td>
+                                        <td><?= $admin->email; ?></td>
+                                        <td><?= $admin->course; ?></td>
+                                        <td><?= $admin->sub_course; ?></td>
+                                        <td>
+                                            <select name="faculty_name">
+                                                <option value="" selected>Select Faculty</option>
+                                                <?php foreach ($Faculty as $facultyItem): ?>
+                                                <?php if ($facultyItem->course == $admin->course && $facultyItem->sub_course == $admin->sub_course): ?>
+                                                <option value="<?= $facultyItem->id; ?>">
+                                                    <?= $facultyItem->full_name; ?>
+                                                </option>
                                                 <?php endif; ?>
-                                            </td>
-                                            <td>
-                                                <?php if ($admin->Assign_Techer_id > 0) : ?>
-                                                    <!-- Show "Change Faculty" button -->
-                                                    <button type="submit" name="change_faculty_button" class="btn btn-info" style="font-size: 13px;">NewFaculty</button>
-                                                <?php else : ?>
-                                                    <!-- Show "Assign" button -->
-                                                    <button type="submit" name="assign_button" class="btn btn-warning" style="font-size: 13px;">Assign</button>
-                                                <?php endif; ?>
-                                            </td>
-                                        </form>
-                                    </tr>
+                                                <?php endforeach; ?>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <?php if ($admin->Assign_Techer_id > 0): ?>
+                                            AssignTeacher Successfully
+                                            <?php else: ?>
+                                            Not AssignTeacher
+                                            <?php endif; ?>
+                                        </td>
+                                        <td>
+                                            <?php if ($admin->Assign_Techer_id > 0): ?>
+                                         
+                                            <button type="submit" name="change_faculty_button" class="btn btn-info"
+                                                style="font-size: 13px;">NewFaculty</button>
+                                            <?php else: ?>
+                                           
+                                            <button type="submit" name="assign_button" class="btn btn-warning"
+                                                style="font-size: 13px;">Assign</button>
+                                            <?php endif; ?>
+                                        </td>
+                                    </form>
+                                </tr>
                                 <?php endforeach; ?>
-                            </table>
+                            </table> -->
+    <table id="faculty-table" class="table">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Sub Course</th>
+                <th>Assign Faculty</th>
+                <th>Assign Faculty Status</th>
+                <th>Action</th>
+            </tr>
+    <?php foreach ($admins as $admin): ?>
+        <tr>
+            <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
+                <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
+                <td><?= $admin->full_name; ?></td>
+                <td><?= $admin->email; ?></td>
+                <td><?= $admin->course; ?></td>
+                <td><?= $admin->sub_course; ?></td>
+        
+                <td class="faculty-select" >
+                <select name="faculty_name">
+             <option value="" selected>Select Faculty</option>
+                <?php foreach ($Faculty as $facultyItem): ?>
+          <?php if ($facultyItem->course == $admin->course && $facultyItem->sub_course == $admin->sub_course): ?>
+             <option value="<?= $facultyItem->id; ?>" <?php if ($admin->Assign_Techer_id == $facultyItem->id) { echo 'selected'; } ?>>
+                <?= $facultyItem->full_name; ?>
+            </option>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</select>
+
+                </td>
+                <td>
+                    <?php if ($admin->Assign_Techer_id > 0): ?>
+                        AssignTeacher Successfully
+                    <?php else: ?>
+                        Not AssignTeacher
+                    <?php endif; ?>
+                </td>
+                <td class="change_f">
+                    <?php if ($admin->Assign_Techer_id > 0): ?>
+                        <button type="submit" name="change_faculty_button" class="btn btn-info"
+                                                style="font-size: 12px;">Change Faculty</button>
+                    <?php else: ?>
+                        <button type="submit" name="assign_button" class="btn btn-warning" style="font-size: 13px;">Assign</button>
+                    <?php endif; ?>
+                </td>
+            </form>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
 
                             <!-- Faculty -->
                             <table id="faculty-table4" style="display: none;" class="table">
@@ -505,13 +603,13 @@
 
                                 </tr>
                                 <?php foreach ($Faculty as $faculty) : ?>
-                                    <tr>
-                                        <td><?= $faculty->full_name; ?></td>
-                                        <td><?= $faculty->email; ?></td>
-                                        <!-- <td><button onclick="showStudentTable(this)" class="btn btn-info">Assign -->
-                                        <!-- Students</button></td> -->
+                                <tr>
+                                    <td><?= $faculty->full_name; ?></td>
+                                    <td><?= $faculty->email; ?></td>
+                                    <!-- <td><button onclick="showStudentTable(this)" class="btn btn-info">Assign -->
+                                    <!-- Students</button></td> -->
 
-                                    </tr>
+                                </tr>
                                 <?php endforeach; ?>
                             </table>
 
@@ -523,15 +621,15 @@
                                     <th>Add</th>
                                 </tr>
                                 <?php foreach ($admins as $faculty) : ?>
-                                    <?php foreach ($SessionData as $session) : ?>
-                                        <tr>
-                                            <td><?= $faculty->full_name; ?></td>
-                                            <td><?= $faculty->id; ?></td>
-                                            <td><?= $session['course']; ?></td>
-                                            </td>
-                                            <td> <button class="btn btn-success">Assign</button></td>
-                                        </tr>
-                                    <?php endforeach; ?>
+                                <?php foreach ($SessionData as $session) : ?>
+                                <tr>
+                                    <td><?= $faculty->full_name; ?></td>
+                                    <td><?= $faculty->id; ?></td>
+                                    <td><?= $session['course']; ?></td>
+                                    </td>
+                                    <td> <button class="btn btn-success">Assign</button></td>
+                                </tr>
+                                <?php endforeach; ?>
                                 <?php endforeach; ?>
                             </table>
                         </div>
@@ -571,7 +669,7 @@
     <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
-        $.widget.bridge('uibutton', $.ui.button)
+    $.widget.bridge('uibutton', $.ui.button)
     </script>
     <!-- Bootstrap 4 -->
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -602,93 +700,96 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // display table
+    // display table
 
 
-        $(document).ready(function() {
-            $("#toggle-table5").click(function() {
-                $("#faculty-table5").toggle("");
-                $("#faculty-table").hide();
-                $("#faculty-table4").hide();
-                $("#faculty-table2").hide();
+    $(document).ready(function() {
+        $("#toggle-table5").click(function() {
+            $("#faculty-table5").toggle("");
+            $("#faculty-table").hide();
+            $("#faculty-table4").hide();
+            $("#faculty-table2").hide();
 
-            });
-
-
-
-            $("#toggle-table2").click(function() {
-                $("#faculty-table2").toggle("");
-                $("#faculty-table").hide();
-                $("#faculty-table4").hide();
-                $("#faculty-table5").hide();
-
-            });
-
-            $("#toggle-table4").click(function() {
-                $("#faculty-table4").toggle("");
-                $("#faculty-table").hide();
-                $("#faculty-table2").hide();
-
-            });
-
-
-            $("#toggle-table").click(function() {
-                $("#faculty-table").toggle("");
-                $("#faculty-table4").hide();
-                $("#faculty-table2").hide();
-
-            });
-
-            $("#toggle-table6").click(function() {
-                $("#faculty-table6").toggle("");
+        });
 
 
 
-            });
-            $(".coundd_demo").click(function() {
-                $("#coundd_demo-payment-table").toggle("");
-                $("#pending-demo-table").hide();
-                $("#comp-payment-table").hide();
+        $("#toggle-table2").click(function() {
+            $("#faculty-table2").toggle("");
+            $("#faculty-table").hide();
+            $("#faculty-table4").hide();
+            $("#faculty-table5").hide();
 
-            });
+        });
 
+        $("#toggle-table4").click(function() {
+            $("#faculty-table4").toggle("");
+            $("#faculty-table").hide();
+            $("#faculty-table2").hide();
 
-            $(".pend-demo").click(function() {
-                $("#pending-demo-table").toggle("");
-                $("#comp-payment-table").hide();
-                $("#coundd_demo-payment-table").hide();
-
-
-            });
-            $(".comp-payment").click(function() {
-                $("#comp-payment-table").toggle("");
-                $("#pending-demo-table").hide();
-                $("#coundd_demo-payment-table").hide();
-
-            });
+        });
 
 
+        $("#toggle-table").click(function() {
+            $("#faculty-table").toggle("");
+            $("#faculty-table4").hide();
+            $("#faculty-table2").hide();
 
+        });
 
-
-
+        $("#toggle-table6").click(function() {
+            $("#faculty-table6").toggle("");
 
 
 
         });
+        $(".coundd_demo").click(function() {
+            $("#coundd_demo-payment-table").toggle("");
+            $("#pending-demo-table").hide();
+            $("#comp-payment-table").hide();
+            $("#unattended-tabal").hide();
+
+        });
+
+
+        $(".pend-demo").click(function() {
+            $("#pending-demo-table").toggle("");
+            $("#comp-payment-table").hide();
+            $("#coundd_demo-payment-table").hide();
+            $("#unattended-tabal").hide();
+
+
+        });
+        $(".UnattendedList").click(function() {
+            $("#unattended-tabal").toggle("");
+            $("#comp-payment-table").hide();
+            $("#coundd_demo-payment-table").hide();
+            $("#pending-demo-table").hide();
+
+        });
+        $(".comp-payment").click(function() {
+            $("#comp-payment-table").toggle("");
+            $("#pending-demo-table").hide();
+            $("#coundd_demo-payment-table").hide();
+            $("#unattended-tabal").hide();
+
+        });
+
+
+    });
     </script>
 
     <script>
-        function showStudentTable(button) {
-            // Hide all tables with class "table"
-            var tables = document.querySelectorAll('.table');
-            for (var i = 0; i < tables.length; i++) {
-                tables[i].style.display = 'none';
-            }
-
-            // Show the student assignment table
-            document.getElementById('student-assignment-table').style.display = 'table';
+    function showStudentTable(button) {
+        // Hide all tables with class "table"
+        var tables = document.querySelectorAll('.table');
+        for (var i = 0; i < tables.length; i++) {
+            tables[i].style.display = 'none';
         }
+
+        // Show the student assignment table
+        document.getElementById('student-assignment-table').style.display = 'table';
+    }
     </script>
 
 
@@ -709,11 +810,6 @@
             });
         });
     </script>
-
-
-
-
-
 
 </body>
 

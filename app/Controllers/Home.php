@@ -2,12 +2,21 @@
 
 namespace App\Controllers;
 use App\Models\LoginModel;
+use App\Libraries\Google;
 
 class Home extends BaseController
 {
+    public function __construct()
+    {
+        // $this->db = \Config\Database::connect();
+        // $this->load->library('google'); 
+    }
+
     public function index()
     {
-        
+        // $google = new Google();
+        // $data['loginURL'] = $this->google->loginURL(); 
+        // print_r($data);die;
         return view('home');
 
         

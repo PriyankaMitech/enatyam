@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-
+  <div class="wrapper">
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -42,7 +42,7 @@
           <img src="public/AdmoinLogo.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?php echo base_url() ?>today" class="d-block">Admin</a>
+          <a href="<?php echo base_url() ?>Admindashboard" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -76,26 +76,26 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a href="<?php //echo base_url() 
-                          ?>Getcalender" class="nav-link">
+                          ?>AddNewUser" class="nav-link">
                   <i class="nav-icon fas fa-calendar-alt"></i>
                   <p>Add New User
                   </p>
                 </a>
-              </li> -->
+              </li>
               <li class="nav-item">
                 <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Demo</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="<?php echo base_url() ?>DailyClass" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Class</p>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </li>
 
@@ -158,13 +158,13 @@
               <li class="nav-item">
                 <a href="<?php echo base_url() ?>StudentGroups" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Create Groups</p>
+                  <p>Groups List</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url() ?>StudentListToAdmin" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Groups List</p>
+                  <p>Create Groups</p>
                 </a>
               </li>
 
@@ -264,11 +264,12 @@
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
+  
     </div>
-
     <!-- /.sidebar -->
   </aside>
-  </div>
+ 
+
   <script src="plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -278,6 +279,8 @@
   <script src="dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="dist/js/demo.js"></script>
+
+
 </body>
 
 </html>

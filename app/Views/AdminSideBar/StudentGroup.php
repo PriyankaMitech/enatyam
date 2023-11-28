@@ -43,6 +43,7 @@
     .faculty-dropdown {
         width: 100%;
     }
+
     </style>
 </head>
 
@@ -54,7 +55,7 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url()?>today" class="nav-link">Home</a>
+                <a href="<?php echo base_url()?>Admindashboard" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
@@ -123,7 +124,6 @@
                                                                 <th>Email</th>
                                                                 <th>Course</th>
                                                                 <th>Sub-course</th>
-                                                                <th>Faculty</th>
 
                                                             </tr>
                                                         </thead>
@@ -134,36 +134,38 @@
                                                                 <td><?= $record->email; ?></td>
                                                                 <td><?= $record->course; ?></td>
                                                                 <td><?= $record->sub_course; ?></td>
-                                                                <td>
-                                                                    <!-- Dropdown menu for faculty -->
-                                                                    <select class="faculty-dropdown" name="faculty">
-                                                                        <?php foreach ($Faculty as $faculty): ?>
-                                                                        <?php if ($faculty->course == $record->course && $faculty->sub_course == $record->sub_course): ?>
-                                                                        <option value="<?= $faculty->id; ?>">
-                                                                            <?= $faculty->full_name; ?>
-                                                                        </option>
-                                                                        <?php endif; ?>
-                                                                        <?php endforeach; ?>
-                                                                    </select>
-                                                                </td>
-                                                                <td>
-                                                                    <!-- Submit button within the form -->
+                                                                <!-- Remove the dropdown from here -->
 
-                                                                </td>
                                                             </tr>
                                                             <?php endforeach; ?>
                                                         </tbody>
-
                                                     </table>
-                                                    <div class="text-right" style="margin-top: 10px;">
+
+                                                    <div class="text-left" style="margin-top: 10px;">
+                                                        <!-- Label and dropdown in the same row -->
+                                                        <label for="facultyDropdown" style="margin-right: 10px;">Select
+                                                            Faculty:</label>
+
+                                                        <!-- Dropdown menu for faculty with reduced size -->
+                                                        <select class="faculty-dropdown" name="faculty"
+                                                            id="facultyDropdown" style="width: 135px;">
+                                                            <?php foreach ($Faculty as $faculty): ?>
+                                                            <?php if ($faculty->course == $record->course && $faculty->sub_course == $record->sub_course): ?>
+                                                            <option value="<?= $faculty->id; ?>">
+                                                                <?= $faculty->full_name; ?>
+                                                            </option>
+                                                            <?php endif; ?>
+                                                            <?php endforeach; ?>
+                                                        </select>
+
                                                         <?php if ($record->Assign_Techer_id !== null): ?>
                                                         <!-- If Assign_Techer_id is not null, show this button -->
                                                         <button type="submit" id="facultyButton"
-                                                            class="btn btn-primary">Change Faculty</button>
+                                                            class="btn btn-primary">Change FacultyAssign Teacher</button>
                                                         <?php else: ?>
                                                         <!-- If Assign_Techer_id is null, show this button -->
                                                         <button type="submit" id="postSelectedRows"
-                                                            class="btn btn-primary">Create Group</button>
+                                                            class="btn btn-primary">Assign Teacher</button>
                                                         <?php endif; ?>
                                                     </div>
                                                 </form>
@@ -187,14 +189,14 @@
     document.addEventListener('DOMContentLoaded', function() {
         var buttons = document.querySelectorAll('.group-button');
         var recordsContainers = document.querySelectorAll('.group-records');
-
+        if (recordsContainers.length > 0) {
+            recordsContainers[0].style.display = 'block';
+        }
         buttons.forEach(function(button) {
             button.addEventListener('click', function() {
                 var group = this.getAttribute('data-group');
                 var clickedRecordsContainer = document.querySelector('[data-group-id="' +
                     group + '-records"]');
-
-                // Toggle the visibility of the records for the clicked group
                 recordsContainers.forEach(function(container) {
                     if (container === clickedRecordsContainer) {
                         container.style.display = 'block';

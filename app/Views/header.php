@@ -16,125 +16,157 @@ $page = $uri->getSegment(count($pages));
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enatyam</title>
     <style>
-        div:where(.swal2-container) {
-            display: grid !important;
-        }
+    div:where(.swal2-container) {
+        display: grid !important;
+    }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
     <?php if ($page == 'enatyam' || $page == 'Home') {
 
     ?>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/faq.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/footer.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/s_header.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/courseOffering.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/faq.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/footer.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/s_header.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/courseOffering.css">
 
+<link rel="stylesheet" href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
+<link rel="stylesheet" href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
 
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-        <!-- fontawesome icon cdn -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- fontawesome icon cdn -->
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- owl carousel css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-        <style>
-            .cart-a sup {
-                background: #FF0067;
-                border-radius: 50%;
-                /* padding: 5px; */
-                width: 23px;
-                height: 23px;
-                display: inline-block;
-                text-align: center;
-                line-height: 23px;
-                font-size: 11px;
-                font-weight: 600;
-            }
+    <style>
+    .cart-a sup {
+        background: #FF0067;
+        border-radius: 50%;
+        /* padding: 5px; */
+        width: 23px;
+        height: 23px;
+        display: inline-block;
+        text-align: center;
+        line-height: 23px;
+        font-size: 11px;
+        font-weight: 600;
+    }
 
-            .btn-close-dark {
-                position: absolute;
-                right: -12px;
-                top: -14px;
-                /* background: crimson; */
-                /* opacity: 1; */
-                /* color: #fff!important; */
-                break-after: avoid;
-                border: 1px solid #000;
-                padding: 6px;
-                border-radius: 30px;
-                background-color: #ff0067;
-                opacity: 1;
-                font-size: 15px;
+    .btn-close-dark {
+        position: absolute;
+        right: -12px;
+        top: -14px;
+        /* background: crimson; */
+        /* opacity: 1; */
+        /* color: #fff!important; */
+        break-after: avoid;
+        border: 1px solid #000;
+        padding: 6px;
+        border-radius: 30px;
+        background-color: #ff0067;
+        opacity: 1;
+        font-size: 15px;
 
-            }
-        </style>
+    }
+    </style>
 
-        <script language="javascript" type="text/javascript">
-            function dynamicdropdown(listindex) {
-                document.getElementById("subcategory").length = 0;
-                switch (listindex) {
-                    case "Dance":
-                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
-                        document.getElementById("subcategory").options[1] = new Option("Bollywood Dance Classes", "Bollywood Dance Classes");
-                        document.getElementById("subcategory").options[2] = new Option("Bharatanatyam Dance Classes", "Bharatanatyam Dance Classes");
-                        document.getElementById("subcategory").options[3] = new Option("Kathak Dance Classes", "Kathak Dance Classes");
-                        document.getElementById("subcategory").options[4] = new Option("Odissi Dance Classes", "Odissi Dance Classes");
-                        document.getElementById("subcategory").options[5] = new Option("Western Dance Classes", "Western Dance Classes");
-                        document.getElementById("subcategory").options[6] = new Option("Semi classical Dance Classes", "Semi classical Dance Classes");
-                        document.getElementById("subcategory").options[7] = new Option("Bhangara Dance Classes", "Bhangara Dance Classes");
-                        document.getElementById("subcategory").options[8] = new Option("Folk Dance Classes", "Folk Dance Classes");
-                        break;
+    <script language="javascript" type="text/javascript">
+    function dynamicdropdown(listindex) {
+        document.getElementById("subcategory").length = 0;
+        switch (listindex) {
+            case "Dance":
+                document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                document.getElementById("subcategory").options[1] = new Option("Bollywood Dance Classes",
+                    "Bollywood Dance Classes");
+                document.getElementById("subcategory").options[2] = new Option("Bharatanatyam Dance Classes",
+                    "Bharatanatyam Dance Classes");
+                document.getElementById("subcategory").options[3] = new Option("Kathak Dance Classes",
+                    "Kathak Dance Classes");
+                document.getElementById("subcategory").options[4] = new Option("Odissi Dance Classes",
+                    "Odissi Dance Classes");
+                document.getElementById("subcategory").options[5] = new Option("Western Dance Classes",
+                    "Western Dance Classes");
+                document.getElementById("subcategory").options[6] = new Option("Semi classical Dance Classes",
+                    "Semi classical Dance Classes");
+                document.getElementById("subcategory").options[7] = new Option("Bhangara Dance Classes",
+                    "Bhangara Dance Classes");
+                document.getElementById("subcategory").options[8] = new Option("Folk Dance Classes",
+                    "Folk Dance Classes");
+                break;
 
-                    case "Music":
-                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
-                        document.getElementById("subcategory").options[1] = new Option("Hindustani Vocal Classes", "Hindustani Vocal Classes");
-                        document.getElementById("subcategory").options[2] = new Option("Carnatic Vocal Classes", "Carnatic Vocal Classes");
-                        document.getElementById("subcategory").options[3] = new Option("Semi Classical Classes", "Semi Classical Classes");
-                        document.getElementById("subcategory").options[4] = new Option("Western Singing Classes", "Western Singing Classes");
-                        document.getElementById("subcategory").options[5] = new Option("Playback Singing Classes", "Playback Singing Classes");
-                        break;
-                    case "Yoga":
-                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
-                        document.getElementById("subcategory").options[1] = new Option("Prenatal Yoga Classes", "Prenatal Yoga Classes");
-                        document.getElementById("subcategory").options[2] = new Option("Stress Reduction Yoga Classes", "Stress Reduction Yoga Classes");
-                        document.getElementById("subcategory").options[3] = new Option("Flexibility Yoga Classes", "Flexibility Yoga Classes");
-                        document.getElementById("subcategory").options[4] = new Option("Weight Loss Yoga Classes", "Weight Loss Yoga Classes");
-                        document.getElementById("subcategory").options[5] = new Option("Everyday Yoga Classes", "Everyday Yoga Classes");
-                        document.getElementById("subcategory").options[6] = new Option("Yoga for chronic disease Classes", "Yoga for chronic disease Classes");
-                        document.getElementById("subcategory").options[7] = new Option("Yoga for Kids Classes", "Yoga for Kids Classes");
-                        document.getElementById("subcategory").options[8] = new Option("Meditation Classes", "Meditation Classes");
-                        document.getElementById("subcategory").options[9] = new Option("Customise your Yoga Plan Classes", "Customise your Yoga Plan Classes");
-                        document.getElementById("subcategory").options[10] = new Option("Nutrition Counselling Classes", "Nutrition Counselling Classes");
-                        break;
-                    case "Instruments":
-                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
-                        document.getElementById("subcategory").options[1] = new Option("Guitar Classes", "Guitar Classes");
-                        document.getElementById("subcategory").options[2] = new Option("Flute Classes", "Flute Classes");
-                        document.getElementById("subcategory").options[3] = new Option("Tabla Classes", "Tabla Classes");
-                        document.getElementById("subcategory").options[4] = new Option("Sitar Classes", "Sitar Classes");
-                        document.getElementById("subcategory").options[5] = new Option("Veena Classes", "Veena Classes");
-                        document.getElementById("subcategory").options[6] = new Option("Piano Classes", "Piano Classes");
-                        document.getElementById("subcategory").options[7] = new Option("Violin Classes", "Violin Classes");
-                        document.getElementById("subcategory").options[8] = new Option("Drum Classes", "Drum Classes");
-                        document.getElementById("subcategory").options[9] = new Option("Keyborad Classes", "Keyborad Classes");
-                        document.getElementById("subcategory").options[10] = new Option("Harmonium Classes", "Harmonium Classes");
+            case "Music":
+                document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                document.getElementById("subcategory").options[1] = new Option("Hindustani Vocal Classes",
+                    "Hindustani Vocal Classes");
+                document.getElementById("subcategory").options[2] = new Option("Carnatic Vocal Classes",
+                    "Carnatic Vocal Classes");
+                document.getElementById("subcategory").options[3] = new Option("Semi Classical Classes",
+                    "Semi Classical Classes");
+                document.getElementById("subcategory").options[4] = new Option("Western Singing Classes",
+                    "Western Singing Classes");
+                document.getElementById("subcategory").options[5] = new Option("Playback Singing Classes",
+                    "Playback Singing Classes");
+                break;
+            case "Yoga":
+                document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                document.getElementById("subcategory").options[1] = new Option("Prenatal Yoga Classes",
+                    "Prenatal Yoga Classes");
+                document.getElementById("subcategory").options[2] = new Option("Stress Reduction Yoga Classes",
+                    "Stress Reduction Yoga Classes");
+                document.getElementById("subcategory").options[3] = new Option("Flexibility Yoga Classes",
+                    "Flexibility Yoga Classes");
+                document.getElementById("subcategory").options[4] = new Option("Weight Loss Yoga Classes",
+                    "Weight Loss Yoga Classes");
+                document.getElementById("subcategory").options[5] = new Option("Everyday Yoga Classes",
+                    "Everyday Yoga Classes");
+                document.getElementById("subcategory").options[6] = new Option("Yoga for chronic disease Classes",
+                    "Yoga for chronic disease Classes");
+                document.getElementById("subcategory").options[7] = new Option("Yoga for Kids Classes",
+                    "Yoga for Kids Classes");
+                document.getElementById("subcategory").options[8] = new Option("Meditation Classes",
+                    "Meditation Classes");
+                document.getElementById("subcategory").options[9] = new Option("Customise your Yoga Plan Classes",
+                    "Customise your Yoga Plan Classes");
+                document.getElementById("subcategory").options[10] = new Option("Nutrition Counselling Classes",
+                    "Nutrition Counselling Classes");
+                break;
+            case "Instruments":
+                document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                document.getElementById("subcategory").options[1] = new Option("Guitar Classes", "Guitar Classes");
+                document.getElementById("subcategory").options[2] = new Option("Flute Classes", "Flute Classes");
+                document.getElementById("subcategory").options[3] = new Option("Tabla Classes", "Tabla Classes");
+                document.getElementById("subcategory").options[4] = new Option("Sitar Classes", "Sitar Classes");
+                document.getElementById("subcategory").options[5] = new Option("Veena Classes", "Veena Classes");
+                document.getElementById("subcategory").options[6] = new Option("Piano Classes", "Piano Classes");
+                document.getElementById("subcategory").options[7] = new Option("Violin Classes", "Violin Classes");
+                document.getElementById("subcategory").options[8] = new Option("Drum Classes", "Drum Classes");
+                document.getElementById("subcategory").options[9] = new Option("Keyborad Classes", "Keyborad Classes");
+                document.getElementById("subcategory").options[10] = new Option("Harmonium Classes",
+                    "Harmonium Classes");
 
-                        break;
-                }
-                return true;
-            }
-        </script>
+                break;
+        }
+        return true;
+    }
+    </script>
     <?php } else if ($page == 'Dance') { ?>
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css">
 
@@ -151,146 +183,181 @@ $page = $uri->getSegment(count($pages));
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- owl carousel css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </script>
 
     <?php } else if ($page == 'music') { ?>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo base_url() ?>public/css/headerStyle.css">
-        <link rel="stylesheet" href="<?php echo base_url() ?>public/css/dancepage.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/DanceInstructer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url() ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>public/css/dancepage.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/DanceInstructer.css">
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
-            .month-row .month-list .dancetypes .monthbtn {
-                width: 109px !important;
-                height: 60px;
-            }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    .month-row .month-list .dancetypes .monthbtn {
+        width: 109px !important;
+        height: 60px;
+    }
 
-            body {
-                background-color: #fad32c;
-            }
+    body {
+        background-color: #fad32c;
+    }
 
-            #danceVideo {
+    #danceVideo {
 
-                width: 100%;
-                height: 500px;
-                object-fit: cover;
-                z-index: -100;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        z-index: -100;
 
-            }
-        </style>
+    }
+    </style>
 
 
     <?php } else if ($page == 'Yoga') { ?>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
 
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- owl carousel css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-        <style>
-            .tab-pane.fade.show .textPara1 {
-                font-size: 15px !important;
-                font-weight: 400 !important;
-            }
-        </style>
+    <style>
+    .tab-pane.fade.show .textPara1 {
+        font-size: 15px !important;
+        font-weight: 400 !important;
+    }
+    </style>
     <?php } else if ($page == 'Instruments') { ?>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- owl carousel css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-        <style>
-            .month-row .month-list .dancetypes .monthbtn {
-                width: 109px !important;
-                height: 60px;
-            }
+    <style>
+    .month-row .month-list .dancetypes .monthbtn {
+        width: 109px !important;
+        height: 60px;
+    }
 
-            body {
-                background-color: #fad32c;
-            }
+    body {
+        background-color: #fad32c;
+    }
 
-            #danceVideo {
+    #danceVideo {
 
-                width: 100%;
+        width: 100%;
 
-                object-fit: cover;
-                z-index: -100;
+        object-fit: cover;
+        z-index: -100;
 
-            }
-        </style>
+    }
+    </style>
     <?php } else if ($page == 'Career') { ?>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Carrier.css">
-        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/Career.css"> -->
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Carrier.css">
+    <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/Career.css"> -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
@@ -298,30 +365,35 @@ $page = $uri->getSegment(count($pages));
 
 
     <?php } else if ($page == 'demo') { ?>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <?php } else if ($page == 'Checkout' || $page == 'BillingInformation') { ?>
 
-        <link rel="stylesheet" href="public/css/Checkout.css">
+    <link rel="stylesheet" href="public/css/Checkout.css">
 
-        <link href="<?php echo base_url(); ?>public/extcss/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="<?php echo base_url(); ?>public/js/bootstrap.bundle.min.js"></script>
+    <link href="<?php echo base_url(); ?>public/extcss/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="<?php echo base_url(); ?>public/js/bootstrap.bundle.min.js"></script>
 
-        <style>
-            .error {
-                color: red !important;
-            }
-        </style>
+    <style>
+    .error {
+        color: red !important;
+    }
+    </style>
 
 
 
@@ -330,34 +402,42 @@ $page = $uri->getSegment(count($pages));
 
 
     ?>
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/footer.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/contactus.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/footer.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/contactus.css">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-        <!-- fontawesome icon cdn -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css"
+        integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- fontawesome icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Carrier.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Carrier.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <?php }
@@ -403,16 +483,18 @@ $page = $uri->getSegment(count($pages));
                     <div>
                         <div class="">
                             <?php if (!(session()->get('sessiondata'))) : ?>
-                                <div class="loginmenu">
-                                    <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
-                                    <a class="login" href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
-                                </div>
+                            <div class="loginmenu">
+                                <a class="Register" href="" data-bs-toggle="modal"
+                                    data-bs-target="#registerformpopup">Register</a>
+                                <a class="login" href="" data-bs-toggle="modal"
+                                    data-bs-target="#loginformpopup">Login</a>
+                            </div>
                             <?php else : ?>
-                                <div class="loginmenu">
-                                    <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
-                                    <a class="Dashboard" href="<?php echo base_url('Dashboard'); ?>">Dashboard</a>
-                                    <a class="logout" href="<?php echo base_url('logout'); ?>">Logout</a>
-                                </div>
+                            <div class="loginmenu">
+                                <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
+                                <a class="Dashboard" href="<?php echo base_url('Dashboard'); ?>">Dashboard</a>
+                                <a class="logout" href="<?php echo base_url('logout'); ?>">Logout</a>
+                            </div>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -428,7 +510,8 @@ $page = $uri->getSegment(count($pages));
                     <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button> -->
-                    <a href="https://infobeckon.com/enatyam/" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
+                    <a href="https://infobeckon.com/enatyam/"
+                        title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
                         <img src="public/images/logo1.png" alt="Enatyam">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -441,7 +524,8 @@ $page = $uri->getSegment(count($pages));
                             <a class="nav-link px-2" href="<?php echo base_url('Career'); ?>">Career</a>
                         </div>
                         <div class="navbar-nav">
-                            <a href="<?php echo base_url('demo'); ?>" class="btn btndemoh" style="width: auto;">BOOK YOUR FREE DEMO</a>
+                            <a href="<?php echo base_url('demo'); ?>" class="btn btndemoh" style="width: auto;">BOOK
+                                YOUR FREE DEMO</a>
                         </div>
                     </div>
                 </div>
@@ -455,7 +539,8 @@ $page = $uri->getSegment(count($pages));
             <div class="container-fluid d-block d-lg-none">
                 <div class="row mx-0">
                     <div class="col-6">
-                        <a href="https://infobeckon.com/enatyam/" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
+                        <a href="https://infobeckon.com/enatyam/"
+                            title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
                             <img src="public/images/logo1.png" alt="Enatyam">
                         </a>
                     </div>
@@ -495,19 +580,22 @@ $page = $uri->getSegment(count($pages));
                     <div class="register_form">
                         <h4 class="titel pt-3">Register a new account</h4>
 
-                        <form name="registrationForm" onsubmit="return validateForm()" method="post" action="<?php echo base_url(); ?>register" id="registerform">
+                        <form name="registrationForm" onsubmit="return validateForm()" method="post"
+                            action="<?php echo base_url(); ?>register" id="registerform">
                             <div class="form-group m-2">
-                                <input type="text" name="full_name" id="full_name" class="form-control" aria-required="true" placeholder="Username">
+                                <input type="text" name="full_name" id="full_name" class="form-control"
+                                    aria-required="true" placeholder="Username">
                                 <span id="nameError" class="d-none" style="color: red;"></span>
                             </div>
-
                             <div class="form-group m-2">
-                                <input type="email" name="email" id="email" class="form-control" aria-required="true" placeholder="Email">
+                                <input type="email" name="email" id="email" class="form-control" aria-required="true"
+                                    placeholder="Email">
                                 <span id="emailError" style="color: red;"></span>
                             </div>
 
                             <div class="form-group m-2">
-                                <input type="mobile_no" name="mobile_no" id="mobile_no" class="form-control" aria-required="true" placeholder="mobile number">
+                                <input type="mobile_no" name="mobile_no" id="mobile_no" class="form-control"
+                                    aria-required="true" placeholder="mobile number">
                                 <span id="mobile_noError" style="color: red;"></span>
                             </div>
 
@@ -523,17 +611,20 @@ $page = $uri->getSegment(count($pages));
 
 
                             <div class="form-group m-2">
-                                <input type="password" name="password" id="password" class="form-control" aria-required="true" placeholder="Password">
+                                <input type="password" name="password" id="password" class="form-control"
+                                    aria-required="true" placeholder="Password">
                                 <span id="passwordError" style="color: red;"></span>
                             </div>
 
                             <div class="form-group m-2">
-                                <input type="password" name="confirm_pass" id="confirm_pass" class="form-control" aria-required="true" placeholder="Repeat password">
+                                <input type="password" name="confirm_pass" id="confirm_pass" class="form-control"
+                                    aria-required="true" placeholder="Repeat password">
                                 <span id="confirmpasswordError" style="color: red;"></span>
                             </div>
 
                             <div class="form-group m-2">
-                                <input type="text" name="otp" id="otp" class="form-control d-none" placeholder="Enter otp">
+                                <input type="text" name="otp" id="otp" class="form-control d-none"
+                                    placeholder="Enter otp">
                                 <span id="otpError" style="color: red;"></span>
                             </div>
 
@@ -543,9 +634,11 @@ $page = $uri->getSegment(count($pages));
                             </div>
 
 
-
                             <input type="button" onclickt="return validateForm()" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
                             <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
+
+                            <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a>
+
                         </form>
 
 
@@ -573,8 +666,16 @@ $page = $uri->getSegment(count($pages));
                     <form action="saveuserdata" method="post">
                         <input type="hidden" name="email" id="hiddenEmail">
                         <!-- <div class="form-group"> -->
+                        <div class="form-group">
+                            <label for="country">Please select Country:</label>
+                            <select name="country" class="form-control" id="country">
+                                <option value="">Select Country</option>
+                                <!-- JavaScript will populate this list -->
+                            </select>
+                        </div>
                         <div class="form-group" id="category_div">Please specify Course:
-                            <select name="category" class="required-entry form-control" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                            <select name="category" class="required-entry form-control" id="category"
+                                onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
                                 <option value="">Select Course</option>
                                 <option value="Dance">Dance</option>
                                 <option value="Music">Music</option>
@@ -589,64 +690,24 @@ $page = $uri->getSegment(count($pages));
                             <select name="subcategory" id="subcategory" class="form-control">
                                 <!-- <option value="">Please select Subcategory</option> -->
                                 <script type="text/javascript" language="JavaScript">
-                                    document.write('<select name="subcategory" id="subcategory"></select>')
+                                document.write('<select name="subcategory" id="subcategory"></select>')
                                 </script>
 
                                 <!-- Add your options here -->
                             </select>
                         </div>
 
-                        <!-- <div class="sub_category_div form-group" id="sub_category_div">Please select Subcategory:
-                            <script type="text/javascript" language="JavaScript">
-                                document.write('<select name="subcategory" id="subcategory"><option value="">Please select Subcategory</option></select>')
-                            </script>
-                            <noscript>
-                                <select name="subcategory" id="subcategory" class="form-control">
-                                    <option value="">Please select Subcourse</option>
-                                </select>
-                            </noscript>
-                        </div> -->
-
-
-
-                        <!-- <div class="form-group">
-                            <select class="form-control" id="course" aria-required="true" aria-invalid="false" name="course">
-                                <option value="">Book Demo for*</option>
-                                <option id="" value="Dance">Dance</option>
-                                <option id="" value="Music">Music</option>
-                                <option id="" value="Yoga">Yoga</option>
-                                <option id="" value="Instruments">Instruments</option>
-
-                            </select>
-                            <span style="color:red;" id="coursespanid"></span> -->
-                        <!-- <select class="form-control" id="course" aria-required="true" aria-invalid="false" name="course">
-                                <option value="">Book Demo for*</option>
-                                <option id="" value="Dance">Dance</option>
-                                <option id="" value="Music">Music</option>
-                                <option id="" value="Yoga">Yoga</option>
-                                <option id="" value="Instruments">Instruments</option>
-
-                            </select> -->
-                        <!-- </div> -->
-                        <!-- <div class="form-group">
-                            <select class="form-control" id="sub_course" aria-required="true" aria-invalid="false" name="sub_course">
-                                <option value="">select subCource*</option>
-                                <option value="Dance">Kathak</option>
-                                <option value="Music">Ouuu</option>
-                                <option value="Yoga">Yoagagag</option>
-                                <option value="Instruments">Tablea</option>
-                            </select>
-                        </div> -->
                         <div class="form-group">
                             <label> Please enter Your Age</label>
-                            <input type="number" name="age" id="age" class="form-control" aria-required="true" placeholder="Enter Your Age">
+                            <input type="number" name="age" id="age" class="form-control" aria-required="true"
+                                placeholder="Enter Your Age">
                         </div>
                         <div class="form-group">
                             <label style="font-size: 14px;">Are you practicing this art (any experience in this
                                 sector)?</label><br>
-                            <label style="margin-left: 100px;" for="yes">Yes</label>
+                            <label style="margin-left: 100px;font-size: 14px;" for="yes">Yes</label>
                             <input type="radio" name="experience" id="yes" value="yes" class="experience-radio">
-                            <label style="margin-left: 100px;" for="no">No</label>
+                            <label style="margin-left: 100px;font-size: 14px;" for="no">No</label>
                             <input type="radio" name="experience" id="no" value="no" class="experience-radio">
                         </div>
                         <div class="form-group" id="experienceDetails" style="display: none;">
@@ -655,9 +716,9 @@ $page = $uri->getSegment(count($pages));
                         </div>
                         <div class="form-group">
                             <label style="font-size: 14px;">Select Class Types</label><br>
-                            <label style="margin-top: 15px;margin-left: 13px;">GroupSession</label>
+                            <label style="margin-top: 15px;margin-left: 13px;font-size: 14px;">GroupSession</label>
                             <input type="radio" name="SessionType" value="GroupSession" class="experience-radio">
-                            <label style="margin-left: 100px;">OneToOneSession</label>
+                            <label style="margin-left: 100px;font-size: 14px;">OneToOneSession</label>
                             <input type="radio" name="SessionType" value="OneToOneSession" class="experience-radio">
                         </div>
                         <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>
@@ -684,25 +745,30 @@ $page = $uri->getSegment(count($pages));
                     <div class="login_form">
                         <h4 class="titel pt-3" color="black">Login with your site account</h4>
 
-                        <form name="loginForm" onsubmit="return validateFormLogin()" action="<?php echo base_url(); ?>login" id="loginform" method="post">
+                        <form name="loginForm" onsubmit="return validateFormLogin()"
+                            action="<?php echo base_url(); ?>login" id="loginform" method="post">
                             <div class="form-group m-2">
-                                <input type="text" name="username" id="username" class="form-control" aria-required="true" placeholder="Email or Mobile number">
+                                <input type="text" name="username" id="username" class="form-control"
+                                    aria-required="true" placeholder="Email or Mobile number">
                                 <span id="usernameError" style="color: red;"></span>
                             </div>
 
                             <div class="form-group  m-2">
-                                <input type="password" name="password" id="password" class="form-control" aria-required="true" placeholder="Password">
+                                <input type="password" name="password" id="password" class="form-control"
+                                    aria-required="true" placeholder="Password">
                                 <span id="passwordError1" style="color: red;"></span>
                             </div>
                             <div class="forgetmenot login-remember">
 
-                                <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password?</a>
+                                <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password"
+                                    onclick="showLostPasswordModal()">Lost your password?</a>
                             </div>
                     </div>
 
                     <input type="submit" value="Login" class="btn btn-light mt-3">
                     <p>Not a member yet?
-                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()"
+                            data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
                     </p>
                     </form>
                 </div>
@@ -716,29 +782,36 @@ $page = $uri->getSegment(count($pages));
                 <div class="modal-body">
                     <div class="login_form">
                         <h4 class="titel pt-3" style="color: black;">Lost Password Recovery</h4>
-                        <form name="lostPasswordForm" action="<?php echo base_url(); ?>lostpassword" id="lostpasswordform" method="post">
+                        <form name="lostPasswordForm" action="<?php echo base_url(); ?>lostpassword"
+                            id="lostpasswordform" method="post">
                             <div class="form-group">
-                                <input type="email" name="lostpassword_email" id="lostpassword_email" class="form-control" aria-required="true" placeholder="Email">
+                                <input type="email" name="lostpassword_email" id="lostpassword_email"
+                                    class="form-control" aria-required="true" placeholder="Email">
                                 <span id="lostpassword_email_error" style="color: red;"></span>
                             </div>
                             <button type="submit" class="btn btn-light mt-3">Recover Password</button>
                         </form>
                         <!-- OTP input field and button (hidden initially) -->
-                        <form name="otpValidateForm" action="<?php echo base_url(); ?>otpvalidate" id="otpValidateForm" method="post">
+                        <form name="otpValidateForm" action="<?php echo base_url(); ?>otpvalidate" id="otpValidateForm"
+                            method="post">
                             <div id="otpField" style="display: none;">
                                 <div class="form-group">
-                                    <input type="text" name="entered_otp" id="entered_otp" class="form-control" placeholder="Enter OTP">
+                                    <input type="text" name="entered_otp" id="entered_otp" class="form-control"
+                                        placeholder="Enter OTP">
                                     <span id="invalidotp" style="color: red;"></span>
                                 </div>
                                 <button type="submit" class="btn btn-light mt-3">Submit OTP</button>
                             </div>
                         </form>
 
-                        <form name="newPasswordForm" action="<?php echo base_url(); ?>newpassword" id="newPasswordForm" method="post">
+                        <form name="newPasswordForm" action="<?php echo base_url(); ?>newpassword" id="newPasswordForm"
+                            method="post">
                             <div id="passwordField" style="display: none;">
                                 <div class="form-group">
-                                    <input type="password" name="new_password" id="new_password" class="form-control" aria-required="true" placeholder="Enter New Password">
-                                    <input type="password" name="conf_password" id="conf_password" class="form-control" aria-required="true" placeholder="Confirm Password">
+                                    <input type="password" name="new_password" id="new_password" class="form-control"
+                                        aria-required="true" placeholder="Enter New Password">
+                                    <input type="password" name="conf_password" id="conf_password" class="form-control"
+                                        aria-required="true" placeholder="Confirm Password">
                                     <span id="password_match_error" style="color: red;"></span>
                                 </div>
                                 <button type="submit" class="btn btn-light mt-3">Submit New Password</button>
