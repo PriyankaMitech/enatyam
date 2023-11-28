@@ -11,6 +11,7 @@
         "ext-mbstring": "*",
         "guzzlehttp/guzzle": "^7.8",
         "laminas/laminas-escaper": "^2.9",
+        "league/oauth2-google": "^4.0",
         "psr/log": "^1.1"
     },
     "require-dev": {

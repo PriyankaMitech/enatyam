@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Controllers;
-use App\Libraries\Google;
+// use App\Libraries\Google;
+use League\OAuth2\Client\Provider\Google;
 
 class User_authentication extends BaseController
 {
@@ -9,13 +10,14 @@ class User_authentication extends BaseController
         parent::__construct(); 
          
         // Load google oauth library 
-        $this->load->library('google'); 
+        // $this->load->library('google'); 
          
         // Load user model 
-        $this->load->model('user'); 
+        // $this->load->model('user'); 
     }
 
     public function index(){ 
+        echo 'asds';die;
         // Redirect to profile page if the user already logged in 
         if($this->session->userdata('loggedIn') == true){ 
             redirect('user_authentication/profile/'); 

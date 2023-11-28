@@ -42,7 +42,8 @@ class Autoload extends AutoloadConfig
     public $psr4 = [
         APP_NAMESPACE => APPPATH, // For custom app namespace
         'Config'      => APPPATH . 'Config',
-
+        // 'Myth\Auth'   => ROOTPATH . 'vendor/lonnieezell/myth-auth/src',
+        'League\OAuth2\Client' => APPPATH . 'ThirdParty/oauth2-client-master',
         
     ];
 
