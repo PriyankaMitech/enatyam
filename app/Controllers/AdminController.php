@@ -152,9 +152,8 @@ class AdminController extends BaseController
             if ($email !== null && $password !== null) {
 
                 $model = new AdminModel();
-                $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
-                $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
-                // echo "<pre>"; print_r($data['FacultyVideoData']);echo "</pre>"; die();
+                $data['studentVideoData'] = $model->getStudeyVideoUplodeByStudent();
+                $data['FacultyVideoData'] = $model->getStudeyVideoUplodeByFaculty();
                 return view('AdminSideBar/StudentVideo', $data);
             } else {
                 return redirect()->to(base_url());
@@ -213,6 +212,7 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
+
     public function getTeachersByStudent()
     {
         $studentId = $this->request->getPost('studentId');
@@ -220,15 +220,16 @@ class AdminController extends BaseController
         $teachers = $model->getTeachersByStudent($studentId);
         return $this->response->setJSON($teachers);
     }
+
     public function processSelection()
     {
-        // print_r($_POST);die;
         $studentId = $this->request->getPost('studentId');
         $teacherId = $this->request->getPost('teacherId');
         $model = new AdminModel();
         $result = $model->getStudentAndTeacherData($studentId, $teacherId);
         return $this->response->setJSON($result);
     }
+
     public function NewFacultyApplication()
     {
         if (isset($_SESSION['sessiondata'])) {
@@ -258,14 +259,11 @@ class AdminController extends BaseController
 
     public function Steusupdate()
     {
-
-        //   print_r($_POST);die;
         $action = $this->request->getPost('action');
         $D_id = $this->request->getPost('D_id');
         if ($D_id && ($action === 'approve' || $action === 'decline')) {
             $model = new CarrierModel();
-            $careerRecord = $model->getcarreerByfaculty($D_id);
-            //       echo "<pre>"; print_r($careerRecord);echo "</pre>"; die();  
+            $careerRecord = $model->getcarreerByfaculty($D_id); 
 
             if ($careerRecord) {
 
@@ -314,8 +312,6 @@ class AdminController extends BaseController
 
     public function backtoApplication()
     {
-        // print_r($_POST);die;
-
         $action = $this->request->getPost('action');
         $D_id = $this->request->getPost('D_id');
 
@@ -326,9 +322,6 @@ class AdminController extends BaseController
     }
     public function createpassword()
     {
-        // print_r($_POST);
-        // die;
-
         $password = $this->request->getPost('password');
         $id = $this->request->getPost('id');
         $model = new AdminModel();
@@ -372,8 +365,6 @@ class AdminController extends BaseController
         }
 
         $data['FacultysheduleData'] = $model->getFacultyShedule();
-        //    echo "<pre>"; print_r($data);echo "</pre>"; die();  
-
 
         return view('AdminSideBar/FacultysidebarShedule', $data);
     }
@@ -445,13 +436,13 @@ class AdminController extends BaseController
         $model->AddUserByAdmin($data);
         return redirect()->to('AddNewUser');
     }
+
     public function addStudent()
     {
-        //  print_r($_POST);die;
         $email = $this->request->getPost('email');
         $model = new AdminModel();
         $studentData = $model->getStudentDataByEmail($email);
-        //print_r($studentData);die;
+        
         if ($studentData) {
             $insertData = [
                 'full_name' => $studentData->name,
@@ -465,41 +456,35 @@ class AdminController extends BaseController
             return redirect()->to('Admindashboard');
         }
     }
+
     public function StudentListToAdmin()
     {
 
         $model = new AdminModel();
         $data['groupSessionStudents'] = $model->getGroupSessionStudents();
         $data['OneToOneSession'] = $model->getOneToOneSessionStudents();
-
-        return view('AdminSideBar/StudentList', $data);
+      
+        return view('AdminSideBar/StudentList', $data);      
     }
+
     public function SelectedForGroup()
     {
-        //  print_r($_POST);die;
-        $groupName = $this->request->getPost('groupName');
-        $selectedRowIds = $this->request->getPost('selectedRowIds');
-        if (empty($selectedRowIds)) {
-            echo 'No row IDs selected for update';
-            return;
-        }
-        if (is_array($selectedRowIds)) {
-            $selectedRowIds = implode(',', $selectedRowIds);
-        }
-        $rowIdsArray = explode(',', $selectedRowIds);
-        $model = new AdminModel();
-        $model->updateGroupName($rowIdsArray, $groupName);
-        return redirect()->to('StudentListToAdmin');
+      //  print_r($_POST);die;
+          $groupName = $this->request->getPost('groupName');
+          $selectedRowIds = $this->request->getPost('selectedRowIds');
+      if (empty($selectedRowIds)) {
+          echo 'No row IDs selected for update';
+          return;
+      }
+      if (is_array($selectedRowIds)) {
+          $selectedRowIds = implode(',', $selectedRowIds);
+      }
+      $rowIdsArray = explode(',', $selectedRowIds);
+      $model = new AdminModel();
+      $model->updateGroupName($rowIdsArray, $groupName);
+      return redirect()->to('StudentListToAdmin');
+  }
 
-
-        if (is_array($selectedRowIds)) {
-            $selectedRowIds = implode(',', $selectedRowIds);
-        }
-        $rowIdsArray = explode(',', $selectedRowIds);
-        $model = new AdminModel();
-        $model->updateGroupName($rowIdsArray, $groupName);
-        return redirect()->to('today');
-    }
     public function StudentGroups()
     {
         $model = new AdminModel();
@@ -517,15 +502,12 @@ class AdminController extends BaseController
     }
     public function AssignFacultyToGroup()
     {
-        // print_r($_POST);die;
+       // print_r($_POST);die;
         $groupName = $this->request->getPost('group');
         $facultyId = $this->request->getPost('faculty');
         $model = new AdminModel();
         $model->updateFacultyForGroup($groupName, $facultyId);
         return redirect()->to('StudentGroups');
-    }
-    public function studentAttendance()
-    {
-        return view('studentAttendance');
+    
     }
 }

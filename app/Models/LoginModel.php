@@ -329,10 +329,7 @@ class LoginModel extends Model
         return !empty($result);
     }
 
-    public function get_user_Session($user_id){
-        
-        return $this->db->table('register')->select('SessionsCount')->where('id', $user_id)->get()->getRow();
-     }
+  
 
     public function checkexist($value, $column) {
         $result = $this->db
