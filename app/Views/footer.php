@@ -88,7 +88,7 @@
 <script src="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/js/bootstrap-select-country.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script src="<?php echo base_url()?>public/js/custom.js"></script>
+<script src="<?php echo base_url() ?>public/js/custom.js"></script>
 <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard') { ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -96,6 +96,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 
     <!-- owl carousel js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -243,6 +247,20 @@
             //     valid = false;
             // }
 
+
+            let input = document.querySelector(".terms");
+            let button = document.querySelector(".clicktoTerms");
+            button.disabled = true;
+            input.addEventListener("change", stateHandle);
+
+            function stateHandle() {
+                if (document.querySelector(".terms").value === "") {
+                    button.disabled = true;
+                } else {
+                    button.disabled = false;
+                }
+            }
+
             return valid;
         }
 
@@ -290,6 +308,13 @@
             return emailRegex.test(email);
         }
     </script>
+    <script>
+        $('#termsCheckbox').change(function() {
+            $('#btncheck').prop("disabled", !this.checked);
+        });
+    </script>
+
+
 
 <?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga') { ?>
 
@@ -2242,6 +2267,7 @@
                                 } else {
                                     $('#otp').removeClass('d-none').after('<span id="otperror">Enter otp sent to your mobile no.</span>')
                                 }
+
                             }
                         }
 
@@ -2278,7 +2304,7 @@
 </script>
 <script>
     // Array of country names (replace this with your actual list of countries)
-    var countries = ["USA", "Canada", "UK", "Germany", "France", "Australia", "Japan","India",];
+    var countries = ["USA", "Canada", "UK", "Germany", "France", "Australia", "Japan", "India", ];
 
     // Reference to the country dropdown
     var countryDropdown = document.getElementById("country");
@@ -2317,6 +2343,51 @@
         }
     });
 </script>
+
+<!-- <script>
+    // Get references to the checkbox, modal, and overlay elements
+    var modalCheckbox = document.getElementById('myModalCheckbox');
+    var modal = document.getElementById('myModal');
+    var overlay = document.getElementById('overlay');
+
+    // Add event listener to the checkbox
+    modalCheckbox.addEventListener('change', function() {
+            if (modalCheckbox.checked) {
+                openModal();
+            } else {
+                closeModal();
+            }
+        }
+
+    );
+
+    // Function to open the modal
+    function openModal() {
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+        modalCheckbox.checked = false; // Uncheck the checkbox when closing the modal
+    }
+</script> -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+<!-- <script>
+    $(document).ready(function() {
+        $('#termsLink').click(function(e) {
+            e.preventDefault();
+            // Show the modal when the link is clicked
+            $('#termsConditions').modal('show');
+        });
+    });
+</script> -->
 
 
 
