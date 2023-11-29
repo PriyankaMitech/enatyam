@@ -62,7 +62,7 @@ $routes->post('AddToCart', 'ProductController::AddToCart'); //add to cart
 $routes->get('showData', 'ProductController::showData'); //fetch data from database
 $routes->get('removeProduct/(:num)', 'ProductController::removeProduct/$1'); //removev cart item
 $routes->post('sessions/store', 'SessionsController::store');
-$routes->get('AdminDashboard', 'Home::AdminDashboard');
+// $routes->get('AdminDashboard', 'Home::AdminDashboard');
 
 $routes->get('register', 'LoginController::register');
 $routes->post('register', 'LoginController::register');
