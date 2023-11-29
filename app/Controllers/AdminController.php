@@ -38,7 +38,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-            //    echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
+                //    echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -473,23 +473,25 @@ class AdminController extends BaseController
       
         return view('AdminSideBar/StudentList', $data);      
     }
-            public function SelectedForGroup()
-            {
-            //  print_r($_POST);die;
-                $groupName = $this->request->getPost('groupName');
-                $selectedRowIds = $this->request->getPost('selectedRowIds');
-            if (empty($selectedRowIds)) {
-                echo 'No row IDs selected for update';
-                return;
-            }
-            if (is_array($selectedRowIds)) {
-                $selectedRowIds = implode(',', $selectedRowIds);
-            }
-            $rowIdsArray = explode(',', $selectedRowIds);
-            $model = new AdminModel();
-            $model->updateGroupName($rowIdsArray, $groupName);
-            return redirect()->to('StudentListToAdmin');
-        }
+
+    public function SelectedForGroup()
+    {
+      //  print_r($_POST);die;
+          $groupName = $this->request->getPost('groupName');
+          $selectedRowIds = $this->request->getPost('selectedRowIds');
+      if (empty($selectedRowIds)) {
+          echo 'No row IDs selected for update';
+          return;
+      }
+      if (is_array($selectedRowIds)) {
+          $selectedRowIds = implode(',', $selectedRowIds);
+      }
+      $rowIdsArray = explode(',', $selectedRowIds);
+      $model = new AdminModel();
+      $model->updateGroupName($rowIdsArray, $groupName);
+      return redirect()->to('StudentListToAdmin');
+  }
+
     public function StudentGroups()
     {
         $model = new AdminModel();
