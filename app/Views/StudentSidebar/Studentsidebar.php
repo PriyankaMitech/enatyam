@@ -23,17 +23,14 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-
+  <div class="wrapper">
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
+   <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <!-- <img src="public/AdmoinLogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
-      <!-- <span class="brand-text font-weight-light"></span> -->
     </a>
 
-    <!-- Sidebar -->
-
+  
 
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
@@ -107,9 +104,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url()?>StudentSelectClassDates" class="nav-link">
+                <a href="<?php echo base_url()?>SelectDate" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Giveslots</p>
+                  <p>Faculty Availability</p>
                 </a>
               </li>
              
@@ -203,7 +200,7 @@
 
     <!-- /.sidebar -->
   </aside>
-  </div>
+
   <script src="plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
