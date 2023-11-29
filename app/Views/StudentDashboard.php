@@ -51,7 +51,7 @@
                     <a href="#" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
+                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
                 </li>
             </ul>
 
@@ -189,25 +189,7 @@
                         <div class="col-sm-6">
 
                         </div><!-- /.col -->
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-
-                                <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>logout">Logout</a></li>
-
-
-
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-            </li>
-
-
-        </ul>
-
-    </nav>
-       
-    </div>
-
+                        
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>

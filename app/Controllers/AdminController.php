@@ -152,9 +152,8 @@ class AdminController extends BaseController
             if ($email !== null && $password !== null) {
 
                 $model = new AdminModel();
-                $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
-                $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
-                // echo "<pre>"; print_r($data['FacultyVideoData']);echo "</pre>"; die();
+                $data['studentVideoData'] = $model->getStudeyVideoUplodeByStudent();
+                $data['FacultyVideoData'] = $model->getStudeyVideoUplodeByFaculty();
                 return view('AdminSideBar/StudentVideo', $data);
             } else {
                 return redirect()->to(base_url());
@@ -471,35 +470,28 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $data['groupSessionStudents'] = $model->getGroupSessionStudents();
         $data['OneToOneSession'] = $model->getOneToOneSessionStudents();
-
-        return view('AdminSideBar/StudentList', $data);
+      
+        return view('AdminSideBar/StudentList', $data);      
     }
+
     public function SelectedForGroup()
     {
-        //  print_r($_POST);die;
-        $groupName = $this->request->getPost('groupName');
-        $selectedRowIds = $this->request->getPost('selectedRowIds');
-        if (empty($selectedRowIds)) {
-            echo 'No row IDs selected for update';
-            return;
-        }
-        if (is_array($selectedRowIds)) {
-            $selectedRowIds = implode(',', $selectedRowIds);
-        }
-        $rowIdsArray = explode(',', $selectedRowIds);
-        $model = new AdminModel();
-        $model->updateGroupName($rowIdsArray, $groupName);
-        return redirect()->to('StudentListToAdmin');
+      //  print_r($_POST);die;
+          $groupName = $this->request->getPost('groupName');
+          $selectedRowIds = $this->request->getPost('selectedRowIds');
+      if (empty($selectedRowIds)) {
+          echo 'No row IDs selected for update';
+          return;
+      }
+      if (is_array($selectedRowIds)) {
+          $selectedRowIds = implode(',', $selectedRowIds);
+      }
+      $rowIdsArray = explode(',', $selectedRowIds);
+      $model = new AdminModel();
+      $model->updateGroupName($rowIdsArray, $groupName);
+      return redirect()->to('StudentListToAdmin');
+  }
 
-
-        if (is_array($selectedRowIds)) {
-            $selectedRowIds = implode(',', $selectedRowIds);
-        }
-        $rowIdsArray = explode(',', $selectedRowIds);
-        $model = new AdminModel();
-        $model->updateGroupName($rowIdsArray, $groupName);
-        return redirect()->to('today');
-    }
     public function StudentGroups()
     {
         $model = new AdminModel();
@@ -517,15 +509,12 @@ class AdminController extends BaseController
     }
     public function AssignFacultyToGroup()
     {
-        // print_r($_POST);die;
+       // print_r($_POST);die;
         $groupName = $this->request->getPost('group');
         $facultyId = $this->request->getPost('faculty');
         $model = new AdminModel();
         $model->updateFacultyForGroup($groupName, $facultyId);
         return redirect()->to('StudentGroups');
-    }
-    public function studentAttendance()
-    {
-        return view('studentAttendance');
+    
     }
 }
