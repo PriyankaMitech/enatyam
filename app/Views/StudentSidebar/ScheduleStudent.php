@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php include(APPPATH . 'views/StudentSidebar/Studentsidebar.php'); ?>
-    <style>
+    <!-- <style>
     .row {
         margin-left: 213px;
         height: auto;
         width: auto;
     }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -38,25 +38,89 @@
         </ul>
 
     </nav>
-    <!-- Check if SessionCount is not null -->
-    <div class="container">
-    <div class="row">
-        <?php if (!is_null($SessionCount)): ?>
-            <?php for ($i = 1; $i <= $SessionCount->SessionsCount; $i++): ?>
-                <div class="col-md-3 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card <?= $i ?></h5>
-                            <!-- You can add more content or styling here -->
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Sesions</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Your Session status</h3>
+                            </div>
+       <div class="card-body">
+                                <div class="row">
+                                    <?php
+        if (!is_null($SessionCount) && $SessionCount->SessionsCount > 0) {
+            usort($slots, function ($a, $b) {
+                return strtotime($a->date) - strtotime($b->date);
+            });
+
+            for ($i = 0; $i < $SessionCount->SessionsCount; $i++) {
+                $cardColor = 'bg-warning'; // Default color for no data
+
+                if (isset($slots[$i])) {
+                    $conductedClass = $slots[$i]->Conducted_Class;
+                    $cardColor = ($conductedClass == 'Y') ? 'bg-success' : (($conductedClass == 'N') ? 'bg-danger' : 'bg-warning');
+                }
+        ?>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="card <?= $cardColor; ?>">
+                                            <div class="card-body" style="height: 150px;">
+                                                <!-- Set your desired height -->
+                                                <h5 class="card-title">Session <?= $i + 1 ?></h5><br>
+                                                <?php if (isset($slots[$i])) : ?>
+                                                <ul>
+                                                    <li><strong>Date:</strong>
+                                                        <?= date('d/m/Y', strtotime($slots[$i]->date)) ?? 'N/A' ?></li>
+                                                    <li><strong>Start Time:</strong>
+                                                        <?= $slots[$i]->start_time ?? 'N/A' ?></li>
+                                                    <li><strong>End Time:</strong> <?= $slots[$i]->end_time ?? 'N/A' ?>
+                                                    </li>
+                                                    <!-- Add other date properties as needed -->
+                                                </ul>
+                                                <?php else : ?>
+                                                <p>No dates available for this session.</p>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php
+            } 
+        } else { ?>
+                                    <div class="col-md-12 mb-3">
+                                        <div class="card bg-warning">
+                                            <div class="card-body" style="height: 200px;">
+                                                <!-- Set your desired height -->
+                                                <p>No session count available.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php } ?>
+                                </div>
+         </div>
                         </div>
                     </div>
                 </div>
-            <?php endfor; ?>
-        <?php else: ?>
-            <p>No session count available.</p>
-        <?php endif; ?>
+            </div>
+        </section>
     </div>
-</div>
 </body>
 
 </html>
