@@ -599,6 +599,17 @@ $page = $uri->getSegment(count($pages));
                                 <span id="mobile_noError" style="color: red;"></span>
                             </div>
 
+                            <!-- <div class="form-group m-2">
+                            <select class="form-control required" name="role" id="role" aria-required="true">
+                                <option value="">Open this to select Role </option>
+                                <option value="Admin">Admin</option>
+                                <option value="Student">Student</option>
+                                <option value="Faculty">Faculty</option>
+                            </select>
+                            <span id="roleerror" style="color: red;"></span>
+                        </div> -->
+
+
                             <div class="form-group m-2">
                                 <input type="password" name="password" id="password" class="form-control"
                                     aria-required="true" placeholder="Password">
@@ -616,6 +627,12 @@ $page = $uri->getSegment(count($pages));
                                     placeholder="Enter otp">
                                 <span id="otpError" style="color: red;"></span>
                             </div>
+
+                            <div class="teacher">
+
+
+                            </div>
+
 
                             <input type="button" onclickt="return validateForm()" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
                             <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
@@ -708,43 +725,13 @@ $page = $uri->getSegment(count($pages));
                             <input type="checkbox" id="termsCheckbox"> I agree to the <a href="#" id="termsLinhfgk" data-bs-toggle="modal" data-bs-target="#staticBackdrop">terms and conditions</a>
                         </label>
                         <input type="submit" id="btncheck" disabled class="btn btn-light mt-3">
-                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>
+                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>>
                     </form>
                     <!-- End of User Form -->
                 </div>
             </div>
         </div>
 
-    </div>
-
-    <div class="modal fade terms" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Terms and Conditions</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li> 1. Register for an account: To access and purchase the online courses, you must first register for an account on the website. If you already have an account, simply log in using your username and password.</li>
-                            <li>2. Select and purchase courses: Browse through the list of courses available on the website and select the ones you wish to purchase. Each course is treated as a separate offer, so make sure to add each course to your cart individually.</li>
-                            <li>3. Review and agree to the fees: Before completing the purchase, carefully review the fees indicated for each course. By selecting a course, you agree to pay the specified fees.</li>
-                            <li>4. Provide valid payment information: During the checkout process, you will be prompted to provide valid payment information. This may include credit card details or other payment methods accepted by the company. Ensure that the information provided is accurate and up to date.</li>
-                            <li>5. Complete the payment: Once you have provided the payment information, proceed to complete the payment. The company or its affiliates will process the payment based on the chosen payment method.</li>
-                            <li> 6. Access the purchased courses: After successful payment, you will gain access to the courses you have purchased. Log in to your account and navigate to the course section to start learning.</li>
-                            <li>7. Comply with course terms: While accessing and using the courses, make sure to comply with the terms outlined in the agreement. This includes not sharing or distributing course material to third parties.</li>
-                            <li>8. Complete the course: Work through the course material at your own pace and complete all the required activities and assessments. Take advantage of any interactive features or forums available to enhance your learning experience.</li>
-
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 
@@ -761,7 +748,8 @@ $page = $uri->getSegment(count($pages));
                     <div class="login_form">
                         <h4 class="titel pt-3" color="black">Login with your site account</h4>
 
-                        <form name="loginForm" onsubmit="return validateFormLogin()" action="<?php echo base_url(); ?>login" id="loginform" method="post">
+                        <form name="loginForm" onsubmit="return validateFormLogin()"
+                            action="<?php echo base_url(); ?>login" id="loginform" method="post">
                             <div class="form-group m-2">
                                 <input type="text" name="username" id="username" class="form-control"
                                     aria-required="true" placeholder="Email or Mobile number">
@@ -778,14 +766,17 @@ $page = $uri->getSegment(count($pages));
                                 <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password"
                                     onclick="showLostPasswordModal()">Lost your password?</a>
                             </div>
-
-                            <input type="submit" value="Login" class="btn btn-light mt-3">
-                            <p>Not a member yet?
-                                <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()"
-                            data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
-                            </p>
-                        </form>
                     </div>
+
+                    <input type="submit" value="Login" id="submitButton" class="btn btn-light mt-3 submitButton">
+
+                    <!-- <button class="btn btn-light mt-3 submitButton" value="Login" id="submitButton" type="submit">Login</button> -->
+
+                    <p>Not a member yet?
+                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()"
+                            data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                    </p>
+                    </form>
                 </div>
             </div>
         </div>

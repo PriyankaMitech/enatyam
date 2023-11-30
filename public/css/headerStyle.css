@@ -191,3 +191,25 @@ div {
 .tophead.scrolled {
   background-color: transparent;
 }
+
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+
+  pointer-events: visible;
+}
+/* Apply styles when the button is not disabled */
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+  cursor: default !important;
+ 
+}
+
+/* Apply default cursor style when the button is disabled */
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled,
+button:disabled {
+  cursor: not-allowed !important;
+}
+
