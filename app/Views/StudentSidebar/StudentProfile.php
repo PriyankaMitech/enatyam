@@ -1,56 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <?php include(APPPATH . 'views/StudentSidebar/Studentsidebar.php'); ?>
-
-</head>
-
-<body>
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url()?>StudentDashboard" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
-
-
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-            </li>
-
-
-        </ul>
-
-    </nav>
-    <div class="content-wrapper" style="min-height: 1172.73px;">
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1>Profile</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Profile</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
+<?php echo view('Studentsidebar/Studentsidebar');?>
+<div class="wrapper">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?=base_url(); ?>" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+            <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="content-wrapper">
+    <section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+        <div class="col-sm-6">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </div>
+        </div>
+    </div><!-- /.container-fluid -->
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+        <div class="row">
                     <div class="col-md-3">
 
                         <!-- Profile Image -->
@@ -198,47 +180,8 @@
                         <!-- /.card -->
                     </div>
                 </div>
-            </div>
-        </section>
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-        <script>
-        function updatePassword() {
-            // Add AJAX request here
-            var formData = $('#updatePasswordForm').serialize();
-
-            $.ajax({
-                type: 'POST',
-                url: 'Studentpasswordupdate',
-                data: formData,
-                dataType: 'json',
-                success: function(response) {
-                    if (response.success) {
-                        // Password updated successfully
-                        $('#updatePasswordForm').html('<div class="alert alert-success">' + response
-                            .message + '</div>');
-                    } else {
-                        // Display error message
-                        $('#password-error').text(response.error);
-                    }
-                },
-                error: function() {
-                    // Handle AJAX error
-                    alert('An error occurred during the password update.');
-                }
-            });
-        }
-
-        const togglePassword = (inputId, iconId) => {
-            const passwordInput = document.getElementById(inputId);
-            const passwordIcon = document.getElementById(iconId);
-
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            passwordIcon.classList.toggle('fa-eye');
-            passwordIcon.classList.toggle('fa-eye-slash');
-        };
-        </script>
-</body>
-
-</html>
+    
+        </div>
+    </section>
+</div>
+<?php echo view('FacultysideBar/FacultyFooter.php');?>      

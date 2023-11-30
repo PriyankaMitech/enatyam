@@ -4,36 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
+  <title>Dashboard</title>
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
 </head>
 
 <body>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- /:\xampp\htdocs\MISdashboard\public\assets\plugins\fontawesome-free\css\all.min.css -->
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <div class="wrapper">
-  <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-   <!-- Brand Logo -->
     <a href="#" class="brand-link">
-    </a>
-
-  
-
+    </a>  
     <div class="sidebar">
-      <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
         <div class="image">
           <img src="public/AdmoinLogo.png" class="img-circle elevation-2" alt="User Image">
@@ -42,8 +26,6 @@
           <a href="<?php echo base_url() ?>StudentDashboard" class="d-block"><?= $username = session()->get('user_name'); ?></a>
         </div>
       </div>
-
-      <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
@@ -52,14 +34,8 @@
           </div>
         </div>
       </div>
-
-      <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          
-          
             </a>     
             <?php if ($_SESSION['sessiondata']['Payment_status'] =='Y') { ?>
               <li class="nav-item">
@@ -179,7 +155,6 @@
                 </a>
               </li>
               <?php } ?>
-
               <?php
               if ($_SESSION['sessiondata']['Payment_status'] =='N') { ?>
                   <li class="nav-item">
@@ -189,27 +164,11 @@
                       </a>
                   </li>
               <?php } ?>
-
             </ul>
           </li>
           </li>
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
     </div>
-
-    <!-- /.sidebar -->
   </aside>
-
-  <script src="plugins/jquery/jquery.min.js"></script>
-  <!-- Bootstrap 4 -->
-  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- overlayScrollbars -->
-  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <!-- AdminLTE App -->
-  <script src="dist/js/adminlte.min.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="dist/js/demo.js"></script>
-</body>
-
-</html>
+  

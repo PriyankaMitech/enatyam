@@ -140,6 +140,28 @@ class AdminController extends BaseController
         }
     }
 
+    // public function UplodedvideoByStudent()
+    // {
+
+    //     if (isset($_SESSION['sessiondata'])) {
+    //         $sessionData = $_SESSION['sessiondata'];
+
+    //         $email = $sessionData['email'] ?? null;
+    //         $password = $sessionData['password'] ?? null;
+
+    //         if ($email !== null && $password !== null) {
+
+    //             $model = new AdminModel();
+    //             $data['studentVideoData'] = $model->getStudeyVideoUplodeByStudent();
+    //             $data['FacultyVideoData'] = $model->getStudeyVideoUplodeByFaculty();
+    //             return view('AdminSideBar/StudentVideo', $data);
+    //         } else {
+    //             return redirect()->to(base_url());
+    //         }
+    //     } else {
+    //         return redirect()->to(base_url());
+    //     }
+    // }
     public function UplodedvideoByStudent()
     {
 
@@ -152,8 +174,9 @@ class AdminController extends BaseController
             if ($email !== null && $password !== null) {
 
                 $model = new AdminModel();
-                $data['studentVideoData'] = $model->getStudeyVideoUplodeByStudent();
-                $data['FacultyVideoData'] = $model->getStudeyVideoUplodeByFaculty();
+                $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
+                $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
+                // echo "<pre>"; print_r($data['FacultyVideoData']);echo "</pre>"; die();
                 return view('AdminSideBar/StudentVideo', $data);
             } else {
                 return redirect()->to(base_url());
@@ -162,7 +185,6 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
-
     public function getDemoDetails()
     {
         if (isset($_SESSION['sessiondata'])) {
