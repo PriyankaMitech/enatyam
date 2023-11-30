@@ -765,7 +765,10 @@ $page = $uri->getSegment(count($pages));
                             </div>
                     </div>
 
-                    <input type="submit" value="Login" class="btn btn-light mt-3">
+                    <input type="submit" value="Login" id="submitButton" class="btn btn-light mt-3 submitButton">
+
+                    <!-- <button class="btn btn-light mt-3 submitButton" value="Login" id="submitButton" type="submit">Login</button> -->
+
                     <p>Not a member yet?
                         <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()"
                             data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>

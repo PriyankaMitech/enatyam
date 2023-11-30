@@ -2317,6 +2317,31 @@
         }
     });
 </script>
+<script>
+$(document).ready(function() {
+    $('#username').on('input', function() {
+        var username = $(this).val();
+        // alert(username);
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>/chechk_username_id',
+            data: {username: username},
+            success: function(response) {
+                console.log(response);
+                if (response == 1) {
+                    $('#usernameError').text('');
+                    $('.submitButton').prop('disabled', false);
+           
+                } else {
+                    $('#usernameError').text('This username is not available.');
+                    $('.submitButton').prop('disabled', true);
+                }
+            }
+        });
+    });
+});
+</script>
 
 
 
