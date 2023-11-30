@@ -721,8 +721,11 @@ $page = $uri->getSegment(count($pages));
                             <label style="margin-left: 100px;font-size: 14px;">OneToOneSession</label>
                             <input type="radio" name="SessionType" value="OneToOneSession" class="experience-radio">
                         </div>
-                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>
-                        <input type="submit" class="btn btn-light mt-3">
+                        <label>
+                            <input type="checkbox" id="termsCheckbox"> I agree to the <a href="#" id="termsLinhfgk" data-bs-toggle="modal" data-bs-target="#staticBackdrop">terms and conditions</a>
+                        </label>
+                        <input type="submit" id="btncheck" disabled class="btn btn-light mt-3">
+                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>>
                     </form>
                     <!-- End of User Form -->
                 </div>

@@ -65,7 +65,7 @@ $routes->post('AddToCart', 'ProductController::AddToCart'); //add to cart
 $routes->get('showData', 'ProductController::showData'); //fetch data from database
 $routes->get('removeProduct/(:num)', 'ProductController::removeProduct/$1'); //removev cart item
 $routes->post('sessions/store', 'SessionsController::store');
-$routes->get('AdminDashboard', 'Home::AdminDashboard');
+// $routes->get('AdminDashboard', 'Home::AdminDashboard');
 
 $routes->get('register', 'LoginController::register');
 $routes->post('register', 'LoginController::register');
@@ -122,7 +122,8 @@ $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule
 $routes->get('FacultyProfile', 'Home::FacultyProfile');
 $routes->get('FacultySchedule', 'DemoController::todayDemo');
 $routes->post('DemoController/resheduleDemo', 'DemoController::resheduleDemo');
-$routes->get('selectfacultySchedule', 'FacultyController::MonthlyCalendar');
+$routes->get('SelectSlot', 'FacultyController::MonthlyCalendar');
+// $routes->get('MonthlyCalendar', 'FacultyController::MonthlyCalendar');
 $routes->get('StudentuplodedVidio', 'FacultyController::StudentuplodedVidio');
 $routes->post('FacultyController/selectfacultySchedule', 'FacultyController::selectfacultySchedule');
 $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
@@ -149,8 +150,9 @@ $routes->get('profilemanagment', 'StudentController::profilemanagment');
 $routes->post('profilemanagment', 'StudentController::profilemanagment');
 $routes->post('changeCountry', 'StudentController::changeCountry');
 $routes->post('Studentpasswordupdate', 'StudentController::Studentpasswordupdate');
+$routes->post('selectedslotsfromstudent', 'StudentController::selectedslotsfromstudent');
 $routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
-$routes->get('StudentSelectClassDates', 'StudentController::StudentSelectClassDates');
+$routes->get('SelectDate', 'StudentController::StudentSelectClassDates');
 // 
 // $routes->get('register', 'LoginController::register');
 // $routes->post('register', 'LoginController::register');

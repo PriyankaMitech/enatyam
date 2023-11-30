@@ -206,19 +206,14 @@ public function lostpassword()
     {
         $session = session();       
         $user_id = $session->get('id');     
-        $model = new LoginModel();
-        $data['SessionCount'] = $model->get_user_Session($user_id); 
-   // print_r($data['SessionCount']);die;
+        $StudentModel = new StudentModel();
+        $data['SessionCount'] = $StudentModel->get_user_Session($user_id); 
+        $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);   
+     //    print_r( $data['slots'] );die;
         return view('StudentSidebar/ScheduleStudent',$data);
     }
 
-    public function StudentSelectClassDates() {
-
-        $result = session();       
-        $registerId = $result->get('id');
-         return view('StudentSidebar/StudentSelectClassDates',['registerId' => $registerId]);
-        
-    }
+   
 
     public function selectStudentSchedule()
     {
@@ -294,5 +289,35 @@ public function lostpassword()
             $StudentModel = new StudentModel();
             $Changecountry =  $StudentModel->changeCountry($registerId,$Country);
             return redirect()->to('StudentProfile'); 
+        }
+
+        public function StudentSelectClassDates() {
+
+            $result = session();       
+            $registerId = $result->get('id');
+            $StudentModel = new StudentModel();
+            $registerData =  $StudentModel->fetchid($registerId);
+            $assignTeacherId = $registerData->Assign_Techer_id;
+            $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId );
+            $data['registerId'] = $registerId;
+            $data['assignFacultyData'] = $assignFacultyData;
+            return view('StudentSidebar/StudentSelectClassDates',$data);
+        }
+        public function selectedslotsfromstudent()  {
+            $registerId = $this->request->getPost('registerId');
+            $selectedId = $this->request->getPost('selectedId');
+            $StudentModel = new StudentModel();
+            $dataToUpdate = [
+                'student_register_id'=>$registerId,
+            ];
+            $StudentModel->updateData($selectedId, $dataToUpdate);
+            return redirect()->to('SelectDate');
+        }
+        public function studentsessionstatus()
+        {
+            $result = session();       
+            $registerId = $result->get('id');
+            $StudentModel = new StudentModel();
+            $registerData =  $StudentModel->fetchSessionsByid($registerId);
         }
 }

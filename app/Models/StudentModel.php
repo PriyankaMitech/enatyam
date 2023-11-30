@@ -73,5 +73,42 @@ class StudentModel extends Model
             ->where('id', $registerId)
             ->update();
         }
+        public function fetchid($registerId)
+        {
+            return $this->db->table($this->table1)->where('id', $registerId)->get()->getRow();
+        }
+        // public function fetchdataFromid($assignTeacherId)
+        // {
+        //     return $this->db->table('schedule')->where('faculty_register_id', $assignTeacherId)->get()
+        //     ->getResult();
+        // }
+
+        public function fetchdataFromid($assignTeacherId)
+        {
+            return $this->db->table('schedule')
+                ->join('register', 'register.id = schedule.faculty_register_id')
+                ->where('schedule.faculty_register_id', $assignTeacherId)
+                ->where('schedule.student_register_id', null) // Add the condition for NULL student_register_id
+                ->select('register.full_name, schedule.*') 
+                ->get()
+                ->getResult();
+        }
+        public function updateData($selectedId, $dataToUpdate)
+        {
+            return $this->db->table('schedule')
+            ->set('student_register_id' , $dataToUpdate,)
+            ->where('id', $selectedId)
+            ->update();
+        }
+        public function get_user_Session($user_id)
+        {
+        
+            return $this->db->table('register')->select('SessionsCount')->where('id', $user_id)->get()->getRow();
+        }
+        public function Getseslectedslotstostudent($user_id)
+        {
+            return $this->db->table('schedule')->where('student_register_id', $user_id) ->get()
+            ->getResult();
+        }
 }
 

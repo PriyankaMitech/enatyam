@@ -191,14 +191,14 @@ class FacultyController extends BaseController
 
   public function selectfacultySchedule()
   {
-    // print_r($_POST);die;
+  //   print_r($_POST);die;
     if ($this->request->getMethod() === 'post') {
       // Get the data from the form
-      $facultyId = $this->request->getPost('faculty_id');
+      $facultyId = $this->request->getPost('faculty_register_id');
       $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
       // print_r($selectedAppointments);die;
       $facultyModel = new FacultyModel();
-
+// print_r($facultyId);die;
         // Prepare an array of data for batch insertion
         $data = [];
         foreach ($selectedAppointments as $appointment) {
@@ -209,11 +209,11 @@ class FacultyController extends BaseController
                 'end_time' => $appointment['toTime'],
             ];
         }
-  //print_r($data);die;
+ // print_r($data);die;
         // Insert all the data as a batch
         $facultyModel->insertAppointments($data);
 
-      return redirect()->to('MonthlyCalendar');
+      return redirect()->to('SelectSlot');
     } else {
       // Handle non-POST requests (optional).
     }
