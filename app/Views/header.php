@@ -782,6 +782,46 @@ $page = $uri->getSegment(count($pages));
         </div>
 
     </div>
+
+    <div class="modal fade terms" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Terms and Conditions</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li> 1. Register for an account: To access and purchase the online courses, you must first register for an account on the website. If you already have an account, simply log in using your username and password.</li>
+                            <li>2. Select and purchase courses: Browse through the list of courses available on the website and select the ones you wish to purchase. Each course is treated as a separate offer, so make sure to add each course to your cart individually.</li>
+                            <li>3. Review and agree to the fees: Before completing the purchase, carefully review the fees indicated for each course. By selecting a course, you agree to pay the specified fees.</li>
+                            <li>4. Provide valid payment information: During the checkout process, you will be prompted to provide valid payment information. This may include credit card details or other payment methods accepted by the company. Ensure that the information provided is accurate and up to date.</li>
+                            <li>5. Complete the payment: Once you have provided the payment information, proceed to complete the payment. The company or its affiliates will process the payment based on the chosen payment method.</li>
+                            <li> 6. Access the purchased courses: After successful payment, you will gain access to the courses you have purchased. Log in to your account and navigate to the course section to start learning.</li>
+                            <li>7. Comply with course terms: While accessing and using the courses, make sure to comply with the terms outlined in the agreement. This includes not sharing or distributing course material to third parties.</li>
+                            <li>8. Complete the course: Work through the course material at your own pace and complete all the required activities and assessments. Take advantage of any interactive features or forums available to enhance your learning experience.</li>
+                            <li class="termsConditions"> 1. Register for an account: To access and purchase the online courses, you must first register for an account on the website. If you already have an account, simply log in using your username and password.
+                            </li>
+                            <li class="termsConditions">2. Select and purchase courses: Browse through the list of courses available on the website and select the ones you wish to purchase. Each course is treated as a separate offer, so make sure to add each course to your cart individually.</li>
+                            <li class="termsConditions">3. Review and agree to the fees: Before completing the purchase, carefully review the fees indicated for each course. By selecting a course, you agree to pay the specified fees.</li>
+                            <li class="termsConditions">4. Provide valid payment information: During the checkout process, you will be prompted to provide valid payment information. This may include credit card details or other payment methods accepted by the company. Ensure that the information provided is accurate and up to date.</li>
+                            <li class="termsConditions">5. Complete the payment: Once you have provided the payment information, proceed to complete the payment. The company or its affiliates will process the payment based on the chosen payment method.</li>
+                            <li class="termsConditions"> 6. Access the purchased courses: After successful payment, you will gain access to the courses you have purchased. Log in to your account and navigate to the course section to start learning.</li>
+                            <li class="termsConditions">7. Comply with course terms: While accessing and using the courses, make sure to comply with the terms outlined in the agreement. This includes not sharing or distributing course material to third parties.</li>
+                            <li class="termsConditions">8. Complete the course: Work through the course material at your own pace and complete all the required activities and assessments. Take advantage of any interactive features or forums available to enhance your learning experience.</li>
+
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="modal fade" id="lostpasswordmodal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
