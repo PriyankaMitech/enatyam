@@ -385,4 +385,16 @@ class LoginModel extends Model
         ->select('*')->where('email', $email)->update($data);
    
     }
+
+    public function chechk_username_id($username)
+    {
+        $result = $this->db->table('register')
+                        ->where('email', $username)
+                        ->orWhere('mobile_no', $username)
+                        ->get()
+                        ->getResult();
+    
+        return count($result) > 0 ? 1 : 0;
+    }
+    
 }

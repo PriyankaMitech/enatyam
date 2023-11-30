@@ -10,6 +10,8 @@ class Home extends BaseController
     {
         // $this->db = \Config\Database::connect();
         // $this->load->library('google'); 
+        $this->Loginmodel = new \App\Models\Loginmodel(); // Instantiate the UserModel
+
     }
 
     public function index()
@@ -219,5 +221,21 @@ class Home extends BaseController
     } else {
         return redirect()->to(base_url());
     }
+}
+
+public function chechk_username_id()
+{
+    $loginModel = new LoginModel();
+    $username = $this->request->getPost('username');
+
+if ($username) {
+    $email = $loginModel->chechk_username_id($username);
+    // echo "<pre>";
+    // print_r($email);exit();
+    return json_encode($email);
+} else {
+    return json_encode([]);
+}
+
 }
 }

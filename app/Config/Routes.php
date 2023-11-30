@@ -37,6 +37,9 @@ $routes->get('RefundPolicy', 'Home::RefundPolicy');
 $routes->get('TermsAndConditions', 'Home::TermsAndConditions');
 $routes->get('Career', 'Home::Career');
 
+$routes->get('chechk_username_id','Home::chechk_username_id');
+$routes->post('chechk_username_id','Home::chechk_username_id');
+
 $routes->get('Carrier', 'Home::Carrier');
 
 $routes->get('PrivacyPolicy', 'Home::PrivacyPolicy');
