@@ -54,7 +54,7 @@ $page = $uri->getSegment(count($pages));
                       <ul class="products-list product-list-in-card">
                         <li class="item pl-2 pr-2">
                           <div class="product-img">
-                            <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                            <img src="<?php echo base_url()?>public/images/user.png" alt="Product Image" class="img-size-50">
                           </div>
                           <div class="product-info">
                             <a href="javascript:void(0)" class="product-title">Samsung TV
@@ -67,7 +67,7 @@ $page = $uri->getSegment(count($pages));
                         <!-- /.item -->
                         <li class="item pl-2 pr-2">
                           <div class="product-img">
-                            <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                            <img src="<?php echo base_url()?>public/images/user.png" alt="Product Image" class="img-size-50">
                           </div>
                           <div class="product-info">
                             <a href="javascript:void(0)" class="product-title">Bicycle
@@ -80,7 +80,7 @@ $page = $uri->getSegment(count($pages));
                         <!-- /.item -->
                         <li class="item pl-2 pr-2">
                           <div class="product-img">
-                            <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                            <img src="<?php echo base_url()?>public/images/user.png" alt="Product Image" class="img-size-50">
                           </div>
                           <div class="product-info">
                             <a href="javascript:void(0)" class="product-title">
@@ -96,7 +96,7 @@ $page = $uri->getSegment(count($pages));
                         <!-- /.item -->
                         <li class="item pl-2 pr-2">
                           <div class="product-img">
-                            <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                            <img src="<?php echo base_url()?>public/images/user.png" alt="Product Image" class="img-size-50">
                           </div>
                           <div class="product-info">
                             <a href="javascript:void(0)" class="product-title">PlayStation 4
