@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<?php include(APPPATH.'Views/AdminSideBar.php');?>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video</title>
-   
-    <style>
-        .row {
-            margin-left: 213px;
-            height: auto;
-            width: auto;
-        }
+<?php echo view('AdminSideBar.php'); ?>
+<style>
+       
 
         .card-body {
             background-color: greenyellow;
@@ -52,29 +40,40 @@
             margin-bottom: 10px;
         }
     </style>
-</head>
+    <div class="wrapper">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?=base_url(); ?>" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+            <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="content-wrapper">
 
-<body>
-
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url() ?>Admindashboard" class="nav-link">Home</a>
-            </li>
-
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
-            </li>
-
-
-        </ul>
-
-    </nav>
-
+<section class="content-header">
+<div class="container-fluid">
+    <div class="row mb-2">
+    <div class="col-sm-6">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+    </div>
+    </div>
+</div><!-- /.container-fluid -->
+</section>
+<section class="content">
+    <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
             <button class="btn btn-block btn-success btn-lg" id="showVideoContainer">Uplode Video By Student</button>
@@ -83,7 +82,6 @@
             <button class="btn btn-block btn-success btn-lg" id="showFacultyVideoContainer">Uplode Video By Faculty</button>
         </div>
     </div>
-
     <div class="container" id="videoContainer" style="display: none;">
         <?php if (!empty($studentVideoData)) { ?>
             <div class="row">
@@ -112,7 +110,6 @@
             <?php } ?>
             </div>
     </div>
-
     <div class="container" id="FacultyVideoContainer" style="display: none;">
         <?php if (isset($FacultyVideoData) && !empty($FacultyVideoData)) :   ?>
             <div class="row">
@@ -135,30 +132,12 @@
             <?php endif; ?>
             </div>
     </div>
-    <script>
-        // document.getElementById("showVideoContainer").addEventListener("click", function() {
-        //     document.getElementById("videoContainer").style.display = "block";
-        //     document.getElementById("imageContainer").style.display = "none";
-        // });
 
-        // document.getElementById("showImageContainer").addEventListener("click", function() {
-        //     document.getElementById("imageContainer").style.display = "block";
-        //     document.getElementById("videoContainer").style.display = "none";
-        // });
-        // document.getElementById("showFacultyVideoContainer").addEventListener("click", function() {
-        //     document.getElementById("FacultyVideoContainer").style.display = "block";
-        //     document.getElementById("imageContainer").style.display = "none";
-        // });
-        document.getElementById("showVideoContainer").addEventListener("click", function() {
-            document.getElementById("videoContainer").style.display = "block";
-            document.getElementById("FacultyVideoContainer").style.display = "none"; // Hide FacultyVideoContainer
-        });
+    </div>
+</section>
+</div>
+<?php echo view('AdminSideBar/AdminFooter.php');?>  
+   
 
-        document.getElementById("showFacultyVideoContainer").addEventListener("click", function() {
-            document.getElementById("videoContainer").style.display = "none"; // Hide videoContainer
-            document.getElementById("FacultyVideoContainer").style.display = "block";
-        });
-    </script>
-</body>
-
-</html>
+   
+    
