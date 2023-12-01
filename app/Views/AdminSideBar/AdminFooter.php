@@ -288,55 +288,53 @@
     });
     </script>
     <!-- for group -->
-     <script>
-            $(document).ready(function() {
-                var groupSessionTable = $('#groupSessionTable').DataTable();
-                $('#selectedRowsTable').hide();
-                $('#groupSessionTable tbody').on('change', '.select-checkbox', function() {
-                    if ($(this).prop('checked')) {
-                        var rowData = $(this).closest('tr').clone();
-                        rowData.find('td:first-child input').remove();
-                        $('#selectedRowsBody').append(rowData);
-                    } else {
-                        var rowIndex = $(this).closest('tr').index();
-                        $('#selectedRowsBody tr').eq(rowIndex).remove();
-                    }
-                    updateRowNumbers();
-                    var hasSelectedRows = $('#selectedRowsBody tr').length > 0;
-                    $('#selectedRowsTable').toggle(hasSelectedRows);
-                });
+    <script>
+        $(document).ready(function () {
+            var groupSessionTable = $('#groupSessionTable').DataTable();
+            $('#selectedRowsTable').hide();
 
-                function toggleGroupNameInputVisibility() {
-                    var hasSelectedRows = $('#selectedRowsBody tr').length > 0;
-                    $('#groupNameContainer').toggle(hasSelectedRows);
+            $('#groupSessionTable tbody').on('change', '.select-checkbox', function () {
+                var rowData = $(this).closest('tr');
+                var rowId = rowData.data('id');
+
+                if ($(this).prop('checked')) {
+                    var clonedRow = rowData.clone();
+                    clonedRow.find('td:first-child input').remove();
+                    $('#selectedRowsBody').append(clonedRow);
+                } else {
+                    $('#selectedRowsBody tr[data-id="' + rowId + '"]').remove();
+                    updateRowNumbers();
                 }
-                toggleGroupNameInputVisibility();
-                $('#groupSessionTable tbody').on('change', '.select-checkbox', function() {
-                    toggleGroupNameInputVisibility();
+
+                var hasSelectedRows = $('#selectedRowsBody tr').length > 0;
+                $('#selectedRowsTable').toggle(hasSelectedRows);
+            });
+
+            $('#postSelectedRows').on('click', function () {
+                var selectedRowIds = [];
+                $('#selectedRowsBody tr').each(function () {
+                    var rowId = $(this).data('id');
+                    selectedRowIds.push(rowId);
                 });
-                $('#postSelectedRows').on('click', function() {
-                    var selectedRowIds = [];
-                    $('#selectedRowsBody tr').each(function() {
-                        var rowId = $(this).attr('data-id');
-                        selectedRowIds.push(rowId);
-                    });
-                    $('#selectedRowsTable').append('<input type="hidden" name="selectedRowIds" value="' +
-                        selectedRowIds.join(',') + '">');
-                });
-                $('#courseSearch').on('input', function() {
-                    groupSessionTable.columns(3).search(this.value).draw();
-                });
-                $('#subCourseSearch').on('input', function() {
-                    groupSessionTable.columns(4).search(this.value).draw();
-                });
+                $('#selectedRowsTable').append('<input type="hidden" name="selectedRowIds" value="' +
+                    selectedRowIds.join(',') + '">');
+            });
+
+            $('#courseSearch').on('input', function () {
+                groupSessionTable.columns(3).search(this.value).draw();
+            });
+
+            $('#subCourseSearch').on('input', function () {
+                groupSessionTable.columns(4).search(this.value).draw();
             });
 
             function updateRowNumbers() {
-                $('#selectedRowsBody tr').each(function(index) {
+                $('#selectedRowsBody tr').each(function (index) {
                     $(this).find('td:first-child').text(index + 1);
                 });
             }
-        </script>
+        });
+    </script>
 <!--  -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
