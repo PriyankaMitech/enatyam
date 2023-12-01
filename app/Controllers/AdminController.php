@@ -532,4 +532,15 @@ class AdminController extends BaseController
         return redirect()->to('StudentGroups');
     
     }
+
+    public function chatwithstud(){
+        echo view('FacultysideBar/Chatwithstud');
+    }
+
+    public function insertChat() {
+        $formdata = $_POST;
+        $model = new AdminModel();
+        $result = $model->insert_formdata('online_chat', $formdata);
+        echo json_encode($result);
+    }
 }

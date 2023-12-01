@@ -10,7 +10,7 @@ class Home extends BaseController
     {
         // $this->db = \Config\Database::connect();
         // $this->load->library('google'); 
-        $this->Loginmodel = new \App\Models\Loginmodel(); // Instantiate the UserModel
+        $this->Loginmodel = new \App\Models\LoginModel(); // Instantiate the UserModel
 
     }
 
