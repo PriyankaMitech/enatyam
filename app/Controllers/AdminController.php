@@ -545,6 +545,6 @@ class AdminController extends BaseController
     }
     public function studentAttendance()
     {
-        echo view('studentAttendance');
+        echo view('AdminSideBar/studentAttendance');
     }
 }

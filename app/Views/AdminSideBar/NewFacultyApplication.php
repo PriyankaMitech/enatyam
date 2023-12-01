@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career</title>
-    <?php include(APPPATH.'Views/AdminSideBar.php');?>
+<?php echo view('AdminSideBar.php'); ?>
     <style>
     table {
         border-collapse: collapse;
@@ -39,31 +32,22 @@
     }
     .btn-secondary{margin-left:255px ;}
     </style>
-</head>
 
-<body>
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url() ?>Admindashboard" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
-
-
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
-            </li>
-
-
-        </ul>
-
-    </nav>
+<div class="wrapper">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?=base_url(); ?>" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+            <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</div>
     <div class="content-wrapper" style="min-height: 1172.73px;">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -245,25 +229,4 @@
     </section>
 
   </div>
-    <script>
-        document.getElementById("showVideoContainer").addEventListener("click", function() {
-            document.getElementById("videoContainer").style.display = "block";
-            document.getElementById("imageContainer").style.display = "none";
-            document.getElementById("facultyContainer").style.display = "none";
-        });
-
-        document.getElementById("showImageContainer").addEventListener("click", function() {
-            document.getElementById("imageContainer").style.display = "block";
-            document.getElementById("videoContainer").style.display = "none";
-            document.getElementById("facultyContainer").style.display = "none";
-        });
-
-        document.getElementById("showFaculty").addEventListener("click", function() {
-            document.getElementById("facultyContainer").style.display = "block";
-            document.getElementById("videoContainer").style.display = "none";
-            document.getElementById("imageContainer").style.display = "none";
-        });
-    </script>
-</body>
-
-</html>
+  <?php echo view('AdminSideBar/AdminFooter.php');?> 
