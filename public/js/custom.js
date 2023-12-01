@@ -44,3 +44,18 @@ function razorpaySubmit(el) {
         instance.open();
     }
 }
+
+$('#msgsend').click(function (e) {
+    var formdata = $('#chatform').serialize();
+    $.ajax({
+        url: 'http://localhost/enatyam/insertChat', // Make sure this URL matches your CodeIgniter route
+        type: "POST",
+        data: formdata,
+        dataType: "JSON",
+        success: function (response) {
+            console.log(response);
+            var html = '<div class="direct-chat-msg right">'+response.getdata.message+'</div>'
+            $('.direct-chat-messages').append(html)
+        },
+    });
+})
