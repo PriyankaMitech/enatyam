@@ -2172,85 +2172,7 @@
 
         });
 
-        // $("#signupbtn").click(function() {
-        //     var formData = $('#registerform').serialize()
-        //     var full_name = $('#full_name').val()
-        //     var email = $('#email').val()
-        //     var mobile_no = $('#mobile_no').val()
-        //     var password = $('#password').val()
-        //     var confirm_pass = $('#confirm_pass').val()
-        //     var valid = true
-        //     $('#confirmpasswordError, #passwordError, #nameError, #emailError, #mobile_noError').addClass('d-none')
-        //     if (password !== confirm_pass) {
-        //         $("#confirmpasswordError").removeClass('d-none').text("Password does not match")
-        //         valid = false
-        //     }
 
-        //     // Password length check
-        //     if (password.length <= 7) {
-        //         $("#passwordError").removeClass('d-none').text("You have to enter at least 8 characters!")
-        //         valid = false;
-        //     }
-
-        //     if (full_name === "") {
-        //         $("#nameError").removeClass('d-none').text("Name is required.")
-        //         valid = false;
-        //     }
-
-        //     if (email === "") {
-        //         $("#emailError").removeClass('d-none').text("Email is required.")
-        //         valid = false;
-        //     }
-
-        //     if (mobile_no === "") {
-        //         $("#mobile_noError").removeClass('d-none').text("Mobile is required.")
-        //         valid = false;
-        //     }
-        //     if (valid == true) {
-        //         $.ajax({
-        //             url: "verifymobile",
-        //             type: "POST",
-        //             data: formData,
-        //             dataType: "JSON",
-        //             success: function(response) {
-        //                 console.log(response)
-        //                 $('#mobile_noError').addClass('d-none');
-        //                 $('#otperror').addClass('d-none');
-        //                 if (response.status == '203') {
-        //                     $('#otp').removeClass('d-none').after('<span id="otperror">' + response.msg + '</span>')
-        //                 } else {
-        //                     if (response.mobileexist == true) {
-        //                         $('#mobile_noError').addClass('d-none');
-        //                         $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
-        //                     } else if (response.emailexist == true) {
-        //                         $('#emailError').addClass('d-none');
-        //                         $('#emailError').removeClass('d-none').text('Email already exist.')
-        //                     } else {
-        //                         if (response.status == '200') {
-        //                             // $('#otperror').addClass('d-none');    
-        //                             // swal.fire("Success", "Registration successfull!", "success");
-        //                             // window.location.href = "Home"; 
-        //                             $('#otperror').addClass('d-none');
-        //                             $('#registerformpopup').modal('hide');
-        //                             $('#userformmodal').modal('show');
-        //                             $('#hiddenEmail').val(response.email);
-        //                             $('#yourFormId').submit();
-        //                         } else {
-        //                             $('#otp').removeClass('d-none').after('<span id="otperror">Enter otp sent to your mobile no.</span>')
-        //                         }
-
-        //                     }
-        //                 }
-
-        //             },
-        //             error: function(response) {
-        //                 console.log(response)
-        //                 swal.fire("Warning", "Login to checkout!", "warning");
-        //             }
-
-        //         })
-        //     }
-        // })
 
         $('#backToRegister').on('click', function() {
             // Hide the current modal
@@ -2439,7 +2361,7 @@ $(document).ready(function() {
                 // Set a timeout to hide the flash message after 5 minutes (300,000 milliseconds)
                 setTimeout(function() {
                     flashMessage.style.display = 'none';
-                }, 1000);
+                }, 3000);
             }
         });
     </script>
