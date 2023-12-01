@@ -1,4 +1,3 @@
-
 <?php echo view('AdminSideBar.php'); ?>
     <style>
     .card-body {
@@ -11,16 +10,15 @@
         float: right;
     }
 
+    .faculty-info {
+        float: left;
+        background-color: beige;
+        border-radius: 22px;
+    }
 
-        .faculty-info {
-            float: left;
-            background-color: beige;
-            border-radius: 22px;
-        }
-
-        .p {
-            padding-left: 12px;
-        }
+    .p {
+        padding-left: 12px;
+    }
 
     /* .card {
 
@@ -54,7 +52,6 @@
         margin-bottom: 0.8rem;
     }
     </style>
-
 
 
 <div class="wrapper">
@@ -92,8 +89,6 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-
-
                     <?php foreach ($facultyData as $faculty): ?>
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="card contact_list text-center">
@@ -125,7 +120,7 @@
                                     <a class="btn  btn-primary btn-sm w-50 mr-2" href="/react/demo/app-profile">
                                         <i class="fa-solid fa-user me-2"></i>Profile </a>
                                     <a class="btn  btn-secondary btn-sm w-50" href="/react/demo/chat">
-
+                                        <i class="fa-sharp fa-regular fa-envelope me-2"></i>Chat </a>
                                 </div>
                             </div>
                         </div>
