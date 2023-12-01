@@ -140,9 +140,6 @@ $routes->get('StudentUploadedVideo', 'FacultyController::StudentuplodedVidio');
 $routes->post('FacultyController/selectfacultySchedule', 'FacultyController::selectfacultySchedule');
 $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
 
-$routes->get('chat', 'Chat_controller::chat');
-$routes->post('chat', 'Chat_controller::chat');
-
 // $routes->get('fetchstudyVideouplodeFromstudent', 'FacultyController::fetchstudyVideouplodeFromstudent');
 $routes->get('facultyinfo', 'FacultyController::facultyinfo');
 // $routes->get('facu', 'FacultyController::index');//email

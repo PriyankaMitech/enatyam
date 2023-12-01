@@ -553,15 +553,41 @@ class AdminController extends BaseController
     }
 
     public function chatwithstud(){
-        echo view('FacultysideBar/Chatwithstud');
+        $model = new AdminModel();
+        $receiverid = $this->request->uri->getSegments(1);
+        $wherecond1 = array('id'=>$receiverid[1]);
+        $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>$receiverid[1]);
+        $wherecond3 = array('sender_id'=>$receiverid[1], 'receiver_id'=>$_SESSION['id']);
+
+        $result['getdata'] = $model->getsinglerow('register', $wherecond1);
+        $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
+
+        // echo '<pre>';print_r($result['chatdata']);die;
+        echo view('FacultysideBar/Chatwithstud', $result);
+    }
+
+    public function chatwithteacher(){
+        $model = new AdminModel();
+        // $receiverid = $this->request->uri->getSegments(1);
+        $wherecond1 = array('id'=>$_SESSION['id']);
+        $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>3);
+        $wherecond3 = array('sender_id'=>3, 'receiver_id'=>$_SESSION['id']);
+
+        $result['getdata'] = $model->getsinglerow('register', $wherecond1);
+        $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
+
+        // echo '<pre>';print_r($_SESSION['id']);die;
+        echo view('FacultysideBar/Chatwithstud', $result);
     }
 
     public function insertChat() {
         $formdata = $_POST;
+        print_r($formdata);die;
         $model = new AdminModel();
-        $result = $model->insert_formdata('online_chat', $formdata);
+        $result = $model->insert_formdata('msg_id','online_chat', $formdata);
         echo json_encode($result);
     }
+
     public function studentAttendance()
     {
         echo view('studentAttendance');
