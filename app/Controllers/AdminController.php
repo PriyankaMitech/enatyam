@@ -543,4 +543,8 @@ class AdminController extends BaseController
         $result = $model->insert_formdata('online_chat', $formdata);
         echo json_encode($result);
     }
+    public function studentAttendance()
+    {
+        echo view('studentAttendance');
+    }
 }
