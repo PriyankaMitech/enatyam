@@ -24,34 +24,34 @@ class FacultyController extends BaseController
   }
 
 
-    public function fetchDataByAssignTeacherId()
-    {
-     
-      if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
+  public function fetchDataByAssignTeacherId()
+  {
 
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
+    if (isset($_SESSION['sessiondata'])) {
+      $sessionData = $_SESSION['sessiondata'];
 
-        if ($email !== null && $password !== null) {
-         
-            $teacherId = $this->session->get('id');
-           
-            $facultymodel = new Facultymodel();
-            $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
+      $email = $sessionData['email'] ?? null;
+      $password = $sessionData['password'] ?? null;
 
-            if (!empty($data)) {
-                return view('faculty', ['data' => $data]);
-            } else {
-                return redirect()->to(base_url());
-            }
+      if ($email !== null && $password !== null) {
+
+        $teacherId = $this->session->get('id');
+
+        $facultymodel = new Facultymodel();
+        $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
+
+        if (!empty($data)) {
+          return view('faculty', ['data' => $data]);
         } else {
-            return redirect()->to(base_url());
+          return redirect()->to(base_url());
         }
-    } else {
+      } else {
         return redirect()->to(base_url());
+      }
+    } else {
+      return redirect()->to(base_url());
     }
-    }
+  }
 
 
   public function index()
@@ -116,128 +116,127 @@ class FacultyController extends BaseController
     //  session_destroy();
   }
 
-    public function fetchvideotostudentdashboard()
-    {
-        if (isset($_SESSION['sessiondata'])) {
-            $sessionData = $_SESSION['sessiondata'];
-        
-            $email = $sessionData['email'] ?? null;
-            $password = $sessionData['password'] ?? null;
-    
-            if ($email !== null && $password !== null) {
-              
-                $studentId = session();
-                $registerId = $studentId->get('id');
-                $facultyModel = new FacultyModel();
-                $videos = $facultyModel->getVideosByRegisterId($registerId);
-                return view('StudentSideBarVideo', ['videos' => $videos]);
-            } else { 
-                return redirect()->to(base_url());
-            }
-        } else {
-            return redirect()->to(base_url());
-        }
-     
+  public function fetchvideotostudentdashboard()
+  {
+    if (isset($_SESSION['sessiondata'])) {
+      $sessionData = $_SESSION['sessiondata'];
+
+      $email = $sessionData['email'] ?? null;
+      $password = $sessionData['password'] ?? null;
+
+      if ($email !== null && $password !== null) {
+
+        $studentId = session();
+        $registerId = $studentId->get('id');
+        $facultyModel = new FacultyModel();
+        $videos = $facultyModel->getVideosByRegisterId($registerId);
+        return view('StudentSideBarVideo', ['videos' => $videos]);
+      } else {
+        return redirect()->to(base_url());
+      }
+    } else {
+      return redirect()->to(base_url());
     }
+  }
 
   public function StudentuplodedVidio()
   {
-     
-    if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
-    
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
 
-        if ($email !== null && $password !== null) {
-          
-            $result = session();
-            $registerId = $result->get('id');
-            $db = \Config\Database::connect(); 
-            $table = $db->table('uplode_study_video_from_student');
-            $query = $table->where('Faculty_id', $registerId)->get();
-            if ($query->getNumRows() > 0) {    
-             $results = $query->getResult();
-             return view('StudentuplodedVidio', ['results' => $results]);
-        } else { 
-            return redirect()->to(base_url());
+    if (isset($_SESSION['sessiondata'])) {
+      $sessionData = $_SESSION['sessiondata'];
+
+      $email = $sessionData['email'] ?? null;
+      $password = $sessionData['password'] ?? null;
+
+      if ($email !== null && $password !== null) {
+
+        $result = session();
+        $registerId = $result->get('id');
+        $db = \Config\Database::connect();
+        $table = $db->table('uplode_study_video_from_student');
+        $query = $table->where('Faculty_id', $registerId)->get();
+        if ($query->getNumRows() > 0) {
+          $results = $query->getResult();
+          return view('StudentuplodedVidio', ['results' => $results]);
+        } else {
+          return redirect()->to(base_url());
         }
-    } else {
+      } else {
         return redirect()->to(base_url());
-    }
+      }
     }
   }
-  public function  MonthlyCalendar() {
+  public function  MonthlyCalendar()
+  {
 
     if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
-    
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
+      $sessionData = $_SESSION['sessiondata'];
 
-        if ($email !== null && $password !== null) {
-          
-            $result = session();
-            $registerId = $result->get('id');
-             return view('FacultysideBar\MonthlyCalendar',['registerId' => $registerId]);
-        } else { 
-            return redirect()->to(base_url());
-        }
-    } else {
+      $email = $sessionData['email'] ?? null;
+      $password = $sessionData['password'] ?? null;
+
+      if ($email !== null && $password !== null) {
+
+        $result = session();
+        $registerId = $result->get('id');
+        return view('FacultysideBar/MonthlyCalendar', ['registerId' => $registerId]);
+      } else {
         return redirect()->to(base_url());
+      }
+    } else {
+      return redirect()->to(base_url());
     }
-    
   }
 
   public function selectfacultySchedule()
   {
-  //   print_r($_POST);die;
+    //   print_r($_POST);die;
     if ($this->request->getMethod() === 'post') {
       // Get the data from the form
       $facultyId = $this->request->getPost('faculty_register_id');
       $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
       // print_r($selectedAppointments);die;
       $facultyModel = new FacultyModel();
-// print_r($facultyId);die;
-        // Prepare an array of data for batch insertion
-        $data = [];
-        foreach ($selectedAppointments as $appointment) {
-            $data[] = [
-              'faculty_register_id' => $facultyId,
-                'date' => $appointment['date'],
-                'start_time' => $appointment['formTime'],
-                'end_time' => $appointment['toTime'],
-            ];
-        }
- // print_r($data);die;
-        // Insert all the data as a batch
-        $facultyModel->insertAppointments($data);
+      // print_r($facultyId);die;
+      // Prepare an array of data for batch insertion
+      $data = [];
+      foreach ($selectedAppointments as $appointment) {
+        $data[] = [
+          'faculty_register_id' => $facultyId,
+          'date' => $appointment['date'],
+          'start_time' => $appointment['formTime'],
+          'end_time' => $appointment['toTime'],
+        ];
+      }
+      // print_r($data);die;
+      // Insert all the data as a batch
+      $facultyModel->insertAppointments($data);
 
       return redirect()->to('SelectSlot');
     } else {
       // Handle non-POST requests (optional).
     }
-}
-public function fetchTofacultyShuduleSidebar()
-{
+  }
+  public function fetchTofacultyShuduleSidebar()
+  {
     if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
-    
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
+      $sessionData = $_SESSION['sessiondata'];
 
-        if ($email !== null && $password !== null) {
-          
-            $result = session();
-            $registerId = $result->get('id');
-            $model = new facultymodel();
-            $data['FacultysheduleData'] = $model->fetchshedule($registerId);
-           return view('FacultysideBar/Monthlyshedule',  $data);
-        } else { 
-            return redirect()->to(base_url());
-        }
-    } else {
+      $email = $sessionData['email'] ?? null;
+      $password = $sessionData['password'] ?? null;
+
+      if ($email !== null && $password !== null) {
+
+        $result = session();
+        $registerId = $result->get('id');
+        $model = new facultymodel();
+        $data['FacultysheduleData'] = $model->fetchshedule($registerId);
+        return view('FacultysideBar/Monthlyshedule',  $data);
+      } else {
         return redirect()->to(base_url());
+      }
+    } else {
+      return redirect()->to(base_url());
     }
-}
+  }
 }

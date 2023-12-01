@@ -1,18 +1,20 @@
 <?php echo view('AdminSideBar.php'); ?>
 <div class="wrapper">
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?=base_url(); ?>" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-      </li>
-    </ul>
-  </nav>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url() ?>AdminDashboard" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
+            </li>
+
+        </ul>
+
+    </nav>
 </div>
 <div class="content-wrapper">
 
@@ -43,27 +45,23 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="AdduserByadmin" method="post" id="quickForm" >
+                        <form action="AdduserByadmin" method="post" id="quickForm">
                             <div class="card-body">
-                            <div class="form-group">
+                                <div class="form-group">
                                     <label for="exampleInputEmail1">Enter Name</label>
-                                    <input type="name" name="full_name" class="form-control" id="name"
-                                        placeholder="Enter name" require>
+                                    <input type="name" name="full_name" class="form-control" id="name" placeholder="Enter name" require>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Enter email" require>
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" require>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Enter Contact Number</label>
-                                    <input type="tel" name="mobile_no" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Enter contact Number" require>
+                                    <input type="tel" name="mobile_no" class="form-control" id="exampleInputEmail1" placeholder="Enter contact Number" require>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" name="password" class="form-control"
-                                        id="exampleInputPassword1" placeholder="Password" require>
+                                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" require>
                                 </div>
 
                             </div>

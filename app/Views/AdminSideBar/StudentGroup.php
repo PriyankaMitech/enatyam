@@ -1,3 +1,4 @@
+
 <?php echo view('AdminSideBar.php'); ?>
     <style>
     .group-button {
@@ -27,22 +28,26 @@
     }
     .faculty-dropdown {
         width: 100%;
-    }
 
-    </style>
+
+        /* Style for faculty dropdown */
+        .faculty-dropdown {
+            width: 100%;
+        }
+
 
 <div class="wrapper">
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?=base_url(); ?>" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-      </li>
+       <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url() ?>Admindashboard" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url(''); ?>logout" class="nav-link">Logout</a>
+            </li>
     </ul>
   </nav>
 </div>
@@ -75,62 +80,69 @@
 
                                 <div class="card-body">
                                     <div class="tab-content" id="custom-tabs-four-tabContent">
-                                        <div class="tab-pane fade active show" id="custom-tabs-four-home"
-                                            role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                                        <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
 
                                             <div class="group-buttons-container">
-                                                <?php foreach ($groups as $group): ?>
-                                                <button class="group-button btn-primary"
-                                                    data-group="<?= $group['groupName'] ?>">
-                                                    <?= $group['groupName'] ?>
-                                                </button>
+                                                <?php foreach ($groups as $group) : ?>
+                                                    <button class="group-button btn-primary" data-group="<?= $group['groupName'] ?>">
+                                                        <?= $group['groupName'] ?>
+                                                    </button>
                                                 <?php endforeach; ?>
                                             </div>
 
-                                            <?php foreach ($groups as $group): ?>
-                                            <div class="group-records"
-                                                data-group-id="<?= $group['groupName'] ?>-records">
-                                                <form action="<?= base_url('AssignFacultyToGroup') ?>" method="post">
-                                                    <input type="hidden" name="group"
-                                                        value="<?= $group['groupName'] ?>">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Email</th>
-                                                                <th>Course</th>
-                                                                <th>Sub-course</th>
+                                            <?php foreach ($groups as $group) : ?>
+                                                <div class="group-records" data-group-id="<?= $group['groupName'] ?>-records">
+                                                    <form action="<?= base_url('AssignFacultyToGroup') ?>" method="post">
+                                                        <input type="hidden" name="group" value="<?= $group['groupName'] ?>">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Name</th>
+                                                                    <th>Email</th>
+                                                                    <th>Course</th>
+                                                                    <th>Sub-course</th>
 
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <?php foreach ($records[$group['groupName']] as $record): ?>
-                                                            <tr>
-                                                                <td><?= $record->full_name; ?></td>
-                                                                <td><?= $record->email; ?></td>
-                                                                <td><?= $record->course; ?></td>
-                                                                <td><?= $record->sub_course; ?></td>
-                                                                <!-- Remove the dropdown from here -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <?php foreach ($records[$group['groupName']] as $record) : ?>
+                                                                    <tr>
+                                                                        <td><?= $record->full_name; ?></td>
+                                                                        <td><?= $record->email; ?></td>
+                                                                        <td><?= $record->course; ?></td>
+                                                                        <td><?= $record->sub_course; ?></td>
+                                                                        <!-- Remove the dropdown from here -->
 
-                                                            </tr>
-                                                            <?php endforeach; ?>
-                                                        </tbody>
-                                                    </table>
+                                                                    </tr>
+                                                                <?php endforeach; ?>
+                                                            </tbody>
+                                                        </table>
 
-                                                    <div class="text-left" style="margin-top: 10px;">
-                                                        <!-- Label and dropdown in the same row -->
-                                                        <label for="facultyDropdown" style="margin-right: 10px;">Select
-                                                            Faculty:</label>
+                                                        <div class="text-left" style="margin-top: 10px;">
+                                                            <!-- Label and dropdown in the same row -->
+                                                            <label for="facultyDropdown" style="margin-right: 10px;">Select
+                                                                Faculty:</label>
 
-                                                        <!-- Dropdown menu for faculty with reduced size -->
-                                                        <select class="faculty-dropdown" name="faculty"
-                                                            id="facultyDropdown" style="width: 135px;">
-                                                            <?php foreach ($Faculty as $faculty): ?>
-                                                            <?php if ($faculty->course == $record->course && $faculty->sub_course == $record->sub_course): ?>
-                                                            <option value="<?= $faculty->id; ?>">
-                                                                <?= $faculty->full_name; ?>
-                                                            </option>
+                                                            <!-- Dropdown menu for faculty with reduced size -->
+                                                            <select class="faculty-dropdown" name="faculty" id="facultyDropdown" style="width: 135px;">
+                                                                <?php foreach ($Faculty as $faculty) : ?>
+                                                                    <?php if ($faculty->course == $record->course && $faculty->sub_course == $record->sub_course) : ?>
+                                                                        <option value="<?= $faculty->id; ?>">
+                                                                            <?= $faculty->full_name; ?>
+                                                                        </option>
+                                                                    <?php endif; ?>
+                                                                <?php endforeach; ?>
+                                                            </select>
+
+                                                            <?php if ($record->Assign_Techer_id !== null) : ?>
+                                                                <!-- If Assign_Techer_id is not null, show this button -->
+                                                                <button type="submit" id="facultyButton" class="btn btn-primary">Change FacultyAssign Teacher</button>
+                                                            <?php else : ?>
+                                                                <!-- If Assign_Techer_id is null, show this button -->
+                                                                <button type="submit" id="postSelectedRows" class="btn btn-primary">Assign Teacher</button>
                                                             <?php endif; ?>
+
+
                                                             <?php endforeach; ?>
                                                         </select>
 
@@ -146,6 +158,7 @@
                                                     </div>
                                                 </form>
                                             </div>
+
                                             <?php endforeach; ?>
 
 
@@ -161,4 +174,6 @@
 
     </div>
 <?php echo view('AdminSideBar/AdminFooter.php');?> 
+
+
 

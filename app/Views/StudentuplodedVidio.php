@@ -1,9 +1,11 @@
-<?php include('FacultySidebar2.php');?>
+<?php include('FacultySidebar2.php'); ?>
 <style>
     .video-row {
         display: flex;
-        justify-content: space-between; /* Distribute videos evenly within the row */
-        margin-bottom: 20px; /* Add some space between rows */
+        justify-content: space-between;
+        /* Distribute videos evenly within the row */
+        margin-bottom: 20px;
+        /* Add some space between rows */
     }
 
     .video-card {
@@ -17,7 +19,7 @@
     .video-info {
         margin-top: 10px;
     }
-</style> 
+</style>
 <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
 </div>
@@ -27,11 +29,11 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="" class="nav-link">Home</a>
+            <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-    </li>
+            <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
+        </li>
     </ul>
 </nav>
 <div class="content-wrapper">
@@ -45,9 +47,9 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard </li>
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>logout">Logout</a></li>
+                        <!-- <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li> -->
+                        <li class="breadcrumb-item active"> <a href="<?php echo base_url(); ?>FacultyDashboard">Dashboard </li>
+                        <!-- <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>logout">Logout</a></li> -->
 
                     </ol>
                 </div><!-- /.col -->
@@ -60,17 +62,21 @@
     <section class="content">
         <div class="container-fluid">
             <div class="video-container"> <!-- Adjust max-width as needed -->
-                <?php if (!empty($results)): ?>
+                <?php if (!empty($results)) : ?>
                     <div class="video-row">
                         <?php $videoCount = 0; ?>
-                        <?php foreach ($results as $result): ?>
+                        <?php foreach ($results as $result) : ?>
                             <div class="video-card" style="width: 19%; margin: 1%;"> <!-- Adjust width and margin as needed -->
                                 <video width="100%" height="auto" controls> <!-- Adjust the video size -->
                                     <source src="<?= base_url('public/uploads/StudentStudyvideos/' . $result->name) ?>" type="video/mp4">
                                 </video>
                                 <div class="video-info"> <!-- Create a container for video information -->
-                                    <b><p>Uploaded by: <?= $result->Student_name ?></p></b>
-                                    <b><p>Uploaded Date/Time: <?= $result->DateTime ?></p></b>
+                                    <b>
+                                        <p>Uploaded by: <?= $result->Student_name ?></p>
+                                    </b>
+                                    <b>
+                                        <p>Uploaded Date/Time: <?= $result->DateTime ?></p>
+                                    </b>
                                 </div>
                             </div>
                             <?php
@@ -81,15 +87,11 @@
                             ?>
                         <?php endforeach; ?>
                     </div>
-                <?php else: ?>
+                <?php else : ?>
                     <p>No videos found.</p>
                 <?php endif; ?>
-            </div> 
+            </div>
         </div>
 
 </div>
- <?php include('FacultysideBar/FacultyFooter.php');?>
-
- 
-   
-   
+<?php include('FacultysideBar/FacultyFooter.php'); ?>

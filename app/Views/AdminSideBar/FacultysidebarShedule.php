@@ -1,3 +1,4 @@
+
 <?php echo view('AdminSideBar.php'); ?>
 <?php
 $uri = new \CodeIgniter\HTTP\URI(current_url(true));
@@ -8,11 +9,14 @@ $page = $uri->getSegment(count($pages));
      
 <div class="wrapper">
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
+
+
         <a href="<?=base_url(); ?>" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
@@ -23,6 +27,7 @@ $page = $uri->getSegment(count($pages));
 </div>
   
 <div class="content-wrapper">
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -46,7 +51,8 @@ $page = $uri->getSegment(count($pages));
         <div class="row">
           <div class="">
             <div class="sticky-top mb-3">
-              <div>
+
+
                 <div class="card-body">
                   <!-- the events -->
                   <div id="external-events">
@@ -57,6 +63,7 @@ $page = $uri->getSegment(count($pages));
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
           <div class="col-md-12">
@@ -72,4 +79,6 @@ $page = $uri->getSegment(count($pages));
    
   </div>
 
+
   <?php echo view('AdminSideBar/AdminFooter.php');?>   
+
