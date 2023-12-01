@@ -405,6 +405,18 @@ class AdminModel extends Model
          ->set(['Assign_Techer_id' => $facultyId])
         ->update();
     }
+    
+    public function insert_formdata($table, $insertdata) {
+        $result['insert'] = $this->db->table($table)->insert($insertdata);
+        
+        if ($result['insert']) {
+            $insertedID = $this->db->insertID(); 
+            $result['getdata'] = $this->db->table($table)->where('msg_id', $insertedID)->get()->getRowArray();
+            return $result;
+        }else {
+            return false;
+        }
+    }
 
    
 }
