@@ -229,7 +229,7 @@ public function chechk_username_id()
     $username = $this->request->getPost('username');
 
 if ($username) {
-    $email = $loginModel->chechk_username_id($username);
+    $email = $loginModel->checkexist($username, 'email');
     // echo "<pre>";
     // print_r($email);exit();
     return json_encode($email);
@@ -246,7 +246,7 @@ public function chechk_mobile_no_id()
     $mobile_no = $this->request->getPost('mobile_no');
 
 if ($mobile_no) {
-    $mobileno = $loginModel->chechk_mobile_no_id($mobile_no);
+    $mobileno = $loginModel->checkexist($mobile_no, 'mobile_no');
     // echo "<pre>";
     // print_r($email);exit();
     return json_encode($mobileno);
