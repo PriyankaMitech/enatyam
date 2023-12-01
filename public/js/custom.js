@@ -54,7 +54,8 @@ $('#msgsend').click(function (e) {
         dataType: "JSON",
         success: function (response) {
             console.log(response);
-            var html = '<div class="direct-chat-msg right">'+response.getdata.message+'</div>'
+            $('#chatform').trigger("reset") 
+            var html = '<div class="direct-chat-msg right"><div class="direct-chat-infos clearfix"><span class="direct-chat-name float-right">Sarah Bullock</span><span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span></div><img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image"><div class="direct-chat-text">'+response.getdata.message+'</div></div>'
             $('.direct-chat-messages').append(html)
         },
     });

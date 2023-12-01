@@ -9,6 +9,19 @@ use CodeIgniter\Controller;
 
 class AdminController extends BaseController
 {
+    public function __construct()
+    {
+        // Do Not Edit This Line
+        // parent::initController($request, $response, $logger);
+
+        // Preload any models, libraries, etc, here.
+
+        // E.g.: $this->session = \Config\Services::session();
+        $this->session = \Config\Services::session();
+        $this->validation = \Config\Services::validation();
+        $model = new AdminModel();
+    }
+
     public function givestudent()
     {
         return view('givestudent');
@@ -534,13 +547,37 @@ class AdminController extends BaseController
     }
 
     public function chatwithstud(){
-        echo view('FacultysideBar/Chatwithstud');
+        $model = new AdminModel();
+        $receiverid = $this->request->uri->getSegments(1);
+        $wherecond1 = array('id'=>$receiverid[1]);
+        $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>$receiverid[1]);
+        $wherecond3 = array('sender_id'=>$receiverid[1], 'receiver_id'=>$_SESSION['id']);
+
+        $result['getdata'] = $model->getsinglerow('register', $wherecond1);
+        $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
+
+        // echo '<pre>';print_r($result['chatdata']);die;
+        echo view('FacultysideBar/Chatwithstud', $result);
+    }
+
+    public function chatwithteacher(){
+        $model = new AdminModel();
+        // $receiverid = $this->request->uri->getSegments(1);
+        $wherecond1 = array('id'=>$_SESSION['id']);
+        $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>3);
+        $wherecond3 = array('sender_id'=>3, 'receiver_id'=>$_SESSION['id']);
+
+        $result['getdata'] = $model->getsinglerow('register', $wherecond1);
+        $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
+
+        // echo '<pre>';print_r($_SESSION['id']);die;
+        echo view('FacultysideBar/Chatwithstud', $result);
     }
 
     public function insertChat() {
         $formdata = $_POST;
         $model = new AdminModel();
-        $result = $model->insert_formdata('online_chat', $formdata);
+        $result = $model->insert_formdata('msg_id','online_chat', $formdata);
         echo json_encode($result);
     }
     public function studentAttendance()

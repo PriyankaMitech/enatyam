@@ -110,6 +110,7 @@ $routes->get('StudentGroups', 'AdminController::StudentGroups');
 $routes->get('FacultysidebarShedule', 'AdminController::FacultysidebarShedule');
 $routes->post('AdduserByadmin', 'AdminController::AdduserByadmin');
 $routes->post('SelectedForGroup', 'AdminController::SelectedForGroup');
+$routes->get('Chat', 'AdminController::chatwithteacher');
 $routes->get('Chat/(:any)', 'AdminController::chatwithstud/$1');
 $routes->post('insertChat', 'AdminController::insertChat');
 

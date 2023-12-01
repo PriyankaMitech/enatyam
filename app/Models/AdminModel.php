@@ -406,13 +406,47 @@ class AdminModel extends Model
         ->update();
     }
     
-    public function insert_formdata($table, $insertdata) {
+    public function insert_formdata($id, $table, $insertdata) {
         $result['insert'] = $this->db->table($table)->insert($insertdata);
         
         if ($result['insert']) {
             $insertedID = $this->db->insertID(); 
-            $result['getdata'] = $this->db->table($table)->where('msg_id', $insertedID)->get()->getRowArray();
+            $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
             return $result;
+        }else {
+            return false;
+        }
+    }
+
+    public function getsinglerow($table, $wherecond) {
+        $result = $this->db->table($table)->where($wherecond)->get()->getRow();
+        
+        if ($result) {
+            return $result;
+        }else {
+            return false;
+        }
+    }
+
+    public function getdata($table, $wherecond) {
+        $result = $this->db->table($table)->where($wherecond)->get()->getResult();
+        
+        if ($result) {
+            return $result;
+        }else {
+            return false;
+        }
+    }
+
+    public function getchat($tablechat, $wherecond2, $wherecond3) {
+        
+        $result = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = 3 AND receiver_id = 6 )
+        OR (sender_id = 6 AND receiver_id = 3) ORDER BY msg_id");
+        //echo '<pre>';print_r($result->getResultArray());die;
+        //$result = $this->db->table($table)->where($wherecond2.' OR ' .$wherecond3)->get()->getResult();
+        
+        if ($result) {
+            return $result->getResultArray();
         }else {
             return false;
         }
