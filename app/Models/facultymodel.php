@@ -64,12 +64,25 @@ class facultymodel extends Model
     }
     public function fetchshedule($registerId)
     {
-        $slots = $this->db->table('schedule')
-          ->select('*')
-            ->where('faculty_register_id', $registerId)
+        // $slots = $this->db->table('schedule')
+        //   ->select('*')
+          
+        //     ->where('faculty_register_id', $registerId)
+        //     ->get()
+        //     ->getResult();
+        // return $slots;
+
+
+
+        $currentMonth = date('m'); // Get the current month in the format 'mm'
+
+        $result = $this->db->table('schedule')
+            ->select('schedule.*, register.full_name') // Select the required columns, including faculty_name
+            ->join('register', 'register.id = schedule.faculty_register_id') // Join the faculties table
+            ->where("MONTH(date) = $currentMonth") // Replace 'date_column' with the actual column name containing the date
             ->get()
             ->getResult();
-        return $slots;
 
+            return $result;
     }
 }
