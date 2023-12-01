@@ -184,7 +184,7 @@ div {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
   transition: all 0.5s ease-in-out;
 }
 
@@ -218,9 +218,9 @@ button:disabled {
 
 #flash-message-container {
   position: fixed;
-  bottom: 10px;
+  top: 10px;
   right: 10px;
-  z-index: 1000;
+  z-index: 9;
 }
 
 .flash-message {
