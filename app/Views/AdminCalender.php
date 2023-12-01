@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calender</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <!-- fullCalendar -->
     <link rel="stylesheet" href="plugins/fullcalendar/main.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <?php include(APPPATH.'Views/AdminSideBar.php');?></head>
+    <?php include(APPPATH . 'Views/AdminSideBar.php'); ?>
+</head>
 
 <body>
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -23,15 +23,10 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url()?>AdminDashboard" class="nav-link">Home</a>
+                <a href="<?php echo base_url() ?>AdminDashboard" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
-
-
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+                <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
             </li>
 
         </ul>
@@ -49,27 +44,23 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="AdduserByadmin" method="post" id="quickForm" >
+                        <form action="AdduserByadmin" method="post" id="quickForm">
                             <div class="card-body">
-                            <div class="form-group">
+                                <div class="form-group">
                                     <label for="exampleInputEmail1">Enter Name</label>
-                                    <input type="name" name="full_name" class="form-control" id="name"
-                                        placeholder="Enter name" require>
+                                    <input type="name" name="full_name" class="form-control" id="name" placeholder="Enter name" require>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Enter email" require>
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" require>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Enter Contact Number</label>
-                                    <input type="tel" name="mobile_no" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Enter contact Number" require>
+                                    <input type="tel" name="mobile_no" class="form-control" id="exampleInputEmail1" placeholder="Enter contact Number" require>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" name="password" class="form-control"
-                                        id="exampleInputPassword1" placeholder="Password" require>
+                                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" require>
                                 </div>
 
                             </div>
