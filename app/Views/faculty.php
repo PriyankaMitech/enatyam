@@ -1,15 +1,17 @@
-<?php include('FacultySidebar2.php');?>
+<?php include('FacultySidebar2.php'); ?>
 <style>
     #studentTable {
         width: 100%;
         border-collapse: collapse;
     }
+
     #studentTable th,
     #studentTable td {
         padding: 10px;
         text-align: center;
         border: 1px solid #ccc;
     }
+
     #studentTable th {
         background-color: #f2f2f2;
         font-weight: bold;
@@ -24,6 +26,7 @@
         border-radius: 5px;
         font-weight: bold;
     }
+
     #toggle-content {
         border: 1px solid #ccc;
         padding: 10px;
@@ -47,11 +50,11 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="" class="nav-link">Home</a>
+            <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-    </li>
+            <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
+        </li>
     </ul>
 </nav>
 <div class="content-wrapper">
@@ -64,10 +67,9 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard </li>
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>logout">Logout</a></li>
+
+                        <li class="breadcrumb-item active"> <a href="<?php echo base_url(); ?>FacultyDashboard"> Dashboard </a></li>
+
 
                     </ol>
                 </div><!-- /.col -->
@@ -250,8 +252,4 @@
         <!-- print the video that uplode by student -->
 
 </div>
- <?php include('FacultysideBar/FacultyFooter.php');?>
-
- 
-   
-   
+<?php include('FacultysideBar/FacultyFooter.php'); ?>

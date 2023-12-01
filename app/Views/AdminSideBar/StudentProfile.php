@@ -1,21 +1,25 @@
+
+
 <?php echo view('AdminSideBar.php'); ?>
 <div class="wrapper">
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?=base_url(); ?>" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-      </li>
+       <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url() ?>Admindashboard" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="<?php echo base_url(''); ?>logout" class="nav-link">Logout</a>
+            </li>
     </ul>
   </nav>
 </div>
 
 <div class="content-wrapper">
+
+
 
     <section class="content-header">
     <div class="container-fluid">
@@ -42,6 +46,7 @@
                         <div class="card bg-light d-flex flex-fill">
                             <div class="card-header text-muted border-bottom-0">
                             Digital Strategist
+
                             </div>
                             <div class="card-body pt-0">
                             <div class="row">
@@ -57,6 +62,7 @@
                                 <img src="<?php echo base_url()?>public/images/user.png" alt="user-avatar" class="img-circle img-fluid">
                                 </div>
                             </div>
+
                             </div>
                             <div class="card-footer">
                             <div class="text-right">
@@ -91,5 +97,4 @@
     </div>
 </section>
 </div>
-
 <?php echo view('AdminSideBar/AdminFooter.php');?> 

@@ -18,7 +18,7 @@ $page = $uri->getSegment(count($pages));
   <script src="<?php echo base_url()?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <script src="<?php echo base_url()?>dist/js/adminlte.min.js"></script>
   <script src="<?php echo base_url()?>public/js/custom.js"></script>
-  <!-- <script src="dist/js/demo.js"></script> -->
+  <script src="dist/js/demo.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
@@ -28,14 +28,16 @@ $page = $uri->getSegment(count($pages));
     <script src="<?php echo base_url()?>plugins/jquery-mapael/jquery.mapael.min.js"></script>
     <script src="<?php echo base_url()?>plugins/jquery-mapael/maps/usa_states.min.js"></script>
     <script src="<?php echo base_url()?>plugins/chart.js/Chart.min.js"></script>
-    <!-- <script src="dist/js/pages/dashboard2.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
-    <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+    <script src="dist/js/pages/dashboard2.js"></script>
+
     <script src="<?php echo base_url()?>plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>plugins/moment/moment.min.js"></script>
     <?php
-        if ($page == 'FacultysidebarShedule') { ?>
+        if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar') { ?>
+             <script src="plugins/jquery/jquery.min.js"></script> 
+
             <script src="<?php echo base_url()?>plugins/fullcalendar/main.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <?php } ?>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -87,7 +89,7 @@ $page = $uri->getSegment(count($pages));
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const addAppointmentButton = document.getElementById("addAppointment");
-        if (addAppointmentButton) {
+        // if (addAppointmentButton) {
             const formDatesInput = document.getElementById("form_date");
                 const currentDate = new Date().toISOString().split("T")[0];
                 formDatesInput.min = currentDate;
@@ -121,7 +123,7 @@ $page = $uri->getSegment(count($pages));
                     toTimeInput.value = "";
                 }
             });
-        }
+        // }
 
         function createTableRow(formdate, formtime, totime) {
             const tr = document.createElement("tr");
@@ -267,12 +269,14 @@ $page = $uri->getSegment(count($pages));
 
     var facultyEvents = [
     <?php if(!empty($FacultysheduleData)) {
+
+        // echo "<pre>";print_r($FacultysheduleData);exit();
         foreach($FacultysheduleData as $data) { ?>
             {
-               
-                start     : '<?=$data->date; ?>T<?=$data->start_time; ?>',
-                end       : '<?=$data->date; ?>T<?=$data->end_time; ?>',
-                faculty_id     : '<?=$data->faculty_register_id; ?>',
+                title      : '<?=$data->full_name; ?> - <?=$data->start_time; ?> to <?=$data->end_time; ?>',
+              start      : '<?=$data->date; ?>T<?=$data->start_time; ?>',
+              end        : '<?=$data->date; ?>T<?=$data->end_time; ?>',
+              faculty_id : '<?=$data->faculty_register_id; ?>',
             },
     <?php }} ?>
 ];
@@ -314,20 +318,32 @@ function getRandomColor() {
 }
 
 var calendar = new Calendar(calendarEl, {
-  headerToolbar: {
-    left  : 'prev,next today',
-    center: 'title',
-    right : 'dayGridMonth,timeGridWeek,timeGridDay'
-  },
-  themeSystem: 'bootstrap',
-  events: facultyEvents,
-  editable  : true,
-  droppable : true,
-  drop      : function(info) {
-    if (checkbox.checked) {
-      info.draggedEl.parentNode.removeChild(info.draggedEl);
-    }
-  }
+        headerToolbar: {
+            left  : 'prev,next today',
+            center: 'title',
+            right : 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        themeSystem: 'bootstrap',
+        events: facultyEvents,
+        editable  : true,
+        droppable : true,
+        drop      : function(info) {
+            if (checkbox.checked) {
+                info.draggedEl.parentNode.removeChild(info.draggedEl);
+            }
+        },
+        eventContent: function(arg) {
+        var eventColor = arg.event.backgroundColor || ''; // Ensure eventColor is defined
+        var textColor = getContrastColor(eventColor); // Calculate text color based on background brightness
+        return {
+            html: '<div class="fc-content" style="background-color:' + eventColor + '; padding: 2%; border-radius: 5%">' +
+                  '<span class="fc-title" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: ' + textColor + ';" title="' + arg.event.title + '">' +
+                    '<div class="event-title">' + arg.event.title.split(' - ')[0] + '</div>' +
+                    '<div class="event-time">' + arg.event.title.split(' - ')[1] + '</div>' +
+                  '</span>' +
+                  '</div>',
+        };
+    },
 });
 
 calendar.render();
@@ -387,6 +403,76 @@ calendar.render();
         document.getElementById('table2').style.display = 'table';
     }
     </script>
+
+
+<!-- Page specific script -->
+<script>
+  $(function () {
+    /* BOOTSTRAP SLIDER */
+    $('.slider').bootstrapSlider()
+
+    /* ION SLIDER */
+    $('#range_1').ionRangeSlider({
+      min     : 0,
+      max     : 5000,
+      from    : 1000,
+      to      : 4000,
+      type    : 'double',
+      step    : 1,
+      prefix  : '$',
+      prettify: false,
+      hasGrid : true
+    })
+    $('#range_2').ionRangeSlider()
+
+    $('#range_5').ionRangeSlider({
+      min     : 0,
+      max     : 10,
+      type    : 'single',
+      step    : 0.1,
+      postfix : ' mm',
+      prettify: false,
+      hasGrid : true
+    })
+    $('#range_6').ionRangeSlider({
+      min     : -50,
+      max     : 50,
+      from    : 0,
+      type    : 'single',
+      step    : 1,
+      postfix : '°',
+      prettify: false,
+      hasGrid : true
+    })
+
+    $('#range_4').ionRangeSlider({
+      type      : 'single',
+      step      : 100,
+      postfix   : ' light years',
+      from      : 55000,
+      hideMinMax: true,
+      hideFromTo: false
+    })
+    $('#range_3').ionRangeSlider({
+      type    : 'double',
+      postfix : ' miles',
+      step    : 10000,
+      from    : 25000000,
+      to      : 35000000,
+      onChange: function (obj) {
+        var t = ''
+        for (var prop in obj) {
+          t += prop + ': ' + obj[prop] + '\r\n'
+        }
+        $('#result').html(t)
+      },
+      onLoad  : function (obj) {
+        //
+      }
+    })
+  })
+</script>
+
 
 </body>
 </html>
