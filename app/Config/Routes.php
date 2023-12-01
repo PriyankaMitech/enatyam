@@ -40,6 +40,11 @@ $routes->get('Career', 'Home::Career');
 $routes->get('chechk_username_id','Home::chechk_username_id');
 $routes->post('chechk_username_id','Home::chechk_username_id');
 
+$routes->get('chechk_mobile_no_id','Home::chechk_mobile_no_id');
+$routes->post('chechk_mobile_no_id','Home::chechk_mobile_no_id');
+
+
+
 $routes->get('Carrier', 'Home::Carrier');
 
 $routes->get('PrivacyPolicy', 'Home::PrivacyPolicy');

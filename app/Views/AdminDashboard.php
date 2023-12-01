@@ -489,7 +489,13 @@
 
                             <!-- assign techers to student -->
                             
-    <table id="faculty-table" class="table">
+            <div class="card" id="faculty-table">
+              <div class="card-header">
+                <h3 class="card-title">Student List</h3>
+              </div>
+                            <div class="card-body">
+                            
+    <table id="example1" class="table table-bordered table-striped">
             <tr>
                 <th>Name</th>
                 <th>Email</th>
@@ -542,24 +548,13 @@
 </table>
 
 
+
+                    </div>
+                    </div>
+
+
                             <!-- Faculty -->
-                            <table id="faculty-table4" style="display: none;" class="table">
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <!-- <th>Assign Students</th> -->
-
-                                </tr>
-                                <?php foreach ($Faculty as $faculty) : ?>
-                                <tr>
-                                    <td><?= $faculty->full_name; ?></td>
-                                    <td><?= $faculty->email; ?></td>
-                                    <!-- <td><button onclick="showStudentTable(this)" class="btn btn-info">Assign -->
-                                    <!-- Students</button></td> -->
-
-                                </tr>
-                                <?php endforeach; ?>
-                            </table>
+                        
 
                             <table id="student-assignment-table" style="display: none;" class="table">
                                 <tr>

@@ -396,4 +396,16 @@ class LoginModel extends Model
     
         return count($result) > 0 ? 1 : 0;
     }
+
+    public function chechk_mobile_no_id($mobile_no)
+    {
+        $result = $this->db->table('register')
+                        ->where('mobile_no', $mobile_no)
+                        ->get()
+                        ->getResult();
+    
+        return count($result) > 0 ? 1 : 0;
+    }
+    
+
 }
