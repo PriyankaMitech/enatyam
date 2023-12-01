@@ -55,33 +55,33 @@ class LoginController extends BaseController
         $validation = \Config\Services::validation(); // Get the validation instance
         $loginModel = new LoginModel();
 
-        // Define validation rules
-        $validation->setRules([
-            'full_name' => 'required',
-            // 'role' => 'required',
-            'password' => 'required|min_length[8]',
-            'confirm_pass' => 'required|alpha_numeric|matches[password]',
-        ]);
+        // // Define validation rules
+        // $validation->setRules([
+        //     'full_name' => 'required',
+        //     // 'role' => 'required',
+        //     'password' => 'required|min_length[8]',
+        //     'confirm_pass' => 'required|alpha_numeric|matches[password]',
+        // ]);
 
-        // Either email or mobile_no should be provided
-        $emailProvided = $this->request->getVar('email');
-        $mobileNoProvided = $this->request->getVar('mobile_no');
-        // echo "$mobileNoProvided";
+        // // Either email or mobile_no should be provided
+        // $emailProvided = $this->request->getVar('email');
+        // $mobileNoProvided = $this->request->getVar('mobile_no');
+        // // echo "$mobileNoProvided";
 
     
-        if (empty($emailProvided) && empty($mobileNoProvided)) {
-            $validation->setError('email', 'Either Email or Mobile no is required.');
-            $validation->setError('mobile_no', 'Either Email or Mobile no is required.');
-        } else if (!empty($emailProvided) && !filter_var($emailProvided, FILTER_VALIDATE_EMAIL)) {
-            $validation->setError('email', 'Invalid email format.');
-        }
+        // if (empty($emailProvided) && empty($mobileNoProvided)) {
+        //     $validation->setError('email', 'Either Email or Mobile no is required.');
+        //     $validation->setError('mobile_no', 'Either Email or Mobile no is required.');
+        // } else if (!empty($emailProvided) && !filter_var($emailProvided, FILTER_VALIDATE_EMAIL)) {
+        //     $validation->setError('email', 'Invalid email format.');
+        // }
 
-        if ($validation->withRequest($this->request)->run()) {
+        // if ($validation->withRequest($this->request)->run()) {
          
             $data = [
                 'full_name' => $this->request->getVar('full_name'),
-                'email' => $emailProvided,
-                'mobile_no' => $mobileNoProvided,
+                'email' => $this->request->getVar('email'),
+                'mobile_no' =>$this->request->getVar('mobile_no'),
                 'role' => 'Student',
                 'password' => $this->request->getVar('password'),
                 'confirm_pass' => $this->request->getVar('confirm_pass'),
@@ -97,8 +97,8 @@ class LoginController extends BaseController
             $last_insert_id = $this->db->insertID();
             $getdata = [
                 'full_name' => $this->request->getVar('full_name'),
-                'email' => $emailProvided,
-                'mobile_no' => $mobileNoProvided,
+                'email' => $this->request->getVar('email'),
+                'mobile_no' => $this->request->getVar('mobile_no'),
                 'role' => 'Student',
                 'password' => $this->request->getVar('password'),
                 'confirm_pass' => $this->request->getVar('confirm_pass'),
@@ -113,18 +113,18 @@ class LoginController extends BaseController
             // Set session variables and redirect as needed
             $this->session->set('user_id', $this->request->getVar($last_insert_id));
             $this->session->set('username', $this->request->getVar('full_name'));
-            $this->session->set('email', $emailProvided);
+            $this->session->set('email', $this->request->getVar('email'));
             $this->session->set('role', 'Student');
 
             $loginModel->setFacultyName($data);
             $loginModel->setStudentName($getdata);
     
             // return redirect()->to('dashboard');
-        } else {
-            // Validation failed
-            $data['validation'] = $validation;
-            return redirect()->to('Home');
-        }
+        // } else {
+        //     // Validation failed
+        //     $data['validation'] = $validation;
+        //     return redirect()->to('Home');
+        // }
     }
 
     public function verifymobile() {
@@ -238,9 +238,14 @@ class LoginController extends BaseController
                     $this->session->set($result);
                     return redirect()->to('uploadMedia');
                 default:
+                    $this->session->setFlashdata('errormessage', 'Invalid role.');
+
                     return redirect()->to('Home');
+
             }
         } else {
+            $this->session->setFlashdata('errormessage', 'Password is wrong.');
+
         return redirect()->to('Home');
         }
     }

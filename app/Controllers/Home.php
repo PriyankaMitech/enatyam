@@ -238,4 +238,22 @@ if ($username) {
 }
 
 }
+
+
+public function chechk_mobile_no_id()
+{
+    $loginModel = new LoginModel();
+    $mobile_no = $this->request->getPost('mobile_no');
+
+if ($mobile_no) {
+    $mobileno = $loginModel->chechk_mobile_no_id($mobile_no);
+    // echo "<pre>";
+    // print_r($email);exit();
+    return json_encode($mobileno);
+} else {
+    return json_encode([]);
+}
+
+}
+
 }
