@@ -1,26 +1,5 @@
 <?php include('FacultySidebar2.php');?>
-<style>
-    .video-row {
-        display: flex;
-        justify-content: space-between; /* Distribute videos evenly within the row */
-        margin-bottom: 20px; /* Add some space between rows */
-    }
 
-    .video-card {
-        width: 30%;
-        border: 1px solid #ccc;
-        padding: 10px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        text-align: center;
-    }
-
-    .video-info {
-        margin-top: 10px;
-    }
-</style> 
-<div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-</div>
 <nav class="main-header navbar navbar-expand navbar-light">
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -34,62 +13,87 @@
     </li>
     </ul>
 </nav>
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">Dashboard </h1>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard </li>
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>logout">Logout</a></li>
 
-                    </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Students Videos</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Students Videos</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
 
     <!-- Main content -->
     <section class="content">
-        <div class="container-fluid">
-            <div class="video-container"> <!-- Adjust max-width as needed -->
-                <?php if (!empty($results)): ?>
-                    <div class="video-row">
-                        <?php $videoCount = 0; ?>
-                        <?php foreach ($results as $result): ?>
-                            <div class="video-card" style="width: 19%; margin: 1%;"> <!-- Adjust width and margin as needed -->
-                                <video width="100%" height="auto" controls> <!-- Adjust the video size -->
-                                    <source src="<?= base_url('public/uploads/StudentStudyvideos/' . $result->name) ?>" type="video/mp4">
-                                </video>
-                                <div class="video-info"> <!-- Create a container for video information -->
-                                    <b><p>Uploaded by: <?= $result->Student_name ?></p></b>
-                                    <b><p>Uploaded Date/Time: <?= $result->DateTime ?></p></b>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Students Videos</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+              <div class="row mt-4">
+              <?php 
+              
+              if (!empty($results)){ ?>
+                <?php foreach ($results as $data){ ?>
+                    <?php
+                            // Generate a random background color based on the student's name
+                            $randomColor1 = '#' . substr(md5($data->Student_name), 0, 4);
+                            ?>
+                    <div class="col-sm-4 mt-3" >
+                        <div class="position-relative videoofs" >
+                            <!-- <img src="<?= base_url(); ?>dist/img/photo1.png" alt="Photo 1" class="img-fluid"> -->
+                            <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
+                                <!-- Adjust the video size -->
+                                <source class="img-fluid"
+                                    src="<?= base_url('public/uploads/StudentStudyvideos/' . $data->name) ?>" type="video/mp4">
+                            </video>
+                            <?php
+                            // Generate a random background color based on the student's name
+                            $randomColor = '#' . substr(md5($data->Student_name), 0, 6);
+                            ?>
+                            <div class="ribbon-wrapper ribbon-lg">
+                                <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
+                                    <?= $data->Student_name ?>
                                 </div>
                             </div>
-                            <?php
-                            $videoCount++;
-                            if ($videoCount % 5 == 0) { // Display 5 videos in one row
-                                echo '</div><div class="video-row">';
-                            }
-                            ?>
-                        <?php endforeach; ?>
+                        </div>
                     </div>
-                <?php else: ?>
-                    <p>No videos found.</p>
-                <?php endif; ?>
-            </div> 
+                    <?php } ?>
+                <?php } ?>
+                  
+   
+             
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
         </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
 
-</div>
- <?php include('FacultysideBar/FacultyFooter.php');?>
 
- 
-   
-   
+<!-- ./wrapper -->
+
+
