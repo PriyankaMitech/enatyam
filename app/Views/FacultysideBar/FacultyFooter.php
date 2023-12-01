@@ -1,32 +1,45 @@
-</body>
-</html>
+<?php
+$uri = new \CodeIgniter\HTTP\URI(current_url(true));
+$pages = $uri->getSegments();
+$page = $uri->getSegment(count($pages));
+?>
 <footer class="main-footer">
  
     <strong>Copyright &copy; 2023-2024 <a href="https://mitech">MI-TECH</a>.</strong> All rights reserved.
   </footer>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="plugins/jquery/jquery.min.js"></script>
-  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script src="dist/js/adminlte.min.js"></script>
-  <script src="dist/js/demo.js"></script>
+  <script src="<?php echo base_url()?>public/js/jquery.dataTables.min.js"></script>
+  <script src="<?php echo base_url()?>public/js/dataTables.bootstrap4.js"></script>
+  <script src="<?php echo base_url()?>public/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo base_url()?>public/js/dataTables.responsive.min.js"></script>
+  <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+  <script src="<?php echo base_url()?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo base_url()?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="<?php echo base_url()?>dist/js/adminlte.min.js"></script>
+  <script src="<?php echo base_url()?>public/js/custom.js"></script>
+  <!-- <script src="dist/js/demo.js"></script> -->
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-    <script src="dist/js/adminlte.js"></script>
-    <script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
-    <script src="plugins/raphael/raphael.min.js"></script>
-    <script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
-    <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <script src="dist/js/pages/dashboard2.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="plugins/jquery/jquery.min.js"></script>
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/fullcalendar/main.js"></script>
+    <script src="<?php echo base_url()?>dist/js/adminlte.js"></script>
+    <script src="<?php echo base_url()?>plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="<?php echo base_url()?>plugins/raphael/raphael.min.js"></script>
+    <script src="<?php echo base_url()?>plugins/jquery-mapael/jquery.mapael.min.js"></script>
+    <script src="<?php echo base_url()?>plugins/jquery-mapael/maps/usa_states.min.js"></script>
+    <script src="<?php echo base_url()?>plugins/chart.js/Chart.min.js"></script>
+    <!-- <script src="dist/js/pages/dashboard2.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+    <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+    <script src="<?php echo base_url()?>plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="<?php echo base_url()?>plugins/moment/moment.min.js"></script>
+    <?php
+        if ($page == 'FacultysidebarShedule') { ?>
+            <script src="<?php echo base_url()?>plugins/fullcalendar/main.js"></script>
+        <?php } ?>
     <script type="text/javascript">
         $(document).ready(function() {
+            
             $("input[name='datetimes']").daterangepicker({},
                 function(start, end, label) {
                     let startDate = start.format("YYYY-MM-DD").toString();
@@ -38,117 +51,126 @@
 
                 }
             );
+            
+    
         });
     </script>
-     <script>
-        document.getElementById('showTableLink').addEventListener('click', function() {
-            var table = document.getElementById('studentTable');
-            if (table.style.display === 'none') {
-                table.style.display = 'table';
-            } else {
-                table.style.display = 'none';
-            }
-        });
+     <script  type="text/javascript">
+        const showTableLink = document.getElementById('showTableLink');
+        if (showTableLink) {
+            showTableLink.addEventListener('click', function() {
+                var table = document.getElementById('studentTable');
+                if (table.style.display === 'none') {
+                    table.style.display = 'table';
+                } else {
+                    table.style.display = 'none';
+                }
+            });
+        }
     </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const toggleButton = document.getElementById("toggle-button");
             const toggleContent = document.getElementById("toggle-content");
-
-            toggleButton.addEventListener("click", function() {
-                if (toggleContent.style.display === "none") {
-                    toggleContent.style.display = "block";
-                } else {
-                    toggleContent.style.display = "none";
-                }
-            });
+            if (toggleButton) {
+                toggleButton.addEventListener("click", function() {
+                    if (toggleContent.style.display === "none") {
+                        toggleContent.style.display = "block";
+                    } else {
+                        toggleContent.style.display = "none";
+                    }
+                });
+            }
         });
     </script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const addAppointmentButton = document.getElementById("addAppointment");
-    const formDatesInput = document.getElementById("form_date");
+    document.addEventListener("DOMContentLoaded", function() {
+        const addAppointmentButton = document.getElementById("addAppointment");
+        if (addAppointmentButton) {
+            const formDatesInput = document.getElementById("form_date");
+                const currentDate = new Date().toISOString().split("T")[0];
+                formDatesInput.min = currentDate;
+            
+            const formTimeInput = document.getElementById("form_time");
+            const toTimeInput = document.getElementById("to_time");
 
-    const currentDate = new Date().toISOString().split("T")[0];
-    formDatesInput.min = currentDate;
+            const selectedAppointmentsContainer = document.querySelector("#selectedAppointments table tbody");
 
-    const formTimeInput = document.getElementById("form_time");
-    const toTimeInput = document.getElementById("to_time");
+            // Set min time for "form_time" input based on current time
+            const currentHour = new Date().getHours();
+            const currentMinute = new Date().getMinutes();
+            const currentTimeString = `${currentHour.toString().padStart(2, "0")}:${currentMinute.toString().padStart(2, "0")}`;
+            formTimeInput.min = currentTimeString;
 
-    const selectedAppointmentsContainer = document.querySelector("#selectedAppointments table tbody");
+            formTimeInput.addEventListener("input", function() {
+                toTimeInput.min = this.value;
+                toTimeInput.value = this.value; // Automatically set "to_time" to match "form_time"
+            });
+            addAppointmentButton.addEventListener("click", function() {
+                const selectedformDate = formDatesInput.value;
+                const selectedformTime = formTimeInput.value;
+                const selectedtoTime = toTimeInput.value;
 
-    // Set min time for "form_time" input based on current time
-    const currentHour = new Date().getHours();
-    const currentMinute = new Date().getMinutes();
-    const currentTimeString = `${currentHour.toString().padStart(2, "0")}:${currentMinute.toString().padStart(2, "0")}`;
-    formTimeInput.min = currentTimeString;
+                if (selectedformDate && selectedformTime && selectedtoTime) {
+                    const tr = createTableRow(selectedformDate, selectedformTime, selectedtoTime);
+                    selectedAppointmentsContainer.appendChild(tr);
 
-    formTimeInput.addEventListener("input", function() {
-        toTimeInput.min = this.value;
-        toTimeInput.value = this.value; // Automatically set "to_time" to match "form_time"
-    });
+                    formDatesInput.value = "";
+                    formTimeInput.value = "";
+                    toTimeInput.value = "";
+                }
+            });
+        }
 
-    addAppointmentButton.addEventListener("click", function() {
-        const selectedformDate = formDatesInput.value;
-        const selectedformTime = formTimeInput.value;
-        const selectedtoTime = toTimeInput.value;
+        function createTableRow(formdate, formtime, totime) {
+            const tr = document.createElement("tr");
+            const formdateTd = document.createElement("td");
+            const formtimeTd = document.createElement("td");
+            const totimeTd = document.createElement("td");
 
-        if (selectedformDate && selectedformTime && selectedtoTime) {
-            const tr = createTableRow(selectedformDate, selectedformTime, selectedtoTime);
-            selectedAppointmentsContainer.appendChild(tr);
+            formdateTd.textContent = formdate;
+            formtimeTd.textContent = formtime;
+            totimeTd.textContent = totime;
 
-            formDatesInput.value = "";
-            formTimeInput.value = "";
-            toTimeInput.value = "";
+            tr.appendChild(formdateTd);
+            tr.appendChild(formtimeTd);
+            tr.appendChild(totimeTd);
+
+            return tr;
+        }
+
+        const appointmentForm = document.getElementById("appointmentForm")
+        if(appointmentForm){
+            document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const selectedDateInputs = selectedAppointmentsContainer.querySelectorAll("td:first-child");
+                const formTimeInputs = selectedAppointmentsContainer.querySelectorAll("td:nth-child(2)");
+                const toTimeInputs = selectedAppointmentsContainer.querySelectorAll("td:last-child");
+
+                const selectedAppointments = [];
+
+                selectedDateInputs.forEach((dateTd, index) => {
+                    selectedAppointments.push({
+                        date: dateTd.textContent,
+                        formTime: formTimeInputs[index].textContent,
+                        toTime: toTimeInputs[index].textContent
+                    });
+                });
+
+                const selectedAppointmentsJSON = JSON.stringify(selectedAppointments);
+
+                const hiddenInput = document.createElement("input");
+                hiddenInput.type = "hidden";
+                hiddenInput.name = "selected_appointments";
+                hiddenInput.value = selectedAppointmentsJSON;
+                this.appendChild(hiddenInput);
+
+                this.submit();
+            });
         }
     });
-
-    function createTableRow(formdate, formtime, totime) {
-        const tr = document.createElement("tr");
-        const formdateTd = document.createElement("td");
-        const formtimeTd = document.createElement("td");
-        const totimeTd = document.createElement("td");
-
-        formdateTd.textContent = formdate;
-        formtimeTd.textContent = formtime;
-        totimeTd.textContent = totime;
-
-        tr.appendChild(formdateTd);
-        tr.appendChild(formtimeTd);
-        tr.appendChild(totimeTd);
-
-        return tr;
-    }
-
-    document.getElementById("appointmentForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const selectedDateInputs = selectedAppointmentsContainer.querySelectorAll("td:first-child");
-        const formTimeInputs = selectedAppointmentsContainer.querySelectorAll("td:nth-child(2)");
-        const toTimeInputs = selectedAppointmentsContainer.querySelectorAll("td:last-child");
-
-        const selectedAppointments = [];
-
-        selectedDateInputs.forEach((dateTd, index) => {
-            selectedAppointments.push({
-                date: dateTd.textContent,
-                formTime: formTimeInputs[index].textContent,
-                toTime: toTimeInputs[index].textContent
-            });
-        });
-
-        const selectedAppointmentsJSON = JSON.stringify(selectedAppointments);
-
-        const hiddenInput = document.createElement("input");
-        hiddenInput.type = "hidden";
-        hiddenInput.name = "selected_appointments";
-        hiddenInput.value = selectedAppointmentsJSON;
-        this.appendChild(hiddenInput);
-
-        this.submit();
-    });
-});
 
     
 </script>
@@ -351,6 +373,7 @@ calendar.render();
       // Remove event from text input
       $('#new-event').val('')
     })
+
   })
 </script>
 <script>
@@ -364,3 +387,6 @@ calendar.render();
         document.getElementById('table2').style.display = 'table';
     }
     </script>
+
+</body>
+</html>

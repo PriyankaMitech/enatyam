@@ -32,6 +32,11 @@
         width: 404px;
         height: 122px;
     }
+    div.dataTables_wrapper div.dataTables_filter input {
+        margin-left: 0.5em;
+        display: inline-block;
+        width: auto;
+    }
 </style>
 <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
@@ -118,7 +123,7 @@
                     </div>
                 </div>
                 <!-- <form method="post"  enctype="multipart/form-data" action="<?php echo base_url('uploadVideo'); ?>"> -->
-                <table id="studentTable" style="display: none;">
+                <table id="studentsTable" style="display: none;">
                     <thead>
                         <tr>
 
@@ -147,6 +152,45 @@
                     </tbody>
                 </table>
             </div>
+                <div class="card" id="studentTable"  style="display: none;">
+                    <div class="card-header">
+                        <div class="card-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                            <div class="input-group-append">
+                            <button type="submit" class="btn btn-default">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Join Date</th>
+                                <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($data as $row) : ?>
+                                <tr>
+                                    <td><?php echo $row['student_id']; ?></td>
+                                    <td><?php echo $row['student_name']; ?></td>
+                                    <td><?php echo $row['created_at']; ?></td>
+                                    <td>
+                                    <a href="<?php echo base_url()?>Chat/<?php echo $row['student_id']; ?>" class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             <div id="" class="collapse">Availability
                 <label for="sessiontime">Session (date and time):</label>
                 <input type="datetime-local" id="sessiontime" name="sessiontime">
@@ -194,7 +238,7 @@
                 <p id="startDate">Start Date:</p>
                 <p id="endDate">End Date:</p>
                 <script>
-                    $("input[name='datetimes']").daterangepicker();
+                    //$("input[name='datetimes']").daterangepicker();
                 </script>
 
 
