@@ -39,7 +39,6 @@ class AdminModel extends Model
     public function getOneToOneSessionStudents()
     {
         return $this->db->table('register')->where('SessionType', 'OneToOneSession')->get()->getResult();
-
     }
     public function getConductedDemo()
     {
@@ -117,7 +116,7 @@ class AdminModel extends Model
     }
     public function UnattendedDemoList()
     {
-         $today = date('Y-m-d');
+        $today = date('Y-m-d');
         return $this->db->table('free_demo_table')
             ->where('Booking_Date_Time <', $today)
             ->get()
@@ -160,12 +159,12 @@ class AdminModel extends Model
     {
         // return $this->db->table('register')->where('role', 'Student')->get()->getResult();
         $query = $this->db->table('register AS students')
-        ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name')
-        ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
-        ->where('students.role', 'Student')
-        ->get();
+            ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name')
+            ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
+            ->where('students.role', 'Student')
+            ->get();
 
-    return $query->getResult();
+        return $query->getResult();
     }
     public function getFaculty()
     {
@@ -256,7 +255,7 @@ class AdminModel extends Model
 
     // public function getStudyVideoUplodedByStudent()
     // {
-       
+
     //     $VideoDetails = $this->db->table('uplode_study_video_from_student')
     //         ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
     //         ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id')
@@ -266,7 +265,7 @@ class AdminModel extends Model
     // }
     public function getStudyVideoUplodedByStudent()
     {
-    
+
         $VideoDetails = $this->db->table('uplode_study_video_from_student')
             ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
             ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id')
@@ -285,7 +284,7 @@ class AdminModel extends Model
     //     return  $VideoDetails;
     // }
     public function getStudyVideoUplodedByFaculty()
-    {   
+    {
         $VideoDetails = $this->db->table('uplode_video_to_student')
             ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
             ->join('student', 'student.student_id = uplode_video_to_student.student_id')
@@ -307,7 +306,7 @@ class AdminModel extends Model
     {
         return $this->db->table('carrier')
             ->select('*')
-            ->where('Stetus', 'N')
+            ->where('Status', 'N')
             ->Where('Result_of_application', 'decline')
             ->get()
             ->getResult();
@@ -315,9 +314,9 @@ class AdminModel extends Model
     public function updateGroupName($rowIdsArray, $groupName)
     {
         return $this->db->table('register')
-        ->whereIn('id', $rowIdsArray)
-        ->set(['groupName' => $groupName])
-        ->update();
+            ->whereIn('id', $rowIdsArray)
+            ->set(['groupName' => $groupName])
+            ->update();
     }
 
     public function updateCarrierData($D_id, $action)
@@ -382,7 +381,7 @@ class AdminModel extends Model
 
     public function getAllGroupNames()
     {
-       
+
         return $this->db->table('register')->distinct()
             ->select('groupName')
             ->where('groupName IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
@@ -392,31 +391,77 @@ class AdminModel extends Model
     public function getRecordsByGroupName($groupName)
     {
         return $this->db->table('register')
-              ->where('groupName', $groupName)
-                    ->where('SessionType', 'GroupSession')
-                    ->get()
-                    ->getResult();
+            ->where('groupName', $groupName)
+            ->where('SessionType', 'GroupSession')
+            ->get()
+            ->getResult();
     }
 
     public function updateFacultyForGroup($groupName, $facultyId)
     {
         return $this->db->table('register')
-        ->where('groupName', $groupName)
-         ->set(['Assign_Techer_id' => $facultyId])
-        ->update();
+            ->where('groupName', $groupName)
+            ->set(['Assign_Techer_id' => $facultyId])
+            ->update();
     }
+    public function getAdminUsers()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('register')
+            ->select('full_name, email, password, mobile_no')
+            ->where('role', 'Admin')->get();
+        // echo '<pre>';
+        // print_r($query->getResultArray());
+        // die;
+        // Return the result as an array
+        return $query->getResultArray();
+    }
+
     
-    public function insert_formdata($table, $insertdata) {
+    public function insert_formdata($id, $table, $insertdata) {
         $result['insert'] = $this->db->table($table)->insert($insertdata);
         
         if ($result['insert']) {
             $insertedID = $this->db->insertID(); 
-            $result['getdata'] = $this->db->table($table)->where('msg_id', $insertedID)->get()->getRowArray();
+            $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
             return $result;
         }else {
             return false;
         }
     }
 
-   
+    public function getsinglerow($table, $wherecond) {
+        $result = $this->db->table($table)->where($wherecond)->get()->getRow();
+        
+        if ($result) {
+            return $result;
+        }else {
+            return false;
+        }
+    }
+
+    public function getdata($table, $wherecond) {
+        $result = $this->db->table($table)->where($wherecond)->get()->getResult();
+        
+        if ($result) {
+            return $result;
+        }else {
+            return false;
+        }
+    }
+
+    public function getchat($tablechat, $wherecond2, $wherecond3) {
+        
+        $result = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = 3 AND receiver_id = 6 )
+        OR (sender_id = 6 AND receiver_id = 3) ORDER BY msg_id");
+        //echo '<pre>';print_r($result->getResultArray());die;
+        //$result = $this->db->table($table)->where($wherecond2.' OR ' .$wherecond3)->get()->getResult();
+        
+        if ($result) {
+            return $result->getResultArray();
+        }else {
+            return false;
+        }
+    }
+
 }

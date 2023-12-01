@@ -37,8 +37,8 @@ $routes->get('RefundPolicy', 'Home::RefundPolicy');
 $routes->get('TermsAndConditions', 'Home::TermsAndConditions');
 $routes->get('Career', 'Home::Career');
 
-$routes->get('chechk_username_id','Home::chechk_username_id');
-$routes->post('chechk_username_id','Home::chechk_username_id');
+$routes->get('chechk_username_id', 'Home::chechk_username_id');
+$routes->post('chechk_username_id', 'Home::chechk_username_id');
 
 $routes->get('chechk_mobile_no_id','Home::chechk_mobile_no_id');
 $routes->post('chechk_mobile_no_id','Home::chechk_mobile_no_id');
@@ -110,6 +110,7 @@ $routes->get('StudentGroups', 'AdminController::StudentGroups');
 $routes->get('FacultysidebarShedule', 'AdminController::FacultysidebarShedule');
 $routes->post('AdduserByadmin', 'AdminController::AdduserByadmin');
 $routes->post('SelectedForGroup', 'AdminController::SelectedForGroup');
+$routes->get('Chat', 'AdminController::chatwithteacher');
 $routes->get('Chat/(:any)', 'AdminController::chatwithstud/$1');
 $routes->post('insertChat', 'AdminController::insertChat');
 
@@ -125,18 +126,22 @@ $routes->post('otpvalidate', 'StudentController::otpvalidate');
 $routes->post('newpassword', 'StudentController::newpassword');
 $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule');
 
+$routes->get('AdminList', 'AdminController::AdminList');
+
+
+
 // Routes for Faculty
 $routes->get('FacultyProfile', 'Home::FacultyProfile');
 $routes->get('FacultySchedule', 'DemoController::todayDemo');
 $routes->post('DemoController/resheduleDemo', 'DemoController::resheduleDemo');
 $routes->get('SelectSlot', 'FacultyController::MonthlyCalendar');
 // $routes->get('MonthlyCalendar', 'FacultyController::MonthlyCalendar');
-$routes->get('StudentuplodedVidio', 'FacultyController::StudentuplodedVidio');
+$routes->get('StudentUploadedVideo', 'FacultyController::StudentuplodedVidio');
 $routes->post('FacultyController/selectfacultySchedule', 'FacultyController::selectfacultySchedule');
 $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
 
-$routes->get('chat','Chat_controller::chat');
-$routes->post('chat','Chat_controller::chat');
+$routes->get('chat', 'Chat_controller::chat');
+$routes->post('chat', 'Chat_controller::chat');
 
 // $routes->get('fetchstudyVideouplodeFromstudent', 'FacultyController::fetchstudyVideouplodeFromstudent');
 $routes->get('facultyinfo', 'FacultyController::facultyinfo');

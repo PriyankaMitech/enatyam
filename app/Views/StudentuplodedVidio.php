@@ -1,4 +1,6 @@
+
 <?php include('FacultySidebar2.php');?>
+
 
 <nav class="main-header navbar navbar-expand navbar-light">
     <ul class="navbar-nav">
@@ -6,13 +8,14 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="" class="nav-link">Home</a>
+            <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-    </li>
+            <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
+        </li>
     </ul>
 </nav>
+
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -34,7 +37,7 @@
     </section>
 
     <!-- Main content -->
-    <section class="content">
+
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
@@ -61,6 +64,7 @@
                                 <source class="img-fluid"
                                     src="<?= base_url('public/uploads/StudentStudyvideos/' . $data->name) ?>" type="video/mp4">
                             </video>
+
                             <?php
                             // Generate a random background color based on the student's name
                             $randomColor = '#' . substr(md5($data->Student_name), 0, 6);
@@ -72,6 +76,7 @@
                             </div>
                         </div>
                     </div>
+
                     <?php } ?>
                 <?php } ?>
                   
@@ -84,6 +89,7 @@
             <!-- /.card -->
           </div>
           <!-- /.col -->
+
         </div>
         <!-- /.row -->
       </div>
@@ -96,4 +102,7 @@
 
 <!-- ./wrapper -->
 
+
+</div>
+<?php include('FacultysideBar/FacultyFooter.php'); ?>
 

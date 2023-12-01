@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<?php include(APPPATH.'Views/AdminSideBar.php');?>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video</title>
-   
-    <style>
-        .row {
-            margin-left: 213px;
-            height: auto;
-            width: auto;
-        }
+<?php echo view('AdminSideBar.php'); ?>
+<style>
+       
 
         .card-body {
             background-color: greenyellow;
@@ -52,6 +40,7 @@
             margin-bottom: 10px;
         }
     </style>
+
 </head>
 
 <body>
@@ -75,6 +64,8 @@
 
     </nav>
 
+
+   
     <div class="row">
         <div class="col-md-6">
             <button class="btn btn-block btn-success btn-lg" id="showVideoContainer">Uplode Video By Student</button>
@@ -83,7 +74,6 @@
             <button class="btn btn-block btn-success btn-lg" id="showFacultyVideoContainer">Uplode Video By Faculty</button>
         </div>
     </div>
-
     <div class="container" id="videoContainer" style="display: none;">
         <?php if (!empty($studentVideoData)) { ?>
             <div class="row">
@@ -112,7 +102,6 @@
             <?php } ?>
             </div>
     </div>
-
     <div class="container" id="FacultyVideoContainer" style="display: none;">
         <?php if (isset($FacultyVideoData) && !empty($FacultyVideoData)) :   ?>
             <div class="row">
@@ -135,30 +124,12 @@
             <?php endif; ?>
             </div>
     </div>
-    <script>
-        // document.getElementById("showVideoContainer").addEventListener("click", function() {
-        //     document.getElementById("videoContainer").style.display = "block";
-        //     document.getElementById("imageContainer").style.display = "none";
-        // });
 
-        // document.getElementById("showImageContainer").addEventListener("click", function() {
-        //     document.getElementById("imageContainer").style.display = "block";
-        //     document.getElementById("videoContainer").style.display = "none";
-        // });
-        // document.getElementById("showFacultyVideoContainer").addEventListener("click", function() {
-        //     document.getElementById("FacultyVideoContainer").style.display = "block";
-        //     document.getElementById("imageContainer").style.display = "none";
-        // });
-        document.getElementById("showVideoContainer").addEventListener("click", function() {
-            document.getElementById("videoContainer").style.display = "block";
-            document.getElementById("FacultyVideoContainer").style.display = "none"; // Hide FacultyVideoContainer
-        });
+    </div>
+</section>
+</div>
+<?php echo view('AdminSideBar/AdminFooter.php');?>  
+   
 
-        document.getElementById("showFacultyVideoContainer").addEventListener("click", function() {
-            document.getElementById("videoContainer").style.display = "none"; // Hide videoContainer
-            document.getElementById("FacultyVideoContainer").style.display = "block";
-        });
-    </script>
-</body>
-
-</html>
+   
+    

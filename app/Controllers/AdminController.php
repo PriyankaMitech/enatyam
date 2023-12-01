@@ -9,6 +9,19 @@ use CodeIgniter\Controller;
 
 class AdminController extends BaseController
 {
+    public function __construct()
+    {
+        // Do Not Edit This Line
+        // parent::initController($request, $response, $logger);
+
+        // Preload any models, libraries, etc, here.
+
+        // E.g.: $this->session = \Config\Services::session();
+        $this->session = \Config\Services::session();
+        $this->validation = \Config\Services::validation();
+        $model = new AdminModel();
+    }
+
     public function givestudent()
     {
         return view('givestudent');
@@ -285,7 +298,7 @@ class AdminController extends BaseController
         $D_id = $this->request->getPost('D_id');
         if ($D_id && ($action === 'approve' || $action === 'decline')) {
             $model = new CarrierModel();
-            $careerRecord = $model->getcarreerByfaculty($D_id); 
+            $careerRecord = $model->getcarreerByfaculty($D_id);
 
             if ($careerRecord) {
 
@@ -459,12 +472,32 @@ class AdminController extends BaseController
         return redirect()->to('AddNewUser');
     }
 
+    public function AdminList()
+
+
+    {
+
+        $model = new AdminModel();
+        $adminUsers = $model->getAdminUsers();
+        // Using the Query Builder to retrieve users with the role 'Admin'
+        // $model = new AdminModel();
+        // $adminUsers = $model->getAdminUsers();
+        // $query = $db->table('register')
+        //     ->select('full_name, email, password, mobile_no')
+        //     ->where('role', 'Admin')->get();
+        // echo '<pre>';
+        // print_r($query->getResultArray());
+        // die;
+        // Return the result as an array
+        return view('AdminSideBar/AdminList', ['adminUsers' => $adminUsers]);
+    }
+
     public function addStudent()
     {
         $email = $this->request->getPost('email');
         $model = new AdminModel();
         $studentData = $model->getStudentDataByEmail($email);
-        
+
         if ($studentData) {
             $insertData = [
                 'full_name' => $studentData->name,
@@ -485,27 +518,27 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $data['groupSessionStudents'] = $model->getGroupSessionStudents();
         $data['OneToOneSession'] = $model->getOneToOneSessionStudents();
-      
-        return view('AdminSideBar/StudentList', $data);      
+
+        return view('AdminSideBar/StudentList', $data);
     }
 
     public function SelectedForGroup()
     {
-      //  print_r($_POST);die;
-          $groupName = $this->request->getPost('groupName');
-          $selectedRowIds = $this->request->getPost('selectedRowIds');
-      if (empty($selectedRowIds)) {
-          echo 'No row IDs selected for update';
-          return;
-      }
-      if (is_array($selectedRowIds)) {
-          $selectedRowIds = implode(',', $selectedRowIds);
-      }
-      $rowIdsArray = explode(',', $selectedRowIds);
-      $model = new AdminModel();
-      $model->updateGroupName($rowIdsArray, $groupName);
-      return redirect()->to('StudentListToAdmin');
-  }
+        //  print_r($_POST);die;
+        $groupName = $this->request->getPost('groupName');
+        $selectedRowIds = $this->request->getPost('selectedRowIds');
+        if (empty($selectedRowIds)) {
+            echo 'No row IDs selected for update';
+            return;
+        }
+        if (is_array($selectedRowIds)) {
+            $selectedRowIds = implode(',', $selectedRowIds);
+        }
+        $rowIdsArray = explode(',', $selectedRowIds);
+        $model = new AdminModel();
+        $model->updateGroupName($rowIdsArray, $groupName);
+        return redirect()->to('StudentListToAdmin');
+    }
 
     public function StudentGroups()
     {
@@ -524,27 +557,50 @@ class AdminController extends BaseController
     }
     public function AssignFacultyToGroup()
     {
-       // print_r($_POST);die;
+        // print_r($_POST);die;
         $groupName = $this->request->getPost('group');
         $facultyId = $this->request->getPost('faculty');
         $model = new AdminModel();
         $model->updateFacultyForGroup($groupName, $facultyId);
         return redirect()->to('StudentGroups');
-    
     }
 
     public function chatwithstud(){
-        echo view('FacultysideBar/Chatwithstud');
+        $model = new AdminModel();
+        $receiverid = $this->request->uri->getSegments(1);
+        $wherecond1 = array('id'=>$receiverid[1]);
+        $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>$receiverid[1]);
+        $wherecond3 = array('sender_id'=>$receiverid[1], 'receiver_id'=>$_SESSION['id']);
+
+        $result['getdata'] = $model->getsinglerow('register', $wherecond1);
+        $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
+
+        // echo '<pre>';print_r($result['chatdata']);die;
+        echo view('FacultysideBar/Chatwithstud', $result);
+    }
+
+    public function chatwithteacher(){
+        $model = new AdminModel();
+        // $receiverid = $this->request->uri->getSegments(1);
+        $wherecond1 = array('id'=>$_SESSION['id']);
+        $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>3);
+        $wherecond3 = array('sender_id'=>3, 'receiver_id'=>$_SESSION['id']);
+
+        $result['getdata'] = $model->getsinglerow('register', $wherecond1);
+        $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
+
+        // echo '<pre>';print_r($_SESSION['id']);die;
+        echo view('FacultysideBar/Chatwithstud', $result);
     }
 
     public function insertChat() {
         $formdata = $_POST;
         $model = new AdminModel();
-        $result = $model->insert_formdata('online_chat', $formdata);
+        $result = $model->insert_formdata('msg_id','online_chat', $formdata);
         echo json_encode($result);
     }
     public function studentAttendance()
     {
-        echo view('studentAttendance');
+        echo view('AdminSideBar/studentAttendance');
     }
 }
