@@ -455,7 +455,7 @@
                 <th>Assign Faculty Status</th>
                 <th>Action</th>
             </tr>
-    <?php foreach ($admins as $admin): ?>
+            <?php foreach ($admins as $admin): ?>
         <tr>
             <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
                 <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
@@ -465,16 +465,16 @@
                 <td><?= $admin->sub_course; ?></td>
         
                 <td class="faculty-select" >
-                <select name="faculty_name">
-             <option value="" selected>Select Faculty</option>
-                <?php foreach ($Faculty as $facultyItem): ?>
-          <?php if ($facultyItem->course == $admin->course && $facultyItem->sub_course == $admin->sub_course): ?>
-             <option value="<?= $facultyItem->id; ?>" <?php if ($admin->Assign_Techer_id == $facultyItem->id) { echo 'selected'; } ?>>
-                <?= $facultyItem->full_name; ?>
-            </option>
-        <?php endif; ?>
-    <?php endforeach; ?>
- </select>
+             <select name="faculty_name">
+                 <option value="" selected>Select Faculty</option>
+                   <?php foreach ($Faculty as $facultyItem): ?>
+                  <?php if ($facultyItem->course == $admin->course && $facultyItem->sub_course == $admin->sub_course): ?>
+               <option value="<?= $facultyItem->id; ?>" <?php if ($admin->Assign_Techer_id == $facultyItem->id) { echo 'selected'; } ?>>
+                   <?= $facultyItem->full_name; ?>
+               </option>
+               <?php endif; ?>
+              <?php endforeach; ?>
+             </select>
 
                 </td>
                 <td>
@@ -502,11 +502,15 @@
 
                     </div>
                     </div>
- <!-- Faculty -->
- <table id="faculty-table4" style="display: none;" class="table">
+ <!-- Faculty --> 
+          
+                  <table id="faculty-table4" class="table table-bordered table-striped" style="display: none;" class="table">
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>course</th>
+                                    <th>sub course</th>
+                                    <th>Contact Number</th>
                                     <!-- <th>Assign Students</th> -->
 
                                 </tr>
@@ -514,13 +518,17 @@
                                     <tr>
                                         <td><?= $faculty->full_name; ?></td>
                                         <td><?= $faculty->email; ?></td>
+                                        <td><?= $faculty->course; ?></td>
+                                        <td><?= $faculty->sub_course; ?></td>
+                                        <td><?= $faculty->mobile_no; ?></td>
                                         <!-- <td><button onclick="showStudentTable(this)" class="btn btn-info">Assign -->
                                         <!-- Students</button></td> -->
 
                                     </tr>
                                 <?php endforeach; ?>
-                            </table>
-
+                    </table>
+                 
+        
                             <!-- Faculty -->
                         
 
