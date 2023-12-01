@@ -337,6 +337,8 @@ class LoginModel extends Model
         ->select($column)
         ->where([$column => ''.$value.''])
         ->get()->getRow();
+
+        // echo "<pre>";print_r($result);exit();
         
         return !empty($result);
     }
@@ -386,26 +388,7 @@ class LoginModel extends Model
    
     }
 
-    public function chechk_username_id($username)
-    {
-        $result = $this->db->table('register')
-                        ->where('email', $username)
-                        ->orWhere('mobile_no', $username)
-                        ->get()
-                        ->getResult();
-    
-        return count($result) > 0 ? 1 : 0;
-    }
 
-    public function chechk_mobile_no_id($mobile_no)
-    {
-        $result = $this->db->table('register')
-                        ->where('mobile_no', $mobile_no)
-                        ->get()
-                        ->getResult();
-    
-        return count($result) > 0 ? 1 : 0;
-    }
     
 
 }

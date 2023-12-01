@@ -2326,11 +2326,11 @@ $(document).ready(function() {
             data: {username: username},
             success: function(response) {
                 console.log(response);
-                if (response == 1) {
+                if (response == 'true') {
                     $('#usernameError').text('');
                     $('.submitButton').prop('disabled', false);
            
-                } else {
+                } else if (response == 'false'){
                     $('#usernameError').text('This username is not available.');
                     $('.submitButton').prop('disabled', true);
                 }
@@ -2352,11 +2352,11 @@ $(document).ready(function() {
             data: {username: username},
             success: function(response) {
                 console.log(response);
-                if (response == 0) {
+                if (response == 'false') {
                     $('#emailError').text('');
                     $('.submitButton').prop('disabled', false);
            
-                } else {
+                } else if(response == 'true') {
                     $('#emailError').text('This email is allredy available.');
                     $('.submitButton').prop('disabled', true);
                 }
@@ -2379,11 +2379,11 @@ $(document).ready(function() {
             data: {mobile_no: mobile_no},
             success: function(response) {
                 console.log(response);
-                if (response == 0) {
+                if (response == 'false') {
                     $('#mobile_noError').text('');
                     $('.submitButton').prop('disabled', false);
            
-                } else {
+                } else if(response == 'true') {
                     $('#mobile_noError').text('This mobile number is allredy available.');
                     $('.submitButton').prop('disabled', true);
                 }
