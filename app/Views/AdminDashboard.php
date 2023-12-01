@@ -1,31 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Dashboard</title>
 
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <!-- JQVMap -->
-    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-    <!-- summernote -->
-    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+<?php include('AdminSideBar.php'); ?>
+
     <style>
         table {
             border-collapse: collapse;
@@ -89,44 +65,24 @@
             /* or inline, flex, etc. based on your layout */
         }
     </style>
-</head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+  
 
-    <?php include('AdminSideBar.php'); ?>
-
-    <div class="wrapper">
-
-        <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-        </div>
-
-        <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
-
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
-                </li>
-
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
-                </li>
-
-            </ul>
-
-
-        </nav>
-        <!-- /.navbar -->
-
-
-
-        <!-- Content Wrapper. Contains page content -->
+<div class="wrapper">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?=base_url(); ?>" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+            <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</div>
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <div class="content-header">
@@ -482,62 +438,72 @@
 
                             <!-- assign techers to student -->
 
-                            <table id="faculty-table" class="table">
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Course</th>
-                                    <th>Sub Course</th>
-                                    <th>Assign Faculty</th>
-                                    <th>Assign Faculty Status</th>
-                                    <th>Action</th>
-                                </tr>
-                                <?php foreach ($admins as $admin) : ?>
-                                    <tr>
-                                        <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
-                                            <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
-                                            <td><?= $admin->full_name; ?></td>
-                                            <td><?= $admin->email; ?></td>
-                                            <td><?= $admin->course; ?></td>
-                                            <td><?= $admin->sub_course; ?></td>
+                            
+            <div class="card" id="faculty-table">
+              <div class="card-header">
+                <h3 class="card-title">Student List</h3>
+              </div>
+                            <div class="card-body">
+                            
+    <table id="example1" class="table table-bordered table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Sub Course</th>
+                <th>Assign Faculty</th>
+                <th>Assign Faculty Status</th>
+                <th>Action</th>
+            </tr>
+    <?php foreach ($admins as $admin): ?>
+        <tr>
+            <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
+                <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
+                <td><?= $admin->full_name; ?></td>
+                <td><?= $admin->email; ?></td>
+                <td><?= $admin->course; ?></td>
+                <td><?= $admin->sub_course; ?></td>
+        
+                <td class="faculty-select" >
+                <select name="faculty_name">
+             <option value="" selected>Select Faculty</option>
+                <?php foreach ($Faculty as $facultyItem): ?>
+          <?php if ($facultyItem->course == $admin->course && $facultyItem->sub_course == $admin->sub_course): ?>
+             <option value="<?= $facultyItem->id; ?>" <?php if ($admin->Assign_Techer_id == $facultyItem->id) { echo 'selected'; } ?>>
+                <?= $facultyItem->full_name; ?>
+            </option>
+        <?php endif; ?>
+    <?php endforeach; ?>
+ </select>
 
-                                            <td class="faculty-select">
-                                                <select name="faculty_name">
-                                                    <option value="" selected>Select Faculty</option>
-                                                    <?php foreach ($Faculty as $facultyItem) : ?>
-                                                        <?php if ($facultyItem->course == $admin->course && $facultyItem->sub_course == $admin->sub_course) : ?>
-                                                            <option value="<?= $facultyItem->id; ?>" <?php if ($admin->Assign_Techer_id == $facultyItem->id) {
-                                                                                                            echo 'selected';
-                                                                                                        } ?>>
-                                                                <?= $facultyItem->full_name; ?>
-                                                            </option>
-                                                        <?php endif; ?>
-                                                    <?php endforeach; ?>
-                                                </select>
-
-                                            </td>
-                                            <td>
-                                                <?php if ($admin->Assign_Techer_id > 0) : ?>
-                                                    AssignTeacher Successfully
-                                                <?php else : ?>
-                                                    Not AssignTeacher
-                                                <?php endif; ?>
-                                            </td>
-                                            <td class="change_f">
-                                                <?php if ($admin->Assign_Techer_id > 0) : ?>
-                                                    <button type="submit" name="change_faculty_button" class="btn btn-info" style="font-size: 12px;">Change Faculty</button>
-                                                <?php else : ?>
-                                                    <button type="submit" name="assign_button" class="btn btn-warning" style="font-size: 13px;">Assign</button>
-                                                <?php endif; ?>
-                                            </td>
-                                        </form>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </table>
+                </td>
+                <td>
+                    <?php if ($admin->Assign_Techer_id > 0): ?>
+                        AssignTeacher Successfully
+                    <?php else: ?>
+                        Not AssignTeacher
+                    <?php endif; ?>
+                </td>
+                <td class="change_f">
+                    <?php if ($admin->Assign_Techer_id > 0): ?>
+                        <button type="submit" name="change_faculty_button" class="btn btn-info"
+                                                style="font-size: 12px;">Change Faculty</button>
+                    <?php else: ?>
+                        <button type="submit" name="assign_button" class="btn btn-warning" style="font-size: 13px;">Assign</button>
+                    <?php endif; ?>
+                </td>
+            </form>
+        </tr>
+    <?php endforeach; ?>
+ </table>
 
 
-                            <!-- Faculty -->
-                            <table id="faculty-table4" style="display: none;" class="table">
+
+
+                    </div>
+                    </div>
+ <!-- Faculty -->
+ <table id="faculty-table4" style="display: none;" class="table">
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
@@ -554,6 +520,9 @@
                                     </tr>
                                 <?php endforeach; ?>
                             </table>
+
+                            <!-- Faculty -->
+                        
 
                             <table id="student-assignment-table" style="display: none;" class="table">
                                 <tr>
@@ -586,173 +555,11 @@
                 </div>
             </section>
 
-            <!-- /.content -->
         </div>
-        <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer>
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
-    </div>
-    <!-- ./wrapper -->
-
-    <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
-    <!-- JQVMap -->
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- daterangepicker -->
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // display table
 
 
-        $(document).ready(function() {
-            $("#toggle-table5").click(function() {
-                $("#faculty-table5").toggle("");
-                $("#faculty-table").hide();
-                $("#faculty-table4").hide();
-                $("#faculty-table2").hide();
+     <?php echo view('AdminSideBar/AdminFooter.php');?>      
+   
+    
+  
 
-            });
-
-
-
-            $("#toggle-table2").click(function() {
-                $("#faculty-table2").toggle("");
-                $("#faculty-table").hide();
-                $("#faculty-table4").hide();
-                $("#faculty-table5").hide();
-
-            });
-
-            $("#toggle-table4").click(function() {
-                $("#faculty-table4").toggle("");
-                $("#faculty-table").hide();
-                $("#faculty-table2").hide();
-
-            });
-
-
-            $("#toggle-table").click(function() {
-                $("#faculty-table").toggle("");
-                $("#faculty-table4").hide();
-                $("#faculty-table2").hide();
-
-            });
-
-            $("#toggle-table6").click(function() {
-                $("#faculty-table6").toggle("");
-
-
-
-            });
-            $(".coundd_demo").click(function() {
-                $("#coundd_demo-payment-table").toggle("");
-                $("#pending-demo-table").hide();
-                $("#comp-payment-table").hide();
-                $("#unattended-tabal").hide();
-
-            });
-
-
-            $(".pend-demo").click(function() {
-                $("#pending-demo-table").toggle("");
-                $("#comp-payment-table").hide();
-                $("#coundd_demo-payment-table").hide();
-                $("#unattended-tabal").hide();
-
-
-            });
-            $(".UnattendedList").click(function() {
-                $("#unattended-tabal").toggle("");
-                $("#comp-payment-table").hide();
-                $("#coundd_demo-payment-table").hide();
-                $("#pending-demo-table").hide();
-
-            });
-            $(".comp-payment").click(function() {
-                $("#comp-payment-table").toggle("");
-                $("#pending-demo-table").hide();
-                $("#coundd_demo-payment-table").hide();
-                $("#unattended-tabal").hide();
-
-            });
-
-
-        });
-    </script>
-
-    <script>
-        function showStudentTable(button) {
-            // Hide all tables with class "table"
-            var tables = document.querySelectorAll('.table');
-            for (var i = 0; i < tables.length; i++) {
-                tables[i].style.display = 'none';
-            }
-
-            // Show the student assignment table
-            document.getElementById('student-assignment-table').style.display = 'table';
-        }
-    </script>
-
-
-
-    <script>
-        const assignButtons = document.querySelectorAll('.assign-button');
-
-        assignButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const row = this.closest('tr');
-                const dropdown = row.querySelector('.teacher-dropdown');
-
-                if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-                    dropdown.style.display = 'block';
-                } else {
-                    dropdown.style.display = 'none';
-                }
-            });
-        });
-    </script>
-
-</body>
-
-</html>

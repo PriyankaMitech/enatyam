@@ -39,126 +39,53 @@ $page = $uri->getSegment(count($pages));
 
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-        <!-- fontawesome icon cdn -->
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- owl carousel css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- fontawesome icon cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-        <style>
-            .cart-a sup {
-                background: #FF0067;
-                border-radius: 50%;
-                /* padding: 5px; */
-                width: 23px;
-                height: 23px;
-                display: inline-block;
-                text-align: center;
-                line-height: 23px;
-                font-size: 11px;
-                font-weight: 600;
-            }
+    <style>
+    .cart-a sup {
+        background: #FF0067;
+        border-radius: 50%;
+        /* padding: 5px; */
+        width: 23px;
+        height: 23px;
+        display: inline-block;
+        text-align: center;
+        line-height: 23px;
+        font-size: 11px;
+        font-weight: 600;
+    }
 
-            .btn-close-dark {
-                position: absolute;
-                right: -12px;
-                top: -14px;
-                /* background: crimson; */
-                /* opacity: 1; */
-                /* color: #fff!important; */
-                break-after: avoid;
-                border: 1px solid #000;
-                padding: 6px;
-                border-radius: 30px;
-                background-color: #ff0067;
-                opacity: 1;
-                font-size: 15px;
+    .btn-close-dark {
+        position: absolute;
+        right: -12px;
+        top: -14px;
+        /* background: crimson; */
+        /* opacity: 1; */
+        /* color: #fff!important; */
+        break-after: avoid;
+        border: 1px solid #000;
+        padding: 6px;
+        border-radius: 30px;
+        background-color: #ff0067;
+        opacity: 1;
+        font-size: 15px;
 
-            }
-        </style>
+    }
+    </style>
 
-        <script language="javascript" type="text/javascript">
-            function dynamicdropdown(listindex) {
-                document.getElementById("subcategory").length = 0;
-                switch (listindex) {
-                    case "Dance":
-                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
-                        document.getElementById("subcategory").options[1] = new Option("Bollywood Dance Classes",
-                            "Bollywood Dance Classes");
-                        document.getElementById("subcategory").options[2] = new Option("Bharatanatyam Dance Classes",
-                            "Bharatanatyam Dance Classes");
-                        document.getElementById("subcategory").options[3] = new Option("Kathak Dance Classes",
-                            "Kathak Dance Classes");
-                        document.getElementById("subcategory").options[4] = new Option("Odissi Dance Classes",
-                            "Odissi Dance Classes");
-                        document.getElementById("subcategory").options[5] = new Option("Western Dance Classes",
-                            "Western Dance Classes");
-                        document.getElementById("subcategory").options[6] = new Option("Semi classical Dance Classes",
-                            "Semi classical Dance Classes");
-                        document.getElementById("subcategory").options[7] = new Option("Bhangara Dance Classes",
-                            "Bhangara Dance Classes");
-                        document.getElementById("subcategory").options[8] = new Option("Folk Dance Classes",
-                            "Folk Dance Classes");
-                        break;
-
-                    case "Music":
-                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
-                        document.getElementById("subcategory").options[1] = new Option("Hindustani Vocal Classes",
-                            "Hindustani Vocal Classes");
-                        document.getElementById("subcategory").options[2] = new Option("Carnatic Vocal Classes",
-                            "Carnatic Vocal Classes");
-                        document.getElementById("subcategory").options[3] = new Option("Semi Classical Classes",
-                            "Semi Classical Classes");
-                        document.getElementById("subcategory").options[4] = new Option("Western Singing Classes",
-                            "Western Singing Classes");
-                        document.getElementById("subcategory").options[5] = new Option("Playback Singing Classes",
-                            "Playback Singing Classes");
-                        break;
-                    case "Yoga":
-                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
-                        document.getElementById("subcategory").options[1] = new Option("Prenatal Yoga Classes",
-                            "Prenatal Yoga Classes");
-                        document.getElementById("subcategory").options[2] = new Option("Stress Reduction Yoga Classes",
-                            "Stress Reduction Yoga Classes");
-                        document.getElementById("subcategory").options[3] = new Option("Flexibility Yoga Classes",
-                            "Flexibility Yoga Classes");
-                        document.getElementById("subcategory").options[4] = new Option("Weight Loss Yoga Classes",
-                            "Weight Loss Yoga Classes");
-                        document.getElementById("subcategory").options[5] = new Option("Everyday Yoga Classes",
-                            "Everyday Yoga Classes");
-                        document.getElementById("subcategory").options[6] = new Option("Yoga for chronic disease Classes",
-                            "Yoga for chronic disease Classes");
-                        document.getElementById("subcategory").options[7] = new Option("Yoga for Kids Classes",
-                            "Yoga for Kids Classes");
-                        document.getElementById("subcategory").options[8] = new Option("Meditation Classes",
-                            "Meditation Classes");
-                        document.getElementById("subcategory").options[9] = new Option("Customise your Yoga Plan Classes",
-                            "Customise your Yoga Plan Classes");
-                        document.getElementById("subcategory").options[10] = new Option("Nutrition Counselling Classes",
-                            "Nutrition Counselling Classes");
-                        break;
-                    case "Instruments":
-                        document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
-                        document.getElementById("subcategory").options[1] = new Option("Guitar Classes", "Guitar Classes");
-                        document.getElementById("subcategory").options[2] = new Option("Flute Classes", "Flute Classes");
-                        document.getElementById("subcategory").options[3] = new Option("Tabla Classes", "Tabla Classes");
-                        document.getElementById("subcategory").options[4] = new Option("Sitar Classes", "Sitar Classes");
-                        document.getElementById("subcategory").options[5] = new Option("Veena Classes", "Veena Classes");
-                        document.getElementById("subcategory").options[6] = new Option("Piano Classes", "Piano Classes");
-                        document.getElementById("subcategory").options[7] = new Option("Violin Classes", "Violin Classes");
-                        document.getElementById("subcategory").options[8] = new Option("Drum Classes", "Drum Classes");
-                        document.getElementById("subcategory").options[9] = new Option("Keyborad Classes", "Keyborad Classes");
-                        document.getElementById("subcategory").options[10] = new Option("Harmonium Classes",
-                            "Harmonium Classes");
-
-                        break;
-                }
-                return true;
-            }
-        </script>
     <?php } else if ($page == 'Dance') { ?>
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
@@ -401,6 +328,14 @@ $page = $uri->getSegment(count($pages));
 </head>
 
 <body class="overlap">
+     <!-- Flash message container -->
+     <div id="flash-message-container">
+        <?php if (session()->has('errormessage')): ?>
+            <div class="flash-message">
+                <?= session('errormessage') ?>
+            </div>
+        <?php endif; ?>
+    </div>
     <section class="tophead ">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid  pd0">
@@ -522,7 +457,10 @@ $page = $uri->getSegment(count($pages));
                     <div class="register_form">
                         <h4 class="titel pt-3">Register a new account</h4>
 
-                        <form name="registrationForm" onsubmit="return validateForm()" method="post" action="<?php echo base_url(); ?>register" id="registerform">
+
+                        <form name="registrationForm"  method="post"
+                            action="<?php echo base_url(); ?>register" id="registerform">
+
                             <div class="form-group m-2">
                                 <input type="text" name="full_name" id="full_name" class="form-control" aria-required="true" placeholder="Username">
                                 <span id="nameError" class="d-none" style="color: red;"></span>
@@ -533,7 +471,10 @@ $page = $uri->getSegment(count($pages));
                             </div>
 
                             <div class="form-group m-2">
-                                <input type="mobile_no" name="mobile_no" id="mobile_no" class="form-control" aria-required="true" placeholder="mobile number">
+
+                                <input type="text" name="mobile_no" id="mobile_no" class="form-control"
+                                    aria-required="true" placeholder="mobile number">
+
                                 <span id="mobile_noError" style="color: red;"></span>
                             </div>
 
@@ -559,9 +500,11 @@ $page = $uri->getSegment(count($pages));
                             </div>
 
                             <div class="form-group m-2">
-                                <input type="text" name="otp" id="otp" class="form-control d-none" placeholder="Enter otp">
-                                <span id="otpError" style="color: red;"></span>
-                            </div>
+
+                                <input type="text" name="otp" id="otp" class="form-control d-none"
+                                    placeholder="Enter otp">
+                                <span class="error" id="otpError" style="color: red;"></span>
+               </div>
 
                             <div class="teacher">
 
@@ -569,7 +512,7 @@ $page = $uri->getSegment(count($pages));
                             </div>
 
 
-                            <input type="button" onclickt="return validateForm()" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
+                            <input type="submit"  id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
                             <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
 
                             <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a>

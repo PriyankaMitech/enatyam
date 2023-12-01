@@ -184,7 +184,7 @@ div {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
   transition: all 0.5s ease-in-out;
 }
 
@@ -211,5 +211,24 @@ button:not(:disabled) {
 [type=submit]:disabled,
 button:disabled {
   cursor: not-allowed !important;
+}
+.error{
+  color: #ff0067 !important;
+}
+
+#flash-message-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9;
+}
+
+.flash-message {
+  background-color: #ff0067;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
 }
 

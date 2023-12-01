@@ -1,4 +1,6 @@
+
 <?php echo view('FacultySidebar2'); ?>
+
 <style>
     table th {
         padding: 10px;

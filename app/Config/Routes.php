@@ -40,6 +40,11 @@ $routes->get('Career', 'Home::Career');
 $routes->get('chechk_username_id', 'Home::chechk_username_id');
 $routes->post('chechk_username_id', 'Home::chechk_username_id');
 
+$routes->get('chechk_mobile_no_id','Home::chechk_mobile_no_id');
+$routes->post('chechk_mobile_no_id','Home::chechk_mobile_no_id');
+
+
+
 $routes->get('Carrier', 'Home::Carrier');
 
 $routes->get('PrivacyPolicy', 'Home::PrivacyPolicy');
@@ -105,6 +110,9 @@ $routes->get('StudentGroups', 'AdminController::StudentGroups');
 $routes->get('FacultysidebarShedule', 'AdminController::FacultysidebarShedule');
 $routes->post('AdduserByadmin', 'AdminController::AdduserByadmin');
 $routes->post('SelectedForGroup', 'AdminController::SelectedForGroup');
+$routes->get('Chat', 'AdminController::chatwithteacher');
+$routes->get('Chat/(:any)', 'AdminController::chatwithstud/$1');
+$routes->post('insertChat', 'AdminController::insertChat');
 
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');

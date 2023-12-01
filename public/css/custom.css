@@ -1,0 +1,23 @@
+.card.contact_list {
+    background-color: #fff;
+    border: 0 solid transparent;
+    border-radius: 0.375rem;
+    height: calc(100% - 30px);
+    margin-bottom: 1.875rem;
+    position: relative;
+}
+.avatar.avatar-xl {
+    height: 7.5rem;
+    width: 7.5rem;
+}
+.avatar {
+    border-radius: 100%;
+    display: inline-block;
+    height: 3rem;
+    object-fit: cover;
+    position: relative;
+    width: 3rem;
+}
+.contact-icon {
+    margin-bottom: 30px;
+}

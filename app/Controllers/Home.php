@@ -10,7 +10,7 @@ class Home extends BaseController
     {
         // $this->db = \Config\Database::connect();
         // $this->load->library('google'); 
-        $this->Loginmodel = new \App\Models\Loginmodel(); // Instantiate the UserModel
+        $this->Loginmodel = new \App\Models\LoginModel(); // Instantiate the UserModel
 
     }
 
@@ -229,7 +229,7 @@ public function chechk_username_id()
     $username = $this->request->getPost('username');
 
 if ($username) {
-    $email = $loginModel->chechk_username_id($username);
+    $email = $loginModel->checkexist($username, 'email');
     // echo "<pre>";
     // print_r($email);exit();
     return json_encode($email);
@@ -238,4 +238,22 @@ if ($username) {
 }
 
 }
+
+
+public function chechk_mobile_no_id()
+{
+    $loginModel = new LoginModel();
+    $mobile_no = $this->request->getPost('mobile_no');
+
+if ($mobile_no) {
+    $mobileno = $loginModel->checkexist($mobile_no, 'mobile_no');
+    // echo "<pre>";
+    // print_r($email);exit();
+    return json_encode($mobileno);
+} else {
+    return json_encode([]);
+}
+
+}
+
 }

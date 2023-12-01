@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List</title>
-    <?php include(APPPATH . 'views/AdminSidebar.php'); ?>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
-
-    <!-- DataTables JavaScript -->
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js">
-    </script>
-</head>
-
-<body>
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
+<?php echo view('AdminSideBar.php'); ?>
+<div class="wrapper">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
@@ -27,8 +12,10 @@
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="<?php echo base_url(''); ?>logout" class="nav-link">Logout</a>
             </li>
-        </ul>
-    </nav>
+    </ul>
+  </nav>
+</div>
+
 
     <div class="content-wrapper" style="min-height: 1172.73px;">
         <section class="content-header">
@@ -160,56 +147,6 @@
 
         <!-- Selected Rows Table -->
 
-        <script>
-            $(document).ready(function() {
-                var groupSessionTable = $('#groupSessionTable').DataTable();
-                $('#selectedRowsTable').hide();
-                $('#groupSessionTable tbody').on('change', '.select-checkbox', function() {
-                    if ($(this).prop('checked')) {
-                        var rowData = $(this).closest('tr').clone();
-                        rowData.find('td:first-child input').remove();
-                        $('#selectedRowsBody').append(rowData);
-                    } else {
-                        var rowIndex = $(this).closest('tr').index();
-                        $('#selectedRowsBody tr').eq(rowIndex).remove();
-                    }
-                    updateRowNumbers();
-                    var hasSelectedRows = $('#selectedRowsBody tr').length > 0;
-                    $('#selectedRowsTable').toggle(hasSelectedRows);
-                });
+    </div>
+        <?php echo view('AdminSideBar/AdminFooter.php');?>  
 
-                function toggleGroupNameInputVisibility() {
-                    var hasSelectedRows = $('#selectedRowsBody tr').length > 0;
-                    $('#groupNameContainer').toggle(hasSelectedRows);
-                }
-                toggleGroupNameInputVisibility();
-                $('#groupSessionTable tbody').on('change', '.select-checkbox', function() {
-                    toggleGroupNameInputVisibility();
-                });
-                $('#postSelectedRows').on('click', function() {
-                    var selectedRowIds = [];
-                    $('#selectedRowsBody tr').each(function() {
-                        var rowId = $(this).attr('data-id');
-                        selectedRowIds.push(rowId);
-                    });
-                    $('#selectedRowsTable').append('<input type="hidden" name="selectedRowIds" value="' +
-                        selectedRowIds.join(',') + '">');
-                });
-                $('#courseSearch').on('input', function() {
-                    groupSessionTable.columns(3).search(this.value).draw();
-                });
-                $('#subCourseSearch').on('input', function() {
-                    groupSessionTable.columns(4).search(this.value).draw();
-                });
-            });
-
-            function updateRowNumbers() {
-                $('#selectedRowsBody tr').each(function(index) {
-                    $(this).find('td:first-child').text(index + 1);
-                });
-            }
-        </script>
-
-</body>
-
-</html>

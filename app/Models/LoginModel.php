@@ -16,7 +16,6 @@ class LoginModel extends Model
         $this->db->table('register')->insert($registerData);
         $insertedID = $this->db->insertID(); // Get the ID of the inserted row
 
-        // Fetch the data by the inserted ID and return it
         return $this->db->table('register')->where('id', $insertedID)->get()->getRowArray();
     }
 
@@ -249,6 +248,7 @@ class LoginModel extends Model
                 'user_name'          => $result->full_name,
                 'mobile_no'          => $result->mobile_no,
                 'Payment_status'     => $result->Payment_status,
+                'is_logged_in'       => 'Y',
             ];
 
             $session->set('sessiondata', $sessiondata); 
@@ -337,6 +337,8 @@ class LoginModel extends Model
         ->select($column)
         ->where([$column => ''.$value.''])
         ->get()->getRow();
+
+        // echo "<pre>";print_r($result);exit();
         
         return !empty($result);
     }
@@ -386,15 +388,7 @@ class LoginModel extends Model
    
     }
 
-    public function chechk_username_id($username)
-    {
-        $result = $this->db->table('register')
-                        ->where('email', $username)
-                        ->orWhere('mobile_no', $username)
-                        ->get()
-                        ->getResult();
+
     
-        return count($result) > 0 ? 1 : 0;
-    }
-    
+
 }

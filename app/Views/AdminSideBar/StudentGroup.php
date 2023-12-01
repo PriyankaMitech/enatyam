@@ -1,56 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
-    <?php include(APPPATH . 'views/AdminSidebar.php'); ?>
+<?php echo view('AdminSideBar.php'); ?>
     <style>
-        /* Style for buttons */
-        .group-button {
-            margin-right: 10px;
-            cursor: pointer;
-        }
+    .group-button {
+        margin-right: 10px;
+        cursor: pointer;
+    }
 
-        /* Style for records container */
-        .group-records {
-            border: 1px solid #ddd;
-            padding: 10px;
-            display: none;
-            margin-top: 10px;
-        }
+    .group-records {
+        border: 1px solid #ddd;
+        padding: 10px;
+        display: none;
+        margin-top: 10px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .faculty-dropdown {
+        width: 100%;
 
-        /* Style for table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
 
         /* Style for faculty dropdown */
         .faculty-dropdown {
             width: 100%;
         }
-    </style>
-</head>
 
-<body>
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
+
+<div class="wrapper">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+       <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
@@ -59,11 +48,9 @@
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="<?php echo base_url(''); ?>logout" class="nav-link">Logout</a>
             </li>
-
-
-        </ul>
-
-    </nav>
+    </ul>
+  </nav>
+</div>
 
     <div class="content-wrapper" style="min-height: 1172.73px;">
         <!-- Content Header (Page header) -->
@@ -154,9 +141,24 @@
                                                                 <!-- If Assign_Techer_id is null, show this button -->
                                                                 <button type="submit" id="postSelectedRows" class="btn btn-primary">Assign Teacher</button>
                                                             <?php endif; ?>
-                                                        </div>
-                                                    </form>
-                                                </div>
+
+
+                                                            <?php endforeach; ?>
+                                                        </select>
+
+                                                        <?php if ($record->Assign_Techer_id !== null): ?>
+                                                        <!-- If Assign_Techer_id is not null, show this button -->
+                                                        <button type="submit" id="facultyButton"
+                                                            class="btn btn-primary">Change Faculty</button>
+                                                        <?php else: ?>
+                                                        <!-- If Assign_Techer_id is null, show this button -->
+                                                        <button type="submit" id="postSelectedRows"
+                                                            class="btn btn-primary">Assign Teacher</button>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                </form>
+                                            </div>
+
                                             <?php endforeach; ?>
 
 
@@ -171,31 +173,7 @@
         </section>
 
     </div>
+<?php echo view('AdminSideBar/AdminFooter.php');?> 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var buttons = document.querySelectorAll('.group-button');
-            var recordsContainers = document.querySelectorAll('.group-records');
-            if (recordsContainers.length > 0) {
-                recordsContainers[0].style.display = 'block';
-            }
-            buttons.forEach(function(button) {
-                button.addEventListener('click', function() {
-                    var group = this.getAttribute('data-group');
-                    var clickedRecordsContainer = document.querySelector('[data-group-id="' +
-                        group + '-records"]');
-                    recordsContainers.forEach(function(container) {
-                        if (container === clickedRecordsContainer) {
-                            container.style.display = 'block';
-                        } else {
-                            container.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 
-</body>
 
-</html>

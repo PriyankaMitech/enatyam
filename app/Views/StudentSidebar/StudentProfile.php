@@ -167,4 +167,6 @@
         </div>
     </section>
 </div>
-<?php echo view('FacultysideBar/FacultyFooter.php'); ?>
+
+<?php echo view('StudentSidebar/StudentFooter.php');?>      
+

@@ -85,10 +85,7 @@
         </div>
     </div>
 </footer>
-<script src="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/js/bootstrap-select-country.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.min.js"></script>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script src="<?php echo base_url() ?>public/js/custom.js"></script>
+
 <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard') { ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -188,7 +185,7 @@
         });
     </script>
 
-    <script>
+    <!-- <script>
         function validateForm() {
             var name = document.forms["registrationForm"]["full_name"].value;
             var email = document.forms["registrationForm"]["email"].value;
@@ -269,50 +266,14 @@
             return emailRegex.test(email);
         }
 
-        function validateFormLogin() {
-
-            var email2 = document.forms["loginForm"]["email"].value;
-            var password2 = document.forms["loginForm"]["password"].value;
-            var mobile_no2 = document.forms["loginForm"]["mobile_no"].value;
-
-            // Reset error messages
-
-            document.getElementById("emailError1").textContent = "";
-            document.getElementById("passwordError1").textContent = "";
-            document.getElementById("mobile_noError1").textContent = "";
-
-            var valid = true;
-
-
-            if (email2 === "" && mobile_no2 === "") {
-                document.getElementById("emailError").textContent = "Either Email or Mobile no is required.";
-                document.getElementById("mobile_noError").textContent = "Either Email or Mobile no is required.";
-                valid = false;
-            } else if (email2 !== "" && !isValidEmail(email2)) {
-                document.getElementById("emailError").textContent = "Invalid email format.";
-                valid = false;
-            }
-
-            if (password2 === "") {
-                document.getElementById("passwordError1").textContent = "Password is required.";
-                valid = false;
-            }
-
-
-            return valid;
-        }
 
         function isValidEmail(email) {
             // Simple email format validation (you can use a more advanced regular expression)
             var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
             return emailRegex.test(email);
         }
-    </script>
-    <script>
-        $('#termsCheckbox').change(function() {
-            $('#btncheck').prop("disabled", !this.checked);
-        });
-    </script>
+    </script> -->
+
 
 
 
@@ -460,7 +421,7 @@
 
 
 <?php } else if ($page == 'Carrier') { ?>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
@@ -1419,7 +1380,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -1440,7 +1401,7 @@
 
 
 <?php } elseif ($page == 'Career') { ?>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -1923,8 +1884,8 @@
     </script>
 <?php } else if ($page == 'Checkout') { ?>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="<?php echo base_url() ?>public/js/jquery.validate.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="<?php echo base_url() ?>public/js/jquery.validate.min.js"></script> -->
 
 
     <script>
@@ -2032,6 +1993,16 @@
 
 
 <?php } ?>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="<?php echo base_url() ?>public/js/jquery.validate.min.js"></script>
+
+<script src="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/js/bootstrap-select-country.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="<?php echo base_url() ?>public/js/custom.js"></script>
+
 
 
 
@@ -2201,85 +2172,7 @@
 
         });
 
-        $("#signupbtn").click(function() {
-            var formData = $('#registerform').serialize()
-            var full_name = $('#full_name').val()
-            var email = $('#email').val()
-            var mobile_no = $('#mobile_no').val()
-            var password = $('#password').val()
-            var confirm_pass = $('#confirm_pass').val()
-            var valid = true
-            $('#confirmpasswordError, #passwordError, #nameError, #emailError, #mobile_noError').addClass('d-none')
-            if (password !== confirm_pass) {
-                $("#confirmpasswordError").removeClass('d-none').text("Password does not match")
-                valid = false
-            }
 
-            // Password length check
-            if (password.length <= 7) {
-                $("#passwordError").removeClass('d-none').text("You have to enter at least 8 characters!")
-                valid = false;
-            }
-
-            if (full_name === "") {
-                $("#nameError").removeClass('d-none').text("Name is required.")
-                valid = false;
-            }
-
-            if (email === "") {
-                $("#emailError").removeClass('d-none').text("Email is required.")
-                valid = false;
-            }
-
-            if (mobile_no === "") {
-                $("#mobile_noError").removeClass('d-none').text("Mobile is required.")
-                valid = false;
-            }
-            if (valid == true) {
-                $.ajax({
-                    url: "verifymobile",
-                    type: "POST",
-                    data: formData,
-                    dataType: "JSON",
-                    success: function(response) {
-                        console.log(response)
-                        $('#mobile_noError').addClass('d-none');
-                        $('#otperror').addClass('d-none');
-                        if (response.status == '203') {
-                            $('#otp').removeClass('d-none').after('<span id="otperror">' + response.msg + '</span>')
-                        } else {
-                            if (response.mobileexist == true) {
-                                $('#mobile_noError').addClass('d-none');
-                                $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
-                            } else if (response.emailexist == true) {
-                                $('#emailError').addClass('d-none');
-                                $('#emailError').removeClass('d-none').text('Email already exist.')
-                            } else {
-                                if (response.status == '200') {
-                                    // $('#otperror').addClass('d-none');    
-                                    // swal.fire("Success", "Registration successfull!", "success");
-                                    // window.location.href = "Home"; 
-                                    $('#otperror').addClass('d-none');
-                                    $('#registerformpopup').modal('hide');
-                                    $('#userformmodal').modal('show');
-                                    $('#hiddenEmail').val(response.email);
-                                    $('#yourFormId').submit();
-                                } else {
-                                    $('#otp').removeClass('d-none').after('<span id="otperror">Enter otp sent to your mobile no.</span>')
-                                }
-
-                            }
-                        }
-
-                    },
-                    error: function(response) {
-                        console.log(response)
-                        swal.fire("Warning", "Login to checkout!", "warning");
-                    }
-
-                })
-            }
-        })
 
         $('#backToRegister').on('click', function() {
             // Hide the current modal
@@ -2355,11 +2248,11 @@ $(document).ready(function() {
             data: {username: username},
             success: function(response) {
                 console.log(response);
-                if (response == 1) {
+                if (response == 'true') {
                     $('#usernameError').text('');
                     $('.submitButton').prop('disabled', false);
            
-                } else {
+                } else if (response == 'false'){
                     $('#usernameError').text('This username is not available.');
                     $('.submitButton').prop('disabled', true);
                 }
@@ -2369,50 +2262,332 @@ $(document).ready(function() {
 });
 </script>
 
-<!-- <script>
-    // Get references to the checkbox, modal, and overlay elements
-    var modalCheckbox = document.getElementById('myModalCheckbox');
-    var modal = document.getElementById('myModal');
-    var overlay = document.getElementById('overlay');
+<script>
+$(document).ready(function() {
+    $('#email').on('input', function() {
+        var username = $(this).val();
+        // alert(username);
 
-    // Add event listener to the checkbox
-    modalCheckbox.addEventListener('change', function() {
-            if (modalCheckbox.checked) {
-                openModal();
-            } else {
-                closeModal();
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>/chechk_username_id',
+            data: {username: username},
+            success: function(response) {
+                console.log(response);
+                if (response == 'false') {
+                    $('#emailError').text('');
+                    $('.submitButton').prop('disabled', false);
+           
+                } else if(response == 'true') {
+                    $('#emailError').text('This email is allredy available.');
+                    $('.submitButton').prop('disabled', true);
+                }
             }
-        }
-
-    );
-
-    // Function to open the modal
-    function openModal() {
-        modal.style.display = 'block';
-        overlay.style.display = 'block';
-    }
-
-    // Function to close the modal
-    function closeModal() {
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-        modalCheckbox.checked = false; // Uncheck the checkbox when closing the modal
-    }
-</script> -->
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-
-<!-- <script>
-    $(document).ready(function() {
-        $('#termsLink').click(function(e) {
-            e.preventDefault();
-            // Show the modal when the link is clicked
-            $('#termsConditions').modal('show');
         });
     });
-</script> -->
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+    $('#mobile_no').on('input', function() {
+        var mobile_no = $(this).val();
+        // alert(username);
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>/chechk_mobile_no_id',
+            data: {mobile_no: mobile_no},
+            success: function(response) {
+                console.log(response);
+                if (response == 'false') {
+                    $('#mobile_noError').text('');
+                    $('.submitButton').prop('disabled', false);
+           
+                } else if(response == 'true') {
+                    $('#mobile_noError').text('This mobile number is allredy available.');
+                    $('.submitButton').prop('disabled', true);
+                }
+            }
+        });
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+    // Add a custom validation method for email or mobile
+    $.validator.addMethod("emailOrMobile", function(value, element) {
+        // Check if the input is a valid email or a valid mobile number
+        return this.optional(element) || /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/i.test(value) || /^[0-9]{10}$/i.test(value);
+    }, "Please enter a valid email address or mobile number.");
+
+    // Initialize the form validation
+    $('#loginform').validate({
+        rules: {
+            username: {
+                required: true,
+                emailOrMobile: true
+            },
+            password: 'required',
+        },
+        messages: {
+            email: {
+                required: 'Please enter your email address or mobile number.',
+                emailOrMobile: 'Please enter a valid email address or mobile number.'
+            },
+            password: 'Please enter your password.',
+        }
+    });
+});
+</script>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if the flash message exists
+            var flashMessage = document.querySelector('.flash-message');
+
+            if (flashMessage) {
+                // Set a timeout to hide the flash message after 5 minutes (300,000 milliseconds)
+                setTimeout(function() {
+                    flashMessage.style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+
+    
+<script language="javascript" type="text/javascript">
+    function dynamicdropdown(listindex) {
+        document.getElementById("subcategory").length = 0;
+        switch (listindex) {
+            case "Dance":
+                document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                document.getElementById("subcategory").options[1] = new Option("Bollywood Dance Classes",
+                    "Bollywood Dance Classes");
+                document.getElementById("subcategory").options[2] = new Option("Bharatanatyam Dance Classes",
+                    "Bharatanatyam Dance Classes");
+                document.getElementById("subcategory").options[3] = new Option("Kathak Dance Classes",
+                    "Kathak Dance Classes");
+                document.getElementById("subcategory").options[4] = new Option("Odissi Dance Classes",
+                    "Odissi Dance Classes");
+                document.getElementById("subcategory").options[5] = new Option("Western Dance Classes",
+                    "Western Dance Classes");
+                document.getElementById("subcategory").options[6] = new Option("Semi classical Dance Classes",
+                    "Semi classical Dance Classes");
+                document.getElementById("subcategory").options[7] = new Option("Bhangara Dance Classes",
+                    "Bhangara Dance Classes");
+                document.getElementById("subcategory").options[8] = new Option("Folk Dance Classes",
+                    "Folk Dance Classes");
+                break;
+
+            case "Music":
+                document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                document.getElementById("subcategory").options[1] = new Option("Hindustani Vocal Classes",
+                    "Hindustani Vocal Classes");
+                document.getElementById("subcategory").options[2] = new Option("Carnatic Vocal Classes",
+                    "Carnatic Vocal Classes");
+                document.getElementById("subcategory").options[3] = new Option("Semi Classical Classes",
+                    "Semi Classical Classes");
+                document.getElementById("subcategory").options[4] = new Option("Western Singing Classes",
+                    "Western Singing Classes");
+                document.getElementById("subcategory").options[5] = new Option("Playback Singing Classes",
+                    "Playback Singing Classes");
+                break;
+            case "Yoga":
+                document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                document.getElementById("subcategory").options[1] = new Option("Prenatal Yoga Classes",
+                    "Prenatal Yoga Classes");
+                document.getElementById("subcategory").options[2] = new Option("Stress Reduction Yoga Classes",
+                    "Stress Reduction Yoga Classes");
+                document.getElementById("subcategory").options[3] = new Option("Flexibility Yoga Classes",
+                    "Flexibility Yoga Classes");
+                document.getElementById("subcategory").options[4] = new Option("Weight Loss Yoga Classes",
+                    "Weight Loss Yoga Classes");
+                document.getElementById("subcategory").options[5] = new Option("Everyday Yoga Classes",
+                    "Everyday Yoga Classes");
+                document.getElementById("subcategory").options[6] = new Option("Yoga for chronic disease Classes",
+                    "Yoga for chronic disease Classes");
+                document.getElementById("subcategory").options[7] = new Option("Yoga for Kids Classes",
+                    "Yoga for Kids Classes");
+                document.getElementById("subcategory").options[8] = new Option("Meditation Classes",
+                    "Meditation Classes");
+                document.getElementById("subcategory").options[9] = new Option("Customise your Yoga Plan Classes",
+                    "Customise your Yoga Plan Classes");
+                document.getElementById("subcategory").options[10] = new Option("Nutrition Counselling Classes",
+                    "Nutrition Counselling Classes");
+                break;
+            case "Instruments":
+                document.getElementById("subcategory").options[0] = new Option("Please select Subcourse", "");
+                document.getElementById("subcategory").options[1] = new Option("Guitar Classes", "Guitar Classes");
+                document.getElementById("subcategory").options[2] = new Option("Flute Classes", "Flute Classes");
+                document.getElementById("subcategory").options[3] = new Option("Tabla Classes", "Tabla Classes");
+                document.getElementById("subcategory").options[4] = new Option("Sitar Classes", "Sitar Classes");
+                document.getElementById("subcategory").options[5] = new Option("Veena Classes", "Veena Classes");
+                document.getElementById("subcategory").options[6] = new Option("Piano Classes", "Piano Classes");
+                document.getElementById("subcategory").options[7] = new Option("Violin Classes", "Violin Classes");
+                document.getElementById("subcategory").options[8] = new Option("Drum Classes", "Drum Classes");
+                document.getElementById("subcategory").options[9] = new Option("Keyborad Classes", "Keyborad Classes");
+                document.getElementById("subcategory").options[10] = new Option("Harmonium Classes",
+                    "Harmonium Classes");
+
+                break;
+        }
+        return true;
+    }
+    </script>
+
+<script>
+        $('#termsCheckbox').change(function() {
+            $('#btncheck').prop("disabled", !this.checked);
+        });
+    </script>
+
+
+
+<script>
+
+
+$.validator.addMethod("mobile", function(value, element) {
+        // Check if the input is a valid email or a valid mobile number
+        return this.optional(element) || /^[0-9]{10}$/i.test(value);
+     }, "Please enter a valid mobile number.");
+
+$.validator.addMethod('lettersOnly', function(value, element) {
+    return /^[a-zA-Z\s]*$/.test(value); // This regex allows only letters and spaces
+}, 'Please enter letters only');
+
+$.validator.addMethod('customPassword', function(value, element) {
+    // Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol. It should be at least 8 characters long.
+    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$/.test(value);
+}, 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol (!@#$%^&*) and be at least 8 characters long');
+
+$.validator.addMethod("emailval", function(value, element) {
+        // Check if the input is a valid email or a valid mobile number
+        return this.optional(element) || /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/i.test(value);
+    }, "Please enter a valid email address.");
+
+$(document).ready(function() {
+    $('#registerform').validate({
+        rules: {
+            full_name: {
+            required: true,
+            lettersOnly: true // Use the custom method here
+            },
+            email: {
+                required: true,
+                email: true,
+                emailval:true,
+            },
+            mobile_no: {
+                required: true,
+                mobile: true
+            },
+            password: {
+                required: true,
+                customPassword: true
+            },
+            confirm_pass: {
+                required: true,
+                equalTo: '#password'
+            }
+        },
+        messages: {
+            full_name: {
+            required: 'Please enter your name.',
+            lettersOnly: 'Please enter letters only.' // Custom error message
+            },
+            email: {
+                required: 'Please enter your email address.',
+                email: 'Please enter a valid email address.',
+                emailval: 'Please enter a valid email address.'
+            },
+            mobile_no: {
+                required: 'Please enter your mobile number.',
+                mobile: 'Please enter your mobile number.',
+            },
+            password: {
+                required: "Password is required.",
+                customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long"
+            },
+            confirm_pass: {
+                required: 'Please confirm your password.',
+                equalTo: 'Passwords do not match.'
+            }
+        },
+        submitHandler: function(form) {
+            var formData = $(form).serialize();
+
+            // Check if all required fields are filled
+            if ($('#mobile_no').val() ) {
+                // Your mobile verification AJAX call
+                $.ajax({
+                    url: "verifymobile",
+                    type: "POST",
+                    data: formData,
+                    dataType: "JSON",
+                    success: function(response) {
+                        console.log(response)
+                        $('#mobile_noError').addClass('d-none');
+                        $('#otperror').addClass('d-none');
+                        if (response.status == '203') {
+                            $('#otp').removeClass('d-none').after('<span id="otperror">' + response.msg + '</span>')
+                        } else {
+                            if (response.mobileexist == true) {
+                                $('#mobile_noError').addClass('d-none');
+                                $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
+                            } else if (response.emailexist == true) {
+                                $('#emailError').addClass('d-none');
+                                $('#emailError').removeClass('d-none').text('Email already exist.')
+                            } else {
+                                if (response.status == '200') {
+                                    // $('#otperror').addClass('d-none');    
+                                    // swal.fire("Success", "Registration successfull!", "success");
+                                    // window.location.href = "Home"; 
+                                    $('#otperror').addClass('d-none');
+                                    $('#registerformpopup').modal('hide');
+                                    $('#userformmodal').modal('show');
+                                    $('#hiddenEmail').val(response.email);
+                                    $('#yourFormId').submit();
+                                } else {
+                                    $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
+                                }
+
+                            }
+                        }
+
+                    },
+                    error: function(response) {
+                        console.log(response)
+                        swal.fire("Warning", "Login to checkout!", "warning");
+                    }
+                });
+
+     
+            } else {
+                // Handle the case where not all required fields are filled
+                alert('Please fill in all required fields.');
+            }
+        }
+    });
+});
+
+
+
+</script>
+
+
+
 
 
 

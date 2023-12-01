@@ -30,6 +30,7 @@
         </div>
       </div>
     </div><!-- /.container-fluid -->
+
   </section>
   <section class="content">
     <div class="container-fluid">
@@ -45,6 +46,7 @@
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
+
         </div>
         <!-- /.col -->
 

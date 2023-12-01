@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
 </head>
 
 <body>
@@ -105,12 +107,12 @@
               </li>
 
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon 	fa fa-credit-card"></i>
-                  <p>
-                    Finance
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
+
+
+                <a href="<?php echo base_url()?>Chat" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Chat</p>
+
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
