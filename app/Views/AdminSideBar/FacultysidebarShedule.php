@@ -1,3 +1,8 @@
+<?php
+$uri = new \CodeIgniter\HTTP\URI(current_url(true));
+$pages = $uri->getSegments();
+$page = $uri->getSegment(count($pages));
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

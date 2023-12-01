@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'enatyam',
+        'database' => 'enatyamnew',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

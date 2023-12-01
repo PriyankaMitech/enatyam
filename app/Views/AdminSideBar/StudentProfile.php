@@ -59,25 +59,25 @@
 
     </nav>
     <div class="container">
-    <div class="row">
-        <?php foreach ($facultyData as $faculty): ?>
-            <div class="col-md-4">
-                <div class="card">
-                <div class="faculty-info">
-                <div class="faculty-image">
-                            <img src="<?= base_url('public/sid.jpeg')?>" class="smaller-image" alt="Faculty Image">
-                        </div>
-                        <div class="p">
-                            <p class="card-text">Name: <?= $faculty->student_name ?></p>
-                            <p class="card-text">Email: <?= $faculty->email ?></p>
-                            <p class="card-text">Contact No: <?= $faculty->email ?></p>
-                        </div>
-                        </div>
-                       
+        <div class="row">
+            <?php foreach ($facultyData as $faculty): ?>
+                <div class="col-md-4">
+                    <div class="card">
+                    <div class="faculty-info">
+                    <div class="faculty-image">
+                                <img src="<?= base_url('public/sid.jpeg')?>" class="smaller-image" alt="Faculty Image">
+                            </div>
+                            <div class="p">
+                                <p class="card-text">Name: <?= $faculty->student_name ?></p>
+                                <p class="card-text">Email: <?= $faculty->email ?></p>
+                                <p class="card-text">Contact No: <?= $faculty->email ?></p>
+                            </div>
+                            </div>
+                        
+                    </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+            <?php endforeach; ?>
+        </div>
     </div>
 </body>
 
