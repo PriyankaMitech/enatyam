@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
-    <link href="<?php echo base_url()?>public/css/custom.css"></link>
+    <link href="<?php echo base_url() ?>public/css/custom.css"></link>
   <link rel="stylesheet" href="plugins/fullcalendar/main.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   
@@ -24,8 +24,9 @@
 
 <body>
   <div class="wrapper"> -->
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,7 +52,9 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
 
@@ -61,10 +64,10 @@
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="<?=base_url(); ?>" class="nav-link">Home</a>
+          <a href="<?= base_url(); ?>" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-              <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+          <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
         </li>
       </ul>
     </nav>
@@ -72,7 +75,7 @@
 
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <div class="sidebar">
+      <div class="sidebar">
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
@@ -114,10 +117,18 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="<?php //echo base_url() 
+                  <a href="<?php echo base_url()
                             ?>AddNewUser" class="nav-link">
                     <i class="nav-icon fas fa-calendar-alt"></i>
                     <p>Add New User
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?php echo base_url()
+                            ?>AdminList" class="nav-link">
+                    <i class="nav-icon fas fa-calendar-alt"></i>
+                    <p>Admin List
                     </p>
                   </a>
                 </li>
@@ -301,10 +312,7 @@
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
-    
+
       </div>
       <!-- /.sidebar -->
     </aside>
- 
-
- 

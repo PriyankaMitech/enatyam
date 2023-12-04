@@ -84,7 +84,7 @@ class DashboardController extends BaseController
         // die;
         if ((session()->get('sessiondata'))) {
             if ($result['role'] == 'Admin') {
-                return redirect()->to('today');
+                return redirect()->to('Admindashboard');
             } else if ($result['role'] == 'Faculty') {
                 $this->session->set($result);
                 return redirect()->to('FacultyDashboard');

@@ -72,7 +72,7 @@
                 <a href="<?php echo base_url() ?>Admindashboard" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
+                <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
             </li>
 
 

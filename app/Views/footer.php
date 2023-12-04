@@ -2237,82 +2237,88 @@
     });
 </script>
 <script>
-$(document).ready(function() {
-    $('#username').on('input', function() {
-        var username = $(this).val();
-        // alert(username);
+    $(document).ready(function() {
+        $('#username').on('input', function() {
+            var username = $(this).val();
+            // alert(username);
 
-        $.ajax({
-            type: 'POST',
-            url: '<?= base_url(); ?>/chechk_username_id',
-            data: {username: username},
-            success: function(response) {
-                console.log(response);
-                if (response == 'true') {
-                    $('#usernameError').text('');
-                    $('.submitButton').prop('disabled', false);
-           
-                } else if (response == 'false'){
-                    $('#usernameError').text('This username is not available.');
-                    $('.submitButton').prop('disabled', true);
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_username_id',
+                data: {
+                    username: username
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response == 'true') {
+                        $('#usernameError').text('');
+                        $('.submitButton').prop('disabled', false);
+
+                    } else if (response == 'false') {
+                        $('#usernameError').text('This username is not available.');
+                        $('.submitButton').prop('disabled', true);
+                    }
                 }
-            }
+            });
         });
     });
-});
 </script>
 
 <script>
-$(document).ready(function() {
-    $('#email').on('input', function() {
-        var username = $(this).val();
-        // alert(username);
+    $(document).ready(function() {
+        $('#email').on('input', function() {
+            var username = $(this).val();
+            // alert(username);
 
-        $.ajax({
-            type: 'POST',
-            url: '<?= base_url(); ?>/chechk_username_id',
-            data: {username: username},
-            success: function(response) {
-                console.log(response);
-                if (response == 'false') {
-                    $('#emailError').text('');
-                    $('.submitButton').prop('disabled', false);
-           
-                } else if(response == 'true') {
-                    $('#emailError').text('This email is allredy available.');
-                    $('.submitButton').prop('disabled', true);
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_username_id',
+                data: {
+                    username: username
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response == 'false') {
+                        $('#emailError').text('');
+                        $('.submitButton').prop('disabled', false);
+
+                    } else if (response == 'true') {
+                        $('#emailError').text('This email is allredy available.');
+                        $('.submitButton').prop('disabled', true);
+                    }
                 }
-            }
+            });
         });
     });
-});
 </script>
 
 
 <script>
-$(document).ready(function() {
-    $('#mobile_no').on('input', function() {
-        var mobile_no = $(this).val();
-        // alert(username);
+    $(document).ready(function() {
+        $('#mobile_no').on('input', function() {
+            var mobile_no = $(this).val();
+            // alert(username);
 
-        $.ajax({
-            type: 'POST',
-            url: '<?= base_url(); ?>/chechk_mobile_no_id',
-            data: {mobile_no: mobile_no},
-            success: function(response) {
-                console.log(response);
-                if (response == 'false') {
-                    $('#mobile_noError').text('');
-                    $('.submitButton').prop('disabled', false);
-           
-                } else if(response == 'true') {
-                    $('#mobile_noError').text('This mobile number is allredy available.');
-                    $('.submitButton').prop('disabled', true);
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_mobile_no_id',
+                data: {
+                    mobile_no: mobile_no
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response == 'false') {
+                        $('#mobile_noError').text('');
+                        $('.submitButton').prop('disabled', false);
+
+                    } else if (response == 'true') {
+                        $('#mobile_noError').text('This mobile number is allredy available.');
+                        $('.submitButton').prop('disabled', true);
+                    }
                 }
-            }
+            });
         });
     });
-});
 </script>
 
 
@@ -2325,48 +2331,48 @@ $(document).ready(function() {
 
 
 <script>
-$(document).ready(function() {
-    // Add a custom validation method for email or mobile
-    $.validator.addMethod("emailOrMobile", function(value, element) {
-        // Check if the input is a valid email or a valid mobile number
-        return this.optional(element) || /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/i.test(value) || /^[0-9]{10}$/i.test(value);
-    }, "Please enter a valid email address or mobile number.");
+    $(document).ready(function() {
+        // Add a custom validation method for email or mobile
+        $.validator.addMethod("emailOrMobile", function(value, element) {
+            // Check if the input is a valid email or a valid mobile number
+            return this.optional(element) || /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/i.test(value) || /^[0-9]{10}$/i.test(value);
+        }, "Please enter a valid email address or mobile number.");
 
-    // Initialize the form validation
-    $('#loginform').validate({
-        rules: {
-            username: {
-                required: true,
-                emailOrMobile: true
+        // Initialize the form validation
+        $('#loginform').validate({
+            rules: {
+                username: {
+                    required: true,
+                    emailOrMobile: true
+                },
+                password: 'required',
             },
-            password: 'required',
-        },
-        messages: {
-            email: {
-                required: 'Please enter your email address or mobile number.',
-                emailOrMobile: 'Please enter a valid email address or mobile number.'
-            },
-            password: 'Please enter your password.',
+            messages: {
+                email: {
+                    required: 'Please enter your email address or mobile number.',
+                    emailOrMobile: 'Please enter a valid email address or mobile number.'
+                },
+                password: 'Please enter your password.',
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if the flash message exists
+        var flashMessage = document.querySelector('.flash-message');
+
+        if (flashMessage) {
+            // Set a timeout to hide the flash message after 5 minutes (300,000 milliseconds)
+            setTimeout(function() {
+                flashMessage.style.display = 'none';
+            }, 3000);
         }
     });
-});
 </script>
 
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Check if the flash message exists
-            var flashMessage = document.querySelector('.flash-message');
 
-            if (flashMessage) {
-                // Set a timeout to hide the flash message after 5 minutes (300,000 milliseconds)
-                setTimeout(function() {
-                    flashMessage.style.display = 'none';
-                }, 3000);
-            }
-        });
-    </script>
-
-    
 <script language="javascript" type="text/javascript">
     function dynamicdropdown(listindex) {
         document.getElementById("subcategory").length = 0;
@@ -2445,146 +2451,144 @@ $(document).ready(function() {
         }
         return true;
     }
-    </script>
+</script>
 
 <script>
-        $('#termsCheckbox').change(function() {
-            $('#btncheck').prop("disabled", !this.checked);
-        });
-    </script>
+    $('#termsCheckbox').change(function() {
+        $('#btncheck').prop("disabled", !this.checked);
+    });
+</script>
 
 
 
 <script>
-
-
-$.validator.addMethod("mobile", function(value, element) {
+    $.validator.addMethod("mobile", function(value, element) {
         // Check if the input is a valid email or a valid mobile number
         return this.optional(element) || /^[0-9]{10}$/i.test(value);
-     }, "Please enter a valid mobile number.");
+    }, "Please enter a valid mobile number.");
 
-$.validator.addMethod('lettersOnly', function(value, element) {
-    return /^[a-zA-Z\s]*$/.test(value); // This regex allows only letters and spaces
-}, 'Please enter letters only');
+    $.validator.addMethod('lettersOnly', function(value, element) {
+        return /^[a-zA-Z\s]*$/.test(value); // This regex allows only letters and spaces
+    }, 'Please enter letters only');
 
-$.validator.addMethod('customPassword', function(value, element) {
-    // Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol. It should be at least 8 characters long.
-    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$/.test(value);
-}, 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol (!@#$%^&*) and be at least 8 characters long');
+    $.validator.addMethod('customPassword', function(value, element) {
+        // Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol. It should be at least 8 characters long.
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$/.test(value);
+    }, 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol (!@#$%^&*) and be at least 8 characters long');
 
-$.validator.addMethod("emailval", function(value, element) {
+    $.validator.addMethod("emailval", function(value, element) {
         // Check if the input is a valid email or a valid mobile number
         return this.optional(element) || /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/i.test(value);
     }, "Please enter a valid email address.");
 
-$(document).ready(function() {
-    $('#registerform').validate({
-        rules: {
-            full_name: {
-            required: true,
-            lettersOnly: true // Use the custom method here
+    $(document).ready(function() {
+        $('#registerform').validate({
+            rules: {
+                full_name: {
+                    required: true,
+                    lettersOnly: true // Use the custom method here
+                },
+                email: {
+                    required: true,
+                    email: true,
+                    emailval: true,
+                },
+                mobile_no: {
+                    required: true,
+                    mobile: true
+                },
+                password: {
+                    required: true,
+                    customPassword: true
+                },
+                confirm_pass: {
+                    required: true,
+                    equalTo: '#password'
+                }
             },
-            email: {
-                required: true,
-                email: true,
-                emailval:true,
+            messages: {
+                full_name: {
+                    required: 'Please enter your name.',
+                    lettersOnly: 'Please enter letters only.' // Custom error message
+                },
+                email: {
+                    required: 'Please enter your email address.',
+                    email: 'Please enter a valid email address.',
+                    emailval: 'Please enter a valid email address.'
+                },
+                mobile_no: {
+                    required: 'Please enter your mobile number.',
+                    mobile: 'Please enter your mobile number.',
+                },
+                password: {
+                    required: "Password is required.",
+                    customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long"
+                },
+                confirm_pass: {
+                    required: 'Please confirm your password.',
+                    equalTo: 'Passwords do not match.'
+                }
             },
-            mobile_no: {
-                required: true,
-                mobile: true
-            },
-            password: {
-                required: true,
-                customPassword: true
-            },
-            confirm_pass: {
-                required: true,
-                equalTo: '#password'
-            }
-        },
-        messages: {
-            full_name: {
-            required: 'Please enter your name.',
-            lettersOnly: 'Please enter letters only.' // Custom error message
-            },
-            email: {
-                required: 'Please enter your email address.',
-                email: 'Please enter a valid email address.',
-                emailval: 'Please enter a valid email address.'
-            },
-            mobile_no: {
-                required: 'Please enter your mobile number.',
-                mobile: 'Please enter your mobile number.',
-            },
-            password: {
-                required: "Password is required.",
-                customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long"
-            },
-            confirm_pass: {
-                required: 'Please confirm your password.',
-                equalTo: 'Passwords do not match.'
-            }
-        },
-        submitHandler: function(form) {
-            var formData = $(form).serialize();
+            submitHandler: function(form) {
+                var formData = $(form).serialize();
 
-            // Check if all required fields are filled
-            if ($('#mobile_no').val() ) {
-                // Your mobile verification AJAX call
-                $.ajax({
-                    url: "verifymobile",
-                    type: "POST",
-                    data: formData,
-                    dataType: "JSON",
-                    success: function(response) {
-                        console.log(response)
-                        $('#mobile_noError').addClass('d-none');
-                        $('#otperror').addClass('d-none');
-                        if (response.status == '203') {
-                            $('#otp').removeClass('d-none').after('<span id="otperror">' + response.msg + '</span>')
-                        } else {
-                            if (response.mobileexist == true) {
-                                $('#mobile_noError').addClass('d-none');
-                                $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
-                            } else if (response.emailexist == true) {
-                                $('#emailError').addClass('d-none');
-                                $('#emailError').removeClass('d-none').text('Email already exist.')
+                // Check if all required fields are filled
+                if ($('#mobile_no').val()) {
+                    // Your mobile verification AJAX call
+                    $.ajax({
+                        url: "verifymobile",
+                        type: "POST",
+                        data: formData,
+                        dataType: "JSON",
+                        success: function(response) {
+                            console.log(response)
+                            $('#mobile_noError').addClass('d-none');
+                            $('#otperror').addClass('d-none');
+                            if (response.status == '203') {
+                                $('#otp').removeClass('d-none').after('<span id="otperror">' + response.msg + '</span>')
                             } else {
-                                if (response.status == '200') {
-                                    // $('#otperror').addClass('d-none');    
-                                    // swal.fire("Success", "Registration successfull!", "success");
-                                    // window.location.href = "Home"; 
-                                    $('#otperror').addClass('d-none');
-                                    $('#registerformpopup').modal('hide');
-                                    $('#userformmodal').modal('show');
-                                    $('#hiddenEmail').val(response.email);
-                                    $('#yourFormId').submit();
+                                if (response.mobileexist == true) {
+                                    $('#mobile_noError').addClass('d-none');
+                                    $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
+                                } else if (response.emailexist == true) {
+                                    $('#emailError').addClass('d-none');
+                                    $('#emailError').removeClass('d-none').text('Email already exist.')
                                 } else {
-                                    $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
+                                    if (response.status == '200') {
+                                        // $('#otperror').addClass('d-none');    
+                                        // swal.fire("Success", "Registration successfull!", "success");
+                                        // window.location.href = "Home"; 
+                                        $('#otperror').addClass('d-none');
+                                        $('#registerformpopup').modal('hide');
+                                        $('#userformmodal').modal('show');
+                                        $('#hiddenEmail').val(response.email);
+                                        $('#yourFormId').submit();
+                                    } else {
+                                        $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
+                                    }
+
                                 }
-
                             }
+
+                        },
+                        error: function(response) {
+                            console.log(response)
+                            swal.fire("Warning", "Login to checkout!", "warning");
                         }
+                    });
 
-                    },
-                    error: function(response) {
-                        console.log(response)
-                        swal.fire("Warning", "Login to checkout!", "warning");
-                    }
-                });
 
-     
-            } else {
-                // Handle the case where not all required fields are filled
-                alert('Please fill in all required fields.');
+                } else {
+                    // Handle the case where not all required fields are filled
+                    alert('Please fill in all required fields.');
+                }
             }
-        }
+        });
     });
-});
-
-
-
 </script>
+
+
+
 
 
 

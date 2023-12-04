@@ -279,31 +279,133 @@ class AdminController extends BaseController
         }
     }
 
+    // public function Steusupdate()
+    // {
+    //     $action[] = $this->request->getPost('action');
+    //     // print_r($action);
+    //     // die;
+    //     $D_id = $this->request->getPost('D_id');
+    //     if ($D_id && ($action === 'approve' || $action === 'decline')) {
+    //         $model = new CarrierModel();
+    //         $careerRecord = $model->getcarreerByfaculty($D_id);
+
+    //         if ($careerRecord) {
+
+    //             $data = [
+    //                 'Result_of_application' => $action,
+    //                 'Status' => 'N',
+    //             ];
+    //             //  print_r($data);die;
+    //             $model->update($D_id, $data);
+
+
+    //             if ($action === 'approve') {
+    //                 $model2 = new LoginModel();
+    //                 $model = new CarrierModel();
+    //                 $lastUpdatedCareerData = $model->getresultofResultofapplication($D_id);
+
+    //                 if ($lastUpdatedCareerData) {
+
+    //                     $registerData = [
+    //                         'full_name' => $lastUpdatedCareerData['name'],
+    //                         'email' => $lastUpdatedCareerData['email'],
+    //                         'is_register_done' => 'Y',
+    //                         'role' => 'Faculty',
+    //                     ];
+
+    //                     // $model2->insertTable1Data($registerData);
+
+    //                     $lastInsertedData = $model2->insertTable1Data($registerData);
+    //                     $lastInsertedData = [
+
+    //                         'faculty_name' => $lastUpdatedCareerData['name'],
+    //                         'email' => $lastUpdatedCareerData['email'],
+    //                         'register_id' => $lastInsertedData['id'],
+    //                     ];
+
+    //                     //  print_r($lastInsertedData);die; 
+
+    //                     $model->insertTable2Data($lastInsertedData);
+    //                 }
+    //             }
+
+    //             return redirect()->to('NewFacultyApplication');
+    //         }
+    //     }
+    // }
+    // public function Steusupdate()
+    // {
+    //     $action = $this->request->getPost('action');
+
+    //     $D_id = $this->request->getPost('D_id');
+
+    //     if ($D_id && ($action === 'approve' || $action === 'decline')) {
+    //         $model = new CarrierModel();
+    //         $careerRecord = $model->getcarreerByfaculty($D_id);
+
+    //         if ($careerRecord) {
+    //             $data = [
+    //                 'Result_of_application' => $action,
+    //                 'Status' => 'N',
+    //             ];
+
+    //             $model->update($D_id, $data);
+
+    //             if ($action === 'approve') {
+    //                 $model2 = new LoginModel();
+    //                 $lastUpdatedCareerData = $model->getresultofResultofapplication($D_id);
+
+    //                 if ($lastUpdatedCareerData) {
+    //                     $registerData = [
+    //                         'full_name' => $lastUpdatedCareerData['name'],
+    //                         'email' => $lastUpdatedCareerData['email'],
+    //                         'is_register_done' => 'Y',
+    //                         'role' => 'Faculty',
+    //                     ];
+
+    //                     $lastInsertedData = $model2->insertTable1Data($registerData);
+
+    //                     $lastInsertedData = [
+    //                         'faculty_name' => $lastUpdatedCareerData['name'],
+    //                         'email' => $lastUpdatedCareerData['email'],
+    //                         'register_id' => $lastInsertedData['id'],
+    //                     ];
+
+    //                     $model->insertTable2Data($lastInsertedData);
+    //                 }
+    //             }
+
+    //             return redirect()->to('NewFacultyApplication');
+    //         }
+    //     }
+
+    //     // Handle the case when $D_id or $action is not valid
+    //     // Redirect or show an error message as needed
+    // }
+
     public function Steusupdate()
     {
         $action = $this->request->getPost('action');
         $D_id = $this->request->getPost('D_id');
+
         if ($D_id && ($action === 'approve' || $action === 'decline')) {
             $model = new CarrierModel();
             $careerRecord = $model->getcarreerByfaculty($D_id);
 
             if ($careerRecord) {
-
                 $data = [
                     'Result_of_application' => $action,
                     'Status' => 'N',
                 ];
-                //  print_r($data);die;
+
                 $model->update($D_id, $data);
 
-
                 if ($action === 'approve') {
+                    //                 // Your "approve" logic here
                     $model2 = new LoginModel();
-                    $model = new CarrierModel();
                     $lastUpdatedCareerData = $model->getresultofResultofapplication($D_id);
 
                     if ($lastUpdatedCareerData) {
-
                         $registerData = [
                             'full_name' => $lastUpdatedCareerData['name'],
                             'email' => $lastUpdatedCareerData['email'],
@@ -311,26 +413,31 @@ class AdminController extends BaseController
                             'role' => 'Faculty',
                         ];
 
-                        // $model2->insertTable1Data($registerData);
-
                         $lastInsertedData = $model2->insertTable1Data($registerData);
-                        $lastInsertedData = [
 
+                        $lastInsertedData = [
                             'faculty_name' => $lastUpdatedCareerData['name'],
                             'email' => $lastUpdatedCareerData['email'],
                             'register_id' => $lastInsertedData['id'],
                         ];
 
-                        //  print_r($lastInsertedData);die; 
-
                         $model->insertTable2Data($lastInsertedData);
                     }
+                    // ...
+                } elseif ($action === 'decline') {
+                    // Your "decline" logic here
+                    // ...
                 }
 
                 return redirect()->to('NewFacultyApplication');
             }
         }
+
+        // Handle the case when $D_id or $action is not valid
+        // Redirect or show an error message as needed
     }
+
+
 
     public function backtoApplication()
     {
@@ -460,22 +567,9 @@ class AdminController extends BaseController
     }
 
     public function AdminList()
-
-
     {
-
         $model = new AdminModel();
         $adminUsers = $model->getAdminUsers();
-        // Using the Query Builder to retrieve users with the role 'Admin'
-        // $model = new AdminModel();
-        // $adminUsers = $model->getAdminUsers();
-        // $query = $db->table('register')
-        //     ->select('full_name, email, password, mobile_no')
-        //     ->where('role', 'Admin')->get();
-        // echo '<pre>';
-        // print_r($query->getResultArray());
-        // die;
-        // Return the result as an array
         return view('AdminSideBar/AdminList', ['adminUsers' => $adminUsers]);
     }
 
@@ -552,13 +646,14 @@ class AdminController extends BaseController
         return redirect()->to('StudentGroups');
     }
 
-    public function chatwithstud(){
+    public function chatwithstud()
+    {
         $model = new AdminModel();
         $receiverid = $this->request->uri->getSegments(1);
-        $wherecond = array('Assign_Techer_id'=>$_SESSION['id']);
-        $wherecond1 = array('id'=>$receiverid[1]);
-        $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>$receiverid[1]);
-        $wherecond3 = array('sender_id'=>$receiverid[1], 'receiver_id'=>$_SESSION['id']);
+        $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
+        $wherecond1 = array('id' => $receiverid[1]);
+        $wherecond2 = array('sender_id' => $_SESSION['id'], 'receiver_id' => $receiverid[1]);
+        $wherecond3 = array('sender_id' => $receiverid[1], 'receiver_id' => $_SESSION['id']);
 
         $result['getdata'] = $model->getsinglerow('register', $wherecond1);
         $result['getstud'] = $model->getdata('register', $wherecond);
@@ -568,12 +663,13 @@ class AdminController extends BaseController
         echo view('FacultysideBar/Chatwithstud', $result);
     }
 
-    public function chatwithteacher(){
+    public function chatwithteacher()
+    {
         $model = new AdminModel();
         // $receiverid = $this->request->uri->getSegments(1);
-        $wherecond1 = array('id'=>$_SESSION['id']);
-        $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>3);
-        $wherecond3 = array('sender_id'=>3, 'receiver_id'=>$_SESSION['id']);
+        $wherecond1 = array('id' => $_SESSION['id']);
+        $wherecond2 = array('sender_id' => $_SESSION['id'], 'receiver_id' => 3);
+        $wherecond3 = array('sender_id' => 3, 'receiver_id' => $_SESSION['id']);
 
         $result['getdata'] = $model->getsinglerow('register', $wherecond1);
         $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
@@ -582,16 +678,18 @@ class AdminController extends BaseController
         echo view('FacultysideBar/Chatwithstud', $result);
     }
 
-    public function insertChat() {
+    public function insertChat()
+    {
         $formdata = $_POST;
-        print_r($formdata);die;
+        print_r($formdata);
+        die;
         $model = new AdminModel();
-        $result = $model->insert_formdata('msg_id','online_chat', $formdata);
+        $result = $model->insert_formdata('msg_id', 'online_chat', $formdata);
         echo json_encode($result);
     }
 
     public function studentAttendance()
     {
-        echo view('studentAttendance');
+        echo view('AdminSideBar/studentAttendance');
     }
 }
