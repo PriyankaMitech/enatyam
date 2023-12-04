@@ -28,6 +28,11 @@ class Home extends BaseController
         
         return view('Contactus');
     }
+    public function test()
+    {
+        
+        return view('testdash');
+    }
     public function RefundPolicy()
     {
         

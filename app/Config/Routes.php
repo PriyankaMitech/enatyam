@@ -46,6 +46,7 @@ $routes->post('chechk_mobile_no_id','Home::chechk_mobile_no_id');
 
 
 $routes->get('Carrier', 'Home::Carrier');
+$routes->get('test', 'Home::test');
 
 $routes->get('PrivacyPolicy', 'Home::PrivacyPolicy');
 $routes->get('Dance', 'Home::Dance');

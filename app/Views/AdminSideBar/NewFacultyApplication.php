@@ -38,18 +38,6 @@
     </style>
 
 
-<div class="wrapper">
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <ul class="navbar-nav">
-     <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url() ?>Admindashboard" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
-            </li>
-    </ul>
-  </nav>
-</div>
     <div class="content-wrapper" style="min-height: 1172.73px;">
         <!-- Content Header (Page header) -->
         <section class="content-header">
