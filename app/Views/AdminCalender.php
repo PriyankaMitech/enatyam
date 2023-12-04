@@ -1,5 +1,5 @@
 <?php echo view('AdminSideBar.php'); ?>
-<div class="wrapper">
+<!-- <div class="wrapper">
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -15,7 +15,7 @@
         </ul>
 
     </nav>
-</div>
+</div> -->
 <div class="content-wrapper">
 
     <section class="content-header">

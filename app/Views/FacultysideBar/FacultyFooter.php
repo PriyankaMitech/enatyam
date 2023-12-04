@@ -7,7 +7,7 @@ $page = $uri->getSegment(count($pages));
  
     <strong>Copyright &copy; 2023-2024 <a href="https://mitech">MI-TECH</a>.</strong> All rights reserved.
   </footer>
-
+</div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="<?php echo base_url()?>public/js/jquery.dataTables.min.js"></script>
   <script src="<?php echo base_url()?>public/js/dataTables.bootstrap4.js"></script>

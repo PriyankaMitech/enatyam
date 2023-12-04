@@ -555,14 +555,16 @@ class AdminController extends BaseController
     public function chatwithstud(){
         $model = new AdminModel();
         $receiverid = $this->request->uri->getSegments(1);
+        $wherecond = array('Assign_Techer_id'=>$_SESSION['id']);
         $wherecond1 = array('id'=>$receiverid[1]);
         $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>$receiverid[1]);
         $wherecond3 = array('sender_id'=>$receiverid[1], 'receiver_id'=>$_SESSION['id']);
 
         $result['getdata'] = $model->getsinglerow('register', $wherecond1);
-        $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
+        $result['getstud'] = $model->getdata('register', $wherecond);
+        $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3, $receiverid[1]);
 
-        // echo '<pre>';print_r($result['chatdata']);die;
+        // echo '<pre>';print_r($result['getstud']);die;
         echo view('FacultysideBar/Chatwithstud', $result);
     }
 
@@ -576,7 +578,7 @@ class AdminController extends BaseController
         $result['getdata'] = $model->getsinglerow('register', $wherecond1);
         $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
 
-        // echo '<pre>';print_r($_SESSION['id']);die;
+        // echo '<pre>';print_r($result);die;
         echo view('FacultysideBar/Chatwithstud', $result);
     }
 

@@ -442,7 +442,6 @@ class AdminModel extends Model
 
     public function getdata($table, $wherecond) {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
-        
         if ($result) {
             return $result;
         }else {
@@ -450,10 +449,10 @@ class AdminModel extends Model
         }
     }
 
-    public function getchat($tablechat, $wherecond2, $wherecond3) {
+    public function getchat($tablechat, $wherecond2, $wherecond3, $receiverid=null) {
         
-        $result = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = 3 AND receiver_id = 6 )
-        OR (sender_id = 6 AND receiver_id = 3) ORDER BY msg_id");
+        $result = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = ".$_SESSION['id']." AND receiver_id = ".$receiverid." )
+        OR (sender_id = ".$receiverid." AND receiver_id = ".$_SESSION['id'].") ORDER BY msg_id");
         //echo '<pre>';print_r($result->getResultArray());die;
         //$result = $this->db->table($table)->where($wherecond2.' OR ' .$wherecond3)->get()->getResult();
         
