@@ -213,10 +213,12 @@ class Home extends BaseController
 
                 // echo "$user_id"; exit();
                 $login_model = new LoginModel();
-     
+                $adminModel = model('AdminModel');  
                 $data['user_data'] = $login_model->get_user_data($user_id); 
-        
-                return view('StudentDashboard', $data);
+                $notifications = $adminModel->getUser($user_id);
+                // return view('StudentDashboard', $data);
+                // echo '<pre>';print_r($notifications);die;
+                return view('StudentDashboard', [$data, 'notifications' => $notifications]);
             } else {
                 return redirect()->to(base_url());
             }

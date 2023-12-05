@@ -26,7 +26,6 @@ class FacultyController extends BaseController
 
   public function fetchDataByAssignTeacherId()
   {
-
     if (isset($_SESSION['sessiondata'])) {
       $sessionData = $_SESSION['sessiondata'];
 
@@ -34,23 +33,24 @@ class FacultyController extends BaseController
       $password = $sessionData['password'] ?? null;
 
       if ($email !== null && $password !== null) {
-
-        $teacherId = $this->session->get('id');
-
-        $facultymodel = new Facultymodel();
-        $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
-
-        if (!empty($data)) {
-          return view('faculty', ['data' => $data]);
-        } else {
-          return redirect()->to(base_url());
-        }
+          $teacherId = $this->session->get('id');
+        //  print_r($teacherId);die;
+          $facultymodel = new Facultymodel();
+          $adminModel = model('AdminModel');  
+          $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
+          $notifications = $adminModel->getUserRole($teacherId);
+      //    echo '<pre>';print_r($notifications);die;    
+          if (!empty($data)) {
+              return view('faculty', ['data' => $data, 'notifications' => $notifications]);
+          } else {
+              return redirect()->to(base_url());
+          }
       } else {
-        return redirect()->to(base_url());
+          return redirect()->to(base_url());
       }
-    } else {
+  } else {
       return redirect()->to(base_url());
-    }
+  }
   }
 
 
