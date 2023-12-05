@@ -227,7 +227,7 @@ th {
                             </div>
                             <!--  -->
 
-                            <div class="card" id="coundd_demo-payment-table" style="display:none">
+                            <div class="col-md-12 card" id="coundd_demo-payment-table" style="display:none">
                                 <div class="card-header">
                                     <h3 class="card-title"> Conducted Demo List</h3>
                                 </div>
@@ -261,7 +261,7 @@ th {
 
                             </div>
                             <!--  -->
-                            <div class="card" id="comp-payment-table" style="display:none">
+                            <div class="col-md-12 card" id="comp-payment-table" style="display:none">
                                 <div class="card-header">
                                     <h3 class="card-title"> Total Demo List</h3>
                                 </div>
@@ -288,7 +288,7 @@ th {
                             </div>
                             <!-- unattended DemoList -->
 
-                            <div class="card" id="unattended-tabal" style="display:none">
+                            <div class="col-md-12 card" id="unattended-tabal" style="display:none">
                                 <div class="card-header">
                                     <h3 class="card-title">Demo List</h3>
                                 </div>
@@ -296,7 +296,7 @@ th {
 
                                     <table class="table table-bordered table-striped">
                                         <tr>
-                                            <th>Name 1111</th>
+                                            <th>Name</th>
                                             <th>Email</th>
                                             <th>course</th>
                                             <th>Demo Date</th>
@@ -313,7 +313,7 @@ th {
                                     </table>
                                 </div>
                             </div>
-                            <div class="card" id="pending-demo-table" style="display:none">
+                            <div class="col-md-12 card" id="pending-demo-table" style="display:none">
                                 <div class="card-header">
                                     <h3 class="card-title">Pending Demo List</h3>
                                 </div>
@@ -459,7 +459,7 @@ th {
                     <!-- assign techers to student -->
 
 
-                    <div class="card" id="faculty-table" style="display:none">
+                    <div class="col-md-12 card" id="faculty-table" style="display:none">
                         <div class="card-header">
                             <h3 class="card-title">Student List</h3>
                         </div>
@@ -521,7 +521,7 @@ th {
                         </div>
                     </div>
 
-                    <div class="card" id="faculty-table4" style="display:none">
+                    <div class="col-md-12 card" id="faculty-table4" style="display:none">
                         <div class="card-header">
                             <h3 class="card-title"> Teachers List</h3>
                         </div>
