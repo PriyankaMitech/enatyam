@@ -60,3 +60,55 @@ $('#msgsend').click(function (e) {
         },
     });
 })
+
+
+$('.stud').click(function (e) {
+    // console.log($(this).attr('value'))
+    var studeid = $(this).attr('value')
+    $.ajax({
+        url: 'http://localhost/enatyam/Chat', // Make sure this URL matches your CodeIgniter route
+        type: "POST",
+        data: {studeid:studeid},
+        dataType: "JSON",
+        success: function (response) {
+            $.each(response, function(value) {
+                if (studeid == value.sender_id) {
+                    // $('.direct-chat-msg.right').addClass('d-none')   
+                    $('.rightmsg').text(value.message)
+                }else {
+                    $('.leftmsg').text(value.message)
+                }
+                
+              });
+              console.log(response)
+            // $('#chatform').trigger("reset") 
+            // var html = '<div class="direct-chat-msg right"><div class="direct-chat-infos clearfix"><span class="direct-chat-name float-right">Sarah Bullock</span><span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span></div><img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image"><div class="direct-chat-text">'+response.getdata.message+'</div></div>'
+            // $('.direct-chat-messages').append(html)
+        },
+    });
+})
+
+$(document).ready(function(){
+
+const searchBar = document.querySelector(".search input"),
+searchIcon = document.querySelector(".search button"),
+usersList = document.querySelector(".users-list, .products-list");
+
+setInterval(() =>{
+    // let xhr = new XMLHttpRequest();
+    // xhr.open("GET", "http://localhost/enatyam/Chat", true);
+    // xhr.onload = ()=>{
+    // var DONE =  (typeof XMLHttpRequest.DONE !== 'undefined') ? XMLHttpRequest.DONE : 200;
+    //   if(xhr.readyState === xhr.DONE){
+    // // console.log(XMLHttpRequest)
+    //       if(xhr.status === 200){
+    //         let data = xhr.response;
+    //         // console.log(data)
+    //         //   usersList.innerHTML = data;
+    //       }
+    //   }
+    // }
+    // xhr.send();
+  }, 500);
+      
+})
