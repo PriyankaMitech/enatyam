@@ -483,5 +483,86 @@ class AdminModel extends Model
             return false;
         }
     }
+    public function insertNotification($result)
+   {
+    $selectedFacultyIds = $result['selected_faculty'];
+    $selectedStudentIds = $result['selected_students'];
+    $notificationDescription = $result['notification_description'];
 
+    $facultyData = [];
+    $studentData = [];
+    if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
+        $facultyData[] = [
+            'register_id' => 'All',
+            'notification_description' => $notificationDescription,
+            'user_type' => 'faculty',
+        ];
+    } elseif (is_array($selectedFacultyIds)) {
+        foreach ($selectedFacultyIds as $facultyId) {
+            $facultyData[] = [
+                'register_id' => $facultyId,
+                'notification_description' => $notificationDescription,
+                'user_type' => 'faculty',
+            ];
+        }
+    }
+    if (is_array($selectedStudentIds) && in_array('all', $selectedStudentIds)) {
+        $studentData[] = [
+            'register_id' => 'All',
+            'notification_description' => $notificationDescription,
+            'user_type' => 'student',
+        ];
+    } elseif (is_array($selectedStudentIds)) {
+        foreach ($selectedStudentIds as $studentId) {
+            $studentData[] = [
+                'register_id' => $studentId,
+                'notification_description' => $notificationDescription,
+                'user_type' => 'student',
+            ];
+        }
+    }
+    if (!empty($facultyData)) {
+        $this->db->table('notificationtable')->insertBatch($facultyData);
+    }
+    if (!empty($studentData)) {
+        $this->db->table('notificationtable')->insertBatch($studentData);
+    }
+}
+
+    public function getUserRole($teacherId)
+    {
+    
+        $result = $this->db->table('notificationtable')
+        ->where([
+            'user_type' => 'faculty',
+            'register_id' => 'All',
+        ])
+        ->orWhere('register_id', $teacherId)
+        ->get()
+        ->getResultArray();
+        
+        if ($result) {
+            return $result;
+        }else {
+            return false;
+        }
+    }
+    public function getUser($user_id)
+    {
+    
+        $result = $this->db->table('notificationtable')
+        ->where([
+            'user_type' => 'student',
+            'register_id' => 'All',
+        ])
+        ->orWhere('register_id', $user_id)
+        ->get()
+        ->getResultArray();
+        
+        if ($result) {
+            return $result;
+        }else {
+            return false;
+        }
+    }
 }
