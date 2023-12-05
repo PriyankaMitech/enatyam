@@ -715,4 +715,15 @@ class AdminController extends BaseController
     {
         echo view('AdminSideBar/studentAttendance');
     }
+    public function Notifications()
+    {
+        $model = new AdminModel();
+        $data['admins'] = $model->getAdmins();
+        $data['Faculty'] = $model->getFaculty();
+        echo view('AdminSideBar/Notifications',$data);
+    }
+    public function SendNotifications()
+    {
+        print_r($_POST);die;
+    }
 }
