@@ -15,21 +15,7 @@
 </head>
 
 <body>
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url() ?>Admindashboard" class="nav-link">Home</a>
-            </li>
 
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-            </li>
-        </ul>
-    </nav>
 
     <div class="content-wrapper" style="min-height: 1172.73px;">
         <section class="content-header">
@@ -40,7 +26,9 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item">
+                                <a href="<?php echo base_url() ?>Admindashboard" class="nav-link">Dashboard </a>
+                            </li>
                             <li class="breadcrumb-item active">Admin Details</li>
                         </ol>
                     </div>
@@ -60,7 +48,7 @@
                                             <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="false">Admin List</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="true">Add New User
+                                            <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="true">
                                             </a>
                                         </li>
                                     </ul>
