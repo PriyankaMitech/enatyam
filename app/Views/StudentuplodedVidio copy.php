@@ -1,23 +1,5 @@
 <?php include('FacultySidebar2.php');?>
-<style>
-    .video-row {
-        display: flex;
-        justify-content: space-between; /* Distribute videos evenly within the row */
-        margin-bottom: 20px; /* Add some space between rows */
-    }
 
-    .video-card {
-        width: 30%;
-        border: 1px solid #ccc;
-        padding: 10px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        text-align: center;
-    }
-
-    .video-info {
-        margin-top: 10px;
-    }
-</style> 
 <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
 </div>

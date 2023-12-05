@@ -65,6 +65,7 @@ public function UplodeVideo()
 }
 public function uploadMedia()
 { 
+
     $result = session();
   
     $registerId = $result->get('id');
@@ -85,7 +86,6 @@ if ($assignTeacherId === null) {
     // Get uploaded files
     $image = $this->request->getFile('imageFile');
     $video = $this->request->getFile('videoFile');
-
     // Check if an image was uploaded
     if ($image && $image->isValid() && !$image->hasMoved()) {
         $imageName = $image->getName();

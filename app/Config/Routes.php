@@ -113,7 +113,9 @@ $routes->post('AdduserByadmin', 'AdminController::AdduserByadmin');
 $routes->post('SelectedForGroup', 'AdminController::SelectedForGroup');
 $routes->get('Chat', 'AdminController::chatwithteacher');
 $routes->get('Chat/(:any)', 'AdminController::chatwithstud/$1');
+$routes->get('Notifications', 'AdminController::Notifications');
 $routes->post('insertChat', 'AdminController::insertChat');
+$routes->post('SendNotifications', 'AdminController::SendNotifications');
 
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');

@@ -157,6 +157,7 @@ class FacultyController extends BaseController
         $query = $table->where('Faculty_id', $registerId)->get();
         if ($query->getNumRows() > 0) {
           $results = $query->getResult();
+       //   print_r($results);die;
           return view('StudentuplodedVidio', ['results' => $results]);
         } else {
           return redirect()->to(base_url());

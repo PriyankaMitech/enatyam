@@ -34,13 +34,11 @@
     <section class="content">
         <div class="container-fluid">
             
-        <div class="center">
-        <div class="video-container" style="max-width: 1000px;background-color: #FFA500;border-radius: 26px; margin-top: 59px;">
-            <!-- Adjust max-width as needed -->
+        <!-- <div class="center">
+        <div class="video-container">
 
             <h2><b style="margin-left: 82.5px;">Upload Media</b></h2>
             <form enctype="multipart/form-data" action="<?= site_url('uploadMedia'); ?>" method="POST">
-                <!-- Row 1: Input for uploading a video -->
                 <div class="row" style="margin-left: 82.5px;">
                     <div class="col">
                         <input type="file" name="videoFile" id="videoFile" class="form-control-file">
@@ -49,7 +47,6 @@
                         <input type="submit" value="Upload Video">
                     </div>
                 </div>
-                <!-- Row 2: Input for uploading an image -->
                 <div class="row" style="margin-left: 82.5px;">
                     <div class="col">
                         <input type="file" name="imageFile" class="form-control-file" accept="image/*">
@@ -59,9 +56,91 @@
                     </div>
                 </div>
             </form>
+            
         </div>
 
+    </div> -->
+    <!-- <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Quick Example</h3>
+              </div>
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text">Upload</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+    </div> -->
+    <div class="row">
+    <div class="col-md-12">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Uplode video / Images</h3>
+            </div>
+            <form enctype="multipart/form-data" action="<?= site_url('uploadMedia'); ?>" method="POST">
+    <div class="card-body">
+        <div class="form-group">
+        <label for="exampleInputFileVideo">Video video</label>
+            <div class="row">
+                    <div class="col">
+                    
+                        <input type="file" name="videoFile" id="videoFile" class="form-control-file">
+                    </div>
+                    <div class="col">
+                        <input type="submit" class="fas fa-upload" value="Upload Video">
+                    </div>
+                </div>
+        </div>
+        <div class="form-group">
+        <label for="exampleInputFileVideo">Video Images</label>
+        <div class="row">
+                    <div class="col">
+                        <input type="file" name="imageFile" class="form-control-file" accept="image/*">
+                    </div>
+                    <div class="col">
+                        <input type="submit" class="fas fa-upload" value="Upload Image">
+                    </div>
+                </div>
+        </div>
+       
     </div>
+
+   
+</form>
+        </div>
+    </div>
+</div>
+        </div>
 
         </div>
     </section>
