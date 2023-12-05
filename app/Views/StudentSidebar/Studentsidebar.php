@@ -106,7 +106,7 @@
                 </ul>
               </li>
 
-              <li class="nav-item">
+              <!-- <li class="nav-item">
 
 
                 <a href="<?php echo base_url()?>Chat" class="nav-link">
@@ -124,7 +124,7 @@
                   </li>
 
                 </ul>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon far fa-comment-dots"></i>

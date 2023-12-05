@@ -40,51 +40,46 @@ $page = $uri->getSegment(count($pages));
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <!-- fontawesome icon cdn -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- fontawesome icon cdn -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- owl carousel css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <style>
-    .cart-a sup {
-        background: #FF0067;
-        border-radius: 50%;
-        /* padding: 5px; */
-        width: 23px;
-        height: 23px;
-        display: inline-block;
-        text-align: center;
-        line-height: 23px;
-        font-size: 11px;
-        font-weight: 600;
-    }
+        <style>
+            .cart-a sup {
+                background: #FF0067;
+                border-radius: 50%;
+                /* padding: 5px; */
+                width: 23px;
+                height: 23px;
+                display: inline-block;
+                text-align: center;
+                line-height: 23px;
+                font-size: 11px;
+                font-weight: 600;
+            }
 
-    .btn-close-dark {
-        position: absolute;
-        right: -12px;
-        top: -14px;
-        /* background: crimson; */
-        /* opacity: 1; */
-        /* color: #fff!important; */
-        break-after: avoid;
-        border: 1px solid #000;
-        padding: 6px;
-        border-radius: 30px;
-        background-color: #ff0067;
-        opacity: 1;
-        font-size: 15px;
+            .btn-close-dark {
+                position: absolute;
+                right: -12px;
+                top: -14px;
+                /* background: crimson; */
+                /* opacity: 1; */
+                /* color: #fff!important; */
+                break-after: avoid;
+                border: 1px solid #000;
+                padding: 6px;
+                border-radius: 30px;
+                background-color: #ff0067;
+                opacity: 1;
+                font-size: 15px;
 
-    }
-    </style>
+            }
+        </style>
 
     <?php } else if ($page == 'Dance') { ?>
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -324,13 +319,19 @@ $page = $uri->getSegment(count($pages));
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/hederresponsive.css">
 
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/resposivestyle.css">
+    <style>
+        .termsConditions {
+            font-size: 12px;
+            font-weight: 400;
+        }
+    </style>
 
 </head>
 
 <body class="overlap">
-     <!-- Flash message container -->
-     <div id="flash-message-container">
-        <?php if (session()->has('errormessage')): ?>
+    <!-- Flash message container -->
+    <div id="flash-message-container">
+        <?php if (session()->has('errormessage')) : ?>
             <div class="flash-message">
                 <?= session('errormessage') ?>
             </div>
@@ -371,8 +372,8 @@ $page = $uri->getSegment(count($pages));
                             <?php else : ?>
                                 <div class="loginmenu">
                                     <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
-                                    <a class="Dashboard" href="<?php echo base_url('Dashboard'); ?>">Dashboard</a>
-                                    <a class="logout" href="<?php echo base_url('logout'); ?>">Logout</a>
+                                    <a class="Dashboard" href="<?php echo base_url(); ?>Dashboard">Dashboard</a>
+                                    <a class="logout" href="<?php echo base_url(); ?>logout">Logout</a>
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -458,8 +459,7 @@ $page = $uri->getSegment(count($pages));
                         <h4 class="titel pt-3">Register a new account</h4>
 
 
-                        <form name="registrationForm"  method="post"
-                            action="<?php echo base_url(); ?>register" id="registerform">
+                        <form name="registrationForm" method="post" action="<?php echo base_url(); ?>register" id="registerform">
 
                             <div class="form-group m-2">
                                 <input type="text" name="full_name" id="full_name" class="form-control" aria-required="true" placeholder="Username">
@@ -472,8 +472,7 @@ $page = $uri->getSegment(count($pages));
 
                             <div class="form-group m-2">
 
-                                <input type="text" name="mobile_no" id="mobile_no" class="form-control"
-                                    aria-required="true" placeholder="mobile number">
+                                <input type="text" name="mobile_no" id="mobile_no" class="form-control" aria-required="true" placeholder="mobile number">
 
                                 <span id="mobile_noError" style="color: red;"></span>
                             </div>
@@ -501,10 +500,9 @@ $page = $uri->getSegment(count($pages));
 
                             <div class="form-group m-2">
 
-                                <input type="text" name="otp" id="otp" class="form-control d-none"
-                                    placeholder="Enter otp">
+                                <input type="text" name="otp" id="otp" class="form-control d-none" placeholder="Enter otp">
                                 <span class="error" id="otpError" style="color: red;"></span>
-               </div>
+                            </div>
 
                             <div class="teacher">
 
@@ -512,7 +510,7 @@ $page = $uri->getSegment(count($pages));
                             </div>
 
 
-                            <input type="submit"  id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
+                            <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
                             <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
 
                             <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a>
@@ -601,7 +599,7 @@ $page = $uri->getSegment(count($pages));
                             <input type="checkbox" id="termsCheckbox"> I agree to the <a href="#" id="termsLinhfgk" data-bs-toggle="modal" data-bs-target="#staticBackdrop">terms and conditions</a>
                         </label>
                         <input type="submit" id="btncheck" disabled class="btn btn-light mt-3">
-                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>>
+                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>
                     </form>
                     <!-- End of User Form -->
                 </div>
@@ -659,21 +657,13 @@ $page = $uri->getSegment(count($pages));
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Terms and Conditions</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="staticBackdropLabel"><b>Terms and Conditions</b></h5>
+
                     </div>
                     <div class="modal-body">
                         <ul>
-                            <li> 1. Register for an account: To access and purchase the online courses, you must first register for an account on the website. If you already have an account, simply log in using your username and password.</li>
-                            <li>2. Select and purchase courses: Browse through the list of courses available on the website and select the ones you wish to purchase. Each course is treated as a separate offer, so make sure to add each course to your cart individually.</li>
-                            <li>3. Review and agree to the fees: Before completing the purchase, carefully review the fees indicated for each course. By selecting a course, you agree to pay the specified fees.</li>
-                            <li>4. Provide valid payment information: During the checkout process, you will be prompted to provide valid payment information. This may include credit card details or other payment methods accepted by the company. Ensure that the information provided is accurate and up to date.</li>
-                            <li>5. Complete the payment: Once you have provided the payment information, proceed to complete the payment. The company or its affiliates will process the payment based on the chosen payment method.</li>
-                            <li> 6. Access the purchased courses: After successful payment, you will gain access to the courses you have purchased. Log in to your account and navigate to the course section to start learning.</li>
-                            <li>7. Comply with course terms: While accessing and using the courses, make sure to comply with the terms outlined in the agreement. This includes not sharing or distributing course material to third parties.</li>
-                            <li>8. Complete the course: Work through the course material at your own pace and complete all the required activities and assessments. Take advantage of any interactive features or forums available to enhance your learning experience.</li>
-                            <li class="termsConditions"> 1. Register for an account: To access and purchase the online courses, you must first register for an account on the website. If you already have an account, simply log in using your username and password.
-                            </li>
+
+                            <li class="termsConditions">1. Register for an account: To access and purchase the online courses, you must first register for an account on the website. If you already have an account, simply log in using your username and password.</li>
                             <li class="termsConditions">2. Select and purchase courses: Browse through the list of courses available on the website and select the ones you wish to purchase. Each course is treated as a separate offer, so make sure to add each course to your cart individually.</li>
                             <li class="termsConditions">3. Review and agree to the fees: Before completing the purchase, carefully review the fees indicated for each course. By selecting a course, you agree to pay the specified fees.</li>
                             <li class="termsConditions">4. Provide valid payment information: During the checkout process, you will be prompted to provide valid payment information. This may include credit card details or other payment methods accepted by the company. Ensure that the information provided is accurate and up to date.</li>
@@ -685,56 +675,55 @@ $page = $uri->getSegment(count($pages));
                         </ul>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="lostpasswordmodal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="login_form">
-                        <h4 class="titel pt-3" style="color: black;">Lost Password Recovery</h4>
-                        <form name="lostPasswordForm" action="<?php echo base_url(); ?>lostpassword" id="lostpasswordform" method="post">
-                            <div class="form-group">
-                                <input type="email" name="lostpassword_email" id="lostpassword_email" class="form-control" aria-required="true" placeholder="Email">
-                                <span id="lostpassword_email_error" style="color: red;"></span>
-                            </div>
-                            <button type="submit" class="btn btn-light mt-3">Recover Password</button>
-                        </form>
-                        <!-- OTP input field and button (hidden initially) -->
-                        <form name="otpValidateForm" action="<?php echo base_url(); ?>otpvalidate" id="otpValidateForm" method="post">
-                            <div id="otpField" style="display: none;">
-                                <div class="form-group">
-                                    <input type="text" name="entered_otp" id="entered_otp" class="form-control" placeholder="Enter OTP">
-                                    <span id="invalidotp" style="color: red;"></span>
-                                </div>
-                                <button type="submit" class="btn btn-light mt-3">Submit OTP</button>
-                            </div>
-                        </form>
-
-                        <form name="newPasswordForm" action="<?php echo base_url(); ?>newpassword" id="newPasswordForm" method="post">
-                            <div id="passwordField" style="display: none;">
-                                <div class="form-group">
-                                    <input type="password" name="new_password" id="new_password" class="form-control" aria-required="true" placeholder="Enter New Password">
-                                    <input type="password" name="conf_password" id="conf_password" class="form-control" aria-required="true" placeholder="Confirm Password">
-                                    <span id="password_match_error" style="color: red;"></span>
-                                </div>
-                                <button type="submit" class="btn btn-light mt-3">Submit New Password</button>
-                            </div>
-                        </form>
-                        <!-- New Password input field (hidden initially) -->
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Understood</button>
 
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
+
+        <div class="modal fade" id="lostpasswordmodal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="login_form">
+                            <h4 class="titel pt-3" style="color: black;">Lost Password Recovery</h4>
+                            <form name="lostPasswordForm" action="<?php echo base_url(); ?>lostpassword" id="lostpasswordform" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="lostpassword_email" id="lostpassword_email" class="form-control" aria-required="true" placeholder="Email">
+                                    <span id="lostpassword_email_error" style="color: red;"></span>
+                                </div>
+                                <button type="submit" class="btn btn-light mt-3">Recover Password</button>
+                            </form>
+                            <!-- OTP input field and button (hidden initially) -->
+                            <form name="otpValidateForm" action="<?php echo base_url(); ?>otpvalidate" id="otpValidateForm" method="post">
+                                <div id="otpField" style="display: none;">
+                                    <div class="form-group">
+                                        <input type="text" name="entered_otp" id="entered_otp" class="form-control" placeholder="Enter OTP">
+                                        <span id="invalidotp" style="color: red;"></span>
+                                    </div>
+                                    <button type="submit" class="btn btn-light mt-3">Submit OTP</button>
+                                </div>
+                            </form>
+
+                            <form name="newPasswordForm" action="<?php echo base_url(); ?>newpassword" id="newPasswordForm" method="post">
+                                <div id="passwordField" style="display: none;">
+                                    <div class="form-group">
+                                        <input type="password" name="new_password" id="new_password" class="form-control" aria-required="true" placeholder="Enter New Password">
+                                        <input type="password" name="conf_password" id="conf_password" class="form-control" aria-required="true" placeholder="Confirm Password">
+                                        <span id="password_match_error" style="color: red;"></span>
+                                    </div>
+                                    <button type="submit" class="btn btn-light mt-3">Submit New Password</button>
+                                </div>
+                            </form>
+                            <!-- New Password input field (hidden initially) -->
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
 
