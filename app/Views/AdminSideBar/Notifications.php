@@ -123,48 +123,4 @@
     </section>
 
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var userTypeSelect = document.getElementById("inputUserType");
-        var studentFormElements = document.getElementById("studentFormElements");
-        var facultyFormElements = document.getElementById("facultyFormElements");
-        var selectAllStudentsCheckbox = document.getElementById("selectAllStudents");
-        var selectAllFacultyCheckbox = document.getElementById("selectAllFaculty");
-
-        function toggleFormElementsVisibility() {
-            var userType = userTypeSelect.value;
-
-            studentFormElements.style.display = "none";
-            facultyFormElements.style.display = "none";
-
-            if (userType === "student" || userType === "both") {
-                studentFormElements.style.display = "block";
-            }
-
-            if (userType === "faculty" || userType === "both") {
-                facultyFormElements.style.display = "block";
-            }
-        }
-
-        userTypeSelect.addEventListener("change", function () {
-            toggleFormElementsVisibility();
-        });
-
-        selectAllStudentsCheckbox.addEventListener("change", function () {
-            var studentCheckboxes = document.querySelectorAll('input[name="selected_students[]"]');
-            studentCheckboxes.forEach(function (checkbox) {
-                checkbox.checked = selectAllStudentsCheckbox.checked;
-            });
-        });
-
-        selectAllFacultyCheckbox.addEventListener("change", function () {
-            var facultyCheckboxes = document.querySelectorAll('input[name="selected_faculty[]"]');
-            facultyCheckboxes.forEach(function (checkbox) {
-                checkbox.checked = selectAllFacultyCheckbox.checked;
-            });
-        });
-
-        toggleFormElementsVisibility();
-    });
-</script>
 <?php echo view('AdminSideBar/AdminFooter.php');?>
