@@ -45,6 +45,7 @@
 
   <link rel="stylesheet" href="plugins/fullcalendar/main.css">
 
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
 <link href="<?php echo base_url()?>public/css/custom.css"></link>
