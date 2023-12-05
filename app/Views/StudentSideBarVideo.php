@@ -1,4 +1,4 @@
-<?php echo view('Studentsidebar/Studentsidebar');?>
+<?php echo view('StudentSidebar/Studentsidebar');?>
     <style>
         .video-card:hover {
             transform: scale(1.05);

@@ -442,18 +442,39 @@ class AdminModel extends Model
 
     public function getdata($table, $wherecond) {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
+
+        $sender = $_SESSION['id'];
         if ($result) {
-            return $result;
+            if (isset($result[0]->msg_id)) {
+                foreach ($result as $singlechat) {
+                    $receiver = $singlechat->receiver_id;
+                    $chat = $this->db->query("SELECT * FROM online_chat WHERE (sender_id = ".$sender." AND receiver_id = ".$receiver.") OR (sender_id = ".$receiver." AND receiver_id = ".$sender.") ORDER BY msg_id ")->getResultArray();
+                }
+                return $chat;
+            }else {
+                foreach ($result as $student) {
+                    $receiver = $student->id;
+                    $chat[] = $this->getchat('online_chat', $sender, $receiver);
+                    $studdata[] = $student->full_name;
+                    $studid[] = $student->id;
+                }
+
+                $output = array(
+                    'chat' => $chat,
+                    'studdata' => $studdata,
+                    'studid' => $studid
+                );
+                return $output;
+            }
         }else {
             return false;
         }
     }
 
-    public function getchat($tablechat, $wherecond2, $wherecond3, $receiverid=null) {
-        
-        $result = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = ".$_SESSION['id']." AND receiver_id = ".$receiverid." )
-        OR (sender_id = ".$receiverid." AND receiver_id = ".$_SESSION['id'].") ORDER BY msg_id");
-        //echo '<pre>';print_r($result->getResultArray());die;
+    public function getchat($tablechat, $sender, $receiver) {
+        $result = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = ".$sender." AND receiver_id = ".$receiver.")
+        OR (sender_id = ".$sender." AND receiver_id = ".$receiver.") ORDER BY msg_id");
+        // echo '<pre>';print_r($this->getLastQuery());
         //$result = $this->db->table($table)->where($wherecond2.' OR ' .$wherecond3)->get()->getResult();
         
         if ($result) {

@@ -53,51 +53,48 @@ $page = $uri->getSegment(count($pages));
                     <div class="col-lg-4">
                       <ul class="products-list product-list-in-card">
                       <?php
-                          if ($chatdata) {
-                          foreach ($getstud as $student) { //print_r($student);die; ?>
+                          if ($getchat) { $i=0;
+                          foreach ($getchat['studdata'] as $student) {//echo '<pre>';print_r($getchat['studid'][$i]); ?>
                         <li class="item pl-2 pr-2">
                           <div class="product-img">
                             <img src="<?php echo base_url()?>public/images/user.png" alt="Product Image" class="img-size-50">
                           </div>
                           <div class="product-info">
-                            <a href="javascript:void(0)" class="product-title"><?php echo $student->full_name?>
-                              <span class="badge badge-warning float-right">$1800</span></a>
-                            <span class="product-description">
-                              Samsung 32" 1080p 60Hz LED Smart HDTV.
-                            </span>
+                            <a href="javascript:void(0)" id="stud" value="<?php echo $getchat['studid'][$i]?>" class="product-title stud"><?php echo $student?></a>
                           </div>
                         </li>
-                        <?php } } else{?>
+                        <?php $i++; } } else{?>
                           <li class="item pl-2 pr-2">No students assigned yet</li>
                         <?php } ?>
                       </ul>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 chatdiv">
                       <div class="direct-chat-messages">
                         <?php
-                          if ($chatdata) {
-                          foreach ($chatdata as $chat) {
-                              if ($chat['sender_id'] == $_SESSION['id']) {  ?>
+                          // if ($getchat) {
+                          // foreach ($getchat as $chat) {
+                          //   echo '<pre>';print_r($chat);die;
+                          //     if ($chat['sender'] == $_SESSION['id']) {  ?>
                               <div class="direct-chat-msg right">
                                 <div class="direct-chat-infos clearfix">
                                   <span class="direct-chat-name float-right"><?php print_r($_SESSION['user_name']);?></span>
                                   <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                 </div>
                                 <img class="direct-chat-img" src="<?php echo base_url()?>public/images/user.png" alt="message user image">
-                                <div class="direct-chat-text"><?php echo $chat['message'] ?> </div>
+                                <div class="direct-chat-text rightmsg"><?php //echo $chat['message'] ?> </div>
                               </div>
-                          <?php  } else { ?>
+                          <?php  //} else { ?>
                             <div class="direct-chat-msg">
                               <div class="direct-chat-infos clearfix">
-                                <span class="direct-chat-name float-left"><?php print_r($getdata->full_name); ?></span>
+                                <span class="direct-chat-name float-left"><?php //print_r($getdata->full_name); ?></span>
                                 <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                               </div>
                               <img class="direct-chat-img" src="<?php echo base_url()?>public/images/user.png" alt="message user image">
-                              <div class="direct-chat-text">
-                                <?php echo $chat['message'] ?> 
+                              <div class="direct-chat-text leftmsg">
+                                <?php //echo $chat['message'] ?> 
                               </div>
                             </div>
-                        <?php } } } ?>
+                        <?php //} } } ?>
                       </div>
                       <div class="card-footer">
                     <form action="#" id="chatform" method="post">
