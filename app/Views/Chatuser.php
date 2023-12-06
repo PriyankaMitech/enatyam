@@ -35,9 +35,6 @@ $page = $uri->getSegment(count($pages));
                     <button type="button" class="btn btn-tool chatopen" title="Contacts" data-widget="chat-pane-toggle">
                         <i class="fas fa-comments"></i>
                     </button>
-                    <button type="button" class="btn btn-tool" data-card-widget="remove">
-                        <i class="fas fa-times"></i>
-                    </button>
                     </div>
                 </div>
                 <div class="card-body">
@@ -66,7 +63,7 @@ $page = $uri->getSegment(count($pages));
                                 <?php echo $chat['message'] ?>
                                 </div>
                             </div>
-                        <?php } } } else { ?> No chats yet <?php } ?>
+                        <?php } } } else { ?> Select user to chat <?php } ?>
                     </div>
 
                     <div class="direct-chat-contacts">
@@ -95,6 +92,7 @@ $page = $uri->getSegment(count($pages));
                                         $id = $chat->faculty_id;
                                         $full_name = $chat->faculty_name;
                                     }
+                                    // print_r($chat);die;
                             ?>
                             <li>
                                 <a href="<?= base_url()?>chatuser/<?=$id?>">
@@ -105,7 +103,11 @@ $page = $uri->getSegment(count($pages));
                                         <?=$full_name?>
                                         <small class="contacts-list-date float-right">2/28/2015</small>
                                     </span>
+                                    <?php
+                                       if($_SESSION['sessiondata']['role'] == 'Admin'){
+                                    ?>
                                     <span class="contacts-list-msg"><?=$chat->role?></span>
+                                    <?php } ?>
                                     </div>
                                 </a>
                             </li>
