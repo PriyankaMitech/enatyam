@@ -15,6 +15,7 @@
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>
+
 <script src="<?=base_url(); ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?=base_url(); ?>plugins/chart.js/Chart.min.js"></script>
 <script src="<?=base_url(); ?>plugins/sparklines/sparkline.js"></script>
@@ -28,6 +29,7 @@
 <script src="<?=base_url(); ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="<?=base_url(); ?>dist/js/adminlte.js"></script>
 <script src="<?=base_url(); ?>dist/js/pages/dashboard.js"></script>
+<script src="<?php echo base_url()?>public/js/custom.js"></script>
 <script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
 
 <script src="<?=base_url(); ?>/public/js/jquery.validate.min.js"></script>

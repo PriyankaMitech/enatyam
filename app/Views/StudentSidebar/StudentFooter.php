@@ -11,6 +11,7 @@
 <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
  <script src="plugins/chart.js/Chart.min.js"></script>
 <script src="dist/js/demo.js"></script>
+<script src="<?php echo base_url()?>public/js/custom.js"></script>
 <script src="dist/js/pages/dashboard2.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="dist/js/adminlte.min.js"></script>

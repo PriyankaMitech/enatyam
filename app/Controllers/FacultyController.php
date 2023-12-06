@@ -265,6 +265,7 @@ class FacultyController extends BaseController
         $registerId = $result->get('id');
         $model = new facultymodel();
         $data['FacultysheduleData'] = $model->fetchshedule($registerId);
+      // echo "<pre>";print_r($data['FacultysheduleData']);exit();
         return view('FacultysideBar/Monthlyshedule',  $data);
       } else {
         return redirect()->to(base_url());
