@@ -915,7 +915,7 @@ class AdminController extends BaseController
 
     
 
-}
+
   public function SendNotifications()
     {
        // print_r($_POST);die;
