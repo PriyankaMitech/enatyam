@@ -97,7 +97,10 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="form-group">
+            <label for="inputDateTime">Select Date and Time</label>
+            <input type="datetime-local" id="inputDateTime" class="form-control" name="notification_date">
+          </div>
                 <!-- Other common form elements -->
                 <div class="form-group">
                     <label for="inputDescription">Create Notifications</label>
@@ -123,4 +126,5 @@
     </section>
 
 </div>
+
 <?php echo view('AdminSideBar/AdminFooter.php');?>

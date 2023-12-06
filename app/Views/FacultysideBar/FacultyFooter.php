@@ -18,7 +18,7 @@ $page = $uri->getSegment(count($pages));
   <script src="<?php echo base_url()?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <script src="<?php echo base_url()?>dist/js/adminlte.min.js"></script>
   <script src="<?php echo base_url()?>public/js/custom.js"></script>
-  <script src="dist/js/demo.js"></script>
+  <!-- <script src="<?php echo base_url()?>dist/js/demo.js"></script> -->
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
@@ -28,7 +28,8 @@ $page = $uri->getSegment(count($pages));
     <script src="<?php echo base_url()?>plugins/jquery-mapael/jquery.mapael.min.js"></script>
     <script src="<?php echo base_url()?>plugins/jquery-mapael/maps/usa_states.min.js"></script>
     <script src="<?php echo base_url()?>plugins/chart.js/Chart.min.js"></script>
-    <script src="dist/js/pages/dashboard2.js"></script>
+    <!-- <script src="<?php echo base_url()?>dist/js/pages/dashboard2.js"></script> -->
+            <script src="<?php echo base_url()?>plugins/fullcalendar/main.js"></script>
 
     <script src="<?php echo base_url()?>plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>plugins/moment/moment.min.js"></script>
@@ -36,7 +37,6 @@ $page = $uri->getSegment(count($pages));
         if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar') { ?>
              <script src="plugins/jquery/jquery.min.js"></script> 
 
-            <script src="<?php echo base_url()?>plugins/fullcalendar/main.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <?php } ?>
     <script type="text/javascript">
@@ -89,7 +89,7 @@ $page = $uri->getSegment(count($pages));
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const addAppointmentButton = document.getElementById("addAppointment");
-        // if (addAppointmentButton) {
+        if (addAppointmentButton) {
             const formDatesInput = document.getElementById("form_date");
                 const currentDate = new Date().toISOString().split("T")[0];
                 formDatesInput.min = currentDate;
@@ -123,7 +123,7 @@ $page = $uri->getSegment(count($pages));
                     toTimeInput.value = "";
                 }
             });
-        // }
+        }
 
         function createTableRow(formdate, formtime, totime) {
             const tr = document.createElement("tr");
@@ -176,6 +176,7 @@ $page = $uri->getSegment(count($pages));
 
     
 </script>
+<?php if (!$pages[1]==' chatuser') { ?>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
@@ -268,85 +269,85 @@ $page = $uri->getSegment(count($pages));
     });
 
     var facultyEvents = [
-    <?php if(!empty($FacultysheduleData)) {
+        <?php if(!empty($FacultysheduleData)) {
 
-        // echo "<pre>";print_r($FacultysheduleData);exit();
-        foreach($FacultysheduleData as $data) { ?>
-            {
-                title      : '<?=$data->full_name; ?> - <?=$data->start_time; ?> to <?=$data->end_time; ?>',
-              start      : '<?=$data->date; ?>T<?=$data->start_time; ?>',
-              end        : '<?=$data->date; ?>T<?=$data->end_time; ?>',
-              faculty_id : '<?=$data->faculty_register_id; ?>',
+            // echo "<pre>";print_r($FacultysheduleData);exit();
+            foreach($FacultysheduleData as $data) { ?>
+                {
+                    title      : '<?=$data->full_name; ?> - <?=$data->start_time; ?> to <?=$data->end_time; ?>',
+                  start      : '<?=$data->date; ?>T<?=$data->start_time; ?>',
+                  end        : '<?=$data->date; ?>T<?=$data->end_time; ?>',
+                  faculty_id : '<?=$data->faculty_register_id; ?>',
+                },
+        <?php }} ?>
+    ];
+
+
+    var colorMap = {};
+
+    facultyEvents.forEach(function(event) {
+        var facultyId = event.faculty_id;
+
+        if (!colorMap[facultyId]) {
+            colorMap[facultyId] = getRandomColor();
+        }
+
+        event.backgroundColor = colorMap[facultyId];
+        event.borderColor = colorMap[facultyId];
+        event.textColor = getContrastColor(colorMap[facultyId]); // Set text color
+    });
+
+    function getContrastColor(hexColor) {
+        var r = parseInt(hexColor.substring(1, 3), 16);
+        var g = parseInt(hexColor.substring(3, 5), 16);
+        var b = parseInt(hexColor.substring(5, 7), 16);
+        var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+
+        return brightness > 128 ? '#000000' : '#FFFFFF';
+    }
+
+    // Rest of your code remains the same...
+
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    var calendar = new Calendar(calendarEl, {
+            headerToolbar: {
+                left  : 'prev,next today',
+                center: 'title',
+                right : 'dayGridMonth,timeGridWeek,timeGridDay'
             },
-    <?php }} ?>
-];
-
-
-var colorMap = {};
-
-facultyEvents.forEach(function(event) {
-    var facultyId = event.faculty_id;
-
-    if (!colorMap[facultyId]) {
-        colorMap[facultyId] = getRandomColor();
-    }
-
-    event.backgroundColor = colorMap[facultyId];
-    event.borderColor = colorMap[facultyId];
-    event.textColor = getContrastColor(colorMap[facultyId]); // Set text color
-});
-
-function getContrastColor(hexColor) {
-    var r = parseInt(hexColor.substring(1, 3), 16);
-    var g = parseInt(hexColor.substring(3, 5), 16);
-    var b = parseInt(hexColor.substring(5, 7), 16);
-    var brightness = (r * 299 + g * 587 + b * 114) / 1000;
-
-    return brightness > 128 ? '#000000' : '#FFFFFF';
-}
-
-// Rest of your code remains the same...
-
-
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-
-var calendar = new Calendar(calendarEl, {
-        headerToolbar: {
-            left  : 'prev,next today',
-            center: 'title',
-            right : 'dayGridMonth,timeGridWeek,timeGridDay'
+            themeSystem: 'bootstrap',
+            events: facultyEvents,
+            editable  : true,
+            droppable : true,
+            drop      : function(info) {
+                if (checkbox.checked) {
+                    info.draggedEl.parentNode.removeChild(info.draggedEl);
+                }
+            },
+            eventContent: function(arg) {
+            var eventColor = arg.event.backgroundColor || ''; // Ensure eventColor is defined
+            var textColor = getContrastColor(eventColor); // Calculate text color based on background brightness
+            return {
+                html: '<div class="fc-content" style="background-color:' + eventColor + '; padding: 2%; border-radius: 5%">' +
+                      '<span class="fc-title" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: ' + textColor + ';" title="' + arg.event.title + '">' +
+                        '<div class="event-title">' + arg.event.title.split(' - ')[0] + '</div>' +
+                        '<div class="event-time">' + arg.event.title.split(' - ')[1] + '</div>' +
+                      '</span>' +
+                      '</div>',
+            };
         },
-        themeSystem: 'bootstrap',
-        events: facultyEvents,
-        editable  : true,
-        droppable : true,
-        drop      : function(info) {
-            if (checkbox.checked) {
-                info.draggedEl.parentNode.removeChild(info.draggedEl);
-            }
-        },
-        eventContent: function(arg) {
-        var eventColor = arg.event.backgroundColor || ''; // Ensure eventColor is defined
-        var textColor = getContrastColor(eventColor); // Calculate text color based on background brightness
-        return {
-            html: '<div class="fc-content" style="background-color:' + eventColor + '; padding: 2%; border-radius: 5%">' +
-                  '<span class="fc-title" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: ' + textColor + ';" title="' + arg.event.title + '">' +
-                    '<div class="event-title">' + arg.event.title.split(' - ')[0] + '</div>' +
-                    '<div class="event-time">' + arg.event.title.split(' - ')[1] + '</div>' +
-                  '</span>' +
-                  '</div>',
-        };
-    },
-});
+    });
 
-calendar.render();
+    calendar.render();
 
 
 
@@ -402,7 +403,7 @@ calendar.render();
         document.getElementById('table1').style.display = 'none';
         document.getElementById('table2').style.display = 'table';
     }
-    </script>
+</script>
 
 
 <!-- Page specific script -->
@@ -473,6 +474,7 @@ calendar.render();
   })
 </script>
 
+<?php }?>
 
 </body>
 </html>

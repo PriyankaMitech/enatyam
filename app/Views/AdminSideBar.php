@@ -405,7 +405,7 @@
                             </li>
 
                             <!-- Messages Menu -->
-                            <li class="nav-item" <?php if (in_array('whatsapp', $access_levels) || in_array('email', $access_levels) || in_array('Notifications', $access_levels) ) {
+                            <li class="nav-item" <?php if (in_array('chatuser', $access_levels) || in_array('email', $access_levels) || in_array('Notifications', $access_levels) ) {
                                 echo "style='display:block'";
                             } else {
                                 echo "style='display:none'";
@@ -418,15 +418,16 @@
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
-                                    <li class="nav-item" <?php if (in_array('whatsapp', $access_levels)) {
+                                    <li class="nav-item" <?php if (in_array('chatuser', $access_levels)) {
                                         echo "style='display:block'";
                                     } else {
                                         echo "style='display:none'";
                                     } ?>>
-                                        <a href="whatsapp" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>WhatsApp</p>
-                                        </a>
+                                        <a href="<?= base_url()?>chatuser" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Chat
+                                        </p>
+                                      </a>
                                     </li>
                                     <li class="nav-item" <?php if (in_array('Email', $access_levels)) {
                                         echo "style='display:block'";
@@ -709,9 +710,10 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item" >
-                                <a href="whatsapp" class="nav-link">
+                                <a href="<?= base_url()?>chatuser" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>WhatsApp</p>
+                                    <p>Chat
+                                    </p>
                                 </a>
                             </li>
                             <li class="nav-item" >
@@ -736,6 +738,7 @@
         </div>
         <!-- /.sidebar -->
     </aside>
-<?php } ?>
+<?php } } ?>
 
-<?php } ?>
+
+

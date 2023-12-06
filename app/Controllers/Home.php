@@ -199,7 +199,7 @@ class Home extends BaseController
     public function StudentDashboard()
     {
        // print_r($_SESSION['sessiondata']);die;
-     if (isset($_SESSION['sessiondata'])) {
+       if (isset($_SESSION['sessiondata'])) {
         $sessionData = $_SESSION['sessiondata'];
 
         $email = $sessionData['email'] ?? null;
@@ -211,12 +211,16 @@ class Home extends BaseController
             if ($session->has('id')) {
                 $user_id = $session->get('id');
 
-                // echo "$user_id"; exit();
                 $login_model = new LoginModel();
-     
+                $adminModel = model('AdminModel');  
                 $data['user_data'] = $login_model->get_user_data($user_id); 
-        
-                return view('StudentDashboard', $data);
+                $notifications = $adminModel->getUser($user_id);
+
+                return view('StudentDashboard', [
+                    'data' => $data,
+                    'notifications' => $notifications,
+                    'notificationCount' => count($notifications),
+                ]);
             } else {
                 return redirect()->to(base_url());
             }

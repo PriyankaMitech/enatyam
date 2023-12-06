@@ -608,13 +608,53 @@ class AdminController extends BaseController
         $model->updateFacultyForGroup($groupName, $facultyId);
         return redirect()->to('StudentGroups');
     }
+    public function chatuser()
+    {
+        $model = new AdminModel();
+        if ($_SESSION['sessiondata']['role'] == 'Admin') {
+            $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
+            $result['getuser'] = $model->getalldata('register', $wherecond);
+        }else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+            $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
+            $result['getuser'] = $model->getalldata('register', $wherecond);
+        }else if($_SESSION['sessiondata']['role'] == 'Student') {
+            $wherecond = array('register_id' => $_SESSION['sessiondata']['id']);
+            $result['getuser'] = $model->getalldata('faculty', $wherecond);
+        }
+        
+        // echo '<pre>';print_r($result);die;
+        echo view('Chatuser', $result);
+    }
+
+    public function singlechat()
+    {
+        $model = new AdminModel();
+        $receiverid = $this->request->uri->getSegments(1);
+        if ($_SESSION['sessiondata']['role'] == 'Admin') {
+            $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
+            $result['getuser'] = $model->getalldata('register', $wherecond);
+        }else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+            $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
+            $result['getuser'] = $model->getalldata('register', $wherecond);
+        }else if($_SESSION['sessiondata']['role'] == 'Student') {
+            $wherecond = array('register_id' => $_SESSION['sessiondata']['id']);
+            $result['getuser'] = $model->getalldata('faculty', $wherecond);
+        }
+        // $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
+        // $result['getuser'] = $model->getalldata('register', $wherecond);
+        $wherecond2 = array('sender_id' => $_SESSION['sessiondata']['id'], 'receiver_id' => $receiverid[1]);
+        $wherecond3 = array('sender_id' => $receiverid[1], 'receiver_id' => $_SESSION['sessiondata']['id']);
+        $result['chatdata'] = $model->getchat('online_chat', $_SESSION['sessiondata']['id'], $receiverid[1]);
+        // echo '<pre>';print_r($result);die;
+        echo view('chatuser', $result);
+    }
 
     public function chatwithstud()
     {
         $model = new AdminModel();
-        print_r($_SESSION);die;
         $receiverid = $this->request->uri->getSegments(1);
-        $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
+        echo '<pre>';print_r($receiverid[1]);die;
+        $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
         $wherecond1 = array('id' => $receiverid[1]);
         $wherecond2 = array('sender_id' => $_SESSION['id'], 'receiver_id' => $receiverid[1]);
         $wherecond3 = array('sender_id' => $receiverid[1], 'receiver_id' => $_SESSION['id']);
@@ -624,7 +664,7 @@ class AdminController extends BaseController
         $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3, $receiverid[1]);
 
         // echo '<pre>';print_r($result['getstud']);die;
-        echo view('FacultysideBar/Chatwithstud', $result);
+        echo view('Chatuser', $result);
     }
 
     public function chatwithteacher()
@@ -666,9 +706,6 @@ class AdminController extends BaseController
     public function insertChat()
     {
         $formdata = $_POST;
-
-        // print_r($formdata);die;
-
         $model = new AdminModel();
         $result = $model->insert_formdata('msg_id', 'online_chat', $formdata);
         echo json_encode($result);
@@ -685,11 +722,7 @@ class AdminController extends BaseController
         $data['Faculty'] = $model->getFaculty();
         echo view('AdminSideBar/Notifications',$data);
     }
-    public function SendNotifications()
-    {
-        print_r($_POST);die;
-    }
-
+  
     public function add_menu()
     {
 
@@ -882,4 +915,25 @@ class AdminController extends BaseController
 
     
 
+}
+  public function SendNotifications()
+    {
+       // print_r($_POST);die;
+       $selected_faculty = $this->request->getPost('selected_faculty');
+       $selectedStudents = $this->request->getPost('selected_students');
+       $notification_date =$this->request->getPost('notification_date');
+       $notificationDescription = $this->request->getPost('notification_description');
+       $model = new AdminModel(); 
+       $result= [
+        'selected_faculty' => $selected_faculty,
+        'selected_students' => $selectedStudents, 
+        'notification_description' => $notificationDescription,
+         'notification_date' =>  $notification_date,
+    ];
+         $model->insertNotification($result);
+        
+      
+         return redirect()->to('Notifications');
+  }
+  
 }

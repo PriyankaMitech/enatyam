@@ -1,5 +1,3 @@
-</body>
-</html>
 <footer class="main-footer">
   <strong>Copyright &copy; 2023-2024 <a href="https://mitech">MI-TECH</a>.</strong> All rights reserved.
   </footer>
@@ -140,3 +138,6 @@ const togglePassword = (inputId, iconId) => {
             defaultCards.forEach(card => card.style.display = 'block');
         });
     </script>
+    </div>
+    </body>
+</html>

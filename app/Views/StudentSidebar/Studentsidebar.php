@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" -->
+        <!-- integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     
 </head>
 
 <body>
   <div class="wrapper">
+    
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <a href="#" class="brand-link">
       </a>
@@ -135,7 +136,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?php echo base_url()?>Chat" class="nav-link">
+                    <a href="<?php echo base_url()?>chatuser" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Chat</p>
                     </a>
