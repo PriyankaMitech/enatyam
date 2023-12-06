@@ -181,11 +181,11 @@
                             <tbody>
                                 <?php foreach ($data as $row) : ?>
                                 <tr>
-                                    <td><?php echo $row['student_id']; ?></td>
+                                    <td><?php echo $row['register_id']; ?></td>
                                     <td><?php echo $row['student_name']; ?></td>
                                     <td><?php echo $row['created_at']; ?></td>
                                     <td>
-                                    <a href="<?php echo base_url()?>Chat" class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
+                                    <a href="<?php echo base_url()?>chatuser/<?php echo $row['register_id']; ?>" class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
                                     <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>" class="btn btn-sm bg-teal"><i class="fas fa-file-upload"></i></a>
                                     </td>
                                 </tr>
