@@ -497,7 +497,7 @@ class AdminModel extends Model
     $selectedFacultyIds = $result['selected_faculty'];
     $selectedStudentIds = $result['selected_students'];
     $notificationDescription = $result['notification_description'];
-
+     $notification_date= $result['notification_date'];
     $facultyData = [];
     $studentData = [];
     if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
@@ -505,6 +505,7 @@ class AdminModel extends Model
             'register_id' => 'All',
             'notification_description' => $notificationDescription,
             'user_type' => 'faculty',
+            'timestamp' => $notification_date,
         ];
     } elseif (is_array($selectedFacultyIds)) {
         foreach ($selectedFacultyIds as $facultyId) {
@@ -512,6 +513,7 @@ class AdminModel extends Model
                 'register_id' => $facultyId,
                 'notification_description' => $notificationDescription,
                 'user_type' => 'faculty',
+                'timestamp' => $notification_date,
             ];
         }
     }
@@ -520,6 +522,7 @@ class AdminModel extends Model
             'register_id' => 'All',
             'notification_description' => $notificationDescription,
             'user_type' => 'student',
+            'timestamp' => $notification_date,
         ];
     } elseif (is_array($selectedStudentIds)) {
         foreach ($selectedStudentIds as $studentId) {
@@ -527,6 +530,7 @@ class AdminModel extends Model
                 'register_id' => $studentId,
                 'notification_description' => $notificationDescription,
                 'user_type' => 'student',
+                'timestamp' => $notification_date,
             ];
         }
     }
@@ -541,12 +545,15 @@ class AdminModel extends Model
     public function getUserRole($teacherId)
     {
     
+        $todayDate = date('Y-m-d H:i:s');
+
         $result = $this->db->table('notificationtable')
         ->where([
             'user_type' => 'faculty',
             'register_id' => 'All',
         ])
         ->orWhere('register_id', $teacherId)
+        ->where('timestamp >=', $todayDate) 
         ->get()
         ->getResultArray();
         
@@ -559,18 +566,21 @@ class AdminModel extends Model
     public function getUser($user_id)
     {
     
+        $todayDate = date('Y-m-d H:i:s');
+
         $result = $this->db->table('notificationtable')
-        ->where([
-            'user_type' => 'student',
-            'register_id' => 'All',
-        ])
-        ->orWhere('register_id', $user_id)
-        ->get()
-        ->getResultArray();
-        
+            ->where([
+                'user_type' => 'student',
+                'register_id' => 'All',
+            ])
+            ->orWhere('register_id', $user_id)
+            ->where('timestamp >=', $todayDate) 
+            ->get()
+            ->getResultArray();
+    
         if ($result) {
             return $result;
-        }else {
+        } else {
             return false;
         }
     }
