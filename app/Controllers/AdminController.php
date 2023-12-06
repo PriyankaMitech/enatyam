@@ -185,6 +185,7 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
+
     public function getDemoDetails()
     {
         if (isset($_SESSION['sessiondata'])) {
@@ -649,7 +650,8 @@ class AdminController extends BaseController
     public function chatwithstud()
     {
         $model = new AdminModel();
-        print_r($_SESSION);die;
+        print_r($_SESSION);
+        die;
         $receiverid = $this->request->uri->getSegments(1);
         $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
         $wherecond1 = array('id' => $receiverid[1]);
@@ -669,19 +671,18 @@ class AdminController extends BaseController
         $model = new AdminModel();
         if ($_SESSION['role'] == 'Faculty') {
             if (isset($_POST['studeid'])) {
-                $wherecond = array('receiver_id'=>$_POST['studeid']);
+                $wherecond = array('receiver_id' => $_POST['studeid']);
                 $result['getstud'] = $model->getdata('online_chat', $wherecond);
                 // echo '<pre>';print_r($result['getstud']);die;
                 echo json_encode($result['getstud']);
-            }else {
-                $wherecond = array('Assign_Techer_id'=>$_SESSION['id']);
+            } else {
+                $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
                 // $result['getstud'] = $model->getdata('register', $wherecond);
                 $result['getchat'] = $model->getdata('register', $wherecond);
                 // echo '<pre>';print_r($result['getchat']);die;
                 echo view('FacultysideBar/Chatwithstud', $result);
             }
-            
-        }else {
+        } else {
             echo 'student';
         }
         // print_r($_SESSION);die;
@@ -720,10 +721,11 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $data['admins'] = $model->getAdmins();
         $data['Faculty'] = $model->getFaculty();
-        echo view('AdminSideBar/Notifications',$data);
+        echo view('AdminSideBar/Notifications', $data);
     }
     public function SendNotifications()
     {
-        print_r($_POST);die;
+        print_r($_POST);
+        die;
     }
 }

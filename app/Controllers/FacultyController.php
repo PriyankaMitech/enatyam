@@ -93,13 +93,50 @@ class FacultyController extends BaseController
 
     $videoFile = $this->request->getFile('videoFile');
 
-    if (!$videoFile->isValid()) {
-      // return $this->fail($videoFile->getErrorString());
+    $type = $_FILES['videoFile']['type'];
+    // print_r($type);
+    // die;
+    switch ($type) {
+      case 'image/gif':
+      case 'image/jpg':
+      case 'image/png':
+        // do img config setup
+        if (!$videoFile->isValid()) {
+          // return $this->fail($videoFile->getErrorString());
+        }
+
+        $videoFile->move(ROOTPATH . 'public\uploads\images\facultyUploadedImages');
+
+        $videoFilename = $videoFile->getName();
+
+
+        break;
+      case 'avi':
+      case 'flv':
+      case 'wmv':
+      case 'mp3':
+      case 'wma':
+        // do video config
+        if (!$videoFile->isValid()) {
+          // return $this->fail($videoFile->getErrorString());
+        }
+
+        $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
+
+        $videoFilename = $videoFile->getName();
+        // print_r($videoFilename);
+
+
+        break;
     }
 
-    $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
+    // if (!$videoFile->isValid()) {
+    //   // return $this->fail($videoFile->getErrorString());
+    // }
 
-    $videoFilename = $videoFile->getName();
+    // $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
+
+    // $videoFilename = $videoFile->getName();
     // print_r($videoFilename);
     // die;
 
@@ -157,7 +194,7 @@ class FacultyController extends BaseController
         $query = $table->where('Faculty_id', $registerId)->get();
         if ($query->getNumRows() > 0) {
           $results = $query->getResult();
-       //   print_r($results);die;
+          //   print_r($results);die;
           return view('StudentuplodedVidio', ['results' => $results]);
         } else {
           return redirect()->to(base_url());
