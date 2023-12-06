@@ -593,7 +593,8 @@
                                     <i class="nav-icon fas fa-calendar-alt"></i>
                                     <p>Attendance</p>
                                 </a>
-                            </li>>
+                            </li>
+                            <li class="nav-item">
                                 <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
                                     <i class="nav-icon far fa-image"></i>
                                     <p>Videos/Images</p>
