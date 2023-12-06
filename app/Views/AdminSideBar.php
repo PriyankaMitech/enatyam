@@ -291,9 +291,9 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="" class="nav-link">
+                  <a href="<?= base_url()?>chatuser" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Whats App
+                    <p>Chat
                     </p>
                   </a>
                 </li>

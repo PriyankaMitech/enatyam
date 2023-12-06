@@ -44,45 +44,68 @@ $page = $uri->getSegment(count($pages));
                     <div class="direct-chat-messages">
                         <?php if (isset($chatdata)) {
                         foreach ($chatdata as $chat) {
-                        if ($chat['sender_id'] == $_SESSION['id']) { ?>
-                        <div class="direct-chat-msg right">
-                            <div class="direct-chat-infos clearfix">
-                            <span class="direct-chat-name float-left">Alexander Pierce</span>
-                            <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                            if ($chat['sender_id'] == $_SESSION['sessiondata']['id']) { ?>
+                            <div class="direct-chat-msg right">
+                                <div class="direct-chat-infos clearfix">
+                                <span class="direct-chat-name float-left">Alexander Pierce</span>
+                                <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                                </div>
+                                <img class="direct-chat-img" src="<?php echo base_url()?>public/images/user.png" alt="Message User Image">
+                                <div class="direct-chat-text">
+                                <?php echo $chat['message'] ?>
+                                </div>
                             </div>
-                            <img class="direct-chat-img" src="<?php echo base_url()?>public/images/user.png" alt="Message User Image">
-                            <div class="direct-chat-text">
-                            <?php echo $chat['message'] ?>
+                            <?php  } else { ?>
+                            <div class="direct-chat-msg ">
+                                <div class="direct-chat-infos clearfix">
+                                <span class="direct-chat-name float-right">Sarah Bullock</span>
+                                <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                                </div>
+                                <img class="direct-chat-img" src="<?php echo base_url()?>public/images/user.png" alt="Message User Image">
+                                <div class="direct-chat-text">
+                                <?php echo $chat['message'] ?>
+                                </div>
                             </div>
-                        </div>
-                        <?php  } else { ?>
-                        <div class="direct-chat-msg ">
-                            <div class="direct-chat-infos clearfix">
-                            <span class="direct-chat-name float-right">Sarah Bullock</span>
-                            <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
-                            </div>
-                            <img class="direct-chat-img" src="<?php echo base_url()?>public/images/user.png" alt="Message User Image">
-                            <div class="direct-chat-text">
-                            <?php echo $chat['message'] ?>
-                            </div>
-                        </div>
-                        <?php } } } ?>
+                        <?php } } } else { ?> No chats yet <?php } ?>
                     </div>
 
                     <div class="direct-chat-contacts">
                         <ul class="contacts-list">
-                            <?php if (isset($getuser)) {
-                                foreach ($getuser as $chat) {?>
+                            <?php if (!$_SESSION['sessiondata']['role'] == 'Admin') {?>
                             <li>
-                                <a href="<?= base_url()?>chatuser/<?=$chat->id?>">
+                                <a href="<?= base_url()?>chatuser/1">
                                     <img class="contacts-list-img" src="<?php echo base_url()?>public/images/user.png" alt="User">
 
                                     <div class="contacts-list-info">
                                     <span class="contacts-list-name">
-                                        <?=$chat->full_name?>
+                                        Admin
+                                        <!-- <small class="contacts-list-date float-right">2/28/2015</small> -->
+                                    </span>
+                                    <!-- <span class="contacts-list-msg">How have you been? I was...</span> -->
+                                    </div>
+                                </a>
+                            </li> 
+                            <?php } ?>
+                            <?php if (isset($getuser) && !empty($getuser)) {
+                                foreach ($getuser as $chat) { 
+                                    if ($_SESSION['sessiondata']['role'] == 'Faculty' || $_SESSION['sessiondata']['role'] == 'Admin') {
+                                        $id= $chat->id;
+                                        $full_name = $chat->full_name;
+                                    }else if($_SESSION['sessiondata']['role'] == 'Student') {
+                                        $id = $chat->faculty_id;
+                                        $full_name = $chat->faculty_name;
+                                    }
+                            ?>
+                            <li>
+                                <a href="<?= base_url()?>chatuser/<?=$id?>">
+                                    <img class="contacts-list-img" src="<?php echo base_url()?>public/images/user.png" alt="User">
+
+                                    <div class="contacts-list-info">
+                                    <span class="contacts-list-name">
+                                        <?=$full_name?>
                                         <small class="contacts-list-date float-right">2/28/2015</small>
                                     </span>
-                                    <span class="contacts-list-msg">How have you been? I was...</span>
+                                    <span class="contacts-list-msg"><?=$chat->role?></span>
                                     </div>
                                 </a>
                             </li>
@@ -93,7 +116,7 @@ $page = $uri->getSegment(count($pages));
                 <div class="card-footer">
                     <form action="#" id="chatform" method="post">
                     <div class="input-group">
-                        <input type="hidden" name="sender_id" value="<?php print_r($_SESSION['id']);?>">
+                        <input type="hidden" name="sender_id" value="<?php print_r($_SESSION['sessiondata']['id']);?>">
                         <input type="hidden" name="receiver_id" value="<?php print_r($page)?>">
                         <input type="text" name="message" placeholder="Type Message ..." class="form-control chatmsg">
                         <span class="input-group-append">
