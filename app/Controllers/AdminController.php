@@ -724,36 +724,22 @@ class AdminController extends BaseController
     }
     public function SendNotifications()
     {
+       // print_r($_POST);die;
        $selected_faculty = $this->request->getPost('selected_faculty');
        $selectedStudents = $this->request->getPost('selected_students');
+       $notification_date =$this->request->getPost('notification_date');
        $notificationDescription = $this->request->getPost('notification_description');
        $model = new AdminModel(); 
        $result= [
         'selected_faculty' => $selected_faculty,
         'selected_students' => $selectedStudents, 
         'notification_description' => $notificationDescription,
+         'notification_date' =>  $notification_date,
     ];
          $model->insertNotification($result);
         
       
          return redirect()->to('Notifications');
   }
-   public function getNotifications()
-   {
-      $session = session();
-       $registerId = $session->get('id');
-      $model = new AdminModel(); 
-      $notifications = $model->getnotificationtable($registerId);
-      if (!empty($notifications)) {
-        $userRole = $model->getUserRole($registerId);
-    //     print_r($userRole);die;
-        if ($userRole === 'student') {
-            return redirect()->to('uploadMedia')->with('notifications', $notifications);
-        } elseif ($userRole === 'faculty') {
-            return redirect()->to('FacultyDashboard')->with('notifications', $notifications);
-        } else {
-        }
-    } else {
-    }
-}
+  
 }
