@@ -79,24 +79,7 @@ class AdminController extends BaseController
 
 
 
-    public function Getcalender()
-    {
-        if (isset($_SESSION['sessiondata'])) {
-            $sessionData = $_SESSION['sessiondata'];
 
-            $email = $sessionData['email'] ?? null;
-            $password = $sessionData['password'] ?? null;
-
-            if ($email !== null && $password !== null) {
-
-                return view('AdminCalender');
-            } else {
-                return redirect()->to(base_url());
-            }
-        } else {
-            return redirect()->to(base_url());
-        }
-    }
 
 
     public function getAdminSideBarAll()
@@ -544,27 +527,7 @@ class AdminController extends BaseController
     }
 
 
-    public function AdduserByadmin()
-    {
-        //  print_r($_POST);die;
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
-        $mo_number = $this->request->getPost('password');
-        //  print_r($email);die;
-        $model = new AdminModel();
-        $data = [
-            'full_name' => $this->request->getVar('full_name'),
-            'email' => $email,
-            'mobile_no' => $mo_number,
-            'role' => 'Admin',
-            'password' => $password,
-            'confirm_pass' => $password,
-            'is_register_done' => 'Y',
-        ];
-        //print_r($data);die;
-        $model->AddUserByAdmin($data);
-        return redirect()->to('AddNewUser');
-    }
+
 
     public function AdminList()
     {
@@ -759,7 +722,201 @@ class AdminController extends BaseController
         $data['Faculty'] = $model->getFaculty();
         echo view('AdminSideBar/Notifications',$data);
     }
-    public function SendNotifications()
+  
+    public function add_menu()
+    {
+
+        echo view('add_menu');
+    }
+  
+    
+
+    public function set_menu()
+	{
+
+        $data = [
+                    'menu_name' => $this->request->getVar('menu_name'),
+                    'url_location' => $this->request->getVar('url_location'),
+                    'created_on' => date('Y:m:d H:i:s'),
+                ];
+
+        $db = \Config\Database::Connect();
+        if($this->request->getVar('id') == ""){
+            $add_data = $db->table('tbl_menu');
+            $add_data->insert($data);
+            session()->setFlashdata('success', 'Data added successfully.');
+        }else{
+            $update_data = $db->table('tbl_menu')->where('id',$this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
+
+        return redirect()->to('menu_list');
+
+	}
+
+    public function menu_list(){
+        $model = new AdminModel();
+
+        $wherecond = array('is_deleted'=> 'Y');
+
+
+        $data['menu_data'] = $model->get_all_data('tbl_menu', $wherecond);
+        // echo "<pre>";print_r($data['menu_data']);exit();
+        echo view('menu_list',$data);
+    }
+
+    public function get_menu()
+	{
+        
+        $model = new AdminModel();
+
+        $menu_id = $this->request->uri->getSegments(1);
+        $data['single_data'] = $model->get_single_data('tbl_menu', $menu_id[1]);
+
+        echo view('add_menu',$data);
+
+	}
+
+
+
+
+    public function delete()
+	{
+        
+        $uri_data = $this->request->uri->getSegments(2);
+
+        $id = base64_decode($uri_data[1]);
+        $table = $uri_data[2];
+        
+		// echo "<pre>"; print_r($uri_data);
+        // echo $table;
+		// exit();
+	
+		// Update the database row with is_deleted = 1
+		$data = ['is_deleted' => 'N'];
+		$db = \Config\Database::connect();
+	
+	
+		$update_data = $db->table($table)->where('id',$id);
+		$update_data->update($data);
+		session()->setFlashdata('success', 'Data deleted successfully.');
+		return redirect()->back();
+	
+	
+	
+		// Redirect or return a response as needed
+	}
+
+
+    public function add_new_user()
+    {
+        $model = new AdminModel();
+
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
+
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+
+            if ($email !== null && $password !== null) {
+
+                $wherecond = array('is_deleted'=> 'Y');
+
+                $data['menu_data'] = $model->get_all_data('tbl_menu',$wherecond);
+
+
+                return view('add_user',$data);
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
+    }
+
+
+    public function AdduserByadmin()
+    {
+        $accessLevels = $this->request->getVar('access_level');
+
+		// Convert the array of selected checkboxes to a comma-separated string
+		$accessLevelString = implode(',', $accessLevels);
+        $data = [
+            'full_name' => $this->request->getVar('full_name'),
+            'email' => $this->request->getPost('email'),
+            'mobile_no' => $this->request->getPost('mobile_no'),
+            'role' => 'sub_admin',
+            'password' => $this->request->getPost('password'),
+            'access_level' => $accessLevelString,
+            'is_register_done' => 'Y',
+            'created_on' => date('Y:m:d H:i:s'),
+        ];
+
+        $db = \Config\Database::Connect();
+        if($this->request->getVar('id') == ""){
+            $add_data = $db->table('register');
+            $add_data->insert($data);
+            session()->setFlashdata('success', 'Data added successfully.');
+        }else{
+            $update_data = $db->table('register')->where('id',$this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
+
+        return redirect()->to('user_list');
+
+    }
+
+    public function user_list(){
+        $model = new AdminModel();
+
+        $wherecond = array('is_deleted'=> 'Y', 'role'=> 'sub_admin');
+        $data['user_data'] = $model->get_all_data('register', $wherecond);
+        // echo "<pre>";print_r($data['menu_data']);exit();
+        echo view('user_list',$data);
+    }
+
+
+    public function get_user()
+	{
+        
+        $model = new AdminModel();
+        $wherecond = array('is_deleted'=> 'Y');
+
+        $menu_id = $this->request->uri->getSegments(1);
+        $data['single_data'] = $model->get_single_data('register', $menu_id[1]);
+        $data['menu_data'] = $model->get_all_data('tbl_menu',$wherecond);
+
+        // echo "<pre>";print_r($data['single_data']);exit();
+
+        echo view('add_user',$data);
+
+	}
+
+    
+  public function chechk_menu_name_id()
+  {
+      $admin_model = new AdminModel();
+      $menu_name = $this->request->getPost('menu_name');
+  
+  if ($menu_name) {
+      $menuname = $admin_model->checkexist_menu($menu_name, 'url_location');
+      // echo "<pre>";
+      // print_r($email);exit();
+      return json_encode($menuname);
+  } else {
+      return json_encode([]);
+  }
+  
+  }
+
+
+
+    
+
+
+  public function SendNotifications()
     {
        // print_r($_POST);die;
        $selected_faculty = $this->request->getPost('selected_faculty');

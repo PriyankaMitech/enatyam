@@ -1,36 +1,76 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; 2023-2024 <a href="https://adminlte.io">MI-TECH</a>.</strong>
     All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
-    </div>
+
 </footer>
 
 </div>
 
-<script src="plugins/jquery/jquery.min.js"></script>
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+
+
+
+
+<script src="<?=base_url(); ?>plugins/jquery/jquery.min.js"></script>
+<script src="<?=base_url(); ?>plugins/jquery-ui/jquery-ui.min.js"></script>
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="plugins/chart.js/Chart.min.js"></script>
-<script src="plugins/sparklines/sparkline.js"></script>
+
+<script src="<?=base_url(); ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?=base_url(); ?>plugins/chart.js/Chart.min.js"></script>
+<script src="<?=base_url(); ?>plugins/sparklines/sparkline.js"></script>
+<script src="<?=base_url(); ?>plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="<?=base_url(); ?>plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="<?=base_url(); ?>plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="<?=base_url(); ?>plugins/moment/moment.min.js"></script>
+<script src="<?=base_url(); ?>plugins/daterangepicker/daterangepicker.js"></script>
+<script src="<?=base_url(); ?>plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="<?=base_url(); ?>plugins/summernote/summernote-bs4.min.js"></script>
+<script src="<?=base_url(); ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="<?=base_url(); ?>dist/js/adminlte.js"></script>
+<script src="<?=base_url(); ?>dist/js/pages/dashboard.js"></script>
 <script src="<?php echo base_url()?>public/js/custom.js"></script>
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<script src="dist/js/adminlte.js"></script>
-<script src="dist/js/pages/dashboard.js"></script>
 <script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
 
-<!-- <script src="dist/js/adminlte.min.js"></script> -->
+<script src="<?=base_url(); ?>/public/js/jquery.validate.min.js"></script>
+
+<!-- <script src="<?=base_url(); ?>dist/js/adminlte.min.js"></script> -->
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
+
+
+<!-- DataTables  & Plugins -->
+<script src="<?=base_url(); ?>plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?=base_url(); ?>plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?=base_url(); ?>plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?=base_url(); ?>plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="<?=base_url(); ?>plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<?=base_url(); ?>plugins/jszip/jszip.min.js"></script>
+<script src="<?=base_url(); ?>plugins/pdfmake/pdfmake.min.js"></script>
+<script src="<?=base_url(); ?>plugins/pdfmake/vfs_fonts.js"></script>
+<script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="<?=base_url(); ?>dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="<?=base_url(); ?>dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+
+    $('table').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 
 <script>
     $(document).ready(function() {
@@ -1128,6 +1168,208 @@ calendar.render();
         option.text = year;
         yearDropdown.add(option);
     }
+</script>
+
+
+<script>
+$(document).ready(function() {
+    $('#add_menu_form ').validate({
+        rules: {
+            menu_name: {
+                required: true,
+            },
+            url_location : {
+                required: true,
+                
+            },
+        },
+        messages: {
+            menu_name: {
+            required: 'Please enter menu name.',
+            },
+            url_location : {
+                required: 'Please enter URL location.',
+            }, 
+        }
+    });
+});
+
+
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if the flash message exists
+        var flashMessage = document.querySelector('.flash-success');
+
+        if (flashMessage) {
+            // Set a timeout to hide the flash message after 5 minutes (300,000 milliseconds)
+            setTimeout(function() {
+                flashMessage.style.display = 'none';
+            }, 3000);
+        }
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#url_location').on('input', function() {
+            var url_location = $(this).val();
+            // alert(url_location);
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_menu_name_id',
+                data: {
+                    menu_name: url_location
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response == 'false') {
+                        $('#menu_nameError').text('');
+                        $('.submitButton').prop('disabled', false);
+
+                    } else if (response == 'true') {
+                        $('#menu_nameError').text('This URL Location is allredy available.');
+                        $('.submitButton').prop('disabled', true);
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+
+<script>
+    $.validator.addMethod("mobile", function(value, element) {
+        // Check if the input is a valid email or a valid mobile number
+        return this.optional(element) || /^[0-9]{10}$/i.test(value);
+    }, "Please enter a valid mobile number.");
+
+    $.validator.addMethod('lettersOnly', function(value, element) {
+        return /^[a-zA-Z\s]*$/.test(value); // This regex allows only letters and spaces
+    }, 'Please enter letters only');
+
+    $.validator.addMethod('customPassword', function(value, element) {
+        // Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol. It should be at least 8 characters long.
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$/.test(value);
+    }, 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol (!@#$%^&*) and be at least 8 characters long');
+
+    $.validator.addMethod("emailval", function(value, element) {
+        // Check if the input is a valid email or a valid mobile number
+        return this.optional(element) || /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/i.test(value);
+    }, "Please enter a valid email address.");
+
+    $(document).ready(function() {
+        $('#user_form').validate({
+            rules: {
+                full_name: {
+                    required: true,
+                    lettersOnly: true // Use the custom method here
+                },
+                email: {
+                    required: true,
+                    email: true,
+                    emailval: true,
+                },
+                mobile_no: {
+                    required: true,
+                    mobile: true
+                },
+                password: {
+                    required: true,
+                    customPassword: true
+                },
+                // confirm_pass: {
+                //     required: true,
+                //     equalTo: '#password'
+                // }
+            },
+            messages: {
+                full_name: {
+                    required: 'Please enter your name.',
+                    lettersOnly: 'Please enter letters only.' // Custom error message
+                },
+                email: {
+                    required: 'Please enter your email address.',
+                    email: 'Please enter a valid email address.',
+                    emailval: 'Please enter a valid email address.'
+                },
+                mobile_no: {
+                    required: 'Please enter your mobile number.',
+                    mobile: 'Please enter your mobile number.',
+                },
+                password: {
+                    required: "Password is required.",
+                    customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long"
+                },
+                // confirm_pass: {
+                //     required: 'Please confirm your password.',
+                //     equalTo: 'Passwords do not match.'
+                // }
+            },
+          
+          
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#email').on('input', function() {
+            var username = $(this).val();
+            // alert(username);
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_username_id',
+                data: {
+                    username: username
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response == 'false') {
+                        $('#emailError').text('');
+                        $('.submitButton').prop('disabled', false);
+
+                    } else if (response == 'true') {
+                        $('#emailError').text('This email is allredy available.');
+                        $('.submitButton').prop('disabled', true);
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        $('#mobile_no').on('input', function() {
+            var mobile_no = $(this).val();
+            // alert(username);
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_mobile_no_id',
+                data: {
+                    mobile_no: mobile_no
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response == 'false') {
+                        $('#mobile_noError').text('');
+                        $('.submitButton').prop('disabled', false);
+
+                    } else if (response == 'true') {
+                        $('#mobile_noError').text('This mobile number is allredy available.');
+                        $('.submitButton').prop('disabled', true);
+                    }
+                }
+            });
+        });
+    });
 </script>
 <!-- </body>
 </html> -->

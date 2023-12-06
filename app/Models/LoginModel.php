@@ -248,6 +248,7 @@ class LoginModel extends Model
                 'user_name'          => $result->full_name,
                 'mobile_no'          => $result->mobile_no,
                 'Payment_status'     => $result->Payment_status,
+                'access_level'      => $result->access_level,
                 'is_logged_in'       => 'Y',
             ];
 
@@ -276,6 +277,8 @@ class LoginModel extends Model
                 'user_name'          => $result->full_name,
                 'mobile_no'          => $result->mobile_no,
                 'Payment_status'     => $result->Payment_status,
+                'access_level'      => $result->access_level,
+
             ];
         
 
@@ -342,6 +345,9 @@ class LoginModel extends Model
         
         return !empty($result);
     }
+
+
+
 
     public function check_otp($otp, $mobile_no, $email) {
         $result = $this->db
