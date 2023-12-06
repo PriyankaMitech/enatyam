@@ -7,7 +7,7 @@ $page = $uri->getSegment(count($pages));
 <?php
     if (isset($_SESSION['sessiondata'])) {
         $role = $_SESSION['sessiondata']['role'];
-        if ($role == 'Faculty' || $role == 'Admin' || $role == 'student') {
+        if ($role == 'Faculty') {
             echo view('FacultySidebar2.php');
         } elseif ($role == 'Student') {
             echo view('Studentsidebar/Studentsidebar');
@@ -17,19 +17,7 @@ $page = $uri->getSegment(count($pages));
     }
 ?>
 
-<nav class="main-header navbar navbar-expand navbar-light">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?php echo base_url('logout'); ?>" class="nav-link">Logout</a>
-    </li>
-    </ul>
-</nav>
+
 <div class="content-wrapper chat">
     <div class="content-header">
         <div class="container-fluid">
