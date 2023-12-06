@@ -240,4 +240,6 @@ class FacultyController extends BaseController
       return redirect()->to(base_url());
     }
   }
+
+
 }

@@ -484,4 +484,59 @@ class AdminModel extends Model
         }
     }
 
+
+    public function insert_and_update_data($table, $array_name, $id) {
+        if($id == ""){
+            // echo "<pre>";print_r($array_name);exit();
+            $result = $this->db->table($table)->insert($array_name);
+            return true;
+        }else{
+            $result = $this->db->table($table)->where('id', $id)->update($array_name);
+            return false;
+        }
+
+    }
+
+    public function get_all_data($table, $wherecond)
+    {
+        $result = $this->db->table($table)
+                    ->where($wherecond)
+                    ->get()
+                    ->getResultArray();  
+                    
+        if (!empty($result)) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
+
+    public function get_single_data($table,$id)
+    {
+        $result = $this->db->table($table)
+                        ->where('is_deleted', 'Y')
+                        ->where('id', $id)
+                    ->get()
+                    ->getRowArray();  
+                    
+        if (!empty($result)) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
+    public function checkexist_menu($value, $column) {
+        $result = $this->db
+        ->table('tbl_menu')
+        ->select($column)
+        ->where([$column => ''.$value.''])
+        ->get()->getRow();
+
+        // echo "<pre>";print_r($result);exit();
+        
+        return !empty($result);
+    }
+
 }

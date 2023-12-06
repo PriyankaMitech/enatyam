@@ -2330,7 +2330,7 @@
 
 
 
-<script>
+<!-- <script>
     $(document).ready(function() {
         // Add a custom validation method for email or mobile
         $.validator.addMethod("emailOrMobile", function(value, element) {
@@ -2356,7 +2356,7 @@
             }
         });
     });
-</script>
+</script> -->
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

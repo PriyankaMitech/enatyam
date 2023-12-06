@@ -1,0 +1,19 @@
+.error{
+    color: crimson;
+}
+
+#flash-success-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9;
+  }
+  
+  .flash-success {
+    background-color: green;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
