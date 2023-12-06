@@ -648,9 +648,18 @@ class AdminController extends BaseController
     public function chatuser()
     {
         $model = new AdminModel();
-        $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
-        $result['getuser'] = $model->getalldata('register', $wherecond);
-        echo '<pre>';print_r($result);die;
+        if ($_SESSION['sessiondata']['role'] == 'Admin') {
+            $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
+            $result['getuser'] = $model->getalldata('register', $wherecond);
+        }else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+            $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
+            $result['getuser'] = $model->getalldata('register', $wherecond);
+        }else if($_SESSION['sessiondata']['role'] == 'Student') {
+            $wherecond = array('register_id' => $_SESSION['sessiondata']['id']);
+            $result['getuser'] = $model->getalldata('faculty', $wherecond);
+        }
+        
+        // echo '<pre>';print_r($result);die;
         echo view('Chatuser', $result);
     }
 
@@ -658,11 +667,21 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
         $receiverid = $this->request->uri->getSegments(1);
-        $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
-        $result['getuser'] = $model->getalldata('register', $wherecond);
-        $wherecond2 = array('sender_id' => $_SESSION['id'], 'receiver_id' => $receiverid[1]);
-        $wherecond3 = array('sender_id' => $receiverid[1], 'receiver_id' => $_SESSION['id']);
-        $result['chatdata'] = $model->getchat('online_chat', $_SESSION['id'], $receiverid[1]);
+        if ($_SESSION['sessiondata']['role'] == 'Admin') {
+            $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
+            $result['getuser'] = $model->getalldata('register', $wherecond);
+        }else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+            $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
+            $result['getuser'] = $model->getalldata('register', $wherecond);
+        }else if($_SESSION['sessiondata']['role'] == 'Student') {
+            $wherecond = array('register_id' => $_SESSION['sessiondata']['id']);
+            $result['getuser'] = $model->getalldata('faculty', $wherecond);
+        }
+        // $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
+        // $result['getuser'] = $model->getalldata('register', $wherecond);
+        $wherecond2 = array('sender_id' => $_SESSION['sessiondata']['id'], 'receiver_id' => $receiverid[1]);
+        $wherecond3 = array('sender_id' => $receiverid[1], 'receiver_id' => $_SESSION['sessiondata']['id']);
+        $result['chatdata'] = $model->getchat('online_chat', $_SESSION['sessiondata']['id'], $receiverid[1]);
         // echo '<pre>';print_r($result);die;
         echo view('chatuser', $result);
     }
@@ -672,7 +691,7 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $receiverid = $this->request->uri->getSegments(1);
         echo '<pre>';print_r($receiverid[1]);die;
-        $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
+        $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
         $wherecond1 = array('id' => $receiverid[1]);
         $wherecond2 = array('sender_id' => $_SESSION['id'], 'receiver_id' => $receiverid[1]);
         $wherecond3 = array('sender_id' => $receiverid[1], 'receiver_id' => $_SESSION['id']);
