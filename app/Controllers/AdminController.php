@@ -645,12 +645,33 @@ class AdminController extends BaseController
         $model->updateFacultyForGroup($groupName, $facultyId);
         return redirect()->to('StudentGroups');
     }
+    public function chatuser()
+    {
+        $model = new AdminModel();
+        $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
+        $result['getuser'] = $model->getalldata('register', $wherecond);
+        echo '<pre>';print_r($result);die;
+        echo view('Chatuser', $result);
+    }
+
+    public function singlechat()
+    {
+        $model = new AdminModel();
+        $receiverid = $this->request->uri->getSegments(1);
+        $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
+        $result['getuser'] = $model->getalldata('register', $wherecond);
+        $wherecond2 = array('sender_id' => $_SESSION['id'], 'receiver_id' => $receiverid[1]);
+        $wherecond3 = array('sender_id' => $receiverid[1], 'receiver_id' => $_SESSION['id']);
+        $result['chatdata'] = $model->getchat('online_chat', $_SESSION['id'], $receiverid[1]);
+        // echo '<pre>';print_r($result);die;
+        echo view('chatuser', $result);
+    }
 
     public function chatwithstud()
     {
         $model = new AdminModel();
-        print_r($_SESSION);die;
         $receiverid = $this->request->uri->getSegments(1);
+        echo '<pre>';print_r($receiverid[1]);die;
         $wherecond = array('Assign_Techer_id' => $_SESSION['id']);
         $wherecond1 = array('id' => $receiverid[1]);
         $wherecond2 = array('sender_id' => $_SESSION['id'], 'receiver_id' => $receiverid[1]);
@@ -661,7 +682,7 @@ class AdminController extends BaseController
         $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3, $receiverid[1]);
 
         // echo '<pre>';print_r($result['getstud']);die;
-        echo view('FacultysideBar/Chatwithstud', $result);
+        echo view('Chatuser', $result);
     }
 
     public function chatwithteacher()
@@ -703,9 +724,6 @@ class AdminController extends BaseController
     public function insertChat()
     {
         $formdata = $_POST;
-
-        // print_r($formdata);die;
-
         $model = new AdminModel();
         $result = $model->insert_formdata('msg_id', 'online_chat', $formdata);
         echo json_encode($result);

@@ -440,6 +440,16 @@ class AdminModel extends Model
         }
     }
 
+    public function getalldata($table, $wherecond) {
+        $result = $this->db->table($table)->where($wherecond)->get()->getResult();
+        
+        if ($result) {
+            return $result;
+        }else {
+            return false;
+        }
+    }
+
     public function getdata($table, $wherecond) {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
 
@@ -472,8 +482,7 @@ class AdminModel extends Model
     }
 
     public function getchat($tablechat, $sender, $receiver) {
-        $result = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = ".$sender." AND receiver_id = ".$receiver.")
-        OR (sender_id = ".$sender." AND receiver_id = ".$receiver.") ORDER BY msg_id");
+        $result = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = ".$sender." AND receiver_id = ".$receiver.") OR (sender_id = ".$receiver." AND receiver_id = ".$sender.") ORDER BY msg_id");
         // echo '<pre>';print_r($this->getLastQuery());
         //$result = $this->db->table($table)->where($wherecond2.' OR ' .$wherecond3)->get()->getResult();
         
