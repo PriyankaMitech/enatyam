@@ -31,12 +31,19 @@ class facultymodel extends Model
         // print_r($data);
         // die;
         // Insert the video information into the 'uploaded_videos' table
-        $this->db->table($this->table2)->insert($data);
+        $res = $this->db->table($this->table2)->insert($data);
+        // if ($res) {
+        //     echo "true!!!!";
+        // }
 
         // Update the 'video_name' column in the 'students' table
-        $this->db->table($this->table)
+        $res1 = $this->db->table($this->table)
             ->where('student_id', $studentId)
             ->update(['video_name' => $videoFilename]);
+        // if ($res1) {
+        //     echo "again true!!!!!1";
+        //     die;
+        // }
     }
 
 
@@ -66,7 +73,7 @@ class facultymodel extends Model
     {
         // $slots = $this->db->table('schedule')
         //   ->select('*')
-          
+
         //     ->where('faculty_register_id', $registerId)
         //     ->get()
         //     ->getResult();
@@ -85,5 +92,6 @@ class facultymodel extends Model
         ->getResult();
 
     return $result;
+
     }
 }

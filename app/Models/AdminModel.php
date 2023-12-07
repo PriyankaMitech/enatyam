@@ -417,25 +417,27 @@ class AdminModel extends Model
         return $query->getResultArray();
     }
 
-    
-    public function insert_formdata($id, $table, $insertdata) {
+
+    public function insert_formdata($id, $table, $insertdata)
+    {
         $result['insert'] = $this->db->table($table)->insert($insertdata);
-        
+
         if ($result['insert']) {
-            $insertedID = $this->db->insertID(); 
+            $insertedID = $this->db->insertID();
             $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
             return $result;
-        }else {
+        } else {
             return false;
         }
     }
 
-    public function getsinglerow($table, $wherecond) {
+    public function getsinglerow($table, $wherecond)
+    {
         $result = $this->db->table($table)->where($wherecond)->get()->getRow();
-        
+
         if ($result) {
             return $result;
-        }else {
+        } else {
             return false;
         }
     }
@@ -451,6 +453,7 @@ class AdminModel extends Model
     }
 
     public function getdata($table, $wherecond) {
+
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
 
         $sender = $_SESSION['id'];
@@ -458,10 +461,10 @@ class AdminModel extends Model
             if (isset($result[0]->msg_id)) {
                 foreach ($result as $singlechat) {
                     $receiver = $singlechat->receiver_id;
-                    $chat = $this->db->query("SELECT * FROM online_chat WHERE (sender_id = ".$sender." AND receiver_id = ".$receiver.") OR (sender_id = ".$receiver." AND receiver_id = ".$sender.") ORDER BY msg_id ")->getResultArray();
+                    $chat = $this->db->query("SELECT * FROM online_chat WHERE (sender_id = " . $sender . " AND receiver_id = " . $receiver . ") OR (sender_id = " . $receiver . " AND receiver_id = " . $sender . ") ORDER BY msg_id ")->getResultArray();
                 }
                 return $chat;
-            }else {
+            } else {
                 foreach ($result as $student) {
                     $receiver = $student->id;
                     $chat[] = $this->getchat('online_chat', $sender, $receiver);
@@ -476,10 +479,11 @@ class AdminModel extends Model
                 );
                 return $output;
             }
-        }else {
+        } else {
             return false;
         }
     }
+
 
     public function getchat($tablechat, $sender, $receiver) {
         $chat = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = ".$sender." AND receiver_id = ".$receiver.") OR (sender_id = ".$receiver." AND receiver_id = ".$sender.") ORDER BY msg_id");
