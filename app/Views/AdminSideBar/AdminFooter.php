@@ -461,56 +461,7 @@
         toggleFormElementsVisibility();
     });
 </script>
-      <script>
-            $(document).ready(function() {
-                var groupSessionTable = $('#groupSessionTable').DataTable();
-                $('#selectedRowsTable').hide();
-                $('#groupSessionTable tbody').on('change', '.select-checkbox', function() {
-                    if ($(this).prop('checked')) {
-                        var rowData = $(this).closest('tr').clone();
-                        rowData.find('td:first-child input').remove();
-                        $('#selectedRowsBody').append(rowData);
-                    } else {
-                        var rowIndex = $(this).closest('tr').index();
-                        $('#selectedRowsBody tr').eq(rowIndex).remove();
-                    }
-                    updateRowNumbers();
-                    var hasSelectedRows = $('#selectedRowsBody tr').length > 0;
-                    $('#selectedRowsTable').toggle(hasSelectedRows);
-                });
-
-                function toggleGroupNameInputVisibility() {
-                    var hasSelectedRows = $('#selectedRowsBody tr').length > 0;
-                    $('#groupNameContainer').toggle(hasSelectedRows);
-                }
-                toggleGroupNameInputVisibility();
-                $('#groupSessionTable tbody').on('change', '.select-checkbox', function() {
-                    toggleGroupNameInputVisibility();
-                });
-                $('#postSelectedRows').on('click', function() {
-                    var selectedRowIds = [];
-                    $('#selectedRowsBody tr').each(function() {
-                        var rowId = $(this).attr('data-id');
-                        selectedRowIds.push(rowId);
-                    });
-                    $('#selectedRowsTable').append('<input type="hidden" name="selectedRowIds" value="' +
-                        selectedRowIds.join(',') + '">');
-                });
-                $('#courseSearch').on('input', function() {
-                    groupSessionTable.columns(3).search(this.value).draw();
-                });
-                $('#subCourseSearch').on('input', function() {
-                    groupSessionTable.columns(4).search(this.value).draw();
-                });
-            });
-
-            function updateRowNumbers() {
-                $('#selectedRowsBody tr').each(function(index) {
-                    $(this).find('td:first-child').text(index + 1);
-                });
-            }
-        </script>
-
+      
   
 </body>
 
