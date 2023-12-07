@@ -10,7 +10,7 @@ $page = $uri->getSegment(count($pages));
         if ($role == 'Faculty') {
             echo view('FacultySidebar2.php');
         } elseif ($role == 'Student') {
-            echo view('Studentsidebar/Studentsidebar');
+            echo view('StudentSidebar/Studentsidebar');
         } else {
             echo view('AdminSideBar');
         }
@@ -25,7 +25,7 @@ $page = $uri->getSegment(count($pages));
           <div class="col-md-8">
             <div class="card card-success card-outline direct-chat direct-chat-success">
                 <div class="card-header">
-                    <h3 class="card-title">Direct Chat</h3>
+                    <h3 class="card-title"><?php //echo '<pre>';print_r($chatdata);die;?><?php //$chatdata[0]['full_name']?></h3>
 
                     <div class="card-tools">
                     <span title="3 New Messages" class="badge bg-success">3</span>
@@ -41,11 +41,16 @@ $page = $uri->getSegment(count($pages));
                     <div class="direct-chat-messages">
                         <?php if (isset($chatdata)) {
                         foreach ($chatdata as $chat) {
+                            $time = new DateTime($chat['created_at']);
+                            $date = date("j M ", strtotime($chat['created_at']));
+                            
+                            $time = $time->format('H:i');
+                            // print_r($time); die;
                             if ($chat['sender_id'] == $_SESSION['sessiondata']['id']) { ?>
                             <div class="direct-chat-msg right">
                                 <div class="direct-chat-infos clearfix">
                                 <span class="direct-chat-name float-left">Alexander Pierce</span>
-                                <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                                <span class="direct-chat-timestamp float-right"><?= $date; echo $time ;?></span>
                                 </div>
                                 <img class="direct-chat-img" src="<?php echo base_url()?>public/images/user.png" alt="Message User Image">
                                 <div class="direct-chat-text">
@@ -56,7 +61,7 @@ $page = $uri->getSegment(count($pages));
                             <div class="direct-chat-msg ">
                                 <div class="direct-chat-infos clearfix">
                                 <span class="direct-chat-name float-right">Sarah Bullock</span>
-                                <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                                <span class="direct-chat-timestamp float-left"><?=$date; echo $time?></span>
                                 </div>
                                 <img class="direct-chat-img" src="<?php echo base_url()?>public/images/user.png" alt="Message User Image">
                                 <div class="direct-chat-text">
@@ -89,7 +94,7 @@ $page = $uri->getSegment(count($pages));
                                         $id= $chat->id;
                                         $full_name = $chat->full_name;
                                     }else if($_SESSION['sessiondata']['role'] == 'Student') {
-                                        $id = $chat->faculty_id;
+                                        $id = $chat->register_id;
                                         $full_name = $chat->faculty_name;
                                     }
                                     // print_r($chat);die;

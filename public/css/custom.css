@@ -21,3 +21,32 @@
 .contact-icon {
     margin-bottom: 30px;
 }
+
+.chatopen::before {
+    /* animation: animate 2.5s linear infinite;  */
+    animation: mymove 2s infinite;
+    position: absolute;
+    background-color: #00FF00;
+}
+
+@keyframes mymove{ 
+    50% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+@keyframes animate{ 
+    0%{ 
+      opacity: 0; 
+    } 
+    50%{ 
+      opacity: 0.7; 
+    } 
+    100%{ 
+      opacity: 0; 
+    } 
+} 
