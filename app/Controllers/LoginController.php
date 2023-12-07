@@ -231,6 +231,8 @@ class LoginController extends BaseController
             switch ($result['role']) {
                 case 'Admin':
                     return redirect()->to('Admindashboard');
+                case 'sub_admin':
+                    return redirect()->to('Admindashboard');
                 case 'Faculty':
                     $this->session->set($result);
                     return redirect()->to('FacultyDashboard');

@@ -120,11 +120,3 @@ $page = $uri->getSegment(count($pages));
     </div>
 </div>
  <?php echo view('FacultysideBar/FacultyFooter.php');?>
-
-<script>
-    $(document).ready(function() {
-        $('.test').click(function (e) {
-            alert('sfd')
-        })
-});
-</script>

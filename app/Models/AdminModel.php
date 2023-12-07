@@ -442,8 +442,18 @@ class AdminModel extends Model
         }
     }
 
-    public function getdata($table, $wherecond)
-    {
+    public function getalldata($table, $wherecond) {
+        $result = $this->db->table($table)->where($wherecond)->get()->getResult();
+        
+        if ($result) {
+            return $result;
+        }else {
+            return false;
+        }
+    }
+
+    public function getdata($table, $wherecond) {
+
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
 
         $sender = $_SESSION['id'];
@@ -474,15 +484,108 @@ class AdminModel extends Model
         }
     }
 
-    public function getchat($tablechat, $sender, $receiver)
-    {
-        $result = $this->db->query("SELECT * FROM " . $tablechat . " WHERE (sender_id = " . $sender . " AND receiver_id = " . $receiver . ")
-        OR (sender_id = " . $sender . " AND receiver_id = " . $receiver . ") ORDER BY msg_id");
-        // echo '<pre>';print_r($this->getLastQuery());
-        //$result = $this->db->table($table)->where($wherecond2.' OR ' .$wherecond3)->get()->getResult();
 
+    public function getchat($tablechat, $sender, $receiver) {
+        $chat = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = ".$sender." AND receiver_id = ".$receiver.") OR (sender_id = ".$receiver." AND receiver_id = ".$sender.") ORDER BY msg_id");
+
+        $user = $this->db->query("SELECT id, full_name, role FROM register WHERE id = ".$receiver." ");
+        // echo '<pre>';print_r($this->getLastQuery());die;
+        //$result = $this->db->table($table)->where($wherecond2.' OR ' .$wherecond3)->get()->getResult();
+        
+        if ($chat) {
+            return $chat->getResultArray();
+        }else {
+            return false;
+        }
+    }
+    public function insertNotification($result)
+   {
+    $selectedFacultyIds = $result['selected_faculty'];
+    $selectedStudentIds = $result['selected_students'];
+    $notificationDescription = $result['notification_description'];
+     $notification_date= $result['notification_date'];
+    $facultyData = [];
+    $studentData = [];
+    if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
+        $facultyData[] = [
+            'register_id' => 'All',
+            'notification_description' => $notificationDescription,
+            'user_type' => 'faculty',
+            'timestamp' => $notification_date,
+        ];
+    } elseif (is_array($selectedFacultyIds)) {
+        foreach ($selectedFacultyIds as $facultyId) {
+            $facultyData[] = [
+                'register_id' => $facultyId,
+                'notification_description' => $notificationDescription,
+                'user_type' => 'faculty',
+                'timestamp' => $notification_date,
+            ];
+        }
+    }
+    if (is_array($selectedStudentIds) && in_array('all', $selectedStudentIds)) {
+        $studentData[] = [
+            'register_id' => 'All',
+            'notification_description' => $notificationDescription,
+            'user_type' => 'student',
+            'timestamp' => $notification_date,
+        ];
+    } elseif (is_array($selectedStudentIds)) {
+        foreach ($selectedStudentIds as $studentId) {
+            $studentData[] = [
+                'register_id' => $studentId,
+                'notification_description' => $notificationDescription,
+                'user_type' => 'student',
+                'timestamp' => $notification_date,
+            ];
+        }
+    }
+    if (!empty($facultyData)) {
+        $this->db->table('notificationtable')->insertBatch($facultyData);
+    }
+    if (!empty($studentData)) {
+        $this->db->table('notificationtable')->insertBatch($studentData);
+    }
+}
+
+    public function getUserRole($teacherId)
+    {
+    
+        $todayDate = date('Y-m-d H:i:s');
+
+        $result = $this->db->table('notificationtable')
+        ->where([
+            'user_type' => 'faculty',
+            'register_id' => 'All',
+        ])
+        ->orWhere('register_id', $teacherId)
+        ->where('timestamp >=', $todayDate) 
+        ->get()
+        ->getResultArray();
+        
         if ($result) {
-            return $result->getResultArray();
+            return $result;
+        }else {
+            return false;
+        }
+    }
+    public function getUser($user_id)
+    {
+    
+        $todayDate = date('Y-m-d H:i:s');
+
+        $result = $this->db->table('notificationtable')
+            ->where([
+                'user_type' => 'student',
+                'register_id' => 'All',
+            ])
+            ->orWhere('register_id', $user_id)
+            ->where('timestamp >=', $todayDate) 
+            ->get()
+            ->getResultArray();
+    
+        if ($result) {
+            return $result;
         } else {
             return false;
         }

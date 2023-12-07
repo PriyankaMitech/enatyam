@@ -40,6 +40,9 @@ $routes->get('Career', 'Home::Career');
 $routes->get('chechk_username_id', 'Home::chechk_username_id');
 $routes->post('chechk_username_id', 'Home::chechk_username_id');
 
+$routes->get('chechk_menu_name_id', ' AdminController::chechk_menu_name_id');
+$routes->post('chechk_menu_name_id', 'AdminController::chechk_menu_name_id');
+
 $routes->get('chechk_mobile_no_id','Home::chechk_mobile_no_id');
 $routes->post('chechk_mobile_no_id','Home::chechk_mobile_no_id');
 
@@ -94,7 +97,6 @@ $routes->get('demo', 'Home::demo');
 $routes->post('AdminController/addStudent', 'AdminController::addStudent');
 $routes->get('givestudent', 'AdminController::givestudent');
 $routes->get('StudentListToAdmin', 'AdminController::StudentListToAdmin');
-$routes->get('AddNewUser', 'AdminController::Getcalender');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
 $routes->get('Admindashboard', 'AdminController::Admindashboard');
 $routes->get('getAdminSideBarAll', 'AdminController::getAdminSideBarAll');
@@ -111,15 +113,44 @@ $routes->get('StudentGroups', 'AdminController::StudentGroups');
 $routes->get('FacultysidebarShedule', 'AdminController::FacultysidebarShedule');
 $routes->post('AdduserByadmin', 'AdminController::AdduserByadmin');
 $routes->post('SelectedForGroup', 'AdminController::SelectedForGroup');
-$routes->get('Chat', 'AdminController::chatwithteacher');
-$routes->post('Chat', 'AdminController::chatwithteacher');
-$routes->get('Chat/(:any)', 'AdminController::chatwithstud/$1');
+$routes->get('chatuser', 'AdminController::chatuser');
+$routes->post('chat', 'AdminController::chatwithteacher');
+$routes->get('chatuser/(:any)', 'AdminController::singlechat/$1');
 $routes->get('Notifications', 'AdminController::Notifications');
 $routes->post('insertChat', 'AdminController::insertChat');
 $routes->post('SendNotifications', 'AdminController::SendNotifications');
 
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');
+
+
+$routes->post('add_menu', 'AdminController::add_menu');
+$routes->get('add_menu', 'AdminController::add_menu');
+
+$routes->post('menu_list', 'AdminController::menu_list');
+$routes->get('menu_list', 'AdminController::menu_list');
+
+$routes->post('user_list', 'AdminController::user_list');
+$routes->get('user_list', 'AdminController::user_list');
+
+
+$routes->post('set_menu', 'AdminController::set_menu');
+// $routes->get('set_menu', 'AdminController::set_menu');
+
+$routes->post('edit_menu/(:any)', 'AdminController::add_menu/$1');
+$routes->get('edit_menu/(:any)', 'AdminController::get_menu/$1');
+
+$routes->get('AddNewUser', 'AdminController::add_new_user');
+
+$routes->post('edit_user/(:any)', 'AdminController::AdduserByadmin/$1');
+$routes->get('edit_user/(:any)', 'AdminController::get_user/$1');
+
+
+$routes->get('delete/(:any)/(:any)','AdminController::delete/$1/$1');
+// $routes->post('delete/(:any)/(:any)','AdminController::delete/$1/$1');
+
+
+
 
 $routes->post('AdminController/Steusupdate', 'AdminController::Steusupdate');
 $routes->post('AdminController/backtoApplication', 'AdminController::backtoApplication');

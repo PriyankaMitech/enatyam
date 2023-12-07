@@ -24,35 +24,68 @@ class FacultyController extends BaseController
   }
 
 
+  // public function fetchDataByAssignTeacherId()
+  // {
+  //   if (isset($_SESSION['sessiondata'])) {
+  //     $sessionData = $_SESSION['sessiondata'];
+
+  //     $email = $sessionData['email'] ?? null;
+  //     $password = $sessionData['password'] ?? null;
+
+  //     if ($email !== null && $password !== null) {
+  //         $teacherId = $this->session->get('id');
+  //       //  print_r($teacherId);die;
+  //         $facultymodel = new Facultymodel();
+  //         $adminModel = model('AdminModel');  
+  //         $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
+  //         $notifications = $adminModel->getUserRole($teacherId);
+  //     //    echo '<pre>';print_r($notifications);die;    
+  //         if (!empty($data)) {
+  //             return view('faculty', ['data' => $data, 'notifications' => $notifications]);
+  //         } else {
+  //             return redirect()->to(base_url());
+  //         }
+  //     } else {
+  //         return redirect()->to(base_url());
+  //     }
+  // } else {
+  //     return redirect()->to(base_url());
+  // }
+  // }
   public function fetchDataByAssignTeacherId()
   {
-
-    if (isset($_SESSION['sessiondata'])) {
-      $sessionData = $_SESSION['sessiondata'];
-
-      $email = $sessionData['email'] ?? null;
-      $password = $sessionData['password'] ?? null;
-
-      if ($email !== null && $password !== null) {
-
-        $teacherId = $this->session->get('id');
-
-        $facultymodel = new Facultymodel();
-        $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
-
-        if (!empty($data)) {
-          return view('faculty', ['data' => $data]);
-        } else {
-          return redirect()->to(base_url());
-        }
+      if (isset($_SESSION['sessiondata'])) {
+          $sessionData = $_SESSION['sessiondata'];
+  
+          $email = $sessionData['email'] ?? null;
+          $password = $sessionData['password'] ?? null;
+  
+          if ($email !== null && $password !== null) {
+              $teacherId = $this->session->get('id');
+              $facultymodel = new Facultymodel();
+              $adminModel = model('AdminModel');  
+              $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
+              $notifications = $adminModel->getUserRole($teacherId);
+              $todayDate = date('Y-m-d H:i:s');
+              $displayedNotificationCount = 0;
+              foreach ($notifications as $key => $notification) {
+                  $notificationDate = $notification['timestamp'];
+                  if ($notificationDate >= $todayDate) {
+                      $displayedNotificationCount++;
+                  }
+              }
+              return view('faculty', [
+                  'data' => $data,
+                  'notifications' => $notifications,
+                  'notificationCount' => $displayedNotificationCount,
+              ]);
+          } else {
+              return redirect()->to(base_url());
+          }
       } else {
-        return redirect()->to(base_url());
+          return redirect()->to(base_url());
       }
-    } else {
-      return redirect()->to(base_url());
-    }
   }
-
 
   public function index()
   {
@@ -269,6 +302,7 @@ class FacultyController extends BaseController
         $registerId = $result->get('id');
         $model = new facultymodel();
         $data['FacultysheduleData'] = $model->fetchshedule($registerId);
+      // echo "<pre>";print_r($data['FacultysheduleData']);exit();
         return view('FacultysideBar/Monthlyshedule',  $data);
       } else {
         return redirect()->to(base_url());
@@ -277,4 +311,6 @@ class FacultyController extends BaseController
       return redirect()->to(base_url());
     }
   }
+
+
 }

@@ -83,13 +83,15 @@ class facultymodel extends Model
 
         $currentMonth = date('m'); // Get the current month in the format 'mm'
 
-        $result = $this->db->table('schedule')
-            ->select('schedule.*, register.full_name') // Select the required columns, including faculty_name
-            ->join('register', 'register.id = schedule.faculty_register_id') // Join the faculties table
-            ->where("MONTH(date) = $currentMonth") // Replace 'date_column' with the actual column name containing the date
-            ->get()
-            ->getResult();
+         $result = $this->db->table('schedule')
+        ->select('schedule.*, register.full_name') // Select the required columns, including faculty_name
+        ->join('register', 'register.id = schedule.faculty_register_id') // Join the faculties table
+        ->where('schedule.faculty_register_id', $registerId) // Filter by faculty register ID
+        ->where("MONTH(schedule.date) = $currentMonth") // Replace 'date_column' with the actual column name containing the date
+        ->get()
+        ->getResult();
 
-        return $result;
+    return $result;
+
     }
 }

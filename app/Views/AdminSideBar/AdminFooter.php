@@ -1,9 +1,7 @@
 <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
-    </div>
+    
 </footer>
 
 </div>
@@ -26,9 +24,9 @@
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="dist/js/adminlte.js"></script>
 <script src="dist/js/pages/dashboard.js"></script>
+<script src="<?php echo base_url()?>public/js/custom.js"></script>
 <script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
 
-<!-- <script src="dist/js/adminlte.min.js"></script> -->
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
 <script>
@@ -463,56 +461,7 @@
         toggleFormElementsVisibility();
     });
 </script>
-      <script>
-            $(document).ready(function() {
-                var groupSessionTable = $('#groupSessionTable').DataTable();
-                $('#selectedRowsTable').hide();
-                $('#groupSessionTable tbody').on('change', '.select-checkbox', function() {
-                    if ($(this).prop('checked')) {
-                        var rowData = $(this).closest('tr').clone();
-                        rowData.find('td:first-child input').remove();
-                        $('#selectedRowsBody').append(rowData);
-                    } else {
-                        var rowIndex = $(this).closest('tr').index();
-                        $('#selectedRowsBody tr').eq(rowIndex).remove();
-                    }
-                    updateRowNumbers();
-                    var hasSelectedRows = $('#selectedRowsBody tr').length > 0;
-                    $('#selectedRowsTable').toggle(hasSelectedRows);
-                });
-
-                function toggleGroupNameInputVisibility() {
-                    var hasSelectedRows = $('#selectedRowsBody tr').length > 0;
-                    $('#groupNameContainer').toggle(hasSelectedRows);
-                }
-                toggleGroupNameInputVisibility();
-                $('#groupSessionTable tbody').on('change', '.select-checkbox', function() {
-                    toggleGroupNameInputVisibility();
-                });
-                $('#postSelectedRows').on('click', function() {
-                    var selectedRowIds = [];
-                    $('#selectedRowsBody tr').each(function() {
-                        var rowId = $(this).attr('data-id');
-                        selectedRowIds.push(rowId);
-                    });
-                    $('#selectedRowsTable').append('<input type="hidden" name="selectedRowIds" value="' +
-                        selectedRowIds.join(',') + '">');
-                });
-                $('#courseSearch').on('input', function() {
-                    groupSessionTable.columns(3).search(this.value).draw();
-                });
-                $('#subCourseSearch').on('input', function() {
-                    groupSessionTable.columns(4).search(this.value).draw();
-                });
-            });
-
-            function updateRowNumbers() {
-                $('#selectedRowsBody tr').each(function(index) {
-                    $(this).find('td:first-child').text(index + 1);
-                });
-            }
-        </script>
-
+      
   
 </body>
 
