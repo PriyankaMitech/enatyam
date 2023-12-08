@@ -51,7 +51,16 @@
                with font-awesome or any other icon font library -->
 
 
-            </a>
+   
+
+            <li class="nav-item">
+                <a href="<?=base_url();?>FacultyDashboard" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                </a>
+              </li>
 
             <li class="nav-item">
               <a href="#" class="nav-link">
@@ -95,7 +104,7 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon 	fa fa-child"></i>
                 <p>
-                  Student
+                  Files
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
@@ -103,7 +112,7 @@
                 <li class="nav-item">
                   <a href="<?php echo base_url() ?>StudentUploadedVideo" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Student Uploded Video</p>
+                    <p>Videos</p>
                   </a>
                 </li>
 

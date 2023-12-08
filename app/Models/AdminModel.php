@@ -135,13 +135,14 @@ class AdminModel extends Model
         $currentMonth = date('m'); // Get the current month in the format 'mm'
 
         $result = $this->db->table('schedule')
-            ->select('schedule.*, faculty.faculty_name') // Select the required columns, including faculty_name
-            ->join('faculty', 'faculty.faculty_id = schedule.faculty_register_id') // Join the faculties table
+            ->select('schedule.*, register.full_name') // Select the required columns, including faculty_name
+            ->join('register', 'register.id = schedule.faculty_register_id') // Join the faculties table
             ->where("MONTH(date) = $currentMonth") // Replace 'date_column' with the actual column name containing the date
             ->get()
             ->getResult();
+        //     echo "<pre>";
         // print_r($result);
-        // die;
+        // exit();
 
         return $result;
     }
@@ -452,6 +453,18 @@ class AdminModel extends Model
         }
     }
 
+
+    public function get_single_data($table, $wherecond) {
+        $result = $this->db->table($table)->where($wherecond)->get()->getRow();
+        // echo "<pre>";print_r( $result );exit();
+        
+        if ($result) {
+            return $result;
+        }else {
+            return false;
+        }
+    }
+
     public function getdata($table, $wherecond) {
 
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
@@ -590,4 +603,6 @@ class AdminModel extends Model
             return false;
         }
     }
+
+ 
 }

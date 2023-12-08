@@ -56,6 +56,14 @@
             <?php if ($_SESSION['sessiondata']['Payment_status'] == 'Y') { ?>
               <li class="nav-item">
               <li class="nav-item">
+                <a href="<?=base_url();?>StudentDashboard" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="<?php echo base_url() ?>StudentProfile" class="nav-link">
                   <i class="nav-icon 	fa fa-child"></i>
                   <p>

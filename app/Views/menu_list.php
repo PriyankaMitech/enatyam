@@ -42,14 +42,11 @@
                                 <?php foreach($menu_data as $data){  ?>
                                     <tr>
                                         <td><?=$i; ?></td>
-                                        <td><?=$data['menu_name']; ?></td>
-                                        <td><?=$data['url_location']; ?></td>
+                                        <td><?=$data->menu_name; ?></td>
+                                        <td><?=$data->url_location; ?></td>
                                         <td>
-                                    
-                                                    <a href="edit_menu/<?=$data['id']; ?>"><i class="far fa-edit me-2"></i></a>
-                                                    <a href="<?=base_url(); ?>delete/<?php echo base64_encode($data['id']); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a>
-                                                
-                                        
+                                            <a href="edit_menu/<?=$data->id; ?>"><i class="far fa-edit me-2"></i></a>
+                                            <a href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a>
                                         </td>
                                     
                                     </tr>
