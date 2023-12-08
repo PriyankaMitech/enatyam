@@ -3,6 +3,10 @@ $uri = new \CodeIgniter\HTTP\URI(current_url(true));
 $pages = $uri->getSegments();
 $page = $uri->getSegment(count($pages));
 
+// echo "<pre>";
+// print_r($pages);
+// exit();
+
 ?>
 
 
@@ -463,52 +467,41 @@ $page = $uri->getSegment(count($pages));
 
                             <div class="form-group m-2">
                                 <input type="text" name="full_name" id="full_name" class="form-control" aria-required="true" placeholder="Username">
-                                <span id="nameError" class="d-none" style="color: red;"></span>
+                                <span id="nameError" class="d-none" class="error"></span>
                             </div>
                             <div class="form-group m-2">
                                 <input type="email" name="email" id="email" class="form-control" aria-required="true" placeholder="Email">
-                                <span id="emailError" style="color: red;"></span>
+                                <span id="emailError" class="error"></span>
+                            </div>
+
+                            <div class="form-group m-2">
+
+                                <input type="text" name="emailotp" id="emailotp" class="form-control d-none" placeholder="Enter otp sent to your email id">
+                                <span class="error" id="otpError" class="error"></span>
                             </div>
 
                             <div class="form-group m-2">
 
                                 <input type="text" name="mobile_no" id="mobile_no" class="form-control" aria-required="true" placeholder="mobile number">
 
-                                <span id="mobile_noError" style="color: red;"></span>
-                            </div>
-
-                            <!-- <div class="form-group m-2">
-                            <select class="form-control required" name="role" id="role" aria-required="true">
-                                <option value="">Open this to select Role </option>
-                                <option value="Admin">Admin</option>
-                                <option value="Student">Student</option>
-                                <option value="Faculty">Faculty</option>
-                            </select>
-                            <span id="roleerror" style="color: red;"></span>
-                        </div> -->
-
-
-                            <div class="form-group m-2">
-                                <input type="password" name="password" id="password" class="form-control" aria-required="true" placeholder="Password">
-                                <span id="passwordError" style="color: red;"></span>
-                            </div>
-
-                            <div class="form-group m-2">
-                                <input type="password" name="confirm_pass" id="confirm_pass" class="form-control" aria-required="true" placeholder="Repeat password">
-                                <span id="confirmpasswordError" style="color: red;"></span>
+                                <span id="mobile_noError" class="error"></span>
                             </div>
 
                             <div class="form-group m-2">
 
                                 <input type="text" name="otp" id="otp" class="form-control d-none" placeholder="Enter otp">
-                                <span class="error" id="otpError" style="color: red;"></span>
+                                <span class="error" id="otpError" class="error"></span>
                             </div>
 
-                            <div class="teacher">
-
-
+                            <div class="form-group m-2">
+                                <input type="password" name="password" id="password" class="form-control" aria-required="true" placeholder="Password">
+                                <span id="passwordError" class="error"></span>
                             </div>
 
+                            <div class="form-group m-2">
+                                <input type="password" name="confirm_pass" id="confirm_pass" class="form-control" aria-required="true" placeholder="Repeat password">
+                                <span id="confirmpasswordError" class="error"></span>
+                            </div>
 
                             <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
                             <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>

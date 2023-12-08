@@ -29,6 +29,9 @@ $page = $uri->getSegment(count($pages));
     <script src="<?php echo base_url()?>plugins/jquery-mapael/maps/usa_states.min.js"></script>
     <script src="<?php echo base_url()?>plugins/chart.js/Chart.min.js"></script>
     <script src="dist/js/pages/dashboard2.js"></script>
+   
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
     <script src="<?php echo base_url()?>plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>plugins/moment/moment.min.js"></script>
@@ -62,6 +65,20 @@ $page = $uri->getSegment(count($pages));
         if (showTableLink) {
             showTableLink.addEventListener('click', function() {
                 var table = document.getElementById('studentTable');
+                if (table.style.display === 'none') {
+                    table.style.display = 'table';
+                } else {
+                    table.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+<script  type="text/javascript">
+        const todaySessionsTable = document.getElementById('todaySessionsTable');
+        if (todaySessionsTable) {
+          todaySessionsTable.addEventListener('click', function() {
+                var table = document.getElementById('todaySessionsTableshow');
                 if (table.style.display === 'none') {
                     table.style.display = 'table';
                 } else {
@@ -473,6 +490,26 @@ calendar.render();
   })
 </script>
 
+<script>
+    function displayGroupList(groupName) {
+        // Replace this with your list data or AJAX request to fetch data
+        var groupListData = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10'];
 
+        // Populate the modal body with the group list data in groups of 5 rows
+        var modalBody = document.getElementById('groupListModalBody');
+        modalBody.innerHTML = '';
+
+        for (var i = 0; i < groupListData.length; i += 5) {
+            modalBody.innerHTML += '<ul>';
+            for (var j = i; j < i + 5 && j < groupListData.length; j++) {
+                modalBody.innerHTML += '<li>' + groupListData[j] + '</li>';
+            }
+            modalBody.innerHTML += '</ul>';
+        }
+
+        // Show the Bootstrap modal
+        $('#groupListModal').modal('show');
+    }
+</script>
 </body>
 </html>

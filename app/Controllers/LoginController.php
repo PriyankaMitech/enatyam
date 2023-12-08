@@ -55,70 +55,31 @@ class LoginController extends BaseController
         $validation = \Config\Services::validation(); // Get the validation instance
         $loginModel = new LoginModel();
 
-        // // Define validation rules
-        // $validation->setRules([
-        //     'full_name' => 'required',
-        //     // 'role' => 'required',
-        //     'password' => 'required|min_length[8]',
-        //     'confirm_pass' => 'required|alpha_numeric|matches[password]',
-        // ]);
+        $loginModel->insert($data);
+        $last_insert_id = $loginModel->getInsertID();
+        $getdata = [
+            'full_name' => $this->request->getVar('full_name'),
+            'email' => $this->request->getVar('email'),
+            'mobile_no' => $this->request->getVar('mobile_no'),
+            'role' => 'Student',
+            'password' => $this->request->getVar('password'),
+            'confirm_pass' => $this->request->getVar('confirm_pass'),
+            'register_id' => $last_insert_id,
+            'is_register_done' => 'Y',
+            'course'=>$this->request->getVar('course'),
+            'sub_course'=>$this->request->getVar('sub_course'),
+            'age'=>$this->request->getVar('age'),
+            'experienceInput'=>$this->request->getVar('experienceInput'),
+            
+        ];
+        
+        $this->session->set('user_id', $this->request->getVar($last_insert_id));
+        $this->session->set('username', $this->request->getVar('full_name'));
+        $this->session->set('email', $this->request->getVar('email'));
+        $this->session->set('role', 'Student');
 
-        // // Either email or mobile_no should be provided
-        // $emailProvided = $this->request->getVar('email');
-        // $mobileNoProvided = $this->request->getVar('mobile_no');
-        // // echo "$mobileNoProvided";
-
-    
-        // if (empty($emailProvided) && empty($mobileNoProvided)) {
-        //     $validation->setError('email', 'Either Email or Mobile no is required.');
-        //     $validation->setError('mobile_no', 'Either Email or Mobile no is required.');
-        // } else if (!empty($emailProvided) && !filter_var($emailProvided, FILTER_VALIDATE_EMAIL)) {
-        //     $validation->setError('email', 'Invalid email format.');
-        // }
-
-        // if ($validation->withRequest($this->request)->run()) {
-         
-            $data = [
-                'full_name' => $this->request->getVar('full_name'),
-                'email' => $this->request->getVar('email'),
-                'mobile_no' =>$this->request->getVar('mobile_no'),
-                'role' => 'Student',
-                'password' => $this->request->getVar('password'),
-                'confirm_pass' => $this->request->getVar('confirm_pass'),
-                'is_register_done' => 'Y',
-                'course'=>$this->request->getVar('course'),
-                'sub_course'=>$this->request->getVar('sub_course'),
-                'age'=>$this->request->getVar('age'),
-                'experienceInput'=>$this->request->getVar('experienceInput'),
-
-            ];
-            // Save data to the database
-            $loginModel->insert($data);
-            $last_insert_id = $this->db->insertID();
-            $getdata = [
-                'full_name' => $this->request->getVar('full_name'),
-                'email' => $this->request->getVar('email'),
-                'mobile_no' => $this->request->getVar('mobile_no'),
-                'role' => 'Student',
-                'password' => $this->request->getVar('password'),
-                'confirm_pass' => $this->request->getVar('confirm_pass'),
-                'register_id' => $last_insert_id,
-                'is_register_done' => 'Y',
-                'course'=>$this->request->getVar('course'),
-                'sub_course'=>$this->request->getVar('sub_course'),
-                'age'=>$this->request->getVar('age'),
-                'experienceInput'=>$this->request->getVar('experienceInput'),
-                
-            ];
-            // Set session variables and redirect as needed
-            $this->session->set('user_id', $this->request->getVar($last_insert_id));
-            $this->session->set('username', $this->request->getVar('full_name'));
-            $this->session->set('email', $this->request->getVar('email'));
-            $this->session->set('role', 'Student');
-
-            $loginModel->setFacultyName($data);
-            $loginModel->setStudentName($getdata);
-    
+        $output = $loginModel->setStudentName($getdata);
+        // print_r($output);die;
             // return redirect()->to('dashboard');
         // } else {
         //     // Validation failed
@@ -130,31 +91,47 @@ class LoginController extends BaseController
     public function verifymobile() {
         $loginModel = new LoginModel();
         $otp = rand(999, 9999);
-        if ($_POST['otp'] == '') {
+        $emailotp = rand(999, 9999);
+        if ($_POST['otp'] == '' && $_POST['emailotp'] == '') {
             $loginModel = new LoginModel();
-            $result['mobileexist'] = $loginModel->checkexist($_POST['mobile_no'], 'mobile_no');
-            $result['emailexist'] = $loginModel->checkexist($_POST['email'], 'email');
+            $mob['mobileexist'] = $loginModel->checkexist($_POST['mobile_no'], 'mobile_no');
+            $email['emailexist'] = $loginModel->checkexist($_POST['email'], 'email');
 
-            if ($result['mobileexist'] == '' && $result['emailexist'] == '') {
-                $insert = $this->savedata($_POST, $otp);
+            if ($mob['mobileexist'] == '' && $email['emailexist'] == '') {
+                $insert = $this->savedata($_POST, $otp, $emailotp);
+                $getdata = [
+                    'student_name' => $this->request->getVar('full_name'),
+                    'email' => $this->request->getVar('email'),
+                    'mobile_no' => $this->request->getVar('mobile_no'),
+                    'register_id' => $insert['lastinsertid']
+                    
+                ];
+                $savestud = $loginModel->setStudentName($getdata);
                 $sms = 'Dear customer, your OTP for registration is '.$otp.'. do not share to anyone. Thank you OTPIMS';
                 $output = sendSMS($_POST['mobile_no'], $sms);
-                // print_r($output);die;
-                $result['mobileno'] = $_POST['mobile_no'];
-                $result['email'] = $_POST['email'];
-                $result['otp'] = $insert;
+                $sendmail = sendConfirmationEmail($_POST['email'], $emailotp);
+                
+                $mob['mobileno'] = $_POST['mobile_no'];
+                $email['email'] = $_POST['email'];
+                $result['otp'] = $insert['otp'];
+                $email['emailotp'] = $emailotp;
+                $result['status'] = '200';
+                $result = array(
+                    'mobile' => $mob,
+                    'email' => $email
+                );
                 echo json_encode($result);
                 
             }else {
                 echo json_encode($result);
             }
         }else {
-            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['mobile_no'], $_POST['email']);
+            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['mobile_no'], $_POST['email']);
             echo json_encode($checkotp);
         }
     }
 
-    public function savedata($postdata, $otp) {
+    public function savedata($postdata, $otp, $emailotp) {
         $loginModel = new LoginModel();
 
         $data = [
@@ -165,19 +142,23 @@ class LoginController extends BaseController
             'password' => $postdata['password'],
             'role' => 'Student',
             'otp' => $otp,
+            'emailotp' => $emailotp,
             'is_register_done' => 'N',
         ];
         $result = $loginModel->insert($data);
+        $last_insert_id = $loginModel->getInsertID();
         if ($result) {
-            return $otp;
+            $output = array(
+                'otp' => $otp,
+                'lastinsertid' => $last_insert_id
+            );
+            return $output;
         }else 
             return false;
             
     }
     public function saveuserdata()
    { 
-   
-        //   print_r($_POST);die;
        $email = $this->request->getPost('email');
        $course = $this->request->getPost('course');
        $sub_course = $this->request->getPost('sub_course');
@@ -188,8 +169,6 @@ class LoginController extends BaseController
        $experienceInput = $this->request->getPost('experienceInput');
        $loginModel = new LoginModel();
 
-   
-       // Prepare the data to be updated
        $data = [
            'course' => $course,
            'sub_course' => $sub_course,
@@ -203,9 +182,7 @@ class LoginController extends BaseController
        ];
        $affectedRows = $loginModel->updateUserByEmail($email, $data);
 
-       // Check if Payment_status is 'Y'
        if ($affectedRows > 0 && $data['Payment_status'] == 'Y') {
-           // Call the email helper method
            sendConfirmationEmail($email, 'Payment Confirmation', 'Thank you for your payment.');
        }
    

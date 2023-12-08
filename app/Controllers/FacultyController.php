@@ -53,39 +53,45 @@ class FacultyController extends BaseController
   // }
   // }
   public function fetchDataByAssignTeacherId()
-  {
-      if (isset($_SESSION['sessiondata'])) {
-          $sessionData = $_SESSION['sessiondata'];
-  
-          $email = $sessionData['email'] ?? null;
-          $password = $sessionData['password'] ?? null;
-  
-          if ($email !== null && $password !== null) {
-              $teacherId = $this->session->get('id');
-              $facultymodel = new Facultymodel();
-              $adminModel = model('AdminModel');  
-              $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
-              $notifications = $adminModel->getUserRole($teacherId);
-              $todayDate = date('Y-m-d H:i:s');
-              $displayedNotificationCount = 0;
-              foreach ($notifications as $key => $notification) {
-                  $notificationDate = $notification['timestamp'];
-                  if ($notificationDate >= $todayDate) {
-                      $displayedNotificationCount++;
-                  }
-              }
-              return view('faculty', [
-                  'data' => $data,
-                  'notifications' => $notifications,
-                  'notificationCount' => $displayedNotificationCount,
-              ]);
-          } else {
-              return redirect()->to(base_url());
-          }
-      } else {
-          return redirect()->to(base_url());
-      }
-  }
+{
+    if (isset($_SESSION['sessiondata'])) {
+        $sessionData = $_SESSION['sessiondata'];
+
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
+
+        if ($email !== null && $password !== null) {
+            $teacherId = $this->session->get('id');
+            $facultymodel = new Facultymodel();
+            $adminModel = model('AdminModel');
+
+            // Fetch today's session data
+            $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
+            // Fetch other data using where condition
+            $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
+            $notifications = $adminModel->getUserRole($teacherId);
+
+            $todayDate = date('Y-m-d H:i:s');
+            $displayedNotificationCount = 0;
+
+            foreach ($notifications as $key => $notification) {
+                $notificationDate = $notification['timestamp'];
+                if ($notificationDate >= $todayDate) {
+                    $displayedNotificationCount++;
+                }
+            }
+
+            return view('faculty', [
+                'data' => $data,
+                'todaysession' => $todaysession,
+                'notifications' => $notifications,
+                'notificationCount' => $displayedNotificationCount,
+            ]);
+        }
+    }
+
+    return redirect()->to(base_url());
+}
 
   public function index()
   {

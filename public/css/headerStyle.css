@@ -213,7 +213,9 @@ button:disabled {
   cursor: not-allowed !important;
 }
 .error{
-  color: #ff0067 !important;
+  color: #ff0067;
+  font-size: 12px;
+
 }
 
 #flash-message-container {
