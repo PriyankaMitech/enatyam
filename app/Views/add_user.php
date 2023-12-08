@@ -31,27 +31,27 @@
                         <!-- form start -->
                         <form action="AdduserByadmin" method="post" id="user_form">
                             <div class="row card-body">
-                            <input type="hidden" name="id" class="form-control" id="id" value="<?php if(!empty($single_data)){ echo $single_data['id'];} ?>">
+                            <input type="hidden" name="id" class="form-control" id="id" value="<?php if(!empty($single_data)){ echo $single_data->id;} ?>">
 
                                 <div class="col-lg-3 col-md-3 col-12 form-group">
                                     <label for="full_name">Enter name</label>
-                                    <input type="name" name="full_name" class="form-control" id="full_name" placeholder="Enter name" value="<?php if(!empty($single_data)){ echo $single_data['full_name'];} ?>">
+                                    <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Enter name" value="<?php if(!empty($single_data)){ echo $single_data->full_name;} ?>">
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-12 form-group">
                                     <label for="email">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" value="<?php if(!empty($single_data)){ echo $single_data['email'];} ?>">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" value="<?php if(!empty($single_data)){ echo $single_data->email;} ?>">
                                     <span id="emailError" style="color: red;"></span>
 
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-12 form-group">
                                     <label for="mobile_no">Mobile number</label>
-                                    <input type="tel" name="mobile_no" class="form-control" id="mobile_no" placeholder="Enter contact Number" value="<?php if(!empty($single_data)){ echo $single_data['mobile_no'];} ?>">
+                                    <input type="tel" name="mobile_no" class="form-control" id="mobile_no" placeholder="Enter contact Number" value="<?php if(!empty($single_data)){ echo $single_data->mobile_no;} ?>">
                                     <span id="mobile_noError" style="color: red;"></span>
 
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-12 form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" value="<?php if(!empty($single_data)){ echo $single_data['password'];} ?>">
+                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" value="<?php if(!empty($single_data)){ echo $single_data->password;} ?>">
                                 </div>
 
                                 
@@ -61,14 +61,21 @@
                                                         <div class="col-md-12">
                                                              <label>Access Level</label>
                                                         </div>
-                                                        <?php if(!empty($menu_data)){ $i=1;?>
-                                                             <?php foreach($menu_data as $data){  ?>
+                                                        <?php if (!empty($menu_data)) { $i = 1; ?>
+                                                            <?php foreach ($menu_data as $data) { ?>
                                                                 <div class="col-md-4">
-                                                                    <input type="checkbox" id="Upload_b_d" name="access_level[]" value="<?=$data['url_location']; ?>" <?php if (isset($single_data) && in_array($data['url_location'], explode(',', $single_data['access_level']))) echo 'checked'; ?>>
-                                                                    <label for="Upload_b_d"> <?=$data['menu_name']; ?></label>
+                                                                    <input type="checkbox" id="Upload_b_d" name="access_level[]" value="<?= $data->url_location; ?>" 
+                                                                        <?php 
+                                                                        if (isset($single_data) && is_object($single_data) && property_exists($single_data, 'access_level') && in_array($data->url_location, explode(',', $single_data->access_level))) {
+                                                                            echo 'checked';
+                                                                        } 
+                                                                        ?>>
+                                                                    <label for="Upload_b_d"> <?= $data->menu_name; ?></label>
                                                                 </div>
-                                                            <?php $i++;} ?>
+                                                                <?php $i++;
+                                                            } ?>
                                                         <?php } ?>
+
                     
                                                         
                                                      

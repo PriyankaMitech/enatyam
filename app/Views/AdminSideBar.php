@@ -98,6 +98,19 @@
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                             data-accordion="false" >
 
+                            <li class="nav-item" <?php if (in_array('Admindashboard', $access_levels)) {
+                                echo "style='display:block'";
+                            } else {
+                                echo "style='display:none'";
+                            } ?>>
+                                <a href="<?=base_url();?>Admindashboard" class="nav-link">
+                                    <i class="nav-icon fas fa-th"></i>
+                                        <p>
+                                            Dashboard
+                                        </p>
+                                </a>
+                            </li>
+
                             <!-- Schedule Menu -->
                             <li class="nav-item" <?php if (in_array('AdminList', $access_levels) || in_array('getDemoDetails', $access_levels)) {
                                 echo "style='display:block'";
@@ -495,6 +508,14 @@
                     data-accordion="false" >
 
                     <!-- Schedule Menu -->
+                    <li class="nav-item" >
+                                <a href="<?=base_url();?>Admindashboard" class="nav-link">
+                                    <i class="nav-icon fas fa-th"></i>
+                                        <p>
+                                            Dashboard
+                                        </p>
+                                </a>
+                    </li>
                     <li class="nav-item" >
                         <a href="#" class="nav-link">
                             <i class=" nav-icon fa fa-calendar"></i>

@@ -468,6 +468,7 @@ class AdminController extends BaseController
 
 
                 $data['FacultysheduleData'] = $model->getFacultyShedule();
+                // echo "<pre>";print_r($data['FacultysheduleData']);exit();
 
                 return view('AdminSideBar/FacultysidebarShedule', $data);
             } else {
@@ -765,7 +766,7 @@ class AdminController extends BaseController
         $wherecond = array('is_deleted'=> 'Y');
 
 
-        $data['menu_data'] = $model->get_all_data('tbl_menu', $wherecond);
+        $data['menu_data'] = $model->getalldata('tbl_menu', $wherecond);
         // echo "<pre>";print_r($data['menu_data']);exit();
         echo view('menu_list',$data);
     }
@@ -776,7 +777,10 @@ class AdminController extends BaseController
         $model = new AdminModel();
 
         $menu_id = $this->request->uri->getSegments(1);
-        $data['single_data'] = $model->get_single_data('tbl_menu', $menu_id[1]);
+
+        $wherecond1 = array('is_deleted'=> 'Y', 'id'=> $menu_id[1]);
+
+        $data['single_data'] = $model->get_single_data('tbl_menu', $wherecond1);
 
         echo view('add_menu',$data);
 
@@ -827,7 +831,7 @@ class AdminController extends BaseController
 
                 $wherecond = array('is_deleted'=> 'Y');
 
-                $data['menu_data'] = $model->get_all_data('tbl_menu',$wherecond);
+                $data['menu_data'] = $model->getalldata('tbl_menu',$wherecond);
 
 
                 return view('add_user',$data);
@@ -877,7 +881,7 @@ class AdminController extends BaseController
         $model = new AdminModel();
 
         $wherecond = array('is_deleted'=> 'Y', 'role'=> 'sub_admin');
-        $data['user_data'] = $model->get_all_data('register', $wherecond);
+        $data['user_data'] = $model->getalldata('register', $wherecond);
         // echo "<pre>";print_r($data['menu_data']);exit();
         echo view('user_list',$data);
     }
@@ -887,13 +891,14 @@ class AdminController extends BaseController
 	{
         
         $model = new AdminModel();
+        $menu_id = $this->request->uri->getSegments(1);
+        $wherecond1 = array('is_deleted'=> 'Y', 'id'=> $menu_id[1]);
+
         $wherecond = array('is_deleted'=> 'Y');
 
-        $menu_id = $this->request->uri->getSegments(1);
-        $data['single_data'] = $model->get_single_data('register', $menu_id[1]);
-        $data['menu_data'] = $model->get_all_data('tbl_menu',$wherecond);
+        $data['single_data'] = $model->get_single_data('register', $wherecond1);
+        $data['menu_data'] = $model->getalldata('tbl_menu',$wherecond);
 
-        // echo "<pre>";print_r($data['single_data']);exit();
 
         echo view('add_user',$data);
 

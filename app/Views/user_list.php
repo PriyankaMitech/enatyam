@@ -44,13 +44,13 @@
                                 <?php foreach($user_data as $data){  ?>
                                     <tr>
                                         <td><?=$i; ?></td>
-                                        <td><?=$data['full_name']; ?></td>
-                                        <td><?=$data['email']; ?></td>
-                                        <td><?=$data['mobile_no']; ?></td>
+                                        <td><?=$data->full_name;?></td>
+                                        <td><?=$data->email; ?></td>
+                                        <td><?=$data->mobile_no; ?></td>
                                         <td>
                                     
-                                                    <a href="edit_user/<?=$data['id']; ?>"><i class="far fa-edit me-2"></i></a>
-                                                    <a href="<?=base_url(); ?>delete/<?php echo base64_encode($data['id']); ?>/register" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a>
+                                                    <a href="edit_user/<?=$data->id; ?>"><i class="far fa-edit me-2"></i></a>
+                                                    <a href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/register" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a>
                                                 
                                         
                                         </td>
