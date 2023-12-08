@@ -616,15 +616,15 @@ class AdminController extends BaseController
             if ($_SESSION['sessiondata']['role'] == 'Admin') {
                 $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
                 $result['getuser'] = $model->getalldata('register', $wherecond);
-            }else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+            } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 $result['getuser'] = $model->getalldata('register', $wherecond);
-            }else if($_SESSION['sessiondata']['role'] == 'Student') {
+            } else if ($_SESSION['sessiondata']['role'] == 'Student') {
                 $wherecond = array('assign_student_id' => $_SESSION['sessiondata']['id']);
                 $result['getuser'] = $model->getalldata('faculty', $wherecond);
             }
             echo view('Chatuser', $result);
-        }else{
+        } else {
             echo view('/');
         }
     }
@@ -637,10 +637,10 @@ class AdminController extends BaseController
             if ($_SESSION['sessiondata']['role'] == 'Admin') {
                 $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
                 $result['getuser'] = $model->getalldata('register', $wherecond);
-            }else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+            } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 $result['getuser'] = $model->getalldata('register', $wherecond);
-            }else if($_SESSION['sessiondata']['role'] == 'Student') {
+            } else if ($_SESSION['sessiondata']['role'] == 'Student') {
                 $wherecond = array('register_id' => $_SESSION['sessiondata']['id']);
                 $result['getuser'] = $model->getalldata('faculty', $wherecond);
             }
@@ -648,7 +648,7 @@ class AdminController extends BaseController
             $wherecond3 = array('sender_id' => $receiverid[1], 'receiver_id' => $_SESSION['sessiondata']['id']);
             $result['chatdata'] = $model->getchat('online_chat', $_SESSION['sessiondata']['id'], $receiverid[1]);
             echo view('chatuser', $result);
-        }else {
+        } else {
             return redirect()->to('/');
         }
     }
@@ -658,7 +658,9 @@ class AdminController extends BaseController
         $model = new AdminModel();
 
         $receiverid = $this->request->uri->getSegments(1);
-        echo '<pre>';print_r($receiverid[1]);die;
+        echo '<pre>';
+        print_r($receiverid[1]);
+        die;
         $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
         $wherecond1 = array('id' => $receiverid[1]);
         $wherecond2 = array('sender_id' => $_SESSION['id'], 'receiver_id' => $receiverid[1]);
@@ -726,91 +728,90 @@ class AdminController extends BaseController
         $data['Faculty'] = $model->getFaculty();
         echo view('AdminSideBar/Notifications', $data);
     }
-  
+
     public function add_menu()
     {
 
         echo view('add_menu');
     }
-  
-    
+
+
 
     public function set_menu()
-	{
+    {
 
         $data = [
-                    'menu_name' => $this->request->getVar('menu_name'),
-                    'url_location' => $this->request->getVar('url_location'),
-                    'created_on' => date('Y:m:d H:i:s'),
-                ];
+            'menu_name' => $this->request->getVar('menu_name'),
+            'url_location' => $this->request->getVar('url_location'),
+            'created_on' => date('Y:m:d H:i:s'),
+        ];
 
         $db = \Config\Database::Connect();
-        if($this->request->getVar('id') == ""){
+        if ($this->request->getVar('id') == "") {
             $add_data = $db->table('tbl_menu');
             $add_data->insert($data);
             session()->setFlashdata('success', 'Data added successfully.');
-        }else{
-            $update_data = $db->table('tbl_menu')->where('id',$this->request->getVar('id'));
+        } else {
+            $update_data = $db->table('tbl_menu')->where('id', $this->request->getVar('id'));
             $update_data->update($data);
             session()->setFlashdata('success', 'Data updated successfully.');
         }
 
         return redirect()->to('menu_list');
+    }
 
-	}
-
-    public function menu_list(){
+    public function menu_list()
+    {
         $model = new AdminModel();
 
-        $wherecond = array('is_deleted'=> 'Y');
+        $wherecond = array('is_deleted' => 'Y');
 
 
         $data['menu_data'] = $model->get_all_data('tbl_menu', $wherecond);
         // echo "<pre>";print_r($data['menu_data']);exit();
-        echo view('menu_list',$data);
+        echo view('menu_list', $data);
     }
 
     public function get_menu()
-	{
-        
+    {
+
         $model = new AdminModel();
 
         $menu_id = $this->request->uri->getSegments(1);
         $data['single_data'] = $model->get_single_data('tbl_menu', $menu_id[1]);
 
-        echo view('add_menu',$data);
-
-	}
+        echo view('add_menu', $data);
+    }
 
 
 
 
     public function delete()
-	{
-        
+    {
+
         $uri_data = $this->request->uri->getSegments(2);
 
         $id = base64_decode($uri_data[1]);
         $table = $uri_data[2];
-        
-		// echo "<pre>"; print_r($uri_data);
+
+        // echo "<pre>"; print_r($uri_data);
         // echo $table;
-		// exit();
-	
-		// Update the database row with is_deleted = 1
-		$data = ['is_deleted' => 'N'];
-		$db = \Config\Database::connect();
-	
-	
-		$update_data = $db->table($table)->where('id',$id);
-		$update_data->update($data);
-		session()->setFlashdata('success', 'Data deleted successfully.');
-		return redirect()->back();
-	
-	
-	
-		// Redirect or return a response as needed
-	}
+        // exit();
+
+        // Update the database row with is_deleted = 1
+        $data = ['is_deleted' => 'N'];
+        $db = \Config\Database::connect();
+
+
+        $update_data = $db->table($table)->where('id', $id);
+        $update_data->update($data);
+        session()->setFlashdata('success', 'Data deleted successfully.');
+        return redirect()->back();
+
+
+
+        // Redirect or return a response as needed
+    }
 
 
     public function add_new_user()
@@ -825,12 +826,12 @@ class AdminController extends BaseController
 
             if ($email !== null && $password !== null) {
 
-                $wherecond = array('is_deleted'=> 'Y');
+                $wherecond = array('is_deleted' => 'Y');
 
-                $data['menu_data'] = $model->get_all_data('tbl_menu',$wherecond);
+                $data['menu_data'] = $model->get_all_data('tbl_menu', $wherecond);
 
 
-                return view('add_user',$data);
+                return view('add_user', $data);
             } else {
                 return redirect()->to(base_url());
             }
@@ -845,8 +846,8 @@ class AdminController extends BaseController
 
         $accessLevels = $this->request->getVar('access_level');
 
-		// Convert the array of selected checkboxes to a comma-separated string
-		$accessLevelString = implode(',', $accessLevels);
+        // Convert the array of selected checkboxes to a comma-separated string
+        $accessLevelString = implode(',', $accessLevels);
         $data = [
             'full_name' => $this->request->getVar('full_name'),
             'email' => $this->request->getPost('email'),
@@ -859,86 +860,88 @@ class AdminController extends BaseController
         ];
 
         $db = \Config\Database::Connect();
-        if($this->request->getVar('id') == ""){
+        if ($this->request->getVar('id') == "") {
             $add_data = $db->table('register');
             $add_data->insert($data);
             session()->setFlashdata('success', 'Data added successfully.');
-        }else{
-            $update_data = $db->table('register')->where('id',$this->request->getVar('id'));
+        } else {
+            $update_data = $db->table('register')->where('id', $this->request->getVar('id'));
             $update_data->update($data);
             session()->setFlashdata('success', 'Data updated successfully.');
         }
 
         return redirect()->to('user_list');
-
     }
 
-    public function user_list(){
+    public function user_list()
+    {
         $model = new AdminModel();
 
-        $wherecond = array('is_deleted'=> 'Y', 'role'=> 'sub_admin');
+        $wherecond = array('is_deleted' => 'Y', 'role' => 'sub_admin');
         $data['user_data'] = $model->get_all_data('register', $wherecond);
         // echo "<pre>";print_r($data['menu_data']);exit();
-        echo view('user_list',$data);
+        echo view('user_list', $data);
     }
 
 
     public function get_user()
-	{
-        
+    {
+
         $model = new AdminModel();
-        $wherecond = array('is_deleted'=> 'Y');
+        $wherecond = array('is_deleted' => 'Y');
 
         $menu_id = $this->request->uri->getSegments(1);
         $data['single_data'] = $model->get_single_data('register', $menu_id[1]);
-        $data['menu_data'] = $model->get_all_data('tbl_menu',$wherecond);
+        $data['menu_data'] = $model->get_all_data('tbl_menu', $wherecond);
 
         // echo "<pre>";print_r($data['single_data']);exit();
 
-        echo view('add_user',$data);
-
-	}
-
-    
-  public function chechk_menu_name_id()
-  {
-      $admin_model = new AdminModel();
-      $menu_name = $this->request->getPost('menu_name');
-  
-  if ($menu_name) {
-      $menuname = $admin_model->checkexist_menu($menu_name, 'url_location');
-      // echo "<pre>";
-      // print_r($email);exit();
-      return json_encode($menuname);
-  } else {
-      return json_encode([]);
-  }
-  
-  }
+        echo view('add_user', $data);
+    }
 
 
-
-    
-
-
-  public function SendNotifications()
+    public function chechk_menu_name_id()
     {
-       // print_r($_POST);die;
-       $selected_faculty = $this->request->getPost('selected_faculty');
-       $selectedStudents = $this->request->getPost('selected_students');
-       $notification_date =$this->request->getPost('notification_date');
-       $notificationDescription = $this->request->getPost('notification_description');
-       $model = new AdminModel(); 
-       $result= [
-        'selected_faculty' => $selected_faculty,
-        'selected_students' => $selectedStudents, 
-        'notification_description' => $notificationDescription,
-         'notification_date' =>  $notification_date,
-    ];
-         $model->insertNotification($result);
-        
-      
-         return redirect()->to('Notifications');
-  }
-  
+        $admin_model = new AdminModel();
+        $menu_name = $this->request->getPost('menu_name');
+
+        if ($menu_name) {
+            $menuname = $admin_model->checkexist_menu($menu_name, 'url_location');
+            // echo "<pre>";
+            // print_r($email);exit();
+            return json_encode($menuname);
+        } else {
+            return json_encode([]);
+        }
+    }
+
+
+
+
+
+
+    public function SendNotifications()
+    {
+        // print_r($_POST);die;
+        $selected_faculty = $this->request->getPost('selected_faculty');
+        $selectedStudents = $this->request->getPost('selected_students');
+        $notification_date = $this->request->getPost('notification_date');
+        $notificationDescription = $this->request->getPost('notification_description');
+        $model = new AdminModel();
+        $result = [
+            'selected_faculty' => $selected_faculty,
+            'selected_students' => $selectedStudents,
+            'notification_description' => $notificationDescription,
+            'notification_date' =>  $notification_date,
+        ];
+        $model->insertNotification($result);
+
+
+        return redirect()->to('Notifications');
+    }
+
+    public function viewProfile()
+    {
+        echo view('AdminSideBar/viewProfile');
+    }
 }

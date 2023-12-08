@@ -43,8 +43,8 @@ $routes->post('chechk_username_id', 'Home::chechk_username_id');
 $routes->get('chechk_menu_name_id', ' AdminController::chechk_menu_name_id');
 $routes->post('chechk_menu_name_id', 'AdminController::chechk_menu_name_id');
 
-$routes->get('chechk_mobile_no_id','Home::chechk_mobile_no_id');
-$routes->post('chechk_mobile_no_id','Home::chechk_mobile_no_id');
+$routes->get('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
+$routes->post('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
 
 
 
@@ -119,6 +119,9 @@ $routes->get('chatuser/(:any)', 'AdminController::singlechat/$1');
 $routes->get('Notifications', 'AdminController::Notifications');
 $routes->post('insertChat', 'AdminController::insertChat');
 $routes->post('SendNotifications', 'AdminController::SendNotifications');
+$routes->get('viewProfile', 'AdminController::viewProfile');
+
+
 
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');
@@ -146,7 +149,7 @@ $routes->post('edit_user/(:any)', 'AdminController::AdduserByadmin/$1');
 $routes->get('edit_user/(:any)', 'AdminController::get_user/$1');
 
 
-$routes->get('delete/(:any)/(:any)','AdminController::delete/$1/$1');
+$routes->get('delete/(:any)/(:any)', 'AdminController::delete/$1/$1');
 // $routes->post('delete/(:any)/(:any)','AdminController::delete/$1/$1');
 
 
