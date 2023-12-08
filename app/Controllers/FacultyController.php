@@ -53,45 +53,45 @@ class FacultyController extends BaseController
   // }
   // }
   public function fetchDataByAssignTeacherId()
-{
+  {
     if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
+      $sessionData = $_SESSION['sessiondata'];
 
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
+      $email = $sessionData['email'] ?? null;
+      $password = $sessionData['password'] ?? null;
 
-        if ($email !== null && $password !== null) {
-            $teacherId = $this->session->get('id');
-            $facultymodel = new Facultymodel();
-            $adminModel = model('AdminModel');
+      if ($email !== null && $password !== null) {
+        $teacherId = $this->session->get('id');
+        $facultymodel = new Facultymodel();
+        $adminModel = model('AdminModel');
 
-            // Fetch today's session data
-            $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
-            // Fetch other data using where condition
-            $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
-            $notifications = $adminModel->getUserRole($teacherId);
+        // Fetch today's session data
+        $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
+        // Fetch other data using where condition
+        $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
+        $notifications = $adminModel->getUserRole($teacherId);
 
-            $todayDate = date('Y-m-d H:i:s');
-            $displayedNotificationCount = 0;
+        $todayDate = date('Y-m-d H:i:s');
+        $displayedNotificationCount = 0;
 
-            foreach ($notifications as $key => $notification) {
-                $notificationDate = $notification['timestamp'];
-                if ($notificationDate >= $todayDate) {
-                    $displayedNotificationCount++;
-                }
-            }
-
-            return view('faculty', [
-                'data' => $data,
-                'todaysession' => $todaysession,
-                'notifications' => $notifications,
-                'notificationCount' => $displayedNotificationCount,
-            ]);
+        foreach ($notifications as $key => $notification) {
+          $notificationDate = $notification['timestamp'];
+          if ($notificationDate >= $todayDate) {
+            $displayedNotificationCount++;
+          }
         }
+
+        return view('faculty', [
+          'data' => $data,
+          'todaysession' => $todaysession,
+          'notifications' => $notifications,
+          'notificationCount' => $displayedNotificationCount,
+        ]);
+      }
     }
 
     return redirect()->to(base_url());
-}
+  }
 
   public function index()
   {
@@ -229,11 +229,21 @@ class FacultyController extends BaseController
         $result = session();
         $registerId = $result->get('id');
         $db = \Config\Database::connect();
+        // $table = $db->table('uplode_study_video_from_student');
+        // $query = $table->where('Faculty_id', $registerId)->get();
+
         $table = $db->table('uplode_study_video_from_student');
-        $query = $table->where('Faculty_id', $registerId)->get();
+        $query = $table->select('uplode_study_video_from_student.*, register.full_name')
+          ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id')
+          ->where('uplode_study_video_from_student.Faculty_id', $registerId)
+          ->get();
+
+
+
         if ($query->getNumRows() > 0) {
           $results = $query->getResult();
-          //   print_r($results);die;
+          // print_r($results);
+          // die;
           return view('StudentuplodedVidio', ['results' => $results]);
         } else {
           return redirect()->to(base_url());
@@ -308,7 +318,7 @@ class FacultyController extends BaseController
         $registerId = $result->get('id');
         $model = new facultymodel();
         $data['FacultysheduleData'] = $model->fetchshedule($registerId);
-      // echo "<pre>";print_r($data['FacultysheduleData']);exit();
+        // echo "<pre>";print_r($data['FacultysheduleData']);exit();
         return view('FacultysideBar/Monthlyshedule',  $data);
       } else {
         return redirect()->to(base_url());
@@ -317,6 +327,4 @@ class FacultyController extends BaseController
       return redirect()->to(base_url());
     }
   }
-
-
 }

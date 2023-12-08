@@ -55,8 +55,8 @@
                   // Generate a random background color based on the student's name
                   $randomColor1 = '#' . substr(md5($data->Student_name), 0, 4);
                   ?>
-                  <div class="col-sm-4 mt-3">
-                    <div class="position-relative videoofs">
+                  <div class="col-sm-3 mt-3">
+                    <div class="position-relative videoofs card">
                       <!-- <img src="<?= base_url(); ?>dist/img/photo1.png" alt="Photo 1" class="img-fluid"> -->
                       <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
                         <!-- Adjust the video size -->
@@ -65,21 +65,26 @@
 
                       <?php
                       // Generate a random background color based on the student's name
-                      $randomColor = '#' . substr(md5($data->Student_name), 0, 6);
-                      ?>
+                      $randomColor = '#' . substr(md5($data->Student_name), 0, 6); ?>
                       <div class="ribbon-wrapper ribbon-lg">
+                        <!-- <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg"> -->
                         <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
-                          <?= $data->Student_name ?>
+                          <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>"><?= $data->Student_name ?> </p>
                         </div>
+                      </div>
+                      <?php
+                      $time = new DateTime($data->DateTime);
+                      $date = date("j M Y", strtotime($data->DateTime));
+
+                      $time = $time->format('H:i');
+                      ?>
+                      <div class="p">
+                        <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?> </p>
                       </div>
                     </div>
                   </div>
-
                 <?php } ?>
               <?php } ?>
-
-
-
             </div>
           </div>
           <!-- /.card-body -->
