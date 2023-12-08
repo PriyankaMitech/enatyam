@@ -65,40 +65,6 @@ $(document).ready(function(){
         }
     })
 
-
-    $('.stud').click(function (e) {
-        // console.log($(this).attr('value'))
-        var studeid = $(this).attr('value')
-        $.ajax({
-            url: 'http://localhost/enatyam/Chat', // Make sure this URL matches your CodeIgniter route
-            type: "POST",
-            data: {studeid:studeid},
-            dataType: "JSON",
-            success: function (response) {
-                $.each(response, function(key, value) {
-                    
-                    if (studeid == value.sender_id) {
-                        // $('.direct-chat-msg.right').addClass('d-none')   
-                        $('.rightmsg').text(value.message)
-                    }else {
-                        // id= value.sender_id
-                        // console.log(value.sender_id)
-                        // $.each(id, function() {
-                            $('.leftmsg').text(value.message)
-                        // })
-                        
-                    }
-                    
-                });
-                console.log(response)
-                // $('#chatform').trigger("reset") 
-                // var html = '<div class="direct-chat-msg right"><div class="direct-chat-infos clearfix"><span class="direct-chat-name float-right">Sarah Bullock</span><span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span></div><img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image"><div class="direct-chat-text">'+response.getdata.message+'</div></div>'
-                // $('.direct-chat-messages').append(html)
-            },
-        });
-    })
-
-
     var SELECTOR_DIRECT_CHAT = '.direct-chat';
     var CLASS_NAME_DIRECT_CHAT_OPEN = 'direct-chat-contacts-open';
     $('.chatopen').click(function(){

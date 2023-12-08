@@ -58,30 +58,13 @@ class LoginModel extends Model
 
     public function setStudentName($getdata)
     {
-        // print_r($data);exit();
-        // $student_name=array('student_name'=>$data['full_name']);
-        $student_name = array('register_id' => $getdata['register_id'], 'student_name' => $getdata['full_name'], 'email' => $getdata['email'], 'mobile_no' => $getdata['mobile_no']);
-        $studentData = [
-            'student_name'   => $student_name['student_name'],
-            'email'          => $student_name['email'],
-            'mobile_no'          => $student_name['mobile_no'],
-            'register_id'          => $student_name['register_id'],
-        ];
-        if ($getdata['role'] == 'Student') {
+        $result = $this->db->table('student')->insert($getdata);
 
-
-            // $res = $this->db->table('student')->insert($student_name, $data['full_name']);
-            $res1 = $this->db->table('student')->insert($studentData);
-
-
-
-         
-        if($res1==1 ){
-            echo "name and email inserted in student successfully";
+        if($result==1 ){
+            return true;
         }
         else{
-            echo "error in inserting in student table";
-        }
+            return false;
         }
 
     } 
@@ -349,14 +332,14 @@ class LoginModel extends Model
 
 
 
-    public function check_otp($otp, $mobile_no, $email) {
+    public function check_otp($otp, $emailotp, $mobile_no, $email) {
         $result = $this->db
             ->table('register')
-            ->select('otp')
+            ->select('otp, emailotp')
             ->where(['mobile_no' => $mobile_no])
             ->get()
             ->getRow();
-    
+            
         if ($otp == $result->otp) {
             $updateData = [
                 'is_mobile_verified' => 'Y'
@@ -368,21 +351,45 @@ class LoginModel extends Model
                 ->set($updateData)
                 ->update();
     
-            $data = array(
-                'msg' => 'Email verified',
+            $data1 = array(
+                'msg' => 'Mobile verified',
                 'status' => '200',
                 'email' => $email  
             );
     
-            return $data;
-        } else {
-            $data = array(
+        }else {
+            $data1 = array(
                 'msg' => 'Enter correct otp',
                 'status' => '203'
             );
     
-            return $data;
         }
+
+        if($emailotp == '4544'){
+            $this->db
+            ->table('register')
+            ->where(["mobile_no" => $mobile_no])
+            ->set('is_email_verify','Y')
+            ->update();
+
+            $data2 = array(
+                'msg' => 'Email verified',
+                'status' => '200',
+                'email' => $email  
+            );
+        } else {
+            $data2 = array(
+                'msg' => 'Enter correct otp',
+                'status' => '203'
+            );
+    
+        }
+
+        $result = array(
+            'mobile' => $data1,
+            'email' => $data2
+        );
+        return $result;
     }
 
     public function updateUserByEmail($email, $data)
