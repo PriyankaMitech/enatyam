@@ -2283,7 +2283,7 @@
                         $('.submitButton').prop('disabled', false);
 
                     } else if (response == 'true') {
-                        $('#emailError').text('This email is allredy available.');
+                        $('#emailError').text('This email is already available.');
                         $('.submitButton').prop('disabled', true);
                     }
                 }
@@ -2533,7 +2533,7 @@
                 var formData = $(form).serialize();
 
                 // Check if all required fields are filled
-                if ($('#mobile_no').val()) {
+                if ($('#mobile_no').val() && $('#email').val()) {
                     // Your mobile verification AJAX call
                     $.ajax({
                         url: "verifymobile",
@@ -2544,27 +2544,55 @@
                             console.log(response)
                             $('#mobile_noError').addClass('d-none');
                             $('#otperror').addClass('d-none');
-                            if (response.status == '203') {
-                                $('#otp').removeClass('d-none').after('<span id="otperror">' + response.msg + '</span>')
+                            // if (response.mobileexist == true) {
+                            //     $('#mobile_noError').addClass('d-none');
+                            //     $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
+                            // }else if (response.emailexist == true) {
+                            //     $('#emailError').addClass('d-none');
+                            //     $('#emailError').removeClass('d-none').text('Email already exist.')
+                            // } else {
+                            //     console.log(response)
+                            //     if (response.email.status == '203') {
+                            //         $('#emailotp').removeClass('d-none').after('<span id="emailerror">' + response.msg + '</span>')
+                            //     }else if (response.mobile.status == '203') {
+                            //         $('#otp').removeClass('d-none').after('<span id="otperror">' + response.msg + '</span>')
+                            //     }else {
+                            //         if (response.email.status == '200' && response.mobile.status == '200' ) {
+                            //             $('#otperror').addClass('d-none');
+                            //             $('#registerformpopup').modal('hide');
+                            //             $('#userformmodal').modal('show');
+                            //             $('#hiddenEmail').val(response.email);
+                            //             $('#yourFormId').submit();
+                            //         } else {
+                            //             $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
+                            //             $('#emailotp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your email</span>')
+                            //         }
+                            //     }
+                            // }
+                            if (response.email.status == '203') {
+                                console.log('response')
+                                $('#emailotp').removeClass('d-none').after('<span id="emailerror">' + response.email.msg + '</span>')
+                            }else if (response.email.status == '203') {
+                                $('#otp').removeClass('d-none').after('<span id="otperror">' + response.mobile.msg + '</span>')
                             } else {
-                                if (response.mobileexist == true) {
+                                if (response.mobile.mobileexist == true) {
                                     $('#mobile_noError').addClass('d-none');
                                     $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
-                                } else if (response.emailexist == true) {
+                                } else if (response.email.emailexist == true) {
                                     $('#emailError').addClass('d-none');
                                     $('#emailError').removeClass('d-none').text('Email already exist.')
                                 } else {
-                                    if (response.status == '200') {
-                                        // $('#otperror').addClass('d-none');    
-                                        // swal.fire("Success", "Registration successfull!", "success");
-                                        // window.location.href = "Home"; 
+                                    if (response.email.status == '200' && response.mobile.status == '200') {
+                                        console.log('response1')
                                         $('#otperror').addClass('d-none');
                                         $('#registerformpopup').modal('hide');
                                         $('#userformmodal').modal('show');
-                                        $('#hiddenEmail').val(response.email);
+                                        $('#hiddenEmail').val(response.mobile.email);
                                         $('#yourFormId').submit();
                                     } else {
+                                        console.log('response2')
                                         $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
+                                        $('#emailotp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your email</span>')
                                     }
 
                                 }

@@ -49,7 +49,7 @@ require 'src/SMTP.php';
         return true;
     }
 
-    function sendConfirmationEmail($email, $msg)
+    function sendConfirmationEmail($email, $otp=null, $msg=null)
     {
         try {
             $mail = new PHPMailer(true);
@@ -63,7 +63,7 @@ require 'src/SMTP.php';
             $mail->setFrom('siddheshkadgemitech@gmail.com', 'Payment Confirmation');
             $mail->addAddress($email, 'Recipient Name');
             $mail->isHTML(true);
-            $mail->Subject = 'Email Verification Code';
+            $mail->Subject = 'Email Verification Code - '.$otp.' ';
             $mail->Body = "Payment Confirmation <br><br> Thank you for your payment ";
             $mail->send();
         } catch (Exception $e) {
