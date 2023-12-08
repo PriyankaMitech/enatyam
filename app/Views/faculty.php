@@ -1,45 +1,89 @@
 <?php include('FacultySidebar2.php'); ?>
 <style>
-    #studentTable {
-        width: 100%;
-        border-collapse: collapse;
-    }
+#studentTable {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-    #studentTable th,
-    #studentTable td {
-        padding: 10px;
-        text-align: center;
-        border: 1px solid #ccc;
-    }
+#studentTable th,
+#studentTable td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
 
-    #studentTable th {
-        background-color: #f2f2f2;
-        font-weight: bold;
-    }
+#studentTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
 
-    .button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #0074D9;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-    }
+#todaySessionsTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
 
-    #toggle-content {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-top: 10px;
-        background-color: #f9f9f9;
-        width: 404px;
-        height: 122px;
-    }
-    div.dataTables_wrapper div.dataTables_filter input {
-        margin-left: 0.5em;
-        display: inline-block;
-        width: auto;
-    }
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#toggle-content {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    width: 404px;
+    height: 122px;
+}
+
+.toggle-button {
+    cursor: pointer;
+}
+
+.icon-link {
+    cursor: pointer;
+}
+
+.availability-link {
+    cursor: pointer;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: auto;
+}
+#groupListModal {
+            color: #333;
+        }
+
+        #groupListModal .modal-content {
+            background-color: #f8f9fa;
+        }
+
+        #groupListModal .modal-header {
+            background-color: #007bff;
+            color: #fff;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        #groupListModal .modal-title {
+            font-weight: bold;
+        }
+
+        #groupListModal .modal-body {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        #groupListModal .modal-footer {
+            border-top: 1px solid #dee2e6;
+        }
 </style>
 <nav class="main-header navbar navbar-expand navbar-light">
     <ul class="navbar-nav">
@@ -54,38 +98,39 @@
         </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
+        <!-- Navbar Search -->
+        <li class="nav-item">
+            <div class="navbar-search-block">
+                <form class="form-inline">
+                    <div class="input-group input-group-sm">
+                        <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-navbar" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-          </form>
-        </div>
-      </li>
-      <?php
+        </li>
+        <?php
     // Get today's date and time in the required format
     $todayDate = date('Y-m-d H:i:s');
 ?>
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-    <a class="nav-link" data-toggle="dropdown" href="#">
-        <i class="far fa-bell"></i>
-        <?php
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+                <i class="far fa-bell"></i>
+                <?php
             // Initialize the count
             $displayedNotificationCount = 0;
         ?>
-        <span class="badge badge-danger navbar-badge">
-            <?php foreach ($notifications as $key => $notification):
+                <span class="badge badge-danger navbar-badge">
+                    <?php foreach ($notifications as $key => $notification):
                 $notificationDate = $notification['timestamp'];
                 // Only count notifications with timestamps equal to or after today
                 if ($notificationDate >= $todayDate):
@@ -94,11 +139,11 @@
             endforeach;
             echo $displayedNotificationCount; // Display the count
             ?>
-        </span>
-    </a>
-    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
-        <div class="notification-scroll">
-            <?php foreach ($notifications as $key => $notification):
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
+                <div class="notification-scroll">
+                    <?php foreach ($notifications as $key => $notification):
                 $notificationDate = $notification['timestamp'];
                 // Only show notifications with timestamps equal to or after today
                 if ($notificationDate >= $todayDate):
@@ -113,21 +158,22 @@
                                     <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                                 </h3>
                                 <p class="text-sm"><?= $notification['notification_description'] ?></p>
-                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> <?= $notification['timestamp'] ?></p>
+                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>
+                                    <?= $notification['timestamp'] ?></p>
                             </div>
                         </div>
                         <!-- Message End -->
                     </a>
-            <?php
+                    <?php
                 endif;
             endforeach;
             ?>
-        </div>
-        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-    </div>
-</li>
-      <!-- Notifications Dropdown Menu -->
-    
+                </div>
+                <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+            </div>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+
     </ul>
 </nav>
 <div class="content-wrapper">
@@ -141,7 +187,8 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
 
-                        <li class="breadcrumb-item active"> <a href="<?php echo base_url(); ?>FacultyDashboard"> Dashboard </a></li>
+                        <li class="breadcrumb-item active"> <a href="<?php echo base_url(); ?>FacultyDashboard">
+                                Dashboard </a></li>
 
 
                     </ol>
@@ -156,110 +203,132 @@
         <div class="container-fluid">
             <!-- Info boxes -->
             <div class="row">
+               <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+                <span class="info-box-icon bg-danger elevation-1"><i class='fas fa-chalkboard-teacher'></i></span>
+                <div class="info-box-content">
+                <a class="icon-link" id="todaySessionsTable"> <span class="info-box-text">Today's Sessions</span></a>
+
+                    <!-- <span class="info-box-text toggle-button" data-target="todaySessionsTable" id="">Today's Sessions</span>
+                    <span class="info-box-number"></span> -->
+                </div>
+            </div>
+        </div>
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-info elevation-1"><i class="fa fa-calendar"
+                                aria-hidden="true"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text availability-link" data-target="GroupTable">Group List</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-danger elevation-1"><i class='fas fa-chalkboard-teacher'></i></span>
+                        <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
                         <div class="info-box-content">
-                            <span class="info-box-text" id="toggle-button">Today's Sessions</span>
+                            <a class="icon-link" id="showTableLink"> <span class="info-box-text">Student List</span></a>
                             <span class="info-box-number"></span>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-info elevation-1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                        <div class="info-box-content">
-                            <span class="info-box-text">Availability</span>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
                         <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
                         <div class="info-box-content">
-                            <a class="icon-link" id="showTableLink"> <span class="info-box-text">Student
-                                    List</span></a>
-                            <span class="info-box-number">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="info-box mb-3">
-                        <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
-                        <div class="info-box-content">
-                            <a class="icon-link"> <span class="info-box-text">conducted classes
-
-                                </span></a>
-                            <span class="info-box-number">
-                            </span>
+                            <a class="icon-link toggle-button" data-target="conductedClassesTable">
+                                <span class="info-box-text">Conducted Classes</span>
+                            </a>
+                            <span class="info-box-number"></span>
                         </div>
                     </div>
                 </div>
                 <!-- <form method="post"  enctype="multipart/form-data" action="<?php echo base_url('uploadVideo'); ?>"> -->
-                <table id="studentsTable" style="display: none;">
-                    <thead>
-                        <tr>
-
-                            <th>Name</th>
-                            <th>Email</th>
-
-                            <th>Profile</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($data as $row) : ?>
-                            <tr>
-                                <td><?php echo $row['student_name']; ?></td>
-                                <td><?php echo $row['email']; ?></td>
-                                <!-- <td> <a href="<?php echo base_url() ?>facultyinfo">View Profile</td> -->
-                                <!-- <td>
-                                <a
-                                    href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>">Uplode Video
-                                    </a>
-                            </td> -->
-                                <td>
-                                    <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>" class="button">Upload Video</a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+               
             </div>
-                <div class="card" id="studentTable"  style="display: none;">
-                    <div class="card-header">
-                        <div class="card-tools">
+            <div class="card" id="studentTable" style="display: none;">
+                <div class="card-header">
+                    <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
-                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                            <input type="text" name="table_search" class="form-control float-right"
+                                placeholder="Search">
 
                             <div class="input-group-append">
-                            <button type="submit" class="btn btn-default">
-                                <i class="fas fa-search"></i>
-                            </button>
+                                <button type="submit" class="btn btn-default">
+                                    <i class="fas fa-search"></i>
+                                </button>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Join Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($data as $row) : ?>
+                            <tr>
+                                <td><?php echo $row['register_id']; ?></td>
+                                <td><?php echo $row['student_name']; ?></td>
+                                <!-- Format the date as day monthname year -->
+                                <td><?php echo date('d F Y', strtotime($row['created_at'])); ?></td>
+                                <td>
+                                    <a href="<?php echo base_url()?>chatuser/<?php echo $row['register_id']; ?>"
+                                        class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
+                                    <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>"
+                                        class="btn btn-sm  badge-primary"><i class="fas fa-file-upload"></i></a>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+                <div class="card" id="todaySessionsTableshow" style="display:none;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- Existing search input on the left side -->
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                            
+                                <div class="input-group-append">
+                                    
+                                </div>
+                            </div>
+                            <?php if (!empty($todaysession)): ?>
+                            <p class="mb-0">
+                                Date: <?= date('l, F j, Y', strtotime($todaysession[0]->date)); ?>
+                            </p>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="card-body">
                         <table class="table table-hover text-nowrap">
                             <thead>
                                 <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Join Date</th>
-                                <th>Action</th>
+                                    <th>Student Name</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($data as $row) : ?>
+                                <?php foreach ($todaysession as $session): ?>
                                 <tr>
-                                    <td><?php echo $row['register_id']; ?></td>
-                                    <td><?php echo $row['student_name']; ?></td>
-                                    <td><?php echo $row['created_at']; ?></td>
+                                    <td><?= $session->student_name; ?></td>
+                                    <td><?= formatDate($session->start_time); ?></td>
+                                    <td><?= formatDate($session->end_time); ?></td>
                                     <td>
-                                    <a href="<?php echo base_url()?>chatuser/<?php echo $row['register_id']; ?>" class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
-                                    <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>" class="btn btn-sm bg-teal"><i class="fas fa-file-upload"></i></a>
+                                        <form action="join_session.php" method="get">
+                                            <input type="hidden" name="session_id" value="<?= $session->id; ?>">
+                                            <button type="submit" class="btn btn-primary">Join</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -267,42 +336,94 @@
                         </table>
                     </div>
                 </div>
+
+            <!-- Add a PHP function to format time -->
+        <?php function formatDate($time) { $dateTime = new DateTime($time); return $dateTime->format('H:i');}?>
+        <div class="card" id="GroupTable">
+            <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- Existing search input on the left side -->
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <div class="input-group-append">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>Group Name</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Group1</td>
+                            <td>Group1</td>
+                            <td>Group1</td>
+                            <td>
+                                <button class="btn btn-primary" onclick="displayGroupList('Group1')">View List</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+         </div>
+    <div class="modal fade" id="groupListModal" tabindex="-1" role="dialog" aria-labelledby="groupListModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="groupListModalLabel">Group List</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="groupListModalBody">
+                <!-- Content of the modal body will be dynamically populated with JavaScript -->
+            </div>
+           
+        </div>
+    </div>
+</div>
             <div id="" class="collapse">Availability
                 <label for="sessiontime">Session (date and time):</label>
                 <input type="datetime-local" id="sessiontime" name="sessiontime">
             </div>
             <?php if (!empty($Studentdata)) { ?>
-                <div id="StudentList" class="">
-                    <p class="info-box-number h3 text-center"><b> Student List</b></p>
+            <div id="StudentList" class="">
+                <p class="info-box-number h3 text-center"><b> Student List</b></p>
 
-                    <table id="studentList-table" class="table">
-                        <thead>
-                            <tr>
-                                <th>Sr.no</th>
-                                <th>Student Name</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
+                <table id="studentList-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Sr.no</th>
+                            <th>Student Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
                             $i = 1;
                             foreach ($Studentdata as $data) { ?>
-                                <tr>
-                                    <td><?= $i; ?></td>
-                                    <td><?= $data->student_name; ?></td>
-                                    <td>
-                                        <a class="btn btn-primary mr-4" href="#">Edit</a>
-                                        <a class="btn btn-danger mr-4" href="#">Delete</a>
-                                        <a class="btn btn-warning mr-4" href="#">Upload</a>
-                                    </td>
-                                </tr>
-                            <?php $i++;
+                        <tr>
+                            <td><?= $i; ?></td>
+                            <td><?= $data->student_name; ?></td>
+                            <td>
+                                <a class="btn btn-primary mr-4" href="#">Edit</a>
+                                <a class="btn btn-danger mr-4" href="#">Delete</a>
+                                <a class="btn btn-warning mr-4" href="#">Upload</a>
+                            </td>
+                        </tr>
+                        <?php $i++;
                             } ?>
 
-                        </tbody>
+                    </tbody>
 
-                    </table>
-                </div>
+                </table>
+            </div>
             <?php } ?>
 
             <!-- datepicker mdb -->
@@ -314,7 +435,7 @@
                 <p id="startDate">Start Date:</p>
                 <p id="endDate">End Date:</p>
                 <script>
-                    //$("input[name='datetimes']").daterangepicker();
+                //$("input[name='datetimes']").daterangepicker();
                 </script>
 
 
@@ -326,3 +447,4 @@
 
 </div>
 <?php include('FacultysideBar/FacultyFooter.php'); ?>
+
