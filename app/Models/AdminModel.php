@@ -517,6 +517,7 @@ class AdminModel extends Model
     $selectedStudentIds = $result['selected_students'];
     $notificationDescription = $result['notification_description'];
      $notification_date= $result['notification_date'];
+     $admin_id= $result['admin_id'];
     $facultyData = [];
     $studentData = [];
     if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
@@ -525,6 +526,8 @@ class AdminModel extends Model
             'notification_description' => $notificationDescription,
             'user_type' => 'faculty',
             'timestamp' => $notification_date,
+            'admin_id' => $admin_id,
+            'created_on' => date('Y:m:d H:i:s'),  
         ];
     } elseif (is_array($selectedFacultyIds)) {
         foreach ($selectedFacultyIds as $facultyId) {
@@ -533,6 +536,8 @@ class AdminModel extends Model
                 'notification_description' => $notificationDescription,
                 'user_type' => 'faculty',
                 'timestamp' => $notification_date,
+                'admin_id' => $admin_id,
+                'created_on' => date('Y:m:d H:i:s'),  
             ];
         }
     }
@@ -542,6 +547,8 @@ class AdminModel extends Model
             'notification_description' => $notificationDescription,
             'user_type' => 'student',
             'timestamp' => $notification_date,
+            'admin_id' => $admin_id,
+            'created_on' => date('Y:m:d H:i:s'),  
         ];
     } elseif (is_array($selectedStudentIds)) {
         foreach ($selectedStudentIds as $studentId) {
@@ -550,6 +557,8 @@ class AdminModel extends Model
                 'notification_description' => $notificationDescription,
                 'user_type' => 'student',
                 'timestamp' => $notification_date,
+                'admin_id' => $admin_id,
+                'created_on' => date('Y:m:d H:i:s'),  
             ];
         }
     }
@@ -561,27 +570,25 @@ class AdminModel extends Model
     }
 }
 
-    public function getUserRole($teacherId)
-    {
-    
-        $todayDate = date('Y-m-d H:i:s');
-
-        $result = $this->db->table('notificationtable')
-        ->where([
-            'user_type' => 'faculty',
-            'register_id' => 'All',
-        ])
-        ->orWhere('register_id', $teacherId)
-        ->where('timestamp >=', $todayDate) 
+public function getUserRole($teacherId)
+{
+    $result = $this->db->table('notificationtable')
+        ->select('notificationtable.*, register.full_name')
+        ->join('register', 'register.id = notificationtable.admin_id', 'left')
+        ->where('notificationtable.user_type', 'faculty')
+        ->where('(notificationtable.register_id = "All" OR notificationtable.register_id = ' . $teacherId . ')')
+        ->where('DATE(notificationtable.timestamp) >= CURDATE()')
         ->get()
         ->getResultArray();
-        
-        if ($result) {
-            return $result;
-        }else {
-            return false;
-        }
+
+    if ($result) {
+        return $result;
+    } else {
+        return false;
     }
+}
+
+
     public function getUser($user_id)
     {
     
