@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\AdminModel;
 use App\Models\StudentModel;
 use CodeIgniter\Controller;
 use App\Models\LoginModel;
@@ -180,14 +181,11 @@ public function lostpassword()
     }
     public function newpassword()
     {
-       // print_r($_POST);die;
 
         $newPassword = $this->request->getPost('new_password');
         $newPassword = $this->request->getPost('conf_password');
         $email = session()->get('email');
        
-          //  print_r($email);die;
-            // Load the UserModel
             $StudentModel = new StudentModel();
             $data = [
                 'email' => $email,
@@ -196,8 +194,7 @@ public function lostpassword()
             ];
     
        $db = \Config\Database::connect();
-   
-   
+
        $update_data = $db->table('register')->where('email',$email);
        $update_data->update($data);
        return redirect()->back();
@@ -209,22 +206,20 @@ public function lostpassword()
         $StudentModel = new StudentModel();
         $data['SessionCount'] = $StudentModel->get_user_Session($user_id); 
         $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);   
-     //    print_r( $data['slots'] );die;
+
         return view('StudentSidebar/ScheduleStudent',$data);
     }
 
-   
 
     public function selectStudentSchedule()
     {
         if ($this->request->getMethod() === 'post') {
-            // Get the data from the form
+            
             $student_register_Id = $this->request->getPost('register_student_id');
             $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
-          // print_r($selectedAppointments);die;
-          $StudentModel = new StudentModel();
+          
+            $StudentModel = new StudentModel();
     
-            // Prepare an array of data for batch insertion
             $data = [];
             foreach ($selectedAppointments as $appointment) {
                 $data[] = [
@@ -234,7 +229,6 @@ public function lostpassword()
                     'end_time' => $appointment['toTime'],
                 ];
             }
-      //print_r($data);die;
             $StudentModel->insertSelectedSlotdByStudents($data);
            return redirect()->to('StudentSelectClassDates'); 
         } else {
@@ -245,79 +239,111 @@ public function lostpassword()
         $result = session();       
         $registerId = $result->get('id');
         $StudentModel = new StudentModel();
-      $data['profileData'] =  $StudentModel->fetchProfileDate($registerId);
-   //   print_r($data['profileData']);die;
+        $data['profileData'] =  $StudentModel->fetchProfileDate($registerId);
+   
         return view('StudentSidebar/StudentProfile',$data);
     }
     public function Studentpasswordupdate()
     {
-   //    print_r($_POST);die;
-            $StudentModel = new StudentModel(); // Replace YourModel with the actual name of your model
+   
+        $StudentModel = new StudentModel(); // Replace YourModel with the actual name of your model
 
-            $userEmail = $this->request->getPost('user_email');
-            $oldPassword = $this->request->getPost('old-password');
-            $newPassword = $this->request->getPost('new-password');
-            $confirmPassword = $this->request->getPost('confirm-password');
+        $userEmail = $this->request->getPost('user_email');
+        $oldPassword = $this->request->getPost('old-password');
+        $newPassword = $this->request->getPost('new-password');
+        $confirmPassword = $this->request->getPost('confirm-password');
 
-            $user = $StudentModel->getStudendByEmail($userEmail);
-            $databaseOldPassword = $user->password;
-            if ($user && isset($user->password)) {
+        $user = $StudentModel->getStudendByEmail($userEmail);
+        $databaseOldPassword = $user->password;
+        if ($user && isset($user->password)) {
                 
-    if (is_string($oldPassword) && $oldPassword === $databaseOldPassword) {
-        // Check if $newPassword and $confirmPassword are valid strings and match
-        if (is_string($newPassword) && is_string($confirmPassword) && $newPassword == $confirmPassword) {
-            $newPassword = $newPassword;
-            $StudentModel->updatePassword($user->id, $newPassword);
+            if (is_string($oldPassword) && $oldPassword === $databaseOldPassword) {
+                // Check if $newPassword and $confirmPassword are valid strings and match
+                if (is_string($newPassword) && is_string($confirmPassword) && $newPassword == $confirmPassword) {
+                    $newPassword = $newPassword;
+                    $StudentModel->updatePassword($user->id, $newPassword);
 
-                echo json_encode(['success' => true, 'message' => 'Password updated successfully.']);
+                    echo json_encode(['success' => true, 'message' => 'Password updated successfully.']);
+                } else {
+                    echo json_encode(['success' => false, 'error' => 'New password and confirm password must be valid strings and match.']);
+                }
             } else {
-                echo json_encode(['success' => false, 'error' => 'New password and confirm password must be valid strings and match.']);
+                echo json_encode(['success' => false, 'error' => 'Old password does not match.']);
             }
         } else {
-            echo json_encode(['success' => false, 'error' => 'Old password does not match.']);
+            echo json_encode(['success' => false, 'error' => 'User not found or invalid password data.']);
         }
-    } else {
-        echo json_encode(['success' => false, 'error' => 'User not found or invalid password data.']);
     }
-}
-        public function changeCountry()
-        {
-    
-           $Country = $this->request->getPost('changeCountry');
-            $result = session();       
-            $registerId = $result->get('id');
-            $StudentModel = new StudentModel();
-            $Changecountry =  $StudentModel->changeCountry($registerId,$Country);
-            return redirect()->to('StudentProfile'); 
-        }
+    public function changeCountry()
+    {
 
-        public function StudentSelectClassDates() {
+        $Country = $this->request->getPost('changeCountry');
+        $result = session();       
+        $registerId = $result->get('id');
+        $StudentModel = new StudentModel();
+        $Changecountry =  $StudentModel->changeCountry($registerId,$Country);
+        return redirect()->to('StudentProfile'); 
+    }
 
-            $result = session();       
-            $registerId = $result->get('id');
-            $StudentModel = new StudentModel();
-            $registerData =  $StudentModel->fetchid($registerId);
-            $assignTeacherId = $registerData->Assign_Techer_id;
-            $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId );
-            $data['registerId'] = $registerId;
-            $data['assignFacultyData'] = $assignFacultyData;
-            return view('StudentSidebar/StudentSelectClassDates',$data);
+    public function StudentSelectClassDates() {
+
+        $result = session();       
+        $registerId = $result->get('id');
+        $StudentModel = new StudentModel();
+        $registerData =  $StudentModel->fetchid($registerId);
+        $assignTeacherId = $registerData->Assign_Techer_id;
+        $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId );
+        $data['registerId'] = $registerId;
+        $data['assignFacultyData'] = $assignFacultyData;
+        return view('StudentSidebar/StudentSelectClassDates',$data);
+    }
+    public function selectedslotsfromstudent()  {
+        $registerId = $this->request->getPost('registerId');
+        $selectedId = $this->request->getPost('selectedId');
+        $StudentModel = new StudentModel();
+        $dataToUpdate = [
+            'student_register_id'=>$registerId,
+        ];
+        $StudentModel->updateData($selectedId, $dataToUpdate);
+        return redirect()->to('SelectDate');
+    }
+
+    public function studentsessionstatus()
+    {
+        $result = session();       
+        $registerId = $result->get('id');
+        $StudentModel = new StudentModel();
+        $registerData =  $StudentModel->fetchSessionsByid($registerId);
+    }
+
+    public function feedback()
+    {
+        echo view('StudentSidebar/feedback');
+    }
+
+    public function savefeedback()
+    {
+        $model = new AdminModel();
+        $insertdata = array(
+            'student_id' => $_SESSION['sessiondata']['id'],
+            'faculty_id' => $_POST['faculty_id'],
+            'rating' => $_POST['faculty'],
+            'review_message' => $_POST['review_message']
+        );
+		$result = $model->insert_formdata('id', 'feedback',$insertdata);
+		if ($result) {
+            session()->setFlashdata('success','Feedback submited!');
+            echo json_encode($result);
+            // print_r($this->session->flashdata('update'));die;
         }
-        public function selectedslotsfromstudent()  {
-            $registerId = $this->request->getPost('registerId');
-            $selectedId = $this->request->getPost('selectedId');
-            $StudentModel = new StudentModel();
-            $dataToUpdate = [
-                'student_register_id'=>$registerId,
-            ];
-            $StudentModel->updateData($selectedId, $dataToUpdate);
-            return redirect()->to('SelectDate');
-        }
-        public function studentsessionstatus()
-        {
-            $result = session();       
-            $registerId = $result->get('id');
-            $StudentModel = new StudentModel();
-            $registerData =  $StudentModel->fetchSessionsByid($registerId);
-        }
+    }
+
+	public function get_citizenrate_by_id()
+	{
+		$sector = $this->input->post('sector');
+		$sector_name = str_replace("_RATING",'',$sector);
+		// echo json_encode($sector_name);
+		$result = $this->Citizen_Model->get_citizenrate_by_id($sector, $sector_name);
+		echo json_encode($result);
+	}
 }

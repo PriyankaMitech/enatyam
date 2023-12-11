@@ -191,6 +191,7 @@ $routes->get('studentList', 'DashboardController::studentList');
 $routes->post('uploadVideo', 'FacultyController::uploadVideo');
 
 $routes->get('fetchTofacultyShuduleSidebar', 'FacultyController::fetchTofacultyShuduleSidebar');
+
 //Routes for Student
 $routes->get('StudentDashboard', 'Home::StudentDashboard');
 $routes->get('profilemanagment', 'StudentController::profilemanagment');
@@ -200,6 +201,8 @@ $routes->post('Studentpasswordupdate', 'StudentController::Studentpasswordupdate
 $routes->post('selectedslotsfromstudent', 'StudentController::selectedslotsfromstudent');
 $routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
 $routes->get('SelectDate', 'StudentController::StudentSelectClassDates');
+$routes->get('feedback', 'StudentController::feedback');
+$routes->post('savefeedback', 'StudentController::savefeedback');
 // 
 // $routes->get('register', 'LoginController::register');
 // $routes->post('register', 'LoginController::register');

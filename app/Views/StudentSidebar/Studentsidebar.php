@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="<?=base_url()?>plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="<?=base_url()?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="<?=base_url()?>dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>public/css/fontawesome-stars.css">
   <link rel="stylesheet" href="<?=base_url()?>public/css/custom.css">
+  <link rel="stylesheet" href="<?=base_url(); ?>public/css/admindashboard_style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
   <link rel="stylesheet" href="<?=base_url()?>https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" -->
         <!-- integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
@@ -16,6 +20,13 @@
 </head>
 
 <body>
+<div id="flash-success-container">
+    <?php if (session()->has('success')) : ?>
+        <div class="flash-success">
+            <?= session('success') ?>
+        </div>
+    <?php endif; ?>
+</div>
   <div class="wrapper">
     <nav class="main-header navbar navbar-expand navbar-light">
       <ul class="navbar-nav">
@@ -54,7 +65,6 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             </a>
             <?php if ($_SESSION['sessiondata']['Payment_status'] == 'Y') { ?>
-              <li class="nav-item">
               <li class="nav-item">
                 <a href="<?=base_url();?>StudentDashboard" class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
@@ -180,6 +190,11 @@
                 <?php } ?>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a href="<?=base_url();?>feedback" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>Feedback </p>
+                </a>
               </li>
           </ul>
         </nav>

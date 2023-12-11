@@ -15,14 +15,13 @@
 <script src="<?=base_url()?>dist/js/pages/dashboard2.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="<?=base_url()?>dist/js/adminlte.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+<script src="<?=base_url()?>public/js/jquery.barrating.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"> -->
     </script>
  <script>
         function toggleUploadForm() {
@@ -36,8 +35,11 @@
     </script>
 
 
-    <script type="text/javascript">
-        $(document).ready(function() {
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            
+            $('#faculty<?php //echo $rate['average_ue']; ?>').barrating('set', 3<?php //echo $rate['average_ue']; ?>);
+
             $("input[name='datetimes']").daterangepicker({},
                 function(start, end, label) {
                     let startDate = start.format("YYYY-MM-DD").toString();
