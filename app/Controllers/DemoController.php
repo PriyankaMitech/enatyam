@@ -32,30 +32,6 @@ class DemoController extends BaseController
         return redirect()->to('Home');
     }
 
-    // $demoModel = new DemoModel();
-
-    // //if ($this->request->getMethod() === 'post') {
-    // $data = [
-    //     'name' => $this->request->getPost('name'),
-    //     'email' => $this->request->getPost('email'),
-    //     'phone' => $this->request->getPost('phone'),
-    //     'course' => $this->request->getPost('course'),
-    //     'sub_course' => $this->request->getPost('sub_course'),
-    //     'Age' => $this->request->getPost('Age'),
-    //     'exprience' => $this->request->getPost('exprience'),
-    //     'Country' => $this->request->getPost('Country'),
-    //     'State' => $this->request->getPost('State'),
-    //     'District' => $this->request->getPost('District'),
-    //     // 'Book_Date_Time' => $this->request->getPost('Book_Date_Time')
-    //     'Book_Date' => $this->request->getPost('Book_Date'),
-    //     'Start_Time' => $this->request->getPost('Start_Time'),
-    //     'End_Time' => $this->request->getPost('End_Time'),
-
-    // ];
-    // //   print_r($data);die;
-    // $demoModel->save($data);
-    // return redirect()->to('Home');
-    // }
 
     public function todayDemo()
     {

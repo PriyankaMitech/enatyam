@@ -250,7 +250,7 @@
                                     } ?>>
                                         <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
                                             <i class="nav-icon far fa-image"></i>
-                                            <p>Videos/Images</p>
+                                            <p>Videos</p>
                                         </a>
                                     </li>
 
@@ -271,7 +271,7 @@
                             </li>
 
                             <!-- Student Menu -->
-                            <li class="nav-item" <?php if (in_array('StudentDate', $access_levels) || in_array('Attendance', $access_levels) || in_array('UplodedvideoByStudent', $access_levels)) {
+                            <li class="nav-item" <?php if (in_array('StudentDate', $access_levels) || in_array('Attendance', $access_levels)) {
                                 echo "style='display:block'";
                             } else {
                                 echo "style='display:none'";
@@ -304,16 +304,7 @@
                                             <p>Attendance</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item" <?php if (in_array('UplodedvideoByStudent', $access_levels)) {
-                                        echo "style='display:block'";
-                                    } else {
-                                        echo "style='display:none'";
-                                    } ?>>
-                                        <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
-                                            <i class="nav-icon far fa-image"></i>
-                                            <p>Videos/Images</p>
-                                        </a>
-                                    </li>
+                          
                                     <!-- Add other Student menu items with access level checks here -->
                                 </ul>
                             </li>
@@ -686,12 +677,7 @@
                                     <p>Attendance</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
-                                    <i class="nav-icon far fa-image"></i>
-                                    <p>Videos/Images</p>
-                                </a>
-                            </li>
+                 
                             <!-- Add other Student menu items with access level checks here -->
                         </ul>
                     </li>

@@ -287,30 +287,39 @@
 
                 </ul>
               </li>
-
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon 	fa fa-child"></i>
-                  <p>
-                    Faculty
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="nav-icon 	fa fa-credit-card"></i>
+                        <p>
+                            Files
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                    <li class="nav-item">
                     <a href="<?php echo base_url() ?>UplodeVideo" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p> Uplode Video</p>
+                      <p> Add Videos / Images</p>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Faculty uploded Video</p>
-                    </a>
-                  </li>
-                </ul>
+                        <li class="nav-item" >
+                            <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>Videos</p>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item" >
+                            <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>Images</p>
+                            </a>
+                        </li>
+                        <!-- Add other Student menu items with access level checks here -->
+                    </ul>
               </li>
+
 
               <!-- <li class="nav-item">
 
