@@ -25,9 +25,8 @@ class FacultyController extends BaseController
 
 
   public function fetchDataByAssignTeacherId()
-  {
+{
     if (isset($_SESSION['sessiondata'])) {
-
         $sessionData = $_SESSION['sessiondata'];
 
         $email = $sessionData['email'] ?? null;
@@ -61,12 +60,10 @@ class FacultyController extends BaseController
                 'notificationCount' => $displayedNotificationCount,
             ]);
         }
-
-      }
     }
 
     return redirect()->to(base_url());
-  }
+}
 
   public function index()
   {
@@ -205,22 +202,11 @@ class FacultyController extends BaseController
         $result = session();
         $registerId = $result->get('id');
         $db = \Config\Database::connect();
-        // $table = $db->table('uplode_study_video_from_student');
-        // $query = $table->where('Faculty_id', $registerId)->get();
-
         $table = $db->table('uplode_study_video_from_student');
-        $query = $table->select('uplode_study_video_from_student.*, register.full_name')
-          ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id')
-          ->where('uplode_study_video_from_student.Faculty_id', $registerId)
-          ->get();
-
-
-
+        $query = $table->where('Faculty_id', $registerId)->get();
         if ($query->getNumRows() > 0) {
           $results = $query->getResult();
-          // echo '<pre>';
-          // print_r($results);
-          // die;
+          //   print_r($results);die;
           return view('StudentuplodedVidio', ['results' => $results]);
         } else {
           return redirect()->to(base_url());
@@ -295,7 +281,7 @@ class FacultyController extends BaseController
         $registerId = $result->get('id');
         $model = new facultymodel();
         $data['FacultysheduleData'] = $model->fetchshedule($registerId);
-        // echo "<pre>";print_r($data['FacultysheduleData']);exit();
+      // echo "<pre>";print_r($data['FacultysheduleData']);exit();
         return view('FacultysideBar/Monthlyshedule',  $data);
       } else {
         return redirect()->to(base_url());
@@ -306,13 +292,11 @@ class FacultyController extends BaseController
   }
 
 
-
   
   public function get_all_notification()
   {
     return view('notification');
   }
-
 
 
 
