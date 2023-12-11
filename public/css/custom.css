@@ -29,6 +29,10 @@
     background-color: #00FF00;
 }
 
+.info-box .info-box-date {
+    font-size: 11px;
+}
+
 @keyframes mymove{ 
     50% {
         transform: scale(2);

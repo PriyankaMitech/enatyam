@@ -204,10 +204,12 @@ class StudentController extends BaseController
         $session = session();
         $user_id = $session->get('id');
         $StudentModel = new StudentModel();
-        $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
-        $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
+
+        $data['SessionCount'] = $StudentModel->get_user_Session($user_id); 
+        $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);   
         //    print_r( $data['slots'] );die;
-        return view('StudentSidebar/ScheduleStudent', $data);
+        return view('StudentSidebar/ScheduleStudent',$data);
+
     }
 
     public function selectStudentSchedule()
@@ -284,6 +286,42 @@ class StudentController extends BaseController
     public function StudentSelectClassDates()
     {
 
+            $result = session();       
+            $registerId = $result->get('id');
+            $StudentModel = new StudentModel();
+            $registerData =  $StudentModel->fetchid($registerId);
+            $assignTeacherId = $registerData->Assign_Techer_id;
+            $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId );
+            $data['registerId'] = $registerId;
+            $data['assignFacultyData'] = $assignFacultyData;
+            return view('StudentSidebar/StudentSelectClassDates',$data);
+        }
+        public function selectedslotsfromstudent()  {
+            $registerId = $this->request->getPost('registerId');
+            $selectedId = $this->request->getPost('selectedId');
+            $StudentModel = new StudentModel();
+          
+           $registerData = $StudentModel->fetchProfileDate($registerId);
+        //    print_r($registerData);die;
+           $sessionStartDate = $registerData['Session_Start_Date'];
+        //    print_r($sessionStartDate);die;
+
+            $dataToUpdate = [
+                'student_register_id' => $registerId,
+                'session_start_date' => $sessionStartDate, // Update the column with the fetched value
+            ];
+            // print_r( $dataToUpdate);die;
+
+           $StudentModel->updateData($selectedId, $dataToUpdate);
+            return redirect()->to('SelectDate');
+        }
+        public function studentsessionstatus()
+        {
+            $result = session();       
+            $registerId = $result->get('id');
+            $StudentModel = new StudentModel();
+            $registerData =  $StudentModel->fetchSessionsByid($registerId);
+
         $result = session();
         $registerId = $result->get('id');
         $StudentModel = new StudentModel();
@@ -307,13 +345,7 @@ class StudentController extends BaseController
         return redirect()->to('SelectDate');
     }
 
-    public function studentsessionstatus()
-    {
-        $result = session();
-        $registerId = $result->get('id');
-        $StudentModel = new StudentModel();
-        $registerData =  $StudentModel->fetchSessionsByid($registerId);
-    }
+
 
     public function feedback()
     {
@@ -334,6 +366,7 @@ class StudentController extends BaseController
             session()->setFlashdata('success','Feedback submited!');
             echo json_encode($result);
             // print_r($this->session->flashdata('update'));die;
+
         }
     }
 

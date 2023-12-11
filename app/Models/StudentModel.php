@@ -31,11 +31,29 @@ class StudentModel extends Model
 
     public function getUserByEmail($email){
         return $this->db->table($this->table1)
-        ->where('email', $email)
-        ->where('role', 'student')
-        ->get()
-        ->getRow();
-    }
+
+            ->where('email', $email)
+            ->where('role', 'student')
+            ->get()
+            ->getRow();
+        }
+
+        public function fetchProfileDate($registerId){
+            return $this->db->table($this->table1)
+            ->where('id', $registerId)
+            ->get()
+           ->getRowArray();
+            }
+        public function insertSelectedSlotdByStudents($data)
+        {
+            if (!empty($data) && is_array($data)) {
+                $this->db->table('Student_Slots_tbl')->insertBatch($data);
+                return true; // Success
+            } else {
+                return false; // Failed to insert data
+            }
+        }
+
 
     public function fetchProfileDate($registerId){
         return $this->db->table($this->table1)
@@ -52,6 +70,37 @@ class StudentModel extends Model
             return false; // Failed to insert data
         }
     }
+
+
+        public function fetchdataFromid($assignTeacherId)
+        {
+            return $this->db->table('schedule')
+                ->join('register', 'register.id = schedule.faculty_register_id')
+                ->where('schedule.faculty_register_id', $assignTeacherId)
+                ->where('schedule.student_register_id', null) // Add the condition for NULL student_register_id
+                ->select('register.full_name, schedule.*') 
+                ->get()
+                ->getResult();
+        }
+        public function updateData($selectedId, $dataToUpdate)
+        {
+            // return $this->db->table('schedule')
+            // ->set('student_register_id' , $dataToUpdate,)
+            // ->where('id', $selectedId)
+            // ->update();
+            return $this->db->table('schedule')
+            ->set($dataToUpdate)  // Fix: Remove the extra comma
+            ->where('id', $selectedId)
+            ->update();
+        }
+        public function get_user_Session($user_id)
+        {
+        
+            return $this->db->table('register')->select('SessionsCount')->where('id', $user_id)->get()->getRow();
+        }
+        public function Getseslectedslotstostudent($user_id)
+        {
+            return $this->db->table('schedule')->where('student_register_id', $user_id) ->get()
 
     public function getStudendByEmail($email)
     {
@@ -83,16 +132,7 @@ class StudentModel extends Model
     //     ->getResult();
     // }
 
-    public function fetchdataFromid($assignTeacherId)
-    {
-        return $this->db->table('schedule')
-            ->join('register', 'register.id = schedule.faculty_register_id')
-            ->where('schedule.faculty_register_id', $assignTeacherId)
-            ->where('schedule.student_register_id', null) // Add the condition for NULL student_register_id
-            ->select('register.full_name, schedule.*') 
-            ->get()
-            ->getResult();
-    }
+
     public function updateData($selectedId, $dataToUpdate)
     {
         return $this->db->table('schedule')

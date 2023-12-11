@@ -1,7 +1,5 @@
-<?php echo view('FacultySidebar2'); ?>
-<!-- Content Wrapper. Contains page content -->
+<?php echo view('AdminSideBar'); ?>
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -15,16 +13,12 @@
                     </ol>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </section>
-
-    <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">
-
-                    <!-- Profile Image -->
                     <div class="card card-primary card-outline">
                         <div class="card-body box-profile">
                             <div class="text-center">
@@ -49,11 +43,7 @@
 
                             <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
                         </div>
-                        <!-- /.card-body -->
                     </div>
-                    <!-- /.card -->
-
-                    <!-- About Me Box -->
                     <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">About Me</h3>
@@ -380,4 +370,4 @@
 </div>
 <!-- /.content-wrapper -->
 
-<?php echo view('FacultysideBar/FacultyFooter.php'); ?>
+<?php echo view('AdminSideBar/AdminFooter.php'); ?>

@@ -13,7 +13,7 @@ class AdminModel extends Model
     protected $tableTeachers = 'schedule';
     protected $table = 'free_demo_table';
     protected $primaryKey = 'D_id';
-    protected $allowedFields = ['Date', 'Conducted_Demo', 'name', 'course', 'AssignTecher_id', ''];
+    protected $allowedFields = ['Date', 'Conducted_Demo', 'name', 'course', 'AssignTecher_id', 'Session_Start_Date'];
 
     public function AddUserByAdmin($data)
     {
@@ -193,24 +193,23 @@ class AdminModel extends Model
 
     public function add($data)
     {
+        print_r($data);die;
+        //   print_r($data['studentid']);die;
+        $builder1 = $this->db->table($this->table2);
+        $builder1->set('Assign_Techer_id', $data['faculty_name']);
+        $builder1->set('Session_Start_Date', $data['Session_Start_Date']);
+        $builder1->where('register_id', $data['studentid']);
+        $result1 = $builder1->update();
+    
+        // Update Assign_Techer_id and Session_Start_Date in table1
+        $builder2 = $this->db->table($this->table1);
+        $builder2->set('Assign_Techer_id', $data['faculty_name']);
+        $builder2->set('Session_Start_Date', $data['Session_Start_Date']);
+        $builder2->where('id', $data['studentid']);
+        $result2 = $builder2->update();
+    
 
-        //  print_r($data['studentid']);die;
-        $builder = $this->db->table($this->table2);
-
-        $builder->set('Assign_Techer_id', $data['faculty_name']);
-        $builder->where('register_id', $data['studentid']);
-
-        $result = $builder->update();
-
-        $builder = $this->db->table($this->table1);
-
-        $builder->set('Assign_Techer_id', $data['faculty_name']);
-        $builder->where('id', $data['studentid']);
-
-        $result = $builder->update();
-
-
-        if ($result) {
+        if ($result1 && $result2 ) {
             return true;
         } else {
             return false;

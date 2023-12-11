@@ -16,70 +16,53 @@
                     </ol>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </section>
     <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Your Session status</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <?php
+            $today = date('Y-m-d'); // Current date in 'Y-m-d' format
+
+            $sessionsCount = !is_null($SessionCount) ? $SessionCount->SessionsCount : 0;
+
+            // Counter variable to keep track of days to add
+            $daysToAdd = 0;
+
+            for ($i = 0; $i < $sessionsCount; $i++) {
+                $sessionStartDate = isset($slots[$i]->Session_Start_Date) ? date('Y-m-d', strtotime($today . ' +' . $daysToAdd . ' weekdays')) : null;
+                $startTime = isset($slots[$i]->start_time) ? date('H:i', strtotime($slots[$i]->start_time)) : 'N/A';
+
+                // Determine button text based on session date
+                $buttonText = ($sessionStartDate >= $today) ? 'Join' : ''; // No button for past sessions
+
+                // Increment the days to add, skipping weekends
+                $daysToAdd++;
+
+                $infoBoxColor = ($sessionStartDate >= $today) ? 'bg-warning' : 'bg-danger';
+            ?>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="info-box">
+                        <div class="info-box-icon <?= $infoBoxColor; ?> flex-column">
+                            <p class="info-box-number m-0"><?= $i + 1 ?></p>
+                            <small class="info-box-date"><?= isset($slots[$i]->Session_Start_Date) ? date('d/m/Y', strtotime($sessionStartDate)) : 'N/A' ?></small>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <?php
-                                if (!is_null($SessionCount) && $SessionCount->SessionsCount > 0) {
-                                    usort($slots, function ($a, $b) {
-                                        return strtotime($a->date) - strtotime($b->date);
-                                    });
 
-                                    for ($i = 0; $i < $SessionCount->SessionsCount; $i++) {
-                                        $cardColor = 'bg-warning'; // Default color for no data
-
-                                        if (isset($slots[$i])) {
-                                            $conductedClass = $slots[$i]->Conducted_Class;
-                                            $cardColor = ($conductedClass == 'Y') ? 'bg-success' : (($conductedClass == 'N') ? 'bg-danger' : 'bg-warning');
-                                        }
-                                ?>
-                                        <div class="col-md-3 mb-3">
-                                            <div class="card <?= $cardColor; ?>">
-                                                <div class="card-body" style="height: 150px;">
-                                                    <!-- Set your desired height -->
-                                                    <h5 class="card-title">Session <?= $i + 1 ?></h5><br>
-                                                    <?php if (isset($slots[$i])) : ?>
-                                                        <ul>
-                                                            <li><strong>Date:</strong>
-                                                                <?= date('d/m/Y', strtotime($slots[$i]->date)) ?? 'N/A' ?></li>
-                                                            <li><strong>Start Time:</strong>
-                                                                <?= $slots[$i]->start_time ?? 'N/A' ?></li>
-                                                            <li><strong>End Time:</strong> <?= $slots[$i]->end_time ?? 'N/A' ?>
-                                                            </li>
-                                                            <!-- Add other date properties as needed -->
-                                                        </ul>
-                                                    <?php else : ?>
-                                                        <p>No dates available for this session.</p>
-                                                    <?php endif; ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php }
-                                } else { ?>
-                                    <div class="col-md-12 mb-3">
-                                        <div class="card bg-warning">
-                                            <div class="card-body" style="height: 200px;">
-                                                <!-- Set your desired height -->
-                                                <p>No session count available.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-                            </div>
+                        <div class="info-box-content">
+                            <span class="info-box-text mb-3"><strong>Start time : </strong><?= $startTime ?></span>
+                            <?php if (!empty($buttonText)) : ?>
+                                <button class="btn btn-sm btn-primary float-right"><?= $buttonText ?></button>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
-    </section>
+    </div>
+</section>
+</div>
+
 </div>
 <?php echo view('FacultysideBar/FacultyFooter.php'); ?>
