@@ -1,4 +1,4 @@
-<?php echo view('Studentsidebar/v'); ?>
+<?php echo view('Studentsidebar/Studentsidebar'); ?>
 
 <div class="content-wrapper">
     <section class="content-header">
