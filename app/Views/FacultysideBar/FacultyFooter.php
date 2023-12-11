@@ -8,36 +8,57 @@ $page = $uri->getSegment(count($pages));
     <strong>Copyright &copy; 2023-2024 <a href="https://mitech">MI-TECH</a>.</strong> All rights reserved.
   </footer>
 
+
+
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <script src="<?php echo base_url()?>public/js/jquery.dataTables.min.js"></script>
   <script src="<?php echo base_url()?>public/js/dataTables.bootstrap4.js"></script>
   <script src="<?php echo base_url()?>public/js/dataTables.bootstrap4.min.js"></script>
   <script src="<?php echo base_url()?>public/js/dataTables.responsive.min.js"></script>
-  <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
   <script src="<?php echo base_url()?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="<?php echo base_url()?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <script src="<?php echo base_url()?>dist/js/adminlte.min.js"></script>
   <script src="<?php echo base_url()?>public/js/custom.js"></script>
-  <script src="dist/js/demo.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-   <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+  <script src="<?php echo base_url()?>dist/js/demo.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url()?>cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+   <script type="text/javascript" src="<?php echo base_url()?>cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <script src="<?php echo base_url()?>dist/js/adminlte.js"></script>
     <script src="<?php echo base_url()?>plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="<?php echo base_url()?>plugins/raphael/raphael.min.js"></script>
     <script src="<?php echo base_url()?>plugins/jquery-mapael/jquery.mapael.min.js"></script>
     <script src="<?php echo base_url()?>plugins/jquery-mapael/maps/usa_states.min.js"></script>
     <script src="<?php echo base_url()?>plugins/chart.js/Chart.min.js"></script>
-    <script src="dist/js/pages/dashboard2.js"></script>
+    <script src="<?php echo base_url()?>dist/js/pages/dashboard2.js"></script>
    
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+
+<script src="<?php echo base_url()?>plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<!-- <script src="<?php echo base_url()?>plugins/sparklines/sparkline.js"></script> -->
+<!-- JQVMap -->
+<script src="<?php echo base_url()?>plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="<?php echo base_url()?>plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="<?php echo base_url()?>plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="<?php echo base_url()?>plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="<?php echo base_url()?>plugins/summernote/summernote-bs4.min.js"></script>
 
 
     <script src="<?php echo base_url()?>plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>plugins/moment/moment.min.js"></script>
     <?php
         if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar') { ?>
-             <script src="plugins/jquery/jquery.min.js"></script> 
+             <script src="<?php echo base_url()?>plugins/jquery/jquery.min.js"></script> 
 
             <script src="<?php echo base_url()?>plugins/fullcalendar/main.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -65,10 +86,22 @@ $page = $uri->getSegment(count($pages));
         if (showTableLink) {
             showTableLink.addEventListener('click', function() {
                 var table = document.getElementById('studentTable');
+                var table1 = document.getElementById('todaySessionsTableshow');
+                var table2 = document.getElementById('GroupTableshow');
+                var table3 = document.getElementById('conductedClassesTableshow');
+
+
+
                 if (table.style.display === 'none') {
                     table.style.display = 'table';
-                } else {
+                    table1.style.display = 'none';
+                    table2.style.display = 'none';
+                    table3.style.display = 'none';
+
+                } else  {
                     table.style.display = 'none';
+               
+
                 }
             });
         }
@@ -79,10 +112,76 @@ $page = $uri->getSegment(count($pages));
         if (todaySessionsTable) {
           todaySessionsTable.addEventListener('click', function() {
                 var table = document.getElementById('todaySessionsTableshow');
+                var table1 = document.getElementById('studentTable');
+                var table2 = document.getElementById('GroupTableshow');
+                var table3 = document.getElementById('conductedClassesTableshow');
+
+
                 if (table.style.display === 'none') {
                     table.style.display = 'table';
+                    table1.style.display = 'none';
+                    table2.style.display = 'none';
+                    table3.style.display = 'none';
+
                 } else {
+                    
                     table.style.display = 'none';
+              
+
+                }
+            });
+        }
+    </script>
+
+
+<script  type="text/javascript">
+        const GroupTable = document.getElementById('GroupTable');
+        if (GroupTable) {
+            GroupTable.addEventListener('click', function() {
+                var table = document.getElementById('GroupTableshow');
+
+                var table1 = document.getElementById('todaySessionsTableshow');
+                var table2 = document.getElementById('studentTable');
+                var table3 = document.getElementById('conductedClassesTableshow');
+
+                if (table.style.display === 'none') {
+                    table.style.display = 'table';
+                    table1.style.display = 'none';
+                    table2.style.display = 'none';
+                    table3.style.display = 'none';
+
+                } else {
+                
+                    table.style.display = 'none';
+       
+
+                }
+            });
+        }
+    </script>
+
+
+<script  type="text/javascript">
+        const conductedClassesTable = document.getElementById('conductedClassesTable');
+        if (conductedClassesTable) {
+            conductedClassesTable.addEventListener('click', function() {
+                var table = document.getElementById('conductedClassesTableshow');
+
+                var table1 = document.getElementById('todaySessionsTableshow');
+                var table2 = document.getElementById('studentTable');
+                var table3 = document.getElementById('GroupTableshow');
+
+                if (table.style.display === 'none') {
+                    table.style.display = 'table';
+                    table1.style.display = 'none';
+                    table2.style.display = 'none';
+                    table3.style.display = 'none';
+
+                } else {
+                
+                    table.style.display = 'none';
+       
+
                 }
             });
         }

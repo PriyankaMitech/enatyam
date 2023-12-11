@@ -722,12 +722,12 @@ class AdminController extends BaseController
     {
         echo view('AdminSideBar/studentAttendance');
     }
-    public function Notifications()
+    public function add_notifications()
     {
         $model = new AdminModel();
         $data['admins'] = $model->getAdmins();
         $data['Faculty'] = $model->getFaculty();
-        echo view('AdminSideBar/Notifications', $data);
+        echo view('AdminSideBar/add_notifications', $data);
     }
 
     public function add_menu()
@@ -931,24 +931,35 @@ class AdminController extends BaseController
 
 
 
-    public function SendNotifications()
+    public function setnotification()
     {
-        // print_r($_POST);die;
-        $selected_faculty = $this->request->getPost('selected_faculty');
-        $selectedStudents = $this->request->getPost('selected_students');
-        $notification_date = $this->request->getPost('notification_date');
-        $notificationDescription = $this->request->getPost('notification_description');
+        $admin_id;
+        if (!empty($_SESSION['sessiondata'])) {
+            $admin_id = $_SESSION['sessiondata']['id'];
+        
+        }
+        
+            // echo "<pre>";
+            // print_r($admin_id);
+            // exit();
+
+
         $model = new AdminModel();
         $result = [
-            'selected_faculty' => $selected_faculty,
-            'selected_students' => $selectedStudents,
-            'notification_description' => $notificationDescription,
-            'notification_date' =>  $notification_date,
+            'selected_faculty' => $this->request->getPost('selected_faculty'),
+            'selected_students' => $this->request->getPost('selected_students'),
+            'notification_description' => $this->request->getPost('notification_description'),
+            'notification_date' =>  $this->request->getPost('notification_date'),
+            'admin_id' => $admin_id,
+            'created_on' => date('Y:m:d H:i:s'),  
         ];
+
+        // echo "<pre>";print_r($result);exit();
+
         $model->insertNotification($result);
 
 
-        return redirect()->to('Notifications');
+        return redirect()->to('add_notifications');
     }
 
     public function viewProfile()
