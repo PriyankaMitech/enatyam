@@ -242,6 +242,7 @@ class FacultyController extends BaseController
 
         if ($query->getNumRows() > 0) {
           $results = $query->getResult();
+          // echo '<pre>';
           // print_r($results);
           // die;
           return view('StudentuplodedVidio', ['results' => $results]);
