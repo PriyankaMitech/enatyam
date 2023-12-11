@@ -51,7 +51,7 @@
 <script>
     $(document).ready(function() {
 
-        $('#faculty_rate').barrating('set', <?php echo round($rating) ?>);
+        $('#faculty_rate').barrating('set', <?php //echo round($rating) ?>);
 
         $("#toggle-table5").click(function() {
             $("#faculty-table5").toggle("");
