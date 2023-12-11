@@ -241,10 +241,11 @@ class AdminModel extends Model
     {
         $query = $this->db->table('faculty as f')
             ->select('f.faculty_id, f.faculty_name, f.category_id, f.email, f.qualification, f.experience, f.country, f.assign_student_id, f.register_id ')
+            ->orderBy("faculty_id desc")
             // ->join('feedback as fb', 'f.register_id = fb.faculty_id')
             ->get()
             ->getResult();
-        // echo '<pre>';print_r($query);die;
+            // echo '<pre>';print_r($query);die;
             return $query;
     }
 
@@ -282,6 +283,7 @@ class AdminModel extends Model
         return $this->db->table('carrier')
             ->select('*')
             ->where('Result_of_application', 'Pending')
+            ->orderBy("D_id desc")
             ->get()
             ->getResult();
     }

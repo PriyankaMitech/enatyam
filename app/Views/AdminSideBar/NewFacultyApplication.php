@@ -87,7 +87,6 @@
                                                     <th> Contact Number</th>
                                                     <th> Email</th>
                                                     <th> Course/Subcourse</th>
-                                                    <th> Resume</th>
                                                     <th> Action</th>
                                                 </tr>
                                             </thead>
@@ -108,29 +107,19 @@
                                                         <td><?= $faculty->email ?></td>
                                                         <td><?= $faculty->course ?>/<?= $faculty->sub_course ?></td>
 
-                                                        <td></td>
                                                         <td>
 
                                                             <form method="POST" action="AdminController/Steusupdate">
-                                                                <!-- <input type="hidden" name="action" value="approve"> -->
                                                                 <input type="hidden" name="D_id" value="<?= $faculty->D_id ?>">
 
-                                                                <!-- <td class="project-actions text-right"> -->
-                                                                <!-- <a class="btn btn-primary btn-sm" href="#">
-                                                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                        View
-                                                                    </a> -->
-
-
-
-                                                                <button type="submit" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View">
+                                                                <button type="submit" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View">
                                                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                                                 </button>
-                                                                <button type="submit" class="btn btn-success" name="action" value="approve" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Approve">
+                                                                <button type="submit" class="btn btn-sm btn-success" name="action" value="approve" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Approve">
                                                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                                                 </button>
 
-                                                                <button type="submit" class="btn btn-danger" name="action" value="decline" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Decline">
+                                                                <button type="submit" class="btn btn-sm btn-danger" name="action" value="decline" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Decline">
                                                                     <i class="fas fa-trash"></i>
                                                                 </button>
                                                             </form>
