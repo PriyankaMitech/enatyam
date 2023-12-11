@@ -7,7 +7,9 @@
                 <div class="col-sm-6">
                     <h1>My Sessions</h1>
                 </div>
+
                 <div class="col-sm-6">
+                    <a href="<?php echo base_url() ?>reschedule" class="btn btn-primary active" role="button" aria-pressed="true">Reschedule</a>
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="<?= base_url(); ?>StudentDashboard">Dashboard</a></li>
                         <li class="breadcrumb-item active">Sessions</li>

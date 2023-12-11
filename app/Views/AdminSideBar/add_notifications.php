@@ -12,12 +12,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Notifications</h1>
+                    <h1>Add Notifications</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Notifications</li>
+                        <li class="breadcrumb-item active">Add Notifications</li>
                     </ol>
                 </div>
             </div>
@@ -31,15 +31,11 @@
             <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Notifications</h3>
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                </button>
-            </div>
+            <h3 class="card-title">Add Notifications</h3>
+          
         </div>
 
-        <form id="notificationForm" method="post" action="SendNotifications">
+        <form id="notificationForm" method="post" action="setnotification">
             <div class="card-body">
                 <div class="form-row">
                     <!-- User Type Selection -->
@@ -98,13 +94,13 @@
                     </div>
                 </div>
                 <div class="form-group">
-            <label for="inputDateTime">Select Date and Time</label>
-            <input type="datetime-local" id="inputDateTime" class="form-control" name="notification_date">
+            <label for="notification_date">Select Date</label>
+            <input type="date" id="notification_date" class="form-control" name="notification_date">
           </div>
                 <!-- Other common form elements -->
                 <div class="form-group">
-                    <label for="inputDescription">Create Notifications</label>
-                    <textarea id="inputDescription" class="form-control" rows="4" name="notification_description"></textarea>
+                    <label for="notification_description">Create Notifications</label>
+                    <textarea id="notification_description" class="form-control" rows="4" name="notification_description"></textarea>
                 </div>
 
                 <!-- Form Action -->

@@ -239,10 +239,13 @@ class AdminModel extends Model
 
     public function getFacultyData()
     {
-        return $this->db->table('faculty')
-            ->select('*')
+        $query = $this->db->table('faculty as f')
+            ->select('f.faculty_id, f.faculty_name, f.category_id, f.email, f.qualification, f.experience, f.country, f.assign_student_id, f.register_id ')
+            // ->join('feedback as fb', 'f.register_id = fb.faculty_id')
             ->get()
             ->getResult();
+        // echo '<pre>';print_r($query);die;
+            return $query;
     }
 
     public function getStudentData()
@@ -253,16 +256,6 @@ class AdminModel extends Model
             ->getResult();
     }
 
-    // public function getStudyVideoUplodedByStudent()
-    // {
-
-    //     $VideoDetails = $this->db->table('uplode_study_video_from_student')
-    //         ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
-    //         ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id')
-    //         ->get()
-    //         ->getResult();
-    //     return  $VideoDetails;
-    // }
     public function getStudyVideoUplodedByStudent()
     {
 
@@ -273,16 +266,7 @@ class AdminModel extends Model
             ->getResult();
         return  $VideoDetails;
     }
-    // public function getStudyVideoUplodedByFaculty()
-    // {
-    //     $VideoDetails = $this->db->table('uplode_video_to_student')
-    //         ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
-    //         ->join('student', 'student.student_id = uplode_video_to_student.student_id')
-    //         ->join('register', 'register.id = uplode_video_to_student.register_faculty_id')
-    //         ->get()
-    //         ->getResult();
-    //     return  $VideoDetails;
-    // }
+    
     public function getStudyVideoUplodedByFaculty()
     {
         $VideoDetails = $this->db->table('uplode_video_to_student')
@@ -421,10 +405,10 @@ class AdminModel extends Model
     public function insert_formdata($id, $table, $insertdata)
     {
         $result['insert'] = $this->db->table($table)->insert($insertdata);
-
         if ($result['insert']) {
             $insertedID = $this->db->insertID();
             $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
+            
             return $result;
         } else {
             return false;
@@ -511,76 +495,104 @@ class AdminModel extends Model
         }
     }
     public function insertNotification($result)
-   {
-    $selectedFacultyIds = $result['selected_faculty'];
-    $selectedStudentIds = $result['selected_students'];
-    $notificationDescription = $result['notification_description'];
-     $notification_date= $result['notification_date'];
-    $facultyData = [];
-    $studentData = [];
-    if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
-        $facultyData[] = [
-            'register_id' => 'All',
-            'notification_description' => $notificationDescription,
-            'user_type' => 'faculty',
-            'timestamp' => $notification_date,
-        ];
-    } elseif (is_array($selectedFacultyIds)) {
-        foreach ($selectedFacultyIds as $facultyId) {
+    {
+        $selectedFacultyIds = $result['selected_faculty'];
+        $selectedStudentIds = $result['selected_students'];
+        $notificationDescription = $result['notification_description'];
+        $notification_date= $result['notification_date'];
+        $admin_id= $result['admin_id'];
+        $facultyData = [];
+        $studentData = [];
+        if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
             $facultyData[] = [
-                'register_id' => $facultyId,
+                'register_id' => 'All',
                 'notification_description' => $notificationDescription,
                 'user_type' => 'faculty',
                 'timestamp' => $notification_date,
-            ];
+                'admin_id' => $admin_id,
+                'created_on' => date('Y:m:d H:i:s'),  
+                ];
+        } elseif (is_array($selectedFacultyIds)) {
+            foreach ($selectedFacultyIds as $facultyId) {
+
+                $facultyData[] = [
+                    'register_id' => 'All',
+                    'notification_description' => $notificationDescription,
+                    'user_type' => 'faculty',
+                    'timestamp' => $notification_date,
+                    'admin_id' => $admin_id,
+                    'created_on' => date('Y:m:d H:i:s'),  
+                ];
+            } 
+        }elseif (is_array($selectedFacultyIds)) {
+            foreach ($selectedFacultyIds as $facultyId) {
+                $facultyData[] = [
+                    'register_id' => $facultyId,
+                    'notification_description' => $notificationDescription,
+                    'user_type' => 'faculty',
+                    'timestamp' => $notification_date,
+                ];
+            }
         }
-    }
-    if (is_array($selectedStudentIds) && in_array('all', $selectedStudentIds)) {
-        $studentData[] = [
-            'register_id' => 'All',
-            'notification_description' => $notificationDescription,
-            'user_type' => 'student',
-            'timestamp' => $notification_date,
-        ];
-    } elseif (is_array($selectedStudentIds)) {
-        foreach ($selectedStudentIds as $studentId) {
+    
+        if (is_array($selectedStudentIds) && in_array('all', $selectedStudentIds)) {
             $studentData[] = [
-                'register_id' => $studentId,
+                'register_id' => 'All',
                 'notification_description' => $notificationDescription,
                 'user_type' => 'student',
                 'timestamp' => $notification_date,
+                'admin_id' => $admin_id,
+                'created_on' => date('Y:m:d H:i:s'),  
             ];
+        } elseif (is_array($selectedStudentIds)) {
+            foreach ($selectedStudentIds as $studentId) {
+
+                $studentData[] = [
+                    'register_id' => 'All',
+                    'notification_description' => $notificationDescription,
+                    'user_type' => 'student',
+                    'timestamp' => $notification_date,
+                    'admin_id' => $admin_id,
+                    'created_on' => date('Y:m:d H:i:s'),  
+                ];
+            } 
+        }elseif (is_array($selectedStudentIds)) {
+            foreach ($selectedStudentIds as $studentId) {
+                $studentData[] = [
+                    'register_id' => $studentId,
+                    'notification_description' => $notificationDescription,
+                    'user_type' => 'student',
+                    'timestamp' => $notification_date,
+                ];
+            }
+        }
+        if (!empty($facultyData)) {
+            $this->db->table('notificationtable')->insertBatch($facultyData);
+        }
+        if (!empty($studentData)) {
+            $this->db->table('notificationtable')->insertBatch($studentData);
         }
     }
-    if (!empty($facultyData)) {
-        $this->db->table('notificationtable')->insertBatch($facultyData);
-    }
-    if (!empty($studentData)) {
-        $this->db->table('notificationtable')->insertBatch($studentData);
-    }
-}
 
     public function getUserRole($teacherId)
     {
-    
-        $todayDate = date('Y-m-d H:i:s');
-
         $result = $this->db->table('notificationtable')
-        ->where([
-            'user_type' => 'faculty',
-            'register_id' => 'All',
-        ])
-        ->orWhere('register_id', $teacherId)
-        ->where('timestamp >=', $todayDate) 
-        ->get()
-        ->getResultArray();
-        
+            ->select('notificationtable.*, register.full_name')
+            ->join('register', 'register.id = notificationtable.admin_id', 'left')
+            ->where('notificationtable.user_type', 'faculty')
+            ->where('(notificationtable.register_id = "All" OR notificationtable.register_id = ' . $teacherId . ')')
+            ->where('DATE(notificationtable.timestamp) >= CURDATE()')
+            ->get()
+            ->getResultArray();
+
         if ($result) {
             return $result;
-        }else {
+        } else {
             return false;
         }
     }
+
+
     public function getUser($user_id)
     {
     
@@ -603,5 +615,10 @@ class AdminModel extends Model
         }
     }
 
+    public function rate_count($column, $faculty_id, $rating)
+    {
+        $query = $this->db->table('feedback')->select('AVG(rating) as avg_rating')->where($column, $faculty_id)->get()->getRow();
+        return $query->avg_rating;
+    }
  
 }

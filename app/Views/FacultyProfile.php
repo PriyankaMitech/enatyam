@@ -47,48 +47,6 @@
                               <li class="list-group-item">
                                  <b>joining Date</b> <a class="float-right">12-4-2021</a>
                               </li>
-                              <!-- <div class="card-body">
-
-                                
-                                 <strong><i class="fas fa-user mr-1"></i> Name</strong>
-                                 <p class="text-muted">
-                                    <input class="form-control readonly-text" id="inputName" name="education" type="text" placeholder=" <?php
-                                                                                                                                          $full_name = $session->get('username');
-                                                                                                                                          echo $full_name;
-                                                                                                                                          ?>" readonly>
-                                 </p>
-                                 <hr>
-
-                                 <strong><i class="fas fa-envelope mr-1"></i> Email</strong>
-                                 <p class="text-muted">
-                                    <input class="form-control readonly-text" id="inputEmail" name="email" type="text" placeholder=" <?php
-                                                                                                                                       $email = $session->get('email');
-                                                                                                                                       echo $email;
-                                                                                                                                       ?>" readonly>
-                                 </p>
-                                 <hr>
-
-                                 <strong><i class="fas fa-book mr-1"></i> Qualification</strong>
-                                 <p class="text-muted">
-                                    <input class="form-control readonly-text" id="inputEducation" name="education" type="text" placeholder="Enter your Qualification" value=" " readonly>
-                                 </p>
-                                 <hr>
-                                 <strong><i class="fas fa-book mr-1"></i> Teaching Experience</strong>
-                                 <p class="text-muted">
-                                    <input class="form-control readonly-text" id="inputExperience" name="experience" type="text" placeholder="Enter your Experience" value=" " readonly>
-                                 </p>
-                                 <hr>
-                                 <strong><i class="fas fa-map-marker-alt mr-1"></i> Country</strong>
-                                 <input class="form-control readonly-text" id="inputCountry" name="current_address" type="text" placeholder="Enter your country" value=" " readonly>
-                                 <hr>
-                                 <strong><i class="fas fa-award-alt mr-1"></i> Awards</strong>
-                                 <input class="form-control readonly-text" id="inputSkills" name="skills" type="text" placeholder="Enter your awards" value="" readonly>
-                                 <button type="button" class="btn btn-outline-dark mt-3" id="edit"><a href="#">Edit</a></button>
-                                 <button type="button" class="btn btn-outline-dark mt-3" id="save"><a href="#">Save</a></button>
-                                 <hr>
-
-                              </div> -->
-
                               <form method="post" action="<?php echo base_url();?>insertProfile" >
                                  <div class="card-body">
                                  <div class="form-group">

@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="<?=base_url()?>plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="<?=base_url()?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="<?=base_url()?>dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>public/css/fontawesome-stars.css">
   <link rel="stylesheet" href="<?=base_url()?>public/css/custom.css">
+  <link rel="stylesheet" href="<?=base_url(); ?>public/css/admindashboard_style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
   <link rel="stylesheet" href="<?=base_url()?>https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" -->
         <!-- integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
@@ -16,20 +20,201 @@
 </head>
 
 <body>
+<div id="flash-success-container">
+    <?php if (session()->has('success')) : ?>
+        <div class="flash-success">
+            <?= session('success') ?>
+        </div>
+    <?php endif; ?>
+</div>
+
+
+<?php 
+         $session = \Config\Services::session();
+         $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
+
+         // Get the 'id' from the session
+         $teacherId = $session->get('id');
+         
+         // Rest of your code
+         $notifications = $adminModel->getUserRole($teacherId);
+         $count = count($notifications);
+
+
+?>
   <div class="wrapper">
-    <nav class="main-header navbar navbar-expand navbar-light">
-      <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-          </li>
-          <li class="nav-item d-none d-sm-inline-block">
-              <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item d-none d-sm-inline-block">
-              <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
-          </li>
-      </ul>
-    </nav>
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+            <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
+        </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <!-- <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a> -->
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <!-- <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a> -->
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="<?php echo base_url()?>dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="<?php echo base_url()?>dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="<?php echo base_url()?>dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <?php
+    // Get today's date and time in the required format
+    $todayDate = date('Y-m-d H:i:s');?>
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+                <i class="far fa-bell"></i>
+                <?php $displayedNotificationCount = 0; ?>
+                <span class="badge badge-danger navbar-badge">
+                    <?= $count; ?>
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
+                <div class="notification-scroll">
+                <?php
+                  // Sort notifications array based on timestamp
+                  usort($notifications, function ($a, $b) {
+                      return strtotime($a['timestamp']) - strtotime($b['timestamp']);
+                  });
+
+                  foreach ($notifications as $notification):
+                      $notificationDate = strtotime($notification['timestamp']);
+                      $todayDateTime = strtotime($todayDate);
+
+                      // Only show notifications with timestamps equal to or after today
+                  ?>
+                      <a href="#" class="dropdown-item view-notification">
+                          <!-- Message Start -->
+                          <div class="media">
+                              <img src="<?php echo base_url()?>dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                              <div class="media-body">
+                                  <h3 class="dropdown-item-title">
+                                      <?= $notification['full_name'] ?>
+                                      <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                                  </h3>
+                                  <p class="text-sm">
+                                      <?php
+                                      // Split the description into lines
+                                      $descriptionLines = explode("\n", $notification['notification_description']);
+
+                                      // Display the first four lines of the description
+                                      $maxLines = 1;
+                                      echo implode("\n", array_slice($descriptionLines, 0, $maxLines));
+
+                                      // If the description has more than four lines, show "..."
+                                      if (count($descriptionLines) > $maxLines):
+                                      ?>
+                                          <span class="read-more-link">...</span>
+                                      <?php endif; ?>
+                                  </p>                <p class="text-sm text-muted">
+                                      <?= $notification['timestamp'] ?>
+                                  </p>
+                              </div>
+                          </div>
+                          <!-- Message End -->
+                      </a>
+                  <?php
+                  endforeach;
+                  ?>
+                </div>
+                <a href="<?=base_url(); ?>notification" class="dropdown-item dropdown-footer">See All Messages</a>
+            </div>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li> -->
+    </ul>
+  </nav>
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <a href="#" class="brand-link">
       </a>
@@ -54,7 +239,6 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             </a>
             <?php if ($_SESSION['sessiondata']['Payment_status'] == 'Y') { ?>
-              <li class="nav-item">
               <li class="nav-item">
                 <a href="<?=base_url();?>StudentDashboard" class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
@@ -103,30 +287,39 @@
 
                 </ul>
               </li>
-
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon 	fa fa-child"></i>
-                  <p>
-                    Faculty
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="nav-icon 	fa fa-credit-card"></i>
+                        <p>
+                            Files
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                    <li class="nav-item">
                     <a href="<?php echo base_url() ?>UplodeVideo" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p> Uplode Video</p>
+                      <p> Add Videos / Images</p>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Faculty uploded Video</p>
-                    </a>
-                  </li>
-                </ul>
+                        <li class="nav-item" >
+                            <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>Videos</p>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item" >
+                            <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>Images</p>
+                            </a>
+                        </li>
+                        <!-- Add other Student menu items with access level checks here -->
+                    </ul>
               </li>
+
 
               <!-- <li class="nav-item">
 
@@ -180,6 +373,11 @@
                 <?php } ?>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a href="<?=base_url();?>feedback" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>Feedback </p>
+                </a>
               </li>
           </ul>
         </nav>
