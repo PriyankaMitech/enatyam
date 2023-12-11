@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <a href="<?php echo base_url() ?>reschedule" class="btn btn-primary active" role="button" aria-pressed="true">Reschedule</a>
+
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="<?= base_url(); ?>StudentDashboard">Dashboard</a></li>
                         <li class="breadcrumb-item active">Sessions</li>
@@ -25,6 +25,10 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Your Session status</h3>
+
+                            <div class="float-right">
+                                <a href="<?php echo base_url() ?>reschedule" class="btn btn-primary active" role="button" aria-pressed="true">Reschedule</a>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="row">
