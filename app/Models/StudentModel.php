@@ -31,7 +31,6 @@ class StudentModel extends Model
 
     public function getUserByEmail($email){
         return $this->db->table($this->table1)
-
             ->where('email', $email)
             ->where('role', 'student')
             ->get()
@@ -42,7 +41,7 @@ class StudentModel extends Model
             return $this->db->table($this->table1)
             ->where('id', $registerId)
             ->get()
-           ->getRowArray();
+            ->getResult();
             }
         public function insertSelectedSlotdByStudents($data)
         {
@@ -54,23 +53,35 @@ class StudentModel extends Model
             }
         }
 
-
-    public function fetchProfileDate($registerId){
-        return $this->db->table($this->table1)
-        ->where('id', $registerId)
-        ->get()
-        ->getResult();
+        public function getStudendByEmail($email)
+        {
+            return $this->db->table($this->table1)->where('email', $email)->get()->getRow();
         }
-    public function insertSelectedSlotdByStudents($data)
-    {
-        if (!empty($data) && is_array($data)) {
-            $this->db->table('Student_Slots_tbl')->insertBatch($data);
-            return true; // Success
-        } else {
-            return false; // Failed to insert data
+    
+        // Function to update the password
+        public function updatePassword($userId, $newPassword)
+        {
+            return $this->db->table('register')
+            ->set(['password' => $newPassword, 'confirm_pass' => $newPassword])
+            ->where('id', $userId)
+            ->update();
         }
-    }
-
+        public function changeCountry($registerId,$Country)
+        {
+            return $this->db->table('register')
+            ->set('country' , $Country,)
+            ->where('id', $registerId)
+            ->update();
+        }
+        public function fetchid($registerId)
+        {
+            return $this->db->table($this->table1)->where('id', $registerId)->get()->getRow();
+        }
+        // public function fetchdataFromid($assignTeacherId)
+        // {
+        //     return $this->db->table('schedule')->where('faculty_register_id', $assignTeacherId)->get()
+        //     ->getResult();
+        // }
 
         public function fetchdataFromid($assignTeacherId)
         {
@@ -84,12 +95,8 @@ class StudentModel extends Model
         }
         public function updateData($selectedId, $dataToUpdate)
         {
-            // return $this->db->table('schedule')
-            // ->set('student_register_id' , $dataToUpdate,)
-            // ->where('id', $selectedId)
-            // ->update();
             return $this->db->table('schedule')
-            ->set($dataToUpdate)  // Fix: Remove the extra comma
+            ->set('student_register_id' , $dataToUpdate,)
             ->where('id', $selectedId)
             ->update();
         }
@@ -101,54 +108,7 @@ class StudentModel extends Model
         public function Getseslectedslotstostudent($user_id)
         {
             return $this->db->table('schedule')->where('student_register_id', $user_id) ->get()
-
-    public function getStudendByEmail($email)
-    {
-        return $this->db->table($this->table1)->where('email', $email)->get()->getRow();
-    }
-
-    // Function to update the password
-    public function updatePassword($userId, $newPassword)
-    {
-        return $this->db->table('register')
-        ->set(['password' => $newPassword, 'confirm_pass' => $newPassword])
-        ->where('id', $userId)
-        ->update();
-    }
-    public function changeCountry($registerId,$Country)
-    {
-        return $this->db->table('register')
-        ->set('country' , $Country,)
-        ->where('id', $registerId)
-        ->update();
-    }
-    public function fetchid($registerId)
-    {
-        return $this->db->table($this->table1)->where('id', $registerId)->get()->getRow();
-    }
-    // public function fetchdataFromid($assignTeacherId)
-    // {
-    //     return $this->db->table('schedule')->where('faculty_register_id', $assignTeacherId)->get()
-    //     ->getResult();
-    // }
-
-
-    public function updateData($selectedId, $dataToUpdate)
-    {
-        return $this->db->table('schedule')
-        ->set('student_register_id' , $dataToUpdate,)
-        ->where('id', $selectedId)
-        ->update();
-    }
-    public function get_user_Session($user_id)
-    {
-    
-        return $this->db->table('register')->select('SessionsCount')->where('id', $user_id)->get()->getRow();
-    }
-    public function Getseslectedslotstostudent($user_id)
-    {
-        return $this->db->table('schedule')->where('student_register_id', $user_id) ->get()
-        ->getResult();
-    }
+            ->getResult();
+        }
 }
 

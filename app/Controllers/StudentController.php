@@ -332,18 +332,7 @@ class StudentController extends BaseController
         $data['assignFacultyData'] = $assignFacultyData;
         return view('StudentSidebar/StudentSelectClassDates', $data);
     }
-    public function selectedslotsfromstudent()
-    {
-
-        $registerId = $this->request->getPost('registerId');
-        $selectedId = $this->request->getPost('selectedId');
-        $StudentModel = new StudentModel();
-        $dataToUpdate = [
-            'student_register_id' => $registerId,
-        ];
-        $StudentModel->updateData($selectedId, $dataToUpdate);
-        return redirect()->to('SelectDate');
-    }
+   
 
 
 
