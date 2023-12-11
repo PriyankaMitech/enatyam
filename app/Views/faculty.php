@@ -85,97 +85,7 @@ div.dataTables_wrapper div.dataTables_filter input {
             border-top: 1px solid #dee2e6;
         }
 </style>
-<nav class="main-header navbar navbar-expand navbar-light">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
-        </li>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-        <!-- Navbar Search -->
-        <li class="nav-item">
-            <div class="navbar-search-block">
-                <form class="form-inline">
-                    <div class="input-group input-group-sm">
-                        <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <div class="input-group-append">
-                            <button class="btn btn-navbar" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </li>
-        <?php
-    // Get today's date and time in the required format
-    $todayDate = date('Y-m-d H:i:s');
-?>
-        <!-- Messages Dropdown Menu -->
-        <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="far fa-bell"></i>
-                <?php
-            // Initialize the count
-            $displayedNotificationCount = 0;
-        ?>
-                <span class="badge badge-danger navbar-badge">
-                    <?php foreach ($notifications as $key => $notification):
-                $notificationDate = $notification['timestamp'];
-                // Only count notifications with timestamps equal to or after today
-                if ($notificationDate >= $todayDate):
-                    $displayedNotificationCount++;
-                endif;
-            endforeach;
-            echo $displayedNotificationCount; // Display the count
-            ?>
-                </span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
-                <div class="notification-scroll">
-                    <?php foreach ($notifications as $key => $notification):
-                $notificationDate = $notification['timestamp'];
-                // Only show notifications with timestamps equal to or after today
-                if ($notificationDate >= $todayDate):
-            ?>
-                    <a href="#" class="dropdown-item view-notification" data-index="<?= $key ?>">
-                        <!-- Message Start -->
-                        <div class="media">
-                            <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                            <div class="media-body">
-                                <h3 class="dropdown-item-title">
-                                    Admin
-                                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                                </h3>
-                                <p class="text-sm"><?= $notification['notification_description'] ?></p>
-                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>
-                                    <?= $notification['timestamp'] ?></p>
-                            </div>
-                        </div>
-                        <!-- Message End -->
-                    </a>
-                    <?php
-                endif;
-            endforeach;
-            ?>
-                </div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-            </div>
-        </li>
-        <!-- Notifications Dropdown Menu -->
 
-    </ul>
-</nav>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -220,7 +130,9 @@ div.dataTables_wrapper div.dataTables_filter input {
                         <span class="info-box-icon bg-info elevation-1"><i class="fa fa-calendar"
                                 aria-hidden="true"></i></span>
                         <div class="info-box-content">
-                            <span class="info-box-text availability-link" data-target="GroupTable">Group List</span>
+                        <a class="icon-link" id="GroupTable"> <span class="info-box-text">Group List</span></a>
+
+                            <!-- <span class="info-box-text availability-link" data-target="GroupTable">Group List</span> -->
                         </div>
                     </div>
                 </div>
@@ -237,9 +149,11 @@ div.dataTables_wrapper div.dataTables_filter input {
                     <div class="info-box mb-3">
                         <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
                         <div class="info-box-content">
-                            <a class="icon-link toggle-button" data-target="conductedClassesTable">
+                        <a class="icon-link" id="conductedClassesTable"> <span class="info-box-text">Conducted Classes</span></a>
+
+                            <!-- <a class="icon-link toggle-button" data-target="conductedClassesTable">
                                 <span class="info-box-text">Conducted Classes</span>
-                            </a>
+                            </a> -->
                             <span class="info-box-number"></span>
                         </div>
                     </div>
@@ -247,7 +161,8 @@ div.dataTables_wrapper div.dataTables_filter input {
                 <!-- <form method="post"  enctype="multipart/form-data" action="<?php echo base_url('uploadVideo'); ?>"> -->
                
             </div>
-            <div class="card" id="studentTable" style="display: none;">
+     
+            <div class="col-md-12 card" id="studentTable" style="display: none;">
                 <div class="card-header">
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
@@ -291,7 +206,7 @@ div.dataTables_wrapper div.dataTables_filter input {
                     </table>
                 </div>
             </div>
-                <div class="card" id="todaySessionsTableshow" style="display:none;">
+            <div class="col-md-12 card" id="todaySessionsTableshow" style="display:none;">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <!-- Existing search input on the left side -->
@@ -335,115 +250,159 @@ div.dataTables_wrapper div.dataTables_filter input {
                             </tbody>
                         </table>
                     </div>
-                </div>
+            </div>
 
-            <!-- Add a PHP function to format time -->
-        <?php function formatDate($time) { $dateTime = new DateTime($time); return $dateTime->format('H:i');}?>
-        <div class="card" id="GroupTable">
-            <div class="card-header">
-                <div class="d-flex justify-content-between align-items-center">
-                    <!-- Existing search input on the left side -->
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                        <div class="input-group-append">
+                <!-- Add a PHP function to format time -->
+            <?php function formatDate($time) { $dateTime = new DateTime($time); return $dateTime->format('H:i');}?>
+            <div class="col-md-12 card" id="GroupTableshow" style="display:none">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Existing search input on the left side -->
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <div class="input-group-append">
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="card-body">
+                    <table class="table table-hover text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>Group Name</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Group1</td>
+                                <td>Group1</td>
+                                <td>Group1</td>
+                                <td>
+                                    <button class="btn btn-primary" onclick="displayGroupList('Group1')">View List</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="card-body">
-                <table class="table table-hover text-nowrap">
-                    <thead>
-                        <tr>
-                            <th>Group Name</th>
-                            <th>Start Time</th>
-                            <th>End Time</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Group1</td>
-                            <td>Group1</td>
-                            <td>Group1</td>
-                            <td>
-                                <button class="btn btn-primary" onclick="displayGroupList('Group1')">View List</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-         </div>
-    <div class="modal fade" id="groupListModal" tabindex="-1" role="dialog" aria-labelledby="groupListModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="groupListModalLabel">Group List</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+            <div class="col-md-12 card" id="conductedClassesTableshow" style="display: none;">
+<div class="card-header">
+    <div class="card-tools">
+        <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" name="table_search" class="form-control float-right"
+                placeholder="Search">
+
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-default">
+                    <i class="fas fa-search"></i>
                 </button>
             </div>
-            <div class="modal-body" id="groupListModalBody">
-                <!-- Content of the modal body will be dynamically populated with JavaScript -->
-            </div>
-           
         </div>
     </div>
 </div>
-            <div id="" class="collapse">Availability
-                <label for="sessiontime">Session (date and time):</label>
-                <input type="datetime-local" id="sessiontime" name="sessiontime">
+<div class="card-body">
+    <table class="table table-hover text-nowrap">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Join Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($data as $row) : ?>
+            <tr>
+                <td><?php echo $row['register_id']; ?></td>
+                <td><?php echo $row['student_name']; ?></td>
+                <!-- Format the date as day monthname year -->
+                <td><?php echo date('d F Y', strtotime($row['created_at'])); ?></td>
+                <td>
+                    <a href="<?php echo base_url()?>chatuser/<?php echo $row['register_id']; ?>"
+                        class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
+                    <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>"
+                        class="btn btn-sm  badge-primary"><i class="fas fa-file-upload"></i></a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+</div>
+                <div class="modal fade" id="groupListModal" tabindex="-1" role="dialog" aria-labelledby="groupListModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="groupListModalLabel">Group List</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" id="groupListModalBody">
+                                <!-- Content of the modal body will be dynamically populated with JavaScript -->
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div id="" class="collapse">Availability
+                    <label for="sessiontime">Session (date and time):</label>
+                    <input type="datetime-local" id="sessiontime" name="sessiontime">
+                </div>
+                <?php if (!empty($Studentdata)) { ?>
+                <div id="StudentList" class="">
+                    <p class="info-box-number h3 text-center"><b> Student List</b></p>
+
+                    <table id="studentList-table" class="table">
+                        <thead>
+                            <tr>
+                                <th>Sr.no</th>
+                                <th>Student Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                $i = 1;
+                                foreach ($Studentdata as $data) { ?>
+                            <tr>
+                                <td><?= $i; ?></td>
+                                <td><?= $data->student_name; ?></td>
+                                <td>
+                                    <a class="btn btn-primary mr-4" href="#">Edit</a>
+                                    <a class="btn btn-danger mr-4" href="#">Delete</a>
+                                    <a class="btn btn-warning mr-4" href="#">Upload</a>
+                                </td>
+                            </tr>
+                            <?php $i++;
+                                } ?>
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <?php } ?>
+
+                <!-- datepicker mdb -->
+                <!--Grid row-->
+                <div class="collapse" id="availability">
+
+                    <!-- <h3>daterangepicker - get date example</h3> -->
+                    <input type="text" name="datetimes" />
+                    <p id="startDate">Start Date:</p>
+                    <p id="endDate">End Date:</p>
+                    <script>
+                    //$("input[name='datetimes']").daterangepicker();
+                    </script>
+
+
+                </div>
+
+
             </div>
-            <?php if (!empty($Studentdata)) { ?>
-            <div id="StudentList" class="">
-                <p class="info-box-number h3 text-center"><b> Student List</b></p>
-
-                <table id="studentList-table" class="table">
-                    <thead>
-                        <tr>
-                            <th>Sr.no</th>
-                            <th>Student Name</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                            $i = 1;
-                            foreach ($Studentdata as $data) { ?>
-                        <tr>
-                            <td><?= $i; ?></td>
-                            <td><?= $data->student_name; ?></td>
-                            <td>
-                                <a class="btn btn-primary mr-4" href="#">Edit</a>
-                                <a class="btn btn-danger mr-4" href="#">Delete</a>
-                                <a class="btn btn-warning mr-4" href="#">Upload</a>
-                            </td>
-                        </tr>
-                        <?php $i++;
-                            } ?>
-
-                    </tbody>
-
-                </table>
-            </div>
-            <?php } ?>
-
-            <!-- datepicker mdb -->
-            <!--Grid row-->
-            <div class="collapse" id="availability">
-
-                <!-- <h3>daterangepicker - get date example</h3> -->
-                <input type="text" name="datetimes" />
-                <p id="startDate">Start Date:</p>
-                <p id="endDate">End Date:</p>
-                <script>
-                //$("input[name='datetimes']").daterangepicker();
-                </script>
-
-
-            </div>
-
-
-        </div>
-        <!-- print the video that uplode by student -->
+            <!-- print the video that uplode by student -->
 
 </div>
 <?php include('FacultysideBar/FacultyFooter.php'); ?>

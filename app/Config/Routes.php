@@ -116,9 +116,9 @@ $routes->post('SelectedForGroup', 'AdminController::SelectedForGroup');
 $routes->get('chatuser', 'AdminController::chatuser');
 $routes->post('chat', 'AdminController::chatwithteacher');
 $routes->get('chatuser/(:any)', 'AdminController::singlechat/$1');
-$routes->get('Notifications', 'AdminController::Notifications');
+$routes->get('add_notifications', 'AdminController::add_notifications');
 $routes->post('insertChat', 'AdminController::insertChat');
-$routes->post('SendNotifications', 'AdminController::SendNotifications');
+$routes->post('setnotification', 'AdminController::setnotification');
 $routes->get('viewProfile', 'AdminController::viewProfile');
 
 
@@ -177,6 +177,9 @@ $routes->get('SelectSlot', 'FacultyController::MonthlyCalendar');
 $routes->get('StudentUploadedVideo', 'FacultyController::StudentuplodedVidio');
 $routes->post('FacultyController/selectfacultySchedule', 'FacultyController::selectfacultySchedule');
 $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
+
+
+$routes->get('notification', 'FacultyController::get_all_notification');
 
 // $routes->get('fetchstudyVideouplodeFromstudent', 'FacultyController::fetchstudyVideouplodeFromstudent');
 $routes->get('facultyinfo', 'FacultyController::facultyinfo');

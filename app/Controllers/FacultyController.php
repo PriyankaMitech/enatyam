@@ -24,69 +24,44 @@ class FacultyController extends BaseController
   }
 
 
-  // public function fetchDataByAssignTeacherId()
-  // {
-  //   if (isset($_SESSION['sessiondata'])) {
-  //     $sessionData = $_SESSION['sessiondata'];
-
-  //     $email = $sessionData['email'] ?? null;
-  //     $password = $sessionData['password'] ?? null;
-
-  //     if ($email !== null && $password !== null) {
-  //         $teacherId = $this->session->get('id');
-  //       //  print_r($teacherId);die;
-  //         $facultymodel = new Facultymodel();
-  //         $adminModel = model('AdminModel');  
-  //         $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
-  //         $notifications = $adminModel->getUserRole($teacherId);
-  //     //    echo '<pre>';print_r($notifications);die;    
-  //         if (!empty($data)) {
-  //             return view('faculty', ['data' => $data, 'notifications' => $notifications]);
-  //         } else {
-  //             return redirect()->to(base_url());
-  //         }
-  //     } else {
-  //         return redirect()->to(base_url());
-  //     }
-  // } else {
-  //     return redirect()->to(base_url());
-  // }
-  // }
   public function fetchDataByAssignTeacherId()
   {
     if (isset($_SESSION['sessiondata'])) {
-      $sessionData = $_SESSION['sessiondata'];
 
-      $email = $sessionData['email'] ?? null;
-      $password = $sessionData['password'] ?? null;
+        $sessionData = $_SESSION['sessiondata'];
 
-      if ($email !== null && $password !== null) {
-        $teacherId = $this->session->get('id');
-        $facultymodel = new Facultymodel();
-        $adminModel = model('AdminModel');
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
 
-        // Fetch today's session data
-        $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
-        // Fetch other data using where condition
-        $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
-        $notifications = $adminModel->getUserRole($teacherId);
+        if ($email !== null && $password !== null) {
+            $teacherId = $this->session->get('id');
+            $facultymodel = new Facultymodel();
+            $adminModel = model('AdminModel');
 
-        $todayDate = date('Y-m-d H:i:s');
-        $displayedNotificationCount = 0;
+            // Fetch today's session data
+            $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
+            // Fetch other data using where condition
+            $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
+            // $notifications = $adminModel->getUserRole($teacherId);
 
-        foreach ($notifications as $key => $notification) {
-          $notificationDate = $notification['timestamp'];
-          if ($notificationDate >= $todayDate) {
-            $displayedNotificationCount++;
-          }
+            $todayDate = date('Y-m-d H:i:s');
+            $displayedNotificationCount = 0;
+
+            // foreach ($notifications as $key => $notification) {
+            //     $notificationDate = $notification['timestamp'];
+            //     if ($notificationDate >= $todayDate) {
+            //         $displayedNotificationCount++;
+            //     }
+            // }
+
+            return view('faculty', [
+                'data' => $data,
+                'todaysession' => $todaysession,
+                // 'notifications' => $notifications,
+                'notificationCount' => $displayedNotificationCount,
+            ]);
         }
 
-        return view('faculty', [
-          'data' => $data,
-          'todaysession' => $todaysession,
-          'notifications' => $notifications,
-          'notificationCount' => $displayedNotificationCount,
-        ]);
       }
     }
 
@@ -97,6 +72,7 @@ class FacultyController extends BaseController
   {
     return view('sendEmail');
   }
+  
 
 
   public function uploadVideo()
@@ -328,4 +304,16 @@ class FacultyController extends BaseController
       return redirect()->to(base_url());
     }
   }
+
+
+
+  
+  public function get_all_notification()
+  {
+    return view('notification');
+  }
+
+
+
+
 }
