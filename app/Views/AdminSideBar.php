@@ -227,6 +227,49 @@
                                 </ul>
                             </li>
 
+                                         <!-- File Menu -->
+                            <li class="nav-item" <?php if (in_array('UplodedvideoByStudent', $access_levels)) {
+                                echo "style='display:block'";
+                            } else {
+                                echo "style='display:none'";
+                            } ?>>
+                                <a href="#" class="nav-link">
+                                <i class="nav-icon 	fa fa-credit-card"></i>
+                                    <p>
+                                        Files
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                     
+                           
+                                    <li class="nav-item" <?php if (in_array('UplodedvideoByStudent', $access_levels)) {
+                                        echo "style='display:block'";
+                                    } else {
+                                        echo "style='display:none'";
+                                    } ?>>
+                                        <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
+                                            <i class="nav-icon far fa-image"></i>
+                                            <p>Videos/Images</p>
+                                        </a>
+                                    </li>
+
+
+
+                                    <li class="nav-item" <?php if (in_array('UplodedvideoByStudent', $access_levels)) {
+                                        echo "style='display:block'";
+                                    } else {
+                                        echo "style='display:none'";
+                                    } ?>>
+                                        <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
+                                            <i class="nav-icon far fa-image"></i>
+                                            <p>Images</p>
+                                        </a>
+                                    </li>
+                                    <!-- Add other Student menu items with access level checks here -->
+                                </ul>
+                            </li>
+
                             <!-- Student Menu -->
                             <li class="nav-item" <?php if (in_array('StudentDate', $access_levels) || in_array('Attendance', $access_levels) || in_array('UplodedvideoByStudent', $access_levels)) {
                                 echo "style='display:block'";
@@ -420,7 +463,7 @@
                             </li>
 
                             <!-- Messages Menu -->
-                            <li class="nav-item" <?php if (in_array('chatuser', $access_levels) || in_array('email', $access_levels) || in_array('Notifications', $access_levels) ) {
+                            <li class="nav-item" <?php if (in_array('chatuser', $access_levels) || in_array('email', $access_levels) || in_array('add_notifications', $access_levels) ) {
                                 echo "style='display:block'";
                             } else {
                                 echo "style='display:none'";
@@ -454,12 +497,12 @@
                                             <p>Email</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item" <?php if (in_array('Notifications', $access_levels)) {
+                                    <li class="nav-item" <?php if (in_array('add_notifications', $access_levels)) {
                                         echo "style='display:block'";
                                     } else {
                                         echo "style='display:none'";
                                     } ?>>
-                                        <a href="<?php echo base_url() ?>Notifications" class="nav-link">
+                                        <a href="<?php echo base_url() ?>add_notifications" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Notifications</p>
                                         </a>
@@ -594,6 +637,32 @@
                             <!-- Add other New User menu items with access level checks here -->
                         </ul>
                     </li>
+                    <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                <i class="nav-icon 	fa fa-credit-card"></i>
+                                    <p>
+                                        Files
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item" >
+                                        <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
+                                            <i class="nav-icon far fa-image"></i>
+                                            <p>Videos</p>
+                                        </a>
+                                    </li>
+
+
+                                    <li class="nav-item" >
+                                        <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
+                                            <i class="nav-icon far fa-image"></i>
+                                            <p>Images</p>
+                                        </a>
+                                    </li>
+                                    <!-- Add other Student menu items with access level checks here -->
+                                </ul>
+                            </li>
 
                     <!-- Student Menu -->
                     <li class="nav-item" >
@@ -747,7 +816,7 @@
                                 </a>
                             </li>
                             <li class="nav-item" >
-                                <a href="<?php echo base_url() ?>Notifications" class="nav-link">
+                                <a href="<?php echo base_url() ?>add_notifications" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Notifications</p>
                                 </a>
