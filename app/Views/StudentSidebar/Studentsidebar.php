@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="<?=base_url()?>plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="<?=base_url()?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="<?=base_url()?>dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>public/css/fontawesome-stars.css">
   <link rel="stylesheet" href="<?=base_url()?>public/css/custom.css">
+  <link rel="stylesheet" href="<?=base_url(); ?>public/css/admindashboard_style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
   <link rel="stylesheet" href="<?=base_url()?>https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" -->
         <!-- integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
@@ -16,6 +20,13 @@
 </head>
 
 <body>
+<div id="flash-success-container">
+    <?php if (session()->has('success')) : ?>
+        <div class="flash-success">
+            <?= session('success') ?>
+        </div>
+    <?php endif; ?>
+</div>
 
 
 <?php 
@@ -229,7 +240,6 @@
             </a>
             <?php if ($_SESSION['sessiondata']['Payment_status'] == 'Y') { ?>
               <li class="nav-item">
-              <li class="nav-item">
                 <a href="<?=base_url();?>StudentDashboard" class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
                         <p>
@@ -277,30 +287,39 @@
 
                 </ul>
               </li>
-
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon 	fa fa-child"></i>
-                  <p>
-                    Faculty
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="nav-icon 	fa fa-credit-card"></i>
+                        <p>
+                            Files
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                    <li class="nav-item">
                     <a href="<?php echo base_url() ?>UplodeVideo" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p> Uplode Video</p>
+                      <p> Add Videos / Images</p>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Faculty uploded Video</p>
-                    </a>
-                  </li>
-                </ul>
+                        <li class="nav-item" >
+                            <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>Videos</p>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item" >
+                            <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>Images</p>
+                            </a>
+                        </li>
+                        <!-- Add other Student menu items with access level checks here -->
+                    </ul>
               </li>
+
 
               <!-- <li class="nav-item">
 
@@ -354,6 +373,11 @@
                 <?php } ?>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a href="<?=base_url();?>feedback" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>Feedback </p>
+                </a>
               </li>
           </ul>
         </nav>

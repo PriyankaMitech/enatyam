@@ -27,6 +27,7 @@
 <script src="<?php echo base_url()?>public/js/custom.js"></script>
 <script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
 
+<script src="<?=base_url()?>public/js/jquery.barrating.min.js"></script>
 <script src="<?=base_url(); ?>/public/js/jquery.validate.min.js"></script>
 
 <!-- <script src="<?=base_url(); ?>dist/js/adminlte.min.js"></script> -->
@@ -49,6 +50,9 @@
 <script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script>
     $(document).ready(function() {
+
+        $('#faculty_rate').barrating('set', <?php //echo round($rating) ?>);
+
         $("#toggle-table5").click(function() {
             $("#faculty-table5").toggle("");
             $("#faculty-table").hide();

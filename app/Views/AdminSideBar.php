@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="<?=base_url(); ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="<?=base_url(); ?>plugins/daterangepicker/daterangepicker.css">
   <link rel="stylesheet" href="<?=base_url(); ?>plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?=base_url()?>public/css/fontawesome-stars.css">
 
   <link rel="stylesheet" href="<?=base_url(); ?>public/css/admindashboard_style.css">
 
@@ -38,12 +40,12 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 
 <div id="flash-success-container">
-        <?php if (session()->has('success')) : ?>
-            <div class="flash-success">
-                <?= session('success') ?>
-            </div>
-        <?php endif; ?>
-    </div>
+    <?php if (session()->has('success')) : ?>
+        <div class="flash-success">
+            <?= session('success') ?>
+        </div>
+    <?php endif; ?>
+</div>
   <div class="wrapper">
 
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -248,7 +250,7 @@
                                     } ?>>
                                         <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
                                             <i class="nav-icon far fa-image"></i>
-                                            <p>Videos/Images</p>
+                                            <p>Videos</p>
                                         </a>
                                     </li>
 
@@ -269,7 +271,7 @@
                             </li>
 
                             <!-- Student Menu -->
-                            <li class="nav-item" <?php if (in_array('StudentDate', $access_levels) || in_array('Attendance', $access_levels) || in_array('UplodedvideoByStudent', $access_levels)) {
+                            <li class="nav-item" <?php if (in_array('StudentDate', $access_levels) || in_array('Attendance', $access_levels)) {
                                 echo "style='display:block'";
                             } else {
                                 echo "style='display:none'";
@@ -302,16 +304,7 @@
                                             <p>Attendance</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item" <?php if (in_array('UplodedvideoByStudent', $access_levels)) {
-                                        echo "style='display:block'";
-                                    } else {
-                                        echo "style='display:none'";
-                                    } ?>>
-                                        <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
-                                            <i class="nav-icon far fa-image"></i>
-                                            <p>Videos/Images</p>
-                                        </a>
-                                    </li>
+                          
                                     <!-- Add other Student menu items with access level checks here -->
                                 </ul>
                             </li>
@@ -684,12 +677,7 @@
                                     <p>Attendance</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
-                                    <i class="nav-icon far fa-image"></i>
-                                    <p>Videos/Images</p>
-                                </a>
-                            </li>
+                 
                             <!-- Add other Student menu items with access level checks here -->
                         </ul>
                     </li>

@@ -71,26 +71,19 @@ class facultymodel extends Model
     }
     public function fetchshedule($registerId)
     {
-        // $slots = $this->db->table('schedule')
-        //   ->select('*')
+    $currentMonth = date('m'); // Get the current month in the format 'mm'
 
-        //     ->where('faculty_register_id', $registerId)
-        //     ->get()
-        //     ->getResult();
-        // return $slots;
-
-
-
-        $currentMonth = date('m'); // Get the current month in the format 'mm'
-
-         $result = $this->db->table('schedule')
-        ->select('schedule.*, register.full_name') // Select the required columns, including faculty_name
-        ->join('register', 'register.id = schedule.faculty_register_id') // Join the faculties table
-        ->where('schedule.faculty_register_id', $registerId) // Filter by faculty register ID
-        ->where("MONTH(schedule.date) = $currentMonth") // Replace 'date_column' with the actual column name containing the date
+    $result = $this->db->table('schedule')
+        ->select('schedule.*, register.full_name as faculty_name, student.full_name as student_name')
+        ->join('register', 'register.id = schedule.faculty_register_id')
+        ->join('register as student', 'student.id = schedule.student_register_id', 'left')
+        ->where('schedule.faculty_register_id', $registerId)
+        ->where('schedule.student_register_id IS NOT NULL')
+        ->where("MONTH(schedule.date) = $currentMonth")
         ->get()
         ->getResult();
-
+    // echo $this->db->getLastQuery();die;
+    
     return $result;
 
     }
@@ -106,6 +99,15 @@ class facultymodel extends Model
     $query = $builder->get();
     $result = $query->getResult();
     return $result;
+    }
+    public function getStudentList($registerId){
+        $result= $this->db->table('register')
+        ->where('role', 'Student')
+        ->where('Assign_Techer_id', $registerId)
+        ->get()
+        ->getResult();
+        // echo $this->db->getLastQuery();die;
+        return $result;
     }
 
 }

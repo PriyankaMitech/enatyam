@@ -38,7 +38,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-                //    echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
+            //         echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -64,7 +64,7 @@ class AdminController extends BaseController
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
 
-
+//  print_r($postData);die;
             $result = $model->add($postData);
 
             if ($result) {
@@ -76,11 +76,6 @@ class AdminController extends BaseController
             }
         }
     }
-
-
-
-
-
 
     public function getAdminSideBarAll()
     {
@@ -95,7 +90,9 @@ class AdminController extends BaseController
 
                 $model = new AdminModel();
                 $data['facultyData'] = $model->getFacultyData();
+                $data['rating'] = $model->rate_count('faculty_id', '2', 'rating');
                 return view('AdminSideBar/FacultyProfile', $data);
+                // return redirect()->to('AdminSideBar/FacultyProfile', $data);
             } else {
                 return redirect()->to(base_url());
             }
@@ -123,28 +120,6 @@ class AdminController extends BaseController
         }
     }
 
-    // public function UplodedvideoByStudent()
-    // {
-
-    //     if (isset($_SESSION['sessiondata'])) {
-    //         $sessionData = $_SESSION['sessiondata'];
-
-    //         $email = $sessionData['email'] ?? null;
-    //         $password = $sessionData['password'] ?? null;
-
-    //         if ($email !== null && $password !== null) {
-
-    //             $model = new AdminModel();
-    //             $data['studentVideoData'] = $model->getStudeyVideoUplodeByStudent();
-    //             $data['FacultyVideoData'] = $model->getStudeyVideoUplodeByFaculty();
-    //             return view('AdminSideBar/StudentVideo', $data);
-    //         } else {
-    //             return redirect()->to(base_url());
-    //         }
-    //     } else {
-    //         return redirect()->to(base_url());
-    //     }
-    // }
     public function UplodedvideoByStudent()
     {
 

@@ -472,7 +472,8 @@ th {
                                     <th>Course</th>
                                     <th>Sub Course</th>
                                     <th>Assign Faculty</th>
-                                    <th>Assign Faculty Status</th>
+                                    <th>Session Date</th>
+                                    <!-- <th>Assign Faculty Status</th> -->
                                     <th>Action</th>
                                 </tr>
                                 <?php foreach ($admins as $admin): ?>
@@ -497,14 +498,15 @@ th {
                                                 <?php endforeach; ?>
                                             </select>
 
-                                        </td>
-                                        <td>
-                                            <?php if ($admin->Assign_Techer_id > 0): ?>
-                                            AssignTeacher Successfully
-                                            <?php else: ?>
-                                            Not AssignTeacher
-                                            <?php endif; ?>
-                                        </td>
+                                            <?php if ($admin->Session_Start_Date): ?>
+                    <!-- If a date is already assigned, display it -->
+                    <td><?= $admin->Session_Start_Date; ?></td>
+                <?php else: ?>
+                    <!-- If no date is assigned, show the input field -->
+                    <td>
+                        <input type="date" name="Session_Start_Date" required>
+                    </td>
+                <?php endif; ?>
                                         <td class="change_f">
                                             <?php if ($admin->Assign_Techer_id > 0): ?>
                                             <button type="submit" name="change_faculty_button" class="btn btn-info"
