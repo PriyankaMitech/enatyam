@@ -318,5 +318,13 @@ class FacultyController extends BaseController
     }
   }
 
-
+public function StudentAttendance()
+{
+  $result = session();
+  $registerId = $result->get('id');
+  $model = new facultymodel();
+  $StudentList['studentList']=$model->getStudentList($registerId);
+  // print_r($StudentList['studentList']);die;
+  return view('FacultysideBar/Studentattendance',$StudentList);
+}
 }

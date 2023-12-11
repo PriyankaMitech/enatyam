@@ -187,6 +187,7 @@ $routes->post('insertProfile', 'DashboardController::insertProfile');
 
 $routes->get('logout', 'LoginController::logout');
 $routes->get('studentList', 'DashboardController::studentList');
+$routes->get('StudentAttendance', 'FacultyController::StudentAttendance');
 
 $routes->post('uploadVideo', 'FacultyController::uploadVideo');
 

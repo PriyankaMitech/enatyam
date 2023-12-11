@@ -38,7 +38,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-                //    echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
+            //         echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -64,7 +64,7 @@ class AdminController extends BaseController
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
 
-
+//  print_r($postData);die;
             $result = $model->add($postData);
 
             if ($result) {

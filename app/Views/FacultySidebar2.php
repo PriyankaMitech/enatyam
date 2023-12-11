@@ -92,6 +92,12 @@
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a href="<?php echo base_url() ?>StudentAttendance" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>StudentAttendance</p>
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a href="" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Class</p>

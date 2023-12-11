@@ -209,7 +209,7 @@ public function lostpassword()
         $StudentModel = new StudentModel();
         $data['SessionCount'] = $StudentModel->get_user_Session($user_id); 
         $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);   
-     //    print_r( $data['slots'] );die;
+        //    print_r( $data['slots'] );die;
         return view('StudentSidebar/ScheduleStudent',$data);
     }
 
@@ -307,10 +307,19 @@ public function lostpassword()
             $registerId = $this->request->getPost('registerId');
             $selectedId = $this->request->getPost('selectedId');
             $StudentModel = new StudentModel();
+          
+           $registerData = $StudentModel->fetchProfileDate($registerId);
+        //    print_r($registerData);die;
+           $sessionStartDate = $registerData['Session_Start_Date'];
+        //    print_r($sessionStartDate);die;
+
             $dataToUpdate = [
-                'student_register_id'=>$registerId,
+                'student_register_id' => $registerId,
+                'session_start_date' => $sessionStartDate, // Update the column with the fetched value
             ];
-            $StudentModel->updateData($selectedId, $dataToUpdate);
+            // print_r( $dataToUpdate);die;
+
+           $StudentModel->updateData($selectedId, $dataToUpdate);
             return redirect()->to('SelectDate');
         }
         public function studentsessionstatus()

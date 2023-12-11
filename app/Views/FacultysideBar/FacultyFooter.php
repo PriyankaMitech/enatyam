@@ -290,7 +290,7 @@ $page = $uri->getSegment(count($pages));
         // echo "<pre>";print_r($FacultysheduleData);exit();
         foreach($FacultysheduleData as $data) { ?>
             {
-                title      : '<?=$data->full_name; ?> - <?=$data->start_time; ?> to <?=$data->end_time; ?>',
+                title      : '<?=$data->student_name; ?> - <?=$data->start_time; ?> to <?=$data->end_time; ?>',
               start      : '<?=$data->date; ?>T<?=$data->start_time; ?>',
               end        : '<?=$data->date; ?>T<?=$data->end_time; ?>',
               faculty_id : '<?=$data->faculty_register_id; ?>',

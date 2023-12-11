@@ -41,7 +41,7 @@ class StudentModel extends Model
             return $this->db->table($this->table1)
             ->where('id', $registerId)
             ->get()
-            ->getResult();
+           ->getRowArray();
             }
         public function insertSelectedSlotdByStudents($data)
         {
@@ -95,8 +95,12 @@ class StudentModel extends Model
         }
         public function updateData($selectedId, $dataToUpdate)
         {
+            // return $this->db->table('schedule')
+            // ->set('student_register_id' , $dataToUpdate,)
+            // ->where('id', $selectedId)
+            // ->update();
             return $this->db->table('schedule')
-            ->set('student_register_id' , $dataToUpdate,)
+            ->set($dataToUpdate)  // Fix: Remove the extra comma
             ->where('id', $selectedId)
             ->update();
         }
