@@ -203,6 +203,7 @@ $routes->post('Studentpasswordupdate', 'StudentController::Studentpasswordupdate
 $routes->post('selectedslotsfromstudent', 'StudentController::selectedslotsfromstudent');
 $routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
 $routes->get('SelectDate', 'StudentController::StudentSelectClassDates');
+$routes->get('reschedule', 'StudentController::reschedule');
 // 
 // $routes->get('register', 'LoginController::register');
 // $routes->post('register', 'LoginController::register');

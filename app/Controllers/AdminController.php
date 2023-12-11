@@ -159,7 +159,10 @@ class AdminController extends BaseController
                 $model = new AdminModel();
                 $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
                 $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
-                // echo "<pre>"; print_r($data['FacultyVideoData']);echo "</pre>"; die();
+                // echo "<pre>";
+                // print_r($data['FacultyVideoData']);
+                // echo "</pre>";
+                // die();
                 return view('AdminSideBar/StudentVideo', $data);
             } else {
                 return redirect()->to(base_url());
@@ -780,7 +783,7 @@ class AdminController extends BaseController
 
         $menu_id = $this->request->uri->getSegments(1);
 
-        $wherecond1 = array('is_deleted'=> 'Y', 'id'=> $menu_id[1]);
+        $wherecond1 = array('is_deleted' => 'Y', 'id' => $menu_id[1]);
 
         $data['single_data'] = $model->get_single_data('tbl_menu', $wherecond1);
 
@@ -833,7 +836,7 @@ class AdminController extends BaseController
                 $wherecond = array('is_deleted' => 'Y');
 
 
-                $data['menu_data'] = $model->getalldata('tbl_menu',$wherecond);
+                $data['menu_data'] = $model->getalldata('tbl_menu', $wherecond);
 
 
 
@@ -884,7 +887,7 @@ class AdminController extends BaseController
         $model = new AdminModel();
 
 
-        $wherecond = array('is_deleted'=> 'Y', 'role'=> 'sub_admin');
+        $wherecond = array('is_deleted' => 'Y', 'role' => 'sub_admin');
         $data['user_data'] = $model->getalldata('register', $wherecond);
 
         // echo "<pre>";print_r($data['menu_data']);exit();
@@ -898,12 +901,12 @@ class AdminController extends BaseController
         $model = new AdminModel();
 
         $menu_id = $this->request->uri->getSegments(1);
-        $wherecond1 = array('is_deleted'=> 'Y', 'id'=> $menu_id[1]);
+        $wherecond1 = array('is_deleted' => 'Y', 'id' => $menu_id[1]);
 
-        $wherecond = array('is_deleted'=> 'Y');
+        $wherecond = array('is_deleted' => 'Y');
 
         $data['single_data'] = $model->get_single_data('register', $wherecond1);
-        $data['menu_data'] = $model->getalldata('tbl_menu',$wherecond);
+        $data['menu_data'] = $model->getalldata('tbl_menu', $wherecond);
 
 
 
