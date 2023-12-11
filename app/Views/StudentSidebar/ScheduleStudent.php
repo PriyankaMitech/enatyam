@@ -26,27 +26,35 @@
 
     for ($i = 0; $i < $sessionsCount; $i++) {
         $conductedClass = isset($slots[$i]->Conducted_Class) ? $slots[$i]->Conducted_Class : 'N/A';
-        $demoDate = isset($slots[$i]->date) ? date('Y-m-d', strtotime($slots[$i]->date)) : null;
+        $clasdate = isset($slots[$i]->date) ? date('Y-m-d', strtotime($slots[$i]->Session_Start_Date)) : null;
         $startTime = isset($slots[$i]->start_time) ? date('H:i', strtotime($slots[$i]->start_time)) : 'N/A';
-
+        
         // Determine button text based on Conducted_Class and demo date
         if ($conductedClass == 'Y') {
             $buttonText = 'Done';
-        } elseif ($conductedClass == 'N' && $demoDate < $today) {
+        } elseif ($conductedClass == 'N' && $clasdate < $today) {
             $buttonText = 'Reschedule';
-        } elseif ($demoDate >= $today) {
+        } elseif ($clasdate >= $today) {
             $buttonText = 'Join';
         } else {
             $buttonText = ''; // No button for other cases
         }
 
         $infoBoxColor = ($conductedClass == 'Y') ? 'bg-success' : (($conductedClass == 'N') ? 'bg-danger' : 'bg-warning');
-    ?>
+        $formattedDate = isset($slots[$i]->Session_Start_Date) ? date('d/m/Y', strtotime($slots[$i]->Session_Start_Date)) : 'N/A';
+        $demoDate = $clasdate;
+        $d = 0;
+        $demoDate = date('Y-m-d', strtotime(''.$demoDate.' '.$d.' day'));
+        // print_r($clasdate);
+        $d++;
+        print_r($demoDate);
+        ?>
         <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">
                 <div class="info-box-icon <?= $infoBoxColor; ?> flex-column">
                     <p class="info-box-number m-0"><?= $i + 1 ?></p>
-                    <small class="info-box-date"><?= isset($slots[$i]->date) ? date('d/m/Y', strtotime($slots[$i]->date)) : 'N/A' ?></small>
+                    <small class="info-box-date"><?= $demoDate ?></small>
+                    <small class="info-box-date">Monday</small>
                 </div>
 
                 <div class="info-box-content">
@@ -57,12 +65,15 @@
                 </div>
             </div>
         </div>
-    <?php
+        <?php
+        // $d++;
+        // Increase the date for the next iteration
     }
     ?>
 </div>
-        </div>
+                </div>
+    </section>
 </div>
-</section>
+
 </div>
 <?php echo view('FacultysideBar/FacultyFooter.php'); ?>
