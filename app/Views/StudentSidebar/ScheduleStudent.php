@@ -18,6 +18,7 @@
     </section>
     <section class="content">
         <div class="container-fluid">
+
         <div class="row">
     <?php
     $today = date('Y-m-d'); // Current date in 'Y-m-d' format
