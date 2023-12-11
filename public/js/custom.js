@@ -70,4 +70,70 @@ $(document).ready(function(){
     $('.chatopen').click(function(){
         $(SELECTOR_DIRECT_CHAT).toggleClass(CLASS_NAME_DIRECT_CHAT_OPEN);
     });  
+
+    $('.rating').barrating({
+        theme: 'fontawesome-stars',
+        // onSelect: function(value, text, event) {
+        //     // Get element id by data-id attribute
+        //     var el = this;
+        //     var el_id = el.$elem.data('id');
+        //     // var formData = $("#feedbackform").serialize();
+        //     // console.log(formData);
+        //     // // rating was selected by a user
+        //     // if (typeof(event) !== 'undefined') {
+                
+        //     //     var split_id = el_id.split("_");
+  
+        //     //     var postid = split_id[1];  // postid
+  
+        //     //     $.ajax({
+        //     //         type: "POST",
+        //     //         url: 'savefeedback',
+        //     //         data: formData,
+        //     //         success: function(response)
+        //     //         {
+        //     //             // var jsonData = JSON.parse(response);
+        //     //             // console.log(jsonData.response);
+        
+        //     //             // user is logged in successfully in the back-end
+        //     //             // let's redirect
+        //     //             // if (jsonData.success == "1")
+        //     //             // {
+        //     //             //     location.href = 'my_profile.php';
+        //     //             // }
+        //     //             // else
+        //     //             // {
+        //     //             //     alert('Invalid Credentials!');
+        //     //             // }
+        //     //         }
+        //     //     });
+        //     // // console.log(success);
+        //     // }
+        // }
+    });
+
+    $('#rate').click(function(){
+        var formData = $("#feedbackform").serialize()
+        var review_message = $('#review_message').val()
+        $('#feedbackform .error').hide()
+        if (review_message == '') {
+            $('#review_message').after('<span class="error">Write something </span>').focus()
+            return false
+        }
+        $.ajax({
+            type: "POST",
+            url: 'savefeedback',
+            data: formData,
+            dataType: "JSON",
+            success: function(response)
+            {
+                $("#feedbackform").trigger("reset") 
+                location.reload(true)
+                // swal.fire("Success", "Feedback submitted!", "succcess");
+            },
+            error: function(response){
+                console.log(response)
+            }
+        });
+    })
 })
