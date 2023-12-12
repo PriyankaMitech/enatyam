@@ -34,10 +34,26 @@
          $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
 
          // Get the 'id' from the session
-         $teacherId = $session->get('id');
+         $student_id = $session->get('id');
          
          // Rest of your code
-         $notifications = $adminModel->getUserRole($teacherId);
+         $notifications = $adminModel->getUserRole($student_id);
+
+         $wherecon = array('id' => $student_id);
+
+         $alldata = $adminModel->getsinglerow('register',  $wherecon);
+        //  echo "<pre>";print_r($alldata);exit();
+         $register_id;
+         if(!empty($alldata)){ $register_id = $alldata->Assign_Techer_id;}
+        //  echo $register_id; exit();
+
+         $wherecon1 = array('register_id' => $register_id);
+
+
+         $alldataoff = $adminModel->getsinglerow('faculty',  $wherecon1);
+        //  echo "<pre>";print_r($alldataoff);exit();
+
+
          $count = count($notifications);
 
 
@@ -361,6 +377,14 @@
                       <p>Email</p>
                     </a>
                   </li>
+
+                  <li class="nav-item">
+                <a href="<?=base_url();?>feedback" class="nav-link">
+                    <i class="nav-icon fa fa-thumbs-up"></i>
+                    
+                    <p>Feedback </p>
+                </a>
+              </li>
                 <?php } ?>
                 <?php
                 if ($_SESSION['sessiondata']['Payment_status'] == 'N') { ?>
@@ -373,12 +397,7 @@
                 <?php } ?>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a href="<?=base_url();?>feedback" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
-                    <p>Feedback </p>
-                </a>
-              </li>
+           
           </ul>
         </nav>
       </div>

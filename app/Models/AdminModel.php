@@ -193,7 +193,6 @@ class AdminModel extends Model
 
     public function add($data)
     {
-        print_r($data);die;
         //   print_r($data['studentid']);die;
         $builder1 = $this->db->table($this->table2);
         $builder1->set('Assign_Techer_id', $data['faculty_name']);
@@ -239,15 +238,15 @@ class AdminModel extends Model
 
     public function getFacultyData()
     {
-        $query = $this->db->table('faculty as f')
-            ->select('f.faculty_id, f.faculty_name, f.category_id, f.email, f.qualification, f.experience, f.country, f.assign_student_id, f.register_id ')
-            ->orderBy("faculty_id desc")
-            // ->join('feedback as fb', 'f.register_id = fb.faculty_id')
+        $query = $this->db->table('faculty')
+            ->select('*')
+            ->orderBy('faculty_id', 'desc')
             ->get()
             ->getResult();
-            // echo '<pre>';print_r($query);die;
-            return $query;
+    
+        return $query;
     }
+    
 
     public function getStudentData()
     {
@@ -617,10 +616,44 @@ class AdminModel extends Model
         }
     }
 
-    public function rate_count($column, $faculty_id, $rating)
+    // public function rate_count($column, $faculty_id)
+    // {
+    //     $query = $this->db->table('feedback')->select('AVG(rating) as avg_rating')->where($column, $faculty_id)->get()->getRow();
+    //     return $query->avg_rating;
+    // }
+
+    public function rate_count($faculty_id)
     {
-        $query = $this->db->table('feedback')->select('AVG(rating) as avg_rating')->where($column, $faculty_id)->get()->getRow();
-        return $query->avg_rating;
+        // Sum of ratings for the faculty
+        $totalRatings = $this->db->table('feedback')
+            ->selectSum('rating', 'total_ratings')
+            ->where('faculty_id', $faculty_id)
+            ->get()
+            ->getRowArray();
+    
+        // Total number of feedbacks for the faculty
+        $feedbackCount = $this->db->table('feedback')
+            ->where('faculty_id', $faculty_id)
+            ->countAllResults();
+    
+        // Calculate the average rating
+        $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+    
+        return [
+            'total_ratings' => $totalRatings['total_ratings'],
+            'feedback_count' => $feedbackCount,
+            'average_rating' => $averageRating,
+        ];
     }
+
+    public function get_all_dataf($id){
+        $result = $this->db->table('carrier')
+        ->Where('D_id', $id)
+        ->get()
+        ->getRow(); 
+        return $result;
+    }
+    
+
  
 }

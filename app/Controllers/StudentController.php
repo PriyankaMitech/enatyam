@@ -345,11 +345,13 @@ class StudentController extends BaseController
     {
         $model = new AdminModel();
         $insertdata = array(
-            'student_id' => $_SESSION['sessiondata']['id'],
+            'student_id' => $_POST['student_id'],
             'faculty_id' => $_POST['faculty_id'],
-            'rating' => $_POST['faculty'],
+            'rating' => $_POST['rating'],
             'review_message' => $_POST['review_message']
         );
+
+        // echo "<pre>";print_r($insertdata);exit();
 		$result = $model->insert_formdata('id', 'feedback',$insertdata);
 		if ($result) {
             session()->setFlashdata('success','Feedback submited!');
