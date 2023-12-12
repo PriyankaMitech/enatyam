@@ -205,37 +205,37 @@ class StudentController extends BaseController
         $user_id = $session->get('id');
         $StudentModel = new StudentModel();
 
-        $data['SessionCount'] = $StudentModel->get_user_Session($user_id); 
-        $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);   
-        //    print_r( $data['slots'] );die;
-        return view('StudentSidebar/ScheduleStudent',$data);
-
+        $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
+        $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
+        // print_r($data['slots']);
+        // die;
+        return view('StudentSidebar/ScheduleStudent', $data);
     }
 
-    public function selectStudentSchedule()
-    {
-        if ($this->request->getMethod() === 'post') {
-            
-            $student_register_Id = $this->request->getPost('register_student_id');
-            $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
+    // public function selectStudentSchedule()
+    // {
+    //     if ($this->request->get() === 'post') {
 
-            $StudentModel = new StudentModel();
-            $data = [];
-            foreach ($selectedAppointments as $appointment) {
-                $data[] = [
-                    'register_student_id' => $student_register_Id,
-                    'date' => $appointment['date'],
-                    'start_time' => $appointment['formTime'],
-                    'end_time' => $appointment['toTime'],
-                ];
-            }
+    //         $student_register_Id = $this->request->getPost('register_student_id');
+    //         $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
 
-            $StudentModel->insertSelectedSlotdByStudents($data);
-            return redirect()->to('StudentSelectClassDates');
-        } else {
-            // Handle non-POST requests (optional).
-        }
-    }
+    //         $StudentModel = new StudentModel();
+    //         $data = [];
+    //         foreach ($selectedAppointments as $appointment) {
+    //             $data[] = [
+    //                 'register_student_id' => $student_register_Id,
+    //                 'date' => $appointment['date'],
+    //                 'start_time' => $appointment['formTime'],
+    //                 'end_time' => $appointment['toTime'],
+    //             ];
+    //         }
+
+    //         $StudentModel->insertSelectedSlotdByStudents($data);
+    //         return redirect()->to('StudentSelectClassDates');
+    //     } else {
+    //         // Handle non-POST requests (optional).
+    //     }
+    // }
     public function StudentProfile()
     {
         $result = session();
@@ -286,41 +286,42 @@ class StudentController extends BaseController
     public function StudentSelectClassDates()
     {
 
-            $result = session();       
-            $registerId = $result->get('id');
-            $StudentModel = new StudentModel();
-            $registerData =  $StudentModel->fetchid($registerId);
-            $assignTeacherId = $registerData->Assign_Techer_id;
-            $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId );
-            $data['registerId'] = $registerId;
-            $data['assignFacultyData'] = $assignFacultyData;
-            return view('StudentSidebar/StudentSelectClassDates',$data);
-        }
-        public function selectedslotsfromstudent()  {
-            $registerId = $this->request->getPost('registerId');
-            $selectedId = $this->request->getPost('selectedId');
-            $StudentModel = new StudentModel();
-          
-           $registerData = $StudentModel->fetchProfileDate($registerId);
+        $result = session();
+        $registerId = $result->get('id');
+        $StudentModel = new StudentModel();
+        $registerData =  $StudentModel->fetchid($registerId);
+        $assignTeacherId = $registerData->Assign_Techer_id;
+        $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId);
+        $data['registerId'] = $registerId;
+        $data['assignFacultyData'] = $assignFacultyData;
+        return view('StudentSidebar/StudentSelectClassDates', $data);
+    }
+    public function selectedslotsfromstudent()
+    {
+        $registerId = $this->request->getPost('registerId');
+        $selectedId = $this->request->getPost('selectedId');
+        $StudentModel = new StudentModel();
+
+        $registerData = $StudentModel->fetchProfileDate($registerId);
         //    print_r($registerData);die;
-           $sessionStartDate = $registerData['Session_Start_Date'];
+        $sessionStartDate = $registerData['Session_Start_Date'];
         //    print_r($sessionStartDate);die;
 
-            $dataToUpdate = [
-                'student_register_id' => $registerId,
-                'session_start_date' => $sessionStartDate, // Update the column with the fetched value
-            ];
-            // print_r( $dataToUpdate);die;
+        $dataToUpdate = [
+            'student_register_id' => $registerId,
+            'session_start_date' => $sessionStartDate, // Update the column with the fetched value
+        ];
+        // print_r( $dataToUpdate);die;
 
-           $StudentModel->updateData($selectedId, $dataToUpdate);
-            return redirect()->to('SelectDate');
-        }
-        public function studentsessionstatus()
-        {
-            $result = session();       
-            $registerId = $result->get('id');
-            $StudentModel = new StudentModel();
-            $registerData =  $StudentModel->fetchSessionsByid($registerId);
+        $StudentModel->updateData($selectedId, $dataToUpdate);
+        return redirect()->to('SelectDate');
+    }
+    public function studentsessionstatus()
+    {
+        $result = session();
+        $registerId = $result->get('id');
+        $StudentModel = new StudentModel();
+        $registerData =  $StudentModel->fetchSessionsByid($registerId);
 
         $result = session();
         $registerId = $result->get('id');
@@ -332,7 +333,7 @@ class StudentController extends BaseController
         $data['assignFacultyData'] = $assignFacultyData;
         return view('StudentSidebar/StudentSelectClassDates', $data);
     }
-   
+
 
 
 
@@ -350,27 +351,26 @@ class StudentController extends BaseController
             'rating' => $_POST['faculty'],
             'review_message' => $_POST['review_message']
         );
-		$result = $model->insert_formdata('id', 'feedback',$insertdata);
-		if ($result) {
-            session()->setFlashdata('success','Feedback submited!');
+        $result = $model->insert_formdata('id', 'feedback', $insertdata);
+        if ($result) {
+            session()->setFlashdata('success', 'Feedback submited!');
             echo json_encode($result);
             // print_r($this->session->flashdata('update'));die;
 
         }
     }
 
-	public function get_citizenrate_by_id()
-	{
-		$sector = $this->input->post('sector');
-		$sector_name = str_replace("_RATING",'',$sector);
-		// echo json_encode($sector_name);
-		$result = $this->Citizen_Model->get_citizenrate_by_id($sector, $sector_name);
-		echo json_encode($result);
-	}
+    public function get_citizenrate_by_id()
+    {
+        // $sector = $this->input->post('sector');
+        // $sector_name = str_replace("_RATING", '', $sector);
+        // // echo json_encode($sector_name);
+        // $result = $this->Citizen_Model->get_citizenrate_by_id($sector, $sector_name);
+        // echo json_encode($result);
+    }
 
     public function reschedule()
     {
         echo view('StudentSidebar/RescheduleClass');
     }
 }
-

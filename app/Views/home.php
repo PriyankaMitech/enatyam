@@ -170,7 +170,7 @@
                             <img src="public/images/Home/kathak.svg" class="danceimg home">
                         </div>
 
-                        <div class="col-md-6 col-12 text-col mt-1">
+                        <div class="col-md-6 col-12 text-col mt-5">
                             <h3 class="heading"> - Kathak</h3>
                             <p class="">
 
@@ -190,7 +190,7 @@
                             <img src="public/images/Home/bharatnatyam.svg" class="danceimg home">
                         </div>
 
-                        <div class="col-md-6 col-12 text-col mt-1">
+                        <div class="col-md-6 col-12 text-col mt-5">
                             <h3 class="heading"> - Bharatnatyam</h3>
                             <p>
                                 Experience the grace and beauty of Bharatanatyam with our online dance classes! Our syllabus covers the fundamentals of this ancient Indian classical dance form, from basic postures and hand gestures to complex choreography and improvisation techniques. Our experienced instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn Bharatanatyam from the comfort of your own home and at your own pace. Join our community of dancers today and discover the rich cultural heritage and artistry of Bharatanatyam! </p>
@@ -207,7 +207,7 @@
                             <img src="public/images/Home/bollywood-dance.png" class="danceimg home">
                         </div>
 
-                        <div class="col-md-6 col-12 text-colmt-1">
+                        <div class="col-md-6 col-12 text-col mt-5">
                             <h3 class="heading"> - Bollywood Dance</h3>
 
                             <p>
@@ -225,7 +225,7 @@
                             <img src="public/images/Home/hindustani-vocal.png" class="danceimg home">
                         </div>
 
-                        <div class="col-md-6 col-12 text-col mt-1">
+                        <div class="col-md-6 col-12 text-col mt-5">
                             <h3 class="heading"> - Hindustani Vocal</h3>
                             <p>
 
@@ -243,7 +243,7 @@
                             <img src="public/images/Home/carnatic-vocal.svg" class="danceimg home">
                         </div>
 
-                        <div class="col-md-6 col-12 text-colmt-1">
+                        <div class="col-md-6 col-12 text-col mt-5">
                             <h3 class="heading"> - Carnatic Vocal</h3>
 
                             <p>
@@ -261,7 +261,7 @@
                             <img src="public/images/Home/western.png" class="danceimg home">
                         </div>
 
-                        <div class="col-md-6 col-12 text-col mt-1">
+                        <div class="col-md-6 col-12 text-col mt-5">
                             <h3 class="heading"> - Western Singing</h3>
 
                             <p>
@@ -280,7 +280,7 @@
                             <img src="public/images/Home/guitar.svg" class="danceimg home">
                         </div>
 
-                        <div class="col-md-6 col-12 text-col mt-1">
+                        <div class="col-md-6 col-12 text-col mt-5">
                             <h3 class="heading"> - Guitar</h3>
 
                             <p>
@@ -298,7 +298,7 @@
                             <img src="public/images/Home/keyboard.svg" class="danceimg home">
                         </div>
 
-                        <div class="col-md-6 col-12 text-col mt-1">
+                        <div class="col-md-6 col-12 text-col mt-5">
                             <h3 class="heading"> - Keyboard</h3>
                             <p>
                                 Unlock the magic of the keyboard with our online keyboard course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this versatile instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering keyboard techniques, music theory, and popular repertoire. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of playing your favorite songs, exploring different genres, or even composing your own music, our online keyboard course offers convenience, ﬂexibility, and expert guidance to help you become a skilled keyboardist. <br><br>
@@ -316,7 +316,7 @@
                             <img src="public/images/Home/yoga.svg" class="danceimg home">
                         </div>
 
-                        <div class="col-md-6 col-12 text-col mt-1">
+                        <div class="col-md-6 col-12 text-col mt-5">
                             <h3 class="heading"> - Yoga</h3>
 
                             <p>
@@ -331,8 +331,8 @@
                 <!-- Coming Soon -->
                 <div class="tab-pane fade show" id="pills-ComingSoon" role="tabpanel" aria-labelledby="pills-ComingSoon-tab">
                     <div class="row">
-                        <div class="col-md-12 col-12 ">
-                            <h3 class="heading"> - Coming Soon </h3>
+                        <div class="col-md-12 col-12 mt-5">
+                            <h6 class="heading ml-5"> - Coming Soon </h6>
                         </div>
 
                     </div>
@@ -575,7 +575,9 @@
 
         <div class="row justify-content-center htgs">
 
-            <div class="col-lg-3 col-md-4 col-6 text-center mb-4 mb-lg-0">
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0">
                 <!-- Icon box -->
                 <div class="icon icon-shape icon-shape-secondary rounded-circle icon1">
                     <span class="fas fa-bell"></span>
@@ -649,7 +651,7 @@
                 <!-- End of Icon box -->
             </div>
 
-            <div class="col-lg-2"></div>
+            <div class="col-lg-1"></div>
 
         </div>
 
