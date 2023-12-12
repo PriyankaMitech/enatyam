@@ -448,6 +448,12 @@
   border-radius: 100% 100% 100% 100%;
 }
 
+icon:hover {
+  /* Set your hover styles here */
+  background-color: #FF0067;
+  /* Set your desired background color on hover */
+}
+
 .fas {
   color: #ffffff;
   font-weight: 900;

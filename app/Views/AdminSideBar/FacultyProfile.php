@@ -48,6 +48,10 @@
     .user-content .user-img {
         margin-bottom: 0.8rem;
     }
+    .mbless{
+        margin-bottom: -0.7rem !important;
+    }
+
 </style>
 
 <div class="content-wrapper" style="min-height: 1172.73px;">
@@ -70,7 +74,23 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <?php foreach ($facultyData as $faculty) : ?>
+                <?php 
+                    if(!empty($facultyData)){
+                        // echo "<pre>";print_r($facultyData);exit();
+
+                    $adminModel = new \App\Models\AdminModel(); 
+                    foreach ($facultyData as $faculty) : 
+                    $rating = $adminModel->rate_count($faculty->faculty_id);
+
+                    $get_all_dataf = $adminModel->get_all_dataf($faculty->carrier_id);
+
+                   
+
+                    $averageRating = $rating['average_rating'];
+
+                    // echo "<pre>";print_r($rating);exit();
+
+                ?>
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="card contact_list text-center">
                             <div class="card-body">
@@ -81,30 +101,28 @@
                                         </div>
                                         <div class="user-details">
                                             <h4 class="user-name mb-0"><?= $faculty->faculty_name ?></h4>
-                                            <p><?= $faculty->email ?></p>
+                                            <p class="mbless"><?= $faculty->email ?></p>
+                                           
                                         </div>
                                     </div>
-                                    <?php //print_r(round($rating));die;?>
                                     <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <div class="br-wrapper br-theme-fontawesome-stars">
-                                            <select class='rating text-center' name="faculty" id='faculty_rate' data-id='rating_ue_<?php //echo $rate['average_ue']; ?>'>
-                                                    <option value="1" >1</option>
-                                                    <option value="2" >2</option>
-                                                    <option value="3" >3</option>
-                                                    <option value="4" >4</option>
-                                                    <option value="5" >5</option>
-                                                </select>
-                                                <div class="br-widget" id='faculty_rate'>
-                                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected br-current"></a>
-                                                    <a href="#" data-rating-value="2" data-rating-text="2"></a>
-                                                    <a href="#" data-rating-value="3" data-rating-text="3"></a>
-                                                    <a href="#" data-rating-value="4" data-rating-text="4"></a>
-                                                    <a href="#" data-rating-value="5" data-rating-text="5"></a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                        <li class="nav-item">
+                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                <select class='rating text-center' name="faculty" id='faculty_rate' data-id='rating_ue_<?= $faculty->faculty_id ?>'>
+                                    <!-- ... (existing options) ... -->
+                                </select>
+                                <div class="br-widget" id='faculty_rate'>
+                                    <?php
+                                    // Display filled stars based on the average rating
+                                    for ($i = 1; $i <= 5; $i++) {
+                                        $class = ($i <= round($averageRating)) ? 'br-selected br-current' : '';
+                                        echo "<a href='#' data-rating-value='$i' data-rating-text='$i' class='$class'></a>";
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                                     <!-- <div class="dropdown">
                                         <div class="btn sharp btn-light i-false dropdown-toggle" id="react-aria448712350-257" aria-expanded="false">
                                             <svg width="24" height="6" viewBox="0 0 24 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,11 +131,15 @@
                                         </div>
                                     </div> -->
                                 </div>
-                                <div class="contact-icon">
-                                    <span class="badge badge-success light">Mathematics</span>
-                                    <span class="badge badge-secondary light mx-2">Science</span>
-                                    <span class="badge badge-danger light">Art</span>
+                             
+                                <div class="rowcontact-icon m-1">
+                                <?php if(!empty($get_all_dataf)){ ?>
+                                    <span class="badge badge-success light"><?php echo $get_all_dataf->course ; ?></span>
+                                    <span class="badge badge-secondary light mx-2"><?php echo  $get_all_dataf->sub_course; ?></span>
+
+                                    <?php } ?>
                                 </div>
+                          
                                 <div class="d-flex align-items-center">
                                     <a class="btn  btn-primary btn-sm w-50 mr-2" href="/react/demo/app-profile">
                                         <i class="fa-solid fa-user me-2"></i>Profile </a>
@@ -127,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php endforeach;} ?>
             </div>
 
         </div>

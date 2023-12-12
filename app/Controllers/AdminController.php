@@ -64,7 +64,6 @@ class AdminController extends BaseController
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
 
-//  print_r($postData);die;
             $result = $model->add($postData);
 
             if ($result) {
@@ -90,7 +89,6 @@ class AdminController extends BaseController
 
                 $model = new AdminModel();
                 $data['facultyData'] = $model->getFacultyData();
-                $data['rating'] = $model->rate_count('faculty_id', '2', 'rating');
                 return view('AdminSideBar/FacultyProfile', $data);
                 // return redirect()->to('AdminSideBar/FacultyProfile', $data);
             } else {
@@ -241,109 +239,7 @@ class AdminController extends BaseController
         }
     }
 
-    // public function Steusupdate()
-    // {
-    //     $action[] = $this->request->getPost('action');
-    //     // print_r($action);
-    //     // die;
-    //     $D_id = $this->request->getPost('D_id');
-    //     if ($D_id && ($action === 'approve' || $action === 'decline')) {
-    //         $model = new CarrierModel();
-    //         $careerRecord = $model->getcarreerByfaculty($D_id);
 
-    //         if ($careerRecord) {
-
-    //             $data = [
-    //                 'Result_of_application' => $action,
-    //                 'Status' => 'N',
-    //             ];
-    //             //  print_r($data);die;
-    //             $model->update($D_id, $data);
-
-
-    //             if ($action === 'approve') {
-    //                 $model2 = new LoginModel();
-    //                 $model = new CarrierModel();
-    //                 $lastUpdatedCareerData = $model->getresultofResultofapplication($D_id);
-
-    //                 if ($lastUpdatedCareerData) {
-
-    //                     $registerData = [
-    //                         'full_name' => $lastUpdatedCareerData['name'],
-    //                         'email' => $lastUpdatedCareerData['email'],
-    //                         'is_register_done' => 'Y',
-    //                         'role' => 'Faculty',
-    //                     ];
-
-    //                     // $model2->insertTable1Data($registerData);
-
-    //                     $lastInsertedData = $model2->insertTable1Data($registerData);
-    //                     $lastInsertedData = [
-
-    //                         'faculty_name' => $lastUpdatedCareerData['name'],
-    //                         'email' => $lastUpdatedCareerData['email'],
-    //                         'register_id' => $lastInsertedData['id'],
-    //                     ];
-
-    //                     //  print_r($lastInsertedData);die; 
-
-    //                     $model->insertTable2Data($lastInsertedData);
-    //                 }
-    //             }
-
-    //             return redirect()->to('NewFacultyApplication');
-    //         }
-    //     }
-    // }
-    // public function Steusupdate()
-    // {
-    //     $action = $this->request->getPost('action');
-
-    //     $D_id = $this->request->getPost('D_id');
-
-    //     if ($D_id && ($action === 'approve' || $action === 'decline')) {
-    //         $model = new CarrierModel();
-    //         $careerRecord = $model->getcarreerByfaculty($D_id);
-
-    //         if ($careerRecord) {
-    //             $data = [
-    //                 'Result_of_application' => $action,
-    //                 'Status' => 'N',
-    //             ];
-
-    //             $model->update($D_id, $data);
-
-    //             if ($action === 'approve') {
-    //                 $model2 = new LoginModel();
-    //                 $lastUpdatedCareerData = $model->getresultofResultofapplication($D_id);
-
-    //                 if ($lastUpdatedCareerData) {
-    //                     $registerData = [
-    //                         'full_name' => $lastUpdatedCareerData['name'],
-    //                         'email' => $lastUpdatedCareerData['email'],
-    //                         'is_register_done' => 'Y',
-    //                         'role' => 'Faculty',
-    //                     ];
-
-    //                     $lastInsertedData = $model2->insertTable1Data($registerData);
-
-    //                     $lastInsertedData = [
-    //                         'faculty_name' => $lastUpdatedCareerData['name'],
-    //                         'email' => $lastUpdatedCareerData['email'],
-    //                         'register_id' => $lastInsertedData['id'],
-    //                     ];
-
-    //                     $model->insertTable2Data($lastInsertedData);
-    //                 }
-    //             }
-
-    //             return redirect()->to('NewFacultyApplication');
-    //         }
-    //     }
-
-    //     // Handle the case when $D_id or $action is not valid
-    //     // Redirect or show an error message as needed
-    // }
 
     public function Steusupdate()
     {
@@ -373,6 +269,7 @@ class AdminController extends BaseController
                             'email' => $lastUpdatedCareerData['email'],
                             'is_register_done' => 'Y',
                             'role' => 'Faculty',
+                            'carrier_id' =>  $D_id,
                         ];
 
                         $lastInsertedData = $model2->insertTable1Data($registerData);
@@ -381,6 +278,8 @@ class AdminController extends BaseController
                             'faculty_name' => $lastUpdatedCareerData['name'],
                             'email' => $lastUpdatedCareerData['email'],
                             'register_id' => $lastInsertedData['id'],
+                            'carrier_id' =>  $D_id,
+
                         ];
 
                         $model->insertTable2Data($lastInsertedData);
@@ -417,7 +316,11 @@ class AdminController extends BaseController
         $id = $this->request->getPost('id');
         $model = new AdminModel();
         $result = $model->updatePassword($id, $password);
-
+        if ($result) {
+            $this->session->setFlashdata('success', 'Password updated successfully.');
+        } else {
+            $this->session->setFlashdata('error', 'Error updating password. Please try again.');
+        }
         return redirect()->to('NewFacultyApplication');
     }
     public function ResheduleByadmin()

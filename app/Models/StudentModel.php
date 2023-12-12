@@ -102,8 +102,8 @@ class StudentModel extends Model
         }
         public function get_user_Session($user_id)
         {
-        
-            return $this->db->table('register')->select('SessionsCount')->where('id', $user_id)->get()->getRow();
+
+            return $this->db->table('student')->select('*')->where('register_id', $user_id)->get()->getRow();
         }
         public function Getseslectedslotstostudent($user_id)
         {

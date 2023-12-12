@@ -109,5 +109,40 @@ class facultymodel extends Model
         // echo $this->db->getLastQuery();die;
         return $result;
     }
-
-}
+    public function updateAttendance($sessionId, $attendance, $currentConductedSessions)
+    {
+        // If attendance is "present," increment the count and append it to the array
+        $conductedSessions = explode(',', $currentConductedSessions);
+        
+        // Extract the numeric part from the last session entry and increment by 1
+        $lastSession = end($conductedSessions);
+        $lastCount = (int) $lastSession; // Extract the numeric part
+        $newCount = is_numeric($lastCount) ? $lastCount + 1 : 1;
+    
+        // Handle the leading comma conditionally
+        $leadingComma = empty($currentConductedSessions) ? '' : ',';
+    
+        if ($attendance === 'present') {
+            $this->db->table('student')
+                ->where('register_id', $sessionId)
+                ->update(['ConductedSessionsCount' => $currentConductedSessions . $leadingComma . $newCount . '-P']);
+            
+            return $newCount;
+        } else {
+            $this->db->table('student')
+                ->where('register_id', $sessionId)
+                ->update(['ConductedSessionsCount' => $currentConductedSessions . $leadingComma . $newCount . '-A']);
+            
+            return $newCount;
+        }
+    }
+    public function getCurrentConductedSessions($sessionId)
+    {
+        return $this->db->table('student')
+            ->select('ConductedSessionsCount')
+            ->where('register_id', $sessionId)
+            ->get()
+            ->getRow()
+            ->ConductedSessionsCount;
+    }
+}    

@@ -6,9 +6,6 @@
     </div>
 <?php endif; ?>
 <section class="contactus">
-    <!-- <?php// print_r(session()->get('sessiondata'));
-        //die; ?> -->
-
     <div class="container cont-width">
         <div class="row">
             <div class="col-lg-12">
@@ -16,8 +13,6 @@
             </div>
         </div>
     </div>
-    <!-- <?php //print_r($SessionPricingData); 
-            ?> -->
 
 </section>
 <section class="cont-main-section">
@@ -39,38 +34,37 @@
     </div>
 </section>
 <?php
-// $value = $_GET['id']; // This will retrieve the value '100'
-// echo $value;
+// $productinfo = $itemInfo['description'];
+$txnid = time();
+$surl = $surl;
+$furl = $furl;        
+$key_id = RAZOR_KEY_ID;
+$currency_code = $currency_code;            
+// $total = ($itemInfo['price']* 100); 
+$amount = '100';
+$merchant_order_id = $id;
+$card_holder_name = 'TechArise Team';
+$email = 'info@techarise.com';
+$phone = '9000000001';
+$name = APPLICATION_NAME;
+$return_url = site_url().'PaymentController/callback';
 ?>
-<!-- <div class="container cont-width mb-3">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar bg-body-tertiary">
-                    <div class="container-fluid check-cont">
-                        <p>Kathak Lehanga has been added to your cart.</p>
+<form name="razorpay-form" id="razorpay-form" action="<?php echo $return_url; ?>" method="POST">
+  <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id" />
+  <input type="hidden" name="merchant_order_id" id="merchant_order_id" value="<?php echo $merchant_order_id; ?>"/>
+  <input type="hidden" name="merchant_trans_id" id="merchant_trans_id" value="<?php echo $txnid; ?>"/>
+  <input type="hidden" name="merchant_product_info_id" id="merchant_product_info_id" value="<?php //echo $productinfo; ?>"/>
+  <input type="hidden" name="merchant_surl_id" id="merchant_surl_id" value="<?php echo $surl; ?>"/>
+  <input type="hidden" name="merchant_furl_id" id="merchant_furl_id" value="<?php echo $furl; ?>"/>
+  <input type="hidden" name="card_holder_name_id" id="card_holder_name_id" value="<?php echo $card_holder_name; ?>"/>
+  <input type="hidden" name="merchant_total" id="merchant_total" value="<?php //echo $total; ?>"/>
+  <input type="hidden" name="merchant_amount" id="merchant_amount" value="<?php echo $amount; ?>"/>
+</form>
 
-                        <a href="<?php echo base_url('shop'); ?>" class="cont-shop">CONTINUE SHOPPING</a>
-                    </div>
-                </nav>
-
-            </div>
-        </div>
-
-
-    </div> -->
 <div class="container cont-width">
     <div class="row">
         <div class="col-lg-12">
             <?php if (!(session()->get('sessiondata'))) : ?>
-
-                <!-- <nav class="navbar bg-body-tertiary">
-                        <div class="container-fluid check-cont justify-content-start">
-                            <p>Returning customer?
-                            </p>
-
-                            <a class="cont-shop1" id="log-btn">Click here to login</a>
-                        </div>
-                    </nav> -->
 
                 <div class="modal" tabindex="-1" role="dialog">
                     <div class="modal-dialog" role="document">
@@ -91,11 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <p>If you have shopped with us before, please enter your details below. If you are a new customer,
-                        please proceed to the Billing section.
-
-                    </p> -->
-                <!-- <div class="container cont-width"> -->
+                
                 <div class="row">
                     <div class="col-lg-12 mt-3">
                         <nav class="navbar bg-body-tertiary">
@@ -133,26 +123,8 @@
 
                     </div>
                 </div>
-                <!-- </div> -->
-
-
             <?php endif; ?>
-            <!-- <nav class="navbar bg-body-tertiary">
-                    <div class="container-fluid check-cont justify-content-start">
-                        <p>Returning customer?
-                        </p>
-
-                        <a class="cont-shop1" id="log-btn">Click here to login</a>
-                    </div>
-                </nav> -->
-
             <div class="login-div">
-
-                <!-- <p>If you have shopped with us before, please enter your details below. If you are a new customer,
-                        please proceed to the Billing section.
-
-                    </p> -->
-
                 <form>
                     <div class="row">
                         <div class="col-lg-6 mb-4">
@@ -182,46 +154,6 @@
 
 
 </div>
-<!-- <div class="container cont-width">
-        <div class="row">
-            <div class="col-lg-12 mt-3">
-                <nav class="navbar bg-body-tertiary">
-                    <div class="container-fluid check-cont justify-content-start">
-                        <p>Have a coupon?
-                        </p>
-
-                        <a id="log-btn1" class="cont-shop1">Click here to enter your code
-                        </a>
-                    </div>
-                </nav>
-
-
-                <div class="login-div log-div">
-
-                    <p>If you have a coupon code, please apply it below.
-                    </p>
-
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-6 my-auto">
-
-                                <input type="text" class="form-control" placeholder="Coupon Code" />
-                            </div>
-
-                            <div class="col-lg-3 ">
-                                <button type="submit" class="btn log-btn">APPLY COUPOUN</button>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div> -->
-
-
-
 
 <div class="container cont-width">
     <div class="row">
@@ -242,24 +174,23 @@
                     <tr class="cart_item">
                         <?php if (!empty($matchingRecords)) : ?>
                             <td class="product-name">
-
-                                <?php echo $matchingRecords->Name; ?>
+                            <span id="pname"><?php echo $matchingRecords->Name; ?></span>
 
                             </td>
                             <td class="product-No_of_Sessions">
-                                <?php echo $matchingRecords->No_of_Sessions  ?>
+                            <span id="sessno"><?php echo $matchingRecords->No_of_Sessions  ?></span>
                             </td>
 
                             <td class="product-Duration">
-                                <?php echo $matchingRecords->Duration  ?>
+                            <span id="duration"><?php echo $matchingRecords->Duration  ?></span>
                             </td>
 
                             <td class="product-PerSession-Price">
-                                ₹</span><?php echo $matchingRecords->Per_Session_Price  ?>
+                            <span id="price">₹</span><?php echo $matchingRecords->Per_Session_Price  ?></span>
                             </td>
 
                             <td class="product-total">
-                                ₹</span><?php echo $matchingRecords->Total_Price   ?>
+                            <span id="total">₹</span><?php echo $matchingRecords->Total_Price   ?></span>
                             </td>
                     </tr>
                 </tbody>
@@ -267,7 +198,6 @@
 
                     <tr class="">
                         <td colspan="5" style="padding:1rem;"> </td>
-                        <!-- <td></td> -->
                     </tr>
                     <tr class="order-total">
                         <td colspan="4" style=""> <span class="woocommerce-Price-amount amount"><b>Total</b> </td>
@@ -286,60 +216,11 @@
 
 </div>
 
-
-
-<!-- <div class="container cont-width mt-4">
-        <div class="row">
-            <div class="col-lg-12 mt-3">
-                <nav class="navbar bg-body-tertiary1 p-3">
-                    <div class="container-fluid justify-content-start">
-
-                        <a class="navbar-brand" href="#">
-                            <h6>Credit Card/Debit Card/NetBanking </h6>
-                        </a>
-                        <span>
-                            <div class="payment-logo">
-                                <img src="public\images\payment.svg ">
-                        </span>
-                    </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="pay-method ">
-                    <p>Pay securely by Credit or Debit card or Internet Banking through Razorpay.</p>
-                </div>
-            </div>
-            <div class="pay-method-1">
-                <p>Your personal data will be used to process your order, support your experience throughout this
-                    website, and for other purposes described in our<a href="<?php echo base_url('privacypolicy'); ?>">privacy policy</a> </p>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label f-label" for="flexCheckDefault">
-                    I have read and agree to the website <a href="<?php echo base_url('privacypolicy'); ?>"> terms
-                        and conditions *</a>
-                </label>
-            </div>
-
-            <div class="place-btn d-block w-100 ">
-                <button class="button-content  " type="submit" role="button">
-
-                    <span class="button-text">PLACE ORDER</a> </span>
-
-                </button>
-            </div>
-
-            </nav>
-            </form>
-        </div>
-
-
-    </div> -->
-
 <div class="container cont-width mt-4">
     <div class="row">
         <div class="col-lg-12 mt-3">
             <nav class="navbar bg-body-tertiary1 p-3">
-                <div class="container-fluid justify-content-start">
+                <div class="container justify-content-start">
 
                     <a class="navbar-brand" href="#">
                         <h6>Credit Card/Debit Card/NetBanking </h6>
@@ -368,11 +249,10 @@
         </div>
 
         <div class="place-btn d-block w-100 ">
-            <button class="button-content  " type="submit" role="button">
-
-                <span class="button-text">PLACE ORDER</a> </span>
-
-            </button>
+            <input type="hidden" id="uemail" value="<?php echo $billingdetails['email']  ?>">
+            <input type="hidden" id="name" value="<?php echo $billingdetails['Fname'].' '.$billingdetails['Lname']  ?>">
+            <input type="hidden" id="phone" value="<?php echo $billingdetails['phone']  ?>">
+            <button class="button-content" onclick="razorpaySubmit(this);" type="submit" role="button">PLACE ORDER</button>
         </div>
 
         </nav>
@@ -382,17 +262,99 @@
 
 <?php include('footer.php'); ?>
 
+<script>
+    // var options = {
+    //     key:            "rzp_test_Ctoq9lGccMcZwj",
+    //     amount:         100,
+    //     name:           "RazorPay Infovistar",
+    //     description:    "Order # ABC-.date('YmdHis')",
+    //     netbanking:     true,
+    //     currency:       "INR", // INR
+    //     prefill: {
+    //         name:       $('#name').val(),
+    //         email:      $('#uemail').val(),
+    //         contact:    $('#phone').val()
+    //     },
+    //     notes: {
+    //         soolegal_order_id: "1234",
+    //     },
+    //     handler: function (transaction) {
+    //         document.getElementById('razorpay_payment_id').value = transaction.razorpay_payment_id;
+    //         document.getElementById('razorpay-form').submit();
+    //     },
+    //     "modal": {
+    //         "ondismiss": function(){
+    //             location.reload()
+    //         }
+    //     }
+    // };
+    
+    // var razorpay_pay_btn, instance;
+    // function razorpaySubmit(el) {
+    //     if(typeof Razorpay == 'undefined') {
+    //         setTimeout(razorpaySubmit, 200);
+    //         if(!razorpay_pay_btn && el) {
+    //             razorpay_pay_btn    = el;
+    //             el.disabled         = true;
+    //             el.value            = 'Please wait...';  
+    //         }
+    //     } else {
+    //         if(!instance) {
+    //             instance = new Razorpay(options);
+    //             if(razorpay_pay_btn) {
+    //             razorpay_pay_btn.disabled   = false;
+    //             razorpay_pay_btn.value      = "Pay Now";
+    //             }
+    //         }
+    //         instance.open();
+    //     }
+    // }
 
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
-<!-- Latest compiled JavaScript -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    var razorpay_options = {
+        key: "<?php echo $key_id; ?>",
+        amount: "<?php echo $amount; ?>",
+        name: "<?php echo $name; ?>",
+        description: "Order # <?php echo $merchant_order_id; ?>",
+        netbanking: true,
+        currency: "<?php echo $currency_code; ?>",
+        prefill: {
+        name:"<?php echo $card_holder_name; ?>",
+        email: "<?php echo $email; ?>",
+        contact: "<?php echo $phone; ?>"
+        },
+        notes: {
+        soolegal_order_id: "<?php echo $merchant_order_id; ?>",
+        },
+        handler: function (transaction) {
+            document.getElementById('razorpay_payment_id').value = transaction.razorpay_payment_id;
+            document.getElementById('razorpay-form').submit();
+        },
+        "modal": {
+            "ondismiss": function(){
+                location.reload()
+            }
+        }
+    };
+    var razorpay_submit_btn, razorpay_instance;
 
-
-
-
-<!-- 
-</body>
-
-
-</html> -->
+    function razorpaySubmit(el){
+        if(typeof Razorpay == 'undefined'){
+        setTimeout(razorpaySubmit, 200);
+        if(!razorpay_submit_btn && el){
+            razorpay_submit_btn = el;
+            el.disabled = true;
+            el.value = 'Please wait...';  
+        }
+        } else {
+        if(!razorpay_instance){
+            razorpay_instance = new Razorpay(razorpay_options);
+            if(razorpay_submit_btn){
+            razorpay_submit_btn.disabled = false;
+            razorpay_submit_btn.value = "Pay Now";
+            }
+        }
+        razorpay_instance.open();
+        }
+    } 
+</script>
