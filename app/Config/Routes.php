@@ -61,8 +61,12 @@ $routes->get('profile', 'Home::Profile');
 $routes->get('StartNowPricing', 'Home::StartNowPricing');
 $routes->get('home', 'Home::returnhome');
 $routes->get('shop', 'Home::shop'); //i remove for cart issue 
-// $routes->get('Checkout', 'Home::Checkout');
 
+$routes->get('success', 'BillingC::success');
+$routes->get('failed', 'BillingC::failed');
+$routes->post('PaymentController/callback', 'PaymentController::payment');
+$routes->get('PaymentController/success', 'PaymentController::success');
+$routes->get('PaymentController/failed', 'PaymentController::failed');
 $routes->get('Checkout', 'BillingC::Checkout');
 $routes->get('getLogin', 'Home::getLogin');
 $routes->get('Session', 'Home::Session');
