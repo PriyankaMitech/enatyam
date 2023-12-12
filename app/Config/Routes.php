@@ -161,6 +161,8 @@ $routes->post('AdminController/createpassword', 'AdminController::createpassword
 $routes->post('AdminController/ResheduleByadmin', 'AdminController::ResheduleByadmin');
 $routes->post('lostpassword', 'StudentController::lostpassword');
 $routes->post('otpvalidate', 'StudentController::otpvalidate');
+$routes->post('submitAttendance', 'FacultyController::submitAttendance');
+
 $routes->post('newpassword', 'StudentController::newpassword');
 $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule');
 

@@ -417,7 +417,11 @@ class AdminController extends BaseController
         $id = $this->request->getPost('id');
         $model = new AdminModel();
         $result = $model->updatePassword($id, $password);
-
+        if ($result) {
+            $this->session->setFlashdata('success', 'Password updated successfully.');
+        } else {
+            $this->session->setFlashdata('error', 'Error updating password. Please try again.');
+        }
         return redirect()->to('NewFacultyApplication');
     }
     public function ResheduleByadmin()
