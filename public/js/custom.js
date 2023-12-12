@@ -1,5 +1,5 @@
 var options = {
-    key:            "rzp_live_jNHwGY4NBVWWah",
+    key:            "rzp_test_Ctoq9lGccMcZwj",
     amount:         100,
     name:           "RazorPay Infovistar",
     description:    "Order # ABC-.date('YmdHis')",
@@ -72,44 +72,7 @@ $(document).ready(function(){
     });  
 
     $('.rating').barrating({
-        theme: 'fontawesome-stars',
-        // onSelect: function(value, text, event) {
-        //     // Get element id by data-id attribute
-        //     var el = this;
-        //     var el_id = el.$elem.data('id');
-        //     // var formData = $("#feedbackform").serialize();
-        //     // console.log(formData);
-        //     // // rating was selected by a user
-        //     // if (typeof(event) !== 'undefined') {
-                
-        //     //     var split_id = el_id.split("_");
-  
-        //     //     var postid = split_id[1];  // postid
-  
-        //     //     $.ajax({
-        //     //         type: "POST",
-        //     //         url: 'savefeedback',
-        //     //         data: formData,
-        //     //         success: function(response)
-        //     //         {
-        //     //             // var jsonData = JSON.parse(response);
-        //     //             // console.log(jsonData.response);
-        
-        //     //             // user is logged in successfully in the back-end
-        //     //             // let's redirect
-        //     //             // if (jsonData.success == "1")
-        //     //             // {
-        //     //             //     location.href = 'my_profile.php';
-        //     //             // }
-        //     //             // else
-        //     //             // {
-        //     //             //     alert('Invalid Credentials!');
-        //     //             // }
-        //     //         }
-        //     //     });
-        //     // // console.log(success);
-        //     // }
-        // }
+        theme: 'fontawesome-stars'
     });
 
     $('#rate').click(function(){
@@ -137,3 +100,44 @@ $(document).ready(function(){
         });
     })
 })
+
+var options = {
+    "key": "rzp_test_Ctoq9lGccMcZwj", // Enter the Key ID generated from the Dashboard
+    "amount": "1", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "RazorPay Infovistar",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": "order_IluGWxBm9U8zJ8", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    // "handler": function (response){
+    //     // alert(response.razorpay_payment_id);
+    //     // alert(response.razorpay_order_id);
+    //     // alert(response.razorpay_signature)
+    // },
+    "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+    "prefill": {
+        "name": "Gaurav Kumar",
+        "email": "gaurav.kumar@example.com",
+        "contact": "9000090000"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+// rzp1.on('payment.failed', function (response){
+//         // alert(response.error.code);
+//         // alert(response.error.description);
+//         // alert(response.error.source);
+//         // alert(response.error.step);
+//         // alert(response.error.reason);
+//         // alert(response.error.metadata.order_id);
+//         // alert(response.error.metadata.payment_id);
+// });
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
