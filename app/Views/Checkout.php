@@ -5,7 +5,7 @@
 
     <?php if (session()->getFlashdata('success')) : ?>
         <div class="alert alert-success">
-            <?= session()->getFlashdata('success') ?>
+            <?= $_SESSION; session()->getFlashdata('success') ?>
         </div>
     <?php endif; ?>
     <section class="contactus">
@@ -37,25 +37,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <div class="container cont-width mb-3">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar bg-body-tertiary">
-                    <div class="container-fluid check-cont">
-                        <p>Kathak Lehanga has been added to your cart.</p>
-
-                        <a href="<?php echo base_url('shop'); ?>" class="cont-shop">CONTINUE SHOPPING</a>
-                    </div>
-                </nav>
-
-            </div>
-        </div>
-
-
-    </div> -->
-
-
 
     <div class="container cont-width">
         <div class="row">

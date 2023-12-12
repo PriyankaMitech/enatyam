@@ -98,7 +98,7 @@ class Autoload extends AutoloadConfig
      * @var string[]
      * @phpstan-var list<string>
      */
-    public $helpers = ['sms_helper'];
+    public $helpers = ['sms_helper, payment_helper'];
     // Autoload.php
    
    

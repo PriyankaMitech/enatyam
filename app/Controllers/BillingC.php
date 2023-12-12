@@ -18,9 +18,9 @@ class BillingC extends BaseController
     public function BillingInformation()
     {
         $BillingM = new BillingM();
-
+        $session = session();
         if ($this->request->getMethod() === 'post') {
-            $data = [
+            $insertdata = [
                 'Fname' => $this->request->getPost('Fname'),
                 'Lname' => $this->request->getPost('Lname'),
                 'notes' => $this->request->getPost('notes'),
@@ -34,22 +34,23 @@ class BillingC extends BaseController
 
 
             ];
-
-            $BillingM->insert($data); // Assuming you have a model to handle database interactions
-            $this->session->setFlashdata('success', 'Order Placed successfully.');
+            $BillingM->insert($insertdata); 
         }
 
-        $id = $this->session->get('PricingType_Id');
-        // echo $id;
-        // die;
+        $data['id'] = $this->session->get('PricingType_Id');
         $billingModel = new BillingM();
-        $matchingRecords = $billingModel->getSessionPricingData($id);
-        // Pass the data to the view
+        $matchingRecords = $billingModel->getSessionPricingData($data['id']);
         $data['matchingRecords'] = $matchingRecords;
-        // print_r($data);
-        // die;
+        $data['billingdetails'] = $insertdata;
 
-        // return redirect()->to('OrderDetails'); // Load a view after form submission
+        $data['title'] = 'Checkout payment ';  
+        // $this->site->setProductID($id);
+        // $data['itemInfo'] = $this->site->getProductDetails(); 
+        $data['return_url'] = site_url().'PaymentController/callback';
+        $data['surl'] = site_url().'PaymentController/success';;
+        $data['furl'] = site_url().'PaymentController/failed';;
+        $data['currency_code'] = 'INR';
+
         return view('OrderDetails', $data);
     }
 
@@ -58,33 +59,20 @@ class BillingC extends BaseController
         $session = session();
 
         $id = $this->request->getGet('id');
-        // echo $id;
 
         if (!(session()->get('sessiondata'))) {
 
             echo "Not set session";
-            //  $("#loginformpopup").modal('toggle');
         } else {
-            // echo $id;
-            // echo $1;
             $billingModel = new BillingM(); // Load the model
-            // $matchingRecords['SessionPricingData'] = $matchModel->getSessionPricingData($id);
             $matchingRecords = $billingModel->getSessionPricingData($id);
-            // print_r($matchingRecords);
-            // die;
 
             $PricingId = $matchingRecords->PricingType_Id;
             $res = $this->session->set('PricingType_Id', $PricingId);
 
-            // print_r($matchingRecords);
-            // die;
-            // echo $this->session->get('PricingType_Id');
-            // die;
-
-            // Pass the data to the view
             $data['matchingRecords'] = $matchingRecords;
 
             return view('Checkout', $data);
         }
-    }
+    } 
 }
