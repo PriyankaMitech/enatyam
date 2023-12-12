@@ -124,6 +124,7 @@ $routes->get('add_notifications', 'AdminController::add_notifications');
 $routes->post('insertChat', 'AdminController::insertChat');
 $routes->post('setnotification', 'AdminController::setnotification');
 $routes->get('viewProfile', 'AdminController::viewProfile');
+$routes->get('UploadedImages', 'AdminController::UploadedImages');
 
 
 
