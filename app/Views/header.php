@@ -343,7 +343,7 @@ $page = $uri->getSegment(count($pages));
     </div>
     <section class="tophead ">
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid  pd0">
+            <div class="container  pd0">
                 <!-- <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -422,7 +422,7 @@ $page = $uri->getSegment(count($pages));
             <div class="container-fluid d-block d-lg-none">
                 <div class="row mx-0">
                     <div class="col-6">
-                        <a href="https://infobeckon.com/enatyam/" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
+                        <a href="https://enatyam.nahichaltahai.org/" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
                             <img src="public/images/logo1.png" alt="Enatyam">
                         </a>
                     </div>

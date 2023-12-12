@@ -1,9 +1,11 @@
 .iconc {
   width: 100px;
 }
+
 .cont-card {
   text-align: center;
 }
+
 .modal-content {
   width: 95%;
   margin: 0 auto;
@@ -17,23 +19,28 @@
 
   margin-top: -40px;
 }
+
 .htgs {
   margin-top: 35px;
 }
+
 .modal-body {
   position: relative;
   flex: 1 1 auto;
   padding: 40px;
 }
+
 .btn-light {
   width: 100%;
   background-color: #ff0067;
   margin-bottom: 20px;
   color: white;
 }
+
 .teacher {
   margin-top: 20px;
 }
+
 .titel {
   font-family: "Roboto", sans-serif !important;
   font-size: 24px;
@@ -45,11 +52,12 @@
   text-transform: none;
   line-height: 40px;
 }
+
 /* .modal {
     background: rgba(0,0,0,0.6);
 } */
 .icon1 {
-  margin-left: 89px !important;
+  margin-left: 45px !important;
 }
 
 .icon2 {
@@ -59,6 +67,7 @@
 .icon3 {
   margin-left: 38px !important;
 }
+
 .icon4 {
   margin-left: 40px !important;
 }
@@ -67,16 +76,23 @@
   margin-left: 33px !important;
 }
 
+.icon:hover {
+  background-color: #ff0067;
+}
+
 .pricing-section {
   margin-top: 55px !important;
 }
+
 .tab-pane {
   /* margin-top: 33px; */
   margin-top: 0px;
 }
+
 .imlalp {
   margin-bottom: 14px !important;
 }
+
 .learning_Platform-section {
   margin-top: 20px;
 }
@@ -84,6 +100,7 @@
 .learningBtn {
   margin-top: 30px !important;
 }
+
 .pricing-section {
   margin-top: 6% !important;
 }

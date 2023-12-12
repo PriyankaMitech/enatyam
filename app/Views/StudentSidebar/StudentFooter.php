@@ -39,7 +39,7 @@
     <script type='text/javascript'>
         $(document).ready(function(){
             
-            $('#faculty<?php //echo $rate['average_ue']; ?>').barrating('set', 3<?php //echo $rate['average_ue']; ?>);
+            $('#faculty').barrating('set', 1);
 
             $("input[name='datetimes']").daterangepicker({},
                 function(start, end, label) {

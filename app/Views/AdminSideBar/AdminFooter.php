@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+<strong>Copyright &copy; 2023-2024 <a href="https://mitech">MI-TECH</a>.</strong> All rights reserved.
     All rights reserved.
     
 </footer>
@@ -50,8 +50,6 @@
 <script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script>
     $(document).ready(function() {
-
-        $('#faculty_rate').barrating('set', <?php //echo round($rating) ?>);
 
         $("#toggle-table5").click(function() {
             $("#faculty-table5").toggle("");
