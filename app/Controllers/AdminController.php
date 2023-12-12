@@ -38,7 +38,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-            //         echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
+                //         echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -137,6 +137,33 @@ class AdminController extends BaseController
                 // echo "</pre>";
                 // die();
                 return view('AdminSideBar/StudentVideo', $data);
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
+    }
+
+    public function UploadedImages()
+    {
+
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
+
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+
+            if ($email !== null && $password !== null) {
+
+                $model = new AdminModel();
+                $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
+                $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
+                // echo "<pre>";
+                // print_r($data['FacultyVideoData']);
+                // echo "</pre>";
+                // die();
+                return view('AdminSideBar/UploadedImages', $data);
             } else {
                 return redirect()->to(base_url());
             }
@@ -813,12 +840,11 @@ class AdminController extends BaseController
         $admin_id;
         if (!empty($_SESSION['sessiondata'])) {
             $admin_id = $_SESSION['sessiondata']['id'];
-        
         }
-        
-            // echo "<pre>";
-            // print_r($admin_id);
-            // exit();
+
+        // echo "<pre>";
+        // print_r($admin_id);
+        // exit();
 
 
         $model = new AdminModel();
@@ -828,7 +854,7 @@ class AdminController extends BaseController
             'notification_description' => $this->request->getPost('notification_description'),
             'notification_date' =>  $this->request->getPost('notification_date'),
             'admin_id' => $admin_id,
-            'created_on' => date('Y:m:d H:i:s'),  
+            'created_on' => date('Y:m:d H:i:s'),
         ];
 
         // echo "<pre>";print_r($result);exit();
