@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 html,
 body {
   font-family: "Roboto", sans-serif !important;
@@ -13,6 +14,7 @@ body {
   background-color: #fad32c !important;
   overflow-x: hidden;
 }
+
 .tophead .navbar ul li a {
   color: #fff;
   text-decoration: none;
@@ -20,23 +22,27 @@ body {
   font-weight: 500 !important;
   font-size: 14px;
 }
+
 /* .tophead .navbar ul li a:hover{
 background-color:aqua;
 } */
 .tophead .navbar ul li {
   margin: 0px 20px 0px 0px;
 }
+
 .tophead .loginmenu a:first-child {
   border-right: 1px solid #f7f7f7;
 }
+
 .tophead .loginmenu a {
   color: #fff;
   padding: 0px 20px 0px 20px;
   text-decoration: none;
   /* font-size: 14px; */
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
+
 /* .container {
     margin-right: auto;
     margin-left: auto;
@@ -49,14 +55,17 @@ background-color:aqua;
   margin: 0;
   padding: 0;
 }
+
 div {
   display: block;
 }
+
 #tophead .navigation {
   padding-top: 5px;
   padding-bottom: 5px;
   transition: all 0.5s ease-in-out;
 }
+
 /* @media (min-width: 1025px) */
 .navigation .tm-table {
   display: table;
@@ -69,62 +78,78 @@ div {
 #masthead.header_v4 .navigation .width-logo {
   margin-right: 30px;
 }
+
 #masthead .navigation .width-logo {
   padding-bottom: 5px;
   padding-top: 5px;
 }
-.navbar > .container-fluid {
+
+.navbar>.container-fluid {
   padding: 0px 70px;
 }
+
 .width-logo {
   margin-right: 30px;
 }
+
 .table-cell {
   display: table-cell;
   vertical-align: middle;
   float: none;
 }
+
 .navigation nav {
   position: static;
 }
+
 .navigation {
   width: calc(100% - var(--thim-width-logo));
 }
+
 .site-header .navbar-nav {
   text-align: right;
 }
+
 .navigation .thim-ekits-menu__nav {
   display: block;
 }
+
 .navbar-nav {
   float: none;
 }
+
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
   /* padding: 0.5rem 2rem; */
   color: #fff !important;
 }
+
 .nav-link:hover {
   color: #ff0067 !important;
 }
+
 .nav-container .nav-link {
   padding-right: 2rem !important;
   padding-left: 0.5rem;
 }
-.tophead .navbar-nav > ul {
+
+.tophead .navbar-nav>ul {
   font-size: 14px;
 }
-.navbar-nav > li {
+
+.navbar-nav>li {
   float: none;
   display: inline-block;
   zoom: 1;
   max-height: 60px;
   vertical-align: middle;
 }
+
 .main menu .a:hover {
   background-color: red;
 }
+
 .btndemo {
   width: 100%;
   /* margin-left: 100px; */
@@ -137,6 +162,7 @@ div {
   color: #ffffff !important;
   /* background: none; */
 }
+
 .btndemoh {
   /* width: 100%; */
   /* margin-left: 100px; */
@@ -144,7 +170,7 @@ div {
   font-weight: 400 !important;
   background-color: #8c52ff !important;
   line-height: 38px !important;
-  /* padding: 5px 25px !important; */
+  padding: 5px 25px !important;
   border-radius: 25px !important;
   color: #ffffff !important;
   /* background: none; */
@@ -154,18 +180,22 @@ div {
   background-color: #737373 !important;
   color: #ffffff !important;
 }
+
 .headingSectionTitle {
   font-size: 28px;
   border-bottom: 1px solid red;
 }
+
 .video-container {
   position: relative;
 }
+
 .video-dance {
   display: block;
   width: 100%;
   height: 759px;
 }
+
 .container .video-col1 {
   position: absolute;
   bottom: 0;
@@ -192,18 +222,21 @@ div {
   background-color: transparent;
 }
 
-.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+.btn.disabled,
+.btn:disabled,
+fieldset:disabled .btn {
 
   pointer-events: visible;
 }
+
 /* Apply styles when the button is not disabled */
-[type=button]:not(:disabled),
+/* [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
 button:not(:disabled) {
   cursor: default !important;
  
-}
+} */
 
 /* Apply default cursor style when the button is disabled */
 [type=button]:disabled,
@@ -212,7 +245,8 @@ button:not(:disabled) {
 button:disabled {
   cursor: not-allowed !important;
 }
-.error{
+
+.error {
   color: #ff0067;
   font-size: 12px;
 
@@ -233,4 +267,3 @@ button:disabled {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
-

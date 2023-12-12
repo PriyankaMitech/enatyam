@@ -6,8 +6,9 @@
     </div>
 <?php endif; ?>
 <section class="contactus">
-    <!-- <?php// print_r(session()->get('sessiondata'));
-        //die; ?> -->
+    <!-- <? php // print_r(session()->get('sessiondata'));
+            //die; 
+            ?> -->
 
     <div class="container cont-width">
         <div class="row">
@@ -339,7 +340,7 @@
     <div class="row">
         <div class="col-lg-12 mt-3">
             <nav class="navbar bg-body-tertiary1 p-3">
-                <div class="container-fluid justify-content-start">
+                <div class="container justify-content-start">
 
                     <a class="navbar-brand" href="#">
                         <h6>Credit Card/Debit Card/NetBanking </h6>
