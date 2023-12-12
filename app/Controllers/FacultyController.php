@@ -309,6 +309,15 @@ public function StudentAttendance()
     return view('notification');
   }
 
-
+public function submitAttendance()
+{
+  //  print_r($_POST);die;
+  $model = new facultymodel();
+  $sessionId = $this->request->getPost('session_id');
+  $attendance = $this->request->getPost('attendance');
+  $currentConductedSessions = $model->getCurrentConductedSessions($sessionId);
+  $model->updateAttendance($sessionId, $attendance,$currentConductedSessions);
+  return redirect()->to('FacultyDashboard');
+}
 
 }
