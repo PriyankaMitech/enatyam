@@ -25,8 +25,8 @@
                 <div class="widget-user-image">
                   <img class="img-circle elevation-2" src="<?=base_url()?>public/images/user.png" alt="User Avatar">
                 </div>
-                <h3 class="widget-user-username">Nadia Carmichael</h3>
-                <h5 class="widget-user-desc">Lead Developer</h5>
+                <h3 class="widget-user-username"><?php if(!empty($alldataoff)){ echo $alldataoff->faculty_name;}?></h3>
+                <h5 class="widget-user-desc"><?php if(!empty($alldatac)){ echo $alldatac->course;}?></h5>
               </div>
               <div class="card-footer p-0">
                 <ul class="nav flex-column">

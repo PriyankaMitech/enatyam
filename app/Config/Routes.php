@@ -125,6 +125,19 @@ $routes->post('insertChat', 'AdminController::insertChat');
 $routes->post('setnotification', 'AdminController::setnotification');
 $routes->get('viewProfile', 'AdminController::viewProfile');
 
+$routes->get('viewProfile/(:any)', 'AdminController::viewProfile/$1');
+
+
+// Report Data
+$routes->get('demo_classes', 'AdminController::demo_classes');
+$routes->get('student', 'AdminController::student');
+$routes->get('faculty', 'AdminController::faculty');
+$routes->get('payment_history', 'AdminController::payment_history');
+
+
+$routes->get('UploadedImages', 'AdminController::UploadedImages');
+
+
 
 
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
