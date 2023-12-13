@@ -64,7 +64,7 @@ $routes->get('shop', 'Home::shop'); //i remove for cart issue
 
 $routes->get('success', 'BillingC::success');
 $routes->get('failed', 'BillingC::failed');
-$routes->post('PaymentController/callback', 'PaymentController::payment');
+$routes->post('PaymentController/payment', 'PaymentController::payment');
 $routes->get('PaymentController/success', 'PaymentController::success');
 $routes->get('PaymentController/failed', 'PaymentController::failed');
 $routes->get('Checkout', 'BillingC::Checkout');

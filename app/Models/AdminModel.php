@@ -404,12 +404,12 @@ class AdminModel extends Model
     }
 
 
-    public function insert_formdata($id, $table, $insertdata)
+    public function insert_formdata($column, $table, $insertdata)
     {
         $result['insert'] = $this->db->table($table)->insert($insertdata);
         if ($result['insert']) {
             $insertedID = $this->db->insertID();
-            $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
+            $result['getdata'] = $this->db->table($table)->where($column, $insertedID)->get()->getRowArray();
             
             return $result;
         } else {
@@ -654,7 +654,72 @@ class AdminModel extends Model
         ->getRow(); 
         return $result;
     }
-    
 
+    public function insert_payment($insertdata){
+        $array = array(
+            'id' => 'pay_NBmMa8Xl2lmBvt',
+            'entity' => 'payment',
+            'currency' => 'INR',
+            'status' => 'captured',
+            'notes' => array(
+                'soolegal_order_id' => 2
+            ),
+            'acquirer_data' => array(
+                'bank_transaction_id' => 5656
+            )
+        );
+        //echo '<pre>';//print_r($array);
+
+        $sql = "insert into payment_details (";
+        $sql1 = " values ( ";
+
+        if (isset($insertdata->error)) {
+            foreach ($insertdata->error as $key => $value) {
+                if (is_object($value)) {
+                    $d=json_encode($value);
+                    $sql1.='"' . htmlspecialchars($d) . '", ';
+                    $sql.= htmlspecialchars($key) . ', ';
+                }else {
+                    $sql.= htmlspecialchars($key) . ', ';
+                    $sql1.='"' . htmlspecialchars($value) . '", ';
+                }
+                
+            }
+        }else {
+            foreach ($insertdata as $key => $value) {
+                // print_r($value);
+                if(!is_object($value)){
+                    $sql1.='"' . htmlspecialchars($value) . '", ';
+                    $sql.= htmlspecialchars($key) . ', ';
+                }
+                if(is_object($value)){
+                    foreach ($value as $ke => $val) {
+                    // print_r($ke);
+                        $sql.= htmlspecialchars($ke) . ', ';
+                        $sql1.='"' . htmlspecialchars($val) . '", ';
+                    }
+                }
+                // if (is_object($value)) {
+                //     $d=json_encode($value);
+                //     $sql1.='"' . htmlspecialchars($d) . '", ';
+                //     $sql.= htmlspecialchars($key) . ', ';
+                // }else {
+                //     $sql.= htmlspecialchars($key) . ', ';
+                //     $sql1.='"' . htmlspecialchars($value) . '", ';
+                // }
+                
+            }
+        }
+
+        $res = substr($sql, 0, strlen($sql) - 2) . ")";
+        $res1 = substr($sql1, 0, strlen($sql1) - 2) .")";
+        $result = $this->db->query($res . $res1);
+        
+        if ($result) {
+            return true;
+        }else {
+            return false;
+        }
+    }
  
 }
