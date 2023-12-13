@@ -480,7 +480,21 @@ th {
                                 <tr>
                                     <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
                                         <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
-                                        <td><?= $admin->full_name; ?></td>
+                                        <td>
+            
+                                    <?php
+                                    // Check if the record is created within the last 10 days
+                                    $createdAt = strtotime($admin->created_at);
+                                    $currentDate = strtotime(date('Y-m-d'));
+                                    $tenDaysAgo = strtotime('-10 days');
+
+                                    if ($createdAt >= $tenDaysAgo && $createdAt <= $currentDate) {
+                                        // echo '<span class="fas fa-clock bg-maroon">New</span>';
+                                        echo '<small class="badge badge-danger"></i>New</small>';
+                                    }
+                                    ?>
+                                    <?= $admin->full_name; ?>
+                                </td>
                                         <td><?= $admin->email; ?></td>
                                         <td><?= $admin->course; ?></td>
                                         <td><?= $admin->sub_course; ?></td>

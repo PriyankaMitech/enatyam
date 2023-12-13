@@ -61,8 +61,12 @@ $routes->get('profile', 'Home::Profile');
 $routes->get('StartNowPricing', 'Home::StartNowPricing');
 $routes->get('home', 'Home::returnhome');
 $routes->get('shop', 'Home::shop'); //i remove for cart issue 
-// $routes->get('Checkout', 'Home::Checkout');
 
+$routes->get('success', 'BillingC::success');
+$routes->get('failed', 'BillingC::failed');
+$routes->post('PaymentController/callback', 'PaymentController::payment');
+$routes->get('PaymentController/success', 'PaymentController::success');
+$routes->get('PaymentController/failed', 'PaymentController::failed');
 $routes->get('Checkout', 'BillingC::Checkout');
 $routes->get('getLogin', 'Home::getLogin');
 $routes->get('Session', 'Home::Session');
@@ -120,6 +124,7 @@ $routes->get('add_notifications', 'AdminController::add_notifications');
 $routes->post('insertChat', 'AdminController::insertChat');
 $routes->post('setnotification', 'AdminController::setnotification');
 $routes->get('viewProfile', 'AdminController::viewProfile');
+
 $routes->get('viewProfile/(:any)', 'AdminController::viewProfile/$1');
 
 
@@ -128,6 +133,9 @@ $routes->get('demo_classes', 'AdminController::demo_classes');
 $routes->get('student', 'AdminController::student');
 $routes->get('faculty', 'AdminController::faculty');
 $routes->get('payment_history', 'AdminController::payment_history');
+
+
+$routes->get('UploadedImages', 'AdminController::UploadedImages');
 
 
 
@@ -170,6 +178,8 @@ $routes->post('AdminController/createpassword', 'AdminController::createpassword
 $routes->post('AdminController/ResheduleByadmin', 'AdminController::ResheduleByadmin');
 $routes->post('lostpassword', 'StudentController::lostpassword');
 $routes->post('otpvalidate', 'StudentController::otpvalidate');
+$routes->post('submitAttendance', 'FacultyController::submitAttendance');
+
 $routes->post('newpassword', 'StudentController::newpassword');
 $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule');
 

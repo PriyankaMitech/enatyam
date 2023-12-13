@@ -67,6 +67,11 @@ defined('DECADE') || define('DECADE', 315_360_000);
  |       http://tldp.org/LDP/abs/html/exitcodes.html
  |
  */
+
+ define('RAZOR_KEY_ID', 'rzp_test_Ctoq9lGccMcZwj');
+ define('RAZOR_KEY_SECRET', 'tk2fke25Gpw2otb6FX6hKpo4');
+ define('APPLICATION_NAME', 'XXXXXXXXXX');
+
 defined('EXIT_SUCCESS')        || define('EXIT_SUCCESS', 0);        // no errors
 defined('EXIT_ERROR')          || define('EXIT_ERROR', 1);          // generic error
 defined('EXIT_CONFIG')         || define('EXIT_CONFIG', 3);         // configuration error

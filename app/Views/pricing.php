@@ -1,7 +1,7 @@
 <?php
 $description        = "Product Description";
 $txnid              = date("YmdHis");     
-$key_id             = "rzp_live_jNHwGY4NBVWWah";
+$key_id             = "rzp_test_Ctoq9lGccMcZwj";
 $currency_code      = 'INR';            
 $total              = (1* 100); // 100 = 1 indian rupees
 $amount             = 1;
@@ -45,17 +45,6 @@ $name               = "RazorPay Infovistar";
                         <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                             <div class="row">
                                 <div class="col-lg-10">
-                                    <form name="razorpay-form" id="razorpay-form" action="<?php echo base_url() ?>payment" method="POST">
-                                    <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id" />
-                                    <input type="hidden" name="merchant_order_id" id="merchant_order_id" value="<?php echo $merchant_order_id; ?>"/>
-                                    <input type="hidden" name="merchant_trans_id" id="merchant_trans_id" value="<?php echo $txnid; ?>"/>
-                                    <input type="hidden" name="merchant_product_info_id" id="merchant_product_info_id" value="<?php echo $description; ?>"/>
-                                    <input type="hidden" name="merchant_surl_id" id="merchant_surl_id" value="<?php //echo $surl; ?>"/>
-                                    <input type="hidden" name="merchant_furl_id" id="merchant_furl_id" value="<?php //echo $furl; ?>"/>
-                                    <input type="hidden" name="card_holder_name_id" id="card_holder_name_id" value="<?php echo $card_holder_name; ?>"/>
-                                    <input type="hidden" name="merchant_total" id="merchant_total" value="<?php echo $total; ?>"/>
-                                    <input type="hidden" name="merchant_amount" id="merchant_amount" value="<?php echo $amount; ?>"/>
-                                </form>
                                         <div class="row pricing-card-section sd">
                                             <div class="col-lg-4">
                                                 <div class="card text-center card-1">
@@ -149,7 +138,7 @@ $name               = "RazorPay Infovistar";
 
 
                                                         <div>
-                                                            <?php if ((session()->get('sessiondata'))) : ?>
+                                                            <?php if (!(session()->get('sessiondata'))) : ?>
                                                                 <input class="btn shop-now-btn" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
                                                             <?php else : ?>
                                                                 <input class="btn shop-now-btn" onclick="razorpaySubmit(this);" type="submit" value="Book Now">
@@ -707,3 +696,5 @@ $name               = "RazorPay Infovistar";
 
 
 </section>
+
+<button id="rzp-button1">Pay</button>

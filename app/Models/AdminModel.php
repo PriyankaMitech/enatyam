@@ -325,6 +325,7 @@ class AdminModel extends Model
     {
         return $this->db->table('register')
             ->where('password', '')
+            ->orderBy("id desc")
             ->get()
             ->getResult();
     }
