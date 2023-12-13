@@ -1,4 +1,3 @@
-<!-- success -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,26 +12,12 @@
 </head>
 
 <body>
-    <div class="content-wrapper">
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-12">
-                        <a href="<?= base_url(); ?>" class="btn btn-primary btn-sm" tabindex="-1" role="button" aria-disabled="true">Back</a>
-                        <div class=" d-flex align-items-center justify-content-center">
-                            <h1>Payment Status</h1>
-                        </div>
-
-                    </div>
-                </div>
-            </div><!-- /.container-fluid -->
-        </section>
+    <div class="content-wrapper ">
         <section class="content">
             <div class="container-fluid">
                 <div class="paymentDiv">
-
-
                     <div class="card payment-card">
+                        <a href="<?= base_url(); ?>" class="btn btn-primary btn-sm" tabindex="-1" role="button" aria-disabled="true">Back</a>
                         <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
                             <i class="checkmark paymentIcon">✓</i>
                         </div>

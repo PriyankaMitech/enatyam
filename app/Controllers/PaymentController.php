@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PaymentModel;
+use App\Models\AdminModel;
 
 class PaymentController extends BaseController
 {
@@ -16,9 +17,9 @@ class PaymentController extends BaseController
     {
         $data = [];
         $data['title']              = 'Checkout payment | Infovistar';
-        $data['callback_url']       = base_url() . '/razorpay/callback';
-        $data['surl']               = base_url() . '/razorpay/success';;
-        $data['furl']               = base_url() . '/razorpay/failed';;
+        $data['callback_url']       = base_url() . 'callback';
+        $data['surl']               = base_url() . 'success';;
+        $data['furl']               = base_url() . 'failed';;
         $data['currency_code']      = 'INR';
         echo view("checkout", $data);
     }
@@ -26,8 +27,8 @@ class PaymentController extends BaseController
     private function curl_handler($payment_id, $amount)
     {
         $url            = 'https://api.razorpay.com/v1/payments/' . $payment_id . '/capture';
-        $key_id         = "YOUR_KEY_ID";
-        $key_secret     = "YOUR_SECRET";
+        $key_id         = RAZOR_KEY_ID;
+        $key_secret     = RAZOR_KEY_SECRET;
         $fields_string  = "amount=$amount";
         //cURL Request
         $ch = curl_init();
@@ -44,6 +45,7 @@ class PaymentController extends BaseController
 
     public function payment()
     {
+        $adminmodel = new AdminModel();
         if (!empty($this->request->getPost('razorpay_payment_id')) && !empty($this->request->getPost('merchant_order_id'))) {
 
             $razorpay_payment_id     = $this->request->getPost('razorpay_payment_id');
@@ -52,7 +54,7 @@ class PaymentController extends BaseController
             $this->session->set('razorpay_payment_id', $this->request->getPost('razorpay_payment_id'));
             $this->session->set('merchant_order_id', $this->request->getPost('merchant_order_id'));
             $currency_code = 'INR';
-            $amount = $this->request->getPost('merchant_total');
+            $amount = $this->request->getPost('total_amount');
 
             $success = false;
             $error = '';
@@ -60,6 +62,7 @@ class PaymentController extends BaseController
                 $ch = $this->curl_handler($razorpay_payment_id, $amount);
                 //execute post
                 $result = curl_exec($ch);
+                $finaloutput = json_decode($result);
                 $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
                 if ($result === false) {
                     $success = false;
@@ -78,22 +81,30 @@ class PaymentController extends BaseController
                         }
                     }
                 }
+                    // echo '<pre>';print_r($response_array);die;
                 //close curl connection
                 curl_close($ch);
             } catch (Exception $e) {
                 $success = false;
                 $error = 'Request to Razorpay Failed';
+                // 
             }
-
             if ($success === true) {
                 if (!empty($this->session->get('ci_subscription_keys'))) {
                     $this->session->unset('ci_subscription_keys');
                 }
-                if (!$order_info['order_status_id']) {
-                    return redirect()->to($this->request->getPost('merchant_surl_id'));
-                } else {
-                    return redirect()->to($this->request->getPost('merchant_surl_id'));
-                }
+                // if (!$order_info['order_status_id']) {
+                //     return redirect()->to($this->request->getPost('merchant_surl_id'));
+                // } else {
+                    $paydetails = $adminmodel->insert_payment($finaloutput);
+                    $payment = $adminmodel->insert_formdata('id', 'payment', $_POST);
+                    if ($result) {
+                        return redirect()->to($this->request->getPost('merchant_surl_id'));
+                    }else {
+                        $this->session->setFlashdata('insert error', 'Error while inserting data into database.');
+                        return redirect()->to(base_url());
+                    }
+                // }
             } else {
                 return redirect()->to($this->request->getPost('merchant_furl_id'));
             }
@@ -105,12 +116,7 @@ class PaymentController extends BaseController
     public function success()
     {
         $data['title'] = 'Razorpay Success | Infovistar';
-        // echo "<h4>Your transaction is successful</h4>";
-        // echo "<br/>";
-        // echo "Transaction ID: " . $this->session->get('razorpay_payment_id');
         $data['transactionid'] = $this->session->get('razorpay_payment_id');
-        // echo "<br/>";
-        // echo "Order ID: " . $this->session->get('merchant_order_id');
         $data['Orderid'] = $this->session->get('merchant_order_id');
         echo view('payment_s', $data);
     }
@@ -118,12 +124,7 @@ class PaymentController extends BaseController
     public function failed()
     {
         $data['title'] = 'Razorpay Failed | Infovistar';
-        // echo "<h4>Your transaction got Failed</h4>";
-        // echo "<br/>";
-        // echo "Transaction ID: " . $this->session->get('razorpay_payment_id');
         $data['transactionid'] = $this->session->get('razorpay_payment_id');
-        // echo "<br/>";
-        // echo "Order ID: " . $this->session->get('merchant_order_id');
         $data['Orderid'] = $this->session->get('merchant_order_id');
         echo view('payment_f', $data);
     }
