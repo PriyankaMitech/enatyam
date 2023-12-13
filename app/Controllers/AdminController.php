@@ -120,7 +120,6 @@ class AdminController extends BaseController
 
     public function UplodedvideoByStudent()
     {
-
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
 
@@ -128,14 +127,20 @@ class AdminController extends BaseController
             $password = $sessionData['password'] ?? null;
 
             if ($email !== null && $password !== null) {
-
                 $model = new AdminModel();
+
+                // Retrieve data without filtering (assuming your method accepts parameters)
                 $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
                 $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
-                // echo "<pre>";
-                // print_r($data['FacultyVideoData']);
-                // echo "</pre>";
-                // die();
+
+                // Retrieve filtered data from session flash
+                $filteredFacultyVideoData = session()->getFlashdata('filteredFacultyVideoData');
+
+                // Merge filtered data with existing FacultyVideoData
+                if (!empty($filteredFacultyVideoData)) {
+                    $data['FacultyVideoData'] = array_merge($data['FacultyVideoData'], $filteredFacultyVideoData);
+                }
+
                 return view('AdminSideBar/StudentVideo', $data);
             } else {
                 return redirect()->to(base_url());
@@ -172,6 +177,22 @@ class AdminController extends BaseController
         }
     }
 
+    public function searchFacultyVideos()
+    {
+        // print_r($_POST);die;
+        // Retrieve filter criteria from the URL
+        $startDate = $this->request->getPost('startDate');
+        $endDate = $this->request->getPost('endDate');
+        $facultyName = $this->request->getPost('facultyName');
+
+        $model = new AdminModel();
+
+        // Get filtered faculty video data
+        $filteredFacultyVideoData = $model->getFacultyBySearch($startDate, $endDate, $facultyName);
+
+        // Redirect to 'UplodedvideoByStudent' route with filtered data
+        return redirect()->to('UplodedvideoByStudent')->with('filteredFacultyVideoData', $filteredFacultyVideoData);
+    }
     public function getDemoDetails()
     {
         if (isset($_SESSION['sessiondata'])) {

@@ -125,6 +125,8 @@ $routes->post('insertChat', 'AdminController::insertChat');
 $routes->post('setnotification', 'AdminController::setnotification');
 $routes->get('viewProfile', 'AdminController::viewProfile');
 $routes->get('UploadedImages', 'AdminController::UploadedImages');
+$routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
+
 
 
 

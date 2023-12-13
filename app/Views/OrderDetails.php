@@ -37,9 +37,9 @@
 // $productinfo = $itemInfo['description'];
 $txnid = time();
 $surl = $surl;
-$furl = $furl;        
+$furl = $furl;
 $key_id = RAZOR_KEY_ID;
-$currency_code = $currency_code;            
+$currency_code = $currency_code;
 // $total = ($itemInfo['price']* 100); 
 $amount = '100';
 $merchant_order_id = $id;
@@ -47,18 +47,20 @@ $card_holder_name = 'TechArise Team';
 $email = 'info@techarise.com';
 $phone = '9000000001';
 $name = APPLICATION_NAME;
-$return_url = site_url().'PaymentController/callback';
+$return_url = site_url() . 'PaymentController/callback';
 ?>
 <form name="razorpay-form" id="razorpay-form" action="<?php echo $return_url; ?>" method="POST">
-  <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id" />
-  <input type="hidden" name="merchant_order_id" id="merchant_order_id" value="<?php echo $merchant_order_id; ?>"/>
-  <input type="hidden" name="merchant_trans_id" id="merchant_trans_id" value="<?php echo $txnid; ?>"/>
-  <input type="hidden" name="merchant_product_info_id" id="merchant_product_info_id" value="<?php //echo $productinfo; ?>"/>
-  <input type="hidden" name="merchant_surl_id" id="merchant_surl_id" value="<?php echo $surl; ?>"/>
-  <input type="hidden" name="merchant_furl_id" id="merchant_furl_id" value="<?php echo $furl; ?>"/>
-  <input type="hidden" name="card_holder_name_id" id="card_holder_name_id" value="<?php echo $card_holder_name; ?>"/>
-  <input type="hidden" name="merchant_total" id="merchant_total" value="<?php //echo $total; ?>"/>
-  <input type="hidden" name="merchant_amount" id="merchant_amount" value="<?php echo $amount; ?>"/>
+    <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id" />
+    <input type="hidden" name="merchant_order_id" id="merchant_order_id" value="<?php echo $merchant_order_id; ?>" />
+    <input type="hidden" name="merchant_trans_id" id="merchant_trans_id" value="<?php echo $txnid; ?>" />
+    <input type="hidden" name="merchant_product_info_id" id="merchant_product_info_id" value="<?php //echo $productinfo; 
+                                                                                                ?>" />
+    <input type="hidden" name="merchant_surl_id" id="merchant_surl_id" value="<?php echo $surl; ?>" />
+    <input type="hidden" name="merchant_furl_id" id="merchant_furl_id" value="<?php echo $furl; ?>" />
+    <input type="hidden" name="card_holder_name_id" id="card_holder_name_id" value="<?php echo $card_holder_name; ?>" />
+    <input type="hidden" name="merchant_total" id="merchant_total" value="<?php //echo $total; 
+                                                                            ?>" />
+    <input type="hidden" name="merchant_amount" id="merchant_amount" value="<?php echo $amount; ?>" />
 </form>
 
 <div class="container cont-width">
@@ -85,7 +87,7 @@ $return_url = site_url().'PaymentController/callback';
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="col-lg-12 mt-3">
                         <nav class="navbar bg-body-tertiary">
@@ -174,23 +176,23 @@ $return_url = site_url().'PaymentController/callback';
                     <tr class="cart_item">
                         <?php if (!empty($matchingRecords)) : ?>
                             <td class="product-name">
-                            <span id="pname"><?php echo $matchingRecords->Name; ?></span>
+                                <span id="pname"><?php echo $matchingRecords->Name; ?></span>
 
                             </td>
                             <td class="product-No_of_Sessions">
-                            <span id="sessno"><?php echo $matchingRecords->No_of_Sessions  ?></span>
+                                <span id="sessno"><?php echo $matchingRecords->No_of_Sessions  ?></span>
                             </td>
 
                             <td class="product-Duration">
-                            <span id="duration"><?php echo $matchingRecords->Duration  ?></span>
+                                <span id="duration"><?php echo $matchingRecords->Duration  ?></span>
                             </td>
 
                             <td class="product-PerSession-Price">
-                            <span id="price">₹</span><?php echo $matchingRecords->Per_Session_Price  ?></span>
+                                <span id="price">₹</span><?php echo $matchingRecords->Per_Session_Price  ?></span>
                             </td>
 
                             <td class="product-total">
-                            <span id="total">₹</span><?php echo $matchingRecords->Total_Price   ?></span>
+                                <span id="total">₹</span><?php echo $matchingRecords->Total_Price   ?></span>
                             </td>
                     </tr>
                 </tbody>
@@ -200,7 +202,7 @@ $return_url = site_url().'PaymentController/callback';
                         <td colspan="5" style="padding:1rem;"> </td>
                     </tr>
                     <tr class="order-total">
-                        <td colspan="4" style=""> <span class="woocommerce-Price-amount amount"><b>Total</b> </td>
+                        <td colspan="4"> <span class="woocommerce-Price-amount amount"><b>Total</b> </td>
                         <td><b>₹<?php echo $matchingRecords->Total_Price ?></b></td>
                     </tr>
 
@@ -218,13 +220,13 @@ $return_url = site_url().'PaymentController/callback';
 
 <div class="container cont-width mt-4">
     <div class="row">
-        <div class="col-lg-12 mt-3">
+        <div class="col-lg-12 mt-3 mb-5">
             <nav class="navbar bg-body-tertiary1 p-3">
                 <div class="container justify-content-start">
-
-                    <a class="navbar-brand" href="#">
+                    <span>
                         <h6>Credit Card/Debit Card/NetBanking </h6>
-                    </a>
+                    </span>
+
                     <span>
                         <div class="payment-logo">
                             <img src="public\images\payment.svg ">
@@ -250,13 +252,22 @@ $return_url = site_url().'PaymentController/callback';
 
         <div class="place-btn d-block w-100 ">
             <input type="hidden" id="uemail" value="<?php echo $billingdetails['email']  ?>">
-            <input type="hidden" id="name" value="<?php echo $billingdetails['Fname'].' '.$billingdetails['Lname']  ?>">
+            <input type="hidden" id="name" value="<?php echo $billingdetails['Fname'] . ' ' . $billingdetails['Lname']  ?>">
             <input type="hidden" id="phone" value="<?php echo $billingdetails['phone']  ?>">
             <button class="button-content" onclick="razorpaySubmit(this);" type="submit" role="button">PLACE ORDER</button>
         </div>
 
         </nav>
         </form>
+    </div>
+</div>
+
+<div class="row m-0">
+    <div class="col-md-6 col-12 text-end mb-2">
+        <a href="<?php echo base_url('demo'); ?>" class="btnnew btn-book text-center byfd">Book your Free demo now</a>
+    </div>
+    <div class="col-md-6 col-12 text-star">
+        <a href="<?php echo base_url('Contactus'); ?>" class="btnnew btn-request text-center nsracb">Not sure ?? Request a call back</a>
     </div>
 </div>
 
@@ -288,7 +299,7 @@ $return_url = site_url().'PaymentController/callback';
     //         }
     //     }
     // };
-    
+
     // var razorpay_pay_btn, instance;
     // function razorpaySubmit(el) {
     //     if(typeof Razorpay == 'undefined') {
@@ -319,42 +330,42 @@ $return_url = site_url().'PaymentController/callback';
         netbanking: true,
         currency: "<?php echo $currency_code; ?>",
         prefill: {
-        name:"<?php echo $card_holder_name; ?>",
-        email: "<?php echo $email; ?>",
-        contact: "<?php echo $phone; ?>"
+            name: "<?php echo $card_holder_name; ?>",
+            email: "<?php echo $email; ?>",
+            contact: "<?php echo $phone; ?>"
         },
         notes: {
-        soolegal_order_id: "<?php echo $merchant_order_id; ?>",
+            soolegal_order_id: "<?php echo $merchant_order_id; ?>",
         },
-        handler: function (transaction) {
+        handler: function(transaction) {
             document.getElementById('razorpay_payment_id').value = transaction.razorpay_payment_id;
             document.getElementById('razorpay-form').submit();
         },
         "modal": {
-            "ondismiss": function(){
+            "ondismiss": function() {
                 location.reload()
             }
         }
     };
     var razorpay_submit_btn, razorpay_instance;
 
-    function razorpaySubmit(el){
-        if(typeof Razorpay == 'undefined'){
-        setTimeout(razorpaySubmit, 200);
-        if(!razorpay_submit_btn && el){
-            razorpay_submit_btn = el;
-            el.disabled = true;
-            el.value = 'Please wait...';  
-        }
-        } else {
-        if(!razorpay_instance){
-            razorpay_instance = new Razorpay(razorpay_options);
-            if(razorpay_submit_btn){
-            razorpay_submit_btn.disabled = false;
-            razorpay_submit_btn.value = "Pay Now";
+    function razorpaySubmit(el) {
+        if (typeof Razorpay == 'undefined') {
+            setTimeout(razorpaySubmit, 200);
+            if (!razorpay_submit_btn && el) {
+                razorpay_submit_btn = el;
+                el.disabled = true;
+                el.value = 'Please wait...';
             }
+        } else {
+            if (!razorpay_instance) {
+                razorpay_instance = new Razorpay(razorpay_options);
+                if (razorpay_submit_btn) {
+                    razorpay_submit_btn.disabled = false;
+                    razorpay_submit_btn.value = "Pay Now";
+                }
+            }
+            razorpay_instance.open();
         }
-        razorpay_instance.open();
-        }
-    } 
+    }
 </script>

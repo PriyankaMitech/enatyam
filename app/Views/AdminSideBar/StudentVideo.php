@@ -33,6 +33,10 @@
     </section>
     <section class="content">
         <div class="container-fluid">
+
+
+
+
             <div class="row">
 
                 <!-- /.col -->
@@ -40,8 +44,8 @@
                     <div class="card">
                         <div class="card-header p-2">
                             <ul class="nav nav-pills">
-                                <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab"> Uploaded Faculty Videos</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab"> Uploaded Student Videos</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab"> Faculty Videos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab"> Student Videos</a></li>
 
                                 <!-- <li class="nav-item"><a class="nav-link" href="#FacultyImages" data-toggle="tab"> Images By Faculty</a></li> -->
                                 <!-- <li class="nav-item"><a class="nav-link" href="#StudentImages" data-toggle="tab"> Images By Student</a></li> -->
@@ -50,6 +54,7 @@
 
 
                         <div class="card-body">
+
                             <div class="tab-content">
                                 <!-- <div class="active tab-pane" id="activity">
                                     <?php if (!empty($FacultyVideoData)) {
@@ -97,6 +102,38 @@
 
                                 <!-- <div class="card-body"> -->
                                 <div class="active tab-pane" id="activity">
+
+                                    <form action="<?php echo base_url(); ?>searchFacultyVideos" method="post">
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="startDate">Start Date:</label>
+                                                    <input type="date" class="form-control" id="startDate" placeholder="Enter start date: " name="startDate">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="endDate">End Date:</label>
+                                                    <input type="date" class="form-control" id="endDate" placeholder="Enter start date:" name="endDate">
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="facultyName">Faculty Name:</label>
+                                                    <input type="text" class="form-control" id="facultyName" name="facultyName">
+                                                </div>
+                                            </div> -->
+                                            <div class="col-md-12">
+                                                <div class="form-group text-right">
+                                                    <button type="submit" class="btn btn-primary">Search</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <hr>
+
                                     <div class="row mt-4">
                                         <?php
                                         if (!empty($FacultyVideoData)) { ?>
@@ -151,6 +188,8 @@
 
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="timeline">
+
+
 
                                     <?php if (!empty($studentVideoData)) { ?>
 
@@ -230,7 +269,7 @@
                 <!-- /.col -->
             </div>
             <!-- /.row -->
-        </div><!-- /.container-fluid -->
+        </div> <!--container-fluid -->
     </section>
 
 

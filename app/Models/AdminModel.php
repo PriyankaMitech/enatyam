@@ -199,16 +199,16 @@ class AdminModel extends Model
         $builder1->set('Session_Start_Date', $data['Session_Start_Date']);
         $builder1->where('register_id', $data['studentid']);
         $result1 = $builder1->update();
-    
+
         // Update Assign_Techer_id and Session_Start_Date in table1
         $builder2 = $this->db->table($this->table1);
         $builder2->set('Assign_Techer_id', $data['faculty_name']);
         $builder2->set('Session_Start_Date', $data['Session_Start_Date']);
         $builder2->where('id', $data['studentid']);
         $result2 = $builder2->update();
-    
 
-        if ($result1 && $result2 ) {
+
+        if ($result1 && $result2) {
             return true;
         } else {
             return false;
@@ -243,10 +243,10 @@ class AdminModel extends Model
             ->orderBy('faculty_id', 'desc')
             ->get()
             ->getResult();
-    
+
         return $query;
     }
-    
+
 
     public function getStudentData()
     {
@@ -266,7 +266,7 @@ class AdminModel extends Model
             ->getResult();
         return  $VideoDetails;
     }
-    
+
     public function getStudyVideoUplodedByFaculty()
     {
         $VideoDetails = $this->db->table('uplode_video_to_student')
@@ -277,6 +277,113 @@ class AdminModel extends Model
             ->getResult();
         return  $VideoDetails;
     }
+
+    // public function getStudyVideoUplodedByStudent($startDate = null, $endDate = null, $facultyName = null)
+    // {
+    //     $query = $this->db->table('uplode_study_video_from_student')
+    //         ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
+    //         ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id');
+
+    //     // Apply filters if provided
+
+    //     // Apply filters if provided
+    //     if ($startDate !== null) {
+    //         $startDate = new \DateTime($startDate);
+    //         $startDateFormatted = $startDate->format('Y-m-d H:i:s');
+    //         $query->where('uplode_study_video_from_student.DateTime >=', $startDateFormatted);
+    //     }
+
+    //     if ($endDate !== null) {
+    //         $endDate = new \DateTime($endDate);
+    //         $endDateFormatted = $endDate->format('Y-m-d H:i:s');
+    //         $query->where('uplode_study_video_from_student.DateTime <=', $endDateFormatted);
+    //     }
+
+    //     if ($facultyName !== null) {
+    //         $query->like('register.full_name', $facultyName);
+    //     }
+
+    //     $videoDetails = $query->get()->getResult();
+
+    //     return $videoDetails;
+    // }
+
+    // public function getFacultyBySearch($startDate = null, $endDate = null, $facultyName = null)
+    // {
+    //     // echo $startDate;
+    //     // echo $endDate;
+    //     // exit();
+    //     $query = $this->db->table('uplode_video_to_student')
+    //         ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
+    //         ->join('student', 'student.student_id = uplode_video_to_student.student_id')
+    //         ->join('register', 'register.id = uplode_video_to_student.register_faculty_id');
+
+    //     // Apply filters if provided
+    //     if ($startDate !== null) {
+    //         $startDate = new \DateTime($startDate);
+    //         $startDateFormatted = $startDate->format('Y-m-d H:i:s');
+    //         print_r($startDateFormatted);
+    //         $query->where('uplode_video_to_student.DateTime >=', $startDateFormatted);
+    //     }
+
+    //     if ($endDate !== null) {
+    //         $endDate = new \DateTime($endDate);
+    //         $endDateFormatted = $endDate->format('Y-m-d H:i:s');
+    //         print_r($endDateFormatted);
+    //         $query->where('uplode_video_to_student.DateTime <=', $endDateFormatted);
+    //     }
+
+
+
+    //     if ($facultyName !== null) {
+    //         $query->like('register.full_name', $facultyName);
+    //     }
+
+    //     $videoDetails = $query->get()->getResult();
+    //     // echo '<pre>';
+    //     // print_r($videoDetails);
+    //     // die;
+    //     echo $this->db->getLastQuery();
+    //     die;
+    //     return $videoDetails;
+    // }
+
+    public function getFacultyBySearch($startDate = null, $endDate = null, $facultyName = null)
+    {
+        $query = $this->db->table('uplode_video_to_student')
+            ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
+            ->join('student', 'student.student_id = uplode_video_to_student.student_id')
+            ->join('register', 'register.id = uplode_video_to_student.register_faculty_id');
+
+        // Apply filters if provided
+        if ($startDate !== null) {
+            $startDate = new \DateTime($startDate);
+            $startDateFormatted = $startDate->format('Y-m-d');
+            $query->where("DATE(uplode_video_to_student.DateTime) >=", $startDateFormatted);
+        }
+
+        if ($endDate !== null) {
+            $endDate = new \DateTime($endDate);
+            $endDateFormatted = $endDate->format('Y-m-d');
+            $query->where("DATE(uplode_video_to_student.DateTime) <=", $endDateFormatted);
+        }
+
+        if ($facultyName !== null) {
+            $query->like('register.full_name', $facultyName);
+        }
+
+        $videoDetails = $query->get()->getResult();
+        // echo '<pre>';
+        // print_r($videoDetails);
+        // die;
+
+        // Uncomment the following lines for debugging purposes
+        // echo $this->db->getLastQuery();
+        // die;
+
+        return $videoDetails;
+    }
+
     public function getcarreerBookByfaculty()
     {
         return $this->db->table('carrier')
@@ -410,7 +517,7 @@ class AdminModel extends Model
         if ($result['insert']) {
             $insertedID = $this->db->insertID();
             $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
-            
+
             return $result;
         } else {
             return false;
@@ -428,29 +535,32 @@ class AdminModel extends Model
         }
     }
 
-    public function getalldata($table, $wherecond) {
+    public function getalldata($table, $wherecond)
+    {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
-        
+
         if ($result) {
             return $result;
-        }else {
+        } else {
             return false;
         }
     }
 
 
-    public function get_single_data($table, $wherecond) {
+    public function get_single_data($table, $wherecond)
+    {
         $result = $this->db->table($table)->where($wherecond)->get()->getRow();
         // echo "<pre>";print_r( $result );exit();
-        
+
         if ($result) {
             return $result;
-        }else {
+        } else {
             return false;
         }
     }
 
-    public function getdata($table, $wherecond) {
+    public function getdata($table, $wherecond)
+    {
 
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
 
@@ -483,16 +593,17 @@ class AdminModel extends Model
     }
 
 
-    public function getchat($tablechat, $sender, $receiver) {
-        $chat = $this->db->query("SELECT * FROM ".$tablechat." WHERE (sender_id = ".$sender." AND receiver_id = ".$receiver.") OR (sender_id = ".$receiver." AND receiver_id = ".$sender.") ORDER BY msg_id");
+    public function getchat($tablechat, $sender, $receiver)
+    {
+        $chat = $this->db->query("SELECT * FROM " . $tablechat . " WHERE (sender_id = " . $sender . " AND receiver_id = " . $receiver . ") OR (sender_id = " . $receiver . " AND receiver_id = " . $sender . ") ORDER BY msg_id");
 
-        $user = $this->db->query("SELECT id, full_name, role FROM register WHERE id = ".$receiver." ");
+        $user = $this->db->query("SELECT id, full_name, role FROM register WHERE id = " . $receiver . " ");
         // echo '<pre>';print_r($this->getLastQuery());die;
         //$result = $this->db->table($table)->where($wherecond2.' OR ' .$wherecond3)->get()->getResult();
-        
+
         if ($chat) {
             return $chat->getResultArray();
-        }else {
+        } else {
             return false;
         }
     }
@@ -501,8 +612,8 @@ class AdminModel extends Model
         $selectedFacultyIds = $result['selected_faculty'];
         $selectedStudentIds = $result['selected_students'];
         $notificationDescription = $result['notification_description'];
-        $notification_date= $result['notification_date'];
-        $admin_id= $result['admin_id'];
+        $notification_date = $result['notification_date'];
+        $admin_id = $result['admin_id'];
         $facultyData = [];
         $studentData = [];
         if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
@@ -512,8 +623,8 @@ class AdminModel extends Model
                 'user_type' => 'faculty',
                 'timestamp' => $notification_date,
                 'admin_id' => $admin_id,
-                'created_on' => date('Y:m:d H:i:s'),  
-                ];
+                'created_on' => date('Y:m:d H:i:s'),
+            ];
         } elseif (is_array($selectedFacultyIds)) {
             foreach ($selectedFacultyIds as $facultyId) {
 
@@ -523,10 +634,10 @@ class AdminModel extends Model
                     'user_type' => 'faculty',
                     'timestamp' => $notification_date,
                     'admin_id' => $admin_id,
-                    'created_on' => date('Y:m:d H:i:s'),  
+                    'created_on' => date('Y:m:d H:i:s'),
                 ];
-            } 
-        }elseif (is_array($selectedFacultyIds)) {
+            }
+        } elseif (is_array($selectedFacultyIds)) {
             foreach ($selectedFacultyIds as $facultyId) {
                 $facultyData[] = [
                     'register_id' => $facultyId,
@@ -536,7 +647,7 @@ class AdminModel extends Model
                 ];
             }
         }
-    
+
         if (is_array($selectedStudentIds) && in_array('all', $selectedStudentIds)) {
             $studentData[] = [
                 'register_id' => 'All',
@@ -544,7 +655,7 @@ class AdminModel extends Model
                 'user_type' => 'student',
                 'timestamp' => $notification_date,
                 'admin_id' => $admin_id,
-                'created_on' => date('Y:m:d H:i:s'),  
+                'created_on' => date('Y:m:d H:i:s'),
             ];
         } elseif (is_array($selectedStudentIds)) {
             foreach ($selectedStudentIds as $studentId) {
@@ -555,10 +666,10 @@ class AdminModel extends Model
                     'user_type' => 'student',
                     'timestamp' => $notification_date,
                     'admin_id' => $admin_id,
-                    'created_on' => date('Y:m:d H:i:s'),  
+                    'created_on' => date('Y:m:d H:i:s'),
                 ];
-            } 
-        }elseif (is_array($selectedStudentIds)) {
+            }
+        } elseif (is_array($selectedStudentIds)) {
             foreach ($selectedStudentIds as $studentId) {
                 $studentData[] = [
                     'register_id' => $studentId,
@@ -597,7 +708,7 @@ class AdminModel extends Model
 
     public function getUser($user_id)
     {
-    
+
         $todayDate = date('Y-m-d H:i:s');
 
         $result = $this->db->table('notificationtable')
@@ -606,10 +717,10 @@ class AdminModel extends Model
                 'register_id' => 'All',
             ])
             ->orWhere('register_id', $user_id)
-            ->where('timestamp >=', $todayDate) 
+            ->where('timestamp >=', $todayDate)
             ->get()
             ->getResultArray();
-    
+
         if ($result) {
             return $result;
         } else {
@@ -631,15 +742,15 @@ class AdminModel extends Model
             ->where('faculty_id', $faculty_id)
             ->get()
             ->getRowArray();
-    
+
         // Total number of feedbacks for the faculty
         $feedbackCount = $this->db->table('feedback')
             ->where('faculty_id', $faculty_id)
             ->countAllResults();
-    
+
         // Calculate the average rating
         $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
-    
+
         return [
             'total_ratings' => $totalRatings['total_ratings'],
             'feedback_count' => $feedbackCount,
@@ -647,14 +758,12 @@ class AdminModel extends Model
         ];
     }
 
-    public function get_all_dataf($id){
+    public function get_all_dataf($id)
+    {
         $result = $this->db->table('carrier')
-        ->Where('D_id', $id)
-        ->get()
-        ->getRow(); 
+            ->Where('D_id', $id)
+            ->get()
+            ->getRow();
         return $result;
     }
-    
-
- 
 }
