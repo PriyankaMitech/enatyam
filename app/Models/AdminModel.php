@@ -395,6 +395,7 @@ class AdminModel extends Model
 
     public function updateFacultyForGroup($groupName, $facultyId)
     {
+        //print_r($groupName);die;
         return $this->db->table('register')
             ->where('groupName', $groupName)
             ->set(['Assign_Techer_id' => $facultyId])
@@ -664,6 +665,17 @@ class AdminModel extends Model
         ->getRow(); 
         return $result;
     }
+
+    public function  studentsgroup($group){
+
+      $grouplist =$this->db->table('register')
+      ->Where('groupName', $group)
+         ->get()
+         ->getResult();
+    //  echo $this->db->getLastQuery();die;
+     return $grouplist;   
+        }
+
 
     public function insert_payment($insertdata){
         $array = array(

@@ -512,8 +512,9 @@ class AdminController extends BaseController
     public function AssignFacultyToGroup()
     {
         // print_r($_POST);die;
-        $groupName = $this->request->getPost('group');
-        $facultyId = $this->request->getPost('faculty');
+        $groupName = $this->request->getPost('group_name');
+        $facultyId = $this->request->getPost('faculty_id');
+      //  print_r($groupName);die;
         $model = new AdminModel();
         $model->updateFacultyForGroup($groupName, $facultyId);
         return redirect()->to('StudentGroups');
@@ -912,5 +913,13 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $data['student_list'] = $model->get_students();
         echo view('payment_list', $data);
+    }
+    public function  fetch_records()  {
+        // print_r($_POST);die;
+        $group = $this->request->getPost('group');
+        $model = new AdminModel();
+    $data['stdent_list'] = $model->studentsgroup($group);
+    $data['facultyData'] = $model->getFaculty();
+    return $this->response->setJSON($data);
     }
 }
