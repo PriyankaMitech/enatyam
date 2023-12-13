@@ -30,10 +30,11 @@
   <link rel="stylesheet" href="<?=base_url(); ?>plugins/fullcalendar/main.css">
 
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="<?=base_url(); ?>public/css/jquery.dataTables.css">
   <link href="<?php echo base_url() ?>public/css/custom.css">
   </link>
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+
 
 </head>
 
@@ -743,6 +744,47 @@
                                 </a>
                             </li>
                             <!-- Add other Faculty menu items with access level checks here -->
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon 	fa fa-credit-card"></i>
+                            <p>
+                                Report
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="demo_classes" class="nav-link">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>Demo Classes</p>
+                                </a>
+                            </li> 
+                            <li class="nav-item" >
+                                <a href="student" class="nav-link">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>Student</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item" >
+                                <a href="faculty" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                    <p>Faculty</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item" >
+                                <a href="payment_history" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                    <p>Payment History</p>
+                                </a>
+                            </li>
+
+                          
+                            <!-- Add other Finance menu items with access level checks here -->
                         </ul>
                     </li>
 

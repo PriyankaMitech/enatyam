@@ -156,21 +156,27 @@ class AdminModel extends Model
     {
         return $this->findAll();
     }
-    public function getAdmins()
+    public function get_students()
     {
-        // return $this->db->table('register')->where('role', 'Student')->get()->getResult();
         $query = $this->db->table('register AS students')
             ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name')
             ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
             ->where('students.role', 'Student')
+            ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
             ->get();
-
+    
         return $query->getResult();
     }
+    
     public function getFaculty()
     {
-        return $this->db->table('register')->where('role', 'Faculty')->get()->getResult();
+        return $this->db->table('register')
+                        ->where('role', 'Faculty')
+                        ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use
+                        ->get()
+                        ->getResult();
     }
+    
     public function getAllSessionData()
     {
         return $this->findAll();
@@ -227,14 +233,18 @@ class AdminModel extends Model
     {
         return $this->db->table('register')->where('Payment_status', 'Y')->get()->getResult();
     }
-
     public function getAllDemoData()
     {
-        return $this->db->table('free_demo_table')
-            ->select('*')
-            ->get()
-            ->getResult();
+        $query = $this->db->table('free_demo_table')
+            ->select('free_demo_table.*, register.full_name')
+            ->join('register', 'register.id = free_demo_table.AssignTecher_id')
+            ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
+            ->get();
+    
+        return $query->getResult();
     }
+    
+    
 
     public function getFacultyData()
     {

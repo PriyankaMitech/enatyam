@@ -51,7 +51,15 @@
 
 
          $alldataoff = $adminModel->getsinglerow('faculty',  $wherecon1);
-        //  echo "<pre>";print_r($alldataoff);exit();
+
+         $carrier_id;
+         if(!empty($alldataoff)){ $carrier_id = $alldataoff->carrier_id;}
+
+         $wherecon2 = array('D_id' => $carrier_id);
+
+         $alldatac = $adminModel->getsinglerow('carrier',  $wherecon2);
+
+        //  echo "<pre>";print_r($alldatac);exit();
 
 
          $count = count($notifications);

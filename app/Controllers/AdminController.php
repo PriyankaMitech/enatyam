@@ -29,7 +29,7 @@ class AdminController extends BaseController
                 $data['SessionData'] = $model->findAll();
                 $data['count'] = $model->getRowCount();
 
-                $data['admins'] = $model->getAdmins();
+                $data['admins'] = $model->get_students();
                 $data['Faculty'] = $model->getFaculty();
                 $data['ConductedDemo'] = $model->getConductedDemo();
                 $data['PendingDemo'] = $model->getPendingDemo();
@@ -602,7 +602,7 @@ class AdminController extends BaseController
     public function add_notifications()
     {
         $model = new AdminModel();
-        $data['admins'] = $model->getAdmins();
+        $data['admins'] = $model->get_students();
         $data['Faculty'] = $model->getFaculty();
         echo view('AdminSideBar/add_notifications', $data);
     }
@@ -841,6 +841,46 @@ class AdminController extends BaseController
 
     public function viewProfile()
     {
-        echo view('AdminSideBar/viewProfile');
+        $model = new AdminModel();
+
+        $uri = service('uri');
+
+        // Get the second segment of the URI
+        $profile_id = $uri->getSegment(2);      
+
+
+        $wherecond = array('id' => $profile_id);
+
+        $data['profile_data'] = $model->getsinglerow('register', $wherecond);
+    
+        // echo "<pre>";
+        // print_r($data['profile_data']);
+        // exit();
+    
+        return view('AdminSideBar/viewProfile', $data);
+    }
+
+    public function demo_classes(){
+        $model = new AdminModel();
+        $data['demo_list'] = $model->getAllDemoData();
+        echo view('demo_list', $data);
+    }
+
+    public function student(){
+        $model = new AdminModel();
+        $data['student_list'] = $model->get_students();
+        echo view('student_list', $data);
+    }
+    
+    public function faculty(){
+        $model = new AdminModel();
+        $data['faculty_list'] = $model->getFaculty();
+        echo view('faculty_list', $data);
+    }
+
+    public function payment_history(){
+        $model = new AdminModel();
+        $data['student_list'] = $model->get_students();
+        echo view('payment_list', $data);
     }
 }
