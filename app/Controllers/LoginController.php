@@ -94,10 +94,10 @@ class LoginController extends BaseController
         $emailotp = rand(999, 9999);
         if ($_POST['otp'] == '' && $_POST['emailotp'] == '') {
             $loginModel = new LoginModel();
-            $mob['mobileexist'] = $loginModel->checkexist($_POST['mobile_no'], 'mobile_no');
-            $email['emailexist'] = $loginModel->checkexist($_POST['email'], 'email');
+            $result['mobileexist'] = $loginModel->checkexist($_POST['mobile_no'], 'mobile_no');
+            $result['emailexist'] = $loginModel->checkexist($_POST['email'], 'email');
 
-            if ($mob['mobileexist'] == '' && $email['emailexist'] == '') {
+            if ($result['mobileexist'] == '' && $result['emailexist'] == '') {
                 $insert = $this->savedata($_POST, $otp, $emailotp);
                 $getdata = [
                     'student_name' => $this->request->getVar('full_name'),
@@ -110,19 +110,19 @@ class LoginController extends BaseController
                 $sms = 'Dear customer, your OTP for registration is '.$otp.'. do not share to anyone. Thank you OTPIMS';
                 $output = sendSMS($_POST['mobile_no'], $sms);
                 $sendmail = sendConfirmationEmail($_POST['email'], $emailotp);
-                
-                $mob['mobileno'] = $_POST['mobile_no'];
-                $email['email'] = $_POST['email'];
-                $result['otp'] = $insert['otp'];
-                $email['emailotp'] = $emailotp;
+
                 $result['status'] = '200';
                 $result = array(
-                    'mobile' => $mob,
-                    'email' => $email
+                    'mobile' => $_POST['mobile_no'],
+                    'email' => $_POST['email'],
+                    'otp' => $otp,
+                    'emailotp' => $emailotp
                 );
                 echo json_encode($result);
                 
             }else {
+                // $result['mob'] =$mob['mobileexist'] ;
+                // $result['email'] =$mob['emailexist'] ;
                 echo json_encode($result);
             }
         }else {
@@ -174,7 +174,6 @@ class LoginController extends BaseController
            'sub_course' => $sub_course,
            'age' => $age,
            'is_register_done'=> 'Y',
-           'Payment_status'=> 'Y',
            'country'=> $country,
            'experience' => $experience,
            'experienceInput' => $experienceInput,

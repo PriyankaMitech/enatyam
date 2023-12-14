@@ -365,7 +365,7 @@ class LoginModel extends Model
     
         }
 
-        if($emailotp == '4544'){
+        if($emailotp == $result->emailotp){
             $this->db
             ->table('register')
             ->where(["mobile_no" => $mobile_no])
