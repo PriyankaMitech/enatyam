@@ -809,19 +809,6 @@ public function getsubcorce()
 
 
     public function insert_payment($insertdata){
-        $array = array(
-            'id' => 'pay_NBmMa8Xl2lmBvt',
-            'entity' => 'payment',
-            'currency' => 'INR',
-            'status' => 'captured',
-            'notes' => array(
-                'soolegal_order_id' => 2
-            ),
-            'acquirer_data' => array(
-                'bank_transaction_id' => 5656
-            )
-        );
-        //echo '<pre>';//print_r($array);
 
         $sql = "insert into payment_details (";
         $sql1 = " values ( ";
@@ -840,26 +827,16 @@ public function getsubcorce()
             }
         }else {
             foreach ($insertdata as $key => $value) {
-                // print_r($value);
                 if(!is_object($value)){
                     $sql1.='"' . htmlspecialchars($value) . '", ';
                     $sql.= htmlspecialchars($key) . ', ';
                 }
                 if(is_object($value)){
                     foreach ($value as $ke => $val) {
-                    // print_r($ke);
                         $sql.= htmlspecialchars($ke) . ', ';
                         $sql1.='"' . htmlspecialchars($val) . '", ';
                     }
                 }
-                // if (is_object($value)) {
-                //     $d=json_encode($value);
-                //     $sql1.='"' . htmlspecialchars($d) . '", ';
-                //     $sql.= htmlspecialchars($key) . ', ';
-                // }else {
-                //     $sql.= htmlspecialchars($key) . ', ';
-                //     $sql1.='"' . htmlspecialchars($value) . '", ';
-                // }
                 
             }
         }
@@ -868,6 +845,11 @@ public function getsubcorce()
         $res1 = substr($sql1, 0, strlen($sql1) - 2) .")";
         $result = $this->db->query($res . $res1);
         
+        $this->table('register')
+            ->where(["id" => $_SESSION['sessiondata']['id']])
+            ->set('Payment_status', 'Y')
+            ->update();
+
         if ($result) {
             return true;
         }else {
