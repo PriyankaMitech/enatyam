@@ -675,6 +675,22 @@ class AdminModel extends Model
     //  echo $this->db->getLastQuery();die;
      return $grouplist;   
         }
+public function getcorce()
+{
+    return $this->db->table('register')->distinct()
+    ->select('course')
+    ->where('course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
+    ->get()
+    ->getResultArray();
+}
+public function getsubcorce()
+{
+    return $this->db->table('register')->distinct()
+    ->select('sub_course')
+    ->where('sub_course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
+    ->get()
+    ->getResultArray();
+}
 
 
     public function insert_payment($insertdata){
@@ -743,5 +759,19 @@ class AdminModel extends Model
             return false;
         }
     }
- 
+    
+    public function getGroupsForCourse($course, $subcourse)
+    {
+        $grouplist = $this->db->table('register')
+            ->where('course', $course)
+            ->where('sub_course', $subcourse)
+            ->where('SessionType', 'GroupSession') // Add this condition
+            ->where('groupName IS NOT NULL') // Add this condition
+            ->get()
+            ->getResult();
+    
+    //    echo $this->db->getLastQuery();die;
+    
+        return $grouplist;   
+    }
 }

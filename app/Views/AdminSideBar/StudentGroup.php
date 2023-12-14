@@ -60,21 +60,39 @@ th {
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="group">Select Group:</label>
-                    <select id="group" class="form-control">
-                        <option value="">Select Groups</option>
-                        <?php foreach ($groups as $group): ?>
-                        <option value="<?= $group['groupName'] ?>"><?= $group['groupName'] ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <!-- <div class="col-md-4">
-                <label for="group">Get List:</label><br>
-                <button id="fetchGroups" class="btn btn-primary">Show</button>
-            </div> -->
-            </div>
+
+        <div class="row">
+    <div class="col-md-4">
+        <label for="course">Select Course:</label>
+        <select id="course" class="form-control">
+            <option value="">Select Courses</option>
+            <?php foreach ($cource as $course): ?>
+                <option value="<?= $course['course'] ?>"><?= $course['course'] ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label for="subcourse">Select Subcourse:</label>
+        <select id="subcourse" class="form-control">
+            <option value="">Select Subcourses</option>
+            <?php foreach ($sub_course as $subcourse): ?>
+                <option value="<?= $subcourse['sub_course'] ?>"><?= $subcourse['sub_course'] ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label for="group">Select Group:</label>
+        <select id="group" class="form-control">
+            <option value="">Select Groups</option>
+            <?php foreach ($groups as $group): ?>
+                <option value="<?= $group['groupName'] ?>"><?= $group['groupName'] ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+</div>
+
 
             <div class="row mt-3 group-records">
                 <div class="col-md-12">

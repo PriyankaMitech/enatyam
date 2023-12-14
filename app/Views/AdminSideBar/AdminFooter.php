@@ -712,12 +712,49 @@ $(document).ready(function() {
 </script>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('.group-records').hide();
         $('#facultySelectionDropdown').hide();
 
+        // Use change event on the course dropdown
+        $('#course').on('change', function () {
+            var course = $(this).val();
+            var subcourse = $('#subcourse').val();
+            fetchGroupsForCourse(course, subcourse);
+        });
+
+        // Use change event on the subcourse dropdown
+        $('#subcourse').on('change', function () {
+            var course = $('#course').val();
+            var subcourse = $(this).val();
+            fetchGroupsForCourse(course, subcourse);
+        });
+
+        function fetchGroupsForCourse(course, subcourse) {
+            $.ajax({
+                url: '<?= site_url('fetch_groups_for_course') ?>',
+                type: 'POST',
+                data: {
+                    course: course,
+                    subcourse: subcourse
+                },
+                dataType: 'json',
+                success: function (response) {
+                    // Populate the groups dropdown
+                    $('#group').empty();
+                    $('#group').append('<option value="">Select Groups</option>');
+                    $.each(response.groups, function (index, group) {
+                        $('#group').append('<option value="' + group.groupName + '">' + group.groupName + '</option>');
+                    });
+                },
+                error: function (error) {
+                    console.error(error);
+                }
+            });
+        }
+
         // Use change event on the group dropdown
-        $('#group').on('change', function() {
+        $('#group').on('change', function () {
             var group = $(this).val();
             fetchAndUpdateRecords(group);
         });
@@ -780,8 +817,6 @@ $(document).ready(function() {
                         var selectedFacultyId = $('#facultySelectionDropdown select').val();
                         postFacultyData(selectedFacultyId, group);
                     });
-
-
                 },
                 error: function(error) {
                     console.error(error);
@@ -799,6 +834,10 @@ $(document).ready(function() {
                 },
                 success: function(response) {
                     console.log('Data posted successfully');
+                    alert('Faculty assigned successfully!');
+                    setTimeout(function() {
+                location.reload();
+            }, 1000);
                 },
                 error: function(error) {
                     console.error('Error posting data:', error);

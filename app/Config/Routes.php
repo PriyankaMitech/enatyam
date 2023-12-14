@@ -109,6 +109,7 @@ $routes->get('NewFacultyApplication', 'AdminController::NewFacultyApplication');
 $routes->get('UplodedvideoByStudent', 'AdminController::UplodedvideoByStudent');
 $routes->post('AssignTecherForDemo', 'AdminController::AssignTecherForDemo');
 $routes->post('AssignFacultyToGroup', 'AdminController::AssignFacultyToGroup');
+$routes->post('fetch_groups_for_course', 'AdminController::fetch_groups_for_course');
 $routes->post('AssignTecherToStudent', 'AdminController::AssignTecherToStudent');
 $routes->post('save-event', 'AdminCalenderController::saveEvent');
 $routes->get('getDemoDetails', 'AdminController::getDemoDetails');
