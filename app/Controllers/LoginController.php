@@ -180,10 +180,6 @@ class LoginController extends BaseController
            'SessionType' => $SessionType,
        ];
        $affectedRows = $loginModel->updateUserByEmail($email, $data);
-
-       if ($affectedRows > 0 && $data['Payment_status'] == 'Y') {
-           sendConfirmationEmail($email, 'Payment Confirmation', 'Thank you for your payment.');
-       }
    
        return redirect()->to('Home');
    }  
