@@ -104,7 +104,7 @@ $routes->get('StudentListToAdmin', 'AdminController::StudentListToAdmin');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
 $routes->get('Admindashboard', 'AdminController::Admindashboard');
 $routes->get('getAdminSideBarAll', 'AdminController::getAdminSideBarAll');
-$routes->get('StudentDate', 'AdminController::StudentDate');
+$routes->get('studentProfile', 'AdminController::studentProfile');
 $routes->get('NewFacultyApplication', 'AdminController::NewFacultyApplication');
 $routes->get('UplodedvideoByStudent', 'AdminController::UplodedvideoByStudent');
 $routes->post('AssignTecherForDemo', 'AdminController::AssignTecherForDemo');
@@ -126,6 +126,8 @@ $routes->post('setnotification', 'AdminController::setnotification');
 $routes->get('viewProfile', 'AdminController::viewProfile');
 
 $routes->get('viewProfile/(:any)', 'AdminController::viewProfile/$1');
+$routes->get('viewProfiledfaculty/(:any)', 'AdminController::viewProfiledfaculty/$1');
+
 
 
 // Report Data

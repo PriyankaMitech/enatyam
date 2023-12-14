@@ -3,20 +3,31 @@
 // echo "<pre>";print_r($profile_data);exit();
         if(!empty($profile_data)){ 
             
-            // $session = \Config\Services::session();
-            // $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
+            $session = \Config\Services::session();
+            $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
     
-            // // Get the 'id' from the session
-            // $carrier_id = $profile_data->carrier_id;
+            // Get the 'id' from the session
+            $D_id = $profile_data->D_id;
 
-            // $wherecon = array('D_id ' => $carrier_id);
+            $wherecon = array('carrier_id ' => $D_id);
 
             
-            // // Rest of your code
-            // $profile_data = $adminModel->getsinglerow('carrier',$wherecon);
+            // Rest of your code
+            $register_data = $adminModel->getsinglerow('register',$wherecon);
+       
+            $r_id = '';
+            if(!empty($register_data)){
+
+            $r_id = $register_data->id;
+            }
+       
+
+            $wherecon1 = array('register_faculty_id' => $r_id);
 
 
-            // // echo "<pre>";print_r($profile_data);exit();
+            $video_data = $adminModel->getalldata('uplode_video_to_student',$wherecon1);
+// echo "<pre>";print_r($video_data);exit();
+
 
             // if(!empty($profile_data)){
                        
@@ -45,30 +56,19 @@
                     <div class="card card-primary card-outline">
                         <div class="card-body box-profile">
                             <div class="text-center">
-                                 <?php if(!empty($profile_data->profile_photo)){ ?>
-                                    <img class="profile-user-img img-fluid img-circle" src="<?=base_url(); ?>public/uploads/profile_photo/<?=$profile_data->profile_photo;  ?>" alt="User profile picture">
+                                <?php if(!empty($profile_data->profile_photo)){ ?>
+                                <img class="profile-user-img img-fluid img-circle" src="<?=base_url(); ?>public/uploads/profile_photo/<?=$profile_data->profile_photo;  ?>" alt="User profile picture">
                                 <?php }else{ ?>
                                     <img class="profile-user-img img-fluid img-circle" src="<?=base_url(); ?>public/images/user.png" alt="User profile picture">
 
-                                <?php } ?>                            </div>
+                                <?php } ?>
+                            </div>
 
                             <h3 class="profile-username text-center"><?=$profile_data->name;  ?></h3>
 
                             <p class="text-muted text-center"><?=$profile_data->course;  ?> - <?=$profile_data->sub_course;  ?></p>
 
-                            <ul class="list-group list-group-unbordered mb-3">
-                                <li class="list-group-item">
-                                    <b>Resume</b> <a href="<?=base_url(); ?>public/uploads/cv/<?=$profile_data->cv_filename;  ?>" target="_blank" class="float-right"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                </li>
-                                <li class="list-group-item">
-                                    <b>Education Certificates</b> <a href="<?=base_url(); ?>public/uploads/educationCertificates/<?=$profile_data->education_certificates_filename;  ?>" target="_blank" class="float-right"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                </li>
-                                <li class="list-group-item">
-                                    <b>Course Related Certificates</b> <a href="<?=base_url(); ?>public/uploads/courseCertificates/<?=$profile_data->course_certificates_filename;  ?>" target="_blank" class="float-right"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                </li>
-                            </ul>
-
-                            <a href="#" class="btn btn-primary btn-block"><b>Approve</b></a>
+                          
                         </div>
                     </div>
                     <div class="card card-primary">
@@ -129,12 +129,22 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                             <div class="col-md-12">
+                                            <?php if(!empty($video_data)){ ?>
+                                                <?php foreach($video_data as $data){ ?>
+
+                                                    <?php
+                                                $extension = pathinfo($data->video_name, PATHINFO_EXTENSION);
+                                                // echo $extension;
+                                                // print_r($faculty);
+                                                // die;
+                                                ?>
+                                                <?php if ($extension == 'mp4' || $extension == 'avi' || $extension == 'mov' || $extension == 'mkv' || $extension == 'wmv') { ?>
                                                 <!-- The time line -->
                                                 <div class="timeline">
                                             
                                                 <!-- timeline time label -->
                                                 <div class="time-label">
-                                                    <span class="bg-green"><span class="bg-green"><?= (new DateTime($profile_data->Booking_Date_Time))->format('j M. Y') ?></span></span>
+                                                    <span class="bg-green"><span class="bg-green"><?= (new DateTime($data->DateTime))->format('j M. Y') ?></span></span>
                                                 </div>
                                        
                                                 <div>
@@ -142,7 +152,7 @@
 
                                                     <div class="timeline-item">
                                                     <span class="time"><?php
-                                                            $bookingDateTime = new DateTime($profile_data->Booking_Date_Time);
+                                                            $bookingDateTime = new DateTime($data->DateTime);
                                                             $currentDateTime = new DateTime();
                                                             $interval = $currentDateTime->diff($bookingDateTime);
 
@@ -156,20 +166,16 @@
                                                     <h3 class="timeline-header"><a href="#"><?=$profile_data->name;  ?></a> shared a video</h3>
 
                                             
-                                                            <?php if(!empty($profile_data->videos)){ ?>
+                                                        
+                                                            
                                                                 <div class="timeline-body">
                                                         <div class="embed-responsive embed-responsive-16by9">
-                                                        <iframe class="embed-responsive-item" src="<?=base_url();?>public/uploads/videos/<?=$profile_data->videos;  ?>" allowfullscreen></iframe>
+                                                        <iframe class="embed-responsive-item" src="<?=base_url();?>public/uploads/videos/<?=$data->video_name;  ?>" allowfullscreen></iframe>
                                                         </div>
                                                     </div>
-                                                        <?php }else{ ?>
-                                                        <div class="timeline-body">
-                                                        <div class="embed-responsive embed-responsive">
-                                                        Not Data available.
-
-                                                        </div>
-                                                    </div>
-                                                        <?php } ?>    
+                                               
+                                                     
+                                       
                                             
                                              
                                                     </div>
@@ -179,6 +185,11 @@
                                                     <i class="fas fa-clock bg-gray"></i>
                                                 </div>
                                                 </div>
+                                                <?php } ?>
+                                                <?php } ?>
+                                                <?php }else{ ?>
+                                                    Data is not available.
+                                                <?php } ?>
                                             </div>
                                             <!-- /.col -->
                                             </div>
@@ -191,19 +202,28 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                 <div class="col-md-12">
+                                                <?php if(!empty($video_data)){ ?>
+                                                <?php foreach($video_data as $data){ ?>
+
+                                                    <?php
+                                                $extension = pathinfo($data->video_name, PATHINFO_EXTENSION);
+                                                // echo $extension;
+                                                // print_r($faculty);
+                                                // die;
+                                                ?>
+                                                <?php if ($extension == 'jpg' || $extension == 'png' || $extension == 'jpeg') { ?>
                                                     <!-- The time line -->
                                                     <div class="timeline">
                                                 
                                                     <!-- timeline time label -->
                                                     <div class="time-label">
-                                                        <span class="bg-green"><span class="bg-green"><?= (new DateTime($profile_data->Booking_Date_Time))->format('j M. Y') ?></span></span>
-                                                    </div>
-                                        
+                                                    <span class="bg-green"><span class="bg-green"><?= (new DateTime($data->DateTime))->format('j M. Y') ?></span></span>
+                                                </div>
                                                     <div>
                                                     <i class="fa fa-camera bg-purple"></i>
                                                         <div class="timeline-item">
                                                         <span class="time"><?php
-                                                            $bookingDateTime = new DateTime($profile_data->Booking_Date_Time);
+                                                            $bookingDateTime = new DateTime($data->DateTime);
                                                             $currentDateTime = new DateTime();
                                                             $interval = $currentDateTime->diff($bookingDateTime);
 
@@ -220,21 +240,13 @@
                                                        
                                           
                                                 
-                                                        <?php if(!empty($profile_data->img)){ ?>
                                                             <div class="timeline-body">
                                                             <div class="embed-responsive embed-responsive-16by9">
 
-                                                                <img class="embed-responsive-item" style="height:auto;" src="<?=base_url();?>public/uploads/images/<?=$profile_data->img;  ?>">
+                                                                <img class="embed-responsive-item" style="height:auto;" src="<?=base_url();?>public/uploads/images/<?=$data->video_name;  ?>">
                                                                 </div>
                                                         </div>
-                                                                <?php }else{ ?>  
-                                                                    <div class="timeline-body">
-                                                        <div class="embed-responsive embed-responsive">
-                                                        Not Data available.
-
-                                                        </div>
-                                                    </div>
-                                                        <?php } ?>                                                           
+                                                                                      
                                                      
                                                 
                                                         </div>
@@ -244,6 +256,11 @@
                                                         <i class="fas fa-clock bg-gray"></i>
                                                     </div>
                                                     </div>
+                                                    <?php } ?>
+                                                <?php } ?>
+                                                <?php }else{ ?>
+                                                    Data is not available.
+                                                <?php } ?>
                                                 </div>
                                                 <!-- /.col -->
                                                 </div>
