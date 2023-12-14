@@ -8,7 +8,7 @@ class CarrierModel extends Model
 {
     protected $table = 'Carrier'; // Change to your actual table name
     protected $primaryKey = 'D_id';
-    protected $allowedFields = ['D_id', 'name', 'email', 'phone', 'course', 'sub_course', 'Country', 'State', 'District', 'Result_of_application', 'Status', 'course_certificates_filename', 'education_certificates_filename', 'cv_filename'];
+    protected $allowedFields = ['D_id', 'name', 'email', 'phone', 'course', 'sub_course', 'Country', 'State', 'District', 'Result_of_application', 'Status', 'course_certificates_filename', 'education_certificates_filename', 'cv_filename','profile_photo','videos','img','education','exprience'];
 
     public function getcarreerByfaculty()
     {

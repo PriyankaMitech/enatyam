@@ -68,8 +68,9 @@ defined('DECADE') || define('DECADE', 315_360_000);
  |
  */
 
- define('RAZOR_KEY_ID', 'rzp_test_Ctoq9lGccMcZwj');
- define('RAZOR_KEY_SECRET', 'tk2fke25Gpw2otb6FX6hKpo4');
+//  test key razorpay
+ define('RAZOR_KEY_ID', 'rzp_live_L1OeaJe1DsAXHJ'); // test key --> rzp_test_QdPDZO6x3F9kBz
+ define('RAZOR_KEY_SECRET', 'b6s5n0VfFqvsePY7kwai6T6U'); //test secret --> 4J842nFYEGsvOnoQx3Bpfl6b
  define('APPLICATION_NAME', 'XXXXXXXXXX');
 
 defined('EXIT_SUCCESS')        || define('EXIT_SUCCESS', 0);        // no errors

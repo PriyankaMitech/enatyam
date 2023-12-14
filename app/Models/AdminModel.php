@@ -156,21 +156,27 @@ class AdminModel extends Model
     {
         return $this->findAll();
     }
-    public function getAdmins()
+    public function get_students()
     {
-        // return $this->db->table('register')->where('role', 'Student')->get()->getResult();
         $query = $this->db->table('register AS students')
             ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name')
             ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
             ->where('students.role', 'Student')
+            ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
             ->get();
-
+    
         return $query->getResult();
     }
+    
     public function getFaculty()
     {
-        return $this->db->table('register')->where('role', 'Faculty')->get()->getResult();
+        return $this->db->table('register')
+                        ->where('role', 'Faculty')
+                        ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use
+                        ->get()
+                        ->getResult();
     }
+    
     public function getAllSessionData()
     {
         return $this->findAll();
@@ -227,14 +233,18 @@ class AdminModel extends Model
     {
         return $this->db->table('register')->where('Payment_status', 'Y')->get()->getResult();
     }
-
     public function getAllDemoData()
     {
-        return $this->db->table('free_demo_table')
-            ->select('*')
-            ->get()
-            ->getResult();
+        $query = $this->db->table('free_demo_table')
+            ->select('free_demo_table.*, register.full_name')
+            ->join('register', 'register.id = free_demo_table.AssignTecher_id')
+            ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
+            ->get();
+    
+        return $query->getResult();
     }
+    
+    
 
     public function getFacultyData()
     {
@@ -490,11 +500,16 @@ class AdminModel extends Model
             ->getResult();
     }
 
-    public function updateFacultyForGroup($groupName, $facultyId)
+    public function updateFacultyForGroup($groupName, $facultyId, $selectedDate)
     {
+        $updateData = ['Assign_Techer_id' => $facultyId];
+        if (!empty($selectedDate)) {
+            $updateData['Session_Start_Date'] = $selectedDate;
+        }
+    
         return $this->db->table('register')
             ->where('groupName', $groupName)
-            ->set(['Assign_Techer_id' => $facultyId])
+            ->set($updateData)
             ->update();
     }
     public function getAdminUsers()
@@ -511,13 +526,14 @@ class AdminModel extends Model
     }
 
 
-    public function insert_formdata($id, $table, $insertdata)
+    public function insert_formdata($column, $table, $insertdata)
     {
         $result['insert'] = $this->db->table($table)->insert($insertdata);
         if ($result['insert']) {
             $insertedID = $this->db->insertID();
-            $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
 
+            $result['getdata'] = $this->db->table($table)->where($column, $insertedID)->get()->getRowArray();
+            
             return $result;
         } else {
             return false;
@@ -765,5 +781,114 @@ class AdminModel extends Model
             ->get()
             ->getRow();
         return $result;
+    }
+
+    public function  studentsgroup($group){
+
+      $grouplist =$this->db->table('register')
+      ->Where('groupName', $group)
+         ->get()
+         ->getResult();
+    //  echo $this->db->getLastQuery();die;
+     return $grouplist;   
+        }
+public function getcorce()
+{
+    return $this->db->table('register')->distinct()
+    ->select('course')
+    ->where('course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
+    ->get()
+    ->getResultArray();
+}
+public function getsubcorce()
+{
+    return $this->db->table('register')->distinct()
+    ->select('sub_course')
+    ->where('sub_course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
+    ->get()
+    ->getResultArray();
+}
+
+
+    public function insert_payment($insertdata){
+        $array = array(
+            'id' => 'pay_NBmMa8Xl2lmBvt',
+            'entity' => 'payment',
+            'currency' => 'INR',
+            'status' => 'captured',
+            'notes' => array(
+                'soolegal_order_id' => 2
+            ),
+            'acquirer_data' => array(
+                'bank_transaction_id' => 5656
+            )
+        );
+        //echo '<pre>';//print_r($array);
+
+        $sql = "insert into payment_details (";
+        $sql1 = " values ( ";
+
+        if (isset($insertdata->error)) {
+            foreach ($insertdata->error as $key => $value) {
+                if (is_object($value)) {
+                    $d=json_encode($value);
+                    $sql1.='"' . htmlspecialchars($d) . '", ';
+                    $sql.= htmlspecialchars($key) . ', ';
+                }else {
+                    $sql.= htmlspecialchars($key) . ', ';
+                    $sql1.='"' . htmlspecialchars($value) . '", ';
+                }
+                
+            }
+        }else {
+            foreach ($insertdata as $key => $value) {
+                // print_r($value);
+                if(!is_object($value)){
+                    $sql1.='"' . htmlspecialchars($value) . '", ';
+                    $sql.= htmlspecialchars($key) . ', ';
+                }
+                if(is_object($value)){
+                    foreach ($value as $ke => $val) {
+                    // print_r($ke);
+                        $sql.= htmlspecialchars($ke) . ', ';
+                        $sql1.='"' . htmlspecialchars($val) . '", ';
+                    }
+                }
+                // if (is_object($value)) {
+                //     $d=json_encode($value);
+                //     $sql1.='"' . htmlspecialchars($d) . '", ';
+                //     $sql.= htmlspecialchars($key) . ', ';
+                // }else {
+                //     $sql.= htmlspecialchars($key) . ', ';
+                //     $sql1.='"' . htmlspecialchars($value) . '", ';
+                // }
+                
+            }
+        }
+
+        $res = substr($sql, 0, strlen($sql) - 2) . ")";
+        $res1 = substr($sql1, 0, strlen($sql1) - 2) .")";
+        $result = $this->db->query($res . $res1);
+        
+        if ($result) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+    
+    public function getGroupsForCourse($course, $subcourse)
+    {
+        $grouplist = $this->db->table('register')
+            ->where('course', $course)
+            ->where('sub_course', $subcourse)
+            ->where('SessionType', 'GroupSession') // Add this condition
+            ->where('groupName IS NOT NULL') // Add this condition
+            ->get()
+            ->getResult();
+    
+    //   echo $this->db->getLastQuery();die;
+    
+        return $grouplist;   
     }
 }

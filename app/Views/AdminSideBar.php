@@ -29,10 +29,13 @@
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/fullcalendar/main.css">
 
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
-    <link href="<?php echo base_url() ?>public/css/custom.css">
-    </link>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" type="text/css" href="<?=base_url(); ?>public/css/jquery.dataTables.css">
+  <link href="<?php echo base_url() ?>public/css/custom.css">
+  </link>
+
+
+
 
 </head>
 
@@ -271,7 +274,7 @@
 
 
                                     <!-- Student Menu -->
-                                    <li class="nav-item" <?php if (in_array('StudentDate', $access_levels) || in_array('Attendance', $access_levels)) {
+                                    <li class="nav-item" <?php if (in_array('studentProfiledata', $access_levels) || in_array('Attendance', $access_levels)) {
                                                                 echo "style='display:block'";
                                                             } else {
                                                                 echo "style='display:none'";
@@ -284,12 +287,12 @@
                                             </p>
                                         </a>
                                         <ul class="nav nav-treeview">
-                                            <li class="nav-item" <?php if (in_array('StudentDate', $access_levels)) {
+                                            <li class="nav-item" <?php if (in_array('studentProfiledata', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>StudentDate" class="nav-link">
+                                                <a href="<?php echo base_url() ?>studentProfiledata" class="nav-link">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Profile</p>
                                                 </a>
@@ -548,93 +551,94 @@
                                         <p>
                                             Dashboard
                                         </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class=" nav-icon fa fa-calendar"></i>
-                                        <p>
-                                            Schedule
-                                            <i class="right fas fa-angle-left"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>AdminList" class="nav-link">
-                                                <i class="nav-icon fas fa-calendar-alt"></i>
-                                                <p>Admin List</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Demo</p>
-                                            </a>
-                                        </li>
-                                        <!-- Add other Schedule menu items with access level checks here -->
-                                    </ul>
-                                </li>
 
-                                <!-- Menu Menu -->
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class=" nav-icon fa fa-calendar"></i>
-                                        <p>
-                                            Menu
-                                            <i class="right fas fa-angle-left"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>add_menu" class="nav-link">
-                                                <i class="nav-icon fas fa-edit"></i>
-                                                <p>Add menu</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>menu_list" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Menu List</p>
-                                            </a>
-                                        </li>
-                                        <!-- Add other Menu menu items with access level checks here -->
-                                    </ul>
-                                </li>
+                                </a>
+                    </li>
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <i class=" nav-icon fa fa-calendar"></i>
+                            <p>
+                                Schedule
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item"  >
+                                <a href="<?php echo base_url() ?>AdminList" class="nav-link">
+                                    <i class="nav-icon fas fa-calendar-alt"></i>
+                                    <p>Admin List</p>
+                                </a>
+                            </li>
+                            <li class="nav-item"  >
+                                <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Demo</p>
+                                </a>
+                            </li>
+                            <!-- Add other Schedule menu items with access level checks here -->
+                        </ul>
+                    </li>
 
-                                <!-- New User Menu -->
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class=" nav-icon fa fa-calendar"></i>
-                                        <p>
-                                            New User
-                                            <i class="right fas fa-angle-left"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>AddNewUser" class="nav-link">
-                                                <i class="nav-icon fas fa-edit"></i>
-                                                <p>Add New User</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>user_list" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>User List</p>
-                                            </a>
-                                        </li>
-                                        <!-- Add other New User menu items with access level checks here -->
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon 	fa fa-credit-card"></i>
-                                        <p>
-                                            Files
-                                            <i class="right fas fa-angle-left"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
+                    <!-- Menu Menu -->
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link" >
+                            <i class=" nav-icon fa fa-calendar"></i>
+                            <p>
+                                Menu
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url(); ?>add_menu" class="nav-link">
+                                    <i class="nav-icon fas fa-edit"></i>
+                                    <p>Add menu</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url(); ?>menu_list" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Menu List</p>
+                                </a>
+                            </li>
+                            <!-- Add other Menu menu items with access level checks here -->
+                        </ul>
+                    </li>
+
+                    <!-- New User Menu -->
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <i class=" nav-icon fa fa-calendar"></i>
+                            <p>
+                                New User
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url(); ?>AddNewUser" class="nav-link">
+                                    <i class="nav-icon fas fa-edit"></i>
+                                    <p>Add New User</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url(); ?>user_list" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>User List</p>
+                                </a>
+                            </li>
+                            <!-- Add other New User menu items with access level checks here -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                <i class="nav-icon 	fa fa-credit-card"></i>
+                                    <p>
+                                        Files
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                            <ul class="nav nav-treeview">
                                         <li class="nav-item">
                                             <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
                                                 <i class="nav-icon far fa-image"></i>
@@ -651,169 +655,210 @@
                                         </li>
                                         <!-- Add other Student menu items with access level checks here -->
                                     </ul>
-                                </li>
+                            </li>
 
-                                <!-- Student Menu -->
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon 	fa fa-child"></i>
-                                        <p>
-                                            Student
-                                            <i class="right fas fa-angle-left"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>StudentDate" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Profile</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>Attendance" class="nav-link">
-                                                <i class="nav-icon fas fa-calendar-alt"></i>
-                                                <p>Attendance</p>
-                                            </a>
-                                        </li>
+                    <!-- Student Menu -->
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon 	fa fa-child"></i>
+                            <p>
+                                Student
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>studentProfiledata" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Profile</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>Attendance" class="nav-link">
+                                    <i class="nav-icon fas fa-calendar-alt"></i>
+                                    <p>Attendance</p>
+                                </a>
+                            </li>
+                 
+                            <!-- Add other Student menu items with access level checks here -->
+                        </ul>
+                    </li>
 
-                                        <!-- Add other Student menu items with access level checks here -->
-                                    </ul>
-                                </li>
+                    <!-- Groups Menu -->
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon far fa fa-child"></i>
+                            <p>
+                                Groups
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>StudentGroups" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Groups List</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>StudentListToAdmin" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Create Groups</p>
+                                </a>
+                            </li>
+                            <!-- Add other Groups menu items with access level checks here -->
+                        </ul>
+                    </li>
 
-                                <!-- Groups Menu -->
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon far fa fa-child"></i>
-                                        <p>
-                                            Groups
-                                            <i class="right fas fa-angle-left"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>StudentGroups" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Groups List</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>StudentListToAdmin" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Create Groups</p>
-                                            </a>
-                                        </li>
-                                        <!-- Add other Groups menu items with access level checks here -->
-                                    </ul>
-                                </li>
+                    <!-- Faculty Menu -->
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon 	fa fa-users"></i>
+                            <p>
+                                Faculty
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>getAdminSideBarAll" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Profile</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>FacultysidebarShedule" class="nav-link">
+                                    <i class="nav-icon fas fa-calendar-alt"></i>
+                                    <p>Schedule</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>Attendance" class="nav-link">
+                                    <i class="nav-icon fas fa-calendar-alt"></i>
+                                    <p>Attendance</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>NewFacultyApplication" class="nav-link">
+                                    <i class="nav-icon fas fa-calendar-alt"></i>
+                                    <p>New Enrollment</p>
+                                </a>
+                            </li>
+                            <!-- Add other Faculty menu items with access level checks here -->
+                        </ul>
+                    </li>
 
-                                <!-- Faculty Menu -->
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon 	fa fa-users"></i>
-                                        <p>
-                                            Faculty
-                                            <i class="right fas fa-angle-left"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>getAdminSideBarAll" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Profile</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>FacultysidebarShedule" class="nav-link">
-                                                <i class="nav-icon fas fa-calendar-alt"></i>
-                                                <p>Schedule</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>Attendance" class="nav-link">
-                                                <i class="nav-icon fas fa-calendar-alt"></i>
-                                                <p>Attendance</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>NewFacultyApplication" class="nav-link">
-                                                <i class="nav-icon fas fa-calendar-alt"></i>
-                                                <p>New Enrollment</p>
-                                            </a>
-                                        </li>
-                                        <!-- Add other Faculty menu items with access level checks here -->
-                                    </ul>
-                                </li>
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon 	fa fa-credit-card"></i>
+                            <p>
+                                Report
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="demo_classes" class="nav-link">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>Demo Classes</p>
+                                </a>
+                            </li> 
+                            <li class="nav-item" >
+                                <a href="student" class="nav-link">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>Student</p>
+                                </a>
+                            </li>
 
-                                <!-- Finance Menu -->
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon 	fa fa-credit-card"></i>
-                                        <p>
-                                            Finance
-                                            <i class="right fas fa-angle-left"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="faculty_pamentrecords" class="nav-link">
-                                                <i class="nav-icon fas fa-book"></i>
-                                                <p>Faculty Payment Records</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="studentpaments" class="nav-link">
-                                                <i class="nav-icon fas fa-book"></i>
-                                                <p>Student Payments</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="payments" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Payments</p>
-                                            </a>
-                                        </li>
-                                        <!-- Add other Finance menu items with access level checks here -->
-                                    </ul>
-                                </li>
+                            <li class="nav-item" >
+                                <a href="faculty" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                    <p>Faculty</p>
+                                </a>
+                            </li>
 
-                                <!-- Messages Menu -->
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="nav-icon far fa-comment-dots"></i>
-                                        <p>
-                                            Messages
-                                            <i class="right fas fa-angle-left"></i>
-                                        </p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="<?= base_url() ?>chatuser" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Chat
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="email" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Email</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>add_notifications" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Notifications</p>
-                                            </a>
-                                        </li>
-                                        <!-- Add other Messages menu items with access level checks here -->
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!-- /.sidebar-menu -->
+                            <li class="nav-item" >
+                                <a href="payment_history" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                    <p>Payment History</p>
+                                </a>
+                            </li>
 
-                    </div>
-                    <!-- /.sidebar -->
-                </aside>
-        <?php }
-        } ?>
+                          
+                            <!-- Add other Finance menu items with access level checks here -->
+                        </ul>
+                    </li>
+
+                    <!-- Finance Menu -->
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon 	fa fa-credit-card"></i>
+                            <p>
+                                Finance
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="faculty_pamentrecords" class="nav-link">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>Faculty Payment Records</p>
+                                </a>
+                            </li> 
+                            <li class="nav-item" >
+                                <a href="studentpaments" class="nav-link">
+                                    <i class="nav-icon fas fa-book"></i>
+                                    <p>Student Payments</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="payments" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Payments</p>
+                                </a>
+                            </li>
+                            <!-- Add other Finance menu items with access level checks here -->
+                        </ul>
+                    </li>
+
+                    <!-- Messages Menu -->
+                    <li class="nav-item" >
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon far fa-comment-dots"></i>
+                            <p>
+                                Messages
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="<?= base_url()?>chatuser" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Chat
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="email" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Email</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>add_notifications" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Notifications</p>
+                                </a>
+                            </li>
+                            <!-- Add other Messages menu items with access level checks here -->
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+<?php } } ?>
+

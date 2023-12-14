@@ -141,7 +141,7 @@
                                 </div>
                           
                                 <div class="d-flex align-items-center">
-                                    <a class="btn  btn-primary btn-sm w-50 mr-2" href="/react/demo/app-profile">
+                                    <a class="btn  btn-primary btn-sm w-50 mr-2" href="<?=base_url(); ?>viewProfiledfaculty/<?=$faculty->carrier_id ;?>">
                                         <i class="fa-solid fa-user me-2"></i>Profile </a>
                                     <a class="btn  btn-secondary btn-sm w-50" href="/react/demo/chat">
                                         <i class="fa-sharp fa-regular fa-envelope me-2"></i>Chat </a>

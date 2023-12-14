@@ -145,7 +145,6 @@
                                                 <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="phone" pattern="[0-9]{10}" placeholder="Phone *" value="" type="tel" name="phone" required>
                                                 <span style="color:red;" id="phonespanid"></span>
                                             </div>
-
                                             <div>
                                                 <select class="form-control" id="course" aria-required="true" aria-invalid="false" name="course">
                                                     <option value="">Position Applying For*</option>
@@ -156,6 +155,10 @@
 
                                                 </select>
                                                 <span style="color:red;" id="coursespanid"></span>
+                                            </div>
+                                            <div class="form-group updloaddata mt-3">
+                                                <label class="mr-4">Upload your profile photo:</label>
+                                                <input type="file" name="profile_photo">
                                             </div>
                                             <div>
                                                 <!-- <input class="form-group-submit" type="submit" value="Next"> -->
@@ -456,6 +459,21 @@
                                             </select>
                                         </div>
 
+                                        <div>
+                                            <p>Experience </p>
+                                            <select class="form-control dropdown" id="experience " name="experience">
+                                                <option value="" selected="selected" disabled="disabled">Please select
+                                                </option>
+                                                <option value="0-1">0-1</option>
+                                                <option value="1-2">1-2</option>
+                                                <option value="2-3">2-3</option>
+                                                <option value="Above-3">Above-3</option>
+                                                
+                                            </select>
+                                        </div>
+
+                                        
+
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your CV:</label>
                                             <input type="file" name="cvFile">
@@ -468,6 +486,16 @@
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your course related certificates:</label>
                                             <input type="file" name="courseCertificateFile">
+                                        </div>
+
+                                        <div class="form-group updloaddata mt-3">
+                                            <label class="mr-4">Upload your videos:</label>
+                                            <input type="file" name="videos">
+                                    
+                                        </div>
+                                        <div class="form-group updloaddata mt-3">
+                                            <label class="mr-4">Upload your Images:</label>
+                                            <input type="file" name="img">
                                         </div>
 
 

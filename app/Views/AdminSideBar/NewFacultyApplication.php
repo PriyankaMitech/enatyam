@@ -101,7 +101,9 @@ thead {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php foreach ($carrer as $faculty) : ?>
+                                                <?php 
+                                                // echo "<pre>";print_r($carrer);exit();
+                                                foreach ($carrer as $faculty) : ?>
                                                 <tr>
                                                     <?php
 
@@ -123,11 +125,11 @@ thead {
                                                             <input type="hidden" name="D_id"
                                                                 value="<?= $faculty->D_id ?>">
 
-                                                            <button type="submit" class="btn btn-sm btn-primary"
+                                                            <a href="<?=base_url(); ?>viewProfile/<?= $faculty->D_id ?>" type="submit" class="btn btn-sm btn-primary"
                                                                 data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                                 title="View">
                                                                 <i class="fa fa-eye" aria-hidden="true"></i>
-                                                            </button>
+                                                            </a>
                                                             <button type="submit" class="btn btn-sm btn-success"
                                                                 name="action" value="approve" data-bs-toggle="tooltip"
                                                                 data-bs-placement="bottom" title="Approve">

@@ -6,27 +6,16 @@ $page = $uri->getSegment(count($pages));
     if (isset($_SESSION['sessiondata'])) {
         $role = $_SESSION['sessiondata']['role'];
         if ($role == 'Faculty') {
-            // echo '1';exit();
             include('FacultySidebar2.php');
         } elseif ($role == 'Student') {
-      
             include('StudentSidebar/Studentsidebar.php'); 
-
-            // echo "<pre>";print_r($notifications);exit();
-
-            // exit();
         } else {
-            // echo '3';exit();
             include('AdminSideBar.php');
         }
     }
 
 ?>
 
-
-
-
-  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -57,6 +46,7 @@ $page = $uri->getSegment(count($pages));
             <!-- /.card-body -->
             <div class="card-body card-comments">
             <?php
+            $todayDate = date('Y-m-d H:i:s');
             usort($notifications, function ($a, $b) {
                 return strtotime($a['timestamp']) - strtotime($b['timestamp']);
             });

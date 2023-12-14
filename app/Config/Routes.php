@@ -64,7 +64,7 @@ $routes->get('shop', 'Home::shop'); //i remove for cart issue
 
 $routes->get('success', 'BillingC::success');
 $routes->get('failed', 'BillingC::failed');
-$routes->post('PaymentController/callback', 'PaymentController::payment');
+$routes->post('PaymentController/payment', 'PaymentController::payment');
 $routes->get('PaymentController/success', 'PaymentController::success');
 $routes->get('PaymentController/failed', 'PaymentController::failed');
 $routes->get('Checkout', 'BillingC::Checkout');
@@ -104,11 +104,12 @@ $routes->get('StudentListToAdmin', 'AdminController::StudentListToAdmin');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
 $routes->get('Admindashboard', 'AdminController::Admindashboard');
 $routes->get('getAdminSideBarAll', 'AdminController::getAdminSideBarAll');
-$routes->get('StudentDate', 'AdminController::StudentDate');
+$routes->get('studentProfiledata', 'AdminController::studentProfiledata');
 $routes->get('NewFacultyApplication', 'AdminController::NewFacultyApplication');
 $routes->get('UplodedvideoByStudent', 'AdminController::UplodedvideoByStudent');
 $routes->post('AssignTecherForDemo', 'AdminController::AssignTecherForDemo');
 $routes->post('AssignFacultyToGroup', 'AdminController::AssignFacultyToGroup');
+$routes->post('fetch_groups_for_course', 'AdminController::fetch_groups_for_course');
 $routes->post('AssignTecherToStudent', 'AdminController::AssignTecherToStudent');
 $routes->post('save-event', 'AdminCalenderController::saveEvent');
 $routes->get('getDemoDetails', 'AdminController::getDemoDetails');
@@ -124,10 +125,27 @@ $routes->get('add_notifications', 'AdminController::add_notifications');
 $routes->post('insertChat', 'AdminController::insertChat');
 $routes->post('setnotification', 'AdminController::setnotification');
 $routes->get('viewProfile', 'AdminController::viewProfile');
+$routes->post('fetch_records', 'AdminController::fetch_records');
+$routes->get('viewProfile/(:any)', 'AdminController::viewProfile/$1');
+$routes->get('viewProfiledfaculty/(:any)', 'AdminController::viewProfiledfaculty/$1');
+
+$routes->get('viewProfiles/(:any)', 'AdminController::viewProfiles/$1');
+
+
+
+
+// Report Data
+$routes->get('demo_classes', 'AdminController::demo_classes');
+$routes->get('student', 'AdminController::student');
+$routes->get('faculty', 'AdminController::faculty');
+$routes->get('payment_history', 'AdminController::payment_history');
+
+
 $routes->get('UploadedImages', 'AdminController::UploadedImages');
 $routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
 $routes->get('AdminController/searchFacultyVideos', 'AdminController::searchFacultyVideos');
+
 
 
 

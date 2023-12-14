@@ -52,6 +52,100 @@ $name               = "RazorPay Infovistar";
                                                 <h3>Basic</h3>
                                                 <span class="line"></span>
                                             </div>
+                                                    <div class="price-card-body">
+                                                        <h2>8 Sessions
+                                                        </h2>
+                                                        <h4>₹ 1200 per session</h4>
+                                                        <h4>Total Price: 9600 <span class="del-price"><del>10105 </del></span></h4>
+
+                                                        <img src="public/images/price-coupn.png" />
+                                                        <p style="color:#000;font-size:16px;margin:20px 0px">Duration : 60 Days</p>
+
+                                                        <ul style="padding-left:0px!important">
+
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    One on One Private Live Class.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Practice Video- weekly 2 Video.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Time Slot preference.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Weekly -quiz.
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Learn Any 1 subject.
+
+                                                                </span>
+                                                            </li>
+
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    Learn at your own Pace - customisation.
+
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span>
+                                                                    <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+
+                                                                </span>
+                                                                <span>
+                                                                    24 X 7 unlimited support for content & doubt clearing.
+
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+
+
+                                                        <div>
+                                                            <?php if (!(session()->get('sessiondata'))) : ?>
+                                                                <input class="btn shop-now-btn" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+                                                            <?php else : ?>
+                                                                <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
+
+                                                            <?php endif; ?>
+                                                        </div>
+
+                                                    </div>
 
                                             <div class="price-card-body">
                                                 <h2>8 Sessions
@@ -693,6 +787,4 @@ $name               = "RazorPay Infovistar";
 
         </div>
     </div>
-
-
 </section>
