@@ -902,7 +902,7 @@ $(document).ready(function() {
             });
         }
     });
-</script>
+
 
         function postFacultyData(facultyId, groupName) {
     var selectedDate = $('#selectedDate').val(); // Get the selected date
@@ -927,7 +927,7 @@ $(document).ready(function() {
         }
     });
 }
-    });
+  
 </script>
 </body>
 

@@ -383,9 +383,7 @@ class AdminModel extends Model
         }
 
         $videoDetails = $query->get()->getResult();
-        echo '<pre>';
-        print_r($videoDetails);
-        die;
+
 
         // Uncomment the following lines for debugging purposes
         // echo $this->db->getLastQuery();
