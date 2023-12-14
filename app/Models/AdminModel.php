@@ -393,12 +393,16 @@ class AdminModel extends Model
             ->getResult();
     }
 
-    public function updateFacultyForGroup($groupName, $facultyId)
+    public function updateFacultyForGroup($groupName, $facultyId, $selectedDate)
     {
-        //print_r($groupName);die;
+        $updateData = ['Assign_Techer_id' => $facultyId];
+        if (!empty($selectedDate)) {
+            $updateData['Session_Start_Date'] = $selectedDate;
+        }
+    
         return $this->db->table('register')
             ->where('groupName', $groupName)
-            ->set(['Assign_Techer_id' => $facultyId])
+            ->set($updateData)
             ->update();
     }
     public function getAdminUsers()
@@ -770,7 +774,7 @@ public function getsubcorce()
             ->get()
             ->getResult();
     
-    //    echo $this->db->getLastQuery();die;
+    //   echo $this->db->getLastQuery();die;
     
         return $grouplist;   
     }

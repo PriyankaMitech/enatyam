@@ -37,6 +37,10 @@ th {
 .group-records {
     display: none;
 }
+
+#selectedDateContainer {
+    display: none;
+}
 </style>
 
 <div class="content-wrapper" style="min-height: 1172.73px;">
@@ -59,70 +63,71 @@ th {
 
     <!-- Main content -->
     <section class="content">
-        <div class="container-fluid">
+    <div class="container-fluid">
 
         <div class="row">
-    <div class="col-md-4">
-        <label for="course">Select Course:</label>
-        <select id="course" class="form-control">
-            <option value="">Select Courses</option>
-            <?php foreach ($cource as $course): ?>
-                <option value="<?= $course['course'] ?>"><?= $course['course'] ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
-
-    <div class="col-md-4">
-        <label for="subcourse">Select Subcourse:</label>
-        <select id="subcourse" class="form-control">
-            <option value="">Select Subcourses</option>
-            <?php foreach ($sub_course as $subcourse): ?>
-                <option value="<?= $subcourse['sub_course'] ?>"><?= $subcourse['sub_course'] ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
-
-    <div class="col-md-4">
-        <label for="group">Select Group:</label>
-        <select id="group" class="form-control">
-            <option value="">Select Groups</option>
-            <?php foreach ($groups as $group): ?>
-                <option value="<?= $group['groupName'] ?>"><?= $group['groupName'] ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
-</div>
-
-
-            <div class="row mt-3 group-records">
-                <div class="col-md-12">
-                    <table id="recordsTable" class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Student Name</th>
-                                <th>Email</th>
-                                <th>Contact Number</th>
-                                <th>Course</th>
-                                <th>Subcourse</th>
-                                <!-- Add more headers as needed -->
-                            </tr>
-                        </thead>
-                        <tbody id="recordsBody"></tbody>
-                    </table>
-                </div>
+            <div class="col-md-4">
+                <label for="course">Select Course:</label>
+                <select id="course" class="form-control">
+                    <option value="">Select Courses</option>
+                    <?php foreach ($cource as $course): ?>
+                        <option value="<?= $course['course'] ?>"><?= $course['course'] ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
 
-            <div class="row mt-3">
-                <div class="col-md-4" id="facultySelectionDropdown"></div>
-                <div class="col-md-4" style="margin-top: 51px;">
-                    <button type="submit" id="changefb" class="btn btn-warning changef" style="display:none">Change
-                        Faculty</button>
-                    <button type="submit" id="assignfb" class="btn btn-success changef" style="display:none">Assign
-                        Faculty</button>
+            <div class="col-md-4">
+                <label for="subcourse">Select Subcourse:</label>
+                <select id="subcourse" class="form-control">
+                    <option value="">Select Subcourses</option>
+                    <?php foreach ($sub_course as $subcourse): ?>
+                        <option value="<?= $subcourse['sub_course'] ?>"><?= $subcourse['sub_course'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
 
-                </div>
+            <div class="col-md-4">
+                <label for="group">Select Group:</label>
+                <select id="group" class="form-control">
+                    <option value="">Select Groups</option>
+                    <?php foreach ($groups as $group): ?>
+                        <option value="<?= $group['groupName'] ?>"><?= $group['groupName'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+           
+        </div>
+
+        <div class="row mt-3 group-records">
+            <div class="col-md-12">
+                <table id="recordsTable" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Email</th>
+                            <th>Contact Number</th>
+                            <th>Course</th>
+                            <th>Subcourse</th>
+                            <!-- Add more headers as needed -->
+                        </tr>
+                    </thead>
+                    <tbody id="recordsBody"></tbody>
+                </table>
             </div>
         </div>
-    </section>
+       
+        <div class="row mt-3">
+    <div class="col-md-4" style="margin-top: 15px;" id="selectedDateContainer" require>
+        <label for="selectedDate">Select Date:</label>
+        <input type="date" id="selectedDate" class="form-control">
+    </div>
+    <div class="col-md-4" id="facultySelectionDropdown"></div>
+    <div class="col-md-4" style="margin-top: 51px;">
+        <button type="submit" id="changefb" class="btn btn-warning changef" style="display:none">Change Faculty</button>
+        <button type="submit" id="assignfb" class="btn btn-success changef" style="display:none">Assign Faculty</button>
+    </div>
+</div>
+    </div>
+</section>
 </div>
 <?php echo view('AdminSideBar/AdminFooter.php'); ?>

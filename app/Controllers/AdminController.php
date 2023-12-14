@@ -514,11 +514,12 @@ class AdminController extends BaseController
     public function AssignFacultyToGroup()
     {
         // print_r($_POST);die;
+        $selectedDate = $this->request->getPost('selected_date');
         $groupName = $this->request->getPost('group_name');
         $facultyId = $this->request->getPost('faculty_id');
       //  print_r($groupName);die;
         $model = new AdminModel();
-        $model->updateFacultyForGroup($groupName, $facultyId);
+        $model->updateFacultyForGroup($groupName, $facultyId, $selectedDate);
         return redirect()->to('StudentGroups');
     }
     public function chatuser()

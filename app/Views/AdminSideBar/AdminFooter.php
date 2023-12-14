@@ -766,10 +766,10 @@ $(document).ready(function() {
                     group: group
                 },
                 dataType: 'json',
-                success: function(response) {
+                success: function (response) {
                     $('#recordsBody').empty();
 
-                    $.each(response.stdent_list, function(index, record) {
+                    $.each(response.stdent_list, function (index, record) {
                         var fullName = record.full_name;
                         var email = record.email;
                         var mobileNumber = record.mobile_no;
@@ -792,7 +792,7 @@ $(document).ready(function() {
                     facultyDropdownHtml += '<label for="faculty">Select Faculty:</label>';
                     facultyDropdownHtml += '<select id="faculty" class="form-control">';
 
-                    $.each(response.facultyData, function(index, faculty) {
+                    $.each(response.facultyData, function (index, faculty) {
                         facultyDropdownHtml += '<option value="' + faculty.id + '">' +
                             faculty.full_name + '</option>';
                     });
@@ -808,41 +808,50 @@ $(document).ready(function() {
                     if (response.stdent_list.length > 0 && response.stdent_list[0].Assign_Techer_id !== null) {
                         $('#changefb').show();
                         $('#assignfb').hide();
+                        // Show the date option when the assign button is clicked
+                        $('#selectedDateContainer').hide();
                     } else {
                         $('#changefb').hide();
                         $('#assignfb').show();
+                        // Hide the date option when the change button is clicked
+                        $('#selectedDateContainer').show();
                     }
-                    $(document).on('click', '.changef', function() {
+                    $(document).on('click', '.changef', function () {
                         var selectedFacultyId = $('#facultySelectionDropdown select').val();
-                        postFacultyData(selectedFacultyId, group);
+                        // Pass the date only when the assign button is not visible
+                        var selectedDate = $('#assignfb').is(':visible') ? $('#selectedDate').val() : null;
+                        postFacultyData(selectedFacultyId, group, selectedDate);
                     });
                 },
-                error: function(error) {
+                error: function (error) {
                     console.error(error);
                 }
             });
         }
 
         function postFacultyData(facultyId, groupName) {
-            $.ajax({
-                url: '<?= site_url('AssignFacultyToGroup') ?>',
-                type: 'POST',
-                data: {
-                    faculty_id: facultyId,
-                    group_name: groupName
-                },
-                success: function(response) {
-                    console.log('Data posted successfully');
-                    alert('Faculty assigned successfully!');
-                    setTimeout(function() {
+    var selectedDate = $('#selectedDate').val(); // Get the selected date
+
+    $.ajax({
+        url: '<?= site_url('AssignFacultyToGroup') ?>',
+        type: 'POST',
+        data: {
+            faculty_id: facultyId,
+            group_name: groupName,
+            selected_date: selectedDate // Add the selected date to the data
+        },
+        success: function(response) {
+            console.log('Data posted successfully');
+            alert('Faculty assigned successfully!');
+            setTimeout(function() {
                 location.reload();
             }, 1000);
-                },
-                error: function(error) {
-                    console.error('Error posting data:', error);
-                }
-            });
+        },
+        error: function(error) {
+            console.error('Error posting data:', error);
         }
+    });
+}
     });
 </script>
 </body>
