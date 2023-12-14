@@ -23,11 +23,13 @@ $.widget.bridge('uibutton', $.ui.button)
 <script src="<?=base_url()?>plugins/summernote/summernote-bs4.min.js"></script>
 <script src="<?=base_url()?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="dist/js/pages/dashboard.js"></script>
-<script src="<?php echo base_url()?>public/js/custom.js"></script>
+<script src="<?php echo base_url() ?>public/js/custom.js"></script>
 <script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
 
-<script src="<?=base_url()?>public/js/jquery.barrating.min.js"></script>
-<script src="<?=base_url(); ?>/public/js/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>public/js/jquery.barrating.min.js"></script>
+<script src="<?= base_url(); ?>/public/js/jquery.validate.min.js"></script>
+
+<!-- <script src="<?= base_url(); ?>dist/js/adminlte.min.js"></script> -->
 
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
@@ -459,6 +461,7 @@ document.getElementById("showVideoContainer").addEventListener("click", function
     document.getElementById("FacultyVideoContainer").style.display = "none"; // Hide FacultyVideoContainer
 });
 
+
 document.getElementById("showFacultyVideoContainer").addEventListener("click", function() {
     document.getElementById("videoContainer").style.display = "none"; // Hide videoContainer
     document.getElementById("FacultyVideoContainer").style.display = "block";
@@ -482,6 +485,7 @@ document.addEventListener("DOMContentLoaded", function() {
             studentFormElements.style.display = "block";
         }
 
+
         if (userType === "faculty" || userType === "both") {
             facultyFormElements.style.display = "block";
         }
@@ -495,6 +499,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var studentCheckboxes = document.querySelectorAll('input[name="selected_students[]"]');
         studentCheckboxes.forEach(function(checkbox) {
             checkbox.checked = selectAllStudentsCheckbox.checked;
+
         });
     });
 
@@ -642,6 +647,7 @@ $(document).ready(function() {
                 required: "Password is required.",
                 customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long"
             },
+
             // confirm_pass: {
             //     required: 'Please confirm your password.',
             //     equalTo: 'Passwords do not match.'
@@ -827,7 +833,76 @@ $(document).ready(function() {
                     console.error(error);
                 }
             });
+
+        });
+    });
+</script>
+
+<!-- <script>
+    // Your JavaScript code for handling AJAX request
+    $(document).ready(function() {
+        $.ajax({
+            url: '/AdminController/searchFacultyVideos',
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                // Update the view with the fetched data
+                $('#result-container').html(response.content);
+                alert(response.message); // Display a success message if needed
+            },
+            error: function() {
+                alert('Error fetching data');
+            }
+        });
+    });
+</script> -->
+
+
+<script>
+    $(document).ready(function() {
+        $('#searchForm').submit(function(e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(data) {
+                    updateFacultyVideos(data);
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX request failed:', status, error);
+                }
+            });
+        });
+
+        function updateFacultyVideos(data) {
+            var container = $('#facultyVideosContainer');
+            container.empty();
+
+            $.each(data, function(index, faculty) {
+                var videoHTML = `
+            <div class="col-sm-3 mt-3">
+                <video width="100%" height="200px" controls poster="<?= base_url('public/images/play.jpg') ?>">
+                <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/') ?>${faculty.video_name}" type="video/mp4">
+                </video>
+                <div class="ribbon-wrapper ribbon-lg">
+                    <div class="ribbon" style="background-color: #${Math.floor(Math.random()*16777215).toString(16)}; text-lg">
+                        <p class="card-text" style="color: #fff; background-color: #${Math.floor(Math.random()*16777215).toString(16)}">${faculty.student_name}</p>
+                    </div>
+                </div>
+                <div class="p">
+                    <p class="card-text" style="padding: 6%; color: #fff; background-color: #${Math.floor(Math.random()*16777215).toString(16)}">Date &nbsp;: &nbsp; ${faculty.DateTime}</p>
+                </div>
+            </div>
+        `;
+
+                container.append(videoHTML);
+            });
         }
+    });
+</script>
 
         function postFacultyData(facultyId, groupName) {
     var selectedDate = $('#selectedDate').val(); // Get the selected date

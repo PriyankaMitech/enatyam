@@ -36,7 +36,7 @@
 <?php
 $txnid = time();
 $surl = $surl;
-$furl = $furl;        
+$furl = $furl;
 $key_id = RAZOR_KEY_ID;
 $currency_code = $currency_code;            
 $per_session_price = $matchingRecords->Per_Session_Price; 
@@ -48,6 +48,7 @@ $card_holder_name = 'TechArise Team';
 $email = 'info@techarise.com';
 $phone = '9000000001';
 $name = APPLICATION_NAME;
+
 $return_url = site_url().'PaymentController/payment';
 ?>
 <form name="razorpay-form" id="razorpay-form" action="<?php echo $return_url; ?>" method="POST">
@@ -64,6 +65,7 @@ $return_url = site_url().'PaymentController/payment';
   <input type="hidden" name="no_of_session" id="no_of_session" value="<?php echo $matchingRecords->No_of_Sessions; ?>"/>
   <input type="hidden" name="description" id="description" value="<?php echo $matchingRecords->Description; ?>"/>
   <input type="hidden" name="duration" id="duration" value="<?php echo $matchingRecords->Duration; ?>"/>
+
 </form>
 
 <div class="container cont-width">
@@ -90,7 +92,7 @@ $return_url = site_url().'PaymentController/payment';
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="col-lg-12 mt-3">
                         <nav class="navbar bg-body-tertiary">
@@ -179,23 +181,23 @@ $return_url = site_url().'PaymentController/payment';
                     <tr class="cart_item">
                         <?php if (!empty($matchingRecords)) : ?>
                             <td class="product-name">
-                            <span id="pname"><?php echo $matchingRecords->Name; ?></span>
+                                <span id="pname"><?php echo $matchingRecords->Name; ?></span>
 
                             </td>
                             <td class="product-No_of_Sessions">
-                            <span id="sessno"><?php echo $matchingRecords->No_of_Sessions  ?></span>
+                                <span id="sessno"><?php echo $matchingRecords->No_of_Sessions  ?></span>
                             </td>
 
                             <td class="product-Duration">
-                            <span id="duration"><?php echo $matchingRecords->Duration  ?></span>
+                                <span id="duration"><?php echo $matchingRecords->Duration  ?></span>
                             </td>
 
                             <td class="product-PerSession-Price">
-                            <span id="price">₹</span><?php echo $matchingRecords->Per_Session_Price  ?></span>
+                                <span id="price">₹</span><?php echo $matchingRecords->Per_Session_Price  ?></span>
                             </td>
 
                             <td class="product-total">
-                            <span id="total">₹</span><?php echo $matchingRecords->Total_Price   ?></span>
+                                <span id="total">₹</span><?php echo $matchingRecords->Total_Price   ?></span>
                             </td>
                     </tr>
                 </tbody>
@@ -205,7 +207,7 @@ $return_url = site_url().'PaymentController/payment';
                         <td colspan="5" style="padding:1rem;"> </td>
                     </tr>
                     <tr class="order-total">
-                        <td colspan="4" style=""> <span class="woocommerce-Price-amount amount"><b>Total</b> </td>
+                        <td colspan="4"> <span class="woocommerce-Price-amount amount"><b>Total</b> </td>
                         <td><b>₹<?php echo $matchingRecords->Total_Price ?></b></td>
                     </tr>
 
@@ -223,13 +225,13 @@ $return_url = site_url().'PaymentController/payment';
 
 <div class="container cont-width mt-4">
     <div class="row">
-        <div class="col-lg-12 mt-3">
+        <div class="col-lg-12 mt-3 mb-5">
             <nav class="navbar bg-body-tertiary1 p-3">
                 <div class="container justify-content-start">
-
-                    <a class="navbar-brand" href="#">
+                    <span>
                         <h6>Credit Card/Debit Card/NetBanking </h6>
-                    </a>
+                    </span>
+
                     <span>
                         <div class="payment-logo">
                             <img src="public\images\payment.svg ">
@@ -255,13 +257,22 @@ $return_url = site_url().'PaymentController/payment';
 
         <div class="place-btn d-block w-100 ">
             <input type="hidden" id="uemail" value="<?php echo $billingdetails['email']  ?>">
-            <input type="hidden" id="name" value="<?php echo $billingdetails['Fname'].' '.$billingdetails['Lname']  ?>">
+            <input type="hidden" id="name" value="<?php echo $billingdetails['Fname'] . ' ' . $billingdetails['Lname']  ?>">
             <input type="hidden" id="phone" value="<?php echo $billingdetails['phone']  ?>">
             <button class="button-content" onclick="razorpaySubmit(this);" type="submit" role="button">PLACE ORDER</button>
         </div>
 
         </nav>
         </form>
+    </div>
+</div>
+
+<div class="row m-0">
+    <div class="col-md-6 col-12 text-end mb-2">
+        <a href="<?php echo base_url('demo'); ?>" class="btnnew btn-book text-center byfd">Book your Free demo now</a>
+    </div>
+    <div class="col-md-6 col-12 text-star">
+        <a href="<?php echo base_url('Contactus'); ?>" class="btnnew btn-request text-center nsracb">Not sure ?? Request a call back</a>
     </div>
 </div>
 
@@ -293,7 +304,7 @@ $return_url = site_url().'PaymentController/payment';
     //         }
     //     }
     // };
-    
+
     // var razorpay_pay_btn, instance;
     // function razorpaySubmit(el) {
     //     if(typeof Razorpay == 'undefined') {
@@ -324,24 +335,25 @@ $return_url = site_url().'PaymentController/payment';
         netbanking: true,
         currency: "<?php echo $currency_code; ?>",
         prefill: {
-        name:"<?php echo $card_holder_name; ?>",
-        email: "<?php echo $email; ?>",
-        contact: "<?php echo $phone; ?>"
+            name: "<?php echo $card_holder_name; ?>",
+            email: "<?php echo $email; ?>",
+            contact: "<?php echo $phone; ?>"
         },
         notes: {
-        soolegal_order_id: "<?php echo $merchant_order_id; ?>",
+            soolegal_order_id: "<?php echo $merchant_order_id; ?>",
         },
-        handler: function (transaction) {
+        handler: function(transaction) {
             document.getElementById('razorpay_payment_id').value = transaction.razorpay_payment_id;
             document.getElementById('razorpay-form').submit();
         },
         "modal": {
-            "ondismiss": function(){
+            "ondismiss": function() {
                 location.reload()
             }
         }
     };
     var razorpay_submit_btn, razorpay_instance;
+
 
     function razorpaySubmit(el){
         
@@ -353,14 +365,14 @@ $return_url = site_url().'PaymentController/payment';
             el.value = 'Please wait...';  
         }
         } else {
-        if(!razorpay_instance){
-            razorpay_instance = new Razorpay(razorpay_options);
-            if(razorpay_submit_btn){
-            razorpay_submit_btn.disabled = false;
-            razorpay_submit_btn.value = "Pay Now";
+            if (!razorpay_instance) {
+                razorpay_instance = new Razorpay(razorpay_options);
+                if (razorpay_submit_btn) {
+                    razorpay_submit_btn.disabled = false;
+                    razorpay_submit_btn.value = "Pay Now";
+                }
             }
+            razorpay_instance.open();
         }
-        razorpay_instance.open();
-        }
-    } 
+    }
 </script>

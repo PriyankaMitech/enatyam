@@ -142,6 +142,10 @@ $routes->get('payment_history', 'AdminController::payment_history');
 
 
 $routes->get('UploadedImages', 'AdminController::UploadedImages');
+$routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
+
+$routes->get('AdminController/searchFacultyVideos', 'AdminController::searchFacultyVideos');
+
 
 
 

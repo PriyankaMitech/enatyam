@@ -394,7 +394,7 @@ $page = $uri->getSegment(count($pages));
                     <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button> -->
-                    <a href="https://infobeckon.com/enatyam/" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
+                    <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
                         <img src="public/images/logo1.png" alt="Enatyam">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -422,7 +422,7 @@ $page = $uri->getSegment(count($pages));
             <div class="container-fluid d-block d-lg-none">
                 <div class="row mx-0">
                     <div class="col-6">
-                        <a href="https://enatyam.nahichaltahai.org/" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
+                        <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
                             <img src="public/images/logo1.png" alt="Enatyam">
                         </a>
                     </div>
