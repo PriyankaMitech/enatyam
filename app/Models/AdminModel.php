@@ -514,7 +514,7 @@ class AdminModel extends Model
         $result['insert'] = $this->db->table($table)->insert($insertdata);
         if ($result['insert']) {
             $insertedID = $this->db->insertID();
-            $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
+            $result['getdata'] = $this->db->table($table)->where($column, $insertedID)->get()->getRowArray();
 
             return $result;
         } else {

@@ -52,6 +52,7 @@ require_once 'src/SMTP.php';
     function sendConfirmationEmail($email, $otp=null, $msg=null)
     {
         try {
+          //  print_r($email);die;
             $mail = new PHPMailer(true);
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
