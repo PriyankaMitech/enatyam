@@ -164,19 +164,14 @@ class AdminModel extends Model
             ->where('students.role', 'Student')
             ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
             ->get();
-    
+
         return $query->getResult();
     }
-    
     public function getFaculty()
     {
-        return $this->db->table('register')
-                        ->where('role', 'Faculty')
-                        ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use
-                        ->get()
-                        ->getResult();
+        return $this->db->table('register')->where('role', 'Faculty')->get()->getResult();
     }
-    
+
     public function getAllSessionData()
     {
         return $this->findAll();
@@ -235,16 +230,11 @@ class AdminModel extends Model
     }
     public function getAllDemoData()
     {
-        $query = $this->db->table('free_demo_table')
-            ->select('free_demo_table.*, register.full_name')
-            ->join('register', 'register.id = free_demo_table.AssignTecher_id')
-            ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
-            ->get();
-    
-        return $query->getResult();
+        return $this->db->table('free_demo_table')
+            ->select('*')
+            ->get()
+            ->getResult();
     }
-    
-    
 
     public function getFacultyData()
     {
@@ -500,11 +490,6 @@ class AdminModel extends Model
 
     public function updateFacultyForGroup($groupName, $facultyId, $selectedDate)
     {
-        $updateData = ['Assign_Techer_id' => $facultyId];
-        if (!empty($selectedDate)) {
-            $updateData['Session_Start_Date'] = $selectedDate;
-        }
-    
         return $this->db->table('register')
             ->where('groupName', $groupName)
             ->set($updateData)
@@ -529,9 +514,8 @@ class AdminModel extends Model
         $result['insert'] = $this->db->table($table)->insert($insertdata);
         if ($result['insert']) {
             $insertedID = $this->db->insertID();
+            $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
 
-            $result['getdata'] = $this->db->table($table)->where($column, $insertedID)->get()->getRowArray();
-            
             return $result;
         } else {
             return false;
