@@ -833,29 +833,34 @@ $(document).ready(function() {
                     console.error(error);
                 }
             });
+        }
 
-        });
+        function postFacultyData(facultyId, groupName) {
+    var selectedDate = $('#selectedDate').val(); // Get the selected date
+
+    $.ajax({
+        url: '<?= site_url('AssignFacultyToGroup') ?>',
+        type: 'POST',
+        data: {
+            faculty_id: facultyId,
+            group_name: groupName,
+            selected_date: selectedDate // Add the selected date to the data
+        },
+        success: function(response) {
+            console.log('Data posted successfully');
+            alert('Faculty assigned successfully!');
+            setTimeout(function() {
+                location.reload();
+            }, 1000);
+        },
+        error: function(error) {
+            console.error('Error posting data:', error);
+        }
+    });
+}
     });
 </script>
 
-<!-- <script>
-    // Your JavaScript code for handling AJAX request
-    $(document).ready(function() {
-        $.ajax({
-            url: '/AdminController/searchFacultyVideos',
-            type: 'GET',
-            dataType: 'json',
-            success: function(response) {
-                // Update the view with the fetched data
-                $('#result-container').html(response.content);
-                alert(response.message); // Display a success message if needed
-            },
-            error: function() {
-                alert('Error fetching data');
-            }
-        });
-    });
-</script> -->
 
 
 <script>
