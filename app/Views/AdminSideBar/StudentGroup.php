@@ -1,39 +1,47 @@
 <?php echo view('AdminSideBar.php'); ?>
+<!-- <style>
+.group-button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.group-records {
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.faculty-dropdown {
+    width: 100%;
+}
+</style> -->
 <style>
-    .group-button {
-        margin-right: 10px;
-        cursor: pointer;
-    }
+.group-records {
+    display: none;
+}
 
-    .group-records {
-        border: 1px solid #ddd;
-        padding: 10px;
-        display: none;
-        margin-top: 10px;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-    }
-
-    th,
-    td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-
-    .faculty-dropdown {
-        width: 100%;
-    }
+#selectedDateContainer {
+    display: none;
+}
 </style>
-
 
 <div class="content-wrapper" style="min-height: 1172.73px;">
     <!-- Content Header (Page header) -->
@@ -55,97 +63,71 @@
 
     <!-- Main content -->
     <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="sticky-top mb-3">
-                        <div class="card card-primary card-outline card-outline-tabs">
+    <div class="container-fluid">
 
-                            <div class="card-body">
-                                <div class="tab-content" id="custom-tabs-four-tabContent">
-                                    <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="course">Select Course:</label>
+                <select id="course" class="form-control">
+                    <option value="">Select Courses</option>
+                    <?php foreach ($cource as $course): ?>
+                        <option value="<?= $course['course'] ?>"><?= $course['course'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
 
-                                        <div class="group-buttons-container">
-                                            <?php if (!empty($groups)) : ?>
+            <div class="col-md-4">
+                <label for="subcourse">Select Subcourse:</label>
+                <select id="subcourse" class="form-control">
+                    <option value="">Select Subcourses</option>
+                    <?php foreach ($sub_course as $subcourse): ?>
+                        <option value="<?= $subcourse['sub_course'] ?>"><?= $subcourse['sub_course'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
 
-                                                <?php foreach ($groups as $group) : ?>
-                                                    <button class="group-button btn-primary" data-group="<?= $group['groupName'] ?>">
-                                                        <?= $group['groupName'] ?>
-                                                    </button>
-                                                <?php endforeach; ?>
-                                        </div>
+            <div class="col-md-4">
+                <label for="group">Select Group:</label>
+                <select id="group" class="form-control">
+                    <option value="">Select Groups</option>
+                    <?php foreach ($groups as $group): ?>
+                        <option value="<?= $group['groupName'] ?>"><?= $group['groupName'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+           
+        </div>
 
-                                        <?php foreach ($groups as $group) : ?>
-                                            <div class="group-records" data-group-id="<?= $group['groupName'] ?>-records">
-                                                <form action="<?= base_url('AssignFacultyToGroup') ?>" method="post">
-                                                    <input type="hidden" name="group" value="<?= $group['groupName'] ?>">
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Email</th>
-                                                                <th>Course</th>
-                                                                <th>Sub-course</th>
-
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <?php foreach ($records[$group['groupName']] as $record) : ?>
-                                                                <tr>
-                                                                    <td><?= $record->full_name; ?></td>
-                                                                    <td><?= $record->email; ?></td>
-                                                                    <td><?= $record->course; ?></td>
-                                                                    <td><?= $record->sub_course; ?></td>
-                                                                    <!-- Remove the dropdown from here -->
-
-                                                                </tr>
-                                                            <?php endforeach; ?>
-                                                        </tbody>
-                                                    </table>
-
-                                                    <div class="text-left" style="margin-top: 10px;">
-                                                        <!-- Label and dropdown in the same row -->
-                                                        <label for="facultyDropdown" style="margin-right: 10px;">Select
-                                                            Faculty:</label>
-
-                                                        <!-- Dropdown menu for faculty with reduced size -->
-                                                        <select class="faculty-dropdown" name="faculty" id="facultyDropdown" style="width: 135px;">
-                                                            <?php foreach ($Faculty as $faculty) : ?>
-                                                                <?php if ($faculty->course == $record->course && $faculty->sub_course == $record->sub_course) : ?>
-                                                                    <option value="<?= $faculty->id; ?>">
-                                                                        <?= $faculty->full_name; ?>
-                                                                    </option>
-                                                                <?php endif; ?>
-                                                            <?php endforeach; ?>
-                                                        </select>
-
-                                                        <?php if ($record->Assign_Techer_id !== null) : ?>
-                                                            <!-- If Assign_Techer_id is not null, show this button -->
-                                                            <button type="submit" id="facultyButton" class="btn btn-primary">Change Faculty</button>
-                                                        <?php else : ?>
-                                                            <!-- If Assign_Techer_id is null, show this button -->
-                                                            <button type="submit" id="postSelectedRows" class="btn btn-primary">Assign Teacher</button>
-                                                        <?php endif; ?>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        <?php endforeach; ?>
-                                    <?php else : ?>
-                                        <div class="col-md-12">
-                                            <h5>No Groups created yet!</h5>
-                                        </div>
-                                    <?php endif; ?>
-
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row -->
-                </div><!-- /.container-fluid -->
-    </section>
-
+        <div class="row mt-3 group-records">
+            <div class="col-md-12">
+                <table id="recordsTable" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Email</th>
+                            <th>Contact Number</th>
+                            <th>Course</th>
+                            <th>Subcourse</th>
+                            <!-- Add more headers as needed -->
+                        </tr>
+                    </thead>
+                    <tbody id="recordsBody"></tbody>
+                </table>
+            </div>
+        </div>
+       
+        <div class="row mt-3">
+    <div class="col-md-4" style="margin-top: 15px;" id="selectedDateContainer" require>
+        <label for="selectedDate">Select Date:</label>
+        <input type="date" id="selectedDate" class="form-control">
+    </div>
+    <div class="col-md-4" id="facultySelectionDropdown"></div>
+    <div class="col-md-4" style="margin-top: 51px;">
+        <button type="submit" id="changefb" class="btn btn-warning changef" style="display:none">Change Faculty</button>
+        <button type="submit" id="assignfb" class="btn btn-success changef" style="display:none">Assign Faculty</button>
+    </div>
+</div>
+    </div>
+</section>
 </div>
 <?php echo view('AdminSideBar/AdminFooter.php'); ?>

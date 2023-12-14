@@ -156,13 +156,13 @@ class AdminModel extends Model
     {
         return $this->findAll();
     }
-    public function getAdmins()
+    public function get_students()
     {
-        // return $this->db->table('register')->where('role', 'Student')->get()->getResult();
         $query = $this->db->table('register AS students')
             ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name')
             ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
             ->where('students.role', 'Student')
+            ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
             ->get();
 
         return $query->getResult();
@@ -171,6 +171,7 @@ class AdminModel extends Model
     {
         return $this->db->table('register')->where('role', 'Faculty')->get()->getResult();
     }
+
     public function getAllSessionData()
     {
         return $this->findAll();
@@ -227,7 +228,6 @@ class AdminModel extends Model
     {
         return $this->db->table('register')->where('Payment_status', 'Y')->get()->getResult();
     }
-
     public function getAllDemoData()
     {
         return $this->db->table('free_demo_table')
@@ -373,9 +373,7 @@ class AdminModel extends Model
         }
 
         $videoDetails = $query->get()->getResult();
-        // echo '<pre>';
-        // print_r($videoDetails);
-        // die;
+
 
         // Uncomment the following lines for debugging purposes
         // echo $this->db->getLastQuery();
@@ -490,11 +488,11 @@ class AdminModel extends Model
             ->getResult();
     }
 
-    public function updateFacultyForGroup($groupName, $facultyId)
+    public function updateFacultyForGroup($groupName, $facultyId, $selectedDate)
     {
         return $this->db->table('register')
             ->where('groupName', $groupName)
-            ->set(['Assign_Techer_id' => $facultyId])
+            ->set($updateData)
             ->update();
     }
     public function getAdminUsers()
@@ -511,7 +509,7 @@ class AdminModel extends Model
     }
 
 
-    public function insert_formdata($id, $table, $insertdata)
+    public function insert_formdata($column, $table, $insertdata)
     {
         $result['insert'] = $this->db->table($table)->insert($insertdata);
         if ($result['insert']) {

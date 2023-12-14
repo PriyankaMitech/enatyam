@@ -52,7 +52,6 @@ $name               = "RazorPay Infovistar";
                                                 <h3>Basic</h3>
                                                 <span class="line"></span>
                                             </div>
-
                                             <div class="price-card-body">
                                                 <h2>8 Sessions
                                                 </h2>
@@ -141,13 +140,12 @@ $name               = "RazorPay Infovistar";
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
                                                         <input class="btn shop-now-btn" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
                                                     <?php else : ?>
-                                                        <input class="btn shop-now-btn" onclick="razorpaySubmit(this);" type="submit" value="Book Now">
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
 
                                                     <?php endif; ?>
                                                 </div>
 
                                             </div>
-
                                         </div>
 
                                     </div>
@@ -693,6 +691,4 @@ $name               = "RazorPay Infovistar";
 
         </div>
     </div>
-
-
 </section>
