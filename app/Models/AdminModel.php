@@ -275,6 +275,7 @@ class AdminModel extends Model
             ->join('register', 'register.id = uplode_video_to_student.register_faculty_id')
             ->get()
             ->getResult();
+
         return  $VideoDetails;
     }
 
@@ -350,37 +351,32 @@ class AdminModel extends Model
 
     public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = null)
     {
+        print_r($studentName);
+
+        $startDate = new \DateTime($startDate);
+        $startDateFormatted = $startDate->format('Y-m-d');
+
+        $endDate = new \DateTime($endDate);
+        $endDateFormatted = $endDate->format('Y-m-d');
+
         $query = $this->db->table('uplode_video_to_student')
             ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
             ->join('student', 'student.student_id = uplode_video_to_student.student_id')
-            ->join('register', 'register.id = uplode_video_to_student.register_faculty_id');
-
-        // Apply filters if provided
-        if ($startDate !== null) {
-            $startDate = new \DateTime($startDate);
-            $startDateFormatted = $startDate->format('Y-m-d');
-            $query->where("DATE(uplode_video_to_student.DateTime) >=", $startDateFormatted);
-        }
-
-        if ($endDate !== null) {
-            $endDate = new \DateTime($endDate);
-            $endDateFormatted = $endDate->format('Y-m-d');
-            $query->where("DATE(uplode_video_to_student.DateTime) <=", $endDateFormatted);
-        }
-
-        if ($studentName !== null) {
-            $query->like('student.student_name', $studentName);
-        }
+            ->join('register', 'register.id = uplode_video_to_student.register_faculty_id')
+            ->where('uplode_video_to_student.student_id', $studentName);
+        // ->orWhere("DATE(uplode_video_to_student.DateTime) >=", $startDateFormatted)
+        // ->orWhere("DATE(uplode_video_to_student.DateTime) <=", $endDateFormatted);
 
         $videoDetails = $query->get()->getResult();
-
-
-        // Uncomment the following lines for debugging purposes
-        // echo $this->db->getLastQuery();
+        // print_r($this->db->getLastQuery());
         // die;
+        echo '<pre>';
+        print_r($videoDetails);
+        die;
 
         return $videoDetails;
     }
+
 
     public function getcarreerBookByfaculty()
     {
@@ -765,34 +761,36 @@ class AdminModel extends Model
         return $result;
     }
 
-    public function  studentsgroup($group){
+    public function  studentsgroup($group)
+    {
 
-      $grouplist =$this->db->table('register')
-      ->Where('groupName', $group)
-         ->get()
-         ->getResult();
-    //  echo $this->db->getLastQuery();die;
-     return $grouplist;   
-        }
-public function getcorce()
-{
-    return $this->db->table('register')->distinct()
-    ->select('course')
-    ->where('course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
-    ->get()
-    ->getResultArray();
-}
-public function getsubcorce()
-{
-    return $this->db->table('register')->distinct()
-    ->select('sub_course')
-    ->where('sub_course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
-    ->get()
-    ->getResultArray();
-}
+        $grouplist = $this->db->table('register')
+            ->Where('groupName', $group)
+            ->get()
+            ->getResult();
+        //  echo $this->db->getLastQuery();die;
+        return $grouplist;
+    }
+    public function getcorce()
+    {
+        return $this->db->table('register')->distinct()
+            ->select('course')
+            ->where('course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
+            ->get()
+            ->getResultArray();
+    }
+    public function getsubcorce()
+    {
+        return $this->db->table('register')->distinct()
+            ->select('sub_course')
+            ->where('sub_course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
+            ->get()
+            ->getResultArray();
+    }
 
 
-    public function insert_payment($insertdata){
+    public function insert_payment($insertdata)
+    {
 
         $sql = "insert into payment_details (";
         $sql1 = " values ( ";
@@ -800,35 +798,33 @@ public function getsubcorce()
         if (isset($insertdata->error)) {
             foreach ($insertdata->error as $key => $value) {
                 if (is_object($value)) {
-                    $d=json_encode($value);
-                    $sql1.='"' . htmlspecialchars($d) . '", ';
-                    $sql.= htmlspecialchars($key) . ', ';
-                }else {
-                    $sql.= htmlspecialchars($key) . ', ';
-                    $sql1.='"' . htmlspecialchars($value) . '", ';
+                    $d = json_encode($value);
+                    $sql1 .= '"' . htmlspecialchars($d) . '", ';
+                    $sql .= htmlspecialchars($key) . ', ';
+                } else {
+                    $sql .= htmlspecialchars($key) . ', ';
+                    $sql1 .= '"' . htmlspecialchars($value) . '", ';
                 }
-                
             }
-        }else {
+        } else {
             foreach ($insertdata as $key => $value) {
-                if(!is_object($value)){
-                    $sql1.='"' . htmlspecialchars($value) . '", ';
-                    $sql.= htmlspecialchars($key) . ', ';
+                if (!is_object($value)) {
+                    $sql1 .= '"' . htmlspecialchars($value) . '", ';
+                    $sql .= htmlspecialchars($key) . ', ';
                 }
-                if(is_object($value)){
+                if (is_object($value)) {
                     foreach ($value as $ke => $val) {
-                        $sql.= htmlspecialchars($ke) . ', ';
-                        $sql1.='"' . htmlspecialchars($val) . '", ';
+                        $sql .= htmlspecialchars($ke) . ', ';
+                        $sql1 .= '"' . htmlspecialchars($val) . '", ';
                     }
                 }
-                
             }
         }
 
         $res = substr($sql, 0, strlen($sql) - 2) . ")";
-        $res1 = substr($sql1, 0, strlen($sql1) - 2) .")";
+        $res1 = substr($sql1, 0, strlen($sql1) - 2) . ")";
         $result = $this->db->query($res . $res1);
-        
+
         $this->table('register')
             ->where(["id" => $_SESSION['sessiondata']['id']])
             ->set('Payment_status', 'Y')
@@ -836,11 +832,11 @@ public function getsubcorce()
 
         if ($result) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
-    
+
     public function getGroupsForCourse($course, $subcourse)
     {
         $grouplist = $this->db->table('register')
@@ -850,9 +846,9 @@ public function getsubcorce()
             ->where('groupName IS NOT NULL') // Add this condition
             ->get()
             ->getResult();
-    
-    //   echo $this->db->getLastQuery();die;
-    
-        return $grouplist;   
+
+        //   echo $this->db->getLastQuery();die;
+
+        return $grouplist;
     }
 }

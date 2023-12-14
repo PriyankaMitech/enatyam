@@ -128,7 +128,7 @@ class AdminController extends BaseController
 
             if ($email !== null && $password !== null) {
                 $model = new AdminModel();
-
+                $data['studentList'] = $model->getStudentData();
                 // Retrieve data without filtering (assuming your method accepts parameters)
                 $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
                 $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
@@ -141,6 +141,9 @@ class AdminController extends BaseController
                     $data['FacultyVideoData'] = array_merge($data['FacultyVideoData'], $filteredFacultyVideoData);
                 }
 
+                // echo "<pre>";
+                // print_r($data['FacultyVideoData']);
+                // exit();
                 return view('AdminSideBar/StudentVideo', $data);
             } else {
                 return redirect()->to(base_url());
@@ -185,8 +188,7 @@ class AdminController extends BaseController
         $startDate = $this->request->getPost('startDate');
         $endDate = $this->request->getPost('endDate');
         $studentName = $this->request->getPost('studentName');
-        // print_r($facultyName);
-        // die;
+
 
         $model = new AdminModel();
 
@@ -544,7 +546,7 @@ class AdminController extends BaseController
         $selectedDate = $this->request->getPost('selected_date');
         $groupName = $this->request->getPost('group_name');
         $facultyId = $this->request->getPost('faculty_id');
-      //  print_r($groupName);die;
+        //  print_r($groupName);die;
         $model = new AdminModel();
         $model->updateFacultyForGroup($groupName, $facultyId, $selectedDate);
         return redirect()->to('StudentGroups');
@@ -907,17 +909,17 @@ class AdminController extends BaseController
         $uri = service('uri');
 
         // Get the second segment of the URI
-        $profile_id = $uri->getSegment(2);      
+        $profile_id = $uri->getSegment(2);
 
 
         $wherecond = array('D_id' => $profile_id);
 
         $data['profile_data'] = $model->getsinglerow('carrier', $wherecond);
-    
+
         // echo "<pre>";
         // print_r($data['profile_data']);
         // exit();
-    
+
         return view('AdminSideBar/viewProfile', $data);
     }
 
@@ -928,21 +930,21 @@ class AdminController extends BaseController
         $uri = service('uri');
 
         // Get the second segment of the URI
-        $profile_id = $uri->getSegment(2);      
+        $profile_id = $uri->getSegment(2);
 
 
         $wherecond = array('D_id' => $profile_id);
 
         $data['profile_data'] = $model->getsinglerow('carrier', $wherecond);
-    
+
         // echo "<pre>";
         // print_r($data['profile_data']);
         // exit();
-    
+
         return view('AdminSideBar/viewprofilefaculty', $data);
     }
 
-    
+
     public function viewProfiles()
     {
         $model = new AdminModel();
@@ -957,15 +959,15 @@ class AdminController extends BaseController
                 $uri = service('uri');
 
                 // Get the second segment of the URI
-                $profile_id = $uri->getSegment(2);      
-        
-        
+                $profile_id = $uri->getSegment(2);
+
+
                 $wherecond = array('student_id ' => $profile_id);
-        
+
                 $data['profile_data'] = $model->getsinglerow('student', $wherecond);
 
 
-                return view('AdminSideBar/viewProfiles', $data);            
+                return view('AdminSideBar/viewProfiles', $data);
             } else {
                 return redirect()->to(base_url());
             }
@@ -974,36 +976,41 @@ class AdminController extends BaseController
         }
     }
 
-    public function demo_classes(){
+    public function demo_classes()
+    {
         $model = new AdminModel();
         $data['demo_list'] = $model->getAllDemoData();
         echo view('demo_list', $data);
     }
 
-    public function student(){
+    public function student()
+    {
         $model = new AdminModel();
         $data['student_list'] = $model->get_students();
         echo view('student_list', $data);
     }
-    
-    public function faculty(){
+
+    public function faculty()
+    {
         $model = new AdminModel();
         $data['faculty_list'] = $model->getFaculty();
         echo view('faculty_list', $data);
     }
 
-    public function payment_history(){
+    public function payment_history()
+    {
         $model = new AdminModel();
         $data['student_list'] = $model->get_students();
         echo view('payment_list', $data);
     }
-    public function  fetch_records()  {
+    public function  fetch_records()
+    {
         // print_r($_POST);die;
-    $group = $this->request->getPost('group');
-    $model = new AdminModel();
-    $data['stdent_list'] = $model->studentsgroup($group);
-    $data['facultyData'] = $model->getFaculty();
-    return $this->response->setJSON($data);
+        $group = $this->request->getPost('group');
+        $model = new AdminModel();
+        $data['stdent_list'] = $model->studentsgroup($group);
+        $data['facultyData'] = $model->getFaculty();
+        return $this->response->setJSON($data);
     }
     public function fetch_groups_for_course()
     {

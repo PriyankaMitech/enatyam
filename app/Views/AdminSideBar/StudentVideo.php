@@ -117,10 +117,19 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label for="facultyName">Student Name:</label>
-                                                            <input type="text" class="form-control" id="studentName" name="studentName">
+
+
+                                                            <label for="dropdown">Select from Dropdown:</label>
+                                                            <select id="dropdown" name="studentName" class="form-control custom-select">
+                                                                <?php foreach ($studentList as $item) : ?>
+                                                                    <option value="<?php echo  $item->student_id; ?>"><?php echo $item->student_name; ?></option>
+                                                                <?php endforeach; ?>
+
+                                                            </select>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group text-right">
                                                             <button type="submit" class="btn btn-primary">Search</button>
@@ -137,7 +146,10 @@
 
                                                 <div class="row mt-4">
                                                     <?php
-                                                    if (!empty($FacultyVideoData)) { ?>
+
+                                                    if (!empty($FacultyVideoData)) {
+
+                                                    ?>
                                                         <?php foreach ($FacultyVideoData as $data) {
                                                             // List of allowed video file extensions
                                                             $allowedVideoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'wmv'];
@@ -175,7 +187,12 @@
                                                                         $time = $time->format('H:i');
                                                                         ?>
                                                                         <div class="p">
-                                                                            <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?> </p>
+                                                                            <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?>
+                                                                                <br>
+                                                                                Faculty Name &nbsp; : &nbsp; <?= $data->faculty_name; ?>
+                                                                            </p>
+
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
