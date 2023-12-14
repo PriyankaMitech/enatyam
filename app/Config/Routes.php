@@ -127,6 +127,8 @@ $routes->get('viewProfile', 'AdminController::viewProfile');
 $routes->get('UploadedImages', 'AdminController::UploadedImages');
 $routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
+$routes->get('AdminController/searchFacultyVideos', 'AdminController::searchFacultyVideos');
+
 
 
 

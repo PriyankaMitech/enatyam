@@ -348,7 +348,7 @@ class AdminModel extends Model
     //     return $videoDetails;
     // }
 
-    public function getFacultyBySearch($startDate = null, $endDate = null, $facultyName = null)
+    public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = null)
     {
         $query = $this->db->table('uplode_video_to_student')
             ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
@@ -368,14 +368,14 @@ class AdminModel extends Model
             $query->where("DATE(uplode_video_to_student.DateTime) <=", $endDateFormatted);
         }
 
-        if ($facultyName !== null) {
-            $query->like('register.full_name', $facultyName);
+        if ($studentName !== null) {
+            $query->like('student.student_name', $studentName);
         }
 
         $videoDetails = $query->get()->getResult();
-        // echo '<pre>';
-        // print_r($videoDetails);
-        // die;
+        echo '<pre>';
+        print_r($videoDetails);
+        die;
 
         // Uncomment the following lines for debugging purposes
         // echo $this->db->getLastQuery();

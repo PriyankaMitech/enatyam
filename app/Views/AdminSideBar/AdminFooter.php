@@ -1,7 +1,7 @@
 <footer class="main-footer">
-<strong>Copyright &copy; 2023-2024 <a href="https://mitech">MI-TECH</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2023-2024 <a href="https://mitech">MI-TECH</a>.</strong> All rights reserved.
     All rights reserved.
-    
+
 </footer>
 
 </div>
@@ -24,30 +24,30 @@
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="dist/js/adminlte.js"></script>
 <script src="dist/js/pages/dashboard.js"></script>
-<script src="<?php echo base_url()?>public/js/custom.js"></script>
+<script src="<?php echo base_url() ?>public/js/custom.js"></script>
 <script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
 
-<script src="<?=base_url()?>public/js/jquery.barrating.min.js"></script>
-<script src="<?=base_url(); ?>/public/js/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>public/js/jquery.barrating.min.js"></script>
+<script src="<?= base_url(); ?>/public/js/jquery.validate.min.js"></script>
 
-<!-- <script src="<?=base_url(); ?>dist/js/adminlte.min.js"></script> -->
+<!-- <script src="<?= base_url(); ?>dist/js/adminlte.min.js"></script> -->
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
 
 
 <!-- DataTables  & Plugins -->
-<script src="<?=base_url(); ?>plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="<?=base_url(); ?>plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="<?=base_url(); ?>plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="<?=base_url(); ?>plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="<?=base_url(); ?>plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="<?=base_url(); ?>plugins/jszip/jszip.min.js"></script>
-<script src="<?=base_url(); ?>plugins/pdfmake/pdfmake.min.js"></script>
-<script src="<?=base_url(); ?>plugins/pdfmake/vfs_fonts.js"></script>
-<script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="<?=base_url(); ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="<?= base_url(); ?>plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?= base_url(); ?>plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?= base_url(); ?>plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?= base_url(); ?>plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="<?= base_url(); ?>plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?= base_url(); ?>plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="<?= base_url(); ?>plugins/jszip/jszip.min.js"></script>
+<script src="<?= base_url(); ?>plugins/pdfmake/pdfmake.min.js"></script>
+<script src="<?= base_url(); ?>plugins/pdfmake/vfs_fonts.js"></script>
+<script src="<?= base_url(); ?>plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="<?= base_url(); ?>plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="<?= base_url(); ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script>
     $(document).ready(function() {
 
@@ -423,22 +423,21 @@
         document.getElementById("videoContainer").style.display = "none";
         document.getElementById("imageContainer").style.display = "none";
     });
-    </script>
-    
-      <script>
-        
-        document.getElementById("showVideoContainer").addEventListener("click", function() {
-            document.getElementById("videoContainer").style.display = "block";
-            document.getElementById("FacultyVideoContainer").style.display = "none"; // Hide FacultyVideoContainer
-        });
+</script>
 
-        document.getElementById("showFacultyVideoContainer").addEventListener("click", function() {
-            document.getElementById("videoContainer").style.display = "none"; // Hide videoContainer
-            document.getElementById("FacultyVideoContainer").style.display = "block";
-        });
-    </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
+<script>
+    document.getElementById("showVideoContainer").addEventListener("click", function() {
+        document.getElementById("videoContainer").style.display = "block";
+        document.getElementById("FacultyVideoContainer").style.display = "none"; // Hide FacultyVideoContainer
+    });
+
+    document.getElementById("showFacultyVideoContainer").addEventListener("click", function() {
+        document.getElementById("videoContainer").style.display = "none"; // Hide videoContainer
+        document.getElementById("FacultyVideoContainer").style.display = "block";
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
         var userTypeSelect = document.getElementById("inputUserType");
         var studentFormElements = document.getElementById("studentFormElements");
         var facultyFormElements = document.getElementById("facultyFormElements");
@@ -460,20 +459,20 @@
             }
         }
 
-        userTypeSelect.addEventListener("change", function () {
+        userTypeSelect.addEventListener("change", function() {
             toggleFormElementsVisibility();
         });
 
-        selectAllStudentsCheckbox.addEventListener("change", function () {
+        selectAllStudentsCheckbox.addEventListener("change", function() {
             var studentCheckboxes = document.querySelectorAll('input[name="selected_students[]"]');
-            studentCheckboxes.forEach(function (checkbox) {
+            studentCheckboxes.forEach(function(checkbox) {
                 checkbox.checked = selectAllStudentsCheckbox.checked;
             });
         });
 
-        selectAllFacultyCheckbox.addEventListener("change", function () {
+        selectAllFacultyCheckbox.addEventListener("change", function() {
             var facultyCheckboxes = document.querySelectorAll('input[name="selected_faculty[]"]');
-            facultyCheckboxes.forEach(function (checkbox) {
+            facultyCheckboxes.forEach(function(checkbox) {
                 checkbox.checked = selectAllFacultyCheckbox.checked;
             });
         });
@@ -484,30 +483,27 @@
 
 
 <script>
-$(document).ready(function() {
-    $('#add_menu_form ').validate({
-        rules: {
-            menu_name: {
-                required: true,
+    $(document).ready(function() {
+        $('#add_menu_form ').validate({
+            rules: {
+                menu_name: {
+                    required: true,
+                },
+                url_location: {
+                    required: true,
+
+                },
             },
-            url_location : {
-                required: true,
-                
-            },
-        },
-        messages: {
-            menu_name: {
-            required: 'Please enter menu name.',
-            },
-            url_location : {
-                required: 'Please enter URL location.',
-            }, 
-        }
+            messages: {
+                menu_name: {
+                    required: 'Please enter menu name.',
+                },
+                url_location: {
+                    required: 'Please enter URL location.',
+                },
+            }
+        });
     });
-});
-
-
-
 </script>
 
 <script>
@@ -621,8 +617,8 @@ $(document).ready(function() {
                 //     equalTo: 'Passwords do not match.'
                 // }
             },
-          
-          
+
+
         });
     });
 </script>
@@ -682,17 +678,75 @@ $(document).ready(function() {
             });
         });
     });
-</script>   
-      
-  
+</script>
+
+<!-- <script>
+    // Your JavaScript code for handling AJAX request
+    $(document).ready(function() {
+        $.ajax({
+            url: '/AdminController/searchFacultyVideos',
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                // Update the view with the fetched data
+                $('#result-container').html(response.content);
+                alert(response.message); // Display a success message if needed
+            },
+            error: function() {
+                alert('Error fetching data');
+            }
+        });
+    });
+</script> -->
+
+
+<script>
+    $(document).ready(function() {
+        $('#searchForm').submit(function(e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(data) {
+                    updateFacultyVideos(data);
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX request failed:', status, error);
+                }
+            });
+        });
+
+        function updateFacultyVideos(data) {
+            var container = $('#facultyVideosContainer');
+            container.empty();
+
+            $.each(data, function(index, faculty) {
+                var videoHTML = `
+            <div class="col-sm-3 mt-3">
+                <video width="100%" height="200px" controls poster="<?= base_url('public/images/play.jpg') ?>">
+                <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/') ?>${faculty.video_name}" type="video/mp4">
+                </video>
+                <div class="ribbon-wrapper ribbon-lg">
+                    <div class="ribbon" style="background-color: #${Math.floor(Math.random()*16777215).toString(16)}; text-lg">
+                        <p class="card-text" style="color: #fff; background-color: #${Math.floor(Math.random()*16777215).toString(16)}">${faculty.student_name}</p>
+                    </div>
+                </div>
+                <div class="p">
+                    <p class="card-text" style="padding: 6%; color: #fff; background-color: #${Math.floor(Math.random()*16777215).toString(16)}">Date &nbsp;: &nbsp; ${faculty.DateTime}</p>
+                </div>
+            </div>
+        `;
+
+                container.append(videoHTML);
+            });
+        }
+    });
+</script>
+
+
 </body>
 
 </html>
-
-
-
-
-
-
-
-

@@ -179,19 +179,25 @@ class AdminController extends BaseController
 
     public function searchFacultyVideos()
     {
-        // print_r($_POST);die;
+        // print_r($_POST);
+        // die;
         // Retrieve filter criteria from the URL
         $startDate = $this->request->getPost('startDate');
         $endDate = $this->request->getPost('endDate');
-        $facultyName = $this->request->getPost('facultyName');
+        $studentName = $this->request->getPost('studentName');
+        // print_r($facultyName);
+        // die;
 
         $model = new AdminModel();
 
         // Get filtered faculty video data
-        $filteredFacultyVideoData = $model->getFacultyBySearch($startDate, $endDate, $facultyName);
+        $filteredFacultyVideoData = $model->getFacultyBySearch($startDate, $endDate, $studentName);
 
         // Redirect to 'UplodedvideoByStudent' route with filtered data
-        return redirect()->to('UplodedvideoByStudent')->with('filteredFacultyVideoData', $filteredFacultyVideoData);
+        // return redirect()->to('UplodedvideoByStudent')->with('filteredFacultyVideoData', $filteredFacultyVideoData);
+
+        // Return data as JSON
+        return $this->response->setJSON($filteredFacultyVideoData);
     }
     public function getDemoDetails()
     {
