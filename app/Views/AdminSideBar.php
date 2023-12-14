@@ -274,7 +274,7 @@
 
 
                                     <!-- Student Menu -->
-                                    <li class="nav-item" <?php if (in_array('StudentDate', $access_levels) || in_array('Attendance', $access_levels)) {
+                                    <li class="nav-item" <?php if (in_array('studentProfile', $access_levels) || in_array('Attendance', $access_levels)) {
                                                                 echo "style='display:block'";
                                                             } else {
                                                                 echo "style='display:none'";
@@ -287,12 +287,12 @@
                                             </p>
                                         </a>
                                         <ul class="nav nav-treeview">
-                                            <li class="nav-item" <?php if (in_array('StudentDate', $access_levels)) {
+                                            <li class="nav-item" <?php if (in_array('studentProfile', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>StudentDate" class="nav-link">
+                                                <a href="<?php echo base_url() ?>studentProfile" class="nav-link">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Profile</p>
                                                 </a>
@@ -668,7 +668,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item" >
-                                <a href="<?php echo base_url() ?>StudentDate" class="nav-link">
+                                <a href="<?php echo base_url() ?>studentProfile" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Profile</p>
                                 </a>

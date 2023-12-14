@@ -98,7 +98,7 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
-    public function StudentDate()
+    public function studentProfile()
     {
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
@@ -882,15 +882,36 @@ class AdminController extends BaseController
         $profile_id = $uri->getSegment(2);      
 
 
-        $wherecond = array('id' => $profile_id);
+        $wherecond = array('D_id' => $profile_id);
 
-        $data['profile_data'] = $model->getsinglerow('register', $wherecond);
+        $data['profile_data'] = $model->getsinglerow('carrier', $wherecond);
     
         // echo "<pre>";
         // print_r($data['profile_data']);
         // exit();
     
         return view('AdminSideBar/viewProfile', $data);
+    }
+
+    public function viewProfiledfaculty()
+    {
+        $model = new AdminModel();
+
+        $uri = service('uri');
+
+        // Get the second segment of the URI
+        $profile_id = $uri->getSegment(2);      
+
+
+        $wherecond = array('D_id' => $profile_id);
+
+        $data['profile_data'] = $model->getsinglerow('carrier', $wherecond);
+    
+        // echo "<pre>";
+        // print_r($data['profile_data']);
+        // exit();
+    
+        return view('AdminSideBar/viewprofilefaculty', $data);
     }
 
     public function demo_classes(){
