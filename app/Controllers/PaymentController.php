@@ -89,6 +89,7 @@ class PaymentController extends BaseController
                 $error = 'Request to Razorpay Failed';
                 // 
             }
+            
             if ($success === true) {
                 if (!empty($this->session->get('ci_subscription_keys'))) {
                     $this->session->unset('ci_subscription_keys');

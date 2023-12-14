@@ -829,10 +829,9 @@ public function getsubcorce()
         $res1 = substr($sql1, 0, strlen($sql1) - 2) .")";
         $result = $this->db->query($res . $res1);
         
-        $this->table('register')
-            ->where(["id" => $_SESSION['sessiondata']['id']])
-            ->set('Payment_status', 'Y')
-            ->update();
+        $this->db->table('register')
+        ->where('id', $_SESSION['sessiondata']['id'])
+        ->update(['Payment_status' => 'Y']);
 
         if ($result) {
             return true;
