@@ -1,35 +1,34 @@
 <?php echo view('AdminSideBar'); ?>
     <?php 
-// echo "<pre>";print_r($profile_data);exit();
+// echo "<pre>";print_r($profile_data);
         if(!empty($profile_data)){ 
             
             $session = \Config\Services::session();
             $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
     
             // Get the 'id' from the session
-            $D_id = $profile_data->D_id;
+            $register_id = $profile_data->register_id;
 
-            $wherecon = array('carrier_id ' => $D_id);
+            $wherecon = array('id ' => $register_id);
 
             
             // Rest of your code
-            $register_data = $adminModel->getsinglerow('register',$wherecon);
-       
-            $r_id = '';
-            if(!empty($register_data)){
+            $profile_datars = $adminModel->getsinglerow('register',$wherecon);
 
-            $r_id = $register_data->id;
-            }
+
+            $student_id = '';
+          
+
+            $student_id = $profile_data->student_id ;
+          
        
 
-            $wherecon1 = array('register_faculty_id' => $r_id);
+            $wherecon1 = array('student_id' => $student_id);
 
 
             $video_data = $adminModel->getalldata('uplode_video_to_student',$wherecon1);
-// echo "<pre>";print_r($video_data);exit();
 
-
-            // if(!empty($profile_data)){
+            // echo "<pre>";print_r($video_data);exit();
                        
     ?>
 
@@ -56,19 +55,20 @@
                     <div class="card card-primary card-outline">
                         <div class="card-body box-profile">
                             <div class="text-center">
-                                <?php if(!empty($profile_data->profile_photo)){ ?>
-                                <img class="profile-user-img img-fluid img-circle" src="<?=base_url(); ?>public/uploads/profile_photo/<?=$profile_data->profile_photo;  ?>" alt="User profile picture">
+                                 <?php if(!empty($profile_data->profile_photo)){ ?>
+                                    <img class="profile-user-img img-fluid img-circle" src="<?=base_url(); ?>public/uploads/profile_photo/<?=$profile_data->profile_photo;  ?>" alt="User profile picture">
                                 <?php }else{ ?>
                                     <img class="profile-user-img img-fluid img-circle" src="<?=base_url(); ?>public/images/user.png" alt="User profile picture">
 
-                                <?php } ?>
-                            </div>
+                                <?php } ?>                            </div>
 
-                            <h3 class="profile-username text-center"><?=$profile_data->name;  ?></h3>
+                            <h3 class="profile-username text-center"><?=$profile_data->student_name;  ?></h3>
 
-                            <p class="text-muted text-center"><?=$profile_data->course;  ?> - <?=$profile_data->sub_course;  ?></p>
+                            <?php if(!empty($profile_datars)){ ?>
+                                <p class="text-muted text-center"><?=$profile_datars->course;  ?> - <?=$profile_datars->sub_course;  ?></p>
+                            <?php } ?>
+  
 
-                          
                         </div>
                     </div>
                     <div class="card card-primary">
@@ -77,32 +77,26 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <strong><i class="fas fa-book mr-1"></i> Education</strong>
-
-                            <p class="text-muted">
-                            <?=$profile_data->education;  ?>
-                            </p>
+                        <strong><i class="fa fa-envelope" aria-hidden="true"></i> Email Id</strong>
+                            <p class="text-muted"><?=$profile_datars->email;  ?></p>
 
                             <hr>
+
+                            <strong><i class="fa fa-phone" aria-hidden="true"></i></i> Mobile Number</strong>
+                            <p class="text-muted"><?=$profile_datars->mobile_no;  ?></p>
+
+                            <hr>    
+
+
+                   
 
                             <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+                            <p class="text-muted"><?=$profile_datars->country;  ?></p>
 
-                            <p class="text-muted"> <?=$profile_data->Country;  ?>, <?=$profile_data->State;  ?>, <?=$profile_data->District;  ?></p>
 
-                            <hr>
+                          
 
-                            <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
 
-                            <p class="text-muted">
-                                <span class="tag tag-danger"><?=$profile_data->course;  ?> - <?=$profile_data->sub_course;  ?></span>
-  
-                            </p>
-
-                            <hr>
-
-                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Experience</strong>
-
-                            <p class="text-muted"> <?=$profile_data->exprience;  ?> Yers</p>
 
 
           
@@ -122,6 +116,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#images" data-toggle="tab">Images</a></li>
                             </ul>
                         </div><!-- /.card-header -->
+                        <div class="card-body">
                         <div class="card-body">
                             <div class="tab-content">
                                 <div class="active tab-pane" id="videos">
@@ -163,7 +158,7 @@
                                                             ?>
                                                         </span>
 
-                                                    <h3 class="timeline-header"><a href="#"><?=$profile_data->name;  ?></a> shared a video</h3>
+                                                    <h3 class="timeline-header"><a href="#"><?=$profile_data->student_name;  ?></a> shared a video</h3>
 
                                             
                                                         
@@ -185,8 +180,7 @@
                                                     <i class="fas fa-clock bg-gray"></i>
                                                 </div>
                                                 </div>
-                                                <?php } ?>
-                                                  
+                                                <?php }?>
                                                 <?php } ?>
                                                 <?php }else{ ?>
                                                     Data is not available.
@@ -235,7 +229,7 @@
                                                             ?>
                                                         </span>
 
-                                                        <h3 class="timeline-header"><a href="#"><?=$profile_data->name;  ?></a> shared a Image</h3>
+                                                        <h3 class="timeline-header"><a href="#"><?=$profile_data->student_name;  ?></a> shared a Image</h3>
 
                                                      
                                                        
@@ -274,6 +268,7 @@
                                 <!-- /.tab-pane -->
                             </div>
                             <!-- /.tab-content -->
+                        </div><!-- /.card-body -->
                         </div><!-- /.card-body -->
                     </div>
                     <!-- /.card -->
