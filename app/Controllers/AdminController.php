@@ -498,6 +498,8 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
         $data['groups'] = $model->getAllGroupNames();
+        $data['cource'] = $model->getcorce();
+        $data['sub_course'] = $model->getsubcorce();
         $data['Faculty'] = $model->getFaculty();
         $data['records'] = [];
         foreach ($data['groups'] as $group) {
@@ -916,10 +918,18 @@ class AdminController extends BaseController
     }
     public function  fetch_records()  {
         // print_r($_POST);die;
-        $group = $this->request->getPost('group');
-        $model = new AdminModel();
+    $group = $this->request->getPost('group');
+    $model = new AdminModel();
     $data['stdent_list'] = $model->studentsgroup($group);
     $data['facultyData'] = $model->getFaculty();
     return $this->response->setJSON($data);
+    }
+    public function fetch_groups_for_course()
+    {
+        $course = $this->request->getPost('course');
+        $subcourse = $this->request->getPost('subcourse');
+        $model = new AdminModel();
+        $data['groups'] = $model->getGroupsForCourse($course, $subcourse);
+        return $this->response->setJSON($data);
     }
 }
