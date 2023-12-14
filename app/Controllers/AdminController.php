@@ -98,7 +98,7 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
-    public function studentProfile()
+    public function studentProfiledata()
     {
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
@@ -108,7 +108,7 @@ class AdminController extends BaseController
 
             if ($email !== null && $password !== null) {
                 $model = new AdminModel();
-                $data['facultyData'] = $model->getStudentData();
+                $data['student_data'] = $model->getStudentData();
                 return view('AdminSideBar/StudentProfile', $data);
             } else {
                 return redirect()->to(base_url());
@@ -912,6 +912,38 @@ class AdminController extends BaseController
         // exit();
     
         return view('AdminSideBar/viewprofilefaculty', $data);
+    }
+
+    
+    public function viewProfiles()
+    {
+        $model = new AdminModel();
+
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
+
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+
+            if ($email !== null && $password !== null) {
+                $uri = service('uri');
+
+                // Get the second segment of the URI
+                $profile_id = $uri->getSegment(2);      
+        
+        
+                $wherecond = array('student_id ' => $profile_id);
+        
+                $data['profile_data'] = $model->getsinglerow('student', $wherecond);
+
+
+                return view('AdminSideBar/viewProfiles', $data);            
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
     }
 
     public function demo_classes(){
