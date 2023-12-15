@@ -117,14 +117,12 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-
-
-                                                            <label for="dropdown">Select from Dropdown:</label>
+                                                            <label for="dropdown">Select Student:</label>
                                                             <select id="dropdown" name="studentName" class="form-control custom-select">
+                                                                <option value="">Select</option>
                                                                 <?php foreach ($studentList as $item) : ?>
                                                                     <option value="<?php echo  $item->student_id; ?>"><?php echo $item->student_name; ?></option>
                                                                 <?php endforeach; ?>
-
                                                             </select>
                                                         </div>
                                                     </div>
@@ -147,9 +145,7 @@
                                                 <div class="row mt-4">
                                                     <?php
 
-                                                    if (!empty($FacultyVideoData)) {
-
-                                                    ?>
+                                                    if (!empty($FacultyVideoData)) { ?>
                                                         <?php foreach ($FacultyVideoData as $data) {
                                                             // List of allowed video file extensions
                                                             $allowedVideoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'wmv'];
@@ -159,7 +155,6 @@
 
                                                             // Check if the file extension is in the allowed list
                                                             if (in_array(strtolower($extension), $allowedVideoExtensions)) {
-
 
                                                                 // Generate a random background color based on the student's name
                                                                 $randomColor1 = '#' . substr(md5($data->student_name), 0, 4);

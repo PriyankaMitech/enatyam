@@ -351,30 +351,25 @@ class AdminModel extends Model
 
     public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = null)
     {
-        print_r($studentName);
-
         $startDate = new \DateTime($startDate);
         $startDateFormatted = $startDate->format('Y-m-d');
 
         $endDate = new \DateTime($endDate);
         $endDateFormatted = $endDate->format('Y-m-d');
 
-        $query = $this->db->table('uplode_video_to_student')
-            ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
-            ->join('student', 'student.student_id = uplode_video_to_student.student_id')
-            ->join('register', 'register.id = uplode_video_to_student.register_faculty_id')
-            ->where('uplode_video_to_student.student_id', $studentName);
-        // ->orWhere("DATE(uplode_video_to_student.DateTime) >=", $startDateFormatted)
-        // ->orWhere("DATE(uplode_video_to_student.DateTime) <=", $endDateFormatted);
+        $query = $this->db->table('uplode_video_to_student as uvs')
+            ->select('uvs.*, student.student_name as student_name, register.full_name as faculty_name')
+            ->join('student', 'student.student_id = uvs.student_id')
+            ->join('register', 'register.id = uvs.register_faculty_id')
+            ->where('uvs.student_id', $studentName);
 
         $videoDetails = $query->get()->getResult();
-        // print_r($this->db->getLastQuery());
-        // die;
-        echo '<pre>';
-        print_r($videoDetails);
-        die;
-
-        return $videoDetails;
+        // echo'<pre>';print_r($videoDetails);die;
+        if ($videoDetails) {
+            return $videoDetails;
+        } else {
+            return false;
+        }
     }
 
 
