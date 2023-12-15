@@ -158,7 +158,7 @@
                                             </div>
                                             <div class="form-group updloaddata mt-3">
                                                 <label class="mr-4">Upload your profile photo:</label>
-                                                <input type="file" name="profile_photo">
+                                                <input type="file" accept="image/jpeg, image/png" name="profile_photo" required>
                                             </div>
                                             <div>
                                                 <!-- <input class="form-group-submit" type="submit" value="Next"> -->
@@ -476,26 +476,26 @@
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your CV:</label>
-                                            <input type="file" name="cvFile">
+                                            <input type="file" accept="application/pdf" name="cvFile" required>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your Education certificates:</label>
-                                            <input type="file" name="educaionCertificateFile">
+                                            <input type="file"  accept="application/pdf" name="educaionCertificateFile" required>
                                         </div>
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your course related certificates:</label>
-                                            <input type="file" name="courseCertificateFile">
+                                            <input type="file"  accept="application/pdf" name="courseCertificateFile" required>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your videos:</label>
-                                            <input type="file" name="videos">
+                                            <input type="file" accept="video/mp4, video/webm, video/ogg" name="videos" required>
                                     
                                         </div>
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your Images:</label>
-                                            <input type="file" name="img">
+                                            <input type="file" accept="image/jpeg, image/png" name="img" required>
                                         </div>
 
 

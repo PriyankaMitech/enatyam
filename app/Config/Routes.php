@@ -43,6 +43,8 @@ $routes->post('chechk_username_id', 'Home::chechk_username_id');
 $routes->get('chechk_menu_name_id', ' AdminController::chechk_menu_name_id');
 $routes->post('chechk_menu_name_id', 'AdminController::chechk_menu_name_id');
 
+
+
 $routes->get('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
 $routes->post('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
 
@@ -146,16 +148,51 @@ $routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
 $routes->get('AdminController/searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
-
-
-
-
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');
+
+// Master routes
+$routes->post('add_courses', 'AdminController::add_courses');
+$routes->get('add_courses', 'AdminController::add_courses');
+
+$routes->post('edit_courses/(:any)', 'AdminController::add_courses/$1');
+$routes->get('edit_courses/(:any)', 'AdminController::get_courses/$1');
+
+$routes->post('set_courses', 'AdminController::set_courses');
+
+$routes->post('courses_list', 'AdminController::courses_list');
+$routes->get('courses_list', 'AdminController::courses_list');
+
+$routes->get('chechk_courses_name_id', ' AdminController::chechk_courses_name_id');
+$routes->post('chechk_courses_name_id', 'AdminController::chechk_courses_name_id');
+
+
+$routes->post('add_sub_courses', 'AdminController::add_sub_courses');
+$routes->get('add_sub_courses', 'AdminController::add_sub_courses');
+
+$routes->post('edit_sub_courses/(:any)', 'AdminController::add_sub_courses/$1');
+$routes->get('edit_sub_courses/(:any)', 'AdminController::get_sub_courses/$1');
+
+$routes->post('set_sub_courses', 'AdminController::set_sub_courses');
+
+$routes->post('sub_courses_list', 'AdminController::sub_courses_list');
+$routes->get('sub_courses_list', 'AdminController::sub_courses_list');
+
+// $routes->get('chechk_sub_courses_name_id', ' AdminController::chechk_sub_courses_name_id');
+$routes->post('chechk_sub_courses_name_id', 'AdminController::chechk_sub_courses_name_id');
+
+
+// $routes->get('chechk_courses_id_id', ' AdminController::chechk_courses_id_id');
+$routes->post('chechk_courses_id_id', 'AdminController::chechk_courses_id_id');
+
+
+
 
 
 $routes->post('add_menu', 'AdminController::add_menu');
 $routes->get('add_menu', 'AdminController::add_menu');
+
+
 
 $routes->post('menu_list', 'AdminController::menu_list');
 $routes->get('menu_list', 'AdminController::menu_list');
