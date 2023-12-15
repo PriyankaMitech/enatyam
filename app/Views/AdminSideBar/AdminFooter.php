@@ -538,6 +538,49 @@ $(document).ready(function() {
     });
 });
 </script>
+<script>
+$('#add_sub_courses_form').validate({
+    rules: {
+        courses_id: {
+            required: true,
+            min: 1, // Assuming that course IDs start from 1. Adjust if needed.
+        },
+        sub_courses_name: {
+            required: true,
+        },
+    },
+    messages: {
+        courses_id: {
+            required: 'Please select courses.',
+            min: 'Please select a valid course.',
+        },
+        sub_courses_name: {
+            required: 'Please enter sub courses name.',
+        },
+    },
+});
+
+</script>
+
+
+<script>
+$(document).ready(function() {
+    $('#add_courses_form').validate({
+        rules: {
+            courses_name: {
+                required: true,
+            },
+    
+        },
+        messages: {
+            courses_name: {
+                required: 'Please enter courses name.',
+            },
+   
+        }
+    });
+});
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -571,7 +614,7 @@ $(document).ready(function() {
                     $('#menu_nameError').text('');
                     $('.submitButton').prop('disabled', false);
 
-                } else if (response == 'true') {
+                } else {
                     $('#menu_nameError').text('This URL Location is allredy available.');
                     $('.submitButton').prop('disabled', true);
                 }
@@ -579,6 +622,154 @@ $(document).ready(function() {
         });
     });
 });
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#courses_name').on('input', function() {
+        var courses_name = $(this).val();
+        // alert(courses_name);
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>/chechk_courses_name_id',
+            data: {
+                courses_name: courses_name
+            },
+            success: function(response) {
+                console.log(response);
+                $('.error').hide()
+
+                if (response == 'false') {
+                    $('.submitButton').prop('disabled', false);
+
+                } else {
+                    $('#courses_name').after('<span class="error">This courses name is allredy available.</span>');
+
+                    $('.submitButton').prop('disabled', true);
+                }
+            }
+        });
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#sub_courses_name').on('input', function() {
+        var courses_id = $('#courses_id').val();
+        var sub_courses_name = $(this).val();
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>/chechk_sub_courses_name_id',
+            data: {
+                courses_id: courses_id,
+                sub_courses_name: sub_courses_name
+            },
+            success: function(response) {
+                console.log(response);
+
+                if (response == 'false') {
+                    $('#courses_idError').text('This courses name is already available.');
+                    $('#sub_courses_nameError').text('This sub courses name is already available.');
+                    $('.submitButton').prop('disabled', true);
+                } else {
+                    // Clear error messages and enable submit button
+                    $('#courses_idError').text('');
+                    $('#sub_courses_nameError').text('');
+                    $('.submitButton').prop('disabled', false);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    });
+
+   
+});
+
+
+
+
+
+</script>
+<script>
+ 
+     $('#courses_id').on('change', function() {
+        var courses_id = $(this).val();
+        var sub_courses_name = $('#sub_courses_name').val();
+        // alert(courses_id);
+        // alert(sub_courses_name);
+
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>/chechk_courses_id_id',
+            data: {
+                courses_id: courses_id,
+                sub_courses_name: sub_courses_name,
+
+            },
+            success: function(response) {
+                console.log(response);
+                $('.error').hide()
+                if (response === 'false') {
+                    $('#courses_idError').text('');
+                    $('#sub_courses_nameError').text('');
+                    $('.submitButton').prop('disabled', false);
+
+            
+                } else {
+                    // Clear error messages and enable submit button
+                    // $('#courses_idError').text('This courses name is already available.');
+                    $('#sub_courses_name').after('<span class="error">This sub courses name is already available.</span>');
+                    $('.submitButton').prop('disabled', true);
+
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    });
+
+    
+</script>
+
+<script>
+
+    $('#sub_courses_name').on('input', function() {
+        var sub_courses_name = $(this).val();
+        var courses_id = $('#courses_id').val();
+
+        // alert(sub_courses_name);
+        // alert(courses_id);
+
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>/chechk_sub_courses_name_id',
+            data: {
+                sub_courses_name: sub_courses_name,
+                courses_id : courses_id
+            },
+            success: function(response) {
+                console.log(response);
+                if (response != '') {
+                 
+                    $('#sub_courses_name').after('<span class="error">This sub courses name is allredy available.</span>');
+                    $('.submitButton').prop('disabled', true);
+
+                } else {
+                    $('#sub_courses_nameError').text('');
+                    $('.submitButton').prop('disabled', false);
+                }
+            }
+        });
+    });
+
 </script>
 
 
