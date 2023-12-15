@@ -868,7 +868,7 @@ public function getsubcorce()
         return $query->getResult();
 
 
-
+    }
     public function chechk_courses_id_id($courses_id, $sub_courses_name)
     {
         $result = $this->db->table('tbl_sub_courses')
