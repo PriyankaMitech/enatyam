@@ -854,4 +854,16 @@ public function getsubcorce()
     
         return $grouplist;   
     }
+    public function getRecordsBefore7Days()
+    {
+        $sevenDaysAgo = date('Y-m-d', strtotime('-7 days'));
+        
+        $query = $this->db->table('carrier')
+            ->where("DATE(Booking_Date_Time) >= ", $sevenDaysAgo)
+            ->where("DATE(Booking_Date_Time) <= ", date('Y-m-d'))
+            ->where('Result_of_application', 'Pending') // Add this line
+            ->get();
+    //    echo $this->db->getLastQuery();die;
+        return $query->getResult();
+    }
 }

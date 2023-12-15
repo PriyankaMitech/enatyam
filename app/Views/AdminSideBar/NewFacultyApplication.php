@@ -89,43 +89,39 @@ thead {
                                 <div class="tab-content" id="custom-tabs-four-tabContent">
                                     <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel"
                                         aria-labelledby="custom-tabs-four-home-tab">
+                                        <?php if (!empty($carrer)) : ?>
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th> Date</th>
-                                                    <th> Applicant Name</th>
-                                                    <th> Contact Number</th>
-                                                    <th> Email</th>
-                                                    <th> Course/Subcourse</th>
-                                                    <th> Action</th>
+                                                    <th>Date</th>
+                                                    <th>Applicant Name</th>
+                                                    <th>Contact Number</th>
+                                                    <th>Email</th>
+                                                    <th>Course/Subcourse</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php 
-                                                // echo "<pre>";print_r($carrer);exit();
-                                                foreach ($carrer as $faculty) : ?>
+                                                <?php foreach ($carrer as $faculty) : ?>
                                                 <tr>
                                                     <?php
-
-                                                        $dateTime = new DateTime($faculty->Booking_Date_Time);
-                                                        $date = $dateTime->format('Y-m-d');
-
-                                                        ?>
+                    $dateTime = new DateTime($faculty->Booking_Date_Time);
+                    $date = $dateTime->format('Y-m-d');
+                    ?>
 
                                                     <td><?= $date ?></td>
-
                                                     <td><?= $faculty->name ?></td>
                                                     <td><?= $faculty->phone ?></td>
                                                     <td><?= $faculty->email ?></td>
                                                     <td><?= $faculty->course ?>/<?= $faculty->sub_course ?></td>
 
                                                     <td>
-
                                                         <form method="POST" action="AdminController/Steusupdate">
                                                             <input type="hidden" name="D_id"
                                                                 value="<?= $faculty->D_id ?>">
 
-                                                            <a href="<?=base_url(); ?>viewProfile/<?= $faculty->D_id ?>" type="submit" class="btn btn-sm btn-primary"
+                                                            <a href="<?= base_url(); ?>viewProfile/<?= $faculty->D_id ?>"
+                                                                type="submit" class="btn btn-sm btn-primary"
                                                                 data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                                 title="View">
                                                                 <i class="fa fa-eye" aria-hidden="true"></i>
@@ -142,77 +138,37 @@ thead {
                                                                 <i class="fas fa-trash"></i>
                                                             </button>
                                                         </form>
-
-                                                        <!-- 
-                                                                    <li class="list-inline-item"><button type="submit" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View">
-                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                        </button></li>
-
-
-                                                                    <li class="list-inline-item"><button type="submit" class="btn btn-success" name="action" value="approve" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Approve">
-                                                                            <i class="fa fa-plus" aria-hidden="true"></i> Approve
-                                                                        </button></li>
-
-                                                                    <li class="list-inline-item"> <button type="submit" class="btn btn-danger" name="action" value="decline" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Decline">
-                                                                            <i class="fas fa-trash"></i> Decline
-                                                                        </button></li> -->
-                                                        </form>
-
-
-                                                        <!-- <li class="list-inline-item"><button type="submit" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View">
-                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                        </button></li>
-
-                                                                    <li class="list-inline-item"> <input type="hidden" name="action[]" value="approve"><button type="submit" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Approve">
-                                                                            <i class="fa fa-plus" aria-hidden="true"></i>
-                                                                        </button></li>
-                                                                 
-                                                                    <li class="list-inline-item"> <input type="hidden" name="action[]" value="decline"> <button type="submit" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="decline">
-                                                                            <i class="fas fa-trash"></i>
-                                                                        </button></li> -->
-                                                        </ul>
-
-                                                        <!-- </td><button class="approve-button" type="submit">Approve</button> -->
-                                                        </form>
-                                                        <form method="POST" action="AdminController/Steusupdate">
-                                                            <!-- <input type="hidden" name="action" value="decline"> -->
-                                                            <!-- <input type="hidden" name="D_id" value="<?= $faculty->D_id ?>"> -->
-                                                            <!-- <a class="btn btn-danger btn-sm" href="#">
-                                                                        <i class="fas fa-trash">
-                                                                        </i>
-                                                                        Decline
-                                                                    </a> -->
-
-
-                                                        </form>
-
                                                     </td>
                                                 </tr>
                                                 <?php endforeach; ?>
                                             </tbody>
                                         </table>
+                                        <?php else : ?>
+                                        <p>No pending applications</p>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="tab-pane fade " id="custom-tabs-four-profile" role="tabpanel"
                                         aria-labelledby="custom-tabs-four-profile-tab">
+                                        <?php if (!empty($cansalList)) : ?>
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th> Date</th>
-                                                    <th> Applicant Name</th>
-                                                    <th> Contact Number</th>
-                                                    <th> Email</th>
-                                                    <th> Course/Subcourse</th>
-                                                    <th> Resume</th>
-                                                    <th> Action</th>
+                                                    <th>Date</th>
+                                                    <th>Applicant Name</th>
+                                                    <th>Contact Number</th>
+                                                    <th>Email</th>
+                                                    <th>Course/Subcourse</th>
+                                                    <th>Resume</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php foreach ($cansalList as $facult) : ?>
                                                 <tr>
                                                     <?php
-                                                        $dateTime = new DateTime($facult->Booking_Date_Time);
-                                                        $date = $dateTime->format('Y-m-d');
-                                                        ?>
+                                                $dateTime = new DateTime($facult->Booking_Date_Time);
+                                                $date = $dateTime->format('Y-m-d');
+                                                ?>
                                                     <td><?= $date ?></td>
                                                     <td><?= $facult->name ?></td>
                                                     <td><?= $facult->phone ?></td>
@@ -224,24 +180,28 @@ thead {
                                                             <input type="hidden" name="action" value="Pending">
                                                             <input type="hidden" name="D_id"
                                                                 value="<?= $facult->D_id ?>">
-                                                            <button class="approve-button" type="submit">Back </button>
+                                                            <button class="approve-button" type="submit">Back</button>
                                                         </form>
                                                     </td>
                                                 </tr>
                                                 <?php endforeach; ?>
                                             </tbody>
                                         </table>
+                                        <?php else : ?>
+                                        <p>No applications</p>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel"
                                         aria-labelledby="custom-tabs-four-messages-tab">
+                                        <?php if (!empty($createPassword)) : ?>
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th> Date</th>
-                                                    <th> Applicant Name</th>
-                                                    <th> Email</th>
+                                                    <th>Date</th>
+                                                    <th>Applicant Name</th>
+                                                    <th>Email</th>
                                                     <th>Enter Password</th>
-                                                    <th> Action</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -253,25 +213,31 @@ thead {
                                                         ?>
 
                                                     <td><?= $date ?></td>
-
                                                     <td><?= $Password->full_name ?></td>
-
                                                     <td><?= $Password->email ?></td>
 
-                                                    <form method="POST" action="AdminController/createpassword">
-                                                        <td> <input type="password" class="form-control"
+                                                    <form method="POST"
+                                                        action="<?= base_url('AdminController/createpassword') ?>">
+                                                        <input type="hidden" name="email"
+                                                            value="<?= $Password->email ?>">
+                                                        <td>
+                                                            <input type="password" class="form-control"
                                                                 id="passwordInput" name="password"
-                                                                placeholder="Password" required></td>
+                                                                placeholder="Password" required>
+                                                        </td>
                                                         <td>
                                                             <input type="hidden" name="id" value="<?= $Password->id ?>">
-                                                            <button class="btn btn-info" type="submit">update Password
-                                                            </button>
+                                                            <button class="btn btn-info" type="submit">Update
+                                                                Password</button>
                                                         </td>
                                                     </form>
                                                 </tr>
                                                 <?php endforeach; ?>
                                             </tbody>
                                         </table>
+                                        <?php else : ?>
+                                        <p>No applications</p>
+                                        <?php endif; ?>
                                     </div>
 
                                 </div>
