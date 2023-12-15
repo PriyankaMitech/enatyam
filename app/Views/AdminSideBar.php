@@ -67,6 +67,38 @@
                     <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
                 </li>
             </ul>
+            <?php 
+         $adminModel = new \App\Models\AdminModel(); 
+         $data = $adminModel->getRecordsBefore7Days();
+         $counteing = count($data);
+        ?>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge"><?= $counteing ?></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header"><?= $counteing ?> Notifications</span>
+                        <div class="dropdown-divider"></div>
+
+                        <?php foreach ($data as $notification): ?>
+                        <a href="<?= base_url('NewFacultyApplication') ?>" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i><?= $notification->name ?>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <?php endforeach; ?>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
         </nav>
         <?php if (!empty($_SESSION)) {
             // echo $_SESSION['sessiondata']['role'];exit();
