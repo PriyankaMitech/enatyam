@@ -6,7 +6,7 @@ use App\Models\AdminModel;
 use App\Models\CarrierModel;
 use App\Models\LoginModel;
 use CodeIgniter\Controller;
-
+helper('sms_helper');
 class AdminController extends BaseController
 {
     public function givestudent()
@@ -38,7 +38,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-                //         echo "<pre>"; print_r($data['admins']);echo "</pre>"; die();
+                
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -47,6 +47,7 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
+   
     public function AssignTecherForDemo()
     {
 
@@ -366,11 +367,19 @@ class AdminController extends BaseController
     }
     public function createpassword()
     {
+       // print_r($_POST);die;
+      
+        $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $id = $this->request->getPost('id');
+        $msg ='Your password has been  updated. ';
+        $Subject ='Your Application Approved';
+        $tital ='congratulations You Are Selected';
         $model = new AdminModel();
         $result = $model->updatePassword($id, $password);
         if ($result) {
+          //  print_r($password);die;
+            sendConfirmationEmail($email,$password,$msg,$Subject,$tital);
             $this->session->setFlashdata('success', 'Password updated successfully.');
         } else {
             $this->session->setFlashdata('error', 'Error updating password. Please try again.');
