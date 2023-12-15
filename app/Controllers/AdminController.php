@@ -678,6 +678,181 @@ class AdminController extends BaseController
         echo view('AdminSideBar/add_notifications', $data);
     }
 
+
+    public function add_courses()
+    {
+
+        echo view('add_courses');
+    }
+
+    public function set_courses()
+    {
+
+        $data = [
+            'courses_name' => $this->request->getVar('courses_name'),
+            'created_on' => date('Y:m:d H:i:s'),
+        ];
+
+        $db = \Config\Database::Connect();
+        if ($this->request->getVar('id') == "") {
+            $add_data = $db->table('tbl_courses');
+            $add_data->insert($data);
+            session()->setFlashdata('success', 'Data added successfully.');
+        } else {
+            $update_data = $db->table('tbl_courses')->where('id', $this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
+
+        return redirect()->to('courses_list');
+    }
+
+    public function courses_list()
+    {
+        $model = new AdminModel();
+
+        $wherecond = array('is_deleted' => 'N');
+
+
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+        // echo "<pre>";print_r($data['menu_data']);exit();
+        echo view('courses_list', $data);
+    }
+
+    public function get_courses()
+    {
+
+        $model = new AdminModel();
+
+        $courses_id = $this->request->uri->getSegments(1);
+
+        $wherecond1 = array('is_deleted' => 'N', 'id' => $courses_id[1]);
+
+        $data['single_data'] = $model->get_single_data('tbl_courses', $wherecond1);
+
+        echo view('add_courses', $data);
+    }
+
+        
+    public function chechk_courses_name_id()
+    {
+        $admin_model = new AdminModel();
+        $courses_name = $this->request->getPost('courses_name');
+
+        if ($courses_name) {
+            $wherecond = array('courses_name' => $courses_name);
+
+            $coursesname = $admin_model->getsinglerow('tbl_courses', $wherecond);
+            // echo "<pre>";
+            // print_r($email);exit();
+            return json_encode($coursesname);
+        } 
+    }
+
+
+    public function add_sub_courses()
+{
+    $admin_model = new AdminModel();
+    $wherecond = array('is_deleted' => 'N');
+
+    $data['courses_data'] = $admin_model->getalldata('tbl_courses', $wherecond);
+
+    // echo "<pre>";print_r($coursesname);exit();
+
+    echo view('add_sub_courses',$data);
+}
+
+public function set_sub_courses()
+{
+
+    $data = [
+        'courses_id' => $this->request->getVar('courses_id'),
+
+        'sub_courses_name' => $this->request->getVar('sub_courses_name'),
+        'created_on' => date('Y:m:d H:i:s'),
+    ];
+
+    $db = \Config\Database::Connect();
+    if ($this->request->getVar('id') == "") {
+        $add_data = $db->table('tbl_sub_courses');
+        $add_data->insert($data);
+        session()->setFlashdata('success', 'Data added successfully.');
+    } else {
+        $update_data = $db->table('tbl_sub_courses')->where('id', $this->request->getVar('id'));
+        $update_data->update($data);
+        session()->setFlashdata('success', 'Data updated successfully.');
+    }
+
+    return redirect()->to('sub_courses_list');
+}
+
+public function sub_courses_list()
+{
+    $model = new AdminModel();
+
+    $wherecond = array('is_deleted' => 'N');
+
+
+    $data['sub_courses_data'] = $model->getalldata('tbl_sub_courses', $wherecond);
+    // echo "<pre>";print_r($data['menu_data']);exit();
+    echo view('sub_courses_list', $data);
+}
+
+public function get_sub_courses()
+{
+
+    $model = new AdminModel();
+
+    $sub_courses_id = $this->request->uri->getSegments(1);
+
+    $wherecond1 = array('is_deleted' => 'N', 'id' => $sub_courses_id[1]);
+    $wherecond = array('is_deleted' => 'N');
+
+
+    $data['single_data'] = $model->get_single_data('tbl_sub_courses', $wherecond1);
+     $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+
+
+
+    echo view('add_sub_courses', $data);
+}
+
+    
+public function chechk_sub_courses_name_id()
+{
+    $admin_model = new AdminModel();
+    $sub_courses_name = $this->request->getPost('sub_courses_name');
+    $courses_id = $this->request->getPost('courses_id');
+
+    if ($sub_courses_name && $courses_id) {
+        $sub_courses_data = $admin_model->chechk_sub_courses_name_id($courses_id, $sub_courses_name);
+
+        if ($sub_courses_data) {
+            // Combination found, return 'false' to indicate non-uniqueness
+            return json_encode($sub_courses_data);
+        } 
+    } 
+}
+
+
+public function chechk_courses_id_id()
+{
+    $admin_model = new AdminModel();
+    $courses_id = $this->request->getPost('courses_id');
+    $sub_courses_name = $this->request->getPost('sub_courses_name');
+
+
+    if ($courses_id) {
+
+        $sub_coursesname = $admin_model->chechk_courses_id_id($courses_id, $sub_courses_name);
+        // echo "<pre>";
+        // print_r($email);exit();
+        return json_encode($sub_coursesname);
+    }
+}
+
+
+    
     public function add_menu()
     {
 
@@ -709,11 +884,13 @@ class AdminController extends BaseController
         return redirect()->to('menu_list');
     }
 
+   
+
     public function menu_list()
     {
         $model = new AdminModel();
 
-        $wherecond = array('is_deleted' => 'Y');
+        $wherecond = array('is_deleted' => 'N');
 
 
         $data['menu_data'] = $model->getalldata('tbl_menu', $wherecond);
@@ -728,7 +905,7 @@ class AdminController extends BaseController
 
         $menu_id = $this->request->uri->getSegments(1);
 
-        $wherecond1 = array('is_deleted' => 'Y', 'id' => $menu_id[1]);
+        $wherecond1 = array('is_deleted' => 'N', 'id' => $menu_id[1]);
 
         $data['single_data'] = $model->get_single_data('tbl_menu', $wherecond1);
 
@@ -751,7 +928,7 @@ class AdminController extends BaseController
         // exit();
 
         // Update the database row with is_deleted = 1
-        $data = ['is_deleted' => 'N'];
+        $data = ['is_deleted' => 'Y'];
         $db = \Config\Database::connect();
 
 
@@ -778,7 +955,7 @@ class AdminController extends BaseController
 
             if ($email !== null && $password !== null) {
 
-                $wherecond = array('is_deleted' => 'Y');
+                $wherecond = array('is_deleted' => 'N');
 
 
                 $data['menu_data'] = $model->getalldata('tbl_menu', $wherecond);
@@ -832,7 +1009,7 @@ class AdminController extends BaseController
         $model = new AdminModel();
 
 
-        $wherecond = array('is_deleted' => 'Y', 'role' => 'sub_admin');
+        $wherecond = array('is_deleted' => 'N', 'role' => 'sub_admin');
         $data['user_data'] = $model->getalldata('register', $wherecond);
 
         // echo "<pre>";print_r($data['menu_data']);exit();
@@ -846,9 +1023,9 @@ class AdminController extends BaseController
         $model = new AdminModel();
 
         $menu_id = $this->request->uri->getSegments(1);
-        $wherecond1 = array('is_deleted' => 'Y', 'id' => $menu_id[1]);
+        $wherecond1 = array('is_deleted' => 'N', 'id' => $menu_id[1]);
 
-        $wherecond = array('is_deleted' => 'Y');
+        $wherecond = array('is_deleted' => 'N');
 
         $data['single_data'] = $model->get_single_data('register', $wherecond1);
         $data['menu_data'] = $model->getalldata('tbl_menu', $wherecond);
@@ -865,7 +1042,10 @@ class AdminController extends BaseController
         $menu_name = $this->request->getPost('menu_name');
 
         if ($menu_name) {
-            $menuname = $admin_model->checkexist_menu($menu_name, 'url_location');
+            $wherecond = array('url_location' => $menu_name);
+
+
+            $menuname = $admin_model->getsinglerow('tbl_menu', $wherecond);
             // echo "<pre>";
             // print_r($email);exit();
             return json_encode($menuname);
@@ -873,6 +1053,7 @@ class AdminController extends BaseController
             return json_encode([]);
         }
     }
+
 
 
 

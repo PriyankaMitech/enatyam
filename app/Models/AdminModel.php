@@ -854,6 +854,7 @@ public function getsubcorce()
     
         return $grouplist;   
     }
+
     public function getRecordsBefore7Days()
     {
         $sevenDaysAgo = date('Y-m-d', strtotime('-7 days'));
@@ -865,5 +866,43 @@ public function getsubcorce()
             ->get();
     //    echo $this->db->getLastQuery();die;
         return $query->getResult();
+
+
+
+    public function chechk_courses_id_id($courses_id, $sub_courses_name)
+    {
+        $result = $this->db->table('tbl_sub_courses')
+            ->where('is_deleted', 'N')
+            ->where('courses_id', $courses_id)
+            ->where('sub_courses_name', $sub_courses_name)
+
+
+            ->get()
+            ->getRow();
+    
+        if(!empty($result)){
+        return $result;  
+        }else{
+            return false;
+        } 
+    }
+
+    
+
+    public function chechk_sub_courses_name_id($courses_id, $sub_courses_name)
+    {
+        $result = $this->db->table('tbl_sub_courses')
+            ->where('is_deleted', 'N')
+            ->where('sub_courses_name', $sub_courses_name)
+            ->where('courses_id', $courses_id)
+            ->get()
+            ->getRow();
+    
+        if(!empty($result)){
+        return $result;  
+        }else{
+            return false;
+        } 
+
     }
 }
