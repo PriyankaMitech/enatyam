@@ -867,43 +867,45 @@
     $(document).ready(function() {
 
         // Generate a single random color for both student name and date
-    var ribbonColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        // var ribbonColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
 
-   
-        $('#searchForm').submit(function(e) {
-            e.preventDefault();
 
-            $.ajax({
-                type: 'POST',
-                url: $(this).attr('action'),
-                data: $(this).serialize(),
-                dataType: 'json',
-                success: function(data) {
-                    // console.log(data)
-                    updateFacultyVideos(data);
-                },
-                error: function(xhr, status, error) {
-                    console.error('AJAX request failed:', status, error);
-                }
+        // $('#searchForm').submit(function(e) {
+        //     e.preventDefault();
+
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: $(this).attr('action'),
+        //         data: $(this).serialize(),
+        //         dataType: 'json',
+        //         success: function(data) {
+        //             // console.log(data);
+        //             updateFacultyVideos(data);
+        //         },
+        //         error: function(xhr,status,error) {
+        //             console.error('AJAX request failed:',status,error);
+        //         }
+        //     });
+        // });
+
+
+
+        function formatVideoDate(dateString) {
+            // Parse the input date string
+            var date = new Date(dateString);
+
+            // Get day, month, and year
+            var day = date.getDate();
+            var month = date.toLocaleString('en-US', {
+                month: 'short'
             });
-        });
+            var year = date.getFullYear();
 
- 
+            // Create the custom format "dd Mmm yyyy"
+            var customFormat = day + ' ' + month + ' ' + year;
 
-    function formatVideoDate(dateString) {
-    // Parse the input date string
-    var date = new Date(dateString);
-
-    // Get day, month, and year
-    var day = date.getDate();
-    var month = date.toLocaleString('en-US', { month: 'short' });
-    var year = date.getFullYear();
-
-    // Create the custom format "dd Mmm yyyy"
-    var customFormat = day + ' ' + month + ' ' + year;
-    
-    return customFormat;
-}
+            return customFormat;
+        }
 
 
         function updateFacultyVideos(data) {
@@ -912,30 +914,24 @@
 
             $.each(data, function(index, faculty) {
                 var base_url = '<?= base_url() ?>';
-              
-                var videoHTML = `
-            <div class="col-sm-3 mt-3">
-                <video width="100%" height="200px" controls poster="<?= base_url('public/images/play.jpg') ?>">
 
+                var videoHTML = `<div class="col-sm-3 mt-3">
+                <video width="100%" height="200px" controls poster="<?= base_url('public/images/play.jpg') ?>">
                 <source class="img-fluid" src="${base_url}/public/uploads/FacultyUplodedVideos/${faculty.video_name}" type="video/mp4">
-                    </video>
-                
                 </video>
                 <div class="ribbon-wrapper ribbon-lg">
-                        <div class="ribbon" style="background-color: ${ribbonColor}; text-lg">
-                            <p class="card-text" style="color: #fff; background-color: ${ribbonColor}">${faculty.student_name}</p>
-                        </div>
+                    <div class="ribbon" style="background-color: ${ribbonColor}; text-lg">
+                        <p class="card-text" style="color: #fff; background-color: ${ribbonColor}">${faculty.student_name}</p>
                     </div>
+                </div>
                     <div class="p">
                         <p class="card-text" style="padding: 6%; color: #fff; background-color: ${ribbonColor}">
                         Faculty Name &nbsp;: &nbsp; ${faculty.faculty_name} <br>
-                            Date &nbsp;: &nbsp; ${formatVideoDate(faculty.DateTime)}
+                        Date &nbsp;: &nbsp; ${formatVideoDate(faculty.DateTime)}
                         </p>
                     </div>
-            </div>
-        `;
-
-                container.append(videoHTML);
+            </div>`;
+            container.append(videoHTML);
             });
         }
     });

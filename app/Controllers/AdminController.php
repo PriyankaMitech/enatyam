@@ -129,10 +129,11 @@ class AdminController extends BaseController
             if ($email !== null && $password !== null) {
                 $model = new AdminModel();
                 $data['studentList'] = $model->getStudentData();
+                $data['facultyList'] = $model->getFacultyrole();
                 // Retrieve data without filtering (assuming your method accepts parameters)
                 $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
                 $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
-                
+
                 // echo'<pre>';print_r($data['FacultyVideoData']);die;
 
                 // Retrieve filtered data from session flash
@@ -187,12 +188,26 @@ class AdminController extends BaseController
         $startDate = $this->request->getPost('startDate');
         $endDate = $this->request->getPost('endDate');
         $studentName = $this->request->getPost('studentName');
-        $model = new AdminModel();
-        $filteredFacultyVideoData = $model->getFacultyBySearch($startDate, $endDate, $studentName);
-        // echo '<pre>';
-        // print_r($filteredFacultyVideoData);
+        $facultyName = $this->request->getPost('facultyName');
+        // print_r($facultyName);
         // die;
-        return $this->response->setJSON($filteredFacultyVideoData);
+        $sDate= $this->session->setFlashdata('startDate', $startDate);
+        $eDate=$this->session->setFlashdata('endDate', $endDate);
+        $studeName = $this->session->setFlashdata('studentName', $studentName);
+       $facName =  $this->session->setFlashdata('facultyName', $facultyName);
+
+
+        $model = new AdminModel();
+
+        $data['searchdata'] = $model->getFacultyBySearch($startDate, $endDate, $studentName, $facultyName);
+        $data['studentList'] = $model->getStudentData();
+        $data['facultyList'] = $model->getFacultyrole();
+        // echo '<pre>';
+        // print_r($data['searchdata']);
+        // die;
+        // return $this->response->setJSON($filteredFacultyVideoData);
+        return view('AdminSideBar/StudentVideo', $data);
+
     }
     public function getDemoDetails()
     {
@@ -860,14 +875,9 @@ class AdminController extends BaseController
         }
     }
 
-
-
-
-
-
     public function setnotification()
     {
-        $admin_id;
+        // $admin_id;
         if (!empty($_SESSION['sessiondata'])) {
             $admin_id = $_SESSION['sessiondata']['id'];
         }

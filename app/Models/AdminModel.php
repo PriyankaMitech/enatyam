@@ -279,98 +279,101 @@ class AdminModel extends Model
         return  $VideoDetails;
     }
 
-    // public function getStudyVideoUplodedByStudent($startDate = null, $endDate = null, $facultyName = null)
-    // {
-    //     $query = $this->db->table('uplode_study_video_from_student')
-    //         ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
-    //         ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id');
-
-    //     // Apply filters if provided
-
-    //     // Apply filters if provided
-    //     if ($startDate !== null) {
-    //         $startDate = new \DateTime($startDate);
-    //         $startDateFormatted = $startDate->format('Y-m-d H:i:s');
-    //         $query->where('uplode_study_video_from_student.DateTime >=', $startDateFormatted);
-    //     }
-
-    //     if ($endDate !== null) {
-    //         $endDate = new \DateTime($endDate);
-    //         $endDateFormatted = $endDate->format('Y-m-d H:i:s');
-    //         $query->where('uplode_study_video_from_student.DateTime <=', $endDateFormatted);
-    //     }
-
-    //     if ($facultyName !== null) {
-    //         $query->like('register.full_name', $facultyName);
-    //     }
-
-    //     $videoDetails = $query->get()->getResult();
-
-    //     return $videoDetails;
-    // }
-
-    // public function getFacultyBySearch($startDate = null, $endDate = null, $facultyName = null)
-    // {
-    //     // echo $startDate;
-    //     // echo $endDate;
-    //     // exit();
-    //     $query = $this->db->table('uplode_video_to_student')
-    //         ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
-    //         ->join('student', 'student.student_id = uplode_video_to_student.student_id')
-    //         ->join('register', 'register.id = uplode_video_to_student.register_faculty_id');
-
-    //     // Apply filters if provided
-    //     if ($startDate !== null) {
-    //         $startDate = new \DateTime($startDate);
-    //         $startDateFormatted = $startDate->format('Y-m-d H:i:s');
-    //         print_r($startDateFormatted);
-    //         $query->where('uplode_video_to_student.DateTime >=', $startDateFormatted);
-    //     }
-
-    //     if ($endDate !== null) {
-    //         $endDate = new \DateTime($endDate);
-    //         $endDateFormatted = $endDate->format('Y-m-d H:i:s');
-    //         print_r($endDateFormatted);
-    //         $query->where('uplode_video_to_student.DateTime <=', $endDateFormatted);
-    //     }
 
 
-
-    //     if ($facultyName !== null) {
-    //         $query->like('register.full_name', $facultyName);
-    //     }
-
-    //     $videoDetails = $query->get()->getResult();
-    //     // echo '<pre>';
-    //     // print_r($videoDetails);
-    //     // die;
-    //     echo $this->db->getLastQuery();
-    //     die;
-    //     return $videoDetails;
-    // }
-
-    public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = null)
+    public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = '', $facultyName = '')
     {
-        $startDate = new \DateTime($startDate);
-        $startDateFormatted = $startDate->format('Y-m-d');
+        // echo $startDate;
+        // echo $endDate;
+        // exit();
+        $query = $this->db->table('uplode_video_to_student')
+            ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
+            ->join('student', 'student.student_id = uplode_video_to_student.student_id')
+            ->join('register', 'register.id = uplode_video_to_student.register_faculty_id');
 
-        $endDate = new \DateTime($endDate);
-        $endDateFormatted = $endDate->format('Y-m-d');
+        // Apply filters if provided
+        if ($startDate !== null) {
+            $startDate = new \DateTime($startDate);
+            $startDateFormatted = $startDate->format('Y-m-d H:i:s');
+            // print_r($startDateFormatted);
+            $query->where('uplode_video_to_student.DateTime >=', $startDateFormatted);
+        }
 
-        $query = $this->db->table('uplode_video_to_student as uvs')
-            ->select('uvs.*, student.student_name as student_name, register.full_name as faculty_name')
-            ->join('student', 'student.student_id = uvs.student_id')
-            ->join('register', 'register.id = uvs.register_faculty_id')
-            ->where('uvs.student_id', $studentName);
+        if ($endDate !== null) {
+            $endDate = new \DateTime($endDate);
+            $endDateFormatted = $endDate->format('Y-m-d H:i:s');
+            // print_r($endDateFormatted);
+            $query->where('uplode_video_to_student.DateTime <=', $endDateFormatted);
+        }
+
+
+
+        if ($facultyName !== '') {
+            $query->orWhere('register.id', $facultyName);
+        }
+        if ($studentName !== '') {
+            $query->orWhere('uplode_video_to_student.student_id', $studentName);
+        }
+
 
         $videoDetails = $query->get()->getResult();
-        // echo'<pre>';print_r($videoDetails);die;
+        // echo '<pre>';
+        // print_r($videoDetails);
+        // die;
+        // echo $this->db->getLastQuery();
+        // die;
         if ($videoDetails) {
             return $videoDetails;
         } else {
             return false;
         }
     }
+
+    // public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = null, $facultyName = null)
+    // {
+    // $startDate = new \DateTime($startDate);
+
+    // $startDateFormatted = $startDate->format('Y-m-d');
+    // print_r($startDateFormatted);
+    // die;
+
+    // $endDate = new \DateTime($endDate);
+    // $endDateFormatted = $endDate->format('Y-m-d');
+
+    // $query = $this->db->table('uplode_video_to_student as uvs')
+    //     ->select('uvs.*, student.student_name as student_name, register.full_name as faculty_name')
+    //     ->join('student', 'student.student_id = uvs.student_id')
+    //     ->join('register', 'register.id = uvs.register_faculty_id')
+    //     ->where('uvs.student_id', $studentName);
+
+    // $startDate = new \DateTime($startDate);
+    // $startDateFormatted = $startDate->format('Y-m-d');
+    // $endDate = new \DateTime($endDate);
+    // $endDateFormatted = $endDate->format('Y-m-d');
+    // print_r($startDateFormatted);
+    // print_r($endDateFormatted);
+    // die;
+
+    // $query = $this->db->table('uplode_video_to_student as uvs')
+    //     ->select('uvs.*, student.student_name as student_name, register.full_name as faculty_name')
+    //     ->join('student', 'student.student_id', '=', 'uvs.student_id')
+    //     ->join('register', 'register.id', '=', 'uvs.register_faculty_id')
+    //     ->where(function ($query) use ($studentName, $startDateFormatted, $endDateFormatted, $facultyName) {
+    //         $query->where('uvs.student_id', $studentName)
+    //             ->orWhereBetween('uvs.DateTime', [$startDateFormatted, $endDateFormatted])
+    //             ->orWhere('student.student_id', $studentName)
+    //             ->orWhere('register.id', $facultyName);
+    //     });
+
+
+    //     $videoDetails = $query->get()->getResult();
+    //     // echo'<pre>';print_r($videoDetails);die;
+    //     if ($videoDetails) {
+    //         return $videoDetails;
+    //     } else {
+    //         return false;
+    //     }
+    // }
 
 
     public function getcarreerBookByfaculty()
