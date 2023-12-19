@@ -160,8 +160,8 @@ class LoginController extends BaseController
     public function saveuserdata()
    { 
        $email = $this->request->getPost('email');
-       $course = $this->request->getPost('course');
-       $sub_course = $this->request->getPost('sub_course');
+       $course = $this->request->getPost('courses_id_g');
+       $sub_course = $this->request->getPost('courses_id_g');
        $age = $this->request->getPost('age');
        $experience = $this->request->getPost('experience');
        $SessionType = $this->request->getPost('SessionType');

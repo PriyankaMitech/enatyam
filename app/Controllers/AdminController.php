@@ -502,14 +502,20 @@ class AdminController extends BaseController
         }
     }
 
-    public function StudentListToAdmin()
+    public function create_group()
     {
 
         $model = new AdminModel();
         $data['groupSessionStudents'] = $model->getGroupSessionStudents();
         $data['OneToOneSession'] = $model->getOneToOneSessionStudents();
+        $wherecond = array('is_deleted' => 'N');
 
-        return view('AdminSideBar/StudentList', $data);
+
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+        $data['faculty_data'] = $model->getalldata('faculty', $wherecond);
+
+
+        return view('AdminSideBar/create_group', $data);
     }
 
     public function SelectedForGroup()
@@ -1037,6 +1043,45 @@ public function chechk_courses_id_id()
 
         echo view('add_user', $data);
     }
+    public function get_sub_courses_data()
+    {
+        $model = new AdminModel();
+
+        $courses_id_g = $this->request->getPost('courses_id_g');
+
+        if ($courses_id_g) {
+            $wherecond1 = array('is_deleted' => 'N', 'courses_id' => $courses_id_g);
+        
+            $sub_courses = $model->getalldata('tbl_sub_courses', $wherecond1);
+            return json_encode($sub_courses);
+        } else {
+            return json_encode([]);
+        }
+    }
+
+
+    public function get_student_data()
+    {
+        $model = new AdminModel();
+
+        $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
+        $courses_id_g = $this->request->getPost('courses_id_g');
+        $GroupSession = 'GroupSession';
+        if ($sub_courses_id_g) {
+
+            $wherecond1 = array('is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g);
+        
+            $student_data = $model->getalldata('register', $wherecond1);
+
+            return json_encode($student_data);
+        } else {
+            return json_encode([]);
+        }
+    }
+    
+
+
+    
 
 
     public function chechk_menu_name_id()
@@ -1206,4 +1251,75 @@ public function chechk_courses_id_id()
         $data['groups'] = $model->getGroupsForCourse($course, $subcourse);
         return $this->response->setJSON($data);
     }
+
+    public function set_create_group_data()
+{
+
+
+    $data = [
+        'courses_id_g' => $this->request->getVar('courses_id_g'),
+        'sub_courses_id_g' => $this->request->getVar('sub_courses_id_g'),
+        'student_id' => implode(',', $this->request->getVar('student_id')), // Convert array to comma-separated string
+        'group_name' => $this->request->getVar('group_name'),
+        'create_group_date' => $this->request->getVar('create_group_date'),
+        'faculty_id_g' => $this->request->getVar('faculty_id_g'),
+        'session_start_date' => $this->request->getVar('session_start_date'),
+        'created_on' => date('Y-m-d H:i:s'),
+    ];
+
+    $db = \Config\Database::Connect();
+
+    if ($this->request->getVar('id') == "") {
+        $add_data = $db->table('tbl_group');
+        $add_data->insert($data);
+        session()->setFlashdata('success', 'Data added successfully.');
+    } else {
+        $update_data = $db->table('tbl_group')->where('id', $this->request->getVar('id'));
+        $update_data->update($data);
+        session()->setFlashdata('success', 'Data updated successfully.');
+    }
+
+    return redirect()->to('student_list_of_group');
+}
+
+
+public function student_list_of_group()
+{
+    $model = new AdminModel();
+
+    $wherecond = array('is_deleted' => 'N');
+
+
+    $data['student_list_of_group'] = $model->getalldata('tbl_group', $wherecond);
+    // echo "<pre>";print_r($data['menu_data']);exit();
+    echo view('student_list_of_group', $data);
+}
+
+
+public function edit_group()
+{
+
+    $model = new AdminModel();
+
+     
+        $wherecond = array('is_deleted' => 'N');
+
+
+    
+
+    $group_id = $this->request->uri->getSegments(1);
+
+    $wherecond1 = array('is_deleted' => 'N', 'id' => $group_id[1]);
+
+    $data['single_data'] = $model->get_single_data('tbl_group', $wherecond1);
+    $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+    $data['faculty_data'] = $model->getalldata('faculty', $wherecond);
+
+
+
+    return view('AdminSideBar/create_group', $data);
+}
+
+    
+    
 }

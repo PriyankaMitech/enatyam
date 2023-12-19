@@ -102,7 +102,7 @@ $routes->get('demo', 'Home::demo');
 //routes for admin
 $routes->post('AdminController/addStudent', 'AdminController::addStudent');
 $routes->get('givestudent', 'AdminController::givestudent');
-$routes->get('StudentListToAdmin', 'AdminController::StudentListToAdmin');
+$routes->get('create_group', 'AdminController::create_group');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
 $routes->get('Admindashboard', 'AdminController::Admindashboard');
 $routes->get('getAdminSideBarAll', 'AdminController::getAdminSideBarAll');
@@ -185,6 +185,12 @@ $routes->post('chechk_sub_courses_name_id', 'AdminController::chechk_sub_courses
 // $routes->get('chechk_courses_id_id', ' AdminController::chechk_courses_id_id');
 $routes->post('chechk_courses_id_id', 'AdminController::chechk_courses_id_id');
 
+$routes->post('get_sub_courses_data', 'AdminController::get_sub_courses_data');
+$routes->post('get_student_data', 'AdminController::get_student_data');
+
+
+
+
 
 
 
@@ -192,6 +198,10 @@ $routes->post('chechk_courses_id_id', 'AdminController::chechk_courses_id_id');
 $routes->post('add_menu', 'AdminController::add_menu');
 $routes->get('add_menu', 'AdminController::add_menu');
 
+
+
+$routes->post('student_list_of_group', 'AdminController::student_list_of_group');
+$routes->get('student_list_of_group', 'AdminController::student_list_of_group');
 
 
 $routes->post('menu_list', 'AdminController::menu_list');
@@ -202,10 +212,13 @@ $routes->get('user_list', 'AdminController::user_list');
 
 
 $routes->post('set_menu', 'AdminController::set_menu');
-// $routes->get('set_menu', 'AdminController::set_menu');
+$routes->post('set_create_group_data', 'AdminController::set_create_group_data');
 
 $routes->post('edit_menu/(:any)', 'AdminController::add_menu/$1');
 $routes->get('edit_menu/(:any)', 'AdminController::get_menu/$1');
+
+$routes->get('edit_group/(:any)', 'AdminController::edit_group/$1');
+
 
 $routes->get('AddNewUser', 'AdminController::add_new_user');
 
