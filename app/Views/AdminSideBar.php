@@ -42,6 +42,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="<?=base_url(); ?>dist/css/adminlte.min.css">
 
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -409,7 +410,7 @@
                                     </li>
 
                                     <!-- Groups Menu -->
-                                    <li class="nav-item" <?php if (in_array('StudentGroups', $access_levels) || in_array('create_group', $access_levels)) {
+                                    <li class="nav-item" <?php if (in_array('student_list_of_group', $access_levels) || in_array('create_group', $access_levels)) {
                                                                 echo "style='display:block'";
                                                             } else {
                                                                 echo "style='display:none'";
@@ -422,12 +423,12 @@
                                             </p>
                                         </a>
                                         <ul class="nav nav-treeview">
-                                            <li class="nav-item" <?php if (in_array('StudentGroups', $access_levels)) {
+                                            <li class="nav-item" <?php if (in_array('student_list_of_group', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>StudentGroups" class="nav-link">
+                                                <a href="<?php echo base_url() ?>student_list_of_group" class="nav-link">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Groups List</p>
                                                 </a>
@@ -892,7 +893,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item" >
-                                <a href="<?php echo base_url() ?>StudentGroups" class="nav-link">
+                                <a href="<?php echo base_url() ?>student_list_of_group" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Groups List</p>
                                 </a>

@@ -1329,54 +1329,145 @@ $(document).ready(function(){
 <script src="path/to/select2.js"></script>
 
 <script>
-$(document).ready(function(){
-    // Function to load student data based on selected sub_courses_id_g
-    function loadStudentData(subcoursesID, courses_id_g) {
-        $.ajax({
-            url: '<?= base_url(); ?>get_student_data',
-            type: 'POST',
-            data: {
-                sub_courses_id_g: subcoursesID,
-                courses_id_g: courses_id_g,
-            },
-            dataType: 'json',
-            success: function(data){
-                $('#student_id').empty();
-                $.each(data, function(key, value){
-                    $('#student_id').append('<option value="'+ value.id +'">'+ value.full_name +'</option>');
-                });
+    $(document).ready(function(){
+        // Function to load student data based on selected sub_courses_id_g
+        function loadStudentData() {
+            var subcoursesID = $('#sub_courses_id_g').val();
+            var courses_id_g = $('#courses_id_g').val();
 
-                // Retrieve the selected student IDs from the hidden input field
-                var selectedStudentIds = $('#selected_student_id').val();
+            $.ajax({
+                url: '<?= base_url(); ?>get_student_data',
+                type: 'POST',
+                data: {
+                    sub_courses_id_g: subcoursesID,
+                    courses_id_g: courses_id_g,
+                },
+                dataType: 'json',
+                success: function(data){
+                    $('#student_id').empty();
+                    $.each(data, function(key, value){
+                        $('#student_id').append('<option value="'+ value.id +'">'+ value.full_name +'</option>');
+                    });
 
-                // Convert the comma-separated string to an array of integers
-                var selectedIdsArray = selectedStudentIds.split(',').map(Number);
+                    // Retrieve the selected student IDs from the hidden input field
+                    var selectedStudentIds = $('#selected_student_id').val();
 
-                // Initialize Select2 and set the selected values
-                $('#student_id').select2();
-                $('#student_id').val(selectedIdsArray).trigger('change');
-            }
-        });
-    }
+                    // Convert the comma-separated string to an array of integers
+                    var selectedIdsArray = selectedStudentIds.split(',').map(Number);
 
-    // Trigger change event on #sub_courses_id_g when the document is ready
-    $('#sub_courses_id_g').change();
-
-    // Event listener for change on #sub_courses_id_g
-    $('#sub_courses_id_g').on('change', function(){
-        var subcoursesID = $(this).val();
-        var courses_id_g = $('#courses_id_g').val();
-
-        if(subcoursesID){
-            // Load student data
-            loadStudentData(subcoursesID, courses_id_g);
-        } else {
-            $('#student_id').empty();
-            $('#student_id').append('<option value="">Please Select State</option>');
+                    // Initialize Select2 and set the selected values
+                    $('#student_id').select2();
+                    $('#student_id').val(selectedIdsArray).trigger('change');
+                }
+            });
         }
+
+        // Use setTimeout to ensure that the document is fully loaded before trying to load student data
+        setTimeout(function() {
+            loadStudentData();
+        }, 1000);
+
+        // Event listener for change on #sub_courses_id_g
+        $('#sub_courses_id_g').on('change', function(){
+            loadStudentData();
+        });
+    });
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        // Get the current date in 'YYYY-MM-DD' format
+        var currentDate = new Date().toISOString().split('T')[0];
+
+        // Set the minimum date for create_group_date input
+        $('#create_group_date').attr('min', currentDate);
+
+        // Set the minimum date for session_start_date input
+        $('#session_start_date').attr('min', currentDate);
+    });
+</script>
+
+
+<script>
+
+
+$(document).ready(function() {
+    $.validator.addMethod('minSelected', function(value, element, min) {
+        return $(element).find('option:selected').length >= min;
+    }, 'Please select at least {0} options.');
+
+    $('#create_group_form').validate({
+        rules: {
+            courses_id_g: {
+                required: true,
+                min: 1, // Assuming that course IDs start from 1. Adjust if needed.
+
+            },
+            sub_courses_id_g: {
+                required: true,
+                min: 1, // Assuming that course IDs start from 1. Adjust if needed.
+
+               
+            },
+            'student_id[]': {
+                required: true,
+                minSelected: 1 // Adjust the minimum number of selected options as needed
+            },
+            group_name: {
+                required: true,
+            },
+            create_group_date: {
+                required: true,
+            },
+            faculty_id_g: {
+                required: true,
+                min: 1, // Assuming that course IDs start from 1. Adjust if needed.
+
+            },
+            session_start_date: {
+                required: true,
+            }
+        },
+        messages: {
+            courses_id_g: {
+                required: 'Please select courses.',
+                min: 'Please select courses.',
+
+            },
+            sub_courses_id_g: {
+                required: 'Please select sub courses.',
+                min: 'Please select sub courses.',
+            },
+            'student_id[]': {
+                required: 'Please select at least one student.',
+                minSelected: 'Please select at least one student.'
+            },
+            group_name: {
+                required: "Enter group name.",
+            },
+
+            create_group_date: {
+                required: 'Please select date.',
+            },
+            faculty_id_g: {
+                required: 'Please select faculty.',
+                min: 'Please select faculty.',
+
+            },
+            session_start_date: {
+                required: 'Please select date.',
+            }
+        },
+
+        
+
+
     });
 });
 </script>
+
+
 
 
 

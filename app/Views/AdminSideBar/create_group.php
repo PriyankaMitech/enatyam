@@ -30,14 +30,14 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="set_create_group_data" method="post">
+            <form action="<?=base_url(); ?>set_create_group_data" method="post" id="create_group_form">
               <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
                       <label>Courses</label>
                       <input type="hidden" id="id" name="id" value="<?php if (isset($single_data)) { echo ($single_data->id); } ?>">
 
-                      <select class="form-control" name="courses_id_g" id="courses_id_g" style="width: 100%;">
+                      <select class="form-control" name="courses_id_g" id="courses_id_g" >
                           <option >Please select course</option>
                           <?php if(!empty($courses_data)){?>
                               <?php foreach ($courses_data as $data){ ?>
@@ -63,9 +63,10 @@
                 <div class="col-md-4">
                 <div class="form-group">
                   <label>Student</label>
-                  <input type="text" id="selected_student_id" value="<?php if (isset($single_data)) { echo ($single_data->student_id); } ?>">
+                  <input type="hidden" id="selected_student_id" value="<?php if (isset($single_data)) { echo ($single_data->student_id); } ?>">
                   <select name="student_id[]" id="student_id" class="select2" multiple="multiple" data-placeholder="Select a student" style="width: 100%;">
                   </select>
+                  <label id="student_id-error" class="error" for="student_id" style="display:none;">Please select at least one student.</label>
               </div>
                 </div>
 
@@ -80,7 +81,7 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Create Group Date</label>
-                    <input type="date" class="form-control" name="create_group_date" id="create_group_date" value="<?php if (isset($single_data)) { echo ($single_data->create_group_date); } ?>">
+                    <input type="date" class="form-control" name="create_group_date" id="create_group_date" value="<?php if (isset($single_data)) { echo ($single_data->create_group_date); }else{ echo date('Y-m-d');} ?>">
                   </div>
                 </div>
 
@@ -105,7 +106,7 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Session Start Date</label>
-                    <input type="date" class="form-control" name="session_start_date" id="session_start_date" value="<?php if (isset($single_data)) { echo ($single_data->session_start_date); } ?>">
+                    <input type="date" class="form-control" name="session_start_date" id="session_start_date" value="<?php if (isset($single_data)) { echo ($single_data->session_start_date); }else{ echo date('Y-m-d');} ?>">
                   </div>
                 </div>
 
@@ -117,9 +118,11 @@
           </div>
       </div>
       <!-- /.container-fluid -->
+
     </section>
+    </div>
     <!-- /.content -->
-  </div>
+
 
 
 

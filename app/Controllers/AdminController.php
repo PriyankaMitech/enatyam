@@ -1266,9 +1266,10 @@ public function chechk_courses_id_id()
         'session_start_date' => $this->request->getVar('session_start_date'),
         'created_on' => date('Y-m-d H:i:s'),
     ];
-
+    
     $db = \Config\Database::Connect();
-
+    
+    // Update or insert data in 'tbl_group' table
     if ($this->request->getVar('id') == "") {
         $add_data = $db->table('tbl_group');
         $add_data->insert($data);
@@ -1278,7 +1279,21 @@ public function chechk_courses_id_id()
         $update_data->update($data);
         session()->setFlashdata('success', 'Data updated successfully.');
     }
-
+    
+    // Update data in 'register' table using student IDs
+    if (!empty($this->request->getVar('student_id'))) {
+        $registerUpdateData = [
+            'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
+            'groupName' => $this->request->getVar('group_name'),
+        ];
+    
+        $studentIds = explode(',', $data['student_id']);
+        foreach ($studentIds as $studentId) {
+            $registerUpdate = $db->table('register')->where('id', $studentId);
+            $registerUpdate->update($registerUpdateData);
+        }
+    }
+    
     return redirect()->to('student_list_of_group');
 }
 
@@ -1286,12 +1301,16 @@ public function chechk_courses_id_id()
 public function student_list_of_group()
 {
     $model = new AdminModel();
-
     $wherecond = array('is_deleted' => 'N');
 
 
-    $data['student_list_of_group'] = $model->getalldata('tbl_group', $wherecond);
-    // echo "<pre>";print_r($data['menu_data']);exit();
+    $wherecond1 = array('is_deleted' => 'N');
+    $orderByField = 'created_on';
+    $orderByDirection = 'desc';
+    
+    $data['student_list_of_group'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
+    $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+
     echo view('student_list_of_group', $data);
 }
 
@@ -1318,6 +1337,45 @@ public function edit_group()
 
 
     return view('AdminSideBar/create_group', $data);
+}
+
+public function serch_data_of_group(){
+
+    $model = new AdminModel();
+
+
+    $courses_id_g = $this->request->getVar('courses_id_g');
+    $sub_courses_id_g = $this->request->getVar('sub_courses_id_g');
+    $wherecond1 = "";
+    if((!empty($courses_id_g)) && (!empty($sub_courses_id_g)) ){
+        $session = session();
+        $session->set('courses_id_g', $courses_id_g);
+        $session->set('sub_courses_id_g', $sub_courses_id_g);
+
+        $wherecond1 = array('is_deleted' => 'N', 'courses_id_g' => $courses_id_g , 'sub_courses_id_g' => $sub_courses_id_g);
+
+    }
+
+    $orderByField = 'created_on';
+    $orderByDirection = 'desc';
+    
+    
+
+    $wherecond = array('is_deleted' => 'N');
+
+    $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+
+    $data['group_data'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
+
+    // echo "<pre>";print_r($data['group_data']);exit();
+
+
+    
+
+    return view('student_list_of_group', $data);
+
+
+
 }
 
     

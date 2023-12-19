@@ -544,6 +544,17 @@ class AdminModel extends Model
         }
     }
 
+    public function getalldatadesc($table, $wherecond, $orderBy = null, $orderByDirection = 'desc')
+{
+    $query = $this->db->table($table)->where($wherecond);
+
+    if ($orderBy !== null) {
+        $query->orderBy($orderBy, $orderByDirection);
+    }
+
+    return $query->get()->getResult();
+}
+
 
     public function get_single_data($table, $wherecond)
     {
@@ -913,24 +924,6 @@ public function getsubcorce()
 
 
 
-    public function getsinglerows($table, $wherecon)
-{
-     $builder = $this->db->table($table);
-
-    if (!empty($wherecon)) {
-        foreach ($wherecon as $condition) {
-            $builder->where($condition);
-        }
-    }
-
-    $result = $builder->get()->getRow();
-
-    if ($result) {
-        return $result;
-    } else {
-        return false;
-    }
-}
 
 
 

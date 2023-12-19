@@ -199,6 +199,11 @@ $routes->post('add_menu', 'AdminController::add_menu');
 $routes->get('add_menu', 'AdminController::add_menu');
 
 
+$routes->post('serch_data_of_group', 'AdminController::serch_data_of_group');
+$routes->get('serch_data_of_group', 'AdminController::serch_data_of_group');
+
+
+
 
 $routes->post('student_list_of_group', 'AdminController::student_list_of_group');
 $routes->get('student_list_of_group', 'AdminController::student_list_of_group');
