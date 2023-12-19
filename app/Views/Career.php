@@ -128,7 +128,7 @@
                                 <div class="demo-form">
                                     <div class="position-relative">
                                         <h5 class="title">
-                                            <u>Free Demo Class</u>
+                                            <u>Apply For Job</u>
                                         </h5>
                                         <div class="f-info fdcd">
                                             <div>
@@ -147,18 +147,29 @@
                                             </div>
                                             <div>
                                                 <select class="form-control" id="course" aria-required="true" aria-invalid="false" name="course">
-                                                    <option value="">Position Applying For*</option>
-                                                    <option value="Dance">Dance</option>
-                                                    <option value="Music">Music</option>
-                                                    <option value="Yoga">Yoga</option>
-                                                    <option value="Instruments">Instruments</option>
+                                                    <option value="">Position applying For*</option>
+                                                    <?php if(!empty($courses_data)){?>
+                                                        <?php foreach ($courses_data as $data){ ?>
+                                                            <option value="<?=$data->id; ?>"
+                                                                <?php if ((!empty($single_data)) && $single_data->courses_id_g === $data->id ) { echo 'selected'; } ?>>
+                                                                <?= $data->courses_name; ?>
+                                                            </option>
+                                                        <?php } ?>
+                                                    <?php } ?>
 
                                                 </select>
                                                 <span style="color:red;" id="coursespanid"></span>
                                             </div>
+                                            <div >
+                                                    <input type="hidden" id="selected_sub_courses_id_g" value="<?php if (isset($single_data)) { echo ($single_data->sub_courses_id_g); } ?>">
+                                                    <select name="sub_courses_id_g" id="sub_courses_id_g" class="form-control">
+                                                        <option value="">Please select sub courses</option>
+                                                    </select>
+                                            </div>
+
                                             <div class="form-group updloaddata mt-3">
                                                 <label class="mr-4">Upload your profile photo:</label>
-                                                <input type="file" name="profile_photo">
+                                                <input type="file" accept="image/jpeg, image/png" name="profile_photo" required>
                                             </div>
                                             <div>
                                                 <!-- <input class="form-group-submit" type="submit" value="Next"> -->
@@ -476,26 +487,26 @@
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your CV:</label>
-                                            <input type="file" name="cvFile">
+                                            <input type="file" accept="application/pdf" name="cvFile" required>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your Education certificates:</label>
-                                            <input type="file" name="educaionCertificateFile">
+                                            <input type="file"  accept="application/pdf" name="educaionCertificateFile" required>
                                         </div>
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your course related certificates:</label>
-                                            <input type="file" name="courseCertificateFile">
+                                            <input type="file"  accept="application/pdf" name="courseCertificateFile" required>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your videos:</label>
-                                            <input type="file" name="videos">
+                                            <input type="file" accept="video/mp4, video/webm, video/ogg" name="videos" required>
                                     
                                         </div>
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your Images:</label>
-                                            <input type="file" name="img">
+                                            <input type="file" accept="image/jpeg, image/png" name="img" required>
                                         </div>
 
 

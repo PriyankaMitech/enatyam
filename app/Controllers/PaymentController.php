@@ -45,6 +45,7 @@ class PaymentController extends BaseController
 
     public function payment()
     {
+      
         $adminmodel = new AdminModel();
         if (!empty($this->request->getPost('razorpay_payment_id')) && !empty($this->request->getPost('merchant_order_id'))) {
 
@@ -89,15 +90,20 @@ class PaymentController extends BaseController
                 $error = 'Request to Razorpay Failed';
                 // 
             }
+            
             if ($success === true) {
                 if (!empty($this->session->get('ci_subscription_keys'))) {
                     $this->session->unset('ci_subscription_keys');
                 }
-                // if (!$order_info['order_status_id']) {
-                //     return redirect()->to($this->request->getPost('merchant_surl_id'));
-                // } else {
+             
+                    $email = $this->session->get('email');
+                   // print_r($email);die;
+                    $msg = 'Payment Confirmation Message'; 
+                    sendConfirmationEmail($email, $msg);
+                    // echo '<pre>';print_r($response_array);die;
                     $paydetails = $adminmodel->insert_payment($finaloutput);
                     $payment = $adminmodel->insert_formdata('id', 'payment', $_POST);
+                    
                     if ($result) {
                         return redirect()->to($this->request->getPost('merchant_surl_id'));
                     }else {

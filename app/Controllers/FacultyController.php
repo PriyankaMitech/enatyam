@@ -39,19 +39,11 @@ class FacultyController extends BaseController
 
             // Fetch today's session data
             $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
-            // Fetch other data using where condition
+          // print_r($todaysession);die;
             $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
-            // $notifications = $adminModel->getUserRole($teacherId);
 
             $todayDate = date('Y-m-d H:i:s');
             $displayedNotificationCount = 0;
-
-            // foreach ($notifications as $key => $notification) {
-            //     $notificationDate = $notification['timestamp'];
-            //     if ($notificationDate >= $todayDate) {
-            //         $displayedNotificationCount++;
-            //     }
-            // }
 
             return view('faculty', [
                 'data' => $data,
