@@ -284,9 +284,9 @@ $routes->post('Studentpasswordupdate', 'StudentController::Studentpasswordupdate
 $routes->post('selectedslotsfromstudent', 'StudentController::selectedslotsfromstudent');
 $routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
 $routes->get('SelectDate', 'StudentController::StudentSelectClassDates');
-
 $routes->get('feedback', 'StudentController::feedback');
 $routes->post('savefeedback', 'StudentController::savefeedback');
+$routes->post('SessionConduct', 'StudentController::SessionConduct');
 
 $routes->get('reschedule', 'StudentController::reschedule');
 

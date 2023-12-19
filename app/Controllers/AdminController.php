@@ -674,7 +674,10 @@ class AdminController extends BaseController
 
     public function studentAttendance()
     {
-        echo view('AdminSideBar/studentAttendance');
+        $model = new AdminModel();
+        $data['attendance'] = $model->fetchattandance();
+// print_r($data['attendance']);die;
+        return view('AdminSideBar/studentAttendance', $data);
     }
     public function add_notifications()
     {
