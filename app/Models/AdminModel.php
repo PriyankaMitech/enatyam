@@ -548,7 +548,6 @@ class AdminModel extends Model
     public function get_single_data($table, $wherecond)
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getRow();
-        // echo "<pre>";print_r( $result );exit();
 
         if ($result) {
             return $result;
@@ -905,4 +904,29 @@ public function getsubcorce()
         } 
 
     }
+
+
+    public function getsinglerows($table, $wherecon)
+{
+     $builder = $this->db->table($table);
+
+    if (!empty($wherecon)) {
+        foreach ($wherecon as $condition) {
+            $builder->where($condition);
+        }
+    }
+
+    $result = $builder->get()->getRow();
+
+    if ($result) {
+        return $result;
+    } else {
+        return false;
+    }
+}
+
+
+
+    
+    
 }
