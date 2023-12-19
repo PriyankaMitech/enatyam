@@ -207,7 +207,6 @@ class StudentController extends BaseController
 
         $data['SessionCount'] = $StudentModel->get_user_Session($user_id); 
         $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);   
-        //    print_r( $data['slots'] );die;
         return view('StudentSidebar/ScheduleStudent',$data);
 
     }
@@ -302,17 +301,18 @@ class StudentController extends BaseController
             $StudentModel = new StudentModel();
           
            $registerData = $StudentModel->fetchProfileDate($registerId);
-        //    print_r($registerData);die;
-           $sessionStartDate = $registerData['Session_Start_Date'];
-        //    print_r($sessionStartDate);die;
+        //    print_r($registerData);
+            // print_r($registerData[0]->Session_Start_Date);die;
+           $sessionStartDate = $registerData[0]->Session_Start_Date;
+           // print_r($sessionStartDate);die;
 
             $dataToUpdate = [
                 'student_register_id' => $registerId,
                 'session_start_date' => $sessionStartDate, // Update the column with the fetched value
             ];
-            // print_r( $dataToUpdate);die;
+           //  print_r($dataToUpdate);die;
 
-           $StudentModel->updateData($selectedId, $dataToUpdate);
+           $StudentModel->updateData($selectedId, $dataToUpdate,$registerId);
             return redirect()->to('SelectDate');
         }
         public function studentsessionstatus()

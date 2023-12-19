@@ -23,7 +23,7 @@
                 <?php
                 $today = date('Y-m-d'); // Current date in 'Y-m-d' format
 
-                $sessionsCount = !is_null($SessionCount) ? $SessionCount->SessionsCount : 0;
+                $sessionsCount = !is_null($SessionCount) ? $SessionCount->no_of_session : 0;
                 $currentDate = isset($slots[0]->Session_Start_Date) ? date('Y-m-d', strtotime($slots[0]->Session_Start_Date)) : null;
 
                 for ($i = 0; $i < $sessionsCount; $i++) {

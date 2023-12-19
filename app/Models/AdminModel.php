@@ -508,7 +508,7 @@ class AdminModel extends Model
         $result['insert'] = $this->db->table($table)->insert($insertdata);
         if ($result['insert']) {
             $insertedID = $this->db->insertID();
-            $result['getdata'] = $this->db->table($table)->where($id, $insertedID)->get()->getRowArray();
+            $result['getdata'] = $this->db->table($table)->where($column, $insertedID)->get()->getRowArray();
 
             return $result;
         } else {
@@ -542,7 +542,6 @@ class AdminModel extends Model
     public function get_single_data($table, $wherecond)
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getRow();
-        // echo "<pre>";print_r( $result );exit();
 
         if ($result) {
             return $result;
@@ -823,10 +822,11 @@ class AdminModel extends Model
         $res1 = substr($sql1, 0, strlen($sql1) - 2) . ")";
         $result = $this->db->query($res . $res1);
 
-        $this->table('register')
-            ->where(["id" => $_SESSION['sessiondata']['id']])
-            ->set('Payment_status', 'Y')
-            ->update();
+        
+        $this->db->table('register')
+        ->where('id', $_SESSION['sessiondata']['id'])
+        ->update(['Payment_status' => 'Y']);
+
 
         if ($result) {
             return true;
@@ -849,4 +849,80 @@ class AdminModel extends Model
 
         return $grouplist;
     }
+
+    public function getRecordsBefore7Days()
+    {
+        $sevenDaysAgo = date('Y-m-d', strtotime('-7 days'));
+        
+        $query = $this->db->table('carrier')
+            ->where("DATE(Booking_Date_Time) >= ", $sevenDaysAgo)
+            ->where("DATE(Booking_Date_Time) <= ", date('Y-m-d'))
+            ->where('Result_of_application', 'Pending') // Add this line
+            ->get();
+    //    echo $this->db->getLastQuery();die;
+        return $query->getResult();
+
+
+    }
+    public function chechk_courses_id_id($courses_id, $sub_courses_name)
+    {
+        $result = $this->db->table('tbl_sub_courses')
+            ->where('is_deleted', 'N')
+            ->where('courses_id', $courses_id)
+            ->where('sub_courses_name', $sub_courses_name)
+
+
+            ->get()
+            ->getRow();
+    
+        if(!empty($result)){
+        return $result;  
+        }else{
+            return false;
+        } 
+    }
+
+    
+
+    public function chechk_sub_courses_name_id($courses_id, $sub_courses_name)
+    {
+        $result = $this->db->table('tbl_sub_courses')
+            ->where('is_deleted', 'N')
+            ->where('sub_courses_name', $sub_courses_name)
+            ->where('courses_id', $courses_id)
+            ->get()
+            ->getRow();
+    
+        if(!empty($result)){
+        return $result;  
+        }else{
+            return false;
+        } 
+
+    }
+
+
+    public function getsinglerows($table, $wherecon)
+{
+     $builder = $this->db->table($table);
+
+    if (!empty($wherecon)) {
+        foreach ($wherecon as $condition) {
+            $builder->where($condition);
+        }
+    }
+
+    $result = $builder->get()->getRow();
+
+    if ($result) {
+        return $result;
+    } else {
+        return false;
+    }
+}
+
+
+
+    
+    
 }

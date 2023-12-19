@@ -160,8 +160,8 @@ class LoginController extends BaseController
     public function saveuserdata()
    { 
        $email = $this->request->getPost('email');
-       $course = $this->request->getPost('course');
-       $sub_course = $this->request->getPost('sub_course');
+       $course = $this->request->getPost('courses_id_g');
+       $sub_course = $this->request->getPost('courses_id_g');
        $age = $this->request->getPost('age');
        $experience = $this->request->getPost('experience');
        $SessionType = $this->request->getPost('SessionType');
@@ -180,10 +180,6 @@ class LoginController extends BaseController
            'SessionType' => $SessionType,
        ];
        $affectedRows = $loginModel->updateUserByEmail($email, $data);
-
-       if ($affectedRows > 0 && $data['Payment_status'] == 'Y') {
-           sendConfirmationEmail($email, 'Payment Confirmation', 'Thank you for your payment.');
-       }
    
        return redirect()->to('Home');
    }  

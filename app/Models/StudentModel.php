@@ -93,17 +93,26 @@ class StudentModel extends Model
                 ->get()
                 ->getResult();
         }
-        public function updateData($selectedId, $dataToUpdate)
+        public function updateData($selectedId, $dataToUpdate, $registerId)
         {
-            return $this->db->table('schedule')
-            ->set('student_register_id' , $dataToUpdate,)
-            ->where('id', $selectedId)
-            ->update();
+            $student_register_id = $dataToUpdate['student_register_id'];
+            $session_start_date = $dataToUpdate['session_start_date'];
+            $dates = $this->db->table('schedule')
+                ->set('student_register_id', $student_register_id)
+                ->set('session_start_date', $session_start_date)
+                ->where('id', $selectedId)
+                ->update();
+            return $dates;
         }
+       
         public function get_user_Session($user_id)
         {
-
-            return $this->db->table('student')->select('*')->where('register_id', $user_id)->get()->getRow();
+            $query = $this->db->table('student')
+                ->select('student.*, payment.no_of_session') // Select specific columns
+                ->where('student.register_id', $user_id)
+                ->join('payment', 'student.register_id = payment.user_id', 'left') // Adjust the join type as needed (left, right, inner)
+                ->get();        
+            return $query->getRow();
         }
         public function Getseslectedslotstostudent($user_id)
         {
