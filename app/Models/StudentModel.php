@@ -83,15 +83,28 @@ class StudentModel extends Model
         //     ->getResult();
         // }
 
-        public function fetchdataFromid($assignTeacherId)
+        public function fetchdataFromid($assignTeacherId, $registerId)
         {
-            return $this->db->table('schedule')
+            $query = $this->db->table('schedule')
                 ->join('register', 'register.id = schedule.faculty_register_id')
-                ->where('schedule.faculty_register_id', $assignTeacherId)
-                ->where('schedule.student_register_id', null) // Add the condition for NULL student_register_id
-                ->select('register.full_name, schedule.*') 
+                ->where('schedule.faculty_register_id', $assignTeacherId);
+        
+            if ($this->isRegisterIdPresent($registerId)) {
+                return null;
+            }
+            $result = $query
+                ->where('schedule.student_register_id', null)
+                ->select('register.full_name, schedule.*')
                 ->get()
                 ->getResult();
+            return $result;
+        }
+        private function isRegisterIdPresent($registerId)
+        {
+            $result = $this->db->table('schedule')
+                ->where('student_register_id', $registerId)
+                ->countAllResults();
+            return $result > 0;
         }
         public function updateData($selectedId, $dataToUpdate, $registerId)
         {

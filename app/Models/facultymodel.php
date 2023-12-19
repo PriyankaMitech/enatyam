@@ -94,7 +94,7 @@ class facultymodel extends Model
     $builder->select('schedule.*, register.full_name as student_name'); // Select the fields you need
     $builder->join('register', 'register.id = schedule.student_register_id', 'left'); // Adjust the join condition based on your actual database structure
     $builder->where('schedule.faculty_register_id', $teacherId);
-    $builder->where('schedule.date', $todayDate);
+    $builder->where('schedule.zz', $todayDate);
     $builder->where('schedule.student_register_id IS NOT NULL');
     $query = $builder->get();
     $result = $query->getResult();

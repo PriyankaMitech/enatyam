@@ -32,34 +32,31 @@
   </section>
   <section class="content">
     <div class="container-fluid">
-      <div class="row">
-
-
-        <div class="col-md-3 col-sm-6 col-12">
-          <div class="info-box bg-info">
+    <div class="row">
+    <div class="col-md-3 col-sm-6 col-12">
+        <a href="http://localhost/enatyam/ScheduleStudent" class="info-box bg-info">
             <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
             <div class="info-box-content">
-              <span class="info-box-text">My Attendance</span>
+                <span class="info-box-text">My Attendance</span>
             </div>
             <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
+        </a>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
 
-        </div>
-        <!-- /.col -->
-
-        <div class="col-md-3 col-sm-6 col-12">
-          <div class="info-box bg-warning">
+    <div class="col-md-3 col-sm-6 col-12">
+        <a href="http://localhost/enatyam/StudentProfile" class="info-box bg-warning">
             <span class="info-box-icon"><i class='fas fa-address-card'></i></span>
             <div class="info-box-content">
-              <span class="info-box-text">My Profile</span>
+                <span class="info-box-text">My Profile</span>
             </div>
             <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-      </div>
+        </a>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+</div>
 
 
     </div>

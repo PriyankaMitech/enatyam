@@ -905,4 +905,9 @@ public function getsubcorce()
         } 
 
     }
+    public function fetchattandance()
+    {
+        $result = $this->db->table('student')->get()->getResult();
+        return $result;
+    }
 }
