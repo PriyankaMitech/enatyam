@@ -142,18 +142,84 @@
         defaultCards.forEach(card => card.style.display = 'block');
     });
 </script>
+<!--  -->
 <script>
-    $(document).ready(function() {
-        // Hide all forms initially
-        $('.dynamic-form').hide();
-
-        // Show the selected form when the dropdown changes
-        $('#selectOption').change(function() {
-            var selectedOption = $(this).val();
-            $('.dynamic-form').hide(); // Hide all forms
-            $('#' + selectedOption).show(); // Show the selected form
-        });
+    $(document).on('change', '#selectOption', function(e) {
+        e.preventDefault();
+        var selectedOption = $(this).val();
+        if (selectedOption === 'form1') {
+            $('#form1').show();
+            $('#form2').hide();
+        } else if (selectedOption === 'form2') {
+            $('#form1').hide();
+            $('#form2').show();
+        } else {
+            $('.dynamic-form').hide();
+        }
     });
+   $(document).ready(function() {
+        // Extract date, commonStartTime, and sessionNumber from the URL parameters
+        var urlParams = new URLSearchParams(window.location.search);
+        var urlDate = urlParams.get('date');
+        var commonStartTime = urlParams.get('commonStartTime');
+        var sessionNumber = urlParams.get('sessionNumber');
+
+        // Set the date, current_time, reschedule_time in the form
+        if (urlDate) {
+            $('#form_date').val(urlDate);
+            $('#reshule_date').val(urlDate); // Set the value for the second date field
+        }
+        if (commonStartTime) {
+            $('#current_time').val(commonStartTime);
+        }
+        if (sessionNumber) {
+            // Assuming sessionNumber is in the format 'sessionNumber=2'
+            // Extract the numeric part and set it in the form
+            var numericSessionNumber = parseInt(sessionNumber.replace('sessionNumber=', ''));
+            $('#session_number').val(numericSessionNumber);
+        }
+    });
+
+    function submitForm(formId) {
+        var formData = $('#' + formId).serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: $('#' + formId).attr('action'),
+            data: formData,
+            success: function(response) {
+                // Handle the success response if needed
+                console.log('Form submitted successfully');
+                console.log(response);
+                window.location.href = '<?= base_url('ScheduleStudent'); ?>';
+            },
+            error: function(error) {
+                // Handle the error response if needed
+                console.error('Error submitting form:', error);
+            }
+        });
+    }
+</script>
+<script>
+    function redirectToOtherPage(date, sessionNumber, buttonText, commonStartTime) {
+        var redirectUrl = 'reschedule';
+        if (buttonText === 'Reschedule') {
+            redirectUrl += '?date=' + encodeURIComponent(date) + '&sessionNumber=' + encodeURIComponent(sessionNumber) + '&commonStartTime=' + encodeURIComponent(commonStartTime);
+            window.location.href = redirectUrl;
+        }
+    }
+</script>
+<script>
+function openModal(currentDate, sessionNumber, buttonText) {
+    document.getElementById('modalCurrentDate').value = currentDate;
+    document.getElementById('modalSessionNumber').value = sessionNumber;
+    document.getElementById('modalButtonText').value = buttonText;
+    document.getElementById('myModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+}
 </script>
 </div>
 </body>
