@@ -80,20 +80,22 @@
                                     <!-- /.tab-pane -->
                                     <div class="tab-pane" id="timeline">
 
-                                        <?php if (!empty($videos)) { ?>
+                                        <?php 
+
+                                        if (!empty($videos)) { 
+                                            
+                                            ?>
 
                                             <div class="row">
-                                                <?php foreach ($videos as $faculty) { ?>
-                                                    <?php
+                                                <?php foreach ($videos as $faculty) { 
                                                     $extension = pathinfo($faculty->video_name, PATHINFO_EXTENSION);
-                                                    echo $extension;
                                                     ?>
                                                     <?php if ($extension == 'mp4') : ?>
                                                         <div class="col-md-4">
                                                             <div class="card">
                                                                 <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
                                                                     <!-- Adjust the video size -->
-                                                                    <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/' . $faculty->video_name) ?>" type="video/mp4">
+                                                                    <source class="img-fluid" src="<?= base_url( ) ?>public/uploads/FacultyUplodedVideos/<?=$faculty->video_name ?>" type="video/mp4">
                                                                 </video>
                                                                 <div class="card-body">
                                                                     <p class="card-text">
@@ -104,8 +106,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    <?php endif; ?>
-                                                <?php } ?>
+                                                    <?php endif; } ?>
 
                                             </div>
                                         <?php } ?>

@@ -275,81 +275,17 @@ class AdminModel extends Model
             ->join('register', 'register.id = uplode_video_to_student.register_faculty_id')
             ->get()
             ->getResult();
+
         return  $VideoDetails;
     }
 
-    // public function getStudyVideoUplodedByStudent($startDate = null, $endDate = null, $facultyName = null)
-    // {
-    //     $query = $this->db->table('uplode_study_video_from_student')
-    //         ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
-    //         ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id');
-
-    //     // Apply filters if provided
-
-    //     // Apply filters if provided
-    //     if ($startDate !== null) {
-    //         $startDate = new \DateTime($startDate);
-    //         $startDateFormatted = $startDate->format('Y-m-d H:i:s');
-    //         $query->where('uplode_study_video_from_student.DateTime >=', $startDateFormatted);
-    //     }
-
-    //     if ($endDate !== null) {
-    //         $endDate = new \DateTime($endDate);
-    //         $endDateFormatted = $endDate->format('Y-m-d H:i:s');
-    //         $query->where('uplode_study_video_from_student.DateTime <=', $endDateFormatted);
-    //     }
-
-    //     if ($facultyName !== null) {
-    //         $query->like('register.full_name', $facultyName);
-    //     }
-
-    //     $videoDetails = $query->get()->getResult();
-
-    //     return $videoDetails;
-    // }
-
-    // public function getFacultyBySearch($startDate = null, $endDate = null, $facultyName = null)
-    // {
-    //     // echo $startDate;
-    //     // echo $endDate;
-    //     // exit();
-    //     $query = $this->db->table('uplode_video_to_student')
-    //         ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
-    //         ->join('student', 'student.student_id = uplode_video_to_student.student_id')
-    //         ->join('register', 'register.id = uplode_video_to_student.register_faculty_id');
-
-    //     // Apply filters if provided
-    //     if ($startDate !== null) {
-    //         $startDate = new \DateTime($startDate);
-    //         $startDateFormatted = $startDate->format('Y-m-d H:i:s');
-    //         print_r($startDateFormatted);
-    //         $query->where('uplode_video_to_student.DateTime >=', $startDateFormatted);
-    //     }
-
-    //     if ($endDate !== null) {
-    //         $endDate = new \DateTime($endDate);
-    //         $endDateFormatted = $endDate->format('Y-m-d H:i:s');
-    //         print_r($endDateFormatted);
-    //         $query->where('uplode_video_to_student.DateTime <=', $endDateFormatted);
-    //     }
 
 
-
-    //     if ($facultyName !== null) {
-    //         $query->like('register.full_name', $facultyName);
-    //     }
-
-    //     $videoDetails = $query->get()->getResult();
-    //     // echo '<pre>';
-    //     // print_r($videoDetails);
-    //     // die;
-    //     echo $this->db->getLastQuery();
-    //     die;
-    //     return $videoDetails;
-    // }
-
-    public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = null)
+    public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = '', $facultyName = '')
     {
+        // echo $startDate;
+        // echo $endDate;
+        // exit();
         $query = $this->db->table('uplode_video_to_student')
             ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
             ->join('student', 'student.student_id = uplode_video_to_student.student_id')
@@ -358,29 +294,87 @@ class AdminModel extends Model
         // Apply filters if provided
         if ($startDate !== null) {
             $startDate = new \DateTime($startDate);
-            $startDateFormatted = $startDate->format('Y-m-d');
-            $query->where("DATE(uplode_video_to_student.DateTime) >=", $startDateFormatted);
+            $startDateFormatted = $startDate->format('Y-m-d H:i:s');
+            // print_r($startDateFormatted);
+            $query->where('uplode_video_to_student.DateTime >=', $startDateFormatted);
         }
 
         if ($endDate !== null) {
             $endDate = new \DateTime($endDate);
-            $endDateFormatted = $endDate->format('Y-m-d');
-            $query->where("DATE(uplode_video_to_student.DateTime) <=", $endDateFormatted);
+            $endDateFormatted = $endDate->format('Y-m-d H:i:s');
+            // print_r($endDateFormatted);
+            $query->where('uplode_video_to_student.DateTime <=', $endDateFormatted);
         }
 
-        if ($studentName !== null) {
-            $query->like('student.student_name', $studentName);
+
+
+        if ($facultyName !== '') {
+            $query->orWhere('register.id', $facultyName);
         }
+        if ($studentName !== '') {
+            $query->orWhere('uplode_video_to_student.student_id', $studentName);
+        }
+
 
         $videoDetails = $query->get()->getResult();
-
-
-        // Uncomment the following lines for debugging purposes
+        // echo '<pre>';
+        // print_r($videoDetails);
+        // die;
         // echo $this->db->getLastQuery();
         // die;
-
-        return $videoDetails;
+        if ($videoDetails) {
+            return $videoDetails;
+        } else {
+            return false;
+        }
     }
+
+    // public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = null, $facultyName = null)
+    // {
+    // $startDate = new \DateTime($startDate);
+
+    // $startDateFormatted = $startDate->format('Y-m-d');
+    // print_r($startDateFormatted);
+    // die;
+
+    // $endDate = new \DateTime($endDate);
+    // $endDateFormatted = $endDate->format('Y-m-d');
+
+    // $query = $this->db->table('uplode_video_to_student as uvs')
+    //     ->select('uvs.*, student.student_name as student_name, register.full_name as faculty_name')
+    //     ->join('student', 'student.student_id = uvs.student_id')
+    //     ->join('register', 'register.id = uvs.register_faculty_id')
+    //     ->where('uvs.student_id', $studentName);
+
+    // $startDate = new \DateTime($startDate);
+    // $startDateFormatted = $startDate->format('Y-m-d');
+    // $endDate = new \DateTime($endDate);
+    // $endDateFormatted = $endDate->format('Y-m-d');
+    // print_r($startDateFormatted);
+    // print_r($endDateFormatted);
+    // die;
+
+    // $query = $this->db->table('uplode_video_to_student as uvs')
+    //     ->select('uvs.*, student.student_name as student_name, register.full_name as faculty_name')
+    //     ->join('student', 'student.student_id', '=', 'uvs.student_id')
+    //     ->join('register', 'register.id', '=', 'uvs.register_faculty_id')
+    //     ->where(function ($query) use ($studentName, $startDateFormatted, $endDateFormatted, $facultyName) {
+    //         $query->where('uvs.student_id', $studentName)
+    //             ->orWhereBetween('uvs.DateTime', [$startDateFormatted, $endDateFormatted])
+    //             ->orWhere('student.student_id', $studentName)
+    //             ->orWhere('register.id', $facultyName);
+    //     });
+
+
+    //     $videoDetails = $query->get()->getResult();
+    //     // echo'<pre>';print_r($videoDetails);die;
+    //     if ($videoDetails) {
+    //         return $videoDetails;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
 
     public function getcarreerBookByfaculty()
     {
@@ -775,34 +769,36 @@ class AdminModel extends Model
         return $result;
     }
 
-    public function  studentsgroup($group){
+    public function  studentsgroup($group)
+    {
 
-      $grouplist =$this->db->table('register')
-      ->Where('groupName', $group)
-         ->get()
-         ->getResult();
-    //  echo $this->db->getLastQuery();die;
-     return $grouplist;   
-        }
-public function getcorce()
-{
-    return $this->db->table('register')->distinct()
-    ->select('course')
-    ->where('course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
-    ->get()
-    ->getResultArray();
-}
-public function getsubcorce()
-{
-    return $this->db->table('register')->distinct()
-    ->select('sub_course')
-    ->where('sub_course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
-    ->get()
-    ->getResultArray();
-}
+        $grouplist = $this->db->table('register')
+            ->Where('groupName', $group)
+            ->get()
+            ->getResult();
+        //  echo $this->db->getLastQuery();die;
+        return $grouplist;
+    }
+    public function getcorce()
+    {
+        return $this->db->table('register')->distinct()
+            ->select('course')
+            ->where('course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
+            ->get()
+            ->getResultArray();
+    }
+    public function getsubcorce()
+    {
+        return $this->db->table('register')->distinct()
+            ->select('sub_course')
+            ->where('sub_course IS NOT NULL', null, false) // Adding the condition for 'groupName' is not null
+            ->get()
+            ->getResultArray();
+    }
 
 
-    public function insert_payment($insertdata){
+    public function insert_payment($insertdata)
+    {
 
         $sql = "insert into payment_details (";
         $sql1 = " values ( ";
@@ -810,46 +806,46 @@ public function getsubcorce()
         if (isset($insertdata->error)) {
             foreach ($insertdata->error as $key => $value) {
                 if (is_object($value)) {
-                    $d=json_encode($value);
-                    $sql1.='"' . htmlspecialchars($d) . '", ';
-                    $sql.= htmlspecialchars($key) . ', ';
-                }else {
-                    $sql.= htmlspecialchars($key) . ', ';
-                    $sql1.='"' . htmlspecialchars($value) . '", ';
+                    $d = json_encode($value);
+                    $sql1 .= '"' . htmlspecialchars($d) . '", ';
+                    $sql .= htmlspecialchars($key) . ', ';
+                } else {
+                    $sql .= htmlspecialchars($key) . ', ';
+                    $sql1 .= '"' . htmlspecialchars($value) . '", ';
                 }
-                
             }
-        }else {
+        } else {
             foreach ($insertdata as $key => $value) {
-                if(!is_object($value)){
-                    $sql1.='"' . htmlspecialchars($value) . '", ';
-                    $sql.= htmlspecialchars($key) . ', ';
+                if (!is_object($value)) {
+                    $sql1 .= '"' . htmlspecialchars($value) . '", ';
+                    $sql .= htmlspecialchars($key) . ', ';
                 }
-                if(is_object($value)){
+                if (is_object($value)) {
                     foreach ($value as $ke => $val) {
-                        $sql.= htmlspecialchars($ke) . ', ';
-                        $sql1.='"' . htmlspecialchars($val) . '", ';
+                        $sql .= htmlspecialchars($ke) . ', ';
+                        $sql1 .= '"' . htmlspecialchars($val) . '", ';
                     }
                 }
-                
             }
         }
 
         $res = substr($sql, 0, strlen($sql) - 2) . ")";
-        $res1 = substr($sql1, 0, strlen($sql1) - 2) .")";
+        $res1 = substr($sql1, 0, strlen($sql1) - 2) . ")";
         $result = $this->db->query($res . $res1);
+
         
         $this->db->table('register')
         ->where('id', $_SESSION['sessiondata']['id'])
         ->update(['Payment_status' => 'Y']);
 
+
         if ($result) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
-    
+
     public function getGroupsForCourse($course, $subcourse)
     {
         $grouplist = $this->db->table('register')
@@ -859,10 +855,10 @@ public function getsubcorce()
             ->where('groupName IS NOT NULL') // Add this condition
             ->get()
             ->getResult();
-    
-    //   echo $this->db->getLastQuery();die;
-    
-        return $grouplist;   
+
+        //   echo $this->db->getLastQuery();die;
+
+        return $grouplist;
     }
 
     public function getRecordsBefore7Days()

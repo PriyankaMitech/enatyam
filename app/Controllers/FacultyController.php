@@ -66,92 +66,40 @@ class FacultyController extends BaseController
 
   public function uploadVideo()
   {
-    // Retrieve student_id and register_id from session
-    //   $session = session();
-    //  $data = session()->get('data');
+    date_default_timezone_set('Asia/Kolkata');
     $data = session();
-    //   print_r($data);die;
     $studentId = $this->request->getPost('student_id');
-
-    // $this->session->set($studentId);
     $registerId =  $data->get('id');
-    // print_r($studentId);die;
-    //print_r($registerId);die;
-    // Create an instance of the FacultyModel
     $facultyModel = new FacultyModel();
-
-    // Retrieve the uploaded video file
-    // $videoFile = $this->request->getFile('videoFile');
-    // print_r($videoFile);
-    // die;
-
-    // Get the client's original video file name
-    // $videoFilename = $videoFile->getName();
-    // print_r($videoFilename);
-    // die;
-
-    // Move the video file to the 'public/videos/' directory
-    // $uploadDir = WRITEPATH . 'uploads/';
-
-    //changing path
-
     $videoFile = $this->request->getFile('videoFile');
-
     $type = $_FILES['videoFile']['type'];
-    // print_r($type);
-    // die;
+    $fileName = $_FILES['videoFile']['name'];
+
+     $videoFilename = $videoFile->getName();
+
     switch ($type) {
       case 'image/gif':
       case 'image/jpg':
       case 'image/png':
-        // do img config setup
-        if (!$videoFile->isValid()) {
-          // return $this->fail($videoFile->getErrorString());
-        }
 
         $videoFile->move(ROOTPATH . 'public\uploads\images\facultyUploadedImages');
 
         $videoFilename = $videoFile->getName();
-
 
         break;
       case 'avi':
       case 'flv':
       case 'wmv':
       case 'mp3':
+      case 'mp4':
+      case 'video/mp4':
       case 'wma':
-        // do video config
-        if (!$videoFile->isValid()) {
-          // return $this->fail($videoFile->getErrorString());
-        }
 
         $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
-
-        $videoFilename = $videoFile->getName();
-        // print_r($videoFilename);
-
-
         break;
     }
 
-    // if (!$videoFile->isValid()) {
-    //   // return $this->fail($videoFile->getErrorString());
-    // }
-
-    // $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
-
-    // $videoFilename = $videoFile->getName();
-    // print_r($videoFilename);
-    // die;
-
-    // print_r($uploadDir);
-    // die;
-
-    // $file->move(ROOTPATH . 'public\uploads\documents');
-    // $videoFile->move($uploadDir, $videoFilename);
-
-    // Call the method to update the student's video information
-    $facultyModel->updateStudentVideo($studentId, $registerId, $videoFilename);
+    $facultyModel->updateStudentVideo($studentId, $registerId, $fileName);
 
     return redirect()->to('FacultyDashboard');
     //  session_destroy();
@@ -171,6 +119,8 @@ class FacultyController extends BaseController
         $registerId = $studentId->get('id');
         $facultyModel = new FacultyModel();
         $videos = $facultyModel->getVideosByRegisterId($registerId);
+
+        // echo "<pre>";print_r($videos);exit();
         return view('StudentSideBarVideo', ['videos' => $videos]);
       } else {
         return redirect()->to(base_url());
