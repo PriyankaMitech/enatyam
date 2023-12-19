@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
-    <link rel="stylesheet" href="<?= base_url(); ?>dist/css/adminlte.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/summernote/summernote-bs4.min.css">
@@ -27,15 +26,21 @@
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/admindashboard_style.css">
 
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/fullcalendar/main.css">
-
-
-
-  <link rel="stylesheet" type="text/css" href="<?=base_url(); ?>public/css/jquery.dataTables.css">
-  <link href="<?php echo base_url() ?>public/css/custom.css">
-  </link>
-
-
-
+    <link rel="stylesheet" type="text/css" href="<?=base_url(); ?>public/css/jquery.dataTables.css">
+    <link href="<?php echo base_url() ?>public/css/custom.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <!-- Select2 -->
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- Bootstrap4 Duallistbox -->
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+    <!-- BS Stepper -->
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/bs-stepper/css/bs-stepper.min.css">
+    <!-- dropzonejs -->
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/dropzone/min/dropzone.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="<?=base_url(); ?>dist/css/adminlte.min.css">
 
 </head>
 
@@ -372,7 +377,7 @@
                                     </li>
 
                                     <!-- Groups Menu -->
-                                    <li class="nav-item" <?php if (in_array('StudentGroups', $access_levels) || in_array('StudentListToAdmin', $access_levels)) {
+                                    <li class="nav-item" <?php if (in_array('StudentGroups', $access_levels) || in_array('create_group', $access_levels)) {
                                                                 echo "style='display:block'";
                                                             } else {
                                                                 echo "style='display:none'";
@@ -395,12 +400,12 @@
                                                     <p>Groups List</p>
                                                 </a>
                                             </li>
-                                            <li class="nav-item" <?php if (in_array('StudentListToAdmin', $access_levels)) {
+                                            <li class="nav-item" <?php if (in_array('create_group', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>StudentListToAdmin" class="nav-link">
+                                                <a href="<?php echo base_url() ?>create_group" class="nav-link">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Create Groups</p>
                                                 </a>
@@ -861,7 +866,7 @@
                                 </a>
                             </li>
                             <li class="nav-item" >
-                                <a href="<?php echo base_url() ?>StudentListToAdmin" class="nav-link">
+                                <a href="<?php echo base_url() ?>create_group" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Create Groups</p>
                                 </a>
