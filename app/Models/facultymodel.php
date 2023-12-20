@@ -62,12 +62,35 @@ class facultymodel extends Model
 
     public function insertAppointments($data)
     {
+        //print_r($data);die;
         if (!empty($data) && is_array($data)) {
             $this->db->table('schedule')->insertBatch($data);
             return true; // Success
         } else {
             return false; // Failed to insert data
         }
+    }
+    public function checkDataExists($facultyId, $formDay, $formTime, $toTime)
+    {
+        $result = $this->db->table('schedule')
+        ->where('faculty_register_id', $facultyId)
+        ->where('Day', $formDay)
+        ->groupStart()
+        ->where('start_time <=', $toTime)
+        ->where('end_time >=', $formTime)
+        ->groupEnd()
+        ->countAllResults();
+
+    return $result > 0;
+    }
+    public function getFacultySlots($facultyRegisterId)
+    {
+        $query = $this->db->table('schedule') 
+            ->select('day, start_time, end_time ,student_register_id') 
+            ->where('faculty_register_id', $facultyRegisterId);
+        $result = $query->get()->getResultArray(); 
+    
+        return $result;
     }
     public function fetchshedule($registerId)
     {
@@ -94,6 +117,7 @@ class facultymodel extends Model
     $builder->select('schedule.*, register.full_name as student_name'); // Select the fields you need
     $builder->join('register', 'register.id = schedule.student_register_id', 'left'); // Adjust the join condition based on your actual database structure
     $builder->where('schedule.faculty_register_id', $teacherId);
+
     $builder->where('schedule.student_register_id IS NOT NULL');
     $query = $builder->get();
     $result = $query->getResult();
@@ -143,5 +167,38 @@ class facultymodel extends Model
             ->get()
             ->getRow()
             ->ConductedSessionsCount;
+    }
+    public function save_schedule_data() {
+        $i = 0;
+        $DAY_ARRAY = $_POST["DAY_ARRAY"];
+        $START_TIME_SEC = $_POST["START_TIME"];
+        $START_TIME_ARRAY = $_POST["START_TIME"];
+        $END_TIME_ARRAY = $_POST["END_TIME"];
+        $END_TIME_SEC = $_POST["END_TIME"];
+        $error_flag = 0;
+        // echo '<pre>';print_r($DAY_ARRAY);die;
+        foreach ($DAY_ARRAY as $day) {
+            if( (isset($DAY_ARRAY[$i]) && !empty($DAY_ARRAY[$i])) && (isset($START_TIME_ARRAY[$i]) && !empty($START_TIME_ARRAY[$i])) && (isset($END_TIME_ARRAY[$i]) && !empty($END_TIME_ARRAY[$i])) ) {
+                $insertdata = array(
+                    "USER_ID" => ($_SESSION['sessiondata']['id']),    
+                    "DAY_NAME" => $DAY_ARRAY[$i],    
+                    "START_TIME" => date("H:i:s", strtotime($START_TIME_ARRAY[$i])),
+                    "END_TIME" => date("H:i:s", strtotime($END_TIME_ARRAY[$i])),    
+                    "IS_VACATION" => "0",
+                    "IS_ACTIVE" => "Y",    
+                    "IS_DELETED" => "N",    
+                    "ENTRY_SOURCE" => "web"
+                );
+                $result= $this->db->table('schedule_details')->insert($insertdata);
+                if ($result) {
+                    return true;
+                }else {
+                    return false;
+                }
+            }else {
+                $error_flag++;
+            }
+            $i++;
+        }
     }
 }    

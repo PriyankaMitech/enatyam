@@ -530,7 +530,8 @@ class AdminModel extends Model
     public function getalldata($table, $wherecond)
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
-
+// print_r($result);die;
+// echo $this->db->getLastQuery();die;
         if ($result) {
             return $result;
         } else {
