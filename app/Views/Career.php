@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="step-item">
-                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         2
                     </button>
                     <div class="step-title">
@@ -98,21 +98,21 @@
                     </div>
                 </div>
                 <div class="step-item">
-                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         3
                     </button>
                     <div class="step-title">
                         Third Step
                     </div>
                 </div>
-                <div class="step-item">
+                <!-- <div class="step-item">
                     <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         4
                     </button>
                     <div class="step-title">
                         Fourth Step
                     </div>
-                </div>
+                </div> -->
 
             </div>
             <form action="<?php echo base_url(); ?>carrier_h" method="post" enctype="multipart/form-data">
@@ -146,7 +146,7 @@
                                                 <span style="color:red;" id="phonespanid"></span>
                                             </div>
                                             <div>
-                                                <select class="form-control" id="course" aria-required="true" aria-invalid="false" name="course">
+                                                <!-- <select class="form-control" id="course" aria-required="true" aria-invalid="false" name="course">
                                                     <option value="">Position applying For*</option>
                                                     <?php if(!empty($courses_data)){?>
                                                         <?php foreach ($courses_data as $data){ ?>
@@ -157,15 +157,29 @@
                                                         <?php } ?>
                                                     <?php } ?>
 
-                                                </select>
+                                                </select> -->
+
+                                                <select class="form-control" name="courses" id="courses" >
+                                                <option >Please select course</option>
+                                                <?php if(!empty($courses_data)){?>
+                                                    <?php foreach ($courses_data as $data){ ?>
+                                                        <option value="<?=$data->id; ?>"
+                                                            <?php if ((!empty($single_data)) && $single_data->courses_id_g === $data->id ) { echo 'selected'; } ?>>
+                                                            <?= $data->courses_name; ?>
+                                                        </option>
+                                                    <?php } ?>
+                                                <?php } ?>
+                                            </select>
                                                 <span style="color:red;" id="coursespanid"></span>
                                             </div>
                                             <div >
-                                                    <input type="hidden" id="selected_sub_courses_id_g" value="<?php if (isset($single_data)) { echo ($single_data->sub_courses_id_g); } ?>">
-                                                    <select name="sub_courses_id_g" id="sub_courses_id_g" class="form-control">
+                                                    <input type="hidden" id="selected_sub_courses" value="<?php if (isset($single_data)) { echo ($single_data->sub_courses_id_g); } ?>">
+                                                    <select name="sub_courses" id="sub_courses" class="form-control">
                                                         <option value="">Please select sub courses</option>
                                                     </select>
                                             </div>
+
+              
 
                                             <div class="form-group updloaddata mt-3">
                                                 <label class="mr-4">Upload your profile photo:</label>
@@ -174,11 +188,11 @@
                                             <div>
                                                 <!-- <input class="form-group-submit" type="submit" value="Next"> -->
                                                 <div style="text-align: center;">
-                                                    <input class="btn btnstart saveEnrollTopic" onclick="handleSubmit('collapseOne')" data-bs-target="#collapseTwo" type="button" name="next" value="Next" />
+                                                <!-- <input class="btn btnstart saveEnrollTopic" onclick="handleSubmit('collapseThree')" type="button" name="next" value="Next" /> -->
 
-                                                    <!-- <a onclick="handleSubmit()" class="btn btnstart saveEnrollTopic"
-                                                            data-bs-toggle="collapse"
-                                                            data-bs-target="#collapseTwo">Next</a> -->
+                                                <button class="btn btnstart saveEnrollTopic" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Next
+                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -189,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-
+<!-- 
                 <div class="card cards">
                     <div id="headingTwo">
 
@@ -227,7 +241,6 @@
 
                                                 <ul class="greenCheckbox multiSelectContainer scrollForAttribute mCustomScrollbar _mCS_1 mCS_no_scrollbar">
                                                     <div id="mCSB_1" class="mCustomScrollBox mCS-light3 mCSB_vertical mCSB_inside" tabindex="0">
-                                                        <!-- new for each course - change subcourse  -->
                                                         <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
 
                                                             <div id="Dance" class="selectCourse" style="display:none">
@@ -413,12 +426,8 @@
 
                                                         </div>
                                                         <div style="text-align: center;">
-                                                            <!-- <input class="btn btnstart saveEnrollTopic" onclick="handlePrevious('collapseTwo')" type="button" name="previous" value="Previous" /> -->
                                                             <input class="btn btnstart saveEnrollTopic" onclick="handleSubmit('collapseTwo')" type="button" name="next" value="Next" />
-                                                            <!-- <a onclick="handleSubmit()"
-                                                                    class="btn btnstart saveEnrollTopic"
-                                                                    data-bs-toggle="collapse"
-                                                                    data-bs-target="#collapseThree">Next</a> -->
+                                                 
                                                         </div>
                                                         <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light3 mCSB_scrollTools_vertical" style="display: none;">
                                                             <div class="mCSB_draggerContainer">
@@ -438,7 +447,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="card cards">
                     <div id="headingThree">

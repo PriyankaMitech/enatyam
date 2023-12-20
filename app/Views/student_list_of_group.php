@@ -103,10 +103,10 @@
                                     
                                     $session = \Config\Services::session();
                                     $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
-                                    $wherec1 = array('faculty_id ' => $data->faculty_id_g);
+                                    $wherec1 = array('D_id ' => $data->faculty_id_g);
 
 
-                                    $falculty_data = $adminModel->getsinglerow('faculty',$wherec1);
+                                    $falculty_data = $adminModel->getsinglerow('carrier',$wherec1);
 
                                     $wherec2 = array('id ' => $data->courses_id_g);
 
@@ -167,8 +167,8 @@
                                         </td>
 
                                         </td>                                        
-                                        <td><?php if(!empty($falculty_data)){ echo $falculty_data->faculty_name; } ?></td>
-                                        <td><?= date('j F Y', strtotime($data->create_group_date)); ?></td>
+                                        <td><?php if(!empty($falculty_data)){ echo $falculty_data->name; } ?></td>
+                                        <td><?= date('j F Y', strtotime($data->created_on)); ?></td>
                                         <td><?= date('j F Y', strtotime($data->session_start_date)); ?></td>
 
 
@@ -193,10 +193,10 @@
                                     
                                     $session = \Config\Services::session();
                                     $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
-                                    $wherec1 = array('faculty_id ' => $data->faculty_id_g);
+                                    $wherec1 = array('D_id ' => $data->faculty_id_g);
 
 
-                                    $falculty_data = $adminModel->getsinglerow('faculty',$wherec1);
+                                    $falculty_data = $adminModel->getsinglerow('carrier',$wherec1);
 
                                     $wherec2 = array('id ' => $data->courses_id_g);
 
@@ -257,8 +257,8 @@
                                         </td>
 
                                         </td>                                        
-                                        <td><?php if(!empty($falculty_data)){ echo $falculty_data->faculty_name; } ?></td>
-                                        <td><?= date('j F Y', strtotime($data->create_group_date)); ?></td>
+                                        <td><?php if(!empty($falculty_data)){ echo $falculty_data->name; } ?></td>
+                                        <td><?= date('j F Y', strtotime($data->created_on)); ?></td>
                                         <td><?= date('j F Y', strtotime($data->session_start_date)); ?></td>
 
 

@@ -32,6 +32,13 @@
           <div class="card-body">
             <form action="<?=base_url(); ?>set_create_group_data" method="post" id="create_group_form">
               <div class="row">
+              <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Group Name</label>
+                    <input type="text" class="form-control" name="group_name" id="group_name" value="<?php if (isset($single_data)) { echo ($single_data->group_name); } ?>">
+                  </div>
+                </div>
+
                 <div class="col-md-4">
                     <div class="form-group">
                       <label>Courses</label>
@@ -70,34 +77,13 @@
               </div>
                 </div>
 
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label>Group Name</label>
-                    <input type="text" class="form-control" name="group_name" id="group_name" value="<?php if (isset($single_data)) { echo ($single_data->group_name); } ?>">
-                  </div>
-                </div>
-
-
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label>Create Group Date</label>
-                    <input type="date" class="form-control" name="create_group_date" id="create_group_date" value="<?php if (isset($single_data)) { echo ($single_data->create_group_date); }else{ echo date('Y-m-d');} ?>">
-                  </div>
-                </div>
 
                 <div class="col-md-4">
                     <div class="form-group">
                     <label>Faculty</label>
                     <select class="form-control" name="faculty_id_g" id="faculty_id_g" style="width: 100%;">
-                        <option >Please select faculty</option>
-                        <?php if(!empty($faculty_data)){?>
-                            <?php foreach ($faculty_data as $data){ ?>
-                                <option value="<?=$data->faculty_id ; ?>"
-                                    <?php if ((!empty($single_data)) && $single_data->faculty_id_g === $data->faculty_id  ) { echo 'selected'; } ?>>
-                                    <?= $data->faculty_name; ?>
-                                </option>
-                            <?php } ?>
-                        <?php } ?>
+                    <option value="">Please select faculty</option>
+
                     </select>
                     </div>
                 </div>
