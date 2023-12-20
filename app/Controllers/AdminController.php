@@ -1088,6 +1088,30 @@ public function chechk_courses_id_id()
             return json_encode([]);
         }
     }
+
+
+
+    public function get_faculty_data()
+    {
+        $model = new AdminModel();
+    
+        $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
+        $courses_id_g = $this->request->getPost('courses_id_g');
+    
+        if ($sub_courses_id_g) {
+            // Assuming you have a "carrier" table
+            $wherecond_carrier = array('sub_course' => $sub_courses_id_g, 'course' => $courses_id_g, 'Result_of_application' => 'approve');
+            $faculty_data = $model->getalldata('carrier', $wherecond_carrier);
+
+
+    
+            return json_encode($faculty_data);
+        } else {
+            return json_encode([]);
+        }
+    }
+    
+
     
 
 
@@ -1271,7 +1295,6 @@ public function chechk_courses_id_id()
         'sub_courses_id_g' => $this->request->getVar('sub_courses_id_g'),
         'student_id' => implode(',', $this->request->getVar('student_id')), // Convert array to comma-separated string
         'group_name' => $this->request->getVar('group_name'),
-        'create_group_date' => $this->request->getVar('create_group_date'),
         'faculty_id_g' => $this->request->getVar('faculty_id_g'),
         'session_start_date' => $this->request->getVar('session_start_date'),
         'created_on' => date('Y-m-d H:i:s'),

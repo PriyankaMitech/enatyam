@@ -188,6 +188,11 @@ $routes->post('chechk_courses_id_id', 'AdminController::chechk_courses_id_id');
 $routes->post('get_sub_courses_data', 'AdminController::get_sub_courses_data');
 $routes->post('get_student_data', 'AdminController::get_student_data');
 
+$routes->post('get_faculty_data', 'AdminController::get_faculty_data');
+
+
+
+
 
 
 
