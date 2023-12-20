@@ -132,5 +132,26 @@ class StudentModel extends Model
             return $this->db->table('schedule')->where('student_register_id', $user_id) ->get()
             ->getResult();
         }
-}
 
+        public function insertFormData($data, $registerId)
+        {
+            try {
+                $registerRecord = $this->db->table('register')
+                    ->where('id', $registerId)
+                    ->get()
+                    ->getRow();
+    
+                if ($registerRecord) {
+                    $assignTeacherId = $registerRecord->Assign_Techer_id;
+                    $data['Assign_Techer_id'] = $assignTeacherId;
+                    $this->db->table('tbl_reschedul')->insert($data);
+                    return true; // Indicate success
+                } else {
+                    return false; // Indicate failure
+                }
+            } catch (\Exception $e) {
+                log_message('error', 'Error in insertFormData: ' . $e->getMessage());
+                return false; // Indicate failure
+            }
+        }
+}

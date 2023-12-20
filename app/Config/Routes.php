@@ -292,7 +292,7 @@ $routes->get('SelectDate', 'StudentController::StudentSelectClassDates');
 $routes->get('feedback', 'StudentController::feedback');
 $routes->post('savefeedback', 'StudentController::savefeedback');
 $routes->post('SessionConduct', 'StudentController::SessionConduct');
-
+$routes->post('submitForm', 'StudentController::submitForm');
 $routes->get('reschedule', 'StudentController::reschedule');
 
 // 
@@ -312,7 +312,7 @@ $routes->get('StudentSideBarVideo', 'FacultyController::fetchvideotostudentdashb
 $routes->get('uploadMedia', 'StudentController::uploadMedia');
 $routes->post('uploadMedia', 'StudentController::uploadMedia');
 //  $routes->get('StudentSideBarVideo', 'StudentController::StudentSideBarVideo');
-
+$routes->get('StudentAttenadnace', 'StudentController::StudentAttenadnace');
 $routes->get('StudentProfile', 'StudentController::StudentProfile');
 $routes->get('UplodeVideo', 'StudentController::UplodeVideo');
 $routes->get('OrderDetails', 'BillingC::OrderDetails');

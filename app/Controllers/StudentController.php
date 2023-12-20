@@ -392,5 +392,47 @@ class StudentController extends BaseController
         echo "Conduct value not set";
     }
 }
+public function submitForm()
+{
+    $result = session();
+    $registerId = $result->get('id');
+    $studentModel = new StudentModel();
+    $action = $this->request->getPost('action');
+    $sessionNumber = $this->request->getPost('sessionNumber');
+
+    switch ($action) {
+        case 'Reschedule':
+            $data = [
+                'action' => $action,
+                'sessionNumber' => $sessionNumber,
+                'Session_date' => $this->request->getPost('Session_date'),
+                'current_time' => $this->request->getPost('current_time'),
+                'reschedule_time' => $this->request->getPost('reschedule_time'),
+                'reschedule_date' => $this->request->getPost('reschedule_date'),
+                'student_registerid' => $registerId,
+                'reason' => $this->request->getPost('reason'),
+            ];
+            break;
+        case 'Leave':
+            $data = [
+                'action' => $action,
+                'form2_date' => $this->request->getPost('form2_date'),
+                'form2Reason' => $this->request->getPost('form2Reason'),
+            ];
+            break;
+        default:
+            return $this->response->setStatusCode(400)->setJSON(['error' => 'Invalid action']);
+    }
+
+    // Insert data into the Student table with student_registerid populated
+    $success = $studentModel->insertFormData($data, $registerId);
+    // print_r($success);die;
+    if($success == '1'){
+    session()->setFlashdata('success', 'Rewest Send successfully.');
+    echo json_encode($success);
+    }
+ 
+}
+
 }
 
