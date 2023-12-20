@@ -86,7 +86,7 @@ class facultymodel extends Model
     public function getFacultySlots($facultyRegisterId)
     {
         $query = $this->db->table('schedule') 
-            ->select('day, start_time, end_time') 
+            ->select('day, start_time, end_time ,student_register_id') 
             ->where('faculty_register_id', $facultyRegisterId);
         $result = $query->get()->getResultArray(); 
     

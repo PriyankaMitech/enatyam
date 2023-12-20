@@ -86,13 +86,16 @@
                     });
 
                     foreach ($filteredSlots as $slot) {
-                        ?>
-                        <?php
                         // Remove trailing ":00" for minutes that are "00"
                         $startTime = date('H:i', strtotime($slot['start_time']));
                         $endTime = date('H:i', strtotime($slot['end_time']));
+
+                        // Check student_register_id and apply the style and disable the button
+                        $buttonStyle = ($slot['student_register_id'] > 0) ? 'btn-secondary' : 'btn-primary';
+                        $buttonDisabled = ($slot['student_register_id'] > 0) ? 'disabled' : '';
                         ?>
-                        <button type="button" class="btn btn-primary btn-sm mr-1" style="margin-top: 10px;"><?= $startTime ?> To <?= $endTime ?></button>
+                        <button type="button" class="btn btn-sm mr-1 <?= $buttonStyle ?>" style="margin-top: 10px;" <?= $buttonDisabled ?>
+                                data-toggle="tooltip" title="This Time Is Booked"><?= $startTime ?> To <?= $endTime ?></button>
                         <?php
                     }
                     ?>
