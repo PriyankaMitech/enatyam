@@ -11,7 +11,12 @@ $page = $uri->getSegment(count($pages));
 
 
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
 
   <script src="<?php echo base_url()?>public/js/jquery.dataTables.min.js"></script>
   <script src="<?php echo base_url()?>public/js/dataTables.bootstrap4.js"></script>
@@ -32,8 +37,15 @@ $page = $uri->getSegment(count($pages));
     <script src="<?php echo base_url()?>plugins/jquery-mapael/maps/usa_states.min.js"></script>
     <script src="<?php echo base_url()?>plugins/chart.js/Chart.min.js"></script>
     <script src="<?php echo base_url()?>dist/js/pages/dashboard2.js"></script>
-   
+   <script src="<?php echo base_url()?>public/js/schedule.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
 
 <script>
   $.widget.bridge('uibutton', $.ui.button)
@@ -202,95 +214,45 @@ $page = $uri->getSegment(count($pages));
             }
         });
     </script>
+
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const addAppointmentButton = document.getElementById("addAppointment");
-        // if (addAppointmentButton) {
-            const formDatesInput = document.getElementById("form_date");
-                const currentDate = new Date().toISOString().split("T")[0];
-                formDatesInput.min = currentDate;
-            
-            const formTimeInput = document.getElementById("form_time");
-            const toTimeInput = document.getElementById("to_time");
-
-            const selectedAppointmentsContainer = document.querySelector("#selectedAppointments table tbody");
-
-            // Set min time for "form_time" input based on current time
-            const currentHour = new Date().getHours();
-            const currentMinute = new Date().getMinutes();
-            const currentTimeString = `${currentHour.toString().padStart(2, "0")}:${currentMinute.toString().padStart(2, "0")}`;
-            formTimeInput.min = currentTimeString;
-
-            formTimeInput.addEventListener("input", function() {
-                toTimeInput.min = this.value;
-                toTimeInput.value = this.value; // Automatically set "to_time" to match "form_time"
-            });
-            addAppointmentButton.addEventListener("click", function() {
-                const selectedformDate = formDatesInput.value;
-                const selectedformTime = formTimeInput.value;
-                const selectedtoTime = toTimeInput.value;
-
-                if (selectedformDate && selectedformTime && selectedtoTime) {
-                    const tr = createTableRow(selectedformDate, selectedformTime, selectedtoTime);
-                    selectedAppointmentsContainer.appendChild(tr);
-
-                    formDatesInput.value = "";
-                    formTimeInput.value = "";
-                    toTimeInput.value = "";
-                }
-            });
-        // }
-
-        function createTableRow(formdate, formtime, totime) {
-            const tr = document.createElement("tr");
-            const formdateTd = document.createElement("td");
-            const formtimeTd = document.createElement("td");
-            const totimeTd = document.createElement("td");
-
-            formdateTd.textContent = formdate;
-            formtimeTd.textContent = formtime;
-            totimeTd.textContent = totime;
-
-            tr.appendChild(formdateTd);
-            tr.appendChild(formtimeTd);
-            tr.appendChild(totimeTd);
-
-            return tr;
-        }
-
-        const appointmentForm = document.getElementById("appointmentForm")
-        if(appointmentForm){
-            document.getElementById("appointmentForm").addEventListener("submit", function(event) {
-                event.preventDefault();
-
-                const selectedDateInputs = selectedAppointmentsContainer.querySelectorAll("td:first-child");
-                const formTimeInputs = selectedAppointmentsContainer.querySelectorAll("td:nth-child(2)");
-                const toTimeInputs = selectedAppointmentsContainer.querySelectorAll("td:last-child");
-
-                const selectedAppointments = [];
-
-                selectedDateInputs.forEach((dateTd, index) => {
-                    selectedAppointments.push({
-                        date: dateTd.textContent,
-                        formTime: formTimeInputs[index].textContent,
-                        toTime: toTimeInputs[index].textContent
-                    });
-                });
-
-                const selectedAppointmentsJSON = JSON.stringify(selectedAppointments);
-
-                const hiddenInput = document.createElement("input");
-                hiddenInput.type = "hidden";
-                hiddenInput.name = "selected_appointments";
-                hiddenInput.value = selectedAppointmentsJSON;
-                this.appendChild(hiddenInput);
-
-                this.submit();
-            });
-        }
-    });
-
+    // function submitForm() {
+    //     $.ajax({
+    //         url: "<?= base_url('checkData'); ?>",
+    //         method: "POST",
+    //         data: $("#scheduleForm").serialize(),
+    //         dataType: "json",
+    //         success: function (response) {
+    //             if (response.exists) {
+    //                 alert(" already exists Change The Time .");
+    //             } else {
+    //                 // Data doesn't exist, proceed with form submission
+    //                 $("#scheduleForm").submit();
+    //             }
+    //         },
+    //         error: function () {
+    //             alert("Error: Unable to check data existence.");
+    //         }
+    //     });
+    // }
     
+    function updateEndTime() {
+        const formDaySelect = document.getElementById("form_day");
+        const formTimeInput = document.getElementById("form_time");
+        const toTimeInput = document.getElementById("to_time");
+
+        // Ensure all fields have values
+        if (formDaySelect.value && formTimeInput.value) {
+            // Set "End Time" to be 1 hour later than "Start Time"
+            const selectedStartTime = new Date(`2023-01-01T${formTimeInput.value}`);
+            const newEndTime = new Date(selectedStartTime.getTime() + 60 * 60 * 1000);
+
+            // Format the time as HH:mm
+            const endTimeString = `${newEndTime.getHours().toString().padStart(2, "0")}:${newEndTime.getMinutes().toString().padStart(2, "0")}`;
+
+            toTimeInput.value = endTimeString;
+        }
+    }
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -609,6 +571,53 @@ calendar.render();
         // Show the Bootstrap modal
         $('#groupListModal').modal('show');
     }
+</script>
+
+<script>
+
+$(document).ready(function() {
+    $('#scheduleForm').validate({
+        rules: {
+       
+            form_time: {
+                required: true,
+            },
+        },
+        messages: {
+            
+            form_time: {
+                required: 'Please select time.',
+            },
+        },
+    });
+
+    $('#submitBtn').on('click', function() {
+        submitForm();
+    });
+});
+
+function submitForm() {
+    if ($('#scheduleForm').valid()) {
+        $.ajax({
+            url: "<?= base_url('checkData'); ?>",
+            method: "POST",
+            data: $("#scheduleForm").serialize(),
+            dataType: "json",
+            success: function(response) {
+                if (response.exists) {
+                    alert("Error: Data already exists in the database.");
+                } else {
+                    $("#scheduleForm").submit();
+                }
+            },
+            error: function() {
+                alert("Error: Unable to check data existence.");
+            }
+        });
+    }
+}
+
+
 </script>
 </body>
 </html>

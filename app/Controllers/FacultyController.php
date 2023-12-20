@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\facultymodel;
+use App\Models\AdminModel;
 use CodeIgniter\Controller;
 
 class FacultyController extends BaseController
@@ -158,57 +159,86 @@ class FacultyController extends BaseController
       }
     }
   }
-  public function  MonthlyCalendar()
-  {
-
+  public function MonthlyCalendar()
+{
+    $facultyModel = new FacultyModel();
+    $adminModel = new AdminModel();
     if (isset($_SESSION['sessiondata'])) {
-      $sessionData = $_SESSION['sessiondata'];
+     $sessionData = $_SESSION['sessiondata'];
 
-      $email = $sessionData['email'] ?? null;
-      $password = $sessionData['password'] ?? null;
+     $email = $sessionData['email'] ?? null;
+     $password = $sessionData['password'] ?? null;
 
-      if ($email !== null && $password !== null) {
+     if ($email !== null && $password !== null) {
 
-        $result = session();
-        $registerId = $result->get('id');
-        return view('FacultysideBar/MonthlyCalendar', ['registerId' => $registerId]);
-      } else {
+        $session = session();
+        $registerId = $session->get('id');
+        $wherecond = array('USER_ID'=> $_SESSION['sessiondata']['id']);
+        $result['registerId'] = $session->get('id');
+        $result['schedule_data'] = $adminModel->getalldata('schedule_details', $wherecond);
+        $result['faculty_slots'] =$facultyModel->getFacultySlots($registerId);
+        // echo '<pre>';print_r($result['faculty_slots']);die;
+        return view('FacultysideBar/MonthlyCalendar', $result);
+     } else {
         return redirect()->to(base_url());
-      }
+     }
     } else {
-      return redirect()->to(base_url());
+     return redirect()->to(base_url());
     }
-  }
+}
 
-  public function selectfacultySchedule()
-  {
-    //   print_r($_POST);die;
-    if ($this->request->getMethod() === 'post') {
-      // Get the data from the form
-      $facultyId = $this->request->getPost('faculty_register_id');
-      $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
-      // print_r($selectedAppointments);die;
-      $facultyModel = new FacultyModel();
-      // print_r($facultyId);die;
-      // Prepare an array of data for batch insertion
-      $data = [];
-      foreach ($selectedAppointments as $appointment) {
-        $data[] = [
-          'faculty_register_id' => $facultyId,
-          'date' => $appointment['date'],
-          'start_time' => $appointment['formTime'],
-          'end_time' => $appointment['toTime'],
-        ];
-      }
-      // print_r($data);die;
-      // Insert all the data as a batch
-      $facultyModel->insertAppointments($data);
 
-      return redirect()->to('SelectSlot');
-    } else {
-      // Handle non-POST requests (optional).
+public function saveschedule()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $facultyId = $this->request->getPost('faculty_register_id');
+            $formDay = $this->request->getPost('form_day');
+            $formTime = $this->request->getPost('form_time');
+            $toTime = $this->request->getPost('to_time');
+
+            $facultyModel = new FacultyModel();
+
+            // Check if the data already exists in the database
+            $dataExists = $facultyModel->checkDataExists($facultyId, $formDay, $formTime, $toTime);
+
+            if ($dataExists) {
+                // Data already exists, handle accordingly (e.g., show an error message)
+                // You may want to redirect or display an error message to the user
+                return redirect()->to('SelectSlot')->with('error', 'Data already exists.');
+            } else {
+                // Data does not exist, proceed with insertion
+                $data = [
+                    'faculty_register_id' => $facultyId,
+                    'Day' => $formDay,
+                    'start_time' => $formTime,
+                    'end_time' => $toTime,
+                ];
+                
+                $facultyModel->insertAppointments($data);
+
+                // Redirect to the desired page after successful insertion
+                return redirect()->to('SelectSlot');
+            }
+        } else {
+            // Handle non-POST requests (optional).
+        }
     }
-  }
+
+public function checkData()
+{
+    $facultyId = $this->request->getPost('faculty_register_id');
+    $formDay = $this->request->getPost('form_day');
+    $formTime = $this->request->getPost('form_time');
+    $toTime = $this->request->getPost('to_time');
+
+    // Perform a database query to check if the data exists
+    $facultyModel = new FacultyModel();
+    $exists = $facultyModel->checkDataExists($facultyId, $formDay, $formTime, $toTime);
+    // print_r($exists);die;
+    // Return a JSON response
+    $this->response->setJSON(['exists' => $exists]);
+    return $this->response;
+}
   public function fetchTofacultyShuduleSidebar()
   {
     if (isset($_SESSION['sessiondata'])) {
@@ -261,5 +291,18 @@ public function submitAttendance()
   $model->updateAttendance($sessionId, $attendance,$currentConductedSessions);
   return redirect()->to('FacultyDashboard');
 }
+public function save_schedule_data() {
+  $model = new facultymodel();
+  // $Adminmodel = new AdminModel();
+   print_r($_POST);die;
+  $result = $model->save_schedule_data();
 
+  if ($result != false) {
+      session()->setFlashdata('success', 'Schecule added successfully.');
+  } else {
+      session()->setFlashdata('success', 'Schedule not added.');
+  }
+
+  return redirect()->to('SelectSlot');
+}
 }

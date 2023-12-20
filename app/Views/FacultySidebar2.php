@@ -34,7 +34,11 @@
   <link href="<?php echo base_url() ?>public/extcss/buttons.bootstrap4.min.css">
   <link href="<?php echo base_url() ?>public/extcss/responsive.bootstrap4.min.css">
 
-
+<style>
+  .error{
+    color:red !important;
+}
+  </style>
 
 
 

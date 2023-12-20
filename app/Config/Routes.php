@@ -259,9 +259,10 @@ $routes->post('DemoController/resheduleDemo', 'DemoController::resheduleDemo');
 $routes->get('SelectSlot', 'FacultyController::MonthlyCalendar');
 // $routes->get('MonthlyCalendar', 'FacultyController::MonthlyCalendar');
 $routes->get('StudentUploadedVideo', 'FacultyController::StudentuplodedVidio');
-$routes->post('FacultyController/selectfacultySchedule', 'FacultyController::selectfacultySchedule');
+$routes->post('saveschedule', 'FacultyController::saveschedule');
 $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
-
+$routes->post('save_schedule_data', 'FacultyController::save_schedule_data');
+$routes->post('checkData', 'FacultyController::checkData');
 
 $routes->get('notification', 'FacultyController::get_all_notification');
 
