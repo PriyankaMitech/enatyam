@@ -51,7 +51,7 @@
                                 <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="btn btn-primary">Back</a>
                             </div>
 
-                          
+
                         </div><!-- /.card-header -->
 
                         <div class="card-body">
@@ -112,15 +112,19 @@
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="startDate">Start Date:</label>
-                                                             <!-- Check if the current URL contains "searchFacultyVideos" -->
+                                                            <!-- Check if the current URL contains "searchFacultyVideos" -->
                                                             <?php $currentUrl = current_url();  ?>
-                                                            <input type="date" class="form-control" id="startDate" placeholder="Enter start date:" name="startDate" value="<?php  if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) { echo session()->getFlashdata('startDate'); }?>">
+                                                            <input type="date" class="form-control" id="startDate" placeholder="Enter start date:" name="startDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) {
+                                                                                                                                                                                echo session()->getFlashdata('startDate');
+                                                                                                                                                                            } ?>">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="endDate">End Date:</label>
-                                                            <input type="date" class="form-control" id="endDate" placeholder="Enter end date:" name="endDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) { echo session()->getFlashdata('startDate');  }?>" >
+                                                            <input type="date" class="form-control" id="endDate" placeholder="Enter end date:" name="endDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) {
+                                                                                                                                                                            echo session()->getFlashdata('startDate');
+                                                                                                                                                                        } ?>">
                                                         </div>
                                                     </div>
 
@@ -129,7 +133,7 @@
                                                             <label for="dropdown">Select Faculty:</label>
                                                             <select id="dropdown" name="facultyName" class="form-control custom-select">
                                                                 <option value="">Select</option>
-                                                                <?php foreach ($facultyList as $item): ?>
+                                                                <?php foreach ($facultyList as $item) : ?>
                                                                     <option value="<?= $item->id; ?>" <?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('facultyName')) && session()->getFlashdata('facultyName') === $item->id) echo 'selected'; ?>>
                                                                         <?= $item->full_name; ?>
                                                                     </option>
@@ -143,8 +147,173 @@
                                                             <select id="dropdown" name="studentName" class="form-control custom-select">
                                                                 <option value="">Select</option>
                                                                 <?php foreach ($studentList as $item) : ?>
-                                                                    <option value="<?php echo  $item->student_id; ?>"<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('studentName')) && session()->getFlashdata('studentName') === $item->student_id) echo 'selected'; ?> >
-                                                                    <?php echo $item->student_name; ?></option>
+                                                                    <option value="<?php echo  $item->student_id; ?>" <?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('studentName')) && session()->getFlashdata('studentName') === $item->student_id) echo 'selected'; ?>>
+                                                                        <?php echo $item->student_name; ?></option>
+                                                                <?php endforeach; ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group text-right">
+                                                            <button type="submit" class="btn btn-primary">Search</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                            <hr>
+                                            <div class="row mt-4" id="facultyVideosContainer">
+                                                <!-- Display faculty videos here -->
+                                                <?php if (empty($searchdata)) { ?>
+
+                                                    <?php if (!empty($FacultyVideoData)) { ?>
+                                                        <?php foreach ($FacultyVideoData as $data) {
+                                                            // List of allowed video file extensions
+                                                            $allowedVideoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'wmv'];
+
+                                                            $extension = pathinfo($data->video_name, PATHINFO_EXTENSION);
+                                                            // echo $extension;
+                                                            // Check if the file extension is in the allowed list
+                                                            if (in_array(strtolower($extension), $allowedVideoExtensions)) {
+
+                                                                // Generate a random background color based on the student's name
+                                                                $randomColor1 = '#' . substr(md5($data->student_name), 0, 4); ?>
+                                                                <div class="col-sm-3 mt-3">
+                                                                    <div class="position-relative videoofs">
+                                                                        <!-- <img src="<?= base_url(); ?>dist/img/photo1.png" alt="Photo 1" class="img-fluid"> -->
+                                                                        <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
+                                                                            <!-- Adjust the video size -->
+                                                                            <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/' . $data->video_name) ?>" type="video/mp4">
+                                                                        </video>
+
+                                                                        <?php
+                                                                        // Generate a random background color based on the student's name
+                                                                        $randomColor = '#' . substr(md5($data->student_name), 0, 6); ?>
+                                                                        <div class="ribbon-wrapper ribbon-lg">
+                                                                            <!-- <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg"> -->
+                                                                            <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
+                                                                                <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>"><?= $data->student_name ?> </p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <?php
+                                                                        $time = new DateTime($data->DateTime);
+                                                                        $date = date("j M Y", strtotime($data->DateTime));
+                                                                        $time = $time->format('H:i');
+                                                                        ?>
+                                                                        <div class="p">
+                                                                            <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?>
+                                                                                <br>
+                                                                                Faculty Name &nbsp; : &nbsp; <?= $data->faculty_name; ?>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            <?php } ?>
+                                                        <?php } ?>
+                                                    <?php }
+                                                    ?>
+
+                                                <?php } else { ?>
+
+                                                    <?php foreach ($searchdata as $data) {
+                                                        // List of allowed video file extensions
+                                                        $allowedVideoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'wmv'];
+
+                                                        $extension = pathinfo($data->video_name, PATHINFO_EXTENSION);
+                                                        // echo $extension;
+                                                        // Check if the file extension is in the allowed list
+                                                        if (in_array(strtolower($extension), $allowedVideoExtensions)) {
+
+                                                            // Generate a random background color based on the student's name
+                                                            $randomColor1 = '#' . substr(md5($data->student_name), 0, 4); ?>
+                                                            <div class="col-sm-3 mt-3">
+                                                                <div class="position-relative videoofs">
+                                                                    <!-- <img src="<?= base_url(); ?>dist/img/photo1.png" alt="Photo 1" class="img-fluid"> -->
+                                                                    <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
+                                                                        <!-- Adjust the video size -->
+                                                                        <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/' . $data->video_name) ?>" type="video/mp4">
+                                                                    </video>
+
+                                                                    <?php
+                                                                    // Generate a random background color based on the student's name
+                                                                    $randomColor = '#' . substr(md5($data->student_name), 0, 6); ?>
+                                                                    <div class="ribbon-wrapper ribbon-lg">
+                                                                        <!-- <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg"> -->
+                                                                        <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
+                                                                            <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>"><?= $data->student_name ?> </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <?php
+                                                                    $time = new DateTime($data->DateTime);
+                                                                    $date = date("j M Y", strtotime($data->DateTime));
+                                                                    $time = $time->format('H:i');
+                                                                    ?>
+                                                                    <div class="p">
+                                                                        <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?>
+                                                                            <br>
+                                                                            Faculty Name &nbsp; : &nbsp; <?= $data->faculty_name; ?>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <?php } ?>
+                                                    <?php }
+                                                    ?>
+
+
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+
+                                        <!-- Add other tab content as needed -->
+
+                                        <!-- /.tab-pane -->
+                                        <div class="tab-pane" id="timeline">
+                                            <form action="<?php echo base_url(); ?>searchStudentVideos" method="post" id="studentVideoForm">
+
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="startDate">Start Date:</label>
+                                                            <!-- Check if the current URL contains "searchFacultyVideos" -->
+                                                            <?php $currentUrl = current_url();  ?>
+                                                            <input type="date" class="form-control" id="studentVideoStartDate" placeholder="Enter start date:" name="studentVideoStartDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) {
+                                                                                                                                                                                                        echo session()->getFlashdata('startDate');
+                                                                                                                                                                                                    } ?>">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="endDate">End Date:</label>
+                                                            <input type="date" class="form-control" id="studentVideoEndDate" placeholder="Enter end date:" name="studentVideoEndDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) {
+                                                                                                                                                                                                    echo session()->getFlashdata('startDate');
+                                                                                                                                                                                                } ?>">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="dropdown">Select Faculty:</label>
+                                                            <select id="facultyNamesDropdown" name="facultyNames" class="form-control custom-select">
+                                                                <option value="">Select</option>
+                                                                <?php foreach ($facultyList as $item) : ?>
+                                                                    <option value="<?= $item->id; ?>" <?php if (strpos($currentUrl, 'searchStudentVideos') !== false && !empty(session()->getFlashdata('facultyName')) && session()->getFlashdata('facultyName') === $item->id) echo 'selected'; ?>>
+                                                                        <?= $item->full_name; ?>
+                                                                    </option>
+                                                                <?php endforeach; ?>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="dropdown">Select Student:</label>
+                                                            <select id="studentNamesDropdown" name="studentNames" class="form-control custom-select">
+                                                                <option value="">Select</option>
+                                                                <?php foreach ($studentList as $item) : ?>
+                                                                    <option value="<?php echo  $item->student_id; ?>" <?php if (strpos($currentUrl, 'searchStudentVideos') !== false && !empty(session()->getFlashdata('studentName')) && session()->getFlashdata('studentName') === $item->student_id) echo 'selected'; ?>>
+                                                                        <?php echo $item->student_name; ?></option>
                                                                 <?php endforeach; ?>
                                                             </select>
                                                         </div>
@@ -163,150 +332,113 @@
 
 
 
-                                            <div class="row mt-4" id="facultyVideosContainer">
+                                            <div class="row mt-4" id="studentVideosContainer">
                                                 <!-- Display faculty videos here -->
-                                                <?php if(empty($searchdata)){ ?>
-                                                  
-                                                        <?php if (!empty($FacultyVideoData)) { ?>
-                                                            <?php foreach ($FacultyVideoData as $data) {
-                                                                // List of allowed video file extensions
-                                                                $allowedVideoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'wmv'];
+                                                <?php if (empty($searchdata)) { ?>
 
-                                                                $extension = pathinfo($data->video_name, PATHINFO_EXTENSION);
-                                                                // echo $extension;
-                                                                // Check if the file extension is in the allowed list
-                                                                if (in_array(strtolower($extension), $allowedVideoExtensions)) {
+                                                    <?php if (!empty($studentVideoData)) { ?>
+                                                        <?php foreach ($studentVideoData as $data) {
+                                                            // print_r($data);
+                                                            // die;
+                                                            // List of allowed video file extensions
+                                                            $allowedVideoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'wmv'];
 
-                                                                    // Generate a random background color based on the student's name
-                                                                    $randomColor1 = '#' . substr(md5($data->student_name), 0, 4); ?>
-                                                                    <div class="col-sm-3 mt-3">
-                                                                        <div class="position-relative videoofs">
-                                                                            <!-- <img src="<?= base_url(); ?>dist/img/photo1.png" alt="Photo 1" class="img-fluid"> -->
-                                                                            <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
-                                                                                <!-- Adjust the video size -->
-                                                                                <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/' . $data->video_name) ?>" type="video/mp4">
-                                                                            </video>
+                                                            $extension = pathinfo($data->name, PATHINFO_EXTENSION);
+                                                            // echo $extension;
+                                                            // Check if the file extension is in the allowed list
+                                                            if (in_array(strtolower($extension), $allowedVideoExtensions)) {
 
-                                                                            <?php
-                                                                            // Generate a random background color based on the student's name
-                                                                            $randomColor = '#' . substr(md5($data->student_name), 0, 6); ?>
-                                                                            <div class="ribbon-wrapper ribbon-lg">
-                                                                                <!-- <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg"> -->
-                                                                                <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
-                                                                                    <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>"><?= $data->student_name ?> </p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <?php
-                                                                            $time = new DateTime($data->DateTime);
-                                                                            $date = date("j M Y", strtotime($data->DateTime));
-                                                                            $time = $time->format('H:i');
-                                                                            ?>
-                                                                            <div class="p">
-                                                                                <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?>
-                                                                                    <br>
-                                                                                    Faculty Name &nbsp; : &nbsp; <?= $data->faculty_name; ?>
-                                                                                </p>
+                                                                // Generate a random background color based on the student's name
+                                                                $randomColor1 = '#' . substr(md5($data->Student_name), 0, 4); ?>
+                                                                <div class="col-sm-3 mt-3">
+                                                                    <div class="position-relative videoofs">
+                                                                        <!-- <img src="<?= base_url(); ?>dist/img/photo1.png" alt="Photo 1" class="img-fluid"> -->
+                                                                        <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
+                                                                            <!-- Adjust the video size -->
+                                                                            <source class="img-fluid" src="<?= base_url('public/uploads/videos/' . $data->name) ?>" type="video/mp4">
+                                                                        </video>
 
-
+                                                                        <?php
+                                                                        // Generate a random background color based on the student's name
+                                                                        $randomColor = '#' . substr(md5($data->Student_name), 0, 6); ?>
+                                                                        <div class="ribbon-wrapper ribbon-lg">
+                                                                            <!-- <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg"> -->
+                                                                            <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
+                                                                                <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>"><?= $data->Student_name ?> </p>
                                                                             </div>
                                                                         </div>
+                                                                        <?php
+                                                                        $time = new DateTime($data->DateTime);
+                                                                        $date = date("j M Y", strtotime($data->DateTime));
+                                                                        $time = $time->format('H:i');
+                                                                        ?>
+                                                                        <div class="p">
+                                                                            <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?>
+                                                                                <br>
+                                                                                Faculty Name &nbsp; : &nbsp; <?= $data->faculty_name; ?>
+                                                                            </p>
+                                                                        </div>
                                                                     </div>
-                                                                <?php } ?>
+                                                                </div>
                                                             <?php } ?>
-                                                        <?php }
-                                                        ?>
-                                                
-                                                <?php }else{ ?>
+                                                        <?php } ?>
+                                                    <?php }
+                                                    ?>
 
-                                                            <?php foreach ($searchdata as $data) {
-                                                                // List of allowed video file extensions
-                                                                $allowedVideoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'wmv'];
+                                                <?php } else { ?>
 
-                                                                $extension = pathinfo($data->video_name, PATHINFO_EXTENSION);
-                                                                // echo $extension;
-                                                                // Check if the file extension is in the allowed list
-                                                                if (in_array(strtolower($extension), $allowedVideoExtensions)) {
+                                                    <?php foreach ($searchdata as $data) {
+                                                        // List of allowed video file extensions
+                                                        $allowedVideoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'wmv'];
 
-                                                                    // Generate a random background color based on the student's name
-                                                                    $randomColor1 = '#' . substr(md5($data->student_name), 0, 4); ?>
-                                                                    <div class="col-sm-3 mt-3">
-                                                                        <div class="position-relative videoofs">
-                                                                            <!-- <img src="<?= base_url(); ?>dist/img/photo1.png" alt="Photo 1" class="img-fluid"> -->
-                                                                            <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
-                                                                                <!-- Adjust the video size -->
-                                                                                <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/' . $data->video_name) ?>" type="video/mp4">
-                                                                            </video>
-
-                                                                            <?php
-                                                                            // Generate a random background color based on the student's name
-                                                                            $randomColor = '#' . substr(md5($data->student_name), 0, 6); ?>
-                                                                            <div class="ribbon-wrapper ribbon-lg">
-                                                                                <!-- <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg"> -->
-                                                                                <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
-                                                                                    <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>"><?= $data->student_name ?> </p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <?php
-                                                                            $time = new DateTime($data->DateTime);
-                                                                            $date = date("j M Y", strtotime($data->DateTime));
-                                                                            $time = $time->format('H:i');
-                                                                            ?>
-                                                                            <div class="p">
-                                                                                <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?>
-                                                                                    <br>
-                                                                                    Faculty Name &nbsp; : &nbsp; <?= $data->faculty_name; ?>
-                                                                                </p>
-
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                <?php } ?>
-                                                        <?php }
-                                                        ?>
-                                                   
-
-                                                <?php } ?>
-                                            </div>
-                                        </div>
-
-                                        <!-- Add other tab content as needed -->
-
-
-
-
-                                        <!-- /.tab-pane -->
-                                        <div class="tab-pane" id="timeline">
-
-                                            <?php if (!empty($studentVideoData)) { ?>
-
-                                                <div class="row">
-                                                    <?php foreach ($studentVideoData as $faculty) { ?>
-                                                        <?php
-                                                        $extension = pathinfo($faculty->name, PATHINFO_EXTENSION);
+                                                        $extension = pathinfo($data->video_name, PATHINFO_EXTENSION);
                                                         // echo $extension;
-                                                        ?>
-                                                        <?php if ($extension == 'mp4') : ?>
-                                                            <div class="col-md-4">
-                                                                <div class="card">
+                                                        // Check if the file extension is in the allowed list
+                                                        if (in_array(strtolower($extension), $allowedVideoExtensions)) {
+
+                                                            // Generate a random background color based on the student's name
+                                                            $randomColor1 = '#' . substr(md5($data->student_name), 0, 4); ?>
+                                                            <div class="col-sm-3 mt-3">
+                                                                <div class="position-relative videoofs">
+                                                                    <!-- <img src="<?= base_url(); ?>dist/img/photo1.png" alt="Photo 1" class="img-fluid"> -->
                                                                     <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
                                                                         <!-- Adjust the video size -->
-                                                                        <source class="img-fluid" src="<?= base_url('public/uploads/videos/' . $faculty->name) ?>" type="video/mp4">
+                                                                        <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/' . $data->video_name) ?>" type="video/mp4">
                                                                     </video>
-                                                                    <div class="card-body">
-                                                                        <p class="card-text">
-                                                                            <?php if ($faculty) : ?>
-                                                                                <strong>Upload Video Date:</strong> <?= $faculty->DateTime; ?>
-                                                                            <?php endif; ?>
+
+                                                                    <?php
+                                                                    // Generate a random background color based on the student's name
+                                                                    $randomColor = '#' . substr(md5($data->student_name), 0, 6); ?>
+                                                                    <div class="ribbon-wrapper ribbon-lg">
+                                                                        <!-- <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg"> -->
+                                                                        <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
+                                                                            <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>"><?= $data->student_name ?> </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <?php
+                                                                    $time = new DateTime($data->DateTime);
+                                                                    $date = date("j M Y", strtotime($data->DateTime));
+                                                                    $time = $time->format('H:i');
+                                                                    ?>
+                                                                    <div class="p">
+                                                                        <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?>
+                                                                            <br>
+                                                                            Faculty Name &nbsp; : &nbsp; <?= $data->faculty_name; ?>
                                                                         </p>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        <?php endif; ?>
-                                                    <?php } ?>
+                                                        <?php } ?>
+                                                    <?php }
+                                                    ?>
 
-                                                </div>
-                                            <?php } ?>
+
+                                                <?php } ?>
+                                            </div>
+
+
+
+
 
                                         </div>
 
