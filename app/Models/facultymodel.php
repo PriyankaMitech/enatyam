@@ -73,13 +73,15 @@ class facultymodel extends Model
     public function checkDataExists($facultyId, $formDay, $formTime, $toTime)
     {
         $result = $this->db->table('schedule')
-            ->where('faculty_register_id', $facultyId)
-            ->where('Day', $formDay)
-            ->where('start_time', $formTime)
-            ->where('end_time', $toTime)
-            ->countAllResults();
+        ->where('faculty_register_id', $facultyId)
+        ->where('Day', $formDay)
+        ->groupStart()
+        ->where('start_time <=', $toTime)
+        ->where('end_time >=', $formTime)
+        ->groupEnd()
+        ->countAllResults();
 
-        return $result > 0;
+    return $result > 0;
     }
     public function getFacultySlots($facultyRegisterId)
     {

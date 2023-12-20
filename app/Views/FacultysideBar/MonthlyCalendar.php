@@ -63,43 +63,45 @@
         </div>
       </div>
       <div class="row">
-          <?php
-          $days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    <?php
+    $days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-          foreach ($days as $day) {
-              ?>
-              <div class="col-md-4 ">
-                  <div class="card">
-                      <div class="card-header">
-                          <h3 class="card-title"><?= $day ?></h3>
-                      </div>
-                      <div class="card-body row">
-                          <?php
-                          // Filter the slots for the current day
-                          $filteredSlots = array_filter($faculty_slots, function ($slot) use ($day) {
-                              return $slot['day'] === $day;
-                          });
+    foreach ($days as $day) {
+        ?>
+        <div class="col-md-4 ">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title"><?= $day ?></h3>
+                </div>
+                <div class="card-body row">
+                    <?php
+                    // Filter the slots for the current day
+                    $filteredSlots = array_filter($faculty_slots, function ($slot) use ($day) {
+                        return $slot['day'] === $day;
+                    });
 
-                          // Loop through the filtered slots
-                          foreach ($filteredSlots as $slot) {
-                              ?>
-                              
-                                  <?php
-                                  // Remove trailing ":00" for minutes that are "00"
-                                  $startTime = date('H:i', strtotime($slot['start_time']));
-                                  $endTime = date('H:i', strtotime($slot['end_time']));
-                                  ?>
-                                  <button type="button" class="btn btn-primary btn-sm mr-1" style="margin-top: 10px;"><?= $startTime ?> To <?= $endTime ?></button>
-                              
-                              <?php
-                          }
-                          ?>
-                      </div>
-                  </div>
-              </div>
-              <?php
-          }
-          ?>
+                    // Sort the filtered slots by start time
+                    usort($filteredSlots, function ($a, $b) {
+                        return strtotime($a['start_time']) - strtotime($b['start_time']);
+                    });
+
+                    foreach ($filteredSlots as $slot) {
+                        ?>
+                        <?php
+                        // Remove trailing ":00" for minutes that are "00"
+                        $startTime = date('H:i', strtotime($slot['start_time']));
+                        $endTime = date('H:i', strtotime($slot['end_time']));
+                        ?>
+                        <button type="button" class="btn btn-primary btn-sm mr-1" style="margin-top: 10px;"><?= $startTime ?> To <?= $endTime ?></button>
+                        <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 </div>
     </div>
   </section>
