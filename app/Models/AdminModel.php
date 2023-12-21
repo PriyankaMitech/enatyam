@@ -881,8 +881,6 @@ class AdminModel extends Model
             ->where('is_deleted', 'N')
             ->where('courses_id', $courses_id)
             ->where('sub_courses_name', $sub_courses_name)
-
-
             ->get()
             ->getRow();
     

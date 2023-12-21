@@ -860,12 +860,12 @@ public function chechk_courses_id_id()
     $courses_id = $this->request->getPost('courses_id');
     $sub_courses_name = $this->request->getPost('sub_courses_name');
 
-
+// echo $courses_id; echo $sub_courses_name;exit();
     if ($courses_id) {
 
         $sub_coursesname = $admin_model->chechk_courses_id_id($courses_id, $sub_courses_name);
-        // echo "<pre>";
-        // print_r($email);exit();
+        // echo "<pre>";print_r($sub_coursesname);exit();
+
         return json_encode($sub_coursesname);
     }
 }
