@@ -112,16 +112,19 @@ class facultymodel extends Model
     }
     public function gettodayssessiontofaculty($teacherId)
     {
-    // $todayDate = date('Y-m-d');
-    // $builder = $this->db->table('schedule');
-    // $builder->select('schedule.*, register.full_name as student_name'); // Select the fields you need
-    // $builder->join('register', 'register.id = schedule.student_register_id', 'left'); // Adjust the join condition based on your actual database structure
-    // $builder->where('schedule.faculty_register_id', $teacherId);
+       
+    $today = date('Y-m-d');
+    $dayOfWeek = date('l', strtotime($today));
 
-    // $builder->where('schedule.student_register_id IS NOT NULL');
-    // $query = $builder->get();
-    // $result = $query->getResult();
-    // return $result;
+    $query = $this->db->table('schedule')
+                     ->select('schedule.*, register.full_name') // Select necessary columns
+                     ->join('register', 'register.id = schedule.student_register_id', 'left') // Perform a left join
+                     ->where('schedule.faculty_register_id', $teacherId)
+                     ->where('schedule.Day', $dayOfWeek)
+                     ->where('schedule.student_register_id >', 0)
+                     ->get();
+
+    return $query->getResult();
     }
     public function getStudentList($registerId){
         $result= $this->db->table('register')

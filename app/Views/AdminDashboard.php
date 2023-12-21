@@ -108,25 +108,41 @@ th {
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"
                                 id="toggle-table5"></i></a>
-                        <table id="faculty-table5" class="table table-bordered table-striped" style="display: none;">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>course</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ($records as $row) : ?>
-                                <tr>
-                                    <td><?= $row['name'] ?></td>
-                                    <td><?= $row['course'] ?></td>
-                                </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
+
 
                     </div>
 
+                    <div class="col-md-12 card" id="faculty-table5" style="display:none">
+                        <div class="card-header">
+                            <h3 class="card-title"> Today Demo List</h3>
+                        </div>
+                        <div class="card-body">
+
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Course</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php if (!empty($records)) : ?>
+                                    <?php foreach ($records as $row) : ?>
+                                    <tr>
+                                        <td><?= $row['name'] ?></td>
+                                        <td><?= $row['course'] ?></td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                    <?php else : ?>
+                                    <tr>
+                                        <td colspan="2">No demo today</td>
+                                    </tr>
+                                    <?php endif; ?>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
                 </div>
                 <!-- ./col -->
                 <div class="col-lg-3 col-6">
@@ -238,7 +254,6 @@ th {
                                             <th>Name</th>
                                             <th>email</th>
                                             <th>Demo Date</th>
-                                            <th>Add This </th>
 
                                         </tr>
                                         <?php foreach ($ConductedDemo as $faculty) : ?>
@@ -263,27 +278,42 @@ th {
                             <!--  -->
                             <div class="col-md-12 card" id="comp-payment-table" style="display:none">
                                 <div class="card-header">
-                                    <h3 class="card-title"> Total Demo List</h3>
+                                    <h3 class="card-title">Total Demo List</h3>
                                 </div>
                                 <div class="card-body">
-
                                     <table class="table table-bordered table-striped">
-
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>course</th>
-                                            <th>Demo Date</th>
-
-                                        </tr>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Course</th>
+                                                <th>Demo Date</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <?php
+                                    // Sort the $getAllDemoList array in descending order based on the Booking_Date_Time field
+                                    usort($getAllDemoList, function ($a, $b) {
+                                        return strtotime($b->Booking_Date_Time) - strtotime($a->Booking_Date_Time);
+                                    });
+                                    ?>
                                         <?php foreach ($getAllDemoList as $status) : ?>
                                         <tr>
                                             <td><?= $status->name; ?></td>
                                             <td><?= $status->course; ?></td>
-                                            <td><?= $status->Booking_Date_Time; ?></td>
+                                            <td><?= date('d/m/Y', strtotime($status->Booking_Date_Time)); ?></td>
+                                            <td>
+                                                <?php if ($status->Conducted_Demo == 'Y') : ?>
+                                                <small class="badge badge-success ">Conducted</small> 
+                                                <?php elseif ($status->Conducted_Demo == 'N') : ?>
+                                                <small class="badge badge-warning ">Not Conducted</small> 
+                                                <?php elseif ($status->Conducted_Demo == 'Reschedule') : ?>
+                                               
+                                                <small class="badge badge-danger"> Rescheduled</small>
+                                                <?php endif; ?>
+                                            </td>
                                         </tr>
                                         <?php endforeach; ?>
                                     </table>
-
                                 </div>
                             </div>
                             <!-- unattended DemoList -->
@@ -318,31 +348,38 @@ th {
                                     <h3 class="card-title">Pending Demo List</h3>
                                 </div>
                                 <div class="card-body">
-
                                     <table class="table table-bordered table-striped">
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Booking Date</th>
-                                            <th>Faculty</th>
-                                            <th>course</th>
-                                            <th>sub_course</th>
-                                            <th>Assign Faculty Status</th>
-                                            <th>Assign</th>
-                                        </tr>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Booking Date</th>
+                                                <th>Faculty</th>
+                                                <th>Course</th>
+                                                <th>Sub Course</th>
+                                                <th>Assign Faculty Status</th>
+                                                <th>Assign</th>
+                                            </tr>
+                                        </thead>
+                                        <?php
+            // Sort the $PendingDemo array in descending order based on the Date field
+            usort($PendingDemo, function ($a, $b) {
+                return strtotime($b->Date) - strtotime($a->Date);
+            });
+            ?>
                                         <?php foreach ($PendingDemo as $facult) : ?>
                                         <tr>
                                             <form action="<?php echo base_url('AssignTecherForDemo'); ?>" method="POST">
                                                 <input type="hidden" name="studentid" value="<?= $facult->D_id; ?>">
                                                 <td><?= $facult->name; ?></td>
                                                 <td><?= $facult->email; ?></td>
-                                                <td><?= $facult->Date; ?></td>
+                                                <td><?= date('d/m/Y', strtotime($facult->Date)); ?></td>
                                                 <td>
                                                     <?php
-                    $matchingFaculties = array_filter($Faculty, function ($faculty) use ($facult) {
-                        return $faculty->course == $facult->course && $faculty->sub_course == $facult->sub_course;
-                    });
-                    ?>
+                            $matchingFaculties = array_filter($Faculty, function ($faculty) use ($facult) {
+                                return $faculty->course == $facult->course && $faculty->sub_course == $facult->sub_course;
+                            });
+                            ?>
                                                     <?php if (!empty($matchingFaculties)) : ?>
                                                     <select name="faculty_name" class="form-control">
                                                         <?php foreach ($matchingFaculties as $faculty) : ?>
@@ -376,7 +413,6 @@ th {
                                         </tr>
                                         <?php endforeach; ?>
                                     </table>
-
                                 </div>
                             </div>
                         </div>
@@ -481,20 +517,20 @@ th {
                                     <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
                                         <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
                                         <td>
-            
-                                    <?php
+
+                                            <?php
                                     // Check if the record is created within the last 10 days
                                     $createdAt = strtotime($admin->created_at);
                                     $currentDate = strtotime(date('Y-m-d'));
                                     $tenDaysAgo = strtotime('-10 days');
 
-                                    if ($createdAt >= $tenDaysAgo && $createdAt <= $currentDate) {
+                                    if ($createdAt >= $tenDaysAgo && $createdAt = $currentDate) {
                                         // echo '<span class="fas fa-clock bg-maroon">New</span>';
                                         echo '<small class="badge badge-danger"></i>New</small>';
                                     }
                                     ?>
-                                    <?= $admin->full_name; ?>
-                                </td>
+                                            <?= $admin->full_name; ?>
+                                        </td>
                                         <td><?= $admin->email; ?></td>
                                         <td><?= $admin->course; ?></td>
                                         <td><?= $admin->sub_course; ?></td>
@@ -513,14 +549,14 @@ th {
                                             </select>
 
                                             <?php if ($admin->Session_Start_Date): ?>
-                    <!-- If a date is already assigned, display it -->
-                    <td><?= $admin->Session_Start_Date; ?></td>
-                <?php else: ?>
-                    <!-- If no date is assigned, show the input field -->
-                    <td>
-                        <input type="date" name="Session_Start_Date" required>
-                    </td>
-                <?php endif; ?>
+                                            <!-- If a date is already assigned, display it -->
+                                        <td><?= $admin->Session_Start_Date; ?></td>
+                                        <?php else: ?>
+                                        <!-- If no date is assigned, show the input field -->
+                                        <td>
+                                            <input type="date" name="Session_Start_Date" required>
+                                        </td>
+                                        <?php endif; ?>
                                         <td class="change_f">
                                             <?php if ($admin->Assign_Techer_id > 0): ?>
                                             <button type="submit" name="change_faculty_button" class="btn btn-info"

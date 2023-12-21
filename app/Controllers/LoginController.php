@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\LoginModel;
 use CodeIgniter\Controller;
 use League\OAuth2\Client\Provider\Google;
+helper('sms_helper');
+
 
 class LoginController extends BaseController
 {
@@ -180,7 +182,11 @@ class LoginController extends BaseController
            'SessionType' => $SessionType,
        ];
        $affectedRows = $loginModel->updateUserByEmail($email, $data);
-   
+       $msg ='Your registration is done';
+       $Subject ='Registration Confirmation';
+       $ccEmails = ['cc1@example.com', 'cc2@example.com'];
+       $tital ='congratulations You Are Registration Confirmation';
+       sendConfirmationEmail($email,$ccEmails,$msg,$Subject,$tital);
        return redirect()->to('Home');
    }  
    
