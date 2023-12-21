@@ -830,6 +830,9 @@ class AdminController extends BaseController
         echo view('user_list', $data);
     }
 
+    public function update_access_token() {
+        
+    }
 
     public function get_user()
     {

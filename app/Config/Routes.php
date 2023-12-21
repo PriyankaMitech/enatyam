@@ -206,6 +206,7 @@ $routes->get('SelectSlot', 'FacultyController::MonthlyCalendar');
 $routes->get('StudentUploadedVideo', 'FacultyController::StudentuplodedVidio');
 $routes->post('FacultyController/selectfacultySchedule', 'FacultyController::selectfacultySchedule');
 $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
+$routes->post('save_schedule_data', 'FacultyController::save_schedule_data');
 
 
 $routes->get('notification', 'FacultyController::get_all_notification');
@@ -272,6 +273,8 @@ $routes->get('googlelogin', 'LoginController::googlelogin');
 $routes->get('User_authentication', 'LoginController::index');
 $routes->get('LoginController/callback', 'LoginController::callback');
 
+// zoom routs
+$routes->get('update_access_token', 'ZoomApiController::update_access_token');
 
 
 /*

@@ -399,6 +399,7 @@ $page = $uri->getSegment(count($pages));
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav main menu ms-auto">
+                        <a href="https://api.whatsapp.com/send?phone=+919421796800&amp;text=Got%20reference%20from%20your%20Digital%20vCard.%20Want%20to%20know%20more%20about%20your%20products%20and%20services." target="_blank">Whatsapp</a>
                             <a class="nav-link active px-2" href="<?php echo base_url('Home'); ?>">Home</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>
                             <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>

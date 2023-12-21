@@ -51,10 +51,25 @@
          
          // Rest of your code
          $notifications = $adminModel->getUserRole($teacherId);
-         $count = count($notifications);
+         if ($notifications) {
+            $count = count($notifications);
+         }else {
+          $count = 0;
+         }
 
 ?>
-  
+  <div id="flash-success-container">
+    <?php if (session()->has('success')) : ?>
+        <div class="flash-success">
+            <?= session('success') ?>
+        </div>
+    <?php endif; ?>
+</div>
+<?php
+$url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".ZOOM_CLIENT_ID."&redirect_uri=".ZOOM_REDIRECT_URI;
+?>
+ 
+<a href="<?php echo $url; ?>" target="_blank" >Login with Zoom</a>
   <div class="wrapper">
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -168,16 +183,14 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
                 <div class="notification-scroll">
                 <?php
-                  // Sort notifications array based on timestamp
-                  usort($notifications, function ($a, $b) {
-                      return strtotime($a['timestamp']) - strtotime($b['timestamp']);
-                  });
+                  if ($notifications) {
+                    usort($notifications, function ($a, $b) {
+                        return strtotime($a['timestamp']) - strtotime($b['timestamp']);
+                    });
 
                   foreach ($notifications as $notification):
                       $notificationDate = strtotime($notification['timestamp']);
                       $todayDateTime = strtotime($todayDate);
-
-                      // Only show notifications with timestamps equal to or after today
                   ?>
                       <a href="#" class="dropdown-item view-notification">
                           <!-- Message Start -->
@@ -210,7 +223,7 @@
                           <!-- Message End -->
                       </a>
                   <?php
-                  endforeach;
+                  endforeach; }
                   ?>
 
 
