@@ -175,7 +175,6 @@ class FacultyController extends BaseController
         $registerId = $session->get('id');
         $wherecond = array('USER_ID'=> $_SESSION['sessiondata']['id']);
         $result['registerId'] = $session->get('id');
-        $result['schedule_data'] = $adminModel->getalldata('schedule_details', $wherecond);
         $result['faculty_slots'] =$facultyModel->getFacultySlots($registerId);
         // echo '<pre>';print_r($result['faculty_slots']);die;
         return view('FacultysideBar/MonthlyCalendar', $result);
@@ -291,18 +290,5 @@ public function submitAttendance()
   $model->updateAttendance($sessionId, $attendance,$currentConductedSessions);
   return redirect()->to('FacultyDashboard');
 }
-public function save_schedule_data() {
-  $model = new facultymodel();
-  // $Adminmodel = new AdminModel();
-   print_r($_POST);die;
-  $result = $model->save_schedule_data();
 
-  if ($result != false) {
-      session()->setFlashdata('success', 'Schecule added successfully.');
-  } else {
-      session()->setFlashdata('success', 'Schedule not added.');
-  }
-
-  return redirect()->to('SelectSlot');
-}
 }
