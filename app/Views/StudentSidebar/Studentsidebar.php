@@ -62,7 +62,14 @@
         //  echo "<pre>";print_r($alldatac);exit();
 
 
-         $count = count($notifications);
+         $count = 0;
+
+
+         if ($notifications) {
+          $count = count($notifications);
+       }else {
+       $count = 0;
+       }
 
 
 ?>
@@ -94,6 +101,7 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
                 <div class="notification-scroll">
                   <?php
+                  if($notifications){
                     $todayDate = date('Y-m-d H:i:s');
                     usort($notifications, function ($a, $b) {
                         return strtotime($a['timestamp']) - strtotime($b['timestamp']);
@@ -128,7 +136,12 @@
                           </div>
                           <!-- Message End -->
                       </a>
-                  <?php endforeach; ?>
+                  <?php endforeach;}else{
+?>
+<p class="p-2">
+No new notifications available</p><hr>
+
+<?php } ?>
                 </div>
                 <a href="<?=base_url(); ?>notification" class="dropdown-item dropdown-footer">See All Messages</a>
             </div>
