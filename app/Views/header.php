@@ -7,7 +7,17 @@ $page = $uri->getSegment(count($pages));
 // print_r($pages);
 // exit();
 
+$session = \Config\Services::session();
+$adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
+
+$wherecond = array('is_deleted' => 'N');
+
+
+$courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
+
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -238,10 +248,10 @@ $page = $uri->getSegment(count($pages));
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Carrier.css">
         <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/Career.css"> -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -543,27 +553,44 @@ $page = $uri->getSegment(count($pages));
                                 <!-- JavaScript will populate this list -->
                             </select>
                         </div>
-                        <div class="form-group" id="category_div">Please specify Course:
-                            <select name="category" class="required-entry form-control" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+
+                        <div class="form-group" id="category_div">
+                            <!-- <select name="category" class="required-entry form-control" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
                                 <option value="">Select Course</option>
                                 <option value="Dance">Dance</option>
                                 <option value="Music">Music</option>
                                 <option value="Yoga">Yoga</option>
                                 <option value="Instruments">Instruments</option>
-                            </select>
+                            </select> -->
+
+
+                            <select class="form-control" name="courses_id_g" id="courses_id_g" style="width: 100%;">
+                        <option >Please select course</option>
+                        <?php if(!empty($courses_data)){?>
+                            <?php foreach ($courses_data as $data){ ?>
+                                <option value="<?=$data->id; ?>"
+                                    <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id ) { echo 'selected'; } ?>>
+                                    <?= $data->courses_name; ?>
+                                </option>
+                            <?php } ?>
+                        <?php } ?>
+                    </select>
                         </div>
                         <!-- </div> -->
                         <div class="sub_category_div form-group" id="sub_category_div">
-                            <label for="subcategory">Please select Subcourse:</label>
+                            <!-- <label for="subcategory">Please select Subcourse:</label>
 
                             <select name="subcategory" id="subcategory" class="form-control">
-                                <!-- <option value="">Please select Subcategory</option> -->
                                 <script type="text/javascript" language="JavaScript">
                                     document.write('<select name="subcategory" id="subcategory"></select>')
                                 </script>
 
-                                <!-- Add your options here -->
-                            </select>
+                            </select> -->
+
+                            <input type="hidden" id="selected_sub_courses_id_g" value="<?php if (isset($edit)) { echo ($edit['sub_courses_id_g']); } ?>">
+                        <select name="sub_courses_id_g" id="sub_courses_id_g" class="form-control">
+                            <option value="">Please select sub courses</option>
+                        </select>
                         </div>
 
                         <div class="form-group">

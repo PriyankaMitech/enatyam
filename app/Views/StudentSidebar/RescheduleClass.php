@@ -1,14 +1,4 @@
 <?php echo view('Studentsidebar/Studentsidebar'); ?>
-
-<!-- <div class="content-wrapper">
-    <section class="content-header"> -->
-<!-- <div class="container-fluid"> -->
-
-<!-- </div> -->
-<!-- </section>
-    <section class="content">
-        <div class="container-fluid"> -->
-
 <div class="content-wrapper">
 
     <section class="content-header">
@@ -46,52 +36,70 @@
                                     <option selected>Select</option>
                                     <option value="form1">Reschedule</option>
                                     <option value="form2">Leave</option>
-
                                 </select>
                             </div>
                         </div>
                     </div>
                     <!-- <form> -->
-                    <form id="form1" class="dynamic-form">
+                    <form action="submitForm" method="post" id="form1" class="dynamic-form">
                         <div class="row">
-                            <div class="col-sm-3 form-group">
+                            <div class="col-sm-5 form-group">
                                 <label>Date:</label>
-                                <div class="input-group ">
-                                    <input type="date" class="form-control" name="form1_date" id="form_date" />
+                                <div class="input-group">
+                                    <!-- Display the date from the URL and make it non-editable -->
+                                    <input type="date" class="form-control" name="Session_date" id="form_date"
+                                        readonly />
                                 </div>
                             </div>
-                            <div class="col-sm-3 form-group">
-                                <label> Current Class time:</label>
-                                <div class="input-group ">
-                                    <input type="time" class="form-control" name="current_time" id="current_time" />
-                                </div>
-                            </div>
-                            <div class="col-sm-3 form-group">
-                                <label> Reschedule Class time:</label>
-                                <div class="input-group ">
-                                    <input type="time" class="form-control" name="reschedule_time" id="reschedule_time" />
+                            <div class="col-sm-5 form-group">
+                                <label>Current Class time:</label>
+                                <div class="input-group">
+                                    <!-- Display the commonStartTime from the URL -->
+                                    <input type="time" class="form-control" name="current_time" id="current_time"
+                                        readonly />
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6 form-group mb-3">
-                                <label> Reason : </label>
+                            <div class="col-sm-5 form-group">
+                                <label>Reschedule Class date:</label>
                                 <div class="input-group">
-                                    <textarea class="form-control" name="form1Reason" rows="3"></textarea>
+                                    <input type="date" class="form-control" name="reschedule_date"
+                                        id="reschedule_date" />
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-5 form-group">
+                                <label>Reschedule Class time:</label>
+                                <div class="input-group">
+                                    <input type="time" class="form-control" name="reschedule_time"
+                                        id="reschedule_time" />
                                 </div>
                             </div>
                         </div>
+                            <input type="hidden" name="sessionNumber" id="session_number" value="">
+
+                            <div class="col-sm-6 form-group mb-3">
+                                <label>Reason:</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" name="reason" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden input for the "Reschedule" value -->
+                        <input type="hidden" name="action" value="Reschedule">
+                        <button type="button" class="btn btn-primary" onclick="submitForm('form1')">Submit
+                            Reschedule</button>
                     </form>
 
-                    <form id="form2" class="dynamic-form">
+                    <form action="submitForm" method="post" id="form2" class="dynamic-form" style="display: none;">
                         <div class="row">
-                            <div class="col-sm-3 form-group">
+                            <div class="col-sm-4 form-group">
                                 <label>Date:</label>
                                 <div class="input-group ">
                                     <input type="date" class="form-control" name="form2_date" id="leave_date" />
                                 </div>
                             </div>
-                            <!-- <div class="row"> -->
                             <div class="col-sm-6 form-group mb-3">
                                 <label> Reason : </label>
                                 <div class="input-group">
@@ -99,6 +107,12 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Hidden input for the "Leave" value -->
+                        <input type="hidden" name="action" value="Leave">
+
+                        <!-- Button to submit the form -->
+                        <button type="button" class="btn btn-primary" onclick="submitForm('form2')">Submit
+                            Leave</button>
                     </form>
                 </div>
             </div>

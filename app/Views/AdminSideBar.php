@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
-    <link rel="stylesheet" href="<?= base_url(); ?>dist/css/adminlte.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/summernote/summernote-bs4.min.css">
@@ -27,14 +26,21 @@
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/admindashboard_style.css">
 
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/fullcalendar/main.css">
-
-
-
-  <link rel="stylesheet" type="text/css" href="<?=base_url(); ?>public/css/jquery.dataTables.css">
-  <link href="<?php echo base_url() ?>public/css/custom.css">
-  </link>
-
-
+    <link rel="stylesheet" type="text/css" href="<?=base_url(); ?>public/css/jquery.dataTables.css">
+    <link href="<?php echo base_url() ?>public/css/custom.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <!-- Select2 -->
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- Bootstrap4 Duallistbox -->
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+    <!-- BS Stepper -->
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/bs-stepper/css/bs-stepper.min.css">
+    <!-- dropzonejs -->
+    <link rel="stylesheet" href="<?=base_url(); ?>plugins/dropzone/min/dropzone.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="<?=base_url(); ?>dist/css/adminlte.min.css">
 
 
 </head>
@@ -62,6 +68,38 @@
                     <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
                 </li>
             </ul>
+            <?php 
+         $adminModel = new \App\Models\AdminModel(); 
+         $data = $adminModel->getRecordsBefore7Days();
+         $counteing = count($data);
+        ?>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge"><?= $counteing ?></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header"><?= $counteing ?> Notifications</span>
+                        <div class="dropdown-divider"></div>
+
+                        <?php foreach ($data as $notification): ?>
+                        <a href="<?= base_url('NewFacultyApplication') ?>" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i><?= $notification->name ?>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <?php endforeach; ?>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
         </nav>
         <?php if (!empty($_SESSION)) {
             // echo $_SESSION['sessiondata']['role'];exit();
@@ -183,6 +221,65 @@
                                                 <a href="<?php echo base_url(); ?>menu_list" class="nav-link">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Menu List</p>
+                                                </a>
+                                            </li>
+                                            <!-- Add other Menu menu items with access level checks here -->
+                                        </ul>
+                                    </li>
+
+                                           <!-- Menu Master -->
+                                    <li class="nav-item" <?php if (in_array('add_courses', $access_levels) || in_array('courses_list', $access_levels) || in_array('add_sub_courses', $access_levels) || in_array('sub_courses_list', $access_levels)) {
+                                                                echo "style='display:block'";
+                                                            } else {
+                                                                echo "style='display:none'";
+                                                            } ?>>
+                                        <a href="#" class="nav-link" >
+                                            <i class=" nav-icon fa fa-calendar"></i>
+                                            <p>
+                                                Master
+                                                <i class="right fas fa-angle-left"></i>
+                                            </p>
+                                        </a>
+                                        <ul class="nav nav-treeview" <?php if (in_array('add_courses', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?>>
+                                            <li class="nav-item" >
+                                                <a href="<?php echo base_url(); ?>add_courses" class="nav-link">
+                                                    <i class="nav-icon fas fa-edit"></i>
+                                                    <p>Add courses</p>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item" <?php if (in_array('courses_list', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?> >
+                                                <a href="<?php echo base_url(); ?>courses_list" class="nav-link">
+                                                    <i class="far fa-circle nav-icon"></i>
+                                                    <p>Courses List</p>
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item" <?php if (in_array('add_sub_courses', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?>>
+                                                <a href="<?php echo base_url(); ?>add_sub_courses" class="nav-link">
+                                                    <i class="nav-icon fas fa-edit"></i>
+                                                    <p>Add sub courses</p>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item" <?php if (in_array('sub_courses_list', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?>>
+                                                <a href="<?php echo base_url(); ?>sub_courses_list" class="nav-link">
+                                                    <i class="far fa-circle nav-icon"></i>
+                                                    <p>Sub courses List</p>
                                                 </a>
                                             </li>
                                             <!-- Add other Menu menu items with access level checks here -->
@@ -313,7 +410,7 @@
                                     </li>
 
                                     <!-- Groups Menu -->
-                                    <li class="nav-item" <?php if (in_array('StudentGroups', $access_levels) || in_array('StudentListToAdmin', $access_levels)) {
+                                    <li class="nav-item" <?php if (in_array('student_list_of_group', $access_levels) || in_array('create_group', $access_levels)) {
                                                                 echo "style='display:block'";
                                                             } else {
                                                                 echo "style='display:none'";
@@ -326,22 +423,22 @@
                                             </p>
                                         </a>
                                         <ul class="nav nav-treeview">
-                                            <li class="nav-item" <?php if (in_array('StudentGroups', $access_levels)) {
+                                            <li class="nav-item" <?php if (in_array('student_list_of_group', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>StudentGroups" class="nav-link">
+                                                <a href="<?php echo base_url() ?>student_list_of_group" class="nav-link">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Groups List</p>
                                                 </a>
                                             </li>
-                                            <li class="nav-item" <?php if (in_array('StudentListToAdmin', $access_levels)) {
+                                            <li class="nav-item" <?php if (in_array('create_group', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>StudentListToAdmin" class="nav-link">
+                                                <a href="<?php echo base_url() ?>create_group" class="nav-link">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Create Groups</p>
                                                 </a>
@@ -408,6 +505,67 @@
                                         </ul>
                                     </li>
 
+                                    <li class="nav-item" <?php if (in_array('demo_classes', $access_levels) || in_array('student', $access_levels) || in_array('faculty', $access_levels) || in_array('payment_history', $access_levels)) {
+                                                                echo "style='display:block'";
+                                                            } else {
+                                                                echo "style='display:none'";
+                                                            } ?>>
+                                        <a href="#" class="nav-link">
+                                            <i class="nav-icon 	fa fa-credit-card"></i>
+                                            <p>
+                                                Report
+                                                <i class="right fas fa-angle-left"></i>
+                                            </p>
+                                        </a>
+                                        <ul class="nav nav-treeview">
+                                            <li class="nav-item" <?php if (in_array('demo_classes', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?>>
+                                                <a href="<?php echo base_url() ?>demo_classes" class="nav-link">
+                                                    <i class="nav-icon fas fa-book"></i>
+                                                    <p>Demo Classes</p>
+                                                </a>
+                                            </li> 
+                                            <li class="nav-item" <?php if (in_array('student', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?>>
+                                                <a href="<?php echo base_url() ?>student" class="nav-link">
+                                                    <i class="nav-icon fas fa-book"></i>
+                                                    <p>Student</p>
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item" <?php if (in_array('faculty', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?>>
+                                                <a href="<?php echo base_url() ?>faculty" class="nav-link">
+                                                <i class="nav-icon fas fa-book"></i>
+                                                    <p>Faculty</p>
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item" <?php if (in_array('payment_history', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?>>
+                                                <a href="<?php echo base_url() ?>payment_history" class="nav-link">
+                                                <i class="nav-icon fas fa-book"></i>
+                                                    <p>Payment History</p>
+                                                </a>
+                                            </li>
+
+                                        
+                                            <!-- Add other Finance menu items with access level checks here -->
+                                        </ul>
+                                    </li>
+
                                     <!-- Finance Menu -->
                                     <li class="nav-item" <?php if (in_array('faculty_pamentrecords', $access_levels) || in_array('studentpaments', $access_levels) || in_array('payments', $access_levels)) {
                                                                 echo "style='display:block'";
@@ -427,7 +585,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="faculty_pamentrecords" class="nav-link">
+                                                <a href="<?php echo base_url() ?>faculty_pamentrecords" class="nav-link">
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Faculty Payment Records</p>
                                                 </a>
@@ -437,7 +595,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="studentpaments" class="nav-link">
+                                                <a href="<?php echo base_url() ?>studentpaments" class="nav-link">
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Student Payments</p>
                                                 </a>
@@ -447,7 +605,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="payments" class="nav-link">
+                                                <a href="<?php echo base_url() ?>payments" class="nav-link">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Payments</p>
                                                 </a>
@@ -605,6 +763,46 @@
                         </ul>
                     </li>
 
+
+                      <!-- Menu Master -->
+                      <li class="nav-item" >
+                        <a href="#" class="nav-link" >
+                            <i class=" nav-icon fa fa-calendar"></i>
+                            <p>
+                                Master
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url(); ?>add_courses" class="nav-link">
+                                    <i class="nav-icon fas fa-edit"></i>
+                                    <p>Add courses</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url(); ?>courses_list" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Courses List</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url(); ?>add_sub_courses" class="nav-link">
+                                    <i class="nav-icon fas fa-edit"></i>
+                                    <p>Add sub courses</p>
+                                </a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="<?php echo base_url(); ?>sub_courses_list" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Sub courses List</p>
+                                </a>
+                            </li>
+                            <!-- Add other Menu menu items with access level checks here -->
+                        </ul>
+                    </li>
+
                     <!-- New User Menu -->
                     <li class="nav-item" >
                         <a href="#" class="nav-link">
@@ -695,13 +893,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item" >
-                                <a href="<?php echo base_url() ?>StudentGroups" class="nav-link">
+                                <a href="<?php echo base_url() ?>student_list_of_group" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Groups List</p>
                                 </a>
                             </li>
                             <li class="nav-item" >
-                                <a href="<?php echo base_url() ?>StudentListToAdmin" class="nav-link">
+                                <a href="<?php echo base_url() ?>create_group" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Create Groups</p>
                                 </a>
@@ -758,27 +956,27 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item" >
-                                <a href="demo_classes" class="nav-link">
+                                <a href="<?php echo base_url() ?>demo_classes" class="nav-link">
                                     <i class="nav-icon fas fa-book"></i>
                                     <p>Demo Classes</p>
                                 </a>
                             </li> 
                             <li class="nav-item" >
-                                <a href="student" class="nav-link">
+                                <a href="<?php echo base_url() ?>student" class="nav-link">
                                     <i class="nav-icon fas fa-book"></i>
                                     <p>Student</p>
                                 </a>
                             </li>
 
                             <li class="nav-item" >
-                                <a href="faculty" class="nav-link">
+                                <a href="<?php echo base_url() ?>faculty" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                     <p>Faculty</p>
                                 </a>
                             </li>
 
                             <li class="nav-item" >
-                                <a href="payment_history" class="nav-link">
+                                <a href="<?php echo base_url() ?>payment_history" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                     <p>Payment History</p>
                                 </a>
@@ -800,19 +998,19 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item" >
-                                <a href="faculty_pamentrecords" class="nav-link">
+                                <a href="<?php echo base_url() ?>faculty_pamentrecords" class="nav-link">
                                     <i class="nav-icon fas fa-book"></i>
                                     <p>Faculty Payment Records</p>
                                 </a>
                             </li> 
                             <li class="nav-item" >
-                                <a href="studentpaments" class="nav-link">
+                                <a href="<?php echo base_url() ?>studentpaments" class="nav-link">
                                     <i class="nav-icon fas fa-book"></i>
                                     <p>Student Payments</p>
                                 </a>
                             </li>
                             <li class="nav-item" >
-                                <a href="payments" class="nav-link">
+                                <a href="<?php echo base_url() ?>payments" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Payments</p>
                                 </a>
@@ -839,7 +1037,7 @@
                                 </a>
                             </li>
                             <li class="nav-item" >
-                                <a href="email" class="nav-link">
+                                <a href="<?php echo base_url() ?>email" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Email</p>
                                 </a>

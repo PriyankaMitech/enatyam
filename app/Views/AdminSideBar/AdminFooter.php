@@ -29,7 +29,6 @@ $.widget.bridge('uibutton', $.ui.button)
 <script src="<?= base_url() ?>public/js/jquery.barrating.min.js"></script>
 <script src="<?= base_url(); ?>/public/js/jquery.validate.min.js"></script>
 
-<!-- <script src="<?= base_url(); ?>dist/js/adminlte.min.js"></script> -->
 
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
@@ -52,8 +51,170 @@ $.widget.bridge('uibutton', $.ui.button)
 
 <!-- AdminLTE App -->
 <script src="<?=base_url(); ?>dist/js/adminlte.min.js"></script>
+
+
+
+
+
+
+<!-- jQuery -->
+<!-- Bootstrap 4 -->
+<!-- Select2 -->
+<script src="<?=base_url(); ?>plugins/select2/js/select2.full.min.js"></script>
+<!-- Bootstrap4 Duallistbox -->
+<script src="<?=base_url(); ?>plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<!-- InputMask -->
+<script src="<?=base_url(); ?>plugins/inputmask/jquery.inputmask.min.js"></script>
+<!-- date-range-picker -->
+<!-- bootstrap color picker -->
+<script src="<?=base_url(); ?>plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<!-- Bootstrap Switch -->
+<script src="<?=base_url(); ?>plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<!-- BS-Stepper -->
+<script src="<?=base_url(); ?>plugins/bs-stepper/js/bs-stepper.min.js"></script>
+<!-- dropzonejs -->
+<script src="<?=base_url(); ?>plugins/dropzone/min/dropzone.min.js"></script>
+<!-- AdminLTE App -->
 <!-- AdminLTE for demo purposes -->
+<script src="<?=base_url(); ?>dist/js/demo.js"></script>
 <!-- Page specific script -->
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+
+    //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    //Money Euro
+    $('[data-mask]').inputmask()
+
+    //Date picker
+    $('#reservationdate').datetimepicker({
+        format: 'L'
+    });
+
+    //Date and time picker
+    $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+
+    //Date range picker
+    $('#reservation').daterangepicker()
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({
+      timePicker: true,
+      timePickerIncrement: 30,
+      locale: {
+        format: 'MM/DD/YYYY hh:mm A'
+      }
+    })
+    //Date range as a button
+    $('#daterange-btn').daterangepicker(
+      {
+        ranges   : {
+          'Today'       : [moment(), moment()],
+          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        startDate: moment().subtract(29, 'days'),
+        endDate  : moment()
+      },
+      function (start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+      }
+    )
+
+    //Timepicker
+    $('#timepicker').datetimepicker({
+      format: 'LT'
+    })
+
+    //Bootstrap Duallistbox
+    $('.duallistbox').bootstrapDualListbox()
+
+    //Colorpicker
+    $('.my-colorpicker1').colorpicker()
+    //color picker with addon
+    $('.my-colorpicker2').colorpicker()
+
+    $('.my-colorpicker2').on('colorpickerChange', function(event) {
+      $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+    })
+
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    })
+
+  })
+  // BS-Stepper Init
+  document.addEventListener('DOMContentLoaded', function () {
+    window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+  })
+
+  // DropzoneJS Demo Code Start
+  Dropzone.autoDiscover = false
+
+  // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+  var previewNode = document.querySelector("#template")
+  previewNode.id = ""
+  var previewTemplate = previewNode.parentNode.innerHTML
+  previewNode.parentNode.removeChild(previewNode)
+
+  var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+    url: "/target-url", // Set the url
+    thumbnailWidth: 80,
+    thumbnailHeight: 80,
+    parallelUploads: 20,
+    previewTemplate: previewTemplate,
+    autoQueue: false, // Make sure the files aren't queued until manually added
+    previewsContainer: "#previews", // Define the container to display the previews
+    clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+  })
+
+  myDropzone.on("addedfile", function(file) {
+    // Hookup the start button
+    file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
+  })
+
+  // Update the total progress bar
+  myDropzone.on("totaluploadprogress", function(progress) {
+    document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
+  })
+
+  myDropzone.on("sending", function(file) {
+    // Show the total progress bar when upload starts
+    document.querySelector("#total-progress").style.opacity = "1"
+    // And disable the start button
+    file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+  })
+
+  // Hide the total progress bar when nothing's uploading anymore
+  myDropzone.on("queuecomplete", function(progress) {
+    document.querySelector("#total-progress").style.opacity = "0"
+  })
+
+  // Setup the buttons for all transfers
+  // The "add files" button doesn't need to be setup because the config
+  // `clickable` has already been specified.
+  document.querySelector("#actions .start").onclick = function() {
+    myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
+  }
+  document.querySelector("#actions .cancel").onclick = function() {
+    myDropzone.removeAllFiles(true)
+  }
+  // DropzoneJS Demo Code End
+</script>
+
+
 <script>
 $(function() {
     $("#example1").DataTable({
@@ -538,6 +699,49 @@ $(document).ready(function() {
     });
 });
 </script>
+<script>
+$('#add_sub_courses_form').validate({
+    rules: {
+        courses_id: {
+            required: true,
+            min: 1, // Assuming that course IDs start from 1. Adjust if needed.
+        },
+        sub_courses_name: {
+            required: true,
+        },
+    },
+    messages: {
+        courses_id: {
+            required: 'Please select courses.',
+            min: 'Please select a valid course.',
+        },
+        sub_courses_name: {
+            required: 'Please enter sub courses name.',
+        },
+    },
+});
+
+</script>
+
+
+<script>
+$(document).ready(function() {
+    $('#add_courses_form').validate({
+        rules: {
+            courses_name: {
+                required: true,
+            },
+    
+        },
+        messages: {
+            courses_name: {
+                required: 'Please enter courses name.',
+            },
+   
+        }
+    });
+});
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -571,7 +775,7 @@ $(document).ready(function() {
                     $('#menu_nameError').text('');
                     $('.submitButton').prop('disabled', false);
 
-                } else if (response == 'true') {
+                } else {
                     $('#menu_nameError').text('This URL Location is allredy available.');
                     $('.submitButton').prop('disabled', true);
                 }
@@ -579,6 +783,156 @@ $(document).ready(function() {
         });
     });
 });
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#courses_name').on('input', function() {
+        var courses_name = $(this).val();
+        // alert(courses_name);
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>/chechk_courses_name_id',
+            data: {
+                courses_name: courses_name
+            },
+            success: function(response) {
+                console.log(response);
+                $('.error').hide()
+
+                if (response == 'false') {
+                    $('.submitButton').prop('disabled', false);
+
+                } else {
+                    $('#courses_name').after('<span class="error">This courses name is allredy available.</span>');
+
+                    $('.submitButton').prop('disabled', true);
+                }
+            }
+        });
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#sub_courses_name').on('input', function() {
+        var courses_id = $('#courses_id').val();
+        var sub_courses_name = $(this).val();
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>/chechk_sub_courses_name_id',
+            data: {
+                courses_id: courses_id,
+                sub_courses_name: sub_courses_name
+            },
+            success: function(response) {
+                console.log(response);
+
+                if (response == 'false') {
+                    $('#courses_idError').text('This courses name is already available.');
+                    $('#sub_courses_nameError').text('This sub courses name is already available.');
+                    $('.submitButton').prop('disabled', true);
+                } else {
+                    // Clear error messages and enable submit button
+                    $('#courses_idError').text('');
+                    $('#sub_courses_nameError').text('');
+                    $('.submitButton').prop('disabled', false);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    });
+
+   
+});
+
+
+
+
+
+</script>
+<script>
+ 
+     $('#courses_id').on('change', function() {
+        var courses_id = $(this).val();
+        var sub_courses_name = $('#sub_courses_name').val();
+        // alert(courses_id);
+        // alert(sub_courses_name);
+
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>chechk_courses_id_id',
+            data: {
+                courses_id: courses_id,
+                sub_courses_name: sub_courses_name,
+
+            },
+            success: function(response) {
+                console.log(response);
+                $('.error').hide()
+                if (response === 'false') {
+                    $('#courses_idError').text('');
+                    $('#sub_courses_nameError').text('');
+                    $('.submitButton').prop('disabled', false);
+
+            
+                } else {
+                    // Clear error messages and enable submit button
+                    // $('#courses_idError').text('This courses name is already available.');
+                    $('#sub_courses_name').after('<span class="error">This sub courses name is already available.</span>');
+                    $('.submitButton').prop('disabled', true);
+
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    });
+
+    
+</script>
+
+<script>
+
+    $('#sub_courses_name').on('input', function() {
+        var sub_courses_name = $(this).val();
+        var courses_id = $('#courses_id').val();
+
+        // alert(sub_courses_name);
+        // alert(courses_id);
+
+
+        $.ajax({
+            type: 'POST',
+            url: '<?= base_url(); ?>chechk_sub_courses_name_id',
+            data: {
+                sub_courses_name: sub_courses_name,
+                courses_id : courses_id
+            },
+            success: function(response) {
+                console.log(response);
+                $('.error').hide()
+
+                if (response != '') {
+                 
+                    $('#sub_courses_name').after('<span class="error">This sub courses name is allredy available.</span>');
+                    $('.submitButton').prop('disabled', true);
+
+                } else {
+                    $('#sub_courses_nameError').text('');
+                    $('.submitButton').prop('disabled', false);
+                }
+            }
+        });
+    });
+
 </script>
 
 
@@ -934,6 +1288,216 @@ $(document).ready(function() {
 }
   
 </script>
+
+
+<script>
+$(document).ready(function(){
+    $('#courses_id_g').on('change', function(){
+        var countryId = $(this).val();
+        console.log(countryId)
+        if(countryId){
+            $.ajax({
+                url: '<?= base_url(); ?>get_sub_courses_data',
+                type: 'POST',
+                data: {courses_id_g: countryId},
+                dataType: 'json',
+                success: function(data){
+                    $('#sub_courses_id_g').empty();
+                    $('#sub_courses_id_g').append('<option value="">Please select sub Courses</option>');
+                    $.each(data, function(key, value){
+                        $('#sub_courses_id_g').append('<option value="'+ value.id +'">'+ value.sub_courses_name +'</option>');
+                    });
+
+                    // Retrieve the selected state ID from the hidden input field
+                    var selectedStateId = $('#selected_sub_courses_id_g').val();
+
+                    // Select the state in the dropdown
+                    $('#sub_courses_id_g').val(selectedStateId);
+                }
+            });
+        } else {
+            $('#sub_courses_id_g').empty();
+            $('#sub_courses_id_g').append('<option value="">Please Select State</option>');
+        }
+    });
+
+    // Trigger change event on #courses_id_g
+    $('#courses_id_g').trigger('change');
+});
+
+</script>
+
+
+<script>
+ $(document).ready(function(){
+    $('#sub_courses_id_g').on('change', function(){
+    function loadStudentData() {
+        var subcoursesID = $('#sub_courses_id_g').val();
+        var courses_id_g = $('#courses_id_g').val();
+
+        $.ajax({
+            url: '<?= base_url(); ?>get_student_data',
+            type: 'POST',
+            data: {
+                sub_courses_id_g: subcoursesID,
+                courses_id_g: courses_id_g,
+            },
+            dataType: 'json',
+            success: function(data){
+                $('#student_id').empty();
+                $.each(data, function(key, value){
+                    $('#student_id').append('<option value="'+ value.id +'">'+ value.full_name +'</option>');
+                });
+
+                // Retrieve the selected student IDs from the hidden input field
+                var selectedStudentIds = $('#selected_student_id').val();
+
+                // Convert the comma-separated string to an array of integers
+                var selectedIdsArray = selectedStudentIds.split(',').map(Number);
+
+                // Initialize Select2 and set the selected values
+                $('#student_id').select2();
+                $('#student_id').val(selectedIdsArray).trigger('change');
+            }
+        });
+    }
+
+    // Function to load faculty data
+    function loadFacultyData() {
+        var subcoursesID = $('#sub_courses_id_g').val();
+        var courses_id_g = $('#courses_id_g').val();
+
+  
+
+        $.ajax({
+            url: '<?= base_url(); ?>get_faculty_data',
+            type: 'POST',
+            data: {
+                sub_courses_id_g: subcoursesID,
+                courses_id_g: courses_id_g,
+            }, 
+            dataType: 'json',
+
+            success: function(data){
+                $('#faculty_id_g').empty();
+                $('#faculty_id_g').append('<option value="">Please select faculty</option>');
+                $.each(data, function(key, value){
+                    $('#faculty_id_g').append('<option value="'+ value.D_id +'">'+ value.name +'</option>');
+                });
+
+                // Retrieve the selected faculty ID from the hidden input field
+                var selectedFacultyId = $('#selected_faculty_id').val();
+
+                // Select the faculty in the dropdown
+                $('#faculty_id_g').val(selectedFacultyId);
+            }
+        });
+    }
+
+    // Use setTimeout to ensure that the document is fully loaded before trying to load student and faculty data
+    setTimeout(function() {
+        loadStudentData();
+        loadFacultyData();
+    }, 1000);
+
+    // Event listener for change on #sub_courses_id_g
+    $('#sub_courses_id_g').on('change', function(){
+        loadStudentData();
+    });
+});
+
+});
+
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        // Get the current date in 'YYYY-MM-DD' format
+        var currentDate = new Date().toISOString().split('T')[0];
+
+        // Set the minimum date for create_group_date input
+        $('#create_group_date').attr('min', currentDate);
+
+        // Set the minimum date for session_start_date input
+        $('#session_start_date').attr('min', currentDate);
+    });
+</script>
+
+
+<script>
+
+
+$(document).ready(function() {
+    $.validator.addMethod('minSelected', function(value, element, min) {
+        return $(element).find('option:selected').length >= min;
+    }, 'Please select at least {0} options.');
+
+    $('#create_group_form').validate({
+        rules: {
+            courses_id_g: {
+                required: true,
+                min: 1, // Assuming that course IDs start from 1. Adjust if needed.
+
+            },
+            sub_courses_id_g: {
+                required: true,
+                min: 1, // Assuming that course IDs start from 1. Adjust if needed.
+
+               
+            },
+            'student_id[]': {
+                required: true,
+                minSelected: 1 // Adjust the minimum number of selected options as needed
+            },
+            group_name: {
+                required: true,
+            },
+    
+            faculty_id_g: {
+                required: true,
+                min: 1, // Assuming that course IDs start from 1. Adjust if needed.
+
+            },
+            session_start_date: {
+                required: true,
+            }
+        },
+        messages: {
+            courses_id_g: {
+                required: 'Please select courses.',
+                min: 'Please select courses.',
+
+            },
+            sub_courses_id_g: {
+                required: 'Please select sub courses.',
+                min: 'Please select sub courses.',
+            },
+            'student_id[]': {
+                required: 'Please select at least one student.',
+                minSelected: 'Please select at least one student.'
+            },
+            group_name: {
+                required: "Enter group name.",
+            },
+
+            faculty_id_g: {
+                required: 'Please select faculty.',
+                min: 'Please select faculty.',
+
+            },
+            session_start_date: {
+                required: 'Please select date.',
+            }
+        },
+
+        
+
+
+    });
+});
+</script>
+
 </body>
 
 </html>

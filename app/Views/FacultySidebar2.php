@@ -34,7 +34,11 @@
   <link href="<?php echo base_url() ?>public/extcss/buttons.bootstrap4.min.css">
   <link href="<?php echo base_url() ?>public/extcss/responsive.bootstrap4.min.css">
 
-
+<style>
+  .error{
+    color:red !important;
+}
+  </style>
 
 
 
@@ -51,12 +55,13 @@
          
          // Rest of your code
          $notifications = $adminModel->getUserRole($teacherId);
+         
+        $count = 0;
          if ($notifications) {
             $count = count($notifications);
          }else {
           $count = 0;
          }
-
 ?>
   <div id="flash-success-container">
     <?php if (session()->has('success')) : ?>
@@ -183,12 +188,11 @@ $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".ZOOM_CLIE
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
                 <div class="notification-scroll">
                 <?php
-                  if ($notifications) {
+                  if($notifications){
                     usort($notifications, function ($a, $b) {
                         return strtotime($a['timestamp']) - strtotime($b['timestamp']);
                     });
-
-                  foreach ($notifications as $notification):
+                   foreach ($notifications as $notification):
                       $notificationDate = strtotime($notification['timestamp']);
                       $todayDateTime = strtotime($todayDate);
                   ?>
@@ -222,9 +226,10 @@ $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".ZOOM_CLIE
                           </div>
                           <!-- Message End -->
                       </a>
-                  <?php
-                  endforeach; }
-                  ?>
+                  <?php endforeach;}else{ ?>
+                   <p class="p-2">No new notifications available</p><hr>
+                  <?php } ?>
+
 
 
                 </div>

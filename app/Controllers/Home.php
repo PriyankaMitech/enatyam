@@ -3,6 +3,8 @@
 namespace App\Controllers;
 use App\Models\LoginModel;
 use App\Libraries\Google;
+use App\Models\AdminModel;
+
 
 
 class Home extends BaseController
@@ -46,8 +48,14 @@ class Home extends BaseController
     }
     public function Career()
     {
+        $model = new AdminModel();
+
+
+        $wherecond = array('is_deleted' => 'N');
+
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
         
-        return view('Career');
+        return view('Career' ,$data);
     }
     public function Carrier()
     {

@@ -207,7 +207,7 @@ class StudentController extends BaseController
 
         $data['SessionCount'] = $StudentModel->get_user_Session($user_id); 
         $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);   
-        //    print_r( $data['slots'] );die;
+      //  print_r($data['SessionCount']);die;
         return view('StudentSidebar/ScheduleStudent',$data);
 
     }
@@ -291,7 +291,8 @@ class StudentController extends BaseController
             $StudentModel = new StudentModel();
             $registerData =  $StudentModel->fetchid($registerId);
             $assignTeacherId = $registerData->Assign_Techer_id;
-            $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId );
+            $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId,$registerId);
+            // print_r($assignFacultyData['assignFacultyData']);die;
             $data['registerId'] = $registerId;
             $data['assignFacultyData'] = $assignFacultyData;
             return view('StudentSidebar/StudentSelectClassDates',$data);
@@ -302,17 +303,18 @@ class StudentController extends BaseController
             $StudentModel = new StudentModel();
           
            $registerData = $StudentModel->fetchProfileDate($registerId);
-        //    print_r($registerData);die;
-           $sessionStartDate = $registerData['Session_Start_Date'];
-        //    print_r($sessionStartDate);die;
+        //    print_r($registerData);
+            // print_r($registerData[0]->Session_Start_Date);die;
+           $sessionStartDate = $registerData[0]->Session_Start_Date;
+           // print_r($sessionStartDate);die;
 
             $dataToUpdate = [
                 'student_register_id' => $registerId,
                 'session_start_date' => $sessionStartDate, // Update the column with the fetched value
             ];
-            // print_r( $dataToUpdate);die;
+           //  print_r($dataToUpdate);die;
 
-           $StudentModel->updateData($selectedId, $dataToUpdate);
+           $StudentModel->updateData($selectedId, $dataToUpdate,$registerId);
             return redirect()->to('SelectDate');
         }
         public function studentsessionstatus()
@@ -372,5 +374,65 @@ class StudentController extends BaseController
     {
         echo view('StudentSidebar/RescheduleClass');
     }
+
+   public function SessionConduct() {
+    if (isset($_POST['conduct'])) {
+        $conductStatus = $_POST['conduct'];
+        $modalCurrentDate = isset($_POST['modalCurrentDate']) ? $_POST['modalCurrentDate'] : 'N/A';
+        $modalSessionNumber = isset($_POST['modalSessionNumber']) ? $_POST['modalSessionNumber'] : 'N/A';
+        $modalButtonText = isset($_POST['modalButtonText']) ? $_POST['modalButtonText'] : 'N/A';
+
+        // Now you can use these values as needed
+        echo "Conduct Status: $conductStatus\n";
+        echo "Modal Current Date: $modalCurrentDate\n";
+        echo "Modal Session Number: $modalSessionNumber\n";
+        echo "Modal Button Text: $modalButtonText\n";
+    } else {
+        // Handle case where conduct value is not set
+        echo "Conduct value not set";
+    }
+}
+public function submitForm()
+{
+    $result = session();
+    $registerId = $result->get('id');
+    $studentModel = new StudentModel();
+    $action = $this->request->getPost('action');
+    $sessionNumber = $this->request->getPost('sessionNumber');
+
+    switch ($action) {
+        case 'Reschedule':
+            $data = [
+                'action' => $action,
+                'sessionNumber' => $sessionNumber,
+                'Session_date' => $this->request->getPost('Session_date'),
+                'current_time' => $this->request->getPost('current_time'),
+                'reschedule_time' => $this->request->getPost('reschedule_time'),
+                'reschedule_date' => $this->request->getPost('reschedule_date'),
+                'student_registerid' => $registerId,
+                'reason' => $this->request->getPost('reason'),
+            ];
+            break;
+        case 'Leave':
+            $data = [
+                'action' => $action,
+                'form2_date' => $this->request->getPost('form2_date'),
+                'form2Reason' => $this->request->getPost('form2Reason'),
+            ];
+            break;
+        default:
+            return $this->response->setStatusCode(400)->setJSON(['error' => 'Invalid action']);
+    }
+
+    // Insert data into the Student table with student_registerid populated
+    $success = $studentModel->insertFormData($data, $registerId);
+    // print_r($success);die;
+    if($success == '1'){
+    session()->setFlashdata('success', 'Rewest Send successfully.');
+    echo json_encode($success);
+    }
+ 
+}
+
 }
 

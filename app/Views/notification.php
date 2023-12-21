@@ -46,12 +46,14 @@ $page = $uri->getSegment(count($pages));
             <!-- /.card-body -->
             <div class="card-body card-comments">
             <?php
+            if($notifications){
             $todayDate = date('Y-m-d H:i:s');
             usort($notifications, function ($a, $b) {
                 return strtotime($a['timestamp']) - strtotime($b['timestamp']);
             });
+          
 
-            foreach ($notifications as $notification):
+            foreach ($notifications as $notification){
                 $notificationDate = strtotime($notification['timestamp']);
                 $todayDateTime = strtotime($todayDate);
 
@@ -73,8 +75,11 @@ $page = $uri->getSegment(count($pages));
                     </div>
                     <!-- /.card-comment -->
                     <?php
-endforeach;
+            }}else{
 ?>
+No new notifications available
+
+<?php } ?>
             </div>
             <!-- /.card-footer -->
 

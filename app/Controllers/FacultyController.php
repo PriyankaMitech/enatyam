@@ -40,19 +40,11 @@ class FacultyController extends BaseController
 
             // Fetch today's session data
             $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
-            // Fetch other data using where condition
+          // print_r($todaysession);die;
             $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
-            // $notifications = $adminModel->getUserRole($teacherId);
 
             $todayDate = date('Y-m-d H:i:s');
             $displayedNotificationCount = 0;
-
-            // foreach ($notifications as $key => $notification) {
-            //     $notificationDate = $notification['timestamp'];
-            //     if ($notificationDate >= $todayDate) {
-            //         $displayedNotificationCount++;
-            //     }
-            // }
 
             return view('faculty', [
                 'data' => $data,
@@ -75,92 +67,40 @@ class FacultyController extends BaseController
 
   public function uploadVideo()
   {
-    // Retrieve student_id and register_id from session
-    //   $session = session();
-    //  $data = session()->get('data');
+    date_default_timezone_set('Asia/Kolkata');
     $data = session();
-    //   print_r($data);die;
     $studentId = $this->request->getPost('student_id');
-
-    // $this->session->set($studentId);
     $registerId =  $data->get('id');
-    // print_r($studentId);die;
-    //print_r($registerId);die;
-    // Create an instance of the FacultyModel
     $facultyModel = new FacultyModel();
-
-    // Retrieve the uploaded video file
-    // $videoFile = $this->request->getFile('videoFile');
-    // print_r($videoFile);
-    // die;
-
-    // Get the client's original video file name
-    // $videoFilename = $videoFile->getName();
-    // print_r($videoFilename);
-    // die;
-
-    // Move the video file to the 'public/videos/' directory
-    // $uploadDir = WRITEPATH . 'uploads/';
-
-    //changing path
-
     $videoFile = $this->request->getFile('videoFile');
-
     $type = $_FILES['videoFile']['type'];
-    // print_r($type);
-    // die;
+    $fileName = $_FILES['videoFile']['name'];
+
+     $videoFilename = $videoFile->getName();
+
     switch ($type) {
       case 'image/gif':
       case 'image/jpg':
       case 'image/png':
-        // do img config setup
-        if (!$videoFile->isValid()) {
-          // return $this->fail($videoFile->getErrorString());
-        }
 
         $videoFile->move(ROOTPATH . 'public\uploads\images\facultyUploadedImages');
 
         $videoFilename = $videoFile->getName();
-
 
         break;
       case 'avi':
       case 'flv':
       case 'wmv':
       case 'mp3':
+      case 'mp4':
+      case 'video/mp4':
       case 'wma':
-        // do video config
-        if (!$videoFile->isValid()) {
-          // return $this->fail($videoFile->getErrorString());
-        }
 
         $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
-
-        $videoFilename = $videoFile->getName();
-        // print_r($videoFilename);
-
-
         break;
     }
 
-    // if (!$videoFile->isValid()) {
-    //   // return $this->fail($videoFile->getErrorString());
-    // }
-
-    // $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
-
-    // $videoFilename = $videoFile->getName();
-    // print_r($videoFilename);
-    // die;
-
-    // print_r($uploadDir);
-    // die;
-
-    // $file->move(ROOTPATH . 'public\uploads\documents');
-    // $videoFile->move($uploadDir, $videoFilename);
-
-    // Call the method to update the student's video information
-    $facultyModel->updateStudentVideo($studentId, $registerId, $videoFilename);
+    $facultyModel->updateStudentVideo($studentId, $registerId, $fileName);
 
     return redirect()->to('FacultyDashboard');
     //  session_destroy();
@@ -180,6 +120,8 @@ class FacultyController extends BaseController
         $registerId = $studentId->get('id');
         $facultyModel = new FacultyModel();
         $videos = $facultyModel->getVideosByRegisterId($registerId);
+
+        // echo "<pre>";print_r($videos);exit();
         return view('StudentSideBarVideo', ['videos' => $videos]);
       } else {
         return redirect()->to(base_url());
@@ -217,60 +159,86 @@ class FacultyController extends BaseController
       }
     }
   }
-  public function  MonthlyCalendar()
-  {
+
+  public function MonthlyCalendar()
+{
+    $facultyModel = new FacultyModel();
     $adminModel = new AdminModel();
     if (isset($_SESSION['sessiondata'])) {
-      $sessionData = $_SESSION['sessiondata'];
+     $sessionData = $_SESSION['sessiondata'];
 
-      $email = $sessionData['email'] ?? null;
-      $password = $sessionData['password'] ?? null;
+     $email = $sessionData['email'] ?? null;
+     $password = $sessionData['password'] ?? null;
 
-      if ($email !== null && $password !== null) {
+     if ($email !== null && $password !== null) {
 
         $session = session();
+        $registerId = $session->get('id');
         $wherecond = array('USER_ID'=> $_SESSION['sessiondata']['id']);
         $result['registerId'] = $session->get('id');
-        $result['schedule_data'] = $adminModel->getalldata('schedule_details', $wherecond);
-        // echo '<pre>';print_r($result);die;
+        $result['faculty_slots'] =$facultyModel->getFacultySlots($registerId);
+        // echo '<pre>';print_r($result['faculty_slots']);die;
         return view('FacultysideBar/MonthlyCalendar', $result);
-      } else {
+     } else {
         return redirect()->to(base_url());
-      }
+     }
     } else {
-      return redirect()->to(base_url());
+     return redirect()->to(base_url());
     }
-  }
+}
 
-  public function selectfacultySchedule()
-  {
-    //   print_r($_POST);die;
-    if ($this->request->getMethod() === 'post') {
-      // Get the data from the form
-      $facultyId = $this->request->getPost('faculty_register_id');
-      $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
-      // print_r($selectedAppointments);die;
-      $facultyModel = new FacultyModel();
-      // print_r($facultyId);die;
-      // Prepare an array of data for batch insertion
-      $data = [];
-      foreach ($selectedAppointments as $appointment) {
-        $data[] = [
-          'faculty_register_id' => $facultyId,
-          'date' => $appointment['date'],
-          'start_time' => $appointment['formTime'],
-          'end_time' => $appointment['toTime'],
-        ];
-      }
-      // print_r($data);die;
-      // Insert all the data as a batch
-      $facultyModel->insertAppointments($data);
 
-      return redirect()->to('SelectSlot');
-    } else {
-      // Handle non-POST requests (optional).
+public function saveschedule()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $facultyId = $this->request->getPost('faculty_register_id');
+            $formDay = $this->request->getPost('form_day');
+            $formTime = $this->request->getPost('form_time');
+            $toTime = $this->request->getPost('to_time');
+
+            $facultyModel = new FacultyModel();
+
+            // Check if the data already exists in the database
+            $dataExists = $facultyModel->checkDataExists($facultyId, $formDay, $formTime, $toTime);
+
+            if ($dataExists) {
+                // Data already exists, handle accordingly (e.g., show an error message)
+                // You may want to redirect or display an error message to the user
+                return redirect()->to('SelectSlot')->with('error', 'Data already exists.');
+            } else {
+                // Data does not exist, proceed with insertion
+                $data = [
+                    'faculty_register_id' => $facultyId,
+                    'Day' => $formDay,
+                    'start_time' => $formTime,
+                    'end_time' => $toTime,
+                ];
+                
+                $facultyModel->insertAppointments($data);
+
+                // Redirect to the desired page after successful insertion
+                return redirect()->to('SelectSlot');
+            }
+        } else {
+            // Handle non-POST requests (optional).
+        }
     }
-  }
+
+public function checkData()
+{
+    $facultyId = $this->request->getPost('faculty_register_id');
+    $formDay = $this->request->getPost('form_day');
+    $formTime = $this->request->getPost('form_time');
+    $toTime = $this->request->getPost('to_time');
+
+    // Perform a database query to check if the data exists
+    $facultyModel = new FacultyModel();
+    $exists = $facultyModel->checkDataExists($facultyId, $formDay, $formTime, $toTime);
+    // print_r($exists);die;
+    // Return a JSON response
+    $this->response->setJSON(['exists' => $exists]);
+    return $this->response;
+}
   public function fetchTofacultyShuduleSidebar()
   {
     if (isset($_SESSION['sessiondata'])) {

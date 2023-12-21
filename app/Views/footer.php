@@ -1398,22 +1398,20 @@
 
 
 <?php } elseif ($page == 'Career') { ?>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+
+
+<script src="<?=base_url(); ?>public/js/custom.js" >
     </script>
     <script>
         function handleSubmit(collapse_val)
@@ -2610,6 +2608,47 @@
             }
         });
     });
+</script>
+
+
+<script>
+$(document).ready(function(){
+    $('#courses_id_g').on('change', function(){
+        var countryId = $(this).val();
+        console.log(countryId)
+        if(countryId){
+            $.ajax({
+                url: '<?= base_url(); ?>get_sub_courses_data',
+                type: 'POST',
+                data: {courses_id_g: countryId},
+                dataType: 'json',
+                success: function(data){
+                    $('#sub_courses_id_g').empty();
+                    $('#sub_courses_id_g').append('<option value="">Please select sub Courses</option>');
+                    $.each(data, function(key, value){
+                        $('#sub_courses_id_g').append('<option value="'+ value.id +'">'+ value.sub_courses_name +'</option>');
+                    });
+
+                    // Retrieve the selected state ID from the hidden input field
+                    var selectedStateId = $('#selected_sub_courses_id_g').val();
+
+                    // Select the state in the dropdown
+                    $('#sub_courses_id_g').val(selectedStateId);
+                }
+            });
+        } else {
+            $('#sub_courses_id_g').empty();
+            $('#sub_courses_id_g').append('<option value="">Please Select State</option>');
+        }
+    });
+
+    // Trigger change event on #courses_id_g
+    $('#courses_id_g').trigger('change');
+});
+
+
+
+
 </script>
 
 

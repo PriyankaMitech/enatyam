@@ -43,6 +43,8 @@ $routes->post('chechk_username_id', 'Home::chechk_username_id');
 $routes->get('chechk_menu_name_id', ' AdminController::chechk_menu_name_id');
 $routes->post('chechk_menu_name_id', 'AdminController::chechk_menu_name_id');
 
+
+
 $routes->get('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
 $routes->post('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
 
@@ -100,7 +102,7 @@ $routes->get('demo', 'Home::demo');
 //routes for admin
 $routes->post('AdminController/addStudent', 'AdminController::addStudent');
 $routes->get('givestudent', 'AdminController::givestudent');
-$routes->get('StudentListToAdmin', 'AdminController::StudentListToAdmin');
+$routes->get('create_group', 'AdminController::create_group');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
 $routes->get('Admindashboard', 'AdminController::Admindashboard');
 $routes->get('getAdminSideBarAll', 'AdminController::getAdminSideBarAll');
@@ -146,16 +148,71 @@ $routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
 $routes->get('AdminController/searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
-
-
-
-
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');
+
+// Master routes
+$routes->post('add_courses', 'AdminController::add_courses');
+$routes->get('add_courses', 'AdminController::add_courses');
+
+$routes->post('edit_courses/(:any)', 'AdminController::add_courses/$1');
+$routes->get('edit_courses/(:any)', 'AdminController::get_courses/$1');
+
+$routes->post('set_courses', 'AdminController::set_courses');
+
+$routes->post('courses_list', 'AdminController::courses_list');
+$routes->get('courses_list', 'AdminController::courses_list');
+
+$routes->get('chechk_courses_name_id', ' AdminController::chechk_courses_name_id');
+$routes->post('chechk_courses_name_id', 'AdminController::chechk_courses_name_id');
+
+
+$routes->post('add_sub_courses', 'AdminController::add_sub_courses');
+$routes->get('add_sub_courses', 'AdminController::add_sub_courses');
+
+$routes->post('edit_sub_courses/(:any)', 'AdminController::add_sub_courses/$1');
+$routes->get('edit_sub_courses/(:any)', 'AdminController::get_sub_courses/$1');
+
+$routes->post('set_sub_courses', 'AdminController::set_sub_courses');
+
+$routes->post('sub_courses_list', 'AdminController::sub_courses_list');
+$routes->get('sub_courses_list', 'AdminController::sub_courses_list');
+
+// $routes->get('chechk_sub_courses_name_id', ' AdminController::chechk_sub_courses_name_id');
+$routes->post('chechk_sub_courses_name_id', 'AdminController::chechk_sub_courses_name_id');
+
+
+// $routes->get('chechk_courses_id_id', ' AdminController::chechk_courses_id_id');
+$routes->post('chechk_courses_id_id', 'AdminController::chechk_courses_id_id');
+
+$routes->post('get_sub_courses_data', 'AdminController::get_sub_courses_data');
+$routes->post('get_student_data', 'AdminController::get_student_data');
+
+$routes->post('get_faculty_data', 'AdminController::get_faculty_data');
+
+
+
+
+
+
+
+
+
 
 
 $routes->post('add_menu', 'AdminController::add_menu');
 $routes->get('add_menu', 'AdminController::add_menu');
+
+
+$routes->post('serch_data_of_group', 'AdminController::serch_data_of_group');
+$routes->get('serch_data_of_group', 'AdminController::serch_data_of_group');
+
+
+
+
+$routes->post('student_list_of_group', 'AdminController::student_list_of_group');
+$routes->get('student_list_of_group', 'AdminController::student_list_of_group');
+
 
 $routes->post('menu_list', 'AdminController::menu_list');
 $routes->get('menu_list', 'AdminController::menu_list');
@@ -165,10 +222,13 @@ $routes->get('user_list', 'AdminController::user_list');
 
 
 $routes->post('set_menu', 'AdminController::set_menu');
-// $routes->get('set_menu', 'AdminController::set_menu');
+$routes->post('set_create_group_data', 'AdminController::set_create_group_data');
 
 $routes->post('edit_menu/(:any)', 'AdminController::add_menu/$1');
 $routes->get('edit_menu/(:any)', 'AdminController::get_menu/$1');
+
+$routes->get('edit_group/(:any)', 'AdminController::edit_group/$1');
+
 
 $routes->get('AddNewUser', 'AdminController::add_new_user');
 
@@ -204,10 +264,10 @@ $routes->post('DemoController/resheduleDemo', 'DemoController::resheduleDemo');
 $routes->get('SelectSlot', 'FacultyController::MonthlyCalendar');
 // $routes->get('MonthlyCalendar', 'FacultyController::MonthlyCalendar');
 $routes->get('StudentUploadedVideo', 'FacultyController::StudentuplodedVidio');
-$routes->post('FacultyController/selectfacultySchedule', 'FacultyController::selectfacultySchedule');
+$routes->post('saveschedule', 'FacultyController::saveschedule');
 $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
 $routes->post('save_schedule_data', 'FacultyController::save_schedule_data');
-
+$routes->post('checkData', 'FacultyController::checkData');
 
 $routes->get('notification', 'FacultyController::get_all_notification');
 
@@ -235,10 +295,10 @@ $routes->post('Studentpasswordupdate', 'StudentController::Studentpasswordupdate
 $routes->post('selectedslotsfromstudent', 'StudentController::selectedslotsfromstudent');
 $routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
 $routes->get('SelectDate', 'StudentController::StudentSelectClassDates');
-
 $routes->get('feedback', 'StudentController::feedback');
 $routes->post('savefeedback', 'StudentController::savefeedback');
-
+$routes->post('SessionConduct', 'StudentController::SessionConduct');
+$routes->post('submitForm', 'StudentController::submitForm');
 $routes->get('reschedule', 'StudentController::reschedule');
 
 // 
@@ -258,7 +318,7 @@ $routes->get('StudentSideBarVideo', 'FacultyController::fetchvideotostudentdashb
 $routes->get('uploadMedia', 'StudentController::uploadMedia');
 $routes->post('uploadMedia', 'StudentController::uploadMedia');
 //  $routes->get('StudentSideBarVideo', 'StudentController::StudentSideBarVideo');
-
+$routes->get('StudentAttenadnace', 'StudentController::StudentAttenadnace');
 $routes->get('StudentProfile', 'StudentController::StudentProfile');
 $routes->get('UplodeVideo', 'StudentController::UplodeVideo');
 $routes->get('OrderDetails', 'BillingC::OrderDetails');
