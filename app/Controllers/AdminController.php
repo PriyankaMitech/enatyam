@@ -1035,6 +1035,9 @@ public function chechk_courses_id_id()
         echo view('user_list', $data);
     }
 
+    public function update_access_token() {
+        
+    }
 
     public function get_user()
     {

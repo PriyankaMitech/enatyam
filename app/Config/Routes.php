@@ -333,6 +333,8 @@ $routes->get('googlelogin', 'LoginController::googlelogin');
 $routes->get('User_authentication', 'LoginController::index');
 $routes->get('LoginController/callback', 'LoginController::callback');
 
+// zoom routs
+$routes->get('update_access_token', 'ZoomApiController::update_access_token');
 
 
 /*

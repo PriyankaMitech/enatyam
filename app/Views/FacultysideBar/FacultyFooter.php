@@ -26,6 +26,7 @@ $page = $uri->getSegment(count($pages));
   <script src="<?php echo base_url()?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <script src="<?php echo base_url()?>dist/js/adminlte.min.js"></script>
   <script src="<?php echo base_url()?>public/js/custom.js"></script>
+  <script src="<?php echo base_url()?>public/js/schedule.js"></script>
   <script src="<?php echo base_url()?>dist/js/demo.js"></script>
   <script type="text/javascript" src="<?php echo base_url()?>cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
   <script type="text/javascript" src="<?php echo base_url()?>cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
