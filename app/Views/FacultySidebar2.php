@@ -55,7 +55,14 @@
          
          // Rest of your code
          $notifications = $adminModel->getUserRole($teacherId);
-         $count = count($notifications);
+         $count = 0;
+
+
+         if ($notifications) {
+          $count = count($notifications);
+       }else {
+       $count = 0;
+       }
 
 ?>
   
@@ -172,7 +179,7 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
                 <div class="notification-scroll">
                 <?php
-                  // Sort notifications array based on timestamp
+             if($notifications){
                   usort($notifications, function ($a, $b) {
                       return strtotime($a['timestamp']) - strtotime($b['timestamp']);
                   });
@@ -214,8 +221,12 @@
                           <!-- Message End -->
                       </a>
                   <?php
-                  endforeach;
-                  ?>
+                  endforeach;}else{
+                    ?>
+                   <p class="p-2">
+No new notifications available</p><hr>
+                    
+                    <?php } ?>
 
 
                 </div>
