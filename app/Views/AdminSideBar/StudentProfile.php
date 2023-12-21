@@ -28,7 +28,7 @@
                             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
                                 <div class="card bg-light d-flex flex-fill">
                                     <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
+                              
 
                                     </div>
                                     <div class="card-body pt-0">
@@ -37,9 +37,11 @@
                                                 <h2 class="lead"><b><?= $data->student_name ?></b></h2>
                                                 <p class="text-muted text-sm"><b>Email: </b><?= $data->email ?> </p>
                                                 <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
+                                                    
                                                     <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone <?= $data->mobile_no ?></li>
+                                                  
                                                 </ul>
+                                                <small class="badge badge-success"> Confirmed</small>
                                             </div>
                                             <div class="col-5 text-center">
                                                 <img src="<?php echo base_url() ?>public/images/user.png" alt="user-avatar" class="img-circle img-fluid">
