@@ -25,40 +25,43 @@
                     <div class="row">
                         <?php if(!empty($student_data)){ ?>
                         <?php foreach ($student_data as $data) { ?>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
-                                <div class="card bg-light d-flex flex-fill">
-                                    <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                            <div class="card bg-light d-flex flex-fill">
+                                <div class="card-header text-muted border-bottom-0">
+                                    Digital Strategist
 
-                                    </div>
-                                    <div class="card-body pt-0">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="lead"><b><?= $data->student_name ?></b></h2>
-                                                <p class="text-muted text-sm"><b>Email: </b><?= $data->email ?> </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone <?= $data->mobile_no ?></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-5 text-center">
-                                                <img src="<?php echo base_url() ?>public/images/user.png" alt="user-avatar" class="img-circle img-fluid">
-                                            </div>
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b><?= $data->student_name ?></b></h2>
+                                            <p class="text-muted text-sm"><b>Email: </b><?= $data->email ?> </p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i
+                                                            class="fas fa-lg fa-building"></i></span> Address: Demo
+                                                    Street 123, Demo City 04312, NJ</li>
+                                                <li class="small"><span class="fa-li"><i
+                                                            class="fas fa-lg fa-phone"></i></span> Phone
+                                                    <?= $data->mobile_no ?></li>
+                                            </ul>
                                         </div>
+                                    </div>
 
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="text-right">
-                                            <a href="<?php echo base_url() ?>chatuser" class="btn btn-sm bg-teal">
-                                                <i class="fas fa-comments"></i>
-                                            </a>
-                                            <a href="<?php echo base_url() ?>viewProfiles/<?=$data->student_id  ?>" class="btn btn-sm btn-primary">
-                                                <i class="fas fa-user"></i> View Profile
-                                            </a>
-                                        </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+                                        <a href="<?php echo base_url('chatuser/' . $data->student_id); ?>"
+                                            class="btn btn-sm bg-teal">
+                                            <i class="fas fa-comments"></i>
+                                        </a>
+                                        <a href="<?php echo base_url() ?>viewProfiles/<?=$data->student_id  ?>"
+                                            class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> View Profile
+                                        </a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         <?php } ?>
                         <?php } ?>
                     </div>

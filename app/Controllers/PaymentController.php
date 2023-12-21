@@ -99,7 +99,9 @@ class PaymentController extends BaseController
                     $email = $this->session->get('email');
                    // print_r($email);die;
                     $msg = 'Payment Confirmation Message'; 
-                    sendConfirmationEmail($email, $msg);
+                    $Subject ='Payment Confirmation';
+                    $ccEmails = ['cc1@example.com', 'cc2@example.com'];
+                    sendConfirmationEmail($email,$ccEmails, $msg,$Subject);
                     // echo '<pre>';print_r($response_array);die;
                     $paydetails = $adminmodel->insert_payment($finaloutput);
                     $payment = $adminmodel->insert_formdata('id', 'payment', $_POST);
