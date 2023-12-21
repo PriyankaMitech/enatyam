@@ -215,14 +215,13 @@ div.dataTables_wrapper div.dataTables_filter input {
                     <div class="d-flex justify-content-between align-items-center">
                         <!-- Existing search input on the left side -->
                         <div class="input-group input-group-sm" style="width: 150px;">
-
                             <div class="input-group-append">
-
+                                <!-- Your search input here -->
                             </div>
                         </div>
                         <?php if (!empty($todaysession)): ?>
                         <p class="mb-0">
-                            Date: <?= date('l, F j, Y', strtotime($todaysession[0]->date)); ?>
+                            <?= date('l, F j, Y'); ?>
                         </p>
                         <?php endif; ?>
                     </div>
@@ -244,7 +243,7 @@ div.dataTables_wrapper div.dataTables_filter input {
                         <tbody>
                             <?php foreach ($todaysession as $session) : ?>
                             <tr>
-                                <td><?= $session->student_name; ?></td>
+                                <td><?= $session->full_name; ?></td>
                                 <td><?= formatDate($session->start_time); ?></td>
                                 <td><?= formatDate($session->end_time); ?></td>
                                 <td>
@@ -263,47 +262,55 @@ div.dataTables_wrapper div.dataTables_filter input {
                             </tr>
 
                             <!-- Modal for each session -->
-       <div class="modal fade" id="attendanceModal<?= $session->id; ?>" tabindex="-1" role="dialog" aria-labelledby="attendanceModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="attendanceModalLabel">Attendance for <?= $session->student_name; ?></h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                                <div class="modal-body">
-                                    <form action="submitAttendance" method="post">
-                                        <div class="form-row">
-                                <div class="col-md-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="attendance" id="presentRadio" value="present" checked>
-                                        <label class="form-check-label" for="presentRadio">
-                                            Present
-                                        </label>
+                            <div class="modal fade" id="attendanceModal<?= $session->id; ?>" tabindex="-1" role="dialog"
+                                aria-labelledby="attendanceModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="attendanceModalLabel">Attendance for
+                                                <?= $session->full_name; ?></h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="submitAttendance" method="post">
+                                                <div class="form-row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="attendance" id="presentRadio" value="present"
+                                                                checked>
+                                                            <label class="form-check-label" for="presentRadio">
+                                                                Present
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="attendance" id="absentRadio" value="absent">
+                                                            <label class="form-check-label" for="absentRadio">
+                                                                Absent
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row mt-3">
+                                                    <div class="col">
+                                                        <input type="hidden" name="session_id"
+                                                            value="<?= $session->student_register_id; ?>">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Cancel</button>
+                                                        <button type="submit" class="btn btn-primary">Submit
+                                                            Attendance</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="attendance" id="absentRadio" value="absent">
-                                        <label class="form-check-label" for="absentRadio">
-                                            Absent
-                                        </label>
-                                    </div>
-                                </div>
                             </div>
-                            <div class="form-row mt-3" >
-                                <div class="col">
-                                <input type="hidden" name="session_id" value="<?= $session->student_register_id; ?>">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Submit Attendance</button>
-                            </div>
-                            </div>
-                                    </form>
-                                </div>
-                            </div>
-                </div>
-        </div>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
