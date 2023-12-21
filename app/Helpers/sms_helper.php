@@ -41,25 +41,24 @@ require_once 'src/SMTP.php';
         // $output = curl_exec($ch);
         
         if (curl_errno($ch)) {
-           return false;
+         return false;
         } else {
             return true;
         }
         curl_close($ch);
         return true;
     }
-
-    function sendConfirmationEmail($email, $password=null, $msg=null, $Subject=null,$tital=null, $otp=null,)
-    {
+    
+    function sendConfirmationEmail($email, $password=null, $msg=null, $Subject=null,$tital=null, $otp=null) {
         try {
             $mail = new PHPMailer(true);
             $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'siddheshkadgemitech@gmail.com';
-            $mail->Password   = 'lxnpuyvyefpbcukr';
+            $mail->Host     = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'siddheshkadgemitech@gmail.com';
+            $mail->Password = 'lxnpuyvyefpbcukr';
             $mail->SMTPSecure = 'tls';
-            $mail->Port       = 587;
+            $mail->Port     = 587;
             $mail->setFrom('siddheshkadgemitech@gmail.com', $tital);
             $mail->addAddress($email, 'Recipient Name');
             $mail->isHTML(true);
@@ -70,9 +69,4 @@ require_once 'src/SMTP.php';
             echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
             return false;
         }
-    
-       
-	
-}
-
-    
+    }

@@ -27,10 +27,10 @@ $page = $uri->getSegment(count($pages));
   <script src="<?php echo base_url()?>dist/js/adminlte.min.js"></script>
   <script src="<?php echo base_url()?>public/js/custom.js"></script>
   <script src="<?php echo base_url()?>public/js/schedule.js"></script>
-  <script src="<?php echo base_url()?>dist/js/demo.js"></script>
-  <script type="text/javascript" src="<?php echo base_url()?>cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-  <script type="text/javascript" src="<?php echo base_url()?>cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-   <script type="text/javascript" src="<?php echo base_url()?>cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+  <!-- <script src="<?php echo base_url()?>dist/js/demo.js"></script> -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <script src="<?php echo base_url()?>dist/js/adminlte.js"></script>
     <script src="<?php echo base_url()?>plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="<?php echo base_url()?>plugins/raphael/raphael.min.js"></script>
@@ -39,7 +39,7 @@ $page = $uri->getSegment(count($pages));
     <script src="<?php echo base_url()?>plugins/chart.js/Chart.min.js"></script>
     <script src="<?php echo base_url()?>dist/js/pages/dashboard2.js"></script>
    <script src="<?php echo base_url()?>public/js/schedule.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 
 
 

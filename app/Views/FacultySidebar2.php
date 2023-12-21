@@ -26,7 +26,7 @@
   <!-- summernote -->
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/summernote/summernote-bs4.min.css">
 
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/fullcalendar/main.css">
 
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
@@ -378,22 +378,9 @@ $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".ZOOM_CLIE
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Whats App
-                    </p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Email</p>
-                  </a>
-                </li>
 
                 <li class="nav-item">
-                  <a href="<?= base_url(); ?>chat" class="nav-link">
+                  <a href="<?= base_url(); ?>chatuser" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Chat</p>
                   </a>
