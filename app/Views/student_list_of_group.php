@@ -265,7 +265,7 @@
 
                                         <td>
                                             <a href="edit_group/<?=$data->id; ?>"><i class="far fa-edit me-2"></i></a>
-                                            <a href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a>
+                                            <a href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2 text-danger"></i></a>
                                         </td>
                                     
                                     </tr>
