@@ -10,7 +10,7 @@
         </div>
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>AdminDashboard">Dashboard</a></li>
             <li class="breadcrumb-item active">Sub Courses List </li>
             </ol>
         </div>
@@ -63,7 +63,7 @@
                                         <td><?=$data->sub_courses_name; ?></td>
                                         <td>
                                             <a href="edit_sub_courses/<?=$data->id; ?>"><i class="far fa-edit me-2"></i></a>
-                                            <a href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_sub_courses" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a>
+                                            <a href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_sub_courses" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2 text-danger"></i></a>
                                         </td>
                                     
                                     </tr>
