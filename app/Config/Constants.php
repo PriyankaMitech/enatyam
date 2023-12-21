@@ -73,6 +73,11 @@ defined('DECADE') || define('DECADE', 315_360_000);
  define('RAZOR_KEY_SECRET', '4J842nFYEGsvOnoQx3Bpfl6b'); //test secret --> 4J842nFYEGsvOnoQx3Bpfl6b live secret -->b6s5n0VfFqvsePY7kwai6T6U
  define('APPLICATION_NAME', 'XXXXXXXXXX');
 
+//  zoom api keys
+ define('ZOOM_CLIENT_ID', 'dFiuoJEvQKyweBxJ6Qetyg');
+ define('ZOOM_CLIENT_SECRET', '5SRPvlHkF2z1mZTGOp4DCUD7JshUyyLv'); 
+ define('ZOOM_REDIRECT_URI', 'https://enatyam.nahichaltahai.org/callback.php');
+
 defined('EXIT_SUCCESS')        || define('EXIT_SUCCESS', 0);        // no errors
 defined('EXIT_ERROR')          || define('EXIT_ERROR', 1);          // generic error
 defined('EXIT_CONFIG')         || define('EXIT_CONFIG', 3);         // configuration error

@@ -880,6 +880,7 @@ class AdminController extends BaseController
     }
 
 
+
     public function chechk_courses_id_id()
     {
         $admin_model = new AdminModel();
@@ -890,10 +891,10 @@ class AdminController extends BaseController
         if ($courses_id) {
 
             $sub_coursesname = $admin_model->chechk_courses_id_id($courses_id, $sub_courses_name);
-            // echo "<pre>";
-            // print_r($email);exit();
+        
             return json_encode($sub_coursesname);
         }
+
     }
 
 
@@ -1061,6 +1062,9 @@ class AdminController extends BaseController
         echo view('user_list', $data);
     }
 
+    public function update_access_token() {
+        
+    }
 
     public function get_user()
     {

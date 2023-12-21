@@ -101,38 +101,38 @@ $(document).ready(function(){
     })
 
 
-        $('#courses').on('change', function(){
-            var countryId = $(this).val();
-       
-            if(countryId){
+    $('#courses').on('change', function(){
+        var countryId = $(this).val();
+    
+        if(countryId){
 
-                $.ajax({
-                    type: 'POST',
-                    url: 'get_sub_courses_data',
-                    data: {courses_id_g: countryId},
-                    dataType: 'json',
-                    success: function(data){
-                        $('#sub_courses').empty();
-                        $('#sub_courses').append('<option value="">Please select sub Courses</option>');
-                        $.each(data, function(key, value){
-                            $('#sub_courses').append('<option value="'+ value.id +'">'+ value.sub_courses_name +'</option>');
-                        });
-    
-                        // Retrieve the selected state ID from the hidden input field
-                        var selectedStateId = $('#selected_sub_courses').val();
-    
-                        // Select the state in the dropdown
-                        $('#sub_courses').val(selectedStateId);
-                    }
-                });
-            } else {
-                $('#sub_courses').empty();
-                $('#sub_courses').append('<option value="">Please Select State</option>');
-            }
-        });
-    
-        // Trigger change event on #courses_id_g
-        $('#courses').trigger('change');
+            $.ajax({
+                type: 'POST',
+                url: 'get_sub_courses_data',
+                data: {courses_id_g: countryId},
+                dataType: 'json',
+                success: function(data){
+                    $('#sub_courses').empty();
+                    $('#sub_courses').append('<option value="">Please select sub Courses</option>');
+                    $.each(data, function(key, value){
+                        $('#sub_courses').append('<option value="'+ value.id +'">'+ value.sub_courses_name +'</option>');
+                    });
+
+                    // Retrieve the selected state ID from the hidden input field
+                    var selectedStateId = $('#selected_sub_courses').val();
+
+                    // Select the state in the dropdown
+                    $('#sub_courses').val(selectedStateId);
+                }
+            });
+        } else {
+            $('#sub_courses').empty();
+            $('#sub_courses').append('<option value="">Please Select State</option>');
+        }
+    });
+
+    // Trigger change event on #courses_id_g
+    $('#courses').trigger('change');
 
 })
 
@@ -162,7 +162,7 @@ var options = {
         "color": "#3399cc"
     }
 };
-var rzp1 = new Razorpay(options);
+// var rzp1 = new Razorpay(options);
 // rzp1.on('payment.failed', function (response){
 //         // alert(response.error.code);
 //         // alert(response.error.description);

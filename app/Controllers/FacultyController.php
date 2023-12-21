@@ -159,6 +159,7 @@ class FacultyController extends BaseController
       }
     }
   }
+
   public function MonthlyCalendar()
 {
     $facultyModel = new FacultyModel();
@@ -175,7 +176,6 @@ class FacultyController extends BaseController
         $registerId = $session->get('id');
         $wherecond = array('USER_ID'=> $_SESSION['sessiondata']['id']);
         $result['registerId'] = $session->get('id');
-        $result['schedule_data'] = $adminModel->getalldata('schedule_details', $wherecond);
         $result['faculty_slots'] =$facultyModel->getFacultySlots($registerId);
         // echo '<pre>';print_r($result['faculty_slots']);die;
         return view('FacultysideBar/MonthlyCalendar', $result);
@@ -281,28 +281,30 @@ public function StudentAttendance()
     return view('notification');
   }
 
-public function submitAttendance()
-{
-  //  print_r($_POST);die;
-  $model = new facultymodel();
-  $sessionId = $this->request->getPost('session_id');
-  $attendance = $this->request->getPost('attendance');
-  $currentConductedSessions = $model->getCurrentConductedSessions($sessionId);
-  $model->updateAttendance($sessionId, $attendance,$currentConductedSessions);
-  return redirect()->to('FacultyDashboard');
-}
-public function save_schedule_data() {
-  $model = new facultymodel();
-  // $Adminmodel = new AdminModel();
-   print_r($_POST);die;
-  $result = $model->save_schedule_data();
+    public function submitAttendance()
+    {
+        //  print_r($_POST);die;
+        $model = new facultymodel();
+        $sessionId = $this->request->getPost('session_id');
+        $attendance = $this->request->getPost('attendance');
+        $currentConductedSessions = $model->getCurrentConductedSessions($sessionId);
+        $model->updateAttendance($sessionId, $attendance,$currentConductedSessions);
+        return redirect()->to('FacultyDashboard');
+    }
 
-  if ($result != false) {
-      session()->setFlashdata('success', 'Schecule added successfully.');
-  } else {
-      session()->setFlashdata('success', 'Schedule not added.');
-  }
+    public function save_schedule_data() {
+        $model = new facultymodel();
+        $Adminmodel = new AdminModel();
+        // print_r($_POST);die;
+        $result = $model->save_schedule_data();
 
-  return redirect()->to('SelectSlot');
-}
+        if ($result != false) {
+            session()->setFlashdata('success', 'Schecule added successfully.');
+        } else {
+            session()->setFlashdata('success', 'Schedule not added.');
+        }
+
+        return redirect()->to('SelectSlot');
+    }
+
 }

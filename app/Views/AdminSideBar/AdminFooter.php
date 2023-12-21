@@ -77,7 +77,9 @@
 <script src="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.js"></script>
 <!-- AdminLTE App -->
 <!-- AdminLTE for demo purposes -->
-<script src="<?= base_url(); ?>dist/js/demo.js"></script>
+
+<!-- <script src="<?=base_url(); ?>dist/js/demo.js"></script> -->
+
 <!-- Page specific script -->
 <script>
     $(function() {
@@ -869,7 +871,7 @@
 
         $.ajax({
             type: 'POST',
-            url: '<?= base_url(); ?>/chechk_courses_id_id',
+            url: '<?= base_url(); ?>chechk_courses_id_id',
             data: {
                 courses_id: courses_id,
                 sub_courses_name: sub_courses_name,
@@ -910,13 +912,15 @@
 
         $.ajax({
             type: 'POST',
-            url: '<?= base_url(); ?>/chechk_sub_courses_name_id',
+            url: '<?= base_url(); ?>chechk_sub_courses_name_id',
             data: {
                 sub_courses_name: sub_courses_name,
                 courses_id: courses_id
             },
             success: function(response) {
                 console.log(response);
+                $('.error').hide()
+
                 if (response != '') {
 
                     $('#sub_courses_name').after('<span class="error">This sub courses name is allredy available.</span>');
