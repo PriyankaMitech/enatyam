@@ -73,7 +73,7 @@ $page = $uri->getSegment(count($pages));
 
                     <div class="direct-chat-contacts">
                         <ul class="contacts-list">
-                            <?php //if (!$_SESSION['sessiondata']['role'] == 'Admin') {?>
+                            <?php if (!$_SESSION['sessiondata']['role'] == 'Admin') {?>
                             <li>
                                 <a href="<?= base_url()?>chatuser/1">
                                     <img class="contacts-list-img" src="<?php echo base_url()?>public/images/user.png" alt="User">
@@ -87,7 +87,7 @@ $page = $uri->getSegment(count($pages));
                                     </div>
                                 </a>
                             </li> 
-                            <?php //} ?>
+                            <?php } ?>
                             <?php if (isset($getuser) && !empty($getuser)) {
                                 foreach ($getuser as $chat) { 
                                     if ($_SESSION['sessiondata']['role'] == 'Faculty' || $_SESSION['sessiondata']['role'] == 'Admin') {
@@ -97,7 +97,6 @@ $page = $uri->getSegment(count($pages));
                                         $id = $chat->register_id;
                                         $full_name = $chat->faculty_name;
                                     }
-                                    // print_r($chat);die;
                             ?>
                             <li>
                                 <a href="<?= base_url()?>chatuser/<?=$id?>">
@@ -106,7 +105,7 @@ $page = $uri->getSegment(count($pages));
                                     <div class="contacts-list-info">
                                     <span class="contacts-list-name">
                                         <?=$full_name?>
-                                        <small class="contacts-list-date float-right">2/28/2015</small>
+                                        <!-- <small class="contacts-list-date float-right">2/28/2015</small> -->
                                     </span>
                                     <?php
                                        if($_SESSION['sessiondata']['role'] == 'Admin'){

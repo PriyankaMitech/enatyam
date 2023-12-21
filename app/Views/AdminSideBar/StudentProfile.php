@@ -45,10 +45,6 @@
                                                     <?= $data->mobile_no ?></li>
                                             </ul>
                                         </div>
-                                        <div class="col-5 text-center">
-                                            <img src="<?php echo base_url() ?>public/images/user.png" alt="user-avatar"
-                                                class="img-circle img-fluid">
-                                        </div>
                                     </div>
 
                                 </div>

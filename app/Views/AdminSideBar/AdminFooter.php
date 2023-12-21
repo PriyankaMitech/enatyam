@@ -77,7 +77,7 @@ $.widget.bridge('uibutton', $.ui.button)
 <script src="<?=base_url(); ?>plugins/dropzone/min/dropzone.min.js"></script>
 <!-- AdminLTE App -->
 <!-- AdminLTE for demo purposes -->
-<script src="<?=base_url(); ?>dist/js/demo.js"></script>
+<!-- <script src="<?=base_url(); ?>dist/js/demo.js"></script> -->
 <!-- Page specific script -->
 <script>
   $(function () {
