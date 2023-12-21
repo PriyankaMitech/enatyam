@@ -918,6 +918,16 @@ class AdminModel extends Model
     }
 
 
+    public function getpaymentdata()
+    {
+        $query = $this->db->table('payment')
+        ->select('payment.*, register.full_name')
+        ->join('register', 'register.id = payment.user_id')
+        ->get()
+        ->getResult();
+
+    return $query;
+    }
 
 
 

@@ -38,7 +38,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-            //  echo'<pre>';print_r($data['getAllDemoList']);die;
+      
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -1413,7 +1413,24 @@ public function serch_data_of_group(){
 
 
 }
+public function payments()
+{
+    if (isset($_SESSION['sessiondata'])) {
+        $sessionData = $_SESSION['sessiondata'];
 
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
+        $model = new AdminModel();
+        if ($email !== null && $password !== null) {
+            $data['payments'] = $model->getpaymentdata();
+      //  echo'<pre>';print_r($data['payments'] );die;
+           return view('AdminSideBar/payments',$data);
+        }
+        else {
+            return redirect()->to(base_url());
+        }
+    }
+}
     
     
 }

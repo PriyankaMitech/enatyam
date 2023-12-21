@@ -41,8 +41,13 @@
     <link rel="stylesheet" href="<?=base_url(); ?>plugins/dropzone/min/dropzone.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?=base_url(); ?>dist/css/adminlte.min.css">
+    <style>
+        .payment-card #example1_wrapper .btn-group{
+            display: none!important;
 
-
+        }
+    </style>
+ 
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -1010,7 +1015,7 @@
                                 </a>
                             </li>
                             <li class="nav-item" >
-                                <a href="<?php echo base_url() ?>payments" class="nav-link">
+                                <a href="<?php echo base_url(); ?>payments" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Payments</p>
                                 </a>

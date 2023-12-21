@@ -106,6 +106,7 @@ $routes->get('create_group', 'AdminController::create_group');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
 $routes->get('Admindashboard', 'AdminController::Admindashboard');
 $routes->get('getAdminSideBarAll', 'AdminController::getAdminSideBarAll');
+$routes->get('payments', 'AdminController::payments');
 $routes->get('studentProfiledata', 'AdminController::studentProfiledata');
 $routes->get('NewFacultyApplication', 'AdminController::NewFacultyApplication');
 $routes->get('UplodedvideoByStudent', 'AdminController::UplodedvideoByStudent');
