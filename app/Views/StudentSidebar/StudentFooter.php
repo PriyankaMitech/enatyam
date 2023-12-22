@@ -92,6 +92,26 @@
 
 <script>
     function updatePassword() {
+        var oldPassword = $('#old-password').val();
+        var newPassword = $('#new-password').val();
+        var confirmPassword = $('#confirm-password').val();
+
+      
+        if (!oldPassword || !newPassword || !confirmPassword) {
+            $('#password-error').text('Please fill in all fields.');
+            return;
+        }
+
+        if (newPassword !== confirmPassword) {
+            $('#password-error').text('New password and confirm password do not match.');
+            return;
+        }
+
+        if (!isValidNewPassword(newPassword)) {
+            $('#password-error').text('New password should start with an uppercase letter, have a total length of 8 characters, and include at least one special character.');
+            return;
+        }
+
         var formData = $('#updatePasswordForm').serialize();
         $.ajax({
             type: 'POST',
@@ -101,10 +121,9 @@
             success: function(response) {
                 if (response.success) {
                     // Password updated successfully
-                    $('#updatePasswordForm').html('<div class="alert alert-success">' + response
-                        .message + '</div>');
+                    $('#updatePasswordForm').html('<div class="alert alert-success">' + response.message + '</div>');
                 } else {
-                    // Display error message
+                 
                     $('#password-error').text(response.error);
                 }
             },
@@ -113,6 +132,7 @@
             }
         });
     }
+
     const togglePassword = (inputId, iconId) => {
         const passwordInput = document.getElementById(inputId);
         const passwordIcon = document.getElementById(iconId);
@@ -121,6 +141,13 @@
         passwordIcon.classList.toggle('fa-eye');
         passwordIcon.classList.toggle('fa-eye-slash');
     };
+
+    // Additional validation function for new password
+    function isValidNewPassword(password) {
+        // Password should start with an uppercase letter, have a total length of 8 characters, and include at least one special character.
+        const regex = /^(?=.*[!@#$%^&*(),.?":{}|<>]).{8}$/;
+        return regex.test(password);
+    }
 </script>
 <script>
     // Function to show/hide cards based on radio button selection
