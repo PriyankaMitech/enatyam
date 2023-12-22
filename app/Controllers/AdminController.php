@@ -1230,12 +1230,10 @@ class AdminController extends BaseController
 
 
         $wherecond = array('D_id' => $profile_id);
-
+// print_r($wherecond);die;
         $data['profile_data'] = $model->getsinglerow('carrier', $wherecond);
-
-        // echo "<pre>";
-        // print_r($data['profile_data']);
-        // exit();
+        $data['faculty_slots'] = $model->getAllSlots($wherecond);
+        // echo "<pre>"; print_r($data['faculty_slots']);exit();
 
         return view('AdminSideBar/viewprofilefaculty', $data);
     }
