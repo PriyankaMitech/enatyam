@@ -45,7 +45,6 @@ class PaymentController extends BaseController
 
     public function payment()
     {
-      
         $adminmodel = new AdminModel();
         if (!empty($this->request->getPost('razorpay_payment_id')) && !empty($this->request->getPost('merchant_order_id'))) {
 
@@ -82,8 +81,6 @@ class PaymentController extends BaseController
                         }
                     }
                 }
-                    // echo '<pre>';print_r($response_array);die;
-                //close curl connection
                 curl_close($ch);
             } catch (Exception $e) {
                 $success = false;
@@ -97,13 +94,15 @@ class PaymentController extends BaseController
                 }
              
                     $email = $this->session->get('email');
-                   // print_r($email);die;
-                    $msg = 'Payment Confirmation Message'; 
+                    $msg = 'Dear '.$this->session->get('user_name').',
+                    <br><br>
+                    This is to confirm that we have received your payment for invoice '.$_POST['merchant_trans_id'].'. The total amount received is '.$_POST['total_amount'].'. <br> Thank you for your timely payment. We looking forward to seeing you in the future. <br><br> Thank you, <br>Enatyam'; 
                     $Subject ='Payment Confirmation';
-                    $ccEmails = ['cc1@example.com', 'cc2@example.com'];
-                    sendConfirmationEmail($email,$ccEmails, $msg,$Subject);
-                    // echo '<pre>';print_r($response_array);die;
+                    $ccEmails = ['admin@gmail.com', 'cc2@example.com'];
+                    sendConfirmationEmail($email,$ccEmails, $Subject, $msg);
+                    
                     $paydetails = $adminmodel->insert_payment($finaloutput);
+                    $_POST['status'] = 'Y';
                     $payment = $adminmodel->insert_formdata('id', 'payment', $_POST);
                     
                     if ($result) {

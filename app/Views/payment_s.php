@@ -22,7 +22,7 @@
                             <i class="checkmark paymentIcon">✓</i>
                         </div>
                         <h1 class="paymentH1">Success</h1>
-                        <p class="paymentPara">We received your purchase request;<br /> we'll be in touch shortly!</p>
+                        <p class="paymentPara">We received your purchase request;<br /> we'll be in touch shortly!<br> We have sent details on your registerd mail.</p>
                     </div>
                 </div>
             </div>
