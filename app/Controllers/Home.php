@@ -207,7 +207,6 @@ class Home extends BaseController
     }
     public function StudentDashboard()
     {
-       // print_r($_SESSION['sessiondata']);die;
        if (isset($_SESSION['sessiondata'])) {
         $sessionData = $_SESSION['sessiondata'];
 
@@ -216,8 +215,7 @@ class Home extends BaseController
 
         if ($email !== null && $password !== null) {
             $session = session();
-            
-            if ($session->has('id')) {
+            if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
                 $user_id = $session->get('id');
 
                 $login_model = new LoginModel();
@@ -231,7 +229,7 @@ class Home extends BaseController
                     'notificationCount' => count($notifications),
                 ]);
             } else {
-                return redirect()->to(base_url());
+                return redirect()->to('ModelForLogin');
             }
         } else {
             return redirect()->to(base_url());

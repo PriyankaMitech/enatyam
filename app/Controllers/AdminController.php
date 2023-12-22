@@ -6,7 +6,9 @@ use App\Models\AdminModel;
 use App\Models\CarrierModel;
 use App\Models\LoginModel;
 use CodeIgniter\Controller;
+
 use CodeIgniter\HTTP\Request;
+
 helper('sms_helper');
 class AdminController extends BaseController
 {
@@ -39,7 +41,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-                
+
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -48,7 +50,7 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
-   
+
     public function AssignTecherForDemo()
     {
 
@@ -193,10 +195,10 @@ class AdminController extends BaseController
         $facultyName = $this->request->getPost('facultyName');
         // print_r($facultyName);
         // die;
-        $sDate= $this->session->setFlashdata('startDate', $startDate);
-        $eDate=$this->session->setFlashdata('endDate', $endDate);
+        $sDate = $this->session->setFlashdata('startDate', $startDate);
+        $eDate = $this->session->setFlashdata('endDate', $endDate);
         $studeName = $this->session->setFlashdata('studentName', $studentName);
-       $facName =  $this->session->setFlashdata('facultyName', $facultyName);
+        $facName =  $this->session->setFlashdata('facultyName', $facultyName);
 
 
         $model = new AdminModel();
@@ -209,7 +211,32 @@ class AdminController extends BaseController
         // die;
         // return $this->response->setJSON($filteredFacultyVideoData);
         return view('AdminSideBar/StudentVideo', $data);
+    }
 
+    public function searchStudentVideos()
+    {
+        $studentVideoStartDate = $this->request->getPost('studentVideoStartDate');
+        $studentVideoEndDate = $this->request->getPost('studentVideoEndDate');
+        $studentNames = $this->request->getPost('studentNames');
+        $facultyNames = $this->request->getPost('facultyNames');
+        // print_r($studentNames);
+        // die;
+        $sDate = $this->session->setFlashdata('studentVideoStartDate', $studentVideoStartDate);
+        $eDate = $this->session->setFlashdata('studentVideoEndDate', $studentVideoEndDate);
+        $studeName = $this->session->setFlashdata('studentNames', $studentNames);
+        $facName =  $this->session->setFlashdata('facultyNames', $facultyNames);
+
+
+        $model = new AdminModel();
+
+        $data['searchStudentData'] = $model->getStudentBySearch($studentVideoStartDate, $studentVideoEndDate, $studentNames, $facultyNames);
+        $data['studentList'] = $model->getStudentData();
+        $data['facultyList'] = $model->getFacultyrole();
+        // echo '<pre>';
+        // print_r($data['searchdata']);
+        // die;
+        // return $this->response->setJSON($filteredFacultyVideoData);
+        return view('AdminSideBar/StudentVideo', $data);
     }
     public function getDemoDetails()
     {
@@ -378,19 +405,19 @@ class AdminController extends BaseController
     }
     public function createpassword()
     {
-       // print_r($_POST);die;
-      
+        // print_r($_POST);die;
+
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $id = $this->request->getPost('id');
-        $msg ='Your password has been  updated. ';
-        $Subject ='Your Application Approved';
-        $tital ='congratulations You Are Selected';
+        $msg = 'Your password has been  updated. ';
+        $Subject = 'Your Application Approved';
+        $tital = 'congratulations You Are Selected';
         $model = new AdminModel();
         $result = $model->updatePassword($id, $password);
         if ($result) {
-          //  print_r($password);die;
-            sendConfirmationEmail($email,$password,$msg,$Subject,$tital);
+            //  print_r($password);die;
+            sendConfirmationEmail($email, $password, $msg, $Subject, $tital);
             $this->session->setFlashdata('success', 'Password updated successfully.');
         } else {
             $this->session->setFlashdata('error', 'Error updating password. Please try again.');
@@ -687,7 +714,7 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
         $data['attendance'] = $model->fetchattandance();
-// print_r($data['attendance']);die;
+        // print_r($data['attendance']);die;
         return view('AdminSideBar/studentAttendance', $data);
     }
     public function add_notifications()
@@ -753,7 +780,7 @@ class AdminController extends BaseController
         echo view('add_courses', $data);
     }
 
-        
+
     public function chechk_courses_name_id()
     {
         $admin_model = new AdminModel();
@@ -766,113 +793,114 @@ class AdminController extends BaseController
             // echo "<pre>";
             // print_r($email);exit();
             return json_encode($coursesname);
-        } 
+        }
     }
 
 
     public function add_sub_courses()
-{
-    $admin_model = new AdminModel();
-    $wherecond = array('is_deleted' => 'N');
+    {
+        $admin_model = new AdminModel();
+        $wherecond = array('is_deleted' => 'N');
 
-    $data['courses_data'] = $admin_model->getalldata('tbl_courses', $wherecond);
+        $data['courses_data'] = $admin_model->getalldata('tbl_courses', $wherecond);
 
-    // echo "<pre>";print_r($coursesname);exit();
+        // echo "<pre>";print_r($coursesname);exit();
 
-    echo view('add_sub_courses',$data);
-}
-
-public function set_sub_courses()
-{
-
-    $data = [
-        'courses_id' => $this->request->getVar('courses_id'),
-
-        'sub_courses_name' => $this->request->getVar('sub_courses_name'),
-        'created_on' => date('Y:m:d H:i:s'),
-    ];
-
-    $db = \Config\Database::Connect();
-    if ($this->request->getVar('id') == "") {
-        $add_data = $db->table('tbl_sub_courses');
-        $add_data->insert($data);
-        session()->setFlashdata('success', 'Data added successfully.');
-    } else {
-        $update_data = $db->table('tbl_sub_courses')->where('id', $this->request->getVar('id'));
-        $update_data->update($data);
-        session()->setFlashdata('success', 'Data updated successfully.');
+        echo view('add_sub_courses', $data);
     }
 
-    return redirect()->to('sub_courses_list');
-}
+    public function set_sub_courses()
+    {
 
-public function sub_courses_list()
-{
-    $model = new AdminModel();
+        $data = [
+            'courses_id' => $this->request->getVar('courses_id'),
 
-    $wherecond = array('is_deleted' => 'N');
+            'sub_courses_name' => $this->request->getVar('sub_courses_name'),
+            'created_on' => date('Y:m:d H:i:s'),
+        ];
 
+        $db = \Config\Database::Connect();
+        if ($this->request->getVar('id') == "") {
+            $add_data = $db->table('tbl_sub_courses');
+            $add_data->insert($data);
+            session()->setFlashdata('success', 'Data added successfully.');
+        } else {
+            $update_data = $db->table('tbl_sub_courses')->where('id', $this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
 
-    $data['sub_courses_data'] = $model->getalldata('tbl_sub_courses', $wherecond);
-    // echo "<pre>";print_r($data['menu_data']);exit();
-    echo view('sub_courses_list', $data);
-}
-
-public function get_sub_courses()
-{
-
-    $model = new AdminModel();
-
-    $sub_courses_id = $this->request->uri->getSegments(1);
-
-    $wherecond1 = array('is_deleted' => 'N', 'id' => $sub_courses_id[1]);
-    $wherecond = array('is_deleted' => 'N');
-
-
-    $data['single_data'] = $model->get_single_data('tbl_sub_courses', $wherecond1);
-     $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
-
-
-
-    echo view('add_sub_courses', $data);
-}
-
-    
-public function chechk_sub_courses_name_id()
-{
-    $admin_model = new AdminModel();
-    $sub_courses_name = $this->request->getPost('sub_courses_name');
-    $courses_id = $this->request->getPost('courses_id');
-
-    if ($sub_courses_name && $courses_id) {
-        $sub_courses_data = $admin_model->chechk_sub_courses_name_id($courses_id, $sub_courses_name);
-
-        if ($sub_courses_data) {
-            // Combination found, return 'false' to indicate non-uniqueness
-            return json_encode($sub_courses_data);
-        } 
-    } 
-}
-
-
-public function chechk_courses_id_id()
-{
-    $admin_model = new AdminModel();
-    $courses_id = $this->request->getPost('courses_id');
-    $sub_courses_name = $this->request->getPost('sub_courses_name');
-
-// echo $courses_id; echo $sub_courses_name;exit();
-    if ($courses_id) {
-
-        $sub_coursesname = $admin_model->chechk_courses_id_id($courses_id, $sub_courses_name);
-        // echo "<pre>";print_r($sub_coursesname);exit();
-
-        return json_encode($sub_coursesname);
+        return redirect()->to('sub_courses_list');
     }
-}
+
+    public function sub_courses_list()
+    {
+        $model = new AdminModel();
+
+        $wherecond = array('is_deleted' => 'N');
 
 
-    
+        $data['sub_courses_data'] = $model->getalldata('tbl_sub_courses', $wherecond);
+        // echo "<pre>";print_r($data['menu_data']);exit();
+        echo view('sub_courses_list', $data);
+    }
+
+    public function get_sub_courses()
+    {
+
+        $model = new AdminModel();
+
+        $sub_courses_id = $this->request->uri->getSegments(1);
+
+        $wherecond1 = array('is_deleted' => 'N', 'id' => $sub_courses_id[1]);
+        $wherecond = array('is_deleted' => 'N');
+
+
+        $data['single_data'] = $model->get_single_data('tbl_sub_courses', $wherecond1);
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+
+
+
+        echo view('add_sub_courses', $data);
+    }
+
+
+    public function chechk_sub_courses_name_id()
+    {
+        $admin_model = new AdminModel();
+        $sub_courses_name = $this->request->getPost('sub_courses_name');
+        $courses_id = $this->request->getPost('courses_id');
+
+        if ($sub_courses_name && $courses_id) {
+            $sub_courses_data = $admin_model->chechk_sub_courses_name_id($courses_id, $sub_courses_name);
+
+            if ($sub_courses_data) {
+                // Combination found, return 'false' to indicate non-uniqueness
+                return json_encode($sub_courses_data);
+            }
+        }
+    }
+
+
+
+    public function chechk_courses_id_id()
+    {
+        $admin_model = new AdminModel();
+        $courses_id = $this->request->getPost('courses_id');
+        $sub_courses_name = $this->request->getPost('sub_courses_name');
+
+
+        if ($courses_id) {
+
+            $sub_coursesname = $admin_model->chechk_courses_id_id($courses_id, $sub_courses_name);
+        
+            return json_encode($sub_coursesname);
+        }
+
+    }
+
+
+
     public function add_menu()
     {
 
@@ -904,7 +932,7 @@ public function chechk_courses_id_id()
         return redirect()->to('menu_list');
     }
 
-   
+
 
     public function menu_list()
     {
@@ -1036,6 +1064,9 @@ public function chechk_courses_id_id()
         echo view('user_list', $data);
     }
 
+    public function update_access_token() {
+        
+    }
 
     public function get_user()
     {
@@ -1062,7 +1093,7 @@ public function chechk_courses_id_id()
 
         if ($courses_id_g) {
             $wherecond1 = array('is_deleted' => 'N', 'courses_id' => $courses_id_g);
-        
+
             $sub_courses = $model->getalldata('tbl_sub_courses', $wherecond1);
             return json_encode($sub_courses);
         } else {
@@ -1078,10 +1109,10 @@ public function chechk_courses_id_id()
         $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
         $courses_id_g = $this->request->getPost('courses_id_g');
         $GroupSession = 'GroupSession';
-    
-        // Initialize where condition array
+
         $whereCondition = '';
             $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
+
 
         $student_data = $model->getalldata('register', $whereCondition);
     
@@ -1094,28 +1125,28 @@ public function chechk_courses_id_id()
     public function get_faculty_data()
     {
         $model = new AdminModel();
-    
+
         $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
         $courses_id_g = $this->request->getPost('courses_id_g');
-    
+
         if ($sub_courses_id_g) {
             // Assuming you have a "carrier" table
             $wherecond_carrier = array('sub_course' => $sub_courses_id_g, 'course' => $courses_id_g, 'Result_of_application' => 'approve');
             $faculty_data = $model->getalldata('carrier', $wherecond_carrier);
 
 
-    
+
             return json_encode($faculty_data);
         } else {
             return json_encode([]);
         }
     }
-    
-
-    
 
 
-    
+
+
+
+
 
 
     public function chechk_menu_name_id()
@@ -1287,202 +1318,123 @@ public function chechk_courses_id_id()
     }
 
     public function set_create_group_data()
-{
+    {
 
 
-    $data = [
-        'courses_id_g' => $this->request->getVar('courses_id_g'),
-        'sub_courses_id_g' => $this->request->getVar('sub_courses_id_g'),
-        'student_id' => implode(',', $this->request->getVar('student_id')), // Convert array to comma-separated string
-        'group_name' => $this->request->getVar('group_name'),
-        'faculty_id_g' => $this->request->getVar('faculty_id_g'),
-        'session_start_date' => $this->request->getVar('session_start_date'),
-        'shedule' => $this->request->getVar('shedule'),
-
-        'created_on' => date('Y-m-d H:i:s'),
-    ];
-    
-    $db = \Config\Database::Connect();
-    
-    // Update or insert data in 'tbl_group' table
-    if ($this->request->getVar('id') == "") {
-        $add_data = $db->table('tbl_group');
-        $add_data->insert($data);
-        session()->setFlashdata('success', 'Data added successfully.');
-    } else {
-        $update_data = $db->table('tbl_group')->where('id', $this->request->getVar('id'));
-        $update_data->update($data);
-        session()->setFlashdata('success', 'Data updated successfully.');
-    }
-    
-    // Update data in 'register' table using student IDs
-    if (!empty($this->request->getVar('student_id'))) {
-        $registerUpdateData = [
-            'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
-            'groupName' => $this->request->getVar('group_name'),
-        ];
-
- 
-    
-        $studentIds = explode(',', $data['student_id']);
-        foreach ($studentIds as $studentId) {
-            $registerUpdate = $db->table('register')->where('id', $studentId);
-            $registerUpdate->update($registerUpdateData);
-        }
-    }
-
-    if (!empty($this->request->getVar('shedule'))) {
-        $shedule_data = [
-            'student_register_id' => implode(',', $this->request->getVar('student_id')), // Convert array to comma-separated string
-            'shedule_status' => 'Y'
-        ];
-
-        $update_data = $db->table('schedule')->where('id', $this->request->getVar('shedule'));
-        $update_data->update($shedule_data);
-    }
-    return redirect()->to('student_list_of_group');
-}
-    public function set_create_group_datas(){
-
-        $db = \Config\Database::Connect();
-
-        $existingData = $db->table('tbl_group')->where('id', $this->request->getVar('id'))->get()->getRowArray();
-
-        $existingStudentIds = !empty($existingData['student_id']) ? explode(',', $existingData['student_id']) : [];
-
-        $newStudentIds = $this->request->getVar('student_id') ?? [];
-
-        $combinedStudentIds = implode(',', array_unique(array_merge($existingStudentIds, $newStudentIds)));
-
-        $datas = [
-            'student_id' => $combinedStudentIds,
+        $data = [
+            'courses_id_g' => $this->request->getVar('courses_id_g'),
+            'sub_courses_id_g' => $this->request->getVar('sub_courses_id_g'),
+            'student_id' => implode(',', $this->request->getVar('student_id')), // Convert array to comma-separated string
+            'group_name' => $this->request->getVar('group_name'),
+            'faculty_id_g' => $this->request->getVar('faculty_id_g'),
+            'session_start_date' => $this->request->getVar('session_start_date'),
             'created_on' => date('Y-m-d H:i:s'),
         ];
 
-        // Update the database
-        $update_data = $db->table('tbl_group')->where('id', $this->request->getVar('id'));
-        $update_data->update($datas);
+        $db = \Config\Database::Connect();
 
-        if (!empty($combinedStudentIds)) {
+        // Update or insert data in 'tbl_group' table
+        if ($this->request->getVar('id') == "") {
+            $add_data = $db->table('tbl_group');
+            $add_data->insert($data);
+            session()->setFlashdata('success', 'Data added successfully.');
+        } else {
+            $update_data = $db->table('tbl_group')->where('id', $this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
+
+        // Update data in 'register' table using student IDs
+        if (!empty($this->request->getVar('student_id'))) {
             $registerUpdateData = [
                 'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
                 'groupName' => $this->request->getVar('group_name'),
             ];
 
-            $studentIds = explode(',',$combinedStudentIds);
+            $studentIds = explode(',', $data['student_id']);
             foreach ($studentIds as $studentId) {
                 $registerUpdate = $db->table('register')->where('id', $studentId);
                 $registerUpdate->update($registerUpdateData);
             }
         }
 
-        $existingData1 = $db->table('schedule')->where('id', $this->request->getVar('shedule'))->get()->getRowArray();
-
-        $existingStudentIds1 = !empty($existingData1['student_id']) ? explode(',', $existingData1['student_id']) : [];
-
-        $newStudentIds1 = $this->request->getVar('student_id') ?? [];
-
-        $combinedStudentIds1 = implode(',', array_unique(array_merge($existingStudentIds1, $newStudentIds1)));
-
-        if (!empty($this->request->getVar('shedule'))) {
-            $shedule_data = [
-                'student_register_id' => $combinedStudentIds, // Convert array to comma-separated string
-                'shedule_status' => 'Y'
-            ];
-    
-            $update_data = $db->table('schedule')->where('id', $this->request->getVar('shedule'));
-            $update_data->update($shedule_data);
-        }
-
-    
-
-
-        session()->setFlashdata('success', 'Student Added Succefully.');
         return redirect()->to('student_list_of_group');
-
-
     }
 
 
-public function student_list_of_group()
-{
-    $model = new AdminModel();
-    $wherecond = array('is_deleted' => 'N');
-
-
-    $wherecond1 = array('is_deleted' => 'N');
-    $orderByField = 'created_on';
-    $orderByDirection = 'desc';
-    
-    $data['student_list_of_group'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
-    $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
-
-    echo view('student_list_of_group', $data);
-}
-
-
-public function edit_group()
-{
-
-    $model = new AdminModel();
-
-     
+    public function student_list_of_group()
+    {
+        $model = new AdminModel();
         $wherecond = array('is_deleted' => 'N');
 
 
-    
+        $wherecond1 = array('is_deleted' => 'N');
+        $orderByField = 'created_on';
+        $orderByDirection = 'desc';
 
-    $group_id = $this->request->uri->getSegments(1);
+        $data['student_list_of_group'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
 
-    $wherecond1 = array('is_deleted' => 'N', 'id' => $group_id[1]);
-
-    $data['single_data'] = $model->get_single_data('tbl_group', $wherecond1);
-    $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
-    $data['faculty_data'] = $model->getalldata('faculty', $wherecond);
-
-
-
-    return view('AdminSideBar/create_group', $data);
-}
-
-public function serch_data_of_group(){
-
-    $model = new AdminModel();
-
-
-    $courses_id_g = $this->request->getVar('courses_id_g');
-    $sub_courses_id_g = $this->request->getVar('sub_courses_id_g');
-    $wherecond1 = "";
-    if((!empty($courses_id_g)) && (!empty($sub_courses_id_g)) ){
-        $session = session();
-        $session->set('courses_id_g', $courses_id_g);
-        $session->set('sub_courses_id_g', $sub_courses_id_g);
-
-        $wherecond1 = array('is_deleted' => 'N', 'courses_id_g' => $courses_id_g , 'sub_courses_id_g' => $sub_courses_id_g);
-
+        echo view('student_list_of_group', $data);
     }
 
-    $orderByField = 'created_on';
-    $orderByDirection = 'desc';
-    
-    
 
-    $wherecond = array('is_deleted' => 'N');
+    public function edit_group()
+    {
 
-    $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
-
-    $data['group_data'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
-
-    // echo "<pre>";print_r($data['group_data']);exit();
+        $model = new AdminModel();
 
 
-    
-
-    return view('student_list_of_group', $data);
+        $wherecond = array('is_deleted' => 'N');
 
 
 
-}
+
+        $group_id = $this->request->uri->getSegments(1);
+
+        $wherecond1 = array('is_deleted' => 'N', 'id' => $group_id[1]);
+
+        $data['single_data'] = $model->get_single_data('tbl_group', $wherecond1);
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+        $data['faculty_data'] = $model->getalldata('faculty', $wherecond);
+
+
+
+        return view('AdminSideBar/create_group', $data);
+    }
+
+    public function serch_data_of_group()
+    {
+
+        $model = new AdminModel();
+
+
+        $courses_id_g = $this->request->getVar('courses_id_g');
+        $sub_courses_id_g = $this->request->getVar('sub_courses_id_g');
+        $wherecond1 = "";
+        if ((!empty($courses_id_g)) && (!empty($sub_courses_id_g))) {
+            $session = session();
+            $session->set('courses_id_g', $courses_id_g);
+            $session->set('sub_courses_id_g', $sub_courses_id_g);
+
+            $wherecond1 = array('is_deleted' => 'N', 'courses_id_g' => $courses_id_g, 'sub_courses_id_g' => $sub_courses_id_g);
+        }
+
+        $orderByField = 'created_on';
+        $orderByDirection = 'desc';
+
+
+
+        $wherecond = array('is_deleted' => 'N');
+
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+
+        $data['group_data'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
+
+
+        return view('student_list_of_group', $data);
+    }
+
 
 public function get_shedule_data()
 {
@@ -1509,10 +1461,24 @@ public function get_shedule_data()
 
 
 
+  
+  public function payments()
+{
+    if (isset($_SESSION['sessiondata'])) {
+        $sessionData = $_SESSION['sessiondata'];
 
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
+        $model = new AdminModel();
+        if ($email !== null && $password !== null) {
+            $data['payments'] = $model->getpaymentdata();
+      //  echo'<pre>';print_r($data['payments'] );die;
+           return view('AdminSideBar/payments',$data);
+        }
+        else {
+            return redirect()->to(base_url());
+        }
+    }
+}
 
-
-    
-
-    
 }

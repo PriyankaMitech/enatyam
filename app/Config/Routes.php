@@ -106,6 +106,7 @@ $routes->get('create_group', 'AdminController::create_group');
 $routes->post('AdminController/getdate', 'AdminController::getdate');
 $routes->get('Admindashboard', 'AdminController::Admindashboard');
 $routes->get('getAdminSideBarAll', 'AdminController::getAdminSideBarAll');
+$routes->get('payments', 'AdminController::payments');
 $routes->get('studentProfiledata', 'AdminController::studentProfiledata');
 $routes->get('NewFacultyApplication', 'AdminController::NewFacultyApplication');
 $routes->get('UplodedvideoByStudent', 'AdminController::UplodedvideoByStudent');
@@ -148,6 +149,8 @@ $routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
 $routes->get('AdminController/searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
+$routes->post('searchStudentVideos', 'AdminController::searchStudentVideos');
+
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');
 
@@ -188,12 +191,12 @@ $routes->post('chechk_courses_id_id', 'AdminController::chechk_courses_id_id');
 $routes->post('get_sub_courses_data', 'AdminController::get_sub_courses_data');
 $routes->post('get_student_data', 'AdminController::get_student_data');
 
+
 $routes->post('get_group_data', 'AdminController::get_group_data');
 
 $routes->post('get_faculty_data', 'AdminController::get_faculty_data');
 
 $routes->post('get_shedule_data', 'AdminController::get_shedule_data');
-
 
 
 $routes->post('add_menu', 'AdminController::add_menu');
@@ -331,6 +334,8 @@ $routes->get('googlelogin', 'LoginController::googlelogin');
 $routes->get('User_authentication', 'LoginController::index');
 $routes->get('LoginController/callback', 'LoginController::callback');
 
+// zoom routs
+$routes->get('update_access_token', 'ZoomApiController::update_access_token');
 
 
 /*

@@ -41,7 +41,7 @@ require_once 'src/SMTP.php';
         // $output = curl_exec($ch);
         
         if (curl_errno($ch)) {
-           return false;
+         return false;
         } else {
             return true;
         }
@@ -49,30 +49,29 @@ require_once 'src/SMTP.php';
         return true;
     }
 
-    function sendConfirmationEmail($email, $password=null, $msg=null, $Subject=null,$tital=null, $otp=null,)
+    function sendConfirmationEmail($email, $otp=null, $Subject=null, $msg=null, $ccEmails = [], $password=null)
     {
         try {
             $mail = new PHPMailer(true);
             $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'siddheshkadgemitech@gmail.com';
-            $mail->Password   = 'lxnpuyvyefpbcukr';
+            $mail->Host     = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'siddheshkadgemitech@gmail.com';
+            $mail->Password = 'lxnpuyvyefpbcukr';
             $mail->SMTPSecure = 'tls';
-            $mail->Port       = 587;
-            $mail->setFrom('siddheshkadgemitech@gmail.com', $tital);
+            $mail->Port     = 587;
+            $mail->setFrom('siddheshkadgemitech@gmail.com', 'Enatyam');
             $mail->addAddress($email, 'Recipient Name');
+            foreach ($ccEmails as $ccEmail) {
+                $mail->addCC($ccEmail);
+            }
             $mail->isHTML(true);
             $mail->Subject = $Subject;
-            $mail->Body = $msg.'Your Password Is '.$password;
+            $mail->Body = $msg;
             $mail->send();
+
         } catch (Exception $e) {
             echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
             return false;
         }
-    
-       
-	
-}
-
-    
+    }

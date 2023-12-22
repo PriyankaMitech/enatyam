@@ -26,7 +26,7 @@
   <!-- summernote -->
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/summernote/summernote-bs4.min.css">
 
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/fullcalendar/main.css">
 
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
@@ -55,17 +55,26 @@
          
          // Rest of your code
          $notifications = $adminModel->getUserRole($teacherId);
-         $count = 0;
-
-
+         
+        $count = 0;
          if ($notifications) {
-          $count = count($notifications);
-       }else {
-       $count = 0;
-       }
-
+            $count = count($notifications);
+         }else {
+          $count = 0;
+         }
 ?>
-  
+  <div id="flash-success-container">
+    <?php if (session()->has('success')) : ?>
+        <div class="flash-success">
+            <?= session('success') ?>
+        </div>
+    <?php endif; ?>
+</div>
+<?php
+$url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".ZOOM_CLIENT_ID."&redirect_uri=".ZOOM_REDIRECT_URI;
+?>
+ 
+<a href="<?php echo $url; ?>" target="_blank" >Login with Zoom</a>
   <div class="wrapper">
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -179,16 +188,13 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
                 <div class="notification-scroll">
                 <?php
-             if($notifications){
-                  usort($notifications, function ($a, $b) {
-                      return strtotime($a['timestamp']) - strtotime($b['timestamp']);
-                  });
-
-                  foreach ($notifications as $notification):
+                  if($notifications){
+                    usort($notifications, function ($a, $b) {
+                        return strtotime($a['timestamp']) - strtotime($b['timestamp']);
+                    });
+                   foreach ($notifications as $notification):
                       $notificationDate = strtotime($notification['timestamp']);
                       $todayDateTime = strtotime($todayDate);
-
-                      // Only show notifications with timestamps equal to or after today
                   ?>
                       <a href="#" class="dropdown-item view-notification">
                           <!-- Message Start -->
@@ -220,13 +226,10 @@
                           </div>
                           <!-- Message End -->
                       </a>
-                  <?php
-                  endforeach;}else{
-                    ?>
-                   <p class="p-2">
-No new notifications available</p><hr>
-                    
-                    <?php } ?>
+                  <?php endforeach;}else{ ?>
+                   <p class="p-2">No new notifications available</p><hr>
+                  <?php } ?>
+
 
 
                 </div>
@@ -375,22 +378,9 @@ No new notifications available</p><hr>
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Whats App
-                    </p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Email</p>
-                  </a>
-                </li>
 
                 <li class="nav-item">
-                  <a href="<?= base_url(); ?>chat" class="nav-link">
+                  <a href="<?= base_url(); ?>chatuser" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Chat</p>
                   </a>

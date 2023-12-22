@@ -94,34 +94,57 @@ class facultymodel extends Model
     }
     public function fetchshedule($registerId)
     {
-    $currentMonth = date('m'); // Get the current month in the format 'mm'
+        $currentMonth = date('m'); // Get the current month in the format 'mm'
 
-    $result = $this->db->table('schedule')
-        ->select('schedule.*, register.full_name as faculty_name, student.full_name as student_name')
-        ->join('register', 'register.id = schedule.faculty_register_id')
-        ->join('register as student', 'student.id = schedule.student_register_id', 'left')
-        ->where('schedule.faculty_register_id', $registerId)
-        ->where('schedule.student_register_id IS NOT NULL')
-        ->where("MONTH(schedule.date) = $currentMonth")
-        ->get()
-        ->getResult();
-    // echo $this->db->getLastQuery();die;
-    
-    return $result;
+        $result = $this->db->table('schedule')
+            ->select('schedule.*, register.full_name as faculty_name, student.full_name as student_name')
+            ->join('register', 'register.id = schedule.faculty_register_id')
+            ->join('register as student', 'student.id = schedule.student_register_id', 'left')
+            ->where('schedule.faculty_register_id', $registerId)
+            ->where('schedule.student_register_id IS NOT NULL')
+            ->where("MONTH(schedule.date) = $currentMonth")
+            ->get()
+            ->getResult();
+        // echo $this->db->getLastQuery();die;
+        
+        return $result;
 
     }
+    
+    public function fetchshedule1($registerId)
+    {
+        $currentMonth = date('m'); // Get the current month in the format 'mm'
+        $day = 'Monday';
+        $result = $this->db->table('schedule_details as sd')
+            ->select('sd.*, register.full_name as faculty_name')
+            ->join('register', 'register.id = sd.USER_ID')
+            // ->join('register as student', 'student.id = sd.student_register_id', 'left')
+            ->where('sd.USER_ID', $registerId)
+            // ->where('sd.student_register_id IS NOT NULL')
+            // ->where("MONTH(sd.date) = $currentMonth")
+            ->where('DAYOFWEEK(sd.DAY_NAME) = 2')
+            ->get()
+            ->getResult();
+        echo $this->db->getLastQuery();die;
+        
+        return $result;
+
+        }
     public function gettodayssessiontofaculty($teacherId)
     {
-    // $todayDate = date('Y-m-d');
-    // $builder = $this->db->table('schedule');
-    // $builder->select('schedule.*, register.full_name as student_name'); // Select the fields you need
-    // $builder->join('register', 'register.id = schedule.student_register_id', 'left'); // Adjust the join condition based on your actual database structure
-    // $builder->where('schedule.faculty_register_id', $teacherId);
+       
+    $today = date('Y-m-d');
+    $dayOfWeek = date('l', strtotime($today));
 
-    // $builder->where('schedule.student_register_id IS NOT NULL');
-    // $query = $builder->get();
-    // $result = $query->getResult();
-    // return $result;
+    $query = $this->db->table('schedule')
+                     ->select('schedule.*, register.full_name') // Select necessary columns
+                     ->join('register', 'register.id = schedule.student_register_id', 'left') // Perform a left join
+                     ->where('schedule.faculty_register_id', $teacherId)
+                     ->where('schedule.Day', $dayOfWeek)
+                     ->where('schedule.student_register_id >', 0)
+                     ->get();
+
+    return $query->getResult();
     }
     public function getStudentList($registerId){
         $result= $this->db->table('register')
@@ -168,5 +191,4 @@ class facultymodel extends Model
             ->getRow()
             ->ConductedSessionsCount;
     }
-   
 }    
