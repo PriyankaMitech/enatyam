@@ -52,8 +52,17 @@
                       <input type="time" class="form-control" name="to_time" id="to_time" readonly />
                   </div>
                   <div class="col-md-4 p-2">
+                    <?php 
+// Access the session data
+$sessionData = $_SESSION['sessiondata'];
+
+// Access the 'id' from the session data
+$id = $sessionData['id'];
+
+
+?>
                     <input type="hidden" name="faculty_register_id" value="
-											<?= $registerId; ?>">
+											<?= $id; ?>">
                     <button type="button" class="btn btn-success" onclick="submitForm()">Save Data</button>
                   </div>
                 </div>

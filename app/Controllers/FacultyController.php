@@ -207,6 +207,9 @@ public function saveschedule()
                     'start_time' => $formTime,
                     'end_time' => $toTime,
                 ];
+
+
+                // echo "<pre>";print_r($data);exit();
                 
                 $facultyModel->insertAppointments($data);
                 return redirect()->to('SelectSlot');

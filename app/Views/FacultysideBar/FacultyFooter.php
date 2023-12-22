@@ -11,8 +11,6 @@ $page = $uri->getSegment(count($pages));
 
 
 
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
@@ -27,8 +25,7 @@ $page = $uri->getSegment(count($pages));
   <script src="<?php echo base_url()?>dist/js/adminlte.min.js"></script>
   <script src="<?php echo base_url()?>public/js/custom.js"></script>
   <script src="<?php echo base_url()?>public/js/schedule.js"></script>
-  <!-- <script src="<?php echo base_url()?>dist/js/demo.js"></script> -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
    <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <script src="<?php echo base_url()?>dist/js/adminlte.js"></script>
