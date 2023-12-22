@@ -195,18 +195,12 @@ public function saveschedule()
             $formDay = $this->request->getPost('form_day');
             $formTime = $this->request->getPost('form_time');
             $toTime = $this->request->getPost('to_time');
-
             $facultyModel = new FacultyModel();
-
-            // Check if the data already exists in the database
             $dataExists = $facultyModel->checkDataExists($facultyId, $formDay, $formTime, $toTime);
 
             if ($dataExists) {
-                // Data already exists, handle accordingly (e.g., show an error message)
-                // You may want to redirect or display an error message to the user
                 return redirect()->to('SelectSlot')->with('error', 'Data already exists.');
             } else {
-                // Data does not exist, proceed with insertion
                 $data = [
                     'faculty_register_id' => $facultyId,
                     'Day' => $formDay,
@@ -215,8 +209,6 @@ public function saveschedule()
                 ];
                 
                 $facultyModel->insertAppointments($data);
-
-                // Redirect to the desired page after successful insertion
                 return redirect()->to('SelectSlot');
             }
         } else {
