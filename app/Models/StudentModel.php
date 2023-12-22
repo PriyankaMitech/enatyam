@@ -73,6 +73,27 @@ class StudentModel extends Model
             ->where('id', $registerId)
             ->update();
         }
+
+        public function getCountryCodeFromDatabase(){
+            $countryCode = $this->db->table('countries')->where('name', $Country)->get()->getRow();
+            // print_r($countryCode);die;
+        }
+
+        public function getCountryList(){
+            $countryData =  $this->db->table('countries')
+            ->select('*')
+            ->get()
+            ->getResult();
+            print_r($countryData);die;
+            if($countryData){
+                return $countryData;
+            }
+            else {
+                return false;
+            }
+    
+        }
+
         public function fetchid($registerId)
         {
             return $this->db->table($this->table1)->where('id', $registerId)->get()->getRow();
