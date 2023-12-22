@@ -204,7 +204,7 @@ class LoginController extends BaseController
       
         $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
         }
-
+        // print_r($result);die;
         if (!empty($result)) {
             switch ($result['role']) {
                 case 'Admin':
@@ -215,9 +215,11 @@ class LoginController extends BaseController
                     $this->session->set($result);
                     return redirect()->to('FacultyDashboard');
                 case 'Student':
+                    // print_r('$result');die;
                     $this->session->set($result);
-                    return redirect()->to('uploadMedia');
+                    return redirect()->to('StudentDashboard');
                 default:
+                print_r('$der');die;
                     $this->session->setFlashdata('errormessage', 'Invalid role.');
 
                     return redirect()->to('Home');
