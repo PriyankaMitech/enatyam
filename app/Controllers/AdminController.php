@@ -1430,11 +1430,27 @@ class AdminController extends BaseController
 
         $data['group_data'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
 
-        // echo "<pre>";print_r($data['group_data']);exit();
-
-
-
 
         return view('student_list_of_group', $data);
     }
+
+  
+  public function payments()
+{
+    if (isset($_SESSION['sessiondata'])) {
+        $sessionData = $_SESSION['sessiondata'];
+
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
+        $model = new AdminModel();
+        if ($email !== null && $password !== null) {
+            $data['payments'] = $model->getpaymentdata();
+      //  echo'<pre>';print_r($data['payments'] );die;
+           return view('AdminSideBar/payments',$data);
+        }
+        else {
+            return redirect()->to(base_url());
+        }
+    }
+}
 }
