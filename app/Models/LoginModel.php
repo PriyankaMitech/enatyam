@@ -325,11 +325,7 @@ class LoginModel extends Model
         ->select($column)
         ->where([$column => ''.$value.''])
         ->get()->getRow();
-        
-        echo "<pre>";print_r($result);
-        echo "<pre>";print_r($this->getLastQuery());exit();
-
-        
+                
         return !empty($result);
     }
 
