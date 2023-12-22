@@ -315,6 +315,7 @@ $routes->Post('carrier_h', 'CarrierController::carrier_h');
 // $routes->get('media/upload-form', 'StudentController::uploadMedia');
 
 $routes->get('StudentSideBarVideo', 'FacultyController::fetchvideotostudentdashboard');
+$routes->get('uploaded_images', 'FacultyController::uploaded_images');
 
 $routes->get('uploadMedia', 'StudentController::uploadMedia');
 $routes->post('uploadMedia', 'StudentController::uploadMedia');

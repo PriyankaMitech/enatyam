@@ -230,10 +230,11 @@ class LoginModel extends Model
                 'cpassword'          => $result->confirm_pass,
                 'user_name'          => $result->full_name,
                 'mobile_no'          => $result->mobile_no,
-                'country'          => $result->country,
-                'SessionType'          => $result->SessionType,
+                'country'            => $result->country,
+                'Assign_Techer_id'   => $result->Assign_Techer_id,
+                'SessionType'        => $result->SessionType,
                 'Payment_status'     => $result->Payment_status,
-                'access_level'      => $result->access_level,
+                'access_level'       => $result->access_level,
                 'is_logged_in'       => 'Y',
             ];
 

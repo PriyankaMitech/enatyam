@@ -70,7 +70,6 @@ class StudentController extends BaseController
 
         $result = session();
         $registerId = $result->get('id');
-        //    print_r($registerId);die;
         $StudentModel = new StudentModel();
         $registerData = $StudentModel->getAllRegisterData($registerId, ['full_name', 'Assign_Techer_id']);
         //    print_r($registerData);die;
@@ -109,7 +108,7 @@ class StudentController extends BaseController
     }
 
     public function StudentSideBarVideo()
-    {
+    {   
         return view('StudentSideBarVideo');
     }
 
@@ -284,38 +283,41 @@ class StudentController extends BaseController
 
     public function StudentSelectClassDates()
     {
-
+        if (isset($_SESSION['sessiondata']) && $_SESSION['role'] =='Student') {
             $result = session();       
             $registerId = $result->get('id');
             $StudentModel = new StudentModel();
             $registerData =  $StudentModel->fetchid($registerId);
             $assignTeacherId = $registerData->Assign_Techer_id;
-            $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId,$registerId);
-            // print_r($assignFacultyData['assignFacultyData']);die;
+            $data['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId,$registerId);
             $data['registerId'] = $registerId;
-            $data['assignFacultyData'] = $assignFacultyData;
+            $data['Assign_Techer_id'] = $assignTeacherId;
+            // $data['assignFacultyData'] = $assignFacultyData;
             return view('StudentSidebar/StudentSelectClassDates',$data);
+        }else {
+            return redirect()->to(base_url());
         }
-        public function selectedslotsfromstudent()  {
-            $registerId = $this->request->getPost('registerId');
-            $selectedId = $this->request->getPost('selectedId');
-            $StudentModel = new StudentModel();
-          
-           $registerData = $StudentModel->fetchProfileDate($registerId);
+    }
+    public function selectedslotsfromstudent()  {
+        $registerId = $this->request->getPost('registerId');
+        $selectedId = $this->request->getPost('selectedId');
+        $StudentModel = new StudentModel();
+        
+        $registerData = $StudentModel->fetchProfileDate($registerId);
         //    print_r($registerData);
-            // print_r($registerData[0]->Session_Start_Date);die;
-           $sessionStartDate = $registerData[0]->Session_Start_Date;
-           // print_r($sessionStartDate);die;
+        // print_r($registerData[0]->Session_Start_Date);die;
+        $sessionStartDate = $registerData[0]->Session_Start_Date;
+        // print_r($sessionStartDate);die;
 
-            $dataToUpdate = [
-                'student_register_id' => $registerId,
-                'session_start_date' => $sessionStartDate, // Update the column with the fetched value
-            ];
-           //  print_r($dataToUpdate);die;
+        $dataToUpdate = [
+            'student_register_id' => $registerId,
+            'session_start_date' => $sessionStartDate, // Update the column with the fetched value
+        ];
+        //  print_r($dataToUpdate);die;
 
-           $StudentModel->updateData($selectedId, $dataToUpdate,$registerId);
-            return redirect()->to('SelectDate');
-        }
+        $StudentModel->updateData($selectedId, $dataToUpdate,$registerId);
+        return redirect()->to('SelectDate');
+    }
         public function studentsessionstatus()
         {
             $result = session();       

@@ -10,7 +10,7 @@
 <script src="<?= base_url() ?>plugins/jquery-mapael/jquery.mapael.min.js"></script>
 <script src="<?= base_url() ?>plugins/jquery-mapael/maps/usa_states.min.js"></script>
 <script src="<?= base_url() ?>plugins/chart.js/Chart.min.js"></script>
-<script src="<?= base_url() ?>dist/js/demo.js"></script>
+<!-- <script src="<?= base_url() ?>dist/js/demo.js"></script> -->
 <script src="<?= base_url() ?>public/js/custom.js"></script>
 <script src="<?= base_url() ?>dist/js/pages/dashboard2.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

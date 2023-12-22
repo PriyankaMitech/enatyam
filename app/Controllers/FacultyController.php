@@ -131,6 +131,21 @@ class FacultyController extends BaseController
     }
   }
 
+  public function uploaded_images()
+  {
+    if (isset($_SESSION['sessiondata'])) {
+        $studentId = session();
+        $registerId = $studentId->get('id');
+        $facultyModel = new FacultyModel();
+        $videos = $facultyModel->getVideosByRegisterId($registerId);
+
+        // echo "<pre>";print_r($videos);exit();
+        return view('uploaded_images', ['videos' => $videos]);
+    } else {
+      return redirect()->to(base_url());
+    }
+  }
+
   public function StudentuplodedVidio()
   {
 
