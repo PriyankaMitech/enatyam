@@ -212,7 +212,6 @@ class Home extends BaseController
 
         $email = $sessionData['email'] ?? null;
         $password = $sessionData['password'] ?? null;
-
         if ($email !== null && $password !== null) {
             $session = session();
             if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
@@ -246,8 +245,8 @@ public function chechk_username_id()
 
 if ($username) {
     $email = $loginModel->checkexist($username, 'email');
-    // echo "<pre>";
-    // print_r($email);exit();
+    echo "<pre>";
+    print_r($email);exit();
     return json_encode($email);
 } else {
     return json_encode([]);

@@ -69,7 +69,6 @@ class StudentController extends BaseController
     {
 
         $result = session();
-
         $registerId = $result->get('id');
         //    print_r($registerId);die;
         $StudentModel = new StudentModel();

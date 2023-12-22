@@ -1026,7 +1026,6 @@
                     username: username
                 },
                 success: function(response) {
-                    console.log(response);
                     if (response == 'false') {
                         $('#emailError').text('');
                         $('.submitButton').prop('disabled', false);
