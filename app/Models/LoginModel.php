@@ -226,10 +226,12 @@ class LoginModel extends Model
                 'id'                 => $result->id,
                 'role'               => $result->role,
                 'email'              => $result->email,
-                'password'           => $result->password,
-                'cpassword'          => $result->confirm_pass,
+                // 'password'           => $result->password,
+                // 'cpassword'          => $result->confirm_pass,
                 'user_name'          => $result->full_name,
                 'mobile_no'          => $result->mobile_no,
+                'country'          => $result->country,
+                'SessionType'          => $result->SessionType,
                 'Payment_status'     => $result->Payment_status,
                 'access_level'      => $result->access_level,
                 'is_logged_in'       => 'Y',
@@ -323,8 +325,10 @@ class LoginModel extends Model
         ->select($column)
         ->where([$column => ''.$value.''])
         ->get()->getRow();
+        
+        echo "<pre>";print_r($result);
+        echo "<pre>";print_r($this->getLastQuery());exit();
 
-        // echo "<pre>";print_r($result);exit();
         
         return !empty($result);
     }
