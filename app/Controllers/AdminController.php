@@ -6,6 +6,7 @@ use App\Models\AdminModel;
 use App\Models\CarrierModel;
 use App\Models\LoginModel;
 use CodeIgniter\Controller;
+use CodeIgniter\HTTP\Request;
 helper('sms_helper');
 class AdminController extends BaseController
 {
@@ -1073,21 +1074,20 @@ public function chechk_courses_id_id()
     public function get_student_data()
     {
         $model = new AdminModel();
-
+    
         $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
         $courses_id_g = $this->request->getPost('courses_id_g');
         $GroupSession = 'GroupSession';
-        if ($sub_courses_id_g) {
+    
+        // Initialize where condition array
+        $whereCondition = '';
+            $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
 
-            $wherecond1 = array('is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g);
-        
-            $student_data = $model->getalldata('register', $wherecond1);
-
-            return json_encode($student_data);
-        } else {
-            return json_encode([]);
-        }
+        $student_data = $model->getalldata('register', $whereCondition);
+    
+        return json_encode($student_data);
     }
+    
 
 
 
@@ -1297,6 +1297,8 @@ public function chechk_courses_id_id()
         'group_name' => $this->request->getVar('group_name'),
         'faculty_id_g' => $this->request->getVar('faculty_id_g'),
         'session_start_date' => $this->request->getVar('session_start_date'),
+        'shedule' => $this->request->getVar('shedule'),
+
         'created_on' => date('Y-m-d H:i:s'),
     ];
     
@@ -1319,6 +1321,8 @@ public function chechk_courses_id_id()
             'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
             'groupName' => $this->request->getVar('group_name'),
         ];
+
+ 
     
         $studentIds = explode(',', $data['student_id']);
         foreach ($studentIds as $studentId) {
@@ -1326,9 +1330,78 @@ public function chechk_courses_id_id()
             $registerUpdate->update($registerUpdateData);
         }
     }
-    
+
+    if (!empty($this->request->getVar('shedule'))) {
+        $shedule_data = [
+            'student_register_id' => implode(',', $this->request->getVar('student_id')), // Convert array to comma-separated string
+            'shedule_status' => 'Y'
+        ];
+
+        $update_data = $db->table('schedule')->where('id', $this->request->getVar('shedule'));
+        $update_data->update($shedule_data);
+    }
     return redirect()->to('student_list_of_group');
 }
+    public function set_create_group_datas(){
+
+        $db = \Config\Database::Connect();
+
+        $existingData = $db->table('tbl_group')->where('id', $this->request->getVar('id'))->get()->getRowArray();
+
+        $existingStudentIds = !empty($existingData['student_id']) ? explode(',', $existingData['student_id']) : [];
+
+        $newStudentIds = $this->request->getVar('student_id') ?? [];
+
+        $combinedStudentIds = implode(',', array_unique(array_merge($existingStudentIds, $newStudentIds)));
+
+        $datas = [
+            'student_id' => $combinedStudentIds,
+            'created_on' => date('Y-m-d H:i:s'),
+        ];
+
+        // Update the database
+        $update_data = $db->table('tbl_group')->where('id', $this->request->getVar('id'));
+        $update_data->update($datas);
+
+        if (!empty($combinedStudentIds)) {
+            $registerUpdateData = [
+                'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
+                'groupName' => $this->request->getVar('group_name'),
+            ];
+
+            $studentIds = explode(',',$combinedStudentIds);
+            foreach ($studentIds as $studentId) {
+                $registerUpdate = $db->table('register')->where('id', $studentId);
+                $registerUpdate->update($registerUpdateData);
+            }
+        }
+
+        $existingData1 = $db->table('schedule')->where('id', $this->request->getVar('shedule'))->get()->getRowArray();
+
+        $existingStudentIds1 = !empty($existingData1['student_id']) ? explode(',', $existingData1['student_id']) : [];
+
+        $newStudentIds1 = $this->request->getVar('student_id') ?? [];
+
+        $combinedStudentIds1 = implode(',', array_unique(array_merge($existingStudentIds1, $newStudentIds1)));
+
+        if (!empty($this->request->getVar('shedule'))) {
+            $shedule_data = [
+                'student_register_id' => $combinedStudentIds, // Convert array to comma-separated string
+                'shedule_status' => 'Y'
+            ];
+    
+            $update_data = $db->table('schedule')->where('id', $this->request->getVar('shedule'));
+            $update_data->update($shedule_data);
+        }
+
+    
+
+
+        session()->setFlashdata('success', 'Student Added Succefully.');
+        return redirect()->to('student_list_of_group');
+
+
+    }
 
 
 public function student_list_of_group()
@@ -1411,6 +1484,35 @@ public function serch_data_of_group(){
 
 }
 
+public function get_shedule_data()
+{
+    $model = new AdminModel();
+
+    $faculty_id_g = $this->request->getPost('faculty_id_g');
+
+
+    if ($faculty_id_g) {
+        $wherecond = array('carrier_id' => $faculty_id_g);
+
+
+        $faculity_data = $model->getsinglerow('register', $wherecond);
+
+        if(!empty($faculity_data)){
+            $wherecond1 = array('student_register_id' => NULL, 'shedule_status' => 'N', 'faculty_register_id' => $faculity_data->id);
+            $shedule_data = $model->getalldata('schedule', $wherecond1);
+        }
+        return json_encode($shedule_data);
+    } else {
+        return json_encode([]);
+    }
+}
+
+
+
+
+
+
     
+
     
 }

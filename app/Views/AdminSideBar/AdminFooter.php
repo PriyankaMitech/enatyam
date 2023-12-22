@@ -1329,8 +1329,8 @@ $(document).ready(function(){
 
 
 <script>
- $(document).ready(function(){
-    $('#sub_courses_id_g').on('change', function(){
+$(document).ready(function () {
+    // Function to load student data
     function loadStudentData() {
         var subcoursesID = $('#sub_courses_id_g').val();
         var courses_id_g = $('#courses_id_g').val();
@@ -1343,10 +1343,12 @@ $(document).ready(function(){
                 courses_id_g: courses_id_g,
             },
             dataType: 'json',
-            success: function(data){
+            success: function (data) {
                 $('#student_id').empty();
-                $.each(data, function(key, value){
-                    $('#student_id').append('<option value="'+ value.id +'">'+ value.full_name +'</option>');
+                $('#selected_student_id').empty();
+
+                $.each(data, function (key, value) {
+                    $('#student_id').append('<option value="' + value.id + '">' + value.full_name + '</option>');
                 });
 
                 // Retrieve the selected student IDs from the hidden input field
@@ -1356,7 +1358,10 @@ $(document).ready(function(){
                 var selectedIdsArray = selectedStudentIds.split(',').map(Number);
 
                 // Initialize Select2 and set the selected values
-                $('#student_id').select2();
+                $('#student_id').select2({
+                    placeholder: "Select a student",
+                    multiple: true
+                });
                 $('#student_id').val(selectedIdsArray).trigger('change');
             }
         });
@@ -1367,46 +1372,55 @@ $(document).ready(function(){
         var subcoursesID = $('#sub_courses_id_g').val();
         var courses_id_g = $('#courses_id_g').val();
 
-  
-
         $.ajax({
             url: '<?= base_url(); ?>get_faculty_data',
             type: 'POST',
             data: {
                 sub_courses_id_g: subcoursesID,
                 courses_id_g: courses_id_g,
-            }, 
+            },
             dataType: 'json',
-
-            success: function(data){
+            success: function (data) {
                 $('#faculty_id_g').empty();
+                $('#selected_faculty_id_g').empty();
+
                 $('#faculty_id_g').append('<option value="">Please select faculty</option>');
-                $.each(data, function(key, value){
-                    $('#faculty_id_g').append('<option value="'+ value.D_id +'">'+ value.name +'</option>');
+                $.each(data, function (key, value) {
+                    $('#faculty_id_g').append('<option value="' + value.D_id + '">' + value.name + '</option>');
                 });
 
                 // Retrieve the selected faculty ID from the hidden input field
-                var selectedFacultyId = $('#selected_faculty_id').val();
+                var selectedFacultyId = $('#selected_faculty_id_g').val();
 
                 // Select the faculty in the dropdown
-                $('#faculty_id_g').val(selectedFacultyId);
+                $('#faculty_id_g').val(selectedFacultyId).trigger('change'); // Trigger 'change' to ensure Select2 updates
             }
         });
     }
 
+
+   
     // Use setTimeout to ensure that the document is fully loaded before trying to load student and faculty data
-    setTimeout(function() {
+    setTimeout(function () {
         loadStudentData();
         loadFacultyData();
     }, 1000);
 
     // Event listener for change on #sub_courses_id_g
-    $('#sub_courses_id_g').on('change', function(){
+    $('#sub_courses_id_g').on('change', function () {
         loadStudentData();
+        loadFacultyData();
+
+        
+
     });
+
+    // Call the loadStudentData and loadFacultyData functions when the document is ready
+    loadStudentData();
+    loadFacultyData();
 });
 
-});
+
 
 </script>
 
@@ -1497,6 +1511,102 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<script>
+$(document).ready(function(){
+    $('#faculty_id_g').on('change', function(){
+        var facultyidg = $(this).val();
+        console.log(facultyidg);
+        if(facultyidg){
+            $.ajax({
+                url: '<?= base_url(); ?>get_shedule_data',
+                type: 'POST',
+                data: {faculty_id_g: facultyidg},
+                dataType: 'json',
+                success: function(data){
+                    $('#shedule').empty();
+                    $('#shedule').append('<option value="">Please select schedule</option>');
+
+                    // Group timings by day
+                    var groupedTimings = {};
+                    $.each(data, function(key, value){
+                        if (!(value.Day in groupedTimings)) {
+                            groupedTimings[value.Day] = [];
+                        }
+                        groupedTimings[value.Day].push(value);
+                    });
+
+                    // Define custom order for days
+                    var customOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                    // Sort days based on custom order
+                    var sortedDays = Object.keys(groupedTimings).sort(function(a, b) {
+                        return customOrder.indexOf(a) - customOrder.indexOf(b);
+                    });
+
+                    // Add grouped timings to the dropdown
+                    $.each(sortedDays, function(index, day){
+                        var oddEvenClass = index % 2 === 0 ? 'even' : 'odd';
+                        var optionsHtml = '<optgroup class="' + oddEvenClass + '" label="' + day + '">';
+
+                        $.each(groupedTimings[day], function(index, timing){
+                            var formattedStartTime = formatTime(timing.start_time);
+                            var formattedEndTime = formatTime(timing.end_time);
+
+                            optionsHtml += '<option value="' + timing.id + '">' + formattedStartTime + ' - ' + formattedEndTime + '</option>';
+                        });
+                        optionsHtml += '</optgroup>';
+                        $('#shedule').append(optionsHtml);
+                    });
+
+                    // Retrieve the selected timing ID from the hidden input field
+                    var selectedTimingId = $('#selected_shedule').val();
+
+                    // Select the timing in the dropdown
+                    $('#shedule').val(selectedTimingId);
+                }
+            });
+        } else {
+            $('#shedule').empty();
+            $('#shedule').append('<option value="">Please select schedule</option>');
+        }
+    });
+
+    // Trigger change event on #courses_id_g
+    $('#faculty_id_g').trigger('change');
+});
+
+function formatTime(timeString) {
+    var timeParts = timeString.split(':');
+    var hours = timeParts[0];
+    var minutes = timeParts[1];
+    
+    return hours + ':' + minutes;
+}
+
+
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.open-modal').on('click', function () {
+            var button = $(this);
+            var modal = $('#modal-default-' + button.data('row-id'));
+
+            // Set values in the modal
+            modal.find('#modal-id').val(button.data('row-id'));
+            modal.find('#modal-faculty-id').val(button.data('faculty-id'));
+            modal.find('#modal-shedule').val(button.data('schedule'));
+            modal.find('#modal-group-name').val(button.data('group-name'));
+        });
+    });
+</script>
+
+
+
+
+
 
 </body>
 

@@ -17,3 +17,11 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
   }
+
+  .even {
+    background-color: #f0f0f0 !important; /* Set your even background color */
+}
+
+.odd {
+    background-color: #e0e0e0 !important; /* Set your odd background color */
+}

@@ -32,12 +32,7 @@
           <div class="card-body">
             <form action="<?=base_url(); ?>set_create_group_data" method="post" id="create_group_form">
               <div class="row">
-              <div class="col-md-4">
-                  <div class="form-group">
-                    <label>Group Name</label>
-                    <input type="text" class="form-control" name="group_name" id="group_name" value="<?php if (isset($single_data)) { echo ($single_data->group_name); } ?>">
-                  </div>
-                </div>
+            
 
                 <div class="col-md-4">
                     <div class="form-group">
@@ -68,19 +63,31 @@
                 </div>
 
                 <div class="col-md-4">
-                <div class="form-group">
-                  <label>Student</label>
-                  <input type="hidden" id="selected_student_id" value="<?php if (isset($single_data)) { echo ($single_data->student_id); } ?>">
-                  <select name="student_id[]" id="student_id" class="select2" multiple="multiple" data-placeholder="Select a student" style="width: 100%;">
-                  </select>
-                  <label id="student_id-error" class="error" for="student_id" style="display:none;">Please select at least one student.</label>
-              </div>
+                  <div class="form-group">
+                    <label>Group Name</label>
+                    <input type="text" class="form-control" name="group_name" id="group_name" value="<?php if (isset($single_data)) { echo ($single_data->group_name); } ?>">
+                  </div>
+                </div>
+
+              
+                
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Student</label>
+                    <input type="hidden" id="selected_student_id" value="<?php if (isset($single_data)) { echo ($single_data->student_id); } ?>">
+                    <select name="student_id[]" id="student_id" class="select2" multiple="multiple" data-placeholder="Select a student" style="width: 100%;">
+                    </select>
+                    <label id="student_id-error" class="error" for="student_id" style="display:none;">Please select at least one student.</label>
+                  </div>
                 </div>
 
 
                 <div class="col-md-4">
                     <div class="form-group">
                     <label>Faculty</label>
+                    <input type="hidden" id="selected_faculty_id_g" value="<?php if (isset($single_data)) { echo ($single_data->faculty_id_g); } ?>">
+
                     <select class="form-control" name="faculty_id_g" id="faculty_id_g" style="width: 100%;">
                     <option value="">Please select faculty</option>
 
@@ -88,12 +95,25 @@
                     </div>
                 </div>
 
+   
+                
+
 
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Session Start Date</label>
                     <input type="date" class="form-control" name="session_start_date" id="session_start_date" value="<?php if (isset($single_data)) { echo ($single_data->session_start_date); }else{ echo date('Y-m-d');} ?>">
                   </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Shedule</label>
+                        <input type="hidden" id="selected_shedule" value="<?php if (isset($single_data)) { echo ($single_data->shedule); } ?>">
+                        <select name="shedule" id="shedule" class="form-control">
+                            <option value="">Please select shedule</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="col-md-12 text-right">
