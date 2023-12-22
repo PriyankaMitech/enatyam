@@ -9,27 +9,22 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="<?= base_url(); ?>StudentDashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="<?= base_url(); ?>StudentDashboard">Schedule</a></li>
                         <li class="breadcrumb-item active">Reschedule</li>
                     </ol>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </section>
     <section class="content">
         <div class="container-fluid">
-
-            <!-- general form elements disabled -->
             <div class="card card-warning">
                 <div class="card-header">
                     <h3 class="card-title">Reschedule </h3>
                 </div>
-                <!-- /.card-header -->
                 <div class="card-body">
-
                     <div class="row">
                         <div class="col-sm-3">
-                            <!-- select -->
                             <div class="form-group">
                                 <label for="selectOption">Select:</label>
                                 <select id="selectOption" class="form-control form-select" name="RescheduleSelect">
@@ -40,23 +35,19 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <form> -->
+                    
                     <form action="submitForm" method="post" id="form1" class="dynamic-form">
                         <div class="row">
                             <div class="col-sm-5 form-group">
                                 <label>Date:</label>
                                 <div class="input-group">
-                                    <!-- Display the date from the URL and make it non-editable -->
-                                    <input type="date" class="form-control" name="Session_date" id="form_date"
-                                        readonly />
+                                    <input type="date" class="form-control" name="Session_date" id="form_date" readonly />
                                 </div>
                             </div>
                             <div class="col-sm-5 form-group">
                                 <label>Current Class time:</label>
                                 <div class="input-group">
-                                    <!-- Display the commonStartTime from the URL -->
-                                    <input type="time" class="form-control" name="current_time" id="current_time"
-                                        readonly />
+                                    <input type="time" class="form-control" name="current_time" id="current_time" readonly />
                                 </div>
                             </div>
                         </div>
@@ -76,9 +67,6 @@
                                         id="reschedule_time" />
                                 </div>
                             </div>
-                        </div>
-                            <input type="hidden" name="sessionNumber" id="session_number" value="">
-
                             <div class="col-sm-6 form-group mb-3">
                                 <label>Reason:</label>
                                 <div class="input-group">
@@ -86,10 +74,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Hidden input for the "Reschedule" value -->
+                        <input type="hidden" name="sessionNumber" id="session_number" value="">
                         <input type="hidden" name="action" value="Reschedule">
-                        <button type="button" class="btn btn-primary" onclick="submitForm('form1')">Submit
-                            Reschedule</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm('form1')">Submit Reschedule</button>
                     </form>
 
                     <form action="submitForm" method="post" id="form2" class="dynamic-form" style="display: none;">
@@ -107,10 +94,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Hidden input for the "Leave" value -->
                         <input type="hidden" name="action" value="Leave">
-
-                        <!-- Button to submit the form -->
                         <button type="button" class="btn btn-primary" onclick="submitForm('form2')">Submit
                             Leave</button>
                     </form>

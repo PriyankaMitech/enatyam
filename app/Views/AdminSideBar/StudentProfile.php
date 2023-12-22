@@ -23,7 +23,9 @@
             <div class="card card-solid">
                 <div class="card-body pb-0">
                     <div class="row">
-                        <?php if(!empty($student_data)){ ?>
+                        <?php if(!empty($student_data)){ 
+                            // echo "<pre>";print_r($student_data);exit();
+                            ?>
                         <?php foreach ($student_data as $data) { ?>
                             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
                                 <div class="card bg-light d-flex flex-fill">
@@ -35,13 +37,15 @@
                                         <div class="row">
                                             <div class="col-7">
                                                 <h2 class="lead"><b><?= $data->student_name ?></b></h2>
-                                                <p class="text-muted text-sm"><b>Email: </b><?= $data->email ?> </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone <?= $data->mobile_no ?></li>
-                                                  
-                                                </ul>
-                                                <small class="badge badge-success"> Confirmed</small>
+                                                <p class="text-muted text-sm"><b>Email : </b> <?= $data->email ?> 
+                                                    <br><b>Phone No : </span> <?= $data->mobile_no ?></b>
+                                                </p>
+                                                <?php if($data->Payment_status == 'N'){ ?>
+                                                <small class="badge badge-danger">Unpaid</small>
+                                                <?php }else{ ?>
+                                                    <small class="badge badge-success">Paid</small>
+                                                <?php } ?>
+
                                             </div>
                                             <div class="col-5 text-center">
                                                 <img src="<?php echo base_url() ?>public/images/user.png" alt="user-avatar" class="img-circle img-fluid">
@@ -65,20 +69,7 @@
                         <?php } ?>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <nav aria-label="Contacts Page Navigation">
-                        <ul class="pagination justify-content-center m-0">
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                            <li class="page-item"><a class="page-link" href="#">6</a></li>
-                            <li class="page-item"><a class="page-link" href="#">7</a></li>
-                            <li class="page-item"><a class="page-link" href="#">8</a></li>
-                        </ul>
-                    </nav>
-                </div>
+    
             </div>
         </div>
     </section>

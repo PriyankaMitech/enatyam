@@ -127,7 +127,7 @@
                                 <div class="active tab-pane" id="videos">
                                     <section class="content">
                                         <div class="container-fluid">
-                                            <div class="row">
+                                        <div class="row">
                                             <div class="col-md-12">
                                             <?php if(!empty($video_data)){ ?>
                                                 <?php foreach($video_data as $data){ ?>
@@ -194,8 +194,10 @@
                                             </div>
                                             <!-- /.col -->
                                             </div>
+                            
                                         </div>
                                     </section>
+                           
                                 </div>
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="images">
@@ -275,9 +277,60 @@
                             </div>
                             <!-- /.tab-content -->
                         </div><!-- /.card-body -->
+                        
                     </div>
                     <!-- /.card -->
+
+                    <div class="col-md-12">
+                    <div class="card">
+                    <div class="card-body">
+                    <div class="row">
+                                <?php
+                                $days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+                                foreach ($days as $day) :
+                                ?>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title"><?= $day ?></h3>
+                                            </div>
+                                            <div class="card-body row">
+                                                <?php
+                                                if (is_array($faculty_slots)) {
+                                                    $filteredSlots = array_filter($faculty_slots, function ($slot) use ($day) {
+                                                        return $slot->Day === $day; 
+                                                    });
+
+                                                    usort($filteredSlots, function ($a, $b) {
+                                                        return strtotime($a->start_time) - strtotime($b->start_time); 
+                                                    });
+
+                                                    foreach ($filteredSlots as $slot) :
+                                                        $startTime = date('H:i', strtotime($slot->start_time));
+                                                        $endTime = date('H:i', strtotime($slot->end_time)); 
+                                                        $buttonStyle = ($slot->student_register_id > 0) ? 'btn-secondary' : 'btn-primary';
+                                                        $buttonDisabled = ($slot->student_register_id > 0) ? 'disabled' : '';
+                                                ?>
+                                                        <button type="button" class="btn btn-sm mr-1 <?= $buttonStyle ?>" style="margin-top: 10px;" <?= $buttonDisabled ?> data-toggle="tooltip" title="This Time Is Booked"><?= $startTime ?> To <?= $endTime ?></button>
+                                                <?php
+                                                    endforeach;
+                                                } else {
+                                                    echo 'No slots available for ' . $day;
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php
+                                endforeach;
+                                ?>
+                            </div>
+                    </div>
+                    </div>
                 </div>
+                </div>
+                
                 <!-- /.col -->
             </div>
             <!-- /.row -->

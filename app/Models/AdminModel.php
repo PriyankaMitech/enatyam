@@ -156,17 +156,32 @@ class AdminModel extends Model
     {
         return $this->findAll();
     }
+    // public function get_students()
+    // {
+    //     $query = $this->db->table('register AS students')
+    //         ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name')
+    //         ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
+    //         ->where('students.role', 'Student')
+    //         ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
+    //         ->get();
+
+    //     return $query->getResult();
+    // }
+
     public function get_students()
     {
         $query = $this->db->table('register AS students')
-            ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name')
+            ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name')
             ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
+            ->join('tbl_courses', 'tbl_courses.id = students.course', 'left') // Adjust 'course_id' to the actual foreign key column in the students table
+            ->join('tbl_sub_courses', 'tbl_sub_courses.id = students.sub_course', 'left') // Adjust 'sub_course_id' to the actual foreign key column in the students table
             ->where('students.role', 'Student')
-            ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
+            ->orderBy('students.created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
             ->get();
 
         return $query->getResult();
     }
+
     public function getFaculty()
     {
         return $this->db->table('register')->where('role', 'Faculty')->get()->getResult();
@@ -248,13 +263,24 @@ class AdminModel extends Model
     }
 
 
+    // public function getStudentData()
+    // {
+    //     return $this->db->table('student')
+    //         ->select('*')
+    //         ->get()
+    //         ->getResult();
+    // }
+
+
     public function getStudentData()
-    {
-        return $this->db->table('student')
-            ->select('*')
-            ->get()
-            ->getResult();
-    }
+{
+    return $this->db->table('student')
+        ->select('student.*, register.Payment_status')
+        ->join('register', 'register.id = student.register_id', 'left')
+        ->get()
+        ->getResult();
+}
+
 
     public function getStudyVideoUplodedByStudent()
     {
@@ -529,13 +555,13 @@ class AdminModel extends Model
             ->getResult();
     }
 
-    public function updateFacultyForGroup($groupName, $facultyId, $selectedDate)
-    {
-        return $this->db->table('register')
-            ->where('groupName', $groupName)
-            ->set($updateData)
-            ->update();
-    }
+    // public function updateFacultyForGroup($groupName, $facultyId, $selectedDate)
+    // {
+    //     return $this->db->table('register')
+    //         ->where('groupName', $groupName)
+    //         ->set($updateData)
+    //         ->update();
+    // }
     public function getAdminUsers()
     {
         $db = \Config\Database::connect();
@@ -573,7 +599,22 @@ class AdminModel extends Model
             return false;
         }
     }
-
+    public function  getAllSlots($wherecond) {
+        $registerData = $this->db->table('register')->where('carrier_id', $wherecond)->get()->getRow();
+// print_r($registerData);die;
+        if ($registerData) {
+            $registerId = $registerData->id;
+            $result = $this->db->table('schedule')->where('faculty_register_id', $registerId)->get()->getResult();
+            if ($result) {
+                return $result;
+            } else {
+                return false;
+            }
+        } else {
+            // If no data is found in the 'register' table, return false
+            return false;
+        }
+        }
     public function getalldata($table, $wherecond)
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
@@ -975,6 +1016,7 @@ class AdminModel extends Model
 
     return $query;
     }
+
 
 
 
