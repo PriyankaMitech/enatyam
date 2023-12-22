@@ -149,6 +149,8 @@ $routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
 $routes->get('AdminController/searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
+$routes->post('searchStudentVideos', 'AdminController::searchStudentVideos');
+
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');
 

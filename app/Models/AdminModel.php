@@ -375,6 +375,53 @@ class AdminModel extends Model
     //     }
     // }
 
+    public function getStudentBySearch($startDate = null, $endDate = null, $studentName = '', $facultyName = '')
+    {
+        // echo $studentName;
+        // // echo $endDate;
+        // exit();
+        $query = $this->db->table('uplode_study_video_from_student')
+            ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
+            ->join('student', 'student.student_id = uplode_study_video_from_student.register_id')
+            ->join('register', 'register.id = uplode_study_video_from_student.register_id');
+
+
+        // Apply filters if provided
+        if ($startDate !== null) {
+            $startDate = new \DateTime($startDate);
+            $startDateFormatted = $startDate->format('Y-m-d H:i:s');
+            // print_r($startDateFormatted);
+            $query->where('uplode_study_video_from_student.DateTime >=', $startDateFormatted);
+        }
+
+        if ($endDate !== null) {
+            $endDate = new \DateTime($endDate);
+            $endDateFormatted = $endDate->format('Y-m-d H:i:s');
+            // print_r($endDateFormatted);
+            $query->where('uplode_study_video_from_student.DateTime <=', $endDateFormatted);
+        }
+
+        if ($facultyName !== '') {
+            $query->orWhere('uplode_study_video_from_student.register_id', $facultyName);
+        }
+        if ($studentName !== '') {
+            $query->orWhere('uplode_study_video_from_student.register_id', $studentName);
+        }
+
+
+        $videoDetails = $query->get()->getResult();
+        // echo '<pre>';
+        // print_r($videoDetails);
+
+        // echo $this->db->getLastQuery();
+        // die;
+        if ($videoDetails) {
+            return $videoDetails;
+        } else {
+            return false;
+        }
+    }
+
 
     public function getcarreerBookByfaculty()
     {
