@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="<?=base_url(); ?>plugins/dropzone/min/dropzone.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?=base_url(); ?>dist/css/adminlte.min.css">
+    
     <style>
         .payment-card #example1_wrapper .btn-group{
             display: none!important;
