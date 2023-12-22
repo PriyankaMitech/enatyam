@@ -529,13 +529,13 @@ class AdminModel extends Model
             ->getResult();
     }
 
-    public function updateFacultyForGroup($groupName, $facultyId, $selectedDate)
-    {
-        return $this->db->table('register')
-            ->where('groupName', $groupName)
-            ->set($updateData)
-            ->update();
-    }
+    // public function updateFacultyForGroup($groupName, $facultyId, $selectedDate)
+    // {
+    //     return $this->db->table('register')
+    //         ->where('groupName', $groupName)
+    //         ->set($updateData)
+    //         ->update();
+    // }
     public function getAdminUsers()
     {
         $db = \Config\Database::connect();
@@ -573,7 +573,22 @@ class AdminModel extends Model
             return false;
         }
     }
-
+    public function  getAllSlots($wherecond) {
+        $registerData = $this->db->table('register')->where('carrier_id', $wherecond)->get()->getRow();
+// print_r($registerData);die;
+        if ($registerData) {
+            $registerId = $registerData->id;
+            $result = $this->db->table('schedule')->where('faculty_register_id', $registerId)->get()->getResult();
+            if ($result) {
+                return $result;
+            } else {
+                return false;
+            }
+        } else {
+            // If no data is found in the 'register' table, return false
+            return false;
+        }
+        }
     public function getalldata($table, $wherecond)
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
