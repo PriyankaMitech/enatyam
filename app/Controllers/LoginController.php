@@ -186,7 +186,7 @@ class LoginController extends BaseController
        $Subject ='Registration Confirmation';
        $ccEmails = ['cc1@example.com', 'cc2@example.com'];
        $tital ='congratulations You Are Registration Confirmation';
-       sendConfirmationEmail($email,$Subject,$msg,$ccEmails);
+       sendConfirmationEmail($email,$ccEmails,$Subject,$msg);
        return redirect()->to('Home');
    }  
    

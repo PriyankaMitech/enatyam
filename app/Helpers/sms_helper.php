@@ -49,7 +49,7 @@ require_once 'src/SMTP.php';
         return true;
     }
 
-    function sendConfirmationEmail($email, $otp=null, $Subject=null, $msg=null, $ccEmails = [], $password=null)
+    function sendConfirmationEmail($email, $ccEmails = [], $Subject=null, $msg=null, $otp=null, $password=null)
     {
         try {
             $mail = new PHPMailer(true);
@@ -62,14 +62,16 @@ require_once 'src/SMTP.php';
             $mail->Port     = 587;
             $mail->setFrom('siddheshkadgemitech@gmail.com', 'Enatyam');
             $mail->addAddress($email, 'Recipient Name');
-            foreach ($ccEmails as $ccEmail) {
-                $mail->addCC($ccEmail);
+            if ($ccEmails) {
+                foreach ($ccEmails as $ccEmail) {
+                    $mail->addCC($ccEmail);
+                }
             }
+            
             $mail->isHTML(true);
             $mail->Subject = $Subject;
             $mail->Body = $msg;
             $mail->send();
-
         } catch (Exception $e) {
             echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
             return false;

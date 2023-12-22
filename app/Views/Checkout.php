@@ -46,7 +46,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label>First name <sup>*</sup></label>
-                                    <input type="text" name="Fname" class="form-control" id="Fname" value="<?php echo $_SESSION['user_name']?>" disabled />
+                                    <input type="text" name="Fname" class="form-control" id="Fname" value="<?php echo $_SESSION['user_name']?>" readonly />
                                 </div>
                                 <div class="col-lg-6">
                                     <label>Last name <sup>*</sup></label>
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <label>Country/Region <sup>*</sup></label>
-                                    <select class="form-select form-control required" name="country" aria-label="Default select example" id="country" disabled>
+                                    <select class="form-select form-control required" name="country" aria-label="Default select example" id="country" readonly>
 
                                         <option value="">Open this select menu</option>
                                         <option <?php echo $_SESSION['country']=='Afghanistan' ? 'selected' : ''?> value="Afghanistan">Afghanistan</option>
@@ -322,11 +322,11 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <label>Mobile Number<sup>*</sup></label>
-                                    <input type="text" name="phone" placeholder="Enter Your Mobile number" id="phone" class="form-control" value="<?php echo $_SESSION['mobile_no']?>" disabled pattern="[0-9]{10}">
+                                    <input type="text" name="phone" placeholder="Enter Your Mobile number" id="phone" class="form-control" value="<?php echo $_SESSION['mobile_no']?>" readonly pattern="[0-9]{10}">
                                 </div>
                                 <div class="col-lg-12">
                                     <label>Email<sup>*</sup></label>
-                                    <input type="email" name="email" placeholder="Enter Your Email " id="Email" class="form-control" value="<?php echo $_SESSION['email']?>" disabled>
+                                    <input type="email" name="email" placeholder="Enter Your Email " id="Email" class="form-control" value="<?php echo $_SESSION['email']?>" readonly>
                                 </div>
 
                             </div>
