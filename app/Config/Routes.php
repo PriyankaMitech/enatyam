@@ -191,7 +191,13 @@ $routes->post('chechk_courses_id_id', 'AdminController::chechk_courses_id_id');
 $routes->post('get_sub_courses_data', 'AdminController::get_sub_courses_data');
 $routes->post('get_student_data', 'AdminController::get_student_data');
 
+
+$routes->post('get_group_data', 'AdminController::get_group_data');
+
 $routes->post('get_faculty_data', 'AdminController::get_faculty_data');
+
+$routes->post('get_shedule_data', 'AdminController::get_shedule_data');
+
 
 $routes->post('add_menu', 'AdminController::add_menu');
 $routes->get('add_menu', 'AdminController::add_menu');
@@ -216,6 +222,8 @@ $routes->get('user_list', 'AdminController::user_list');
 
 $routes->post('set_menu', 'AdminController::set_menu');
 $routes->post('set_create_group_data', 'AdminController::set_create_group_data');
+$routes->post('set_create_group_datas', 'AdminController::set_create_group_datas');
+
 
 $routes->post('edit_menu/(:any)', 'AdminController::add_menu/$1');
 $routes->get('edit_menu/(:any)', 'AdminController::get_menu/$1');

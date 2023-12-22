@@ -1539,6 +1539,102 @@
     });
 </script>
 
+<script>
+$(document).ready(function(){
+    $('#faculty_id_g').on('change', function(){
+        var facultyidg = $(this).val();
+        console.log(facultyidg);
+        if(facultyidg){
+            $.ajax({
+                url: '<?= base_url(); ?>get_shedule_data',
+                type: 'POST',
+                data: {faculty_id_g: facultyidg},
+                dataType: 'json',
+                success: function(data){
+                    $('#shedule').empty();
+                    $('#shedule').append('<option value="">Please select schedule</option>');
+
+                    // Group timings by day
+                    var groupedTimings = {};
+                    $.each(data, function(key, value){
+                        if (!(value.Day in groupedTimings)) {
+                            groupedTimings[value.Day] = [];
+                        }
+                        groupedTimings[value.Day].push(value);
+                    });
+
+                    // Define custom order for days
+                    var customOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                    // Sort days based on custom order
+                    var sortedDays = Object.keys(groupedTimings).sort(function(a, b) {
+                        return customOrder.indexOf(a) - customOrder.indexOf(b);
+                    });
+
+                    // Add grouped timings to the dropdown
+                    $.each(sortedDays, function(index, day){
+                        var oddEvenClass = index % 2 === 0 ? 'even' : 'odd';
+                        var optionsHtml = '<optgroup class="' + oddEvenClass + '" label="' + day + '">';
+
+                        $.each(groupedTimings[day], function(index, timing){
+                            var formattedStartTime = formatTime(timing.start_time);
+                            var formattedEndTime = formatTime(timing.end_time);
+
+                            optionsHtml += '<option value="' + timing.id + '">' + formattedStartTime + ' - ' + formattedEndTime + '</option>';
+                        });
+                        optionsHtml += '</optgroup>';
+                        $('#shedule').append(optionsHtml);
+                    });
+
+                    // Retrieve the selected timing ID from the hidden input field
+                    var selectedTimingId = $('#selected_shedule').val();
+
+                    // Select the timing in the dropdown
+                    $('#shedule').val(selectedTimingId);
+                }
+            });
+        } else {
+            $('#shedule').empty();
+            $('#shedule').append('<option value="">Please select schedule</option>');
+        }
+    });
+
+    // Trigger change event on #courses_id_g
+    $('#faculty_id_g').trigger('change');
+});
+
+function formatTime(timeString) {
+    var timeParts = timeString.split(':');
+    var hours = timeParts[0];
+    var minutes = timeParts[1];
+    
+    return hours + ':' + minutes;
+}
+
+
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.open-modal').on('click', function () {
+            var button = $(this);
+            var modal = $('#modal-default-' + button.data('row-id'));
+
+            // Set values in the modal
+            modal.find('#modal-id').val(button.data('row-id'));
+            modal.find('#modal-faculty-id').val(button.data('faculty-id'));
+            modal.find('#modal-shedule').val(button.data('schedule'));
+            modal.find('#modal-group-name').val(button.data('group-name'));
+        });
+    });
+</script>
+
+
+
+
+
+
 </body>
 
 </html>

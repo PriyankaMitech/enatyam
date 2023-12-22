@@ -7,6 +7,8 @@ use App\Models\CarrierModel;
 use App\Models\LoginModel;
 use CodeIgniter\Controller;
 
+use CodeIgniter\HTTP\Request;
+
 helper('sms_helper');
 class AdminController extends BaseController
 {
@@ -1103,21 +1105,20 @@ class AdminController extends BaseController
     public function get_student_data()
     {
         $model = new AdminModel();
-
+    
         $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
         $courses_id_g = $this->request->getPost('courses_id_g');
         $GroupSession = 'GroupSession';
-        if ($sub_courses_id_g) {
 
-            $wherecond1 = array('is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g);
+        $whereCondition = '';
+            $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
 
-            $student_data = $model->getalldata('register', $wherecond1);
 
-            return json_encode($student_data);
-        } else {
-            return json_encode([]);
-        }
+        $student_data = $model->getalldata('register', $whereCondition);
+    
+        return json_encode($student_data);
     }
+    
 
 
 
@@ -1434,6 +1435,32 @@ class AdminController extends BaseController
         return view('student_list_of_group', $data);
     }
 
+
+public function get_shedule_data()
+{
+    $model = new AdminModel();
+
+    $faculty_id_g = $this->request->getPost('faculty_id_g');
+
+
+    if ($faculty_id_g) {
+        $wherecond = array('carrier_id' => $faculty_id_g);
+
+
+        $faculity_data = $model->getsinglerow('register', $wherecond);
+
+        if(!empty($faculity_data)){
+            $wherecond1 = array('student_register_id' => NULL, 'shedule_status' => 'N', 'faculty_register_id' => $faculity_data->id);
+            $shedule_data = $model->getalldata('schedule', $wherecond1);
+        }
+        return json_encode($shedule_data);
+    } else {
+        return json_encode([]);
+    }
+}
+
+
+
   
   public function payments()
 {
@@ -1453,4 +1480,5 @@ class AdminController extends BaseController
         }
     }
 }
+
 }
