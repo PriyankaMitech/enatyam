@@ -112,30 +112,31 @@
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="timeline">
                                     <?php foreach ($profileData as $country) : ?>
-                                    <form action="<?= base_url('changeCountry') ?>" method="post">
-                                        <div class="timeline-item">
-                                            <div class="timeline-item-content">
-                                                <div class="preCountry" style="margin-left: 85%;">
-                                                    <h3 class="timeline-country"><?= $country->country ?></h3>
-                                                </div>
-                                                <div class="change-country">
-                                                    <label for="changeCountry">Change Country:</label>
-                                                    <select id="changeCountry" name="changeCountry"
-                                                        class="form-control">
-                                                        <!-- Populate this dropdown with your country options -->
-                                                        <option value="USA" data-country-code="us" class="flag flag-us">
-                                                            USA</option>
-                                                        <option value="Canada" data-country-code="ca"
-                                                            class="flag flag-ca">Canada</option>
-                                                        <option value="UK" data-country-code="gb" class="flag flag-gb">
-                                                            United Kingdom</option>
-                                                        <option value="India" data-country-code="In"
-                                                            class="flag flag-gb">India</option>
-                                                        <!-- Add more countries as needed -->
-                                                    </select>
-                                                    <div class="chngec" style="margin-top: 10px;">
-                                                        <button type="submit" class="btn btn-primary">Change
-                                                            Country</button>
+                                        <form action="<?= base_url('changeCountry') ?>" method="post">
+                                            <div class="timeline-item">
+                                                <div class="timeline-item-content">
+                                                    <div class="preCountry" style="margin-left: 85%;">
+                                                        <h3 class="timeline-country"><?= $country->country ?></h3>
+                                                        <span class="ip2location-flag-64 flag-pole flag-vn"></span>
+                                                    </div>
+                                                    <div class="change-country">
+                                                        <label for="changeCountry">Change Country:</label>
+                                                        <select id="changeCountry" name="changeCountry" class="form-control">
+                                                            <!-- Populate this dropdown with your country options -->
+                                                            <option value="">Select</option>
+                                                            <?php if(!empty($country_data)){ ?>
+                                                                <?php foreach ($country_data as $data) : ?>
+                                                                    <option value="<?= $data->code; ?>">
+                                                                        <?= $data->name; ?>
+                                                                    </option>
+                                                                <?php endforeach; ?>
+                                                                <?php } ?>
+                                                            <!-- Add more countries as needed -->
+                                                        </select>
+                                                        <div class="chngec" style="margin-top: 10px;">
+                                                            <button type="submit" class="btn btn-primary">Change
+                                                                Country</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

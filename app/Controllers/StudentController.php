@@ -239,7 +239,15 @@ class StudentController extends BaseController
         $result = session();
         $registerId = $result->get('id');
         $StudentModel = new StudentModel();
+        $model = new Adminmodel();
+
         $data['profileData'] =  $StudentModel->fetchProfileDate($registerId);
+
+        $wherecond = array('is_deleted' => 'N');
+
+        $data['country_data'] = $model->getalldata('countries', $wherecond);
+
+    //    echo'<pre>'; print_r($data['country_data']);exit();
         return view('StudentSidebar/StudentProfile', $data);
     }
     public function Studentpasswordupdate()
@@ -273,13 +281,27 @@ class StudentController extends BaseController
     }
     public function changeCountry()
     {
+        $model = new AdminModel();
+
         $Country = $this->request->getPost('changeCountry');
+           // Sample country name
+    //  $countryName = $this->request->getPost('changeCountry');
+
+     // Fetch the country code based on the name (this requires database interaction)
+     // For demonstration, we'll assume the code is fetched from the database:
+   
+
+     // Pass data to view
+    //  return view('home', ['countryCode' => $countryCode]);
         $result = session();
         $registerId = $result->get('id');
         $StudentModel = new StudentModel();
-        $Changecountry =  $StudentModel->changeCountry($registerId, $Country);
+        $countryList['list'] = $StudentModel->getCountryList();
+  
+    //     $countryCode = $StudentModel->getCountryCodeFromDatabase($Country);
+    //     $Changecountry =  $StudentModel->changeCountry($registerId, $Country);
         return redirect()->to('StudentProfile');
-    }
+     }
 
     public function StudentSelectClassDates()
     {
@@ -433,6 +455,10 @@ public function submitForm()
     echo json_encode($success);
     }
  
+}
+
+public function getCountryCode(){
+  
 }
 
 }
