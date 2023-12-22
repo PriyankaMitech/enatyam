@@ -111,7 +111,7 @@ class LoginController extends BaseController
                 $savestud = $loginModel->setStudentName($getdata);
                 $sms = 'Dear customer, your OTP for registration is '.$otp.'. do not share to anyone. Thank you OTPIMS';
                 $output = sendSMS($_POST['mobile_no'], $sms);
-                $sendmail = sendConfirmationEmail($_POST['email'], $emailotp);
+                $sendmail = sendConfirmationEmail($_POST['email'], $emailotp, 'Enatyam', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !');
 
                 $result['status'] = '200';
                 $result = array(
@@ -186,7 +186,7 @@ class LoginController extends BaseController
        $Subject ='Registration Confirmation';
        $ccEmails = ['cc1@example.com', 'cc2@example.com'];
        $tital ='congratulations You Are Registration Confirmation';
-       sendConfirmationEmail($email,$ccEmails,$msg,$Subject,$tital);
+       sendConfirmationEmail($email,$Subject,$msg,$ccEmails);
        return redirect()->to('Home');
    }  
    

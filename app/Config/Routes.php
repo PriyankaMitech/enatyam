@@ -190,16 +190,6 @@ $routes->post('get_student_data', 'AdminController::get_student_data');
 
 $routes->post('get_faculty_data', 'AdminController::get_faculty_data');
 
-
-
-
-
-
-
-
-
-
-
 $routes->post('add_menu', 'AdminController::add_menu');
 $routes->get('add_menu', 'AdminController::add_menu');
 
