@@ -84,24 +84,9 @@
 
                             <strong><i class="fa fa-phone" aria-hidden="true"></i></i> Mobile Number</strong>
                             <p class="text-muted"><?=$profile_datars->mobile_no;  ?></p>
-
                             <hr>    
-
-
-                   
-
                             <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
-                            <p class="text-muted"><?=$profile_datars->country;  ?></p>
-
-
-                          
-
-
-
-
-          
-
-                          
+                            <p class="text-muted"><?=$profile_datars->country;  ?></p> 
                         </div>
                         <!-- /.card-body -->
                     </div>
