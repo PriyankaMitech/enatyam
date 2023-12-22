@@ -7,9 +7,6 @@
                 <div class="col-sm-6">
                     <h1>My Profile</h1>
                 </div>
-
-
-
             </div>
         </div><!-- /.container-fluid -->
     </section>
