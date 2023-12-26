@@ -44,10 +44,10 @@
          $wherecon = array('id' => $student_id);
 
          $alldata = $adminModel->getsinglerow('register',  $wherecon);
-        //  echo "<pre>";print_r($alldata);exit();
-         $register_id;
+        // echo "<pre>";print_r($alldata);exit();
+         //$register_id;
          if(!empty($alldata)){ $register_id = $alldata->Assign_Techer_id;}
-        //  echo $register_id; exit();
+        // echo $register_id; exit();
 
          $wherecon1 = array('register_id' => $register_id);
 

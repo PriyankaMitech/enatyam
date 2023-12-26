@@ -59,6 +59,7 @@
                                 <div class="active tab-pane" id="activity">
                                     <!-- Post -->
                                     <?php foreach ($profileData as $profile) : ?>
+
                                         <form id="updatePasswordForm" action="#" method="post">
                                             <input type="hidden" name="user_email" value="<?= $profile->email ?>">
 
@@ -107,31 +108,41 @@
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="timeline">
                                     <?php foreach ($profileData as $country) : ?>
+
                                         <form action="<?= base_url('changeCountry') ?>" method="post">
                                             <div class="timeline-item">
                                                 <div class="timeline-item-content">
                                                     <div class="preCountry" style="margin-left: 85%;">
-                                                        <h3 class="timeline-country"><?= $country->country ?></h3>
-                                                        <span class="ip2location-flag-64 flag-pole flag-vn"></span>
+                                                        <?php
+                                                        // Suppose $studentCountryCode contains the student's country code, e.g., "vn"
+                                                        $studentCountryCode = $country->code; // This would be dynamically fetched in a real-world scenario
+                                                        // Generate the CSS class
+                                                        $cssClass = "ip2location-flag-32 flag-square flag-" . strtolower($studentCountryCode);
+                                                        ?>
+                                                        <span style="display: inline-block; vertical-align: middle;" class="timeline-country"><?= $country->country ?></span>
+                                                        <span style="display: inline-block; vertical-align: middle;" class=" timeline-country <?= $cssClass ?>"></span>
                                                     </div>
-                                                    <div class="change-country">
-                                                        <label for="changeCountry">Change Country:</label>
-                                                        <select id="changeCountry" name="changeCountry" class="form-control">
-                                                            <!-- Populate this dropdown with your country options -->
-                                                            <option value="">Select</option>
-                                                            <?php if(!empty($country_data)){ ?>
-                                                                <?php foreach ($country_data as $data) : ?>
-                                                                    <option value="<?= $data->code; ?>">
-                                                                        <?= $data->name; ?>
-                                                                    </option>
-                                                                <?php endforeach; ?>
+                                                    <div class="row">
+                                                        <div class="col-6 change-country">
+                                                            <label for="changeCountry">Change Country:</label>
+                                                            <select id="changeCountry" name="changeCountry" class="form-control">
+                                                                <!-- Populate this dropdown with your country options -->
+                                                                <option value="">Select</option>
+                                                                <?php if (!empty($country_data)) { ?>
+                                                                    <?php foreach ($country_data as $data) : ?>
+                                                                        <option value="<?= $data->name; ?>" <?= ($data->name == $country->country) ? 'selected' : ''; ?>>
+                                                                            <?= $data->name; ?>
+                                                                        </option>
+                                                                    <?php endforeach; ?>
                                                                 <?php } ?>
-                                                            <!-- Add more countries as needed -->
-                                                        </select>
-                                                        <div class="chngec" style="margin-top: 10px;">
+                                                                <!-- Add more countries as needed -->
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-6" style="margin-top: 2rem">
                                                             <button type="submit" class="btn btn-primary">Change
                                                                 Country</button>
                                                         </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -154,5 +165,4 @@
     </section>
 </div>
 
-<?php echo view('StudentSidebar/StudentFooter.php');?>      
-
+<?php echo view('StudentSidebar/StudentFooter.php'); ?>
