@@ -1,5 +1,4 @@
 <?php echo view('Studentsidebar/Studentsidebar'); ?>
-
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">
@@ -104,7 +103,11 @@
                                         </form>
                                     <?php endforeach; ?>
 
+                                    <!-- Display success message -->
+                                    <div id="success-message" class="alert alert-success" style="display: none;"></div>
                                 </div>
+
+
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="timeline">
                                     <?php foreach ($profileData as $country) : ?>
@@ -146,23 +149,26 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
-                                    <?php endforeach; ?>
                                 </div>
-                                <!-- /.tab-pane -->
-
-
-                                <!-- /.tab-pane -->
+                                </form>
+                            <?php endforeach; ?>
                             </div>
-                            <!-- /.tab-content -->
-                        </div><!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-                </div>
-            </div>
+                            <!-- /.tab-pane -->
 
+
+                            <!-- /.tab-pane -->
+                        </div>
+                        <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
         </div>
-    </section>
+
 </div>
+</section>
+</div>
+
+<?php echo view('StudentSidebar/StudentFooter.php'); ?>
 
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>

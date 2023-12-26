@@ -70,7 +70,6 @@ class StudentController extends BaseController
 
         $result = session();
         $registerId = $result->get('id');
-        //    print_r($registerId);die;
         $StudentModel = new StudentModel();
         $registerData = $StudentModel->getAllRegisterData($registerId, ['full_name', 'Assign_Techer_id']);
         //    print_r($registerData);die;
@@ -310,17 +309,20 @@ class StudentController extends BaseController
 
     public function StudentSelectClassDates()
     {
-
-        $result = session();
-        $registerId = $result->get('id');
-        $StudentModel = new StudentModel();
-        $registerData =  $StudentModel->fetchid($registerId);
-        $assignTeacherId = $registerData->Assign_Techer_id;
-        $assignFacultyData['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId, $registerId);
-        // print_r($assignFacultyData['assignFacultyData']);die;
-        $data['registerId'] = $registerId;
-        $data['assignFacultyData'] = $assignFacultyData;
-        return view('StudentSidebar/StudentSelectClassDates', $data);
+        if (isset($_SESSION['sessiondata']) && $_SESSION['role'] == 'Student') {
+            $result = session();
+            $registerId = $result->get('id');
+            $StudentModel = new StudentModel();
+            $registerData =  $StudentModel->fetchid($registerId);
+            $assignTeacherId = $registerData->Assign_Techer_id;
+            $data['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId, $registerId);
+            $data['registerId'] = $registerId;
+            $data['Assign_Techer_id'] = $assignTeacherId;
+            // $data['assignFacultyData'] = $assignFacultyData;
+            return view('StudentSidebar/StudentSelectClassDates', $data);
+        } else {
+            return redirect()->to(base_url());
+        }
     }
     public function selectedslotsfromstudent()
     {

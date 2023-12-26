@@ -12,11 +12,7 @@
         text-align: center;
     }
 </style>
-
-
-
     <div class="content-wrapper">
-
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
@@ -30,29 +26,24 @@
                         </ol>
                     </div>
                 </div>
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-
-                    <!-- /.col -->
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header p-2">
                                 <ul class="nav nav-pills">
-                                    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab"> Uploaded Images</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab"> Uploaded Videos</a></li>
-
+                                    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab"> My video</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab"> Study Videos</a></li>
                                 </ul>
-                            </div><!-- /.card-header -->
-
+                            </div>
 
                             <div class="card-body">
                                 <div class="tab-content">
                                     <div class="active tab-pane" id="activity">
                                         <?php if (!empty($videos)) { ?>
-
                                             <div class="row">
                                                 <?php foreach ($videos as $faculty) { ?>
 
@@ -75,26 +66,20 @@
                                                 <?php } ?>
 
                                             </div>
+                                        <?php }else { ?>
+                                            No videos uploaded yet.
                                         <?php } ?>
                                     </div>
-                                    <!-- /.tab-pane -->
+                                    
                                     <div class="tab-pane" id="timeline">
-
-                                        <?php 
-
-                                        if (!empty($videos)) { 
-                                            
-                                            ?>
-
+                                        <?php if (!empty($videos)) {  ?>
                                             <div class="row">
                                                 <?php foreach ($videos as $faculty) { 
                                                     $extension = pathinfo($faculty->video_name, PATHINFO_EXTENSION);
-                                                    ?>
-                                                    <?php if ($extension == 'mp4') : ?>
+                                                    if ($extension == 'mp4') : ?>
                                                         <div class="col-md-4">
                                                             <div class="card">
                                                                 <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
-                                                                    <!-- Adjust the video size -->
                                                                     <source class="img-fluid" src="<?= base_url( ) ?>public/uploads/FacultyUplodedVideos/<?=$faculty->video_name ?>" type="video/mp4">
                                                                 </video>
                                                                 <div class="card-body">
@@ -107,25 +92,22 @@
                                                             </div>
                                                         </div>
                                                     <?php endif; } ?>
-
                                             </div>
+                                        <?php }else {?>
+                                            No videos uploaded yet.
                                         <?php } ?>
 
                                     </div>
                                 </div>
-                                <!-- /.tab-content -->
-                            </div><!-- /.card-body -->
+                            </div>
                         </div>
-                        <!-- /.card -->
                     </div>
-                    <!-- /.col -->
                 </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
 
 
 
 
     </div>
-    <?php echo view('FacultysideBar/FacultyFooter.php'); ?>
+    <?php echo view('StudentSidebar/StudentFooter.php'); ?>

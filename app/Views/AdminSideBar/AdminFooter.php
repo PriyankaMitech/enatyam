@@ -1463,6 +1463,8 @@
 
         // Set the minimum date for session_start_date input
         $('#session_start_date').attr('min', currentDate);
+
+        $('.Session_Start_Date').attr('min', currentDate);
     });
 </script>
 

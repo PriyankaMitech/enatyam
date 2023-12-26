@@ -12,57 +12,41 @@
   <link rel="stylesheet" href="<?=base_url()?>public/css/fontawesome-stars.css">
   <link rel="stylesheet" href="<?=base_url()?>public/css/custom.css">
   <link rel="stylesheet" href="<?=base_url(); ?>public/css/admindashboard_style.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" -->
-        <!-- integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+  <!-- integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
-        <link href="image_sprite/ip2location-image-sprite.css" rel="stylesheet">
-    
+  <link href="image_sprite/ip2location-image-sprite.css" rel="stylesheet">
+
 </head>
 
 <body>
-<div id="flash-success-container">
+  <div id="flash-success-container">
     <?php if (session()->has('success')) : ?>
-        <div class="flash-success">
-            <?= session('success') ?>
-        </div>
+      <div class="flash-success">
+        <?= session('success') ?>
+      </div>
     <?php endif; ?>
-</div>
+  </div>
 
 
 <?php 
-         $session = \Config\Services::session();
-         $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
-
-         // Get the 'id' from the session
-         $student_id = $session->get('id');
-         
-         // Rest of your code
-         $notifications = $adminModel->getUserRole($student_id);
-
-         $wherecon = array('id' => $student_id);
-
-         $alldata = $adminModel->getsinglerow('register',  $wherecon);
-        // echo "<pre>";print_r($alldata);exit();
-         //$register_id;
-         if(!empty($alldata)){ $register_id = $alldata->Assign_Techer_id;}
-        // echo $register_id; exit();
-
-         $wherecon1 = array('register_id' => $register_id);
-
-
-         $alldataoff = $adminModel->getsinglerow('faculty',  $wherecon1);
-
-         $carrier_id = '';
-         if(!empty($alldataoff)){ $carrier_id = $alldataoff->carrier_id;}
-
-         $wherecon2 = array('D_id' => $carrier_id);
-
-         $alldatac = $adminModel->getsinglerow('carrier',  $wherecon2);
-
-        //  echo "<pre>";print_r($alldatac);exit();
-
+    $session = \Config\Services::session();
+    $adminModel = new \App\Models\AdminModel(); 
+    $student_id = $session->get('id');
+    $notifications = $adminModel->getUserRole($student_id);
+    $wherecon = array('id' => $student_id);
+    $alldata = $adminModel->getsinglerow('register',  $wherecon);
+    $register_id;
+    if(!empty($alldata)){ $register_id = $alldata->Assign_Techer_id;}
+    $wherecon1 = array('register_id' => $register_id);
+    $alldataoff = $adminModel->getsinglerow('faculty',  $wherecon1);
+    $carrier_id = '';
+    if(!empty($alldataoff)){ $carrier_id = $alldataoff->carrier_id;}
+    $wherecon2 = array('D_id' => $carrier_id);
+    $alldatac = $adminModel->getsinglerow('carrier',  $wherecon2);
 
          $count = 0;
 
@@ -162,7 +146,7 @@ No new notifications available</p><hr>
       <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
           <div class="image">
-            <img src="<?=base_url()?>public/AdmoinLogo.png" class="img-circle elevation-2" alt="User Image">
+            <img src="<?= base_url() ?>public/AdmoinLogo.png" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
             <a href="<?php echo base_url() ?>StudentDashboard" class="d-block"><?= $username = session()->get('user_name'); ?></a>
@@ -181,11 +165,11 @@ No new notifications available</p><hr>
             </a>
             <?php if ($_SESSION['sessiondata']['Payment_status'] == 'Y') { ?>
               <li class="nav-item">
-                <a href="<?=base_url();?>StudentDashboard" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Dashboard
-                        </p>
+                <a href="<?= base_url(); ?>StudentDashboard" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Dashboard
+                  </p>
                 </a>
               </li>
               <li class="nav-item">
@@ -214,9 +198,9 @@ No new notifications available</p><hr>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="<?php echo base_url() ?>reschedule" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Reshedule</p>
+                      <p>Leave</p>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -291,27 +275,19 @@ No new notifications available</p><hr>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?php echo base_url()?>chatuser" class="nav-link">
+                    <a href="<?php echo base_url() ?>chatuser" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Chat</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="<?php echo base_url()?>feedback" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Email</p>
+                      <p>Feedback</p>
                     </a>
                   </li>
-
-                  <li class="nav-item">
-                <a href="<?=base_url();?>feedback" class="nav-link">
-                    <i class="nav-icon fa fa-thumbs-up"></i>
-                    
-                    <p>Feedback </p>
-                </a>
-              </li>
-                <?php } ?>
-                <?php
+              <?php } ?>
+              <?php } 
                 if ($_SESSION['sessiondata']['Payment_status'] == 'N') { ?>
                   <li class="nav-item">
                     <a href="<?php echo base_url() ?>ModelForLogin" class="nav-link">
@@ -320,9 +296,6 @@ No new notifications available</p><hr>
                     </a>
                   </li>
                 <?php } ?>
-                </ul>
-              </li>
-           
           </ul>
         </nav>
       </div>

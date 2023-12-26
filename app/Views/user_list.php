@@ -57,6 +57,10 @@
                                     
                                     </tr>
                                 <?php $i++;} ?>
+                        <?php }else{ ?>
+                            <tr>
+                                        <td class="text-center" colspan= 5>No Data Available</td>  
+                            </tr>
                         <?php } ?>
                     
                         </tbody>

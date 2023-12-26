@@ -62,6 +62,9 @@ th {
     display: block;
     /* or inline, flex, etc. based on your layout */
 }
+.tc, .tc a{
+    color : #fff !important;
+}
 </style>
 
 
@@ -111,8 +114,75 @@ th {
 
 
                     </div>
+                    </div>
 
-                    <div class="col-md-12 card" id="faculty-table5" style="display:none">
+              
+               
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3><?php echo $count ?></sup></h3>
+
+                            <p> Demos List</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-stats-bars"></i>
+                        </div>
+                        <a href="#" class="small-box-footer book-more-info" id="toggle-table2">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+
+                    <div class="small-box bg-warning tc">
+                        <div class="inner">
+                            <?php if (!empty($admins)) : ?>
+                            <h3><?= count($admins) ?></h3>
+                            <?php else : ?>
+                                <h3>0</h3>
+
+                            <?php endif; ?>
+                            <p>Students</p>
+                        </div>
+                        
+                        <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                        </div>
+                        <a href="#" class="small-box-footer stud-more-info" id="toggle-table">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            <?php if (!empty($Faculty)) : ?>
+                            <h3><?= count($Faculty) ?></h3>
+                            <?php else : ?>
+                                <h3>0</h3>
+
+                            <?php endif; ?>
+                            <p>Teachers</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-pie-graph"></i>
+                        </div>
+                        <a href="#" class="small-box-footer teach-more-info" id="toggle-table4">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-12 card" id="faculty-table5" style="display:none">
                         <div class="card-header">
                             <h3 class="card-title"> Today Demo List</h3>
                         </div>
@@ -135,7 +205,7 @@ th {
                                     <?php endforeach; ?>
                                     <?php else : ?>
                                     <tr>
-                                        <td colspan="2">No demo today</td>
+                                        <td class="text-center" colspan="2">No data available</td>
                                     </tr>
                                     <?php endif; ?>
                                 </tbody>
@@ -143,65 +213,6 @@ th {
 
                         </div>
                     </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-success">
-                        <div class="inner">
-                            <h3><?php echo $count ?></sup></h3>
-
-                            <p> Demos List</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
-                        </div>
-                        <a href="#" class="small-box-footer book-more-info" id="toggle-table2">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-
-                    <div class="small-box bg-warning">
-                        <div class="inner">
-                            <?php if (!empty($admins)) : ?>
-                            <h3><?= count($admins) ?></h3>
-                            <?php else : ?>
-                            <?php endif; ?>
-                            <p>Students</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-person-add"></i>
-                        </div>
-                        <a href="#" class="small-box-footer stud-more-info" id="toggle-table">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-danger">
-                        <div class="inner">
-                            <?php if (!empty($Faculty)) : ?>
-                            <h3><?= count($Faculty) ?></h3>
-                            <?php else : ?>
-                            <?php endif; ?>
-                            <p>Teachers</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-pie-graph"></i>
-                        </div>
-                        <a href="#" class="small-box-footer teach-more-info" id="toggle-table4">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-
-
-                </div>
-
                 <div class="col-lg-12">
 
 
@@ -256,6 +267,7 @@ th {
                                             <th>Demo Date</th>
 
                                         </tr>
+                                        <?php if(!empty($ConductedDemo)){?>
                                         <?php foreach ($ConductedDemo as $faculty) : ?>
                                         <tr>
                                             <form action="<?= base_url('AdminController/addStudent'); ?>" method="post">
@@ -269,6 +281,12 @@ th {
                                             </form>
                                         </tr>
                                         <?php endforeach; ?>
+                                        <?php }else{ ?>
+                                            <tr>
+                                                <td class="text-center" colspan= 3>No data available</td>
+                                                
+                                                </tr>
+                                        <?php } ?>
 
 
                                     </table>
@@ -296,6 +314,7 @@ th {
                                         return strtotime($b->Booking_Date_Time) - strtotime($a->Booking_Date_Time);
                                     });
                                     ?>
+                                    <?php if(!empty($getAllDemoList)){?>
                                         <?php foreach ($getAllDemoList as $status) : ?>
                                         <tr>
                                             <td><?= $status->name; ?></td>
@@ -313,6 +332,12 @@ th {
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
+                                        <?php }else{ ?>
+                                            <tr>
+                                                <td class="text-center" colspan= 4>No data available</td>
+                                                
+                                                </tr>
+                                        <?php } ?>
                                     </table>
                                 </div>
                             </div>
@@ -332,14 +357,21 @@ th {
                                             <th>Demo Date</th>
 
                                         </tr>
-                                        <?php foreach ($UnattendedDemoList as $status) : ?>
+                                        <?php if($UnattendedDemoList){ ?>
+                                        <?php foreach ($UnattendedDemoList as $status) { ?>
                                         <tr>
                                             <td><?= $status->name; ?></td>
                                             <td><?= $status->email; ?></td>
                                             <td><?= $status->course; ?></td>
                                             <td><?= $status->Booking_Date_Time; ?></td>
                                         </tr>
-                                        <?php endforeach; ?>
+                                        <?php } ?>
+                                        <?php }else{ ?>
+                                            <tr>
+                                                <td class="text-center" colspan= 4>No data available</td>
+                                                
+                                                </tr>
+                                        <?php } ?>
                                     </table>
                                 </div>
                             </div>
@@ -362,11 +394,11 @@ th {
                                             </tr>
                                         </thead>
                                         <?php
-            // Sort the $PendingDemo array in descending order based on the Date field
-            usort($PendingDemo, function ($a, $b) {
-                return strtotime($b->Date) - strtotime($a->Date);
-            });
-            ?>
+                                            usort($PendingDemo, function ($a, $b) {
+                                                return strtotime($b->Date) - strtotime($a->Date);
+                                            });
+                                        ?>
+                                        <?php if(!empty($PendingDemo)){ ?>
                                         <?php foreach ($PendingDemo as $facult) : ?>
                                         <tr>
                                             <form action="<?php echo base_url('AssignTecherForDemo'); ?>" method="POST">
@@ -376,10 +408,10 @@ th {
                                                 <td><?= date('d/m/Y', strtotime($facult->Date)); ?></td>
                                                 <td>
                                                     <?php
-                            $matchingFaculties = array_filter($Faculty, function ($faculty) use ($facult) {
-                                return $faculty->course == $facult->course && $faculty->sub_course == $facult->sub_course;
-                            });
-                            ?>
+                                                        $matchingFaculties = array_filter($Faculty, function ($faculty) use ($facult) {
+                                                            return $faculty->course == $facult->course && $faculty->sub_course == $facult->sub_course;
+                                                        });
+                                                    ?>
                                                     <?php if (!empty($matchingFaculties)) : ?>
                                                     <select name="faculty_name" class="form-control">
                                                         <?php foreach ($matchingFaculties as $faculty) : ?>
@@ -412,6 +444,12 @@ th {
                                             </form>
                                         </tr>
                                         <?php endforeach; ?>
+                                        <?php }else{ ?>
+                                            <tr>
+                                                <td class="text-center" colspan= 8>No data available</td>
+                                                
+                                                </tr>
+                                        <?php } ?>
                                     </table>
                                 </div>
                             </div>
@@ -507,35 +545,42 @@ th {
                                     <th>Email</th>
                                     <th>Course</th>
                                     <th>Sub Course</th>
+                                    <th>Session Type</th>
+
                                     <th>Assign Faculty</th>
                                     <th>Session Date</th>
                                     <!-- <th>Assign Faculty Status</th> -->
                                     <th>Action</th>
                                 </tr>
-                                <?php foreach ($admins as $admin): ?>
-                                <tr>
-                                    <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
-                                        <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
-                                        <td>
-
-                                            <?php
-                                    // Check if the record is created within the last 10 days
+                                <?php if($admins){
+                                    
+                                    ?>
+                                <?php foreach ($admins as $admin): 
                                     $createdAt = strtotime($admin->created_at);
                                     $currentDate = strtotime(date('Y-m-d'));
                                     $tenDaysAgo = strtotime('-10 days');
-
+                                    $new = '';
                                     if ($createdAt >= $tenDaysAgo && $createdAt = $currentDate) {
                                         // echo '<span class="fas fa-clock bg-maroon">New</span>';
-                                        echo '<small class="badge badge-danger"></i>New</small>';
+                                        $new= 'New';
                                     }
                                     ?>
-                                            <?= $admin->full_name; ?>
+                                <tr>
+                                    <form action="<?= base_url('AssignTecherToStudent'); ?>" method="POST">
+                                        <input type="hidden" name="studentid" value="<?= $admin->id; ?>">
+                                        <td style="width:100px">
+                                            <p><?= $admin->full_name; ?><sup > <small class="badge badge-danger"><i><?php echo $new?></i></small></sup></p>
+                                      
+                               
                                         </td>
                                         <td><?= $admin->email; ?></td>
-                                        <td><?= $admin->course; ?></td>
-                                        <td><?= $admin->sub_course; ?></td>
+                                        <td><?= $admin->courses_name; ?></td>
+                                        <td><?= $admin->sub_courses_name; ?></td>
+                                        <td><?= $admin->SessionType; ?></td>
+
 
                                         <td class="faculty-select">
+                                        <?php if ($admin->Assign_Techer_id == null && $admin->SessionType == 'OneToOneSession' ){ ?>
                                             <select name="faculty_name">
                                                 <option value="" selected>Select Faculty</option>
                                                 <?php foreach ($Faculty as $facultyItem): ?>
@@ -547,6 +592,9 @@ th {
                                                 <?php endif; ?>
                                                 <?php endforeach; ?>
                                             </select>
+                                            <?php }else if($admin->SessionType == 'GroupSession'){ ?>
+                                              <?= $admin->teacher_name; ?>
+                                      <?php } ?>
 
                                             <?php if ($admin->Session_Start_Date): ?>
                                             <!-- If a date is already assigned, display it -->
@@ -554,21 +602,37 @@ th {
                                         <?php else: ?>
                                         <!-- If no date is assigned, show the input field -->
                                         <td>
-                                            <input type="date" name="Session_Start_Date" required>
+                                        <?php if ($admin->Assign_Techer_id == null && $admin->SessionType == 'OneToOneSession' ){ ?>
+
+                                            <input type="date" name="Session_Start_Date" class="Session_Start_Date" value="<?php if ($admin->Session_Start_Date != null) { echo ($admin->Session_Start_Date); }else{ echo date('Y-m-d');} ?>">
+                                            <?php }else if($admin->SessionType == 'GroupSession'){ ?>
+                                                You Can't Assign Session Date Here
+                                                <?php }else{ ?>
+                                                    <td><?= $admin->Session_Start_Date; ?></td>
+
+                                                <?php } ?>
                                         </td>
                                         <?php endif; ?>
                                         <td class="change_f">
-                                            <?php if ($admin->Assign_Techer_id > 0): ?>
+                                            <?php if ($admin->Assign_Techer_id > 0 && $admin->SessionType == 'OneToOneSession' ){ ?>
                                             <button type="submit" name="change_faculty_button" class="btn btn-info"
                                                 style="font-size: 12px;">Change Faculty</button>
-                                            <?php else: ?>
-                                            <button type="submit" name="assign_button" class="btn btn-warning"
+                                            <?php }else if($admin->SessionType == 'GroupSession'){ ?>
+                                                You Can't Assign Faculty Here
+                                            <?php }else{ ?>
+                                                <button type="submit" name="assign_button" class="btn btn-warning"
                                                 style="font-size: 13px;">Assign</button>
-                                            <?php endif; ?>
+                                                <?php } ?>
                                         </td>
                                     </form>
                                 </tr>
                                 <?php endforeach; ?>
+                                <?php }else{ ?>
+                                            <tr>
+                                                <td class="text-center" colspan= 8>No data available</td>
+                                                
+                                                </tr>
+                                        <?php } ?>
                             </table>
                         </div>
                     </div>
@@ -589,6 +653,7 @@ th {
                                     <!-- <th>Assign Students</th> -->
 
                                 </tr>
+                                <?php if(!empty($Faculty)){?>
                                 <?php foreach ($Faculty as $faculty) : ?>
                                 <tr>
                                     <td><?= $faculty->full_name; ?></td>
@@ -601,6 +666,12 @@ th {
 
                                 </tr>
                                 <?php endforeach; ?>
+                                <?php }else{ ?>
+                                            <tr>
+                                                <td class="text-center" colspan= 5>No data available</td>
+                                                
+                                                </tr>
+                                        <?php } ?>
                             </table>
                         </div>
                     </div>
