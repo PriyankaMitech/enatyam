@@ -1,4 +1,4 @@
-<?php echo view('Studentsidebar/Studentsidebar'); ?>
+<?php echo view('StudentSidebar/Studentsidebar'); ?>
 <style>
     .notification-dropdown {
         max-height: 300px; /* Adjust the maximum height as needed */

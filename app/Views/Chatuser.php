@@ -88,9 +88,9 @@ $page = $uri->getSegment(count($pages));
                                 </a>
                             </li> 
                             <?php } ?>
-                            <?php if (isset($getuser) && !empty($getuser)) {
+                            <?php 
+                            if (isset($getuser) && !empty($getuser['chatuser'])) {
                                 foreach ($getuser as $chat) { 
-                                    // print_r($chat);die;
                                     if ($_SESSION['sessiondata']['role'] == 'Faculty' || $_SESSION['sessiondata']['role'] == 'Admin') {
                                         $id= $chat->id;
                                         $full_name = $chat->full_name;

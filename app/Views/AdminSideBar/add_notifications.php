@@ -95,7 +95,8 @@
                 </div>
                 <div class="form-group">
             <label for="notification_date">Select Date</label>
-            <input type="date" id="notification_date" class="form-control" name="notification_date">
+            <input type="date" id="notification_date" class="form-control" name="notification_date" value="<?php  echo date('Y-m-d'); ?>">
+
           </div>
                 <!-- Other common form elements -->
                 <div class="form-group">

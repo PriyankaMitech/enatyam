@@ -796,8 +796,10 @@ th {
                                     <!-- <th>Assign Students</th> -->
 
                                 </tr>
+
                                 <?php if (!empty($Faculty)) { ?>
                                 <?php foreach ($Faculty as $faculty): ?>
+
                                 <tr>
                                     <td><?= $faculty->full_name ?></td>
                                     <td><?= $faculty->email ?></td>

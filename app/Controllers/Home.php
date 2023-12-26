@@ -223,11 +223,13 @@ class Home extends BaseController
                 $notifications = $adminModel->getUser($user_id);
 
                     $count = 0;
+
                 if ($notifications) {
                     $count = count($notifications);
                 }else {
                 $count = 0;
                 }
+
                 return view('StudentDashboard', [
                     'data' => $data,
                     'notifications' => $notifications,
@@ -252,8 +254,8 @@ public function chechk_username_id()
 
 if ($username) {
     $email = $loginModel->checkexist($username, 'email');
-    echo "<pre>";
-    print_r($email);exit();
+    // echo "<pre>";
+    // print_r($email);exit();
     return json_encode($email);
 } else {
     return json_encode([]);

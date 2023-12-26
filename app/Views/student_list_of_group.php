@@ -80,7 +80,7 @@
                         <table  class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                            <th>Sr.No11</th>
+                            <th>Sr.No</th>
                             <th>Courses Name / Sub Courses Name</th>
                             <th>Group Name</th>
 
@@ -195,8 +195,12 @@
                                     
                                     </tr>
                                 <?php $i++;} ?>
-                        <?php } ?>
-                    
+                        <?php }else{ ?>
+                            <tr>
+                                <td class="text-center" colspan="9"> No Data Available</td>
+                            </tr>
+
+                        <?php } ?>                    
                         </tbody>
 
                         <?php }else{ ?>
@@ -390,7 +394,12 @@
                                       
                                     </tr>
                                 <?php $i++;} ?>
-                        <?php } ?>
+                                <?php }else{ ?>
+                            <tr>
+                                <td class="text-center" colspan="9"> No Data Available</td>
+                            </tr>
+
+                        <?php } ?>         
                     
                         </tbody>
                         <?php } ?>
