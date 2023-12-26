@@ -36,7 +36,7 @@
                     $today = date('Y-m-d'); 
                     $sessionsCount = !is_null($SessionCount) ? $SessionCount->no_of_session : 0;
                     $currentDate = isset($slots[0]->Session_Start_Date) ? date('Y-m-d', strtotime($slots[0]->Session_Start_Date)) : null;
-
+                    
                     for ($i = 0; $i < $sessionsCount; $i++) {
                         $conductedSessions = isset($SessionCount->ConductedSessionsCount) ? explode(',', $SessionCount->ConductedSessionsCount) : [];
                         $statusParts = explode('-', isset($conductedSessions[$i]) ? $conductedSessions[$i] : '');

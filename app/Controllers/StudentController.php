@@ -104,7 +104,7 @@ class StudentController extends BaseController
             $StudentModel->insert(['name' => $videoName, 'type' => 'video', 'Faculty_id' => $assignTeacherId, 'register_id' => $registerId, 'Student_name' => $full_name]);
         }
 
-        return redirect()->to('StudentDashboard');
+        return redirect()->to('UplodeVideo');
     }
 
     public function StudentSideBarVideo()
@@ -206,7 +206,7 @@ class StudentController extends BaseController
         $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
         $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
         //  print_r($data['SessionCount']);die;
-        return view('StudentSidebar/ScheduleStudent', $data);
+        return view('StudentSidebar/ScheduleStudent',$data);
     }
 
     public function selectStudentSchedule()
