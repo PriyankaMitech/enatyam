@@ -156,17 +156,6 @@ class AdminModel extends Model
     {
         return $this->findAll();
     }
-    // public function get_students()
-    // {
-    //     $query = $this->db->table('register AS students')
-    //         ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name')
-    //         ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
-    //         ->where('students.role', 'Student')
-    //         ->orderBy('created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
-    //         ->get();
-
-    //     return $query->getResult();
-    // }
 
     public function get_students()
     {
@@ -176,6 +165,7 @@ class AdminModel extends Model
             ->join('tbl_courses', 'tbl_courses.id = students.course', 'left') // Adjust 'course_id' to the actual foreign key column in the students table
             ->join('tbl_sub_courses', 'tbl_sub_courses.id = students.sub_course', 'left') // Adjust 'sub_course_id' to the actual foreign key column in the students table
             ->where('students.role', 'Student')
+            ->where('students.is_register_done', 'Y')
             ->orderBy('students.created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
             ->get();
 
@@ -618,8 +608,7 @@ class AdminModel extends Model
     public function getalldata($table, $wherecond)
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
-// print_r($result);die;
-// echo $this->db->getLastQuery();die;
+        // echo $this->db->getLastQuery();die;
         if ($result) {
             return $result;
         } else {
@@ -1015,6 +1004,17 @@ class AdminModel extends Model
         ->getResult();
 
     return $query;
+    }
+       
+    public function chatfaculty($table, $wherecond)
+    {
+        $query['chatuser'] = $this->db->table(''.$table.' r')
+            ->select('r.*, s.Assign_Techer_id') 
+            ->join('student s', 'r.id = s.Assign_Techer_id', 'left')
+            ->where($wherecond)
+            ->get()->getRow();        
+            //    echo $this->db->getLastQuery();die;
+        return $query;
     }
 
 

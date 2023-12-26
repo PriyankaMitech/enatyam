@@ -55,9 +55,9 @@ class facultymodel extends Model
             ->where('register_id', $registerId)
             ->get()
             ->getResult();
+        //  echo '<pre>';print_r($this->getLastQuery());die;
         return $videos;
         //   print_r($videos);die;
-        //  echo '<pre>';print_r($this->getLastQuery());die;
     }
 
     public function insertAppointments($data)

@@ -2244,7 +2244,6 @@
                     username: username
                 },
                 success: function(response) {
-                    console.log(response);
                     if (response == 'true') {
                         $('#usernameError').text('');
                         $('.submitButton').prop('disabled', false);
@@ -2272,7 +2271,6 @@
                     username: username
                 },
                 success: function(response) {
-                    console.log(response);
                     if (response == 'false') {
                         $('#emailError').text('');
                         $('.submitButton').prop('disabled', false);
@@ -2301,7 +2299,6 @@
                     mobile_no: mobile_no
                 },
                 success: function(response) {
-                    console.log(response);
                     if (response == 'false') {
                         $('#mobile_noError').text('');
                         $('.submitButton').prop('disabled', false);
@@ -2539,54 +2536,32 @@
                             console.log(response)
                             $('#mobile_noError').addClass('d-none');
                             $('#otperror').addClass('d-none');
-                            // if (response.mobileexist == true) {
-                            //     $('#mobile_noError').addClass('d-none');
-                            //     $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
-                            // }else if (response.emailexist == true) {
-                            //     $('#emailError').addClass('d-none');
-                            //     $('#emailError').removeClass('d-none').text('Email already exist.')
-                            // } else {
-                            //     console.log(response)
-                            //     if (response.email.status == '203') {
-                            //         $('#emailotp').removeClass('d-none').after('<span id="emailerror">' + response.msg + '</span>')
-                            //     }else if (response.mobile.status == '203') {
-                            //         $('#otp').removeClass('d-none').after('<span id="otperror">' + response.msg + '</span>')
-                            //     }else {
-                            //         if (response.email.status == '200' && response.mobile.status == '200' ) {
-                            //             $('#otperror').addClass('d-none');
-                            //             $('#registerformpopup').modal('hide');
-                            //             $('#userformmodal').modal('show');
-                            //             $('#hiddenEmail').val(response.email);
-                            //             $('#yourFormId').submit();
-                            //         } else {
-                            //             $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
-                            //             $('#emailotp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your email</span>')
-                            //         }
-                            //     }
-                            // }
+                            $('#signupbtn').val('Please wait...!')
                             if (response.email.status == '203') {
                                 console.log('response')
                                 $('#emailotp').removeClass('d-none').after('<span id="emailerror">' + response.email.msg + '</span>')
                             }else if (response.email.status == '203') {
-                                $('#otp').removeClass('d-none').after('<span id="otperror">' + response.mobile.msg + '</span>')
+                                // $('#otp').removeClass('d-none').after('<span id="otperror">' + response.mobile.msg + '</span>')
                             } else {
-                                if (response.mobile.mobileexist == true) {
-                                    $('#mobile_noError').addClass('d-none');
-                                    $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
-                                } else if (response.email.emailexist == true) {
+                                // if (response.mobile.mobileexist == true) {
+                                //     $('#mobile_noError').addClass('d-none');
+                                //     $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
+                                // } else 
+                                if (response.email.emailexist == true) {
                                     $('#emailError').addClass('d-none');
                                     $('#emailError').removeClass('d-none').text('Email already exist.')
+                                    $('#signupbtn').val('Sign Up')
                                 } else {
-                                    if (response.email.status == '200' && response.mobile.status == '200') {
+                                    if (response.email.status == '200') {
                                         console.log('response1')
                                         $('#otperror').addClass('d-none');
                                         $('#registerformpopup').modal('hide');
                                         $('#userformmodal').modal('show');
-                                        $('#hiddenEmail').val(response.mobile.email);
+                                        $('#hiddenEmail').val(response.email.email);
                                         $('#yourFormId').submit();
                                     } else {
-                                        console.log('response2')
-                                        $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
+                                        $('#signupbtn').val('Sign Up')
+                                        // $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
                                         $('#emailotp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your email</span>')
                                     }
 
@@ -2596,7 +2571,7 @@
                         },
                         error: function(response) {
                             console.log(response)
-                            swal.fire("Warning", "Login to checkout!", "warning");
+                            swal.fire("Warning", "Error in login!", "warning");
                         }
                     });
 
