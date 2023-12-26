@@ -106,6 +106,7 @@ class PaymentController extends BaseController
                     $payment = $adminmodel->insert_formdata('id', 'payment', $_POST);
                     
                     if ($result) {
+                        session()->destroy();
                         return redirect()->to($this->request->getPost('merchant_surl_id'));
                     }else {
                         $this->session->setFlashdata('insert error', 'Error while inserting data into database.');

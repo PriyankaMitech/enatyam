@@ -493,7 +493,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                             <div class="form-group m-2">
 
-                                <input type="text" name="mobile_no" id="mobile_no" class="form-control" aria-required="true" placeholder="mobile number">
+                                <input type="text" name="mobile_no" id="mobile_no" class="form-control" aria-required="true" placeholder="Enter your whatsapp number">
 
                                 <span id="mobile_noError" class="error"></span>
                             </div>
