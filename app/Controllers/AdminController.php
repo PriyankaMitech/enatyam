@@ -53,7 +53,7 @@ class AdminController extends BaseController
 
     public function AssignTecherForDemo()
     {
-
+         
         $model = new AdminModel();
         $postData = $this->request->getPost();
         $model->edit($postData);
@@ -425,18 +425,35 @@ class AdminController extends BaseController
         return redirect()->to('NewFacultyApplication');
     }
     public function ResheduleByadmin()
-    {
-        //   print_r($_POST);die;
-        $date = $this->request->getPost('Reshedule_date');
-        $time = $this->request->getPost('Reshedule_Time');
-        $result = $this->request->getPost('action');
-        $D_id = $this->request->getPost('D_id');
-        $model = new AdminModel();
-        $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time);
+{
+    $email = $this->request->getPost('email');
+    $AssignTecher_id = $this->request->getPost('AssignTecher_id');
+    $date = $this->request->getPost('Reshedule_date');
+    $time = $this->request->getPost('Reshedule_Time');
+    $result = $this->request->getPost('http://localhost/enatyam/getDemoDetails#custom-tabs-four-profile');
+    $D_id = $this->request->getPost('D_id');
+    $model = new AdminModel();
+    $registerRecord = $model->findname($AssignTecher_id);
 
-        return redirect()->to('getDemoDetails');
+    if (!empty($registerRecord)) {
+        $firstRecord = reset($registerRecord);
+        $ccEmails = [$firstRecord->email]; // Assuming you want to CC the faculty's email
+        $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time);
+        $Subject = 'Your Demo Rescheduled';
+        $msg = "Your Demo Has Been Rescheduled - Date: $date, Time: $time";
+        if ($result == 1) {
+            // Pass $ccEmails to sendConfirmationEmail
+            sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
+            $this->session->setFlashdata('success', 'Demo Rescheduled Successfully.');
+        } else {
+            $this->session->setFlashdata('error', 'Error Rescheduling Demo. Please try again.');
+        }
+    } else {
+        $this->session->setFlashdata('error', 'Error fetching faculty details. Please try again.');
     }
 
+    return redirect()->to('getDemoDetails');
+}
     public function FacultysidebarShedule()
     {
         $model = new AdminModel();

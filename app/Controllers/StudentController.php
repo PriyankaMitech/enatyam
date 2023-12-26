@@ -108,7 +108,7 @@ class StudentController extends BaseController
     }
 
     public function StudentSideBarVideo()
-    {   
+    {
         return view('StudentSideBarVideo');
     }
 
@@ -203,17 +203,16 @@ class StudentController extends BaseController
         $user_id = $session->get('id');
         $StudentModel = new StudentModel();
 
-        $data['SessionCount'] = $StudentModel->get_user_Session($user_id); 
-        $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);   
-    //    print_r($data['SessionCount']);die;
+        $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
+        $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
+        //  print_r($data['SessionCount']);die;
         return view('StudentSidebar/ScheduleStudent',$data);
-
     }
 
     public function selectStudentSchedule()
     {
         if ($this->request->getMethod() === 'post') {
-            
+
             $student_register_Id = $this->request->getPost('register_student_id');
             $selectedAppointments = json_decode($this->request->getPost('selected_appointments'), true);
 
@@ -247,7 +246,7 @@ class StudentController extends BaseController
 
         $data['country_data'] = $model->getalldata('countries', $wherecond);
 
-    //    echo'<pre>'; print_r($data['country_data']);exit();
+        //    echo'<pre>'; print_r($data['country_data']);exit();
         return view('StudentSidebar/StudentProfile', $data);
     }
     public function Studentpasswordupdate()
@@ -284,47 +283,53 @@ class StudentController extends BaseController
         $model = new AdminModel();
 
         $Country = $this->request->getPost('changeCountry');
-           // Sample country name
-    //  $countryName = $this->request->getPost('changeCountry');
+        // echo $Country;
+        // die;
 
-     // Fetch the country code based on the name (this requires database interaction)
-     // For demonstration, we'll assume the code is fetched from the database:
-   
+        // Sample country name
+        //  $countryName = $this->request->getPost('changeCountry');
 
-     // Pass data to view
-    //  return view('home', ['countryCode' => $countryCode]);
+        // Fetch the country code based on the name (this requires database interaction)
+        // For demonstration, we'll assume the code is fetched from the database:
+
+
+        // Pass data to view
+        //  return view('home', ['countryCode' => $countryCode]);
         $result = session();
         $registerId = $result->get('id');
+        // print_r($registerId);
+        // die;
         $StudentModel = new StudentModel();
-        $countryList['list'] = $StudentModel->getCountryList();
-  
-    //     $countryCode = $StudentModel->getCountryCodeFromDatabase($Country);
-    //     $Changecountry =  $StudentModel->changeCountry($registerId, $Country);
+        $countryList['list'] = $StudentModel->updateCountry($Country, $registerId);
+
+        //     $countryCode = $StudentModel->getCountryCodeFromDatabase($Country);
+        //     $Changecountry =  $StudentModel->changeCountry($registerId, $Country);
         return redirect()->to('StudentProfile');
-     }
+    }
 
     public function StudentSelectClassDates()
     {
-        if (isset($_SESSION['sessiondata']) && $_SESSION['role'] =='Student') {
-            $result = session();       
+        if (isset($_SESSION['sessiondata']) && $_SESSION['role'] == 'Student') {
+            $result = session();
             $registerId = $result->get('id');
             $StudentModel = new StudentModel();
             $registerData =  $StudentModel->fetchid($registerId);
             $assignTeacherId = $registerData->Assign_Techer_id;
-            $data['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId,$registerId);
+            $data['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId, $registerId);
             $data['registerId'] = $registerId;
             $data['Assign_Techer_id'] = $assignTeacherId;
             // $data['assignFacultyData'] = $assignFacultyData;
-            return view('StudentSidebar/StudentSelectClassDates',$data);
-        }else {
+            return view('StudentSidebar/StudentSelectClassDates', $data);
+        } else {
             return redirect()->to(base_url());
         }
     }
-    public function selectedslotsfromstudent()  {
+    public function selectedslotsfromstudent()
+    {
         $registerId = $this->request->getPost('registerId');
         $selectedId = $this->request->getPost('selectedId');
         $StudentModel = new StudentModel();
-        
+
         $registerData = $StudentModel->fetchProfileDate($registerId);
         //    print_r($registerData);
         // print_r($registerData[0]->Session_Start_Date);die;
@@ -337,15 +342,15 @@ class StudentController extends BaseController
         ];
         //  print_r($dataToUpdate);die;
 
-        $StudentModel->updateData($selectedId, $dataToUpdate,$registerId);
+        $StudentModel->updateData($selectedId, $dataToUpdate, $registerId);
         return redirect()->to('SelectDate');
     }
-        public function studentsessionstatus()
-        {
-            $result = session();       
-            $registerId = $result->get('id');
-            $StudentModel = new StudentModel();
-            $registerData =  $StudentModel->fetchSessionsByid($registerId);
+    public function studentsessionstatus()
+    {
+        $result = session();
+        $registerId = $result->get('id');
+        $StudentModel = new StudentModel();
+        $registerData =  $StudentModel->fetchSessionsByid($registerId);
 
         $result = session();
         $registerId = $result->get('id');
@@ -357,7 +362,7 @@ class StudentController extends BaseController
         $data['assignFacultyData'] = $assignFacultyData;
         return view('StudentSidebar/StudentSelectClassDates', $data);
     }
-   
+
 
 
 
@@ -375,91 +380,89 @@ class StudentController extends BaseController
             'rating' => $_POST['faculty'],
             'review_message' => $_POST['review_message']
         );
-		$result = $model->insert_formdata('id', 'feedback',$insertdata);
-		if ($result) {
-            session()->setFlashdata('success','Feedback submited!');
+        $result = $model->insert_formdata('id', 'feedback', $insertdata);
+        if ($result) {
+            session()->setFlashdata('success', 'Feedback submited!');
             echo json_encode($result);
             // print_r($this->session->flashdata('update'));die;
 
         }
     }
 
-	public function get_citizenrate_by_id()
-	{
-		$sector = $this->input->post('sector');
-		$sector_name = str_replace("_RATING",'',$sector);
-		// echo json_encode($sector_name);
-		$result = $this->Citizen_Model->get_citizenrate_by_id($sector, $sector_name);
-		echo json_encode($result);
-	}
+    public function get_citizenrate_by_id()
+    {
+        $sector = $this->input->post('sector');
+        $sector_name = str_replace("_RATING", '', $sector);
+        // echo json_encode($sector_name);
+        $result = $this->Citizen_Model->get_citizenrate_by_id($sector, $sector_name);
+        echo json_encode($result);
+    }
 
     public function reschedule()
     {
         echo view('StudentSidebar/RescheduleClass');
     }
 
-   public function SessionConduct() {
-    if (isset($_POST['conduct'])) {
-        $conductStatus = $_POST['conduct'];
-        $modalCurrentDate = isset($_POST['modalCurrentDate']) ? $_POST['modalCurrentDate'] : 'N/A';
-        $modalSessionNumber = isset($_POST['modalSessionNumber']) ? $_POST['modalSessionNumber'] : 'N/A';
-        $modalButtonText = isset($_POST['modalButtonText']) ? $_POST['modalButtonText'] : 'N/A';
+    public function SessionConduct()
+    {
+        if (isset($_POST['conduct'])) {
+            $conductStatus = $_POST['conduct'];
+            $modalCurrentDate = isset($_POST['modalCurrentDate']) ? $_POST['modalCurrentDate'] : 'N/A';
+            $modalSessionNumber = isset($_POST['modalSessionNumber']) ? $_POST['modalSessionNumber'] : 'N/A';
+            $modalButtonText = isset($_POST['modalButtonText']) ? $_POST['modalButtonText'] : 'N/A';
 
-        // Now you can use these values as needed
-        echo "Conduct Status: $conductStatus\n";
-        echo "Modal Current Date: $modalCurrentDate\n";
-        echo "Modal Session Number: $modalSessionNumber\n";
-        echo "Modal Button Text: $modalButtonText\n";
-    } else {
-        // Handle case where conduct value is not set
-        echo "Conduct value not set";
+            // Now you can use these values as needed
+            echo "Conduct Status: $conductStatus\n";
+            echo "Modal Current Date: $modalCurrentDate\n";
+            echo "Modal Session Number: $modalSessionNumber\n";
+            echo "Modal Button Text: $modalButtonText\n";
+        } else {
+            // Handle case where conduct value is not set
+            echo "Conduct value not set";
+        }
+    }
+    public function submitForm()
+    {
+        $result = session();
+        $registerId = $result->get('id');
+        $studentModel = new StudentModel();
+        $action = $this->request->getPost('action');
+        $sessionNumber = $this->request->getPost('sessionNumber');
+
+        switch ($action) {
+            case 'Reschedule':
+                $data = [
+                    'action' => $action,
+                    'sessionNumber' => $sessionNumber,
+                    'Session_date' => $this->request->getPost('Session_date'),
+                    'current_time' => $this->request->getPost('current_time'),
+                    'reschedule_time' => $this->request->getPost('reschedule_time'),
+                    'reschedule_date' => $this->request->getPost('reschedule_date'),
+                    'student_registerid' => $registerId,
+                    'reason' => $this->request->getPost('reason'),
+                ];
+                break;
+            case 'Leave':
+                $data = [
+                    'action' => $action,
+                    'form2_date' => $this->request->getPost('form2_date'),
+                    'form2Reason' => $this->request->getPost('form2Reason'),
+                ];
+                break;
+            default:
+                return $this->response->setStatusCode(400)->setJSON(['error' => 'Invalid action']);
+        }
+
+        // Insert data into the Student table with student_registerid populated
+        $success = $studentModel->insertFormData($data, $registerId);
+        // print_r($success);die;
+        if ($success == '1') {
+            session()->setFlashdata('success', 'Rewest Send successfully.');
+            echo json_encode($success);
+        }
+    }
+
+    public function getCountryCode()
+    {
     }
 }
-public function submitForm()
-{
-    $result = session();
-    $registerId = $result->get('id');
-    $studentModel = new StudentModel();
-    $action = $this->request->getPost('action');
-    $sessionNumber = $this->request->getPost('sessionNumber');
-
-    switch ($action) {
-        case 'Reschedule':
-            $data = [
-                'action' => $action,
-                'sessionNumber' => $sessionNumber,
-                'Session_date' => $this->request->getPost('Session_date'),
-                'current_time' => $this->request->getPost('current_time'),
-                'reschedule_time' => $this->request->getPost('reschedule_time'),
-                'reschedule_date' => $this->request->getPost('reschedule_date'),
-                'student_registerid' => $registerId,
-                'reason' => $this->request->getPost('reason'),
-            ];
-            break;
-        case 'Leave':
-            $data = [
-                'action' => $action,
-                'form2_date' => $this->request->getPost('form2_date'),
-                'form2Reason' => $this->request->getPost('form2Reason'),
-            ];
-            break;
-        default:
-            return $this->response->setStatusCode(400)->setJSON(['error' => 'Invalid action']);
-    }
-
-    // Insert data into the Student table with student_registerid populated
-    $success = $studentModel->insertFormData($data, $registerId);
-    // print_r($success);die;
-    if($success == '1'){
-    session()->setFlashdata('success', 'Rewest Send successfully.');
-    echo json_encode($success);
-    }
- 
-}
-
-public function getCountryCode(){
-  
-}
-
-}
-
