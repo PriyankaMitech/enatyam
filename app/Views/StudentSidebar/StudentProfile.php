@@ -170,5 +170,3 @@
 </div>
 
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>
-
-<?php echo view('StudentSidebar/StudentFooter.php'); ?>
