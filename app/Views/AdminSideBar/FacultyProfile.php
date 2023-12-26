@@ -153,7 +153,28 @@
                         </div>
                     </div>
                 </div>
-                <?php endforeach;} ?>
+                <?php endforeach;}else{ ?>
+                    <div class="col-xl-12 col-lg-12 col-sm-12">
+                    <div class="card contact_list text-center">
+                        <div class="card-body">
+                            <div class="user-content">
+                                <div class="user-info">
+                                  
+                                    <div class="user-details">
+                                        <p class="mbless">No Data Available</p>
+
+                                    </div>
+                                </div>
+                              
+                            </div>
+
+                      
+
+                        </div>
+                    </div>
+                </div>
+                    
+                <?php } ?>
             </div>
 
         </div>

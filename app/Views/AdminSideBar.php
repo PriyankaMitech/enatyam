@@ -171,7 +171,7 @@
                                             </p>
                                         </a>
                                         <ul class="nav nav-treeview">
-                                            <li class="nav-item" <?php if (in_array('AdminList', $access_levels)) {
+                                            <!-- <li class="nav-item" <?php if (in_array('AdminList', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
@@ -180,7 +180,7 @@
                                                     <i class="nav-icon fas fa-calendar-alt"></i>
                                                     <p>Admin List</p>
                                                 </a>
-                                            </li>
+                                            </li> -->
                                             <li class="nav-item" <?php if (in_array('getDemoDetails', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
@@ -422,13 +422,24 @@
                                                                 echo "style='display:none'";
                                                             } ?>>
                                         <a href="#" class="nav-link">
-                                            <i class="nav-icon far fa fa-child"></i>
+                                            <i class="nav-icon far fa fa-users"></i>
+
                                             <p>
                                                 Groups
                                                 <i class="right fas fa-angle-left"></i>
                                             </p>
                                         </a>
                                         <ul class="nav nav-treeview">
+                                        <li class="nav-item" <?php if (in_array('create_group', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?>>
+                                                <a href="<?php echo base_url() ?>create_group" class="nav-link">
+                                                    <i class="far fa-circle nav-icon"></i>
+                                                    <p>Create Groups</p>
+                                                </a>
+                                            </li>
                                             <li class="nav-item" <?php if (in_array('student_list_of_group', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
@@ -439,16 +450,7 @@
                                                     <p>Groups List</p>
                                                 </a>
                                             </li>
-                                            <li class="nav-item" <?php if (in_array('create_group', $access_levels)) {
-                                                                        echo "style='display:block'";
-                                                                    } else {
-                                                                        echo "style='display:none'";
-                                                                    } ?>>
-                                                <a href="<?php echo base_url() ?>create_group" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Create Groups</p>
-                                                </a>
-                                            </li>
+                                           
                                             <!-- Add other Groups menu items with access level checks here -->
                                         </ul>
                                     </li>
@@ -727,12 +729,12 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            <li class="nav-item"  >
+                            <!-- <li class="nav-item"  >
                                 <a href="<?php echo base_url() ?>AdminList" class="nav-link">
                                     <i class="nav-icon fas fa-calendar-alt"></i>
                                     <p>Admin List</p>
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item"  >
                                 <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
@@ -891,25 +893,26 @@
                     <!-- Groups Menu -->
                     <li class="nav-item" >
                         <a href="#" class="nav-link">
-                            <i class="nav-icon far fa fa-child"></i>
+                        <i class="nav-icon far fa fa-users"></i>
                             <p>
                                 Groups
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
+                        <li class="nav-item" >
+                                <a href="<?php echo base_url() ?>create_group" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Create Groups</p>
+                                </a>
+                            </li>
                             <li class="nav-item" >
                                 <a href="<?php echo base_url() ?>student_list_of_group" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Groups List</p>
                                 </a>
                             </li>
-                            <li class="nav-item" >
-                                <a href="<?php echo base_url() ?>create_group" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Create Groups</p>
-                                </a>
-                            </li>
+                           
                             <!-- Add other Groups menu items with access level checks here -->
                         </ul>
                     </li>
