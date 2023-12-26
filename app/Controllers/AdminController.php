@@ -41,7 +41,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-
+                // echo '<pre>';print_r($data['Faculty']);die;
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -613,9 +613,10 @@ class AdminController extends BaseController
                 $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 $result['getuser'] = $model->getalldata('register', $wherecond);
             } else if ($_SESSION['sessiondata']['role'] == 'Student') {
-                $wherecond = array('assign_student_id' => $_SESSION['sessiondata']['id']);
-                $result['getuser'] = $model->getalldata('faculty', $wherecond);
+                $wherecond = array('id' => $_SESSION['sessiondata']['Assign_Techer_id']);
+                $result['getuser'] = $model->chatfaculty('register', $wherecond);
             }
+            // echo '<pre>';print_r($result);die;
             echo view('Chatuser', $result);
         } else {
             echo view('/');

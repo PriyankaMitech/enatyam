@@ -38,9 +38,7 @@ class FacultyController extends BaseController
             $facultymodel = new Facultymodel();
             $adminModel = model('AdminModel');
 
-            // Fetch today's session data
             $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
-          // print_r($todaysession);die;
             $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
 
             $todayDate = date('Y-m-d H:i:s');

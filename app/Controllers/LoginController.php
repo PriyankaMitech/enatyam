@@ -48,7 +48,7 @@ class LoginController extends BaseController
         ]);
 
         $user = $provider->getResourceOwner($token);
-
+        // echo '<pre>';print_r($user);die;
         return redirect()->to('Dance');
     }
 
@@ -129,6 +129,7 @@ class LoginController extends BaseController
             }
         }else {
             $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['mobile_no'], $_POST['email']);
+            // print_r($checkotp);
             echo json_encode($checkotp);
         }
     }

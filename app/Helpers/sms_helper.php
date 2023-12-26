@@ -51,7 +51,8 @@ require_once 'src/SMTP.php';
 
     function sendConfirmationEmail($email, $ccEmails = [], $Subject=null, $msg=null, $otp=null, $password=null)
     {
-        // try {
+        try {
+            // print_r($email);die;
             $mail = new PHPMailer(true);
             $mail->isSMTP();
             $mail->Host     = 'smtp.gmail.com';
@@ -72,8 +73,8 @@ require_once 'src/SMTP.php';
             $mail->Subject = $Subject;
             $mail->Body = $msg;
             $mail->send();
-        // } catch (Exception $e) {
-        //     echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
-        //     return false;
-        // }
+        } catch (Exception $e) {
+            echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            return false;
+        }
     }
