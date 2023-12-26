@@ -617,7 +617,7 @@ class AdminController extends BaseController
                 $result['getuser'] = $model->chatfaculty('register', $wherecond);
                 // print_r($result);die;
             }
-            echo view('Chatuser', $result);
+            echo view('chatuser', $result);
         } else {
             echo view('/');
         }
