@@ -145,33 +145,30 @@ class FacultyController extends BaseController
   }
 
   public function StudentuplodedVidio()
-  {
-
+{
     if (isset($_SESSION['sessiondata'])) {
-      $sessionData = $_SESSION['sessiondata'];
+        $sessionData = $_SESSION['sessiondata'];
 
-      $email = $sessionData['email'] ?? null;
-      $password = $sessionData['password'] ?? null;
+        $email = $sessionData['email'] ?? null;
+        $password = $sessionData['password'] ?? null;
 
-      if ($email !== null && $password !== null) {
+        if ($email !== null && $password !== null) {
 
-        $result = session();
-        $registerId = $result->get('id');
-        $db = \Config\Database::connect();
-        $table = $db->table('uplode_study_video_from_student');
-        $query = $table->where('Faculty_id', $registerId)->get();
-        if ($query->getNumRows() > 0) {
-          $results = $query->getResult();
-          //   print_r($results);die;
-          return view('StudentuplodedVidio', ['results' => $results]);
-        } else {
-          return redirect()->to(base_url());
+            $result = session();
+            $registerId = $result->get('id');
+            $db = \Config\Database::connect();
+            $table = $db->table('uplode_study_video_from_student');
+            $query = $table->where('Faculty_id', $registerId)->get();
+            
+            $data['results'] = $query->getResult();
+            $data['dataFound'] = count($data['results']) > 0;
+
+            return view('StudentuplodedVidio', $data);
         }
-      } else {
-        return redirect()->to(base_url());
-      }
     }
-  }
+    // Show the page even if session data is not set
+    return view('StudentuplodedVidio', ['dataFound' => false]);
+}
 
   public function MonthlyCalendar()
 {

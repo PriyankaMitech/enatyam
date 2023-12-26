@@ -132,7 +132,7 @@ $page = $uri->getSegment(count($pages));
                     </div>
                     </form>
                 </div>
-                </div>
+            </div>
             </div>
           </div>
 
