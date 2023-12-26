@@ -54,8 +54,8 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php if (!empty($assignFacultyData['assignFacultyData'])) : ?>
-                                            <?php foreach ($assignFacultyData['assignFacultyData'] as $facultyData) : ?>
+                                        <?php if (!empty($assignFacultyData)) : ?>
+                                            <?php foreach ($assignFacultyData as $facultyData) : ?>
                                                 <tr>
                                                     <td><?= $facultyData->full_name; ?></td>
                                                     <td><?= $facultyData->date; ?></td>

@@ -341,30 +341,30 @@ class LoginModel extends Model
             ->get()
             ->getRow();
             
-        if ($otp == $result->otp) {
-            $updateData = [
-                'is_mobile_verified' => 'Y'
-            ];
+        // if ($otp == $result->otp) {
+        //     $updateData = [
+        //         'is_mobile_verified' => 'Y'
+        //     ];
     
-            $this->db
-                ->table('register')
-                ->where(["mobile_no" => $mobile_no])
-                ->set($updateData)
-                ->update();
+        //     $this->db
+        //         ->table('register')
+        //         ->where(["mobile_no" => $mobile_no])
+        //         ->set($updateData)
+        //         ->update();
     
-            $data1 = array(
-                'msg' => 'Mobile verified',
-                'status' => '200',
-                'email' => $email  
-            );
+        //     $data1 = array(
+        //         'msg' => 'Mobile verified',
+        //         'status' => '200',
+        //         'email' => $email  
+        //     );
     
-        }else {
-            $data1 = array(
-                'msg' => 'Enter correct otp',
-                'status' => '203'
-            );
+        // }else {
+        //     $data1 = array(
+        //         'msg' => 'Enter correct otp',
+        //         'status' => '203'
+        //     );
     
-        }
+        // }
 
         if($emailotp == $result->emailotp){
             $this->db
@@ -387,7 +387,7 @@ class LoginModel extends Model
         }
 
         $result = array(
-            'mobile' => $data1,
+            // 'mobile' => $data1,
             'email' => $data2
         );
         return $result;

@@ -73,7 +73,7 @@ $page = $uri->getSegment(count($pages));
 
                     <div class="direct-chat-contacts">
                         <ul class="contacts-list">
-                            <?php if (!$_SESSION['sessiondata']['role'] == 'Admin') {?>
+                            <?php if ($_SESSION['sessiondata']['role'] != 'Admin') {?>
                             <li>
                                 <a href="<?= base_url()?>chatuser/1">
                                     <img class="contacts-list-img" src="<?php echo base_url()?>public/images/user.png" alt="User">
@@ -90,12 +90,13 @@ $page = $uri->getSegment(count($pages));
                             <?php } ?>
                             <?php if (isset($getuser) && !empty($getuser)) {
                                 foreach ($getuser as $chat) { 
+                                    // print_r($chat);die;
                                     if ($_SESSION['sessiondata']['role'] == 'Faculty' || $_SESSION['sessiondata']['role'] == 'Admin') {
                                         $id= $chat->id;
                                         $full_name = $chat->full_name;
                                     }else if($_SESSION['sessiondata']['role'] == 'Student') {
-                                        $id = $chat->register_id;
-                                        $full_name = $chat->faculty_name;
+                                        $id = $chat->id;
+                                        $full_name = $chat->full_name;
                                     }
                             ?>
                             <li>
