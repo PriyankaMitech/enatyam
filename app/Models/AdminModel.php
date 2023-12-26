@@ -263,13 +263,13 @@ class AdminModel extends Model
 
 
     public function getStudentData()
-{
-    return $this->db->table('student')
-        ->select('student.*, register.Payment_status')
-        ->join('register', 'register.id = student.register_id', 'left')
-        ->get()
-        ->getResult();
-}
+    {
+        return $this->db->table('student')
+            ->select('student.*, register.Payment_status')
+            ->join('register', 'register.id = student.register_id', 'left')
+            ->get()
+            ->getResult();
+    }
 
 
     public function getStudyVideoUplodedByStudent()
@@ -589,9 +589,10 @@ class AdminModel extends Model
             return false;
         }
     }
-    public function  getAllSlots($wherecond) {
+    public function  getAllSlots($wherecond)
+    {
         $registerData = $this->db->table('register')->where('carrier_id', $wherecond)->get()->getRow();
-// print_r($registerData);die;
+        // print_r($registerData);die;
         if ($registerData) {
             $registerId = $registerData->id;
             $result = $this->db->table('schedule')->where('faculty_register_id', $registerId)->get()->getResult();
@@ -604,10 +605,11 @@ class AdminModel extends Model
             // If no data is found in the 'register' table, return false
             return false;
         }
-        }
+    }
     public function getalldata($table, $wherecond)
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
+
         // echo $this->db->getLastQuery();die;
         if ($result) {
             return $result;
@@ -617,15 +619,15 @@ class AdminModel extends Model
     }
 
     public function getalldatadesc($table, $wherecond, $orderBy = null, $orderByDirection = 'desc')
-{
-    $query = $this->db->table($table)->where($wherecond);
+    {
+        $query = $this->db->table($table)->where($wherecond);
 
-    if ($orderBy !== null) {
-        $query->orderBy($orderBy, $orderByDirection);
+        if ($orderBy !== null) {
+            $query->orderBy($orderBy, $orderByDirection);
+        }
+
+        return $query->get()->getResult();
     }
-
-    return $query->get()->getResult();
-}
 
 
     public function get_single_data($table, $wherecond)
@@ -911,10 +913,10 @@ class AdminModel extends Model
         $res1 = substr($sql1, 0, strlen($sql1) - 2) . ")";
         $result = $this->db->query($res . $res1);
 
-        
+
         $this->db->table('register')
-        ->where('id', $_SESSION['sessiondata']['id'])
-        ->update(['Payment_status' => 'Y']);
+            ->where('id', $_SESSION['sessiondata']['id'])
+            ->update(['Payment_status' => 'Y']);
 
 
         if ($result) {
@@ -942,16 +944,14 @@ class AdminModel extends Model
     public function getRecordsBefore7Days()
     {
         $sevenDaysAgo = date('Y-m-d', strtotime('-7 days'));
-        
+
         $query = $this->db->table('carrier')
             ->where("DATE(Booking_Date_Time) >= ", $sevenDaysAgo)
             ->where("DATE(Booking_Date_Time) <= ", date('Y-m-d'))
             ->where('Result_of_application', 'Pending') // Add this line
             ->get();
-    //    echo $this->db->getLastQuery();die;
+        //    echo $this->db->getLastQuery();die;
         return $query->getResult();
-
-
     }
     public function chechk_courses_id_id($courses_id, $sub_courses_name)
     {
@@ -961,15 +961,15 @@ class AdminModel extends Model
             ->where('sub_courses_name', $sub_courses_name)
             ->get()
             ->getRow();
-    
-        if(!empty($result)){
-        return $result;  
-        }else{
+
+        if (!empty($result)) {
+            return $result;
+        } else {
             return false;
-        } 
+        }
     }
 
-    
+
 
     public function chechk_sub_courses_name_id($courses_id, $sub_courses_name)
     {
@@ -979,13 +979,12 @@ class AdminModel extends Model
             ->where('courses_id', $courses_id)
             ->get()
             ->getRow();
-    
-        if(!empty($result)){
-        return $result;  
-        }else{
-            return false;
-        } 
 
+        if (!empty($result)) {
+            return $result;
+        } else {
+            return false;
+        }
     }
 
     public function fetchattandance()
@@ -998,14 +997,13 @@ class AdminModel extends Model
     public function getpaymentdata()
     {
         $query = $this->db->table('payment')
-        ->select('payment.*, register.full_name')
-        ->join('register', 'register.id = payment.user_id')
-        ->get()
-        ->getResult();
+            ->select('payment.*, register.full_name')
+            ->join('register', 'register.id = payment.user_id')
+            ->get()
+            ->getResult();
 
-    return $query;
+        return $query;
     }
-       
     public function chatfaculty($table, $wherecond)
     {
         $query['chatuser'] = $this->db->table(''.$table.' r')
@@ -1016,12 +1014,5 @@ class AdminModel extends Model
             //    echo $this->db->getLastQuery();die;
         return $query;
     }
-
-
-
-
-
-    
-    
 
 }
