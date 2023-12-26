@@ -246,7 +246,7 @@ class LoginController extends BaseController
         // session_destroy();
         $session->destroy();
         // print_r($_SESSION);die;
-        return redirect()->to('/');
+        return redirect()->to('/Home');
     }
 
     public function update_profile_data()

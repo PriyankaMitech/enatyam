@@ -37,9 +37,11 @@ class BillingC extends BaseController
             $BillingM->insert($insertdata); 
             $lastinsert_id = $BillingM->getInsertID();
         }
+        
         $data['id'] = $this->session->get('PricingType_Id');
         $billingModel = new BillingM();
         $matchingRecords = $billingModel->getSessionPricingData($data['id']);
+        
         $data['matchingRecords'] = $matchingRecords;
         $data['billingdetails'] = $insertdata;
 
@@ -64,8 +66,13 @@ class BillingC extends BaseController
         } else {
             $billingModel = new BillingM(); // Load the model
             $matchingRecords = $billingModel->getSessionPricingData($id);
+            $PricingId = '';
 
-            $PricingId = $matchingRecords->PricingType_Id;
+            if ($matchingRecords !== null) {
+                $PricingId = $matchingRecords->PricingType_Id;
+            }
+
+            // $PricingId = $matchingRecords->PricingType_Id;
             $res = $this->session->set('PricingType_Id', $PricingId);
 
             $data['matchingRecords'] = $matchingRecords;

@@ -1,4 +1,4 @@
-<?php echo view('Studentsidebar/Studentsidebar'); ?>
+<?php echo view('StudentSidebar/Studentsidebar'); ?>
 <style>
 #myModal {
     width: 24%;

@@ -1,4 +1,4 @@
-<?php echo view('Studentsidebar/Studentsidebar');?>
+<?php echo view('StudentSidebar/Studentsidebar'); ?>
     <style>
     .card-container {
         display: flex;
@@ -117,7 +117,7 @@
 
 
                                 <span style="margin-left: 50px;">
-                                    <a href="/enatyam/#pricing-section" target="_blank">Know More</a>
+                                    <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
                                 </span>
 
 
@@ -191,7 +191,7 @@
                                 </li>
 
                                 <span style="margin-left: 50px;">
-                                    <a href="/enatyam/#pricing-section" target="_blank">Know More</a>
+                                    <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
                                 </span>
 
 
@@ -264,7 +264,7 @@
                                 </li>
 
                                 <span style="margin-left: 50px;">
-                                    <a href="/enatyam/#pricing-section" target="_blank">Know More</a>
+                                    <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
                                 </span>
 
 
@@ -344,7 +344,7 @@
                                 </li>
 
                                 <span style="margin-left: 50px;">
-                                    <a href="/enatyam/#pricing-section" target="_blank">Know More</a>
+                                    <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
                                 </span>
 
                             </ul>
@@ -419,7 +419,7 @@
                                 </li>
 
                                 <span style="margin-left: 50px;">
-                                    <a href="/enatyam/#pricing-section" target="_blank">Know More</a>
+                                    <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
                                 </span>
 
 
@@ -491,7 +491,7 @@
                                 </li>
 
                                 <span style="margin-left: 50px;">
-                                    <a href="/enatyam/#pricing-section" target="_blank">Know More</a>
+                                    <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
                                 </span>
 
                             </ul>

@@ -24,9 +24,9 @@ class CarrierController extends BaseController
     
             // Debugging: Check if video file is uploaded
             if ($videos && $videos->isValid()) {
-                echo "Video Name: " . $videos->getName() . '<br>';
-                echo "Video Size: " . $videos->getSize() . '<br>';
-                echo "Video Type: " . $videos->getClientMimeType() . '<br>';
+                "Video Name: " . $videos->getName() . '<br>';
+                "Video Size: " . $videos->getSize() . '<br>';
+                "Video Type: " . $videos->getClientMimeType() . '<br>';
             }
     
             // Check if all files are uploaded and valid

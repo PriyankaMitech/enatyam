@@ -1465,6 +1465,9 @@
         $('#session_start_date').attr('min', currentDate);
 
         $('.Session_Start_Date').attr('min', currentDate);
+
+        $('#notification_date').attr('min', currentDate)
+        
     });
 </script>
 

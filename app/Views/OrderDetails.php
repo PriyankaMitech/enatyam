@@ -1,4 +1,5 @@
 <?php include('header.php'); ?>
+
 <?php if (session()->getFlashdata('success')) : ?>
 
     <div class="alert alert-success">
@@ -34,11 +35,13 @@
     </div>
 </section>
 <?php
+
 $txnid = time();
 $surl = $surl;
 $furl = $furl;
 $key_id = RAZOR_KEY_ID;
-$currency_code = $currency_code;            
+$currency_code = $currency_code;  
+          
 $per_session_price = $matchingRecords->Per_Session_Price; 
 $amount = $matchingRecords->Total_Price;
 // $amount = '100';
@@ -51,6 +54,7 @@ $name = APPLICATION_NAME;
 
 $return_url = site_url().'PaymentController/payment';
 ?>
+
 <form name="razorpay-form" id="razorpay-form" action="<?php echo $return_url; ?>" method="POST">
   <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id" />
   <input type="hidden" name="merchant_order_id" id="merchant_order_id" value="<?php echo $merchant_order_id; ?>"/>
@@ -376,3 +380,4 @@ $return_url = site_url().'PaymentController/payment';
         }
     }
 </script>
+

@@ -615,8 +615,8 @@ class AdminController extends BaseController
             } else if ($_SESSION['sessiondata']['role'] == 'Student') {
                 $wherecond = array('id' => $_SESSION['sessiondata']['Assign_Techer_id']);
                 $result['getuser'] = $model->chatfaculty('register', $wherecond);
+                // print_r($result);die;
             }
-            // echo '<pre>';print_r($result);die;
             echo view('Chatuser', $result);
         } else {
             echo view('/');
@@ -1110,9 +1110,11 @@ class AdminController extends BaseController
         $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
         $courses_id_g = $this->request->getPost('courses_id_g');
         $GroupSession = 'GroupSession';
+        $Payment_status = 'Y';
+
 
         $whereCondition = '';
-            $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
+            $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'Payment_status' =>  $Payment_status, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
 
 
         $student_data = $model->getalldata('register', $whereCondition);
