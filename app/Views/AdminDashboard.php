@@ -1,70 +1,72 @@
 <?php include "AdminSideBar.php"; ?>
 
 <style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
-    th,
-    td {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
+th,
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
 
-    th {
-        background-color: #f2f2f2;
+th {
+    background-color: #f2f2f2;
 
-    }
+}
 
-    .demo-card {
-        padding: 10px;
-    }
+.demo-card {
+    padding: 10px;
+}
 
-    .demo-card h3 {
-        color: #28a745 !important;
-        font-size: 18px
-    }
+.demo-card h3 {
+    color: #28a745 !important;
+    font-size: 18px
+}
 
-    .demo-card h4 {
-        color: #17a2b8 !important;
-        font-weight: 600
-    }
+.demo-card h4 {
+    color: #17a2b8 !important;
+    font-weight: 600
+}
 
-    .demo-card i {
-        color: #ffc107 !important;
-        float: right;
-        display: block;
-        text-align: right;
-        width: 30px;
-        height: 30px;
-        background: #ffc10733;
-        line-height: 30px;
-        text-align: center;
-        margin-left: auto;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: 0.5s;
-    }
+.demo-card i {
+    color: #ffc107 !important;
+    float: right;
+    display: block;
+    text-align: right;
+    width: 30px;
+    height: 30px;
+    background: #ffc10733;
+    line-height: 30px;
+    text-align: center;
+    margin-left: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
 
-    .demo-card i:hover {
-        color: #fff !important;
+.demo-card i:hover {
+    color: #fff !important;
 
-        background: #ffc107;
-    }
+    background: #ffc107;
+}
 
-    .hidden {
-        display: none;
-    }
+.hidden {
+    display: none;
+}
 
-    .show {
-        display: block;
-        /* or inline, flex, etc. based on your layout */
-    }
-    .tc, .tc a{
-        color : #fff !important;
-    }
+.show {
+    display: block;
+    /* or inline, flex, etc. based on your layout */
+}
+
+.tc,
+.tc a {
+    color: #fff !important;
+}
 </style>
 
 
@@ -84,7 +86,7 @@
             </div>
         </div>
     </div>
-     
+
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -101,14 +103,15 @@
                         <div class="icon">
                             <i class="ion ion-bag"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"  id="toggle-table5"></i></a>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"
+                                id="toggle-table5"></i></a>
 
 
                     </div>
-                    </div>
+                </div>
 
-              
-               
+
+
                 <!-- ./col -->
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
@@ -135,12 +138,12 @@
                             <?php if (!empty($admins)): ?>
                             <h3><?= count($admins) ?></h3>
                             <?php else: ?>
-                                <h3>0</h3>
+                            <h3>0</h3>
 
                             <?php endif; ?>
                             <p>Students</p>
                         </div>
-                        
+
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
@@ -157,7 +160,7 @@
                             <?php if (!empty($Faculty)): ?>
                             <h3><?= count($Faculty) ?></h3>
                             <?php else: ?>
-                                <h3>0</h3>
+                            <h3>0</h3>
 
                             <?php endif; ?>
                             <p>Teachers</p>
@@ -174,35 +177,35 @@
 
 
                 <div class="col-md-12 card" id="faculty-table5" style="display:none">
-                        <div class="card-header">
-                            <h3 class="card-title"> Today Demo List</h3>
-                        </div>
-                        <div class="card-body table-responsive">
-                            <table class="table table-hover text-nowrap">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Course</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php if (!empty($records)): ?>
-                                    <?php foreach ($records as $row): ?>
-                                    <tr>
-                                        <td><?= $row["name"] ?></td>
-                                        <td><?= $row["course"] ?></td>
-                                    </tr>
-                                    <?php endforeach; ?>
-                                    <?php else: ?>
-                                    <tr>
-                                        <td class="text-center" colspan="2">No data available</td>
-                                    </tr>
-                                    <?php endif; ?>
-                                </tbody>
-                            </table>
-
-                        </div>
+                    <div class="card-header">
+                        <h3 class="card-title"> Today Demo List</h3>
                     </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Course</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php if (!empty($records)): ?>
+                                <?php foreach ($records as $row): ?>
+                                <tr>
+                                    <td><?= $row["name"] ?></td>
+                                    <td><?= $row["course"] ?></td>
+                                </tr>
+                                <?php endforeach; ?>
+                                <?php else: ?>
+                                <tr>
+                                    <td class="text-center" colspan="2">No data available</td>
+                                </tr>
+                                <?php endif; ?>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
                 <div class="col-lg-12">
 
 
@@ -221,7 +224,7 @@
                             <div class="col-lg-3">
                                 <div class="card demo-card">
                                     <h4><?php echo abs(
-                                        count($ConductedDemo) - $count
+                                        count($PendingDemo) - $count
                                     ); ?></h4>
                                     <h3>Pending Demo</h3>
                                     <i class="fas fa-long-arrow-alt-right pend-demo"></i>
@@ -278,10 +281,10 @@
                                         </tr>
                                         <?php endforeach; ?>
                                         <?php } else { ?>
-                                            <tr>
-                                                <td class="text-center" colspan= 3>No data available</td>
-                                                
-                                                </tr>
+                                        <tr>
+                                            <td class="text-center" colspan=3>No data available</td>
+
+                                        </tr>
                                         <?php } ?>
 
 
@@ -316,7 +319,7 @@
                                                     $a->Booking_Date_Time
                                                 );
                                         }); ?>
-                                    <?php if (!empty($getAllDemoList)) { ?>
+                                        <?php if (!empty($getAllDemoList)) { ?>
                                         <?php foreach (
                                             $getAllDemoList
                                             as $status
@@ -335,27 +338,27 @@
                                                     $status->Conducted_Demo ==
                                                     "Y"
                                                 ): ?>
-                                                <small class="badge badge-success ">Conducted</small> 
+                                                <small class="badge badge-success ">Conducted</small>
                                                 <?php elseif (
                                                     $status->Conducted_Demo ==
                                                     "N"
                                                 ): ?>
-                                                <small class="badge badge-warning ">Not Conducted</small> 
+                                                <small class="badge badge-warning ">Not Conducted</small>
                                                 <?php elseif (
                                                     $status->Conducted_Demo ==
                                                     "Reschedule"
                                                 ): ?>
-                                               
+
                                                 <small class="badge badge-danger"> Rescheduled</small>
                                                 <?php endif; ?>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
                                         <?php } else { ?>
-                                            <tr>
-                                                <td class="text-center" colspan= 4>No data available</td>
-                                                
-                                                </tr>
+                                        <tr>
+                                            <td class="text-center" colspan=4>No data available</td>
+
+                                        </tr>
                                         <?php } ?>
                                     </table>
                                 </div>
@@ -371,28 +374,76 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
-                                            <th>course</th>
+                                            <th>Course</th>
                                             <th>Demo Date</th>
-
+                                            <th>Assign faculty</th>
+                                            <th>Reschedule</th>
                                         </tr>
-                                        <?php if ($UnattendedDemoList) { ?>
-                                        <?php foreach (
-                                            $UnattendedDemoList
-                                            as $status
-                                        ) { ?>
+                                        <?php if (!empty($UnattendedDemoList)): ?>
+                                        <?php foreach ($UnattendedDemoList as $status): ?>
                                         <tr>
                                             <td><?= $status->name ?></td>
                                             <td><?= $status->email ?></td>
                                             <td><?= $status->course ?></td>
                                             <td><?= $status->Booking_Date_Time ?></td>
+                                            <td>
+                                                <?php if ($status->AssignTecher_id === null): ?>
+                                                <?php
+                        $matchingFaculties = array_filter(
+                            $Faculty,
+                            function ($faculty) use ($status) {
+                                return $faculty->course == $status->course &&
+                                    $faculty->sub_course == $status->sub_course;
+                            }
+                        );
+                        ?>
+                                                <?php if (!empty($matchingFaculties)): ?>
+                                                <form action="AssignTecherForDemo" method="post">
+                                                    <select name="faculty_id" class="form-control">
+                                                        <?php foreach ($matchingFaculties as $faculty): ?>
+                                                        <option value="<?= $faculty->id ?>">
+                                                            <?= $faculty->full_name ?>
+                                                        </option>
+                                                        <?php endforeach; ?>
+                                                    </select>
+                                                    <input type="hidden" name="studentid" value="<?= $status->D_id ?>">
+                                                    <button type="submit" class="btn btn-primary">Assign
+                                                        Faculty</button>
+                                                </form>
+                                                <?php else: ?>
+                                                <p>No faculty available</p>
+                                                <?php endif; ?>
+                                                <?php else: ?>
+                                                <?php
+                        // Find the assigned faculty by ID
+                        $assignedFaculty = array_filter(
+                            $Faculty,
+                            function ($faculty) use ($status) {
+                                return $faculty->id == $status->AssignTecher_id;
+                            }
+                        );
+                        if (!empty($assignedFaculty)) {
+                            $assignedFaculty = reset($assignedFaculty);
+                            echo $assignedFaculty->full_name;
+                        }
+                        ?>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td>
+                                                <?php if ($status->AssignTecher_id == null): ?>
+                                                <span>No reschedule available</span>
+                                                <?php else: ?>
+                                                <a
+                                                    href="http://localhost/enatyam/getDemoDetails#custom-tabs-four-messages">Reschedule</a>
+                                                <?php endif; ?>
+                                            </td>
                                         </tr>
-                                        <?php } ?>
-                                        <?php } else { ?>
-                                            <tr>
-                                                <td class="text-center" colspan= 4>No data available</td>
-                                                
-                                                </tr>
-                                        <?php } ?>
+                                        <?php endforeach; ?>
+                                        <?php else: ?>
+                                        <tr>
+                                            <td class="text-center" colspan="6">No data available</td>
+                                        </tr>
+                                        <?php endif; ?>
                                     </table>
                                 </div>
                             </div>
@@ -498,10 +549,10 @@
                                         </tr>
                                         <?php endforeach; ?>
                                         <?php } else { ?>
-                                            <tr>
-                                                <td class="text-center" colspan= 8>No data available</td>
-                                                
-                                                </tr>
+                                        <tr>
+                                            <td class="text-center" colspan=8>No data available</td>
+
+                                        </tr>
                                         <?php } ?>
                                     </table>
                                 </div>
@@ -634,7 +685,7 @@
                                     <form action="<?= base_url("AssignTecherToStudent") ?>" method="POST">
                                         <input type="hidden" name="studentid" value="<?= $admin->id ?>">
                                         <td style="width:100px">
-                                            <p><?= $admin->full_name ?><sup > <?php echo $new; ?></sup></p>
+                                            <p><?= $admin->full_name ?><sup> <?php echo $new; ?></sup></p>
                                         </td>
                                         <td><?= $admin->email ?></td>
                                         <td><?= $admin->courses_name ?></td>
@@ -648,8 +699,7 @@
                                                 <option value="" selected>Select Faculty</option>
                                                 <?php foreach ($Faculty as $facultyItem ): ?>
                                                 <?php if ($facultyItem->course == $admin->course && $facultyItem->sub_course == $admin->sub_course ): ?>
-                                                <option value="<?= $facultyItem->id ?>"
-                                                    <?php if (
+                                                <option value="<?= $facultyItem->id ?>" <?php if (
                                                         $admin->Assign_Techer_id ==
                                                         $facultyItem->id
                                                     ) {
@@ -668,18 +718,19 @@
                                                 $admin->Session_Start_Date
                                             ): ?>
                                         </td>
-                                            <!-- If a date is already assigned, display it -->
+                                        <!-- If a date is already assigned, display it -->
                                         <td><?= $admin->Session_Start_Date ?></td>
                                         <?php else: ?>
                                         <!-- If no date is assigned, show the input field -->
                                         <td>
-                                        <?php if (
+                                            <?php if (
                                             $admin->Assign_Techer_id == null &&
                                             $admin->SessionType ==
                                                 "OneToOneSession"
                                         ) { ?>
 
-                                            <input type="date" name="Session_Start_Date" class="Session_Start_Date" value="<?php if (
+                                            <input type="date" name="Session_Start_Date" class="Session_Start_Date"
+                                                value="<?php if (
                                                 $admin->Session_Start_Date !=
                                                 null
                                             ) {
@@ -691,11 +742,11 @@
                                             $admin->SessionType ==
                                             "GroupSession"
                                         ) { ?>
-                                                You Can't Assign Session Date Here
-                                                <?php } else { ?>
-                                                    <td><?= $admin->Session_Start_Date ?></td>
+                                            You Can't Assign Session Date Here
+                                            <?php } else { ?>
+                                        <td><?= $admin->Session_Start_Date ?></td>
 
-                                                <?php } ?>
+                                        <?php } ?>
                                         </td>
                                         <?php endif; ?>
                                         <td class="change_f">
@@ -710,22 +761,22 @@
                                                 $admin->SessionType ==
                                                 "GroupSession"
                                             ) { ?>
-                                                You Can't Assign Faculty Here
+                                            You Can't Assign Faculty Here
                                             <?php } else { ?>
-                                                <button type="submit" name="assign_button" class="btn btn-warning"
+                                            <button type="submit" name="assign_button" class="btn btn-warning"
                                                 style="font-size: 13px;">Assign</button>
-                                                <?php } ?>
+                                            <?php } ?>
                                         </td>
                                     </form>
                                 </tr>
                                 <?php
                                 endforeach; ?>
                                 <?php } else { ?>
-                                            <tr>
-                                                <td class="text-center" colspan= 8>No data available</td>
-                                                
-                                                </tr>
-                                        <?php } ?>
+                                <tr>
+                                    <td class="text-center" colspan=8>No data available</td>
+
+                                </tr>
+                                <?php } ?>
                             </table>
                         </div>
                     </div>
@@ -759,11 +810,11 @@
                                 </tr>
                                 <?php endforeach; ?>
                                 <?php } else { ?>
-                                            <tr>
-                                                <td class="text-center" colspan= 5>No data available</td>
-                                                
-                                                </tr>
-                                        <?php } ?>
+                                <tr>
+                                    <td class="text-center" colspan=5>No data available</td>
+
+                                </tr>
+                                <?php } ?>
                             </table>
                         </div>
                     </div>

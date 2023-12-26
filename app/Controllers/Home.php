@@ -222,11 +222,18 @@ class Home extends BaseController
                 $data['user_data'] = $login_model->get_user_data($user_id); 
                 $notifications = $adminModel->getUser($user_id);
 
+                    $count = 0;
+                if ($notifications) {
+                    $count = count($notifications);
+                }else {
+                $count = 0;
+                }
                 return view('StudentDashboard', [
                     'data' => $data,
                     'notifications' => $notifications,
-                    'notificationCount' => count($notifications),
+                    'notificationCount' => $count,
                 ]);
+            
             } else {
                 return redirect()->to('ModelForLogin');
             }

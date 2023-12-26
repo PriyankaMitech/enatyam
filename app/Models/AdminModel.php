@@ -20,6 +20,10 @@ class AdminModel extends Model
         //   print_r($email);die;
         $this->db->table('register')->insert($data);
     }
+    public function findname($AssignTecher_id)
+    {
+        return $this->db->table('register')->where('id', $AssignTecher_id)->get()->getResult();
+    }
     public function AddStudentByAdmin($insertData)
     {
 
@@ -30,7 +34,7 @@ class AdminModel extends Model
         // $today = date('Y-m-d');
         // return $this->where('DATE(Date)', $today)->findAll();
         $today = date('Y-m-d');
-        return $this->where('DATE(`Booking_Date_Time`) =', $today)->findAll();
+        return $this->where('DATE(`Book_Date`) =', $today)->findAll();
     }
     public function getGroupSessionStudents()
     {
@@ -112,13 +116,18 @@ class AdminModel extends Model
     // }
     public function getPendingDemo()
     {
-        return $this->db->table('free_demo_table')->where('Conducted_Demo', 'N')->get()->getResult();
+        $today = date('Y-m-d');
+        return $this->db->table('free_demo_table')
+                        ->where('Conducted_Demo', 'N')
+                        ->where('Book_Date >=', $today)
+                        ->get()
+                        ->getResult();
     }
     public function UnattendedDemoList()
     {
         $today = date('Y-m-d');
         return $this->db->table('free_demo_table')
-            ->where('Booking_Date_Time <', $today)
+            ->where('Book_Date <', $today)
             ->get()
             ->getResult();
     }
@@ -183,8 +192,6 @@ class AdminModel extends Model
     }
     public function edit($data)
     {
-
-        //  echo $data['faculty_name'];die;
         $result = $this->table('free_demo_table')
             ->where(["D_id" => $data['studentid']])
             ->set('AssignTecher_id', $data['faculty_name'])
