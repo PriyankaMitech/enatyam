@@ -141,12 +141,10 @@ class AdminModel extends Model
     }
     public function getFacultyShedule()
     {
-        $currentMonth = date('m'); // Get the current month in the format 'mm'
 
         $result = $this->db->table('schedule')
             ->select('schedule.*, register.full_name') // Select the required columns, including faculty_name
             ->join('register', 'register.id = schedule.faculty_register_id') // Join the faculties table
-            ->where("MONTH(date) = $currentMonth") // Replace 'date_column' with the actual column name containing the date
             ->get()
             ->getResult();
         //     echo "<pre>";
@@ -175,6 +173,8 @@ class AdminModel extends Model
             ->join('tbl_sub_courses', 'tbl_sub_courses.id = students.sub_course', 'left') // Adjust 'sub_course_id' to the actual foreign key column in the students table
             ->where('students.role', 'Student')
             ->where('students.is_register_done', 'Y')
+            ->where('students.Payment_status', 'Y')
+
             ->orderBy('students.created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
             ->get();
 
@@ -185,6 +185,19 @@ class AdminModel extends Model
     {
         return $this->db->table('register')->where('role', 'Faculty')->get()->getResult();
     }
+
+    public function getFacultyWithCarrier()
+    {
+
+        $result = $this->db->table('register AS r')
+        ->select('r.*, carrier.course as ccourses,  carrier.sub_course as csubcourses')
+        ->join('carrier', 'r.carrier_id = carrier.D_id ', 'left')
+        ->where('r.role', 'Faculty')
+        ->get();
+        return $result->getResult();
+    }
+    
+    
 
     public function getAllSessionData()
     {
