@@ -92,11 +92,14 @@
 
 <script>
     function updatePassword() {
+        // Clear previous validation messages
+        $('#password-error').text('');
+        $('#success-message').hide();
+
         var oldPassword = $('#old-password').val();
         var newPassword = $('#new-password').val();
         var confirmPassword = $('#confirm-password').val();
 
-      
         if (!oldPassword || !newPassword || !confirmPassword) {
             $('#password-error').text('Please fill in all fields.');
             return;
@@ -121,9 +124,11 @@
             success: function(response) {
                 if (response.success) {
                     // Password updated successfully
-                    $('#updatePasswordForm').html('<div class="alert alert-success">' + response.message + '</div>');
+                    $('#success-message').html('<div class="alert alert-success">' + response.message + '</div>').show();
+                    setTimeout(function () {
+                        location.reload(); // Refresh the page after 2 seconds
+                    }, 2000);
                 } else {
-                 
                     $('#password-error').text(response.error);
                 }
             },
@@ -148,6 +153,12 @@
         const regex = /^(?=.*[!@#$%^&*(),.?":{}|<>]).{8}$/;
         return regex.test(password);
     }
+
+    // Clear validation messages when focusing on password fields
+    $('#old-password, #new-password, #confirm-password').focus(function () {
+        $('#password-error').text('');
+        $('#success-message').hide();
+    });
 </script>
 <script>
     // Function to show/hide cards based on radio button selection

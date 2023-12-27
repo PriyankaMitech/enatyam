@@ -28,17 +28,13 @@
 
                                 <ul class="list-group list-group-unbordered mb-3">
                                     <li class="list-group-item">
-                                        <b>course</b> <a class="float-right"><?= $profile->course ?></a>
+                                        <b>course</b> <a class="float-right"><?= $profile->courses_name ?></a>
                                     </li>
                                     <li class="list-group-item">
-                                        <b>sub course</b> <a class="float-right"><?= $profile->sub_course ?></a>
+                                        <b>sub course</b> <a class="float-right"><?= $profile->sub_courses_name ?></a>
                                     </li>
-                                    <!-- <li class="list-group-item">
-                                         <b>Friends</b> <a class="float-right">13,287</a>
-                                         </li> -->
                                 </ul>
                             <?php endforeach; ?>
-                            <!-- <a href="#" class="btn btn-primary btn-block"><b>Chenge</b></a> -->
                         </div>
                     </div>
                 </div>
@@ -50,10 +46,14 @@
                                 <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab"> Change
                                         Country
                                     </a></li>
-
                             </ul>
                         </div><!-- /.card-header -->
+                        <div id="success-message" style="display: none; padding: 5px; margin-bottom: 10px; font-size: 14px;" class="alert alert-success"></div>
+
+
                         <div class="card-body">
+                            <!-- Display success message outside the card -->
+
                             <div class="tab-content">
                                 <div class="active tab-pane" id="activity">
                                     <!-- Post -->
@@ -103,10 +103,7 @@
                                         </form>
                                     <?php endforeach; ?>
 
-                                    <!-- Display success message -->
-                                    <div id="success-message" class="alert alert-success" style="display: none;"></div>
                                 </div>
-
 
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="timeline">
@@ -129,7 +126,6 @@
                                                         <div class="col-6 change-country">
                                                             <label for="changeCountry">Change Country:</label>
                                                             <select id="changeCountry" name="changeCountry" class="form-control">
-                                                                <!-- Populate this dropdown with your country options -->
                                                                 <option value="">Select</option>
                                                                 <?php if (!empty($country_data)) { ?>
                                                                     <?php foreach ($country_data as $data) : ?>
@@ -138,7 +134,6 @@
                                                                         </option>
                                                                     <?php endforeach; ?>
                                                                 <?php } ?>
-                                                                <!-- Add more countries as needed -->
                                                             </select>
                                                         </div>
                                                         <div class="col-6" style="margin-top: 2rem">
@@ -149,24 +144,17 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </form>
+                                    <?php endforeach; ?>
                                 </div>
-                                </form>
-                            <?php endforeach; ?>
                             </div>
-                            <!-- /.tab-pane -->
-
-
-                            <!-- /.tab-pane -->
-                        </div>
-                        <!-- /.tab-content -->
-                    </div><!-- /.card-body -->
+                        </div><!-- /.card-body -->
+                    </div><!-- /.card -->
                 </div>
-                <!-- /.card -->
             </div>
         </div>
 
-</div>
-</section>
+    </section>
 </div>
 
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>
