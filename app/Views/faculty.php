@@ -172,7 +172,6 @@ div.dataTables_wrapper div.dataTables_filter input {
                         <div class="input-group input-group-sm" style="width: 150px;">
                             <input type="text" name="table_search" class="form-control float-right"
                                 placeholder="Search">
-
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-default">
                                     <i class="fas fa-search"></i>
@@ -182,6 +181,7 @@ div.dataTables_wrapper div.dataTables_filter input {
                     </div>
                 </div>
                 <div class="card-body">
+                    <?php if (!empty($data)): ?>
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
@@ -208,6 +208,9 @@ div.dataTables_wrapper div.dataTables_filter input {
                             <?php endforeach; ?>
                         </tbody>
                     </table>
+                    <?php else: ?>
+                    <p>No students are assigned.</p>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-md-12 card" id="todaySessionsTableshow" style="display:none;">
@@ -361,7 +364,6 @@ div.dataTables_wrapper div.dataTables_filter input {
                         <div class="input-group input-group-sm" style="width: 150px;">
                             <input type="text" name="table_search" class="form-control float-right"
                                 placeholder="Search">
-
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-default">
                                     <i class="fas fa-search"></i>
@@ -371,6 +373,7 @@ div.dataTables_wrapper div.dataTables_filter input {
                     </div>
                 </div>
                 <div class="card-body">
+                    <?php if (!empty($data)): ?>
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
@@ -391,12 +394,15 @@ div.dataTables_wrapper div.dataTables_filter input {
                                     <a href="<?php echo base_url()?>chatuser/<?php echo $row['register_id']; ?>"
                                         class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
                                     <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>"
-                                        class="btn btn-sm  badge-primary"><i class="fas fa-file-upload"></i></a>
+                                        class="btn btn-sm badge-primary"><i class="fas fa-file-upload"></i></a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
+                    <?php else: ?>
+                    <p>No classes found.</p>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="modal fade" id="groupListModal" tabindex="-1" role="dialog"

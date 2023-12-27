@@ -341,7 +341,7 @@ $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".ZOOM_CLIE
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="<?php echo base_url() ?>StudentUploadedVideo" class="nav-link">
+                  <a href="<?php echo base_url()?>StudentUploadedVideo" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Videos</p>
                   </a>
