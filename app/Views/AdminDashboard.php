@@ -135,8 +135,8 @@ th {
 
                     <div class="small-box bg-warning tc">
                         <div class="inner">
-                            <?php if (!empty($admins)): ?>
-                            <h3><?= count($admins) ?></h3>
+                            <?php if (!empty($students)): ?>
+                            <h3><?= count($students) ?></h3>
                             <?php else: ?>
                             <h3>0</h3>
 
@@ -667,10 +667,10 @@ th {
                                     <th>Session Date</th>
                                     <th>Action</th>
                                 </tr>
-                                <?php if ($admins) { ?>
-                                <?php foreach ($admins as $admin):
+                                <?php if ($students) { ?>
+                                <?php foreach ($students as $data):
 
-                                    $createdAt = strtotime($admin->created_at);
+                                    $createdAt = strtotime($data->created_at);
                                     $currentDate = strtotime(date("Y-m-d"));
                                     $tenDaysAgo = strtotime("-10 days");
                                     $new = "";
@@ -683,24 +683,24 @@ th {
                                     ?>
                                 <tr>
                                     <form action="<?= base_url("AssignTecherToStudent") ?>" method="POST">
-                                        <input type="hidden" name="studentid" value="<?= $admin->id ?>">
+                                        <input type="hidden" name="studentid" value="<?= $data->id ?>">
                                         <td style="width:100px">
-                                            <p><?= $admin->full_name ?><sup> <?php echo $new; ?></sup></p>
+                                            <p><?= $data->full_name ?><sup> <?php echo $new; ?></sup></p>
                                         </td>
-                                        <td><?= $admin->email ?></td>
-                                        <td><?= $admin->courses_name ?></td>
-                                        <td><?= $admin->sub_courses_name ?></td>
-                                        <td><?= $admin->SessionType ?></td>
+                                        <td><?= $data->email ?></td>
+                                        <td><?= $data->courses_name ?></td>
+                                        <td><?= $data->sub_courses_name ?></td>
+                                        <td><?= $data->SessionType ?></td>
 
 
                                         <td class="faculty-select">
-                                            <?php if ( $admin->Assign_Techer_id == null && $admin->SessionType == "OneToOneSession" ) { ?>
+                                            <?php if ($data->SessionType == "OneToOneSession" ) { ?>
                                             <select name="faculty_name">
                                                 <option value="" selected>Select Faculty</option>
                                                 <?php foreach ($Faculty as $facultyItem ): ?>
-                                                <?php if ($facultyItem->course == $admin->course && $facultyItem->sub_course == $admin->sub_course ): ?>
+                                                <?php if ($facultyItem->ccourses == $data->course && $facultyItem->csubcourses == $data->sub_course ): ?>
                                                 <option value="<?= $facultyItem->id ?>" <?php if (
-                                                        $admin->Assign_Techer_id ==
+                                                        $data->Assign_Techer_id ==
                                                         $facultyItem->id
                                                     ) {
                                                         echo "selected";
@@ -710,55 +710,54 @@ th {
                                                 <?php endif; ?>
                                                 <?php endforeach; ?>
                                             </select>
-                                            <?php } elseif ($admin->SessionType == "GroupSession") { ?>
-                                            <?= $admin->teacher_name ?>
+                                            <?php } elseif ($data->SessionType == "GroupSession") { ?>
+                                            <?= $data->teacher_name ?>
                                             <?php } ?>
 
                                             <?php if (
-                                                $admin->Session_Start_Date
+                                                $data->Session_Start_Date
                                             ): ?>
                                         </td>
                                         <!-- If a date is already assigned, display it -->
-                                        <td><?= $admin->Session_Start_Date ?></td>
+                                        <td><?= $data->Session_Start_Date ?>
+                                        <input type="hidden" name="Session_Start_Date" class="Session_Start_Date" value="<?= $data->Session_Start_Date ?>">
+
+                                        </td>
                                         <?php else: ?>
                                         <!-- If no date is assigned, show the input field -->
                                         <td>
-                                            <?php if (
-                                            $admin->Assign_Techer_id == null &&
-                                            $admin->SessionType ==
-                                                "OneToOneSession"
-                                        ) { ?>
+                                            <?php if ($data->SessionType == "OneToOneSession") { ?>
 
                                             <input type="date" name="Session_Start_Date" class="Session_Start_Date"
                                                 value="<?php if (
-                                                $admin->Session_Start_Date !=
+                                                $data->Session_Start_Date !=
                                                 null
                                             ) {
-                                                echo $admin->Session_Start_Date;
+                                                echo $data->Session_Start_Date;
                                             } else {
                                                 echo date("Y-m-d");
                                             } ?>">
                                             <?php } elseif (
-                                            $admin->SessionType ==
+                                            $data->SessionType ==
                                             "GroupSession"
                                         ) { ?>
                                             You Can't Assign Session Date Here
                                             <?php } else { ?>
-                                        <td><?= $admin->Session_Start_Date ?></td>
+                                        <td><?= $data->Session_Start_Date ?></td>
 
                                         <?php } ?>
                                         </td>
                                         <?php endif; ?>
                                         <td class="change_f">
                                             <?php if (
-                                                $admin->Assign_Techer_id > 0 &&
-                                                $admin->SessionType ==
+                                                $data->Assign_Techer_id > 0 &&
+                                                $data->SessionType ==
                                                     "OneToOneSession"
                                             ) { ?>
                                             <button type="submit" name="change_faculty_button" class="btn btn-info"
                                                 style="font-size: 12px;">Change Faculty</button>
                                             <?php } elseif (
-                                                $admin->SessionType ==
+                                                $data->SessionType ==
                                                 "GroupSession"
                                             ) { ?>
                                             You Can't Assign Faculty Here
@@ -831,7 +830,7 @@ th {
                             <th>course</th>
                             <th>Add</th>
                         </tr>
-                        <?php foreach ($admins as $faculty): ?>
+                        <?php foreach ($students as $faculty): ?>
                         <?php foreach ($SessionData as $session): ?>
                         <tr>
                             <td><?= $faculty->full_name ?></td>

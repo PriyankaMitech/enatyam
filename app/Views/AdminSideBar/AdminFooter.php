@@ -431,181 +431,196 @@
 </script>
 
 <script>
-    $(function() {
+   $(function () {
+    function ini_events(ele) {
+        ele.each(function () {
+            var eventObject = {
+                title: $.trim($(this).text())
+            };
+            $(this).data('eventObject', eventObject);
+            $(this).draggable({
+                zIndex: 1070,
+                revert: true,
+                revertDuration: 0
+            });
+        });
+    }
 
-        /* initialize the external events
-        -----------------------------------------------------------------*/
-        function ini_events(ele) {
-            ele.each(function() {
+    ini_events($('#external-events div.external-event'));
 
-                // create an Event Object (https://fullcalendar.io/docs/event-object)
-                // it doesn't need to have a start or end
-                var eventObject = {
-                    title: $.trim($(this).text()) // use the element's text as the event title
-                }
+    var date = new Date();
+    var d = date.getDate(),
+        m = date.getMonth(),
+        y = date.getFullYear();
 
-                // store the Event Object in the DOM element so we can get to it later
-                $(this).data('eventObject', eventObject)
+    var Calendar = FullCalendar.Calendar;
+    var Draggable = FullCalendar.Draggable;
 
-                // make the event draggable using jQuery UI
-                $(this).draggable({
-                    zIndex: 1070,
-                    revert: true, // will cause the event to go back to its
-                    revertDuration: 0 //  original position after the drag
-                })
+    var containerEl = document.getElementById('external-events');
+    var checkbox = document.getElementById('drop-remove');
+    var calendarEl = document.getElementById('calendar');
 
-            })
+    new Draggable(containerEl, {
+        itemSelector: '.external-event',
+        eventData: function (eventEl) {
+            return {
+                title: eventEl.innerText,
+                backgroundColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
+                borderColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
+                textColor: window.getComputedStyle(eventEl, null).getPropertyValue('color'),
+            };
+        }
+    });
+
+    var facultyEvents = [
+        <?php if (!empty($FacultysheduleData)) {
+
+            // echo "<pre>";print_r($FacultysheduleData);exit();
+            foreach ($FacultysheduleData as $data) {
+                // Get the current day of the week (assuming $data->Day contains the day information)
+                $currentDayOfWeek = strtolower($data->Day);
+            
+                // Calculate the date of the next occurrence of the specified day
+                $nextOccurrenceDate = date('Y-m-d', strtotime('next ' . $currentDayOfWeek));
+            
+                // Use the next occurrence date along with start and end times
+                ?>
+                {
+                    title: '<?= $data->full_name; ?> - <?= $data->start_time; ?> to <?= $data->end_time; ?>',
+                    start: '<?= $nextOccurrenceDate; ?>T<?= $data->start_time; ?>',
+                    end: '<?= $nextOccurrenceDate; ?>T<?= $data->end_time; ?>',
+                    faculty_id: '<?= $data->faculty_register_id; ?>',
+                },
+        <?php }
+        } ?>
+    ];
+
+    var colorMap = {};
+
+    facultyEvents.forEach(function (event) {
+        var facultyId = event.faculty_id;
+
+        if (!colorMap[facultyId]) {
+            colorMap[facultyId] = getRandomColor();
         }
 
-        ini_events($('#external-events div.external-event'))
+        event.backgroundColor = colorMap[facultyId];
+        event.borderColor = colorMap[facultyId];
+        event.textColor = getContrastColor(colorMap[facultyId]);
+    });
 
-        /* initialize the calendar
-        -----------------------------------------------------------------*/
-        //Date for the calendar events (dummy data)
-        var date = new Date()
-        var d = date.getDate(),
-            m = date.getMonth(),
-            y = date.getFullYear()
+    function getContrastColor(hexColor) {
+        var r = parseInt(hexColor.substring(1, 3), 16);
+        var g = parseInt(hexColor.substring(3, 5), 16);
+        var b = parseInt(hexColor.substring(5, 7), 16);
+        var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+        return brightness > 128 ? '#000000' : '#FFFFFF';
+    }
 
-        var Calendar = FullCalendar.Calendar;
-        var Draggable = FullCalendar.Draggable;
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
 
-        var containerEl = document.getElementById('external-events');
-        var checkbox = document.getElementById('drop-remove');
-        var calendarEl = document.getElementById('calendar');
-
-        // initialize the external events
-        // -----------------------------------------------------------------
-
-        new Draggable(containerEl, {
-            itemSelector: '.external-event',
-            eventData: function(eventEl) {
-                return {
-                    title: eventEl.innerText,
-                    backgroundColor: window.getComputedStyle(eventEl, null).getPropertyValue(
-                        'background-color'),
-                    borderColor: window.getComputedStyle(eventEl, null).getPropertyValue(
-                        'background-color'),
-                    textColor: window.getComputedStyle(eventEl, null).getPropertyValue('color'),
-                };
+    var calendar = new Calendar(calendarEl, {
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        themeSystem: 'bootstrap',
+        events: facultyEvents,
+        editable: true,
+        droppable: true,
+        drop: function (info) {
+            if (checkbox.checked) {
+                info.draggedEl.parentNode.removeChild(info.draggedEl);
             }
+        },
+        eventContent: function (arg) {
+            var eventColor = arg.event.backgroundColor || '';
+            var textColor = getContrastColor(eventColor);
+            return {
+                html: '<div class="fc-content" style="background-color:' + eventColor +
+                    '; padding: 2%; border-radius: 5%">' +
+                    '<span class="fc-title" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: ' +
+                    textColor + ';" title="' + arg.event.title + '">' +
+                    '<div class="event-title">' + arg.event.title.split(' - ')[0] + '</div>' +
+                    '<div class="event-time">' + arg.event.title.split(' - ')[1] + '</div>' +
+                    '</span>' +
+                    '</div>',
+            };
+        },
+        dayRender: function (arg) {
+            var currentDay = arg.date.getDate();
+            var currentMonth = arg.date.getMonth() + 1;
+            var currentYear = arg.date.getFullYear();
+
+            var filteredEvents = facultyEvents.filter(function (event) {
+                var eventDate = new Date(event.start);
+                var eventDay = eventDate.getDate();
+                var eventMonth = eventDate.getMonth() + 1;
+                var eventYear = eventDate.getFullYear();
+
+                return (
+                    eventDay === currentDay &&
+                    eventMonth === currentMonth &&
+                    eventYear === currentYear
+                );
+            });
+
+            var eventContainer = $('<div class="day-events"></div>');
+            filteredEvents.forEach(function (event) {
+                var eventHtml =
+                    '<div class="event" style="background-color:' +
+                    event.backgroundColor +
+                    '">' +
+                    event.title +
+                    '</div>';
+                eventContainer.append(eventHtml);
+            });
+
+            $(arg.el).append(eventContainer);
+        },
+    });
+
+    calendar.render();
+
+    var currColor = '#3c8dbc';
+    $('#color-chooser > li > a').click(function (e) {
+        e.preventDefault();
+        currColor = $(this).css('color');
+        $('#add-new-event').css({
+            'background-color': currColor,
+            'border-color': currColor
         });
+    });
 
-        var facultyEvents = [
-            <?php if (!empty($FacultysheduleData)) {
-                foreach ($FacultysheduleData as $data) { ?> {
-                        title: '<?= $data->full_name; ?> - <?= $data->start_time; ?> to <?= $data->end_time; ?>',
-                        start: '<?= $data->date; ?>T<?= $data->start_time; ?>',
-                        end: '<?= $data->date; ?>T<?= $data->end_time; ?>',
-                        faculty_id: '<?= $data->faculty_register_id; ?>',
-                    },
-            <?php }
-            } ?>
-        ];
-
-
-        var colorMap = {};
-
-        facultyEvents.forEach(function(event) {
-            var facultyId = event.faculty_id;
-
-            if (!colorMap[facultyId]) {
-                colorMap[facultyId] = getRandomColor();
-            }
-
-            event.backgroundColor = colorMap[facultyId];
-            event.borderColor = colorMap[facultyId];
-            event.textColor = getContrastColor(colorMap[facultyId]); // Set text color
-        });
-
-        function getContrastColor(hexColor) {
-            var r = parseInt(hexColor.substring(1, 3), 16);
-            var g = parseInt(hexColor.substring(3, 5), 16);
-            var b = parseInt(hexColor.substring(5, 7), 16);
-            var brightness = (r * 299 + g * 587 + b * 114) / 1000;
-
-            return brightness > 128 ? '#000000' : '#FFFFFF';
+    $('#add-new-event').click(function (e) {
+        e.preventDefault();
+        var val = $('#new-event').val();
+        if (val.length == 0) {
+            return;
         }
 
-        // Rest of your code remains the same...
+        var event = $('<div />');
+        event.css({
+            'background-color': currColor,
+            'border-color': currColor,
+            'color': '#fff'
+        }).addClass('external-event');
+        event.text(val);
+        $('#external-events').prepend(event);
 
+        ini_events(event);
+        $('#new-event').val('');
+    });
+});
 
-        function getRandomColor() {
-            var letters = '0123456789ABCDEF';
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        var calendar = new Calendar(calendarEl, {
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay'
-            },
-            themeSystem: 'bootstrap',
-            events: facultyEvents,
-            editable: true,
-            droppable: true,
-            drop: function(info) {
-                if (checkbox.checked) {
-                    info.draggedEl.parentNode.removeChild(info.draggedEl);
-                }
-            },
-            eventContent: function(arg) {
-                var eventColor = arg.event.backgroundColor || ''; // Ensure eventColor is defined
-                var textColor = getContrastColor(
-                    eventColor); // Calculate text color based on background brightness
-                return {
-                    html: '<div class="fc-content" style="background-color:' + eventColor +
-                        '; padding: 2%; border-radius: 5%">' +
-                        '<span class="fc-title" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: ' +
-                        textColor + ';" title="' + arg.event.title + '">' +
-                        '<div class="event-title">' + arg.event.title.split(' - ')[0] + '</div>' +
-                        '<div class="event-time">' + arg.event.title.split(' - ')[1] + '</div>' +
-                        '</span>' +
-                        '</div>',
-                };
-            },
-        });
-
-        calendar.render();
-
-
-
-        // $('#calendar').fullCalendar()
-
-        var currColor = '#3c8dbc'
-        $('#color-chooser > li > a').click(function(e) {
-            e.preventDefault()
-            currColor = $(this).css('color')
-            $('#add-new-event').css({
-                'background-color': currColor,
-                'border-color': currColor
-            })
-        })
-        $('#add-new-event').click(function(e) {
-            e.preventDefault()
-            var val = $('#new-event').val()
-            if (val.length == 0) {
-                return
-            }
-
-            var event = $('<div />')
-            event.css({
-                'background-color': currColor,
-                'border-color': currColor,
-                'color': '#fff'
-            }).addClass('external-event')
-            event.text(val)
-            $('#external-events').prepend(event)
-
-            ini_events(event)
-            $('#new-event').val('')
-        })
-    })
 </script>
 <script>
     document.getElementById("showVideoContainer").addEventListener("click", function() {

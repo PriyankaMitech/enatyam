@@ -32,8 +32,8 @@ class AdminController extends BaseController
                 $data['SessionData'] = $model->findAll();
                 $data['count'] = $model->getRowCount();
 
-                $data['admins'] = $model->get_students();
-                $data['Faculty'] = $model->getFaculty();
+                $data['students'] = $model->get_students();
+                $data['Faculty'] = $model->getFacultyWithCarrier();
                 $data['ConductedDemo'] = $model->getConductedDemo();
                 $data['PendingDemo'] = $model->getPendingDemo();
                 $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
@@ -67,6 +67,8 @@ class AdminController extends BaseController
 
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
+
+            // echo "<pre>";print_r($postData);exit();
 
             $result = $model->add($postData);
 
