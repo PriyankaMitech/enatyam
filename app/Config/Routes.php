@@ -109,7 +109,7 @@ $routes->get('getAdminSideBarAll', 'AdminController::getAdminSideBarAll');
 $routes->get('payments', 'AdminController::payments');
 $routes->get('studentProfiledata', 'AdminController::studentProfiledata');
 $routes->get('NewFacultyApplication', 'AdminController::NewFacultyApplication');
-$routes->get('UplodedvideoByStudent', 'AdminController::UplodedvideoByStudent');
+$routes->get('uploaded_video', 'AdminController::UplodedvideoByStudent');
 $routes->post('AssignTecherForDemo', 'AdminController::AssignTecherForDemo');
 $routes->post('AssignFacultyToGroup', 'AdminController::AssignFacultyToGroup');
 $routes->post('fetch_groups_for_course', 'AdminController::fetch_groups_for_course');
@@ -149,7 +149,7 @@ $routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
 $routes->get('AdminController/searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
-$routes->post('searchStudentVideos', 'AdminController::searchStudentVideos');
+$routes->post('getSearchData', 'AdminController::getSearchData');
 
 $routes->post('AdminController/getTeachersByStudent', 'AdminController::getTeachersByStudent');
 $routes->post('AdminController/processSelection', 'AdminController::processSelection');

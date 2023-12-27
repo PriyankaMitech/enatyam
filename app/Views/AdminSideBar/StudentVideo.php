@@ -35,7 +35,6 @@
     <section class="content" id="result-container">
         <div class="container-fluid">
             <div class="row">
-                <!-- /.col -->
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header p-2">
@@ -48,28 +47,22 @@
 
                             </ul>
                             <div class="text-right mt-0">
-                                <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="btn btn-primary">Back</a>
+                                <a href="<?php echo base_url() ?>uploaded_video" class="btn btn-primary">Back</a>
                             </div>
 
 
-                        </div><!-- /.card-header -->
+                        </div>
 
                         <div class="card-body">
 
                             <div class="tab-content">
                                 <!-- <div class="active tab-pane" id="activity">
                                     <?php if (!empty($FacultyVideoData)) {
-                                        // echo "<pre>";
-                                        // print_r($FacultyVideoData);
-                                        // exit();
                                     ?>
                                         <div class="row">
                                             <?php foreach ($FacultyVideoData as $faculty) { ?>
                                                 <?php
                                                 $extension = pathinfo($faculty->video_name, PATHINFO_EXTENSION);
-                                                // echo $extension;
-                                                // print_r($faculty);
-                                                // die;
                                                 ?>
                                                 <?php if ($extension == 'mp4' || $extension == 'avi' || $extension == 'mov' || $extension == 'mkv' || $extension == 'wmv') : ?>
                                                     <div class="col-md-4">
@@ -112,7 +105,6 @@
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="startDate">Start Date:</label>
-                                                            <!-- Check if the current URL contains "searchFacultyVideos" -->
                                                             <?php $currentUrl = current_url();  ?>
                                                             <input type="date" class="form-control" id="startDate" placeholder="Enter start date:" name="startDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) {
                                                                                                                                                                                 echo session()->getFlashdata('startDate');
@@ -123,7 +115,7 @@
                                                         <div class="form-group">
                                                             <label for="endDate">End Date:</label>
                                                             <input type="date" class="form-control" id="endDate" placeholder="Enter end date:" name="endDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) {
-                                                                                                                                                                            echo session()->getFlashdata('startDate');
+                                                                                                                                                                            echo session()->getFlashdata('endDate');
                                                                                                                                                                         } ?>">
                                                         </div>
                                                     </div>
@@ -157,7 +149,8 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group text-right">
-                                                            <button type="submit" class="btn btn-primary">Search</button>
+                                                            <input type="hidden" name="table" value="uplode_video_to_student">
+                                                            <button type="button" value="searchfacvideo" id="searchfacvideo" class="btn btn-primary">Search</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -165,7 +158,6 @@
                                             </form>
                                             <hr>
                                             <div class="row mt-4" id="facultyVideosContainer">
-                                                <!-- Display faculty videos here -->
                                                 <?php if (empty($searchdata)) { ?>
 
                                                     <?php if (!empty($FacultyVideoData)) { ?>
@@ -267,9 +259,6 @@
                                             </div>
                                         </div>
 
-                                        <!-- Add other tab content as needed -->
-
-                                        <!-- /.tab-pane -->
                                         <div class="tab-pane" id="timeline">
                                             <form action="<?php echo base_url(); ?>searchStudentVideos" method="post" id="studentVideoForm">
 
@@ -277,26 +266,21 @@
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="startDate">Start Date:</label>
-                                                            <!-- Check if the current URL contains "searchFacultyVideos" -->
                                                             <?php $currentUrl = current_url();  ?>
-                                                            <input type="date" class="form-control" id="studentVideoStartDate" placeholder="Enter start date:" name="studentVideoStartDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) {
-                                                                                                                                                                                                        echo session()->getFlashdata('startDate');
-                                                                                                                                                                                                    } ?>">
+                                                            <input type="date" class="form-control" id="studentVideoStartDate" placeholder="Enter start date:" name="startDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) {  echo session()->getFlashdata('startDate');  } ?>">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="endDate">End Date:</label>
-                                                            <input type="date" class="form-control" id="studentVideoEndDate" placeholder="Enter end date:" name="studentVideoEndDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) {
-                                                                                                                                                                                                    echo session()->getFlashdata('startDate');
-                                                                                                                                                                                                } ?>">
+                                                            <input type="date" class="form-control" id="studentVideoEndDate" placeholder="Enter end date:" name="endDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) { echo session()->getFlashdata('startDate');} ?>">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="dropdown">Select Faculty:</label>
-                                                            <select id="facultyNamesDropdown" name="facultyNames" class="form-control custom-select">
+                                                            <select id="facultyNamesDropdown" name="facultyName" class="form-control custom-select">
                                                                 <option value="">Select</option>
                                                                 <?php foreach ($facultyList as $item) : ?>
                                                                     <option value="<?= $item->id; ?>" <?php if (strpos($currentUrl, 'searchStudentVideos') !== false && !empty(session()->getFlashdata('facultyName')) && session()->getFlashdata('facultyName') === $item->id) echo 'selected'; ?>>
@@ -309,7 +293,7 @@
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="dropdown">Select Student:</label>
-                                                            <select id="studentNamesDropdown" name="studentNames" class="form-control custom-select">
+                                                            <select id="studentNamesDropdown" name="studentName" class="form-control custom-select">
                                                                 <option value="">Select</option>
                                                                 <?php foreach ($studentList as $item) : ?>
                                                                     <option value="<?php echo  $item->student_id; ?>" <?php if (strpos($currentUrl, 'searchStudentVideos') !== false && !empty(session()->getFlashdata('studentName')) && session()->getFlashdata('studentName') === $item->student_id) echo 'selected'; ?>>
@@ -322,7 +306,8 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group text-right">
-                                                            <button type="submit" class="btn btn-primary">Search</button>
+                                                            <input type="hidden" name="table" value="uplode_study_video_from_student">
+                                                            <button type="button" id="searchstudvideo" class="btn btn-primary">Search</button>
                                                         </div>
                                                     </div>
                                                 </div>

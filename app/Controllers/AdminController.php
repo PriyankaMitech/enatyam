@@ -187,56 +187,62 @@ class AdminController extends BaseController
         }
     }
 
-    public function searchFacultyVideos()
-    {
-        $startDate = $this->request->getPost('startDate');
-        $endDate = $this->request->getPost('endDate');
-        $studentName = $this->request->getPost('studentName');
-        $facultyName = $this->request->getPost('facultyName');
-        // print_r($facultyName);
-        // die;
-        $sDate = $this->session->setFlashdata('startDate', $startDate);
-        $eDate = $this->session->setFlashdata('endDate', $endDate);
-        $studeName = $this->session->setFlashdata('studentName', $studentName);
-        $facName =  $this->session->setFlashdata('facultyName', $facultyName);
+    // public function searchFacultyVideos()
+    // {
+    //     $startDate = $this->request->getPost('startDate');
+    //     $endDate = $this->request->getPost('endDate');
+    //     $studentName = $this->request->getPost('studentName');
+    //     $facultyName = $this->request->getPost('facultyName');
+    //     // print_r($endDate);
+    //     // die;
+    //     $sDate = $this->session->setFlashdata('startDate', $startDate);
+    //     $eDate = $this->session->setFlashdata('endDate', $endDate);
+    //     $studeName = $this->session->setFlashdata('studentName', $studentName);
+    //     $facName =  $this->session->setFlashdata('facultyName', $facultyName);
 
+
+    //     $model = new AdminModel();
+
+    //     $data['searchdata'] = $model->getFacultyBySearch($startDate, $endDate, $studentName, $facultyName);
+    //     $data['studentList'] = $model->getStudentData();
+    //     $data['facultyList'] = $model->getFacultyrole();
+    //     // echo '<pre>';
+    //     // print_r($data['searchdata']);
+    //     // die;
+    //     // return $this->response->setJSON($filteredFacultyVideoData);
+    //     return view('AdminSideBar/StudentVideo', $data);
+    // }
+
+    public function getSearchData()
+    {
+        $studentVideoStartDate = $this->request->getPost('startDate');
+        $studentVideoEndDate = $this->request->getPost('endDate');
+        $studentNames = $this->request->getPost('studentName');
+        $facultyNames = $this->request->getPost('facultyName');
+        $table = $this->request->getPost('table');
+
+        $sDate = $this->session->setFlashdata('startDate', $studentVideoStartDate);
+        $eDate = $this->session->setFlashdata('endDate', $studentVideoEndDate);
+        $studeName = $this->session->setFlashdata('studentName', $studentNames);
+        $facName =  $this->session->setFlashdata('facultyName', $facultyNames);
 
         $model = new AdminModel();
-
-        $data['searchdata'] = $model->getFacultyBySearch($startDate, $endDate, $studentName, $facultyName);
+        // print_r($_POST);die;
+        // $data['searchStudentData'] = $model->getStudentBySearch($studentVideoStartDate, $studentVideoEndDate, $studentNames, $facultyNames);
+        $data['searchStudentData'] = $model->getSearchData($table, $studentVideoStartDate, $studentVideoEndDate, $studentNames, $facultyNames);
         $data['studentList'] = $model->getStudentData();
         $data['facultyList'] = $model->getFacultyrole();
         // echo '<pre>';
-        // print_r($data['searchdata']);
+        // print_r($data['searchStudentData']);
         // die;
-        // return $this->response->setJSON($filteredFacultyVideoData);
-        return view('AdminSideBar/StudentVideo', $data);
-    }
-
-    public function searchStudentVideos()
-    {
-        $studentVideoStartDate = $this->request->getPost('studentVideoStartDate');
-        $studentVideoEndDate = $this->request->getPost('studentVideoEndDate');
-        $studentNames = $this->request->getPost('studentNames');
-        $facultyNames = $this->request->getPost('facultyNames');
-        // print_r($studentNames);
-        // die;
-        $sDate = $this->session->setFlashdata('studentVideoStartDate', $studentVideoStartDate);
-        $eDate = $this->session->setFlashdata('studentVideoEndDate', $studentVideoEndDate);
-        $studeName = $this->session->setFlashdata('studentNames', $studentNames);
-        $facName =  $this->session->setFlashdata('facultyNames', $facultyNames);
-
-
-        $model = new AdminModel();
-
-        $data['searchStudentData'] = $model->getStudentBySearch($studentVideoStartDate, $studentVideoEndDate, $studentNames, $facultyNames);
-        $data['studentList'] = $model->getStudentData();
-        $data['facultyList'] = $model->getFacultyrole();
-        // echo '<pre>';
-        // print_r($data['searchdata']);
-        // die;
-        // return $this->response->setJSON($filteredFacultyVideoData);
-        return view('AdminSideBar/StudentVideo', $data);
+        if ($data['searchStudentData']) {
+            return $this->response->setJSON($data);
+        }else {
+            $data['status'] = '203';
+            return $this->response->setJSON($data);
+        }
+        
+        // return view('AdminSideBar/StudentVideo', $data);
     }
     public function getDemoDetails()
     {

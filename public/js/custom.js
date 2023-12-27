@@ -131,8 +131,50 @@ $(document).ready(function(){
         }
     });
 
-    // Trigger change event on #courses_id_g
     $('#courses').trigger('change');
+
+    $('#searchstudvideo, #searchfacvideo').click(function () {
+        
+        if ($(this).val() == 'searchfacvideo') {
+            var formdata = $('#searchForm').serialize();
+            var sdate = $('#startDate').val()
+            var edate = $('#endDate').val()
+            var container = '#facultyVideosContainer'
+        }else {
+            var formdata = $('#studentVideoForm').serialize();
+            var sdate = $('#studentVideoStartDate').val()
+            var edate = $('#studentVideoEndDate').val()
+            var container = '#studentVideosContainer'
+        }
+        if (edate <= sdate) {
+            alert('End date should be greater than start date')
+            $('#studentVideoEndDate').focus()
+            return false
+        }
+        console.log($(this).val())
+        if(formdata){
+            $.ajax({
+                url: 'http://localhost/enatyam/getSearchData', 
+                type: "POST",
+                data: formdata,
+                dataType: "JSON",
+                success: function (response) {
+                    var searchdata = response.searchStudentData
+                    var html = '';
+                    console.log(response.searchStudentData);
+                    if (response.searchStudentData =='false') {
+                        $(container).html('No matching records found!')
+                    }else {
+                        $.each(searchdata, function(index, faculty) {
+                            console.log(faculty.student_name)
+                            html += '<div class="col-sm-3 mt-3"><div class="position-relative videoofs"><video width="100%" height="200px" controls="" poster="http://localhost/enatyam/public/images/play.jpg"><source class="img-fluid" src="http://localhost/enatyam/public/uploads/videos/'+faculty.name+'" type="video/mp4"></video><div class="ribbon-wrapper ribbon-lg"><div class="ribbon" style="background-color: #d41d8c; text-lg"><p class="card-text" style="color:#fff; background-color: #d41d8c">'+faculty.Student_name+' </p></div></div><div class="p"><p class="card-text" style="padding: 6%; color:#fff; background-color: #d41d8c">Date &nbsp; : &nbsp; '+faculty.DateTime+'<br>  Faculty Name &nbsp; : &nbsp; '+faculty.faculty_name+'</p></div></div></div>'
+                            $(container).html(html)
+                        })
+                    }
+                },
+            });
+        }
+    })
 
 })
 

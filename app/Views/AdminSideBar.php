@@ -353,7 +353,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
+                                                <a href="<?php echo base_url() ?>uploaded_video" class="nav-link">
                                                     <i class="nav-icon far fa-image"></i>
                                                     <p>Videos</p>
                                                 </a>
@@ -844,7 +844,7 @@
                                 </a>
                             <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>UplodedvideoByStudent" class="nav-link">
+                                            <a href="<?php echo base_url() ?>uploaded_video" class="nav-link">
                                                 <i class="nav-icon far fa-image"></i>
                                                 <p>Videos</p>
                                             </a>
