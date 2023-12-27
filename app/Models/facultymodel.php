@@ -94,15 +94,13 @@ class facultymodel extends Model
     }
     public function fetchshedule($registerId)
     {
-        $currentMonth = date('m'); // Get the current month in the format 'mm'
 
         $result = $this->db->table('schedule')
-            ->select('schedule.*, register.full_name as faculty_name, student.full_name as student_name')
+            ->select('schedule.*, register.full_name as faculty_name, student.full_name as student_name,')
             ->join('register', 'register.id = schedule.faculty_register_id')
             ->join('register as student', 'student.id = schedule.student_register_id', 'left')
             ->where('schedule.faculty_register_id', $registerId)
             ->where('schedule.student_register_id IS NOT NULL')
-            ->where("MONTH(schedule.date) = $currentMonth")
             ->get()
             ->getResult();
         // echo $this->db->getLastQuery();die;
@@ -110,6 +108,24 @@ class facultymodel extends Model
         return $result;
 
     }
+
+//     public function fetchshedule($registerId)
+//     {
+
+//         $result = $this->db->table('schedule')
+//         ->select('schedule.*, register.full_name as faculty_name, student.full_name as student_name, payment.no_of_session')
+//         ->join('register', 'register.id = schedule.faculty_register_id')
+//         ->join('register as student', 'student.id = schedule.student_register_id', 'left')
+//         ->join('payment', 'schedule.student_register_id = payment.user_id', 'left') // Join the payment table
+//         ->where('schedule.faculty_register_id', $registerId)
+//         ->where('schedule.student_register_id IS NOT NULL')
+//         ->get()
+//         ->getResult();
+
+//     // echo $this->db->getLastQuery();die;
+
+//     return $result;
+// }
     
     public function fetchshedule1($registerId)
     {
