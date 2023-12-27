@@ -41,23 +41,18 @@ class StudentModel extends Model
 
     public function fetchProfileDate($registerId)
     {
-        // return $this->db->table($this->table1)
-        //     ->join('countries', 'countries.register_id = s.id')
-        //     ->where('id', $registerId)
-        //     ->get()
-        //     ->getResult();
-
-        $result =  $this->db->table($this->table1)
-            ->select($this->table1 . '.*, countries.code ') // Select all columns from the main table and the country_code from the joined table
-            ->join('countries', 'countries.name = ' . $this->table1 . '.country', 'left') // Assuming you have a country_id column in your main table that references the countries table
+        $result = $this->db->table($this->table1)
+            ->select($this->table1 . '.*, countries.code, sub_courses.sub_courses_name, courses.courses_name')
+            ->join('countries', 'countries.name = ' . $this->table1 . '.country', 'left')
+            ->join('tbl_sub_courses as sub_courses', 'sub_courses.id = ' . $this->table1 . '.sub_course', 'left')
+            ->join('tbl_courses as courses', 'courses.id = sub_courses.courses_id', 'left')
             ->where($this->table1 . '.id', $registerId)
             ->get()
             ->getResult();
-
-        // echo '<pre>';
-        // print_r($result);
-        // die;
-
+            
+            // echo '<pre>';
+            // print_r($result);
+            // die;
         if ($result) {
             return $result;
         } else {
