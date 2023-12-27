@@ -598,12 +598,12 @@
                                                     <p>Faculty Payment Records</p>
                                                 </a>
                                             </li>
-                                            <li class="nav-item" <?php if (in_array('studentpaments', $access_levels)) {
+                                            <li class="nav-item" <?php if (in_array('payments', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>studentpaments" class="nav-link">
+                                                <a href="<?php echo base_url() ?>payments" class="nav-link">
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Student Payments</p>
                                                 </a>
@@ -613,10 +613,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>payments" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Payments</p>
-                                                </a>
+                                               
                                             </li>
                                             <!-- Add other Finance menu items with access level checks here -->
                                         </ul>
@@ -1013,17 +1010,12 @@
                                 </a>
                             </li> 
                             <li class="nav-item" >
-                                <a href="<?php echo base_url() ?>studentpaments" class="nav-link">
+                                <a href="<?php echo base_url() ?>payments" class="nav-link">
                                     <i class="nav-icon fas fa-book"></i>
                                     <p>Student Payments</p>
                                 </a>
                             </li>
-                            <li class="nav-item" >
-                                <a href="<?php echo base_url(); ?>payments" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Payments</p>
-                                </a>
-                            </li>
+                            
                             <!-- Add other Finance menu items with access level checks here -->
                         </ul>
                     </li>

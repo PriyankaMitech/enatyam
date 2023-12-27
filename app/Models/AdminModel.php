@@ -167,18 +167,17 @@ class AdminModel extends Model
     public function get_students()
     {
         $query = $this->db->table('register AS students')
-            ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name')
-            ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
-            ->join('tbl_courses', 'tbl_courses.id = students.course', 'left') // Adjust 'course_id' to the actual foreign key column in the students table
-            ->join('tbl_sub_courses', 'tbl_sub_courses.id = students.sub_course', 'left') // Adjust 'sub_course_id' to the actual foreign key column in the students table
-            ->where('students.role', 'Student')
-            ->where('students.is_register_done', 'Y')
-            ->where('students.Payment_status', 'Y')
+        ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name')
+        ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
+        ->join('tbl_courses', 'tbl_courses.id = students.course', 'left')
+        ->join('tbl_sub_courses', 'tbl_sub_courses.id = students.sub_course', 'left')
+        ->where('students.role', 'Student')
+        ->where('students.is_register_done', 'Y')
+        ->where('students.Payment_status', 'Y')
+        ->orderBy('students.created_at', 'desc')
+        ->get();
 
-            ->orderBy('students.created_at', 'desc') // Replace 'created_at' with the actual column name you want to use for ordering
-            ->get();
-
-        return $query->getResult();
+    return $query->getResult();
     }
 
     public function getFaculty()
@@ -450,21 +449,25 @@ class AdminModel extends Model
     public function getcarreerBookByfaculty()
     {
         return $this->db->table('carrier')
-            ->select('*')
-            ->where('Result_of_application', 'Pending')
-            ->orderBy("D_id desc")
-            ->get()
-            ->getResult();
+        ->select('carrier.*, tbl_sub_courses.sub_courses_name, tbl_courses.courses_name')
+        ->join('tbl_sub_courses', 'tbl_sub_courses.id = carrier.sub_course', 'left')
+        ->join('tbl_courses', 'tbl_courses.id = carrier.course', 'left')
+        ->where('Result_of_application', 'Pending')
+        ->orderBy("D_id desc")
+        ->get()
+        ->getResult();
     }
 
     public function getrejectedList()
     {
         return $this->db->table('carrier')
-            ->select('*')
-            ->where('Status', 'N')
-            ->Where('Result_of_application', 'decline')
-            ->get()
-            ->getResult();
+        ->select('carrier.*, tbl_sub_courses.sub_courses_name, tbl_courses.courses_name')
+        ->join('tbl_sub_courses', 'tbl_sub_courses.id = carrier.sub_course', 'left')
+        ->join('tbl_courses', 'tbl_courses.id = carrier.course', 'left')
+        ->where('carrier.Status', 'N')
+        ->where('carrier.Result_of_application', 'decline')
+        ->get()
+        ->getResult();
     }
     public function updateGroupName($rowIdsArray, $groupName)
     {
@@ -589,8 +592,52 @@ class AdminModel extends Model
 
     public function getsinglerow($table, $wherecond)
     {
+     
         $result = $this->db->table($table)->where($wherecond)->get()->getRow();
 
+        if ($result) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
+    public function getsinglerow1($table, $wherecond)
+    {
+     
+        $joinConditions = [
+            'tbl_sub_courses' => 'tbl_sub_courses.id = carrier.sub_course',
+            'tbl_courses' => 'tbl_courses.id = carrier.course',
+            
+        ];    
+        $selectColumns = [
+            'tbl_sub_courses.sub_courses_name as sub_course_info', 
+            'tbl_courses.courses_name as course_info', 
+        ];
+    
+        $result = $this->db->table($table)
+            ->select("$table.*, " . implode(', ', $selectColumns))
+            ->join('tbl_sub_courses', $joinConditions['tbl_sub_courses'], 'left')
+            ->join('tbl_courses', $joinConditions['tbl_courses'], 'left')
+            ->where($wherecond)
+            ->get()
+            ->getRow();
+    
+        if ($result) {
+            return $result;
+        } else {
+            return false;
+        }
+    
+    }
+    public function  getcorcessforstudentprofile($table, $wherecond){
+        $result = $this->db->table($table)
+        ->select("$table.*,register.country, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name")
+        ->join('register', 'register.id = ' . $table . '.register_id', 'left')
+        ->join('tbl_sub_courses ', 'tbl_sub_courses.id = register.sub_course', 'left')
+        ->join('tbl_courses ', 'tbl_courses.id = register.course', 'left')
+        ->where($wherecond)
+        ->get()
+        ->getRow();
         if ($result) {
             return $result;
         } else {

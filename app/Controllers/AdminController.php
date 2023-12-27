@@ -41,7 +41,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-                // echo '<pre>';print_r($data['Faculty']);die;
+              //   echo '<pre>';print_r($data['PendingDemo']);die;
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -331,6 +331,9 @@ class AdminController extends BaseController
                 $data['carrer'] = $filteredCareerData;
                 $data['cansalList'] = $model->getrejectedList();
                 $data['createPassword'] = $model->getNullPasswordRecords();
+        //          echo '<pre>';
+        // print_r($data['cansalList']);
+        // die;
                 return view('AdminSideBar/NewFacultyApplication', $data);
             } else {
                 return redirect()->to(base_url());
@@ -1238,7 +1241,7 @@ class AdminController extends BaseController
 
         $wherecond = array('D_id' => $profile_id);
 
-        $data['profile_data'] = $model->getsinglerow('carrier', $wherecond);
+        $data['profile_data'] = $model->getsinglerow1('carrier', $wherecond);
 
         // echo "<pre>";
         // print_r($data['profile_data']);
@@ -1259,9 +1262,9 @@ class AdminController extends BaseController
 
         $wherecond = array('D_id' => $profile_id);
 // print_r($wherecond);die;
-        $data['profile_data'] = $model->getsinglerow('carrier', $wherecond);
+        $data['profile_data'] = $model->getsinglerow1('carrier', $wherecond);
         $data['faculty_slots'] = $model->getAllSlots($wherecond);
-        // echo "<pre>"; print_r($data['faculty_slots']);exit();
+  //      echo "<pre>"; print_r($data['profile_data']);exit();
 
         return view('AdminSideBar/viewprofilefaculty', $data);
     }
@@ -1286,9 +1289,9 @@ class AdminController extends BaseController
 
                 $wherecond = array('student_id ' => $profile_id);
 
-                $data['profile_data'] = $model->getsinglerow('student', $wherecond);
+                $data['profile_data'] = $model->getcorcessforstudentprofile('student', $wherecond);
 
-
+    
                 return view('AdminSideBar/viewProfiles', $data);
             } else {
                 return redirect()->to(base_url());
@@ -1323,6 +1326,7 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
         $data['student_list'] = $model->get_students();
+        //print_r($data['student_list']);die;
         echo view('payment_list', $data);
     }
     public function  fetch_records()

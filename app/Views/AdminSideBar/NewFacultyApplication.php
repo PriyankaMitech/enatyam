@@ -113,7 +113,8 @@ thead {
                                                     <td><?= $faculty->name ?></td>
                                                     <td><?= $faculty->phone ?></td>
                                                     <td><?= $faculty->email ?></td>
-                                                    <td><?= $faculty->course ?>/<?= $faculty->sub_course ?></td>
+                                                    <td><?= $faculty->courses_name ?>/<?= $faculty->sub_courses_name ?>
+                                                    </td>
 
                                                     <td>
                                                         <form method="POST" action="AdminController/Steusupdate">
@@ -158,7 +159,7 @@ thead {
                                                     <th>Contact Number</th>
                                                     <th>Email</th>
                                                     <th>Course/Subcourse</th>
-                                                    <th>Resume</th>
+                                                    <th>View</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -173,8 +174,14 @@ thead {
                                                     <td><?= $facult->name ?></td>
                                                     <td><?= $facult->phone ?></td>
                                                     <td><?= $facult->email ?></td>
-                                                    <td><?= $facult->course ?>/<?= $facult->sub_course ?></td>
-                                                    <td></td>
+                                                    <td><?= $facult->courses_name ?>/<?= $facult->sub_courses_name ?>
+                                                    </td>
+                                                    <td><a href="<?= base_url(); ?>viewProfile/<?= $faculty->D_id ?>"
+                                                            type="submit" class="btn btn-sm btn-primary"
+                                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                            title="View">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                        </a></td>
                                                     <td>
                                                         <form method="POST" action="AdminController/backtoApplication">
                                                             <input type="hidden" name="action" value="Pending">
@@ -216,21 +223,17 @@ thead {
                                                     <td><?= $Password->full_name ?></td>
                                                     <td><?= $Password->email ?></td>
 
-                                                    <form method="POST"
-                                                        action="<?= base_url('AdminController/createpassword') ?>">
-                                                        <input type="hidden" name="email"
-                                                            value="<?= $Password->email ?>">
-                                                        <td>
-                                                            <input type="password" class="form-control"
-                                                                id="passwordInput" name="password"
-                                                                placeholder="Password" required>
-                                                        </td>
-                                                        <td>
-                                                            <input type="hidden" name="id" value="<?= $Password->id ?>">
-                                                            <button class="btn btn-info" type="submit">Update
-                                                                Password</button>
-                                                        </td>
-                                                    </form>
+                                                    <form method="POST" action="<?= base_url('AdminController/createpassword') ?>" onsubmit="return validatePassword()">
+    <td>
+        <input type="password" class="form-control" id="passwordInput" name="password"
+               placeholder="Password" required oninput="validatePasswordOnInput()">
+        <span id="passwordError" style="color: red;"></span>
+    </td>
+    <td>
+        <input type="hidden" name="id" value="<?= $Password->id ?>">
+        <button class="btn btn-info" type="submit">Update Password</button>
+    </td>
+</form>
                                                 </tr>
                                                 <?php endforeach; ?>
                                             </tbody>

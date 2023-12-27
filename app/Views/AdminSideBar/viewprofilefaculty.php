@@ -66,7 +66,7 @@
 
                             <h3 class="profile-username text-center"><?=$profile_data->name;  ?></h3>
 
-                            <p class="text-muted text-center"><?=$profile_data->course;  ?> - <?=$profile_data->sub_course;  ?></p>
+                            <p class="text-muted text-center"><?=$profile_data->course_info;  ?> - <?=$profile_data->sub_course_info;  ?></p>
 
                           
                         </div>
@@ -94,7 +94,7 @@
                             <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
 
                             <p class="text-muted">
-                                <span class="tag tag-danger"><?=$profile_data->course;  ?> - <?=$profile_data->sub_course;  ?></span>
+                                <span class="tag tag-danger"><?=$profile_data->course_info;  ?> - <?=$profile_data->sub_course_info;  ?></span>
   
                             </p>
 

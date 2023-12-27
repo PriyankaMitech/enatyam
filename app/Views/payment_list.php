@@ -56,7 +56,7 @@
                         <tr>
                             <td><?= $i; ?></td>
                             <td><?= $data->full_name; ?></td>
-                            <td><?= $data->course; ?> - <?= $data->sub_course; ?></td>
+                            <td><?= $data->courses_name; ?> - <?= $data->sub_courses_name; ?></td>
                             <td><?= $data->teacher_name; ?></td>
                             <td><?= $data->SessionType; ?></td>
 
