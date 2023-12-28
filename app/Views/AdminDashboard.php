@@ -684,16 +684,12 @@ th {
 
                                         <td class="faculty-select">
                                             <?php if ($data->SessionType == "OneToOneSession" ) { ?>
-                                            <select name="faculty_name">
+                                            <select name="faculty_name" required>
                                                 <option value="" selected>Select Faculty</option>
                                                 <?php foreach ($Faculty as $facultyItem ): ?>
                                                 <?php if ($facultyItem->ccourses == $data->course && $facultyItem->csubcourses == $data->sub_course ): ?>
-                                                <option value="<?= $facultyItem->id ?>" <?php if (
-                                                        $data->Assign_Techer_id ==
-                                                        $facultyItem->id
-                                                    ) {
-                                                        echo "selected";
-                                                    } ?>>
+                                                <option value="<?= $facultyItem->id ?>"
+                                                    <?php if ($data->Assign_Techer_id == $facultyItem->id) echo "selected"; ?>>
                                                     <?= $facultyItem->full_name ?>
                                                 </option>
                                                 <?php endif; ?>
@@ -702,41 +698,18 @@ th {
                                             <?php } elseif ($data->SessionType == "GroupSession") { ?>
                                             <?= $data->teacher_name ?>
                                             <?php } ?>
-
-                                            <?php if (
-                                                $data->Session_Start_Date
-                                            ): ?>
                                         </td>
-                                        <!-- If a date is already assigned, display it -->
-                                        <td><?= $data->Session_Start_Date ?>
-                                        <input type="hidden" name="Session_Start_Date" class="Session_Start_Date" value="<?= $data->Session_Start_Date ?>">
-
-                                        </td>
-                                        <?php else: ?>
-                                        <!-- If no date is assigned, show the input field -->
+                                        <?php if ($data->SessionType == "OneToOneSession" && !$data->Session_Start_Date): ?>
                                         <td>
-                                            <?php if ($data->SessionType == "OneToOneSession") { ?>
-
                                             <input type="date" name="Session_Start_Date" class="Session_Start_Date"
-                                                value="<?php if (
-                                                $data->Session_Start_Date !=
-                                                null
-                                            ) {
-                                                echo $data->Session_Start_Date;
-                                            } else {
-                                                echo date("Y-m-d");
-                                            } ?>">
-                                            <?php } elseif (
-                                            $data->SessionType ==
-                                            "GroupSession"
-                                        ) { ?>
-                                            You Can't Assign Session Date Here
-                                            <?php } else { ?>
-                                        <td><?= $data->Session_Start_Date ?></td>
-
-                                        <?php } ?>
+                                                required>
                                         </td>
+                                        <?php elseif ($data->SessionType == "OneToOneSession" && $data->Session_Start_Date): ?>
+                                        <td><?= $data->Session_Start_Date ?><input type="hidden"
+                                                name="Session_Start_Date" class="Session_Start_Date"
+                                                value="<?= $data->Session_Start_Date ?>"></td>
                                         <?php endif; ?>
+
                                         <td class="change_f">
                                             <?php if (
                                                 $data->Assign_Techer_id > 0 &&

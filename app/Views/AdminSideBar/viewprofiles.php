@@ -7,13 +7,13 @@
             $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
     
             // Get the 'id' from the session
-            $register_id = $profile_data->register_id;
+            // $register_id = $profile_data->register_id;
 
-            $wherecon = array('id ' => $register_id);
+            // $wherecon = array('id ' => $register_id);
 
             
             // Rest of your code
-            $profile_datars = $adminModel->getsinglerow('register',$wherecon);
+            // $profile_datars = $adminModel->getsinglerow('register',$wherecon);
 
 
             $student_id = '';
@@ -64,9 +64,9 @@
 
                             <h3 class="profile-username text-center"><?=$profile_data->student_name;  ?></h3>
 
-                            <?php if(!empty($profile_datars)){ ?>
-                                <p class="text-muted text-center"><?=$profile_datars->course;  ?> - <?=$profile_datars->sub_course;  ?></p>
-                            <?php } ?>
+                            
+                                <p class="text-muted text-center"><?=$profile_data->courses_name;  ?> - <?=$profile_data->sub_courses_name;  ?></p>
+                           
   
 
                         </div>
@@ -78,15 +78,15 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                         <strong><i class="fa fa-envelope" aria-hidden="true"></i> Email Id</strong>
-                            <p class="text-muted"><?=$profile_datars->email;  ?></p>
+                            <p class="text-muted"><?=$profile_data->email;  ?></p>
 
                             <hr>
 
                             <strong><i class="fa fa-phone" aria-hidden="true"></i></i> Mobile Number</strong>
-                            <p class="text-muted"><?=$profile_datars->mobile_no;  ?></p>
+                            <p class="text-muted"><?=$profile_data->mobile_no;  ?></p>
                             <hr>    
                             <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
-                            <p class="text-muted"><?=$profile_datars->country;  ?></p> 
+                            <p class="text-muted"><?=$profile_data->country;  ?></p> 
                         </div>
                         <!-- /.card-body -->
                     </div>
