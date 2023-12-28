@@ -41,7 +41,7 @@ class AdminController extends BaseController
                 $data['getAllDemoList'] = $model->getAllDemoData();
                 $data['UnattendedDemoList'] = $model->UnattendedDemoList();
                 $data['Facultydatails'] = $model->getFaculty();
-              //   echo '<pre>';print_r($data['PendingDemo']);die;
+
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -1247,7 +1247,7 @@ class AdminController extends BaseController
         // print_r($data['profile_data']);
         // exit();
 
-        return view('AdminSideBar/viewProfile', $data);
+        return view('AdminSideBar/viewprofile', $data);
     }
 
     public function viewProfiledfaculty()
@@ -1291,8 +1291,9 @@ class AdminController extends BaseController
 
                 $data['profile_data'] = $model->getcorcessforstudentprofile('student', $wherecond);
 
-    
-                return view('AdminSideBar/viewProfiles', $data);
+
+                return view('AdminSideBar/viewprofiles', $data);
+
             } else {
                 return redirect()->to(base_url());
             }

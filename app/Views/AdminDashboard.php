@@ -224,7 +224,7 @@ th {
                             <div class="col-lg-3">
                                 <div class="card demo-card">
                                     <h4><?php echo abs(
-                                        count($PendingDemo) - $count
+                                        count($PendingDemo) 
                                     ); ?></h4>
                                     <h3>Pending Demo</h3>
                                     <i class="fas fa-long-arrow-alt-right pend-demo"></i>
@@ -473,10 +473,7 @@ th {
                                                 strtotime($a->Date);
                                         }); ?>
                                         <?php if (!empty($PendingDemo)) { ?>
-                                        <?php foreach (
-                                            $PendingDemo
-                                            as $facult
-                                        ): ?>
+                                        <?php foreach ($PendingDemo as $facult): ?>
                                         <tr>
                                             <form action="<?php echo base_url(
                                                 "AssignTecherForDemo"
@@ -489,35 +486,26 @@ th {
                                                     strtotime($facult->Date)
                                                 ) ?></td>
                                                 <td>
-                                                    <?php $matchingFaculties = array_filter(
-                                                        $Faculty,
-                                                        function (
-                                                            $faculty
-                                                        ) use ($facult) {
-                                                            return $faculty->course ==
-                                                                $facult->course &&
-                                                                $faculty->sub_course ==
-                                                                    $facult->sub_course;
-                                                        }
-                                                    ); ?>
-                                                    <?php if (
-                                                        !empty(
-                                                            $matchingFaculties
-                                                        )
-                                                    ): ?>
-                                                    <select name="faculty_name" class="form-control">
-                                                        <?php foreach (
-                                                            $matchingFaculties
-                                                            as $faculty
-                                                        ): ?>
-                                                        <option value="<?= $faculty->id ?>">
-                                                            <?= $faculty->full_name ?>
-                                                        </option>
-                                                        <?php endforeach; ?>
-                                                    </select>
-                                                    <?php else: ?>
-                                                    <p>No faculty available </p>
-                                                    <?php endif; ?>
+                                     
+                                   
+
+
+                                                    <select name="faculty_name">
+                                                <option value="" selected>Select Faculty</option>
+                                                <?php foreach ($Faculty as $facultyItems ): ?>
+                                                <?php if ($facultyItems->ccourses == $facult->course && $facultyItems->csubcourses == $facult->sub_course ): ?>
+                                                <option value="<?= $facultyItems->id ?>" <?php if (
+                                                        $facult->AssignTecher_id ==
+                                                        $facultyItems->id
+                                                    ) {
+                                                        echo "selected";
+                                                    } ?>>
+                                                    <?= $facultyItems->full_name ?>
+                                                </option>
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            </select>
+                                                  
                                                 </td>
                                                 <td><?= $facult->course ?></td>
                                                 <td><?= $facult->sub_course ?></td>
@@ -532,18 +520,19 @@ th {
                                                     <?php endif; ?>
                                                 </td>
                                                 <td>
+                                  
+
+
+
                                                     <?php if (
-                                                        $facult->AssignTecher_id >
-                                                            0 ||
-                                                        empty(
-                                                            $matchingFaculties
-                                                        )
-                                                    ): ?>
-                                                    <!-- Do nothing or display alternative content when the condition is true -->
-                                                    <?php else: ?>
-                                                    <button type="submit" name="assign_button"
-                                                        class="btn btn-info">Assign</button>
-                                                    <?php endif; ?>
+                                                $facult->AssignTecher_id > 0 
+                                            ) { ?>
+                                            <button type="submit" name="change_faculty_button" class="btn btn-info"
+                                                style="font-size: 12px;">Change Faculty</button>
+                                            <?php }  else { ?>
+                                            <button type="submit" name="assign_button" class="btn btn-warning"
+                                                style="font-size: 13px;">Assign</button>
+                                            <?php } ?>
                                                 </td>
                                             </form>
                                         </tr>

@@ -15,9 +15,9 @@ class DemoController extends BaseController
             'name' => $this->request->getPost('name'),
             'email' => $this->request->getPost('email'),
             'phone' => $this->request->getPost('phone'),
-            'course' => $this->request->getPost('course'),
-            'sub_course' => $this->request->getPost('sub_course'),
-            'Age' => $this->request->getPost('Age'),
+            'course' => $this->request->getPost('courses_id_d'),
+            'sub_course' => $this->request->getPost('sub_courses_id_d'),
+            'Age' => $this->request->getPost('Age1'),
             'exprience' => $this->request->getPost('exprience'),
             'Country' => $this->request->getPost('Country'),
             'State' => $this->request->getPost('State'),
@@ -28,6 +28,7 @@ class DemoController extends BaseController
             'End_Time' => $this->request->getPost('End_Time'),
 
         ];
+        // echo "<pre>";print_r($data);exit();
         $demoModel->save($data);
         return redirect()->to('Home');
     }
