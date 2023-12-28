@@ -33,7 +33,7 @@ class AdminController extends BaseController
                 $data['count'] = $model->getRowCount();
 
                 $data['students'] = $model->get_students();
-                $data['Faculty'] = $model->getFacultyWithCarrier();
+                // $data['Faculty'] = $model->getFacultyWithCarrier();
                 // $data['ConductedDemo'] = $model->getConductedDemo();
                 $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
                 $data['getPaymentstatus'] = $model->Paymentstatus();
@@ -83,9 +83,28 @@ class AdminController extends BaseController
                 // echo "<pre>";print_r($data['alldemolist']);exit();
 
 
-           
+
+                $select1 = 'register.*, carrier.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
+                $joinCond4 = 'register.carrier_id = carrier.D_id';
+                $joinCond5 = 'carrier.course = tbl_courses.id';
+                $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';
+        
+        
+                $wherecond = [
+                    'register.role' => 'Faculty',
+                ];
+        
+        
+        
+                $data['Faculty'] = $model->joinfourtables($select1, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, $wherecond, 'DESC');
+        
 
 
+         
+
+            
+
+                // echo "<pre>";print_r($data['Faculty']);exit();
                 
                 return view('AdminDashboard', $data);
             } else {
@@ -1381,8 +1400,39 @@ class AdminController extends BaseController
     public function demo_classes()
     {
         $model = new AdminModel();
-        $data['demo_list'] = $model->getAllDemoData();
-        echo view('demo_list', $data);
+
+            $select = 'free_demo_table.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
+            $joinCond = 'free_demo_table.course = tbl_courses.id';
+            $joinCond2 = 'free_demo_table.sub_course = tbl_sub_courses.id';
+
+            $demo_list = $model->jointhreetableswwc($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ', $joinCond, $joinCond2, 'DESC');
+
+            $result = array(); // Use a different variable
+
+            if (!empty($demo_list)) {
+                foreach ($demo_list as &$demo) {
+
+                    $AssignTecher_id = $demo->AssignTecher_id;
+                    $wherecon = array('id' => $AssignTecher_id);
+
+                    $faculty_data = $model->getsinglerow('register', $wherecon);
+
+                    // Add additional data to the demo array
+                    if(!empty($faculty_data)){
+                        $teachername=$faculty_data->full_name;
+                    }else {
+                        $teachername= 'No faculty assigned';
+                    }
+                    $demo->teacher = $teachername;
+
+                    // You can add more fields as needed, for example:
+                    // $demo->test = 'test';
+
+                    $result['demo_list'][] = $demo;
+                }
+            }
+
+        echo view('demo_list', $result);
     }
 
     public function student()
@@ -1395,7 +1445,29 @@ class AdminController extends BaseController
     public function faculty()
     {
         $model = new AdminModel();
-        $data['faculty_list'] = $model->getFaculty();
+        // $data['faculty_list'] = $model->getFaculty();
+
+
+        $select = 'register.*, carrier.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
+        $joinCond = 'register.carrier_id = carrier.D_id';
+        $joinCond2 = 'carrier.course = tbl_courses.id';
+        $joinCond3 = 'carrier.sub_course = tbl_sub_courses.id';
+
+
+        $wherecond = [
+            'register.role' => 'Faculty',
+        ];
+
+        // return $this->db->table('register')->where('role', 'Faculty')->get()->getResult();
+
+
+        $data['faculty_list'] = $model->joinfourtables($select, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $joinCond3, $wherecond, 'DESC');
+
+        // echo "<pre>";
+        // print_r($data['faculty_list']);
+        // print_r($data['data_list']);exit();
+        
+
         echo view('faculty_list', $data);
     }
 

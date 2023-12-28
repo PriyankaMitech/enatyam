@@ -54,12 +54,21 @@
                             <td><?= $i; ?></td>
                             <td><?= $data->full_name; ?></td>
                             <td><?= $data->email; ?></td>
-                            <td><?= $data->course; ?> - <?= $data->sub_course; ?></td>
+                            <td><?= $data->courses_name; ?> - <?= $data->sub_courses_name; ?></td>
                             <td><?= $data->teacher_name; ?></td>
                             <td><?= $data->SessionType; ?></td>
 
                             <td><?= $data->groupName; ?></td>
-                            <td><?= $data->Session_Start_Date;?></td>
+                            <?php
+                            if (!empty($data->Session_Start_Date)) {
+                                $formattedDate = date('j F Y', strtotime($data->Session_Start_Date));
+                                echo "<td>{$formattedDate}</td>";
+                            } else {
+                                echo "<td>No date available</td>";
+                            }
+                            ?>
+
+
 
 
 

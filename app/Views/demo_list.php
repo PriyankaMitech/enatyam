@@ -53,23 +53,29 @@
                   // exit();
                   if (!empty($demo_list)) {
                     $i = '1'; ?>
-                    <?php foreach ($demo_list as $data) { ?>
+                    <?php foreach ($demo_list as $data) { 
+                      
+                     
+                      ?>
                       <tr>
                         <td><?= $i; ?></td>
                         <td><?= $data->name; ?></td>
-                        <td><?= $data->course; ?></td>
-                        <td><?= $data->sub_course; ?></td>
-                        <td><?= $data->full_name; ?></td>
+                        <td><?= $data->courses_name; ?></td>
+                        <td><?= $data->sub_courses_name; ?></td>
+          
+                        <td><?= $data->teacher; ?></td>
 
 
-                        <td><?= $data->Booking_Date_Time; ?></td>
-                        <td><?php if ($data->Conducted_Demo == 'Reschedule') {
-                              echo 'Reschedule';
-                            } else if ($data->Conducted_Demo == 'Y') {
-                              echo  'Done';
-                            } else {
-                              echo 'Not Conducted';
-                            } ?></td>
+                        <td><?= date('j F Y', strtotime($data->Book_Date)); ?></td>
+                        <td><?php if ($data->Conducted_Demo == 'Reschedule') { ?>
+                              <small class="badge badge-warning ">Reschedule</small>                            
+
+                            <?php } else if ($data->Conducted_Demo == 'Y') { ?>
+                              <small class="badge badge-success ">Conducted</small>                            
+                              <?php } else { ?>
+                              <small class="badge badge-danger ">Not Conducted</small>                            
+
+                            <?php } ?></td>
 
                       </tr>
                     <?php $i++;
