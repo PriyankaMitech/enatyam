@@ -469,8 +469,8 @@ th {
                                             $a,
                                             $b
                                         ) {
-                                            return strtotime($b->Date) -
-                                                strtotime($a->Date);
+                                            return strtotime($b->Book_Date) -
+                                                strtotime($a->Book_Date);
                                         }); ?>
                                         <?php if (!empty($PendingDemo)) { ?>
                                         <?php foreach ($PendingDemo as $facult): ?>
@@ -483,7 +483,7 @@ th {
                                                 <td><?= $facult->email ?></td>
                                                 <td><?= date(
                                                     "d/m/Y",
-                                                    strtotime($facult->Date)
+                                                    strtotime($facult->Book_Date)
                                                 ) ?></td>
                                                 <td>
                                      

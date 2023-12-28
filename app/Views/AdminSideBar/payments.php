@@ -53,7 +53,7 @@ foreach ($payments as $key => $payment) {
     echo "<td>" . $payment->total_amount . "</td>";
 
     // Check if the status is null
-    if ($payment->status == null) {
+    if ($payment->status !== null) {
         echo '<td><small class="badge badge-success ">Sucessfull</small></td>';
     } else {
         echo "<td>" . $payment->status . "</td>";
