@@ -59,7 +59,17 @@ class facultymodel extends Model
         return $videos;
         //   print_r($videos);die;
     }
-
+    public function getstudentvideo($registerId)
+      {
+        $query = $this->db->table('uplode_study_video_from_student svf')
+        ->join('student s', 's.register_id = svf.register_id')
+        ->select('svf.name, svf.DateTime, s.student_name')
+        ->where('svf.register_id', $registerId)
+        ->get();
+   // print_r($query);die;
+    return $query->getResult();
+            
+      }
     public function insertAppointments($data)
     {
         //print_r($data);die;

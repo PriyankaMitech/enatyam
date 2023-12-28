@@ -24,18 +24,18 @@
         <div class="col-md-12">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Uplode video / Images</h3>
+              <h3 class="card-title">Upload video / Images</h3>
             </div>
             <form enctype="multipart/form-data" action="<?= site_url('uploadMedia'); ?>" method="POST">
               <div class="card-body">
                 <div class="row">
                   <div class="col-6">
                     <div class="form-group">
-                      <label for="Upoad Video">Upoad Video</label>
+                      <label for="UploadVideo">Upload Video</label>
                       <div class="input-group">
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="exampleInputFile" name="videoFile">
-                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                          <input type="file" class="custom-file-input" id="videoFile" name="videoFile" onchange="updateLabel('videoFile')">
+                          <label class="custom-file-label" for="videoFile">Choose file</label>
                         </div>
                         <div class="input-group-append">
                           <button class="btn btn-outline-secondary" type="submit" value="Upload Video">Upload</button>
@@ -43,10 +43,10 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="Upload Image">Upload Image </label>
+                      <label for="UploadImage">Upload Image</label>
                       <div class="input-group">
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="imageFile" name="imageFile" accept="image/*">
+                          <input type="file" class="custom-file-input" id="imageFile" name="imageFile" accept="image/*" onchange="updateLabel('imageFile')">
                           <label class="custom-file-label" for="imageFile">Choose file</label>
                         </div>
                         <div class="input-group-append">
@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-
 </section>
+
 </div>
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>

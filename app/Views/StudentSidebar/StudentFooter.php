@@ -259,6 +259,14 @@ function closeModal() {
     document.getElementById('myModal').style.display = 'none';
 }
 </script>
+<script>
+function updateLabel(inputId) {
+    var input = document.getElementById(inputId);
+    var label = input.nextElementSibling;
+    var fileName = input.files[0].name;
+    label.innerHTML = fileName;
+}
+</script>
 </div>
 </body>
 
