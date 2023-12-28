@@ -78,7 +78,7 @@
 <!-- AdminLTE App -->
 <!-- AdminLTE for demo purposes -->
 
-<!-- <script src="<?=base_url(); ?>dist/js/demo.js"></script> -->
+<!-- <script src="<?= base_url(); ?>dist/js/demo.js"></script> -->
 
 <!-- Page specific script -->
 <script>
@@ -431,196 +431,194 @@
 </script>
 
 <script>
-   $(function () {
-    function ini_events(ele) {
-        ele.each(function () {
-            var eventObject = {
-                title: $.trim($(this).text())
-            };
-            $(this).data('eventObject', eventObject);
-            $(this).draggable({
-                zIndex: 1070,
-                revert: true,
-                revertDuration: 0
+    $(function() {
+        function ini_events(ele) {
+            ele.each(function() {
+                var eventObject = {
+                    title: $.trim($(this).text())
+                };
+                $(this).data('eventObject', eventObject);
+                $(this).draggable({
+                    zIndex: 1070,
+                    revert: true,
+                    revertDuration: 0
+                });
             });
-        });
-    }
-
-    ini_events($('#external-events div.external-event'));
-
-    var date = new Date();
-    var d = date.getDate(),
-        m = date.getMonth(),
-        y = date.getFullYear();
-
-    var Calendar = FullCalendar.Calendar;
-    var Draggable = FullCalendar.Draggable;
-
-    var containerEl = document.getElementById('external-events');
-    var checkbox = document.getElementById('drop-remove');
-    var calendarEl = document.getElementById('calendar');
-
-    new Draggable(containerEl, {
-        itemSelector: '.external-event',
-        eventData: function (eventEl) {
-            return {
-                title: eventEl.innerText,
-                backgroundColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
-                borderColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
-                textColor: window.getComputedStyle(eventEl, null).getPropertyValue('color'),
-            };
-        }
-    });
-
-    var facultyEvents = [
-        <?php if (!empty($FacultysheduleData)) {
-
-            // echo "<pre>";print_r($FacultysheduleData);exit();
-            foreach ($FacultysheduleData as $data) {
-                // Get the current day of the week (assuming $data->Day contains the day information)
-                $currentDayOfWeek = strtolower($data->Day);
-            
-                // Calculate the date of the next occurrence of the specified day
-                $nextOccurrenceDate = date('Y-m-d', strtotime('next ' . $currentDayOfWeek));
-            
-                // Use the next occurrence date along with start and end times
-                ?>
-                {
-                    title: '<?= $data->full_name; ?> - <?= $data->start_time; ?> to <?= $data->end_time; ?>',
-                    start: '<?= $nextOccurrenceDate; ?>T<?= $data->start_time; ?>',
-                    end: '<?= $nextOccurrenceDate; ?>T<?= $data->end_time; ?>',
-                    faculty_id: '<?= $data->faculty_register_id; ?>',
-                },
-        <?php }
-        } ?>
-    ];
-
-    var colorMap = {};
-
-    facultyEvents.forEach(function (event) {
-        var facultyId = event.faculty_id;
-
-        if (!colorMap[facultyId]) {
-            colorMap[facultyId] = getRandomColor();
         }
 
-        event.backgroundColor = colorMap[facultyId];
-        event.borderColor = colorMap[facultyId];
-        event.textColor = getContrastColor(colorMap[facultyId]);
-    });
+        ini_events($('#external-events div.external-event'));
 
-    function getContrastColor(hexColor) {
-        var r = parseInt(hexColor.substring(1, 3), 16);
-        var g = parseInt(hexColor.substring(3, 5), 16);
-        var b = parseInt(hexColor.substring(5, 7), 16);
-        var brightness = (r * 299 + g * 587 + b * 114) / 1000;
-        return brightness > 128 ? '#000000' : '#FFFFFF';
-    }
+        var date = new Date();
+        var d = date.getDate(),
+            m = date.getMonth(),
+            y = date.getFullYear();
 
-    function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
+        var Calendar = FullCalendar.Calendar;
+        var Draggable = FullCalendar.Draggable;
 
-    var calendar = new Calendar(calendarEl, {
-        headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        themeSystem: 'bootstrap',
-        events: facultyEvents,
-        editable: true,
-        droppable: true,
-        drop: function (info) {
-            if (checkbox.checked) {
-                info.draggedEl.parentNode.removeChild(info.draggedEl);
+        var containerEl = document.getElementById('external-events');
+        var checkbox = document.getElementById('drop-remove');
+        var calendarEl = document.getElementById('calendar');
+
+        new Draggable(containerEl, {
+            itemSelector: '.external-event',
+            eventData: function(eventEl) {
+                return {
+                    title: eventEl.innerText,
+                    backgroundColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
+                    borderColor: window.getComputedStyle(eventEl, null).getPropertyValue('background-color'),
+                    textColor: window.getComputedStyle(eventEl, null).getPropertyValue('color'),
+                };
             }
-        },
-        eventContent: function (arg) {
-            var eventColor = arg.event.backgroundColor || '';
-            var textColor = getContrastColor(eventColor);
-            return {
-                html: '<div class="fc-content" style="background-color:' + eventColor +
-                    '; padding: 2%; border-radius: 5%">' +
-                    '<span class="fc-title" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: ' +
-                    textColor + ';" title="' + arg.event.title + '">' +
-                    '<div class="event-title">' + arg.event.title.split(' - ')[0] + '</div>' +
-                    '<div class="event-time">' + arg.event.title.split(' - ')[1] + '</div>' +
-                    '</span>' +
-                    '</div>',
-            };
-        },
-        dayRender: function (arg) {
-            var currentDay = arg.date.getDate();
-            var currentMonth = arg.date.getMonth() + 1;
-            var currentYear = arg.date.getFullYear();
-
-            var filteredEvents = facultyEvents.filter(function (event) {
-                var eventDate = new Date(event.start);
-                var eventDay = eventDate.getDate();
-                var eventMonth = eventDate.getMonth() + 1;
-                var eventYear = eventDate.getFullYear();
-
-                return (
-                    eventDay === currentDay &&
-                    eventMonth === currentMonth &&
-                    eventYear === currentYear
-                );
-            });
-
-            var eventContainer = $('<div class="day-events"></div>');
-            filteredEvents.forEach(function (event) {
-                var eventHtml =
-                    '<div class="event" style="background-color:' +
-                    event.backgroundColor +
-                    '">' +
-                    event.title +
-                    '</div>';
-                eventContainer.append(eventHtml);
-            });
-
-            $(arg.el).append(eventContainer);
-        },
-    });
-
-    calendar.render();
-
-    var currColor = '#3c8dbc';
-    $('#color-chooser > li > a').click(function (e) {
-        e.preventDefault();
-        currColor = $(this).css('color');
-        $('#add-new-event').css({
-            'background-color': currColor,
-            'border-color': currColor
         });
-    });
 
-    $('#add-new-event').click(function (e) {
-        e.preventDefault();
-        var val = $('#new-event').val();
-        if (val.length == 0) {
-            return;
+        var facultyEvents = [
+            <?php if (!empty($FacultysheduleData)) {
+
+                // echo "<pre>";print_r($FacultysheduleData);exit();
+                foreach ($FacultysheduleData as $data) {
+                    // Get the current day of the week (assuming $data->Day contains the day information)
+                    $currentDayOfWeek = strtolower($data->Day);
+
+                    // Calculate the date of the next occurrence of the specified day
+                    $nextOccurrenceDate = date('Y-m-d', strtotime('next ' . $currentDayOfWeek));
+
+                    // Use the next occurrence date along with start and end times
+            ?> {
+                        title: '<?= $data->full_name; ?> - <?= $data->start_time; ?> to <?= $data->end_time; ?>',
+                        start: '<?= $nextOccurrenceDate; ?>T<?= $data->start_time; ?>',
+                        end: '<?= $nextOccurrenceDate; ?>T<?= $data->end_time; ?>',
+                        faculty_id: '<?= $data->faculty_register_id; ?>',
+                    },
+            <?php }
+            } ?>
+        ];
+
+        var colorMap = {};
+
+        facultyEvents.forEach(function(event) {
+            var facultyId = event.faculty_id;
+
+            if (!colorMap[facultyId]) {
+                colorMap[facultyId] = getRandomColor();
+            }
+
+            event.backgroundColor = colorMap[facultyId];
+            event.borderColor = colorMap[facultyId];
+            event.textColor = getContrastColor(colorMap[facultyId]);
+        });
+
+        function getContrastColor(hexColor) {
+            var r = parseInt(hexColor.substring(1, 3), 16);
+            var g = parseInt(hexColor.substring(3, 5), 16);
+            var b = parseInt(hexColor.substring(5, 7), 16);
+            var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+            return brightness > 128 ? '#000000' : '#FFFFFF';
         }
 
-        var event = $('<div />');
-        event.css({
-            'background-color': currColor,
-            'border-color': currColor,
-            'color': '#fff'
-        }).addClass('external-event');
-        event.text(val);
-        $('#external-events').prepend(event);
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
 
-        ini_events(event);
-        $('#new-event').val('');
+        var calendar = new Calendar(calendarEl, {
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            themeSystem: 'bootstrap',
+            events: facultyEvents,
+            editable: true,
+            droppable: true,
+            drop: function(info) {
+                if (checkbox.checked) {
+                    info.draggedEl.parentNode.removeChild(info.draggedEl);
+                }
+            },
+            eventContent: function(arg) {
+                var eventColor = arg.event.backgroundColor || '';
+                var textColor = getContrastColor(eventColor);
+                return {
+                    html: '<div class="fc-content" style="background-color:' + eventColor +
+                        '; padding: 2%; border-radius: 5%">' +
+                        '<span class="fc-title" style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: ' +
+                        textColor + ';" title="' + arg.event.title + '">' +
+                        '<div class="event-title">' + arg.event.title.split(' - ')[0] + '</div>' +
+                        '<div class="event-time">' + arg.event.title.split(' - ')[1] + '</div>' +
+                        '</span>' +
+                        '</div>',
+                };
+            },
+            dayRender: function(arg) {
+                var currentDay = arg.date.getDate();
+                var currentMonth = arg.date.getMonth() + 1;
+                var currentYear = arg.date.getFullYear();
+
+                var filteredEvents = facultyEvents.filter(function(event) {
+                    var eventDate = new Date(event.start);
+                    var eventDay = eventDate.getDate();
+                    var eventMonth = eventDate.getMonth() + 1;
+                    var eventYear = eventDate.getFullYear();
+
+                    return (
+                        eventDay === currentDay &&
+                        eventMonth === currentMonth &&
+                        eventYear === currentYear
+                    );
+                });
+
+                var eventContainer = $('<div class="day-events"></div>');
+                filteredEvents.forEach(function(event) {
+                    var eventHtml =
+                        '<div class="event" style="background-color:' +
+                        event.backgroundColor +
+                        '">' +
+                        event.title +
+                        '</div>';
+                    eventContainer.append(eventHtml);
+                });
+
+                $(arg.el).append(eventContainer);
+            },
+        });
+
+        calendar.render();
+
+        var currColor = '#3c8dbc';
+        $('#color-chooser > li > a').click(function(e) {
+            e.preventDefault();
+            currColor = $(this).css('color');
+            $('#add-new-event').css({
+                'background-color': currColor,
+                'border-color': currColor
+            });
+        });
+
+        $('#add-new-event').click(function(e) {
+            e.preventDefault();
+            var val = $('#new-event').val();
+            if (val.length == 0) {
+                return;
+            }
+
+            var event = $('<div />');
+            event.css({
+                'background-color': currColor,
+                'border-color': currColor,
+                'color': '#fff'
+            }).addClass('external-event');
+            event.text(val);
+            $('#external-events').prepend(event);
+
+            ini_events(event);
+            $('#new-event').val('');
+        });
     });
-});
-
 </script>
 <script>
     document.getElementById("showVideoContainer").addEventListener("click", function() {
@@ -1277,27 +1275,34 @@
     <video width="100%" height="200px" controls poster="<?= base_url('public/images/play.jpg') ?>">
 
     var videoHTML = ` < div class = "col-sm-3 mt-3" >
-                    <video width = "100%"
+                    <
+                    video width = "100%"
                 height = "200px"
                 controls poster = "<?= base_url('public/images/play.jpg') ?>" >
-                    <source class = "img-fluid"
+                    <
+                    source class = "img-fluid"
                 src = "${base_url}/public/uploads/FacultyUplodedVideos/${faculty.video_name}"
                 type = "video/mp4" >
-                    </video>
+                    <
+                    /video>
 
-                     <div class = "ribbon-wrapper ribbon-lg" >
-                <div class = "ribbon"
+                    <
+                    div class = "ribbon-wrapper ribbon-lg" >
+                    <
+                    div class = "ribbon"
                 style = "background-color: ${ribbonColor}; text-lg" >
-                    <p class = "card-text"
+                    <
+                    p class = "card-text"
                 style = "color: #fff; background-color: ${ribbonColor}" > $ {
                     faculty.student_name
-                } </p> </div > <div class = "ribbon"
+                } < /p> </div > < div class = "ribbon"
                 style = "background-color: ${ribbonColor}; text-lg" >
-                    <p class = "card-text"
+                    <
+                    p class = "card-text"
                 style = "color: #fff; background-color: ${ribbonColor}" > $ {
                     faculty.student_name
-                } </p> </div> </div> <div class = "p" >
-                <p class = "card-text"
+                } < /p> </div > < /div> <div class = "p" > <
+                p class = "card-text"
                 style = "padding: 6%; color: #fff; background-color: ${ribbonColor}" >
                     Faculty Name & nbsp;: & nbsp;
                 $ {
@@ -1310,10 +1315,10 @@
                 Date & nbsp;: & nbsp;
                 $ {
                     formatVideoDate(faculty.DateTime)
-                } </p> </div > </div> `;
+                } < /p> </div > < /div> `;
 
-    container.append(videoHTML);
-</div>`;
+                container.append(videoHTML); <
+                /div>`;
                 container.append(videoHTML);
             });
         }
@@ -1482,7 +1487,7 @@
         $('.Session_Start_Date').attr('min', currentDate);
 
         $('#notification_date').attr('min', currentDate)
-        
+
     });
 </script>
 
@@ -1559,84 +1564,83 @@
 </script>
 
 <script>
-$(document).ready(function(){
-    $('#faculty_id_g').on('change', function(){
-        var facultyidg = $(this).val();
-        console.log(facultyidg);
-        if(facultyidg){
-            $.ajax({
-                url: '<?= base_url(); ?>get_shedule_data',
-                type: 'POST',
-                data: {faculty_id_g: facultyidg},
-                dataType: 'json',
-                success: function(data){
-                    $('#shedule').empty();
-                    $('#shedule').append('<option value="">Please select schedule</option>');
+    $(document).ready(function() {
+        $('#faculty_id_g').on('change', function() {
+            var facultyidg = $(this).val();
+            console.log(facultyidg);
+            if (facultyidg) {
+                $.ajax({
+                    url: '<?= base_url(); ?>get_shedule_data',
+                    type: 'POST',
+                    data: {
+                        faculty_id_g: facultyidg
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#shedule').empty();
+                        $('#shedule').append('<option value="">Please select schedule</option>');
 
-                    // Group timings by day
-                    var groupedTimings = {};
-                    $.each(data, function(key, value){
-                        if (!(value.Day in groupedTimings)) {
-                            groupedTimings[value.Day] = [];
-                        }
-                        groupedTimings[value.Day].push(value);
-                    });
-
-                    // Define custom order for days
-                    var customOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-                    // Sort days based on custom order
-                    var sortedDays = Object.keys(groupedTimings).sort(function(a, b) {
-                        return customOrder.indexOf(a) - customOrder.indexOf(b);
-                    });
-
-                    // Add grouped timings to the dropdown
-                    $.each(sortedDays, function(index, day){
-                        var oddEvenClass = index % 2 === 0 ? 'even' : 'odd';
-                        var optionsHtml = '<optgroup class="' + oddEvenClass + '" label="' + day + '">';
-
-                        $.each(groupedTimings[day], function(index, timing){
-                            var formattedStartTime = formatTime(timing.start_time);
-                            var formattedEndTime = formatTime(timing.end_time);
-
-                            optionsHtml += '<option value="' + timing.id + '">' + formattedStartTime + ' - ' + formattedEndTime + '</option>';
+                        // Group timings by day
+                        var groupedTimings = {};
+                        $.each(data, function(key, value) {
+                            if (!(value.Day in groupedTimings)) {
+                                groupedTimings[value.Day] = [];
+                            }
+                            groupedTimings[value.Day].push(value);
                         });
-                        optionsHtml += '</optgroup>';
-                        $('#shedule').append(optionsHtml);
-                    });
 
-                    // Retrieve the selected timing ID from the hidden input field
-                    var selectedTimingId = $('#selected_shedule').val();
+                        // Define custom order for days
+                        var customOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-                    // Select the timing in the dropdown
-                    $('#shedule').val(selectedTimingId);
-                }
-            });
-        } else {
-            $('#shedule').empty();
-            $('#shedule').append('<option value="">Please select schedule</option>');
-        }
+                        // Sort days based on custom order
+                        var sortedDays = Object.keys(groupedTimings).sort(function(a, b) {
+                            return customOrder.indexOf(a) - customOrder.indexOf(b);
+                        });
+
+                        // Add grouped timings to the dropdown
+                        $.each(sortedDays, function(index, day) {
+                            var oddEvenClass = index % 2 === 0 ? 'even' : 'odd';
+                            var optionsHtml = '<optgroup class="' + oddEvenClass + '" label="' + day + '">';
+
+                            $.each(groupedTimings[day], function(index, timing) {
+                                var formattedStartTime = formatTime(timing.start_time);
+                                var formattedEndTime = formatTime(timing.end_time);
+
+                                optionsHtml += '<option value="' + timing.id + '">' + formattedStartTime + ' - ' + formattedEndTime + '</option>';
+                            });
+                            optionsHtml += '</optgroup>';
+                            $('#shedule').append(optionsHtml);
+                        });
+
+                        // Retrieve the selected timing ID from the hidden input field
+                        var selectedTimingId = $('#selected_shedule').val();
+
+                        // Select the timing in the dropdown
+                        $('#shedule').val(selectedTimingId);
+                    }
+                });
+            } else {
+                $('#shedule').empty();
+                $('#shedule').append('<option value="">Please select schedule</option>');
+            }
+        });
+
+        // Trigger change event on #courses_id_g
+        $('#faculty_id_g').trigger('change');
     });
 
-    // Trigger change event on #courses_id_g
-    $('#faculty_id_g').trigger('change');
-});
+    function formatTime(timeString) {
+        var timeParts = timeString.split(':');
+        var hours = timeParts[0];
+        var minutes = timeParts[1];
 
-function formatTime(timeString) {
-    var timeParts = timeString.split(':');
-    var hours = timeParts[0];
-    var minutes = timeParts[1];
-    
-    return hours + ':' + minutes;
-}
-
-
-
+        return hours + ':' + minutes;
+    }
 </script>
 
 <script>
-    $(document).ready(function () {
-        $('.open-modal').on('click', function () {
+    $(document).ready(function() {
+        $('.open-modal').on('click', function() {
             var button = $(this);
             var modal = $('#modal-default-' + button.data('row-id'));
 
@@ -1660,6 +1664,7 @@ function formatTime(timeString) {
             passwordError.textContent = '';
         }
     }
+
     function validatePassword() {
         validatePasswordOnInput();
         return document.getElementById('passwordError').textContent === '';

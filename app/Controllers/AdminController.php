@@ -53,7 +53,7 @@ class AdminController extends BaseController
 
     public function AssignTecherForDemo()
     {
-         
+
         $model = new AdminModel();
         $postData = $this->request->getPost();
         $model->edit($postData);
@@ -239,11 +239,11 @@ class AdminController extends BaseController
         // die;
         if ($data['searchStudentData']) {
             return $this->response->setJSON($data);
-        }else {
+        } else {
             $data['status'] = '203';
             return $this->response->setJSON($data);
         }
-        
+
         // return view('AdminSideBar/StudentVideo', $data);
     }
     public function getDemoDetails()
@@ -331,9 +331,9 @@ class AdminController extends BaseController
                 $data['carrer'] = $filteredCareerData;
                 $data['cansalList'] = $model->getrejectedList();
                 $data['createPassword'] = $model->getNullPasswordRecords();
-        //          echo '<pre>';
-        // print_r($data['cansalList']);
-        // die;
+                //          echo '<pre>';
+                // print_r($data['cansalList']);
+                // die;
                 return view('AdminSideBar/NewFacultyApplication', $data);
             } else {
                 return redirect()->to(base_url());
@@ -436,35 +436,35 @@ class AdminController extends BaseController
         return redirect()->to('NewFacultyApplication');
     }
     public function ResheduleByadmin()
-{
-    $email = $this->request->getPost('email');
-    $AssignTecher_id = $this->request->getPost('AssignTecher_id');
-    $date = $this->request->getPost('Reshedule_date');
-    $time = $this->request->getPost('Reshedule_Time');
-    $result = $this->request->getPost('http://localhost/enatyam/getDemoDetails#custom-tabs-four-profile');
-    $D_id = $this->request->getPost('D_id');
-    $model = new AdminModel();
-    $registerRecord = $model->findname($AssignTecher_id);
+    {
+        $email = $this->request->getPost('email');
+        $AssignTecher_id = $this->request->getPost('AssignTecher_id');
+        $date = $this->request->getPost('Reshedule_date');
+        $time = $this->request->getPost('Reshedule_Time');
+        $result = $this->request->getPost('http://localhost/enatyam/getDemoDetails#custom-tabs-four-profile');
+        $D_id = $this->request->getPost('D_id');
+        $model = new AdminModel();
+        $registerRecord = $model->findname($AssignTecher_id);
 
-    if (!empty($registerRecord)) {
-        $firstRecord = reset($registerRecord);
-        $ccEmails = [$firstRecord->email]; // Assuming you want to CC the faculty's email
-        $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time);
-        $Subject = 'Your Demo Rescheduled';
-        $msg = "Your Demo Has Been Rescheduled - Date: $date, Time: $time";
-        if ($result == 1) {
-            // Pass $ccEmails to sendConfirmationEmail
-            sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
-            $this->session->setFlashdata('success', 'Demo Rescheduled Successfully.');
+        if (!empty($registerRecord)) {
+            $firstRecord = reset($registerRecord);
+            $ccEmails = [$firstRecord->email]; // Assuming you want to CC the faculty's email
+            $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time);
+            $Subject = 'Your Demo Rescheduled';
+            $msg = "Your Demo Has Been Rescheduled - Date: $date, Time: $time";
+            if ($result == 1) {
+                // Pass $ccEmails to sendConfirmationEmail
+                sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
+                $this->session->setFlashdata('success', 'Demo Rescheduled Successfully.');
+            } else {
+                $this->session->setFlashdata('error', 'Error Rescheduling Demo. Please try again.');
+            }
         } else {
-            $this->session->setFlashdata('error', 'Error Rescheduling Demo. Please try again.');
+            $this->session->setFlashdata('error', 'Error fetching faculty details. Please try again.');
         }
-    } else {
-        $this->session->setFlashdata('error', 'Error fetching faculty details. Please try again.');
-    }
 
-    return redirect()->to('getDemoDetails');
-}
+        return redirect()->to('getDemoDetails');
+    }
     public function FacultysidebarShedule()
     {
         $model = new AdminModel();
@@ -637,6 +637,9 @@ class AdminController extends BaseController
             if ($_SESSION['sessiondata']['role'] == 'Admin') {
                 $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
                 $result['getuser'] = $model->getalldata('register', $wherecond);
+                // echo '<pre>';
+                // print_r($result);
+                // die;
             } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 $result['getuser'] = $model->getalldata('register', $wherecond);
@@ -656,6 +659,9 @@ class AdminController extends BaseController
         if (isset($_SESSION['sessiondata'])) {
             $model = new AdminModel();
             $receiverid = $this->request->uri->getSegments(1);
+            // echo '<pre>';
+            // print_r($receiverid);
+            // die;
             if ($_SESSION['sessiondata']['role'] == 'Admin') {
                 $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
                 $result['getuser'] = $model->getalldata('register', $wherecond);
@@ -680,9 +686,9 @@ class AdminController extends BaseController
         $model = new AdminModel();
 
         $receiverid = $this->request->uri->getSegments(1);
-        echo '<pre>';
-        print_r($receiverid[1]);
-        die;
+        // echo '<pre>';
+        // print_r($receiverid[1]);
+        // die;
         $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
         $wherecond1 = array('id' => $receiverid[1]);
         $wherecond2 = array('sender_id' => $_SESSION['id'], 'receiver_id' => $receiverid[1]);
@@ -922,10 +928,9 @@ class AdminController extends BaseController
         if ($courses_id) {
 
             $sub_coursesname = $admin_model->chechk_courses_id_id($courses_id, $sub_courses_name);
-        
+
             return json_encode($sub_coursesname);
         }
-
     }
 
 
@@ -1093,8 +1098,8 @@ class AdminController extends BaseController
         echo view('user_list', $data);
     }
 
-    public function update_access_token() {
-        
+    public function update_access_token()
+    {
     }
 
     public function get_user()
@@ -1134,7 +1139,7 @@ class AdminController extends BaseController
     public function get_student_data()
     {
         $model = new AdminModel();
-    
+
         $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
         $courses_id_g = $this->request->getPost('courses_id_g');
         $GroupSession = 'GroupSession';
@@ -1142,14 +1147,14 @@ class AdminController extends BaseController
 
 
         $whereCondition = '';
-            $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'Payment_status' =>  $Payment_status, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
+        $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'Payment_status' =>  $Payment_status, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
 
 
         $student_data = $model->getalldata('register', $whereCondition);
-    
+
         return json_encode($student_data);
     }
-    
+
 
 
 
@@ -1261,10 +1266,10 @@ class AdminController extends BaseController
 
 
         $wherecond = array('D_id' => $profile_id);
-// print_r($wherecond);die;
+        // print_r($wherecond);die;
         $data['profile_data'] = $model->getsinglerow1('carrier', $wherecond);
         $data['faculty_slots'] = $model->getAllSlots($wherecond);
-  //      echo "<pre>"; print_r($data['profile_data']);exit();
+        //      echo "<pre>"; print_r($data['profile_data']);exit();
 
         return view('AdminSideBar/viewprofilefaculty', $data);
     }
@@ -1293,7 +1298,6 @@ class AdminController extends BaseController
 
 
                 return view('AdminSideBar/viewprofiles', $data);
-
             } else {
                 return redirect()->to(base_url());
             }
@@ -1467,49 +1471,47 @@ class AdminController extends BaseController
     }
 
 
-public function get_shedule_data()
-{
-    $model = new AdminModel();
-
-    $faculty_id_g = $this->request->getPost('faculty_id_g');
-
-
-    if ($faculty_id_g) {
-        $wherecond = array('carrier_id' => $faculty_id_g);
-
-
-        $faculity_data = $model->getsinglerow('register', $wherecond);
-
-        if(!empty($faculity_data)){
-            $wherecond1 = array('student_register_id' => NULL, 'shedule_status' => 'N', 'faculty_register_id' => $faculity_data->id);
-            $shedule_data = $model->getalldata('schedule', $wherecond1);
-        }
-        return json_encode($shedule_data);
-    } else {
-        return json_encode([]);
-    }
-}
-
-
-
-  
-  public function payments()
-{
-    if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
-
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
+    public function get_shedule_data()
+    {
         $model = new AdminModel();
-        if ($email !== null && $password !== null) {
-            $data['payments'] = $model->getpaymentdata();
-      //  echo'<pre>';print_r($data['payments'] );die;
-           return view('AdminSideBar/payments',$data);
-        }
-        else {
-            return redirect()->to(base_url());
+
+        $faculty_id_g = $this->request->getPost('faculty_id_g');
+
+
+        if ($faculty_id_g) {
+            $wherecond = array('carrier_id' => $faculty_id_g);
+
+
+            $faculity_data = $model->getsinglerow('register', $wherecond);
+
+            if (!empty($faculity_data)) {
+                $wherecond1 = array('student_register_id' => NULL, 'shedule_status' => 'N', 'faculty_register_id' => $faculity_data->id);
+                $shedule_data = $model->getalldata('schedule', $wherecond1);
+            }
+            return json_encode($shedule_data);
+        } else {
+            return json_encode([]);
         }
     }
-}
 
+
+
+
+    public function payments()
+    {
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
+
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+            $model = new AdminModel();
+            if ($email !== null && $password !== null) {
+                $data['payments'] = $model->getpaymentdata();
+                //  echo'<pre>';print_r($data['payments'] );die;
+                return view('AdminSideBar/payments', $data);
+            } else {
+                return redirect()->to(base_url());
+            }
+        }
+    }
 }

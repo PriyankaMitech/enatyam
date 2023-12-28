@@ -118,10 +118,10 @@ class AdminModel extends Model
     {
         $today = date('Y-m-d');
         return $this->db->table('free_demo_table')
-                        ->where('Conducted_Demo', 'N')
-                        ->where('Book_Date >=', $today)
-                        ->get()
-                        ->getResult();
+            ->where('Conducted_Demo', 'N')
+            ->where('Book_Date >=', $today)
+            ->get()
+            ->getResult();
     }
     public function UnattendedDemoList()
     {
@@ -167,17 +167,17 @@ class AdminModel extends Model
     public function get_students()
     {
         $query = $this->db->table('register AS students')
-        ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name')
-        ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
-        ->join('tbl_courses', 'tbl_courses.id = students.course', 'left')
-        ->join('tbl_sub_courses', 'tbl_sub_courses.id = students.sub_course', 'left')
-        ->where('students.role', 'Student')
-        ->where('students.is_register_done', 'Y')
-        ->where('students.Payment_status', 'Y')
-        ->orderBy('students.created_at', 'desc')
-        ->get();
+            ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name')
+            ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
+            ->join('tbl_courses', 'tbl_courses.id = students.course', 'left')
+            ->join('tbl_sub_courses', 'tbl_sub_courses.id = students.sub_course', 'left')
+            ->where('students.role', 'Student')
+            ->where('students.is_register_done', 'Y')
+            ->where('students.Payment_status', 'Y')
+            ->orderBy('students.created_at', 'desc')
+            ->get();
 
-    return $query->getResult();
+        return $query->getResult();
     }
 
     public function getFaculty()
@@ -189,14 +189,14 @@ class AdminModel extends Model
     {
 
         $result = $this->db->table('register AS r')
-        ->select('r.*, carrier.course as ccourses,  carrier.sub_course as csubcourses')
-        ->join('carrier', 'r.carrier_id = carrier.D_id ', 'left')
-        ->where('r.role', 'Faculty')
-        ->get();
+            ->select('r.*, carrier.course as ccourses,  carrier.sub_course as csubcourses')
+            ->join('carrier', 'r.carrier_id = carrier.D_id ', 'left')
+            ->where('r.role', 'Faculty')
+            ->get();
         return $result->getResult();
     }
-    
-    
+
+
 
     public function getAllSessionData()
     {
@@ -254,10 +254,21 @@ class AdminModel extends Model
     }
     public function getAllDemoData()
     {
-        return $this->db->table('free_demo_table')
-            ->select('*')
+        // return $this->db->table('free_demo_table')
+        //     ->select('*')
+        //     ->get()
+        //     ->getResult();
+        $result = $this->db->table('free_demo_table AS fdt')
+            ->select('fdt.*, register.full_name as full_name')
+            ->join('register', 'fdt.AssignTecher_id = register.id')
             ->get()
             ->getResult();
+        return $result;
+
+        // echo $this->db->getLastQuery();
+        // echo '<pre>';
+        // print_r($result);
+        // exit();
     }
 
     public function getFacultyData()
@@ -391,40 +402,40 @@ class AdminModel extends Model
     //     }
     // }
 
-    public function getSearchData($table, $startDate=null, $endDate = null, $studentName = '', $facultyName = '')
+    public function getSearchData($table, $startDate = null, $endDate = null, $studentName = '', $facultyName = '')
     {
         if ($table == 'uplode_video_to_student') {
             $joinstudent = 'student.student_id = uplode_video_to_student.student_id';
             $joinregister = 'register.id = uplode_video_to_student.register_faculty_id';
             $jointbl1 = 'student';
-            $student= 'student.student_name as Student_name';
-            $where1 = array('register.id'=>$facultyName);
-            $where2 = array('uplode_video_to_student.student_id'=>$studentName);
+            $student = 'student.student_name as Student_name';
+            $where1 = array('register.id' => $facultyName);
+            $where2 = array('uplode_video_to_student.student_id' => $studentName);
             // $where2 = 'uplode_video_to_student.student_id ,'.$studentName.'';
-        }else {
+        } else {
             $joinstudent = 'register.carrier_id = faculty.carrier_id';
             $joinregister = 'register.id = uplode_study_video_from_student.Faculty_id';
             $jointbl1 = 'faculty';
-            $student ='';
-            $where1 = array('uplode_study_video_from_student.faculty_id'=>$facultyName);
-            $where2 = array('uplode_study_video_from_student.register_id'=>$studentName);
+            $student = '';
+            $where1 = array('uplode_study_video_from_student.faculty_id' => $facultyName);
+            $where2 = array('uplode_study_video_from_student.register_id' => $studentName);
         }
         // print_r($startDate);die;
         $query = $this->db->table($table)
-            ->select(''.$table.'.*, '.$student.', register.full_name as faculty_name')
+            ->select('' . $table . '.*, ' . $student . ', register.full_name as faculty_name')
             ->join('register', $joinregister)
             ->join($jointbl1, $joinstudent);
 
         if ($startDate !== null) {
             $startDate = new \DateTime($startDate);
             $startDateFormatted = $startDate->format('Y-m-d H:i:s');
-            $query->where(''.$table.'.DateTime >=', $startDateFormatted);
+            $query->where('' . $table . '.DateTime >=', $startDateFormatted);
         }
 
         if ($endDate !== null) {
             $endDate = new \DateTime($endDate);
             $endDateFormatted = $endDate->format('Y-m-d H:i:s');
-            $query->where(''.$table.'.DateTime <=', $endDateFormatted);
+            $query->where('' . $table . '.DateTime <=', $endDateFormatted);
         }
 
         if ($facultyName !== '') {
@@ -449,25 +460,25 @@ class AdminModel extends Model
     public function getcarreerBookByfaculty()
     {
         return $this->db->table('carrier')
-        ->select('carrier.*, tbl_sub_courses.sub_courses_name, tbl_courses.courses_name')
-        ->join('tbl_sub_courses', 'tbl_sub_courses.id = carrier.sub_course', 'left')
-        ->join('tbl_courses', 'tbl_courses.id = carrier.course', 'left')
-        ->where('Result_of_application', 'Pending')
-        ->orderBy("D_id desc")
-        ->get()
-        ->getResult();
+            ->select('carrier.*, tbl_sub_courses.sub_courses_name, tbl_courses.courses_name')
+            ->join('tbl_sub_courses', 'tbl_sub_courses.id = carrier.sub_course', 'left')
+            ->join('tbl_courses', 'tbl_courses.id = carrier.course', 'left')
+            ->where('Result_of_application', 'Pending')
+            ->orderBy("D_id desc")
+            ->get()
+            ->getResult();
     }
 
     public function getrejectedList()
     {
         return $this->db->table('carrier')
-        ->select('carrier.*, tbl_sub_courses.sub_courses_name, tbl_courses.courses_name')
-        ->join('tbl_sub_courses', 'tbl_sub_courses.id = carrier.sub_course', 'left')
-        ->join('tbl_courses', 'tbl_courses.id = carrier.course', 'left')
-        ->where('carrier.Status', 'N')
-        ->where('carrier.Result_of_application', 'decline')
-        ->get()
-        ->getResult();
+            ->select('carrier.*, tbl_sub_courses.sub_courses_name, tbl_courses.courses_name')
+            ->join('tbl_sub_courses', 'tbl_sub_courses.id = carrier.sub_course', 'left')
+            ->join('tbl_courses', 'tbl_courses.id = carrier.course', 'left')
+            ->where('carrier.Status', 'N')
+            ->where('carrier.Result_of_application', 'decline')
+            ->get()
+            ->getResult();
     }
     public function updateGroupName($rowIdsArray, $groupName)
     {
@@ -592,7 +603,7 @@ class AdminModel extends Model
 
     public function getsinglerow($table, $wherecond)
     {
-     
+
         $result = $this->db->table($table)->where($wherecond)->get()->getRow();
 
         if ($result) {
@@ -603,17 +614,17 @@ class AdminModel extends Model
     }
     public function getsinglerow1($table, $wherecond)
     {
-     
+
         $joinConditions = [
             'tbl_sub_courses' => 'tbl_sub_courses.id = carrier.sub_course',
             'tbl_courses' => 'tbl_courses.id = carrier.course',
-            
-        ];    
-        $selectColumns = [
-            'tbl_sub_courses.sub_courses_name as sub_course_info', 
-            'tbl_courses.courses_name as course_info', 
+
         ];
-    
+        $selectColumns = [
+            'tbl_sub_courses.sub_courses_name as sub_course_info',
+            'tbl_courses.courses_name as course_info',
+        ];
+
         $result = $this->db->table($table)
             ->select("$table.*, " . implode(', ', $selectColumns))
             ->join('tbl_sub_courses', $joinConditions['tbl_sub_courses'], 'left')
@@ -621,23 +632,23 @@ class AdminModel extends Model
             ->where($wherecond)
             ->get()
             ->getRow();
-    
+
         if ($result) {
             return $result;
         } else {
             return false;
         }
-    
     }
-    public function  getcorcessforstudentprofile($table, $wherecond){
+    public function  getcorcessforstudentprofile($table, $wherecond)
+    {
         $result = $this->db->table($table)
-        ->select("$table.*,register.country, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name")
-        ->join('register', 'register.id = ' . $table . '.register_id', 'left')
-        ->join('tbl_sub_courses ', 'tbl_sub_courses.id = register.sub_course', 'left')
-        ->join('tbl_courses ', 'tbl_courses.id = register.course', 'left')
-        ->where($wherecond)
-        ->get()
-        ->getRow();
+            ->select("$table.*,register.country, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name")
+            ->join('register', 'register.id = ' . $table . '.register_id', 'left')
+            ->join('tbl_sub_courses ', 'tbl_sub_courses.id = register.sub_course', 'left')
+            ->join('tbl_courses ', 'tbl_courses.id = register.course', 'left')
+            ->where($wherecond)
+            ->get()
+            ->getRow();
         if ($result) {
             return $result;
         } else {
@@ -665,7 +676,11 @@ class AdminModel extends Model
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
 
-        // echo $this->db->getLastQuery();die;
+        // echo $this->db->getLastQuery();
+        // die;
+        // echo '<pre>';
+        // print_r($result);
+        // die;
         if ($result) {
             return $result;
         } else {
@@ -1061,13 +1076,12 @@ class AdminModel extends Model
     }
     public function chatfaculty($table, $wherecond)
     {
-        $query['chatuser'] = $this->db->table(''.$table.' r')
-            ->select('r.*, s.Assign_Techer_id') 
+        $query['chatuser'] = $this->db->table('' . $table . ' r')
+            ->select('r.*, s.Assign_Techer_id')
             ->join('student s', 'r.id = s.Assign_Techer_id', 'left')
             ->where($wherecond)
-            ->get()->getRow();        
-            //    echo $this->db->getLastQuery();die;
+            ->get()->getRow();
+        //    echo $this->db->getLastQuery();die;
         return $query;
     }
-
 }
