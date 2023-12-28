@@ -2369,7 +2369,7 @@
 
     <script>
         $(document).ready(function() {
-            Add custom method for letters only validation
+            // Add custom method for letters only validation
             $.validator.addMethod("lettersOnly", function(value, element) {
                 return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
             }, "Please enter letters only.");
@@ -2396,7 +2396,6 @@
                 rules: {
                     Fname: {
                         required: true,
-                        // lettersOnly: true
                     },
                     Lname: {
                         required: true,
@@ -2428,7 +2427,6 @@
                 messages: {
                     Fname: {
                         required: 'Please enter your first name.',
-                        // lettersOnly: 'Please enter letters only.' // Custom error message
                     },
                     Lname: {
                         required: 'Please enter your last name.',
