@@ -134,7 +134,6 @@ $(document).ready(function(){
     $('#courses').trigger('change');
 
     $('#searchstudvideo, #searchfacvideo').click(function () {
-        
         if ($(this).val() == 'searchfacvideo') {
             var formdata = $('#searchForm').serialize();
             var sdate = $('#startDate').val()
@@ -146,12 +145,13 @@ $(document).ready(function(){
             var edate = $('#studentVideoEndDate').val()
             var container = '#studentVideosContainer'
         }
+        
         if (edate <= sdate) {
             alert('End date should be greater than start date')
             $('#studentVideoEndDate').focus()
             return false
         }
-        console.log($(this).val())
+        // alert(formdata)
         if(formdata){
             $.ajax({
                 url: 'http://localhost/enatyam/getSearchData', 
@@ -161,7 +161,7 @@ $(document).ready(function(){
                 success: function (response) {
                     var searchdata = response.searchStudentData
                     var html = '';
-                    console.log(response.searchStudentData);
+                    console.log(container);
                     if (response.searchStudentData =='false') {
                         $(container).html('No matching records found!')
                     }else {

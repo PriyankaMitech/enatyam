@@ -120,7 +120,7 @@ class FacultyController extends BaseController
           $videos = $facultyModel->getVideosByRegisterId($registerId);
           $stdvideos = $facultyModel->getstudentvideo($registerId);
 // print_r($videos);die;
-          return view('StudentSideBarVideo', ['videos' => $videos, 'stdvideos' => $stdvideos]);
+return view('StudentSideBarVideo', ['videos' => $videos, 'stdvideos' => $stdvideos, 'registerId' => $registerId]);
       } else {
           return redirect()->to(base_url());
       }
