@@ -253,8 +253,6 @@
                                                         <?php } ?>
                                                     <?php }
                                                     ?>
-
-
                                                 <?php } ?>
                                             </div>
                                         </div>
@@ -267,13 +265,17 @@
                                                         <div class="form-group">
                                                             <label for="startDate">Start Date:</label>
                                                             <?php $currentUrl = current_url();  ?>
-                                                            <input type="date" class="form-control" id="studentVideoStartDate" placeholder="Enter start date:" name="startDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) {  echo session()->getFlashdata('startDate');  } ?>">
+                                                            <input type="date" class="form-control" id="studentVideoStartDate" placeholder="Enter start date:" name="startDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) {
+                                                                                                                                                                                            echo session()->getFlashdata('startDate');
+                                                                                                                                                                                        } ?>">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label for="endDate">End Date:</label>
-                                                            <input type="date" class="form-control" id="studentVideoEndDate" placeholder="Enter end date:" name="endDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) { echo session()->getFlashdata('startDate');} ?>">
+                                                            <input type="date" class="form-control" id="studentVideoEndDate" placeholder="Enter end date:" name="endDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) {
+                                                                                                                                                                                        echo session()->getFlashdata('startDate');
+                                                                                                                                                                                    } ?>">
                                                         </div>
                                                     </div>
 
