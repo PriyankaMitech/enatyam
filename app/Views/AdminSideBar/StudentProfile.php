@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="card-footer">
                                         <div class="text-right">
-                                            <a href="#" class="btn btn-sm bg-teal">
+                                            <a href="<?php echo base_url()?>chatuser/<?php echo $data->register_id ; ?>" class="btn btn-sm bg-teal">
                                                 <i class="fas fa-comments"></i>
                                             </a>
                                             <a href="<?php echo base_url() ?>viewProfiles/<?=$data->student_id  ?>" class="btn btn-sm btn-primary">

@@ -68,7 +68,7 @@ th {
                                     <li class="nav-item">
                                         <a class="nav-link " id="custom-tabs-four-profile-tab" data-toggle="pill"
                                             href="#custom-tabs-four-profile" role="tab"
-                                            aria-controls="custom-tabs-four-profile" aria-selected="true">pending
+                                            aria-controls="custom-tabs-four-profile" aria-selected="true">Pending
                                             Demo</a>
                                     </li>
                                     <li class="nav-item">
@@ -99,7 +99,7 @@ th {
                                                 <?php foreach ($ConductedDemo as $Demo): ?>
                                                 <tr>
                                                     <td><?= $Demo->name ?></td>
-                                                    <td><?= $Demo->course ?>/<?= $Demo->sub_course ?></td>
+                                                    <td><?= $Demo->courses_name ?>/<?= $Demo->sub_courses_name ?></td>
                                                     <td><?= $Demo->email ?></td>
                                                     <td><?= $Demo->phone ?></td>
                                                     <td></td>
@@ -136,7 +136,7 @@ th {
                                                 ?>
                                                 <tr>
                                                     <td><?= $PDemo->name ?></td>
-                                                    <td><?= $PDemo->course ?>/<?= $PDemo->sub_course ?></td>
+                                                    <td><?= $PDemo->courses_name ?>/<?= $PDemo->sub_courses_name ?></td>
                                                     <td><?= $PDemo->email ?></td>
                                                     <td><?= $PDemo->phone ?></td>
                                                     <td><?= $PDemo->Book_Date ?></td>
@@ -201,18 +201,18 @@ th {
                                             ?>
                                                 <tr>
                                                     <td><?= $PDemo->name ?></td>
-                                                    <td><?= $PDemo->course ?>/<?= $PDemo->sub_course ?></td>
+                                                    <td><?= $PDemo->courses_name ?>/<?= $PDemo->sub_courses_name ?></td>
                                                     <td><?= $PDemo->email ?></td>
                                                     <td><?= $PDemo->phone ?></td>
                                                     <form method="POST" action="AdminController/ResheduleByadmin">
                                                         <td>
                                                             <div>
                                                                 <input type="date" name="Reshedule_date"
-                                                                    min="<?= date('Y-m-d') ?>">
+                                                                    min="<?= date('Y-m-d') ?>" required>
                                                                 <!-- Date input field -->
                                                                 <input type="time"
                                                                     style="margin-top: 7px; width: 131px;"
-                                                                    name="Reshedule_Time">
+                                                                    name="Reshedule_Time" required>
                                                                 <!-- Time input field -->
                                                             </div>
                                                         </td>

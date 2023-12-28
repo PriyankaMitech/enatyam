@@ -147,7 +147,7 @@
                                 <a class="btn  btn-primary btn-sm w-50 mr-2"
                                     href="<?=base_url(); ?>viewProfiledfaculty/<?=$faculty->carrier_id ;?>">
                                     <i class="fa fa-user" aria-hidden="true"></i>&nbsp;Profile </a>
-                                <a class="btn  btn-secondary btn-sm w-50" href="/react/demo/chat">
+                                <a class="btn  btn-secondary btn-sm w-50" href="<?php echo base_url()?>chatuser/<?php echo $faculty->register_id ; ?>">
                                     <i class="fa fa-comments-o" aria-hidden="true"></i> &nbsp;Chat </a>
                             </div>
                         </div>

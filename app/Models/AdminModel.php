@@ -515,8 +515,10 @@ class AdminModel extends Model
         return $this->db->table('free_demo_table')
             ->where('D_id', $D_id)
             ->update([
-                'Conducted_Demo' => $result,
+                'Conducted_Demo' => 'N',
                 'Reshedule_date' => $date,
+                'Book_Date' => $date,
+
                 'Reshedule_Time' => $time
             ]);
     }
@@ -1084,4 +1086,36 @@ class AdminModel extends Model
         //    echo $this->db->getLastQuery();die;
         return $query;
     }
+
+
+    public function jointhreetables($select, $table1, $table2, $table3, $joinCond, $joinCond2, $wherecond, $type)
+    {
+        $result = $this->db->table($table1)  // Use $table1 variable here
+            ->select($select) 
+            ->join($table2, $joinCond, $type)
+            ->join($table3, $joinCond2, $type)
+            ->where($wherecond)
+            ->get()
+            ->getResult();        
+        //    echo $this->db->getLastQuery();die;
+        return $result;
+    }
+
+    
+
+    public function jointhreetableswwc($select, $table1, $table2, $table3, $joinCond, $joinCond2, $type)
+    {
+        $result = $this->db->table($table1)  // Use $table1 variable here
+            ->select($select) 
+            ->join($table2, $joinCond, $type)
+            ->join($table3, $joinCond2, $type)
+            ->get()
+            ->getResult();        
+        //    echo $this->db->getLastQuery();die;
+        return $result;
+    }
+    
+
+
+
 }

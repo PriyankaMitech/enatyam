@@ -359,15 +359,17 @@ $return_url = site_url().'PaymentController/payment';
     var razorpay_submit_btn, razorpay_instance;
 
 
-    function razorpaySubmit(el){
-        
-        if(typeof Razorpay == 'undefined'){
-        setTimeout(razorpaySubmit, 200);
-        if(!razorpay_submit_btn && el){
-            razorpay_submit_btn = el;
-            el.disabled = true;
-            el.value = 'Please wait...';  
-        }
+    function razorpaySubmit(el) {
+    var checkbox = document.getElementById('flexCheckDefault');
+    
+    if (checkbox.checked) {
+        if (typeof Razorpay == 'undefined') {
+            setTimeout(razorpaySubmit, 200);
+            if (!razorpay_submit_btn && el) {
+                razorpay_submit_btn = el;
+                el.disabled = true;
+                el.value = 'Please wait...';
+            }
         } else {
             if (!razorpay_instance) {
                 razorpay_instance = new Razorpay(razorpay_options);
@@ -378,6 +380,10 @@ $return_url = site_url().'PaymentController/payment';
             }
             razorpay_instance.open();
         }
+    } else {
+        // Display an alert or any other indication that the checkbox is not checked.
+        alert("Please read and agree to the terms and conditions.");
     }
+}
 </script>
 

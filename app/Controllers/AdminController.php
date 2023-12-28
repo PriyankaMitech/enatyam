@@ -34,14 +34,59 @@ class AdminController extends BaseController
 
                 $data['students'] = $model->get_students();
                 $data['Faculty'] = $model->getFacultyWithCarrier();
-                $data['ConductedDemo'] = $model->getConductedDemo();
-                $data['PendingDemo'] = $model->getPendingDemo();
+                // $data['ConductedDemo'] = $model->getConductedDemo();
                 $data['ConductedDemoStatus'] = $model->getConductedDemoStatus();
                 $data['getPaymentstatus'] = $model->Paymentstatus();
-                $data['getAllDemoList'] = $model->getAllDemoData();
-                $data['UnattendedDemoList'] = $model->UnattendedDemoList();
+                // $data['alldemolist'] = $model->getAllDemoData();
+                // $data['PendingDemo'] = $model->getPendingDemo();
+                // $data['UnattendedDemoList'] = $model->UnattendedDemoList();
+              
                 $data['Facultydatails'] = $model->getFaculty();
 
+
+                $select = 'free_demo_table.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
+                $joinCond = 'free_demo_table.course = tbl_courses.id';
+                $joinCond2 = 'free_demo_table.sub_course = tbl_sub_courses.id';
+                // $cond = "u.email =  '$email'";
+                $today = date('Y-m-d');
+
+    
+
+                $wherecond = [
+                    'free_demo_table.Conducted_Demo' => 'N',
+                    'free_demo_table.Book_Date >=' => $today,
+                ];
+ 
+                
+    
+                $data['PendingDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond, 'DESC');
+
+
+                $wherecond1 = [
+                    'free_demo_table.Conducted_Demo' => 'N',
+
+                    'free_demo_table.Book_Date <' => $today,
+                ];
+        
+
+                $data['UnattendedDemoList'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond1, 'DESC');
+
+
+                $data['alldemolist'] = $model->jointhreetableswwc($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2,  'DESC');
+
+
+                $wherecond2 = [
+                    'free_demo_table.Conducted_Demo' => 'Y',
+                ]; 
+                $data['ConductedDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond2, 'DESC');;
+
+                // echo "<pre>";print_r($data['alldemolist']);exit();
+
+
+           
+
+
+                
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -257,10 +302,37 @@ class AdminController extends BaseController
             if ($email !== null && $password !== null) {
                 $model = new AdminModel();
 
-                $data['ConductedDemo'] = $model->getConductedDemo();
-                $data['PendingDemo'] = $model->getPendingDemoList();
-                $data['resheduleDemo'] = $model->getresheduleDemo();
+                // $data['ConductedDemo'] = $model->getConductedDemo();
+                // $data['PendingDemo'] = $model->getPendingDemoList();
+                // $data['resheduleDemo'] = $model->getresheduleDemo();
                 $data['Faculty'] = $model->getFaculty();
+
+                $select = 'free_demo_table.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
+                $joinCond = 'free_demo_table.course = tbl_courses.id';
+                $joinCond2 = 'free_demo_table.sub_course = tbl_sub_courses.id';
+                $today = date('Y-m-d'); 
+
+                $wherecond = [
+                    'free_demo_table.Conducted_Demo' => 'N',
+                    'free_demo_table.Reshedule_date' => null,
+                ]; 
+
+                $data['PendingDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond, 'DESC');
+
+                $wherecond1 = [
+                    'free_demo_table.Conducted_Demo' => 'Reschedule',
+                ]; 
+
+                $data['resheduleDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond1, 'DESC');
+
+                $wherecond2 = [
+                    'free_demo_table.Conducted_Demo' => 'Y',
+                ]; 
+                $data['ConductedDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond2, 'DESC');;
+
+
+
+            //  echo "<pre>";print_r($data['PendingDemo']);exit();
 
                 return view('AdminSideBar/Demo', $data);
             } else {

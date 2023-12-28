@@ -258,10 +258,15 @@ th {
                                         <tr>
                                             <th>Name</th>
                                             <th>email</th>
+                                            <th>Course</th>
+                                            <th>Sub course</th>
+
+
                                             <th>Demo Date</th>
 
                                         </tr>
-                                        <?php if (!empty($ConductedDemo)) { ?>
+                                        <?php
+                                        if (!empty($ConductedDemo)) { ?>
                                         <?php foreach (
                                             $ConductedDemo
                                             as $faculty
@@ -272,6 +277,10 @@ th {
                                             ) ?>" method="post">
                                                 <td><?= $faculty->name ?></td>
                                                 <td><?= $faculty->email ?></td>
+                                                <td><?= $faculty->courses_name ?></td>
+
+                                                <td><?= $faculty->sub_courses_name ?></td>
+
                                                 <td>
                                                     <input type="hidden" name="email" value="<?= $faculty->email ?>">
                                                     <!-- <button class="btn btn-primary" type="submit">Add
@@ -303,12 +312,14 @@ th {
                                             <tr>
                                                 <th>Name</th>
                                                 <th>Course</th>
+                                                <th>Sub Course</th>
+
                                                 <th>Demo Date</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
-                                        <?php // Sort the $getAllDemoList array in descending order based on the Booking_Date_Time field
-                                        usort($getAllDemoList, function (
+                                        <?php // Sort the $alldemolist array in descending order based on the Booking_Date_Time field
+                                        usort($alldemolist, function (
                                             $a,
                                             $b
                                         ) {
@@ -319,14 +330,16 @@ th {
                                                     $a->Booking_Date_Time
                                                 );
                                         }); ?>
-                                        <?php if (!empty($getAllDemoList)) { ?>
+                                        <?php if (!empty($alldemolist)) { ?>
                                         <?php foreach (
-                                            $getAllDemoList
+                                            $alldemolist
                                             as $status
                                         ): ?>
                                         <tr>
                                             <td><?= $status->name ?></td>
-                                            <td><?= $status->course ?></td>
+                                            <td><?= $status->courses_name ?></td>
+                                            <td><?= $status->sub_courses_name ?></td>
+
                                             <td><?= date(
                                                 "d/m/Y",
                                                 strtotime(
@@ -375,6 +388,8 @@ th {
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Course</th>
+                                            <th>Sub Course</th>
+
                                             <th>Demo Date</th>
                                             <th>Assign faculty</th>
                                             <th>Reschedule</th>
@@ -384,19 +399,21 @@ th {
                                         <tr>
                                             <td><?= $status->name ?></td>
                                             <td><?= $status->email ?></td>
-                                            <td><?= $status->course ?></td>
-                                            <td><?= $status->Booking_Date_Time ?></td>
+                                            <td><?= $status->courses_name ?></td>
+                                            <td><?= $status->sub_courses_name ?></td>
+
+                                            <td><?php echo $status->Book_Date;?></td>
                                             <td>
                                                 <?php if ($status->AssignTecher_id === null): ?>
                                                 <?php
-                        $matchingFaculties = array_filter(
-                            $Faculty,
-                            function ($faculty) use ($status) {
-                                return $faculty->course == $status->course &&
-                                    $faculty->sub_course == $status->sub_course;
-                            }
-                        );
-                        ?>
+                                                    $matchingFaculties = array_filter(
+                                                        $Faculty,
+                                                        function ($faculty) use ($status) {
+                                                            return $faculty->course == $status->course &&
+                                                                $faculty->sub_course == $status->sub_course;
+                                                        }
+                                                    );
+                                                ?>
                                                 <?php if (!empty($matchingFaculties)): ?>
                                                 <form action="AssignTecherForDemo" method="post">
                                                     <select name="faculty_id" class="form-control">
@@ -469,8 +486,8 @@ th {
                                             $a,
                                             $b
                                         ) {
-                                            return strtotime($b->Date) -
-                                                strtotime($a->Date);
+                                            return strtotime($b->Book_Date) -
+                                                strtotime($a->Book_Date);
                                         }); ?>
                                         <?php if (!empty($PendingDemo)) { ?>
                                         <?php foreach ($PendingDemo as $facult): ?>
@@ -483,7 +500,7 @@ th {
                                                 <td><?= $facult->email ?></td>
                                                 <td><?= date(
                                                     "d/m/Y",
-                                                    strtotime($facult->Date)
+                                                    strtotime($facult->Book_Date)
                                                 ) ?></td>
                                                 <td>
                                      
@@ -507,8 +524,8 @@ th {
                                             </select>
                                                   
                                                 </td>
-                                                <td><?= $facult->course ?></td>
-                                                <td><?= $facult->sub_course ?></td>
+                                                <td><?= $facult->courses_name ?></td>
+                                                <td><?= $facult->sub_courses_name ?></td>
                                                 <td>
                                                     <?php if (
                                                         $facult->AssignTecher_id >

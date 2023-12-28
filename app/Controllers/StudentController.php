@@ -67,43 +67,50 @@ class StudentController extends BaseController
     }
     public function uploadMedia()
     {
-
         $result = session();
         $registerId = $result->get('id');
         $StudentModel = new StudentModel();
         $registerData = $StudentModel->getAllRegisterData($registerId, ['full_name', 'Assign_Techer_id']);
-        //    print_r($registerData);die;
+    
         $assignTeacherId = $registerData[0]->Assign_Techer_id;
         $full_name = $registerData[0]->full_name;
-        // print_r($assignTeacherId);die;
+    
         if ($assignTeacherId === null) {
             // Display an error message
-            echo 'You cannot upload a video because you do not have a faculty assigned.';
-
+            $result->setFlashdata('error', 'You cannot upload a video because you do not have a faculty assigned.');
+    
             // Redirect to the dashboard with the error message
             return redirect()->to('StudentDashboard');
         }
+    
         // Get uploaded files
         $image = $this->request->getFile('imageFile');
         $video = $this->request->getFile('videoFile');
+    
         // Check if an image was uploaded
         if ($image && $image->isValid() && !$image->hasMoved()) {
             $imageName = $image->getName();
             $image->move(ROOTPATH . 'public/uploads/images', $imageName);
-
+    
             // Save image name, Assign_Teacher_id, and registerId to the database
             $StudentModel->insert(['name' => $imageName, 'type' => 'image', 'Faculty_id' => $assignTeacherId, 'register_id' => $registerId, 'Student_name' => $full_name]);
+    
+            // Set success message in session
+            $result->setFlashdata('success', 'Image uploaded successfully.');
         }
-
+    
         // Check if a video was uploaded
         if ($video && $video->isValid() && !$video->hasMoved()) {
             $videoName = $video->getName();
             $video->move(ROOTPATH . 'public/uploads/StudentStudyvideos', $videoName);
-
+    
             // Save video name, Assign_Teacher_id, and registerId to the database
             $StudentModel->insert(['name' => $videoName, 'type' => 'video', 'Faculty_id' => $assignTeacherId, 'register_id' => $registerId, 'Student_name' => $full_name]);
+    
+            // Set success message in session
+            $result->setFlashdata('success', 'Video uploaded successfully.');
         }
-
+    
         return redirect()->to('UplodeVideo');
     }
 

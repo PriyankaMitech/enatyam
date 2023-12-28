@@ -113,20 +113,20 @@ class FacultyController extends BaseController
       $password = $sessionData['password'] ?? null;
 
       if ($email !== null && $password !== null) {
+          $studentId = session();
+          $registerId = $studentId->get('id');
 
-        $studentId = session();
-        $registerId = $studentId->get('id');
-        $facultyModel = new FacultyModel();
-        $videos = $facultyModel->getVideosByRegisterId($registerId);
-
-        // echo "<pre>";print_r($videos);exit();
-        return view('StudentSideBarVideo', ['videos' => $videos]);
+          $facultyModel = new FacultyModel();
+          $videos = $facultyModel->getVideosByRegisterId($registerId);
+          $stdvideos = $facultyModel->getstudentvideo($registerId);
+// print_r($videos);die;
+          return view('StudentSideBarVideo', ['videos' => $videos, 'stdvideos' => $stdvideos]);
       } else {
-        return redirect()->to(base_url());
+          return redirect()->to(base_url());
       }
-    } else {
+  } else {
       return redirect()->to(base_url());
-    }
+  }
   }
 
   public function uploaded_images()
