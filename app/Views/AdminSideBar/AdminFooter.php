@@ -1648,7 +1648,23 @@ function formatTime(timeString) {
         });
     });
 </script>
-
+<script>
+    function validatePasswordOnInput() {
+        var passwordInput = document.getElementById('passwordInput');
+        var password = passwordInput.value;
+        var passwordPattern = /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?\":{}|<>]).{8,}$/;
+        var passwordError = document.getElementById('passwordError');
+        if (!passwordPattern.test(password)) {
+            passwordError.textContent = "Password must contain at least one uppercase letter, one special character, and be at least 8 characters long.";
+        } else {
+            passwordError.textContent = '';
+        }
+    }
+    function validatePassword() {
+        validatePasswordOnInput();
+        return document.getElementById('passwordError').textContent === '';
+    }
+</script>
 
 
 
