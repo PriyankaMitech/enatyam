@@ -704,7 +704,7 @@ th {
                                             <select name="faculty_name" required>
                                                 <option value="" selected>Select Faculty</option>
                                                 <?php foreach ($Faculty as $facultyItem ): ?>
-                                                <?php if ($facultyItem->ccourses == $data->course && $facultyItem->csubcourses == $data->sub_course ): ?>
+                                                <?php if ($facultyItem->course == $data->course && $facultyItem->sub_course == $data->sub_course ): ?>
                                                 <option value="<?= $facultyItem->id ?>"
                                                     <?php if ($data->Assign_Techer_id == $facultyItem->id) echo "selected"; ?>>
                                                     <?= $facultyItem->full_name ?>
@@ -714,18 +714,24 @@ th {
                                             </select>
                                             <?php } elseif ($data->SessionType == "GroupSession") { ?>
                                             <?= $data->teacher_name ?>
+                                            
                                             <?php } ?>
                                         </td>
-                                        <?php if ($data->SessionType == "OneToOneSession" && !$data->Session_Start_Date): ?>
+                                        <?php if ($data->SessionType == "OneToOneSession" && !$data->Session_Start_Date){ ?>
                                         <td>
                                             <input type="date" name="Session_Start_Date" class="Session_Start_Date"
                                                 required>
                                         </td>
-                                        <?php elseif ($data->SessionType == "OneToOneSession" && $data->Session_Start_Date): ?>
+                                        <?php }elseif ($data->SessionType == "OneToOneSession" && $data->Session_Start_Date){ ?>
                                         <td><?= $data->Session_Start_Date ?><input type="hidden"
                                                 name="Session_Start_Date" class="Session_Start_Date"
                                                 value="<?= $data->Session_Start_Date ?>"></td>
-                                        <?php endif; ?>
+
+                                                
+                                        <?php }else{ ?>
+                                        <td><?= $data->Session_Start_Date ?></td>
+                                        <?php } ?>
+
 
                                         <td class="change_f">
                                             <?php if (
@@ -775,15 +781,16 @@ th {
 
                                 </tr>
 
-                                <?php if (!empty($Faculty)) { ?>
+                                <?php if (!empty($Faculty)) {
+                                    ?>
                                 <?php foreach ($Faculty as $faculty): ?>
 
                                 <tr>
                                     <td><?= $faculty->full_name ?></td>
                                     <td><?= $faculty->email ?></td>
-                                    <td><?= $faculty->course ?></td>
-                                    <td><?= $faculty->sub_course ?></td>
-                                    <td><?= $faculty->mobile_no ?></td>
+                                    <td><?= $data->courses_name;?></td>
+                                    <td><?= $data->sub_courses_name; ?></td>
+                                    <td><?= $faculty->phone ?></td>
                                     <!-- <td><button onclick="showStudentTable(this)" class="btn btn-info">Assign -->
                                     <!-- Students</button></td> -->
 

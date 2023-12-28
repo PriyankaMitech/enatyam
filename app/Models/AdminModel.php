@@ -1114,7 +1114,39 @@ class AdminModel extends Model
         //    echo $this->db->getLastQuery();die;
         return $result;
     }
+
+
+    public function joinfourtables($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $wherecond, $type)
+    {
+        $result = $this->db->table($table1)  // Use $table1 variable here
+            ->select($select) 
+            ->join($table2, $joinCond, $type)
+            ->join($table3, $joinCond2, $type)
+            ->join($table4, $joinCond3, $type)
+            ->where($wherecond)
+            ->get()
+            ->getResult();        
+        //    echo $this->db->getLastQuery();die;
+        return $result;
+    }
     
+
+    public function joinfourtableswwc($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $type)
+    {
+        $result = $this->db->table($table1)  // Use $table1 variable here
+            ->select($select) 
+            ->join($table2, $joinCond, $type)
+            ->join($table3, $joinCond2, $type)
+            ->join($table4, $joinCond3, $type)
+            ->get()
+            ->getResult();        
+        //    echo $this->db->getLastQuery();die;
+        return $result;
+    }
+    
+
+
+
 
 
 

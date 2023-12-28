@@ -58,12 +58,7 @@
                     <?php foreach ($faculty_list as $data) { 
 
                       
-                          $carrier_id;
-                         $carrier_id = $data->carrier_id;
-             
-                      $wherecon2 = array('D_id' => $carrier_id);
-             
-                      $alldatac = $adminModel->getsinglerow('carrier',  $wherecon2);
+                     
 
                       // echo "<pre>";print_r($faculty_list);exit();
                       ?>
@@ -71,9 +66,9 @@
                             <td><?= $i; ?></td>
                             <td><?= $data->full_name; ?></td>
                             <td><?= $data->email; ?></td>
-                            <td><?php if(!empty($alldatac)){ echo  $alldatac->phone;} ?></td>
-                            <td><?php if(!empty($alldatac)){ echo  $alldatac->course;} ?></td>
-                            <td><?php if(!empty($alldatac)){ echo  $alldatac->sub_course;} ?></td>
+                            <td><?= $data->phone; ?></td>
+                            <td><?= $data->courses_name;?></td>
+                            <td><?= $data->sub_courses_name; ?></td>
        
 
 
