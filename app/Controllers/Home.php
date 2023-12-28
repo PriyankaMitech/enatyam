@@ -187,12 +187,12 @@ class Home extends BaseController
     }
     public function demo1()
     {
-        
+
         return view('demo1');
     }
     public function demo()
     {
-        
+
         return view('demo');
     }
     public function FacultyDashboard()

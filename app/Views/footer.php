@@ -890,6 +890,10 @@
 
     <script>
         function handleSubmit(collapse_val) {
+            // alert(collapse_val);
+            // alert("hiii");
+
+
             if (collapse_val == "collapseOne") {
                 var phoneno_regx = /^\d{10}$/;
                 var name_error_msg = "Name field is required";
@@ -928,7 +932,7 @@
                 $("#coursespanid").html(demo_for_error_msg);
 
                 if (name_error_msg == "" && email_error_msg == "" && phone_error_msg == "" && demo_for_error_msg == "") {
-                    $("#collapseTwo").collapse('show');
+                    $("#collapseThree").collapse('show');
                 }
 
                 // Step-2 validation
@@ -964,7 +968,7 @@
                 var information_error_msg = "Information field is required";
 
                 // Check if at least one age checkbox is checked
-                if ($(".checkboxCondition[name='Age']:checked").length === 0) {
+                if ($(".checkboxCondition[name='Age1']:checked").length === 0) {
                     age_error_msg = "At least one Age must be selected";
                 } else {
                     age_error_msg = "";
@@ -3105,6 +3109,46 @@ $(document).ready(function(){
 
 
 </script>
+<script>
+$(document).ready(function(){
+    $('#courses_id_d').on('change', function(){
+        var countryId = $(this).val();
+        console.log(countryId)
+        if(countryId){
+            $.ajax({
+                url: '<?= base_url(); ?>get_sub_courses_data',
+                type: 'POST',
+                data: {courses_id_g: countryId},
+                dataType: 'json',
+                success: function(data){
+                    $('#sub_courses_id_d').empty();
+                    $('#sub_courses_id_d').append('<option value="">Please select sub Courses</option>');
+                    $.each(data, function(key, value){
+                        $('#sub_courses_id_d').append('<option value="'+ value.id +'">'+ value.sub_courses_name +'</option>');
+                    });
+
+                    // Retrieve the selected state ID from the hidden input field
+                    var selectedStateId = $('#selected_sub_courses_id_d').val();
+
+                    // Select the state in the dropdown
+                    $('#sub_courses_id_d').val(selectedStateId);
+                }
+            });
+        } else {
+            $('#sub_courses_id_d').empty();
+            $('#sub_courses_id_d').append('<option value="">Please Select State</option>');
+        }
+    });
+
+    // Trigger change event on #courses_id_d
+    $('#courses_id_d').trigger('change');
+});
+
+
+
+
+</script>
+
 
 
 

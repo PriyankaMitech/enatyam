@@ -355,6 +355,8 @@ $page = $uri->getSegment(count($pages));
               faculty_id : '<?=$data->faculty_register_id; ?>',
             },
     <?php }} ?>
+
+    
 ];
 
 
