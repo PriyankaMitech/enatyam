@@ -293,7 +293,7 @@ class AdminController extends BaseController
         $facName =  $this->session->setFlashdata('facultyName', $facultyNames);
 
         $model = new AdminModel();
-        // print_r($_POST);die;
+        //  print_r($table);die;
         // $data['searchStudentData'] = $model->getStudentBySearch($studentVideoStartDate, $studentVideoEndDate, $studentNames, $facultyNames);
         $data['searchStudentData'] = $model->getSearchData($table, $studentVideoStartDate, $studentVideoEndDate, $studentNames, $facultyNames);
         $data['studentList'] = $model->getStudentData();

@@ -66,10 +66,40 @@ function formatDateTime($dateTimeString)
 
     <!-- Display for both faculty and student videos -->
     <div class="card-body">
+   
     <div class="tab-content">
         <div class="active tab-pane" id="activity">
+            <form action="<?php echo base_url(); ?>searchFacultyVideos" method="post" id="studentVideoForm">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="startDate">Start Date:</label>
+                            <?php $currentUrl = current_url(); ?>
+                            <input type="date" class="form-control" id="studentVideoStartDate" name="startDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) { echo session()->getFlashdata('startDate');} ?>">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="endDate">End Date:</label>
+                            <input type="date" class="form-control" id="studentVideoEndDate" name="endDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) {  echo session()->getFlashdata('endDate'); } ?>">
+                        </div>
+                    </div>
+       
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group text-right">
+                            <input type="hidden" name="table" value="uplode_study_video_from_student">
+                            <input type="hidden" name="facultyName" value="<?php echo $_SESSION['Assign_Techer_id']?>">
+                            <input type="hidden" name="studentName" value="<?php echo $registerId; ?>">
+                            <!-- Include an additional hidden input field -->
+                            <button type="button" value="searchstudvideo" id="searchstudvideo" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
             <?php if (!empty($stdvideos)) { ?>
-                <div class="row mt-4">
+                <div class="row mt-4" id="studentVideosContainer">
                     <?php foreach ($stdvideos as $mystdvideo) {
                         $imagePath = 'public/uploads/StudentStudyvideos/' . $mystdvideo->name;
                         $fullImagePath = base_url($imagePath);
@@ -91,7 +121,7 @@ function formatDateTime($dateTimeString)
                                     <div class="card-body">
                                         <p class="card-text">
                                             <?php if ($mystdvideo) : ?>
-                                                <strong>Video Date:</strong>
+                                                <strong> Video Date:</strong>
                                                 <?= formatDateTime($mystdvideo->DateTime); ?>
                                             <?php endif; ?>
                                         </p>
@@ -108,8 +138,37 @@ function formatDateTime($dateTimeString)
         </div>
 
         <div class="tab-pane" id="timeline">
+            <form action="<?php echo base_url(); ?>searchFacultyVideos" method="post" id="searchForm">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="startDate">Start Date:</label>
+                            <?php $currentUrl = current_url(); ?>
+                            <input type="date" class="form-control" id="startDate" name="startDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('startDate'))) { echo session()->getFlashdata('startDate'); } ?>">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="endDate">End Date:</label>
+                            <input type="date" class="form-control" id="endDate" name="endDate" value="<?php if (strpos($currentUrl, 'searchFacultyVideos') !== false && !empty(session()->getFlashdata('endDate'))) { echo session()->getFlashdata('endDate'); } ?>">
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group text-right">
+                            <input type="hidden" name="table" value="uplode_video_to_student">
+                            <input type="hidden" name="facultyName" value="<?php echo $_SESSION['Assign_Techer_id']?>">
+                            <input type="hidden" name="studentName" value="<?php echo $registerId; ?>">
+                            <!-- Include an additional hidden input field -->
+                            <button type="button" value="searchfacvideo" id="searchfacvideo" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
             <?php if (!empty($videos)) {  ?>
-                <div class="row mt-4">
+                <div class="row mt-4" id="facultyVideosContainer">
                     <?php foreach ($videos as $faculty) {
                         $extension = pathinfo($faculty->video_name, PATHINFO_EXTENSION);
                         if ($extension == 'mp4') :
