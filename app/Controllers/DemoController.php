@@ -9,6 +9,7 @@ class DemoController extends BaseController
 {
     public function bookDemo()
     {
+       // print_r($_POST);die;
 
         $demoModel = new DemoModel();
         $data = [

@@ -214,23 +214,12 @@ class AdminController extends BaseController
                 $model = new AdminModel();
                 $data['studentList'] = $model->getStudentData();
                 $data['facultyList'] = $model->getFacultyrole();
-                // Retrieve data without filtering (assuming your method accepts parameters)
                 $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
                 $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
-
-                // echo'<pre>';print_r($data['FacultyVideoData']);die;
-
-                // Retrieve filtered data from session flash
                 $filteredFacultyVideoData = session()->getFlashdata('filteredFacultyVideoData');
-
-                // Merge filtered data with existing FacultyVideoData
                 if (!empty($filteredFacultyVideoData)) {
                     $data['FacultyVideoData'] = array_merge($data['FacultyVideoData'], $filteredFacultyVideoData);
                 }
-
-                // echo "<pre>";
-                // print_r($data['FacultyVideoData']);
-                // exit();
                 return view('AdminSideBar/StudentVideo', $data);
             } else {
                 return redirect()->to(base_url());

@@ -325,83 +325,6 @@ class AdminModel extends Model
         return  $VideoDetails;
     }
 
-
-
-    // public function getFacultyBySearch($startDate = null, $endDate = null, $studentName = '', $facultyName = '')
-    // {
-    //     $query = $this->db->table('uplode_video_to_student')
-    //         ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
-    //         ->join('student', 'student.student_id = uplode_video_to_student.student_id')
-    //         ->join('register', 'register.id = uplode_video_to_student.register_faculty_id');
-
-    //     if ($startDate !== null) {
-    //         $startDate = new \DateTime($startDate);
-    //         $startDateFormatted = $startDate->format('Y-m-d H:i:s');
-    //         $query->where('uplode_video_to_student.DateTime >=', $startDateFormatted);
-    //     }
-
-    //     if ($endDate !== null) {
-    //         $endDate = new \DateTime($endDate);
-    //         $endDateFormatted = $endDate->format('Y-m-d H:i:s');
-    //         $query->where('uplode_video_to_student.DateTime <=', $endDateFormatted);
-    //     }
-
-
-
-    //     if ($facultyName !== '') {
-    //         $query->Where('register.id', $facultyName);
-    //     }
-    //     if ($studentName !== '') {
-    //         $query->Where('uplode_video_to_student.student_id', $studentName);
-    //     }
-
-
-    //     $videoDetails = $query->get()->getResult();
-    //     // echo $this->db->getLastQuery();
-    //     // die;
-    //     if ($videoDetails) {
-    //         return $videoDetails;
-    //     } else {
-    //         return false;
-    //     }
-    // }
-
-    // public function getStudentBySearch($startDate = null, $endDate = null, $studentName = '', $facultyName = '')
-    // {
-    //     $query = $this->db->table('uplode_study_video_from_student')
-    //         ->select('uplode_study_video_from_student.*, register.full_name as faculty_name')
-    //         ->join('student', 'student.student_id = uplode_study_video_from_student.register_id')
-    //         ->join('register', 'register.id = uplode_study_video_from_student.register_id');
-
-    //     if ($startDate !== null) {
-    //         $startDate = new \DateTime($startDate);
-    //         $startDateFormatted = $startDate->format('Y-m-d H:i:s');
-    //         $query->where('uplode_study_video_from_student.DateTime >=', $startDateFormatted);
-    //     }
-
-    //     if ($endDate !== null) {
-    //         $endDate = new \DateTime($endDate);
-    //         $endDateFormatted = $endDate->format('Y-m-d H:i:s');
-    //         $query->where('uplode_study_video_from_student.DateTime <=', $endDateFormatted);
-    //     }
-
-    //     if ($facultyName !== '') {
-    //         $query->Where('uplode_study_video_from_student.faculty_id', $facultyName);
-    //     }
-    //     if ($studentName !== '') {
-    //         $query->Where('uplode_study_video_from_student.register_id', $studentName);
-    //     }
-
-
-    //     $videoDetails = $query->get()->getResult();
-
-    //     if ($videoDetails) {
-    //         return $videoDetails;
-    //     } else {
-    //         return 'false';
-    //     }
-    // }
-
     public function getSearchData($table, $startDate = null, $endDate = null, $studentName = '', $facultyName = '')
     {
         if ($table == 'uplode_video_to_student') {
@@ -411,7 +334,6 @@ class AdminModel extends Model
             $student = 'student.student_name as Student_name';
             $where1 = array('register.id' => $facultyName);
             $where2 = array('uplode_video_to_student.student_id' => $studentName);
-            // $where2 = 'uplode_video_to_student.student_id ,'.$studentName.'';
         } else {
             $joinstudent = 'register.carrier_id = faculty.carrier_id';
             $joinregister = 'register.id = uplode_study_video_from_student.Faculty_id';
@@ -420,7 +342,6 @@ class AdminModel extends Model
             $where1 = array('uplode_study_video_from_student.faculty_id' => $facultyName);
             $where2 = array('uplode_study_video_from_student.register_id' => $studentName);
         }
-        // print_r($startDate);die;
         $query = $this->db->table($table)
             ->select('' . $table . '.*, ' . $student . ', register.full_name as faculty_name')
             ->join('register', $joinregister)
@@ -444,11 +365,7 @@ class AdminModel extends Model
         if ($studentName !== '') {
             $query->Where($where2);
         }
-
-
         $videoDetails = $query->get()->getResult();
-        // echo $this->db->getLastQuery();
-        // die;
         if ($videoDetails) {
             return $videoDetails;
         } else {
