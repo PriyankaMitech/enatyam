@@ -1,7 +1,7 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2023-2024 <a href="https://mitech">MI-TECH</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2023-2024 <a href="https://www.marketingintelligence.tech/" target="_blank">MI-TECH</a>.</strong> All rights reserved.
 </footer>
-<script src="<?= base_url() ?>plugins/jquery/jquery.min.js"></script>
+<script src=" <?= base_url() ?>plugins/jquery/jquery.min.js"></script>
 <script src="<?= base_url() ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url() ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="<?= base_url() ?>dist/js/adminlte.js"></script>
@@ -14,37 +14,35 @@
 <script src="<?= base_url() ?>public/js/custom.js"></script>
 <script src="<?= base_url() ?>dist/js/pages/dashboard2.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="<?=base_url()?>dist/js/adminlte.min.js"></script>
-<script src="<?=base_url()?>public/js/jquery.barrating.min.js"></script>
+<script src="<?= base_url() ?>dist/js/adminlte.min.js"></script>
+<script src="<?= base_url() ?>public/js/jquery.barrating.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-    </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"> -->
-    </script>
- <script>
-        function toggleUploadForm() {
-            var uploadForm = document.getElementById("uploadForm");
-            if (uploadForm.style.display === "none") {
-                uploadForm.style.display = "block";
-            } else {
-                uploadForm.style.display = "none";
-            }
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+</script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"> -->
+</script>
+<script>
+    function toggleUploadForm() {
+        var uploadForm = document.getElementById("uploadForm");
+        if (uploadForm.style.display === "none") {
+            uploadForm.style.display = "block";
+        } else {
+            uploadForm.style.display = "none";
         }
-    
+    }
 </script>
 
 
-    <script type='text/javascript'>
-        $(document).ready(function(){
-            
-            $('#faculty').barrating('set', 1);
+<script type='text/javascript'>
+    $(document).ready(function() {
 
-            $("input[name='datetimes']").daterangepicker({},
-                function(start, end, label) {
-                    let startDate = start.format("YYYY-MM-DD").toString();
-                    let endDate = end.format("YYYY-MM-DD").toString();
+        $('#faculty').barrating('set', 1);
+
+        $("input[name='datetimes']").daterangepicker({},
+            function(start, end, label) {
+                let startDate = start.format("YYYY-MM-DD").toString();
+                let endDate = end.format("YYYY-MM-DD").toString();
 
                 document.getElementById("startDate").innerHTML =
                     "Start date: " + startDate;
@@ -125,7 +123,7 @@
                 if (response.success) {
                     // Password updated successfully
                     $('#success-message').html('<div class="alert alert-success">' + response.message + '</div>').show();
-                    setTimeout(function () {
+                    setTimeout(function() {
                         location.reload(); // Refresh the page after 2 seconds
                     }, 2000);
                 } else {
@@ -155,7 +153,7 @@
     }
 
     // Clear validation messages when focusing on password fields
-    $('#old-password, #new-password, #confirm-password').focus(function () {
+    $('#old-password, #new-password, #confirm-password').focus(function() {
         $('#password-error').text('');
         $('#success-message').hide();
     });
@@ -195,7 +193,7 @@
             $('.dynamic-form').hide();
         }
     });
-   $(document).ready(function() {
+    $(document).ready(function() {
         // Extract date, commonStartTime, and sessionNumber from the URL parameters
         var urlParams = new URLSearchParams(window.location.search);
         var urlDate = urlParams.get('date');
@@ -248,24 +246,24 @@
     }
 </script>
 <script>
-function openModal(currentDate, sessionNumber, buttonText) {
-    document.getElementById('modalCurrentDate').value = currentDate;
-    document.getElementById('modalSessionNumber').value = sessionNumber;
-    document.getElementById('modalButtonText').value = buttonText;
-    document.getElementById('myModal').style.display = 'block';
-}
+    function openModal(currentDate, sessionNumber, buttonText) {
+        document.getElementById('modalCurrentDate').value = currentDate;
+        document.getElementById('modalSessionNumber').value = sessionNumber;
+        document.getElementById('modalButtonText').value = buttonText;
+        document.getElementById('myModal').style.display = 'block';
+    }
 
-function closeModal() {
-    document.getElementById('myModal').style.display = 'none';
-}
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
 </script>
 <script>
-function updateLabel(inputId) {
-    var input = document.getElementById(inputId);
-    var label = input.nextElementSibling;
-    var fileName = input.files[0].name;
-    label.innerHTML = fileName;
-}
+    function updateLabel(inputId) {
+        var input = document.getElementById(inputId);
+        var label = input.nextElementSibling;
+        var fileName = input.files[0].name;
+        label.innerHTML = fileName;
+    }
 </script>
 </div>
 </body>
