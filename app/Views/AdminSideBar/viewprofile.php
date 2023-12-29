@@ -67,8 +67,7 @@
                                     <b>Course Related Certificates</b> <a href="<?=base_url(); ?>public/uploads/courseCertificates/<?=$profile_data->course_certificates_filename;  ?>" target="_blank" class="float-right"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                 </li>
                             </ul>
-
-                            <a href="#" class="btn btn-primary btn-block"><b>Approve</b></a>
+                          
                         </div>
                     </div>
                     <div class="card card-primary">

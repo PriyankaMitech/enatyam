@@ -77,7 +77,9 @@
 
 
 
-                                                <select class="form-control" name="courses_id_d" id="courses_id_d" style="width: 100%;">
+                                                <select class="form-control" name="courses_id_d" id="courses_id_d" style="width: 100%;" >
+                                                <span style="color:red;" id="courses_id_did"></span>
+
                                                 <option >Please select course</option>
                                                 <?php if(!empty($courses_data)){?>
                                                 <?php foreach ($courses_data as $data){ ?>
@@ -95,6 +97,8 @@
 
                                                 <input type="hidden" id="selected_sub_courses_id_d" value="<?php if (isset($edit)) { echo ($edit['sub_courses_id_d']); } ?>">
                                                 <select name="sub_courses_id_d" id="sub_courses_id_d" class="form-control">
+                                                <span style="color:red;" id="sub_course_id_did"></span>
+
                                                 <option value="">Please select sub courses</option>
                                                 </select>
                                                 </div>

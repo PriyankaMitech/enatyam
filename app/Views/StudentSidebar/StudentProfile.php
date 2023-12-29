@@ -1,4 +1,5 @@
 <?php echo view('StudentSidebar/Studentsidebar'); ?>
+
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">
@@ -17,24 +18,24 @@
                     <!-- Profile Image -->
 
                     <div class="card card-primary card-outline">
-                        <div class="card-body box-profile">
+                        <div class="card-body box-profileData">
                             <div class="text-center">
-                                <img class="profile-user-img img-fluid img-circle" src="public/AdmoinLogo.png" alt="User profile picture">
+                                <img class="profileData-user-img img-fluid img-circle" src="public/AdmoinLogo.png" alt="User profileData picture">
                             </div>
-                            <?php foreach ($profileData as $profile) : ?>
-                                <h3 class="profile-username text-center"><?= $profile->full_name ?></h3>
+                            <?php if (!empty($profileData)){ ?>
+                                <h3 class="profileData-username text-center"><?= $profileData->full_name ?></h3>
 
-                                <p class="text-muted text-center"><?= $profile->email ?></p>
+                                <p class="text-muted text-center"><?= $profileData->email ?></p>
 
                                 <ul class="list-group list-group-unbordered mb-3">
                                     <li class="list-group-item">
-                                        <b>course</b> <a class="float-right"><?= $profile->courses_name ?></a>
+                                        <b>course</b> <a class="float-right"><?= $profileData->courses_name ?></a>
                                     </li>
                                     <li class="list-group-item">
-                                        <b>sub course</b> <a class="float-right"><?= $profile->sub_courses_name ?></a>
+                                        <b>sub course</b> <a class="float-right"><?= $profileData->sub_courses_name ?></a>
                                     </li>
                                 </ul>
-                            <?php endforeach; ?>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -57,10 +58,10 @@
                             <div class="tab-content">
                                 <div class="active tab-pane" id="activity">
                                     <!-- Post -->
-                                    <?php foreach ($profileData as $profile) : ?>
+                                    <?php if (!empty($profileData)){ ?>
 
                                         <form id="updatePasswordForm" action="#" method="post">
-                                            <input type="hidden" name="user_email" value="<?= $profile->email ?>">
+                                            <input type="hidden" name="user_email" value="<?= $profileData->email ?>">
 
                                             <div class="form-group">
                                                 <label for="old-password">Old Password</label>
@@ -101,13 +102,13 @@
 
                                             <button type="button" id="updatePasswordBtn" class="btn btn-primary" onclick="updatePassword()">Update Password</button>
                                         </form>
-                                    <?php endforeach; ?>
+                                    <?php } ?>
 
                                 </div>
 
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="timeline">
-                                    <?php foreach ($profileData as $country) : ?>
+                                <?php if (!empty($profileData)){ ?>
 
                                         <form action="<?= base_url('changeCountry') ?>" method="post">
                                             <div class="timeline-item">
@@ -115,11 +116,11 @@
                                                     <div class="preCountry" style="margin-left: 85%;">
                                                         <?php
                                                         // Suppose $studentCountryCode contains the student's country code, e.g., "vn"
-                                                        $studentCountryCode = $country->code; // This would be dynamically fetched in a real-world scenario
+                                                        $studentCountryCode = $profileData->code; // This would be dynamically fetched in a real-world scenario
                                                         // Generate the CSS class
                                                         $cssClass = "ip2location-flag-32 flag-square flag-" . strtolower($studentCountryCode);
                                                         ?>
-                                                        <span style="display: inline-block; vertical-align: middle;" class="timeline-country"><?= $country->country ?></span>
+                                                        <span style="display: inline-block; vertical-align: middle;" class="timeline-country"><?= $profileData->country ?></span>
                                                         <span style="display: inline-block; vertical-align: middle;" class=" timeline-country <?= $cssClass ?>"></span>
                                                     </div>
                                                     <div class="row">
@@ -129,7 +130,7 @@
                                                                 <option value="">Select</option>
                                                                 <?php if (!empty($country_data)) { ?>
                                                                     <?php foreach ($country_data as $data) : ?>
-                                                                        <option value="<?= $data->name; ?>" <?= ($data->name == $country->country) ? 'selected' : ''; ?>>
+                                                                        <option value="<?= $data->name; ?>" <?= ($data->name == $profileData->country) ? 'selected' : ''; ?>>
                                                                             <?= $data->name; ?>
                                                                         </option>
                                                                     <?php endforeach; ?>
@@ -145,7 +146,7 @@
                                                 </div>
                                             </div>
                                         </form>
-                                    <?php endforeach; ?>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div><!-- /.card-body -->
