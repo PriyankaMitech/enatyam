@@ -34,7 +34,7 @@
     <div class="container-fluid">
     <div class="row">
     <div class="col-md-3 col-sm-6 col-12">
-        <a href="http://localhost/enatyam/ScheduleStudent" class="info-box bg-info">
+        <a href="<?=base_url();?>ScheduleStudent" class="info-box bg-info">
             <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">My Attendance</span>
@@ -46,7 +46,7 @@
     <!-- /.col -->
 
     <div class="col-md-3 col-sm-6 col-12">
-        <a href="http://localhost/enatyam/StudentProfile" class="info-box bg-warning">
+        <a href="<?=base_url();?>StudentProfile" class="info-box bg-warning">
             <span class="info-box-icon"><i class='fas fa-address-card'></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">My Profile</span>

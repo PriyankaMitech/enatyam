@@ -82,7 +82,6 @@
                     foreach ($facultyData as $faculty) : 
                     $rating = $adminModel->rate_count($faculty->faculty_id);
 
-                    $get_all_dataf = $adminModel->get_all_dataf($faculty->carrier_id);
 
                    
 
@@ -135,12 +134,12 @@
                             </div>
 
                             <div class="rowcontact-icon m-1">
-                                <?php if(!empty($get_all_dataf)){ ?>
-                                <span class="badge badge-success light"><?php echo $get_all_dataf->course ; ?></span>
+                             
+                                <span class="badge badge-success light"><?php echo $faculty->courses_name ; ?></span>
                                 <span
-                                    class="badge badge-secondary light mx-2"><?php echo  $get_all_dataf->sub_course; ?></span>
+                                    class="badge badge-secondary light mx-2"><?php echo  $faculty->sub_courses_name; ?></span>
 
-                                <?php } ?>
+                             
                             </div>
 
                             <div class="d-flex align-items-center">

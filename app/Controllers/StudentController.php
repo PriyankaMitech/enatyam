@@ -245,15 +245,34 @@ class StudentController extends BaseController
         $result = session();
         $registerId = $result->get('id');
         $StudentModel = new StudentModel();
-        $model = new Adminmodel();
+        $model = new AdminModel();
 
-        $data['profileData'] =  $StudentModel->fetchProfileDate($registerId);
+// echo  $registerId;
 
-        $wherecond = array('is_deleted' => 'N');
 
-        $data['country_data'] = $model->getalldata('countries', $wherecond);
+        $select1 = 'register.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name, countries.code,';
+        $joinCond5 = 'register.course = tbl_courses.id';
+        $joinCond6 = 'register.sub_course = tbl_sub_courses.id';
+        $joinCond = 'register.country = countries.name';
 
-        //    echo'<pre>'; print_r($data['country_data']);exit();
+
+
+        $wherecond = [
+            'register.id ' =>$registerId,
+        ];
+
+
+
+
+        $data['profileData'] = $model->joinfourtablessingle($select1, 'register ', 'tbl_courses ', 'tbl_sub_courses', 'countries',  $joinCond5, $joinCond6, $joinCond , $wherecond);
+
+
+        // echo "<pre>";print_r($data['profileData']);exit();
+
+        $wherecond1 = array('is_deleted' => 'N');
+
+        $data['country_data'] = $model->getalldata('countries', $wherecond1);
+
         return view('StudentSidebar/StudentProfile', $data);
     }
     public function Studentpasswordupdate()

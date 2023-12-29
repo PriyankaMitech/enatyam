@@ -436,6 +436,8 @@
                 var email_error_msg = "Email field is required";
                 var phone_error_msg = "Phone Number field is required"; // Define phone_error_msg
                 var demo_for_error_msg = "Position Applying for field is required";
+                var demo_for_error_msg1 = "Please select subcourses.";
+
 
                 if ($("#name").val() == '') {
                     name_error_msg = "Name field is required";
@@ -456,16 +458,24 @@
                 } else {
                     phone_error_msg = "Phone Number field is required";
                 }
-                if ($("#course").val() == '') {
-                    demo_for_error_msg = "Position Applying for field is required";
-                } else {
-                    demo_for_error_msg = "";
-                }
+                if ($("#courses_id_d").val() == '') {
+            demo_for_error_msg = "Please select courses.";
+        }
+
+        // Validate the second dropdown
+        if ($("#sub_courses_id_d").val() == '') {
+            demo_for_error_msg1 = "Please select subcourses.";
+        }
+
 
                 $("#namespanid").html(name_error_msg);
                 $("#emailspanid").html(email_error_msg);
                 $("#phonespanid").html(phone_error_msg); // Update the phonespanid error message
-                $("#coursespanid").html(demo_for_error_msg);
+                // $("#coursespanid").html(demo_for_error_msg);
+                $("#courses_id_did").html(demo_for_error_msg);
+
+                $("#sub_course_id_did").html(demo_for_error_msg1);
+
 
                 if (name_error_msg == "" && email_error_msg == "" && phone_error_msg == "" && demo_for_error_msg == "") {
                     $("#collapseTwo").collapse('show');

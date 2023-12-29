@@ -588,7 +588,7 @@
                                             </p>
                                         </a>
                                         <ul class="nav nav-treeview">
-                                            <li class="nav-item" <?php if (in_array('faculty_pamentrecords', $access_levels)) {
+                                            <!-- <li class="nav-item" <?php if (in_array('faculty_pamentrecords', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
@@ -597,7 +597,7 @@
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Faculty Payment Records</p>
                                                 </a>
-                                            </li>
+                                            </li> -->
                                             <li class="nav-item" <?php if (in_array('payments', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
@@ -644,7 +644,7 @@
                                                     </p>
                                                 </a>
                                             </li>
-                                            <li class="nav-item" <?php if (in_array('Email', $access_levels)) {
+                                            <!-- <li class="nav-item" <?php if (in_array('Email', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
@@ -653,7 +653,7 @@
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Email</p>
                                                 </a>
-                                            </li>
+                                            </li> -->
                                             <li class="nav-item" <?php if (in_array('add_notifications', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
@@ -1004,12 +1004,12 @@
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a href="<?php echo base_url() ?>faculty_pamentrecords" class="nav-link">
                                                 <i class="nav-icon fas fa-book"></i>
                                                 <p>Faculty Payment Records</p>
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <li class="nav-item">
                                             <a href="<?php echo base_url() ?>payments" class="nav-link">
                                                 <i class="nav-icon fas fa-book"></i>
@@ -1038,12 +1038,12 @@
                                                 </p>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a href="<?php echo base_url() ?>email" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Email</p>
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <li class="nav-item">
                                             <a href="<?php echo base_url() ?>add_notifications" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
