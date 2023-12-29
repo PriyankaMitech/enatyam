@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Enatyam</title>
   <link rel="stylesheet" href="<?= base_url() ?>plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>dist/css/adminlte.min.css">
@@ -12,14 +12,9 @@
   <link rel="stylesheet" href="<?= base_url() ?>public/css/fontawesome-stars.css">
   <link rel="stylesheet" href="<?= base_url() ?>public/css/custom.css">
   <link rel="stylesheet" href="<?= base_url(); ?>public/css/admindashboard_style.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" -->
-  <!-- integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-
   <link href="image_sprite/ip2location-image-sprite.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -67,9 +62,9 @@
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
+      <!-- <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li> -->
         <li class="nav-item d-none d-sm-inline-block">
           <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
         </li>
@@ -148,8 +143,7 @@
       </ul>
     </nav>
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-      <a href="#" class="brand-link">
-      </a>
+
       <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
           <div class="image">

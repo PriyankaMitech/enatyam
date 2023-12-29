@@ -188,6 +188,8 @@ class LoginController extends BaseController
        $ccEmails = ['cc1@example.com', 'cc2@example.com'];
        $tital ='congratulations You Are Registration Confirmation';
        sendConfirmationEmail($email,$ccEmails,$Subject,$msg);
+       session()->setFlashdata('success', 'Registration successfully.');
+
        return redirect()->to('Home');
    }  
    
