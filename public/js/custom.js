@@ -71,9 +71,6 @@ $(document).ready(function(){
         $(SELECTOR_DIRECT_CHAT).toggleClass(CLASS_NAME_DIRECT_CHAT_OPEN);
     });  
 
-    $('.rating').barrating({
-        theme: 'fontawesome-stars'
-    });
 
     $('#rate').click(function(){
         var formData = $("#feedbackform").serialize()
@@ -134,6 +131,7 @@ $(document).ready(function(){
     $('#courses').trigger('change');
 
     $('#searchstudvideo, #searchfacvideo').click(function () {
+        console.log('hggfgf')
         if ($(this).val() == 'searchfacvideo') {
             var formdata = $('#searchForm').serialize();
             var sdate = $('#startDate').val()
@@ -176,6 +174,9 @@ $(document).ready(function(){
         }
     })
 
+    $('.rating').barrating({
+        theme: 'fontawesome-stars'
+    });
 })
 
 var options = {

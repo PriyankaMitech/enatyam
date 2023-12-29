@@ -153,7 +153,7 @@ return view('StudentSideBarVideo', ['videos' => $videos, 'stdvideos' => $stdvide
         $password = $sessionData['password'] ?? null;
 
         if ($email !== null && $password !== null) {
-
+          $model = new AdminModel();
             $result = session();
             $registerId = $result->get('id');
             $db = \Config\Database::connect();
@@ -162,7 +162,7 @@ return view('StudentSideBarVideo', ['videos' => $videos, 'stdvideos' => $stdvide
             
             $data['results'] = $query->getResult();
             $data['dataFound'] = count($data['results']) > 0;
-
+            $data['studentList'] = $model->getStudentData();
             return view('StudentuplodedVidio', $data);
         }
     }

@@ -338,8 +338,8 @@
                                                                 class="form-control custom-select">
                                                                 <option value="">Select</option>
                                                                 <?php foreach ($studentList as $item) : ?>
-                                                                <option value="<?php echo  $item->student_id; ?>"
-                                                                    <?php if (strpos($currentUrl, 'searchStudentVideos') !== false && !empty(session()->getFlashdata('studentName')) && session()->getFlashdata('studentName') === $item->student_id) echo 'selected'; ?>>
+                                                                <option value="<?php echo  $item->register_id; ?>"
+                                                                    <?php if (strpos($currentUrl, 'searchStudentVideos') !== false && !empty(session()->getFlashdata('studentName')) && session()->getFlashdata('studentName') === $item->register_id) echo 'selected'; ?>>
                                                                     <?php echo $item->student_name; ?></option>
                                                                 <?php endforeach; ?>
                                                             </select>
