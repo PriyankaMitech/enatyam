@@ -369,6 +369,15 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             </div>
         <?php endif; ?>
     </div>
+
+
+    <div id="flash-success-container">
+        <?php if (session()->has('success')) : ?>
+            <div class="flash-success">
+                <?= session('success') ?>
+            </div>
+        <?php endif; ?>
+    </div>
     <section class="tophead ">
         <nav class="navbar navbar-expand-lg">
             <div class="container  pd0">

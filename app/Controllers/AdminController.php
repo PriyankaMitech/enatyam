@@ -158,7 +158,22 @@ class AdminController extends BaseController
             if ($email !== null && $password !== null) {
 
                 $model = new AdminModel();
-                $data['facultyData'] = $model->getFacultyData();
+
+                
+                $select1 = 'faculty.*, carrier.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
+                $joinCond4 = 'faculty.carrier_id = carrier.D_id';
+                $joinCond5 = 'carrier.course = tbl_courses.id';
+                $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';
+
+        
+        
+        
+                $data['facultyData'] = $model->joinfourtableswwc($select1, 'faculty ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, 'DESC');
+                // $data['facultyData'] = $model->getFacultyData();
+
+                // echo "<pre>";print_r($data['facultyData']);exit();
+
+    
                 return view('AdminSideBar/FacultyProfile', $data);
             } else {
                 return redirect()->to(base_url());
@@ -473,7 +488,9 @@ class AdminController extends BaseController
                     // ...
                 }
 
-                return redirect()->to('NewFacultyApplication');
+                // return redirect()->to('NewFacultyApplication');
+                return redirect()->to(previous_url());
+
             }
         }
 
@@ -1208,6 +1225,8 @@ class AdminController extends BaseController
             $wherecond1 = array('is_deleted' => 'N', 'courses_id' => $courses_id_g);
 
             $sub_courses = $model->getalldata('tbl_sub_courses', $wherecond1);
+
+            // echo "<pre>";print_r($sub_courses);exit();
             return json_encode($sub_courses);
         } else {
             return json_encode([]);
@@ -1348,7 +1367,7 @@ class AdminController extends BaseController
         // print_r($wherecond);die;
         $data['profile_data'] = $model->getsinglerow1('carrier', $wherecond);
         $data['faculty_slots'] = $model->getAllSlots($wherecond);
-        //      echo "<pre>"; print_r($data['profile_data']);exit();
+            //  echo "<pre>"; print_r($data['profile_data']);exit();
 
         return view('AdminSideBar/viewprofilefaculty', $data);
     }

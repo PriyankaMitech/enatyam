@@ -87,11 +87,13 @@
 
 
 
+
                                                 <select class="form-control" name="courses_id_d" id="courses_id_d"
                                                     style="width: 100%;">
                                                     <option>Please select course</option>
                                                     <?php if(!empty($courses_data)){?>
                                                     <?php foreach ($courses_data as $data){ ?>
+
                                                     <option value="<?=$data->id; ?>"
                                                         <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id ) { echo 'selected'; } ?>>
                                                         <?= $data->courses_name; ?>
@@ -105,11 +107,13 @@
                                             <div class="sub_category_div form-group" id="sub_category_div">
 
 
+
                                                 <input type="hidden" id="selected_sub_courses_id_d"
                                                     value="<?php if (isset($edit)) { echo ($edit['sub_courses_id_d']); } ?>">
                                                 <select name="sub_courses_id_d" id="sub_courses_id_d"
                                                     class="form-control">
                                                     <option value="">Please select sub courses</option>
+
                                                 </select>
                                                 <span style="color:red;" id="sub_coursespanid"></span>
                                             </div>

@@ -1060,6 +1060,22 @@ class AdminModel extends Model
         //    echo $this->db->getLastQuery();die;
         return $result;
     }
+
+
+    public function joinfourtablessingle($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $wherecond)
+    {
+        $result = $this->db->table($table1)  // Use $table1 variable here
+            ->select($select) 
+            ->join($table2, $joinCond)
+            ->join($table3, $joinCond2)
+            ->join($table4, $joinCond3)
+            ->where($wherecond)
+            ->get()
+            ->getRow();   
+            
+             //    echo $this->db->getLastQuery();die;
+        return $result;
+    }
     
 
 

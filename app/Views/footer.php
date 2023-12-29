@@ -430,6 +430,7 @@ $(document).ready(function() {
 
 
 <?php } else if ($page == 'Carrier') { ?>
+
 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
 </script>
@@ -476,6 +477,7 @@ function handleSubmit(collapse_val) {
         } else {
             demo_for_error_msg = "";
         }
+
 
         $("#namespanid").html(name_error_msg);
         $("#emailspanid").html(email_error_msg);

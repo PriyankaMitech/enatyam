@@ -164,7 +164,7 @@ class LoginController extends BaseController
    { 
        $email = $this->request->getPost('email');
        $course = $this->request->getPost('courses_id_g');
-       $sub_course = $this->request->getPost('courses_id_g');
+       $sub_course = $this->request->getPost('sub_courses_id_g');
        $age = $this->request->getPost('age');
        $experience = $this->request->getPost('experience');
        $SessionType = $this->request->getPost('SessionType');
@@ -188,6 +188,8 @@ class LoginController extends BaseController
        $ccEmails = ['cc1@example.com', 'cc2@example.com'];
        $tital ='congratulations You Are Registration Confirmation';
        sendConfirmationEmail($email,$ccEmails,$Subject,$msg);
+       session()->setFlashdata('success', 'Registration successfully.');
+
        return redirect()->to('Home');
    }  
    

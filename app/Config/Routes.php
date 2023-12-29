@@ -242,8 +242,10 @@ $routes->get('delete/(:any)/(:any)', 'AdminController::delete/$1/$1');
 
 
 
+$routes->post('Steusupdate', 'AdminController::Steusupdate');
+$routes->get('Steusupdate', 'AdminController::Steusupdate');
 
-$routes->post('AdminController/Steusupdate', 'AdminController::Steusupdate');
+// $routes->post('AdminController/Steusupdate', 'AdminController::Steusupdate');
 $routes->post('AdminController/backtoApplication', 'AdminController::backtoApplication');
 $routes->post('AdminController/createpassword', 'AdminController::createpassword');
 $routes->post('AdminController/ResheduleByadmin', 'AdminController::ResheduleByadmin');
