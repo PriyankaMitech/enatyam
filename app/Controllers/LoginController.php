@@ -3,8 +3,10 @@
 namespace App\Controllers;
 
 use App\Models\LoginModel;
+use App\Models\AdminModel;
 use CodeIgniter\Controller;
 use League\OAuth2\Client\Provider\Google;
+
 helper('sms_helper');
 
 
@@ -15,7 +17,8 @@ class LoginController extends BaseController
     //     $this->db = \Config\Database::connect();
     //  //   $this->load->library('google'); 
     // }
-    public function index() {
+    public function index()
+    {
         helper(['form']);
         $data = [];
         echo view('register', $data);
@@ -42,7 +45,7 @@ class LoginController extends BaseController
             'clientSecret' => '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',
             'redirectUri'  => base_url('LoginController/callback'),
         ]);
-        
+
         $token = $provider->getAccessToken('authorization_code', [
             'code' => $this->request->getGet('code'),
         ]);
@@ -68,21 +71,26 @@ class LoginController extends BaseController
             'confirm_pass' => $this->request->getVar('confirm_pass'),
             'register_id' => $last_insert_id,
             'is_register_done' => 'Y',
-            'course'=>$this->request->getVar('course'),
-            'sub_course'=>$this->request->getVar('sub_course'),
-            'age'=>$this->request->getVar('age'),
-            'experienceInput'=>$this->request->getVar('experienceInput'),
-            
+            'course' => $this->request->getVar('course'),
+            'sub_course' => $this->request->getVar('sub_course'),
+            'age' => $this->request->getVar('age'),
+            'experienceInput' => $this->request->getVar('experienceInput'),
+
         ];
-        
+
         $this->session->set('user_id', $this->request->getVar($last_insert_id));
         $this->session->set('username', $this->request->getVar('full_name'));
         $this->session->set('email', $this->request->getVar('email'));
         $this->session->set('role', 'Student');
 
+        $model = new AdminModel();
+        $wherecond1 = array('is_deleted' => 'N');
+
+
+
         $output = $loginModel->setStudentName($getdata);
         // print_r($output);die;
-            // return redirect()->to('dashboard');
+        // return redirect()->to('dashboard');
         // } else {
         //     // Validation failed
         //     $data['validation'] = $validation;
@@ -90,7 +98,8 @@ class LoginController extends BaseController
         // }
     }
 
-    public function verifymobile() {
+    public function verifymobile()
+    {
         $loginModel = new LoginModel();
         $otp = rand(999, 9999);
         $emailotp = rand(999, 9999);
@@ -106,10 +115,10 @@ class LoginController extends BaseController
                     'email' => $this->request->getVar('email'),
                     'mobile_no' => $this->request->getVar('mobile_no'),
                     'register_id' => $insert['lastinsertid']
-                    
+
                 ];
                 $savestud = $loginModel->setStudentName($getdata);
-                $sms = 'Dear customer, your OTP for registration is '.$otp.'. do not share to anyone. Thank you OTPIMS';
+                $sms = 'Dear customer, your OTP for registration is ' . $otp . '. do not share to anyone. Thank you OTPIMS';
                 $output = sendSMS($_POST['mobile_no'], $sms);
                 // $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
 
@@ -121,20 +130,20 @@ class LoginController extends BaseController
                     'emailotp' => $emailotp
                 );
                 echo json_encode($result);
-                
-            }else {
+            } else {
                 // $result['mob'] =$mob['mobileexist'] ;
                 // $result['email'] =$mob['emailexist'] ;
                 echo json_encode($result);
             }
-        }else {
+        } else {
             $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['mobile_no'], $_POST['email']);
             // print_r($checkotp);
             echo json_encode($checkotp);
         }
     }
 
-    public function savedata($postdata, $otp, $emailotp) {
+    public function savedata($postdata, $otp, $emailotp)
+    {
         $loginModel = new LoginModel();
 
         $data = [
@@ -156,54 +165,55 @@ class LoginController extends BaseController
                 'lastinsertid' => $last_insert_id
             );
             return $output;
-        }else 
+        } else
             return false;
-            
     }
     public function saveuserdata()
-   { 
-       $email = $this->request->getPost('email');
-       $course = $this->request->getPost('courses_id_g');
-       $sub_course = $this->request->getPost('sub_courses_id_g');
-       $age = $this->request->getPost('age');
-       $experience = $this->request->getPost('experience');
-       $SessionType = $this->request->getPost('SessionType');
-       $country = $this->request->getPost('country');
-       $experienceInput = $this->request->getPost('experienceInput');
-       $loginModel = new LoginModel();
+    {
 
-       $data = [
-           'course' => $course,
-           'sub_course' => $sub_course,
-           'age' => $age,
-           'is_register_done'=> 'Y',
-           'country'=> $country,
-           'experience' => $experience,
-           'experienceInput' => $experienceInput,
-           'SessionType' => $SessionType,
-       ];
-       $affectedRows = $loginModel->updateUserByEmail($email, $data);
-       $msg ='Your registration is done';
-       $Subject ='Registration Confirmation';
-       $ccEmails = ['cc1@example.com', 'cc2@example.com'];
-       $tital ='congratulations You Are Registration Confirmation';
-       sendConfirmationEmail($email,$ccEmails,$Subject,$msg);
-       return redirect()->to('Home');
-   }  
-   
+
+        $email = $this->request->getPost('email');
+        $course = $this->request->getPost('courses_id_g');
+        $sub_course = $this->request->getPost('sub_courses_id_g');
+        $age = $this->request->getPost('age');
+        $experience = $this->request->getPost('experience');
+        $SessionType = $this->request->getPost('SessionType');
+        $country = $this->request->getPost('country');
+        $experienceInput = $this->request->getPost('experienceInput');
+        $loginModel = new LoginModel();
+
+        $data = [
+            'course' => $course,
+            'sub_course' => $sub_course,
+            'age' => $age,
+            'is_register_done' => 'Y',
+            'country' => $country,
+            'experience' => $experience,
+            'experienceInput' => $experienceInput,
+            'SessionType' => $SessionType,
+        ];
+        $affectedRows = $loginModel->updateUserByEmail($email, $data);
+        $msg = 'Your registration is done';
+        $Subject = 'Registration Confirmation';
+        $ccEmails = ['cc1@example.com', 'cc2@example.com'];
+        $tital = 'congratulations You Are Registration Confirmation';
+        sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
+        return redirect()->to('Home');
+    }
+
     public function checkLoginDetails()
     {
-         $request = \Config\Services::request();
-         $loginModel = new LoginModel();
+        $request = \Config\Services::request();
+        $loginModel = new LoginModel();
 
-         $username = $request->getPost('username');
-         $password = $request->getPost('password');
+        $username = $request->getPost('username');
+        $password = $request->getPost('password');
 
-         if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
-         $result = $loginModel->getUserByEmailAndPassword($username, $password);
-          } else {
-      
-        $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
+        if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
+            $result = $loginModel->getUserByEmailAndPassword($username, $password);
+        } else {
+
+            $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
         }
         // print_r($result);die;
         if (!empty($result)) {
@@ -220,19 +230,19 @@ class LoginController extends BaseController
                     $this->session->set($result);
                     return redirect()->to('StudentDashboard');
                 default:
-                print_r('$der');die;
+                    print_r('$der');
+                    die;
                     $this->session->setFlashdata('errormessage', 'Invalid role.');
 
                     return redirect()->to('Home');
-
             }
         } else {
             $this->session->setFlashdata('errormessage', 'Password is wrong.');
 
-        return redirect()->to('Home');
+            return redirect()->to('Home');
         }
     }
-      
+
     public function ModelForLogin()
     {
         return view('ModelForLogin');
@@ -246,7 +256,7 @@ class LoginController extends BaseController
         // session_destroy();
         $session->destroy();
         // print_r($_SESSION);die;
-        return redirect()->to('/Home');
+        return redirect()->to('/');
     }
 
     public function update_profile_data()
@@ -264,26 +274,22 @@ class LoginController extends BaseController
 
             'student_name'  => $this->request->getVar('name'),
             'email'  => $this->request->getVar('email'),
-            'mobile_no'  => $this->request->getVar('mobile_no'),          
+            'mobile_no'  => $this->request->getVar('mobile_no'),
         ];
 
         $db = \Config\Database::Connect();
 
-        if($this->request->getVar('id') == ""){
-        
+        if ($this->request->getVar('id') == "") {
+
             $add_data = $db->table('tbl_tax');
             $add_data->insert($data);
-        }else{
-            $update_data = $db->table('register')->where('id',$this->request->getVar('id'));
+        } else {
+            $update_data = $db->table('register')->where('id', $this->request->getVar('id'));
             $update_data->update($data);
 
-            $update_studentdata = $db->table('student')->where('register_id',$this->request->getVar('id'));
+            $update_studentdata = $db->table('student')->where('register_id', $this->request->getVar('id'));
             $update_studentdata->update($studentdata);
-        }	
-		return redirect()->to('profilemanagment'); 
-
-	}
- 
-    
-
+        }
+        return redirect()->to('profilemanagment');
+    }
 }

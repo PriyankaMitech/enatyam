@@ -25,7 +25,7 @@
                         2
                     </button>
                     <div class="step-title">
-                    Second Step
+                        Second Step
 
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                         3
                     </button>
                     <div class="step-title">
-                    Third Step
+                        Third Step
                     </div>
                 </div>
 
@@ -77,31 +77,34 @@
 
 
 
-                                                <select class="form-control" name="courses_id_d" id="courses_id_d" style="width: 100%;" >
-                                                <span style="color:red;" id="courses_id_did"></span>
+                                                <select class="form-control" name="courses_id_d" id="courses_id_d" style="width: 100%;">
+                                                    <span style="color:red;" id="courses_id_did"></span>
 
-                                                <option >Please select course</option>
-                                                <?php if(!empty($courses_data)){?>
-                                                <?php foreach ($courses_data as $data){ ?>
-                                                    <option value="<?=$data->id; ?>"
-                                                        <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id ) { echo 'selected'; } ?>>
-                                                        <?= $data->courses_name; ?>
-                                                    </option>
-                                                <?php } ?>
-                                                <?php } ?>
+                                                    <option>Please select course</option>
+                                                    <?php if (!empty($courses_data)) { ?>
+                                                        <?php foreach ($courses_data as $data) { ?>
+                                                            <option value="<?= $data->id; ?>" <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id) {
+                                                                                                    echo 'selected';
+                                                                                                } ?>>
+                                                                <?= $data->courses_name; ?>
+                                                            </option>
+                                                        <?php } ?>
+                                                    <?php } ?>
                                                 </select>
-                                                </div>
-                                                <!-- </div> -->
-                                                <div class="sub_category_div form-group" id="sub_category_div">
+                                            </div>
+                                            <!-- </div> -->
+                                            <div class="sub_category_div form-group" id="sub_category_div">
 
 
-                                                <input type="hidden" id="selected_sub_courses_id_d" value="<?php if (isset($edit)) { echo ($edit['sub_courses_id_d']); } ?>">
+                                                <input type="hidden" id="selected_sub_courses_id_d" value="<?php if (isset($edit)) {
+                                                                                                                echo ($edit['sub_courses_id_d']);
+                                                                                                            } ?>">
                                                 <select name="sub_courses_id_d" id="sub_courses_id_d" class="form-control">
-                                                <span style="color:red;" id="sub_course_id_did"></span>
+                                                    <span style="color:red;" id="sub_course_id_did"></span>
 
-                                                <option value="">Please select sub courses</option>
+                                                    <option value="">Please select sub courses</option>
                                                 </select>
-                                                </div>
+                                            </div>
                                             <div>
                                                 <!-- <input class="form-group-submit" type="submit" value="Next"> -->
                                                 <div style="text-align: center;">
@@ -146,11 +149,8 @@
                                             </h5>
 
                                             <div class="f-info">
-                                                <ul
-                                                    class="greenCheckbox multiSelectContainer scrollForAttribute mCustomScrollbar _mCS_1 mCS_no_scrollbar">
-                                                    <div id="mCSB_1"
-                                                        class="mCustomScrollBox mCS-light3 mCSB_vertical mCSB_inside"
-                                                        tabindex="0">
+                                                <ul class="greenCheckbox multiSelectContainer scrollForAttribute mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+                                                    <div id="mCSB_1" class="mCustomScrollBox mCS-light3 mCSB_vertical mCSB_inside" tabindex="0">
 
                                                         <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
 
@@ -478,8 +478,16 @@
                                         <div class="form-group slcsfieldsd col-md-10">
                                             <label for="inputcountry">Country:</label>
                                             <select class="form-select" id="inputCountry" name="Country">
-                                                <option value="SelectCountry">Select Country</option>
-                                                <option value="Bharat">Bharat</option>
+                                                <!-- <option value="SelectCountry">Select Country</option> -->
+                                                <!-- <option value="Bharat">Bharat</option> -->
+                                                <option value="">Select Country</option>
+                                                <?php if (!empty($country_data)) { ?>
+                                                    <?php foreach ($country_data as $data) : ?>
+                                                        <option value="<?= $data->name; ?>">
+                                                            <?= $data->name; ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+                                                <?php } ?>
 
                                                 <span style="color:red;" id="Countryspanid">
 
@@ -558,18 +566,16 @@
                                         </div>
                                         <div class="date_time">
                                             <p>Choose your Demo Class Date & Time</p>
-                                            <input class="form-control" type="date" id="demo_class-date" name="Book_Date"
-                                               
-                                                min="<?= date('Y-m-d', strtotime('+1 day')) ?>">
-                                              
+                                            <input class="form-control" type="date" id="demo_class-date" name="Book_Date" min="<?= date('Y-m-d', strtotime('+1 day')) ?>">
+
                                             <label for="start-time">Start Time:</label>
                                             <input class="form-control" type="time" name="Start_Time">
-                                           
+
                                             <label for="end-time">End Time:</label>
-                                            <input class="form-control" type="time"  name="End_Time">
-                                           
+                                            <input class="form-control" type="time" name="End_Time">
+
                                             <span style="color:red;" id="demo_class-timespanid"></span>
-                                            
+
                                         </div>
 
                                         <input class="form-group-submit bookdemosubmit" type="submit" value="Book Demo">
@@ -658,26 +664,29 @@
                                             </div>
 
                                             <div>
-                                            <div class="form-group" id="category_div">
-                                                <select class="form-control" name="courses_id_d" id="courses_id_d" style="width: 100%;">
-                                                <option >Please select course</option>
-                                                <?php if(!empty($courses_data)){?>
-                                                <?php foreach ($courses_data as $data){ ?>
-                                                    <option value="<?=$data->id; ?>"
-                                                        <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id ) { echo 'selected'; } ?>>
-                                                        <?= $data->courses_name; ?>
-                                                    </option>
-                                                <?php } ?>
-                                                <?php } ?>
-                                                </select>
+                                                <div class="form-group" id="category_div">
+                                                    <select class="form-control" name="courses_id_d" id="courses_id_d" style="width: 100%;">
+                                                        <option>Please select course</option>
+                                                        <?php if (!empty($courses_data)) { ?>
+                                                            <?php foreach ($courses_data as $data) { ?>
+                                                                <option value="<?= $data->id; ?>" <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id) {
+                                                                                                        echo 'selected';
+                                                                                                    } ?>>
+                                                                    <?= $data->courses_name; ?>
+                                                                </option>
+                                                            <?php } ?>
+                                                        <?php } ?>
+                                                    </select>
                                                 </div>
                                                 <div class="sub_category_div form-group" id="sub_category_div">
 
 
-                                                <input type="hidden" id="selected_sub_courses_id_d" value="<?php if (isset($edit)) { echo ($edit['sub_courses_id_d']); } ?>">
-                                                <select name="sub_courses_id_d" id="sub_courses_id_d" class="form-control">
-                                                <option value="">Please select sub courses</option>
-                                                </select>
+                                                    <input type="hidden" id="selected_sub_courses_id_d" value="<?php if (isset($edit)) {
+                                                                                                                    echo ($edit['sub_courses_id_d']);
+                                                                                                                } ?>">
+                                                    <select name="sub_courses_id_d" id="sub_courses_id_d" class="form-control">
+                                                        <option value="">Please select sub courses</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div>
@@ -1133,18 +1142,16 @@
                                         </div>
                                         <div class="date_time">
                                             <p>Choose your Demo Class Date & Time</p>
-                                            <input class="form-control" type="date" id="demo_class-date" name="Book_Date"
-                                               
-                                                min="<?= date('Y-m-d', strtotime('+1 day')) ?>">
-                                              
+                                            <input class="form-control" type="date" id="demo_class-date" name="Book_Date" min="<?= date('Y-m-d', strtotime('+1 day')) ?>">
+
                                             <label for="start-time">Start Time:</label>
                                             <input class="form-control" type="time" name="Start_Time">
-                                           
+
                                             <label for="end-time">End Time:</label>
-                                            <input class="form-control" type="time"  name="End_Time">
-                                           
+                                            <input class="form-control" type="time" name="End_Time">
+
                                             <span style="color:red;" id="demo_class-timespanid"></span>
-                                            
+
                                         </div>
 
                                         <input class="form-group-submit bookdemosubmit" type="submit" value="Book Demo">
