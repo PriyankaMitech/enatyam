@@ -165,11 +165,8 @@
                                             </h5>
 
                                             <div class="f-info">
-                                                <ul
-                                                    class="greenCheckbox multiSelectContainer scrollForAttribute mCustomScrollbar _mCS_1 mCS_no_scrollbar">
-                                                    <div id="mCSB_1"
-                                                        class="mCustomScrollBox mCS-light3 mCSB_vertical mCSB_inside"
-                                                        tabindex="0">
+                                                <ul class="greenCheckbox multiSelectContainer scrollForAttribute mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+                                                    <div id="mCSB_1" class="mCustomScrollBox mCS-light3 mCSB_vertical mCSB_inside" tabindex="0">
 
 
 
@@ -314,8 +311,16 @@
                                         <div class="form-group slcsfieldsd col-md-10">
                                             <label for="inputcountry">Country:</label>
                                             <select class="form-select" id="inputCountry" name="Country">
-                                                <option value="SelectCountry">Select Country</option>
-                                                <option value="Bharat">Bharat</option>
+                                                <!-- <option value="SelectCountry">Select Country</option> -->
+                                                <!-- <option value="Bharat">Bharat</option> -->
+                                                <option value="">Select Country</option>
+                                                <?php if (!empty($country_data)) { ?>
+                                                    <?php foreach ($country_data as $data) : ?>
+                                                        <option value="<?= $data->name; ?>">
+                                                            <?= $data->name; ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+                                                <?php } ?>
 
 
                                             </select>
