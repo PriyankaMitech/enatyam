@@ -246,30 +246,18 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Carrier.css">
-        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/Career.css"> -->
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <?php } else if ($page == 'Carrier') { ?>
+        <?php } else if ($page == 'Carrier') { ?>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+            <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
+            <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
 
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Carrier.css">
-        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/Career.css"> -->
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
+            <link rel="stylesheet" href="<?= base_url(); ?>public/css/Carrier.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <?php } else if ($page == 'demo') { ?>
@@ -431,7 +419,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav main menu ms-auto">
-                            <a href="https://api.whatsapp.com/send?phone=+919421796800&amp;text=Got%20reference%20from%20your%20Digital%20vCard.%20Want%20to%20know%20more%20about%20your%20products%20and%20services." target="_blank">Whatsapp</a>
+                        <a href="https://api.whatsapp.com/send?phone=+919421796800&amp;text=Got%20reference%20from%20your%20Digital%20vCard.%20Want%20to%20know%20more%20about%20your%20products%20and%20services." target="_blank">Whatsapp</a>
                             <a class="nav-link active px-2" href="<?php echo base_url('Home'); ?>">Home</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>
                             <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>
@@ -573,14 +561,6 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <select name="country" class="form-control" id="country">
                                 <option value="">Select Country</option>
                                 <!-- JavaScript will populate this list -->
-                                <option value="">Select</option>
-                                <?php if (!empty($country_data)) { ?>
-                                    <?php foreach ($country_data as $data) : ?>
-                                        <option value="<?= $data->name; ?>">
-                                            <?= $data->name; ?>
-                                        </option>
-                                    <?php endforeach; ?>
-                                <?php } ?>
                             </select>
                         </div>
 
@@ -595,17 +575,16 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
 
                             <select class="form-control" name="courses_id_g" id="courses_id_g" style="width: 100%;">
-                                <option>Please select course</option>
-                                <?php if (!empty($courses_data)) { ?>
-                                    <?php foreach ($courses_data as $data) { ?>
-                                        <option value="<?= $data->id; ?>" <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id) {
-                                                                                echo 'selected';
-                                                                            } ?>>
-                                            <?= $data->courses_name; ?>
-                                        </option>
-                                    <?php } ?>
-                                <?php } ?>
-                            </select>
+                        <option >Please select course</option>
+                        <?php if(!empty($courses_data)){?>
+                            <?php foreach ($courses_data as $data){ ?>
+                                <option value="<?=$data->id; ?>"
+                                    <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id ) { echo 'selected'; } ?>>
+                                    <?= $data->courses_name; ?>
+                                </option>
+                            <?php } ?>
+                        <?php } ?>
+                    </select>
                         </div>
                         <!-- </div> -->
                         <div class="sub_category_div form-group" id="sub_category_div">
@@ -618,12 +597,10 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                             </select> -->
 
-                            <input type="hidden" id="selected_sub_courses_id_g" value="<?php if (isset($edit)) {
-                                                                                            echo ($edit['sub_courses_id_g']);
-                                                                                        } ?>">
-                            <select name="sub_courses_id_g" id="sub_courses_id_g" class="form-control">
-                                <option value="">Please select sub courses</option>
-                            </select>
+                            <input type="hidden" id="selected_sub_courses_id_g" value="<?php if (isset($edit)) { echo ($edit['sub_courses_id_g']); } ?>">
+                        <select name="sub_courses_id_g" id="sub_courses_id_g" class="form-control">
+                            <option value="">Please select sub courses</option>
+                        </select>
                         </div>
 
                         <div class="form-group">

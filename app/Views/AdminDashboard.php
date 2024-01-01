@@ -517,7 +517,9 @@ th {
 
                                                     <select name="faculty_name">
                                                 <option value="" selected>Select Faculty</option>
+
                                                 <?php foreach ($Faculty as $facultyItems ): ?>
+
                                                 <?php if ($facultyItems->course == $facult->course && $facultyItems->sub_course == $facult->sub_course ): ?>
                                                 <option value="<?= $facultyItems->id ?>" <?php if (
                                                         $facult->AssignTecher_id ==
