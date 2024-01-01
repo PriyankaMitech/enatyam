@@ -190,9 +190,8 @@
                                                 <div style="text-align: center;">
                                                 <!-- <input class="btn btnstart saveEnrollTopic" onclick="handleSubmit('collapseThree')" type="button" name="next" value="Next" /> -->
 
-                                                <button class="btn btnstart saveEnrollTopic" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Next
-                    </button>
+             
+                                                
                                                 </div>
                                             </div>
                                         </div>

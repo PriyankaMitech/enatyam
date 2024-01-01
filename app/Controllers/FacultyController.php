@@ -27,6 +27,9 @@ class FacultyController extends BaseController
 
   public function fetchDataByAssignTeacherId()
 {
+  $model = new AdminModel();
+  // echo "<pre>";print_r($_SESSION);exit();
+
     if (isset($_SESSION['sessiondata'])) {
         $sessionData = $_SESSION['sessiondata'];
 
@@ -40,6 +43,39 @@ class FacultyController extends BaseController
 
             $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
             $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
+            $wherecond1 = array('id' => $teacherId);
+
+
+
+            $loginsingel_data = $model->getsinglerow('register',$wherecond1);
+            
+
+            $wherecond = '';
+            if(!empty($loginsingel_data)){
+            $wherecond = ['faculty_id_g' => $loginsingel_data->carrier_id];
+            }
+
+
+            $select = 'tbl_group.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name, carrier.name';
+            $joinCond = 'tbl_group.courses_id_g = tbl_courses.id';
+            $joinCond1 = 'tbl_group.sub_courses_id_g = tbl_sub_courses.id';
+            $joinCond3 = 'tbl_group.faculty_id_g = carrier.D_id';
+
+
+
+
+            
+// Assuming joinfivetables method exists in AdminModel
+$group_data = $model->joinfourtables($select, 'tbl_group', 'tbl_courses', 'tbl_sub_courses', 'carrier',  $joinCond, $joinCond1, $joinCond3, $wherecond, 'DESC');
+
+// Debugging
+// echo "<pre>";
+// print_r($data['group_data']);
+// exit();
+
+
+            // $group_data = $model->joinfivetables('tbl_group',$wherecond);
+
 
             $todayDate = date('Y-m-d H:i:s');
             $displayedNotificationCount = 0;
@@ -47,7 +83,7 @@ class FacultyController extends BaseController
             return view('faculty', [
                 'data' => $data,
                 'todaysession' => $todaysession,
-                // 'notifications' => $notifications,
+                'group_data' => $group_data,
                 'notificationCount' => $displayedNotificationCount,
             ]);
         }

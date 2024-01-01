@@ -1558,6 +1558,9 @@ class AdminController extends BaseController
         $orderByField = 'created_on';
         $orderByDirection = 'desc';
 
+
+        
+
         $data['student_list_of_group'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
         $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
 

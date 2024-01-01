@@ -81,7 +81,7 @@
                         <thead>
                         <tr>
                             <th>Sr.No</th>
-                            <th>Courses Name / Sub Courses Name</th>
+                            <th>Courses / Sub Courses</th>
                             <th>Group Name</th>
 
                             <th>Student Name</th>
@@ -188,10 +188,98 @@
 
 
 
+                                     
                                         <td>
-                                            <a href="edit_group/<?=$data->id; ?>"><i class="far fa-edit me-2"></i></a>
-                                            <a href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a>
+                                            <div class="btn-group" role="group">
+                                            <?php
+                                            $studentIds = explode(',', $data->student_id);
+
+                                            // Count the number of students
+                                            $numberOfStudents = count($studentIds);
+                                            if($numberOfStudents < 10 ){
+                                            ?>
+                                            <a class="btn btn-success m-1 open-modal" data-toggle="modal" data-target="#modal-default-<?=$data->id;?>" 
+                                                data-row-id="<?=$data->id;?>" 
+                                                data-faculty-id="<?=$data->faculty_id_g;?>" 
+                                                data-schedule="<?=$data->shedule;?>" 
+                                                data-group-name="<?=$data->group_name;?>" 
+                                                href="#">
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </a>
+                                            <?php } ?>
+                                                <!-- <a href="edit_group/<?=$data->id; ?>"><i class="far fa-edit me-2"></i></a> -->
+                                                <a class="btn btn-danger m-1" href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')">
+                                                    <i class="far fa-trash-alt me-2"></i>
+                                                </a>
+                                            </div>
                                         </td>
+
+
+                                        <div class="modal fade" id="modal-default-<?=$data->id;?>">
+                                        <form action="set_create_group_datas" method="post">
+                                            <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h4 class="modal-title">Add More Student</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group ">
+                                                       
+                                                        <div class="row">
+                                                            <?php //echo "<pre>";print_r($data);exit();?>
+                                                            <div class="col-md-12">
+                                                            <input type="hidden" value="" name="id" id="modal-id">
+                                                            <input type="hidden" value="" name="faculty_id_g" id="modal-faculty-id">
+                                                            <input type="hidden" value="" id="modal-shedule" name="shedule">
+                                                            <input type="hidden" value="" id="modal-group-name" name="group_name">
+
+
+
+                                                                <label>Student List</label>
+                                                            </div>
+                                                            <?php
+
+                                                                $GroupSession = 'GroupSession';
+
+                                                                $Payment_status = 'Y';
+                                                                $wherec6 = array('course' => $data->courses_id_g, 'sub_course' => $data->sub_courses_id_g, 'is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'Payment_status' =>  $Payment_status );
+
+                                                                $student_data = $adminModel->getalldata('register',$wherec6);
+
+                                                                // echo "<pre>";print_r($student_data);exit();
+
+                                                            
+                                                            if (!empty($student_data)) { $i = 1; ?>
+                                                                <?php foreach ($student_data as $datas) { ?>
+                                                                    <div class="col-md-4">
+                                                                        <input type="checkbox" id="student_id" name="student_id[]" value="<?= $datas->id; ?>"  >
+
+                                                                        <label for="student_id"> <?= $datas->full_name; ?></label>
+                                                                    </div>
+                                                                    <?php $i++;
+                                                                } ?>
+                                                            <?php }else{ ?>
+                                                                <div class="col-md-4">
+                                                                      No Data available
+                                                                    </div>
+                                                            <?php } ?>
+
+                        
+                                                            
+                                                        
+                                                        </div>
+                                                    </div>
+                                                           
+                                                <div class="modal-footer justify-content-between">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                            </form>
+                                        </div>
+
                                     
                                     </tr>
                                 <?php $i++;} ?>
@@ -351,8 +439,8 @@
 
                                                                 $GroupSession = 'GroupSession';
 
-
-                                                                $wherec6 = array('course' => $data->courses_id_g, 'sub_course' => $data->sub_courses_id_g, 'is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, );
+                                                                $Payment_status = 'Y';
+                                                                $wherec6 = array('course' => $data->courses_id_g, 'sub_course' => $data->sub_courses_id_g, 'is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'Payment_status' =>  $Payment_status );
 
                                                                 $student_data = $adminModel->getalldata('register',$wherec6);
 
