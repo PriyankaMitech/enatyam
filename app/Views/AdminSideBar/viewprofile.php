@@ -57,15 +57,22 @@
                             <p class="text-muted text-center"><?=$profile_data->course_info;  ?> - <?=$profile_data->sub_course_info;  ?></p>
 
                             <ul class="list-group list-group-unbordered mb-3">
+                                <?php if(!empty($profile_data->cv_filename)){ ?>
                                 <li class="list-group-item">
                                     <b>Resume</b> <a href="<?=base_url(); ?>public/uploads/cv/<?=$profile_data->cv_filename;  ?>" target="_blank" class="float-right"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                 </li>
+                                <?php } ?>
+                                <?php if(!empty($profile_data->education_certificates_filename)){ ?>
                                 <li class="list-group-item">
                                     <b>Education Certificates</b> <a href="<?=base_url(); ?>public/uploads/educationCertificates/<?=$profile_data->education_certificates_filename;  ?>" target="_blank" class="float-right"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                 </li>
+                                <?php } ?>
+                                <?php if(!empty($profile_data->course_certificates_filename)){ ?>
+
                                 <li class="list-group-item">
                                     <b>Course Related Certificates</b> <a href="<?=base_url(); ?>public/uploads/courseCertificates/<?=$profile_data->course_certificates_filename;  ?>" target="_blank" class="float-right"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                 </li>
+                                <?php } ?>
                             </ul>
                           
                         </div>

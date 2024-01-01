@@ -1533,11 +1533,11 @@ function handleSubmit(collapse_val)
             // Reset all previous error messages
             $("#educationError").html("");
             $("#experienceError").html("");
-            $("#cvFileError").html("");
-            $("#educaionCertificateFileError").html("");
-            $("#courseCertificateFileError").html("");
-            $("#videosError").html("");
-            $("#imgError").html("");
+            // $("#cvFileError").html("");
+            // $("#educaionCertificateFileError").html("");
+            // $("#courseCertificateFileError").html("");
+            // $("#videosError").html("");
+            // $("#imgError").html("");
 
             // Validate Education dropdown
             var education = $("#education").val();
@@ -1554,36 +1554,36 @@ function handleSubmit(collapse_val)
             }
 
             // Validate file uploads
-            var cvFile = $("input[name='cvFile']").val();
-            var educaionCertificateFile = $("input[name='educationCertificateFile']").val();
-            var courseCertificateFile = $("input[name='courseCertificateFile']").val();
-            var videos = $("input[name='videos']").val();
-            var img = $("input[name='img']").val();
+            // var cvFile = $("input[name='cvFile']").val();
+            // var educaionCertificateFile = $("input[name='educationCertificateFile']").val();
+            // var courseCertificateFile = $("input[name='courseCertificateFile']").val();
+            // var videos = $("input[name='videos']").val();
+            // var img = $("input[name='img']").val();
 
-            if (!cvFile) {
-                $("#cvFileError").html("Please upload your CV");
-                return;
-            }
+            // if (!cvFile) {
+            //     $("#cvFileError").html("Please upload your CV");
+            //     return;
+            // }
 
-            if (!educaionCertificateFile) {
-                $("#educaionCertificateFileError").html("Please upload your education certificates");
-                return;
-            }
+            // if (!educaionCertificateFile) {
+            //     $("#educaionCertificateFileError").html("Please upload your education certificates");
+            //     return;
+            // }
 
-            if (!courseCertificateFile) {
-                $("#courseCertificateFileError").html("Please upload your course-related certificates");
-                return;
-            }
+            // if (!courseCertificateFile) {
+            //     $("#courseCertificateFileError").html("Please upload your course-related certificates");
+            //     return;
+            // }
 
-            if (!videos) {
-                $("#videosError").html("Please upload your videos");
-                return;
-            }
+            // if (!videos) {
+            //     $("#videosError").html("Please upload your videos");
+            //     return;
+            // }
 
-            if (!img) {
-                $("#imgError").html("Please upload your images");
-                return;
-            }
+            // if (!img) {
+            //     $("#imgError").html("Please upload your images");
+            //     return;
+            // }
             // alert("Validation successful! Proceeding to the next step.");
 
             // You can remove the alert above and uncomment the line below to show the next step

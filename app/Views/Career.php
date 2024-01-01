@@ -182,7 +182,7 @@
                                             <div class="form-group updloaddata mt-3">
                                                 <label class="mr-4">Upload your profile photo:</label>
                                                 <input type="file" accept="image/jpeg, image/png" name="profile_photo"
-                                                    required>
+                                                    >
 
                                             </div>
                                             <div>
@@ -257,34 +257,34 @@
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your CV:</label>
-                                            <input type="file" accept="application/pdf" name="cvFile" required>
+                                            <input type="file" accept="application/pdf" name="cvFile" >
                                             <span id="cvFileError" style="color: red;"></span>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your Education certificates:</label>
                                             <input type="file" accept="application/pdf" name="educationCertificateFile"
-                                                required>
+                                                >
                                             <span id="educaionCertificateFileError" style="color: red;"></span>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your course related certificates:</label>
                                             <input type="file" accept="application/pdf" name="courseCertificateFile"
-                                                required>
+                                                >
                                             <span id="courseCertificateFileError" style="color: red;"></span>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your videos:</label>
                                             <input type="file" accept="video/mp4, video/webm, video/ogg" name="videos"
-                                                required>
+                                                >
                                             <span id="videosError" style="color: red;"></span>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your Images:</label>
-                                            <input type="file" accept="image/jpeg, image/png" name="img" required>
+                                            <input type="file" accept="image/jpeg, image/png" name="img" >
                                             <span id="imgError" style="color: red;"></span>
                                         </div>
 
