@@ -12,8 +12,10 @@ class CarrierController extends BaseController
     {
         $carrierModel = new CarrierModel();
 
-        if ($this->request->getMethod() === 'post') {
 
+
+
+        if ($this->request->getMethod() === 'post') {
             // Handle file uploads
             $cvFile = $this->request->getFile('cvFile');
             $educationCertificatesFile = $this->request->getFile('educaionCertificateFile');
@@ -21,6 +23,15 @@ class CarrierController extends BaseController
             $profile_photo = $this->request->getFile('profile_photo');
             $videos = $this->request->getFile('videos');
             $img = $this->request->getFile('img');
+
+
+
+            $cvFileName = '';
+            $educationCertificatesFileName = '';
+            $courseCertificatesFileName = '';
+            $profile_photoFileName = '';
+            $videosFileName = '';
+            $imgFileName = '';
     
             // Debugging: Check if video file is uploaded
             if ($videos && $videos->isValid()) {
@@ -31,14 +42,15 @@ class CarrierController extends BaseController
     
             // Check if all files are uploaded and valid
             if (
-                $cvFile && $cvFile->isValid() &&
-                $educationCertificatesFile && $educationCertificatesFile->isValid() &&
-                $courseCertificatesFile && $courseCertificatesFile->isValid() &&
-                $profile_photo && $profile_photo->isValid() &&
-                $videos && $videos->isValid() &&
-                $img && $img->isValid()
+                ($cvFile && $cvFile->isValid()) ||
+                ($educationCertificatesFile && $educationCertificatesFile->isValid()) ||
+                ($courseCertificatesFile && $courseCertificatesFile->isValid()) ||
+                ($profile_photo && $profile_photo->isValid()) ||
+                ($videos && $videos->isValid()) ||
+                ($img && $img->isValid())
             ) {
-
+                echo "hiii";
+            
                 // Define the destination folders using FCPATH
                 $uploadPath = FCPATH . 'public/uploads/cv';
                 $uploadPath1 = FCPATH . 'public/uploads/educationCertificates';
@@ -46,23 +58,42 @@ class CarrierController extends BaseController
                 $uploadPath3 = FCPATH . 'public/uploads/profile_photo';
                 $uploadPath4 = FCPATH . 'public/uploads/videos';
                 $uploadPath5 = FCPATH . 'public/uploads/images';
-    
-                // Get the original file names
-                $cvFileName = $cvFile->getName();
-                $educationCertificatesFileName = $educationCertificatesFile->getName();
-                $courseCertificatesFileName = $courseCertificatesFile->getName();
-                $profile_photoFileName = $profile_photo->getName();
-                $videosFileName = $videos->getName();
-                $imgFileName = $img->getName();
-    
-                // Move the uploaded files to the destination folders
-                $cvFile->move($uploadPath, $cvFileName);
-                $educationCertificatesFile->move($uploadPath1, $educationCertificatesFileName);
-                $courseCertificatesFile->move($uploadPath2, $courseCertificatesFileName);
-                $profile_photo->move($uploadPath3, $profile_photoFileName);
-                $videos->move($uploadPath4, $videosFileName);
-                $img->move($uploadPath5, $imgFileName);
-    
+            
+                // Initialize file names
+                $cvFileName = $educationCertificatesFileName = $courseCertificatesFileName = '';
+                $profile_photoFileName = $videosFileName = $imgFileName = '';
+            
+                // Move the uploaded files to the destination folders (if available)
+                if ($cvFile && $cvFile->isValid()) {
+                    $cvFileName = $cvFile->getName();
+                    $cvFile->move($uploadPath, $cvFileName);
+                }
+            
+                if ($educationCertificatesFile && $educationCertificatesFile->isValid()) {
+                    $educationCertificatesFileName = $educationCertificatesFile->getName();
+                    $educationCertificatesFile->move($uploadPath1, $educationCertificatesFileName);
+                }
+            
+                if ($courseCertificatesFile && $courseCertificatesFile->isValid()) {
+                    $courseCertificatesFileName = $courseCertificatesFile->getName();
+                    $courseCertificatesFile->move($uploadPath2, $courseCertificatesFileName);
+                }
+            
+                if ($profile_photo && $profile_photo->isValid()) {
+                    $profile_photoFileName = $profile_photo->getName();
+                    $profile_photo->move($uploadPath3, $profile_photoFileName);
+                }
+            
+                if ($videos && $videos->isValid()) {
+                    $videosFileName = $videos->getName();
+                    $videos->move($uploadPath4, $videosFileName);
+                }
+            
+                if ($img && $img->isValid()) {
+                    $imgFileName = $img->getName();
+                    $img->move($uploadPath5, $imgFileName);
+                }
+            }
                 // Insert data into the database
                 $data = [
                     'name' => $this->request->getPost('name'),
@@ -85,10 +116,12 @@ class CarrierController extends BaseController
                     'img' => $imgFileName,
                 ];
 
+                // echo "<pre>";print_r($data);exit();
+
 
                 $carrierModel->save($data);
                 return redirect()->to('Home');
-            }
+            
         }
     }
     

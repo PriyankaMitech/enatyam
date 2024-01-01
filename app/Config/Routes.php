@@ -132,6 +132,8 @@ $routes->post('fetch_records', 'AdminController::fetch_records');
 $routes->get('viewProfile/(:any)', 'AdminController::viewProfile/$1');
 $routes->get('viewProfiledfaculty/(:any)', 'AdminController::viewProfiledfaculty/$1');
 
+
+
 $routes->get('viewProfiles/(:any)', 'AdminController::viewProfiles/$1');
 
 

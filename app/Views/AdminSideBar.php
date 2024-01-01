@@ -5,42 +5,69 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Enatyam</title>
+
+
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/fontawesome-free/css/all.min.css">
+
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/jqvmap/jqvmap.min.css">
 
-    <!-- DataTables -->
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/jqvmap/jqvmap.min.css">
+
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/summernote/summernote-bs4.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>public/css/fontawesome-stars.css">
 
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/admindashboard_style.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/fullcalendar/main.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/jquery.dataTables.css">
-    <link href="<?php echo base_url() ?>public/css/custom.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
-    <!-- Tempusdominus Bootstrap 4 -->
-    <!-- Select2 -->
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-    <!-- Bootstrap4 Duallistbox -->
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
-    <!-- BS Stepper -->
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/bs-stepper/css/bs-stepper.min.css">
-    <!-- dropzonejs -->
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="<?= base_url(); ?>dist/css/adminlte.min.css">
+
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/daterangepicker/daterangepicker.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/summernote/summernote-bs4.min.css">
+<link rel="stylesheet" href="<?= base_url() ?>public/css/fontawesome-stars.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="<?= base_url(); ?>public/css/admindashboard_style.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/fullcalendar/main.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/jquery.dataTables.css">
+<link href="<?php echo base_url() ?>public/css/custom.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/bs-stepper/css/bs-stepper.min.css">
+<link rel="stylesheet" href="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.css">
+
+<link rel="stylesheet" href="<?= base_url(); ?>dist/css/adminlte.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <style>
         .payment-card #example1_wrapper .btn-group {
@@ -120,11 +147,11 @@
                             <!-- Sidebar user (optional) -->
                             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                                 <div class="image">
-                                    <img src="public/AdmoinLogo.png" class="img-circle elevation-2" alt="User Image">
+                                <img src="<?= base_url('public/AdmoinLogo.png'); ?>" class="img-circle elevation-2" alt="User Image">
                                 </div>
                                 <div class="info">
                                     <a href="<?php echo base_url() ?>Admindashboard" class="d-block">
-                                        <?php echo ($_SESSION['sessiondata']['user_name']); ?> </a>
+                                        <?php echo ($_SESSION['sessiondata']['user_name']); ?>  </a>
                                 </div>
                             </div>
 
@@ -683,7 +710,7 @@
                         <!-- Sidebar user (optional) -->
                         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                             <div class="image">
-                                <img src="public/AdmoinLogo.png" class="img-circle elevation-2" alt="User Image">
+                                <img src="<?php echo base_url() ?>public/AdmoinLogo.png" class="img-circle elevation-2" alt="User Image">
                             </div>
                             <div class="info">
                                 <a href="<?php echo base_url() ?>Admindashboard" class="d-block">
