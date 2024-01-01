@@ -187,6 +187,7 @@
                                             </div>
                                             <div>
                                                 <div style="text-align: center;">
+
                                                     <input class="btn btnstart saveEnrollTopic"
                                                         onclick="handleSubmit('collapseOne')"
                                                         data-bs-target="#collapseTwo" type="button" name="next"
@@ -195,6 +196,7 @@
                                                     <button class="btn btnstart saveEnrollTopic" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" onclick="handleSubmit('collapseOne')" aria-expanded="false" aria-controls="collapseThree">
                     Next
                     </button>   -->
+
                                                 </div>
                                             </div>
                                         </div>

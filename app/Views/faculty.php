@@ -338,22 +338,59 @@ div.dataTables_wrapper div.dataTables_filter input {
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
+                                <th>Sr.No</th>
                                 <th>Group Name</th>
-                                <th>Start Time</th>
-                                <th>End Time</th>
-                                <th>Action</th>
+                                <th>Courses/Sub Courses</th>
+                                <th>Student Names</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php if(!empty($group_data)) { $i=1; ?>
+                                <?php foreach($group_data as $datas) {
+                                    
+                                    
+                                    $student_id = explode(',', $datas->student_id);
+
+                                    $studentNames = array(); // To store student names
+                                    $wherec = '';
+
+
+                                    if (!empty($student_id)) {
+                                        // echo "<pre>";print_r($student_id);
+                                        foreach ($student_id as $student_id_data) {
+                                            // echo "<pre>";print_r($student_id_data);
+                                                $wherec = array('id' => $student_id_data);
+                                            // Assuming you have a method in your model to get student names by ID
+                                            $student = $adminModel->getsinglerow('register',$wherec);
+                                            // echo "<pre>";print_r($student);exit();
+
+
+                                            // Assuming the method returns an object with a 'name' property
+                                            $studentNames[] = $student->full_name;
+
+                                            // echo "<pre>";print_r($student);exit();
+
+                                        }
+                                    }
+                                    ?>
                             <tr>
-                                <td>Group1</td>
-                                <td>Group1</td>
-                                <td>Group1</td>
+                                <td><?=$i;?></td>
+                                <td><?=$datas->group_name; ?></td>
+                                <td><?=$datas->courses_name; ?>/<?=$datas->sub_courses_name;?></td>
                                 <td>
-                                    <button class="btn btn-primary" onclick="displayGroupList('Group1')">View
-                                        List</button>
+                                            <?php $x= 1;
+                                                foreach ($studentNames as $studentName) {
+                                                    echo $x . ') ' . $studentName . '<br>';
+                                                    $x++; // Increment the counter
+                                            }
+                                            ?>
                                 </td>
+                             
                             </tr>
+                            <?php } ?>
+                            <?php }else{ ?>
+                                <tr colspan="4"> No Data Availabel.</tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>

@@ -206,7 +206,7 @@ class AdminModel extends Model
     {
         $result = $this->table('free_demo_table')
             ->where(["D_id" => $data['studentid']])
-            ->set('AssignTecher_id', $data['faculty_name'])
+            ->set('AssignTecher_id', $data['faculty_id'])
             ->update();
         if ($result == '1') {
             return true;
@@ -1076,6 +1076,23 @@ class AdminModel extends Model
              //    echo $this->db->getLastQuery();die;
         return $result;
     }
+
+
+    public function joinfivetables($select, $table1, $table2, $table3, $table4, $table5, $joinCond, $joinCond1, $joinCond2, $joinCond3, $wherecond, $type)
+    {
+        $result = $this->db->table($table1)
+        ->select($select)
+        ->join($table2, $joinCond, $type)
+        ->join($table3, $joinCond1, $type)
+        ->join($table4, $joinCond2, $type)
+        ->join($table5, $joinCond3, $type)
+        ->where($wherecond)
+        ->get()
+        ->getResult();
+        //    echo $this->db->getLastQuery();die;
+        return $result;
+    }
+
     
 
 

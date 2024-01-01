@@ -380,7 +380,7 @@ th {
 
                             <div class="col-md-12 card" id="unattended-tabal" style="display:none">
                                 <div class="card-header">
-                                    <h3 class="card-title">Demo List</h3>
+                                    <h3 class="card-title">Unattended Demo List</h3>
                                 </div>
                                 <div class="card-body table-responsive">
                                     <table class="table table-hover text-nowrap">
@@ -458,7 +458,7 @@ th {
                                         <?php endforeach; ?>
                                         <?php else: ?>
                                         <tr>
-                                            <td class="text-center" colspan="6">No data available</td>
+                                            <td class="text-center" colspan="8">No data available</td>
                                         </tr>
                                         <?php endif; ?>
                                     </table>
@@ -475,6 +475,8 @@ th {
                                                 <th>Name</th>
                                                 <th>Email</th>
                                                 <th>Booking Date</th>
+                                                <th>Reshedule Date</th>
+
                                                 <th>Faculty</th>
                                                 <th>Course</th>
                                                 <th>Sub Course</th>
@@ -489,7 +491,9 @@ th {
                                             return strtotime($b->Book_Date) -
                                                 strtotime($a->Book_Date);
                                         }); ?>
-                                        <?php if (!empty($PendingDemo)) { ?>
+                                        <?php
+                                        // echo "<pre>";print_r($PendingDemo);exit();
+                                        if (!empty($PendingDemo)) { ?>
                                         <?php foreach ($PendingDemo as $facult): ?>
                                         <tr>
                                             <form action="<?php echo base_url(
@@ -498,19 +502,24 @@ th {
                                                 <input type="hidden" name="studentid" value="<?= $facult->D_id ?>">
                                                 <td><?= $facult->name ?></td>
                                                 <td><?= $facult->email ?></td>
-                                                <td><?= date(
-                                                    "d/m/Y",
-                                                    strtotime($facult->Book_Date)
-                                                ) ?></td>
+                                                <td><?= date('j F Y', strtotime($facult->Book_Date)); ?></td>
                                                 <td>
-                                     
-                                   
+                                                    <?php 
+                                                        if ($facult->Reshedule_date && $facult->Reshedule_date != '0000-00-00') {
+                                                            echo date('j F Y', strtotime($facult->Reshedule_date)); 
+                                                        } else {
+                                                            echo 'Not available';
+                                                        }
+                                                    ?>
+                                                </td>
+                                                <td>
 
 
                                                     <select name="faculty_name">
                                                 <option value="" selected>Select Faculty</option>
-                                                <?php
-                                                foreach ($Faculty as $facultyItems ): ?>
+
+                                                <?php foreach ($Faculty as $facultyItems ): ?>
+
                                                 <?php if ($facultyItems->course == $facult->course && $facultyItems->sub_course == $facult->sub_course ): ?>
                                                 <option value="<?= $facultyItems->id ?>" <?php if (
                                                         $facult->AssignTecher_id ==
