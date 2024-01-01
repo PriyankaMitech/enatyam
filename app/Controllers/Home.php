@@ -57,7 +57,7 @@ class Home extends BaseController
         $wherecond = array('is_deleted' => 'N');
 
         $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
-
+//print_r($data['courses_data']);die;
         return view('Career', $data);
     }
     public function Carrier()
