@@ -6,6 +6,7 @@
     margin-bottom: 1.875rem;
     position: relative;
 }
+
 .avatar.avatar-xl {
     height: 7.5rem;
     width: 7.5rem;
@@ -19,6 +20,7 @@
     position: relative;
     width: 3rem;
 }
+
 .contact-icon {
     margin-bottom: 30px;
 }
@@ -34,24 +36,33 @@
     font-size: 11px;
 }
 
-@keyframes mymove{ 
+@keyframes mymove {
     50% {
         transform: scale(2);
         opacity: 0;
     }
+
     100% {
         transform: scale(2);
         opacity: 0;
     }
 }
-@keyframes animate{ 
-    0%{ 
-      opacity: 0; 
-    } 
-    50%{ 
-      opacity: 0.7; 
-    } 
-    100%{ 
-      opacity: 0; 
-    } 
-} 
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.timeline-country {
+    display: inline-block;
+    vertical-align: middle;
+}
