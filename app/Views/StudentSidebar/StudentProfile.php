@@ -22,7 +22,7 @@
                             <div class="text-center">
                                 <img class="profileData-user-img img-fluid img-circle" src="public/AdmoinLogo.png" alt="User profileData picture">
                             </div>
-                            <?php if (!empty($profileData)){ ?>
+                            <?php if (!empty($profileData)) { ?>
                                 <h3 class="profileData-username text-center"><?= $profileData->full_name ?></h3>
 
                                 <p class="text-muted text-center"><?= $profileData->email ?></p>
@@ -58,7 +58,7 @@
                             <div class="tab-content">
                                 <div class="active tab-pane" id="activity">
                                     <!-- Post -->
-                                    <?php if (!empty($profileData)){ ?>
+                                    <?php if (!empty($profileData)) { ?>
 
                                         <form id="updatePasswordForm" action="#" method="post">
                                             <input type="hidden" name="user_email" value="<?= $profileData->email ?>">
@@ -108,20 +108,20 @@
 
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="timeline">
-                                <?php if (!empty($profileData)){ ?>
+                                    <?php if (!empty($profileData)) { ?>
 
                                         <form action="<?= base_url('changeCountry') ?>" method="post">
                                             <div class="timeline-item">
                                                 <div class="timeline-item-content">
-                                                    <div class="preCountry" style="margin-left: 85%;">
+                                                    <div class="preCountry text-right">
                                                         <?php
                                                         // Suppose $studentCountryCode contains the student's country code, e.g., "vn"
                                                         $studentCountryCode = $profileData->code; // This would be dynamically fetched in a real-world scenario
                                                         // Generate the CSS class
                                                         $cssClass = "ip2location-flag-32 flag-square flag-" . strtolower($studentCountryCode);
                                                         ?>
-                                                        <span style="display: inline-block; vertical-align: middle;" class="timeline-country"><?= $profileData->country ?></span>
-                                                        <span style="display: inline-block; vertical-align: middle;" class=" timeline-country <?= $cssClass ?>"></span>
+                                                        <span class="timeline-country"><?= $profileData->country ?></span>
+                                                        <span class=" timeline-country <?= $cssClass ?>"></span>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-6 change-country">
