@@ -204,6 +204,7 @@ class AdminModel extends Model
     }
     public function edit($data)
     {
+     //   print_r($data);die;
         $result = $this->table('free_demo_table')
             ->where(["D_id" => $data['studentid']])
             ->set('AssignTecher_id', $data['faculty_id'])
