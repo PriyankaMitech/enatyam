@@ -117,7 +117,7 @@ th {
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3><?php echo $count; ?></sup></h3>
+                            <h3><?php echo count($alldemolist); ?></sup></h3>
 
                             <p> Demos List</p>
                         </div>
@@ -186,14 +186,20 @@ th {
                                 <tr>
                                     <th>Name</th>
                                     <th>Course</th>
+                                    <th>Sub Course</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if (!empty($records)): ?>
                                 <?php foreach ($records as $row): ?>
                                 <tr>
-                                    <td><?= $row["name"] ?></td>
-                                    <td><?= $row["course"] ?></td>
+                                    <td><?= $row->name ?></td>
+                                    <td><?= $row->courses_name ?></td>
+                                    <td><?= $row->sub_courses_name ?></td>
+                                    <td><?= $row->Start_Time ?></td>
+                                    <td><?= $row->End_Time ?></td>
                                 </tr>
                                 <?php endforeach; ?>
                                 <?php else: ?>
@@ -203,7 +209,6 @@ th {
                                 <?php endif; ?>
                             </tbody>
                         </table>
-
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -242,7 +247,7 @@ th {
 
                             <div class="col-lg-3">
                                 <div class="card demo-card">
-                                    <h4><?php echo $count; ?></h4>
+                                    <h4><?php echo count($alldemolist); ?></h4>
                                     <h3>Total Demo</h3>
                                     <i class="fas fa-long-arrow-alt-right comp-payment"></i>
                                 </div>
@@ -515,24 +520,24 @@ th {
                                                 <td>
 
 
-                                                    <select name="faculty_name">
-                                                <option value="" selected>Select Faculty</option>
+                                                    <select name="faculty_id">
+                                                        <option value="" selected>Select Faculty</option>
 
-                                                <?php foreach ($Faculty as $facultyItems ): ?>
+                                                        <?php foreach ($Faculty as $facultyItems ): ?>
 
-                                                <?php if ($facultyItems->course == $facult->course && $facultyItems->sub_course == $facult->sub_course ): ?>
-                                                <option value="<?= $facultyItems->id ?>" <?php if (
+                                                        <?php if ($facultyItems->course == $facult->course && $facultyItems->sub_course == $facult->sub_course ): ?>
+                                                        <option value="<?= $facultyItems->id ?>" <?php if (
                                                         $facult->AssignTecher_id ==
                                                         $facultyItems->id
                                                     ) {
                                                         echo "selected";
                                                     } ?>>
-                                                    <?= $facultyItems->full_name ?>
-                                                </option>
-                                                <?php endif; ?>
-                                                <?php endforeach; ?>
-                                            </select>
-                                                  
+                                                            <?= $facultyItems->full_name ?>
+                                                        </option>
+                                                        <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    </select>
+
                                                 </td>
                                                 <td><?= $facult->courses_name ?></td>
                                                 <td><?= $facult->sub_courses_name ?></td>
@@ -547,19 +552,20 @@ th {
                                                     <?php endif; ?>
                                                 </td>
                                                 <td>
-                                  
+
 
 
 
                                                     <?php if (
                                                 $facult->AssignTecher_id > 0 
                                             ) { ?>
-                                            <button type="submit" name="change_faculty_button" class="btn btn-info"
-                                                style="font-size: 12px;">Change Faculty</button>
-                                            <?php }  else { ?>
-                                            <button type="submit" name="assign_button" class="btn btn-warning"
-                                                style="font-size: 13px;">Assign</button>
-                                            <?php } ?>
+                                                    <button type="submit" name="change_faculty_button"
+                                                        class="btn btn-info" style="font-size: 12px;">Change
+                                                        Faculty</button>
+                                                    <?php }  else { ?>
+                                                    <button type="submit" name="assign_button" class="btn btn-warning"
+                                                        style="font-size: 13px;">Assign</button>
+                                                    <?php } ?>
                                                 </td>
                                             </form>
                                         </tr>
@@ -724,7 +730,7 @@ th {
                                             </select>
                                             <?php } elseif ($data->SessionType == "GroupSession") { ?>
                                             <?= $data->teacher_name ?>
-                                            
+
                                             <?php } ?>
                                         </td>
                                         <?php if ($data->SessionType == "OneToOneSession" && !$data->Session_Start_Date){ ?>
@@ -737,7 +743,7 @@ th {
                                                 name="Session_Start_Date" class="Session_Start_Date"
                                                 value="<?= $data->Session_Start_Date ?>"></td>
 
-                                                
+
                                         <?php }else{ ?>
                                         <td><?= $data->Session_Start_Date ?></td>
                                         <?php } ?>

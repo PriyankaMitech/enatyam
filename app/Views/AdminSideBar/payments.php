@@ -16,9 +16,7 @@
         </div>
     </section>
     <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">DataTable with default features</h3>
-        </div>
+       
         <?php
         function compareDates($a, $b) {
             return strtotime($b->created_at) - strtotime($a->created_at);
@@ -54,7 +52,7 @@ foreach ($payments as $key => $payment) {
 
     // Check if the status is null
     if ($payment->status !== null) {
-        echo '<td><small class="badge badge-success ">Sucessfull</small></td>';
+        echo '<td><small class="badge badge-success ">Sucessful</small></td>';
     } else {
         echo "<td>" . $payment->status . "</td>";
     }

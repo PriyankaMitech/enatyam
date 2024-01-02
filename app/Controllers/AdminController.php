@@ -28,10 +28,9 @@ class AdminController extends BaseController
 
             if ($email !== null && $password !== null) {
                 $model = new AdminModel();
-                $data['records'] = $model->getTodayRecords();
+                // $data['records'] = $model->getTodayRecords();
                 $data['SessionData'] = $model->findAll();
                 $data['count'] = $model->getRowCount();
-
                 $data['students'] = $model->get_students();
                 // $data['Faculty'] = $model->getFacultyWithCarrier();
                 // $data['ConductedDemo'] = $model->getConductedDemo();
@@ -39,73 +38,40 @@ class AdminController extends BaseController
                 $data['getPaymentstatus'] = $model->Paymentstatus();
                 // $data['alldemolist'] = $model->getAllDemoData();
                 // $data['PendingDemo'] = $model->getPendingDemo();
-                // $data['UnattendedDemoList'] = $model->UnattendedDemoList();
-              
+                // $data['UnattendedDemoList'] = $model->UnattendedDemoList();   
                 $data['Facultydatails'] = $model->getFaculty();
-
-
                 $select = 'free_demo_table.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
                 $joinCond = 'free_demo_table.course = tbl_courses.id';
                 $joinCond2 = 'free_demo_table.sub_course = tbl_sub_courses.id';
-                // $cond = "u.email =  '$email'";
                 $today = date('Y-m-d');
-
-    
-
                 $wherecond = [
                     'free_demo_table.Conducted_Demo' => 'N',
                     'free_demo_table.Book_Date >=' => $today,
                 ];
- 
-                
-    
-                $data['PendingDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond, 'DESC');
-
-
+                $data['PendingDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond, 'DESC');            
+                $wherecondr = [
+                    'free_demo_table.Book_Date =' => $today,
+                ];          
+                $data['records'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecondr, 'DESC');
                 $wherecond1 = [
                     'free_demo_table.Conducted_Demo' => 'N',
 
                     'free_demo_table.Book_Date <' => $today,
                 ];
-        
-
                 $data['UnattendedDemoList'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond1, 'DESC');
-
-
                 $data['alldemolist'] = $model->jointhreetableswwc($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2,  'DESC');
-
-
                 $wherecond2 = [
                     'free_demo_table.Conducted_Demo' => 'Y',
                 ]; 
-                $data['ConductedDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond2, 'DESC');;
-
-                // echo "<pre>";print_r($data['alldemolist']);exit();
-
-
-
+                $data['ConductedDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond2, 'DESC');
                 $select1 = 'register.*, carrier.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
                 $joinCond4 = 'register.carrier_id = carrier.D_id';
                 $joinCond5 = 'carrier.course = tbl_courses.id';
-                $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';
-        
-        
+                $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';       
                 $wherecond = [
                     'register.role' => 'Faculty',
-                ];
-        
-        
-        
+                ];     
                 $data['Faculty'] = $model->joinfourtables($select1, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, $wherecond, 'DESC');
-        
-
-
-         
-
-            
-
-                // echo "<pre>";print_r($data['Faculty']);exit();
-                
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -131,17 +97,11 @@ class AdminController extends BaseController
 
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
-
-            // echo "<pre>";print_r($postData);exit();
-
             $result = $model->add($postData);
-
             if ($result) {
-
-                return redirect()->to('Admindashboard'); // Change 'success' to your desired URL
+                return redirect()->to('Admindashboard'); 
             } else {
-
-                return redirect()->to('error'); // Change 'error' to your error handling URL
+                return redirect()->to('error'); 
             }
         }
     }
@@ -151,29 +111,17 @@ class AdminController extends BaseController
 
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
-
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
 
             if ($email !== null && $password !== null) {
-
                 $model = new AdminModel();
-
-                
                 $select1 = 'faculty.*, carrier.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
                 $joinCond4 = 'faculty.carrier_id = carrier.D_id';
                 $joinCond5 = 'carrier.course = tbl_courses.id';
                 $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';
-
-        
-        
-        
                 $data['facultyData'] = $model->joinfourtableswwc($select1, 'faculty ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, 'DESC');
-                // $data['facultyData'] = $model->getFacultyData();
-
-                // echo "<pre>";print_r($data['facultyData']);exit();
-
-    
+             
                 return view('AdminSideBar/FacultyProfile', $data);
             } else {
                 return redirect()->to(base_url());
@@ -243,10 +191,6 @@ class AdminController extends BaseController
                 $model = new AdminModel();
                 $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
                 $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
-                // echo "<pre>";
-                // print_r($data['FacultyVideoData']);
-                // echo "</pre>";
-                // die();
                 return view('AdminSideBar/UploadedImages', $data);
             } else {
                 return redirect()->to(base_url());
@@ -255,33 +199,6 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
-
-    // public function searchFacultyVideos()
-    // {
-    //     $startDate = $this->request->getPost('startDate');
-    //     $endDate = $this->request->getPost('endDate');
-    //     $studentName = $this->request->getPost('studentName');
-    //     $facultyName = $this->request->getPost('facultyName');
-    //     // print_r($endDate);
-    //     // die;
-    //     $sDate = $this->session->setFlashdata('startDate', $startDate);
-    //     $eDate = $this->session->setFlashdata('endDate', $endDate);
-    //     $studeName = $this->session->setFlashdata('studentName', $studentName);
-    //     $facName =  $this->session->setFlashdata('facultyName', $facultyName);
-
-
-    //     $model = new AdminModel();
-
-    //     $data['searchdata'] = $model->getFacultyBySearch($startDate, $endDate, $studentName, $facultyName);
-    //     $data['studentList'] = $model->getStudentData();
-    //     $data['facultyList'] = $model->getFacultyrole();
-    //     // echo '<pre>';
-    //     // print_r($data['searchdata']);
-    //     // die;
-    //     // return $this->response->setJSON($filteredFacultyVideoData);
-    //     return view('AdminSideBar/StudentVideo', $data);
-    // }
-
     public function getSearchData()
     {
         $studentVideoStartDate = $this->request->getPost('startDate');
@@ -294,24 +211,16 @@ class AdminController extends BaseController
         $eDate = $this->session->setFlashdata('endDate', $studentVideoEndDate);
         $studeName = $this->session->setFlashdata('studentName', $studentNames);
         $facName =  $this->session->setFlashdata('facultyName', $facultyNames);
-
         $model = new AdminModel();
-        //  print_r($table);die;
-        // $data['searchStudentData'] = $model->getStudentBySearch($studentVideoStartDate, $studentVideoEndDate, $studentNames, $facultyNames);
         $data['searchStudentData'] = $model->getSearchData($table, $studentVideoStartDate, $studentVideoEndDate, $studentNames, $facultyNames);
         $data['studentList'] = $model->getStudentData();
         $data['facultyList'] = $model->getFacultyrole();
-        // echo '<pre>';
-        // print_r($data['searchStudentData']);
-        // die;
         if ($data['searchStudentData']) {
             return $this->response->setJSON($data);
         } else {
             $data['status'] = '203';
             return $this->response->setJSON($data);
         }
-
-        // return view('AdminSideBar/StudentVideo', $data);
     }
     public function getDemoDetails()
     {
@@ -323,10 +232,6 @@ class AdminController extends BaseController
 
             if ($email !== null && $password !== null) {
                 $model = new AdminModel();
-
-                // $data['ConductedDemo'] = $model->getConductedDemo();
-                // $data['PendingDemo'] = $model->getPendingDemoList();
-                // $data['resheduleDemo'] = $model->getresheduleDemo();
                 $data['Faculty'] = $model->getFaculty();
 
                 $select = 'free_demo_table.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
@@ -350,12 +255,7 @@ class AdminController extends BaseController
                 $wherecond2 = [
                     'free_demo_table.Conducted_Demo' => 'Y',
                 ]; 
-                $data['ConductedDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond2, 'DESC');;
-
-
-
-            //  echo "<pre>";print_r($data['PendingDemo']);exit();
-
+                $data['ConductedDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond2, 'DESC');
                 return view('AdminSideBar/Demo', $data);
             } else {
                 return redirect()->to(base_url());
@@ -375,12 +275,8 @@ class AdminController extends BaseController
 
             if ($email !== null && $password !== null) {
                 $model = new AdminModel();
-
-
                 $data['StudentList'] = $model->getStudents();
                 $data['facultyList'] = $model->getFacultyrole();
-
-                // print_r($data['facultyList']);die;
                 return view('AdminSideBar/DailyClass', $data);
             } else {
                 return redirect()->to(base_url());
@@ -425,9 +321,6 @@ class AdminController extends BaseController
                 $data['carrer'] = $filteredCareerData;
                 $data['cansalList'] = $model->getrejectedList();
                 $data['createPassword'] = $model->getNullPasswordRecords();
-                //          echo '<pre>';
-                // print_r($data['cansalList']);
-                // die;
                 return view('AdminSideBar/NewFacultyApplication', $data);
             } else {
                 return redirect()->to(base_url());
@@ -436,9 +329,6 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
-
-
-
     public function Steusupdate()
     {
         $action = $this->request->getPost('action');
@@ -457,7 +347,6 @@ class AdminController extends BaseController
                 $model->update($D_id, $data);
 
                 if ($action === 'approve') {
-                    //                 // Your "approve" logic here
                     $model2 = new LoginModel();
                     $lastUpdatedCareerData = $model->getresultofResultofapplication($D_id);
 
@@ -482,38 +371,24 @@ class AdminController extends BaseController
 
                         $model->insertTable2Data($lastInsertedData);
                     }
-                    // ...
+                   
                 } elseif ($action === 'decline') {
-                    // Your "decline" logic here
-                    // ...
+                   
                 }
-
-                // return redirect()->to('NewFacultyApplication');
                 return redirect()->to(previous_url());
-
             }
         }
-
-        // Handle the case when $D_id or $action is not valid
-        // Redirect or show an error message as needed
     }
-
-
-
     public function backtoApplication()
     {
         $action = $this->request->getPost('action');
         $D_id = $this->request->getPost('D_id');
-
         $model = new AdminModel();
-
         $result = $model->updateCarrierData($D_id, $action);
         return redirect()->to('NewFacultyApplication');
     }
     public function createpassword()
     {
-        // print_r($_POST);die;
-
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $id = $this->request->getPost('id');
@@ -523,7 +398,6 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $result = $model->updatePassword($id, $password);
         if ($result) {
-            //  print_r($password);die;
             sendConfirmationEmail($email, $password, $msg, $Subject, $tital);
             $this->session->setFlashdata('success', 'Password updated successfully.');
         } else {
@@ -544,12 +418,11 @@ class AdminController extends BaseController
 
         if (!empty($registerRecord)) {
             $firstRecord = reset($registerRecord);
-            $ccEmails = [$firstRecord->email]; // Assuming you want to CC the faculty's email
+            $ccEmails = [$firstRecord->email];
             $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time);
             $Subject = 'Your Demo Rescheduled';
             $msg = "Your Demo Has Been Rescheduled - Date: $date, Time: $time";
             if ($result == 1) {
-                // Pass $ccEmails to sendConfirmationEmail
                 sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
                 $this->session->setFlashdata('success', 'Demo Rescheduled Successfully.');
             } else {
@@ -571,11 +444,7 @@ class AdminController extends BaseController
             $password = $sessionData['password'] ?? null;
 
             if ($email !== null && $password !== null) {
-
-
                 $data['FacultysheduleData'] = $model->getFacultyShedule();
-                // echo "<pre>";print_r($data['FacultysheduleData']);exit();
-
                 return view('AdminSideBar/FacultysidebarShedule', $data);
             } else {
                 return redirect()->to(base_url());
@@ -583,16 +452,14 @@ class AdminController extends BaseController
         } else {
             return redirect()->to(base_url());
         }
-
         $data['FacultysheduleData'] = $model->getFacultyShedule();
-
         return view('AdminSideBar/FacultysidebarShedule', $data);
     }
     public function getdate()
     {
         $model = new AdminModel();
         $date = $this->request->getPost('date');
-        $tableHtml = ''; // Initialize an empty string to store the HTML table
+        $tableHtml = ''; 
 
         if ($date) {
             $dateData = $model->getdate($date);
@@ -603,11 +470,10 @@ class AdminController extends BaseController
                 foreach ($dateData as $data) {
                     $tableHtml .= '<tr><td>' . $data->faculty_id . '</td><td>' . $data->date . '</td><td>' . $data->time . '</td></tr>';
                 }
-
                 $tableHtml .= '</tbody></table></div>';
             }
         } else {
-            $tableHtml = json_encode([]); // Return an empty JSON if there's no data
+            $tableHtml = json_encode([]); 
         }
 
         return $tableHtml;

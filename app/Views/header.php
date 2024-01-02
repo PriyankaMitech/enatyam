@@ -727,7 +727,9 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             </div>
         </div>
 
-        <div class="modal fade" id="lostpasswordmodal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+        
+    </div>
+    <div class="modal fade" id="lostpasswordmodal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -769,7 +771,5 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
             </div>
         </div>
-    </div>
-
 
     <!-- model  -->
