@@ -730,11 +730,33 @@ class AdminController extends BaseController
     {
         if (isset($_SESSION['sessiondata'])) {
             $model = new AdminModel();
+
+            $chatCountWhere = array(
+                'receiver_id' => $_SESSION['sessiondata']['id'],
+                'status' => 'N'
+            );
+            $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
+      
+            // echo "<pre>";print_r($result['chat_count']);exit();
+
+
             if ($_SESSION['sessiondata']['role'] == 'Admin') {
-                $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
-                $result['getuser'] = $model->getalldata('register', $wherecond);
+                // $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
+               // For Faculty
+                $wherecondFaculty = array('is_register_done' => 'Y', 'role' => 'Faculty');
+                $result['faculty'] = $model->getalldata('register', $wherecondFaculty);
+
+        
+
+                // For Student
+                $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y');
+                $result['student'] = $model->getalldata('register', $wherecondStudent);
+
+                // Merge results
+                $result['getuser'] = array_merge($result['faculty'], $result['student']);
+
                 // echo '<pre>';
-                // print_r($result);
+                // print_r($result['getuser']);
                 // die;
             } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
@@ -744,7 +766,37 @@ class AdminController extends BaseController
                 $result['getuser'] = $model->chatfaculty('register', $wherecond);
                 // print_r($result);die;
             }
-            echo view('chatuser', $result);
+
+            // $messageCountQuery = '';
+
+
+
+            // foreach ($result['getuser'] as &$user) {
+            //     $id = $user->id; // Assuming 'id' is the field containing user ID
+            //     $full_names = $user->full_name;
+            
+            //     $messageCountWhere = array(
+            //         'sender_id' => $id,
+            //         'receiver_id' => $_SESSION['sessiondata']['id'],
+            //         'status' => 'N'
+            //     );
+            
+            //     $messageCountQuery = $model->getalldata('online_chat', $messageCountWhere); // Assuming the 'getalldata' method returns the count
+            
+            //     echo "User: $full_names, Message Count: ". count($messageCountQuery);
+            
+            //     $user->messageCount = $messageCountQuery;
+            // }
+            
+            // foreach ($result['getuser'] as $user) {
+            //     echo "User: $user->full_name, Message Count: $user->messageCount";
+            // }
+
+
+          
+            
+            // echo "<pre>";print_r($messageCountQuery);exit();
+            echo view('Chatuser', $result);
         } else {
             echo view('/');
         }
@@ -771,6 +823,14 @@ class AdminController extends BaseController
             $wherecond2 = array('sender_id' => $_SESSION['sessiondata']['id'], 'receiver_id' => $receiverid[1]);
             $wherecond3 = array('sender_id' => $receiverid[1], 'receiver_id' => $_SESSION['sessiondata']['id']);
             $result['chatdata'] = $model->getchat('online_chat', $_SESSION['sessiondata']['id'], $receiverid[1]);
+
+            $wherecond4 = ['id' => $receiverid[1]];
+            $result['chat_user_data'] = $model->get_single_data('register',$wherecond4);
+
+
+
+            // echo "<pre>";print_r($result['chat_user_data']);exit();
+
             echo view('chatuser', $result);
         } else {
             return redirect()->to('/');
@@ -1668,4 +1728,24 @@ class AdminController extends BaseController
             }
         }
     }
+
+
+    public function update_seen_status()
+    {
+        $id = $this->request->getVar('id');
+
+        $data = [
+            'status' => 'Y',
+        ];
+
+        $db = \Config\Database::Connect();
+        if ($this->request->getVar('id') != "") {
+            $update_data = $db->table('online_chat')->where('sender_id', $this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        } 
+        return redirect()->to('chatuser/'.$id);
+    }
+
+    
 }

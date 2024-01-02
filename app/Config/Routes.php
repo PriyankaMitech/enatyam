@@ -136,6 +136,9 @@ $routes->get('viewProfiledfaculty/(:any)', 'AdminController::viewProfiledfaculty
 
 $routes->get('viewProfiles/(:any)', 'AdminController::viewProfiles/$1');
 
+$routes->post('update_seen_status', 'AdminController::update_seen_status');
+$routes->get('update_seen_status', 'AdminController::update_seen_status');
+
 
 
 

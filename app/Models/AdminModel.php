@@ -666,11 +666,26 @@ class AdminModel extends Model
 
     public function getchat($tablechat, $sender, $receiver)
     {
-        $chat = $this->db->query("SELECT * FROM " . $tablechat . " WHERE (sender_id = " . $sender . " AND receiver_id = " . $receiver . ") OR (sender_id = " . $receiver . " AND receiver_id = " . $sender . ") ORDER BY msg_id");
+        // $chat = $this->db->query("SELECT * FROM " . $tablechat . " WHERE (sender_id = " . $sender . " AND receiver_id = " . $receiver . ") OR (sender_id = " . $receiver . " AND receiver_id = " . $sender . ") ORDER BY msg_id");
+
+        
+        $chat = $this->db->query("
+        SELECT c.*, r1.full_name AS sender_name, r2.full_name AS receiver_name
+        FROM " . $tablechat . " AS c
+    LEFT JOIN register AS r1 ON c.sender_id = r1.id
+    LEFT JOIN register AS r2 ON c.receiver_id = r2.id
+    WHERE (c.sender_id = " . $sender . " AND c.receiver_id = " . $receiver . ") 
+       OR (c.sender_id = " . $receiver . " AND c.receiver_id = " . $sender . ")
+    ORDER BY c.msg_id
+");
+
+// echo "<pre>";print_r($chat);exit();
 
         $user = $this->db->query("SELECT id, full_name, role FROM register WHERE id = " . $receiver . " ");
         // echo '<pre>';print_r($this->getLastQuery());die;
         //$result = $this->db->table($table)->where($wherecond2.' OR ' .$wherecond3)->get()->getResult();
+
+        // echo "<pre>";print_r($user);exit();
 
         if ($chat) {
             return $chat->getResultArray();
