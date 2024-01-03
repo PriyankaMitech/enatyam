@@ -52,12 +52,9 @@ class Home extends BaseController
     public function Career()
     {
         $model = new AdminModel();
-
-
-        $wherecond = array('is_deleted' => 'N');
-
-        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
-//print_r($data['courses_data']);die;
+        $wherecond1 = array('is_deleted' => 'N');
+        $data['country_data'] = $model->getalldata('countries', $wherecond1);
+        //print_r($data['courses_data']);die;
         return view('Career', $data);
     }
     public function Carrier()

@@ -82,8 +82,7 @@
             <div class="steps">
                 <progress id="progress" class="progressbarcarrier" value=0 max=100></progress>
                 <div class="step-item">
-                    <button class="step-button text-center" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="step-button text-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         1
                     </button>
                     <div class="step-title">
@@ -91,8 +90,7 @@
                     </div>
                 </div>
                 <div class="step-item">
-                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         2
                     </button>
                     <div class="step-title">
@@ -100,8 +98,7 @@
                     </div>
                 </div>
                 <div class="step-item">
-                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                         3
                     </button>
                     <div class="step-title">
@@ -118,8 +115,7 @@
 
 
                     <!-- gfffdfdggdfsdgsagsgsgsgggdgdfggdggdggegdgggggsgsddfsdfsfsdggsddggdsgdfggddgdgfg -->
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="card-body">
                             <div class="col-lg-12 " style="padding-left:0px" width="100%">
 
@@ -132,23 +128,17 @@
                                         </h5>
                                         <div class="f-info">
                                             <div>
-                                                <input class="form-control" size="40" aria-required="true"
-                                                    aria-invalid="false" id="name" placeholder="Your Name *" value=""
-                                                    type="text" name="name">
+                                                <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="name" placeholder="Your Name *" value="" type="text" name="name">
                                                 <span style="color:red;" id="namespanid"></span> </span>
                                             </div>
 
                                             <div>
-                                                <input class="form-control" size="40" aria-required="true"
-                                                    aria-invalid="false" id="femail" placeholder="Email *" value=""
-                                                    type="email" name="email">
+                                                <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="femail" placeholder="Email *" value="" type="email" name="email">
                                                 <span style="color:red;" id="emailspanid"></span>
                                             </div>
 
                                             <div>
-                                                <input class="form-control" size="40" aria-required="true"
-                                                    aria-invalid="false" id="phone" pattern="[0-9]{10}"
-                                                    placeholder="Phone *" value="" type="tel" name="phone" required>
+                                                <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="phone" pattern="[0-9]{10}" placeholder="Phone *" value="" type="tel" name="phone" required>
                                                 <span style="color:red;" id="phonespanid"></span>
                                             </div>
 
@@ -157,20 +147,22 @@
 
                                                 <select class="form-control" name="courses" id="courses">
                                                     <option>Please select course</option>
-                                                    <?php if(!empty($courses_data)){?>
-                                                    <?php foreach ($courses_data as $data){ ?>
-                                                    <option value="<?=$data->id; ?>"
-                                                        <?php if ((!empty($single_data)) && $single_data->courses_id_g === $data->id ) { echo 'selected'; } ?>>
-                                                        <?= $data->courses_name; ?>
-                                                    </option>
-                                                    <?php } ?>
+                                                    <?php if (!empty($courses_data)) { ?>
+                                                        <?php foreach ($courses_data as $data) { ?>
+                                                            <option value="<?= $data->id; ?>" <?php if ((!empty($single_data)) && $single_data->courses_id_g === $data->id) {
+                                                                                                    echo 'selected';
+                                                                                                } ?>>
+                                                                <?= $data->courses_name; ?>
+                                                            </option>
+                                                        <?php } ?>
                                                     <?php } ?>
                                                 </select>
                                                 <span style="color:red;" id="coursespanid"></span>
                                             </div>
                                             <div>
-                                                <input type="hidden" id="selected_sub_courses"
-                                                    value="<?php if (isset($single_data)) { echo ($single_data->sub_courses_id_g); } ?>">
+                                                <input type="hidden" id="selected_sub_courses" value="<?php if (isset($single_data)) {
+                                                                                                            echo ($single_data->sub_courses_id_g);
+                                                                                                        } ?>">
                                                 <select name="sub_courses" id="sub_courses" class="form-control">
                                                     <option value="">Please select sub courses</option>
                                                 </select>
@@ -181,17 +173,13 @@
 
                                             <div class="form-group updloaddata mt-3">
                                                 <label class="mr-4">Upload your profile photo:</label>
-                                                <input type="file" accept="image/jpeg, image/png" name="profile_photo"
-                                                    >
+                                                <input type="file" accept="image/jpeg, image/png" name="profile_photo">
 
                                             </div>
                                             <div>
                                                 <div style="text-align: center;">
 
-                                                    <input class="btn btnstart saveEnrollTopic"
-                                                        onclick="handleSubmit('collapseOne')"
-                                                        data-bs-target="#collapseTwo" type="button" name="next"
-                                                        value="Next" />
+                                                    <input class="btn btnstart saveEnrollTopic" onclick="handleSubmit('collapseOne')" data-bs-target="#collapseTwo" type="button" name="next" value="Next" />
                                                     <!-- 
                                                     <button class="btn btnstart saveEnrollTopic" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" onclick="handleSubmit('collapseOne')" aria-expanded="false" aria-controls="collapseThree">
                     Next
@@ -214,8 +202,7 @@
                     <div id="headingThree">
 
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="card-body">
                             <div class="demo-form">
                                 <div class="position-relative">
@@ -257,41 +244,36 @@
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your CV:</label>
-                                            <input type="file" accept="application/pdf" name="cvFile" >
+                                            <input type="file" accept="application/pdf" name="cvFile">
                                             <span id="cvFileError" style="color: red;"></span>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your Education certificates:</label>
-                                            <input type="file" accept="application/pdf" name="educationCertificateFile"
-                                                >
+                                            <input type="file" accept="application/pdf" name="educationCertificateFile">
                                             <span id="educaionCertificateFileError" style="color: red;"></span>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your course related certificates:</label>
-                                            <input type="file" accept="application/pdf" name="courseCertificateFile"
-                                                >
+                                            <input type="file" accept="application/pdf" name="courseCertificateFile">
                                             <span id="courseCertificateFileError" style="color: red;"></span>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your videos:</label>
-                                            <input type="file" accept="video/mp4, video/webm, video/ogg" name="videos"
-                                                >
+                                            <input type="file" accept="video/mp4, video/webm, video/ogg" name="videos">
                                             <span id="videosError" style="color: red;"></span>
                                         </div>
 
                                         <div class="form-group updloaddata mt-3">
                                             <label class="mr-4">Upload your Images:</label>
-                                            <input type="file" accept="image/jpeg, image/png" name="img" >
+                                            <input type="file" accept="image/jpeg, image/png" name="img">
                                             <span id="imgError" style="color: red;"></span>
                                         </div>
 
                                         <div style="text-align: center;">
-                                            <input class="btn btnstart saveEnrollTopic"
-                                                onclick="handleSubmit('collapseFour')" type="button" name="next"
-                                                value="Next" />
+                                            <input class="btn btnstart saveEnrollTopic" onclick="handleSubmit('collapseFour')" type="button" name="next" value="Next" />
                                         </div>
                                     </div>
                                 </div>
@@ -304,8 +286,7 @@
                     <div id="headingFour">
                     </div>
 
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                         <div class="card-body">
 
                             <div class="demo-form">
@@ -317,13 +298,33 @@
                                         <div class="form-group slcsfields col-md-10">
                                             <label for="inputcountry">Country:</label>
                                             <select class="form-control" id="inputCountry" name="Country">
-                                                <option value="SelectCountry">Select Country</option>
-                                                <option value="Bharat">Bharat</option>
+                                                <!-- <option value="SelectCountry">Select Country</option>
+                                                <option value="Bharat">Bharat</option> -->
+                                                <option value="">Select Country</option>
+                                                <!-- JavaScript will populate this list -->
+                                                <?php if (!empty($country_data)) { ?>
+                                                    <?php foreach ($country_data as $data) : ?>
+                                                        <option value="<?= $data->name; ?>">
+                                                            <?= $data->name; ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+                                                <?php } ?>
                                                 <span style="color:red;" id="Countryspanid">
                                                 </span>
                                             </select>
                                         </div>
                                         <div class="form-group slcsfields col-md-10">
+                                            <label for="State">State:</label>
+                                            <input class="form-control" aria-required="true" aria-invalid="false" id="State" placeholder="Enter Your State" value="" type="text" name="State">
+                                            <span style="color:red;" id="Statespanid"></span>
+                                        </div>
+
+                                        <div class="form-group slcsfields col-md-10">
+                                            <label for="state">District:</label>
+                                            <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="District" placeholder="Enter Your District" value="" type="text" name="District">
+                                            <span style="color:red;" id="Districtspanid"></span>
+                                        </div>
+                                        <!-- <div class="form-group slcsfields col-md-10">
                                             <label for="inputState">State:</label>
                                             <select class="form-control" id="inputState" name="State">
                                                 <option value="SelectState">Select State</option>
@@ -374,24 +375,17 @@
                                                 <option value="Lakshadeep">Lakshadeep</option>
                                                 <option value="Pondicherry">Pondicherry</option>
                                             </select>
-
                                             <span style="color:red;" id="Statespanid">
-
                                             </span>
-
-
-                                        </div>
-                                        <div class="form-group slcsfields col-md-10">
+                                        </div> -->
+                                        <!-- <div class="form-group slcsfields col-md-10">
                                             <label for="inputDistrict">District:</label>
                                             <select class="form-control" id="inputDistrict" name="District">
                                                 <option value="">Select District</option>
                                             </select>
-
                                             <span style="color:red;" id="Districtspanid">
-
                                             </span>
-
-                                        </div>
+                                        </div> -->
 
 
                                         <div>
