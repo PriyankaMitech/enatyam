@@ -1608,7 +1608,7 @@ class AdminController extends BaseController
         if ($this->request->getVar('id') != "") {
             $update_data = $db->table('online_chat')->where('sender_id', $this->request->getVar('id'));
             $update_data->update($data);
-            session()->setFlashdata('success', 'Data updated successfully.');
+            // session()->setFlashdata('success', 'Data updated successfully.');
         } 
         return redirect()->to('chatuser/'.$id);
     }
