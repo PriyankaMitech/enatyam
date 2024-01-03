@@ -81,6 +81,7 @@ th {
                     <ol class="breadcrumb float-sm-right">
 
                         <li class="breadcrumb-item active">Dashboard </li>
+                        <li class="breadcrumb-item"><a href="https://www.google.com/calendar/" target="_blank">Google Calendar</a></li>
                     </ol>
                 </div>
             </div>
@@ -437,18 +438,18 @@ th {
                                                 <?php endif; ?>
                                                 <?php else: ?>
                                                 <?php
-                        // Find the assigned faculty by ID
-                        $assignedFaculty = array_filter(
-                            $Faculty,
-                            function ($faculty) use ($status) {
-                                return $faculty->id == $status->AssignTecher_id;
-                            }
-                        );
-                        if (!empty($assignedFaculty)) {
-                            $assignedFaculty = reset($assignedFaculty);
-                            echo $assignedFaculty->full_name;
-                        }
-                        ?>
+                      
+                                                        $assignedFaculty = array_filter(
+                                                            $Faculty,
+                                                            function ($faculty) use ($status) {
+                                                                return $faculty->id == $status->AssignTecher_id;
+                                                            }
+                                                        );
+                                                        if (!empty($assignedFaculty)) {
+                                                            $assignedFaculty = reset($assignedFaculty);
+                                                            echo $assignedFaculty->full_name;
+                                                        }
+                                                        ?>
                                                 <?php endif; ?>
                                             </td>
                                             <td>
