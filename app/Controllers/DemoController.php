@@ -9,7 +9,7 @@ class DemoController extends BaseController
 {
     public function bookDemo()
     {
-       // print_r($_POST);die;
+        // print_r($_POST);die;
 
         $demoModel = new DemoModel();
         $data = [
@@ -29,7 +29,9 @@ class DemoController extends BaseController
             'End_Time' => $this->request->getPost('End_Time'),
 
         ];
-        // echo "<pre>";print_r($data);exit();
+        // echo "<pre>";
+        // print_r($data);
+        // exit();
         $demoModel->save($data);
         return redirect()->to('Home');
     }
