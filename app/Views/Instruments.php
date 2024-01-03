@@ -1,46 +1,45 @@
-
-<?php include('header.php');?>
-    <div class="wrapper-container ">
-        <div class="video-container">
+<?php include('header.php'); ?>
+<div class="wrapper-container ">
+    <div class="video-container">
         <video class="video-dance banerforinstuments" controls="false" autoplay="1" loop="1" id="danceVideo">
-                <source src="public/images/instrument/instrument-video-1.mp4" type="video/mp4">
-                </video>
-                <div class="video-section">
-                <div class="row video-row">
-                    <div class="col-4 video-col1">
-                        <P>We are commited to your</P>
-                        commitment.
-                        <div class="col-12 col-md-9 ">
-                            <button class="button-content" role="button">
+            <source src="public/images/instrument/instrument-video-1.mp4" type="video/mp4">
+        </video>
+        <div class="video-section">
+            <div class="row video-row">
+                <div class="col-4 video-col1">
+                    <P>We are commited to your</P>
+                    commitment.
+                    <div class="col-12 col-md-9 ">
+                        <button class="button-content" role="button">
 
-                                <span class="button-text"><a href="<?php echo base_url('StartNowPricing');?>">Start Now if you are <br> commited </a></span>
+                            <span class="button-text"><a href="<?php echo base_url('StartNowPricing'); ?>">Start Now if you are <br> commited </a></span>
 
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <p>
-                    </div>
-                    <div class="col-4">
-                        <p>Your time @ Your Place .</p>
-                        <img src="public/images/instrument/music-pc.svg">
+                        </button>
                     </div>
                 </div>
+                <div class="col-4">
+                    <p>
+                </div>
+                <div class="col-4">
+                    <p>Your time @ Your Place .</p>
+                    <img src="public/images/instrument/music-pc.svg">
+                </div>
             </div>
-
-            
         </div>
+
+
     </div>
-    
-    <section class="btnSection">
+</div>
+
+<section class="btnSection">
     <div class="container">
         <div class="typesOfYoga-tab">
 
 
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="col-lg-1 col-md-1 hidefi" >
-                </li>   
-            <!-- Guitar -->
+                <li class="col-lg-1 col-md-1 hidefi">
+                </li>
+                <!-- Guitar -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <button class="nav-link active" id="pills-Guitar-tab" data-bs-toggle="pill" data-bs-target="#pills-Guitar" type="button" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</button>
                 </li>
@@ -60,10 +59,10 @@
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Veena-tab" data-bs-toggle="pill" data-bs-target="#pills-Veena" type="button" role="tab" aria-controls="pills-Veena" aria-selected="false">Veena</button>
                 </li>
-                <li class="col-lg-1 col-md-1 hidefi" >
-                </li> 
-                <li class="col-lg-1 col-md-1 hidefi" >
-                </li> 
+                <li class="col-lg-1 col-md-1 hidefi">
+                </li>
+                <li class="col-lg-1 col-md-1 hidefi">
+                </li>
 
                 <!-- Piano -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -87,8 +86,8 @@
                     <button class="nav-link" id="pills-Harmonium-tab" data-bs-toggle="pill" data-bs-target="#pills-Harmonium" type="button" role="tab" aria-controls="pills-Harmonium" aria-selected="false">Harmonium</button>
                 </li>
 
-                <li class="col-lg-1 col-md-1 hidefi" >
-                </li> 
+                <li class="col-lg-1 col-md-1 hidefi">
+                </li>
             </ul>
 
             <div class="tab-content" id="pills-tabContent">
@@ -104,66 +103,67 @@
                             <p class="">
                                 The course focuses on making life healthier and building core stength by practicing Yoga in scientific way . Online prenatal yoga classes provide expectant mothers with a convenient and accessible way to stay active and healthy throughout their pregnancy. These classes are designed to help pregnant women reduce stress, alleviate common pregnancy-related discomforts, and prepare for childbirth. Online classes offer flexibility for busy schedules and can be accessed from the comfort of one’s own home. In addition to physical benefits, prenatal yoga classes can also provide emotional support and a sense of community for expectant mothers. With the rise of virtual platforms, there has never been a better time to take advantage of the many benefits of online prenatal yoga classes.ogical well-being, and overall health.
                             </p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
                     <section class="learningsec" id="learninstruments">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -188,7 +188,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -502,75 +502,76 @@
                 <!-- Flute  -->
                 <div class="tab-pane fade" id="pills-Flute" role="tabpanel" aria-labelledby="pills-Flute-tab">
                     <div class="row">
-                       <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/fluteImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                        <h3 class="heading"> - Flute</h3>
+                            <h3 class="heading"> - Flute</h3>
 
                             <p class="">
                                 Discover the enchanting world of ﬂute playing with our online ﬂute course. Designed for beginners and intermediate players, this comprehensive program will guide you through the fundamentals of ﬂute technique, note reading, and music theory. Over the course of 12 months, you’ll learn to produce beautiful melodies and explore a variety of musical genres. Our expert instructors will provide step-by-step video lessons, personalized feedback, and practice materials to enhance your progress. Whether you’re passionate about classical, jazz, or world music, our online ﬂute course offers convenience and ﬂexibility, empowering you to become a skilled ﬂutist from the comfort of your home. Enroll now and let the music take ﬂight!
                             </p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments1" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments1" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments1" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments1" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
                     <section class="learningsec" id="learninstruments1">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -595,7 +596,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -908,75 +909,76 @@
                 <!-- Tabla -->
                 <div class="tab-pane fade show" id="pills-Tabla" role="tabpanel" aria-labelledby="pills-Tabla-tab">
                     <div class="row">
-                       <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/tablaImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                        <h3 class="heading"> - Tabla</h3>
+                            <h3 class="heading"> - Tabla</h3>
 
                             <p class="">
                                 Embark on a rhythmic journey with our online tabla course. Perfect for beginners and intermediate players, this comprehensive program delves into the art of playing the tabla, a versatile Indian percussion instrument. Over 12 months, you’ll master the intricacies of tabla strokes, bols (syllables), and the rhythmic patterns of Indian classical music. Our experienced instructors will provide engaging video lessons, personalized feedback, and practice materials to enhance your skills. Whether you aspire to perform solo or accompany other musicians, our online tabla course offers convenience and ﬂexibility, allowing you to learn and excel at your own pace. Join us today and explore the captivating world of tabla rhythms!
                             </p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments2" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments2" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments2" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments2" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
                     <section class="learningsec" id="learninstruments2">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1001,7 +1003,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -1300,11 +1302,11 @@
                 <!-- Sitar -->
                 <div class="tab-pane fade show" id="pills-Sitar" role="tabpanel" aria-labelledby="pills-Sitar-tab">
                     <div class="row">
-                       <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/sitarImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                        <h3 class="heading"> - Sitar</h3>
+                            <h3 class="heading"> - Sitar</h3>
 
                             <p class="">
 
@@ -1312,58 +1314,59 @@
 
                                 Unleash your inner musician and join us today!
                             </p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments3" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments3" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments3" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments3" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
@@ -1372,8 +1375,8 @@
                     <section class="learningsec" id="learninstruments3">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1398,7 +1401,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -1686,77 +1689,78 @@
                 <!-- Veena -->
                 <div class="tab-pane fade show" id="pills-Veena" role="tabpanel" aria-labelledby="pills-Veena-tab">
                     <div class="row">
-                       <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/VeenaImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                        <h3 class="heading"> - Veena</h3>
+                            <h3 class="heading"> - Veena</h3>
 
                             <p class="">
                                 Immerse yourself in the serene melodies of the veena with our online veena course. Designed for beginners and intermediate players, this comprehensive program will help you master this ancient Indian string instrument. Over 12 months, you’ll learn veena techniques, ﬁngering, and the intricacies of Indian classical music. Our experienced instructors will provide engaging video lessons, personalized feedback, and practice materials to enhance your progress. Whether you seek to explore the spiritual realm of Carnatic music or captivate audiences with your veena skills, our online course offers convenience and ﬂexibility.
 
                                 Enroll now and embark on a melodic journey with the enchanting veena!
                             </p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments4" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments4" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments4" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments4" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
                     <section class="learningsec" id="learninstruments4">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1781,7 +1785,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -2060,11 +2064,11 @@
                 <!-- piano -->
                 <div class="tab-pane fade show" id="pills-Piano" role="tabpanel" aria-labelledby="pills-Piano-tab">
                     <div class="row">
-                       <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/pianoImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                        <h3 class="heading"> - Piano</h3>
+                            <h3 class="heading"> - Piano</h3>
 
                             <p class="">
 
@@ -2072,66 +2076,67 @@
 
                                 Enroll today and let the music ﬂow!
                             </p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments5" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments5" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments5" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments5" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
                     <section class="learningsec" id="learninstruments5">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2156,7 +2161,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -2434,11 +2439,11 @@
                 <!-- Violin -->
                 <div class="tab-pane fade show" id="pills-Violin" role="tabpanel" aria-labelledby="pills-Violin-tab">
                     <div class="row">
-                       <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/VeenaImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                        <h3 class="heading"> - Violin</h3>
+                            <h3 class="heading"> - Violin</h3>
 
                             <p class="">
 
@@ -2446,66 +2451,67 @@
 
                                 Enroll today and let the melodies soar!
                             </p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments6" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments6" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments6" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments6" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
                     <section class="learningsec" id="learninstruments6">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2530,7 +2536,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -2808,77 +2814,78 @@
                 <!-- Drum -->
                 <div class="tab-pane fade show" id="pills-Drum" role="tabpanel" aria-labelledby="pills-Drum-tab">
                     <div class="row">
-                       <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/drumImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                        <h3 class="heading"> - Drum</h3>
+                            <h3 class="heading"> - Drum</h3>
 
                             <p class="">
                                 Experience the rhythm and power of drums with our online drum course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this dynamic percussion instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering drumming techniques, rudiments, and rhythmic patterns. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of rocking out in a band or exploring different drumming styles, our online drum course offers convenience, ﬂexibility, and expert guidance to help you become a skilled drummer.
 
                                 Enroll today and let the beats begin!
                             </p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments7" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments7" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments7" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments7" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
                     <section class="learningsec" id="learninstruments7">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2903,7 +2910,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -3183,76 +3190,77 @@
                 <!-- Keyboard -->
                 <div class="tab-pane fade show" id="pills-Keyboard" role="tabpanel" aria-labelledby="pills-Keyboard-tab">
                     <div class="row">
-                       <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/keyboardImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                        <h3 class="heading"> - Keyboard</h3>
+                            <h3 class="heading"> - Keyboard</h3>
 
                             <p class="">
                                 Unlock the magic of the keyboard with our online keyboard course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this versatile instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering keyboard techniques, music theory, and popular repertoire. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of playing your favorite songs, exploring different genres, or even composing your own music, our online keyboard course offers convenience, ﬂexibility, and expert guidance to help you become a skilled keyboardist.
                                 Enroll today and let your musical journey begin! </p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
 
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments8" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments8" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments8" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments8" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
 
                     <section class="learningsec" id="learninstruments8">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -3277,7 +3285,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -3557,7 +3565,7 @@
                 <!-- Harmonium -->
                 <div class="tab-pane fade show" id="pills-Harmonium" role="tabpanel" aria-labelledby="pills-Harmonium-tab">
                     <div class="row">
-                       <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/VeenaImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
@@ -3565,65 +3573,66 @@
                             <p class="">
                                 Discover the soulful melodies of the harmonium with our online harmonium course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this beloved Indian keyboard instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering harmonium techniques, notation reading, and Indian classical music. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you aspire to accompany devotional singing or explore the versatility of the harmonium, our online course offers convenience, ﬂexibility, and expert guidance to help you become a skilled harmonium player.
                                 Enroll today and let the harmonium melodies resonate!</p>
-                  <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
-                            </div>                        </div>
+                            <div class="text-end mt-4">
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                            </div>
+                        </div>
                     </div>
                     <section class="learningBtn">
                         <div class="container">
-                        <ul class="list-inline row ">
+                            <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-                                      
-                                    </li>
 
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#learninstruments9" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">What you will learn</span>
-                                            </span>
-					                </a>
-                                    </li>
-                                    <li class="list-inline-item  col-lg-2 col-md-2 col-6">
-                                        <a href="#mod-instruments9" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Modules</span>
-                                        	</span>
-					                    </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#testimonials" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Testimonials</span>
-                                            </span>
-                                        </a>
+                                </li>
 
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-2 col-6">
-                                        <a href="#Instructors" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Instructors</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                        <a href="#pricing" class="btn btndemo step" role="button">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Pricing</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-1 ">
-                                      
-                                      </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#learninstruments9" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">What you will learn</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item  col-lg-2 col-md-2 col-6">
+                                    <a href="#mod-instruments9" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Modules</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#testimonials" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Testimonials</span>
+                                        </span>
+                                    </a>
 
-                                </ul>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-2 col-6">
+                                    <a href="#Instructors" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Instructors</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item col-lg-2 col-md-3 col-6">
+                                    <a href="#pricing" class="btn btndemo step" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Pricing</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="col-lg-1 ">
+
+                                </li>
+
+                            </ul>
                         </div>
                     </section>
                     <section class="learningsec" id="learninstruments9">
                         <div class="container">
                             <div class="row mt-5">
-                               <div class="col-lg-6 col-md-6 col-12">
-                                <h3 class="heading"> - What you will learn</h3> 
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <h3 class="heading"> - What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -3648,7 +3657,7 @@
 
 
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
                                     <img src="public/images/instrument/c-2.svg" class="danceimg">
@@ -3933,229 +3942,227 @@
         </div>
     </div>
 </section>
- 
-    
 
-    
+
+
+
 <section class="testimonials ittm" id="testimonials">
-<div class="container">
-    <div class="row">
-        <span class="text-center mbft"> <button type="button" class="btn btndemo step mfi">Testimonials</button></span>
-    </div>
-            <div class="month-row">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <!-- slider -->
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
+    <div class="container">
+        <div class="row">
+            <span class="text-center mbft"> <button type="button" class="btn btndemo step mfi">Testimonials</button></span>
+        </div>
+        <div class="month-row">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <!-- slider -->
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
                             <div class="carousel-item mot2 active">
-                                    <div class="carousel-caption">
-                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                        <p>I never thought I could learn to play the guitar so well until I joined this
-                                    online course. The lessons are structured, easy to follow, and the
-                                    instructor provides excellent guidance.</p>
-                                    </div>
-                                </div>
-                
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
+                                <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <p>The online ﬂute course has been a game-changer for me. I have made signiﬁcant
-                                    progress in my ﬂute playing skills, thanks to the comprehensive lessons and
-                                    personalized feedback from the instructor.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <p>The tabla course online exceeded my expectations. The instructor's teaching
-                                    style is engaging and effective, and I have developed a strong foundation in
-                                    tabla playing.</p>
- 
-                                    </div>
-                                </div>
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <p>Learning the sitar online has been a fulﬁlling experience. The course
-                                    curriculum covers everything from the basics to advanced techniques, and the
-                                    instructor's expertise is truly commendable.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <p>The online veena course has been a revelation for me. The lessons are
-                                    well-structured, and the instructor's passion for the veena is inspiring. I
-                                    am amazed at my progress within a short period.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <p>The online piano course has given me the conﬁdence to pursue my passion for
-                                    playing the piano. The lessons are informative, and the instructor's
-                                    patience and guidance have been instrumental in my progress. </p>
-                                </div>
-                                </div>
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <p> The online drum course is simply outstanding. The lessons are comprehensive,
-                                    and the instructor's expertise in various drumming styles has broadened my
-                                    musical horizons. </p>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <p> I highly recommend the online harmonium course. The
-                                    instructor's teaching method is clear and concise, and I have learned to
-                                    play various genres with conﬁdence.</p>
-                                    </div>
-                                
-                                </div>
-
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <p>The online keyboard course has been a fantastic learning experience. The
-                                    lessons are<br />structured, and the instructor's guidance has helped me
-                                    progress from a beginner to an intermediate level. </p>
-
-                                    </div>
-                                </div>
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                 
-                                    <p>I am grateful for the online guitar course. The instructor's knowledge and
-                                    passion for the guitar are evident, and I have seen signiﬁcant improvement
-                                    in my playing skills.</p>
-                                    </div>
-
-                                   
-
-                                </div>
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                       
-                                    <p>The online ﬂute course has been an enriching journey. The instructor's
-                                    patience and
-                                    dedication to teaching have made the learning process enjoyable and
-                                    rewarding.</p>
-                                    </div>
-
-                                </div>
-
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                      
-                                   
-                                    <p>The tabla course online has been an incredible learning experience. The
-                                    instructor's expertise and attention to detail have helped me develop a
-                                    solid foundation in tabla playing.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <p>Learning the sitar online has been a fulﬁlling experience. The course content
-                                    is comprehensive, and the instructor's guidance has been invaluable in
-                                    honing my sitar skills.</p>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <p>The online veena course has surpassed my expectations. The instructor's
-                                    teaching style is engaging, and I have learned to play traditional
-                                    compositions with conﬁdence.
-                                    </p>
-                                    </div>
-
-                                </div>
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <p>The online piano course has been a revelation for me. The lessons are
-                                    well-structured, and the instructor's guidance has helped me develop my
-                                    technique and musicality.</p>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <p>I cannot recommend the online violin course enough. The instructor's
-                                    expertise and personalized feedback have been instrumental in my growth as a
-                                    violinist.</p>
-                                        </div>
-                                </div>
-
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <p>The online drum course has been an incredible journey. The instructor's
-                                    passion for drumming is contagious, and I have learned various styles and
-                                    techniques that have elevated my playing.</p>
-                                        </div>
-                                </div>
-
-                                <div class="carousel-item mot2">
-                                    <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    
-                                <p>The online harmonium course is exceptional. The instructor's teaching
-                                    approach is clear, and I have gained conﬁdence in my harmonium playing
-                                    skills through their guidance.</p>
-                                    </div>
-                                </div>
-
-                          <div>
+                                    <p>I never thought I could learn to play the guitar so well until I joined this
+                                        online course. The lessons are structured, easy to follow, and the
+                                        instructor provides excellent guidance.</p>
                                 </div>
                             </div>
 
-                        
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
-                            <a class="carousel-control-prev mta" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span  aria-hidden="true"><i class="fa fa-arrow-left" ></i></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next mta" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span  aria-hidden="true"><i class="fa fa-arrow-right" ></i></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                    </div>
-                    </div>
+                                    <p>The online ﬂute course has been a game-changer for me. I have made signiﬁcant
+                                        progress in my ﬂute playing skills, thanks to the comprehensive lessons and
+                                        personalized feedback from the instructor.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
-                    <div class="col-lg-6 col-md-6 col-12">
-                    <img src="public/images/instrument/h-4.svg" class="danceimg">
+                                    <p>The tabla course online exceeded my expectations. The instructor's teaching
+                                        style is engaging and effective, and I have developed a strong foundation in
+                                        tabla playing.</p>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <p>Learning the sitar online has been a fulﬁlling experience. The course
+                                        curriculum covers everything from the basics to advanced techniques, and the
+                                        instructor's expertise is truly commendable.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <p>The online veena course has been a revelation for me. The lessons are
+                                        well-structured, and the instructor's passion for the veena is inspiring. I
+                                        am amazed at my progress within a short period.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <p>The online piano course has given me the conﬁdence to pursue my passion for
+                                        playing the piano. The lessons are informative, and the instructor's
+                                        patience and guidance have been instrumental in my progress. </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <p> The online drum course is simply outstanding. The lessons are comprehensive,
+                                        and the instructor's expertise in various drumming styles has broadened my
+                                        musical horizons. </p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <p> I highly recommend the online harmonium course. The
+                                        instructor's teaching method is clear and concise, and I have learned to
+                                        play various genres with conﬁdence.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <p>The online keyboard course has been a fantastic learning experience. The
+                                        lessons are<br />structured, and the instructor's guidance has helped me
+                                        progress from a beginner to an intermediate level. </p>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <p>I am grateful for the online guitar course. The instructor's knowledge and
+                                        passion for the guitar are evident, and I have seen signiﬁcant improvement
+                                        in my playing skills.</p>
+                                </div>
+
+
+
+                            </div>
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+
+                                    <p>The online ﬂute course has been an enriching journey. The instructor's
+                                        patience and
+                                        dedication to teaching have made the learning process enjoyable and
+                                        rewarding.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+
+
+                                    <p>The tabla course online has been an incredible learning experience. The
+                                        instructor's expertise and attention to detail have helped me develop a
+                                        solid foundation in tabla playing.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+                                    <p>Learning the sitar online has been a fulﬁlling experience. The course content
+                                        is comprehensive, and the instructor's guidance has been invaluable in
+                                        honing my sitar skills.</p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <p>The online veena course has surpassed my expectations. The instructor's
+                                        teaching style is engaging, and I have learned to play traditional
+                                        compositions with conﬁdence.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <p>The online piano course has been a revelation for me. The lessons are
+                                        well-structured, and the instructor's guidance has helped me develop my
+                                        technique and musicality.</p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <p>I cannot recommend the online violin course enough. The instructor's
+                                        expertise and personalized feedback have been instrumental in my growth as a
+                                        violinist.</p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                                    <p>The online drum course has been an incredible journey. The instructor's
+                                        passion for drumming is contagious, and I have learned various styles and
+                                        techniques that have elevated my playing.</p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item mot2">
+                                <div class="carousel-caption">
+                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+
+
+                                    <p>The online harmonium course is exceptional. The instructor's teaching
+                                        approach is clear, and I have gained conﬁdence in my harmonium playing
+                                        skills through their guidance.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                            </div>
+                        </div>
+
+
+
+                        <a class="carousel-control-prev mta" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next mta" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="public/images/instrument/h-4.svg" class="danceimg">
+                </div>
             </div>
-           </div> 
-    </section>
-<?php include('InstruInstructer.php');?>
+        </div>
+    </div>
+</section>
+<?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>
 
 
 
-<?php include('Instrumentsfaq.php');?>
-<?php include('bookdemocallb.php');?>
+<?php include('Instrumentsfaq.php'); ?>
+<?php include('bookdemocallb.php'); ?>
 
-    <?php include('footer.php');?>
-
-   
+<?php include('footer.php'); ?>
