@@ -621,16 +621,17 @@ class AdminController extends BaseController
                 // Merge results
                 $result['getuser'] = array_merge($result['faculty'], $result['student']);
 
-                // echo '<pre>';
-                // print_r($result['getuser']);
-                // die;
+               
             } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 $result['getuser'] = $model->getalldata('register', $wherecond);
             } else if ($_SESSION['sessiondata']['role'] == 'Student') {
+                // echo "<pre>";print_r($_SESSION);exit();
                 $wherecond = array('id' => $_SESSION['sessiondata']['Assign_Techer_id']);
                 $result['getuser'] = $model->chatfaculty('register', $wherecond);
-                // print_r($result);die;
+            //    echo '<pre>';
+            //     print_r($result['getuser']);
+            //     die;
             }
 
             // $messageCountQuery = '';
