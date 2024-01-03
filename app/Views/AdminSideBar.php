@@ -118,7 +118,7 @@
 
                         <?php foreach ($data as $notification) : ?>
                             <a href="<?= base_url('NewFacultyApplication') ?>" class="dropdown-item">
-                                <i class="fas fa-envelope mr-2"></i><?= $notification->name ?>
+                                <i class="fas fa-users  mr-2"></i><?= $notification->name ?>
                             </a>
                             <div class="dropdown-divider"></div>
                         <?php endforeach; ?>
