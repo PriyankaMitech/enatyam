@@ -36,4 +36,19 @@ class BillingM extends Model
 
         // die;
     }
+    public function updateCountry($country)
+    {
+        $id = $_SESSION['id'];
+        // print_r($id);
+        // die;
+        $this->builder = $this->db->table('register');
+        $result = $this->builder->set('country', $country)
+            ->where('id', $id)
+            ->update();
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
