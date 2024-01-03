@@ -178,7 +178,7 @@
                                 Looking for the best online Kathak classes with a comprehensive syllabus? Look no further than our platform! Our online Kathak classes are designed to provide you with an immersive learning experience that will help you master this beautiful dance form. Our syllabus covers everything from the basics of footwork and hand gestures to complex choreography and improvisation techniques. With our experienced instructors and state-of-the-art technology, you can learn Kathak from the comfort of your own home and at your own pace. Join us today and discover the joy of Kathak dancing!
                             </p>
                             <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                             <p>
                                 Experience the grace and beauty of Bharatanatyam with our online dance classes! Our syllabus covers the fundamentals of this ancient Indian classical dance form, from basic postures and hand gestures to complex choreography and improvisation techniques. Our experienced instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn Bharatanatyam from the comfort of your own home and at your own pace. Join our community of dancers today and discover the rich cultural heritage and artistry of Bharatanatyam! </p>
                             <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
                         </div>
                     </div>
@@ -213,7 +213,7 @@
                             <p>
                                 Ready to add some Bollywood ﬂair to your dance routine? Our online Bollywood dance classes have got you covered! Our expert instructors will guide you through everything from basic steps to complex choreography, helping you master the signature moves of Bollywood dance. Our comprehensive syllabus includes techniques for Bollywood-style footwork, hand gestures, and facial expressions, as well as tips for incorporating your own personal style into your dancing. With our ﬂexible scheduling and convenient online platform, you can learn Bollywood dance from anywhere, at any time. Join us today and start moving to the beat of Bollywood!</p>
                             <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
                         </div>
                     </div>
@@ -231,7 +231,7 @@
 
                                 Looking for an immersive and authentic Hindustani vocal learning experience? Join our Online Hindustani Vocal Class today! Unlock the rich heritage of Indian classical music from the comfort of your home. Our expert instructors provide comprehensive lessons tailored to all skill levels, whether you’re a beginner or advanced learner. Explore the intricacies of ragas, taal, and classical techniques while honing your voice and expression. With interactive virtual sessions, personalized feedback, and a supportive community, you’ll experience remarkable progress in no time. Embark on a soulful journey into the realm of Hindustani music. Enroll in our Online Hindustani Vocal Class and discover the beauty of this ancient art form. </p>
                             <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
                         </div>
                     </div>
@@ -249,7 +249,7 @@
                             <p>
                                 Embark on a melodious journey through the divine sounds of Carnatic music with our Online Carnatic Vocal Class. Discover the rich heritage and intricate nuances of this classical South Indian art form from the comfort of your own home. Our experienced instructors provide comprehensive lessons for all skill levels, from beginners to advanced learners. Dive deep into the world of ragas, talas, and improvisation, while refining your vocal technique and expression. With interactive virtual sessions, personalized guidance, and a supportive community, you’ll witness remarkable progress in your Carnatic vocal skills. Enroll in our Online Carnatic Vocal Class today and unleash your musical talent. </p>
                             <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
                         </div>
                     </div>
@@ -268,7 +268,7 @@
                                 Unleash your inner diva and elevate your singing skills with our Online Western Singing Class. Whether you’re a beginner or an experienced vocalist, our comprehensive virtual lessons cater to all skill levels. Discover the fundamentals of Western singing, including vocal technique, breath control, pitch, and expression. From pop to rock, jazz to R&B, our expert instructors will guide you through various genres and help you develop your unique style. With interactive sessions, personalized feedback, and a supportive community, you’ll witness remarkable progress in your vocal abilities. Enroll in our Online Western Singing Class today and let your voice soar to new heights. </p>
 
                             <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
                         </div>
                     </div>
@@ -286,7 +286,7 @@
                             <p>
                                 Looking to master the guitar from the comfort of your own home? Our comprehensive online guitar course is designed to take you from a beginner to a conﬁdent player in no time. With expert instruction and step-by-step lessons, you’ll learn essential techniques, chord progressions, scales, and music theory. Our interactive platform offers practice exercises, video tutorials, and personalized feedback to ensure your progress. Whether you’re into rock, blues, or acoustic styles, our course covers a wide range of genres and helps you develop your own unique sound. Join our online guitar course today and unleash your musical potential with convenience and ﬂexibility. </p>
                             <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
                         </div>
                     </div>
@@ -304,7 +304,7 @@
                                 Unlock the magic of the keyboard with our online keyboard course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this versatile instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering keyboard techniques, music theory, and popular repertoire. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of playing your favorite songs, exploring different genres, or even composing your own music, our online keyboard course offers convenience, ﬂexibility, and expert guidance to help you become a skilled keyboardist. <br><br>
                                 Enroll today and let your musical journey begin!</p>
                             <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
                         </div>
                     </div>
@@ -323,7 +323,7 @@
                                 Online everyday yoga classes offer a convenient and effective way to incorporate yoga into your daily routine. Yoga is a great way to improve overall health and wellness, reduce stress and anxiety, and increase strength and ﬂexibility. With online classes, you can practice yoga from the comfort of your own home, at a time that works for you. <br><br>
                                 Additionally, online classes often offer a variety of options, from quick morning stretches to longer, more intensive classes, so you can ﬁnd a class that ﬁts your schedule and ﬁtness level. Joining an online everyday yoga class can be a great way to improve your physical and mental wellbeing and make yoga a regular part of your daily routine.</p>
                             <div class="text-end mt-4">
-                                <button type="button" class="btn btndemoh">START NOW</button>
+                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
                         </div>
                     </div>
