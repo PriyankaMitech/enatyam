@@ -48,10 +48,10 @@ class AdminController extends BaseController
                     'free_demo_table.Conducted_Demo' => 'N',
                     'free_demo_table.Book_Date >=' => $today,
                 ];
-                $data['PendingDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond, 'DESC');            
+                $data['PendingDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond, 'DESC');
                 $wherecondr = [
                     'free_demo_table.Book_Date =' => $today,
-                ];          
+                ];
                 $data['records'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecondr, 'DESC');
                 $wherecond1 = [
                     'free_demo_table.Conducted_Demo' => 'N',
@@ -62,15 +62,15 @@ class AdminController extends BaseController
                 $data['alldemolist'] = $model->jointhreetableswwc($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2,  'DESC');
                 $wherecond2 = [
                     'free_demo_table.Conducted_Demo' => 'Y',
-                ]; 
+                ];
                 $data['ConductedDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond2, 'DESC');
                 $select1 = 'register.*, carrier.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
                 $joinCond4 = 'register.carrier_id = carrier.D_id';
                 $joinCond5 = 'carrier.course = tbl_courses.id';
-                $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';       
+                $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';
                 $wherecond = [
                     'register.role' => 'Faculty',
-                ];     
+                ];
                 $data['Faculty'] = $model->joinfourtables($select1, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, $wherecond, 'DESC');
                 return view('AdminDashboard', $data);
             } else {
@@ -99,9 +99,9 @@ class AdminController extends BaseController
             $postData = $this->request->getPost();
             $result = $model->add($postData);
             if ($result) {
-                return redirect()->to('Admindashboard'); 
+                return redirect()->to('Admindashboard');
             } else {
-                return redirect()->to('error'); 
+                return redirect()->to('error');
             }
         }
     }
@@ -121,7 +121,7 @@ class AdminController extends BaseController
                 $joinCond5 = 'carrier.course = tbl_courses.id';
                 $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';
                 $data['facultyData'] = $model->joinfourtableswwc($select1, 'faculty ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, 'DESC');
-             
+
                 return view('AdminSideBar/FacultyProfile', $data);
             } else {
                 return redirect()->to(base_url());
@@ -237,24 +237,24 @@ class AdminController extends BaseController
                 $select = 'free_demo_table.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
                 $joinCond = 'free_demo_table.course = tbl_courses.id';
                 $joinCond2 = 'free_demo_table.sub_course = tbl_sub_courses.id';
-                $today = date('Y-m-d'); 
+                $today = date('Y-m-d');
 
                 $wherecond = [
                     'free_demo_table.Conducted_Demo' => 'N',
                     'free_demo_table.Reshedule_date' => null,
-                ]; 
+                ];
 
                 $data['PendingDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond, 'DESC');
 
                 $wherecond1 = [
                     'free_demo_table.Conducted_Demo' => 'Reschedule',
-                ]; 
+                ];
 
                 $data['resheduleDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond1, 'DESC');
 
                 $wherecond2 = [
                     'free_demo_table.Conducted_Demo' => 'Y',
-                ]; 
+                ];
                 $data['ConductedDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond2, 'DESC');
                 return view('AdminSideBar/Demo', $data);
             } else {
@@ -371,9 +371,7 @@ class AdminController extends BaseController
 
                         $model->insertTable2Data($lastInsertedData);
                     }
-                   
                 } elseif ($action === 'decline') {
-                   
                 }
                 return redirect()->to(previous_url());
             }
@@ -459,7 +457,7 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
         $date = $this->request->getPost('date');
-        $tableHtml = ''; 
+        $tableHtml = '';
 
         if ($date) {
             $dateData = $model->getdate($date);
@@ -473,7 +471,7 @@ class AdminController extends BaseController
                 $tableHtml .= '</tbody></table></div>';
             }
         } else {
-            $tableHtml = json_encode([]); 
+            $tableHtml = json_encode([]);
         }
 
         return $tableHtml;
@@ -602,17 +600,17 @@ class AdminController extends BaseController
                 'status' => 'N'
             );
             $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
-      
+
             // echo "<pre>";print_r($result['chat_count']);exit();
 
 
             if ($_SESSION['sessiondata']['role'] == 'Admin') {
                 // $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
-               // For Faculty
+                // For Faculty
                 $wherecondFaculty = array('is_register_done' => 'Y', 'role' => 'Faculty');
                 $result['faculty'] = $model->getalldata('register', $wherecondFaculty);
 
-        
+
 
                 // For Student
                 $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y');
@@ -620,8 +618,6 @@ class AdminController extends BaseController
 
                 // Merge results
                 $result['getuser'] = array_merge($result['faculty'], $result['student']);
-
-               
             } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 $result['getuser'] = $model->getalldata('register', $wherecond);
@@ -629,9 +625,9 @@ class AdminController extends BaseController
                 // echo "<pre>";print_r($_SESSION);exit();
                 $wherecond = array('id' => $_SESSION['sessiondata']['Assign_Techer_id']);
                 $result['getuser'] = $model->chatfaculty('register', $wherecond);
-            //    echo '<pre>';
-            //     print_r($result['getuser']);
-            //     die;
+                //    echo '<pre>';
+                //     print_r($result['getuser']);
+                //     die;
             }
 
             // $messageCountQuery = '';
@@ -641,27 +637,27 @@ class AdminController extends BaseController
             // foreach ($result['getuser'] as &$user) {
             //     $id = $user->id; // Assuming 'id' is the field containing user ID
             //     $full_names = $user->full_name;
-            
+
             //     $messageCountWhere = array(
             //         'sender_id' => $id,
             //         'receiver_id' => $_SESSION['sessiondata']['id'],
             //         'status' => 'N'
             //     );
-            
+
             //     $messageCountQuery = $model->getalldata('online_chat', $messageCountWhere); // Assuming the 'getalldata' method returns the count
-            
+
             //     echo "User: $full_names, Message Count: ". count($messageCountQuery);
-            
+
             //     $user->messageCount = $messageCountQuery;
             // }
-            
+
             // foreach ($result['getuser'] as $user) {
             //     echo "User: $user->full_name, Message Count: $user->messageCount";
             // }
 
 
-          
-            
+
+
             // echo "<pre>";print_r($messageCountQuery);exit();
             echo view('Chatuser', $result);
         } else {
@@ -692,7 +688,7 @@ class AdminController extends BaseController
             $result['chatdata'] = $model->getchat('online_chat', $_SESSION['sessiondata']['id'], $receiverid[1]);
 
             $wherecond4 = ['id' => $receiverid[1]];
-            $result['chat_user_data'] = $model->get_single_data('register',$wherecond4);
+            $result['chat_user_data'] = $model->get_single_data('register', $wherecond4);
 
 
 
@@ -872,7 +868,6 @@ class AdminController extends BaseController
 
         $data = [
             'courses_id' => $this->request->getVar('courses_id'),
-
             'sub_courses_name' => $this->request->getVar('sub_courses_name'),
             'created_on' => date('Y:m:d H:i:s'),
         ];
@@ -1294,7 +1289,7 @@ class AdminController extends BaseController
         // print_r($wherecond);die;
         $data['profile_data'] = $model->getsinglerow1('carrier', $wherecond);
         $data['faculty_slots'] = $model->getAllSlots($wherecond);
-            //  echo "<pre>"; print_r($data['profile_data']);exit();
+        //  echo "<pre>"; print_r($data['profile_data']);exit();
 
         return view('AdminSideBar/viewprofilefaculty', $data);
     }
@@ -1335,36 +1330,36 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
 
-            $select = 'free_demo_table.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
-            $joinCond = 'free_demo_table.course = tbl_courses.id';
-            $joinCond2 = 'free_demo_table.sub_course = tbl_sub_courses.id';
+        $select = 'free_demo_table.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
+        $joinCond = 'free_demo_table.course = tbl_courses.id';
+        $joinCond2 = 'free_demo_table.sub_course = tbl_sub_courses.id';
 
-            $demo_list = $model->jointhreetableswwc($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ', $joinCond, $joinCond2, 'DESC');
+        $demo_list = $model->jointhreetableswwc($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ', $joinCond, $joinCond2, 'DESC');
 
-            $result = array(); // Use a different variable
+        $result = array(); // Use a different variable
 
-            if (!empty($demo_list)) {
-                foreach ($demo_list as &$demo) {
+        if (!empty($demo_list)) {
+            foreach ($demo_list as &$demo) {
 
-                    $AssignTecher_id = $demo->AssignTecher_id;
-                    $wherecon = array('id' => $AssignTecher_id);
+                $AssignTecher_id = $demo->AssignTecher_id;
+                $wherecon = array('id' => $AssignTecher_id);
 
-                    $faculty_data = $model->getsinglerow('register', $wherecon);
+                $faculty_data = $model->getsinglerow('register', $wherecon);
 
-                    // Add additional data to the demo array
-                    if(!empty($faculty_data)){
-                        $teachername=$faculty_data->full_name;
-                    }else {
-                        $teachername= 'No faculty assigned';
-                    }
-                    $demo->teacher = $teachername;
-
-                    // You can add more fields as needed, for example:
-                    // $demo->test = 'test';
-
-                    $result['demo_list'][] = $demo;
+                // Add additional data to the demo array
+                if (!empty($faculty_data)) {
+                    $teachername = $faculty_data->full_name;
+                } else {
+                    $teachername = 'No faculty assigned';
                 }
+                $demo->teacher = $teachername;
+
+                // You can add more fields as needed, for example:
+                // $demo->test = 'test';
+
+                $result['demo_list'][] = $demo;
             }
+        }
 
         echo view('demo_list', $result);
     }
@@ -1400,7 +1395,7 @@ class AdminController extends BaseController
         // echo "<pre>";
         // print_r($data['faculty_list']);
         // print_r($data['data_list']);exit();
-        
+
 
         echo view('faculty_list', $data);
     }
@@ -1486,7 +1481,7 @@ class AdminController extends BaseController
         $orderByDirection = 'desc';
 
 
-        
+
 
         $data['student_list_of_group'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
         $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
@@ -1610,9 +1605,7 @@ class AdminController extends BaseController
             $update_data = $db->table('online_chat')->where('sender_id', $this->request->getVar('id'));
             $update_data->update($data);
             // session()->setFlashdata('success', 'Data updated successfully.');
-        } 
-        return redirect()->to('chatuser/'.$id);
+        }
+        return redirect()->to('chatuser/' . $id);
     }
-
-    
 }

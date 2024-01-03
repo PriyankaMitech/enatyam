@@ -34,21 +34,26 @@ class BillingC extends BaseController
 
 
             ];
-            $BillingM->insert($insertdata); 
+            $BillingM->insert($insertdata);
+            $country = $this->request->getPost('country');
+            $result = $BillingM->updateCountry($country);
+            // print_r($result);
+            // die;
+
             $lastinsert_id = $BillingM->getInsertID();
         }
-        
+
         $data['id'] = $this->session->get('PricingType_Id');
         $billingModel = new BillingM();
         $matchingRecords = $billingModel->getSessionPricingData($data['id']);
-        
+
         $data['matchingRecords'] = $matchingRecords;
         $data['billingdetails'] = $insertdata;
 
-        $data['title'] = 'Checkout payment '; 
-        $data['return_url'] = site_url().'PaymentController/callback';
-        $data['surl'] = site_url().'PaymentController/success';;
-        $data['furl'] = site_url().'PaymentController/failed';;
+        $data['title'] = 'Checkout payment ';
+        $data['return_url'] = site_url() . 'PaymentController/callback';
+        $data['surl'] = site_url() . 'PaymentController/success';;
+        $data['furl'] = site_url() . 'PaymentController/failed';;
         $data['currency_code'] = 'INR';
         $data['lastinsert_id'] = $lastinsert_id;
         return view('OrderDetails', $data);
@@ -79,5 +84,5 @@ class BillingC extends BaseController
 
             return view('Checkout', $data);
         }
-    } 
+    }
 }
