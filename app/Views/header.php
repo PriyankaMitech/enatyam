@@ -530,10 +530,6 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a>
 
                         </form>
-
-
-
-
                     </div>
 
                 </div>
@@ -727,49 +723,49 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             </div>
         </div>
 
-        
+
     </div>
     <div class="modal fade" id="lostpasswordmodal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="login_form">
-                            <h4 class="titel pt-3" style="color: black;">Lost Password Recovery</h4>
-                            <form name="lostPasswordForm" action="<?php echo base_url(); ?>lostpassword" id="lostpasswordform" method="post">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="login_form">
+                        <h4 class="titel pt-3" style="color: black;">Lost Password Recovery</h4>
+                        <form name="lostPasswordForm" action="<?php echo base_url(); ?>lostpassword" id="lostpasswordform" method="post">
+                            <div class="form-group">
+                                <input type="email" name="lostpassword_email" id="lostpassword_email" class="form-control" aria-required="true" placeholder="Email">
+                                <span id="lostpassword_email_error" style="color: red;"></span>
+                            </div>
+                            <button type="submit" class="btn btn-light mt-3">Recover Password</button>
+                        </form>
+                        <!-- OTP input field and button (hidden initially) -->
+                        <form name="otpValidateForm" action="<?php echo base_url(); ?>otpvalidate" id="otpValidateForm" method="post">
+                            <div id="otpField" style="display: none;">
                                 <div class="form-group">
-                                    <input type="email" name="lostpassword_email" id="lostpassword_email" class="form-control" aria-required="true" placeholder="Email">
-                                    <span id="lostpassword_email_error" style="color: red;"></span>
+                                    <input type="text" name="entered_otp" id="entered_otp" class="form-control" placeholder="Enter OTP">
+                                    <span id="invalidotp" style="color: red;"></span>
                                 </div>
-                                <button type="submit" class="btn btn-light mt-3">Recover Password</button>
-                            </form>
-                            <!-- OTP input field and button (hidden initially) -->
-                            <form name="otpValidateForm" action="<?php echo base_url(); ?>otpvalidate" id="otpValidateForm" method="post">
-                                <div id="otpField" style="display: none;">
-                                    <div class="form-group">
-                                        <input type="text" name="entered_otp" id="entered_otp" class="form-control" placeholder="Enter OTP">
-                                        <span id="invalidotp" style="color: red;"></span>
-                                    </div>
-                                    <button type="submit" class="btn btn-light mt-3">Submit OTP</button>
-                                </div>
-                            </form>
+                                <button type="submit" class="btn btn-light mt-3">Submit OTP</button>
+                            </div>
+                        </form>
 
-                            <form name="newPasswordForm" action="<?php echo base_url(); ?>newpassword" id="newPasswordForm" method="post">
-                                <div id="passwordField" style="display: none;">
-                                    <div class="form-group">
-                                        <input type="password" name="new_password" id="new_password" class="form-control" aria-required="true" placeholder="Enter New Password">
-                                        <input type="password" name="conf_password" id="conf_password" class="form-control" aria-required="true" placeholder="Confirm Password">
-                                        <span id="password_match_error" style="color: red;"></span>
-                                    </div>
-                                    <button type="submit" class="btn btn-light mt-3">Submit New Password</button>
+                        <form name="newPasswordForm" action="<?php echo base_url(); ?>newpassword" id="newPasswordForm" method="post">
+                            <div id="passwordField" style="display: none;">
+                                <div class="form-group">
+                                    <input type="password" name="new_password" id="new_password" class="form-control" aria-required="true" placeholder="Enter New Password">
+                                    <input type="password" name="conf_password" id="conf_password" class="form-control" aria-required="true" placeholder="Confirm Password">
+                                    <span id="password_match_error" style="color: red;"></span>
                                 </div>
-                            </form>
-                            <!-- New Password input field (hidden initially) -->
+                                <button type="submit" class="btn btn-light mt-3">Submit New Password</button>
+                            </div>
+                        </form>
+                        <!-- New Password input field (hidden initially) -->
 
-                        </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
+    </div>
 
     <!-- model  -->
