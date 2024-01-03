@@ -12,7 +12,7 @@
                     <div class="col-12 col-md-9 ">
                         <button class="button-content" role="button">
 
-                            <span class="button-text"><a href="<?php echo base_url('StartNowPricing'); ?>">Start Now if you are <br> commited </a></span>
+                            <span class="button-text"> <a href="<?= base_url(); ?>Home#pricing-section">Start Now if you are <br> commited </a></span>
 
                         </button>
                     </div>

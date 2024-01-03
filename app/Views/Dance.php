@@ -11,11 +11,7 @@
                 <div class="col-4 video-col1">
                     <P>We are commited to your </p>
                     <p>commitment.</P>
-
-
-                    <a class="btn btn-dark btnstrt p-2" href="<?php echo base_url('StartNowPricing'); ?>"> <span class="button-text">Start Now </span></a>
-
-
+                    <a class="btn btn-dark btnstrt p-2" href="<?= base_url(); ?>Home#pricing-section" ?> <span class="button-text">Start Now </span></a>
                 </div>
 
                 <div class="col-4 video-col1">
