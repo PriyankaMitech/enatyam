@@ -21,6 +21,10 @@ if (isset($_SESSION['sessiondata'])) {
     .direct-chat-messages, .direct-chat-contacts {
         height: 428px !important;
             }
+
+            .nav-link {
+    /* padding: 0rem 0rem !important; */
+}
 </style>
 
 
@@ -98,7 +102,7 @@ if (isset($_SESSION['sessiondata'])) {
 
 
                                 
-                                <ul class="contacts-list">
+                                <ul class="contacts-list nav-item " >
                                     <?php if ($_SESSION['sessiondata']['role'] != 'Admin') { ?>
                                         <li>
                                             <a href="<?= base_url() ?>chatuser/1">
@@ -130,25 +134,148 @@ if (isset($_SESSION['sessiondata'])) {
                                                 $id = $chat->id;
                                                 $full_names = $chat->full_name;
                                             }
+
+                                            $adminModel = new \App\Models\AdminModel();
+                                            $whenc = array('status' => 'N','sender_id' => $chat->id);
+                                            $countmess = $adminModel->getalldata('online_chat', $whenc);
+                                            // echo "<pre>";print_r($countmess);exit();
+
+                                            if (is_array($countmess)) {
+                                                // Sort the messages by created_at in descending order
+                                                usort($countmess, function ($a, $b) {
+                                                    return strtotime($b->created_at) - strtotime($a->created_at);
+                                                });
+                                            
+                                                $lastMessageDate = null;
+                                                $lastMessageContent = null;
+                                            
+                                                // Check if there are any messages
+                                                if (!empty($countmess)) {
+                                                    // Access the date and content of the last message
+                                                    $lastMessageDate = $countmess[0]->created_at;
+                                                    $lastMessageContent = $countmess[0]->message;
+                                            
+                                                    // Convert the string date to a DateTime object
+                                                    $lastMessageDateTime = new DateTime($lastMessageDate);
+                                                    $currentDateTime = new DateTime();
+                                            
+                                                    // Compare the dates
+                                                    if ($lastMessageDateTime->format('Y-m-d') == $currentDateTime->format('Y-m-d')) {
+                                                        // Display time if the message was sent today
+                                                        $formattedDate = $lastMessageDateTime->format('H:i');
+                                                    } elseif ($lastMessageDateTime < $currentDateTime) {
+                                                        // Display "Yesterday" if the message was sent in the past
+                                                        $formattedDate = 'Yesterday';
+                                                    } else {
+                                                        // Display the full date for future messages
+                                                        $formattedDate = $lastMessageDateTime->format('Y-m-d H:i');
+                                                    }
+                                            
+                                                    // Output or use $formattedDate and $lastMessageContent as needed
+                                                }
+                                            } else {
+                                                // Handle the case where $countmess is not an array (query failure or no results)
+                                                $formattedDate = null; // or set a default value
+                                                $lastMessageContent = null;
+                                            }
+                                            
+                                            $counteing = '';
+                                            if (!empty($countmess)) {
+                                                $counteing = count($countmess);
+                                            }
+                                
+
+
+                                            $whenc1 = array('sender_id' => $chat->id);
+                                            $countmess1 = $adminModel->getalldata('online_chat', $whenc1);
+
+
+
+                                            // echo "<pre>";print_r($countmess);exit();
+
+                                            if (is_array($countmess1)) {
+                                                // Sort the messages by created_at in descending order
+                                                usort($countmess1, function ($a, $b) {
+                                                    return strtotime($b->created_at) - strtotime($a->created_at);
+                                                });
+                                            
+                                                $lastMessageDate1 = null;
+                                                $lastMessageContent1 = null;
+                                            
+                                                // Check if there are any messages
+                                                if (!empty($countmess1)) {
+                                                    // Access the date and content of the last message
+                                                    $lastMessageDate1 = $countmess1[0]->created_at;
+                                                    $lastMessageContent1 = $countmess1[0]->message;
+                                            
+                                                    // Convert the string date to a DateTime object
+                                                    $lastMessageDateTime1 = new DateTime($lastMessageDate1);
+                                                    $currentDateTime1 = new DateTime();
+                                            
+                                                    // Compare the dates
+                                                    if ($lastMessageDateTime1->format('Y-m-d') == $currentDateTime1->format('Y-m-d')) {
+                                                        // Display time if the message was sent today
+                                                        $formattedDate1 = $lastMessageDateTime1->format('H:i');
+                                                    } elseif ($lastMessageDateTime1 < $currentDateTime1) {
+                                                        // Display "Yesterday" if the message was sent in the past
+                                                        $formattedDate1 = 'Yesterday';
+                                                    } else {
+                                                        // Display the full date for future messages
+                                                        $formattedDate1 = $lastMessageDateTime1->format('Y-m-d H:i');
+                                                    }
+                                            
+                                                    // Output or use $formattedDate and $lastMessageContent as needed
+                                                }
+                                            } else {
+                                                // Handle the case where $countmess is not an array (query failure or no results)
+                                                $formattedDate1 = null; // or set a default value
+                                                $lastMessageContent1 = null;
+                                            }
+                                            
+                                            $countein1g = '';
+                                            if (!empty($countmess1)) {
+                                                $counteing1 = count($countmess1);
+                                            }
+                                            
                                     ?>
                                             <li onclick="seen_chat(<?php echo $id; ?>)">
-                                                <a href="<?= base_url() ?>chatuser/<?= $id ?>">
+                                                <a href="<?= base_url() ?>chatuser/<?= $id ?>" >
                                                     <img class="contacts-list-img" src="<?php echo base_url() ?>public/images/user.png" alt="User">
 
                                                     <div class="contacts-list-info" style="color:#000 !important">
                                                         <span class="contacts-list-name">
-                                                            <?= $full_names ?>
-                                                            <!-- <small class="contacts-list-date float-right">2/28/2015</small> -->
-                                                        </span>
-                                                        <?php
+                                                            <?= $full_names ?><?php
                                                         if ($_SESSION['sessiondata']['role'] == 'Admin') {
                                                         ?>
-                                                            <span class="contacts-list-msg"><?= $chat->role ?></span>
+                                                            <span class="contacts-list-msg">(<?= $chat->role ?>)</span>
                                                         <?php } ?>
+                                                            <small class="contacts-list-date float-right">                                                            
+                                                                <span class="float-right">
+                                                                    <?php if(!empty($formattedDate)){ ?>
+                                                                        <span class="badge" style="color:#28a745"><?php  echo $formattedDate; ?></span>
+                                                                    <?php }else{ ?>
+                                                                        <span class="badge" style="color:#ccc"><?php  echo $formattedDate1; ?></span>
+
+                                                                        <?php } ?>
+                                                                    
+                                                                    <br>
+                                                                    <?php if(!empty($counteing)){ ?>
+                                                                        <span class="badge bg-success float-right" style="border-radius: 50%; padding:4px 6px !important"><?=$counteing; ?></span>
+                                                                    <?php } ?>
+                                                            </small>
+                                                   
+                                                        </span>
+                                                        <span>
+                                                            
+                                                            <?php echo $lastMessageContent1;?>
+                                                        </span>
+                                                       
                                                     </div>
 
                                                 </a>
                                             </li>
+
+
                                     <?php }
                                     } ?>
                                 </ul>
@@ -192,6 +319,108 @@ if (isset($_SESSION['sessiondata'])) {
                                                 $id = $chat->id;
                                                 $full_name = $chat->full_name;
                                             }
+
+                                            $adminModel = new \App\Models\AdminModel();
+                                            $whenc = array('status' => 'N','sender_id' => $chat->id);
+                                            $countmess = $adminModel->getalldata('online_chat', $whenc);
+                                            // echo "<pre>";print_r($countmess);exit();
+
+                                            if (is_array($countmess)) {
+                                                // Sort the messages by created_at in descending order
+                                                usort($countmess, function ($a, $b) {
+                                                    return strtotime($b->created_at) - strtotime($a->created_at);
+                                                });
+                                            
+                                                $lastMessageDate = null;
+                                                $lastMessageContent = null;
+                                            
+                                                // Check if there are any messages
+                                                if (!empty($countmess)) {
+                                                    // Access the date and content of the last message
+                                                    $lastMessageDate = $countmess[0]->created_at;
+                                                    $lastMessageContent = $countmess[0]->message;
+                                            
+                                                    // Convert the string date to a DateTime object
+                                                    $lastMessageDateTime = new DateTime($lastMessageDate);
+                                                    $currentDateTime = new DateTime();
+                                            
+                                                    // Compare the dates
+                                                    if ($lastMessageDateTime->format('Y-m-d') == $currentDateTime->format('Y-m-d')) {
+                                                        // Display time if the message was sent today
+                                                        $formattedDate = $lastMessageDateTime->format('H:i');
+                                                    } elseif ($lastMessageDateTime < $currentDateTime) {
+                                                        // Display "Yesterday" if the message was sent in the past
+                                                        $formattedDate = 'Yesterday';
+                                                    } else {
+                                                        // Display the full date for future messages
+                                                        $formattedDate = $lastMessageDateTime->format('Y-m-d H:i');
+                                                    }
+                                            
+                                                    // Output or use $formattedDate and $lastMessageContent as needed
+                                                }
+                                            } else {
+                                                // Handle the case where $countmess is not an array (query failure or no results)
+                                                $formattedDate = null; // or set a default value
+                                                $lastMessageContent = null;
+                                            }
+                                            
+                                            $counteing = '';
+                                            if (!empty($countmess)) {
+                                                $counteing = count($countmess);
+                                            }
+                                
+
+
+                                            $whenc1 = array('sender_id' => $chat->id);
+                                            $countmess1 = $adminModel->getalldata('online_chat', $whenc1);
+
+
+
+                                            // echo "<pre>";print_r($countmess);exit();
+
+                                            if (is_array($countmess1)) {
+                                                // Sort the messages by created_at in descending order
+                                                usort($countmess1, function ($a, $b) {
+                                                    return strtotime($b->created_at) - strtotime($a->created_at);
+                                                });
+                                            
+                                                $lastMessageDate1 = null;
+                                                $lastMessageContent1 = null;
+                                            
+                                                // Check if there are any messages
+                                                if (!empty($countmess1)) {
+                                                    // Access the date and content of the last message
+                                                    $lastMessageDate1 = $countmess1[0]->created_at;
+                                                    $lastMessageContent1 = $countmess1[0]->message;
+                                            
+                                                    // Convert the string date to a DateTime object
+                                                    $lastMessageDateTime1 = new DateTime($lastMessageDate1);
+                                                    $currentDateTime1 = new DateTime();
+                                            
+                                                    // Compare the dates
+                                                    if ($lastMessageDateTime1->format('Y-m-d') == $currentDateTime1->format('Y-m-d')) {
+                                                        // Display time if the message was sent today
+                                                        $formattedDate1 = $lastMessageDateTime1->format('H:i');
+                                                    } elseif ($lastMessageDateTime1 < $currentDateTime1) {
+                                                        // Display "Yesterday" if the message was sent in the past
+                                                        $formattedDate1 = 'Yesterday';
+                                                    } else {
+                                                        // Display the full date for future messages
+                                                        $formattedDate1 = $lastMessageDateTime1->format('Y-m-d H:i');
+                                                    }
+                                            
+                                                    // Output or use $formattedDate and $lastMessageContent as needed
+                                                }
+                                            } else {
+                                                // Handle the case where $countmess is not an array (query failure or no results)
+                                                $formattedDate1 = null; // or set a default value
+                                                $lastMessageContent1 = null;
+                                            }
+                                            
+                                            $countein1g = '';
+                                            if (!empty($countmess1)) {
+                                                $counteing1 = count($countmess1);
+                                            }
                                     ?>
                                             <li onclick="seen_chat(<?php echo $id; ?>)">
                                                 <a href="<?= base_url() ?>chatuser/<?= $id ?>">
@@ -199,14 +428,32 @@ if (isset($_SESSION['sessiondata'])) {
 
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
-                                                            <?= $full_name ?>
-                                                            <!-- <small class="contacts-list-date float-right">2/28/2015</small> -->
-                                                        </span>
-                                                        <?php
+                                                            <?= $full_name ?><?php
                                                         if ($_SESSION['sessiondata']['role'] == 'Admin') {
                                                         ?>
-                                                            <span class="contacts-list-msg"><?= $chat->role ?></span>
+                                                            <span class="contacts-list-msg">(<?= $chat->role ?>)</span>
                                                         <?php } ?>
+                                                        <small class="contacts-list-date float-right">                                                            
+                                                                <span class="float-right">
+                                                                    <?php if(!empty($formattedDate)){ ?>
+                                                                        <span class="badge" style="color:#28a745"><?php  echo $formattedDate; ?></span>
+                                                                    <?php }else{ ?>
+                                                                        <span class="badge" style="color:#ccc"><?php  echo $formattedDate1; ?></span>
+
+                                                                        <?php } ?>
+                                                                    
+                                                                    <br>
+                                                                    <?php if(!empty($counteing)){ ?>
+                                                                        <span class="badge bg-success float-right" style="border-radius: 50%; padding:4px 6px !important"><?=$counteing; ?></span>
+                                                                    <?php } ?>
+                                                            </small>
+                                                   
+                                                        </span>
+                                                        <span>
+                                                            
+                                                            <?php echo $lastMessageContent1;?>
+                                                        </span>
+                                                      
                                                     </div>
                                                 </a>
                                             </li>
@@ -216,7 +463,16 @@ if (isset($_SESSION['sessiondata'])) {
                             </div>
                         </div>
                         <?php
-                            $receiverid = current_url(true)->getSegment(3);
+
+                                $uri = current_url(true);
+                                $segmentCount = $uri->getTotalSegments();
+                                $receiverid = '';
+                                if ($segmentCount >= 3) {
+                                    $receiverid = $uri->getSegment(3);
+                                } else {
+                                    $receiverid = null; // or whatever default value you want to set
+                                }
+                            // $receiverid = current_url(true)->getSegment(3);
                             // echo  $receiverid; exit();
                         if(!empty($receiverid)){ ?>
                         <div class="card-footer">
@@ -259,7 +515,6 @@ if (isset($_SESSION['sessiondata'])) {
 
 <script>
 function seen_chat(id) {
-    alert(id);
 
     // Use the parameter id instead of $(this).val()
     var id = id;

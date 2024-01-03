@@ -280,8 +280,21 @@
                                         <div class="form-group slcsfieldsd col-md-10">
                                             <label for="inputcountry">Country:</label>
                                             <select class="form-select" id="inputCountry" name="Country">
-                                                <option value="SelectCountry">Select Country</option>
-                                                <option value="Bharat">Bharat</option>
+                                                <!-- <option value="SelectCountry">Select Country</option> -->
+                                                <!-- <option value="Bharat">Bharat</option> -->
+                                                <option value="">Select Country</option>
+                                                <!-- JavaScript will populate this list -->
+                                                <?php if (!empty($country_data)) { ?>
+                                                    <?php foreach ($country_data as $data) : ?>
+                                                        <option value="<?= $data->name; ?>">
+                                                            <?= $data->name; ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+                                                <?php } ?>
+
+                                                <span style="color:red;" id="Countryspanid">
+
+                                                </span>
 
 
                                             </select>
