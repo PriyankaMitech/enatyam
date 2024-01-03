@@ -1519,11 +1519,7 @@
                 $("#educationError").html("");
                 $("#experienceError").html("");
                 $("#cvFileError").html("");
-                $("#educaionCertificateFileError").html("");
-                $("#courseCertificateFileError").html("");
-                $("#videosError").html("");
-                $("#imgError").html("");
-
+                
                 // Validate Education dropdown
                 var education = $("#education").val();
                 if (!education) {
@@ -1550,25 +1546,7 @@
                     return;
                 }
 
-                if (!educaionCertificateFile) {
-                    $("#educaionCertificateFileError").html("Please upload your education certificates");
-                    return;
-                }
-
-                if (!courseCertificateFile) {
-                    $("#courseCertificateFileError").html("Please upload your course-related certificates");
-                    return;
-                }
-
-                if (!videos) {
-                    $("#videosError").html("Please upload your videos");
-                    return;
-                }
-
-                if (!img) {
-                    $("#imgError").html("Please upload your images");
-                    return;
-                }
+              
                 // alert("Validation successful! Proceeding to the next step.");
 
                 // You can remove the alert above and uncomment the line below to show the next step
