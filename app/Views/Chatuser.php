@@ -231,7 +231,46 @@ color:#000 !important;
                                             if (!empty($countmess1)) {
                                                 $counteing1 = count($countmess1);
                                             }
-                                            
+
+                                           
+
+                                            $whenc2 = array('sender_id' => $_SESSION['sessiondata']['id'], 'receiver_id' =>  $chat->id);
+                                            $countmess2 = $adminModel->getalldata('online_chat', $whenc2);
+
+                                            $formattedDate2 = '';
+                                            $lastMessageContent2  = '';
+
+                                            if (is_array($countmess2)) {
+                                                // Sort the messages by created_at in descending order
+                                                usort($countmess2, function ($a, $b) {
+                                                    return strtotime($b->created_at) - strtotime($a->created_at);
+                                                });
+
+                                                // Check if there are any messages
+                                                if (!empty($countmess2)) {
+                                                    // Access the content and sender_id of the last message
+                                                    $lastMessageContent2 = $countmess2[0]->message;
+                                                    $lastMessageSenderId1 = $countmess2[0]->sender_id;
+
+
+                                                    $whenc3 = array('id' => $lastMessageSenderId1);
+                                                    $senderInfo = $adminModel->get_single_data('register', $whenc3);
+
+                                                    // Retrieve sender information (assuming you have a function to get user data by ID)
+
+                                                    // Check if sender information is available
+                                                    if ($senderInfo) {
+                                                        $lastMessageSender2 = $senderInfo->full_name; // Replace with the actual field containing sender's name
+                                                        $formattedDate2 = date('Y-m-d H:i', strtotime($countmess2[0]->created_at));
+
+                                                        // Output or use $formattedDate1, $lastMessageContent1, and $lastMessageSender1 as needed
+                                                        // echo "Last message from $lastMessageSender2 sent at $formattedDate2: $lastMessageContent2";
+                                                    }
+                                                } else {
+                                                    // Handle the case where $countmess1 is an empty array (no messages available)
+                                                    echo "No messages available.";
+                                                }
+                                            }         
                                     ?>
                                             <li onclick="seen_chat(<?php echo $id; ?>)">
                                                 <a href="<?= base_url() ?>chatuser/<?= $id ?>" >
@@ -246,13 +285,50 @@ color:#000 !important;
                                                         <?php } ?>
                                                             <small class="contacts-list-date float-right">                                                            
                                                                 <span class="float-right">
-                                                                    <?php if(!empty($formattedDate)){ ?>
-                                                                        <span class="badge" style="color:#28a745"><?php  echo $formattedDate; ?></span>
-                                                                    <?php }else{ ?>
-                                                                        <span class="badge" style="color:#ccc"><?php  echo $formattedDate1; ?></span>
+                                                                    <?php
+                                                                        $latestDateTime = null;
+                                                                        $latestMessageContent = null;
 
-                                                                        <?php } ?>
-                                                                    
+                                                                        if (!empty($formattedDate1) && !empty($formattedDate2)) {
+                                                                            $dateTime1 = new DateTime($formattedDate1);
+                                                                            $dateTime2 = new DateTime($formattedDate2);
+
+                                                                            if ($dateTime1 > $dateTime2) {
+                                                                                // Message from sender1 is the latest
+                                                                                $latestDateTime = $dateTime1;
+                                                                                $latestMessageContent = $lastMessageContent1;
+                                                                            } else {
+                                                                                // Message from sender2 is the latest
+                                                                                $latestDateTime = $dateTime2;
+                                                                                $latestMessageContent = $lastMessageContent2;
+                                                                            }
+                                                                        } elseif (!empty($formattedDate1)) {
+                                                                            // Only message from sender1 is available
+                                                                            $latestDateTime = new DateTime($formattedDate1);
+                                                                            $latestMessageContent = $lastMessageContent1;
+                                                                        } elseif (!empty($formattedDate2)) {
+                                                                            // Only message from sender2 is available
+                                                                            $latestDateTime = new DateTime($formattedDate2);
+                                                                            $latestMessageContent = $lastMessageContent2;
+                                                                        } 
+
+                                                                        if ($latestDateTime !== null && $latestMessageContent !== null) {
+                                                                            $now = new DateTime();
+                                                                            $yesterday = new DateTime('yesterday');
+                                                                            $today = new DateTime();
+
+                                                                            if ($latestDateTime->format('Y-m-d') == $today->format('Y-m-d')) {
+                                                                                // Display today's time
+                                                                                echo $latestDateTime->format('H:i');
+                                                                            } elseif ($latestDateTime < $today && $latestDateTime >= $yesterday) {
+                                                                                // Display "Yesterday"
+                                                                                echo "Yesterday";
+                                                                            } else {
+                                                                                // Display the date
+                                                                                echo $latestDateTime->format('j F'); // Format as '2 July'
+                                                                            }
+                                                                        }
+                                                                        ?>
                                                                     <br>
                                                                     <?php if(!empty($counteing)){ ?>
                                                                         <span class="badge bg-success float-right" style="border-radius: 50%; padding:4px 6px !important"><?=$counteing; ?></span>
@@ -262,7 +338,27 @@ color:#000 !important;
                                                         </span>
                                                         <span>
                                                             
-                                                            <?php echo $lastMessageContent1;?>
+                                                            <?php if (!empty($formattedDate1) && !empty($formattedDate2)) {
+                                                                    $dateTime1 = new DateTime($formattedDate1);
+                                                                    $dateTime2 = new DateTime($formattedDate2);
+
+                                                                    if ($dateTime1 > $dateTime2) {
+                                                                        // Message from sender1 is the latest
+                                                                        echo "$lastMessageContent1";
+                                                                    } else {
+                                                                        // Message from sender2 is the latest
+                                                                        echo "$lastMessageContent2";
+                                                                    }
+                                                                } elseif (!empty($formattedDate1)) {
+                                                                    // Only message from sender1 is available
+                                                                    echo "$lastMessageContent1";
+                                                                } elseif (!empty($formattedDate2)) {
+                                                                    // Only message from sender2 is available
+                                                                    echo "$lastMessageContent2";
+                                                                } else {
+                                                                    // No messages available
+                                                                    echo "No messages available.";
+                                                                }?>
                                                         </span>
                                                        
                                                     </div>
@@ -402,6 +498,44 @@ color:#000 !important;
                                             if (!empty($countmess1)) {
                                                 $counteing1 = count($countmess1);
                                             }
+
+                                            $whenc2 = array('sender_id' => $_SESSION['sessiondata']['id'], 'receiver_id' =>  $chat->id);
+                                            $countmess2 = $adminModel->getalldata('online_chat', $whenc2);
+
+                                            $formattedDate2 = '';
+                                            $lastMessageContent2  = '';
+
+                                            if (is_array($countmess2)) {
+                                                // Sort the messages by created_at in descending order
+                                                usort($countmess2, function ($a, $b) {
+                                                    return strtotime($b->created_at) - strtotime($a->created_at);
+                                                });
+
+                                                // Check if there are any messages
+                                                if (!empty($countmess2)) {
+                                                    // Access the content and sender_id of the last message
+                                                    $lastMessageContent2 = $countmess2[0]->message;
+                                                    $lastMessageSenderId1 = $countmess2[0]->sender_id;
+
+
+                                                    $whenc3 = array('id' => $lastMessageSenderId1);
+                                                    $senderInfo = $adminModel->get_single_data('register', $whenc3);
+
+                                                    // Retrieve sender information (assuming you have a function to get user data by ID)
+
+                                                    // Check if sender information is available
+                                                    if ($senderInfo) {
+                                                        $lastMessageSender2 = $senderInfo->full_name; // Replace with the actual field containing sender's name
+                                                        $formattedDate2 = date('Y-m-d H:i', strtotime($countmess2[0]->created_at));
+
+                                                        // Output or use $formattedDate1, $lastMessageContent1, and $lastMessageSender1 as needed
+                                                        // echo "Last message from $lastMessageSender2 sent at $formattedDate2: $lastMessageContent2";
+                                                    }
+                                                } else {
+                                                    // Handle the case where $countmess1 is an empty array (no messages available)
+                                                    echo "No messages available.";
+                                                }
+                                            }         
                                     ?>
                                             <li onclick="seen_chat(<?php echo $id; ?>)">
                                                 <a href="<?= base_url() ?>chatuser/<?= $id ?>">
@@ -416,12 +550,50 @@ color:#000 !important;
                                                         <?php } ?>
                                                         <small class="contacts-list-date float-right">                                                            
                                                                 <span class="float-right">
-                                                                    <?php if(!empty($formattedDate)){ ?>
-                                                                        <span class="badge" style="color:#28a745"><?php  echo $formattedDate; ?></span>
-                                                                    <?php }else{ ?>
-                                                                        <span class="badge" style="color:#ccc"><?php  echo $formattedDate1; ?></span>
+                                                                <?php
+                                                                        $latestDateTime = null;
+                                                                        $latestMessageContent = null;
 
-                                                                        <?php } ?>
+                                                                        if (!empty($formattedDate1) && !empty($formattedDate2)) {
+                                                                            $dateTime1 = new DateTime($formattedDate1);
+                                                                            $dateTime2 = new DateTime($formattedDate2);
+
+                                                                            if ($dateTime1 > $dateTime2) {
+                                                                                // Message from sender1 is the latest
+                                                                                $latestDateTime = $dateTime1;
+                                                                                $latestMessageContent = $lastMessageContent1;
+                                                                            } else {
+                                                                                // Message from sender2 is the latest
+                                                                                $latestDateTime = $dateTime2;
+                                                                                $latestMessageContent = $lastMessageContent2;
+                                                                            }
+                                                                        } elseif (!empty($formattedDate1)) {
+                                                                            // Only message from sender1 is available
+                                                                            $latestDateTime = new DateTime($formattedDate1);
+                                                                            $latestMessageContent = $lastMessageContent1;
+                                                                        } elseif (!empty($formattedDate2)) {
+                                                                            // Only message from sender2 is available
+                                                                            $latestDateTime = new DateTime($formattedDate2);
+                                                                            $latestMessageContent = $lastMessageContent2;
+                                                                        } 
+
+                                                                        if ($latestDateTime !== null && $latestMessageContent !== null) {
+                                                                            $now = new DateTime();
+                                                                            $yesterday = new DateTime('yesterday');
+                                                                            $today = new DateTime();
+
+                                                                            if ($latestDateTime->format('Y-m-d') == $today->format('Y-m-d')) {
+                                                                                // Display today's time
+                                                                                echo $latestDateTime->format('H:i');
+                                                                            } elseif ($latestDateTime < $today && $latestDateTime >= $yesterday) {
+                                                                                // Display "Yesterday"
+                                                                                echo "Yesterday";
+                                                                            } else {
+                                                                                // Display the date
+                                                                                echo $latestDateTime->format('j F'); // Format as '2 July'
+                                                                            }
+                                                                        }
+                                                                        ?>
                                                                     
                                                                     <br>
                                                                     <?php if(!empty($counteing)){ ?>
@@ -432,7 +604,27 @@ color:#000 !important;
                                                         </span>
                                                         <span>
                                                             
-                                                            <?php echo $lastMessageContent1;?>
+                                                        <?php if (!empty($formattedDate1) && !empty($formattedDate2)) {
+                                                                    $dateTime1 = new DateTime($formattedDate1);
+                                                                    $dateTime2 = new DateTime($formattedDate2);
+
+                                                                    if ($dateTime1 > $dateTime2) {
+                                                                        // Message from sender1 is the latest
+                                                                        echo "$lastMessageContent1";
+                                                                    } else {
+                                                                        // Message from sender2 is the latest
+                                                                        echo "$lastMessageContent2";
+                                                                    }
+                                                                } elseif (!empty($formattedDate1)) {
+                                                                    // Only message from sender1 is available
+                                                                    echo "$lastMessageContent1";
+                                                                } elseif (!empty($formattedDate2)) {
+                                                                    // Only message from sender2 is available
+                                                                    echo "$lastMessageContent2";
+                                                                } else {
+                                                                    // No messages available
+                                                                    echo "No messages available.";
+                                                                }?>
                                                         </span>
                                                       
                                                     </div>
