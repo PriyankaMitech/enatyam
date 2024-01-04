@@ -348,26 +348,40 @@ public function StudentAttendance()
     }
     public function giveschedule()
     {
+      $result = session();
+      $session_id = $result->get('id');
+      
       $model = new AdminModel();
+      $data['session_id'] = $session_id;
       $data['schedule_data'] = $model->getalldatawwc('schedule_list');
-      echo view('schedule/index',$data);
+      echo view('schedule/index', $data);
     }
+
     public function save_schedule()
-    {
-        $model = new facultymodel();
-        if ($this->request->getMethod() !== 'post') {
-            return redirect()->to(base_url())->with('error', 'Error: No data to save.');
-        }
-        $data = $this->request->getPost();
-        if ($model->saveSchedule($data)) {
-          return redirect()->to('giveschedule')->with('success', 'Schedule Successfully Saved.');
-        } else {
-            return view('error_view', [
-                'error' => [
-                    'message' => 'An Error occurred.',
-                    'error' => $model->errors(),
-                ],
-            ]);
-        }
+{
+ // print_r($_POST);die;
+    $model = new facultymodel();
+
+    if ($this->request->getMethod() !== 'post') {
+        return redirect()->to(base_url())->with('error', 'Error: No data to save.');
     }
+
+    $data = $this->request->getPost();
+
+    // Add the selected days to the data array
+    $data['days'] = isset($data['days']) ? $data['days'] : [];
+
+    if ($model->saveSchedule($data)) {
+        return redirect()->to('giveschedule')->with('success', 'Schedule Successfully Saved.');
+    } else {
+        return view('error_view', [
+            'error' => [
+                'message' => 'An Error occurred.',
+                'error' => $model->errors(),
+            ],
+        ]);
+    }
+}
+
+
 }
