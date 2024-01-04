@@ -710,7 +710,7 @@ public function singlechat()
 
 
 
-            // echo "<pre>";print_r($result['chat_user_data']);exit();
+            // echo "<pre>";print_r($result['chatdata']);exit();
 
             echo view('chatuser', $result);
         } else {
