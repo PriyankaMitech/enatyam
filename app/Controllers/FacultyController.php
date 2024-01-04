@@ -336,7 +336,6 @@ public function StudentAttendance()
     public function save_schedule_data() {
         $model = new facultymodel();
         $Adminmodel = new AdminModel();
-        // print_r($_POST);die;
         $result = $model->save_schedule_data();
 
         if ($result != false) {
@@ -347,5 +346,28 @@ public function StudentAttendance()
 
         return redirect()->to('SelectSlot');
     }
-
+    public function giveschedule()
+    {
+      $model = new AdminModel();
+      $data['schedule_data'] = $model->getalldatawwc('schedule_list');
+      echo view('schedule/index',$data);
+    }
+    public function save_schedule()
+    {
+        $model = new facultymodel();
+        if ($this->request->getMethod() !== 'post') {
+            return redirect()->to(base_url())->with('error', 'Error: No data to save.');
+        }
+        $data = $this->request->getPost();
+        if ($model->saveSchedule($data)) {
+          return redirect()->to('giveschedule')->with('success', 'Schedule Successfully Saved.');
+        } else {
+            return view('error_view', [
+                'error' => [
+                    'message' => 'An Error occurred.',
+                    'error' => $model->errors(),
+                ],
+            ]);
+        }
+    }
 }

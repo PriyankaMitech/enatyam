@@ -590,27 +590,25 @@ class AdminController extends BaseController
         $model->updateFacultyForGroup($groupName, $facultyId, $selectedDate);
         return redirect()->to('StudentGroups');
     }
-    public function chatuser()
+  public function chatuser()
     {
         if (isset($_SESSION['sessiondata'])) {
             $model = new AdminModel();
 
-            $chatCountWhere = array(
-                'receiver_id' => $_SESSION['sessiondata']['id'],
-                'status' => 'N'
-            );
-            $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
-
-            // echo "<pre>";print_r($result['chat_count']);exit();
-
+         
+            $result['getuser'] = [];
 
             if ($_SESSION['sessiondata']['role'] == 'Admin') {
-                // $wherecond = array('is_register_done' => 'Y', 'Payment_status' => 'Y');
-                // For Faculty
+                $chatCountWhere = array(
+                    'receiver_id' => $_SESSION['sessiondata']['id'],
+                    'status' => 'N'
+                );
+                $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
+          
                 $wherecondFaculty = array('is_register_done' => 'Y', 'role' => 'Faculty');
                 $result['faculty'] = $model->getalldata('register', $wherecondFaculty);
 
-
+        
 
                 // For Student
                 $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y');
@@ -618,54 +616,74 @@ class AdminController extends BaseController
 
                 // Merge results
                 $result['getuser'] = array_merge($result['faculty'], $result['student']);
+
+               
             } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
-                $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
-                $result['getuser'] = $model->getalldata('register', $wherecond);
+                $chatCountWhere = array(
+                    'receiver_id' => $_SESSION['sessiondata']['id'],
+                    'status' => 'N'
+                );
+                $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
+
+
+                $wherecondFaculty = array('role' => 'Admin');
+                $result['admin'] = $model->getalldata('register', $wherecondFaculty);
+
+                $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y', 'Assign_Techer_id' => $_SESSION['sessiondata']['id']);
+                $result['student'] = $model->getalldata('register', $wherecondStudent);
+
+          
+                // $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
+                // $result['getuser'] = $model->getalldata('register', $wherecond);
+                if (is_array($result['admin']) && is_array($result['student'])) {
+                    $result['getuser'] = array_merge($result['admin'], $result['student']);
+                } elseif (is_array($result['admin'])) {
+                    $result['getuser'] = $result['admin'];
+                } elseif (is_array($result['student'])) {
+                    $result['getuser'] = $result['student'];
+                }
+
             } else if ($_SESSION['sessiondata']['role'] == 'Student') {
-                // echo "<pre>";print_r($_SESSION);exit();
-                $wherecond = array('id' => $_SESSION['sessiondata']['Assign_Techer_id']);
-                $result['getuser'] = $model->chatfaculty('register', $wherecond);
-                //    echo '<pre>';
-                //     print_r($result['getuser']);
-                //     die;
+                $chatCountWhere = array(
+                    'receiver_id' => $_SESSION['sessiondata']['id'],
+                    'status' => 'N'
+                );
+                $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
+          
+                // $wherecond = array('id' => $_SESSION['sessiondata']['Assign_Techer_id']);
+                // $result['getuser'] = $model->chatfaculty('register', $wherecond);
+
+                // echo "<pre>";print_r( $result['getuser'] );exit();
+
+
+                $wherecondFaculty = array('role' => 'Admin');
+                $result['admin'] = $model->getalldata('register', $wherecondFaculty);
+
+                $wherecondStudent = array('role'=> 'Faculty','id' => $_SESSION['sessiondata']['Assign_Techer_id']);
+                $result['faculty'] = $model->getalldata('register', $wherecondStudent);
+
+                if (is_array($result['admin']) && is_array($result['faculty'])) {
+                    $result['getuser'] = array_merge($result['admin'], $result['faculty']);
+                } elseif (is_array($result['admin'])) {
+                    $result['getuser'] = $result['admin'];
+                } elseif (is_array($result['faculty'])) {
+                    $result['getuser'] = $result['faculty'];
+                }
+         
             }
 
-            // $messageCountQuery = '';
+   
 
-
-
-            // foreach ($result['getuser'] as &$user) {
-            //     $id = $user->id; // Assuming 'id' is the field containing user ID
-            //     $full_names = $user->full_name;
-
-            //     $messageCountWhere = array(
-            //         'sender_id' => $id,
-            //         'receiver_id' => $_SESSION['sessiondata']['id'],
-            //         'status' => 'N'
-            //     );
-
-            //     $messageCountQuery = $model->getalldata('online_chat', $messageCountWhere); // Assuming the 'getalldata' method returns the count
-
-            //     echo "User: $full_names, Message Count: ". count($messageCountQuery);
-
-            //     $user->messageCount = $messageCountQuery;
-            // }
-
-            // foreach ($result['getuser'] as $user) {
-            //     echo "User: $user->full_name, Message Count: $user->messageCount";
-            // }
-
-
-
-
-            // echo "<pre>";print_r($messageCountQuery);exit();
+          
             echo view('Chatuser', $result);
         } else {
-            echo view('/');
+            return redirect()->to(base_url());
+
         }
     }
 
-    public function singlechat()
+
+public function singlechat()
     {
         if (isset($_SESSION['sessiondata'])) {
             $model = new AdminModel();
@@ -688,15 +706,15 @@ class AdminController extends BaseController
             $result['chatdata'] = $model->getchat('online_chat', $_SESSION['sessiondata']['id'], $receiverid[1]);
 
             $wherecond4 = ['id' => $receiverid[1]];
-            $result['chat_user_data'] = $model->get_single_data('register', $wherecond4);
+            $result['chat_user_data'] = $model->get_single_data('register',$wherecond4);
 
 
 
-            // echo "<pre>";print_r($result['chat_user_data']);exit();
+            // echo "<pre>";print_r($result['chatdata']);exit();
 
             echo view('chatuser', $result);
         } else {
-            return redirect()->to('/');
+            return redirect()->to(base_url());
         }
     }
 

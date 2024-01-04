@@ -276,6 +276,13 @@ $routes->post('saveschedule', 'FacultyController::saveschedule');
 $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId');
 $routes->post('save_schedule_data', 'FacultyController::save_schedule_data');
 $routes->post('checkData', 'FacultyController::checkData');
+$routes->get('giveschedule', 'FacultyController::giveschedule');
+$routes->post('giveschedule', 'FacultyController::giveschedule');
+
+$routes->get('save_schedule', 'FacultyController::save_schedule');
+$routes->post('save_schedule', 'FacultyController::save_schedule');
+
+
 
 $routes->get('notification', 'FacultyController::get_all_notification');
 
