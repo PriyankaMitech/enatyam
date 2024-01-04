@@ -129,11 +129,7 @@ class StudentModel extends Model
     {
         return $this->db->table($this->table1)->where('id', $registerId)->get()->getRow();
     }
-    // public function fetchdataFromid($assignTeacherId)
-    // {
-    //     return $this->db->table('schedule')->where('faculty_register_id', $assignTeacherId)->get()
-    //     ->getResult();
-    // }
+ 
 
     public function fetchdataFromid($assignTeacherId, $registerId)
     {
@@ -205,5 +201,14 @@ class StudentModel extends Model
             log_message('error', 'Error in insertFormData: ' . $e->getMessage());
             return false; // Indicate failure
         }
+    }
+    public function fetchafacultyslots($assignTeacherId)
+    {
+        $query = $this->db->table('schedule_list')
+        ->where('faculty_registerid', $assignTeacherId)
+        ->get()
+        ->getResult();
+
+        return $query;
     }
 }

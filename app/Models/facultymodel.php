@@ -218,38 +218,44 @@ class facultymodel extends Model
             ->ConductedSessionsCount;
     }
 
+
     public function saveSchedule($data)
     {
-    //  print_r($data);die;
-    $allday = isset($data['allday']);
-    $start_datetime = strtotime($data['start_datetime']);
-    $end_datetime = strtotime($data['end_datetime']);
-
-    while ($start_datetime <= $end_datetime) {
-        // Keep the time from $data['end_datetime'] for end_datetime, but only change the date
-        $current_datetime_start = date('Y-m-d H:i:s', $start_datetime);
-        $current_datetime_end = date('Y-m-d', $start_datetime) . date(' H:i:s', $end_datetime);
-
+        $optionType = $data['option_type'];
+        $selectedDays = $data['days'];
+        $faculty_registerid = $data['session_id'];
+        $start_datetime = strtotime($data['start_datetime']);
+        $end_datetime = strtotime($data['end_datetime']);
+    
+        $startTime = date('H:i:s', $start_datetime);
+        $endTime = date('H:i:s', $end_datetime);
+    
         if (empty($data['id'])) {
-            $this->db->table('schedule_list')->insert([
-                'title' => $data['title'],
-                'description' => $data['description'],
-                'start_datetime' => $current_datetime_start,
-                'end_datetime' => $current_datetime_end,
-            ]);
+            while ($start_datetime <= $end_datetime) {
+                $currentDay = date('l', $start_datetime);
+    
+                if ($optionType === 'allDay' || in_array($currentDay, $selectedDays)) {
+                    $current_datetime_start = date('Y-m-d', $start_datetime) . ' ' . $startTime;
+                    $current_datetime_end = date('Y-m-d', $start_datetime) . ' ' . $endTime;
+    
+                    $this->db->table('schedule_list')->insert([
+                        'start_datetime' => $current_datetime_start,
+                        'end_datetime' => $current_datetime_end,
+                        'faculty_registerid' => $faculty_registerid,
+                        'Daystype' => $optionType, 
+                    ]);
+                }
+                $start_datetime = strtotime('+1 day', $start_datetime);
+            }
         } else {
             $this->db->table('schedule_list')->where('id', $data['id'])->update([
-                'title' => $data['title'],
-                'description' => $data['description'],
-                'start_datetime' => $current_datetime_start,
-                'end_datetime' => $current_datetime_end,
+                'start_datetime' => $data['start_datetime'],
+                'end_datetime' => $data['end_datetime'],
+                'faculty_registerid' => $faculty_registerid,
+                'Daystype' => $optionType, 
             ]);
         }
-
-        // Increment to the next day
-        $start_datetime = strtotime('+1 day', $start_datetime);
+    
+        return true;
     }
-
-    return true;
-}
 }    
