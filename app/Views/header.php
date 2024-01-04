@@ -663,7 +663,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                     <div class="login_form">
                         <h4 class="titel pt-3" color="black">Login with your site account</h4>
 
-                        <form name="loginForm" onsubmit="return validateFormLogin()" action="<?php echo base_url(); ?>login" id="loginform" method="post">
+                        <form action="<?php echo base_url(); ?>login" id="loginform" method="post">
                             <div class="form-group m-2">
                                 <input type="text" name="username" id="username" class="form-control" aria-required="true" placeholder="Email or Mobile number">
                                 <span id="usernameError" style="color: red;"></span>
