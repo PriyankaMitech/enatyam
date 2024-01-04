@@ -217,4 +217,39 @@ class facultymodel extends Model
             ->getRow()
             ->ConductedSessionsCount;
     }
+
+    public function saveSchedule($data)
+    {
+    //  print_r($data);die;
+    $allday = isset($data['allday']);
+    $start_datetime = strtotime($data['start_datetime']);
+    $end_datetime = strtotime($data['end_datetime']);
+
+    while ($start_datetime <= $end_datetime) {
+        // Keep the time from $data['end_datetime'] for end_datetime, but only change the date
+        $current_datetime_start = date('Y-m-d H:i:s', $start_datetime);
+        $current_datetime_end = date('Y-m-d', $start_datetime) . date(' H:i:s', $end_datetime);
+
+        if (empty($data['id'])) {
+            $this->db->table('schedule_list')->insert([
+                'title' => $data['title'],
+                'description' => $data['description'],
+                'start_datetime' => $current_datetime_start,
+                'end_datetime' => $current_datetime_end,
+            ]);
+        } else {
+            $this->db->table('schedule_list')->where('id', $data['id'])->update([
+                'title' => $data['title'],
+                'description' => $data['description'],
+                'start_datetime' => $current_datetime_start,
+                'end_datetime' => $current_datetime_end,
+            ]);
+        }
+
+        // Increment to the next day
+        $start_datetime = strtotime('+1 day', $start_datetime);
+    }
+
+    return true;
+}
 }    

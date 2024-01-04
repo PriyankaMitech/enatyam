@@ -1073,8 +1073,7 @@ class AdminModel extends Model
             ->join($table4, $joinCond3, $type)
             ->get()
             ->getResult();        
-        //    echo $this->db->getLastQuery();die;
-        return $result;
+         return $result;
     }
 
 
@@ -1088,9 +1087,7 @@ class AdminModel extends Model
             ->where($wherecond)
             ->get()
             ->getRow();   
-            
-             //    echo $this->db->getLastQuery();die;
-        return $result;
+           return $result;
     }
 
 
@@ -1105,9 +1102,22 @@ class AdminModel extends Model
         ->where($wherecond)
         ->get()
         ->getResult();
-        //    echo $this->db->getLastQuery();die;
         return $result;
     }
+
+
+    public function getalldatawwc($table)
+    {
+        $result = $this->db->table($table)->get()->getResult();
+
+  
+        if ($result) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
 
     
 
