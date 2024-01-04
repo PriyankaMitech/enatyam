@@ -54,10 +54,8 @@ class Home extends BaseController
         $model = new AdminModel();
 
 
-        $wherecond = array('is_deleted' => 'N');
-
-        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
-//print_r($data['courses_data']);die;
+        $wherecond1 = array('is_deleted' => 'N');
+        $data['country_data'] = $model->getalldata('countries', $wherecond1);
         return view('Career', $data);
     }
     public function Carrier()

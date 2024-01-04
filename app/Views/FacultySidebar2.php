@@ -8,32 +8,25 @@
   <link href="<?php echo base_url() ?>public/css/custom.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="<?php echo base_url() ?>plugins/fontawesome-free/css/all.min.css">
-
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url()?>dist/css/adminlte.min.css">
-
-
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/jqvmap/jqvmap.min.css">
-
-
   <link rel="stylesheet" href="<?php echo base_url() ?>dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?php echo base_url() ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="<?php echo base_url()?>plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/summernote/summernote-bs4.min.css">
-
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/fullcalendar/main.css">
-
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
   <link href="<?php echo base_url() ?>public/extcss/dataTables.bootstrap4.min.css">
   <link href="<?php echo base_url() ?>public/extcss/buttons.bootstrap4.min.css">
   <link href="<?php echo base_url() ?>public/extcss/responsive.bootstrap4.min.css">
 
+  
 <style>
   .error{
     color:red !important;
@@ -297,7 +290,12 @@ $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".ZOOM_CLIE
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="<?php echo base_url() ?>SelectSlot" class="nav-link">
+                  <!-- <a href="<?php echo base_url() ?>SelectSlot" class="nav-link">
+                    <i class="nav-icon fas fa-edit"></i>
+                    <p> Add Schedule
+                    </p>
+                  </a> -->
+                  <a href="<?php echo base_url() ?>giveschedule" class="nav-link">
                     <i class="nav-icon fas fa-edit"></i>
                     <p> Add Schedule
                     </p>
