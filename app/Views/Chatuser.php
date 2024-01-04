@@ -25,6 +25,9 @@ if (isset($_SESSION['sessiondata'])) {
             .nav-link {
     /* padding: 0rem 0rem !important; */
 }
+.contacts-list-info1{
+color:#000 !important;
+}
 </style>
 
 
@@ -103,21 +106,7 @@ if (isset($_SESSION['sessiondata'])) {
 
                                 
                                 <ul class="contacts-list nav-item " >
-                                    <?php if ($_SESSION['sessiondata']['role'] != 'Admin') { ?>
-                                        <li>
-                                            <a href="<?= base_url() ?>chatuser/1">
-                                                <img class="contacts-list-img" src="<?php echo base_url() ?>public/images/user.png" alt="User">
-
-                                                <div class="contacts-list-info">
-                                                    <span class="contacts-list-name">
-                                                        Admin
-                                                        <!-- <small class="contacts-list-date float-right">2/28/2015</small> -->
-                                                    </span>
-                                                    <!-- <span class="contacts-list-msg">How have you been? I was...</span> -->
-                                                </div>
-                                            </a>
-                                        </li>
-                                    <?php } ?>
+                                   
                                     <?php
                                     // echo '<pre>';
                                     // print_r($getuser);
@@ -136,8 +125,14 @@ if (isset($_SESSION['sessiondata'])) {
                                             }
 
                                             $adminModel = new \App\Models\AdminModel();
-                                            $whenc = array('status' => 'N','sender_id' => $chat->id);
+                                            // echo $chat->id;exit();
+
+                                            // echo "<pre>"; print_r($_SESSION);exit();
+                                            $whenc = array('status' => 'N','receiver_id' => $_SESSION['sessiondata']['id'],'sender_id' => $chat->id);
                                             $countmess = $adminModel->getalldata('online_chat', $whenc);
+
+
+                                            
                                             // echo "<pre>";print_r($countmess);exit();
 
                                             if (is_array($countmess)) {
@@ -186,7 +181,7 @@ if (isset($_SESSION['sessiondata'])) {
                                 
 
 
-                                            $whenc1 = array('sender_id' => $chat->id);
+                                            $whenc1 = array('sender_id' => $chat->id,'receiver_id' => $_SESSION['sessiondata']['id']);
                                             $countmess1 = $adminModel->getalldata('online_chat', $whenc1);
 
 
@@ -242,7 +237,7 @@ if (isset($_SESSION['sessiondata'])) {
                                                 <a href="<?= base_url() ?>chatuser/<?= $id ?>" >
                                                     <img class="contacts-list-img" src="<?php echo base_url() ?>public/images/user.png" alt="User">
 
-                                                    <div class="contacts-list-info" style="color:#000 !important">
+                                                    <div class="contacts-list-info contacts-list-info1" >
                                                         <span class="contacts-list-name">
                                                             <?= $full_names ?><?php
                                                         if ($_SESSION['sessiondata']['role'] == 'Admin') {
@@ -288,21 +283,7 @@ if (isset($_SESSION['sessiondata'])) {
 
                             <div class="direct-chat-contacts">
                                 <ul class="contacts-list">
-                                    <?php if ($_SESSION['sessiondata']['role'] != 'Admin') { ?>
-                                        <li >
-                                            <a href="<?= base_url() ?>chatuser/1">
-                                                <img class="contacts-list-img" src="<?php echo base_url() ?>public/images/user.png" alt="User">
-
-                                                <div class="contacts-list-info">
-                                                    <span class="contacts-list-name">
-                                                        Admin
-                                                        <!-- <small class="contacts-list-date float-right">2/28/2015</small> -->
-                                                    </span>
-                                                    <!-- <span class="contacts-list-msg">How have you been? I was...</span> -->
-                                                </div>
-                                            </a>
-                                        </li>
-                                    <?php } ?>
+                                  
                                     <?php
                                     // echo '<pre>';
                                     // print_r($getuser);
@@ -321,7 +302,7 @@ if (isset($_SESSION['sessiondata'])) {
                                             }
 
                                             $adminModel = new \App\Models\AdminModel();
-                                            $whenc = array('status' => 'N','sender_id' => $chat->id);
+                                            $whenc = array('status' => 'N','sender_id' => $chat->id ,'receiver_id' => $_SESSION['sessiondata']['id'],);
                                             $countmess = $adminModel->getalldata('online_chat', $whenc);
                                             // echo "<pre>";print_r($countmess);exit();
 
@@ -371,7 +352,7 @@ if (isset($_SESSION['sessiondata'])) {
                                 
 
 
-                                            $whenc1 = array('sender_id' => $chat->id);
+                                            $whenc1 = array('sender_id' => $chat->id, 'receiver_id' => $_SESSION['sessiondata']['id'],);
                                             $countmess1 = $adminModel->getalldata('online_chat', $whenc1);
 
 
