@@ -25,65 +25,31 @@
                                     <form action="<?php echo base_url()?>gy" method="post"
                                         id="schedule-form">
                                         <input type="hidden" name="id" value="">
-                                        <label for="classDate">Select Class Date:</label>
-                                        <select name="student_shedule_time[]" id="student_shedule_time" class="select2" multiple="multiple" data-placeholder="Select a student" style="width: 100%;">
-                                            <?php if(!empty($slots)){
-                                                // echo "<pre>";print_r($slots);exit();
-                                                ?>
-                                             <?php
-                                                $groupedSlots = [];
-
-                                                // Group time slots by weekdays
-                                                foreach ($slots as $data) {
-                                                    $startDateTime = new DateTime($data->start_datetime);
-                                                    $endDateTime = new DateTime($data->end_datetime);
-
-                                                    // Calculate the total hours (ceil to ensure we include the last hour)
-                                                    $totalHours = ceil($startDateTime->diff($endDateTime)->h + $startDateTime->diff($endDateTime)->i / 60);
-
-                                                    // Reset start time
-                                                    $startDateTime = new DateTime($data->start_datetime);
-
-                                                    for ($i = 0; $i < $totalHours; $i++) {
-                                                        $dayOfWeek = $startDateTime->format('l'); // Get the day of the week (e.g., Monday)
-                                                        $startTime = $startDateTime->format('H:i');
-                                                        
-                                                        // Calculate end time (add 1 hour)
-                                                        $endDateTime = clone $startDateTime;
-                                                        $endDateTime->add(new DateInterval('PT1H'));
-                                                        $endTime = $endDateTime->format('H:i');
-
-                                                        // Add the time slot to the corresponding day if it doesn't exist
-                                                        if (!isset($groupedSlots[$dayOfWeek][$startTime])) {
-                                                            $groupedSlots[$dayOfWeek][$startTime] = true;
-                                                            $groupedSlots[$dayOfWeek][] = "<option value=\"$startTime\">{$startTime} - {$endTime}</option>";
-                                                        }
-
-                                                        $startDateTime->add(new DateInterval('PT1H'));
-                                                    }
-                                                }
-
-                                                // Sort days in the correct sequence
-                                                $sequence = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-                                                // Display time slots for each day in sequence
-                                                foreach ($sequence as $day) {
-                                                    if (isset($groupedSlots[$day])) {
-                                                        echo "<optgroup label=\"$day\">";
-                                                        foreach ($groupedSlots[$day] as $slot) {
-                                                            echo $slot;
-                                                        }
-                                                        echo "</optgroup>";
-                                                    }
-                                                }
-                                                ?>
-
-                                            <?php } ?>
-                                        </select>
-                         
+                                        <div class="form-group mb-2" id="select_day">
+                                            <label class="control-label">Select Option</label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-check">
+                                                        <input type="radio" class="form-check-input" name="option_type"
+                                                            value="day" checked>
+                                                        <label class="form-check-label">Select Day</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-check">
+                                                        <input type="radio" class="form-check-input" name="option_type"
+                                                            value="allDay">
+                                                        <label class="form-check-label">All days</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="dayOptions" class="form-group mb-2">
+                                            <!-- This div will be populated dynamically based on the user's selection -->
+                                        </div>
                                         
                                         <button class="btn btn-primary btn-sm rounded-0" type="submit"
-                                            form="schedule-form"><i class="fa fa-save"></i> View</button>
+                                            form="schedule-form"><i class="fa fa-save"></i>View</button>
                                         <button class="btn btn-default border btn-sm rounded-0" type="reset"
                                             form="schedule-form"><i class="fa fa-reset"></i> Cancel</button>
                                     </form>
@@ -132,12 +98,16 @@
         </div>
     </section>
 </div>
-<?php
+
+
+
+<?php echo view('StudentSidebar/StudentFooter.php'); ?>
+<?php 
 
 $sched_res = [];
-if(!empty($slots)){
+if(!empty($data)){
 
-foreach($slots as $data){
+foreach($data as $data){
     $sdate = date("F d, Y h:i A",strtotime($data->start_datetime));
     $edate = date("F d, Y h:i A",strtotime($data->end_datetime));
     $sched_res[$data->id] = $data;
@@ -147,30 +117,114 @@ foreach($slots as $data){
 <script>
     var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
-
-
 <script src="public/calendar/js/script.js"></script>
-
 <script>
-    // jQuery script to handle selection change
-    $(document).ready(function () {
-        var $select = $('#student_id');
+document.addEventListener("DOMContentLoaded", function() {
+    var optionTypeRadio = document.getElementsByName("option_type");
 
-        $select.on('change', function () {
-            var selectedOptions = $(this).val();
+    function toggleDayOptions() {
+        var dayOptionsDiv = document.getElementById("dayOptions");
+        if (optionTypeRadio[0].checked) {
+            dayOptionsDiv.innerHTML = '<label class="control-label">Select Day(s)</label>' +
+                '<div class="form-check">' +
+                '<input type="checkbox" class="form-check-input" name="days[]" value="Monday">' +
+                '<label class="form-check-label">Monday</label>' +
+                '</div>' +
+                '<div class="form-check">' +
+                '<input type="checkbox" class="form-check-input" name="days[]" value="Tuesday">' +
+                '<label class="form-check-label">Tuesday</label>' +
+                '</div>' +
+                '<div class="form-check">' +
+                '<input type="checkbox" class="form-check-input" name="days[]" value="Wednesday">' +
+                '<label class="form-check-label">Wednesday</label>' +
+                '</div>' +
+                '<div class="form-check">' +
+                '<input type="checkbox" class="form-check-input" name="days[]" value="Thursday">' +
+                '<label class="form-check-label">Thursday</label>' +
+                '</div>' +
+                '<div class="form-check">' +
+                '<input type="checkbox" class="form-check-input" name="days[]" value="Friday">' +
+                '<label class="form-check-label">Friday</label>' +
+                '</div>' +
+                '<div class="form-check">' +
+                '<input type="checkbox" class="form-check-input" name="days[]" value="Saturday">' +
+                '<label class="form-check-label">Saturday</label>' +
+                '</div>' +
+                '<div class="form-check">' +
+                '<input type="checkbox" class="form-check-input" name="days[]" value="Sunday">' +
+                '<label class="form-check-label">Sunday</label>' +
+                '</div>';
+        } else {
 
-            if (selectedOptions) {
-                // Check for duplicate selections
-                var uniqueSelections = Array.from(new Set(selectedOptions));
+            dayOptionsDiv.innerHTML = '';
+        }
+    }
+    for (var i = 0; i < optionTypeRadio.length; i++) {
+        optionTypeRadio[i].addEventListener("change", toggleDayOptions);
+    }
+    toggleDayOptions();
+});
 
-                // Update the select box with unique selections
-                $select.val(uniqueSelections).trigger('change.select2');
-            }
-        });
+document.addEventListener("DOMContentLoaded", function() {
+    var currentDate = new Date();
+    var startDatetimeInput = document.getElementById("start_datetime");
+    var endDatetimeInput = document.getElementById("end_datetime");
 
-        // Initialize select2
-        $select.select2();
-    });
+    startDatetimeInput.min = formatDate(currentDate);
+    endDatetimeInput.min = formatDate(currentDate);
+
+    function formatDate(date) {
+        var year = date.getFullYear();
+        var month = (date.getMonth() + 1).toString().padStart(2, '0');
+        var day = date.getDate().toString().padStart(2, '0');
+        var hours = date.getHours().toString().padStart(2, '0');
+        var minutes = date.getMinutes().toString().padStart(2, '0');
+        return `${year}-${month}-${day}T${hours}:${minutes}`;
+    }
+});
 </script>
 
-<?php echo view('StudentSidebar/StudentFooter.php'); ?>
+
+<script>
+     $(document).ready(function () {
+    // Array to store selected days
+    var selectedDays = [];
+
+    $('input[name="days[]"]').on('change', function () {
+        // Clear the array
+        selectedDays = [];
+
+        // Loop through all checkboxes and add selected ones to the array
+        $('input[name="days[]"]:checked').each(function () {
+            selectedDays.push($(this).val());
+        });
+
+        // Log the selected days (you can remove this line in production)
+        // console.log('Selected Days:', selectedDays);
+
+        // Perform your AJAX call or other actions here using the selectedDays array
+        $.ajax({
+            url: '<?= base_url(); ?>get_shedule_data_for_student',
+            type: 'POST',
+            data: {
+                selectedDays: selectedDays
+            },
+            dataType: 'json',
+            success: function (data) {
+                $('#sub_courses_id_g').empty();
+                $('#sub_courses_id_g').append('<option value="">Please select sub Courses</option>');
+                $.each(data, function (key, value) {
+                    $('#sub_courses_id_g').append('<option value="' + value.id + '">' + value.sub_courses_name + '</option>');
+                });
+
+                // Retrieve the selected state ID from the hidden input field
+                var selectedStateId = $('#selected_sub_courses_id_g').val();
+
+                // Select the state in the dropdown
+                $('#sub_courses_id_g').val(selectedStateId);
+            }
+        });
+    });
+});
+
+</script>

@@ -18,6 +18,7 @@ require_once 'src/PHPMailer.php';
 require_once 'src/SMTP.php';
 class StudentController extends BaseController
 {
+    
     public function StudentVideouplode()
     {
         return view('StuUplodeVideo');
@@ -499,7 +500,82 @@ class StudentController extends BaseController
         }
     }
 
-    public function getCountryCode()
+    public function set_student_shedule()
     {
+
+        $data = [
+            'student_id' => $this->request->getVar('student_id'),
+            'student_id' => implode(',', $this->request->getVar('student_id')),
+            'created_on' => date('Y:m:d H:i:s'),
+        ];
+
+        $db = \Config\Database::Connect();
+        if ($this->request->getVar('id') == "") {
+            $add_data = $db->table('tbl_sub_courses');
+            $add_data->insert($data);
+            session()->setFlashdata('success', 'Data added successfully.');
+        } else {
+            $update_data = $db->table('tbl_sub_courses')->where('id', $this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
+
+        return redirect()->to('sub_courses_list');
+
+    }
+
+    public function get_shedule_data_for_student(){
+
+        $result = session();
+        $registerId = $result->get('id');
+
+
+        // echo $registerId ;exit();
+        $StudentModel = new StudentModel();
+        $model = new AdminModel();
+
+        $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
+        // echo "<pre>";print_r($Sheduledatafromfaculty);exit();
+        $assignTeacherId = '';
+        if(!empty($Sheduledatafromfaculty)){
+        $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
+        }
+
+        $selectedDays = $this->request->getPost('selectedDays');
+
+
+      // Get the current year
+        $currentYear = date('Y');
+        $currentMonth = date('M');
+
+        // Now you can use $currentYear in your code
+        // For example, you can use it in constructing the start and end dates
+        $startDate = "{$currentYear}-{$currentMonth}-01 00:00:00";
+        $endDate = date('Y-m-t 23:59:59', strtotime($startDate));
+
+        // Prepare the WHERE condition for the query
+        $wherecond1 = [
+            'student_register_id' => NULL,
+            'faculty_registerid' => $assignTeacherId,
+            'start_datetime >= ' => $startDate,
+            'start_datetime <= ' => $endDate,
+        ];
+
+        echo "<pre>";print_r($selectedDays);exit();
+        if (!empty($selectedDays)) {
+            
+            $shedule_data = $model->getalldataforstudent('schedule_list',$wherecond1, $selectedDays);
+
+        }
+
+        // Fetch the schedule data for the current month and selected days
+            echo "<pre>";print_r($shedule_data);exit();
+
+
+        if (!empty($$shedule_data)) {
+            return json_encode($shedule_data);
+        } else {
+            return json_encode([]);
+        }   
     }
 }

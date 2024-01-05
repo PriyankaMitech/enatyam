@@ -204,6 +204,8 @@ $routes->post('get_faculty_data', 'AdminController::get_faculty_data');
 $routes->post('get_shedule_data', 'AdminController::get_shedule_data');
 
 
+
+
 $routes->post('add_menu', 'AdminController::add_menu');
 $routes->get('add_menu', 'AdminController::add_menu');
 
@@ -317,6 +319,17 @@ $routes->post('savefeedback', 'StudentController::savefeedback');
 $routes->post('SessionConduct', 'StudentController::SessionConduct');
 $routes->post('submitForm', 'StudentController::submitForm');
 $routes->get('reschedule', 'StudentController::reschedule');
+
+
+$routes->post('get_shedule_data_for_student', 'StudentController::get_shedule_data_for_student');
+
+
+$routes->get('set_student_shedule', 'StudentController::set_student_shedule');
+$routes->post('set_student_shedule', 'StudentController::set_student_shedule');
+
+
+
+
 
 // 
 // $routes->get('register', 'LoginController::register');
