@@ -39,7 +39,7 @@
                 </div>
 
             </div>
-            <form action="bookDemo" method="post">
+            <form action="<?php base_url(); ?>bookDemo" method="post">
                 <div class="card cards">
                     <div id="headingOne">
                     </div>
