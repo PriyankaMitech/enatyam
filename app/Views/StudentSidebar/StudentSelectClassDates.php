@@ -1,54 +1,5 @@
 <?php echo view('StudentSidebar/Studentsidebar'); ?>
 
-<!-- <div class="content-wrapper">
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Faculty Slots</h1>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item">
-                            <a href="">Dashboard</a>
-                        </li>
-                        <li class="breadcrumb-item active">Faculty Slots</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <form action="your_form_action_url" method="post">
-                            <label for="classDate">Select Class Date:</label>
-                            <select name="classDate" id="classDate" class="form-control">
-                                <?php foreach ($Slots as $slot): ?>
-                                    <?php
-                                    $startDateTime = new DateTime($slot->start_datetime);
-                                    while ($startDateTime < new DateTime($slot->end_datetime)) {
-                                        $formattedTime = $startDateTime->format('Y-m-d H:i:s');
-                                        echo "<option value=\"$formattedTime\">{$startDateTime->format('Y-m-d H:i:s')}</option>";
-                                        $startDateTime->add(new DateInterval('PT1H'));
-                                    }
-                                    ?>
-                                <?php endforeach; ?>
-                            </select>
-                           
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-</div> -->
 
 
 <link rel="stylesheet" href="public/calendar/fullcalendar/lib/main.min.css">
@@ -74,32 +25,65 @@
                                     <form action="<?php echo base_url()?>gy" method="post"
                                         id="schedule-form">
                                         <input type="hidden" name="id" value="">
-                                        <div class="form-group mb-2" id="select_day">
-                                            <label class="control-label">Select Option</label>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-check">
-                                                        <input type="radio" class="form-check-input" name="option_type"
-                                                            value="day" checked>
-                                                        <label class="form-check-label">Select Day</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-check">
-                                                        <input type="radio" class="form-check-input" name="option_type"
-                                                            value="allDay">
-                                                        <label class="form-check-label">All days</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="dayOptions" class="form-group mb-2">
-                                            <!-- This div will be populated dynamically based on the user's selection -->
-                                        </div>
+                                        <label for="classDate">Select Class Date:</label>
+                                        <select name="student_shedule_time[]" id="student_shedule_time" class="select2" multiple="multiple" data-placeholder="Select a student" style="width: 100%;">
+                                            <?php if(!empty($slots)){
+                                                // echo "<pre>";print_r($slots);exit();
+                                                ?>
+                                             <?php
+                                                $groupedSlots = [];
 
+                                                // Group time slots by weekdays
+                                                foreach ($slots as $data) {
+                                                    $startDateTime = new DateTime($data->start_datetime);
+                                                    $endDateTime = new DateTime($data->end_datetime);
+
+                                                    // Calculate the total hours (ceil to ensure we include the last hour)
+                                                    $totalHours = ceil($startDateTime->diff($endDateTime)->h + $startDateTime->diff($endDateTime)->i / 60);
+
+                                                    // Reset start time
+                                                    $startDateTime = new DateTime($data->start_datetime);
+
+                                                    for ($i = 0; $i < $totalHours; $i++) {
+                                                        $dayOfWeek = $startDateTime->format('l'); // Get the day of the week (e.g., Monday)
+                                                        $startTime = $startDateTime->format('H:i');
+                                                        
+                                                        // Calculate end time (add 1 hour)
+                                                        $endDateTime = clone $startDateTime;
+                                                        $endDateTime->add(new DateInterval('PT1H'));
+                                                        $endTime = $endDateTime->format('H:i');
+
+                                                        // Add the time slot to the corresponding day if it doesn't exist
+                                                        if (!isset($groupedSlots[$dayOfWeek][$startTime])) {
+                                                            $groupedSlots[$dayOfWeek][$startTime] = true;
+                                                            $groupedSlots[$dayOfWeek][] = "<option value=\"$startTime\">{$startTime} - {$endTime}</option>";
+                                                        }
+
+                                                        $startDateTime->add(new DateInterval('PT1H'));
+                                                    }
+                                                }
+
+                                                // Sort days in the correct sequence
+                                                $sequence = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                                                // Display time slots for each day in sequence
+                                                foreach ($sequence as $day) {
+                                                    if (isset($groupedSlots[$day])) {
+                                                        echo "<optgroup label=\"$day\">";
+                                                        foreach ($groupedSlots[$day] as $slot) {
+                                                            echo $slot;
+                                                        }
+                                                        echo "</optgroup>";
+                                                    }
+                                                }
+                                                ?>
+
+                                            <?php } ?>
+                                        </select>
+                         
                                         
                                         <button class="btn btn-primary btn-sm rounded-0" type="submit"
-                                            form="schedule-form"><i class="fa fa-save"></i>View</button>
+                                            form="schedule-form"><i class="fa fa-save"></i> View</button>
                                         <button class="btn btn-default border btn-sm rounded-0" type="reset"
                                             form="schedule-form"><i class="fa fa-reset"></i> Cancel</button>
                                     </form>
@@ -148,12 +132,12 @@
         </div>
     </section>
 </div>
-<?php 
+<?php
 
 $sched_res = [];
-if(!empty($data)){
+if(!empty($slots)){
 
-foreach($data as $data){
+foreach($slots as $data){
     $sdate = date("F d, Y h:i A",strtotime($data->start_datetime));
     $edate = date("F d, Y h:i A",strtotime($data->end_datetime));
     $sched_res[$data->id] = $data;
@@ -163,7 +147,30 @@ foreach($data as $data){
 <script>
     var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
+
+
 <script src="public/calendar/js/script.js"></script>
 
-</html>
+<script>
+    // jQuery script to handle selection change
+    $(document).ready(function () {
+        var $select = $('#student_id');
+
+        $select.on('change', function () {
+            var selectedOptions = $(this).val();
+
+            if (selectedOptions) {
+                // Check for duplicate selections
+                var uniqueSelections = Array.from(new Set(selectedOptions));
+
+                // Update the select box with unique selections
+                $select.val(uniqueSelections).trigger('change.select2');
+            }
+        });
+
+        // Initialize select2
+        $select.select2();
+    });
+</script>
+
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>

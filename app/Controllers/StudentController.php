@@ -337,11 +337,27 @@ class StudentController extends BaseController
     {
         $result = session();
         $registerId = $result->get('id');
+
+
+        // echo $registerId ;exit();
         $StudentModel = new StudentModel();
+        $model = new AdminModel();
+
         $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
+        // echo "<pre>";print_r($Sheduledatafromfaculty);exit();
+        $data['slots'] = NULL;
+        if(!empty($Sheduledatafromfaculty)){
         $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
-        $data['Slots'] =  $StudentModel->fetchafacultyslots($assignTeacherId);
-      //  echo "<pre>";print_r($data['Slots']);exit();
+        $wherecond = array(
+                            'faculty_registerid' => $assignTeacherId,
+                            'MONTH(start_datetime)' => date('m'), // Compare with the current month for start_datetime
+                            'MONTH(end_datetime)' => date('m')    // Compare with the current month for end_datetime
+                          );
+
+    
+        $data['slots'] =  $model->getalldata('schedule_list',$wherecond);
+    }
+    //    echo "<pre>";print_r($data['slots']);exit();
         return view('StudentSidebar/StudentSelectClassDates',$data);
     }
     
