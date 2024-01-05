@@ -353,7 +353,9 @@ public function StudentAttendance()
       
       $model = new AdminModel();
       $data['session_id'] = $session_id;
-      $data['schedule_data'] = $model->getalldatawwc('schedule_list');
+      $wherecond = array('faculty_registerid' => $session_id);
+
+      $data['schedule_data'] = $model->getalldata('schedule_list',$wherecond);
       echo view('schedule/index', $data);
     }
 

@@ -782,6 +782,7 @@ class AdminModel extends Model
             ->where('notificationtable.user_type', 'faculty')
             ->where('(notificationtable.register_id = "All" OR notificationtable.register_id = ' . $teacherId . ')')
             ->where('DATE(notificationtable.timestamp) >= CURDATE()')
+
             ->get()
             ->getResultArray();
 
