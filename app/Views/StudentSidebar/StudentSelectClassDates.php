@@ -42,11 +42,25 @@
                                                         <label class="form-check-label">All days</label>
                                                     </div>
                                                 </div>
+
+                                                <div class="col-md-12">
+                                                    <div id="dayOptions" class="form-group mb-2">
+                                                        <!-- This div will be populated dynamically based on the user's selection -->
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Sub Courses</label>
+                                                        <input type="hidden" id="selected_shedules_time" value="<?php if (isset($single_data)) { echo ($single_data->shedules_time); } ?>">
+                                                        <select name="shedules_time" id="shedules_time" class="form-control">
+                                                            <option value="">Please select sub courses</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div id="dayOptions" class="form-group mb-2">
-                                            <!-- This div will be populated dynamically based on the user's selection -->
-                                        </div>
+                                      
                                         
                                         <button class="btn btn-primary btn-sm rounded-0" type="submit"
                                             form="schedule-form"><i class="fa fa-save"></i>View</button>
@@ -187,22 +201,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <script>
      $(document).ready(function () {
-    // Array to store selected days
     var selectedDays = [];
 
     $('input[name="days[]"]').on('change', function () {
-        // Clear the array
         selectedDays = [];
 
-        // Loop through all checkboxes and add selected ones to the array
         $('input[name="days[]"]:checked').each(function () {
             selectedDays.push($(this).val());
         });
 
-        // Log the selected days (you can remove this line in production)
-        // console.log('Selected Days:', selectedDays);
-
-        // Perform your AJAX call or other actions here using the selectedDays array
+      
         $.ajax({
             url: '<?= base_url(); ?>get_shedule_data_for_student',
             type: 'POST',
@@ -211,20 +219,22 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             dataType: 'json',
             success: function (data) {
-                $('#sub_courses_id_g').empty();
-                $('#sub_courses_id_g').append('<option value="">Please select sub Courses</option>');
+                $('#shedules_time').empty();
+                $('#shedules_time').append('<option value="">Please select sub Courses</option>');
                 $.each(data, function (key, value) {
-                    $('#sub_courses_id_g').append('<option value="' + value.id + '">' + value.sub_courses_name + '</option>');
+                    $('#shedules_time').append('<option value="' + value.id + '">' + value.start_datetime + '</option>');
                 });
 
-                // Retrieve the selected state ID from the hidden input field
-                var selectedStateId = $('#selected_sub_courses_id_g').val();
+                var selectedStateId = $('#selected_shedules_time').val();
 
-                // Select the state in the dropdown
-                $('#sub_courses_id_g').val(selectedStateId);
+                $('#shedules_time').val(selectedStateId);
             }
         });
     });
 });
+
+
+
+
 
 </script>

@@ -1120,27 +1120,24 @@ class AdminModel extends Model
     }
 
 
-    
 
-    
     public function getalldataforstudent($table, $wherecond, $selectedDays)
-    {
+{
+    if (!empty($selectedDays)) {
         $result = $this->db->table($table)
-                ->where($wherecond)
-                ->where_in('Daystype', $selectedDays)
-                ->get()->getResult();
-
-        // echo $this->db->getLastQuery();
-        // die;
-        // echo '<pre>';
-        // print_r($result);
-        // die;
-        if ($result) {
-            return $result;
-        } else {
-            return false;
-        }
+            ->where($wherecond)
+            ->whereIn('Daystype', $selectedDays)
+            ->get()
+            ->getResult();
     }
+
+    if ($result) {
+        return $result;
+    } else {
+        return false;
+    }
+}
+
 
 
 
