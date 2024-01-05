@@ -309,47 +309,42 @@ class StudentController extends BaseController
         $model = new AdminModel();
 
         $Country = $this->request->getPost('changeCountry');
-        // echo $Country;
-        // die;
-
-        // Sample country name
-        //  $countryName = $this->request->getPost('changeCountry');
-
-        // Fetch the country code based on the name (this requires database interaction)
-        // For demonstration, we'll assume the code is fetched from the database:
-
-
-        // Pass data to view
-        //  return view('home', ['countryCode' => $countryCode]);
         $result = session();
         $registerId = $result->get('id');
-        // print_r($registerId);
-        // die;
         $StudentModel = new StudentModel();
         $countryList['list'] = $StudentModel->updateCountry($Country, $registerId);
-
-        //     $countryCode = $StudentModel->getCountryCodeFromDatabase($Country);
-        //     $Changecountry =  $StudentModel->changeCountry($registerId, $Country);
         return redirect()->to('StudentProfile');
     }
 
+    // public function StudentSelectClassDates()
+    // {
+    //     if (isset($_SESSION['sessiondata']) && $_SESSION['role'] == 'Student') {
+    //         $result = session();
+    //         $registerId = $result->get('id');
+    //         $StudentModel = new StudentModel();
+    //         $registerData =  $StudentModel->fetchid($registerId);
+    //         $assignTeacherId = $registerData->Assign_Techer_id;
+    //         $data['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId, $registerId);
+    //         $data['registerId'] = $registerId;
+    //         $data['Assign_Techer_id'] = $assignTeacherId;
+    //         // $data['assignFacultyData'] = $assignFacultyData;
+    //         return view('StudentSidebar/StudentSelectClassDates', $data);
+    //     } else {
+    //         return redirect()->to(base_url());
+    //     }
+    // }
     public function StudentSelectClassDates()
     {
-        if (isset($_SESSION['sessiondata']) && $_SESSION['role'] == 'Student') {
-            $result = session();
-            $registerId = $result->get('id');
-            $StudentModel = new StudentModel();
-            $registerData =  $StudentModel->fetchid($registerId);
-            $assignTeacherId = $registerData->Assign_Techer_id;
-            $data['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId, $registerId);
-            $data['registerId'] = $registerId;
-            $data['Assign_Techer_id'] = $assignTeacherId;
-            // $data['assignFacultyData'] = $assignFacultyData;
-            return view('StudentSidebar/StudentSelectClassDates', $data);
-        } else {
-            return redirect()->to(base_url());
-        }
+        $result = session();
+        $registerId = $result->get('id');
+        $StudentModel = new StudentModel();
+        $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
+        $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
+        $data['Slots'] =  $StudentModel->fetchafacultyslots($assignTeacherId);
+      //  echo "<pre>";print_r($data['Slots']);exit();
+        return view('StudentSidebar/StudentSelectClassDates',$data);
     }
+    
     public function selectedslotsfromstudent()
     {
         $registerId = $this->request->getPost('registerId');
