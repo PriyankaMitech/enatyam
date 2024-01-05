@@ -316,14 +316,14 @@
 
                                         <div class="form-group slcsfields col-md-10">
                                             <label for="State">State:</label>
-                                            <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="State" placeholder="Enter Your State" value="" type="text" name="State">
-                                            <span style="color:red;" id="Statespanid"></span> </span>
+                                            <input class="form-control" aria-required="true" aria-invalid="false" id="State" placeholder="Enter Your State" value="" type="text" name="State">
+                                            <span style="color:red;" id="Statespanid"></span>
                                         </div>
 
                                         <div class="form-group slcsfields col-md-10">
                                             <label for="state">District:</label>
                                             <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="District" placeholder="Enter Your District" value="" type="text" name="District">
-                                            <span style="color:red;" id="Districtspanid"></span> </span>
+                                            <span style="color:red;" id="Districtspanid"></span>
                                         </div>
                                         <!-- <div class="form-group slcsfields col-md-10">
                                             <label for="inputState">State:</label>

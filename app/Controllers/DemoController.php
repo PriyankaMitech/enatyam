@@ -33,6 +33,8 @@ class DemoController extends BaseController
         // print_r($data);
         // exit();
         $demoModel->save($data);
+        $session = session();
+        $session->setFlashdata('success', 'Demo booked successfully!');
         return redirect()->to('Home');
     }
 
