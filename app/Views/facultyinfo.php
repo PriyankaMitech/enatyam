@@ -1,18 +1,4 @@
 <?php include('FacultySidebar2.php'); ?>
-<nav class="main-header navbar navbar-expand navbar-light">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url() ?>" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
-        </li>
-    </ul>
-</nav>
-
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -26,7 +12,7 @@
                                     <a class="nav-link active" id="custom-tabs-two-profile-tab" data-toggle="pill" href="#custom-tabs-two-profile" role="tab" aria-controls="custom-tabs-two-profile" aria-selected="true">Upload Video</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages" aria-selected="false">Messages</a>
+                                    <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages" aria-selected="false">Google Meet Link</a>
                                 </li>
                             </ul>
                         </div>
@@ -43,7 +29,8 @@
                                     </form>
                                 </div>
                                 <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel" aria-labelledby="custom-tabs-two-messages-tab">
-                                    <!-- Your Messages content goes here -->
+                                <textarea id="meetLink" placeholder="Paste Google Meet link here"></textarea>
+        <button class="btn btn-primary" onclick="sendMeetLink()">Send</button>
                                 </div>
                             </div>
                         </div>
