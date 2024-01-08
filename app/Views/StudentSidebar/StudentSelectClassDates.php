@@ -203,19 +203,25 @@ document.addEventListener("DOMContentLoaded", function() {
      $(document).ready(function () {
     var selectedDays = [];
 
+
+
     $('input[name="days[]"]').on('change', function () {
         selectedDays = [];
 
+        selectedOptionType = '';
+
         $('input[name="days[]"]:checked').each(function () {
             selectedDays.push($(this).val());
-        });
 
+
+        });
       
         $.ajax({ 
             url: '<?= base_url(); ?>get_shedule_data_for_student',
             type: 'POST',
             data: {
-                selectedDays: selectedDays
+                selectedDays: selectedDays,
+                selectedOptionType : selectedOptionType
             },
             dataType: 'json',
             success: function (data) {

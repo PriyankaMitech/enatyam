@@ -542,6 +542,8 @@ class StudentController extends BaseController
         }
 
         $selectedDays = $this->request->getPost('selectedDays');
+        // $selectedOptionType = $this->request->getPost('selectedOptionType');
+
 
 
       // Get the current year
@@ -555,15 +557,11 @@ class StudentController extends BaseController
 
         // Prepare the WHERE condition for the query
         $wherecond1 = [
-            // 'student_register_id' => NULL,
+            'OptionType' => 'day',
             'faculty_registerid' => $assignTeacherId,
             'start_datetime >= ' => $startDate,
             'start_datetime <= ' => $endDate,
         ];
-
-        // echo "<pre>";print_r($selectedDays);exit();
-      
-            
             $shedule_data = $model->getalldataforstudent('schedule_list',$wherecond1, $selectedDays);
 
 
