@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
       
-        $.ajax({
+        $.ajax({ 
             url: '<?= base_url(); ?>get_shedule_data_for_student',
             type: 'POST',
             data: {

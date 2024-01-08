@@ -568,7 +568,7 @@ class StudentController extends BaseController
 
 
         // Fetch the schedule data for the current month and selected days
-            // echo "<pre>";print_r($shedule_data);exit();
+        // echo "<pre>";print_r($shedule_data);exit();
 
 
         if (!empty($shedule_data)) {
