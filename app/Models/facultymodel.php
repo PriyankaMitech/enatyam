@@ -218,9 +218,9 @@ class facultymodel extends Model
             ->ConductedSessionsCount;
     }
 
-
     public function saveSchedule($data)
     {
+       // print_r($_POST);die;
         $optionType = $data['option_type'];
         $selectedDays = $data['days'];
         $faculty_registerid = $data['session_id'];
@@ -239,6 +239,7 @@ class facultymodel extends Model
                 $current_datetime_end = $currentDate . ' ' . $endTime;
     
                 $this->db->table('schedule_list')->insert([
+                    'OptionType'=> $optionType,
                     'start_datetime' => $current_datetime_start,
                     'end_datetime' => $current_datetime_end,
                     'faculty_registerid' => $faculty_registerid,
