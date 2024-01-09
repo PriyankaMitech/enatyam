@@ -59,6 +59,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                       
                                         <button class="btn btn-primary btn-sm rounded-0" type="submit" form="schedule-form"
         value="<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>_<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>">
     <i class="fa fa-save"></i> Submit
@@ -259,15 +260,15 @@ $(document).ready(function() {
                     var endDatetime = new Date(value.end_datetime);
 
                     var slots = createOneHourSlots(startDatetime, endDatetime);
-
-                    $.each(slots, function(index, slot) {
-                        if (!addedTimeSlots.includes(slot)) {
-                            checkSlot(slot)
-                            $('#shedules_time').append('<option value="' + value
-                                .id + '">' + slot + '</option>');
-                            addedTimeSlots.push(slot); 
-                        }
-                    });
+                    checkSlot(slots)
+                    // $.each(slots, function(index, slot) {
+                    //     if (!addedTimeSlots.includes(slot)) {
+                      
+                    //         $('#shedules_time').append('<option value="' + value
+                    //             .id + '">' + slot + '</option>');
+                    //         addedTimeSlots.push(slot); 
+                    //     }
+                    // });
                 });
 
                 var selectedStateId = $('#selected_shedules_time').val();
@@ -308,29 +309,46 @@ $(document).ready(function() {
 });
 
 function checkSlot(slot) {
-    
-        var teacherId = '<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>';
+    var teacherId = '<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>';
 
-    $.each(slot, function(index, slot) {
+    $.each(slot, function(index, value) {
+        
         $.ajax({
-         url: '<?= base_url(); ?>check_slot_availability',
+            url: '<?= base_url(); ?>check_slot_availability',
             type: 'POST',
             data: {
-                selectedSlot: slot,
+                selectedSlot: value,
                 studentId: '<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>',
-                 teacherId: teacherId
-             },
-             dataType: 'json',
-             success: function(data) {
-               console.log(slot);
-             },
-             error: function(jqXHR, textStatus, errorThrown) {
-                 console.error('AJAX Error:', textStatus, errorThrown);
-             }
-         })
-     })
+                teacherId: teacherId
+            },
+            dataType: 'json',
+            success: function(data) {
+                
+                    console.log(value);
+                if (data.available == 'true') { 
+                    $.each(slots, function(index, slot) {
+                        if (!addedTimeSlots.includes(slot)) {
+                      
+                            $('#shedules_time').append('<option value="' + value
+                                .id + '">' + slot + '</option>');
+                            addedTimeSlots.push(slot); 
+                        }
+                    });
+                  
+                } else {
+                    console.log(data)
+                    $('#shedules_time').append('<option value="1">+ slot + </option>');
+                    addedTimeSlots.push(slot);
+                    // If the slot is not available, you can handle it as needed
+                    console.log('Slot not available:', value);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error('AJAX Error:', textStatus, errorThrown);
+            }
+        });
+    });
 }
-
 resetDropdownAndFetchData();
 });
 </script>
