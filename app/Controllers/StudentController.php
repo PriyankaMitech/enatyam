@@ -603,7 +603,8 @@ class StudentController extends BaseController
     $teacherId = $this->request->getPost('teacherId');
     $studentModel = new StudentModel();
     $availability = $studentModel->checkSlotAvailability($selectedSlot, $studentId, $teacherId);
-//    print_r($availability);die;
+    $result = $availability['records'];
+    // echo '<pre>';print_r($result);die;
     return $this->response->setJSON($availability);
 }
 }

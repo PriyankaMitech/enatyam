@@ -237,20 +237,17 @@ class StudentModel extends Model
 }
 public function checkSlotAvailability($selectedSlot, $studentId, $teacherId)
 {
-
     $result = $this->db->table('student_slots_tbl')
         ->where([
             'selected_time_period' => $selectedSlot,
             'student_register_id' => $studentId,
             'Assign_Techer_id' => $teacherId,
-        ])->countAllResults();  
-    if ($result > 0) {
-    
-        return ['available' => false];
+        ])->get()->getResult();  
+        // echo '<pre>';print_r($result);die;
+    if (!empty($result)) {
+        return ['available' => false, 'records' => $result];
     } else {
-     
         return ['available' => true];
     }
 }
-
 }
