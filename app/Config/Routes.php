@@ -313,6 +313,8 @@ $routes->post('selectedslotsfromstudent', 'StudentController::selectedslotsfroms
 $routes->get('ScheduleStudent', 'StudentController::ScheduleStudent');
 $routes->get('SelectDate', 'StudentController::StudentSelectClassDates');
 $routes->post('fetchSlotsByDates', 'StudentController::StudentSelectClassDates');
+$routes->post('selectslotsbystudent', 'StudentController::selectslotsbystudent');
+$routes->post('check_slot_availability', 'StudentController::check_slot_availability');
 
 $routes->get('feedback', 'StudentController::feedback');
 $routes->post('savefeedback', 'StudentController::savefeedback');
