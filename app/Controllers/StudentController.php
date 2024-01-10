@@ -373,37 +373,37 @@ class StudentController extends BaseController
     // }
     public function StudentSelectClassDates()
     {
-        $result = session();
-        $registerId = $result->get('id');
+    //     $result = session();
+    //     $registerId = $result->get('id');
 
 
-        // echo $registerId ;exit();
-        $StudentModel = new StudentModel();
-        $model = new AdminModel();
+    //     // echo $registerId ;exit();
+    //     $StudentModel = new StudentModel();
+    //     $model = new AdminModel();
 
-        $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
-        // echo "<pre>";print_r($Sheduledatafromfaculty);exit();
-        $data['slots'] = NULL;
+    //     $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
+    //     // echo "<pre>";print_r($Sheduledatafromfaculty);exit();
+    //     $data['slots'] = NULL;
 
-        if(!empty($Sheduledatafromfaculty)){
-        $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
-        $wherecond = array(
-                            'OptionType' => 'day',
-                            'faculty_registerid' => $assignTeacherId,
-                            'MONTH(start_datetime)' => date('m'), // Compare with the current month for start_datetime
-                            'MONTH(end_datetime)' => date('m')    // Compare with the current month for end_datetime
-                          );
+    //     if(!empty($Sheduledatafromfaculty)){
+    //     $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
+    //     $wherecond = array(
+    //                         'days' => 'day',
+    //                         'faculty_registerid' => $assignTeacherId,
+    //                         'MONTH(start_datetime)' => date('m'), // Compare with the current month for start_datetime
+    //                         'MONTH(end_datetime)' => date('m')    // Compare with the current month for end_datetime
+    //                       );
 
-        $groupByCondition = 'Daystype'; // Replace 'Daystype' with the actual column name
+    //     $groupByCondition = 'Daystype'; // Replace 'Daystype' with the actual column name
 
 
     
-        $data['day_wise_shedules'] =  $model->getalldatagroupby('schedule_list',$wherecond, $groupByCondition);
+    //     $data['day_wise_shedules'] =  $model->getalldatagroupby('schedule_list',$wherecond, $groupByCondition);
         
-    }
+    // }
 
     //    echo "<pre>";print_r($data['day_wise_shedules']);exit();
-        return view('StudentSidebar/StudentSelectClassDates',$data);
+        return view('StudentSidebar/StudentSelectClassDates');
 
     }
 

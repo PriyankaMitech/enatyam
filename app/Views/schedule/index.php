@@ -24,26 +24,30 @@
                                         <input type="hidden" name="id" value="<?php echo esc($session_id); ?>">
                                         <input type="hidden" name="session_id" value="<?php echo esc($session_id); ?>">
                                         
-                                        <div  class="form-group mb-2">
-                                        <label class="control-label">Select Day's</label>
+                           
+                                            <?php if(!empty($single)){ ?>
+                                                <div  class="form-group mb-2">
+                                                    <label class="control-label">Select Day's</label>
 
-                                        <?php
-                                        if(!empty($single)){
-                                        $selectedDays = explode(',', $single->days); // Assuming $yourObject contains your data
-                                        $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+                                                        <?php
+                                                    
+                                                        $selectedDays = explode(',', $single->days); // Assuming $yourObject contains your data
+                                                        $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-                                        foreach ($allDays as $day) {
-                                            $isChecked = in_array($day, $selectedDays) ? 'checked' : '';
-                                            $isdisabled = in_array($day, $selectedDays) ? 'disabled' : '';
-                                        ?>
-                                             <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isChecked ?> <?=$isdisabled; ?>>
-                                                <label class="form-check-label"><?= $day ?></label>
-                                            </div>
+                                                        foreach ($allDays as $day) {
+                                                            $isChecked = in_array($day, $selectedDays) ? 'checked' : '';
+                                                            $isdisabled = in_array($day, $selectedDays) ? 'disabled' : '';
+                                                        ?>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isChecked ?> <?=$isdisabled; ?>>
+                                                                <label class="form-check-label"><?= $day ?></label>
+                                                            </div>
 
-                                            <?php }} ?>
-                                            <?php if(empty($single)){ ?>
-                                        <div class="form-group mb-2">
+                                                        <?php }?>
+                                                    </div>
+
+                                                
+                                        <!-- <div class="form-group mb-2">
                                             <label for="start_date" class="control-label">Start Date</label>
                                             <input type="date" class="start_date form-control form-control-sm rounded-0"  id="start_date"  disabled>
                                             <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date" value="<?=$single->start_date;?>" >
@@ -54,17 +58,61 @@
                                             <input type="date" class="end_date form-control form-control-sm rounded-0"  id="end_date"  disabled>
                                             <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date"  value="<?=$single->end_date;?>" >
 
+                                        </div> -->
+
+
+                                     
+                                        <!-- <div class="form-group mb-2">
+                                            <label for="start_time" class="control-label">Start Time</label>
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="start_time" id="start_time"  >
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <label for="end_time" class="control-label">End Time</label>
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="end_time" id="end_time" >
+                                        </div> -->
+                                        <?php }else{ ?>
+
+                                            <div  class="form-group mb-2">
+                                                    <label class="control-label">Select Day's</label>
+
+                                                        <?php
+                                                    
+                                                            $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                                                            foreach ($allDays as $day) {
+                                                           
+                                                        ?>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" >
+                                                                <label class="form-check-label"><?= $day ?></label>
+                                                            </div>
+
+                                                        <?php }?>
+                                            </div>
+
+
+                                        <div class="form-group mb-2">
+                                            <label for="start_date" class="control-label">Start Date</label>
+                                            <input type="date" class="start_date form-control form-control-sm rounded-0"  id="start_date"  disabled>
+                                            <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date"  >
+
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <label for="end_date" class="control-label">End Date</label>
+                                            <input type="date" class="end_date form-control form-control-sm rounded-0"  id="end_date"  disabled>
+                                            <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date"  >
+
                                         </div>
 
 
                                      
                                         <div class="form-group mb-2">
                                             <label for="start_time" class="control-label">Start Time</label>
-                                            <input type="time" class="form-control form-control-sm rounded-0" name="start_time" id="start_time"  value="<?=$single->start_time;?>">
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="start_time" id="start_time"  >
                                         </div>
                                         <div class="form-group mb-2">
                                             <label for="end_time" class="control-label">End Time</label>
-                                            <input type="time" class="form-control form-control-sm rounded-0" name="end_time" id="end_time"  value="<?=$single->end_time;?>">
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="end_time" id="end_time" >
                                         </div>
                                         <?php } ?>
                                         <button class="btn btn-primary btn-sm rounded-0" type="submit"
