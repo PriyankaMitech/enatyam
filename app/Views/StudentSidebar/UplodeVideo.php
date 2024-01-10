@@ -1,15 +1,24 @@
 <?php echo view('StudentSidebar/Studentsidebar'); ?>
 
 <?php
+
 $session = session();
 if (empty($session->sessiondata['Assign_Techer_id'])) {
   // Display an error message
-  $session->setFlashdata('errormessage', 'You cannot upload a video because you do not have a faculty assigned.');
+  $session->setFlashdata('errormessage', 'You cannot upload a video because you do not have a faculty assigned.'); ?>
 
-  // Redirect or display a message and stop rendering the view
-  echo '<div class="alert alert-danger uploadVideoError">You cannot upload a video because you do not have a faculty assigned.</div>';
-  exit; // Stop rendering the view
-}
+  <!-- Redirect or display a message and stop rendering the view -->
+  <div class="content-wrapper">
+    <?php echo '<div class="alert alert-danger uploadVideoError">You cannot upload a video because you do not have a faculty assigned.</div>'; ?>
+  </div>
+<?php echo view('StudentSidebar/StudentFooter.php');
+  exit;
+} // Stop rendering the view  
+?>
+
+
+
+
 ?>
 
 
