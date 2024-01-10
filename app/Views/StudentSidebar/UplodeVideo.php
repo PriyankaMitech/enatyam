@@ -1,5 +1,18 @@
 <?php echo view('StudentSidebar/Studentsidebar'); ?>
 
+<?php
+$session = session();
+if (empty($session->sessiondata['Assign_Techer_id'])) {
+  // Display an error message
+  $session->setFlashdata('errormessage', 'You cannot upload a video because you do not have a faculty assigned.');
+
+  // Redirect or display a message and stop rendering the view
+  echo '<div class="alert alert-danger uploadVideoError">You cannot upload a video because you do not have a faculty assigned.</div>';
+  exit; // Stop rendering the view
+}
+?>
+
+
 <div class="content-wrapper">
 
   <section class="content-header">
@@ -17,6 +30,12 @@
       </div>
     </div><!-- /.container-fluid -->
   </section>
+  <?php
+  $session = session();
+  if (empty($session->sessiondata['Assign_Techer_id'])) {
+
+    $session->setFlashdata('errormessage', 'You cannot upload a video because you do not have a faculty assigned.');
+  } ?>
   <section class="content">
     <div class="container-fluid">
 
@@ -64,7 +83,9 @@
         </div>
       </div>
     </div>
-</section>
+  </section>
 
 </div>
+
+
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>
