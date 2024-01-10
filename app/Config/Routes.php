@@ -280,7 +280,7 @@ $routes->post('save_schedule_data', 'FacultyController::save_schedule_data');
 $routes->post('checkData', 'FacultyController::checkData');
 $routes->get('giveschedule', 'FacultyController::giveschedule');
 $routes->post('giveschedule', 'FacultyController::giveschedule');
-
+$routes->post('sendmeetinglink', 'FacultyController::sendmeetinglink');
 $routes->get('save_schedule', 'FacultyController::save_schedule');
 $routes->post('save_schedule', 'FacultyController::save_schedule');
 
