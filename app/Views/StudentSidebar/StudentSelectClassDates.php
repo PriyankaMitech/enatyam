@@ -59,7 +59,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
                                         <button class="btn btn-primary btn-sm rounded-0" type="submit" form="schedule-form"
                                                 value="<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>_<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>">
                                             <i class="fa fa-save"></i> Submit
@@ -274,8 +273,9 @@ $(document).ready(function() {
                     var endDatetime = new Date(value.end_datetime);
 
                     var slots = createOneHourSlots(startDatetime, endDatetime);
-                    // console.log(slots);
-                    // checkSlot(slots)
+
+            checkSlot(slots)
+
                     $.each(slots, function(index, slot) {
                         if (!addedTimeSlots.includes(slot)) {
                       
@@ -324,16 +324,17 @@ $(document).ready(function() {
 });
 
 function checkSlot(slot) {
-    var teacherId = '<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>';
+    
+        var teacherId = '<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>';
 
-    $.each(slot, function(index, value) {
-        
+    $.each(slot, function(index, slot) {
         $.ajax({
-            url: '<?= base_url(); ?>check_slot_availability',
+         url: '<?= base_url(); ?>check_slot_availability',
             type: 'POST',
             data: {
-                selectedSlot: value,
+                selectedSlot: slot,
                 studentId: '<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>',
+
                 teacherId: teacherId
             },
             dataType: 'json',
@@ -363,7 +364,9 @@ function checkSlot(slot) {
             }
         });
     });
+
 }
+
 resetDropdownAndFetchData();
 });
 </script>
