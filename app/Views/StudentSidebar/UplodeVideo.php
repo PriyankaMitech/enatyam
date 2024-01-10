@@ -16,12 +16,6 @@ if (empty($session->sessiondata['Assign_Techer_id'])) {
 } // Stop rendering the view  
 ?>
 
-
-
-
-?>
-
-
 <div class="content-wrapper">
 
   <section class="content-header">
