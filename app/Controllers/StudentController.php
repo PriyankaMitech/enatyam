@@ -18,7 +18,7 @@ require_once 'src/PHPMailer.php';
 require_once 'src/SMTP.php';
 class StudentController extends BaseController
 {
-    
+
     public function StudentVideouplode()
     {
         return view('StuUplodeVideo');
@@ -68,50 +68,54 @@ class StudentController extends BaseController
     }
     public function uploadMedia()
     {
-        $result = session();
-        $registerId = $result->get('id');
+        $session = session();
+        $registerId = $session->get('id');
         $StudentModel = new StudentModel();
         $registerData = $StudentModel->getAllRegisterData($registerId, ['full_name', 'Assign_Techer_id']);
-    
+
         $assignTeacherId = $registerData[0]->Assign_Techer_id;
+        // echo "Teacher name ";
+        // print_r($assignTeacherId);
+        // die;
         $full_name = $registerData[0]->full_name;
-    
+
         if ($assignTeacherId === null) {
+
             // Display an error message
-            $result->setFlashdata('error', 'You cannot upload a video because you do not have a faculty assigned.');
-    
-            // Redirect to the dashboard with the error message
-            return redirect()->to('StudentDashboard');
+            $this->session->setFlashdata('errormessage', 'You cannot upload a video because you do not have a faculty assigned.');
+
+            // Redirect with the error message
+            return redirect()->to('UplodeVideo');
         }
-    
+
         // Get uploaded files
         $image = $this->request->getFile('imageFile');
         $video = $this->request->getFile('videoFile');
-    
+
         // Check if an image was uploaded
         if ($image && $image->isValid() && !$image->hasMoved()) {
             $imageName = $image->getName();
             $image->move(ROOTPATH . 'public/uploads/images', $imageName);
-    
+
             // Save image name, Assign_Teacher_id, and registerId to the database
             $StudentModel->insert(['name' => $imageName, 'type' => 'image', 'Faculty_id' => $assignTeacherId, 'register_id' => $registerId, 'Student_name' => $full_name]);
-    
+
             // Set success message in session
-            $result->setFlashdata('success', 'Image uploaded successfully.');
+            $session->setFlashdata('success', 'Image uploaded successfully.');
         }
-    
+
         // Check if a video was uploaded
         if ($video && $video->isValid() && !$video->hasMoved()) {
             $videoName = $video->getName();
             $video->move(ROOTPATH . 'public/uploads/StudentStudyvideos', $videoName);
-    
+
             // Save video name, Assign_Teacher_id, and registerId to the database
             $StudentModel->insert(['name' => $videoName, 'type' => 'video', 'Faculty_id' => $assignTeacherId, 'register_id' => $registerId, 'Student_name' => $full_name]);
-    
+
             // Set success message in session
-            $result->setFlashdata('success', 'Video uploaded successfully.');
+            $session->setFlashdata('success', 'Video uploaded successfully.');
         }
-    
+
         return redirect()->to('UplodeVideo');
     }
 
@@ -214,7 +218,7 @@ class StudentController extends BaseController
         $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
         $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
         //  print_r($data['SessionCount']);die;
-        return view('StudentSidebar/ScheduleStudent',$data);
+        return view('StudentSidebar/ScheduleStudent', $data);
     }
 
     public function selectStudentSchedule()
@@ -248,7 +252,7 @@ class StudentController extends BaseController
         $StudentModel = new StudentModel();
         $model = new AdminModel();
 
-// echo  $registerId;
+        // echo  $registerId;
 
 
         $select1 = 'register.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name, countries.code,';
@@ -259,13 +263,13 @@ class StudentController extends BaseController
 
 
         $wherecond = [
-            'register.id ' =>$registerId,
+            'register.id ' => $registerId,
         ];
 
 
 
 
-        $data['profileData'] = $model->joinfourtablessingle($select1, 'register ', 'tbl_courses ', 'tbl_sub_courses', 'countries',  $joinCond5, $joinCond6, $joinCond , $wherecond);
+        $data['profileData'] = $model->joinfourtablessingle($select1, 'register ', 'tbl_courses ', 'tbl_sub_courses', 'countries',  $joinCond5, $joinCond6, $joinCond, $wherecond);
 
 
         // echo "<pre>";print_r($data['profileData']);exit();
@@ -347,6 +351,7 @@ class StudentController extends BaseController
         $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
         // echo "<pre>";print_r($Sheduledatafromfaculty);exit();
         $data['slots'] = NULL;
+
         if(!empty($Sheduledatafromfaculty)){
         $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
         $wherecond = array(
@@ -361,8 +366,9 @@ class StudentController extends BaseController
     }
     //    echo "<pre>";print_r($data['day_wise_shedules']);exit();
         return view('StudentSidebar/StudentSelectClassDates',$data);
+
     }
-    
+
     public function selectedslotsfromstudent()
     {
         $registerId = $this->request->getPost('registerId');
@@ -522,11 +528,11 @@ class StudentController extends BaseController
         }
 
         return redirect()->to('sub_courses_list');
-
     }
 
     public function get_shedule_data_for_student()
     {
+
         $result = session();
         $registerId = $result->get('id');
     
@@ -541,9 +547,11 @@ class StudentController extends BaseController
         }
     
         $selectedDays = $this->request->getPost('selectedDays');
+
         $selectedOptionType = $this->request->getPost('selectedOptionType');
     
         // Get the current year and month
+
         $currentYear = date('Y');
         $currentMonth = date('m');
     
@@ -557,6 +565,7 @@ class StudentController extends BaseController
             'start_datetime >= ' => $startDate,
             'start_datetime <= ' => $endDate,
         ];
+
         // print_r($selectedDays);exit();
        
         // Add condition for 'OptionType' based on the selected radio button
@@ -569,6 +578,7 @@ class StudentController extends BaseController
     
         $shedule_data = $model->getalldataforstudent('schedule_list', $wherecond, $selectedDays);
     
+
         if (!empty($shedule_data)) {
             return json_encode($shedule_data);
         } else {

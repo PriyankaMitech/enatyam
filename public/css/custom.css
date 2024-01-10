@@ -66,3 +66,8 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+.uploadVideoError {
+    margin-left: 280px;
+    margin-right: 25px;
+}
