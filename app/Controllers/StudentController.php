@@ -356,9 +356,14 @@ class StudentController extends BaseController
                             'MONTH(end_datetime)' => date('m')    // Compare with the current month for end_datetime
                           );
 
+        $groupByCondition = 'Daystype'; // Replace 'Daystype' with the actual column name
+
+
     
-        $data['day_wise_shedules'] =  $model->getalldata('schedule_list',$wherecond);
+        $data['day_wise_shedules'] =  $model->getalldatagroupby('schedule_list',$wherecond, $groupByCondition);
+        
     }
+
     //    echo "<pre>";print_r($data['day_wise_shedules']);exit();
         return view('StudentSidebar/StudentSelectClassDates',$data);
     }
@@ -565,9 +570,14 @@ class StudentController extends BaseController
         } elseif ($selectedOptionType == 'allDay') {
             $wherecond['OptionType'] = 'allDay';
         }
+
+
  
     
         $shedule_data = $model->getalldataforstudent('schedule_list', $wherecond, $selectedDays);
+
+
+        // echo "<pre>";print_r($shedule_data);exit();
     
         if (!empty($shedule_data)) {
             return json_encode($shedule_data);
@@ -603,8 +613,8 @@ class StudentController extends BaseController
     $teacherId = $this->request->getPost('teacherId');
     $studentModel = new StudentModel();
     $availability = $studentModel->checkSlotAvailability($selectedSlot, $studentId, $teacherId);
-    $result = $availability['records'];
-    // echo '<pre>';print_r($result);die;
+    // $result = $availability['records'];
+    echo '<pre>';print_r($result);die;
     return $this->response->setJSON($availability);
 }
 }

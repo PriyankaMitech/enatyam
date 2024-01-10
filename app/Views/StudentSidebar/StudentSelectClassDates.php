@@ -61,9 +61,9 @@
                                         </div>
                                        
                                         <button class="btn btn-primary btn-sm rounded-0" type="submit" form="schedule-form"
-        value="<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>_<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>">
-    <i class="fa fa-save"></i> Submit
-</button>
+                                                value="<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>_<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>">
+                                            <i class="fa fa-save"></i> Submit
+                                        </button>
                                         <button class="btn btn-default border btn-sm rounded-0" type="reset"
                                             form="schedule-form"><i class="fa fa-reset"></i> Cancel</button>
                                     </form>
@@ -196,7 +196,7 @@ $(document).ready(function() {
             selectedDays.push($(this).val());
         });
 
-        fetchData(selectedDays, selectedOptionType);
+        resetDropdownAndFetchData();
     });
 
     $('input[name="option_type"]').on('change', function() {
@@ -208,6 +208,20 @@ $(document).ready(function() {
             resetDropdownAndFetchData();
         } else {
             $('#shedules_time').empty();
+
+            $('input[name="days[]"]').on('change', function() {
+        // alert('hiii');
+        selectedDays = [];
+        selectedOptionType = $('input[name="option_type"]:checked').val();
+
+        $('input[name="days[]"]:checked').each(function() {
+            selectedDays.push($(this).val());
+        });
+        resetDropdownAndFetchData();
+
+
+        // fetchData(selectedDays, selectedOptionType);
+    });
         }
     });
 
@@ -242,9 +256,9 @@ $(document).ready(function() {
     }
 
     function fetchData(selectedDays, selectedOptionType) {
-        if (selectedOptionType == 'allDay') {
-            selectedDays = '';
-        }
+        // if (selectedOptionType == 'allDay') {
+        //     selectedDays = '';
+        // }
 
         $.ajax({
             url: '<?= base_url(); ?>get_shedule_data_for_student',
@@ -260,15 +274,16 @@ $(document).ready(function() {
                     var endDatetime = new Date(value.end_datetime);
 
                     var slots = createOneHourSlots(startDatetime, endDatetime);
-                    checkSlot(slots)
-                    // $.each(slots, function(index, slot) {
-                    //     if (!addedTimeSlots.includes(slot)) {
+                    // console.log(slots);
+                    // checkSlot(slots)
+                    $.each(slots, function(index, slot) {
+                        if (!addedTimeSlots.includes(slot)) {
                       
-                    //         $('#shedules_time').append('<option value="' + value
-                    //             .id + '">' + slot + '</option>');
-                    //         addedTimeSlots.push(slot); 
-                    //     }
-                    // });
+                            $('#shedules_time').append('<option value="' + value
+                                .id + '">' + slot + '</option>');
+                            addedTimeSlots.push(slot); 
+                        }
+                    });
                 });
 
                 var selectedStateId = $('#selected_shedules_time').val();
@@ -324,7 +339,7 @@ function checkSlot(slot) {
             dataType: 'json',
             success: function(data) {
                 
-                    console.log(value);
+                    // console.log(value);
                 if (data.available == 'true') { 
                     $.each(slots, function(index, slot) {
                         if (!addedTimeSlots.includes(slot)) {
@@ -336,11 +351,11 @@ function checkSlot(slot) {
                     });
                   
                 } else {
-                    console.log(data)
+                    // console.log(data)
                     $('#shedules_time').append('<option value="1">+ slot + </option>');
                     addedTimeSlots.push(slot);
                     // If the slot is not available, you can handle it as needed
-                    console.log('Slot not available:', value);
+                    // console.log('Slot not available:', value);
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {

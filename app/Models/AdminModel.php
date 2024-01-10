@@ -595,12 +595,21 @@ class AdminModel extends Model
     public function getalldata($table, $wherecond)
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
+      
 
-        // echo $this->db->getLastQuery();
-        // die;
-        // echo '<pre>';
-        // print_r($result);
-        // die;
+        if ($result) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
+
+    public function getalldatagroupby($table, $wherecond, $groupByCondition)
+    {
+        $result = $this->db->table($table)->groupBy($groupByCondition)->where($wherecond)->get()->getResult();
+
+
         if ($result) {
             return $result;
         } else {
@@ -1123,20 +1132,59 @@ class AdminModel extends Model
 
     public function getalldataforstudent($table, $wherecond, $selectedDays)
     {
-        // echo "<pre>";print_r($selectedDays);exit();
         $query = $this->db->table($table)
             ->where($wherecond);
+        
+         
     
         if (!empty($selectedDays)) {
             $query->whereIn('Daystype', $selectedDays);
+          
         }
     
         $result = $query->get()->getResult();
-        // print_r($selectedDays);
-        // echo "<pre>";print_r($result);exit();
- //   echo $this->db->getLastQuery();die;
+        // echo'<pre>'; print_r($this->db->getLastQuery());die;
+   
         return $result;
     }
+
+    // public function getalldataforstudent($table, $wherecond, $selectedDays)
+    // {
+    //     $query = $this->db->table($table)
+    //         ->select('MIN(start_datetime) as min_start, MAX(end_datetime) as max_end')
+    //         ->where($wherecond);
+    
+    //     if (!empty($selectedDays)) {
+    //         $query->whereIn('Daystype', $selectedDays);
+    //     }
+    
+    //     $result = $query->get()->getRow();
+    
+    //     if ($result) {
+    //         $commonTiming = [
+    //             'start_datetime' => $result->min_start,
+    //             'end_datetime' => $result->max_end,
+    //         ];
+    
+    //         // Retrieve records with the common timing
+    //         $query = $this->db->table($table)
+    //             ->where($wherecond)
+    //             ->whereIn('Daystype', $selectedDays)
+    //             ->where('start_datetime', $commonTiming['start_datetime'])
+    //             ->where('end_datetime', $commonTiming['end_datetime']);
+    
+    //         $result = $query->get()->getResult();
+    
+    //         return $result;
+    //     }
+    
+    //     return [];
+    // }
+    
+   
+ 
+
+    
 }
 
 
