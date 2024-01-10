@@ -211,4 +211,43 @@ class StudentModel extends Model
 
         return $query;
     }
+    public function insertStudentSlot($data)
+    {
+      //  print_r($data);die;
+      if ($data['option_type'] == 'day') {
+        $days = implode(',', $data['days']);
+
+        $insertData = [
+            'option_type' => $data['option_type'],
+            'days' => $days,
+            'selected_time_period' => $data['selected_time_period'],
+            'student_register_id' => $data['student_register_id'],
+            'Assign_Techer_id' => $data['Assign_Techer_id'],
+        ];
+    } else {
+        $insertData = [
+            'option_type' => $data['option_type'],
+            'selected_time_period' => $data['selected_time_period'],
+            'student_register_id' => $data['student_register_id'],
+            'Assign_Techer_id' => $data['Assign_Techer_id'],
+        ];
+    }
+
+    $this->db->table('student_slots_tbl')->insert($insertData);
+}
+public function checkSlotAvailability($selectedSlot, $studentId, $teacherId)
+{
+    $result = $this->db->table('student_slots_tbl')
+        ->where([
+            'selected_time_period' => $selectedSlot,
+            'student_register_id' => $studentId,
+            'Assign_Techer_id' => $teacherId,
+        ])->get()->getResult();  
+        // echo '<pre>';print_r($result);die;
+    if (!empty($result)) {
+        return ['available' => false, 'records' => $result];
+    } else {
+        return ['available' => true];
+    }
+}
 }
