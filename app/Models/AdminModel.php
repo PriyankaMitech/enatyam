@@ -204,7 +204,7 @@ class AdminModel extends Model
     }
     public function edit($data)
     {
-     //   print_r($data);die;
+        //   print_r($data);die;
         $result = $this->table('free_demo_table')
             ->where(["D_id" => $data['studentid']])
             ->set('AssignTecher_id', $data['faculty_id'])
@@ -595,7 +595,7 @@ class AdminModel extends Model
     public function getalldata($table, $wherecond)
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
-      
+
 
         if ($result) {
             return $result;
@@ -678,7 +678,7 @@ class AdminModel extends Model
     {
         // $chat = $this->db->query("SELECT * FROM " . $tablechat . " WHERE (sender_id = " . $sender . " AND receiver_id = " . $receiver . ") OR (sender_id = " . $receiver . " AND receiver_id = " . $sender . ") ORDER BY msg_id");
 
-        
+
         $chat = $this->db->query("
         SELECT c.*, r1.full_name AS sender_name, r2.full_name AS receiver_name
         FROM " . $tablechat . " AS c
@@ -689,7 +689,7 @@ class AdminModel extends Model
     ORDER BY c.msg_id
 ");
 
-// echo "<pre>";print_r($chat);exit();
+        // echo "<pre>";print_r($chat);exit();
 
         $user = $this->db->query("SELECT id, full_name, role FROM register WHERE id = " . $receiver . " ");
         // echo '<pre>';print_r($this->getLastQuery());die;
@@ -956,18 +956,46 @@ class AdminModel extends Model
         return $grouplist;
     }
 
+
+
     public function getRecordsBefore7Days()
     {
         $sevenDaysAgo = date('Y-m-d', strtotime('-7 days'));
 
-        $query = $this->db->table('carrier')
-            ->where("DATE(Booking_Date_Time) >= ", $sevenDaysAgo)
-            ->where("DATE(Booking_Date_Time) <= ", date('Y-m-d'))
-            ->where('Result_of_application', 'Pending') // Add this line
+        // Query for new faculty registrations through carrier
+        $queryCarrier = $this->db->table('carrier')
+            ->select('carrier.*, carrier.name as nname')
+            ->where('DATE(Booking_Date_Time) >=', $sevenDaysAgo)
+            ->where('DATE(Booking_Date_Time) <=', date('Y-m-d'))
+            ->where('Result_of_application', 'Pending')
             ->get();
-        //    echo $this->db->getLastQuery();die;
-        return $query->getResult();
+
+        // Query for new student registrations through register
+        $queryRegister = $this->db->table('register')
+            ->select('register.*, register.full_name as nname')
+            ->where('DATE(created_on) >=', $sevenDaysAgo)
+            ->where('DATE(created_on) <=', date('Y-m-d'))
+            ->where('Payment_status', 'Y')
+            ->get();
+        // echo $this->db->getLastQuery();
+        // die;
+
+        // Combine the results from both queries
+        $resultCarrier = $queryCarrier->getResult();
+        $resultRegister = $queryRegister->getResult();
+
+        // Notify the admin about both scenarios
+        // You can implement your notification logic here, for example, sending an email or triggering a notification system.
+        $adminNotification = "New faculty registered through carrier: " . count($resultCarrier) . " records.\n";
+        $adminNotification .= "New student registered through register: " . count($resultRegister) . " records.";
+
+        // Example: Send notification email
+        // mail('admin@example.com', 'Notification', $adminNotification);
+
+        // Return combined results or handle them as needed
+        return array_merge($resultCarrier, $resultRegister);
     }
+
     public function chechk_courses_id_id($courses_id, $sub_courses_name)
     {
         $result = $this->db->table('tbl_sub_courses')
@@ -1034,26 +1062,26 @@ class AdminModel extends Model
     public function jointhreetables($select, $table1, $table2, $table3, $joinCond, $joinCond2, $wherecond, $type)
     {
         $result = $this->db->table($table1)  // Use $table1 variable here
-            ->select($select) 
+            ->select($select)
             ->join($table2, $joinCond, $type)
             ->join($table3, $joinCond2, $type)
             ->where($wherecond)
             ->get()
-            ->getResult();        
+            ->getResult();
         //    echo $this->db->getLastQuery();die;
         return $result;
     }
 
-    
+
 
     public function jointhreetableswwc($select, $table1, $table2, $table3, $joinCond, $joinCond2, $type)
     {
         $result = $this->db->table($table1)  // Use $table1 variable here
-            ->select($select) 
+            ->select($select)
             ->join($table2, $joinCond, $type)
             ->join($table3, $joinCond2, $type)
             ->get()
-            ->getResult();        
+            ->getResult();
         //    echo $this->db->getLastQuery();die;
         return $result;
     }
@@ -1062,56 +1090,56 @@ class AdminModel extends Model
     public function joinfourtables($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $wherecond, $type)
     {
         $result = $this->db->table($table1)  // Use $table1 variable here
-            ->select($select) 
+            ->select($select)
             ->join($table2, $joinCond, $type)
             ->join($table3, $joinCond2, $type)
             ->join($table4, $joinCond3, $type)
             ->where($wherecond)
             ->get()
-            ->getResult();        
+            ->getResult();
         //    echo $this->db->getLastQuery();die;
         return $result;
     }
-    
+
 
     public function joinfourtableswwc($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $type)
     {
         $result = $this->db->table($table1)  // Use $table1 variable here
-            ->select($select) 
+            ->select($select)
             ->join($table2, $joinCond, $type)
             ->join($table3, $joinCond2, $type)
             ->join($table4, $joinCond3, $type)
             ->get()
-            ->getResult();        
-         return $result;
+            ->getResult();
+        return $result;
     }
 
 
     public function joinfourtablessingle($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $wherecond)
     {
         $result = $this->db->table($table1)  // Use $table1 variable here
-            ->select($select) 
+            ->select($select)
             ->join($table2, $joinCond)
             ->join($table3, $joinCond2)
             ->join($table4, $joinCond3)
             ->where($wherecond)
             ->get()
-            ->getRow();   
-           return $result;
+            ->getRow();
+        return $result;
     }
 
 
     public function joinfivetables($select, $table1, $table2, $table3, $table4, $table5, $joinCond, $joinCond1, $joinCond2, $joinCond3, $wherecond, $type)
     {
         $result = $this->db->table($table1)
-        ->select($select)
-        ->join($table2, $joinCond, $type)
-        ->join($table3, $joinCond1, $type)
-        ->join($table4, $joinCond2, $type)
-        ->join($table5, $joinCond3, $type)
-        ->where($wherecond)
-        ->get()
-        ->getResult();
+            ->select($select)
+            ->join($table2, $joinCond, $type)
+            ->join($table3, $joinCond1, $type)
+            ->join($table4, $joinCond2, $type)
+            ->join($table5, $joinCond3, $type)
+            ->where($wherecond)
+            ->get()
+            ->getResult();
         return $result;
     }
 
@@ -1120,7 +1148,7 @@ class AdminModel extends Model
     {
         $result = $this->db->table($table)->get()->getResult();
 
-  
+
         if ($result) {
             return $result;
         } else {
@@ -1134,52 +1162,21 @@ class AdminModel extends Model
     {
         $query = $this->db->table($table)
             ->where($wherecond);
-        
-         
-    
+
+
+
         if (!empty($selectedDays)) {
             $query->whereIn('Daystype', $selectedDays);
-          
         }
-    
+
         $result = $query->get()->getRow();
         // echo'<pre>'; print_r($this->db->getLastQuery());die;
-   
+
         return $result;
     }
 
-    // public function getalldataforstudent($table, $wherecond, $selectedDays)
-    // {
-    //     $query = $this->db->table($table)
-    //         ->select('MIN(start_datetime) as min_start, MAX(end_datetime) as max_end')
-    //         ->where($wherecond);
-    
-    //     if (!empty($selectedDays)) {
-    //         $query->whereIn('Daystype', $selectedDays);
-    //     }
-    
-    //     $result = $query->get()->getRow();
-    
-    //     if ($result) {
-    //         $commonTiming = [
-    //             'start_datetime' => $result->min_start,
-    //             'end_datetime' => $result->max_end,
-    //         ];
-    
-    //         // Retrieve records with the common timing
-    //         $query = $this->db->table($table)
-    //             ->where($wherecond)
-    //             ->whereIn('Daystype', $selectedDays)
-    //             ->where('start_datetime', $commonTiming['start_datetime'])
-    //             ->where('end_datetime', $commonTiming['end_datetime']);
-    
-    //         $result = $query->get()->getResult();
-    
-    //         return $result;
-    //     }
-    
-    //     return [];
-    // }
+
+   
     
    
  
@@ -1189,5 +1186,8 @@ class AdminModel extends Model
     }
     
 }
+
+
+
 
 

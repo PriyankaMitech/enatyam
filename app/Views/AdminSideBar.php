@@ -21,52 +21,31 @@
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/jqvmap/jqvmap.min.css">
 
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
 
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
 
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/daterangepicker/daterangepicker.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/summernote/summernote-bs4.min.css">
-<link rel="stylesheet" href="<?= base_url() ?>public/css/fontawesome-stars.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>public/css/fontawesome-stars.css">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="<?= base_url(); ?>public/css/admindashboard_style.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/fullcalendar/main.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/jquery.dataTables.css">
-<link href="<?php echo base_url() ?>public/css/custom.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/select2/css/select2.min.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/bs-stepper/css/bs-stepper.min.css">
-<link rel="stylesheet" href="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/admindashboard_style.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/fullcalendar/main.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/css/jquery.dataTables.css">
+    <link href="<?php echo base_url() ?>public/css/custom.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/bs-stepper/css/bs-stepper.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.css">
 
-<link rel="stylesheet" href="<?= base_url(); ?>dist/css/adminlte.min.css">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <link rel="stylesheet" href="<?= base_url(); ?>dist/css/adminlte.min.css">
 
 
     <style>
@@ -117,13 +96,22 @@
                         <div class="dropdown-divider"></div>
 
                         <?php foreach ($data as $notification) : ?>
-                            <a href="<?= base_url('NewFacultyApplication') ?>" class="dropdown-item">
-                                <i class="fas fa-users  mr-2"></i><?= $notification->name ?>
-                            </a>
+                            <?php if (isset($notification->D_id)) : ?>
+                                <a href="<?= base_url() ?>NewFacultyApplication" class="dropdown-item">
+                                    <i class="fas fa-users  mr-2"></i><?= $notification->nname ?>
+                                </a>
+                            <?php elseif (isset($notification->id)) : ?>
+                                <a href="<?= base_url(); ?>studentProfiledata" class="dropdown-item">
+                                    <i class="fas fa-users  mr-2"></i><?= $notification->nname ?>
+                                </a>
+                            <?php endif ?>
                             <div class="dropdown-divider"></div>
                         <?php endforeach; ?>
 
                     </div>
+
+
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -147,11 +135,11 @@
                             <!-- Sidebar user (optional) -->
                             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                                 <div class="image">
-                                <img src="<?= base_url('public/AdmoinLogo.png'); ?>" class="img-circle elevation-2" alt="User Image">
+                                    <img src="<?= base_url('public/AdmoinLogo.png'); ?>" class="img-circle elevation-2" alt="User Image">
                                 </div>
                                 <div class="info">
                                     <a href="<?php echo base_url() ?>Admindashboard" class="d-block">
-                                        <?php echo ($_SESSION['sessiondata']['user_name']); ?>  </a>
+                                        <?php echo ($_SESSION['sessiondata']['user_name']); ?> </a>
                                 </div>
                             </div>
 
@@ -616,10 +604,10 @@
                                         </a>
                                         <ul class="nav nav-treeview">
                                             <!-- <li class="nav-item" <?php if (in_array('faculty_pamentrecords', $access_levels)) {
-                                                                        echo "style='display:block'";
-                                                                    } else {
-                                                                        echo "style='display:none'";
-                                                                    } ?>>
+                                                                            echo "style='display:block'";
+                                                                        } else {
+                                                                            echo "style='display:none'";
+                                                                        } ?>>
                                                 <a href="<?php echo base_url() ?>faculty_pamentrecords" class="nav-link">
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Faculty Payment Records</p>
@@ -672,10 +660,10 @@
                                                 </a>
                                             </li>
                                             <!-- <li class="nav-item" <?php if (in_array('Email', $access_levels)) {
-                                                                        echo "style='display:block'";
-                                                                    } else {
-                                                                        echo "style='display:none'";
-                                                                    } ?>>
+                                                                            echo "style='display:block'";
+                                                                        } else {
+                                                                            echo "style='display:none'";
+                                                                        } ?>>
                                                 <a href="email" class="nav-link">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Email</p>
