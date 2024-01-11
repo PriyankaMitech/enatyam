@@ -1176,8 +1176,18 @@ class AdminModel extends Model
     }
 
 
-
-
-
-
+   
+    
+   
+ 
+    public function getslots($wherecond)
+    {
+        return $this->db->table('tbl_student_shedule')->where($wherecond)->get()->getResult();
+    }
+    
 }
+
+
+
+
+
