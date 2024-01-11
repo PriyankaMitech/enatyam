@@ -24,9 +24,9 @@
                                         <input type="hidden" name="id" value="<?php echo esc($session_id); ?>">
                                         <input type="hidden" name="session_id" value="<?php echo esc($session_id); ?>">
                                         
-                           
+                        
                                             <?php if(!empty($single)){ ?>
-                                                <div  class="form-group mb-2">
+                                                <div class="form-group mb-2">
                                                     <label class="control-label">Select Day's</label>
 
                                                         <?php
@@ -49,22 +49,22 @@
                                                 
                                         <!-- <div class="form-group mb-2">
                                             <label for="start_date" class="control-label">Start Date</label>
-                                            <input type="date" class="start_date form-control form-control-sm rounded-0"  id="start_date"  disabled>
+                                            <input type="date" class="start_date form-control form-control-sm rounded-0" id="start_date" disabled>
                                             <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date" value="<?=$single->start_date;?>" >
 
                                         </div>
                                         <div class="form-group mb-2">
                                             <label for="end_date" class="control-label">End Date</label>
-                                            <input type="date" class="end_date form-control form-control-sm rounded-0"  id="end_date"  disabled>
-                                            <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date"  value="<?=$single->end_date;?>" >
+                                            <input type="date" class="end_date form-control form-control-sm rounded-0" id="end_date" disabled>
+                                            <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date" value="<?=$single->end_date;?>" >
 
                                         </div> -->
 
 
-                                     
+                                    
                                         <!-- <div class="form-group mb-2">
                                             <label for="start_time" class="control-label">Start Time</label>
-                                            <input type="time" class="form-control form-control-sm rounded-0" name="start_time" id="start_time"  >
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="start_time" id="start_time" >
                                         </div>
                                         <div class="form-group mb-2">
                                             <label for="end_time" class="control-label">End Time</label>
@@ -72,7 +72,7 @@
                                         </div> -->
                                         <?php }else{ ?>
 
-                                            <div  class="form-group mb-2">
+                                            <div class="form-group mb-2">
                                                     <label class="control-label">Select Day's</label>
 
                                                         <?php
@@ -80,7 +80,7 @@
                                                             $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
                                                             foreach ($allDays as $day) {
-                                                           
+                                                        
                                                         ?>
                                                             <div class="form-check">
                                                                 <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" >
@@ -93,22 +93,22 @@
 
                                         <div class="form-group mb-2">
                                             <label for="start_date" class="control-label">Start Date</label>
-                                            <input type="date" class="start_date form-control form-control-sm rounded-0"  id="start_date"  disabled>
-                                            <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date"  >
+                                            <input type="date" class="start_date form-control form-control-sm rounded-0" id="start_date" disabled>
+                                            <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date" >
 
                                         </div>
                                         <div class="form-group mb-2">
                                             <label for="end_date" class="control-label">End Date</label>
-                                            <input type="date" class="end_date form-control form-control-sm rounded-0"  id="end_date"  disabled>
-                                            <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date"  >
+                                            <input type="date" class="end_date form-control form-control-sm rounded-0" id="end_date" disabled>
+                                            <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date" >
 
                                         </div>
 
 
-                                     
+                                    
                                         <div class="form-group mb-2">
                                             <label for="start_time" class="control-label">Start Time</label>
-                                            <input type="time" class="form-control form-control-sm rounded-0" name="start_time" id="start_time"  >
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="start_time" id="start_time" >
                                         </div>
                                         <div class="form-group mb-2">
                                             <label for="end_time" class="control-label">End Time</label>
@@ -144,8 +144,8 @@
             <div class="modal-body rounded-0">
                 <div class="container-fluid">
                     <dl>
-                          <dt class="text-muted">Description</dt>
-                           <a> <dd id="description" class=""></dd></a>
+                         <dt class="text-muted">Description</dt>
+                         <a> <dd id="description" class=""></dd></a>
                         <dt class="text-muted">Start</dt>
                         <dd id="start" class=""></dd>
                         <dt class="text-muted">End</dt>
@@ -164,7 +164,7 @@
         </div>
     </div>
 </div>
-<?php 
+<?php
 
 $sched_res = [];
 if(!empty($schedule_data)){
@@ -187,7 +187,7 @@ foreach($schedule_data as $data){
     $(document).ready(function() {
         function updateEndDateState() {
             var start_date_value = $('.start_date').val();
-          
+        
         }
 
         var currentDate = new Date();
@@ -244,5 +244,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
 </script>
+
 
