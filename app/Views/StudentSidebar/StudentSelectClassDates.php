@@ -232,8 +232,7 @@ function fetchData(selectedDays) {
                 var endTime = value.end_time;
 
                 var slots = createOneHourTimeSlots(startTime, endTime);
-
-                checkSlot(slots);
+                checkSlot(slots,selectedDays);
                 $.each(slots, function (index, slot) {
                     if (!addedTimeSlots.includes(slot)) {
                         $('#shedules_time').append('<option value="' + slot + '">' + slot + '</option>');
@@ -280,47 +279,74 @@ function pad(number) {
     return (number < 10 ? '0' : '') + number;
 }
 
-function checkSlot(slot) {
-    
-        var teacherId = '<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>';
+function checkSlot(slots, selectedDay) {
+    var teacherId = '<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>';
 
-    $.each(slot, function(index, slot) {
-        $.ajax({
-         url: '<?= base_url(); ?>check_slot_availability',
-            type: 'POST',
-            data: {
-                selectedSlot: slot,
-                teacherId: teacherId
-            },
-            dataType: 'json',
-            success: function(data) {
-                
-                    // console.log(value);
-                if (data.available == 'true') { 
-                    $.each(slots, function(index, slot) {
-                        if (!addedTimeSlots.includes(slot)) {
-                      
-                            $('#shedules_time').append('<option value="' + value
-                                .id + '">' + slot + '</option>');
-                            addedTimeSlots.push(slot); 
+    // Use a Promise to ensure all AJAX requests are completed before continuing
+    var promises = [];
+
+    $.each(slots, function(index, slotValue) {
+        var promise = new Promise(function(resolve, reject) {
+            $.ajax({
+                url: '<?= base_url(); ?>check_slot_availability',
+                type: 'POST',
+                data: {
+                    selectedSlot: slotValue,
+                    teacherId: teacherId
+                },
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data);
+
+                    // Assuming data is an array of available slots
+                    var isSlotAvailable = true;
+
+                    $.each(data, function(key, value) {
+                        if (selectedDay.includes(value.days) && slotValue === value.shedules_time) {
+                            // Matching day and time found, slot is not available
+                            isSlotAvailable = false;
                         }
                     });
-                  
-                } else {
-                    // console.log(data)
-                    $('#shedules_time').append('<option value="1">+ slot + </option>');
-                    addedTimeSlots.push(slot);
-                    // If the slot is not available, you can handle it as needed
-                    // console.log('Slot not available:', value);
+
+                    // Resolve if the slot is available
+                    if (isSlotAvailable) {
+                        resolve({ slot: slotValue, available: true });
+                    } else {
+                        // Reject if the slot is not available
+                        reject({ slot: slotValue, available: false });
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('AJAX Error:', textStatus, errorThrown);
+                    reject(errorThrown);
                 }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.error('AJAX Error:', textStatus, errorThrown);
+            });
+        });
+
+        promises.push(promise);
+    });
+
+    // Wait for all promises to resolve before updating the dropdown
+    Promise.allSettled(promises).then(function(results) {
+        $.each(results, function(index, result) {
+            if (result.status === 'fulfilled' && result.value.available) {
+                var availableSlot = result.value.slot;
+                if (!addedTimeSlots.includes(availableSlot)) {
+                    $('#shedules_time').append('<option value="' + availableSlot + '">' + availableSlot + '</option>');
+                    addedTimeSlots.push(availableSlot);
+                }
+            } else if (result.status === 'rejected') {
+                var unavailableSlot = result.value.slot;
+                // Handle the case where the slot is not available (show alert, etc.)
+                console.log('Slot not available:', unavailableSlot);
+                // Example: alert('This slot is not available for the selected day(s).');
             }
         });
     });
-
 }
+
+
+
 
 resetDropdownAndFetchData();
 });
