@@ -23,32 +23,35 @@
                                         id="schedule-form">
                                         <input type="hidden" name="id" value="">
                                         <div class="form-group mb-2" id="select_day">
-                                            <label class="control-label">Select Option</label>
+                                          
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-check">
-                                                        <input type="radio" class="form-check-input" name="option_type"
-                                                            value="day" checked>
-                                                        <label class="form-check-label">Select Day</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-check">
-                                                        <input type="radio" class="form-check-input" name="option_type"
-                                                            value="allDay">
-                                                        <label class="form-check-label">All days</label>
-                                                    </div>
-                                                </div>
+                                              
 
                                                 <div class="col-md-12">
-                                                    <div id="dayOptions" class="form-group mb-2">
-                                                        <!-- This div will be populated dynamically based on the user's selection -->
+                                                <?php if (!empty($fshedules)) : ?>
+                                                    <div class="form-group mb-2">
+                                                        <label class="control-label">Select Day's</label>
+                                                        <?php
+                                                        $selectedDays = explode(',', $fshedules->days); // Assuming $fshedules contains your data
+                                                        $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                                                        foreach ($allDays as $day) :
+                                                            $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
+                                                        ?>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>"  <?= $isDisabled ?>>
+                                                                <label class="form-check-label"><?= $day ?></label>
+                                                            </div>
+                                                        <?php endforeach; ?>
                                                     </div>
+                                                <?php endif; ?>
+
+
                                                 </div>
 
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label>Sub Courses</label>
+                                                        <label>Select Shedule</label>
                                                         <input type="hidden" id="selected_shedules_time"
                                                             value="<?php if (isset($single_data)) { echo ($single_data->shedules_time); } ?>">
                                                         <select name="shedules_time" id="shedules_time"
@@ -184,51 +187,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 $(document).ready(function() {
     var selectedDays = [];
-    var selectedOptionType = $('input[name="option_type"]:checked').val();
     var addedTimeSlots = [];
 
     $('input[name="days[]"]').on('change', function() {
         selectedDays = [];
-        selectedOptionType = $('input[name="option_type"]:checked').val();
-
-        $('input[name="days[]"]:checked').each(function() {
-            selectedDays.push($(this).val());
-        });
-
-        resetDropdownAndFetchData();
+        fetchData(selectedDays);
     });
 
-    $('input[name="option_type"]').on('change', function() {
-        selectedOptionType = $(this).val();
-
-        if (selectedOptionType == 'allDay') {
-            $('input[name="days[]"]').prop('checked', false);
-            $('#shedules_time').empty();
-            resetDropdownAndFetchData();
-        } else {
-            $('#shedules_time').empty();
-
-            $('input[name="days[]"]').on('change', function() {
-        // alert('hiii');
-        selectedDays = [];
-        selectedOptionType = $('input[name="option_type"]:checked').val();
-
-        $('input[name="days[]"]:checked').each(function() {
-            selectedDays.push($(this).val());
-        });
-        resetDropdownAndFetchData();
-
-
-        // fetchData(selectedDays, selectedOptionType);
-    });
-        }
-    });
 
     function resetDropdownAndFetchData() {
         $('#shedules_time').empty();
         $('#shedules_time').append('<option value="">Please select time</option>');
         addedTimeSlots = []; // Reset added time slots
-        fetchData(selectedDays, selectedOptionType);
+        fetchData(selectedDays);
     }
 
     function createOneHourSlots(start, end) {
@@ -254,46 +225,123 @@ $(document).ready(function() {
         return hours + ':' + minutes + ' ' + period;
     }
 
-    function fetchData(selectedDays, selectedOptionType) {
-        // if (selectedOptionType == 'allDay') {
-        //     selectedDays = '';
-        // }
+//     function fetchData(selectedDays) {
+//     $.ajax({
+//         url: '<?= base_url(); ?>get_shedule_data_for_student',
+//         type: 'POST',
+//         data: {
+//             selectedDays: selectedDays,
+//         },
+//         dataType: 'json',
+//         success: function (data) {
+//             // Check if 'data' is an array, if not, convert it to an array
+//             if (!Array.isArray(data)) {
+//                 data = [data];
+//             }
 
-        $.ajax({
-            url: '<?= base_url(); ?>get_shedule_data_for_student',
-            type: 'POST',
-            data: {
-                selectedDays: selectedDays,
-                selectedOptionType: selectedOptionType
-            },
-            dataType: 'json',
-            success: function(data) {
-                $.each(data, function(key, value) {
-                    var startDatetime = new Date(value.start_datetime);
-                    var endDatetime = new Date(value.end_datetime);
+//             $.each(data, function (key, value) {
+//                 // Combine date and time components
+//                 var startDateTimeString = value.start_date + ' ' + value.start_time;
+//                 var endDateTimeString = value.end_date + ' ' + value.end_time;
 
-                    var slots = createOneHourSlots(startDatetime, endDatetime);
+//                 // Parse combined date and time strings into JavaScript Date objects
+//                 var startDatetime = new Date(startDateTimeString);
+//                 var endDatetime = new Date(endDateTimeString);
 
-            checkSlot(slots)
+//                 // Generate one-hour time slots
+//                 var slots = createOneHourSlots(startDatetime, endDatetime);
 
-                    $.each(slots, function(index, slot) {
-                        if (!addedTimeSlots.includes(slot)) {
-                      
-                            $('#shedules_time').append('<option value="' + value
-                                .id + '">' + slot + '</option>');
-                            addedTimeSlots.push(slot); 
-                        }
-                    });
-                });
+           
 
-                var selectedStateId = $('#selected_shedules_time').val();
-                $('#shedules_time').val(selectedStateId);
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.error('AJAX Error:', textStatus, errorThrown);
+
+//                 $.each(slots, function (index, slot) {
+//                     if (!addedTimeSlots.includes(slot)) {
+//                         $('#shedules_time').append('<option value="' + value.id + '">' + slot + '</option>');
+//                         addedTimeSlots.push(slot);
+//                     }
+//                 });
+//             });
+
+//             var selectedStateId = $('#selected_shedules_time').val();
+//             $('#shedules_time').val(selectedStateId);
+//         },
+//         error: function (jqXHR, textStatus, errorThrown) {
+//             console.error('AJAX Error:', textStatus, errorThrown);
+//         }
+//     });
+// }
+
+
+function fetchData(selectedDays) {
+    $.ajax({
+        url: '<?= base_url(); ?>get_shedule_data_for_student',
+        type: 'POST',
+        data: {
+            selectedDays: selectedDays,
+        },
+        dataType: 'json',
+        success: function (data) {
+            // Check if 'data' is an array, if not, convert it to an array
+            if (!Array.isArray(data)) {
+                data = [data];
             }
-        });
+
+            $.each(data, function (key, value) {
+                // Assuming 'start_time' and 'end_time' are in the format 'HH:mm:ss'
+                var startTime = value.start_time;
+                var endTime = value.end_time;
+
+                // Generate one-hour time slots
+                var slots = createOneHourTimeSlots(startTime, endTime);
+
+                $.each(slots, function (index, slot) {
+                    if (!addedTimeSlots.includes(slot)) {
+                        $('#shedules_time').append('<option value="' + value.id + '">' + slot + '</option>');
+                        addedTimeSlots.push(slot);
+                    }
+                });
+            });
+
+            var selectedStateId = $('#selected_shedules_time').val();
+            $('#shedules_time').val(selectedStateId);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.error('AJAX Error:', textStatus, errorThrown);
+        }
+    });
+}
+
+function createOneHourTimeSlots(startTime, endTime) {
+    var slots = [];
+    var currentSlot = startTime;
+
+    while (currentSlot < endTime) {
+        var slot = currentSlot + ' - ' + addOneHour(currentSlot);
+        slots.push(slot);
+        currentSlot = addOneHour(currentSlot);
     }
+
+    return slots;
+}
+
+function addOneHour(time) {
+    var parts = time.split(':');
+    var hours = parseInt(parts[0], 10);
+    var minutes = parseInt(parts[1], 10);
+
+    // Add one hour
+    hours += 1;
+
+    // Format to 'HH:mm:ss'
+    return pad(hours) + ':' + pad(minutes) + ':00';
+}
+
+function pad(number) {
+    return (number < 10 ? '0' : '') + number;
+}
+
+
+
 
     $('#schedule-form').submit(function(e) {
         e.preventDefault();

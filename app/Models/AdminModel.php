@@ -1142,7 +1142,7 @@ class AdminModel extends Model
           
         }
     
-        $result = $query->get()->getResult();
+        $result = $query->get()->getRow();
         // echo'<pre>'; print_r($this->db->getLastQuery());die;
    
         return $result;
