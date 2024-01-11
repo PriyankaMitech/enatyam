@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enatyam</title>
-  <link href="<?php echo base_url() ?>public/css/custom.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="<?php echo base_url() ?>plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -13,7 +12,6 @@
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url()?>dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/jqvmap/jqvmap.min.css">
-  <link rel="stylesheet" href="<?php echo base_url() ?>dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?php echo base_url() ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="<?php echo base_url()?>plugins/daterangepicker/daterangepicker.css">
@@ -21,16 +19,31 @@
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
   <link rel="stylesheet" href="<?php echo base_url()?>plugins/fullcalendar/main.css">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
   <link href="<?php echo base_url() ?>public/extcss/dataTables.bootstrap4.min.css">
   <link href="<?php echo base_url() ?>public/extcss/buttons.bootstrap4.min.css">
   <link href="<?php echo base_url() ?>public/extcss/responsive.bootstrap4.min.css">
+  <link href="<?php echo base_url() ?>public/css/custom.css">
 
   
 <style>
   .error{
     color:red !important;
 }
+#flash-success-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99999;
+  }
+  
+  .flash-success {
+    background-color: green;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
   </style>
 
 

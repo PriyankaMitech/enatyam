@@ -989,7 +989,7 @@ public function singlechat()
         ];
 
         $db = \Config\Database::Connect();
-        if ($this->request->getVar('id') == "") {
+        if ($this->request->getVar('id') ==     "") {
             $add_data = $db->table('tbl_menu');
             $add_data->insert($data);
             session()->setFlashdata('success', 'Data added successfully.');
