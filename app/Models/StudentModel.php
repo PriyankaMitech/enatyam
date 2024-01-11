@@ -235,13 +235,12 @@ class StudentModel extends Model
 
     $this->db->table('student_slots_tbl')->insert($insertData);
 }
-public function checkSlotAvailability($selectedSlot, $studentId, $teacherId)
+public function checkSlotAvailability($selectedSlot, $teacherId)
 {
-    $result = $this->db->table('student_slots_tbl')
+    $result = $this->db->table('tbl_student_shedule')
         ->where([
-            'selected_time_period' => $selectedSlot,
-            'student_register_id' => $studentId,
-            'Assign_Techer_id' => $teacherId,
+            'shedules_time' => $selectedSlot,
+            'faculty_id' => $teacherId,
         ])->get()->getResult();  
         // echo '<pre>';print_r($result);die;
     if (!empty($result)) {
