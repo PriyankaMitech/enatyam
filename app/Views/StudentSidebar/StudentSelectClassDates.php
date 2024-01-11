@@ -92,7 +92,7 @@
                                                                 value="<?php if (isset($single_data)) { echo ($single_data->shedules_time); } ?>">
                                                             <select name="shedules_time" id="shedules_time"
                                                                 class="form-control">
-                                                                <option value="">Please select sub courses</option>
+                                                                <option value="">Please select Time</option>
                                                             </select>
                                                         </div>
                                                 <?php } ?>   

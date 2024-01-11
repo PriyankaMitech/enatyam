@@ -596,64 +596,6 @@ class StudentController extends BaseController
         }
     }
 
-
-
-    public function selectslotsbystudent()
-    {
-        // echo "<pre>";print_r($_POST);exit();
-
-        $model = new AdminModel();
-        $wherecond = array('student_id' => $this->request->getVar('student_id'));
-
-  
-        $single= $model->getsinglerow('tbl_student_shedule',$wherecond);
-        
-        $db = \Config\Database::Connect();
-        if (empty($single)) {
-            $selectedDaysArray = $this->request->getVar('days[]'); 
-            $selectedDaysString = implode(',', $selectedDaysArray);
-    
-            $data = [
-                'student_id' => $this->request->getVar('student_id'),
-                'faculty_id' => $this->request->getVar('faculty_id'),
-                'days' => $selectedDaysString,
-                'start_date' => $this->request->getVar('start_date'),
-                'end_date' => $this->request->getVar('end_date'),
-                'shedules_time' => $this->request->getVar('shedules_time'),
-                'created_on' => date('Y:m:d H:i:s'),
-            ];
-
-            // echo "<pre>";print_r($data);exit();
-
-            $add_data = $db->table('tbl_student_shedule');
-            $add_data->insert($data);
-            session()->setFlashdata('success', 'Data added successfully.');
-        } else {
-
-            $selectedDaysArray = $this->request->getVar('days[]'); 
-
-            // $selectedDaysArray[] = $single->days;
-            
-            $selectedDaysString = implode(',', $selectedDaysArray);
-
-            $data = [
-                'student_id' => $single->student_id,
-                'faculty_id' => $single->faculty_id,
-                'days' => $selectedDaysString,
-                'start_date' => $single->start_date,
-                'end_date' => $single->end_date,
-                'shedules_time' => $single->shedules_time,
-            ];
-
-            $update_data = $db->table('tbl_student_shedule')->where('student_id', $this->request->getVar('student_id'));
-            $update_data->update($data);
-            session()->setFlashdata('success', 'Data updated successfully.');
-        }
-
-        return redirect()->to('SelectDate');
-    }
-
-
     public function check_slot_availability()
     {
         // print_r($_POST);die;
@@ -665,4 +607,61 @@ class StudentController extends BaseController
 
         return $this->response->setJSON($availability);
     }
+
+    public function selectslotsbystudent()
+{
+    $model = new AdminModel();
+    $wherecond = ['student_id' => $this->request->getVar('student_id')];
+    $single = $model->getsinglerow('tbl_student_shedule', $wherecond);
+
+    $db = \Config\Database::Connect();
+
+    $selectedDaysArray = $this->request->getVar('days[]');
+    $selectedDaysString = implode(',', $selectedDaysArray);
+
+    $data = [
+        'student_id' => $this->request->getVar('student_id'),
+        'faculty_id' => $this->request->getVar('faculty_id'),
+        'days' => $selectedDaysString,
+        'start_date' => $this->request->getVar('start_date'),
+        'end_date' => $this->request->getVar('end_date'),
+        'shedules_time' => $this->request->getVar('shedules_time'),
+        'created_on' => date('Y:m:d H:i:s'),
+    ];
+    $isAvailable = $this->checkAvailability($data);
+
+    if ($isAvailable) {
+        if (empty($single)) {
+            $add_data = $db->table('tbl_student_shedule');
+            $add_data->insert($data);
+            session()->setFlashdata('success', 'Data added successfully.');
+        } else {
+            $update_data = $db->table('tbl_student_shedule')->where('student_id', $this->request->getVar('student_id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
+    } else {
+        session()->setFlashdata('success', 'Selected days and time are not available.');
+    }
+
+    return redirect()->to('SelectDate');
+}
+
+protected function checkAvailability($data)
+{
+    $model = new AdminModel();
+    $wherecond = [
+        'faculty_id' => $data['faculty_id'],
+        'shedules_time' => $data['shedules_time'],
+    ];
+    $existingSchedules = $model->getslots($wherecond);
+    foreach ($existingSchedules as $existingSchedule) {
+        $availableDays = explode(',', $existingSchedule->days);
+        $selectedDays = explode(',', $data['days']);
+        if (array_intersect($selectedDays, $availableDays)) {
+            return false; 
+        }
+    }
+    return true; 
+}
 }
