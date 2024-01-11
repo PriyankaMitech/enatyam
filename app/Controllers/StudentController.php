@@ -373,37 +373,28 @@ class StudentController extends BaseController
     // }
     public function StudentSelectClassDates()
     {
-    //     $result = session();
-    //     $registerId = $result->get('id');
+        $result = session();
+        $registerId = $result->get('id');
 
 
-    //     // echo $registerId ;exit();
-    //     $StudentModel = new StudentModel();
-    //     $model = new AdminModel();
+        // echo $registerId ;exit();
+        $StudentModel = new StudentModel();
+        $model = new AdminModel();
 
-    //     $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
-    //     // echo "<pre>";print_r($Sheduledatafromfaculty);exit();
-    //     $data['slots'] = NULL;
+        $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
+        // echo "<pre>";print_r($Sheduledatafromfaculty);exit();
+      
 
-    //     if(!empty($Sheduledatafromfaculty)){
-    //     $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
-    //     $wherecond = array(
-    //                         'days' => 'day',
-    //                         'faculty_registerid' => $assignTeacherId,
-    //                         'MONTH(start_datetime)' => date('m'), // Compare with the current month for start_datetime
-    //                         'MONTH(end_datetime)' => date('m')    // Compare with the current month for end_datetime
-    //                       );
-
-    //     $groupByCondition = 'Daystype'; // Replace 'Daystype' with the actual column name
-
-
+        if(!empty($Sheduledatafromfaculty)){
+        $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
+        $wherecond = array('faculty_registerid' => $assignTeacherId);
     
-    //     $data['day_wise_shedules'] =  $model->getalldatagroupby('schedule_list',$wherecond, $groupByCondition);
+        $data['fshedules'] =  $model->getsinglerow('schedule_list',$wherecond);
         
-    // }
+    }
 
     //    echo "<pre>";print_r($data['day_wise_shedules']);exit();
-        return view('StudentSidebar/StudentSelectClassDates');
+        return view('StudentSidebar/StudentSelectClassDates',$data);
 
     }
 
@@ -586,7 +577,6 @@ class StudentController extends BaseController
     
         $selectedDays = $this->request->getPost('selectedDays');
 
-        $selectedOptionType = $this->request->getPost('selectedOptionType');
     
         // Get the current year and month
 
@@ -600,18 +590,14 @@ class StudentController extends BaseController
         // Prepare the WHERE condition for the query
         $wherecond = [
             'faculty_registerid' => $assignTeacherId,
-            'start_datetime >= ' => $startDate,
-            'start_datetime <= ' => $endDate,
+            'start_date >= ' => $startDate,
+            'end_date <= ' => $endDate,
         ];
 
         // print_r($selectedDays);exit();
        
         // Add condition for 'OptionType' based on the selected radio button
-        if ($selectedOptionType == 'day') {
-            $wherecond['OptionType'] = 'day';
-        } elseif ($selectedOptionType == 'allDay') {
-            $wherecond['OptionType'] = 'allDay';
-        }
+      
 
 
  

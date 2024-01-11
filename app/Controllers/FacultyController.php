@@ -421,20 +421,16 @@ public function StudentAttendance()
 
             
         ];
-        // echo "hiii";
-        // echo "<pre>";print_r($data);exit();
-
+      
             $add_data = $db->table('schedule_list');
             $add_data->insert($data);
             session()->setFlashdata('success', 'Data added successfully.');
         } else {
 
-          $selectedDaysArray = $this->request->getVar('days[]'); // Assuming days[] is an array from the form
+          $selectedDaysArray = $this->request->getVar('days[]'); 
 
-          // Add the single day data to the array
           $selectedDaysArray[] = $single->days;
           
-          // Convert the array to a comma-separated string
           $selectedDaysString = implode(',', $selectedDaysArray);
 
           $data = [
@@ -443,14 +439,8 @@ public function StudentAttendance()
             'start_date' => $single->start_date,
             'end_date' => $single->end_date,
             'start_time' =>$single->start_time,
-            'end_time' => $single->end_date,
-
-            
-        ];
-        // echo "bye";
-
-        // echo "<pre>";print_r($data);exit();
-
+            'end_time' => $single->end_time,  
+          ];
 
             $update_data = $db->table('schedule_list')->where('faculty_registerid', $this->request->getVar('id'));
             $update_data->update($data);
