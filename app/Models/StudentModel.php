@@ -244,9 +244,9 @@ public function checkSlotAvailability($selectedSlot, $teacherId)
         ])->get()->getResult();  
         // echo '<pre>';print_r($result);die;
     if (!empty($result)) {
-        return ['available' => false, 'records' => $result];
+        return $result;
     } else {
-        return ['available' => true];
+        return true;
     }
 }
 }
