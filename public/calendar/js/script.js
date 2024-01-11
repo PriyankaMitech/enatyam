@@ -1,16 +1,26 @@
-    var calendar;
-    var Calendar = FullCalendar.Calendar;
-    var events = [];
-    $(function() {
-        console.log(scheds);
-        
-        if (!!scheds) {
-            
-            Object.keys(scheds).map(k => {
-                var row = scheds[k]
-                events.push({ id: row.id, title: row.title, start: row.start_datetime, end: row.end_datetime });
-            })
-        }
+var calendar;
+var Calendar = FullCalendar.Calendar;
+var events = [];
+
+$(function() {
+    if (!!scheds) {
+        Object.keys(scheds).map(k => {
+            var row = scheds[k];
+            var startDate = moment(row.start_date);
+            var endDate = moment(row.end_date);
+            for (var currentDay = startDate.clone(); currentDay.isSameOrBefore(endDate); currentDay.add(1, 'day')) {
+                if (row.days.includes(currentDay.format('dddd'))) {
+                    events.push({
+                        id: row.id,
+                        // title: row.faculty_registerid,
+                        start: currentDay.format('YYYY-MM-DD') + ' ' + row.start_time,
+                        end: currentDay.format('YYYY-MM-DD') + ' ' + row.end_time
+                    });
+                }
+            }
+        });
+    }
+
         var date = new Date()
         var d = date.getDate(),
             m = date.getMonth(),
@@ -45,8 +55,8 @@
                         _details.find('#description').text(description);
                     }
             
-                    _details.find('#start').text(scheds[id].start_datetime);
-                    _details.find('#end').text(scheds[id].end_datetime);
+                    _details.find('#start').text(scheds[id].start_time);
+                    _details.find('#end').text(scheds[id].end_time);
                     _details.find('#edit,#delete').attr('data-id', id);
                     _details.modal('show');
                 } else {

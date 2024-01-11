@@ -619,6 +619,19 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
         }
     }
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if the flash message exists
+        var flashMessage = document.querySelector('.flash-success');
+
+        if (flashMessage) {
+            // Set a timeout to hide the flash message after 5 minutes (300,000 milliseconds)
+            setTimeout(function() {
+                flashMessage.style.display = 'none';
+            }, 300);
+        }
+    });
+</script>
 </body>
 
 </html>
