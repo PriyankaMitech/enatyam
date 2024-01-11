@@ -145,6 +145,7 @@ if(!empty($schedule_data)){
 <script src="public/calendar/js/script.js"></script>
 <?php echo view('FacultysideBar/FacultyFooter.php'); ?>
 <script>
+
 $(document).ready(function() {
     function updateEndDateState() {
         var start_date_value = $('.start_date').val();
@@ -163,6 +164,7 @@ $(document).ready(function() {
             return false; // Prevent form submission
         }
 
+
         // Validate start_date and end_date
         var start_date = $('#start_date').val();
         var end_date = $('#end_date').val();
@@ -170,6 +172,7 @@ $(document).ready(function() {
             $('#dateError').html('Please select both Start Date and End Date.');
             return false;
         }
+
 
         // Validate start_time and end_time
         var start_time = $('#start_time').val();
@@ -196,6 +199,7 @@ $(document).ready(function() {
     updateEndDateState();
     $('.start_date').on('change', function() {
         updateEndDateState();
+
     });
 });
 </script>

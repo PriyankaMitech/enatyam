@@ -22,50 +22,86 @@
                                     <form action="<?php echo base_url()?>selectslotsbystudent" method="post"
                                         id="schedule-form">
                                         <input type="hidden" name="id" value="">
-                                        <div class="form-group mb-2" id="select_day">
+                                        <input type="hidden" name="student_id" id="student_id" value="<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>">
+                                        <input type="hidden" name="faculty_id" value="<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>">
+
+
+                                        <div class="form-group mb-2" >
                                           
                                             <div class="row">
-                                              
+                                            <div class="col-md-12">
 
-                                                <div class="col-md-12">
+
+                                                <?php if (!empty($single)) { ?>
                                                 <?php if (!empty($fshedules)) : ?>
-                                                    <div class="form-group mb-2">
-                                                        <label class="control-label">Select Day's</label>
-                                                        <?php
-                                                        $selectedDays = explode(',', $fshedules->days); // Assuming $fshedules contains your data
-                                                        $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+                                                   
+                                                        <div class="form-group mb-2">
+                                                            <label class="control-label">Select Day's</label>
+                                                            <?php
+                                                            $selectedDays = explode(',', $fshedules->days); // Assuming $fshedules contains your data
+                                                            $selectedDays1 = explode(',', $single->days);
+                                                            $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-                                                        foreach ($allDays as $day) :
-                                                            $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
-                                                        ?>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>"  <?= $isDisabled ?>>
-                                                                <label class="form-check-label"><?= $day ?></label>
+                                                            foreach ($allDays as $day) :
+                                                                $isChecked =  in_array($day, $selectedDays1) ? 'checked' : '';
+                                                                $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
+                                                            ?>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isDisabled ?>>
+                                                                    <label class="form-check-label"><?= $day ?></label>
+                                                                </div>
+                                                            <?php endforeach; ?>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                <?php }else{ ?>
+
+                                                        <?php if (!empty($fshedules)) : ?>
+                                                            <div class="form-group mb-2">
+                                                                <label class="control-label">Select Day's</label>
+                                                                <?php
+                                                                $selectedDays = explode(',', $fshedules->days); // Assuming $fshedules contains your data
+                                                                $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                                                                foreach ($allDays as $day) :
+                                                                    $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
+                                                                ?>
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>"  <?= $isDisabled ?>>
+                                                                        <label class="form-check-label"><?= $day ?></label>
+                                                                    </div>
+                                                                <?php endforeach; ?>
                                                             </div>
-                                                        <?php endforeach; ?>
-                                                    </div>
-                                                <?php endif; ?>
+                                                        <?php endif; ?>
 
 
+                                                        <div class="form-group mb-2">
+                                                            <label for="start_date" class="control-label">Start Date</label>
+                                                            <input type="date" class="start_date form-control form-control-sm rounded-0"  id="start_date"  disabled>
+                                                            <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date"  >
+
+                                                        </div>
+                                                        <div class="form-group mb-2">
+                                                            <label for="end_date" class="control-label">End Date</label>
+                                                            <input type="date" class="end_date form-control form-control-sm rounded-0"  id="end_date"  disabled>
+                                                            <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date"  >
+
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Select Time</label>
+                                                            <input type="hidden" id="selected_shedules_time"
+                                                                value="<?php if (isset($single_data)) { echo ($single_data->shedules_time); } ?>">
+                                                            <select name="shedules_time" id="shedules_time"
+                                                                class="form-control">
+                                                                <option value="">Please select sub courses</option>
+                                                            </select>
+                                                        </div>
+                                                <?php } ?>   
                                                 </div>
-
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>Select Shedule</label>
-                                                        <input type="hidden" id="selected_shedules_time"
-                                                            value="<?php if (isset($single_data)) { echo ($single_data->shedules_time); } ?>">
-                                                        <select name="shedules_time" id="shedules_time"
-                                                            class="form-control">
-                                                            <option value="">Please select sub courses</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
+                                            
                                             </div>
                                         </div>
-                                        <button class="btn btn-primary btn-sm rounded-0" type="submit" form="schedule-form"
-                                                value="<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>_<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>">
-                                            <i class="fa fa-save"></i> Submit
-                                        </button>
+                                        <button class="btn btn-primary btn-sm rounded-0" type="submit"
+                                            form="schedule-form"><i class="fa fa-save"></i> Save</button>
                                         <button class="btn btn-default border btn-sm rounded-0" type="reset"
                                             form="schedule-form"><i class="fa fa-reset"></i> Cancel</button>
                                     </form>
@@ -138,53 +174,6 @@ var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
 <script src="public/calendar/js/script.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var optionTypeRadio = document.getElementsByName("option_type");
-
-    function toggleDayOptions() {
-        var dayOptionsDiv = document.getElementById("dayOptions");
-        if (optionTypeRadio[0].checked) {
-            <?php if (!empty($day_wise_shedules)) : ?>
-            dayOptionsDiv.innerHTML = '<label class="control-label">Select Day(s)</label>';
-            <?php foreach ($day_wise_shedules as $data) : ?>
-            dayOptionsDiv.innerHTML += '<div class="form-check">' +
-                '<input type="checkbox" class="form-check-input" name="days[]" value="<?php echo $data->Daystype; ?>" <?php echo ($data->Daystype !== $data->Daystype) ? 'disabled' : ''; ?>>' +
-                '<label class="form-check-label"><?php echo $data->Daystype; ?></label>' +
-                '</div>';
-            <?php endforeach; ?>
-            <?php else : ?>
-            dayOptionsDiv.innerHTML = '';
-            <?php endif; ?>
-        } else {
-            dayOptionsDiv.innerHTML = '';
-        }
-    }
-
-    for (var i = 0; optionTypeRadio && i < optionTypeRadio.length; i++) {
-        optionTypeRadio[i].addEventListener("change", toggleDayOptions);
-    }
-
-    toggleDayOptions();
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    var currentDate = new Date();
-    var startDatetimeInput = document.getElementById("start_datetime");
-    var endDatetimeInput = document.getElementById("end_datetime");
-
-    startDatetimeInput.min = formatDate(currentDate);
-    endDatetimeInput.min = formatDate(currentDate);
-
-    function formatDate(date) {
-        var year = date.getFullYear();
-        var month = (date.getMonth() + 1).toString().padStart(2, '0');
-        var day = date.getDate().toString().padStart(2, '0');
-        var hours = date.getHours().toString().padStart(2, '0');
-        var minutes = date.getMinutes().toString().padStart(2, '0');
-        return `${year}-${month}-${day}T${hours}:${minutes}`;
-    }
-});
-
 $(document).ready(function() {
     var selectedDays = [];
     var addedTimeSlots = [];
@@ -195,12 +184,12 @@ $(document).ready(function() {
     });
 
 
-    function resetDropdownAndFetchData() {
-        $('#shedules_time').empty();
-        $('#shedules_time').append('<option value="">Please select time</option>');
-        addedTimeSlots = []; // Reset added time slots
-        fetchData(selectedDays);
-    }
+    // function resetDropdownAndFetchData() {
+    //     $('#shedules_time').empty();
+    //     $('#shedules_time').append('<option value="">Please select time</option>');
+    //     addedTimeSlots = []; // Reset added time slots
+    //     fetchData(selectedDays);
+    // }
 
     function createOneHourSlots(start, end) {
         var slots = [];
@@ -225,53 +214,6 @@ $(document).ready(function() {
         return hours + ':' + minutes + ' ' + period;
     }
 
-//     function fetchData(selectedDays) {
-//     $.ajax({
-//         url: '<?= base_url(); ?>get_shedule_data_for_student',
-//         type: 'POST',
-//         data: {
-//             selectedDays: selectedDays,
-//         },
-//         dataType: 'json',
-//         success: function (data) {
-//             // Check if 'data' is an array, if not, convert it to an array
-//             if (!Array.isArray(data)) {
-//                 data = [data];
-//             }
-
-//             $.each(data, function (key, value) {
-//                 // Combine date and time components
-//                 var startDateTimeString = value.start_date + ' ' + value.start_time;
-//                 var endDateTimeString = value.end_date + ' ' + value.end_time;
-
-//                 // Parse combined date and time strings into JavaScript Date objects
-//                 var startDatetime = new Date(startDateTimeString);
-//                 var endDatetime = new Date(endDateTimeString);
-
-//                 // Generate one-hour time slots
-//                 var slots = createOneHourSlots(startDatetime, endDatetime);
-
-           
-
-
-//                 $.each(slots, function (index, slot) {
-//                     if (!addedTimeSlots.includes(slot)) {
-//                         $('#shedules_time').append('<option value="' + value.id + '">' + slot + '</option>');
-//                         addedTimeSlots.push(slot);
-//                     }
-//                 });
-//             });
-
-//             var selectedStateId = $('#selected_shedules_time').val();
-//             $('#shedules_time').val(selectedStateId);
-//         },
-//         error: function (jqXHR, textStatus, errorThrown) {
-//             console.error('AJAX Error:', textStatus, errorThrown);
-//         }
-//     });
-// }
-
-
 function fetchData(selectedDays) {
     $.ajax({
         url: '<?= base_url(); ?>get_shedule_data_for_student',
@@ -281,29 +223,27 @@ function fetchData(selectedDays) {
         },
         dataType: 'json',
         success: function (data) {
-            // Check if 'data' is an array, if not, convert it to an array
             if (!Array.isArray(data)) {
                 data = [data];
             }
 
             $.each(data, function (key, value) {
-                // Assuming 'start_time' and 'end_time' are in the format 'HH:mm:ss'
                 var startTime = value.start_time;
                 var endTime = value.end_time;
 
-                // Generate one-hour time slots
                 var slots = createOneHourTimeSlots(startTime, endTime);
 
+                checkSlot(slots);
                 $.each(slots, function (index, slot) {
                     if (!addedTimeSlots.includes(slot)) {
-                        $('#shedules_time').append('<option value="' + value.id + '">' + slot + '</option>');
+                        $('#shedules_time').append('<option value="' + slot + '">' + slot + '</option>');
                         addedTimeSlots.push(slot);
                     }
                 });
             });
 
-            var selectedStateId = $('#selected_shedules_time').val();
-            $('#shedules_time').val(selectedStateId);
+            // var selectedStateId = $('#selected_shedules_time').val();
+            // $('#shedules_time').val(selectedStateId);
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.error('AJAX Error:', textStatus, errorThrown);
@@ -340,37 +280,6 @@ function pad(number) {
     return (number < 10 ? '0' : '') + number;
 }
 
-
-
-
-    $('#schedule-form').submit(function(e) {
-        e.preventDefault();
-        var selectedTime = $('#shedules_time option:selected').text();
-        var selectedTimePeriod = selectedTime.split(' - ').join(' ');
-        var formData = {
-            option_type: $('input[name="option_type"]:checked').val(),
-            days: $('input[name="days[]"]:checked').map(function() {
-                return this.value;
-            }).get(),
-            selected_time_period: selectedTimePeriod,
-            id: '<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>',
-            Assign_Techer_id: '<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>'
-        };
-
-    $.ajax({
-        url: '<?= base_url(); ?>selectslotsbystudent',
-        type: 'POST',
-        data: formData,
-        dataType: 'json',
-        success: function(data) {
-            
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.error('AJAX Error:', textStatus, errorThrown);
-        }
-    });
-});
-
 function checkSlot(slot) {
     
         var teacherId = '<?php echo isset($_SESSION['Assign_Techer_id']) ? $_SESSION['Assign_Techer_id'] : ''; ?>';
@@ -381,8 +290,6 @@ function checkSlot(slot) {
             type: 'POST',
             data: {
                 selectedSlot: slot,
-                studentId: '<?php echo isset($_SESSION['id']) ? $_SESSION['id'] : ''; ?>',
-
                 teacherId: teacherId
             },
             dataType: 'json',
@@ -417,4 +324,37 @@ function checkSlot(slot) {
 
 resetDropdownAndFetchData();
 });
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        function updateEndDateState() {
+            var start_date_value = $('.start_date').val();
+          
+        }
+
+        var currentDate = new Date();
+        var tomorrowDate = new Date(currentDate);
+        tomorrowDate.setDate(currentDate.getDate() + 1);
+        var start_date_formatted = tomorrowDate.toISOString().split('T')[0];
+        $('.start_date').val(start_date_formatted);
+
+        var lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+
+        var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+
+        var end_date_formatted = currentDate.getFullYear() + '-' + month + '-' + lastDayOfMonth;
+
+
+        $('.end_date').val(end_date_formatted);
+
+        $('.start_date').attr('min', start_date_formatted);
+
+        updateEndDateState();
+
+        $('.start_date').on('change', function() {
+            updateEndDateState();
+        });
+    });
 </script>
