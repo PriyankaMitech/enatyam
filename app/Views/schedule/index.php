@@ -185,38 +185,30 @@ foreach($schedule_data as $data){
 
 <script>
     $(document).ready(function() {
-        // Function to enable or disable end_date based on start_date value
         function updateEndDateState() {
             var start_date_value = $('.start_date').val();
-            // $('#end_date').prop('disabled', !start_date_value);
-            // $('#end_date').prop('disabled', !start_date_value);
+          
         }
 
-        // Set start_date to tomorrow's date
         var currentDate = new Date();
         var tomorrowDate = new Date(currentDate);
         tomorrowDate.setDate(currentDate.getDate() + 1);
         var start_date_formatted = tomorrowDate.toISOString().split('T')[0];
         $('.start_date').val(start_date_formatted);
 
-        // Set end_date to the last date of the current month
         var lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
 
-        // Ensure month is two digits (pad with leading zero if needed)
         var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
 
         var end_date_formatted = currentDate.getFullYear() + '-' + month + '-' + lastDayOfMonth;
 
-        // Set value to end_date input
+
         $('.end_date').val(end_date_formatted);
 
-        // Set min attribute for start_date input to tomorrow's date
         $('.start_date').attr('min', start_date_formatted);
 
-        // Initial state setup
         updateEndDateState();
 
-        // Bind change event to start_date input
         $('.start_date').on('change', function() {
             updateEndDateState();
         });

@@ -354,23 +354,6 @@ class StudentController extends BaseController
         return redirect()->to('StudentProfile');
     }
 
-    // public function StudentSelectClassDates()
-    // {
-    //     if (isset($_SESSION['sessiondata']) && $_SESSION['role'] == 'Student') {
-    //         $result = session();
-    //         $registerId = $result->get('id');
-    //         $StudentModel = new StudentModel();
-    //         $registerData =  $StudentModel->fetchid($registerId);
-    //         $assignTeacherId = $registerData->Assign_Techer_id;
-    //         $data['assignFacultyData'] =  $StudentModel->fetchdataFromid($assignTeacherId, $registerId);
-    //         $data['registerId'] = $registerId;
-    //         $data['Assign_Techer_id'] = $assignTeacherId;
-    //         // $data['assignFacultyData'] = $assignFacultyData;
-    //         return view('StudentSidebar/StudentSelectClassDates', $data);
-    //     } else {
-    //         return redirect()->to(base_url());
-    //     }
-    // }
     public function StudentSelectClassDates()
     {
         $result = session();
@@ -390,10 +373,17 @@ class StudentController extends BaseController
         $wherecond = array('faculty_registerid' => $assignTeacherId);
     
         $data['fshedules'] =  $model->getsinglerow('schedule_list',$wherecond);
+
+        $wherecond1 = array('student_id' =>  $registerId);
+        $data['single']= $model->getsinglerow('tbl_student_shedule',$wherecond1);
+
+        $wherecond2 = array('faculty_id' => $assignTeacherId);
+
+        $data['slot_data'] =  $model->getalldata('tbl_student_shedule',$wherecond2);
         
     }
 
-    //    echo "<pre>";print_r($data['day_wise_shedules']);exit();
+    //    echo "<pre>";print_r($data['slot_data']);exit();
         return view('StudentSidebar/StudentSelectClassDates',$data);
 
     }
@@ -577,13 +567,11 @@ class StudentController extends BaseController
     
         $selectedDays = $this->request->getPost('selectedDays');
 
-    
-        // Get the current year and month
 
         $currentYear = date('Y');
         $currentMonth = date('m');
     
-        // Define the start and end dates
+     
         $startDate = "{$currentYear}-{$currentMonth}-01 00:00:00";
         $endDate = date('Y-m-t 23:59:59', strtotime($startDate));
     
@@ -594,19 +582,12 @@ class StudentController extends BaseController
             'end_date <= ' => $endDate,
         ];
 
-        // print_r($selectedDays);exit();
-       
-        // Add condition for 'OptionType' based on the selected radio button
-      
 
+     
+        
 
- 
     
         $shedule_data = $model->getalldataforstudent('schedule_list', $wherecond, $selectedDays);
-
-
-        // echo "<pre>";print_r($shedule_data);exit();
-    
 
         if (!empty($shedule_data)) {
             return json_encode($shedule_data);
@@ -614,36 +595,74 @@ class StudentController extends BaseController
             return json_encode([]);
         }
     }
+
+
+
     public function selectslotsbystudent()
     {
-       //  print_r($_POST);die;
-        $studentModel = new StudentModel();
-        $optionType = $this->request->getPost('option_type');
-        $days = $this->request->getPost('days');
-        $selectedTimePeriod = $this->request->getPost('selected_time_period');
-        $Assign_Techer_id = $this->request->getPost('Assign_Techer_id');
-        $id = $this->request->getPost('id');
-    
-        // Now you can insert this data into your database
-        $data = array(
-            'option_type' => $optionType,
-            'days' => $days,
-            'selected_time_period' => $selectedTimePeriod,
-            'student_register_id' => $id,
-            'Assign_Techer_id' =>$Assign_Techer_id,
-        );
-        $result = $studentModel->insertStudentSlot($data);
-    }
-    public function check_slot_availability()
-{
-    // print_r($_POST);die;
-    $selectedSlot = $this->request->getPost('selectedSlot');
-    $studentId = $this->request->getPost('studentId');
-    $teacherId = $this->request->getPost('teacherId');
-    $studentModel = new StudentModel();
-    $availability = $studentModel->checkSlotAvailability($selectedSlot, $studentId, $teacherId);
-    // $result = $availability['records'];
+        // echo "<pre>";print_r($_POST);exit();
 
-    return $this->response->setJSON($availability);
-}
+        $model = new AdminModel();
+        $wherecond = array('student_id' => $this->request->getVar('student_id'));
+
+  
+        $single= $model->getsinglerow('tbl_student_shedule',$wherecond);
+        
+        $db = \Config\Database::Connect();
+        if (empty($single)) {
+            $selectedDaysArray = $this->request->getVar('days[]'); 
+            $selectedDaysString = implode(',', $selectedDaysArray);
+    
+            $data = [
+                'student_id' => $this->request->getVar('student_id'),
+                'faculty_id' => $this->request->getVar('faculty_id'),
+                'days' => $selectedDaysString,
+                'start_date' => $this->request->getVar('start_date'),
+                'end_date' => $this->request->getVar('end_date'),
+                'shedules_time' => $this->request->getVar('shedules_time'),
+                'created_on' => date('Y:m:d H:i:s'),
+            ];
+
+            // echo "<pre>";print_r($data);exit();
+
+            $add_data = $db->table('tbl_student_shedule');
+            $add_data->insert($data);
+            session()->setFlashdata('success', 'Data added successfully.');
+        } else {
+
+            $selectedDaysArray = $this->request->getVar('days[]'); 
+
+            // $selectedDaysArray[] = $single->days;
+            
+            $selectedDaysString = implode(',', $selectedDaysArray);
+
+            $data = [
+                'student_id' => $single->student_id,
+                'faculty_id' => $single->faculty_id,
+                'days' => $selectedDaysString,
+                'start_date' => $single->start_date,
+                'end_date' => $single->end_date,
+                'shedules_time' => $single->shedules_time,
+            ];
+
+            $update_data = $db->table('tbl_student_shedule')->where('student_id', $this->request->getVar('student_id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
+
+        return redirect()->to('SelectDate');
+    }
+
+
+    public function check_slot_availability()
+    {
+        // print_r($_POST);die;
+        $selectedSlot = $this->request->getPost('selectedSlot');
+        $teacherId = $this->request->getPost('teacherId');
+        $studentModel = new StudentModel();
+        $availability = $studentModel->checkSlotAvailability($selectedSlot,  $teacherId);
+        // $result = $availability['records'];
+
+        return $this->response->setJSON($availability);
+    }
 }
