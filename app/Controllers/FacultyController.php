@@ -354,36 +354,115 @@ public function StudentAttendance()
       $model = new AdminModel();
       $data['session_id'] = $session_id;
       $wherecond = array('faculty_registerid' => $session_id);
-
+ 
       $data['schedule_data'] = $model->getalldata('schedule_list',$wherecond);
+
+
+      $data['single'] = $model->getsinglerow('schedule_list',$wherecond);
+
+      // echo "<pre>";print_r($data['single']);exit();
+
+
       echo view('schedule/index', $data);
     }
 
     public function save_schedule()
       {
-      // print_r($_POST);die;
-          $model = new facultymodel();
+          // $model = new facultymodel();
 
-          if ($this->request->getMethod() !== 'post') {
-              return redirect()->to(base_url())->with('error', 'Error: No data to save.');
-          }
+          // if ($this->request->getMethod() !== 'post') {
+          //     return redirect()->to(base_url())->with('error', 'Error: No data to save.');
+          // }
 
-          $data = $this->request->getPost();
+          // $data = $this->request->getPost();
 
-          // Add the selected days to the data array
-          $data['days'] = isset($data['days']) ? $data['days'] : [];
+          // // Add the selected days to the data array
+          // $data['days'] = isset($data['days']) ? $data['days'] : [];
 
-          if ($model->saveSchedule($data)) {
-              return redirect()->to('giveschedule')->with('success', 'Schedule Successfully Saved.');
-          } else {
-              return view('error_view', [
-                  'error' => [
-                      'message' => 'An Error occurred.',
-                      'error' => $model->errors(),
-                  ],
-              ]);
-          }
+          // if ($model->saveSchedule($data)) {
+          //     return redirect()->to('giveschedule')->with('success', 'Schedule Successfully Saved.');
+          // } else {
+          //     return view('error_view', [
+          //         'error' => [
+          //             'message' => 'An Error occurred.',
+          //             'error' => $model->errors(),
+          //         ],
+          //     ]);
+          // }
+ 
+          $model = new AdminModel();
+          $wherecond = array('faculty_registerid' => $this->request->getVar('id'));
+
+          $data['schedule_data'] = $model->getalldata('schedule_list',$wherecond);
+    
+          $single= $model->getsinglerow('schedule_list',$wherecond);
+    
+
+         
+
+
+        $db = \Config\Database::Connect();
+        if (empty($single)) {
+
+          $selectedDaysArray = $this->request->getVar('days[]'); // Assuming days[] is an array from the form
+
+          // Convert the array to a comma-separated string
+          $selectedDaysString = implode(',', $selectedDaysArray);
+        
+
+          $data = [
+            'faculty_registerid' => $this->request->getVar('session_id'),
+            'days' => $selectedDaysString,
+            'start_date' => $this->request->getVar('start_date'),
+            'end_date' => $this->request->getVar('end_date'),
+            'start_time' => $this->request->getVar('start_time'),
+            'end_time' => $this->request->getVar('end_time'),
+            'created_on' => date('Y:m:d H:i:s'),
+
+            
+        ];
+      
+            $add_data = $db->table('schedule_list');
+            $add_data->insert($data);
+            session()->setFlashdata('success', 'Data added successfully.');
+        } else {
+
+          $selectedDaysArray = $this->request->getVar('days[]'); 
+
+          $selectedDaysArray[] = $single->days;
+          
+          $selectedDaysString = implode(',', $selectedDaysArray);
+
+          $data = [
+            'faculty_registerid' => $this->request->getVar('session_id'),
+            'days' => $selectedDaysString,
+            'start_date' => $single->start_date,
+            'end_date' => $single->end_date,
+            'start_time' =>$single->start_time,
+            'end_time' => $single->end_time,  
+          ];
+
+            $update_data = $db->table('schedule_list')->where('faculty_registerid', $this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
+
+        return redirect()->to('giveschedule');
       }
-
+      public function sendmeetinglink()
+      {
+          $link = $this->request->getPost('linkInput');
+          $id = $this->request->getPost('student_registerid');
+          $model = new facultymodel();
+          $meetLinkUpdated = $model->updatemeeetlink($id, $link);
+  //    print_r($meetLinkUpdated);die;
+          if ($meetLinkUpdated == 1) {
+              session()->setFlashdata('success', 'Link added successfully.');
+          } else {
+              session()->setFlashdata('success', 'Failed to update link.');
+          }
+      
+          return redirect()->to('FacultyDashboard');
+      }
 
 }

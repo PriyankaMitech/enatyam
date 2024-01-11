@@ -21,41 +21,100 @@
                                 <div class="container-fluid">
                                     <form action="<?php echo base_url()?>save_schedule" method="post"
                                         id="schedule-form">
-                                        <input type="hidden" name="id" value="">
+                                        <input type="hidden" name="id" value="<?php echo esc($session_id); ?>">
                                         <input type="hidden" name="session_id" value="<?php echo esc($session_id); ?>">
-                                        <div class="form-group mb-2" id="select_day">
-                                            <label class="control-label">Select Option</label>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-check">
-                                                        <input type="radio" class="form-check-input" name="option_type"
-                                                            value="day" checked>
-                                                        <label class="form-check-label">Select Day</label>
+                                        
+                           
+                                            <?php if(!empty($single)){ ?>
+                                                <div  class="form-group mb-2">
+                                                    <label class="control-label">Select Day's</label>
+
+                                                        <?php
+                                                    
+                                                        $selectedDays = explode(',', $single->days); // Assuming $yourObject contains your data
+                                                        $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                                                        foreach ($allDays as $day) {
+                                                            $isChecked = in_array($day, $selectedDays) ? 'checked' : '';
+                                                            $isdisabled = in_array($day, $selectedDays) ? 'disabled' : '';
+                                                        ?>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isChecked ?> <?=$isdisabled; ?>>
+                                                                <label class="form-check-label"><?= $day ?></label>
+                                                            </div>
+
+                                                        <?php }?>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-check">
-                                                        <input type="radio" class="form-check-input" name="option_type"
-                                                            value="allDay">
-                                                        <label class="form-check-label">All days</label>
-                                                    </div>
-                                                </div>
+
+                                                
+                                        <!-- <div class="form-group mb-2">
+                                            <label for="start_date" class="control-label">Start Date</label>
+                                            <input type="date" class="start_date form-control form-control-sm rounded-0"  id="start_date"  disabled>
+                                            <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date" value="<?=$single->start_date;?>" >
+
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <label for="end_date" class="control-label">End Date</label>
+                                            <input type="date" class="end_date form-control form-control-sm rounded-0"  id="end_date"  disabled>
+                                            <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date"  value="<?=$single->end_date;?>" >
+
+                                        </div> -->
+
+
+                                     
+                                        <!-- <div class="form-group mb-2">
+                                            <label for="start_time" class="control-label">Start Time</label>
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="start_time" id="start_time"  >
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <label for="end_time" class="control-label">End Time</label>
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="end_time" id="end_time" >
+                                        </div> -->
+                                        <?php }else{ ?>
+
+                                            <div  class="form-group mb-2">
+                                                    <label class="control-label">Select Day's</label>
+
+                                                        <?php
+                                                    
+                                                            $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                                                            foreach ($allDays as $day) {
+                                                           
+                                                        ?>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" >
+                                                                <label class="form-check-label"><?= $day ?></label>
+                                                            </div>
+
+                                                        <?php }?>
                                             </div>
-                                        </div>
-                                        <div id="dayOptions" class="form-group mb-2">
-                                            <!-- This div will be populated dynamically based on the user's selection -->
-                                        </div>
+
 
                                         <div class="form-group mb-2">
-                                            <label for="start_datetime" class="control-label">Start</label>
-                                            <input type="datetime-local" class="form-control form-control-sm rounded-0"
-                                                name="start_datetime" id="start_datetime" required>
+                                            <label for="start_date" class="control-label">Start Date</label>
+                                            <input type="date" class="start_date form-control form-control-sm rounded-0"  id="start_date"  disabled>
+                                            <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date"  >
+
                                         </div>
                                         <div class="form-group mb-2">
-                                            <label for="end_datetime" class="control-label">End</label>
-                                            <input type="datetime-local" class="form-control form-control-sm rounded-0"
-                                                name="end_datetime" id="end_datetime" required>
+                                            <label for="end_date" class="control-label">End Date</label>
+                                            <input type="date" class="end_date form-control form-control-sm rounded-0"  id="end_date"  disabled>
+                                            <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date"  >
+
                                         </div>
+
+
+                                     
+                                        <div class="form-group mb-2">
+                                            <label for="start_time" class="control-label">Start Time</label>
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="start_time" id="start_time"  >
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <label for="end_time" class="control-label">End Time</label>
+                                            <input type="time" class="form-control form-control-sm rounded-0" name="end_time" id="end_time" >
+                                        </div>
+                                        <?php } ?>
                                         <button class="btn btn-primary btn-sm rounded-0" type="submit"
                                             form="schedule-form"><i class="fa fa-save"></i> Save</button>
                                         <button class="btn btn-default border btn-sm rounded-0" type="reset"
@@ -111,8 +170,8 @@ $sched_res = [];
 if(!empty($schedule_data)){
 
 foreach($schedule_data as $data){
-    $sdate = date("F d, Y h:i A",strtotime($data->start_datetime));
-    $edate = date("F d, Y h:i A",strtotime($data->end_datetime));
+    $sdate = date("F d, Y h:i A",strtotime($data->start_date));
+    $edate = date("F d, Y h:i A",strtotime($data->end_date));
     $sched_res[$data->id] = $data;
 }
 }
@@ -121,55 +180,57 @@ foreach($schedule_data as $data){
 <script src="public/calendar/js/script.js"></script>
 <?php echo view('FacultysideBar/FacultyFooter.php'); ?>
 
+
+<!-- Your HTML code -->
+
+<script>
+    $(document).ready(function() {
+        // Function to enable or disable end_date based on start_date value
+        function updateEndDateState() {
+            var start_date_value = $('.start_date').val();
+            // $('#end_date').prop('disabled', !start_date_value);
+            // $('#end_date').prop('disabled', !start_date_value);
+        }
+
+        // Set start_date to tomorrow's date
+        var currentDate = new Date();
+        var tomorrowDate = new Date(currentDate);
+        tomorrowDate.setDate(currentDate.getDate() + 1);
+        var start_date_formatted = tomorrowDate.toISOString().split('T')[0];
+        $('.start_date').val(start_date_formatted);
+
+        // Set end_date to the last date of the current month
+        var lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+
+        // Ensure month is two digits (pad with leading zero if needed)
+        var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+
+        var end_date_formatted = currentDate.getFullYear() + '-' + month + '-' + lastDayOfMonth;
+
+        // Set value to end_date input
+        $('.end_date').val(end_date_formatted);
+
+        // Set min attribute for start_date input to tomorrow's date
+        $('.start_date').attr('min', start_date_formatted);
+
+        // Initial state setup
+        updateEndDateState();
+
+        // Bind change event to start_date input
+        $('.start_date').on('change', function() {
+            updateEndDateState();
+        });
+    });
+</script>
+
+
+
+
 <script>
 var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var optionTypeRadio = document.getElementsByName("option_type");
 
-    function toggleDayOptions() {
-        var dayOptionsDiv = document.getElementById("dayOptions");
-        if (optionTypeRadio[0].checked) {
-            dayOptionsDiv.innerHTML = '<label class="control-label">Select Day(s)</label>' +
-                '<div class="form-check">' +
-                '<input type="checkbox" class="form-check-input" name="days[]" value="Monday">' +
-                '<label class="form-check-label">Monday</label>' +
-                '</div>' +
-                '<div class="form-check">' +
-                '<input type="checkbox" class="form-check-input" name="days[]" value="Tuesday">' +
-                '<label class="form-check-label">Tuesday</label>' +
-                '</div>' +
-                '<div class="form-check">' +
-                '<input type="checkbox" class="form-check-input" name="days[]" value="Wednesday">' +
-                '<label class="form-check-label">Wednesday</label>' +
-                '</div>' +
-                '<div class="form-check">' +
-                '<input type="checkbox" class="form-check-input" name="days[]" value="Thursday">' +
-                '<label class="form-check-label">Thursday</label>' +
-                '</div>' +
-                '<div class="form-check">' +
-                '<input type="checkbox" class="form-check-input" name="days[]" value="Friday">' +
-                '<label class="form-check-label">Friday</label>' +
-                '</div>' +
-                '<div class="form-check">' +
-                '<input type="checkbox" class="form-check-input" name="days[]" value="Saturday">' +
-                '<label class="form-check-label">Saturday</label>' +
-                '</div>' +
-                '<div class="form-check">' +
-                '<input type="checkbox" class="form-check-input" name="days[]" value="Sunday">' +
-                '<label class="form-check-label">Sunday</label>' +
-                '</div>';
-        } else {
-
-            dayOptionsDiv.innerHTML = '';
-        }
-    }
-    for (var i = 0; i < optionTypeRadio.length; i++) {
-        optionTypeRadio[i].addEventListener("change", toggleDayOptions);
-    }
-    toggleDayOptions();
-});
 
 document.addEventListener("DOMContentLoaded", function() {
     var currentDate = new Date();

@@ -209,18 +209,51 @@ class StudentController extends BaseController
         $update_data->update($data);
         return redirect()->back();
     }
+    // public function ScheduleStudent()
+    // {
+    //     $session = session();
+    //     $user_id = $session->get('id');
+    //     $StudentModel = new StudentModel();
+    //     $model = new AdminModel();
+    //     $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
+    //     $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
+    //     //  print_r($data['SessionCount']);die;
+    //     $wherecond = array('student_register_id' =>  $user_id);
+
+    //     $data['schedule_data'] = $model->getalldata('student_slots_tbl',$wherecond);
+    //     print_r($data['schedule_data']);die;
+    //     return view('StudentSidebar/ScheduleStudent',$data);
+    // }
     public function ScheduleStudent()
-    {
-        $session = session();
-        $user_id = $session->get('id');
-        $StudentModel = new StudentModel();
+{
+    $session = session();
+    $user_id = $session->get('id');
+    $StudentModel = new StudentModel();
+    $model = new AdminModel();
 
-        $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
-        $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
-        //  print_r($data['SessionCount']);die;
-        return view('StudentSidebar/ScheduleStudent', $data);
-    }
 
+    $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
+    $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
+
+
+    $wherecond = array('student_register_id' => $user_id);
+
+    $schedule_data = $model->getsinglerow('student_slots_tbl', $wherecond);
+    $wherecond = array('faculty_registerid' => $user_id);
+ 
+    $data['schedule_data'] = $model->getalldata('schedule_list',$wherecond);
+    $filtered_data = [];
+    $current_month = date('m');
+    $current_year = date('Y');
+
+    $data['schedule_data'] = $schedule_data;
+   
+   
+    return view('StudentSidebar/ScheduleStudent', $data);
+}
+
+    
+    
     public function selectStudentSchedule()
     {
         if ($this->request->getMethod() === 'post') {
@@ -350,20 +383,16 @@ class StudentController extends BaseController
 
         $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
         // echo "<pre>";print_r($Sheduledatafromfaculty);exit();
-        $data['slots'] = NULL;
+      
 
         if(!empty($Sheduledatafromfaculty)){
         $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
-        $wherecond = array(
-                            'OptionType' => 'day',
-                            'faculty_registerid' => $assignTeacherId,
-                            'MONTH(start_datetime)' => date('m'), // Compare with the current month for start_datetime
-                            'MONTH(end_datetime)' => date('m')    // Compare with the current month for end_datetime
-                          );
-
+        $wherecond = array('faculty_registerid' => $assignTeacherId);
     
-        $data['day_wise_shedules'] =  $model->getalldata('schedule_list',$wherecond);
+        $data['fshedules'] =  $model->getsinglerow('schedule_list',$wherecond);
+        
     }
+
     //    echo "<pre>";print_r($data['day_wise_shedules']);exit();
         return view('StudentSidebar/StudentSelectClassDates',$data);
 
@@ -548,7 +577,6 @@ class StudentController extends BaseController
     
         $selectedDays = $this->request->getPost('selectedDays');
 
-        $selectedOptionType = $this->request->getPost('selectedOptionType');
     
         // Get the current year and month
 
@@ -562,21 +590,22 @@ class StudentController extends BaseController
         // Prepare the WHERE condition for the query
         $wherecond = [
             'faculty_registerid' => $assignTeacherId,
-            'start_datetime >= ' => $startDate,
-            'start_datetime <= ' => $endDate,
+            'start_date >= ' => $startDate,
+            'end_date <= ' => $endDate,
         ];
 
         // print_r($selectedDays);exit();
        
         // Add condition for 'OptionType' based on the selected radio button
-        if ($selectedOptionType == 'day') {
-            $wherecond['OptionType'] = 'day';
-        } elseif ($selectedOptionType == 'allDay') {
-            $wherecond['OptionType'] = 'allDay';
-        }
+      
+
+
  
     
         $shedule_data = $model->getalldataforstudent('schedule_list', $wherecond, $selectedDays);
+
+
+        // echo "<pre>";print_r($shedule_data);exit();
     
 
         if (!empty($shedule_data)) {
@@ -613,8 +642,8 @@ class StudentController extends BaseController
     $teacherId = $this->request->getPost('teacherId');
     $studentModel = new StudentModel();
     $availability = $studentModel->checkSlotAvailability($selectedSlot, $studentId, $teacherId);
-    $result = $availability['records'];
-    // echo '<pre>';print_r($result);die;
+    // $result = $availability['records'];
+
     return $this->response->setJSON($availability);
 }
 }
