@@ -1148,38 +1148,15 @@ class AdminModel extends Model
         return $result;
     }
 
-    // public function getalldataforstudent($table, $wherecond, $selectedDays)
-    // {
-    //     $query = $this->db->table($table)
-    //         ->select('MIN(start_datetime) as min_start, MAX(end_datetime) as max_end')
-    //         ->where($wherecond);
+
     
-    //     if (!empty($selectedDays)) {
-    //         $query->whereIn('Daystype', $selectedDays);
-    //     }
     
-    //     $result = $query->get()->getRow();
+
+
+
     
-    //     if ($result) {
-    //         $commonTiming = [
-    //             'start_datetime' => $result->min_start,
-    //             'end_datetime' => $result->max_end,
-    //         ];
+
     
-    //         // Retrieve records with the common timing
-    //         $query = $this->db->table($table)
-    //             ->where($wherecond)
-    //             ->whereIn('Daystype', $selectedDays)
-    //             ->where('start_datetime', $commonTiming['start_datetime'])
-    //             ->where('end_datetime', $commonTiming['end_datetime']);
-    
-    //         $result = $query->get()->getResult();
-    
-    //         return $result;
-    //     }
-    
-    //     return [];
-    // }
     
    
  

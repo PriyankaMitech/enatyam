@@ -377,13 +377,19 @@ class StudentController extends BaseController
         $wherecond1 = array('student_id' =>  $registerId);
         $data['single']= $model->getsinglerow('tbl_student_shedule',$wherecond1);
 
+ 
+        $data['schedule_data'] = $model->getalldata('tbl_student_shedule',$wherecond1);
+  
+
         $wherecond2 = array('faculty_id' => $assignTeacherId);
 
         $data['slot_data'] =  $model->getalldata('tbl_student_shedule',$wherecond2);
+
+        
         
     }
 
-    //    echo "<pre>";print_r($data['slot_data']);exit();
+    //    echo "<pre>";print_r($data['schedule_data']);exit();
         return view('StudentSidebar/StudentSelectClassDates',$data);
 
     }

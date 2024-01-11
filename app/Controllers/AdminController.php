@@ -1626,4 +1626,22 @@ public function singlechat()
         }
         return redirect()->to('chatuser/' . $id);
     }
+
+
+
+    public function chechk_selected_shedules_time_id()
+    {
+        $admin_model = new AdminModel();
+        $selected_shedules_time = $this->request->getPost('selected_shedules_time');
+        $days = $this->request->getPost('days');
+        $faculty_id = $this->request->getPost('faculty_id');
+
+        if ($selected_shedules_time) {
+
+            $result = $admin_model->chechk_selected_shedules_time_id($selected_shedules_time, $days, $faculty_id);
+
+            return json_encode($result);
+        }
+    }
+
 }
