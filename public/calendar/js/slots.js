@@ -1,22 +1,20 @@
-var calendar;
 var Calendar = FullCalendar.Calendar;
 var events = [];
-$(function() {
-    console.log(scheds);
-    
-    if (!!scheds) {
-        
-        Object.keys(scheds).map(k => {
-            var row = scheds[k]
-            events.push({ id: row.id, title: row.title, start: row.start_datetime, end: row.end_datetime });
-        })
-    }
-    var date = new Date()
-    var d = date.getDate(),
-        m = date.getMonth(),
-        y = date.getFullYear()
+if (scheds) {
+    console.log(scheds)
+    Object.keys(scheds).map(k => {
+        var row = scheds[k];
+        events.push({
+            id: row.id,
+            title: row.title,
+            start: new Date(row.start), // Use the correct property name based on your data
+            end: new Date(row.end), // Use the correct property name based on your data
+        });
+    });
+}
 
-    calendar = new Calendar(document.getElementById('calendar'), {
+document.addEventListener('DOMContentLoaded', function () {
+    var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
         headerToolbar: {
             left: 'prev,next today',
             right: 'dayGridMonth,dayGridWeek,list',
@@ -24,7 +22,6 @@ $(function() {
         },
         selectable: true,
         themeSystem: 'bootstrap',
-        //Random default events
         events: events,
         eventClick: function (info) {
             var _details = $('#event-details-modal');
@@ -72,12 +69,12 @@ $(function() {
         var id = $(this).attr('data-id')
         if (!!scheds[id]) {
             var _form = $('#schedule-form')
-            console.log(String(scheds[id].start_datetime), String(scheds[id].start_datetime).replace(" ", "\\t"))
+            console.log(String(scheds[id].start), String(scheds[id].start).replace(" ", "\\t"))
             _form.find('[name="id"]').val(id)
             _form.find('[name="title"]').val(scheds[id].title)
             _form.find('[name="description"]').val(scheds[id].description)
-            _form.find('[name="start_datetime"]').val(String(scheds[id].start_datetime).replace(" ", "T"))
-            _form.find('[name="end_datetime"]').val(String(scheds[id].end_datetime).replace(" ", "T"))
+            _form.find('[name="start_datetime"]').val(String(scheds[id].start).replace(" ", "T"))
+            _form.find('[name="end_datetime"]').val(String(scheds[id].end).replace(" ", "T"))
             $('#event-details-modal').modal('hide')
             _form.find('[name="title"]').focus()
         } else {
@@ -91,10 +88,11 @@ $(function() {
         if (!!scheds[id]) {
             var _conf = confirm("Are you sure to delete this scheduled event?");
             if (_conf === true) {
-                location.href = "./delete_schedule.php?id=" + id;
+                // Add your delete logic here
             }
         } else {
             alert("Event is undefined");
         }
     })
-})
+});
+

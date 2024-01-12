@@ -360,7 +360,7 @@ public function StudentAttendance()
 
       $data['single'] = $model->getsinglerow('schedule_list',$wherecond);
 
-      // echo "<pre>";print_r($data['single']);exit();
+     //  echo "<pre>";print_r($data['schedule_data']);exit();
 
 
       echo view('schedule/index', $data);
@@ -455,7 +455,6 @@ public function StudentAttendance()
           $id = $this->request->getPost('student_registerid');
           $model = new facultymodel();
           $meetLinkUpdated = $model->updatemeeetlink($id, $link);
-  //    print_r($meetLinkUpdated);die;
           if ($meetLinkUpdated == 1) {
               session()->setFlashdata('success', 'Link added successfully.');
           } else {

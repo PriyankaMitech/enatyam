@@ -322,5 +322,3 @@ resetDropdownAndFetchData();
         });
     });
 </script>
-
-<
