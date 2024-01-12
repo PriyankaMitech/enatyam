@@ -253,18 +253,14 @@ class facultymodel extends Model
     }
  public function updatemeeetlink($id, $link)
 {
-    // Attempt to update the record
-    $result = $this->db->table('student_slots_tbl')
+   
+    $result = $this->db->table('tbl_student_shedule')
         ->set('meetlink', $link)
-        ->where('student_register_id', $id)
+        ->where('student_id', $id)
         ->update();
-
-    // Check the result of the update operation
-    if ($this->db->affectedRows() > 0) {
-        // Rows affected, successful update
+    if ($this->db->affectedRows() > 0) {      
         return 1;
     } else {
-        // No rows affected, record not found
         return 0;
     }
 }

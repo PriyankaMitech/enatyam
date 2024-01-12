@@ -209,51 +209,18 @@ class StudentController extends BaseController
         $update_data->update($data);
         return redirect()->back();
     }
-    // public function ScheduleStudent()
-    // {
-    //     $session = session();
-    //     $user_id = $session->get('id');
-    //     $StudentModel = new StudentModel();
-    //     $model = new AdminModel();
-    //     $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
-    //     $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
-    //     //  print_r($data['SessionCount']);die;
-    //     $wherecond = array('student_register_id' =>  $user_id);
-
-    //     $data['schedule_data'] = $model->getalldata('student_slots_tbl',$wherecond);
-    //     print_r($data['schedule_data']);die;
-    //     return view('StudentSidebar/ScheduleStudent',$data);
-    // }
     public function ScheduleStudent()
-{
-    $session = session();
-    $user_id = $session->get('id');
-    $StudentModel = new StudentModel();
-    $model = new AdminModel();
-
-
-    $data['SessionCount'] = $StudentModel->get_user_Session($user_id);
-    $data['slots'] = $StudentModel->Getseslectedslotstostudent($user_id);
-
-
-    $wherecond = array('student_register_id' => $user_id);
-
-    $schedule_data = $model->getsinglerow('student_slots_tbl', $wherecond);
-    $wherecond = array('faculty_registerid' => $user_id);
- 
-    $data['schedule_data'] = $model->getalldata('schedule_list',$wherecond);
-    $filtered_data = [];
-    $current_month = date('m');
-    $current_year = date('Y');
-
-    $data['schedule_data'] = $schedule_data;
-   
-   
-    return view('StudentSidebar/ScheduleStudent', $data);
-}
-
-    
-    
+    {
+        $session = session();
+        $user_id = $session->get('id');
+        $StudentModel = new StudentModel();
+        $model = new AdminModel();
+        $wherecond = array('student_id' =>  $user_id);
+        $data['schedule_data'] = $model->getalldata('tbl_student_shedule',$wherecond);
+     // echo "<pre>";print_r($data['schedule_data']);exit();
+        return view('StudentSidebar/ScheduleStudent',$data);
+    }
+  
     public function selectStudentSchedule()
     {
         if ($this->request->getMethod() === 'post') {
