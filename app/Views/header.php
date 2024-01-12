@@ -539,6 +539,11 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         </div>
 
     </div>
+    <?php
+    $adminModel = new \App\Models\AdminModel();
+    $wherecond1 = array('is_deleted' => 'N');
+    $data = $adminModel->getalldata('countries', $wherecond1);
+    ?>
 
     <div class="modal fade" id="userformmodal" tabindex="-1" aria-labelledby="userformmodalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -557,10 +562,10 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <select name="country" class="form-control" id="country">
                                 <option value="">Select Country</option>
                                 <!-- JavaScript will populate this list -->
-                                <?php if (!empty($country_data)) { ?>
-                                    <?php foreach ($country_data as $data) : ?>
-                                        <option value="<?= $data->name; ?>">
-                                            <?= $data->name; ?>
+                                <?php if (!empty($data)) { ?>
+                                    <?php foreach ($data as $country) : ?>
+                                        <option value="<?= $country->name; ?>">
+                                            <?= $country->name; ?>
                                         </option>
                                     <?php endforeach; ?>
                                 <?php } ?>
