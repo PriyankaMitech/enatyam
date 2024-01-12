@@ -647,7 +647,7 @@ class StudentController extends BaseController
             session()->setFlashdata('success', 'Data updated successfully.');
         }
     } else {
-        session()->setFlashdata('success', 'Selected days and time are not available.');
+        session()->setFlashdata('errormessage', 'Selected days and time are not available.');
     }
 
     return redirect()->to('SelectDate');

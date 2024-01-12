@@ -34,6 +34,15 @@
   </div>
 
 
+  <div id="flash-message-container">
+        <?php if (session()->has('errormessage')) : ?>
+            <div class="flash-message">
+                <?= session('errormessage') ?>
+            </div>
+        <?php endif; ?>
+    </div>
+
+
   <?php
   $session = \Config\Services::session();
   $adminModel = new \App\Models\AdminModel();
