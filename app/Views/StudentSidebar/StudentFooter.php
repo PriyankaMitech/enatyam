@@ -1,8 +1,11 @@
 <footer class="main-footer">
     <strong>Copyright &copy; 2023-2024 <a href="https://www.marketingintelligence.tech/" target="_blank">MI-TECH</a>.</strong> All rights reserved.
 </footer>
-
-<script src=" <?= base_url() ?>plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<!-- this two for student calender  -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src=" <?= base_url() ?>plugins/jquery/jquery.min.js"></script> -->
 <script src="<?= base_url() ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url() ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="<?= base_url() ?>dist/js/adminlte.js"></script>
@@ -12,9 +15,7 @@
 <script src="<?= base_url() ?>plugins/jquery-mapael/maps/usa_states.min.js"></script>
 <script src="<?= base_url() ?>plugins/chart.js/Chart.min.js"></script>
 <script src="<?= base_url() ?>public/js/custom.js"></script>
-
 <script src="<?= base_url() ?>dist/js/pages/dashboard2.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="<?= base_url() ?>dist/js/adminlte.min.js"></script>
 <script src="<?= base_url() ?>public/js/jquery.barrating.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.min.js"></script>
@@ -22,7 +23,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
 </script>
 <script src="<?= base_url(); ?>plugins/select2/js/select2.full.min.js"></script>
-
 <script>
     $(function() {
         //Initialize Select2 Elements

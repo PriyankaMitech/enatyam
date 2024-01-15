@@ -12,7 +12,7 @@ $(function() {
                 if (row.days.includes(currentDay.format('dddd'))) {
                     events.push({
                         id: row.id,
-                        title: row.title,  // Assuming you want to use the title property
+                        title: row.student_name,  // Assuming you want to use the title property
                         start: currentDay.format('YYYY-MM-DD') + ' ' + row.start_time,
                         end: currentDay.format('YYYY-MM-DD') + ' ' + row.end_time
                     });
@@ -38,7 +38,7 @@ $(function() {
                 _details.find('#title').text(scheds[id].title);
 
                 // Check if the description is a valid URL
-                var description = scheds[id].description;
+                var description = scheds[id].meetlink;
                 var isUrl = /^(ftp|http|https):\/\/[^ "]+$/.test(description);
 
                 if (isUrl) {

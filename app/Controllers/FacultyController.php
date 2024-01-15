@@ -280,30 +280,41 @@ public function checkData()
     $this->response->setJSON(['exists' => $exists]);
     return $this->response;
 }
-  public function fetchTofacultyShuduleSidebar()
-  {
-    if (isset($_SESSION['sessiondata'])) {
-      $sessionData = $_SESSION['sessiondata'];
+  // public function fetchTofacultyShuduleSidebar()
+  // {
+  //   if (isset($_SESSION['sessiondata'])) {
+  //     $sessionData = $_SESSION['sessiondata'];
 
-      $email = $sessionData['email'] ?? null;
-      $password = $sessionData['password'] ?? null;
+  //     $email = $sessionData['email'] ?? null;
+  //     $password = $sessionData['password'] ?? null;
 
-      if ($email !== null && $password !== null) {
+  //     if ($email !== null && $password !== null) {
 
-        $result = session();
-        $registerId = $result->get('id');
-        $model = new facultymodel();
-        $data['FacultysheduleData'] = $model->fetchshedule($registerId);
-      // echo "<pre>";print_r($data['FacultysheduleData']);exit();
-        return view('FacultysideBar/Monthlyshedule',  $data);
-      } else {
-        return redirect()->to(base_url());
-      }
-    } else {
-      return redirect()->to(base_url());
-    }
-  }
+  //       $result = session();
+  //       $registerId = $result->get('id');
+  //       $model = new facultymodel();
+  //       $data['schedule_data'] = $model->fetchshedule($registerId);
+  //     // echo "<pre>";print_r($data['FacultysheduleData']);exit();
+  //       return view('FacultysideBar/Monthlyshedule',  $data);
+  //     } else {
+  //       return redirect()->to(base_url());
+  //     }
+  //   } else {
+  //     return redirect()->to(base_url());
+  //   }
+  // }
+public function fetchTofacultyShuduleSidebar(){
 
+          $result = session();
+          $session_id = $result->get('id');
+          $model = new AdminModel();
+          $data['session_id'] = $session_id;
+          $wherecond = array('faculty_id' => $session_id);
+
+          $data['schedule_data'] = $model->getalldataslots('tbl_student_shedule',$wherecond);
+          echo view('FacultysideBar/Monthlyshedule', $data);
+  
+}
 
 public function StudentAttendance()
 {
@@ -368,48 +379,15 @@ public function StudentAttendance()
 
     public function save_schedule()
       {
-          // $model = new facultymodel();
-
-          // if ($this->request->getMethod() !== 'post') {
-          //     return redirect()->to(base_url())->with('error', 'Error: No data to save.');
-          // }
-
-          // $data = $this->request->getPost();
-
-          // // Add the selected days to the data array
-          // $data['days'] = isset($data['days']) ? $data['days'] : [];
-
-          // if ($model->saveSchedule($data)) {
-          //     return redirect()->to('giveschedule')->with('success', 'Schedule Successfully Saved.');
-          // } else {
-          //     return view('error_view', [
-          //         'error' => [
-          //             'message' => 'An Error occurred.',
-          //             'error' => $model->errors(),
-          //         ],
-          //     ]);
-          // }
- 
+          
           $model = new AdminModel();
           $wherecond = array('faculty_registerid' => $this->request->getVar('id'));
-
           $data['schedule_data'] = $model->getalldata('schedule_list',$wherecond);
-    
           $single= $model->getsinglerow('schedule_list',$wherecond);
-    
-
-         
-
-
-        $db = \Config\Database::Connect();
+          $db = \Config\Database::Connect();
         if (empty($single)) {
-
           $selectedDaysArray = $this->request->getVar('days[]'); // Assuming days[] is an array from the form
-
-          // Convert the array to a comma-separated string
           $selectedDaysString = implode(',', $selectedDaysArray);
-        
-
           $data = [
             'faculty_registerid' => $this->request->getVar('session_id'),
             'days' => $selectedDaysString,
@@ -417,11 +395,8 @@ public function StudentAttendance()
             'end_date' => $this->request->getVar('end_date'),
             'start_time' => $this->request->getVar('start_time'),
             'end_time' => $this->request->getVar('end_time'),
-            'created_on' => date('Y:m:d H:i:s'),
-
-            
-        ];
-      
+            'created_on' => date('Y:m:d H:i:s'),      
+        ];   
             $add_data = $db->table('schedule_list');
             $add_data->insert($data);
             session()->setFlashdata('success', 'Data added successfully.');
