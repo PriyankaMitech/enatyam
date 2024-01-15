@@ -588,7 +588,6 @@ class AdminModel extends Model
                 return false;
             }
         } else {
-            // If no data is found in the 'register' table, return false
             return false;
         }
     }
@@ -603,6 +602,30 @@ class AdminModel extends Model
             return false;
         }
     }
+    public function getalldataslots($table, $wherecond)
+{
+    $result = $this->db->table($table)
+        ->where($wherecond)
+        ->get()
+        ->getResult();
+
+    if ($result) {
+        // Fetch student names using student_ids
+        foreach ($result as $row) {
+            $student_id = $row->student_id;
+            $student_data = $this->db->table('register')
+                ->where('id', $student_id)
+                ->get()
+                ->getRow();
+
+            // Add student name to the result
+            $row->student_name = $student_data ? $student_data->full_name : '';
+        }
+        return $result;
+    } else {
+        return false;
+    }
+}
 
 
     public function getalldatagroupby($table, $wherecond, $groupByCondition)

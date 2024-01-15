@@ -7,15 +7,9 @@ $page = $uri->getSegment(count($pages));
 
     <strong>Copyright &copy; 2023-2024 <a href="https://www.marketingintelligence.tech/" target="_blank">MI-TECH</a>.</strong> All rights reserved.
 </footer>
-
-
-
-
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-
-
 <script src="<?php echo base_url() ?>public/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url() ?>public/js/dataTables.bootstrap4.js"></script>
 <script src="<?php echo base_url() ?>public/js/dataTables.bootstrap4.min.js"></script>
@@ -25,7 +19,6 @@ $page = $uri->getSegment(count($pages));
 <script src="<?php echo base_url() ?>dist/js/adminlte.min.js"></script>
 <script src="<?php echo base_url() ?>public/js/custom.js"></script>
 <script src="<?php echo base_url() ?>public/js/schedule.js"></script>
-
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <script src="<?php echo base_url() ?>dist/js/adminlte.js"></script>
@@ -37,14 +30,6 @@ $page = $uri->getSegment(count($pages));
 <script src="<?php echo base_url() ?>dist/js/pages/dashboard2.js"></script>
 <script src="<?php echo base_url() ?>public/js/schedule.js"></script>
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-
-
-
-
-
-
-
-
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>

@@ -211,14 +211,17 @@ class StudentController extends BaseController
     }
     public function ScheduleStudent()
     {
-        $session = session();
-        $user_id = $session->get('id');
-        $StudentModel = new StudentModel();
-        $model = new AdminModel();
-        $wherecond = array('student_id' =>  $user_id);
-        $data['schedule_data'] = $model->getalldata('tbl_student_shedule',$wherecond);
-     // echo "<pre>";print_r($data['schedule_data']);exit();
-        return view('StudentSidebar/ScheduleStudent',$data);
+  
+     $result = session();
+    $session_id = $result->get('id');
+
+    $model = new AdminModel();
+    $data['session_id'] = $session_id;
+    $wherecond = array('student_id' => $session_id);
+
+    $data['schedule_data'] = $model->getalldata('tbl_student_shedule',$wherecond);
+   //  echo "<pre>";print_r($data['schedule_data']);exit();
+    return view('StudentSidebar/ScheduleStudent',$data);
     }
   
     public function selectStudentSchedule()
@@ -536,15 +539,10 @@ class StudentController extends BaseController
         $assignTeacherId = '';
         if (!empty($Sheduledatafromfaculty)) {
             $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
-        }
-    
+        } 
         $selectedDays = $this->request->getPost('selectedDays');
-
-
         $currentYear = date('Y');
         $currentMonth = date('m');
-    
-     
         $startDate = "{$currentYear}-{$currentMonth}-01 00:00:00";
         $endDate = date('Y-m-t 23:59:59', strtotime($startDate));
     
@@ -555,11 +553,6 @@ class StudentController extends BaseController
             'end_date <= ' => $endDate,
         ];
 
-
-     
-        
-
-    
         $shedule_data = $model->getalldataforstudent('schedule_list', $wherecond, $selectedDays);
 
         if (!empty($shedule_data)) {
@@ -581,13 +574,20 @@ class StudentController extends BaseController
         return $this->response->setJSON($availability);
     }
 
-    public function selectslotsbystudent()
+
+public function selectslotsbystudent()
 {
+   
     $model = new AdminModel();
     $wherecond = ['student_id' => $this->request->getVar('student_id')];
     $single = $model->getsinglerow('tbl_student_shedule', $wherecond);
 
     $db = \Config\Database::Connect();
+
+    // Extract start and end times from 'shedules_time'
+    $sheduleTimes = explode(' - ', $this->request->getVar('shedules_time'));
+    $startTime = $sheduleTimes[0];
+    $endTime = $sheduleTimes[1];
 
     $selectedDaysArray = $this->request->getVar('days[]');
     $selectedDaysString = implode(',', $selectedDaysArray);
@@ -599,8 +599,11 @@ class StudentController extends BaseController
         'start_date' => $this->request->getVar('start_date'),
         'end_date' => $this->request->getVar('end_date'),
         'shedules_time' => $this->request->getVar('shedules_time'),
+        'start_time' => $startTime,
+        'end_time' => $endTime,
         'created_on' => date('Y:m:d H:i:s'),
     ];
+
     $isAvailable = $this->checkAvailability($data);
 
     if ($isAvailable) {

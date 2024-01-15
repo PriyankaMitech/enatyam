@@ -1,4 +1,4 @@
-<?php echo view('StudentSidebar/Studentsidebar'); ?>
+<?php  echo view('StudentSidebar/Studentsidebar'); ?>
 <link rel="stylesheet" href="public/calendar/fullcalendar/lib/main.min.css">
 <script src="public/calendar/js/jquery-3.6.0.min.js"></script>
 <script src="public/calendar/fullcalendar/lib/main.min.js"></script>
@@ -12,6 +12,7 @@
                     <div class="col-md-12">
                         <div id="calendar"></div>
                     </div>
+                   
                 </div>
             </div>
         </div>
@@ -52,24 +53,18 @@
 
 $sched_res = [];
 if(!empty($schedule_data)){
-//  print_r($schedule_data);die;
 foreach($schedule_data as $data){
-    $sdate = date("Y-m-d H:i:s", strtotime($data->start_date)); // Assuming your date format is compatible with strtotime
-    $edate = date("Y-m-d H:i:s", strtotime($data->end_date)); // Adjust this based on your date format
-    $sched_res[$data->id] = [
-        'id' => $data->id,
-        'student_id' => $data->student_id,
-        'days' => $data->days,
-        'description' => $data->meetlink,
-        'title'=>$data->shedules_time,
-        'start' => $sdate,
-        'end' => $edate
-    ];
+    $sdate = date("F d, Y h:i A",strtotime($data->start_date));
+    $edate = date("F d, Y h:i A",strtotime($data->end_date));
+    $sched_res[$data->id] = $data;
 }
 }
+
 ?>
 <script>
-var scheds = <?= json_encode($sched_res) ?>;
+var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
 <script src="public/calendar/js/slots.js"></script>
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>
+
+
