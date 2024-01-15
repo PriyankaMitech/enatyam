@@ -595,7 +595,6 @@ class AdminModel extends Model
     {
         $result = $this->db->table($table)->where($wherecond)->get()->getResult();
 
-
         if ($result) {
             return $result;
         } else {

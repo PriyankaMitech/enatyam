@@ -1176,6 +1176,7 @@ public function singlechat()
 
     public function get_student_data()
     {
+        
         $model = new AdminModel();
 
         $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
@@ -1183,12 +1184,21 @@ public function singlechat()
         $GroupSession = 'GroupSession';
         $Payment_status = 'Y';
 
+    
+
 
         $whereCondition = '';
         $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'Payment_status' =>  $Payment_status, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
 
 
         $student_data = $model->getalldata('register', $whereCondition);
+
+        // $lastQuery = $model->getLastQuery();
+
+        // // Now you can use $lastQuery for debugging or logging purposes
+        // echo "Last Query: " . $lastQuery;exit();
+         
+
 
         return json_encode($student_data);
     }
