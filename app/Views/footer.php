@@ -2764,6 +2764,59 @@ $(function() {
         }
     });
 </script>
+<script>
+    $(document).ready(function() {
+        $('#femail').on('input', function() {
+            var username = $(this).val();
+            // alert(username);
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_username_id',
+                data: {
+                    username: username
+                },
+                success: function(response) {
+                    if (response == 'false') {
+                        $('#emailspanid').text('');
+                        $('.saveEnrollTopic').prop('disabled', false);
+
+                    } else if (response == 'true') {
+                        $('#emailspanid').text('This email is already available.');
+                        $('.saveEnrollTopic').prop('disabled', true);
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#phone').on('input', function() {
+            var mobile_no = $(this).val();
+            // alert(username);
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_mobile_no_id',
+                data: {
+                    mobile_no: mobile_no
+                },
+                success: function(response) {
+                    if (response == 'false') {
+                        $('#phonespanid').text('');
+                        $('.saveEnrollTopic').prop('disabled', false);
+
+                    } else if (response == 'true') {
+                        $('#phonespanid').text('This mobile number is allredy available.');
+                        $('.saveEnrollTopic').prop('disabled', true);
+                    }
+                }
+            });
+        });
+    });
+</script>
 
 
 

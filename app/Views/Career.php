@@ -22,7 +22,7 @@
             <div class="col-lg-12">
                 <ul class="breadcrumb-ul">
                     <li>
-                        <a href="<?php echo base_url('home'); ?>">Home</a>
+                        <a href="<?php echo base_url('/'); ?>">Home</a>
                     </li>
                     <li><i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </li>
@@ -134,7 +134,8 @@
 
                                             <div>
                                                 <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="femail" placeholder="Email *" value="" type="email" name="email">
-                                                <span style="color:red;" id="emailspanid"></span>
+                                                <span style="color:red;" id="emailspanid" class="error"></span>
+                                                <!-- <span id="emailError" class="error"></span> -->
                                             </div>
 
                                             <div>

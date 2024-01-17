@@ -272,6 +272,7 @@ class Home extends BaseController
 
         if ($mobile_no) {
             $mobileno = $loginModel->checkexist($mobile_no, 'mobile_no');
+            // $mobileno = $loginModel->checkPhoneExist($mobile_no, 'mobile_no');
             // echo "<pre>";
             // print_r($email);exit();
             return json_encode($mobileno);
