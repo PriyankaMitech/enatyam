@@ -255,7 +255,7 @@ class Home extends BaseController
         $username = $this->request->getPost('username');
 
         if ($username) {
-            $email = $loginModel->checkexist($username, 'email');
+            $email = $loginModel->checkExist($username, 'email', 'register');
             // echo "<pre>";
             // print_r($email);exit();
             return json_encode($email);
@@ -269,15 +269,25 @@ class Home extends BaseController
     {
         $loginModel = new LoginModel();
         $mobile_no = $this->request->getPost('mobile_no');
+        $phone =  $this->request->getPost('phone');
+        // print_r($phone);
+        // die;
+        // $result = $this->loginModel->checkExist($mobile_no, 'mobile_no' 'register');
+
 
         if ($mobile_no) {
-            $mobileno = $loginModel->checkexist($mobile_no, 'mobile_no');
-            // $mobileno = $loginModel->checkPhoneExist($mobile_no, 'mobile_no');
+            $mobileno = $loginModel->checkExist($mobile_no, 'mobile_no', 'register');
+
             // echo "<pre>";
             // print_r($email);exit();
             return json_encode($mobileno);
         } else {
-            return json_encode([]);
+            if ($phone) {
+                $mobileno = $loginModel->checkExist($phone, 'phone', 'carrier');
+                return json_encode($mobileno);
+            } else {
+                return json_encode([]);
+            }
         }
     }
 }

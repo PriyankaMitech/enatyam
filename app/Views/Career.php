@@ -2,19 +2,13 @@
 
 
 <section class="contactus">
-
     <div class="container cont-width">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
                 <h1><b>Career</b></h1>
-
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 <section class="cont-main-section">
     <div class="container ">
@@ -52,26 +46,16 @@
             </div>
         </div>
     </div>
-
-
 </section>
-
 
 <section class="career-main-section pt-0">
     <div class="container ">
         <div class="row">
             <div class="col-lg-12 text-center">
-
-                <h3>Steps to become a Faculty
-
-                </h3>
-                <p class="text-grey">Lorem ipsum dolor sit amet, consectetur
-
-                </p>
+                <h3>Steps to become a Faculty</h3>
+                <p class="text-grey">Lorem ipsum dolor sit amet, consectetur</p>
                 <span class="line"> </span>
             </div>
-
-
         </div>
     </div>
 </section>
@@ -131,21 +115,16 @@
                                                 <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="name" placeholder="Your Name *" value="" type="text" name="name">
                                                 <span style="color:red;" id="namespanid"></span> </span>
                                             </div>
-
                                             <div>
                                                 <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="femail" placeholder="Email *" value="" type="email" name="email">
-                                                <span style="color:red;" id="emailspanid" class="error"></span>
-                                                <!-- <span id="emailError" class="error"></span> -->
+                                                <span style="color:red;" id="emailspanid"></span>
                                             </div>
-
                                             <div>
                                                 <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="phone" pattern="[0-9]{10}" placeholder="Phone *" value="" type="tel" name="phone" required>
                                                 <span style="color:red;" id="phonespanid"></span>
                                             </div>
 
                                             <div>
-
-
                                                 <select class="form-control" name="courses" id="courses">
                                                     <option>Please select course</option>
                                                     <?php if (!empty($courses_data)) { ?>

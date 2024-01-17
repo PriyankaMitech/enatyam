@@ -2795,7 +2795,7 @@ $(function() {
     $(document).ready(function() {
         $('#phone').on('input', function() {
             var mobile_no = $(this).val();
-            // alert(username);
+            // alert(mobile_no);
 
             $.ajax({
                 type: 'POST',
@@ -2809,7 +2809,7 @@ $(function() {
                         $('.saveEnrollTopic').prop('disabled', false);
 
                     } else if (response == 'true') {
-                        $('#phonespanid').text('This mobile number is allredy available.');
+                        $('#phonespanid').text('This mobile number is already available.');
                         $('.saveEnrollTopic').prop('disabled', true);
                     }
                 }
