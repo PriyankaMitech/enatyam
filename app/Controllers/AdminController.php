@@ -90,6 +90,8 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $postData = $this->request->getPost();
         $model->edit($postData);
+        // $session = session();
+        // $session->setFlashdata('success', 'Teacher assigned for Demo.');
         return redirect()->to('Admindashboard');
     }
 
@@ -101,7 +103,10 @@ class AdminController extends BaseController
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
             $result = $model->add($postData);
+
             if ($result) {
+                $session = session();
+                $session->setFlashdata('success', 'Faculty assigned successfully!');
                 return redirect()->to('Admindashboard');
             } else {
                 return redirect()->to('error');
@@ -427,10 +432,12 @@ class AdminController extends BaseController
                 sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
                 $this->session->setFlashdata('success', 'Demo Rescheduled Successfully.');
             } else {
-                $this->session->setFlashdata('error', 'Error Rescheduling Demo. Please try again.');
+                $this->session->setFlashdata('errormessage', 'Error Rescheduling Demo. Please try again.');
             }
         } else {
-            $this->session->setFlashdata('error', 'Error fetching faculty details. Please try again.');
+            $session = session();
+            $session->setFlashdata('errormessage', 'Error fetching faculty details. Please try again.');
+            // $this->session->setFlashdata('error', 'Error fetching faculty details. Please try again.');
         }
 
         return redirect()->to('getDemoDetails');
@@ -444,9 +451,9 @@ class AdminController extends BaseController
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
 
-            if ($email !== null && $password !== null) {   
-              $data['schedule_data'] = $model->getFacultyslots();
-           //   echo "<pre>";print_r($data['schedule_data']);exit();
+            if ($email !== null && $password !== null) {
+                $data['schedule_data'] = $model->getFacultyslots();
+                //   echo "<pre>";print_r($data['schedule_data']);exit();
                 return view('AdminSideBar/FacultysidebarShedule', $data);
             } else {
                 return redirect()->to(base_url());
@@ -1182,7 +1189,7 @@ class AdminController extends BaseController
 
     public function get_student_data()
     {
-        
+
         $model = new AdminModel();
 
         $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
@@ -1190,7 +1197,7 @@ class AdminController extends BaseController
         $GroupSession = 'GroupSession';
         $Payment_status = 'Y';
 
-    
+
 
 
         $whereCondition = '';
@@ -1203,7 +1210,7 @@ class AdminController extends BaseController
 
         // // Now you can use $lastQuery for debugging or logging purposes
         // echo "Last Query: " . $lastQuery;exit();
-         
+
 
 
         return json_encode($student_data);
@@ -1466,58 +1473,58 @@ class AdminController extends BaseController
 
         $selectedDaysString = '';
         $selectedDaysArray = $this->request->getVar('days[]');
-        if(!empty($selectedDaysArray)){
-        $selectedDaysString = implode(',', $selectedDaysArray);
+        if (!empty($selectedDaysArray)) {
+            $selectedDaysString = implode(',', $selectedDaysArray);
         }
-        
+
         $selectedgroupstudentnamesString = '';
 
         $selectedgroupstudentnameArray = $this->request->getVar('student_id');
-        if(!empty($selectedgroupstudentnameArray)){
-        $selectedgroupstudentnamesString = implode(',', $selectedgroupstudentnameArray);
+        if (!empty($selectedgroupstudentnameArray)) {
+            $selectedgroupstudentnamesString = implode(',', $selectedgroupstudentnameArray);
         }
-        
-    
+
+
         // Extract start and end times from 'shedules_time'
         $sheduleTimes = explode(' - ', $this->request->getVar('shedule'));
-    
+
         if (isset($sheduleTimes[0]) && isset($sheduleTimes[1])) {
-                   $startTime = $sheduleTimes[0];
-                   $endTime = $sheduleTimes[1];
-                }
-     
-
-        $db = \Config\Database::Connect();  
-
-      
-       
-
-            if (empty($single)) {
-                $datas = [
-                    'groupstudentname' => $selectedgroupstudentnamesString, // Convert array to comma-separated string
-                    'faculty_id' => $this->request->getVar('faculty_id_g'),
-                    // 'group_id' => $lastInsertID,
-                    'groupname' => $this->request->getVar('group_name'),
-        
-                    'days' => $selectedDaysString,
-                    'start_date' => $this->request->getVar('start_date'),
-                    'end_date' => $this->request->getVar('end_date'),
-                    'shedules_time' => $this->request->getVar('shedule'),
-                    'start_time' => $startTime,
-                    'end_time' => $endTime,
-                    'created_on' => date('Y:m:d H:i:s'),
-                ];
+            $startTime = $sheduleTimes[0];
+            $endTime = $sheduleTimes[1];
+        }
 
 
-                // echo "<pre>";print_r($datas);exit();
-                    
-        $isAvailable = $this->checkAvailability($datas);
-    
-    
-        if ($isAvailable) {
+        $db = \Config\Database::Connect();
+
+
+
+
+        if (empty($single)) {
+            $datas = [
+                'groupstudentname' => $selectedgroupstudentnamesString, // Convert array to comma-separated string
+                'faculty_id' => $this->request->getVar('faculty_id_g'),
+                // 'group_id' => $lastInsertID,
+                'groupname' => $this->request->getVar('group_name'),
+
+                'days' => $selectedDaysString,
+                'start_date' => $this->request->getVar('start_date'),
+                'end_date' => $this->request->getVar('end_date'),
+                'shedules_time' => $this->request->getVar('shedule'),
+                'start_time' => $startTime,
+                'end_time' => $endTime,
+                'created_on' => date('Y:m:d H:i:s'),
+            ];
+
+
+            // echo "<pre>";print_r($datas);exit();
+
+            $isAvailable = $this->checkAvailability($datas);
+
+
+            if ($isAvailable) {
                 $add_data = $db->table('tbl_student_shedule');
                 $add_data->insert($datas);
-        
+
                 $data = [
                     'courses_id_g' => $this->request->getVar('courses_id_g'),
                     'sub_courses_id_g' => $this->request->getVar('sub_courses_id_g'),
@@ -1538,7 +1545,7 @@ class AdminController extends BaseController
                         'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
                         'groupName' => $this->request->getVar('group_name'),
                     ];
-        
+
                     $studentIds = explode(',', $data['student_id']);
                     foreach ($studentIds as $studentId) {
                         $registerUpdate = $db->table('register')->where('id', $studentId);
@@ -1549,95 +1556,95 @@ class AdminController extends BaseController
             } else {
                 session()->setFlashdata('errormessage', 'Selected days and time are not available.');
             }
-            } else {
-                // echo "<pre>";print_r($single);exit();
-                $selectedDaysArray = $this->request->getVar('days[]'); 
-    
-                $selectedDaysArray[] = $single->days;
-              
-                $selectedDaysString = implode(',', $selectedDaysArray);
+        } else {
+            // echo "<pre>";print_r($single);exit();
+            $selectedDaysArray = $this->request->getVar('days[]');
 
-                $selectedgroupstudentnameArray =  $this->request->getVar('student_id[]');
-                $selectedgroupstudentnameArray[] = $single->student_id;
-                $selectedgroupstudentnamesString = implode(',', $selectedgroupstudentnameArray);
+            $selectedDaysArray[] = $single->days;
 
-                $data = [
-                    'student_id' => $selectedgroupstudentnamesString, 
+            $selectedDaysString = implode(',', $selectedDaysArray);
 
-                    'days' => $selectedDaysString,
-      
-             
+            $selectedgroupstudentnameArray =  $this->request->getVar('student_id[]');
+            $selectedgroupstudentnameArray[] = $single->student_id;
+            $selectedgroupstudentnamesString = implode(',', $selectedgroupstudentnameArray);
+
+            $data = [
+                'student_id' => $selectedgroupstudentnamesString,
+
+                'days' => $selectedDaysString,
+
+
+            ];
+
+
+
+            $datas = [
+                'groupstudentname' => $selectedgroupstudentnamesString,
+
+                'days' => $selectedDaysString,
+
+
+            ];
+
+            // echo "<pre>";print_r($datas);exit();
+
+            $update_data = $db->table('tbl_student_shedule')->where('student_id', $this->request->getVar('student_id'));
+            $update_data->update($datas);
+
+            $update_data = $db->table('tbl_group')->where('id', $this->request->getVar('id'));
+            $update_data->update($data);
+
+
+            if (!empty($this->request->getVar('student_id'))) {
+                $registerUpdateData = [
+                    'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
+                    'groupName' => $this->request->getVar('group_name'),
                 ];
 
-
-                
-                $datas = [
-                    'groupstudentname' => $selectedgroupstudentnamesString, 
-
-                    'days' => $selectedDaysString,
-      
-             
-                ];
-
-                // echo "<pre>";print_r($datas);exit();
-            
-                $update_data = $db->table('tbl_student_shedule')->where('student_id', $this->request->getVar('student_id'));
-                $update_data->update($datas);
-
-                $update_data = $db->table('tbl_group')->where('id', $this->request->getVar('id'));
-                $update_data->update($data);
-
-
-                if (!empty($this->request->getVar('student_id'))) {
-                    $registerUpdateData = [
-                        'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
-                        'groupName' => $this->request->getVar('group_name'),
-                    ];
-        
-                    $studentIds = explode(',', $data['student_id']);
-                    foreach ($studentIds as $studentId) {
-                        $registerUpdate = $db->table('register')->where('id', $studentId);
-                        $registerUpdate->update($registerUpdateData);
-                    }
+                $studentIds = explode(',', $data['student_id']);
+                foreach ($studentIds as $studentId) {
+                    $registerUpdate = $db->table('register')->where('id', $studentId);
+                    $registerUpdate->update($registerUpdateData);
                 }
-
-
-
-                session()->setFlashdata('success', 'Data updated successfully.');
             }
-      
 
 
-        
-    
 
-    
+            session()->setFlashdata('success', 'Data updated successfully.');
+        }
+
+
+
+
+
+
+
 
         // Update data in 'register' table using student IDs
-        
+
 
         return redirect()->to('student_list_of_group');
     }
 
 
-    
-protected function checkAvailability($data)
-{
-    $model = new AdminModel();
-    $wherecond = [
-        'faculty_id' => $data['faculty_id'],
-        'shedules_time' => $data['shedules_time'],
-    ];
-    $existingSchedules = $model->getslots($wherecond);
-    foreach ($existingSchedules as $existingSchedule) {
-        $availableDays = explode(',', $existingSchedule->days);
-        $selectedDays = explode(',', $data['days']);
-        if (array_intersect($selectedDays, $availableDays)) {
-            return false; 
+
+    protected function checkAvailability($data)
+    {
+        $model = new AdminModel();
+        $wherecond = [
+            'faculty_id' => $data['faculty_id'],
+            'shedules_time' => $data['shedules_time'],
+        ];
+        $existingSchedules = $model->getslots($wherecond);
+        foreach ($existingSchedules as $existingSchedule) {
+            $availableDays = explode(',', $existingSchedule->days);
+            $selectedDays = explode(',', $data['days']);
+            if (array_intersect($selectedDays, $availableDays)) {
+                return false;
+            }
         }
+        return true;
     }
-    return true; 
-}
 
 
     public function student_list_of_group()
@@ -1797,7 +1804,7 @@ protected function checkAvailability($data)
     }
     public function studentSlots()
     {
-       
+
         $model = new AdminModel();
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
@@ -1805,10 +1812,10 @@ protected function checkAvailability($data)
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
 
-            if ($email !== null && $password !== null) {   
-              $data['schedule_data'] = $model->getstudentslots();
-           //   echo "<pre>";print_r($data['schedule_data']);exit();
-                echo view('AdminSideBar/StudentselectedSlots',$data);
+            if ($email !== null && $password !== null) {
+                $data['schedule_data'] = $model->getstudentslots();
+                //   echo "<pre>";print_r($data['schedule_data']);exit();
+                echo view('AdminSideBar/StudentselectedSlots', $data);
             } else {
                 return redirect()->to(base_url());
             }
@@ -1823,33 +1830,32 @@ protected function checkAvailability($data)
     {
         $model = new AdminModel();
 
-    
+
         $assignTeacherId = $this->request->getPost('facultyidg');
 
         $wherecond1 = [
             'carrier_id' => $assignTeacherId,
-          
+
         ];
 
 
 
-        $teacher_data = $model->getsinglerow('register',$wherecond1);
+        $teacher_data = $model->getsinglerow('register', $wherecond1);
 
         // echo "<pre>";print_r($teacher_data);
 
         $teacher_id = '';
-        if(!empty($teacher_data)){
+        if (!empty($teacher_data)) {
             $teacher_id = $teacher_data->id;
-
         }
 
-        
+
         $selectedDays = $this->request->getPost('selectedDays');
         $currentYear = date('Y');
         $currentMonth = date('m');
         $startDate = "{$currentYear}-{$currentMonth}-01 00:00:00";
         $endDate = date('Y-m-t 23:59:59', strtotime($startDate));
-    
+
         // Prepare the WHERE condition for the query
         $wherecond = [
             'faculty_registerid' => $teacher_id,
@@ -1857,15 +1863,15 @@ protected function checkAvailability($data)
             'end_date <= ' => $endDate,
         ];
 
-    
+
         // Prepare the WHERE condition for the query
-     
+
 
         // echo "<pre>";print_r($selectedDays);
 
         $shedule_data = $model->getalldataforstudent('schedule_list', $wherecond, $selectedDays);
 
-        
+
 
 
         if (!empty($shedule_data)) {
@@ -1876,12 +1882,12 @@ protected function checkAvailability($data)
     }
 
 
-    
-   
+
+
 
     public function check_group_name()
     {
-      
+
         $admin_model = new AdminModel();
         $group_name = $this->request->getPost('group_name');
 
@@ -1894,5 +1900,4 @@ protected function checkAvailability($data)
             return json_encode([]);
         }
     }
-
 }

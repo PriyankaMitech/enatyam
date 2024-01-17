@@ -233,7 +233,7 @@ if (!empty($profile_data)) {
                                                                     <?php } else { ?>
                                                                         <div class="timeline-body">
                                                                             <div class="embed-responsive embed-responsive">
-                                                                                Not Data available.
+                                                                                No Data available.
 
                                                                             </div>
                                                                         </div>
