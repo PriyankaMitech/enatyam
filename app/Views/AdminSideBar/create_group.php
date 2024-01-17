@@ -66,6 +66,7 @@
                   <div class="form-group">
                     <label>Group Name</label>
                     <input type="text" class="form-control" name="group_name" id="group_name" value="<?php if (isset($single_data)) { echo ($single_data->group_name); } ?>">
+                    <span class="error" id="group_namerror"></span>
                   </div>
                 </div>
 
@@ -95,15 +96,32 @@
                     </div>
                 </div>
 
-   
-                
-
 
                 <div class="col-md-4">
-                  <div class="form-group">
-                    <label>Session Start Date</label>
-                    <input type="date" class="form-control" name="session_start_date" id="session_start_date" value="<?php if (isset($single_data)) { echo ($single_data->session_start_date); }else{ echo date('Y-m-d');} ?>">
-                  </div>
+
+                <div class="form-group mb-2">
+                    <label for="start_date" class="control-label">Start Date</label>
+                    <input type="date" class="start_date form-control form-control-sm rounded-0"  id="start_date"  disabled>
+                    <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date"  >
+
+                </div>
+                              </div>
+                              <div class="col-md-4">
+
+                <div class="form-group mb-2">
+                    <label for="end_date" class="control-label">End Date</label>
+                    <input type="date" class="end_date form-control form-control-sm rounded-0"  id="end_date"  disabled>
+                    <input type="hidden" class="end_date form-control form-control-sm rounded-0" name="end_date" id="end_date"  >
+
+                </div>
+                              </div>
+
+                <div class="col-md-4 ">
+                <label class="control-label">Select Days</label>
+                <div class="row checkboxdays">
+                              </div>
+
+                  
                 </div>
 
                 <div class="col-md-4">
@@ -117,7 +135,7 @@
                 </div>
 
                 <div class="col-md-12 text-right">
-                    <button type="submit" name="submit" value="submit" class="btn btn-primary" >Submit</button>
+                    <button type="submit" name="submit" value="submit" class="submitButton btn btn-primary" >Submit</button>
                 </div>
               </div>
             </form>

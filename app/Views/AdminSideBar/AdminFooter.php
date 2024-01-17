@@ -52,13 +52,6 @@
 <!-- AdminLTE App -->
 <script src="<?= base_url(); ?>dist/js/adminlte.min.js"></script>
 
-
-
-
-
-
-<!-- jQuery -->
-<!-- Bootstrap 4 -->
 <!-- Select2 -->
 <script src="<?= base_url(); ?>plugins/select2/js/select2.full.min.js"></script>
 <!-- Bootstrap4 Duallistbox -->
@@ -75,12 +68,8 @@
 <script src="<?= base_url(); ?>plugins/bs-stepper/js/bs-stepper.min.js"></script>
 <!-- dropzonejs -->
 <script src="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.js"></script>
-<!-- AdminLTE App -->
-<!-- AdminLTE for demo purposes -->
 
-<!-- <script src="<?= base_url(); ?>dist/js/demo.js"></script> -->
 
-<!-- Page specific script -->
 <script>
     $(function() {
         //Initialize Select2 Elements
@@ -770,12 +759,19 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Check if the flash message exists
         var flashMessage = document.querySelector('.flash-success');
+        var errorMessage = document.querySelector('.flash-message');
+
 
         if (flashMessage) {
             // Set a timeout to hide the flash message after 5 minutes (300,000 milliseconds)
             setTimeout(function() {
                 flashMessage.style.display = 'none';
-            }, 300);
+            }, 1200);
+        }
+        if(errorMessage){
+            setTimeout(function() {
+                errorMessage.style.display = 'none';
+            }, 1500);
         }
     });
 </script>
@@ -1265,63 +1261,37 @@
             return customFormat;
         }
 
-        function updateFacultyVideos(data) {
+      function updateFacultyVideos(data) {
+    $.each(data, function(index, faculty) {
+        var base_url = '<?= base_url() ?>';
+        var ribbonColor = '#ff0000'; // You might want to set an appropriate color
 
-            $.each(data, function(index, faculty) {
-                var base_url = '<?= base_url() ?>';
+        var videoHTML = `
+            <div class="col-sm-3 mt-3">
+                <video width="100%" height="200px" controls poster="<?= base_url('public/images/play.jpg') ?>">
+                    <source class="img-fluid" src="${base_url}/public/uploads/FacultyUplodedVideos/${faculty.video_name}" type="video/mp4">
+                </video>
+                <div class="ribbon-wrapper ribbon-lg">
+                    <div class="ribbon" style="background-color: ${ribbonColor}; text-lg">
+                        <p class="card-text" style="color: #fff; background-color: ${ribbonColor}">${faculty.student_name}</p>
+                    </div>
+                    <div class="ribbon" style="background-color: ${ribbonColor}; text-lg">
+                        <p class="card-text" style="color: #fff; background-color: ${ribbonColor}">${faculty.student_name}</p>
+                    </div>
+                </div>
+                <div class="p">
+                    <p class="card-text" style="padding: 6%; color: #fff; background-color: ${ribbonColor}">
+                        Faculty Name: ${faculty.faculty_name} <br>
+                        Date: ${formatVideoDate(faculty.DateTime)}
+                    </p>
+                </div>
+            </div>
+        `;
 
-                var videoHTML = `
-<div class="col-sm-3 mt-3">
-    <video width="100%" height="200px" controls poster="<?= base_url('public/images/play.jpg') ?>">
+        container.append(videoHTML);
+    });
+}
 
-    var videoHTML = ` < div class = "col-sm-3 mt-3" >
-                    <
-                    video width = "100%"
-                height = "200px"
-                controls poster = "<?= base_url('public/images/play.jpg') ?>" >
-                    <
-                    source class = "img-fluid"
-                src = "${base_url}/public/uploads/FacultyUplodedVideos/${faculty.video_name}"
-                type = "video/mp4" >
-                    <
-                    /video>
-
-                    <
-                    div class = "ribbon-wrapper ribbon-lg" >
-                    <
-                    div class = "ribbon"
-                style = "background-color: ${ribbonColor}; text-lg" >
-                    <
-                    p class = "card-text"
-                style = "color: #fff; background-color: ${ribbonColor}" > $ {
-                    faculty.student_name
-                } < /p> </div > < div class = "ribbon"
-                style = "background-color: ${ribbonColor}; text-lg" >
-                    <
-                    p class = "card-text"
-                style = "color: #fff; background-color: ${ribbonColor}" > $ {
-                    faculty.student_name
-                } < /p> </div > < /div> <div class = "p" > <
-                p class = "card-text"
-                style = "padding: 6%; color: #fff; background-color: ${ribbonColor}" >
-                    Faculty Name & nbsp;: & nbsp;
-                $ {
-                    faculty.faculty_name
-                } < br >
-                    Date & nbsp;: & nbsp;
-                $ {
-                    formatVideoDate(faculty.DateTime)
-                }
-                Date & nbsp;: & nbsp;
-                $ {
-                    formatVideoDate(faculty.DateTime)
-                } < /p> </div > < /div> `;
-
-                container.append(videoHTML); <
-                /div>`;
-                container.append(videoHTML);
-            });
-        }
     });
 
 
@@ -1564,78 +1534,165 @@
 </script>
 
 <script>
-    $(document).ready(function() {
-        $('#faculty_id_g').on('change', function() {
-            var facultyidg = $(this).val();
-            console.log(facultyidg);
-            if (facultyidg) {
-                $.ajax({
-                    url: '<?= base_url(); ?>get_shedule_data',
-                    type: 'POST',
-                    data: {
-                        faculty_id_g: facultyidg
-                    },
-                    dataType: 'json',
-                    success: function(data) {
-                        $('#shedule').empty();
-                        $('#shedule').append('<option value="">Please select schedule</option>');
+  $(document).ready(function() {
+    $('#faculty_id_g').on('change', function() {
+        var facultyidg = $(this).val();
+        var allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-                        // Group timings by day
-                        var groupedTimings = {};
-                        $.each(data, function(key, value) {
-                            if (!(value.Day in groupedTimings)) {
-                                groupedTimings[value.Day] = [];
-                            }
-                            groupedTimings[value.Day].push(value);
-                        });
+        console.log(facultyidg);
+        if (facultyidg) {
+            $.ajax({
+                url: '<?= base_url(); ?>get_shedule_data',
+                type: 'POST',
+                data: {
+                    faculty_id_g: facultyidg
+                },
+                dataType: 'json',
+                success: function(data) {
+                    // Extracting days from the schedule data
+                    var scheduleDays = data.length > 0 ? data[0].days.split(',') : [];
 
-                        // Define custom order for days
-                        var customOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+                    // Clear existing checkboxes
+                    $('.form-check').remove();
 
-                        // Sort days based on custom order
-                        var sortedDays = Object.keys(groupedTimings).sort(function(a, b) {
-                            return customOrder.indexOf(a) - customOrder.indexOf(b);
-                        });
+                    // Generate checkboxes
+                    $.each(allDays, function(index, day) {
+                        var isChecked = scheduleDays.includes(day);
+                        console.log(isChecked); // Add this line to log the value of isChecked
+                        var disabled = isChecked ? '' : 'disabled';
 
-                        // Add grouped timings to the dropdown
-                        $.each(sortedDays, function(index, day) {
-                            var oddEvenClass = index % 2 === 0 ? 'even' : 'odd';
-                            var optionsHtml = '<optgroup class="' + oddEvenClass + '" label="' + day + '">';
+                        var checkboxHtml = `
+                            <div class="form-check col-md-6">
+                                <input type="checkbox" id="days" class="form-check-input days" name="days[]" value="${day}" ${disabled}>
+                                <label class="form-check-label" for="days">${day}</label>
+                            </div>
+                        `;
+                        $('.checkboxdays').append(checkboxHtml);
 
-                            $.each(groupedTimings[day], function(index, timing) {
-                                var formattedStartTime = formatTime(timing.start_time);
-                                var formattedEndTime = formatTime(timing.end_time);
+                    
+                    });
+                }
+            });
+        } else {
+            // Clear existing checkboxes if faculty_id_g is not selected
+            $('.form-check').remove();
+        }
 
-                                optionsHtml += '<option value="' + timing.id + '">' + formattedStartTime + ' - ' + formattedEndTime + '</option>';
-                            });
-                            optionsHtml += '</optgroup>';
-                            $('#shedule').append(optionsHtml);
-                        });
 
-                        // Retrieve the selected timing ID from the hidden input field
-                        var selectedTimingId = $('#selected_shedule').val();
-
-                        // Select the timing in the dropdown
-                        $('#shedule').val(selectedTimingId);
-                    }
-                });
-            } else {
-                $('#shedule').empty();
-                $('#shedule').append('<option value="">Please select schedule</option>');
-            }
-        });
-
-        // Trigger change event on #courses_id_g
-        $('#faculty_id_g').trigger('change');
+      
     });
 
-    function formatTime(timeString) {
-        var timeParts = timeString.split(':');
-        var hours = timeParts[0];
-        var minutes = timeParts[1];
 
-        return hours + ':' + minutes;
+    $('.checkboxdays').on('change', '.days', function() {
+        var selectedDays = [];
+
+                            // var selectedDays = $('.days:checked').map(function() {
+                            //     return this.value;
+                            // }).get();
+                            fetchData(selectedDays);
+
+                        });
+
+    // Trigger change event on #faculty_id_g
+    $('#faculty_id_g').trigger('change');
+
+
+    function fetchData(selectedDays) {
+        // resetDropdownAndFetchData();
+
+        var addedTimeSlots = [];
+        var facultyidg = $('#faculty_id_g').val();
+        // alert(selectedDays);
+
+        // alert(facultyidg);
+    $.ajax({
+        url: '<?= base_url(); ?>get_shedule_data_for_group',
+        type: 'POST',
+        data: {
+            selectedDays: selectedDays,
+            facultyidg :facultyidg,
+        },
+        dataType: 'json',
+  
+        success: function (data) {
+            $('#shedule').empty();
+
+            if (!Array.isArray(data)) {
+                data = [data];
+            }
+
+            $.each(data, function (key, value) {
+                var startTime = value.start_time;
+                var endTime = value.end_time;
+
+                var slots = createOneHourTimeSlots(startTime, endTime);
+
+                // console.log(slots);
+                $.each(slots, function (index, slot) {
+                    if (!addedTimeSlots.includes(slot)) {
+                        $('#shedule').append('<option value="' + slot + '">' + slot + '</option>');
+                        addedTimeSlots.push(slot);
+                    }
+                });
+            });
+
+            // var selectedStateId = $('#selected_shedules_time').val();
+            // $('#shedules_time').val(selectedStateId);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.error('AJAX Error:', textStatus, errorThrown);
+        }
+    });
+}
+
+function createOneHourTimeSlots(startTime, endTime) {
+    var slots = [];
+    var currentSlot = startTime;
+
+    while (currentSlot < endTime) {
+        var slot = currentSlot + ' - ' + addOneHour(currentSlot);
+        slots.push(slot);
+        currentSlot = addOneHour(currentSlot);
     }
+
+    return slots;
+}
+
+function addOneHour(time) {
+    var parts = time.split(':');
+    var hours = parseInt(parts[0], 10);
+    var minutes = parseInt(parts[1], 10);
+
+    // Add one hour
+    hours += 1;
+
+    // Format to 'HH:mm:ss'
+    return pad(hours) + ':' + pad(minutes) + ':00';
+}
+
+function pad(number) {
+    return (number < 10 ? '0' : '') + number;
+}
+
+
+
+});
+
+function formatTime(timeString) {
+    var timeParts = timeString.split(':');
+    var hours = timeParts[0];
+    var minutes = timeParts[1];
+
+    return hours + ':' + minutes;
+}
+
+    function resetDropdownAndFetchData() {
+        $('#shedule').empty();
+        $('#shedule').append('<option value="">Please select time</option>');
+        addedTimeSlots = []; // Reset added time slots
+        fetchData(selectedDays);
+    }
+
 </script>
 
 <script>
@@ -1670,6 +1727,102 @@
         return document.getElementById('passwordError').textContent === '';
     }
 </script>
+<script>
+    $(document).ready(function() {
+        function updateEndDateState() {
+            var start_date_value = $('.start_date').val();
+          
+        }
+
+        var currentDate = new Date();
+        var tomorrowDate = new Date(currentDate);
+        tomorrowDate.setDate(currentDate.getDate() + 1);
+        var start_date_formatted = tomorrowDate.toISOString().split('T')[0];
+        $('.start_date').val(start_date_formatted);
+
+        var lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+
+        var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+
+        var end_date_formatted = currentDate.getFullYear() + '-' + month + '-' + lastDayOfMonth;
+
+
+        $('.end_date').val(end_date_formatted);
+
+        $('.start_date').attr('min', start_date_formatted);
+
+        updateEndDateState();
+
+        $('.start_date').on('change', function() {
+            updateEndDateState();
+        });
+    });
+</script>
+
+<!-- 
+<script>
+    $(document).ready(function() {
+        $('#email').on('input', function() {
+            var username = $(this).val();
+            // alert(username);
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost/enatyam//chechk_username_id',
+                data: {
+                    username: username
+                },
+                success: function(response) {
+                    if (response == 'false') {
+                        $('#emailError').text('');
+                        $('.submitButton').prop('disabled', false);
+
+                    } else if (response == 'true') {
+                        $('#emailError').text('This email is already available.');
+                        $('.submitButton').prop('disabled', true);
+                    }
+                }
+            });
+        });
+    });
+</script> -->
+
+
+
+<script>
+    $(document).ready(function() {
+        $('#group_name').on('input', function() {
+            var group_name = $(this).val();
+            // alert(username);
+
+            $.ajax({
+                type: 'POST',
+                url: '<?=base_url(); ?>check_group_name',
+                data: {
+                    group_name: group_name
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (response == 'false') {
+                   
+                        $('#group_namerror').text('');
+
+                        $('.submitButton').prop('disabled', false);
+
+                    } else if (response == 'true') {
+                        $('#group_namerror').text('This group name is already available.');
+
+                        $('.submitButton').prop('disabled', true);
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
 
 
 

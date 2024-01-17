@@ -25,6 +25,14 @@
 </head>
 
 <body>
+<div id="flash-message-container">
+        <?php if (session()->has('errormessage')) : ?>
+            <div class="flash-message">
+                <?= session('errormessage') ?>
+            </div>
+        <?php endif; ?>
+    </div>
+
   <div id="flash-success-container">
     <?php if (session()->has('success')) : ?>
       <div class="flash-success">
@@ -34,13 +42,6 @@
   </div>
 
 
-  <div id="flash-message-container">
-        <?php if (session()->has('errormessage')) : ?>
-            <div class="flash-message">
-                <?= session('errormessage') ?>
-            </div>
-        <?php endif; ?>
-    </div>
 
 
   <?php
