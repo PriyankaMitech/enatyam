@@ -25,6 +25,21 @@ class FacultyController extends BaseController
   }
 
 
+  public function addlink()
+  {
+     $segment_2 =  base64_decode($this->request->uri->getSegment(2));
+
+    $facultymodel = new facultymodel();
+
+
+    // Pass the student data to the view
+      // print_r($studentData);die;
+    return view('addlink');
+
+    // return view('facultyinfo');
+  }
+
+
   public function fetchDataByAssignTeacherId()
 {
   $model = new AdminModel();
@@ -61,20 +76,7 @@ class FacultyController extends BaseController
             $joinCond1 = 'tbl_group.sub_courses_id_g = tbl_sub_courses.id';
             $joinCond3 = 'tbl_group.faculty_id_g = register.id';
 
-
-
-
-            
-// Assuming joinfivetables method exists in AdminModel
-$group_data = $model->joinfourtables($select, 'tbl_group', 'tbl_courses', 'tbl_sub_courses', 'register',  $joinCond, $joinCond1, $joinCond3, $wherecond, 'DESC');
-
-// Debugging
-// echo "<pre>";
-// print_r($group_data);
-// exit();
-
-
-            // $group_data = $model->joinfivetables('tbl_group',$wherecond);
+            $group_data = $model->joinfourtables($select, 'tbl_group', 'tbl_courses', 'tbl_sub_courses', 'register',  $joinCond, $joinCond1, $joinCond3, $wherecond, 'DESC');
 
 
             $todayDate = date('Y-m-d H:i:s');
@@ -426,6 +428,29 @@ public function StudentAttendance()
           }
       
           return redirect()->to('FacultyDashboard');
+      }
+
+
+      public function setlinkforgroup()
+      { 
+        $data = [
+        
+        'meetlink' => $this->request->getVar('linkInput'),
+      ];
+
+        $db = \Config\Database::Connect();
+        if ($this->request->getVar('group_name') != "") {
+
+            $update_data = $db->table('tbl_student_shedule')->where('groupname', $this->request->getVar('group_name'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'link added successfully.');
+        } else {
+          
+            session()->setFlashdata('success', 'link not added successfully.');
+        }
+        
+
+        return redirect()->to('addlink');
       }
 
 }

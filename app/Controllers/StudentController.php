@@ -211,18 +211,25 @@ class StudentController extends BaseController
     }
     public function ScheduleStudent()
     {
-  
-     $result = session();
-    $session_id = $result->get('id');
+        $result = session();
+        $session_id = $result->get('id');
+        $session_type = $result->get('SessionType');
+        $wherecond = '';
+    
+        $model = new AdminModel();
+        $data['session_id'] = $session_id;
+    
+        if ($session_type != 'OneToOneSession') {
+            $wherecond = "FIND_IN_SET('$session_id', groupstudentname) > 0";
+        } else {
+            $wherecond = array('student_id' => $session_id);
+        }
+    
+        $data['schedule_data'] = $model->getalldata('tbl_student_shedule', $wherecond);
 
-    $model = new AdminModel();
-    $data['session_id'] = $session_id;
-    $wherecond = array('student_id' => $session_id);
-
-    $data['schedule_data'] = $model->getalldata('tbl_student_shedule',$wherecond);
-    // echo "<pre>";print_r($data['schedule_data']);exit();
-    return view('StudentSidebar/ScheduleStudent',$data);
+        return view('StudentSidebar/ScheduleStudent', $data);
     }
+    
   
     public function selectStudentSchedule()
     {
