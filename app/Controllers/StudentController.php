@@ -336,19 +336,24 @@ class StudentController extends BaseController
 
         $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
         // echo "<pre>";print_r($Sheduledatafromfaculty);exit();
-      
+        $data[] ='';
 
         if(!empty($Sheduledatafromfaculty)){
+            
         $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
         $wherecond = array('faculty_registerid' => $assignTeacherId);
     
         $data['fshedules'] =  $model->getsinglerow('schedule_list',$wherecond);
 
+        $wherecond = array('faculty_registerid' => $assignTeacherId);
+    
+        $data['schedule_data'] =  $model->getalldata('schedule_list',$wherecond);
+
         $wherecond1 = array('student_id' =>  $registerId);
         $data['single']= $model->getsinglerow('tbl_student_shedule',$wherecond1);
 
  
-        $data['schedule_data'] = $model->getalldata('tbl_student_shedule',$wherecond1);
+        // $data['schedule_data'] = $model->getalldata('tbl_student_shedule',$wherecond1);
 
         $wherecond2 = array('faculty_id' => $assignTeacherId);
 

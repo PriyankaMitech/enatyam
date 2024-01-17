@@ -26,6 +26,7 @@ $(function() {
         headerToolbar: {
             left: 'prev,next today',
             right: 'dayGridMonth,dayGridWeek,list',
+            
             center: 'title',
         },
         selectable: true,
