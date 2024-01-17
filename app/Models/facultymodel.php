@@ -263,4 +263,8 @@ class facultymodel extends Model
         return 0;
     }
 }
+public function insertAttendance($data)
+{
+    return $this->db->table('attendeance_table')->insert($data);
+}
 }    

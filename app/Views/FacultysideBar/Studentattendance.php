@@ -73,25 +73,33 @@
 </div>
 <?php echo view('FacultysideBar/FacultyFooter.php'); ?>
 <script>
-   function submitAttendance(studentId) {
-    var isPresentChecked = $('input[name="attendance[' + studentId + '][present]"]').is(':checked');
-    var isAbsentChecked = $('input[name="attendance[' + studentId + '][absent]"]').is(':checked');
-    var attendanceValue = isPresentChecked ? 'p' : (isAbsentChecked ? 'a' : '');
-    var formData = {
-        'studentId': studentId,
-        'attendance': attendanceValue,
-        'session': $('select[name="session[' + studentId + ']"]').val() || ''
-    };
-    $.ajax({
-        type: 'POST',
-        url: 'submitAttendance',
-        data: formData,
-        success: function (response) {
-            console.log(response);
-        },
-        error: function (error) {
-            console.log(error);
-        }
-    });
-}
+    function submitAttendance(studentId) {
+        var isPresentChecked = $('input[name="attendance[' + studentId + '][present]"]').is(':checked');
+        var isAbsentChecked = $('input[name="attendance[' + studentId + '][absent]"]').is(':checked');
+        var attendanceValue = isPresentChecked ? 'p' : (isAbsentChecked ? 'a' : '');
+        var formData = {
+            'studentId': studentId,
+            'attendance': attendanceValue,
+            'session': $('select[name="session[' + studentId + ']"]').val() || ''
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: 'submitAttendance',
+            data: formData,
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+                    // Reload the page after successful insertion
+                    location.reload(true);
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function (error) {
+                console.log(error);
+                alert('An error occurred while submitting attendance.');
+            }
+        });
+    }
 </script>

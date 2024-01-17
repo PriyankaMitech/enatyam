@@ -280,29 +280,6 @@ public function checkData()
     $this->response->setJSON(['exists' => $exists]);
     return $this->response;
 }
-  // public function fetchTofacultyShuduleSidebar()
-  // {
-  //   if (isset($_SESSION['sessiondata'])) {
-  //     $sessionData = $_SESSION['sessiondata'];
-
-  //     $email = $sessionData['email'] ?? null;
-  //     $password = $sessionData['password'] ?? null;
-
-  //     if ($email !== null && $password !== null) {
-
-  //       $result = session();
-  //       $registerId = $result->get('id');
-  //       $model = new facultymodel();
-  //       $data['schedule_data'] = $model->fetchshedule($registerId);
-  //     // echo "<pre>";print_r($data['FacultysheduleData']);exit();
-  //       return view('FacultysideBar/Monthlyshedule',  $data);
-  //     } else {
-  //       return redirect()->to(base_url());
-  //     }
-  //   } else {
-  //     return redirect()->to(base_url());
-  //   }
-  // }
 public function fetchTofacultyShuduleSidebar(){
 
           $result = session();
@@ -333,16 +310,28 @@ public function StudentAttendance()
     return view('notification');
   }
 
-    public function submitAttendance()
-    {
-          print_r($_POST);die;
-        $model = new facultymodel();
-        $sessionId = $this->request->getPost('session_id');
-        $attendance = $this->request->getPost('attendance');
-        $currentConductedSessions = $model->getCurrentConductedSessions($sessionId);
-        $model->updateAttendance($sessionId, $attendance,$currentConductedSessions);
-        return redirect()->to('FacultyDashboard');
-    }
+  public function submitAttendance()
+  {
+      $model = new Facultymodel();
+  
+      $data = [
+          'student_registerid'  => $this->request->getPost('studentId'),
+          'Attendance_status'   => $this->request->getPost('attendance'),
+          'Session_no'          => $this->request->getPost('session'),
+      ];
+  
+      $result = $model->insertAttendance($data);
+  
+      // Check if the insertion was successful
+      if ($result) {
+          $response = ['success' => true, 'message' => 'Attendance added successfully.'];
+      } else {
+          $response = ['success' => false, 'message' => 'Attendance not added.'];
+      }
+  
+      // Return the JSON response
+      return $this->response->setJSON($response);
+  }
 
     public function save_schedule_data() {
         $model = new facultymodel();
