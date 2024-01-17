@@ -72,6 +72,9 @@ class AdminController extends BaseController
                     'register.role' => 'Faculty',
                 ];
                 $data['Faculty'] = $model->joinfourtables($select1, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, $wherecond, 'DESC');
+                // echo '<pre>';
+                // print_r($data['Faculty']);
+                // die;
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -590,12 +593,12 @@ class AdminController extends BaseController
         $model->updateFacultyForGroup($groupName, $facultyId, $selectedDate);
         return redirect()->to('StudentGroups');
     }
-  public function chatuser()
+    public function chatuser()
     {
         if (isset($_SESSION['sessiondata'])) {
             $model = new AdminModel();
 
-         
+
             $result['getuser'] = [];
 
             if ($_SESSION['sessiondata']['role'] == 'Admin') {
@@ -604,11 +607,11 @@ class AdminController extends BaseController
                     'status' => 'N'
                 );
                 $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
-          
+
                 $wherecondFaculty = array('is_register_done' => 'Y', 'role' => 'Faculty');
                 $result['faculty'] = $model->getalldata('register', $wherecondFaculty);
 
-        
+
 
                 // For Student
                 $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y');
@@ -616,8 +619,6 @@ class AdminController extends BaseController
 
                 // Merge results
                 $result['getuser'] = array_merge($result['faculty'], $result['student']);
-
-               
             } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $chatCountWhere = array(
                     'receiver_id' => $_SESSION['sessiondata']['id'],
@@ -632,7 +633,7 @@ class AdminController extends BaseController
                 $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y', 'Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 $result['student'] = $model->getalldata('register', $wherecondStudent);
 
-          
+
                 // $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 // $result['getuser'] = $model->getalldata('register', $wherecond);
                 if (is_array($result['admin']) && is_array($result['student'])) {
@@ -642,14 +643,13 @@ class AdminController extends BaseController
                 } elseif (is_array($result['student'])) {
                     $result['getuser'] = $result['student'];
                 }
-
             } else if ($_SESSION['sessiondata']['role'] == 'Student') {
                 $chatCountWhere = array(
                     'receiver_id' => $_SESSION['sessiondata']['id'],
                     'status' => 'N'
                 );
                 $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
-          
+
                 // $wherecond = array('id' => $_SESSION['sessiondata']['Assign_Techer_id']);
                 // $result['getuser'] = $model->chatfaculty('register', $wherecond);
 
@@ -659,7 +659,7 @@ class AdminController extends BaseController
                 $wherecondFaculty = array('role' => 'Admin');
                 $result['admin'] = $model->getalldata('register', $wherecondFaculty);
 
-                $wherecondStudent = array('role'=> 'Faculty','id' => $_SESSION['sessiondata']['Assign_Techer_id']);
+                $wherecondStudent = array('role' => 'Faculty', 'id' => $_SESSION['sessiondata']['Assign_Techer_id']);
                 $result['faculty'] = $model->getalldata('register', $wherecondStudent);
 
                 if (is_array($result['admin']) && is_array($result['faculty'])) {
@@ -669,21 +669,19 @@ class AdminController extends BaseController
                 } elseif (is_array($result['faculty'])) {
                     $result['getuser'] = $result['faculty'];
                 }
-         
             }
 
-   
 
-          
+
+
             echo view('Chatuser', $result);
         } else {
             return redirect()->to(base_url());
-
         }
     }
 
 
-public function singlechat()
+    public function singlechat()
     {
         if (isset($_SESSION['sessiondata'])) {
             $model = new AdminModel();
@@ -706,11 +704,13 @@ public function singlechat()
             $result['chatdata'] = $model->getchat('online_chat', $_SESSION['sessiondata']['id'], $receiverid[1]);
 
             $wherecond4 = ['id' => $receiverid[1]];
-            $result['chat_user_data'] = $model->get_single_data('register',$wherecond4);
+            $result['chat_user_data'] = $model->get_single_data('register', $wherecond4);
 
 
 
-            // echo "<pre>";print_r($result['chatdata']);exit();
+            // echo "<pre>";
+            // print_r($result['chatdata']);
+            // exit();
 
             echo view('chatuser', $result);
         } else {
@@ -777,8 +777,15 @@ public function singlechat()
     public function insertChat()
     {
         $formdata = $_POST;
+        $wherecond = array('id ' => $formdata['sender_id']);
+
         $model = new AdminModel();
+        $senderData = $model->getalldata('register', $wherecond);
+        // print_r($senderData[0]->full_name);
+        // die;
         $result = $model->insert_formdata('msg_id', 'online_chat', $formdata);
+        // print_r($result);
+        // die;
         echo json_encode($result);
     }
 
@@ -1788,6 +1795,7 @@ protected function checkAvailability($data)
     }
 
 
+
     public function get_shedule_data_for_group()
     {
         $model = new AdminModel();
@@ -1846,25 +1854,7 @@ protected function checkAvailability($data)
 
 
     
-    // public function check_group_name()
-    // {
-    //     $admin_model = new AdminModel();
-    //     $group_name = $this->request->getPost('group_name');
-
-    //     if ($group_name) {
-    //         $wherecond = array('group_name' => $group_name);
-
-
-    //         $groupName = $admin_model->getsinglerow('tbl_group', $wherecond);
-          
-      
-    //         return json_encode($groupName);
-    //     } else {
-    //         return json_encode([]);
-    //     }
-    // }
-
-
+   
 
     public function check_group_name()
     {

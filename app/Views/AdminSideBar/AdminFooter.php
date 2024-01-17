@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <strong>Copyright &copy; 2023-2024 <a href="https://www.marketingintelligence.tech/" target="_blank">MI-TECH</a>.</strong> All rights reserved.
-    All rights reserved.
+
 
 </footer>
 
@@ -824,7 +824,7 @@
                         $('.submitButton').prop('disabled', false);
 
                     } else {
-                        $('#courses_name').after('<span class="error">This courses name is allredy available.</span>');
+                        $('#courses_name').after('<span class="error">This course name is already available.</span>');
 
                         $('.submitButton').prop('disabled', true);
                     }
@@ -932,7 +932,7 @@
 
                 if (response != '') {
 
-                    $('#sub_courses_name').after('<span class="error">This sub courses name is allredy available.</span>');
+                    $('#sub_courses_name').after('<span class="error">This sub courses name is already available.</span>');
                     $('.submitButton').prop('disabled', true);
 
                 } else {
@@ -1040,7 +1040,7 @@
                         $('.submitButton').prop('disabled', false);
 
                     } else if (response == 'true') {
-                        $('#emailError').text('This email is allredy available.');
+                        $('#emailError').text('This email is already available.');
                         $('.submitButton').prop('disabled', true);
                     }
                 }
@@ -1069,7 +1069,7 @@
                         $('.submitButton').prop('disabled', false);
 
                     } else if (response == 'true') {
-                        $('#mobile_noError').text('This mobile number is allredy available.');
+                        $('#mobile_noError').text('This mobile number is already available.');
                         $('.submitButton').prop('disabled', true);
                     }
                 }
