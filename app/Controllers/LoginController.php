@@ -105,8 +105,8 @@ class LoginController extends BaseController
         $emailotp = rand(999, 9999);
         if ($_POST['otp'] == '' && $_POST['emailotp'] == '') {
             $loginModel = new LoginModel();
-            $result['mobileexist'] = $loginModel->checkexist($_POST['mobile_no'], 'mobile_no');
-            $result['emailexist'] = $loginModel->checkexist($_POST['email'], 'email');
+            $result['mobileexist'] = $loginModel->checkExist($_POST['mobile_no'], 'mobile_no', 'register');
+            $result['emailexist'] = $loginModel->checkExist($_POST['email'], 'email', 'register');
 
             if ($result['mobileexist'] == '' && $result['emailexist'] == '') {
                 $insert = $this->savedata($_POST, $otp, $emailotp);
