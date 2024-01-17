@@ -1182,13 +1182,14 @@ class AdminModel extends Model
 
     public function getalldataforstudent($table, $wherecond, $selectedDays)
     {
+        // echo "<pre>";print_r($selectedDays);die();
         $query = $this->db->table($table)
             ->where($wherecond);
 
 
 
         if (!empty($selectedDays)) {
-            $query->whereIn('Daystype', $selectedDays);
+            $query->whereIn('days', $selectedDays);
         }
 
         $result = $query->get()->getRow();
@@ -1196,15 +1197,21 @@ class AdminModel extends Model
 
         return $result;
     }
-
-
-   
-    
-   
  
     public function getslots($wherecond)
     {
         return $this->db->table('tbl_student_shedule')->where($wherecond)->get()->getResult();
+    }
+
+
+    public function check_group_name($value, $column) {
+        $result = $this->db
+        ->table('tbl_group')
+        ->select($column)
+        ->where([$column => ''.$value.''])
+        ->get()->getRow();  
+                
+        return !empty($result);
     }
     
 }

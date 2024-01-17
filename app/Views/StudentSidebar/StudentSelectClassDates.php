@@ -160,30 +160,36 @@
     </section>
 </div>
 
-<?php echo view('StudentSidebar/StudentFooter.php'); ?>
-<?php 
+<?php
 
 $sched_res = [];
-if(!empty($data)){
+// echo "<pre>";print_r($schedule_data);exit();
 
-foreach($data as $data){
-    $sdate = date("F d, Y h:i A",strtotime($data->start_datetime));
-    $edate = date("F d, Y h:i A",strtotime($data->end_datetime));
+if(!empty($schedule_data)){
+
+
+foreach($schedule_data as $data){
+    $sdate = date("F d, Y h:i A",strtotime($data->start_date));
+    $edate = date("F d, Y h:i A",strtotime($data->end_date));
     $sched_res[$data->id] = $data;
 }
 }
 ?>
+
+<script src="public/calendar/js/script.js"></script>
+
+<?php echo view('StudentSidebar/StudentFooter.php'); ?>
 <script>
 var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
-<script src="public/calendar/js/script.js"></script>
 <script>
 $(document).ready(function() {
     var selectedDays = [];
     var addedTimeSlots = [];
 
     $('input[name="days[]"]').on('change', function() {
-        selectedDays = [];
+        // selectedDays = [];
+
         fetchData(selectedDays);
     });
 
