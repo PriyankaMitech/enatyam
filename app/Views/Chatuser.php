@@ -46,6 +46,7 @@ if (isset($_SESSION['sessiondata'])) {
 
                                 <h3 class="card-title"><?php echo $chat_user_data->full_name ?></h3>
                             <?php } ?>
+                               
 
                             <div class="card-tools">
                                 <!-- <span title="3 New Messages" class="badge bg-success"><?php if (!empty($chat_count)) {
@@ -373,8 +374,11 @@ if (isset($_SESSION['sessiondata'])) {
                                                 </li>
 
 
-                                        <?php }
-                                        } ?>
+                                        <?php }?>
+                                       <?php  }else{  ?>
+                      
+    <p>No user Availabel.</p>
+    <?php } ?>
                                     </ul>
 
 
@@ -636,8 +640,11 @@ if (isset($_SESSION['sessiondata'])) {
                                                     </div>
                                                 </a>
                                             </li>
-                                    <?php }
-                                    } ?>
+                                    <?php } ?>
+                                   <?php }else{  ?>
+                      
+                      <p class="p-4">No user Availabel.</p>
+                      <?php } ?>
                                 </ul>
                             </div>
                         </div>

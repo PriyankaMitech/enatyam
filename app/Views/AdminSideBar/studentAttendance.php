@@ -34,12 +34,16 @@
                                         <?php
                             // Access ConductedSessionsCount from the first student (assuming it's the same for all)
                             $firstStudent = reset($attendance);
+                            $conductedSessionsCount = 0; 
+                            if(!empty($firstStudent->ConductedSessionsCount)){
                             $conductedSessionsCount = explode(',', $firstStudent->ConductedSessionsCount);
                             foreach ($conductedSessionsCount as $session) {
                                 // Extract the numeric part of the session status (e.g., "Session 1-P" => "1")
                                 $sessionNumber = filter_var($session, FILTER_SANITIZE_NUMBER_INT);
                                 echo '<th>Session ' . $sessionNumber . '</th>';
                             }
+                            }
+                           
                             ?>
                                     </tr>
                                 </thead>
@@ -54,7 +58,7 @@
                             $sessionStatuses = explode(',', $student->ConductedSessionsCount);
                             if (empty($sessionStatuses[0])) {
                                 // Display "NA" if there is no data for ConductedSessionsCount
-                                echo '<td colspan="' . count($conductedSessionsCount) . '">NA</td>';
+                                echo '<td colspan="' . count($sessionStatuses) . '">NA</td>';
                             } else {
                                 foreach ($sessionStatuses as $status) {
                                     // Check if the explode returned an array with at least two elements
