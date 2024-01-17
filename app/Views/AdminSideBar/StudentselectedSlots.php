@@ -13,12 +13,12 @@ $page = $uri->getSegment(count($pages));
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>List</h1>
+          <h1>Schedule List</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Classes List</li>
+            <li class="breadcrumb-item active">Schedule List</li>
           </ol>
         </div>
       </div>
@@ -32,7 +32,7 @@ $page = $uri->getSegment(count($pages));
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Demo Classes List</h3>
+                        <h3 class="card-title">Schedule </h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -40,6 +40,7 @@ $page = $uri->getSegment(count($pages));
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Student Name</th>
                                     <th>Faculty Name</th>
                                     <th>Days</th>
                                     <th>Start Date</th>
@@ -53,6 +54,7 @@ $page = $uri->getSegment(count($pages));
                                 <?php foreach ($schedule_data as $slot): ?>
                                     <tr>
                                         <td><?= $counter ?></td>
+                                        <td><?= $slot->student_name ?></td>
                                         <td><?= $slot->faculty_name ?></td>
                                         <td><?= $slot->days ?></td>
                                         <td><?= $slot->start_date ?></td>
@@ -71,6 +73,7 @@ $page = $uri->getSegment(count($pages));
     </div>
 </section>
 
+ 
 </div>
 
   <?php echo view('AdminSideBar/AdminFooter.php');?>   

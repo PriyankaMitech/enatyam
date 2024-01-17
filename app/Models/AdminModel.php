@@ -1207,6 +1207,26 @@ class AdminModel extends Model
     {
         return $this->db->table('tbl_student_shedule')->where($wherecond)->get()->getResult();
     }
+    public function getFacultyslots()
+    {
+        return $this->db->table('schedule_list')
+                        ->select('schedule_list.*, register.full_name as faculty_name')
+                        ->join('register', 'register.id = schedule_list.faculty_registerid', 'left')
+                        ->where('schedule_list.faculty_registerid IS NOT NULL')
+                        ->get()
+                        ->getResult(); 
+    }
+    public function getstudentslots()
+{
+    return $this->db->table('tbl_student_shedule')
+                    ->select('tbl_student_shedule.*, faculty.full_name as faculty_name, student.full_name as student_name')
+                    ->join('register as faculty', 'faculty.id = tbl_student_shedule.faculty_id', 'left')
+                    ->join('register as student', 'student.id = tbl_student_shedule.student_id', 'left')
+                    ->where('tbl_student_shedule.faculty_id IS NOT NULL')
+                    ->get()
+                    ->getResult(); 
+}
+
     
 }
 

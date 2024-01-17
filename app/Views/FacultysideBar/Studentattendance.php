@@ -1,11 +1,10 @@
 <?php echo view('FacultySidebar2'); ?>
 <div class="content-wrapper">
-
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Student Attendance </h1>
+                    <h1>Student Attendance</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -22,43 +21,50 @@
                 <div class="card-header">
                     <h3 class="card-title">DataTable with default features</h3>
                 </div>
-                <!-- /.card-header -->
                 <div class="card-body">
-                    <form action="submitAttendance" method="post">
+                    <form id="attendanceForm" action="#" method="post">
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Name</th>
-
                                     <th>Attendance</th>
+                                    <th>Session</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($studentList as $student): ?>
-                                <tr>
-                                    <td><?= $student->full_name ?></td>
-
-                                    <td>
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                        present
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                        absent
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-secondary">Done</button>
-                                    </td>
-                                </tr>
+                                <?php foreach ($studentList as $student): ?>
+                                    <tr>
+                                        <td><?= $student->full_name ?></td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    name="attendance[<?= $student->id ?>][present]" id="present<?= $student->id ?>"
+                                                    value="p">
+                                                <label class="form-check-label" style="margin-right:54px;"
+                                                    for="present<?= $student->id ?>">Present</label>
+                                                <input class="form-check-input" type="checkbox"
+                                                    name="attendance[<?= $student->id ?>][absent]" id="absent<?= $student->id ?>"
+                                                    value="a">
+                                                <label class="form-check-label" for="absent<?= $student->id ?>">Absent</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <select class="form-control" name="session[<?= $student->id ?>]">
+                                                <option value="">Select</option>
+                                                <?php for ($i = 1; $i <= $student->no_of_session; $i++): ?>
+                                                    <option value="<?= $i ?>">Session <?= $i ?></option>
+                                                <?php endfor; ?>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="submitAttendance(<?= $student->id ?>)">Submit Attendance</button>
+                                        </td>
+                                    </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                        <button type="submit" class="btn btn-primary">Submit Attendance</button>
                     </form>
                 </div>
             </div>
@@ -66,3 +72,26 @@
     </section>
 </div>
 <?php echo view('FacultysideBar/FacultyFooter.php'); ?>
+<script>
+   function submitAttendance(studentId) {
+    var isPresentChecked = $('input[name="attendance[' + studentId + '][present]"]').is(':checked');
+    var isAbsentChecked = $('input[name="attendance[' + studentId + '][absent]"]').is(':checked');
+    var attendanceValue = isPresentChecked ? 'p' : (isAbsentChecked ? 'a' : '');
+    var formData = {
+        'studentId': studentId,
+        'attendance': attendanceValue,
+        'session': $('select[name="session[' + studentId + ']"]').val() || ''
+    };
+    $.ajax({
+        type: 'POST',
+        url: 'submitAttendance',
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+</script>

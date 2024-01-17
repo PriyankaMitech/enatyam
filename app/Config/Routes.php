@@ -118,7 +118,7 @@ $routes->post('save-event', 'AdminCalenderController::saveEvent');
 $routes->get('getDemoDetails', 'AdminController::getDemoDetails');
 $routes->get('DailyClass', 'AdminController::GetClasses');
 $routes->get('StudentGroups', 'AdminController::StudentGroups');
-$routes->get('FacultysidebarShedule', 'AdminController::FacultysidebarShedule');
+$routes->get('FacultyShedule', 'AdminController::FacultysidebarShedule');
 $routes->post('AdduserByadmin', 'AdminController::AdduserByadmin');
 $routes->post('SelectedForGroup', 'AdminController::SelectedForGroup');
 $routes->get('chatuser', 'AdminController::chatuser');
@@ -145,6 +145,8 @@ $routes->get('update_seen_status', 'AdminController::update_seen_status');
 // Report Data
 $routes->get('demo_classes', 'AdminController::demo_classes');
 $routes->get('student', 'AdminController::student');
+$routes->get('studentSlots', 'AdminController::studentSlots');
+
 $routes->get('faculty', 'AdminController::faculty');
 $routes->get('payment_history', 'AdminController::payment_history');
 

@@ -471,7 +471,7 @@
                                     </li>
 
                                     <!-- Faculty Menu -->
-                                    <li class="nav-item" <?php if (in_array('getAdminSideBarAll', $access_levels) || in_array('FacultysidebarShedule', $access_levels) || in_array('Attendance', $access_levels) || in_array('NewFacultyApplication', $access_levels)) {
+                                    <li class="nav-item" <?php if (in_array('getAdminSideBarAll', $access_levels) || in_array('FacultyShedule', $access_levels) || in_array('Attendance', $access_levels) || in_array('NewFacultyApplication', $access_levels)) {
                                                                 echo "style='display:block'";
                                                             } else {
                                                                 echo "style='display:none'";
@@ -494,12 +494,12 @@
                                                     <p>Profile</p>
                                                 </a>
                                             </li>
-                                            <li class="nav-item" <?php if (in_array('FacultysidebarShedule', $access_levels)) {
+                                            <li class="nav-item" <?php if (in_array('FacultyShedule', $access_levels)) {
                                                                         echo "style='display:block'";
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>FacultysidebarShedule" class="nav-link">
+                                                <a href="<?php echo base_url() ?>FacultyShedule" class="nav-link">
                                                     <i class="nav-icon fas fa-calendar-alt"></i>
                                                     <p>Schedule</p>
                                                 </a>
@@ -898,7 +898,12 @@
                                                 <p>Attendance</p>
                                             </a>
                                         </li>
-
+                                        <li class="nav-item">
+                                            <a href="<?php echo base_url() ?>studentSlots" class="nav-link">
+                                                <i class="nav-icon fas fa-calendar-alt"></i>
+                                                <p>Schedule</p>
+                                            </a>
+                                        </li>
                                         <!-- Add other Student menu items with access level checks here -->
                                     </ul>
                                 </li>
@@ -947,7 +952,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>FacultysidebarShedule" class="nav-link">
+                                            <a href="<?php echo base_url() ?>FacultyShedule" class="nav-link">
                                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                                 <p>Schedule</p>
                                             </a>

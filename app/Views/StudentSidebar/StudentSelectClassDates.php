@@ -9,10 +9,10 @@
         <div class="container-fluid">
             <div class="container py-5" id="page-container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <!-- <div class="col-md-9">
                         <div id="calendar"></div>
-                    </div>
-                    <div class="col-md-3">
+                    </div> -->
+                    <div class="col-md-9 ">
                         <div class="cardt rounded-0 shadow">
                             <div class="card-header bg-gradient bg-primary text-light">
                                 <h5 class="card-title">Select Schedule</h5>
@@ -160,21 +160,22 @@
     </section>
 </div>
 
-<?php echo view('StudentSidebar/StudentFooter.php'); ?>
+
 <?php 
 
-$sched_res = [];
-if(!empty($data)){
+$fshedules = [];
+if(!empty($fshedules)){
 
-foreach($data as $data){
-    $sdate = date("F d, Y h:i A",strtotime($data->start_datetime));
-    $edate = date("F d, Y h:i A",strtotime($data->end_datetime));
-    $sched_res[$data->id] = $data;
+foreach($fshedules as $data){
+    $sdate = date("F d, Y h:i A",strtotime($data->start_date));
+    $edate = date("F d, Y h:i A",strtotime($data->end_date));
+    $fshedules[$data->id] = $data;
 }
 }
 ?>
+<?php echo view('StudentSidebar/StudentFooter.php'); ?>
 <script>
-var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
+var scheds = $.parseJSON('<?= json_encode($fshedules) ?>')
 </script>
 <script src="public/calendar/js/script.js"></script>
 <script>

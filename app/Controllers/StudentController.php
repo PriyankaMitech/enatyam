@@ -359,7 +359,7 @@ class StudentController extends BaseController
         
     }
 
-    //    echo "<pre>";print_r($data['schedule_data']);exit();
+       // echo "<pre>";print_r($data['fshedules']);exit();
         return view('StudentSidebar/StudentSelectClassDates',$data);
 
     }

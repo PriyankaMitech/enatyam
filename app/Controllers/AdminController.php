@@ -441,8 +441,9 @@ class AdminController extends BaseController
             $email = $sessionData['email'] ?? null;
             $password = $sessionData['password'] ?? null;
 
-            if ($email !== null && $password !== null) {
-                $data['FacultysheduleData'] = $model->getFacultyShedule();
+            if ($email !== null && $password !== null) {   
+              $data['schedule_data'] = $model->getFacultyslots();
+           //   echo "<pre>";print_r($data['schedule_data']);exit();
                 return view('AdminSideBar/FacultysidebarShedule', $data);
             } else {
                 return redirect()->to(base_url());
@@ -450,8 +451,6 @@ class AdminController extends BaseController
         } else {
             return redirect()->to(base_url());
         }
-        $data['FacultysheduleData'] = $model->getFacultyShedule();
-        return view('AdminSideBar/FacultysidebarShedule', $data);
     }
     public function getdate()
     {
@@ -1643,5 +1642,25 @@ public function singlechat()
             return json_encode($result);
         }
     }
+    public function studentSlots()
+    {
+       
+        $model = new AdminModel();
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
 
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+
+            if ($email !== null && $password !== null) {   
+              $data['schedule_data'] = $model->getstudentslots();
+           //   echo "<pre>";print_r($data['schedule_data']);exit();
+                echo view('AdminSideBar/StudentselectedSlots',$data);
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
+    }
 }
