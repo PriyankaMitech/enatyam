@@ -52,25 +52,25 @@ class FacultyController extends BaseController
 
             $wherecond = '';
             if(!empty($loginsingel_data)){
-            $wherecond = ['faculty_id_g' => $loginsingel_data->carrier_id];
+            $wherecond = ['faculty_id_g' => $loginsingel_data->id];
             }
 
 
-            $select = 'tbl_group.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name, carrier.name';
+            $select = 'tbl_group.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name, register.full_name as name';
             $joinCond = 'tbl_group.courses_id_g = tbl_courses.id';
             $joinCond1 = 'tbl_group.sub_courses_id_g = tbl_sub_courses.id';
-            $joinCond3 = 'tbl_group.faculty_id_g = carrier.D_id';
+            $joinCond3 = 'tbl_group.faculty_id_g = register.id';
 
 
 
 
             
 // Assuming joinfivetables method exists in AdminModel
-$group_data = $model->joinfourtables($select, 'tbl_group', 'tbl_courses', 'tbl_sub_courses', 'carrier',  $joinCond, $joinCond1, $joinCond3, $wherecond, 'DESC');
+$group_data = $model->joinfourtables($select, 'tbl_group', 'tbl_courses', 'tbl_sub_courses', 'register',  $joinCond, $joinCond1, $joinCond3, $wherecond, 'DESC');
 
 // Debugging
 // echo "<pre>";
-// print_r($data['group_data']);
+// print_r($group_data);
 // exit();
 
 

@@ -1080,6 +1080,18 @@ class AdminModel extends Model
         return $query;
     }
 
+    public function jointwotables($select, $table1, $table2,  $joinCond, $wherecond, $type)
+    {
+        $result = $this->db->table($table1)  // Use $table1 variable here
+            ->select($select)
+            ->join($table2, $joinCond, $type)
+            ->where($wherecond)
+            ->get()
+            ->getResult();
+        //    echo $this->db->getLastQuery();die;
+        return $result;
+    }
+
 
     public function jointhreetables($select, $table1, $table2, $table3, $joinCond, $joinCond2, $wherecond, $type)
     {

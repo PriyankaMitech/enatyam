@@ -1220,9 +1220,22 @@ class AdminController extends BaseController
         $courses_id_g = $this->request->getPost('courses_id_g');
 
         if ($sub_courses_id_g) {
-            // Assuming you have a "carrier" table
-            $wherecond_carrier = array('sub_course' => $sub_courses_id_g, 'course' => $courses_id_g, 'Result_of_application' => 'approve');
-            $faculty_data = $model->getalldata('carrier', $wherecond_carrier);
+
+            $select = 'carrier.*, register.id as faculty_id,';
+            $joinCond = 'carrier.D_id  = register.carrier_id';
+            $wherecond = [
+                'carrier.sub_course' => $sub_courses_id_g,
+                'carrier.course' => $courses_id_g,
+                'carrier.Result_of_application' => 'approve'
+            ];
+            $faculty_data = $model->jointwotables($select, 'carrier ', 'register ',  $joinCond,  $wherecond, 'DESC');
+    
+
+
+   
+            // $wherecond_carrier = array('sub_course' => $sub_courses_id_g, 'course' => $courses_id_g, 'Result_of_application' => 'approve');
+            // // $faculty_data = $model->getalldata('carrier', $wherecond_carrier);
+
 
 
 
@@ -1725,7 +1738,7 @@ protected function checkAvailability($data)
 
 
         if ($faculty_id_g) {
-            $wherecond = array('carrier_id' => $faculty_id_g);
+            $wherecond = array('id' => $faculty_id_g);
 
 
             $faculity_data = $model->getsinglerow('register', $wherecond);
@@ -1827,7 +1840,7 @@ protected function checkAvailability($data)
         $assignTeacherId = $this->request->getPost('facultyidg');
 
         $wherecond1 = [
-            'carrier_id' => $assignTeacherId,
+            'id' => $assignTeacherId,
           
         ];
 

@@ -1415,7 +1415,7 @@
                         $('#faculty_id_g').empty();
                         $('#faculty_id_g').append('<option value="">Please select faculty</option>');
                         $.each(data, function(key, value) {
-                            $('#faculty_id_g').append('<option value="' + value.D_id + '">' + value.name + '</option>');
+                            $('#faculty_id_g').append('<option value="' + value.faculty_id + '">' + value.name + '</option>');
                         });
 
                         // Retrieve the selected faculty ID from the hidden input field
