@@ -87,14 +87,18 @@
                             <th>Student Name</th>
                             <th>Faculty Name</th>
                             <th>Created Group Date</th>
-                            <th>Day/Time</th>
+                            <th>Days</th>
+
+                            <th>Time</th>
 
 
                             <th>Action</th>
             
                         </tr>
                         </thead>
-                        <?php if(!empty($group_data)){ ?>
+                        <?php if(!empty($group_data)){ 
+                            ?>
+                            
 
                             <tbody>
                             <?php if(!empty($group_data)){ $i=1;?>
@@ -171,23 +175,10 @@
                                         </td>                                        
                                         <td><?php if(!empty($falculty_data)){ echo $falculty_data->name; } ?></td>
                                         <td><?= date('j F Y', strtotime($data->created_on)); ?></td>
-                                        <td>
-                                            <?php
-                                            if (!empty($shedule_data)) {
-                                                $day = $shedule_data->Day;
-                                                $startTime = date('H:i', strtotime($shedule_data->start_time));
-                                                $endTime = date('H:i', strtotime($shedule_data->end_time));
-                                                echo $day . ' ' . $startTime . ' - ' . $endTime;
-                                            }
-                                            ?>
-                                        </td>
-
-                                        </td>
-
-
-
+                                        <td><?=$data->days ?></td>
+                                            <td><?=$data->shedule ?> </td>
                                      
-                                        <td>
+                                            <td>
                                             <div class="btn-group" role="group">
                                             <?php
                                             $studentIds = explode(',', $data->student_id);
@@ -214,7 +205,7 @@
 
 
                                         <div class="modal fade" id="modal-default-<?=$data->id;?>">
-                                        <form action="set_create_group_datas" method="post">
+                                        <form action="set_create_group_data" method="post">
                                             <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -244,27 +235,35 @@
 
                                                                 $student_data = $adminModel->getalldata('register',$wherec6);
 
-                                                                $wherec6 = array('course' => $data->courses_id_g, 'sub_course' => $data->sub_courses_id_g, 'is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'Payment_status' =>  $Payment_status );
 
-                                                              
 
-                                                                // echo "<pre>";print_r($student_data);exit();
+                                                                $wherec1 = array('carrier_id ' => $data->faculty_id_g);
+
+
+                                                                $falculty_data = $adminModel->getsinglerow('register',$wherec1);
+                                                                $techer_id = '';
+                                                                if(!empty($falculty_data)){
+                                                                    $techer_id = $falculty_data->id;
+                                                                }
+                            
+                                                                $wherec2 = array('faculty_registerid '=> $techer_id);
+
+
+                                                                $days_data = $adminModel->getsinglerow('schedule_list',$wherec2);
+
+                                                                // echo "<pre>";print_r($days_data);exit();
+
 
                                                             
                                                             if (!empty($student_data)) { $i = 1; ?>
                                                                 <?php foreach ($student_data as $datas) { ?>
-                                                                    <div class="col-md-4">
+                                                                    <div class="col-md-12">
                                                                         <input type="checkbox" id="student_id" name="student_id[]" value="<?= $datas->id; ?>"  >
 
                                                                         <label for="student_id"> <?= $datas->full_name; ?></label>
                                                                     </div>
-                                                                    <div class="col-md-4 ">
-                                                                        <label class="control-label">Select Days</label>
-                                                                        <div class="row checkboxdays">
-                                                                        </div>
 
-                                                                        
-                                                                    </div>
+                                                
                                                                     <?php $i++;
                                                                 } ?>
                                                             <?php }else{ ?>
@@ -272,6 +271,33 @@
                                                                       No Data available
                                                                     </div>
                                                             <?php } ?>
+
+
+                                                            <?php if (!empty($days_data)) : ?>
+                                                                <div class="col-md-12">
+
+                                                   
+                                                            <div class="form-group mb-2">
+                                                                <label class="control-label">Select Day's</label>
+                                                                <?php
+                                                                $selectedDays = explode(',', $days_data->days); // Assuming $fshedules contains your data
+                                                                $selectedDays1 = explode(',', $data->days);
+                                                                $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                                                                foreach ($allDays as $day) :
+                                                                    $isChecked =  in_array($day, $selectedDays1) ? 'checked' : '';
+                                                                    $isChecked1 =  in_array($day, $selectedDays1) ? 'disabled' : '';
+
+                                                                    $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
+                                                                ?>
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isChecked1 ?> <?= $isDisabled ?>>
+                                                                        <label class="form-check-label"><?= $day ?></label>
+                                                                    </div>
+                                                                <?php endforeach; ?>
+                                                            </div>
+                                                        <?php endif; ?>
+                                                                </div>
 
                         
                                                             
@@ -289,6 +315,7 @@
                                             </form>
                                         </div>
 
+
                                     
                                     </tr>
                                 <?php $i++;} ?>
@@ -303,7 +330,12 @@
                         <?php }else{ ?>
 
                         <tbody>
-                            <?php if(!empty($student_list_of_group)){ $p=1;?>
+                            <?php if(!empty($student_list_of_group)){ $p=1;
+                                                            // echo "<pre>";print_r($student_list_of_group);exit();
+
+                                ?>
+
+                                
                                 <?php foreach($student_list_of_group as $data){  
                                     
                                     
@@ -384,16 +416,8 @@
                                         </td>                                        
                                         <td><?php if(!empty($falculty_data)){ echo $falculty_data->name; } ?></td>
                                         <td><?= date('j F Y', strtotime($data->created_on)); ?></td>
-                                        <td>
-                                            <?php
-                                            if (!empty($shedule_data)) {
-                                                $day = $shedule_data->Day;
-                                                $startTime = date('H:i', strtotime($shedule_data->start_time));
-                                                $endTime = date('H:i', strtotime($shedule_data->end_time));
-                                                echo $day . ' ' . $startTime . ' - ' . $endTime;
-                                            }
-                                            ?>
-                                        </td>
+                                        <td><?=$data->days ?></td>
+                                        <td><?=$data->shedule ?> </td>
 
                                         <td>
                                             <div class="btn-group" role="group">

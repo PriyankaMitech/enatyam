@@ -1464,8 +1464,11 @@ class AdminController extends BaseController
         $startTime = '';
         $endTime = '';
 
+        $selectedDaysString = '';
         $selectedDaysArray = $this->request->getVar('days[]');
+        if(!empty($selectedDaysArray)){
         $selectedDaysString = implode(',', $selectedDaysArray);
+        }
         
         $selectedgroupstudentnamesString = '';
 
