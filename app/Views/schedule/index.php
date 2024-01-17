@@ -144,8 +144,8 @@
             <div class="modal-body rounded-0">
                 <div class="container-fluid">
                     <dl>
-                         <dt class="text-muted">Description</dt>
-                         <a> <dd id="description" class=""></dd></a>
+                         <!-- <dt class="text-muted">Description</dt>
+                         <a> <dd id="description" class=""></dd></a> -->
                         <dt class="text-muted">Start</dt>
                         <dd id="start" class=""></dd>
                         <dt class="text-muted">End</dt>
@@ -167,7 +167,10 @@
 <?php
 
 $sched_res = [];
+// echo "<pre>";print_r($schedule_data);exit();
+
 if(!empty($schedule_data)){
+
 
 foreach($schedule_data as $data){
     $sdate = date("F d, Y h:i A",strtotime($data->start_date));

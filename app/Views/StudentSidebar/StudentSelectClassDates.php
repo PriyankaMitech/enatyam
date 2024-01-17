@@ -161,30 +161,50 @@
 </div>
 
 
+
 <?php 
 
-$fshedules = [];
-if(!empty($fshedules)){
+// $fshedules = [];
+// if(!empty($fshedules)){
 
-foreach($fshedules as $data){
+// foreach($fshedules as $data){
+//     $sdate = date("F d, Y h:i A",strtotime($data->start_date));
+//     $edate = date("F d, Y h:i A",strtotime($data->end_date));
+//     $fshedules[$data->id] = $data;
+// }
+// }
+?>
+
+<?php
+
+$sched_res = [];
+// echo "<pre>";print_r($schedule_data);exit();
+
+if(!empty($schedule_data)){
+
+
+foreach($schedule_data as $data){
     $sdate = date("F d, Y h:i A",strtotime($data->start_date));
     $edate = date("F d, Y h:i A",strtotime($data->end_date));
-    $fshedules[$data->id] = $data;
+    $sched_res[$data->id] = $data;
 }
 }
 ?>
+
+<script src="public/calendar/js/script.js"></script>
+
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>
 <script>
 var scheds = $.parseJSON('<?= json_encode($fshedules) ?>')
 </script>
-<script src="public/calendar/js/script.js"></script>
 <script>
 $(document).ready(function() {
     var selectedDays = [];
     var addedTimeSlots = [];
 
     $('input[name="days[]"]').on('change', function() {
-        selectedDays = [];
+        // selectedDays = [];
+
         fetchData(selectedDays);
     });
 

@@ -66,6 +66,13 @@
             </div>
         <?php endif; ?>
     </div>
+    <div id="flash-message-container">
+        <?php if (session()->has('errormessage')) : ?>
+            <div class="flash-message">
+                <?= session('errormessage') ?>
+            </div>
+        <?php endif; ?>
+    </div>
     <div class="wrapper">
 
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">

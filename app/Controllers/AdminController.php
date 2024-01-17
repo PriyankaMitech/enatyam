@@ -72,6 +72,9 @@ class AdminController extends BaseController
                     'register.role' => 'Faculty',
                 ];
                 $data['Faculty'] = $model->joinfourtables($select1, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, $wherecond, 'DESC');
+                // echo '<pre>';
+                // print_r($data['Faculty']);
+                // die;
                 return view('AdminDashboard', $data);
             } else {
                 return redirect()->to(base_url());
@@ -589,12 +592,12 @@ class AdminController extends BaseController
         $model->updateFacultyForGroup($groupName, $facultyId, $selectedDate);
         return redirect()->to('StudentGroups');
     }
-  public function chatuser()
+    public function chatuser()
     {
         if (isset($_SESSION['sessiondata'])) {
             $model = new AdminModel();
 
-         
+
             $result['getuser'] = [];
 
             if ($_SESSION['sessiondata']['role'] == 'Admin') {
@@ -603,11 +606,11 @@ class AdminController extends BaseController
                     'status' => 'N'
                 );
                 $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
-          
+
                 $wherecondFaculty = array('is_register_done' => 'Y', 'role' => 'Faculty');
                 $result['faculty'] = $model->getalldata('register', $wherecondFaculty);
 
-        
+
 
                 // For Student
                 $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y');
@@ -615,8 +618,6 @@ class AdminController extends BaseController
 
                 // Merge results
                 $result['getuser'] = array_merge($result['faculty'], $result['student']);
-
-               
             } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $chatCountWhere = array(
                     'receiver_id' => $_SESSION['sessiondata']['id'],
@@ -631,7 +632,7 @@ class AdminController extends BaseController
                 $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y', 'Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 $result['student'] = $model->getalldata('register', $wherecondStudent);
 
-          
+
                 // $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
                 // $result['getuser'] = $model->getalldata('register', $wherecond);
                 if (is_array($result['admin']) && is_array($result['student'])) {
@@ -641,14 +642,13 @@ class AdminController extends BaseController
                 } elseif (is_array($result['student'])) {
                     $result['getuser'] = $result['student'];
                 }
-
             } else if ($_SESSION['sessiondata']['role'] == 'Student') {
                 $chatCountWhere = array(
                     'receiver_id' => $_SESSION['sessiondata']['id'],
                     'status' => 'N'
                 );
                 $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
-          
+
                 // $wherecond = array('id' => $_SESSION['sessiondata']['Assign_Techer_id']);
                 // $result['getuser'] = $model->chatfaculty('register', $wherecond);
 
@@ -658,7 +658,7 @@ class AdminController extends BaseController
                 $wherecondFaculty = array('role' => 'Admin');
                 $result['admin'] = $model->getalldata('register', $wherecondFaculty);
 
-                $wherecondStudent = array('role'=> 'Faculty','id' => $_SESSION['sessiondata']['Assign_Techer_id']);
+                $wherecondStudent = array('role' => 'Faculty', 'id' => $_SESSION['sessiondata']['Assign_Techer_id']);
                 $result['faculty'] = $model->getalldata('register', $wherecondStudent);
 
                 if (is_array($result['admin']) && is_array($result['faculty'])) {
@@ -668,21 +668,19 @@ class AdminController extends BaseController
                 } elseif (is_array($result['faculty'])) {
                     $result['getuser'] = $result['faculty'];
                 }
-         
             }
 
-   
 
-          
+
+
             echo view('Chatuser', $result);
         } else {
             return redirect()->to(base_url());
-
         }
     }
 
 
-public function singlechat()
+    public function singlechat()
     {
         if (isset($_SESSION['sessiondata'])) {
             $model = new AdminModel();
@@ -705,11 +703,13 @@ public function singlechat()
             $result['chatdata'] = $model->getchat('online_chat', $_SESSION['sessiondata']['id'], $receiverid[1]);
 
             $wherecond4 = ['id' => $receiverid[1]];
-            $result['chat_user_data'] = $model->get_single_data('register',$wherecond4);
+            $result['chat_user_data'] = $model->get_single_data('register', $wherecond4);
 
 
 
-            // echo "<pre>";print_r($result['chatdata']);exit();
+            // echo "<pre>";
+            // print_r($result['chatdata']);
+            // exit();
 
             echo view('chatuser', $result);
         } else {
@@ -776,8 +776,15 @@ public function singlechat()
     public function insertChat()
     {
         $formdata = $_POST;
+        $wherecond = array('id ' => $formdata['sender_id']);
+
         $model = new AdminModel();
+        $senderData = $model->getalldata('register', $wherecond);
+        // print_r($senderData[0]->full_name);
+        // die;
         $result = $model->insert_formdata('msg_id', 'online_chat', $formdata);
+        // print_r($result);
+        // die;
         echo json_encode($result);
     }
 
@@ -1175,6 +1182,7 @@ public function singlechat()
 
     public function get_student_data()
     {
+        
         $model = new AdminModel();
 
         $sub_courses_id_g = $this->request->getPost('sub_courses_id_g');
@@ -1182,12 +1190,21 @@ public function singlechat()
         $GroupSession = 'GroupSession';
         $Payment_status = 'Y';
 
+    
+
 
         $whereCondition = '';
         $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'Payment_status' =>  $Payment_status, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
 
 
         $student_data = $model->getalldata('register', $whereCondition);
+
+        // $lastQuery = $model->getLastQuery();
+
+        // // Now you can use $lastQuery for debugging or logging purposes
+        // echo "Last Query: " . $lastQuery;exit();
+         
+
 
         return json_encode($student_data);
     }
@@ -1214,13 +1231,6 @@ public function singlechat()
             return json_encode([]);
         }
     }
-
-
-
-
-
-
-
 
     public function chechk_menu_name_id()
     {
@@ -1444,47 +1454,187 @@ public function singlechat()
 
     public function set_create_group_data()
     {
+        // echo "<pre>";print_r($_POST);exit();
 
+        // echo $this->request->getVar('id');exit();
 
-        $data = [
-            'courses_id_g' => $this->request->getVar('courses_id_g'),
-            'sub_courses_id_g' => $this->request->getVar('sub_courses_id_g'),
-            'student_id' => implode(',', $this->request->getVar('student_id')), // Convert array to comma-separated string
-            'group_name' => $this->request->getVar('group_name'),
-            'faculty_id_g' => $this->request->getVar('faculty_id_g'),
-            'session_start_date' => $this->request->getVar('session_start_date'),
-            'created_on' => date('Y-m-d H:i:s'),
-        ];
+        $model = new AdminModel();
+        $wherecond = ['id' => $this->request->getVar('id')];
+        $single = $model->getsinglerow('tbl_group', $wherecond);
+        $startTime = '';
+        $endTime = '';
 
-        $db = \Config\Database::Connect();
+        $selectedDaysArray = $this->request->getVar('days[]');
+        $selectedDaysString = implode(',', $selectedDaysArray);
+        
+        $selectedgroupstudentnamesString = '';
 
-        // Update or insert data in 'tbl_group' table
-        if ($this->request->getVar('id') == "") {
-            $add_data = $db->table('tbl_group');
-            $add_data->insert($data);
-            session()->setFlashdata('success', 'Data added successfully.');
-        } else {
-            $update_data = $db->table('tbl_group')->where('id', $this->request->getVar('id'));
-            $update_data->update($data);
-            session()->setFlashdata('success', 'Data updated successfully.');
+        $selectedgroupstudentnameArray = $this->request->getVar('student_id');
+        if(!empty($selectedgroupstudentnameArray)){
+        $selectedgroupstudentnamesString = implode(',', $selectedgroupstudentnameArray);
         }
+        
+    
+        // Extract start and end times from 'shedules_time'
+        $sheduleTimes = explode(' - ', $this->request->getVar('shedule'));
+    
+        if (isset($sheduleTimes[0]) && isset($sheduleTimes[1])) {
+                   $startTime = $sheduleTimes[0];
+                   $endTime = $sheduleTimes[1];
+                }
+     
+
+        $db = \Config\Database::Connect();  
+
+      
+       
+
+            if (empty($single)) {
+                $datas = [
+                    'groupstudentname' => $selectedgroupstudentnamesString, // Convert array to comma-separated string
+                    'faculty_id' => $this->request->getVar('faculty_id_g'),
+                    // 'group_id' => $lastInsertID,
+                    'groupname' => $this->request->getVar('group_name'),
+        
+                    'days' => $selectedDaysString,
+                    'start_date' => $this->request->getVar('start_date'),
+                    'end_date' => $this->request->getVar('end_date'),
+                    'shedules_time' => $this->request->getVar('shedule'),
+                    'start_time' => $startTime,
+                    'end_time' => $endTime,
+                    'created_on' => date('Y:m:d H:i:s'),
+                ];
+
+
+                // echo "<pre>";print_r($datas);exit();
+                    
+        $isAvailable = $this->checkAvailability($datas);
+    
+    
+        if ($isAvailable) {
+                $add_data = $db->table('tbl_student_shedule');
+                $add_data->insert($datas);
+        
+                $data = [
+                    'courses_id_g' => $this->request->getVar('courses_id_g'),
+                    'sub_courses_id_g' => $this->request->getVar('sub_courses_id_g'),
+                    'student_id' => $selectedgroupstudentnamesString, // Convert array to comma-separated string
+                    'group_name' => $this->request->getVar('group_name'),
+                    'faculty_id_g' => $this->request->getVar('faculty_id_g'),
+                    'days' => $selectedDaysString,
+                    'shedule' => $this->request->getVar('shedule'),
+                    'created_on' => date('Y-m-d H:i:s'),
+                ];
+
+                $add_data = $db->table('tbl_group');
+                $add_data->insert($data);
+
+
+                if (!empty($this->request->getVar('student_id'))) {
+                    $registerUpdateData = [
+                        'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
+                        'groupName' => $this->request->getVar('group_name'),
+                    ];
+        
+                    $studentIds = explode(',', $data['student_id']);
+                    foreach ($studentIds as $studentId) {
+                        $registerUpdate = $db->table('register')->where('id', $studentId);
+                        $registerUpdate->update($registerUpdateData);
+                    }
+                }
+                session()->setFlashdata('success', 'Data added successfully.');
+            } else {
+                session()->setFlashdata('errormessage', 'Selected days and time are not available.');
+            }
+            } else {
+                // echo "<pre>";print_r($single);exit();
+                $selectedDaysArray = $this->request->getVar('days[]'); 
+    
+                $selectedDaysArray[] = $single->days;
+              
+                $selectedDaysString = implode(',', $selectedDaysArray);
+
+                $selectedgroupstudentnameArray =  $this->request->getVar('student_id[]');
+                $selectedgroupstudentnameArray[] = $single->student_id;
+                $selectedgroupstudentnamesString = implode(',', $selectedgroupstudentnameArray);
+
+                $data = [
+                    'student_id' => $selectedgroupstudentnamesString, 
+
+                    'days' => $selectedDaysString,
+      
+             
+                ];
+
+
+                
+                $datas = [
+                    'groupstudentname' => $selectedgroupstudentnamesString, 
+
+                    'days' => $selectedDaysString,
+      
+             
+                ];
+
+                // echo "<pre>";print_r($datas);exit();
+            
+                $update_data = $db->table('tbl_student_shedule')->where('student_id', $this->request->getVar('student_id'));
+                $update_data->update($datas);
+
+                $update_data = $db->table('tbl_group')->where('id', $this->request->getVar('id'));
+                $update_data->update($data);
+
+
+                if (!empty($this->request->getVar('student_id'))) {
+                    $registerUpdateData = [
+                        'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
+                        'groupName' => $this->request->getVar('group_name'),
+                    ];
+        
+                    $studentIds = explode(',', $data['student_id']);
+                    foreach ($studentIds as $studentId) {
+                        $registerUpdate = $db->table('register')->where('id', $studentId);
+                        $registerUpdate->update($registerUpdateData);
+                    }
+                }
+
+
+
+                session()->setFlashdata('success', 'Data updated successfully.');
+            }
+      
+
+
+        
+    
+
+    
 
         // Update data in 'register' table using student IDs
-        if (!empty($this->request->getVar('student_id'))) {
-            $registerUpdateData = [
-                'Assign_Techer_id' => $this->request->getVar('faculty_id_g'),
-                'groupName' => $this->request->getVar('group_name'),
-            ];
-
-            $studentIds = explode(',', $data['student_id']);
-            foreach ($studentIds as $studentId) {
-                $registerUpdate = $db->table('register')->where('id', $studentId);
-                $registerUpdate->update($registerUpdateData);
-            }
-        }
+        
 
         return redirect()->to('student_list_of_group');
     }
+
+
+    
+protected function checkAvailability($data)
+{
+    $model = new AdminModel();
+    $wherecond = [
+        'faculty_id' => $data['faculty_id'],
+        'shedules_time' => $data['shedules_time'],
+    ];
+    $existingSchedules = $model->getslots($wherecond);
+    foreach ($existingSchedules as $existingSchedule) {
+        $availableDays = explode(',', $existingSchedule->days);
+        $selectedDays = explode(',', $data['days']);
+        if (array_intersect($selectedDays, $availableDays)) {
+            return false; 
+        }
+    }
+    return true; 
+}
 
 
     public function student_list_of_group()
@@ -1578,8 +1728,8 @@ public function singlechat()
             $faculity_data = $model->getsinglerow('register', $wherecond);
 
             if (!empty($faculity_data)) {
-                $wherecond1 = array('student_register_id' => NULL, 'shedule_status' => 'N', 'faculty_register_id' => $faculity_data->id);
-                $shedule_data = $model->getalldata('schedule', $wherecond1);
+                $wherecond1 = array('faculty_registerid' => $faculity_data->id);
+                $shedule_data = $model->getalldata('schedule_list', $wherecond1);
             }
             return json_encode($shedule_data);
         } else {
@@ -1663,4 +1813,83 @@ public function singlechat()
             return redirect()->to(base_url());
         }
     }
+
+
+
+    public function get_shedule_data_for_group()
+    {
+        $model = new AdminModel();
+
+    
+        $assignTeacherId = $this->request->getPost('facultyidg');
+
+        $wherecond1 = [
+            'carrier_id' => $assignTeacherId,
+          
+        ];
+
+
+
+        $teacher_data = $model->getsinglerow('register',$wherecond1);
+
+        // echo "<pre>";print_r($teacher_data);
+
+        $teacher_id = '';
+        if(!empty($teacher_data)){
+            $teacher_id = $teacher_data->id;
+
+        }
+
+        
+        $selectedDays = $this->request->getPost('selectedDays');
+        $currentYear = date('Y');
+        $currentMonth = date('m');
+        $startDate = "{$currentYear}-{$currentMonth}-01 00:00:00";
+        $endDate = date('Y-m-t 23:59:59', strtotime($startDate));
+    
+        // Prepare the WHERE condition for the query
+        $wherecond = [
+            'faculty_registerid' => $teacher_id,
+            'start_date >= ' => $startDate,
+            'end_date <= ' => $endDate,
+        ];
+
+    
+        // Prepare the WHERE condition for the query
+     
+
+        // echo "<pre>";print_r($selectedDays);
+
+        $shedule_data = $model->getalldataforstudent('schedule_list', $wherecond, $selectedDays);
+
+        
+
+
+        if (!empty($shedule_data)) {
+            return json_encode($shedule_data);
+        } else {
+            return json_encode([]);
+        }
+    }
+
+
+    
+   
+
+    public function check_group_name()
+    {
+      
+        $admin_model = new AdminModel();
+        $group_name = $this->request->getPost('group_name');
+
+        if ($group_name) {
+            $data = $admin_model->check_group_name($group_name, 'group_name');
+            // echo "<pre>";
+            // print_r($email);exit();
+            return json_encode($data);
+        } else {
+            return json_encode([]);
+        }
+    }
+
 }

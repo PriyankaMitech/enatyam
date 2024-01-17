@@ -371,7 +371,7 @@ public function StudentAttendance()
 
       $data['single'] = $model->getsinglerow('schedule_list',$wherecond);
 
-     //  echo "<pre>";print_r($data['schedule_data']);exit();
+      // echo "<pre>";print_r($data['schedule_data']);exit();
 
 
       echo view('schedule/index', $data);

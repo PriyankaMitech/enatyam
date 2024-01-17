@@ -3,16 +3,17 @@ var events = [];
 
 $(function() {
     if (!!scheds) {
-     
+
         Object.keys(scheds).map(k => {
             var row = scheds[k];
             var startDate = moment(row.start_date);
             var endDate = moment(row.end_date);
             for (var currentDay = startDate.clone(); currentDay.isSameOrBefore(endDate); currentDay.add(1, 'day')) {
                 if (row.days.includes(currentDay.format('dddd'))) {
+                    console.log(row);
                     events.push({
                         id: row.id,
-                        title: row.title,  // Assuming you want to use the title property
+                        title: moment(row.start_time, 'HH:mm:ss').format('HH:mm') + ' - '  + moment(row.end_time, 'HH:mm:ss').format('HH:mm'),
                         start: currentDay.format('YYYY-MM-DD') + ' ' + row.start_time,
                         end: currentDay.format('YYYY-MM-DD') + ' ' + row.end_time
                     });
@@ -35,7 +36,7 @@ $(function() {
             var id = info.event.id;
 
             if (!!scheds[id]) {
-                _details.find('#title').text(scheds[id].title);
+                // _details.find('#title').text(scheds[id].start_time);
 
                 // Check if the description is a valid URL
                 var description = scheds[id].description;
@@ -58,11 +59,11 @@ $(function() {
             }
         },
         eventDidMount: function(info) {
-
+            var eventElement = info.el;
+            eventElement.querySelector('.fc-event-time').style.display = 'none'; // Hide the time div
         },
-        editable: true
+        editable: true,
     });
-
     calendar.render();
 
     // Form reset listener

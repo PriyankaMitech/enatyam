@@ -40,8 +40,14 @@ $routes->get('Career', 'Home::Career');
 $routes->get('chechk_username_id', 'Home::chechk_username_id');
 $routes->post('chechk_username_id', 'Home::chechk_username_id');
 
+
+
 $routes->get('chechk_menu_name_id', ' AdminController::chechk_menu_name_id');
 $routes->post('chechk_menu_name_id', 'AdminController::chechk_menu_name_id');
+
+
+$routes->get('check_group_name', ' AdminController::check_group_name');
+$routes->post('check_group_name', 'AdminController::check_group_name');
 
 
 
@@ -329,6 +335,8 @@ $routes->get('reschedule', 'StudentController::reschedule');
 
 
 $routes->post('get_shedule_data_for_student', 'StudentController::get_shedule_data_for_student');
+$routes->post('get_shedule_data_for_group', 'AdminController::get_shedule_data_for_group');
+
 
 
 $routes->get('set_student_shedule', 'StudentController::set_student_shedule');
