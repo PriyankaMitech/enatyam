@@ -173,12 +173,27 @@ class facultymodel extends Model
             ->select('register.*, payment.no_of_session')
             ->join('payment', 'register.id = payment.user_id', 'left')
             ->where('register.role', 'Student')
+            ->where('register.SessionType', 'OneToOneSession')
             ->where('register.Assign_Techer_id', $registerId)
             ->get()
             ->getResult();
     
         // echo $this->db->getLastQuery();die;
         return $result;
+    }
+    public function getGroupList($registerId)
+    {
+        $result = $this->db->table('register')
+        ->select('register.*, payment.no_of_session')
+        ->join('payment', 'register.id = payment.user_id', 'left')
+        ->where('register.role', 'Student')
+        ->where('register.SessionType', 'GroupSession')
+        ->where('register.Assign_Techer_id', $registerId)
+        ->get()
+        ->getResult();
+
+    // echo $this->db->getLastQuery();die;
+    return $result;
     }
     public function updateAttendance($sessionId, $attendance, $currentConductedSessions)
     {

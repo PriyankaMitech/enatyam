@@ -298,9 +298,11 @@ public function StudentAttendance()
   $result = session();
   $registerId = $result->get('id');
   $model = new facultymodel();
-  $StudentList['studentList']=$model->getStudentList($registerId);
-//  print_r($StudentList['studentList']);die;
-  return view('FacultysideBar/Studentattendance',$StudentList);
+  $data['studentList']=$model->getStudentList($registerId);
+  $data['GroupList']=$model->getGroupList($registerId);
+  // print_r($GroupList['GroupList']);die;
+ //  echo '<pre>'; print_r($data['GroupList']);die;
+  return view('FacultysideBar/Studentattendance',$data);
 }
 
 
