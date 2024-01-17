@@ -3,6 +3,7 @@ var events = [];
 
 $(function() {
     if (!!scheds) {
+
         Object.keys(scheds).map(k => {
             var row = scheds[k];
             var startDate = moment(row.start_date);

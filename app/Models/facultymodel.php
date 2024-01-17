@@ -168,12 +168,15 @@ class facultymodel extends Model
 
     return $query->getResult();
     }
-    public function getStudentList($registerId){
-        $result= $this->db->table('register')
-        ->where('role', 'Student')
-        ->where('Assign_Techer_id', $registerId)
-        ->get()
-        ->getResult();
+    public function getStudentList($registerId) {
+        $result = $this->db->table('register')
+            ->select('register.*, payment.no_of_session')
+            ->join('payment', 'register.id = payment.user_id', 'left')
+            ->where('register.role', 'Student')
+            ->where('register.Assign_Techer_id', $registerId)
+            ->get()
+            ->getResult();
+    
         // echo $this->db->getLastQuery();die;
         return $result;
     }

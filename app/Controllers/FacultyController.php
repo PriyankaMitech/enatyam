@@ -322,7 +322,7 @@ public function StudentAttendance()
   $registerId = $result->get('id');
   $model = new facultymodel();
   $StudentList['studentList']=$model->getStudentList($registerId);
-  // print_r($StudentList['studentList']);die;
+//  print_r($StudentList['studentList']);die;
   return view('FacultysideBar/Studentattendance',$StudentList);
 }
 
@@ -335,7 +335,7 @@ public function StudentAttendance()
 
     public function submitAttendance()
     {
-        //  print_r($_POST);die;
+          print_r($_POST);die;
         $model = new facultymodel();
         $sessionId = $this->request->getPost('session_id');
         $attendance = $this->request->getPost('attendance');
