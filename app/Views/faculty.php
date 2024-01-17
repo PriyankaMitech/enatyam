@@ -342,6 +342,7 @@ div.dataTables_wrapper div.dataTables_filter input {
                                 <th>Group Name</th>
                                 <th>Courses/Sub Courses</th>
                                 <th>Student Names</th>
+                                <th>action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -385,7 +386,10 @@ div.dataTables_wrapper div.dataTables_filter input {
                                             }
                                             ?>
                                 </td>
-                             
+                                <td>
+                                    <a href="<?php echo base_url() ?>facultyinfo?student_id=<?=$datas->group_name; ?>"
+                                        class="btn btn-sm  badge-primary"><i class="fas fa-file-upload"></i></a>
+                                </td>
                             </tr>
                             <?php } ?>
                             <?php }else{ ?>

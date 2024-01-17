@@ -24,7 +24,7 @@
 <script src="<?= base_url() ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="dist/js/pages/dashboard.js"></script>
 <script src="<?php echo base_url() ?>public/js/custom.js"></script>
-<script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
+    <script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
 
 <script src="<?= base_url() ?>public/js/jquery.barrating.min.js"></script>
 <script src="<?= base_url(); ?>/public/js/jquery.validate.min.js"></script>
