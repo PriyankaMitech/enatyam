@@ -29,7 +29,7 @@
             <div class="modal-body rounded-0">
                 <div class="container-fluid">
                     <dl>
-                         <dt class="text-muted">Description</dt>
+                         <dt class="text-muted">Google Meet Link</dt>
                          <a> <dd id="description" class=""></dd></a>
                         <dt class="text-muted">Start</dt>
                         <dd id="start" class=""></dd>

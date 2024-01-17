@@ -342,6 +342,7 @@ div.dataTables_wrapper div.dataTables_filter input {
                                 <th>Group Name</th>
                                 <th>Courses/Sub Courses</th>
                                 <th>Student Names</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -384,6 +385,12 @@ div.dataTables_wrapper div.dataTables_filter input {
                                                     $x++; // Increment the counter
                                             }
                                             ?>
+                                </td>
+
+                                <td>
+                             
+                                    <a href="<?php echo base_url() ?>addlink/<?=base64_encode($datas->group_name); ?>"
+                                        class="btn btn-sm badge-primary"><i class="fas fa-file-upload"></i></a>
                                 </td>
                              
                             </tr>

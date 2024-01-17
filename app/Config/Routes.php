@@ -292,6 +292,11 @@ $routes->post('checkData', 'FacultyController::checkData');
 $routes->get('giveschedule', 'FacultyController::giveschedule');
 $routes->post('giveschedule', 'FacultyController::giveschedule');
 $routes->post('sendmeetinglink', 'FacultyController::sendmeetinglink');
+$routes->post('setlinkforgroup', 'FacultyController::setlinkforgroup');
+$routes->get('setlinkforgroup', 'FacultyController::setlinkforgroup');
+
+
+
 $routes->get('save_schedule', 'FacultyController::save_schedule');
 $routes->post('save_schedule', 'FacultyController::save_schedule');
 
@@ -301,6 +306,9 @@ $routes->get('notification', 'FacultyController::get_all_notification');
 
 // $routes->get('fetchstudyVideouplodeFromstudent', 'FacultyController::fetchstudyVideouplodeFromstudent');
 $routes->get('facultyinfo', 'FacultyController::facultyinfo');
+$routes->get('addlink', 'FacultyController::addlink');
+$routes->get('addlink/(:any)', 'FacultyController::addlink/$i');
+
 // $routes->get('facu', 'FacultyController::index');//email
 $routes->get('sendEmail', 'EmailController::sendEmail'); //email
 $routes->post('send_mail', 'EmailController::send_mail');
