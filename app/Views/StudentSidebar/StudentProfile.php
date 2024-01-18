@@ -110,7 +110,7 @@
                                 <div class="tab-pane" id="timeline">
                                     <?php if (!empty($profileData)) { ?>
 
-                                        <form action="<?= base_url('changeCountry') ?>" method="post">
+                                        <form action="<?= base_url() ?>changeCountry" method="post">
                                             <div class="timeline-item">
                                                 <div class="timeline-item-content">
                                                     <div class="preCountry text-right">

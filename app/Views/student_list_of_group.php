@@ -3,33 +3,33 @@
 <div class="content-wrapper">
 
     <section class="content-header">
-    <div class="container-fluid">
-        <div class="row mb-2">
-        <div class="col-sm-6">
-            <h1>Student List Of Group</h1>
-        </div>
-        <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Student List Of Group</li>
-            </ol>
-        </div>
-        </div>
-    </div><!-- /.container-fluid -->
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Student List Of Group</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Student List Of Group</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
     </section>
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12"> 
+                <div class="col-md-12">
                     <div class="card card-default">
                         <div class="row card-header">
                             <div class="col-md-6">
                                 <h3 class="col-md-6 card-title">Search Group</h3>
                             </div>
                             <div class="col-md-6 text-right">
-                                <a href="<?=base_url();?>student_list_of_group" class="btn btn-primary ">Back</a>
+                                <a href="<?= base_url(); ?>student_list_of_group" class="btn btn-primary ">Back</a>
                             </div>
-                               
+
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -38,8 +38,10 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Courses</label>
-                                            <input type="hidden" id="id" name="id" value="<?php if (isset($single_data)) { echo ($single_data->id); } ?>">
-                                            <select class="form-control" name="courses_id_g" id="courses_id_g" style="width: 100%;" >
+                                            <input type="hidden" id="id" name="id" value="<?php if (isset($single_data)) {
+                                                                                                echo ($single_data->id);
+                                                                                            } ?>">
+                                            <select class="form-control" name="courses_id_g" id="courses_id_g" style="width: 100%;">
                                                 <option value="">Please select course</option>
                                                 <?php if (!empty($courses_data)) { ?>
                                                     <?php foreach ($courses_data as $data) { ?>
@@ -54,7 +56,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Sub Courses</label>
-                                            <input type="hidden" id="selected_sub_courses_id_g" name="selected_sub_courses_id_g" value="<?php $session = session(); echo $session->sub_courses_id_g; ?>">
+                                            <input type="hidden" id="selected_sub_courses_id_g" name="selected_sub_courses_id_g" value="<?php $session = session();
+                                                                                                                                        echo $session->sub_courses_id_g; ?>">
                                             <select name="sub_courses_id_g" id="sub_courses_id_g" class="form-control">
                                                 <option value="">Please select sub courses</option>
                                                 <!-- Add your sub-courses options here -->
@@ -72,507 +75,518 @@
                 </div>
                 <div class="col-12">
                     <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Student List Of Group</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <table  class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>Sr.No</th>
-                            <th>Courses / Sub Courses</th>
-                            <th>Group Name</th>
-
-                            <th>Student Name</th>
-                            <th>Faculty Name</th>
-                            <th>Created Group Date</th>
-                            <th>Days</th>
-
-                            <th>Time</th>
-
-
-                            <th>Action</th>
-            
-                        </tr>
-                        </thead>
-                        <?php if(!empty($group_data)){ 
-                            ?>
-                            
-
-                            <tbody>
-                            <?php if(!empty($group_data)){ $i=1;?>
-                                <?php foreach($group_data as $data){  
-                                    
-                                    
-                                    $session = \Config\Services::session();
-                                    $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
-                                    $wherec1 = array('id ' => $data->faculty_id_g);
-
-
-                                    $falculty_data = $adminModel->getsinglerow('register',$wherec1);
-
-                                    $wherec2 = array('id ' => $data->courses_id_g);
-
-
-                                    $courses_data = $adminModel->getsinglerow('tbl_courses',$wherec2);
-
-                                    $wherec3 = array('id ' => $data->sub_courses_id_g);
-
-
-                                    $subcourses_data = $adminModel->getsinglerow('tbl_sub_courses',$wherec3);
-
-
-                                    $student_id = explode(',', $data->student_id);
-
-                                    $studentNames = array(); // To store student names
-                                    $wherec = '';
-
-
-                                    if (!empty($student_id)) {
-                                        // echo "<pre>";print_r($student_id);
-                                        foreach ($student_id as $student_id_data) {
-                                            // echo "<pre>";print_r($student_id_data);
-                                                $wherec = array('id' => $student_id_data);
-                                            // Assuming you have a method in your model to get student names by ID
-                                            $student = $adminModel->getsinglerow('register',$wherec);
-                                            // echo "<pre>";print_r($student);exit();
-
-
-                                            // Assuming the method returns an object with a 'name' property
-                                            $studentNames[] = $student->full_name;
-
-                                            // echo "<pre>";print_r($student);exit();
-
-                                        }
-                                    }
-
-                                    $wherec4 = array('id ' => $data->shedule);
-                                    $shedule_data = $adminModel->getsinglerow('schedule',$wherec4);
-
-
-                                    
-
-                                    ?>
+                        <div class="card-header">
+                            <h3 class="card-title">Student List Of Group</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered table-hover">
+                                <thead>
                                     <tr>
-                                        <td><?=$i; ?></td>
-                                        <td><?php if(!empty($courses_data)){ echo $courses_data->courses_name; } ?> - <?php if(!empty($subcourses_data)){ echo $subcourses_data->sub_courses_name; } ?></td>
-                                   
+                                        <th>Sr.No</th>
+                                        <th>Courses / Sub Courses</th>
+                                        <th>Group Name</th>
+
+                                        <th>Student Name</th>
+                                        <th>Faculty Name</th>
+                                        <th>Created Group Date</th>
+                                        <th>Days</th>
+
+                                        <th>Time</th>
 
 
-                                        <td><?=$data->group_name; ?></td>
+                                        <th>Action</th>
 
-                                    
-                                        <td>
-                                            <?php $x= 1;
-                                                foreach ($studentNames as $studentName) {
-                                                    echo $x . ') ' . $studentName . '<br>';
-                                                    $x++; // Increment the counter
-                                            }
-                                            ?>
-                                        </td>
-
-                                        </td>                                        
-                                        <td><?php if(!empty($falculty_data)){ echo $falculty_data->full_name; } ?></td>
-                                        <td><?= date('j F Y', strtotime($data->created_on)); ?></td>
-                                        <td><?=$data->days ?></td>
-                                            <td><?=$data->shedule ?> </td>
-                                     
-                                            <td>
-                                            <div class="btn-group" role="group">
-                                            <?php
-                                            $studentIds = explode(',', $data->student_id);
-
-                                            // Count the number of students
-                                            $numberOfStudents = count($studentIds);
-                                            if($numberOfStudents < 10 ){
-                                            ?>
-                                            <a class="btn btn-success m-1 open-modal" data-toggle="modal" data-target="#modal-default-<?=$data->id;?>" 
-                                                data-row-id="<?=$data->id;?>" 
-                                                data-faculty-id="<?=$data->faculty_id_g;?>" 
-                                                data-schedule="<?=$data->shedule;?>" 
-                                                data-group-name="<?=$data->group_name;?>" 
-                                                href="#">
-                                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                                            </a>
-                                            <?php } ?>
-                                                <!-- <a href="edit_group/<?=$data->id; ?>"><i class="far fa-edit me-2"></i></a> -->
-                                                <a class="btn btn-danger m-1" href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')">
-                                                    <i class="far fa-trash-alt me-2"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-
-
-                                        <div class="modal fade" id="modal-default-<?=$data->id;?>">
-                                        <form action="set_create_group_data" method="post">
-                                            <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                <h4 class="modal-title">Add More Student</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group ">
-                                                       
-                                                        <div class="row">
-                                                            <?php //echo "<pre>";print_r($data);exit();?>
-                                                            <div class="col-md-12">
-                                                            <input type="hidden" value="" name="id" id="modal-id">
-                                                            <input type="hidden" value="" name="faculty_id_g" id="modal-faculty-id">
-                                                            <input type="hidden" value="" id="modal-shedule" name="shedule">
-                                                            <input type="hidden" value="" id="modal-group-name" name="group_name">
-
-
-
-                                                                <label>Student List</label>
-                                                            </div>
-                                                            <?php
-
-                                                                $GroupSession = 'GroupSession';
-
-                                                                $Payment_status = 'Y';
-                                                                $wherec6 = array('course' => $data->courses_id_g, 'sub_course' => $data->sub_courses_id_g, 'is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'Payment_status' =>  $Payment_status );
-
-                                                                $student_data = $adminModel->getalldata('register',$wherec6);
-
-
-
-                                                                $wherec1 = array('id ' => $data->faculty_id_g);
-
-
-                                                                $falculty_data = $adminModel->getsinglerow('register',$wherec1);
-                                                                $techer_id = '';
-                                                                if(!empty($falculty_data)){
-                                                                    $techer_id = $falculty_data->id;
-                                                                }
-                            
-                                                                $wherec2 = array('faculty_registerid '=> $techer_id);
-
-
-                                                                $days_data = $adminModel->getsinglerow('schedule_list',$wherec2);
-
-                                                                // echo "<pre>";print_r($days_data);exit();
-
-
-                                                            
-                                                            if (!empty($student_data)) { $i = 1; ?>
-                                                                <?php foreach ($student_data as $datas) { ?>
-                                                                    <div class="col-md-12">
-                                                                        <input type="checkbox" id="student_id" name="student_id[]" value="<?= $datas->id; ?>"  >
-
-                                                                        <label for="student_id"> <?= $datas->full_name; ?></label>
-                                                                    </div>
-
-                                                
-                                                                    <?php $i++;
-                                                                } ?>
-                                                            <?php }else{ ?>
-                                                                <div class="col-md-4">
-                                                                      No Data available
-                                                                    </div>
-                                                            <?php } ?>
-
-
-                                                            <?php if (!empty($days_data)) : ?>
-                                                                <div class="col-md-12">
-
-                                                   
-                                                            <div class="form-group mb-2">
-                                                                <label class="control-label">Select Day's</label>
-                                                                <?php
-                                                                $selectedDays = explode(',', $days_data->days); // Assuming $fshedules contains your data
-                                                                $selectedDays1 = explode(',', $data->days);
-                                                                $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-                                                                foreach ($allDays as $day) :
-                                                                    $isChecked =  in_array($day, $selectedDays1) ? 'checked' : '';
-                                                                    $isChecked1 =  in_array($day, $selectedDays1) ? 'disabled' : '';
-
-                                                                    $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
-                                                                ?>
-                                                                    <div class="form-check">
-                                                                        <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isChecked1 ?> <?= $isDisabled ?>>
-                                                                        <label class="form-check-label"><?= $day ?></label>
-                                                                    </div>
-                                                                <?php endforeach; ?>
-                                                            </div>
-                                                        <?php endif; ?>
-                                                                </div>
-
-                        
-                                                            
-                                                        
-                                                        </div>
-                                                    </div>
-                                                           
-                                                <div class="modal-footer justify-content-between">
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                                </div>
-                                            </div>
-                                            <!-- /.modal-content -->
-                                            </div>
-                                            <!-- /.modal-dialog -->
-                                            </form>
-                                        </div>
-
-
-                                    
                                     </tr>
-                                <?php $i++;} ?>
-                        <?php }else{ ?>
-                            <tr>
-                                <td class="text-center" colspan="9"> No Data Available</td>
-                            </tr>
-
-                        <?php } ?>                    
-                        </tbody>
-
-                        <?php }else{ ?>
-
-                        <tbody>
-                            <?php if(!empty($student_list_of_group)){ $p=1;
-                                                            // echo "<pre>";print_r($student_list_of_group);exit();
-
+                                </thead>
+                                <?php if (!empty($group_data)) {
                                 ?>
 
-                                
-                                <?php foreach($student_list_of_group as $data){  
-                                    
-                                    
-                                    $session = \Config\Services::session();
-                                    $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
-                                    $wherec1 = array('id ' => $data->faculty_id_g);
+
+                                    <tbody>
+                                        <?php if (!empty($group_data)) {
+                                            $i = 1; ?>
+                                            <?php foreach ($group_data as $data) {
 
 
-                                    $falculty_data = $adminModel->getsinglerow('register',$wherec1);
-
-                                    $wherec2 = array('id ' => $data->courses_id_g);
-
-
-                                    $courses_data = $adminModel->getsinglerow('tbl_courses',$wherec2);
-
-                                    $wherec3 = array('id ' => $data->sub_courses_id_g);
+                                                $session = \Config\Services::session();
+                                                $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
+                                                $wherec1 = array('id ' => $data->faculty_id_g);
 
 
-                                    $subcourses_data = $adminModel->getsinglerow('tbl_sub_courses',$wherec3);
+                                                $falculty_data = $adminModel->getsinglerow('register', $wherec1);
+
+                                                $wherec2 = array('id ' => $data->courses_id_g);
 
 
-                                    $student_id = explode(',', $data->student_id);
+                                                $courses_data = $adminModel->getsinglerow('tbl_courses', $wherec2);
 
-                                    $studentNames = array(); // To store student names
-                                    $wherec = '';
-
-
-                                    if (!empty($student_id)) {
-                                        // echo "<pre>";print_r($student_id);
-                                        foreach ($student_id as $student_id_data) {
-                                            // echo "<pre>";print_r($student_id_data);
-                                                $wherec = array('id' => $student_id_data);
-                                            // Assuming you have a method in your model to get student names by ID
-                                            $student = $adminModel->getsinglerow('register',$wherec);
-                                            // echo "<pre>";print_r($student);exit();
-                                            if(!empty($student)){
-                                            // Assuming the method returns an object with a 'name' property
-                                            $studentNames[] = $student->full_name;
-                                            }
-
-                                            // echo "<pre>";print_r($student);exit();
-
-                                        }
-                                    }
+                                                $wherec3 = array('id ' => $data->sub_courses_id_g);
 
 
-                                    $wherec4 = array('id ' => $data->shedule);
-                                    $shedule_data = $adminModel->getsinglerow('schedule',$wherec4);
-
-                                //   echo "<pre>";print_r($shedule_data);exit();
+                                                $subcourses_data = $adminModel->getsinglerow('tbl_sub_courses', $wherec3);
 
 
-                                  
-                                    
+                                                $student_id = explode(',', $data->student_id);
 
-                                    ?>
-                                    <tr>
-                                        <td><?=$p; ?></td>
-                                        <td><?php if(!empty($courses_data)){ echo $courses_data->courses_name; } ?> - <?php if(!empty($subcourses_data)){ echo $subcourses_data->sub_courses_name; } ?></td>
-                                   
+                                                $studentNames = array(); // To store student names
+                                                $wherec = '';
 
 
-                                        <td><?=$data->group_name; ?></td>
+                                                if (!empty($student_id)) {
+                                                    // echo "<pre>";print_r($student_id);
+                                                    foreach ($student_id as $student_id_data) {
+                                                        // echo "<pre>";print_r($student_id_data);
+                                                        $wherec = array('id' => $student_id_data);
+                                                        // Assuming you have a method in your model to get student names by ID
+                                                        $student = $adminModel->getsinglerow('register', $wherec);
+                                                        // echo "<pre>";print_r($student);exit();
 
-                                    
-                                        <td>
-                                            <?php $x= 1;
-                                                foreach ($studentNames as $studentName) {
-                                                    echo $x . ') ' . $studentName . '<br>';
-                                                    $x++; // Increment the counter
-                                            }
 
-                                            
+                                                        // Assuming the method returns an object with a 'name' property
+                                                        $studentNames[] = $student->full_name;
+
+                                                        // echo "<pre>";print_r($student);exit();
+
+                                                    }
+                                                }
+
+                                                $wherec4 = array('id ' => $data->shedule);
+                                                $shedule_data = $adminModel->getsinglerow('schedule', $wherec4);
+
+
+
+
                                             ?>
-
-                                        </td>
-
-                                        </td>                                        
-                                        <td><?php if(!empty($falculty_data)){ echo $falculty_data->full_name; } ?></td>
-                                        <td><?= date('j F Y', strtotime($data->created_on)); ?></td>
-                                        <td><?=$data->days ?></td>
-                                        <td><?=$data->shedule ?> </td>
-
-                                        <td>
-                                            <div class="btn-group" role="group">
-                                            <?php
-                                            $studentIds = explode(',', $data->student_id);
-
-                                            // Count the number of students
-                                            $numberOfStudents = count($studentIds);
-                                            if($numberOfStudents < 10 ){
-                                            ?>
-                                            <a class="btn btn-success m-1 open-modal" data-toggle="modal" data-target="#modal-default-<?=$data->id;?>" 
-                                                data-row-id="<?=$data->id;?>" 
-                                                data-faculty-id="<?=$data->faculty_id_g;?>" 
-                                                data-schedule="<?=$data->shedule;?>" 
-                                                data-group-name="<?=$data->group_name;?>" 
-                                                href="#">
-                                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                                            </a>
-                                            <?php } ?>
-                                                <!-- <a href="edit_group/<?=$data->id; ?>"><i class="far fa-edit me-2"></i></a> -->
-                                                <a class="btn btn-danger m-1" href="<?=base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')">
-                                                    <i class="far fa-trash-alt me-2"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-
-
-                                        <div class="modal fade" id="modal-default-<?=$data->id;?>">
-                                        <form action="set_create_group_data" method="post">
-                                            <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                <h4 class="modal-title">Add More Student</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group ">
-                                                       
-                                                        <div class="row">
-                                                            <?php //echo "<pre>";print_r($data);exit();?>
-                                                            <div class="col-md-12">
-                                                            <input type="hidden" value="" name="id" id="modal-id">
-                                                            <input type="hidden" value="" name="faculty_id_g" id="modal-faculty-id">
-                                                            <input type="hidden" value="" id="modal-shedule" name="shedule">
-                                                            <input type="hidden" value="" id="modal-group-name" name="group_name">
+                                                <tr>
+                                                    <td><?= $i; ?></td>
+                                                    <td><?php if (!empty($courses_data)) {
+                                                            echo $courses_data->courses_name;
+                                                        } ?> - <?php if (!empty($subcourses_data)) {
+                                                                    echo $subcourses_data->sub_courses_name;
+                                                                } ?></td>
 
 
 
-                                                                <label>Student List</label>
-                                                            </div>
+                                                    <td><?= $data->group_name; ?></td>
+
+
+                                                    <td>
+                                                        <?php $x = 1;
+                                                        foreach ($studentNames as $studentName) {
+                                                            echo $x . ') ' . $studentName . '<br>';
+                                                            $x++; // Increment the counter
+                                                        }
+                                                        ?>
+                                                    </td>
+
+                                                    </td>
+                                                    <td><?php if (!empty($falculty_data)) {
+                                                            echo $falculty_data->full_name;
+                                                        } ?></td>
+                                                    <td><?= date('j F Y', strtotime($data->created_on)); ?></td>
+                                                    <td><?= $data->days ?></td>
+                                                    <td><?= $data->shedule ?> </td>
+
+                                                    <td>
+                                                        <div class="btn-group" role="group">
                                                             <?php
+                                                            $studentIds = explode(',', $data->student_id);
 
-                                                                $GroupSession = 'GroupSession';
-
-                                                                $Payment_status = 'Y';
-                                                                $wherec6 = array('course' => $data->courses_id_g, 'sub_course' => $data->sub_courses_id_g, 'is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'Payment_status' =>  $Payment_status );
-
-                                                                $student_data = $adminModel->getalldata('register',$wherec6);
-
-
-
-                                                                $wherec1 = array('carrier_id ' => $data->faculty_id_g);
-
-
-                                                                $falculty_data = $adminModel->getsinglerow('register',$wherec1);
-                                                                $techer_id = '';
-                                                                if(!empty($falculty_data)){
-                                                                    $techer_id = $falculty_data->id;
-                                                                }
-                            
-                                                                $wherec2 = array('faculty_registerid '=> $techer_id);
-
-
-                                                                $days_data = $adminModel->getsinglerow('schedule_list',$wherec2);
-
-                                                                // echo "<pre>";print_r($days_data);exit();
-
-
-                                                            
-                                                            if (!empty($student_data)) { $i = 1; ?>
-                                                                <?php foreach ($student_data as $datas) { ?>
-                                                                    <div class="col-md-12">
-                                                                        <input type="checkbox" id="student_id" name="student_id[]" value="<?= $datas->id; ?>"  >
-
-                                                                        <label for="student_id"> <?= $datas->full_name; ?></label>
-                                                                    </div>
-
-                                                
-                                                                    <?php $i++;
-                                                                } ?>
-                                                            <?php }else{ ?>
-                                                                <div class="col-md-4">
-                                                                      No Data available
-                                                                    </div>
+                                                            // Count the number of students
+                                                            $numberOfStudents = count($studentIds);
+                                                            if ($numberOfStudents < 10) {
+                                                            ?>
+                                                                <a class="btn btn-success m-1 open-modal" data-toggle="modal" data-target="#modal-default-<?= $data->id; ?>" data-row-id="<?= $data->id; ?>" data-faculty-id="<?= $data->faculty_id_g; ?>" data-schedule="<?= $data->shedule; ?>" data-group-name="<?= $data->group_name; ?>" href="#">
+                                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                                </a>
                                                             <?php } ?>
-
-
-                                                            <?php if (!empty($days_data)) : ?>
-                                                                <div class="col-md-12">
-
-                                                   
-                                                            <div class="form-group mb-2">
-                                                                <label class="control-label">Select Day's</label>
-                                                                <?php
-                                                                $selectedDays = explode(',', $days_data->days); // Assuming $fshedules contains your data
-                                                                $selectedDays1 = explode(',', $data->days);
-                                                                $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-                                                                foreach ($allDays as $day) :
-                                                                    $isChecked =  in_array($day, $selectedDays1) ? 'checked' : '';
-                                                                    $isChecked1 =  in_array($day, $selectedDays1) ? 'disabled' : '';
-
-                                                                    $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
-                                                                ?>
-                                                                    <div class="form-check">
-                                                                        <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isChecked1 ?> <?= $isDisabled ?>>
-                                                                        <label class="form-check-label"><?= $day ?></label>
-                                                                    </div>
-                                                                <?php endforeach; ?>
-                                                            </div>
-                                                        <?php endif; ?>
-                                                                </div>
-
-                        
-                                                            
-                                                        
+                                                            <!-- <a href="edit_group/<?= $data->id; ?>"><i class="far fa-edit me-2"></i></a> -->
+                                                            <a class="btn btn-danger m-1" href="<?= base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')">
+                                                                <i class="far fa-trash-alt me-2"></i>
+                                                            </a>
                                                         </div>
+                                                    </td>
+
+
+                                                    <div class="modal fade" id="modal-default-<?= $data->id; ?>">
+                                                        <form action="set_create_group_data" method="post">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Add More Student</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group ">
+
+                                                                            <div class="row">
+                                                                                <?php //echo "<pre>";print_r($data);exit();
+                                                                                ?>
+                                                                                <div class="col-md-12">
+                                                                                    <input type="hidden" value="" name="id" id="modal-id">
+                                                                                    <input type="hidden" value="" name="faculty_id_g" id="modal-faculty-id">
+                                                                                    <input type="hidden" value="" id="modal-shedule" name="shedule">
+                                                                                    <input type="hidden" value="" id="modal-group-name" name="group_name">
+
+
+
+                                                                                    <label>Student List</label>
+                                                                                </div>
+                                                                                <?php
+
+                                                                                $GroupSession = 'GroupSession';
+
+                                                                                $Payment_status = 'Y';
+                                                                                $wherec6 = array('course' => $data->courses_id_g, 'sub_course' => $data->sub_courses_id_g, 'is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'Payment_status' =>  $Payment_status);
+
+                                                                                $student_data = $adminModel->getalldata('register', $wherec6);
+
+
+
+                                                                                $wherec1 = array('id ' => $data->faculty_id_g);
+
+
+                                                                                $falculty_data = $adminModel->getsinglerow('register', $wherec1);
+                                                                                $techer_id = '';
+                                                                                if (!empty($falculty_data)) {
+                                                                                    $techer_id = $falculty_data->id;
+                                                                                }
+
+                                                                                $wherec2 = array('faculty_registerid ' => $techer_id);
+
+
+                                                                                $days_data = $adminModel->getsinglerow('schedule_list', $wherec2);
+
+                                                                                // echo "<pre>";print_r($days_data);exit();
+
+
+
+                                                                                if (!empty($student_data)) {
+                                                                                    $i = 1; ?>
+                                                                                    <?php foreach ($student_data as $datas) { ?>
+                                                                                        <div class="col-md-12">
+                                                                                            <input type="checkbox" id="student_id" name="student_id[]" value="<?= $datas->id; ?>">
+
+                                                                                            <label for="student_id"> <?= $datas->full_name; ?></label>
+                                                                                        </div>
+
+
+                                                                                    <?php $i++;
+                                                                                    } ?>
+                                                                                <?php } else { ?>
+                                                                                    <div class="col-md-4">
+                                                                                        No Data available
+                                                                                    </div>
+                                                                                <?php } ?>
+
+
+                                                                                <?php if (!empty($days_data)) : ?>
+                                                                                    <div class="col-md-12">
+
+
+                                                                                        <div class="form-group mb-2">
+                                                                                            <label class="control-label">Select Day's</label>
+                                                                                            <?php
+                                                                                            $selectedDays = explode(',', $days_data->days); // Assuming $fshedules contains your data
+                                                                                            $selectedDays1 = explode(',', $data->days);
+                                                                                            $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                                                                                            foreach ($allDays as $day) :
+                                                                                                $isChecked =  in_array($day, $selectedDays1) ? 'checked' : '';
+                                                                                                $isChecked1 =  in_array($day, $selectedDays1) ? 'disabled' : '';
+
+                                                                                                $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
+                                                                                            ?>
+                                                                                                <div class="form-check">
+                                                                                                    <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isChecked1 ?> <?= $isDisabled ?>>
+                                                                                                    <label class="form-check-label"><?= $day ?></label>
+                                                                                                </div>
+                                                                                            <?php endforeach; ?>
+                                                                                        </div>
+                                                                                    <?php endif; ?>
+                                                                                    </div>
+
+
+
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="modal-footer justify-content-between">
+                                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /.modal-content -->
+                                                                </div>
+                                                                <!-- /.modal-dialog -->
+                                                        </form>
                                                     </div>
-                                                           
-                                                <div class="modal-footer justify-content-between">
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                                </div>
-                                            </div>
-                                            <!-- /.modal-content -->
-                                            </div>
-                                            <!-- /.modal-dialog -->
-                                            </form>
-                                        </div>
 
 
-                                      
-                                    </tr>
-                                <?php $p++;} ?>
-                                <?php }else{ ?>
-                            <tr>
-                                <td class="text-center" colspan="9"> No Data Available</td>
-                            </tr>
 
-                        <?php } ?>         
-                    
-                        </tbody>
-                        <?php } ?>
-             
-                        </table>
-                    </div>
-                    <!-- /.card-body -->
+                                                </tr>
+                                            <?php $i++;
+                                            } ?>
+                                        <?php } else { ?>
+                                            <tr>
+                                                <td class="text-center" colspan="9"> No Data Available</td>
+                                            </tr>
+
+                                        <?php } ?>
+                                    </tbody>
+
+                                <?php } else { ?>
+
+                                    <tbody>
+                                        <?php if (!empty($student_list_of_group)) {
+                                            $p = 1;
+                                            // echo "<pre>";print_r($student_list_of_group);exit();
+
+                                        ?>
+
+
+                                            <?php foreach ($student_list_of_group as $data) {
+
+
+                                                $session = \Config\Services::session();
+                                                $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
+                                                $wherec1 = array('id ' => $data->faculty_id_g);
+
+
+                                                $falculty_data = $adminModel->getsinglerow('register', $wherec1);
+
+                                                $wherec2 = array('id ' => $data->courses_id_g);
+
+
+                                                $courses_data = $adminModel->getsinglerow('tbl_courses', $wherec2);
+
+                                                $wherec3 = array('id ' => $data->sub_courses_id_g);
+
+
+                                                $subcourses_data = $adminModel->getsinglerow('tbl_sub_courses', $wherec3);
+
+
+                                                $student_id = explode(',', $data->student_id);
+
+                                                $studentNames = array(); // To store student names
+                                                $wherec = '';
+
+
+                                                if (!empty($student_id)) {
+                                                    // echo "<pre>";print_r($student_id);
+                                                    foreach ($student_id as $student_id_data) {
+                                                        // echo "<pre>";print_r($student_id_data);
+                                                        $wherec = array('id' => $student_id_data);
+                                                        // Assuming you have a method in your model to get student names by ID
+                                                        $student = $adminModel->getsinglerow('register', $wherec);
+                                                        // echo "<pre>";print_r($student);exit();
+                                                        if (!empty($student)) {
+                                                            // Assuming the method returns an object with a 'name' property
+                                                            $studentNames[] = $student->full_name;
+                                                        }
+
+                                                        // echo "<pre>";print_r($student);exit();
+
+                                                    }
+                                                }
+
+                                                // print_r($data);
+                                                // die;
+                                                $wherec4 = array('id ' => $data->shedule);
+                                                $shedule_data = $adminModel->getsinglerow('schedule', $wherec4);
+
+                                                //   echo "<pre>";print_r($shedule_data);exit();
+
+
+
+
+
+                                            ?>
+                                                <tr>
+                                                    <td><?= $p; ?></td>
+                                                    <td><?php if (!empty($courses_data)) {
+                                                            echo $courses_data->courses_name;
+                                                        } ?> - <?php if (!empty($subcourses_data)) {
+                                                                    echo $subcourses_data->sub_courses_name;
+                                                                } ?></td>
+
+
+
+                                                    <td><?= $data->group_name; ?></td>
+
+
+                                                    <td>
+                                                        <?php $x = 1;
+                                                        foreach ($studentNames as $studentName) {
+                                                            echo $x . ') ' . $studentName . '<br>';
+                                                            $x++; // Increment the counter
+                                                        }
+
+
+                                                        ?>
+
+                                                    </td>
+
+                                                    </td>
+                                                    <td><?php if (!empty($falculty_data)) {
+                                                            echo $falculty_data->full_name;
+                                                        } ?></td>
+                                                    <td><?= date('j F Y', strtotime($data->created_on)); ?></td>
+                                                    <td><?= $data->days ?></td>
+                                                    <td><?= $data->shedule ?> </td>
+
+                                                    <td>
+                                                        <div class="btn-group" role="group">
+                                                            <?php
+                                                            $studentIds = explode(',', $data->student_id);
+
+                                                            // Count the number of students
+                                                            $numberOfStudents = count($studentIds);
+                                                            if ($numberOfStudents < 10) {
+                                                            ?>
+                                                                <a class="btn btn-success m-1 open-modal" data-toggle="modal" data-target="#modal-default-<?= $data->id; ?>" data-row-id="<?= $data->id; ?>" data-faculty-id="<?= $data->faculty_id_g; ?>" data-schedule="<?= $data->shedule; ?>" data-group-name="<?= $data->group_name; ?>" href="#">
+                                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                                </a>
+                                                            <?php } ?>
+                                                            <!-- <a href="edit_group/<?= $data->id; ?>"><i class="far fa-edit me-2"></i></a> -->
+                                                            <a class="btn btn-danger m-1" href="<?= base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/tbl_menu" onclick="return confirm('Are You Sure You Want To Delete This Record?')">
+                                                                <i class="far fa-trash-alt me-2"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+
+
+                                                    <div class="modal fade" id="modal-default-<?= $data->id; ?>">
+                                                        <form action="set_create_group_data" method="post">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Add More Student</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group ">
+
+                                                                            <div class="row">
+                                                                                <?php //echo "<pre>";print_r($data);exit();
+                                                                                ?>
+                                                                                <div class="col-md-12">
+                                                                                    <input type="hidden" value="" name="id" id="modal-id">
+                                                                                    <input type="hidden" value="" name="faculty_id_g" id="modal-faculty-id">
+                                                                                    <input type="hidden" value="" id="modal-shedule" name="shedule">
+                                                                                    <input type="hidden" value="" id="modal-group-name" name="group_name">
+
+
+
+                                                                                    <label>Student List</label>
+                                                                                </div>
+                                                                                <?php
+
+                                                                                $GroupSession = 'GroupSession';
+
+                                                                                $Payment_status = 'Y';
+                                                                                $wherec6 = array('course' => $data->courses_id_g, 'sub_course' => $data->sub_courses_id_g, 'is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'SessionType' => $GroupSession, 'groupName' => NULL, 'Payment_status' =>  $Payment_status);
+
+                                                                                $student_data = $adminModel->getalldata('register', $wherec6);
+
+
+
+                                                                                $wherec1 = array('carrier_id ' => $data->faculty_id_g);
+
+
+                                                                                $falculty_data = $adminModel->getsinglerow('register', $wherec1);
+                                                                                $techer_id = '';
+                                                                                if (!empty($falculty_data)) {
+                                                                                    $techer_id = $falculty_data->id;
+                                                                                }
+
+                                                                                $wherec2 = array('faculty_registerid ' => $techer_id);
+
+
+                                                                                $days_data = $adminModel->getsinglerow('schedule_list', $wherec2);
+
+                                                                                // echo "<pre>";print_r($days_data);exit();
+
+
+
+                                                                                if (!empty($student_data)) {
+                                                                                    $i = 1; ?>
+                                                                                    <?php foreach ($student_data as $datas) { ?>
+                                                                                        <div class="col-md-12">
+                                                                                            <input type="checkbox" id="student_id" name="student_id[]" value="<?= $datas->id; ?>">
+
+                                                                                            <label for="student_id"> <?= $datas->full_name; ?></label>
+                                                                                        </div>
+
+
+                                                                                    <?php $i++;
+                                                                                    } ?>
+                                                                                <?php } else { ?>
+                                                                                    <div class="col-md-4">
+                                                                                        No Data available
+                                                                                    </div>
+                                                                                <?php } ?>
+
+
+                                                                                <?php if (!empty($days_data)) : ?>
+                                                                                    <div class="col-md-12">
+
+
+                                                                                        <div class="form-group mb-2">
+                                                                                            <label class="control-label">Select Day's</label>
+                                                                                            <?php
+                                                                                            $selectedDays = explode(',', $days_data->days); // Assuming $fshedules contains your data
+                                                                                            $selectedDays1 = explode(',', $data->days);
+                                                                                            $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+                                                                                            foreach ($allDays as $day) :
+                                                                                                $isChecked =  in_array($day, $selectedDays1) ? 'checked' : '';
+                                                                                                $isChecked1 =  in_array($day, $selectedDays1) ? 'disabled' : '';
+
+                                                                                                $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
+                                                                                            ?>
+                                                                                                <div class="form-check">
+                                                                                                    <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isChecked1 ?> <?= $isDisabled ?>>
+                                                                                                    <label class="form-check-label"><?= $day ?></label>
+                                                                                                </div>
+                                                                                            <?php endforeach; ?>
+                                                                                        </div>
+                                                                                    <?php endif; ?>
+                                                                                    </div>
+
+
+
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="modal-footer justify-content-between">
+                                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /.modal-content -->
+                                                                </div>
+                                                                <!-- /.modal-dialog -->
+                                                        </form>
+                                                    </div>
+
+
+
+                                                </tr>
+                                            <?php $p++;
+                                            } ?>
+                                        <?php } else { ?>
+                                            <tr>
+                                                <td class="text-center" colspan="9"> No Data Available</td>
+                                            </tr>
+
+                                        <?php } ?>
+
+                                    </tbody>
+                                <?php } ?>
+
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
                     </div>
                 </div>
             </div>
@@ -581,7 +595,4 @@
 </div>
 
 
-<?php echo view('AdminSideBar/AdminFooter.php');?>      
-    
-
- 
+<?php echo view('AdminSideBar/AdminFooter.php'); ?>

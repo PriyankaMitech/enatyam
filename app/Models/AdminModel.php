@@ -602,29 +602,29 @@ class AdminModel extends Model
         }
     }
     public function getalldataslots($table, $wherecond)
-{
-    $result = $this->db->table($table)
-        ->where($wherecond)
-        ->get()
-        ->getResult();
+    {
+        $result = $this->db->table($table)
+            ->where($wherecond)
+            ->get()
+            ->getResult();
 
-    if ($result) {
-        // Fetch student names using student_ids
-        foreach ($result as $row) {
-            $student_id = $row->student_id;
-            $student_data = $this->db->table('register')
-                ->where('id', $student_id)
-                ->get()
-                ->getRow();
+        if ($result) {
+            // Fetch student names using student_ids
+            foreach ($result as $row) {
+                $student_id = $row->student_id;
+                $student_data = $this->db->table('register')
+                    ->where('id', $student_id)
+                    ->get()
+                    ->getRow();
 
-            // Add student name to the result
-            $row->student_name = $student_data ? $student_data->full_name : '';
+                // Add student name to the result
+                $row->student_name = $student_data ? $student_data->full_name : '';
+            }
+            return $result;
+        } else {
+            return false;
         }
-        return $result;
-    } else {
-        return false;
     }
-}
 
 
     public function getalldatagroupby($table, $wherecond, $groupByCondition)
@@ -734,7 +734,9 @@ class AdminModel extends Model
         $admin_id = $result['admin_id'];
         $facultyData = [];
         $studentData = [];
+
         if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
+
             $facultyData[] = [
                 'register_id' => 'All',
                 'notification_description' => $notificationDescription,
@@ -747,7 +749,7 @@ class AdminModel extends Model
             foreach ($selectedFacultyIds as $facultyId) {
 
                 $facultyData[] = [
-                    'register_id' => 'All',
+                    'register_id' => $facultyId,
                     'notification_description' => $notificationDescription,
                     'user_type' => 'faculty',
                     'timestamp' => $notification_date,
@@ -779,7 +781,7 @@ class AdminModel extends Model
             foreach ($selectedStudentIds as $studentId) {
 
                 $studentData[] = [
-                    'register_id' => 'All',
+                    'register_id' => $studentId,
                     'notification_description' => $notificationDescription,
                     'user_type' => 'student',
                     'timestamp' => $notification_date,
@@ -798,24 +800,45 @@ class AdminModel extends Model
             }
         }
         if (!empty($facultyData)) {
-            $this->db->table('notificationtable')->insertBatch($facultyData);
+            $res1 = $this->db->table('notificationtable')->insertBatch($facultyData);
+            if ($res1) {
+                return true; // Return true if faculty insert is successful
+            }
+            // echo "res :";
+            // if ($res1) {
+            //     print_r($res1);
+            // }
         }
         if (!empty($studentData)) {
-            $this->db->table('notificationtable')->insertBatch($studentData);
+            $res2 =  $this->db->table('notificationtable')->insertBatch($studentData);
+            if ($res2) {
+                return true; // Return true if student insert is successful
+            }
+            // echo "res :";
+            // if ($res2) {
+            //     //print_r($res1);
+            //     print_r($res2);
+            //     die;
+            // }
         }
+        return false; // Return false if no insert operation is successful
     }
 
-    public function getUserRole($teacherId)
+    public function getUserRole($teacherId, $userType)
     {
         $result = $this->db->table('notificationtable')
             ->select('notificationtable.*, register.full_name')
             ->join('register', 'register.id = notificationtable.admin_id', 'left')
-            ->where('notificationtable.user_type', 'faculty')
+            ->where('notificationtable.user_type', $userType)
             ->where('(notificationtable.register_id = "All" OR notificationtable.register_id = ' . $teacherId . ')')
             ->where('DATE(notificationtable.timestamp) >= CURDATE()')
 
             ->get()
             ->getResultArray();
+
+        // echo '<pre>';
+        // print_r($this->db->getLastQuery());
+        // die;
 
         if ($result) {
             return $result;
@@ -1232,7 +1255,7 @@ class AdminModel extends Model
 
         return $result;
     }
- 
+
     public function getslots($wherecond)
     {
         return $this->db->table('tbl_student_shedule')->where($wherecond)->get()->getResult();
@@ -1241,12 +1264,13 @@ class AdminModel extends Model
     public function getFacultyslots()
     {
         return $this->db->table('schedule_list')
-                        ->select('schedule_list.*, register.full_name as faculty_name')
-                        ->join('register', 'register.id = schedule_list.faculty_registerid', 'left')
-                        ->where('schedule_list.faculty_registerid IS NOT NULL')
-                        ->get()
-                        ->getResult(); 
+            ->select('schedule_list.*, register.full_name as faculty_name')
+            ->join('register', 'register.id = schedule_list.faculty_registerid', 'left')
+            ->where('schedule_list.faculty_registerid IS NOT NULL')
+            ->get()
+            ->getResult();
     }
+
 //     public function getstudentslots()
 // {
 //     return $this->db->table('tbl_student_shedule')
@@ -1271,20 +1295,15 @@ public function getstudentslots()
 
 
 
-    public function check_group_name($value, $column) {
+
+    public function check_group_name($value, $column)
+    {
         $result = $this->db
-        ->table('tbl_group')
-        ->select($column)
-        ->where([$column => ''.$value.''])
-        ->get()->getRow();  
-                
+            ->table('tbl_group')
+            ->select($column)
+            ->where([$column => '' . $value . ''])
+            ->get()->getRow();
+
         return !empty($result);
     }
-
-    
 }
-
-
-
-
-
