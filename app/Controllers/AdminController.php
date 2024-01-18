@@ -623,8 +623,12 @@ class AdminController extends BaseController
                 $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y');
                 $result['student'] = $model->getalldata('register', $wherecondStudent);
 
-                // Merge results
+                $result['getuser'] = [];
+
+                if((!empty($result['faculty'])) || (!empty($result['faculty']))){
+                
                 $result['getuser'] = array_merge($result['faculty'], $result['student']);
+                }
             } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $chatCountWhere = array(
                     'receiver_id' => $_SESSION['sessiondata']['id'],
@@ -799,7 +803,7 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
         $data['attendance'] = $model->fetchattandance();
-        // print_r($data['attendance']);die;
+//    echo '<pre>'; print_r($data['attendance']);die;
         return view('AdminSideBar/studentAttendance', $data);
     }
     public function add_notifications()

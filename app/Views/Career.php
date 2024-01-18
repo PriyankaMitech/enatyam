@@ -110,7 +110,7 @@
                                         <h5 class="title">
                                             <u>Personal Information</u>
                                         </h5>
-                                        <div class="f-info">
+                                        <div class="f-info uploadinfo">
                                             <div>
                                                 <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="name" placeholder="Your Name *" value="" type="text" name="name">
                                                 <span style="color:red;" id="namespanid"></span> </span>
