@@ -1053,10 +1053,33 @@ class AdminModel extends Model
     }
 
     public function fetchattandance()
-    {
-        $result = $this->db->table('student')->get()->getResult();
-        return $result;
+{
+    $result = $this->db->table('attendeance_table')->get()->getResult();
+
+    foreach ($result as &$attendanceRecord) {
+        $student_registerid = $attendanceRecord->student_registerid;
+
+        // Fetch student name from 'register' table
+        $studentData = $this->db->table('register')
+            ->select('full_name') // Adjust the column name accordingly
+            ->where('id', $student_registerid)
+            ->get()
+            ->getRow();
+        $attendanceRecord->student_name = $studentData ? $studentData->full_name : null;
+
+        // Fetch no_of_session from 'payment' table
+        $paymentData = $this->db->table('payment')
+            ->select('no_of_session') // Adjust the column name accordingly
+            ->where('user_id', $student_registerid)
+            ->get()
+            ->getRow();
+        $attendanceRecord->no_of_session = $paymentData ? $paymentData->no_of_session : null;
     }
+
+    return $result;
+}
+
+    
 
 
     public function getpaymentdata()

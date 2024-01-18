@@ -28,61 +28,64 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                     <tr>
-                                        <th>Student ID</th>
+                                        <th>No</th>
                                         <th>Student Name</th>
                                         <th>Session Start Date</th>
+
                                         <?php
-                            // Access ConductedSessionsCount from the first student (assuming it's the same for all)
-                            $firstStudent = reset($attendance);
-                            $conductedSessionsCount = 0; 
-                            if(!empty($firstStudent->ConductedSessionsCount)){
-                            $conductedSessionsCount = explode(',', $firstStudent->ConductedSessionsCount);
-                            foreach ($conductedSessionsCount as $session) {
-                                // Extract the numeric part of the session status (e.g., "Session 1-P" => "1")
-                                $sessionNumber = filter_var($session, FILTER_SANITIZE_NUMBER_INT);
-                                echo '<th>Session ' . $sessionNumber . '</th>';
-                            }
-                            }
-                           
-                            ?>
+                                        // Extract session information directly from the first student's data
+                                        $maxSessions = 0;
+                                        foreach ($attendance as $student) {
+                                            $maxSessions = max($maxSessions, $student->no_of_session);
+                                        }
+
+                                        // Create columns based on no_of_session value
+                                        for ($session = 1; $session <= $maxSessions; $session++) {
+                                            echo '<th>Session ' . $session . '</th>';
+                                        }
+                                        ?>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($attendance as $student): ?>
-                                    <tr class="student-row">
-                                        <td><?= $student->student_id; ?></td>
-                                        <td><?= $student->student_name; ?></td>
-                                        <td><?= $student->Session_Start_Date; ?></td>
-                                        <?php
-                            // Assuming ConductedSessionsCount is a comma-separated string of session statuses
-                            $sessionStatuses = explode(',', $student->ConductedSessionsCount);
-                            if (empty($sessionStatuses[0])) {
-                                // Display "NA" if there is no data for ConductedSessionsCount
-                                echo '<td colspan="' . count($sessionStatuses) . '">NA</td>';
-                            } else {
-                                foreach ($sessionStatuses as $status) {
-                                    // Check if the explode returned an array with at least two elements
-                                    $explodedStatus = explode('-', $status);
-                                    if (count($explodedStatus) >= 2) {
-                                        list($sessionNumber, $attendanceStatus) = $explodedStatus;
+                                <?php
+$uniqueStudents = []; // To keep track of unique students
 
-                                        // Set Bootstrap badge class based on attendance status
-                                        $badgeClass = ($attendanceStatus == 'P') ? 'bg-success' : 'bg-danger';
+foreach ($attendance as $student):
+    // Check if the student ID is already processed
+    if (!in_array($student->student_registerid, $uniqueStudents)) {
+        $uniqueStudents[] = $student->student_registerid;
+?>
+        <tr class="student-row">
+            <td><?= count($uniqueStudents); ?></td>
+            <td><?= $student->student_name; ?></td>
+            <td><?= $student->date; ?></td>
 
-                                        // Set label based on attendance status
-                                        $label = ($attendanceStatus == 'P') ? 'Present' : 'Absent';
+            <?php
+            // Display Attendance_status for each session based on Session_no
+            for ($session = 1; $session <= $maxSessions; $session++) {
+                echo '<td>';
+                $attendanceStatus = 'N/A';
 
-                                        // You can customize the display based on attendance status
-                                        echo '<td><span class="badge ' . $badgeClass . '">' . $label . '</span></td>';
-                                    } else {
-                                        // Handle the case where the format is unexpected
-                                        echo '<td>Invalid Format</td>';
-                                    }
-                                }
-                            }
-                            ?>
-                                    </tr>
-                                    <?php endforeach; ?>
+                foreach ($attendance as $sessionRecord) {
+                    if ($sessionRecord->student_registerid == $student->student_registerid
+                        && $sessionRecord->Session_no == $session) {
+                        $badgeClass = ($sessionRecord->Attendance_status == 'p') ? 'bg-success' : 'bg-danger';
+                        $attendanceStatus = ($sessionRecord->Attendance_status == 'p') ? 'Present' : 'Absent';
+                        echo '<span class="badge ' . $badgeClass . '">' . $attendanceStatus . '</span>';
+                        break; // Stop searching for this session once found
+                    }
+                }
+
+                echo '</td>';
+            }
+            ?>
+        </tr>
+<?php
+    }
+endforeach;
+?>
+
+
                                 </tbody>
                             </table>
                         </div>

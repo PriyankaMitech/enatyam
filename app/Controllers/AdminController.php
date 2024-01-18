@@ -803,7 +803,7 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
         $data['attendance'] = $model->fetchattandance();
-        // print_r($data['attendance']);die;
+//    echo '<pre>'; print_r($data['attendance']);die;
         return view('AdminSideBar/studentAttendance', $data);
     }
     public function add_notifications()
