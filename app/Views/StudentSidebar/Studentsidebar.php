@@ -19,19 +19,19 @@
 <link rel="stylesheet" href="<?= base_url(); ?>plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"> -->
 
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 </head>
 
 <body>
-<div id="flash-message-container">
-        <?php if (session()->has('errormessage')) : ?>
-            <div class="flash-message">
-                <?= session('errormessage') ?>
-            </div>
-        <?php endif; ?>
-    </div>
+  <div id="flash-message-container">
+    <?php if (session()->has('errormessage')) : ?>
+      <div class="flash-message">
+        <?= session('errormessage') ?>
+      </div>
+    <?php endif; ?>
+  </div>
 
   <div id="flash-success-container">
     <?php if (session()->has('success')) : ?>
@@ -48,15 +48,21 @@
   $session = \Config\Services::session();
   $adminModel = new \App\Models\AdminModel();
   $student_id = $session->get('id');
-  $notifications = $adminModel->getUserRole($student_id);
+  $userType = 'student';
+  $notifications = $adminModel->getUserRole($student_id, $userType);
   $wherecon = array('id' => $student_id);
   $alldata = $adminModel->getsinglerow('register',  $wherecon);
+  // print_r($alldata);
+  // die;
   $register_id;
   if (!empty($alldata)) {
     $register_id = $alldata->Assign_Techer_id;
   }
   $wherecon1 = array('register_id' => $register_id);
   $alldataoff = $adminModel->getsinglerow('faculty',  $wherecon1);
+  // print_r($alldataoff);
+  // die;
+
   $carrier_id = '';
   if (!empty($alldataoff)) {
     $carrier_id = $alldataoff->carrier_id;
@@ -79,7 +85,7 @@
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
-      <!-- <li class="nav-item">
+        <!-- <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li> -->
         <li class="nav-item d-none d-sm-inline-block">

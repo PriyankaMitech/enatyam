@@ -24,7 +24,7 @@
 <script src="<?= base_url() ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="dist/js/pages/dashboard.js"></script>
 <script src="<?php echo base_url() ?>public/js/custom.js"></script>
-    <script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
+<script src="<?= base_url(); ?>plugins/fullcalendar/main.js"></script>
 
 <script src="<?= base_url() ?>public/js/jquery.barrating.min.js"></script>
 <script src="<?= base_url(); ?>/public/js/jquery.validate.min.js"></script>
@@ -768,7 +768,7 @@
                 flashMessage.style.display = 'none';
             }, 1200);
         }
-        if(errorMessage){
+        if (errorMessage) {
             setTimeout(function() {
                 errorMessage.style.display = 'none';
             }, 1500);
@@ -851,8 +851,8 @@
                     console.log(response);
 
                     if (response == 'false') {
-                        $('#courses_idError').text('This courses name is already available.');
-                        $('#sub_courses_nameError').text('This sub courses name is already available.');
+                        $('#courses_idError').text('This course name is already available.');
+                        $('#sub_courses_nameError').text('This sub course name is already available.');
                         $('.submitButton').prop('disabled', true);
                     } else {
                         // Clear error messages and enable submit button
@@ -898,7 +898,7 @@
                 } else {
                     // Clear error messages and enable submit button
                     // $('#courses_idError').text('This courses name is already available.');
-                    $('#sub_courses_name').after('<span class="error">This sub courses name is already available.</span>');
+                    $('#sub_courses_name').after('<span class="error">This sub course name is already available.</span>');
                     $('.submitButton').prop('disabled', true);
 
                 }
@@ -932,7 +932,7 @@
 
                 if (response != '') {
 
-                    $('#sub_courses_name').after('<span class="error">This sub courses name is already available.</span>');
+                    $('#sub_courses_name').after('<span class="error">This sub course name is already available.</span>');
                     $('.submitButton').prop('disabled', true);
 
                 } else {
@@ -1261,12 +1261,12 @@
             return customFormat;
         }
 
-      function updateFacultyVideos(data) {
-    $.each(data, function(index, faculty) {
-        var base_url = '<?= base_url() ?>';
-        var ribbonColor = '#ff0000'; // You might want to set an appropriate color
+        function updateFacultyVideos(data) {
+            $.each(data, function(index, faculty) {
+                var base_url = '<?= base_url() ?>';
+                var ribbonColor = '#ff0000'; // You might want to set an appropriate color
 
-        var videoHTML = `
+                var videoHTML = `
             <div class="col-sm-3 mt-3">
                 <video width="100%" height="200px" controls poster="<?= base_url('public/images/play.jpg') ?>">
                     <source class="img-fluid" src="${base_url}/public/uploads/FacultyUplodedVideos/${faculty.video_name}" type="video/mp4">
@@ -1288,9 +1288,9 @@
             </div>
         `;
 
-        container.append(videoHTML);
-    });
-}
+                container.append(videoHTML);
+            });
+        }
 
     });
 
@@ -1534,157 +1534,157 @@
 </script>
 
 <script>
-  $(document).ready(function() {
-    $('#faculty_id_g').on('change', function() {
-        var facultyidg = $(this).val();
-        var allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    $(document).ready(function() {
+        $('#faculty_id_g').on('change', function() {
+            var facultyidg = $(this).val();
+            var allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-        console.log(facultyidg);
-        if (facultyidg) {
-            $.ajax({
-                url: '<?= base_url(); ?>get_shedule_data',
-                type: 'POST',
-                data: {
-                    faculty_id_g: facultyidg
-                },
-                dataType: 'json',
-                success: function(data) {
-                    // Extracting days from the schedule data
-                    var scheduleDays = data.length > 0 ? data[0].days.split(',') : [];
+            console.log(facultyidg);
+            if (facultyidg) {
+                $.ajax({
+                    url: '<?= base_url(); ?>get_shedule_data',
+                    type: 'POST',
+                    data: {
+                        faculty_id_g: facultyidg
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        // Extracting days from the schedule data
+                        var scheduleDays = data.length > 0 ? data[0].days.split(',') : [];
 
-                    // Clear existing checkboxes
-                    $('.form-check').remove();
+                        // Clear existing checkboxes
+                        $('.form-check').remove();
 
-                    // Generate checkboxes
-                    $.each(allDays, function(index, day) {
-                        var isChecked = scheduleDays.includes(day);
-                        console.log(isChecked); // Add this line to log the value of isChecked
-                        var disabled = isChecked ? '' : 'disabled';
+                        // Generate checkboxes
+                        $.each(allDays, function(index, day) {
+                            var isChecked = scheduleDays.includes(day);
+                            console.log(isChecked); // Add this line to log the value of isChecked
+                            var disabled = isChecked ? '' : 'disabled';
 
-                        var checkboxHtml = `
+                            var checkboxHtml = `
                             <div class="form-check col-md-6">
                                 <input type="checkbox" id="days" class="form-check-input days" name="days[]" value="${day}" ${disabled}>
                                 <label class="form-check-label" for="days">${day}</label>
                             </div>
                         `;
-                        $('.checkboxdays').append(checkboxHtml);
+                            $('.checkboxdays').append(checkboxHtml);
 
-                    
-                    });
-                }
-            });
-        } else {
-            // Clear existing checkboxes if faculty_id_g is not selected
-            $('.form-check').remove();
-        }
-
-
-      
-    });
-
-
-    $('.checkboxdays').on('change', '.days', function() {
-        var selectedDays = [];
-
-                            // var selectedDays = $('.days:checked').map(function() {
-                            //     return this.value;
-                            // }).get();
-                            fetchData(selectedDays);
 
                         });
-
-    // Trigger change event on #faculty_id_g
-    $('#faculty_id_g').trigger('change');
-
-
-    function fetchData(selectedDays) {
-        // resetDropdownAndFetchData();
-
-        var addedTimeSlots = [];
-        var facultyidg = $('#faculty_id_g').val();
-        // alert(selectedDays);
-
-        // alert(facultyidg);
-    $.ajax({
-        url: '<?= base_url(); ?>get_shedule_data_for_group',
-        type: 'POST',
-        data: {
-            selectedDays: selectedDays,
-            facultyidg :facultyidg,
-        },
-        dataType: 'json',
-  
-        success: function (data) {
-            $('#shedule').empty();
-
-            if (!Array.isArray(data)) {
-                data = [data];
-            }
-
-            $.each(data, function (key, value) {
-                var startTime = value.start_time;
-                var endTime = value.end_time;
-
-                var slots = createOneHourTimeSlots(startTime, endTime);
-
-                // console.log(slots);
-                $.each(slots, function (index, slot) {
-                    if (!addedTimeSlots.includes(slot)) {
-                        $('#shedule').append('<option value="' + slot + '">' + slot + '</option>');
-                        addedTimeSlots.push(slot);
                     }
                 });
+            } else {
+                // Clear existing checkboxes if faculty_id_g is not selected
+                $('.form-check').remove();
+            }
+
+
+
+        });
+
+
+        $('.checkboxdays').on('change', '.days', function() {
+            var selectedDays = [];
+
+            // var selectedDays = $('.days:checked').map(function() {
+            //     return this.value;
+            // }).get();
+            fetchData(selectedDays);
+
+        });
+
+        // Trigger change event on #faculty_id_g
+        $('#faculty_id_g').trigger('change');
+
+
+        function fetchData(selectedDays) {
+            // resetDropdownAndFetchData();
+
+            var addedTimeSlots = [];
+            var facultyidg = $('#faculty_id_g').val();
+            // alert(selectedDays);
+
+            // alert(facultyidg);
+            $.ajax({
+                url: '<?= base_url(); ?>get_shedule_data_for_group',
+                type: 'POST',
+                data: {
+                    selectedDays: selectedDays,
+                    facultyidg: facultyidg,
+                },
+                dataType: 'json',
+
+                success: function(data) {
+                    $('#shedule').empty();
+
+                    if (!Array.isArray(data)) {
+                        data = [data];
+                    }
+
+                    $.each(data, function(key, value) {
+                        var startTime = value.start_time;
+                        var endTime = value.end_time;
+
+                        var slots = createOneHourTimeSlots(startTime, endTime);
+
+                        // console.log(slots);
+                        $.each(slots, function(index, slot) {
+                            if (!addedTimeSlots.includes(slot)) {
+                                $('#shedule').append('<option value="' + slot + '">' + slot + '</option>');
+                                addedTimeSlots.push(slot);
+                            }
+                        });
+                    });
+
+                    // var selectedStateId = $('#selected_shedules_time').val();
+                    // $('#shedules_time').val(selectedStateId);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('AJAX Error:', textStatus, errorThrown);
+                }
             });
-
-            // var selectedStateId = $('#selected_shedules_time').val();
-            // $('#shedules_time').val(selectedStateId);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.error('AJAX Error:', textStatus, errorThrown);
         }
+
+        function createOneHourTimeSlots(startTime, endTime) {
+            var slots = [];
+            var currentSlot = startTime;
+
+            while (currentSlot < endTime) {
+                var slot = currentSlot + ' - ' + addOneHour(currentSlot);
+                slots.push(slot);
+                currentSlot = addOneHour(currentSlot);
+            }
+
+            return slots;
+        }
+
+        function addOneHour(time) {
+            var parts = time.split(':');
+            var hours = parseInt(parts[0], 10);
+            var minutes = parseInt(parts[1], 10);
+
+            // Add one hour
+            hours += 1;
+
+            // Format to 'HH:mm:ss'
+            return pad(hours) + ':' + pad(minutes) + ':00';
+        }
+
+        function pad(number) {
+            return (number < 10 ? '0' : '') + number;
+        }
+
+
+
     });
-}
 
-function createOneHourTimeSlots(startTime, endTime) {
-    var slots = [];
-    var currentSlot = startTime;
+    function formatTime(timeString) {
+        var timeParts = timeString.split(':');
+        var hours = timeParts[0];
+        var minutes = timeParts[1];
 
-    while (currentSlot < endTime) {
-        var slot = currentSlot + ' - ' + addOneHour(currentSlot);
-        slots.push(slot);
-        currentSlot = addOneHour(currentSlot);
+        return hours + ':' + minutes;
     }
-
-    return slots;
-}
-
-function addOneHour(time) {
-    var parts = time.split(':');
-    var hours = parseInt(parts[0], 10);
-    var minutes = parseInt(parts[1], 10);
-
-    // Add one hour
-    hours += 1;
-
-    // Format to 'HH:mm:ss'
-    return pad(hours) + ':' + pad(minutes) + ':00';
-}
-
-function pad(number) {
-    return (number < 10 ? '0' : '') + number;
-}
-
-
-
-});
-
-function formatTime(timeString) {
-    var timeParts = timeString.split(':');
-    var hours = timeParts[0];
-    var minutes = timeParts[1];
-
-    return hours + ':' + minutes;
-}
 
     function resetDropdownAndFetchData() {
         $('#shedule').empty();
@@ -1692,7 +1692,6 @@ function formatTime(timeString) {
         addedTimeSlots = []; // Reset added time slots
         fetchData(selectedDays);
     }
-
 </script>
 
 <script>
@@ -1731,7 +1730,7 @@ function formatTime(timeString) {
     $(document).ready(function() {
         function updateEndDateState() {
             var start_date_value = $('.start_date').val();
-          
+
         }
 
         var currentDate = new Date();
@@ -1797,14 +1796,14 @@ function formatTime(timeString) {
 
             $.ajax({
                 type: 'POST',
-                url: '<?=base_url(); ?>check_group_name',
+                url: '<?= base_url(); ?>check_group_name',
                 data: {
                     group_name: group_name
                 },
                 success: function(response) {
                     console.log(response);
                     if (response == 'false') {
-                   
+
                         $('#group_namerror').text('');
 
                         $('.submitButton').prop('disabled', false);

@@ -829,11 +829,11 @@ class AdminController extends BaseController
         if ($this->request->getVar('id') == "") {
             $add_data = $db->table('tbl_courses');
             $add_data->insert($data);
-            session()->setFlashdata('success', 'Data added successfully.');
+            session()->setFlashdata('success', 'Course added successfully.');
         } else {
             $update_data = $db->table('tbl_courses')->where('id', $this->request->getVar('id'));
             $update_data->update($data);
-            session()->setFlashdata('success', 'Data updated successfully.');
+            session()->setFlashdata('success', 'Course updated successfully.');
         }
 
         return redirect()->to('courses_list');
@@ -907,11 +907,11 @@ class AdminController extends BaseController
         if ($this->request->getVar('id') == "") {
             $add_data = $db->table('tbl_sub_courses');
             $add_data->insert($data);
-            session()->setFlashdata('success', 'Data added successfully.');
+            session()->setFlashdata('success', 'Sub course added successfully.');
         } else {
             $update_data = $db->table('tbl_sub_courses')->where('id', $this->request->getVar('id'));
             $update_data->update($data);
-            session()->setFlashdata('success', 'Data updated successfully.');
+            session()->setFlashdata('success', 'Sub course updated successfully.');
         }
 
         return redirect()->to('sub_courses_list');
@@ -1005,11 +1005,11 @@ class AdminController extends BaseController
         if ($this->request->getVar('id') ==     "") {
             $add_data = $db->table('tbl_menu');
             $add_data->insert($data);
-            session()->setFlashdata('success', 'Data added successfully.');
+            session()->setFlashdata('success', 'Menu added successfully.');
         } else {
             $update_data = $db->table('tbl_menu')->where('id', $this->request->getVar('id'));
             $update_data->update($data);
-            session()->setFlashdata('success', 'Data updated successfully.');
+            session()->setFlashdata('success', 'Menu updated successfully.');
         }
 
         return redirect()->to('menu_list');
@@ -1236,10 +1236,10 @@ class AdminController extends BaseController
                 'carrier.Result_of_application' => 'approve'
             ];
             $faculty_data = $model->jointwotables($select, 'carrier ', 'register ',  $joinCond,  $wherecond, 'DESC');
-    
 
 
-   
+
+
             // $wherecond_carrier = array('sub_course' => $sub_courses_id_g, 'course' => $courses_id_g, 'Result_of_application' => 'approve');
             // // $faculty_data = $model->getalldata('carrier', $wherecond_carrier);
 
@@ -1281,8 +1281,6 @@ class AdminController extends BaseController
         // echo "<pre>";
         // print_r($admin_id);
         // exit();
-
-
         $model = new AdminModel();
         $result = [
             'selected_faculty' => $this->request->getPost('selected_faculty'),
@@ -1293,9 +1291,20 @@ class AdminController extends BaseController
             'created_on' => date('Y:m:d H:i:s'),
         ];
 
-        // echo "<pre>";print_r($result);exit();
+        // echo "<pre>";
+        // print_r($result);
+        // exit();
 
-        $model->insertNotification($result);
+        $addNotification = $model->insertNotification($result);
+        // print_r($addNotification);
+        // die;
+        if ($addNotification) {
+            $session = session();
+            $session->setFlashdata('success', 'Notification sent successfully.');
+        } else {
+            $session = session();
+            $session->setFlashdata('errormessage', 'Error while sending notification.');
+        }
 
 
         return redirect()->to('add_notifications');
@@ -1565,7 +1574,7 @@ class AdminController extends BaseController
                         $registerUpdate->update($registerUpdateData);
                     }
                 }
-                session()->setFlashdata('success', 'Data added successfully.');
+                session()->setFlashdata('success', 'Group created successfully.');
             } else {
                 session()->setFlashdata('errormessage', 'Selected days and time are not available.');
             }
@@ -1849,7 +1858,7 @@ class AdminController extends BaseController
         $wherecond1 = [
 
             'id' => $assignTeacherId,
-          
+
 
         ];
 

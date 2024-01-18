@@ -181,7 +181,7 @@
 
 <script type='text/javascript'>
     $(document).ready(function() {
-        
+
 
         $('#faculty').barrating('set', 1);
 
@@ -271,7 +271,7 @@
                     $('#success-message').html('<div class="alert alert-success">' + response.message + '</div>').show();
                     setTimeout(function() {
                         location.reload(); // Refresh the page after 2 seconds
-                    }, 2000);
+                    }, 1200);
                 } else {
                     $('#password-error').text(response.error);
                 }
@@ -410,6 +410,26 @@
         var fileName = input.files[0].name;
         label.innerHTML = fileName;
     }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if the flash message exists
+        var flashMessage = document.querySelector('.flash-success');
+        var errorMessage = document.querySelector('.flash-message');
+
+
+        if (flashMessage) {
+            // Set a timeout to hide the flash message after 5 minutes (300,000 milliseconds)
+            setTimeout(function() {
+                flashMessage.style.display = 'none';
+            }, 1200);
+        }
+        if (errorMessage) {
+            setTimeout(function() {
+                errorMessage.style.display = 'none';
+            }, 1200);
+        }
+    });
 </script>
 </div>
 </body>
