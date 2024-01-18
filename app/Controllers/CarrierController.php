@@ -118,7 +118,7 @@ class CarrierController extends BaseController
 
             $carrierModel->save($data);
             $session = session();
-            $session->setFlashdata('success', 'Your career form has been submitted successfully. We will contact you shortly.');
+            $session->setFlashdata('success', 'Application has been submitted successfully.');
             return redirect()->to('Home');
         }
     }
