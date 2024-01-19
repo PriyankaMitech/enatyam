@@ -1666,6 +1666,8 @@ class AdminController extends BaseController
 
     public function student_list_of_group()
     {
+
+        if(!empty($_SESSION)){
         $model = new AdminModel();
         $wherecond = array('is_deleted' => 'N');
 
@@ -1681,6 +1683,10 @@ class AdminController extends BaseController
         $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
 
         echo view('student_list_of_group', $data);
+        }else{
+            echo view(base_url());
+
+        }
     }
 
 
