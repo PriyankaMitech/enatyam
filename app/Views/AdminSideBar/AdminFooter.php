@@ -1708,6 +1708,21 @@
         });
     });
 </script>
+
+<script>
+    $(document).ready(function() {
+        $('.open-modal').on('click', function() {
+            var button = $(this);
+            var modal = $('#modal-default1-' + button.data('row-id1'));
+
+            // Set values in the modal
+            modal.find('#modal-id1').val(button.data('row-id1'));
+            modal.find('#modal-faculty-id1').val(button.data('faculty-id1'));
+            modal.find('#modal-shedule1').val(button.data('schedule1'));
+            modal.find('#modal-group-name1').val(button.data('group-name1'));
+        });
+    });
+</script>
 <script>
     function validatePasswordOnInput() {
         var passwordInput = document.getElementById('passwordInput');

@@ -444,7 +444,7 @@
                                                             $numberOfStudents = count($studentIds);
                                                             if ($numberOfStudents < 10) {
                                                             ?>
-                                                                <a class="btn btn-success m-1 open-modal" data-toggle="modal" data-target="#modal-default-<?= $data->id; ?>" data-row-id="<?= $data->id; ?>" data-faculty-id="<?= $data->faculty_id_g; ?>" data-schedule="<?= $data->shedule; ?>" data-group-name="<?= $data->group_name; ?>" href="#">
+                                                                <a class="btn btn-success m-1 open-modal" data-toggle="modal" data-target="#modal-default1-<?= $data->id; ?>" data-row-id1="<?= $data->id; ?>" data-faculty-id1="<?= $data->faculty_id_g; ?>" data-schedule1="<?= $data->shedule; ?>" data-group-name1="<?= $data->group_name; ?>" href="#">
                                                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                                                 </a>
                                                             <?php } ?>
@@ -456,7 +456,7 @@
                                                     </td>
 
 
-                                                    <div class="modal fade" id="modal-default-<?= $data->id; ?>">
+                                                    <div class="modal fade" id="modal-default1-<?= $data->id; ?>">
                                                         <form action="set_create_group_data" method="post">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
@@ -470,10 +470,10 @@
                                                                                 <?php //echo "<pre>";print_r($data);exit();
                                                                                 ?>
                                                                                 <div class="col-md-12">
-                                                                                    <input type="hidden" value="" name="id" id="modal-id">
-                                                                                    <input type="hidden" value="" name="faculty_id_g" id="modal-faculty-id">
-                                                                                    <input type="hidden" value="" id="modal-shedule" name="shedule">
-                                                                                    <input type="hidden" value="" id="modal-group-name" name="group_name">
+                                                                                    <input type="hidden" value="" name="id" id="modal-id1">
+                                                                                    <input type="hidden" value="" name="faculty_id_g" id="modal-faculty-id1">
+                                                                                    <input type="hidden" value="" id="modal-shedule1" name="shedule">
+                                                                                    <input type="hidden" value="" id="modal-group-name1" name="group_name">
 
 
 
@@ -490,7 +490,7 @@
 
 
 
-                                                                                $wherec1 = array('carrier_id ' => $data->faculty_id_g);
+                                                                                $wherec1 = array('id ' => $data->faculty_id_g);
 
 
                                                                                 $falculty_data = $adminModel->getsinglerow('register', $wherec1);

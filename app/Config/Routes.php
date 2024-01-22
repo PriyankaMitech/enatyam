@@ -319,6 +319,8 @@ $routes->get('studentList', 'DashboardController::studentList');
 $routes->get('StudentAttendance', 'FacultyController::StudentAttendance');
 
 $routes->post('uploadVideo', 'FacultyController::uploadVideo');
+$routes->post('set_videos', 'FacultyController::set_videos');
+
 
 $routes->get('fetchTofacultyShuduleSidebar', 'FacultyController::fetchTofacultyShuduleSidebar');
 

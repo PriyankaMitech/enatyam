@@ -12,7 +12,7 @@ class facultymodel extends Model
     protected $table2 = 'uplode_video_to_student';
     protected $table = 'student'; // Set the table name
     protected $primaryKey = 'student_id';
-    protected $allowedFields = ['student_id', 'id', 'Date', 'Conducted_Demo', 'name', 'course', 'Assign_Teacher_id', 'video_name', 'Student_name',];
+    protected $allowedFields = ['student_id', 'id', 'Date', 'Conducted_Demo', 'name', 'course', 'Assign_Teacher_id', 'video_name', 'Student_name','groupid'];
 
     public function getStudentData($studentId)
     {
@@ -26,25 +26,16 @@ class facultymodel extends Model
     {
         $data = [
             'student_id' => $studentId,
-            'register_faculty_id' => $registerId, // Include register_id in the data array
+            'register_faculty_id' => $registerId, 
             'video_name' => $videoFilename,
         ];
-        // print_r($data);
-        // die;
-        // Insert the video information into the 'uploaded_videos' table
-        $res = $this->db->table($this->table2)->insert($data);
-        // if ($res) {
-        //     echo "true!!!!";
-        // }
 
-        // Update the 'video_name' column in the 'students' table
+        $res = $this->db->table($this->table2)->insert($data);
+
         $res1 = $this->db->table($this->table)
             ->where('student_id', $studentId)
             ->update(['video_name' => $videoFilename]);
-        // if ($res1) {
-        //     echo "again true!!!!!1";
-        //     die;
-        // }
+     
     }
 
 
@@ -53,7 +44,7 @@ class facultymodel extends Model
         $videos = $this->db->table('student s')
             ->join('uplode_video_to_student sv', 'sv.student_id = s.student_id')
             ->select('s.student_id, sv.video_name ,sv.DateTime')
-            ->where('register_id', $registerId)
+            ->where('s.student_id', $registerId)
             ->get()
             ->getResult();
         //  echo '<pre>';print_r($this->getLastQuery());die;
@@ -281,5 +272,24 @@ class facultymodel extends Model
 public function insertAttendance($data)
 {
     return $this->db->table('attendeance_table')->insert($data);
+}
+
+
+public function updateStudentVideoforgroup($studentId, $registerId, $videoFilename, $groupid)
+{
+    $data = [
+        'student_id' => $studentId,
+        'register_faculty_id' => $registerId, 
+        'video_name' => $videoFilename,
+        'groupid' => $groupid,
+
+    ];
+
+    $res = $this->db->table($this->table2)->insert($data);
+
+    $res1 = $this->db->table($this->table)
+        ->where('register_id', $studentId)
+        ->update(['video_name' => $videoFilename]);
+ 
 }
 }    
