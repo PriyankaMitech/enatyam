@@ -1522,7 +1522,7 @@ class AdminController extends BaseController
 
         $db = \Config\Database::Connect();
 
-
+// echo "<pre>";print_r($single);exit();
 
 
         if (empty($single)) {
@@ -1676,7 +1676,7 @@ class AdminController extends BaseController
     public function student_list_of_group()
     {
 
-        if(!empty($_SESSION)){
+        if(!empty($_SESSION['sessiondata'])){
         $model = new AdminModel();
         $wherecond = array('is_deleted' => 'N');
 
@@ -1693,7 +1693,7 @@ class AdminController extends BaseController
 
         echo view('student_list_of_group', $data);
         }else{
-            echo view(base_url());
+            return redirect()->to(base_url());
 
         }
     }
