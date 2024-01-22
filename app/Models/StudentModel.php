@@ -249,4 +249,23 @@ public function checkSlotAvailability($selectedSlot, $teacherId)
         return true;
     }
 }
+// public function getattandance($registerId)
+// {
+//     // Query the 'attendeance_table' table to get attendance data for a specific student
+//     return $this->db->table('attendeance_table')
+//         ->where('student_registerid', $registerId)
+//         ->get()
+//         ->getResult();
+// }
+public function getattandance($registerId)
+{
+ 
+    $result = $this->db->table('attendeance_table')
+        ->join('register', 'register.id = attendeance_table.student_registerid')
+        ->where('attendeance_table.student_registerid', $registerId)
+        ->get()
+        ->getResult();
+
+    return $result;
+}
 }
