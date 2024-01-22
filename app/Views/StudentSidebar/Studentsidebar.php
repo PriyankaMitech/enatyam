@@ -228,6 +228,12 @@
                     </a>
                   </li>
                   <li class="nav-item">
+                    <a href="<?php echo base_url() ?>StudentAttendancerecord" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Attendance</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
                     <a href="<?php echo base_url() ?>SelectDate" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Faculty Availability</p>

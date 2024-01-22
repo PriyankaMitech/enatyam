@@ -270,7 +270,7 @@ $routes->post('AdminController/ResheduleByadmin', 'AdminController::ResheduleBya
 $routes->post('lostpassword', 'StudentController::lostpassword');
 $routes->post('otpvalidate', 'StudentController::otpvalidate');
 $routes->post('submitAttendance', 'FacultyController::submitAttendance');
-
+$routes->get('StudentAttendancerecord', 'StudentController::StudentAttendancerecord');
 $routes->post('newpassword', 'StudentController::newpassword');
 $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule');
 
