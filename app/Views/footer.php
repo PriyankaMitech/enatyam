@@ -2760,7 +2760,7 @@ $(function() {
             // Set a timeout to hide the flash message after 5 minutes (300,000 milliseconds)
             setTimeout(function() {
                 flashMessage.style.display = 'none';
-            }, 300);
+            }, 600);
         }
     });
 </script>

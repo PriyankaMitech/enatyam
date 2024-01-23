@@ -95,7 +95,8 @@ class StudentController extends BaseController
         // Check if an image was uploaded
         if ($image && $image->isValid() && !$image->hasMoved()) {
             $imageName = $image->getName();
-            $image->move(ROOTPATH . 'public/uploads/images', $imageName);
+            $image->move(ROOTPATH . 'public/uploads/images/studentUploadedImages', $imageName);
+
 
             // Save image name, Assign_Teacher_id, and registerId to the database
             $StudentModel->insert(['name' => $imageName, 'type' => 'image', 'Faculty_id' => $assignTeacherId, 'register_id' => $registerId, 'Student_name' => $full_name]);
@@ -270,17 +271,11 @@ class StudentController extends BaseController
         $joinCond6 = 'register.sub_course = tbl_sub_courses.id';
         $joinCond = 'register.country = countries.name';
 
-
-
         $wherecond = [
             'register.id ' => $registerId,
         ];
 
-
-
-
         $data['profileData'] = $model->joinfourtablessingle($select1, 'register ', 'tbl_courses ', 'tbl_sub_courses', 'countries',  $joinCond5, $joinCond6, $joinCond, $wherecond);
-
 
         // echo "<pre>";print_r($data['profileData']);exit();
 
@@ -683,5 +678,15 @@ class StudentController extends BaseController
             }
         }
         return true;
+    }
+    public function getStudyVideo($registerId)
+    {
+        $StudentModel = new StudentModel();
+        $res = $StudentModel->getStudyVideo($registerId);
+        if ($res) {
+            return $res;
+        } else {
+            return false;
+        }
     }
 }

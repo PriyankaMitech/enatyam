@@ -56,21 +56,22 @@ class facultymodel extends Model
             ->where('register_id', $registerId)
             ->get()
             ->getResult();
-        //  echo '<pre>';print_r($this->getLastQuery());die;
+        echo '<pre>';
+        print_r($this->getLastQuery());
+        die;
         return $videos;
         //   print_r($videos);die;
     }
     public function getstudentvideo($registerId)
-      {
+    {
         $query = $this->db->table('uplode_study_video_from_student svf')
-        ->join('student s', 's.register_id = svf.register_id')
-        ->select('svf.name, svf.DateTime, s.student_name')
-        ->where('svf.register_id', $registerId)
-        ->get();
-   // print_r($query);die;
-    return $query->getResult();
-            
-      }
+            ->join('student s', 's.register_id = svf.register_id')
+            ->select('svf.name, svf.DateTime, s.student_name')
+            ->where('svf.register_id', $registerId)
+            ->get();
+        // print_r($query);die;
+        return $query->getResult();
+    }
     public function insertAppointments($data)
     {
         //print_r($data);die;
@@ -84,23 +85,23 @@ class facultymodel extends Model
     public function checkDataExists($facultyId, $formDay, $formTime, $toTime)
     {
         $result = $this->db->table('schedule')
-        ->where('faculty_register_id', $facultyId)
-        ->where('Day', $formDay)
-        ->groupStart()
-        ->where('start_time <=', $toTime)
-        ->where('end_time >=', $formTime)
-        ->groupEnd()
-        ->countAllResults();
+            ->where('faculty_register_id', $facultyId)
+            ->where('Day', $formDay)
+            ->groupStart()
+            ->where('start_time <=', $toTime)
+            ->where('end_time >=', $formTime)
+            ->groupEnd()
+            ->countAllResults();
 
-    return $result > 0;
+        return $result > 0;
     }
     public function getFacultySlots($facultyRegisterId)
     {
-        $query = $this->db->table('schedule') 
-            ->select('day, start_time, end_time ,student_register_id') 
+        $query = $this->db->table('schedule')
+            ->select('day, start_time, end_time ,student_register_id')
             ->where('faculty_register_id', $facultyRegisterId);
-        $result = $query->get()->getResultArray(); 
-    
+        $result = $query->get()->getResultArray();
+
         return $result;
     }
     // public function fetchshedule($registerId)
@@ -115,24 +116,24 @@ class facultymodel extends Model
     //         ->get()
     //         ->getResult();
     //     // echo $this->db->getLastQuery();die;
-        
+
     //     return $result;
 
     // }
 
     public function fetchshedule($registerId)
     {
-      //  print_r($registerId);die;
-      $result = $this->db->table('tbl_student_shedule')
-      ->where('faculty_id', $registerId)
-      ->get()
-      ->getResultArray();
+        //  print_r($registerId);die;
+        $result = $this->db->table('tbl_student_shedule')
+            ->where('faculty_id', $registerId)
+            ->get()
+            ->getResultArray();
 
-  // Print the result set
-//   print_r($result);
-//   die;
-   }
-    
+        // Print the result set
+        //   print_r($result);
+        //   die;
+    }
+
     public function fetchshedule1($registerId)
     {
         $currentMonth = date('m'); // Get the current month in the format 'mm'
@@ -147,28 +148,29 @@ class facultymodel extends Model
             ->where('DAYOFWEEK(sd.DAY_NAME) = 2')
             ->get()
             ->getResult();
-        echo $this->db->getLastQuery();die;
-        
-        return $result;
+        echo $this->db->getLastQuery();
+        die;
 
-        }
+        return $result;
+    }
     public function gettodayssessiontofaculty($teacherId)
     {
-       
-    $today = date('Y-m-d');
-    $dayOfWeek = date('l', strtotime($today));
 
-    $query = $this->db->table('schedule')
-                     ->select('schedule.*, register.full_name') // Select necessary columns
-                     ->join('register', 'register.id = schedule.student_register_id', 'left') // Perform a left join
-                     ->where('schedule.faculty_register_id', $teacherId)
-                     ->where('schedule.Day', $dayOfWeek)
-                     ->where('schedule.student_register_id >', 0)
-                     ->get();
+        $today = date('Y-m-d');
+        $dayOfWeek = date('l', strtotime($today));
 
-    return $query->getResult();
+        $query = $this->db->table('schedule')
+            ->select('schedule.*, register.full_name') // Select necessary columns
+            ->join('register', 'register.id = schedule.student_register_id', 'left') // Perform a left join
+            ->where('schedule.faculty_register_id', $teacherId)
+            ->where('schedule.Day', $dayOfWeek)
+            ->where('schedule.student_register_id >', 0)
+            ->get();
+
+        return $query->getResult();
     }
-    public function getStudentList($registerId) {
+    public function getStudentList($registerId)
+    {
         $result = $this->db->table('register')
             ->select('register.*, payment.no_of_session')
             ->join('payment', 'register.id = payment.user_id', 'left')
@@ -177,48 +179,48 @@ class facultymodel extends Model
             ->where('register.Assign_Techer_id', $registerId)
             ->get()
             ->getResult();
-    
+
         // echo $this->db->getLastQuery();die;
         return $result;
     }
     public function getGroupList($registerId)
     {
         $result = $this->db->table('register')
-        ->select('register.*, payment.no_of_session')
-        ->join('payment', 'register.id = payment.user_id', 'left')
-        ->where('register.role', 'Student')
-        ->where('register.SessionType', 'GroupSession')
-        ->where('register.Assign_Techer_id', $registerId)
-        ->get()
-        ->getResult();
+            ->select('register.*, payment.no_of_session')
+            ->join('payment', 'register.id = payment.user_id', 'left')
+            ->where('register.role', 'Student')
+            ->where('register.SessionType', 'GroupSession')
+            ->where('register.Assign_Techer_id', $registerId)
+            ->get()
+            ->getResult();
 
-    // echo $this->db->getLastQuery();die;
-    return $result;
+        // echo $this->db->getLastQuery();die;
+        return $result;
     }
     public function updateAttendance($sessionId, $attendance, $currentConductedSessions)
     {
         // If attendance is "present," increment the count and append it to the array
         $conductedSessions = explode(',', $currentConductedSessions);
-        
+
         // Extract the numeric part from the last session entry and increment by 1
         $lastSession = end($conductedSessions);
         $lastCount = (int) $lastSession; // Extract the numeric part
         $newCount = is_numeric($lastCount) ? $lastCount + 1 : 1;
-    
+
         // Handle the leading comma conditionally
         $leadingComma = empty($currentConductedSessions) ? '' : ',';
-    
+
         if ($attendance === 'present') {
             $this->db->table('student')
                 ->where('register_id', $sessionId)
                 ->update(['ConductedSessionsCount' => $currentConductedSessions . $leadingComma . $newCount . '-P']);
-            
+
             return $newCount;
         } else {
             $this->db->table('student')
                 ->where('register_id', $sessionId)
                 ->update(['ConductedSessionsCount' => $currentConductedSessions . $leadingComma . $newCount . '-A']);
-            
+
             return $newCount;
         }
     }
@@ -234,26 +236,26 @@ class facultymodel extends Model
 
     public function saveSchedule($data)
     {
-       // print_r($_POST);die;
+        // print_r($_POST);die;
         $optionType = $data['option_type'];
         $selectedDays = $data['days'];
         $faculty_registerid = $data['session_id'];
         $start_datetime = strtotime($data['start_datetime']);
         $end_datetime = strtotime($data['end_datetime']);
-    
+
         $startTime = date('H:i:s', $start_datetime);
         $endTime = date('H:i:s', $end_datetime);
-    
+
         while ($start_datetime <= $end_datetime) {
             $currentDay = date('l', $start_datetime);
             $currentDate = date('Y-m-d', $start_datetime);
-    
+
             if ($optionType === 'allDay' || in_array($currentDay, $selectedDays)) {
                 $current_datetime_start = $currentDate . ' ' . $startTime;
                 $current_datetime_end = $currentDate . ' ' . $endTime;
-    
+
                 $this->db->table('schedule_list')->insert([
-                    'OptionType'=> $optionType,
+                    'OptionType' => $optionType,
                     'start_datetime' => $current_datetime_start,
                     'end_datetime' => $current_datetime_end,
                     'faculty_registerid' => $faculty_registerid,
@@ -262,24 +264,24 @@ class facultymodel extends Model
             }
             $start_datetime = strtotime('+1 day', $start_datetime);
         }
-    
+
         return true;
     }
- public function updatemeeetlink($id, $link)
-{
-   
-    $result = $this->db->table('tbl_student_shedule')
-        ->set('meetlink', $link)
-        ->where('student_id', $id)
-        ->update();
-    if ($this->db->affectedRows() > 0) {      
-        return 1;
-    } else {
-        return 0;
+    public function updatemeeetlink($id, $link)
+    {
+
+        $result = $this->db->table('tbl_student_shedule')
+            ->set('meetlink', $link)
+            ->where('student_id', $id)
+            ->update();
+        if ($this->db->affectedRows() > 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    public function insertAttendance($data)
+    {
+        return $this->db->table('attendeance_table')->insert($data);
     }
 }
-public function insertAttendance($data)
-{
-    return $this->db->table('attendeance_table')->insert($data);
-}
-}    

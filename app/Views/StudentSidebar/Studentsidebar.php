@@ -260,7 +260,7 @@
 
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
+                    <a href="<?php echo base_url() ?>StudentSideBarImages" class="nav-link">
                       <i class="nav-icon far fa-image"></i>
                       <p>Images</p>
                     </a>

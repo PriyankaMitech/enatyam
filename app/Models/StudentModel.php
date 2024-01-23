@@ -49,10 +49,10 @@ class StudentModel extends Model
             ->where($this->table1 . '.id', $registerId)
             ->get()
             ->getResult();
-            
-            // echo '<pre>';
-            // print_r($result);
-            // die;
+
+        // echo '<pre>';
+        // print_r($result);
+        // die;
         if ($result) {
             return $result;
         } else {
@@ -129,7 +129,7 @@ class StudentModel extends Model
     {
         return $this->db->table($this->table1)->where('id', $registerId)->get()->getRow();
     }
- 
+
 
     public function fetchdataFromid($assignTeacherId, $registerId)
     {
@@ -205,48 +205,73 @@ class StudentModel extends Model
     public function fetchafacultyslots($assignTeacherId)
     {
         $query = $this->db->table('schedule_list')
-        ->where('faculty_registerid', $assignTeacherId)
-        ->get()
-        ->getResult();
+            ->where('faculty_registerid', $assignTeacherId)
+            ->get()
+            ->getResult();
 
         return $query;
     }
     public function insertStudentSlot($data)
     {
-      //  print_r($data);die;
-      if ($data['option_type'] == 'day') {
-        $days = implode(',', $data['days']);
+        //  print_r($data);die;
+        if ($data['option_type'] == 'day') {
+            $days = implode(',', $data['days']);
 
-        $insertData = [
-            'option_type' => $data['option_type'],
-            'days' => $days,
-            'selected_time_period' => $data['selected_time_period'],
-            'student_register_id' => $data['student_register_id'],
-            'Assign_Techer_id' => $data['Assign_Techer_id'],
-        ];
-    } else {
-        $insertData = [
-            'option_type' => $data['option_type'],
-            'selected_time_period' => $data['selected_time_period'],
-            'student_register_id' => $data['student_register_id'],
-            'Assign_Techer_id' => $data['Assign_Techer_id'],
-        ];
+            $insertData = [
+                'option_type' => $data['option_type'],
+                'days' => $days,
+                'selected_time_period' => $data['selected_time_period'],
+                'student_register_id' => $data['student_register_id'],
+                'Assign_Techer_id' => $data['Assign_Techer_id'],
+            ];
+        } else {
+            $insertData = [
+                'option_type' => $data['option_type'],
+                'selected_time_period' => $data['selected_time_period'],
+                'student_register_id' => $data['student_register_id'],
+                'Assign_Techer_id' => $data['Assign_Techer_id'],
+            ];
+        }
+
+        $this->db->table('student_slots_tbl')->insert($insertData);
     }
-
-    $this->db->table('student_slots_tbl')->insert($insertData);
-}
-public function checkSlotAvailability($selectedSlot, $teacherId)
-{
-    $result = $this->db->table('tbl_student_shedule')
-        ->where([
-            'shedules_time' => $selectedSlot,
-            'faculty_id' => $teacherId,
-        ])->get()->getResult();  
+    public function checkSlotAvailability($selectedSlot, $teacherId)
+    {
+        $result = $this->db->table('tbl_student_shedule')
+            ->where([
+                'shedules_time' => $selectedSlot,
+                'faculty_id' => $teacherId,
+            ])->get()->getResult();
         // echo '<pre>';print_r($result);die;
-    if (!empty($result)) {
-        return $result;
-    } else {
-        return true;
+        if (!empty($result)) {
+            return $result;
+        } else {
+            return true;
+        }
     }
-}
+
+    public function getVideosByRegisterId($registerId, $Assign_Techer_id)
+    {
+        $videos = $this->db->table('student s')
+            ->join('uplode_video_to_student sv', 'sv.student_id = s.student_id')
+            //->join('register', 'register.id = sv.register_id')
+            ->select('s.student_id, sv.video_name, sv.DateTime')
+            ->where('s.register_id', $registerId)
+            ->where('sv.register_faculty_id', $Assign_Techer_id) // Add this line for the second where condition
+            ->get()
+            ->getResult();
+
+        // echo '<pre>';
+        // print_r($this->getLastQuery());
+        // die;
+        return $videos;
+
+        // $query = $this->db->table('uplode_video_to_student uvts')
+        //     ->join('register', 'register.register_id = uvts.register_id')
+        //     ->select('uvts.*, register.full_name')
+        //     ->where('uvts.register_faculty_id', $Assign_Techer_id)
+        //     ->get();
+        // // print_r($query);die;
+        // return $query->getResult();
+    }
 }
