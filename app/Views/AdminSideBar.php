@@ -129,10 +129,10 @@
             </ul>
         </nav>
         </nav>
-        <?php if (!empty($_SESSION)) {
-            // echo $_SESSION['sessiondata']['role'];exit();
+        <?php if ((!empty($_SESSION))) {
+            
         ?>
-            <?php if (($_SESSION['sessiondata']['role']) == 'sub_admin') { ?>
+            <?php  if (($_SESSION['sessiondata']['role']) == 'sub_admin') { ?>
                 <?php
                 if (isset($_SESSION['sessiondata']['access_level'])) {
                     $access_levels = explode(',', $_SESSION['sessiondata']['access_level']);

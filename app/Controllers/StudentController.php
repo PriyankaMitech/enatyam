@@ -689,4 +689,17 @@ class StudentController extends BaseController
             return false;
         }
     }
+
+    public function StudentAttendancerecord()
+    {
+        $result = session();
+        $registerId = $result->get('id');
+        $model = new StudentModel();
+        $attendance['attendance'] = $model->getattandance($registerId);
+  //  print_r($attendance['attendance']);die;
+        // Load the view and pass the $attendance data to it
+        return view('StudentSidebar/studentAttenadnace', $attendance);
+    }
+    
+
 }

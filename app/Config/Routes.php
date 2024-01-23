@@ -270,7 +270,7 @@ $routes->post('AdminController/ResheduleByadmin', 'AdminController::ResheduleBya
 $routes->post('lostpassword', 'StudentController::lostpassword');
 $routes->post('otpvalidate', 'StudentController::otpvalidate');
 $routes->post('submitAttendance', 'FacultyController::submitAttendance');
-
+$routes->get('StudentAttendancerecord', 'StudentController::StudentAttendancerecord');
 $routes->post('newpassword', 'StudentController::newpassword');
 $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule');
 
@@ -321,6 +321,8 @@ $routes->get('studentList', 'DashboardController::studentList');
 $routes->get('StudentAttendance', 'FacultyController::StudentAttendance');
 
 $routes->post('uploadVideo', 'FacultyController::uploadVideo');
+$routes->post('set_videos', 'FacultyController::set_videos');
+
 
 $routes->get('fetchTofacultyShuduleSidebar', 'FacultyController::fetchTofacultyShuduleSidebar');
 

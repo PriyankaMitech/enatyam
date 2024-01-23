@@ -7,21 +7,47 @@
                 <div class="col-12 col-sm-12">
                     <div class="card card-primary card-tabs">
                         <div class="card-header p-0 pt-1">
+                         
+
                             <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="custom-tabs-two-profile-tab" data-toggle="pill"
                                         href="#custom-tabs-two-profile" role="tab"
-                                        aria-controls="custom-tabs-two-profile" aria-selected="true">Google Meet
+                                        aria-controls="custom-tabs-two-profile" aria-selected="true">Upload Video</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill"
+                                        href="#custom-tabs-two-messages" role="tab"
+                                        aria-controls="custom-tabs-two-messages" aria-selected="false">Google Meet
                                         Link</a>
                                 </li>
-                        
                             </ul>
                         </div>
                         
+                     
+
+
                         <div class="card-body">
                             <div class="tab-content" id="custom-tabs-two-tabContent">
                                 <div class="tab-pane fade show active" id="custom-tabs-two-profile" role="tabpanel"
                                     aria-labelledby="custom-tabs-two-profile-tab">
+                                    <form action="<?= site_url('set_videos'); ?>" method="post"
+                                        enctype="multipart/form-data">
+                                        <input type="hidden" name="faculty_id"
+                                            value="<?php echo $sessionId = session()->get('id'); ?>" >
+                                            <input type="hidden" name="group_name"
+                                            value="<?php echo $segment_2 =  base64_decode(request()->uri->getSegment(2)); ?>" >
+                                       
+                                        <div class="form-group">
+                                            <label for="videoFile">Upload Video/Image:</label>
+                                            <input type="file" name="videoFile" id="videoFile"
+                                                class="form-control-file">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Upload</button>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel"
+                                    aria-labelledby="custom-tabs-two-messages-tab">
                                     <form action="<?=base_url(); ?>setlinkforgroup" method="post">
                                         <div class="form-group">
                                             <label for="linkInput">Link</label>
@@ -36,8 +62,8 @@
                                         </div>
                                         <button type="submit" class="btn btn-primary">Send</button>
                                     </form>
+
                                 </div>
-                              
                             </div>
                         </div>
                         <!-- /.card -->

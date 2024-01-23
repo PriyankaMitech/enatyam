@@ -414,7 +414,7 @@
                 </div>
 
                 <div class="col-md-12 col-lg-12 col-12 ST_Inspire-widget-container2 mb-5">
-                    <a class="btn join-now-btn" href="">Inspired ?<br>Join Now!</a>
+                    <a class="btn join-now-btn" href="<?php echo base_url('demo'); ?>">Inspired ?<br>Join Now!</a>
                 </div>
             </div>
         </div>
