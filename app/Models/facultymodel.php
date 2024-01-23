@@ -277,6 +277,7 @@ public function insertAttendance($data)
 
 public function updateStudentVideoforgroup($studentId, $registerId, $videoFilename, $groupid)
 {
+    // echo "<pre>";print_r($studentId);exit();
     $data = [
         'student_id' => $studentId,
         'register_faculty_id' => $registerId, 
