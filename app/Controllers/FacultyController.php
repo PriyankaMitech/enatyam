@@ -470,6 +470,8 @@ class FacultyController extends BaseController
   
       $wherecond = array('is_deleted' => 'N', 'group_name' => $group_name);
       $groupData = $model->get_single_data('tbl_group', $wherecond);
+
+      echo "<pre>";print_r($groupData);exit();
   
       if(!empty($groupData)){
         $group_id = $groupData->id;
