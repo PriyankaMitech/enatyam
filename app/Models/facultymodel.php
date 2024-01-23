@@ -12,7 +12,7 @@ class facultymodel extends Model
     protected $table2 = 'uplode_video_to_student';
     protected $table = 'student'; // Set the table name
     protected $primaryKey = 'student_id';
-    protected $allowedFields = ['student_id', 'id', 'Date', 'Conducted_Demo', 'name', 'course', 'Assign_Teacher_id', 'video_name', 'Student_name','groupid'];
+    protected $allowedFields = ['student_id', 'id', 'Date', 'Conducted_Demo', 'name', 'course', 'Assign_Teacher_id', 'video_name', 'Student_name', 'groupid'];
 
     public function getStudentData($studentId)
     {
@@ -26,7 +26,7 @@ class facultymodel extends Model
     {
         $data = [
             'student_id' => $studentId,
-            'register_faculty_id' => $registerId, 
+            'register_faculty_id' => $registerId,
             'video_name' => $videoFilename,
         ];
 
@@ -35,7 +35,6 @@ class facultymodel extends Model
         $res1 = $this->db->table($this->table)
             ->where('student_id', $studentId)
             ->update(['video_name' => $videoFilename]);
-     
     }
 
 
@@ -275,31 +274,25 @@ class facultymodel extends Model
     {
         return $this->db->table('attendeance_table')->insert($data);
     }
+
+
+
+
+    public function updateStudentVideoforgroup($studentId, $registerId, $videoFilename, $groupid)
+    {
+        // echo "<pre>";print_r($studentId);exit();
+        $data = [
+            'student_id' => $studentId,
+            'register_faculty_id' => $registerId,
+            'video_name' => $videoFilename,
+            'groupid' => $groupid,
+
+        ];
+
+        $res = $this->db->table($this->table2)->insert($data);
+
+        $res1 = $this->db->table($this->table)
+            ->where('register_id', $studentId)
+            ->update(['video_name' => $videoFilename]);
+    }
 }
-
-public function insertAttendance($data)
-{
-    return $this->db->table('attendeance_table')->insert($data);
-}
-
-
-public function updateStudentVideoforgroup($studentId, $registerId, $videoFilename, $groupid)
-{
-    // echo "<pre>";print_r($studentId);exit();
-    $data = [
-        'student_id' => $studentId,
-        'register_faculty_id' => $registerId, 
-        'video_name' => $videoFilename,
-        'groupid' => $groupid,
-
-    ];
-
-    $res = $this->db->table($this->table2)->insert($data);
-
-    $res1 = $this->db->table($this->table)
-        ->where('register_id', $studentId)
-        ->update(['video_name' => $videoFilename]);
- 
-}
-}    
-
