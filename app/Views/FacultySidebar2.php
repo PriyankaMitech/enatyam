@@ -358,6 +358,12 @@
                     <p>Videos</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="<?php echo base_url() ?>StudentUploadedImages" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Images</p>
+                  </a>
+                </li>
 
               </ul>
             </li>

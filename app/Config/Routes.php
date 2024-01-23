@@ -294,6 +294,8 @@ $routes->post('giveschedule', 'FacultyController::giveschedule');
 $routes->post('sendmeetinglink', 'FacultyController::sendmeetinglink');
 $routes->post('setlinkforgroup', 'FacultyController::setlinkforgroup');
 $routes->get('setlinkforgroup', 'FacultyController::setlinkforgroup');
+$routes->get('StudentUploadedImages', 'FacultyController::StudentuplodedVidio');
+
 
 
 
@@ -370,6 +372,7 @@ $routes->Post('carrier_h', 'CarrierController::carrier_h');
 
 $routes->get('StudentSideBarVideo', 'FacultyController::fetchvideotostudentdashboard');
 $routes->get('uploaded_images', 'FacultyController::uploaded_images');
+$routes->get('StudentSideBarImages', 'FacultyController::fetchImagesToStudentDashboard');
 
 $routes->get('uploadMedia', 'StudentController::uploadMedia');
 $routes->post('uploadMedia', 'StudentController::uploadMedia');

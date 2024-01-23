@@ -4,12 +4,11 @@ namespace App\Controllers;
 
 use App\Models\facultymodel;
 use App\Models\AdminModel;
+use App\Models\StudentModel;
 use CodeIgniter\Controller;
 
 class FacultyController extends BaseController
 {
-
-
   public function facultyinfo()
   {
     $studentId = $this->request->getVar('student_id');
@@ -113,11 +112,14 @@ class FacultyController extends BaseController
     $fileName = $_FILES['videoFile']['name'];
 
     $videoFilename = $videoFile->getName();
+    // print_r($videoFilename);
+    // die;
 
     switch ($type) {
       case 'image/gif':
       case 'image/jpg':
       case 'image/png':
+      case 'image/jpeg':
 
         $videoFile->move(ROOTPATH . 'public\uploads\images\facultyUploadedImages');
 
@@ -151,8 +153,8 @@ class FacultyController extends BaseController
       $password = $sessionData['password'] ?? null;
 
       if ($email !== null && $password !== null) {
-        $studentId = session();
-        $registerId = $studentId->get('id');
+        $session = session();
+        $registerId = $session->get('id');
 
         $facultyModel = new FacultyModel();
         $videos = $facultyModel->getVideosByRegisterId($registerId);
@@ -170,10 +172,11 @@ class FacultyController extends BaseController
   public function uploaded_images()
   {
     if (isset($_SESSION['sessiondata'])) {
-      $studentId = session();
-      $registerId = $studentId->get('id');
+      $session = session();
+      $registerId = $session->get('id');
       $facultyModel = new FacultyModel();
       $videos = $facultyModel->getVideosByRegisterId($registerId);
+      $stdvideos = $facultyModel->getstudentvideo($registerId);
 
       // echo "<pre>";print_r($videos);exit();
       return view('uploaded_images', ['videos' => $videos]);
@@ -454,6 +457,34 @@ class FacultyController extends BaseController
 
 
     return redirect()->to('addlink');
+  }
+
+
+  public function fetchImagesToStudentDashboard()
+  {
+    if (isset($_SESSION['sessiondata'])) {
+      $session = session();
+      $registerId = $session->get('id');
+      $sessionData = $_SESSION['sessiondata'];
+      $Assign_Techer_id = $sessionData['Assign_Techer_id'];
+      // print_r($Assign_Techer_id);
+      // die;
+
+      $facultyModel = new FacultyModel();
+      $StudentModel = new StudentModel();
+      $videos = $StudentModel->getVideosByRegisterId($registerId, $Assign_Techer_id);
+      $stdvideos = $facultyModel->getstudentvideo($registerId);
+      // echo '<pre>';
+      // print_r($videos);
+      // print_r($stdvideos);
+      // die;
+      return view('StudentSidebar/StudentSideBarImages', ['videos' => $videos, 'stdvideos' => $stdvideos, 'registerId' => $registerId]);
+
+      // echo "<pre>";print_r($videos);exit();
+      return view('uploaded_images', ['videos' => $videos]);
+    } else {
+      return redirect()->to(base_url());
+    }
   }
 
 
