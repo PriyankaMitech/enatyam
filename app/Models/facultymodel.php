@@ -44,12 +44,12 @@ class facultymodel extends Model
         $videos = $this->db->table('student s')
             ->join('uplode_video_to_student sv', 'sv.student_id = s.student_id')
             ->select('s.student_id, sv.video_name ,sv.DateTime')
-            ->where('s.student_id', $registerId)
+            ->where('register_id', $registerId)
             ->get()
             ->getResult();
-        //  echo '<pre>';print_r($this->getLastQuery());die;
+        // echo '<pre>';print_r($this->getLastQuery());die;
         return $videos;
-        //   print_r($videos);die;
+        // print_r($videos);die;
     }
     public function getstudentvideo($registerId)
       {
