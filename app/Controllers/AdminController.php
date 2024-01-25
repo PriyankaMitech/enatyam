@@ -199,6 +199,9 @@ class AdminController extends BaseController
                 $model = new AdminModel();
                 $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
                 $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
+                // echo '<pre>';
+                // $data['studentVideoData'];
+                // die;
                 return view('AdminSideBar/UploadedImages', $data);
             } else {
                 return redirect()->to(base_url());
@@ -625,9 +628,9 @@ class AdminController extends BaseController
 
                 $result['getuser'] = [];
 
-                if((!empty($result['faculty'])) || (!empty($result['faculty']))){
-                
-                $result['getuser'] = array_merge($result['faculty'], $result['student']);
+                if ((!empty($result['faculty'])) || (!empty($result['faculty']))) {
+
+                    $result['getuser'] = array_merge($result['faculty'], $result['student']);
                 }
             } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
                 $chatCountWhere = array(
@@ -803,7 +806,7 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
         $data['attendance'] = $model->fetchattandance();
-//    echo '<pre>'; print_r($data['attendance']);die;
+        //    echo '<pre>'; print_r($data['attendance']);die;
         return view('AdminSideBar/studentAttendance', $data);
     }
     public function add_notifications()
@@ -1522,7 +1525,7 @@ class AdminController extends BaseController
 
         $db = \Config\Database::Connect();
 
-// echo "<pre>";print_r($single);exit();
+        // echo "<pre>";print_r($single);exit();
 
 
         if (empty($single)) {
@@ -1676,25 +1679,24 @@ class AdminController extends BaseController
     public function student_list_of_group()
     {
 
-        if(!empty($_SESSION['sessiondata'])){
-        $model = new AdminModel();
-        $wherecond = array('is_deleted' => 'N');
+        if (!empty($_SESSION['sessiondata'])) {
+            $model = new AdminModel();
+            $wherecond = array('is_deleted' => 'N');
 
 
-        $wherecond1 = array('is_deleted' => 'N');
-        $orderByField = 'created_on';
-        $orderByDirection = 'desc';
+            $wherecond1 = array('is_deleted' => 'N');
+            $orderByField = 'created_on';
+            $orderByDirection = 'desc';
 
 
 
 
-        $data['student_list_of_group'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
-        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+            $data['student_list_of_group'] = $model->getalldatadesc('tbl_group', $wherecond1, $orderByField, $orderByDirection);
+            $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
 
-        echo view('student_list_of_group', $data);
-        }else{
+            echo view('student_list_of_group', $data);
+        } else {
             return redirect()->to(base_url());
-
         }
     }
 

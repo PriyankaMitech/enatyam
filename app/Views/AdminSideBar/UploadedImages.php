@@ -13,7 +13,13 @@
     }
 </style>
 
-
+<?php
+function formatDateTime($dateTimeString)
+{
+    $dateTime = new DateTime($dateTimeString);
+    return $dateTime->format('j M Y');
+}
+?>
 <div class="content-wrapper">
 
     <section class="content-header">
@@ -40,230 +46,140 @@
                     <div class="card">
                         <div class="card-header p-2">
                             <ul class="nav nav-pills">
-                                <!-- <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab"> Uploaded Faculty Videos</a></li> -->
-                                <!-- <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab"> Uploaded Student Videos</a></li> -->
-
-                                <li class="nav-item"><a class="nav-link" href="#FacultyImages" data-toggle="tab"> Images By Faculty</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#StudentImages" data-toggle="tab"> Images By Student</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#FacultyImages" data-toggle="tab"> Faculty Images</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#StudentImages" data-toggle="tab"> Student Images</a></li>
                             </ul>
                         </div><!-- /.card-header -->
 
-
                         <div class="card-body">
                             <div class="tab-content">
-                                <!-- <div class="active tab-pane" id="activity">
-                                    <?php if (!empty($FacultyVideoData)) {
-                                        // echo "<pre>";
-                                        // print_r($FacultyVideoData);
-                                        // exit();
-                                    ?>
+
+                                <div class=" active tab-pane" id="FacultyImages">
+                                    <?php if (!empty($FacultyVideoData)) { ?>
                                         <div class="row">
                                             <?php foreach ($FacultyVideoData as $faculty) { ?>
                                                 <?php
                                                 $extension = pathinfo($faculty->video_name, PATHINFO_EXTENSION);
                                                 // echo $extension;
-                                                // print_r($faculty);
-                                                // die;
-                                                ?>
-                                                <?php if ($extension == 'mp4' || $extension == 'avi' || $extension == 'mov' || $extension == 'mkv' || $extension == 'wmv') : ?>
-                                                    <div class="col-md-4">
-                                                        <div class="card">
-                                                            <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
-                                                                 Adjust the video size 
-                                <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/' . $faculty->video_name) ?>" type="video/mp4">
-                                </video>
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        <?php if ($faculty) : ?>
 
-
-                                    <div class="p">
-                                        <p class="card-text">Faculty Name: <?= $faculty->faculty_name; ?></p>
-                                        <p class="card-text">Date &nbsp;&&nbsp; Time : &nbsp;<?= $faculty->DateTime ?> </p>
-                                        <p class="card-text">student name: <?= $faculty->student_name ?></p>
-                                    </div>
-                                <?php endif; ?>
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                <?php } ?>
-
-                    </div>
-                <?php } ?>
-
-                </div> -->
-
-                                <!-- <div class="card-body"> -->
-                                <!-- <div class="active tab-pane" id="activity">
-                                    <div class="row mt-4">
-                                        <?php
-                                        if (!empty($FacultyVideoData)) { ?>
-                                            <?php foreach ($FacultyVideoData as $data) {
                                                 // List of allowed video file extensions
-                                                $allowedVideoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'wmv'];
-
-                                                $extension = pathinfo($data->video_name, PATHINFO_EXTENSION);
-                                                // echo $extension;
+                                                $allowedVideoExtensions = ['jpg', 'png', 'jpeg'];
 
                                                 // Check if the file extension is in the allowed list
                                                 if (in_array(strtolower($extension), $allowedVideoExtensions)) {
 
+                                                    $imagePath = '/public/uploads/images/facultyUploadedImages/' . $faculty->video_name;
+                                                    $fullImagePath = base_url($imagePath);
 
                                                     // Generate a random background color based on the student's name
-                                                    $randomColor1 = '#' . substr(md5($data->student_name), 0, 4);
-                                            ?>
-                                                    <div class="col-sm-3 mt-3">
+                                                    $randomColor = '#' . substr(md5($faculty->student_name), 0, 4); ?>
+
+                                                    <div class="col-md-3 mt-3">
                                                         <div class="position-relative videoofs">
-                                                          
-                                <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
 
-                                    <source class="img-fluid" src="<?= base_url('public/uploads/FacultyUplodedVideos/' . $faculty->video_name) ?>" type="video/mp4">
-                                </video>
+                                                            <!-- Check if the image file exists -->
+                                                            <?php if (file_exists(FCPATH . $imagePath)) :  ?>
+                                                                <!-- <div class="col-md-4"> -->
+                                                                <div class="card">
+                                                                    <!-- Image exists, display it -->
+                                                                    <div class="ribbon-wrapper ribbon-lg">
+                                                                        <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
+                                                                            <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>">
+                                                                                <?= $faculty->student_name ?> </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <?php echo '<img src="' . $fullImagePath . '" alt="Faculty Image" width="100%" height="200px">'; ?>
 
-                                <?php
-                                                    // Generate a random background color based on the student's name
-                                                    $randomColor = '#' . substr(md5($data->student_name), 0, 6); ?>
-                                <div class="ribbon-wrapper ribbon-lg">
-                                  
-                                <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
-                                    <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>"><?= $data->student_name ?> </p>
-                                </div>
-                            </div>
-                            <?php
-                                                    $time = new DateTime($data->DateTime);
-                                                    $date = date("j M Y", strtotime($data->DateTime));
-                                                    $time = $time->format('H:i');
-                            ?>
-                            <div class="p">
-                                <p class="card-text" style="padding: 6%; color:#fff; background-color: <?= $randomColor ?>">Date &nbsp; : &nbsp; <?= $date; ?> </p>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
-            <?php } ?>
-        <?php }
-        ?>
-                </div>
-            </div> -->
-
-
-                                <!-- /.tab-pane -->
-                                <!-- <div class="tab-pane" id="timeline">
-
-                                    <?php if (!empty($studentVideoData)) { ?>
-
-                                        <div class="row">
-                                            <?php foreach ($studentVideoData as $faculty) { ?>
-                                                <?php
-                                                $extension = pathinfo($faculty->name, PATHINFO_EXTENSION);
-                                                // echo $extension;
-                                                ?>
-                                                <?php if ($extension == 'mp4') : ?>
-                                                    <div class="col-md-4">
-                                                        <div class="card">
-                                                            <video width="100%" height="200px" controls poster="<?= base_url(); ?>public/images/play.jpg">
-                                                               
-                                                                <source class="img-fluid" src="<?= base_url('public/uploads/videos/' . $faculty->name) ?>" type="video/mp4">
-                                                            </video>
-                                                            <div class="card-body">
-                                                                <p class="card-text">
-                                                                    <?php if ($faculty) : ?>
-                                                                        <strong>Upload Video Date:</strong> <?= $faculty->DateTime; ?>
-                                                                    <?php endif; ?>
-                                                                </p>
-                                                            </div>
+                                                                    <div class="p">
+                                                                        <p class="card-text" style=" padding: 6%; color:#fff; background-color: <?= $randomColor ?>">
+                                                                            <?php if ($faculty) : ?>
+                                                                                <strong> Image Date:</strong>
+                                                                                <?= formatDateTime($faculty->DateTime); ?>
+                                                                                <br>
+                                                                                Faculty Name &nbsp; : &nbsp; <?= $faculty->faculty_name; ?>
+                                                                                <?php if ($faculty->group_name) : ?>
+                                                                                    Group Name &nbsp; : &nbsp; <?= $faculty->group_name; ?>
+                                                                                <?php endif; ?>
+                                                                            <?php endif; ?>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- </div> -->
+                                                            <?php endif; ?>
                                                         </div>
                                                     </div>
-                                                <?php endif; ?>
+                                                <?php } ?>
                                             <?php } ?>
-
-                                        </div>
-                                    <?php } ?>
-
-                                </div> -->
-
-                                <div class="tab-pane" id="FacultyImages">
-                                    <?php if (!empty($FacultyVideoData)) { ?>
-
-                                        <div class="row">
-                                            <?php foreach ($FacultyVideoData as $faculty) { ?>
-                                                <?php
-                                                $extension = pathinfo($faculty->video_name, PATHINFO_EXTENSION);
-                                                // echo $extension;
-                                                ?>
-                                                <?php if ($extension == 'jpg' || $extension == 'png' || $extension == 'jpeg') : ?>
-
-                                                    <?php $imagePath = '/public/uploads/images/facultyUploadedImages/' . $faculty->video_name;
-                                                    $fullImagePath = base_url($imagePath);
-                                                    // Check if the image file exists
-                                                    if (file_exists(FCPATH . $imagePath)) : ?>
-                                                        <div class="col-md-4">
-                                                            <div class="card">
-                                                                <!-- Image exists, display it -->
-                                                                <?php echo '<img src="' . $fullImagePath . '" alt="Faculty Image" width="100%" height="200px">'; ?>
-
-                                                                <div class="p">
-                                                                    <p class="card-text">Date &nbsp;&&nbsp; Time : &nbsp;<?= $faculty->DateTime ?> </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                <?php endif; ?>
-                                            <?php } ?>
-
                                         </div>
                                     <?php } ?>
                                 </div>
+
 
                                 <div class="tab-pane" id="StudentImages">
                                     <?php if (!empty($studentVideoData)) { ?>
 
                                         <div class="row">
-                                            <?php foreach ($studentVideoData as $faculty) { ?>
-                                                <?php
+                                            <?php foreach ($studentVideoData as $faculty) {
+
                                                 $extension = pathinfo($faculty->name, PATHINFO_EXTENSION);
                                                 // echo $extension;
-                                                ?>
+                                            ?>
                                                 <?php if ($extension == 'jpg' || $extension == 'png' || $extension == 'jpeg') : ?>
 
                                                     <?php $imagePath = '/public/uploads/images/studentUploadedImages/' . $faculty->name;
                                                     $fullImagePath = base_url($imagePath);
-                                                    // Check if the image file exists
-                                                    if (file_exists(FCPATH . $imagePath)) : ?>
-                                                        <div class="col-md-4">
-                                                            <div class="card">
-                                                                <!-- Image exists, display it -->
-                                                                <?php echo '<img src="' . $fullImagePath . '" alt="Student Image" width="100%" height="200px">'; ?>
 
-                                                                <div class="p">
-                                                                    <p class="card-text">Date &nbsp;&&nbsp; Time : &nbsp;<?= $faculty->DateTime ?> </p>
+                                                    // Generate a random background color based on the student's name
+                                                    $randomColor = '#' . substr(md5($faculty->Student_name), 0, 4); ?>
+
+                                                    <div class="col-md-3 mt-3">
+                                                        <div class="position-relative videoofs">
+                                                            <!-- Check if the image file exists -->
+                                                            <?php if (file_exists(FCPATH . $imagePath)) : ?>
+                                                                <!-- <div class="col-md-3"> -->
+                                                                <div class="card">
+                                                                    <!-- Image exists, display it -->
+                                                                    <div class="ribbon-wrapper ribbon-lg">
+                                                                        <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
+                                                                            <p class="card-text" style="color:#fff; background-color: <?= $randomColor ?>">
+                                                                                <?= $faculty->Student_name ?> </p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <?php echo '<img src="' . $fullImagePath . '" alt="Student Image" width="100%" height="200px">'; ?>
+
+                                                                    <div class="p">
+                                                                        <p class="card-text" style=" padding: 6%; color:#fff; background-color: <?= $randomColor ?>">
+                                                                            <?php if ($faculty) : ?>
+                                                                                Date:
+                                                                                <?= formatDateTime($faculty->DateTime); ?>
+                                                                                <br>
+                                                                                Faculty Name &nbsp; : &nbsp; <?= $faculty->faculty_name; ?>
+                                                                                <br>
+
+                                                                            <?php endif; ?>
+                                                                        </p>
+                                                                    </div>
+
                                                                 </div>
-                                                            </div>
+                                                                <!-- </div> -->
+                                                            <?php endif; ?>
+
                                                         </div>
-                                                    <?php endif; ?>
+                                                    </div>
                                                 <?php endif; ?>
                                             <?php } ?>
-
+                                        <?php } ?>
                                         </div>
-                                    <?php } ?>
-                                </div>
-
-
-
-
-
+                                        <!-- /.tab-content -->
+                                </div><!-- /.card-body -->
                             </div>
-                            <!-- /.tab-content -->
-                        </div><!-- /.card-body -->
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
                     </div>
-                    <!-- /.card -->
-                </div>
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
-        </div><!-- /.container-fluid -->
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
     </section>
 
 

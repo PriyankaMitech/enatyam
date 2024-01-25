@@ -294,7 +294,7 @@ $routes->post('giveschedule', 'FacultyController::giveschedule');
 $routes->post('sendmeetinglink', 'FacultyController::sendmeetinglink');
 $routes->post('setlinkforgroup', 'FacultyController::setlinkforgroup');
 $routes->get('setlinkforgroup', 'FacultyController::setlinkforgroup');
-$routes->get('StudentUploadedImages', 'FacultyController::StudentuplodedVidio');
+$routes->get('StudentUploadedImages', 'FacultyController::studentUploadedImages');
 
 
 
