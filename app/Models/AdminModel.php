@@ -311,20 +311,27 @@ class AdminModel extends Model
             ->join('register', 'register.id = uplode_study_video_from_student.Faculty_id')
             ->get()
             ->getResult();
+
         return  $VideoDetails;
     }
 
     public function getStudyVideoUplodedByFaculty()
     {
         $VideoDetails = $this->db->table('uplode_video_to_student')
-            ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name')
+            ->select('uplode_video_to_student.*, student.student_name as student_name, register.full_name as faculty_name, tbl_group.group_name as group_name')
             ->join('student', 'student.student_id = uplode_video_to_student.student_id')
             ->join('register', 'register.id = uplode_video_to_student.register_faculty_id')
+            ->join('tbl_group', 'tbl_group.id = uplode_video_to_student.groupid', 'left') // Left join on tbl_group
             ->get()
             ->getResult();
 
-        return  $VideoDetails;
+        // echo '<pre>';
+        // print_r($VideoDetails);
+        // die;
+
+        return $VideoDetails;
     }
+
 
     public function getSearchData($table, $startDate = null, $endDate = null, $studentName = '', $facultyName = '')
     {
@@ -1076,33 +1083,33 @@ class AdminModel extends Model
     }
 
     public function fetchattandance()
-{
-    $result = $this->db->table('attendeance_table')->get()->getResult();
+    {
+        $result = $this->db->table('attendeance_table')->get()->getResult();
 
-    foreach ($result as &$attendanceRecord) {
-        $student_registerid = $attendanceRecord->student_registerid;
+        foreach ($result as &$attendanceRecord) {
+            $student_registerid = $attendanceRecord->student_registerid;
 
-        // Fetch student name from 'register' table
-        $studentData = $this->db->table('register')
-            ->select('full_name') // Adjust the column name accordingly
-            ->where('id', $student_registerid)
-            ->get()
-            ->getRow();
-        $attendanceRecord->student_name = $studentData ? $studentData->full_name : null;
+            // Fetch student name from 'register' table
+            $studentData = $this->db->table('register')
+                ->select('full_name') // Adjust the column name accordingly
+                ->where('id', $student_registerid)
+                ->get()
+                ->getRow();
+            $attendanceRecord->student_name = $studentData ? $studentData->full_name : null;
 
-        // Fetch no_of_session from 'payment' table
-        $paymentData = $this->db->table('payment')
-            ->select('no_of_session') // Adjust the column name accordingly
-            ->where('user_id', $student_registerid)
-            ->get()
-            ->getRow();
-        $attendanceRecord->no_of_session = $paymentData ? $paymentData->no_of_session : null;
+            // Fetch no_of_session from 'payment' table
+            $paymentData = $this->db->table('payment')
+                ->select('no_of_session') // Adjust the column name accordingly
+                ->where('user_id', $student_registerid)
+                ->get()
+                ->getRow();
+            $attendanceRecord->no_of_session = $paymentData ? $paymentData->no_of_session : null;
+        }
+
+        return $result;
     }
 
-    return $result;
-}
 
-    
 
 
     public function getpaymentdata()
@@ -1271,27 +1278,27 @@ class AdminModel extends Model
             ->getResult();
     }
 
-//     public function getstudentslots()
-// {
-//     return $this->db->table('tbl_student_shedule')
-//                     ->select('tbl_student_shedule.*, faculty.full_name as faculty_name, student.full_name as student_name')
-//                     ->join('register as faculty', 'faculty.id = tbl_student_shedule.faculty_id', 'left')
-//                     ->join('register as student', 'student.id = tbl_student_shedule.student_id', 'left')
-//                     ->where('tbl_student_shedule.faculty_id IS NOT NULL')
-//                     ->get()
-//                     ->getResult(); 
-// }
-public function getstudentslots()
-{
-    return $this->db->table('tbl_student_shedule')
-        ->select('tbl_student_shedule.*, faculty.full_name as faculty_name, student.full_name as student_name')
-        ->join('register as faculty', 'faculty.id = tbl_student_shedule.faculty_id', 'left')
-        ->join('register as student', 'student.id = tbl_student_shedule.student_id', 'left')
-        ->where('tbl_student_shedule.faculty_id IS NOT NULL')
-        ->where('student.SessionType', 'OneToOneSession')  // Add this line
-        ->get()
-        ->getResult(); 
-}
+    //     public function getstudentslots()
+    // {
+    //     return $this->db->table('tbl_student_shedule')
+    //                     ->select('tbl_student_shedule.*, faculty.full_name as faculty_name, student.full_name as student_name')
+    //                     ->join('register as faculty', 'faculty.id = tbl_student_shedule.faculty_id', 'left')
+    //                     ->join('register as student', 'student.id = tbl_student_shedule.student_id', 'left')
+    //                     ->where('tbl_student_shedule.faculty_id IS NOT NULL')
+    //                     ->get()
+    //                     ->getResult(); 
+    // }
+    public function getstudentslots()
+    {
+        return $this->db->table('tbl_student_shedule')
+            ->select('tbl_student_shedule.*, faculty.full_name as faculty_name, student.full_name as student_name')
+            ->join('register as faculty', 'faculty.id = tbl_student_shedule.faculty_id', 'left')
+            ->join('register as student', 'student.id = tbl_student_shedule.student_id', 'left')
+            ->where('tbl_student_shedule.faculty_id IS NOT NULL')
+            ->where('student.SessionType', 'OneToOneSession')  // Add this line
+            ->get()
+            ->getResult();
+    }
 
 
 

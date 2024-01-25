@@ -488,10 +488,10 @@ class FacultyController extends BaseController
   }
 
 
- 
-  
+
+
   public function set_videos()
-{
+  {
     $model = new AdminModel();
     $data = session();
     $faculty_id = $this->request->getPost('faculty_id');
@@ -506,68 +506,98 @@ class FacultyController extends BaseController
     $groupData = $model->get_single_data('tbl_group', $wherecond);
 
     if (!empty($groupData)) {
-        $group_id = $groupData->id;
-        $studentIdsString = $groupData->student_id;
+      $group_id = $groupData->id;
+      $studentIdsString = $groupData->student_id;
 
-        $getstudentids = explode(',', $studentIdsString);
+      $getstudentids = explode(',', $studentIdsString);
     }
 
     $facultyModel = new FacultyModel();
     $videoFile = $this->request->getFile('videoFile');
 
     try {
-        // Check if a file was uploaded
-        if ($videoFile->isValid() && !$videoFile->hasMoved()) {
-            $type = $videoFile->getClientMimeType();
-            $fileName = $videoFile->getName();
+      // Check if a file was uploaded
+      if ($videoFile->isValid() && !$videoFile->hasMoved()) {
+        $type = $videoFile->getClientMimeType();
+        $fileName = $videoFile->getName();
 
-            switch ($type) {
-                case 'image/gif':
-                case 'image/jpeg':
-                case 'image/png':
-                    $destinationPath = ROOTPATH . 'public/uploads/images/facultyUploadedImages';
-                    break;
+        switch ($type) {
+          case 'image/gif':
+          case 'image/jpeg':
+          case 'image/png':
+            $destinationPath = ROOTPATH . 'public/uploads/images/facultyUploadedImages';
+            break;
 
-                case 'video/avi':
-                case 'video/flv':
-                case 'video/wmv':
-                case 'video/mp3':
-                case 'video/mp4':
-                case 'audio/wma':
-                    $destinationPath = ROOTPATH . 'public/uploads/FacultyUplodedVideos';
-                    break;
+          case 'video/avi':
+          case 'video/flv':
+          case 'video/wmv':
+          case 'video/mp3':
+          case 'video/mp4':
+          case 'audio/wma':
+            $destinationPath = ROOTPATH . 'public/uploads/FacultyUplodedVideos';
+            break;
 
-                default:
-                    throw new \RuntimeException('Invalid file type');
-            }
-
-            // Move the file to the destination path
-            $videoFile->move($destinationPath, $fileName);
-
-            // Iterate through each student ID and update the database
-            foreach ($getstudentids as $studentId) {
-                $wherecond1 = array('is_deleted' => 'N', 'register_id' => $studentId);
-                $studentData = $model->get_single_data('student', $wherecond1);
-
-                if (!empty($studentData)) {
-                    $studentidd = $studentData->student_id;
-
-                    // Update database with file information for each student
-                    $facultyModel->updateStudentVideoforgroup($studentidd, $faculty_id, $fileName, $group_id);
-                }
-            }
-
-            return redirect()->to('FacultyDashboard');
-        } else {
-            throw new \RuntimeException('File upload failed');
+          default:
+            throw new \RuntimeException('Invalid file type');
         }
+
+        // Move the file to the destination path
+        $videoFile->move($destinationPath, $fileName);
+
+        // Iterate through each student ID and update the database
+        foreach ($getstudentids as $studentId) {
+          // $wherecond1 = array('is_deleted' => 'N', 'register_id' => $studentId);
+          $wherecond1 = array('register_id' => $studentId);
+
+          $studentData = $model->get_single_data('student', $wherecond1);
+
+          if (!empty($studentData)) {
+            $studentidd = $studentData->student_id;
+
+            // Update database with file information for each student
+            $facultyModel->updateStudentVideoforgroup($studentidd, $faculty_id, $fileName, $group_id);
+          }
+        }
+
+        return redirect()->to('FacultyDashboard');
+      } else {
+        throw new \RuntimeException('File upload failed');
+      }
     } catch (\Exception $e) {
-        // Log the error
-        log_message('error', 'File Upload Error: ' . $e->getMessage());
+      // Log the error
+      log_message('error', 'File Upload Error: ' . $e->getMessage());
 
-        // Optionally, you can display a user-friendly error message
-        return view('upload_error');
+      // Optionally, you can display a user-friendly error message
+      return view('upload_error');
     }
-}
+  }
 
+  public function studentUploadedImages()
+  {
+    if (isset($_SESSION['sessiondata'])) {
+      $sessionData = $_SESSION['sessiondata'];
+
+      $email = $sessionData['email'] ?? null;
+      $password = $sessionData['password'] ?? null;
+
+      if ($email !== null && $password !== null) {
+        $model = new AdminModel();
+        $result = session();
+        $registerId = $result->get('id');
+        $db = \Config\Database::connect();
+        $table = $db->table('uplode_study_video_from_student');
+        $query = $table->where('Faculty_id', $registerId)->get();
+
+        $data['results'] = $query->getResult();
+        // echo '<pre>';
+        // print_r($data);
+        // die;
+        $data['dataFound'] = count($data['results']) > 0;
+        $data['studentList'] = $model->getStudentData();
+        return view('StudentUploadedImages', $data);
+      }
+    }
+    // Show the page even if session data is not set
+    return view('StudentuplodedVidio', ['dataFound' => false]);
+  }
 }
