@@ -27,13 +27,13 @@ $name               = "RazorPay Infovistar";
             <div class="col-lg-12">
                 <ul class="nav nav-pills mb-3 row" id="pills-tab" role="tablist">
                     <li class="nav-item col-md-6 col-lg-6 col-6" role="presentation">
-                        <button class="price-btn " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                        <button class="price-btn active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
                             <p>One on One</p>
                             <p>Private Session</p>
                         </button>
                     </li>
                     <li class="nav-item col-md-6 col-lg-6 col-6" role="presentation">
-                        <button class="price-btn  " id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                        <button class="price-btn" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
 
                             <p>Group Session</p>
                             <p>Up to 10 Students</p>
@@ -42,7 +42,7 @@ $name               = "RazorPay Infovistar";
 
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                         <div class="row">
                             <div class="col-lg-10">
                                 <div class="row pricing-card-section sd">
@@ -65,7 +65,7 @@ $name               = "RazorPay Infovistar";
 
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -75,7 +75,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -85,7 +85,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -95,7 +95,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -104,7 +104,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -115,7 +115,7 @@ $name               = "RazorPay Infovistar";
 
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-times-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -125,7 +125,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-times-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -169,7 +169,7 @@ $name               = "RazorPay Infovistar";
 
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -179,7 +179,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -189,7 +189,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -199,7 +199,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -208,7 +208,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -217,7 +217,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -227,7 +227,7 @@ $name               = "RazorPay Infovistar";
 
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-times-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -268,7 +268,7 @@ $name               = "RazorPay Infovistar";
 
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -278,7 +278,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -288,7 +288,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -298,7 +298,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -307,7 +307,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -316,7 +316,7 @@ $name               = "RazorPay Infovistar";
                                                     </li>
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -326,7 +326,7 @@ $name               = "RazorPay Infovistar";
 
                                                     <li>
                                                         <span>
-                                                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-check-circle-o"></i>
 
                                                         </span>
                                                         <span>
@@ -384,7 +384,7 @@ $name               = "RazorPay Infovistar";
 
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -394,7 +394,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -404,7 +404,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -414,7 +414,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -423,7 +423,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -434,7 +434,7 @@ $name               = "RazorPay Infovistar";
 
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-times-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -444,7 +444,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-times-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -490,7 +490,7 @@ $name               = "RazorPay Infovistar";
 
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -500,7 +500,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -510,7 +510,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -520,7 +520,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -529,7 +529,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -539,7 +539,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-times-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -549,7 +549,7 @@ $name               = "RazorPay Infovistar";
 
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-times-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -592,7 +592,7 @@ $name               = "RazorPay Infovistar";
 
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -602,7 +602,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -612,7 +612,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -622,7 +622,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -631,7 +631,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -640,7 +640,7 @@ $name               = "RazorPay Infovistar";
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-times-circle-o"></i>
 
                                                             </span>
                                                             <span>
@@ -650,7 +650,7 @@ $name               = "RazorPay Infovistar";
 
                                                         <li>
                                                             <span>
-                                                                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-times-circle-o"></i>
 
                                                             </span>
                                                             <span>
