@@ -156,20 +156,20 @@ ul {
 }
 
 .price-btn p:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 .price-btn {
-  display: block;
-  width: 100%;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: 14px;
+  display: block !important;
+  width: 100% !important;
+  padding: 15px 30px !important;
+  text-align: center !important;
+  font-size: 14px !important;
   color: #fff !important;
-  border-radius: 50px;
+  border-radius: 50px !important;
 
-  background: #ff0067;
-  transition: 0.5s;
+  background: #ff0067 !important;
+  transition: 0.5s !important;
   border: none !important;
 }
 
@@ -260,6 +260,7 @@ a:hover {
   /* margin: auto */
   text-align: justify;
 }
+
 .card-2 .price-card-body span:last-child {
   color: #fff !important;
 }

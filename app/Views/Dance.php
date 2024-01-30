@@ -783,9 +783,7 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
                                                                         Basic adavus (steps) in different Varnam styles. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Pada Varnam (dance piece with lyrics).</li>
-
                                                                 </ul>
-
                                                             </div>
                                                         </div>
 
@@ -799,9 +797,7 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
                                                                         Basic adavus (steps) in different Tala variations. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the concept of Laya (tempo) and its variations.</li>
-
                                                                 </ul>
-
                                                             </div>
                                                         </div>
 
@@ -1141,9 +1137,6 @@
                             </div>
                     </section>
                 </div>
-
-
-
 
                 <!-- Bollywood -->
                 <div class="tab-pane fade" id="pills-Bollywood" role="tabpanel" aria-labelledby="pills-Bollywood-tab">
@@ -1996,11 +1989,8 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the Indian ﬁlm industry and music composers.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic facial expressions and emotions (bhavas).</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic poses and movements.</li>
-
                                                                 </ul>
                                                             </div>
-
-
                                                         </div>
 
                                                         <!-- Month 3 & 4 -->
@@ -2008,10 +1998,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 3-4 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to different styles of Bollywood dance.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Intermediate hand gestures (hastas) and their use in dance compositions. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to different styles of Bollywood dance.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate hand gestures (hastas) and their use in dance compositions. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate footwork and grooves.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Intermediate rhythm (beat) exercises with hand claps.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to different Indian musical genres used in Bollywood dance.</li>
@@ -2020,31 +2008,22 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the use of props in Bollywood dance.
                                                                     </li>
                                                                 </ul>
-
                                                             </div>
-
-
                                                         </div>
 
                                                         <!-- Month 5 & 6 -->
                                                         <div class="tab-pane fade" id="pills-Month5_6" role="tabpanel" aria-labelledby="pills-Month5_6-tab">
-
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 5-6 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate hand gestures (hastas) and their use in different styles (bhava).
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Intermediate footwork and grooves in different tempos (laya). </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate hand gestures (hastas) and their use in different styles (bhava). </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate footwork and grooves in different tempos (laya). </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate rhythm (beat) exercises with footwork and hand claps.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate facial expressions and emotions (bhavas) in different songs.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Bollywood choreography and its elements.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses and movements with different expressions.</li>
                                                                 </ul>
-
                                                             </div>
-
-
                                                         </div>
 
                                                         <!-- Month 7 & 8  -->
@@ -2060,10 +2039,7 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic adavus (dance steps) in different Nayikas (heroine) and Nayakas (hero) styles.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the concept of Taala (rhythm) and its variations.</li>
                                                                 </ul>
-
                                                             </div>
-
-
                                                         </div>
 
                                                         <!-- Month 9 & 10 -->
@@ -2079,12 +2055,8 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate mudras (hand gestures) and their use in Odissi.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different Nayikas (heroine) and Nayakas (hero) styles.
                                                                     </li>
-
                                                                 </ul>
-
                                                             </div>
-
-
                                                         </div>
 
                                                         <!-- Month 11 & 12 -->
@@ -2092,46 +2064,32 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 11-12 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses (asanas) in Odissi.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Intermediate adavus (dance steps) in different speeds (gati). </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses (asanas) in Odissi.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different speeds (gati). </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the basic repertoire of Abhinaya (expressive) pieces.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different positions (tribhangi, chowk and samabhanga).</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different tempos (laya).
                                                                     </li>
                                                                 </ul>
-
                                                             </div>
-
-
-
                                                         </div>
 
                                                         <div class=" row  mt-3 Notediv">
-
                                                             <p class="Notepara">
                                                                 <strong>Note : </strong>
                                                                 The syllabus may vary based on the instructor’s preference and the student’s progress. It’s important to practice regularly and seek feedback from the instructor to improve.
                                                             </p>
-
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                                 <!-- </div> -->
                             </div>
-
                     </section>
-
                 </div>
-
-
 
                 <!-- Bhangra -->
                 <div class="tab-pane fade" id="pills-Bhangra" role="tabpanel" aria-labelledby="pills-Bhangra-tab">
@@ -2141,7 +2099,6 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> - Bhangra</h3>
-
                             <p>
                                 Get ready to experience the vibrant energy and infectious rhythm of Bhangra with our online dance classes! Our syllabus covers the basics of this traditional Punjabi dance form, from footwork and hand gestures to the high-energy movements that make Bhangra so exhilarating. Our expert instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our state-of-the-art technology and convenient online platform, you can learn Bhangra dance from anywhere in the world, at your own pace. Whether you’re a beginner or an experienced dancer, our online classes provide a fun and engaging way to explore the richness of Bhangra dance culture.
                                 Join us today and let’s dance to the beat of Bhangra!
@@ -2182,7 +2139,6 @@
                                             <span class="elementor-button-text">Testimonials</span>
                                         </span>
                                     </a>
-
                                 </li>
                                 <li class="list-inline-item col-lg-2 col-md-2 col-6">
                                     <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
@@ -2203,7 +2159,6 @@
                                 <li class="col-lg-1 ">
 
                                 </li>
-
                             </ul>
                         </div>
                     </section>
@@ -2354,26 +2309,20 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 2 : Intermediate Bhangra dance techniques</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> More advanced Bhangra footwork and movements.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating hand and arm movements in Bhangra dance.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> More advanced Bhangra footwork and movements. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating hand and arm movements in Bhangra dance.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
 
                                                         <!-- Month 3 -->
                                                         <div class="tab-pane fade" id="pills-BhangraMonth3" role="tabpanel" aria-labelledby="pills-BhangraMonth3-tab">
-
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 3 : Bhangra dance choreography</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn a complete Bhangra dance routine.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Focus on precision and timing in dance steps. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Introduction to Bhangra music composition and structure.</li>
-
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn a complete Bhangra dance routine. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on precision and timing in dance steps. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Bhangra music composition and structure.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2383,14 +2332,10 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 4 : Introduction to props in Bhangra dance</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the role of props in Bhangra dance.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Introduction to Dhol and its role in Bhangra music. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the role of props in Bhangra dance. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Dhol and its role in Bhangra music. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learning to dance with Dhol sticks.</li>
-
                                                                 </ul>
-
                                                             </div>
                                                         </div>
 
@@ -2399,12 +2344,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 5 : Advanced Bhangra dance techniques</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on advanced Bhangra movements and footwork.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating more complex hand and arm movements in dance routines. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on advanced Bhangra movements and footwork. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating more complex hand and arm movements in dance routines. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Bhangra acrobatics and lifts.</li>
-
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2414,12 +2356,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 6 : Fusion Bhangra dance</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn to combine Bhangra dance with other dance styles.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Understanding the role of Bhangra in Bollywood and Western music. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn to combine Bhangra dance with other dance styles. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the role of Bhangra in Bollywood and Western music. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Bhangra ﬁtness and workout routines.</li>
-
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2429,15 +2368,10 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 7 : Choreography and performance</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn and rehearse a full Bhangra dance performance.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Focus on stage presence and audience engagement. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn and rehearse a full Bhangra dance performance. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on stage presence and audience engagement. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to costume design and stage lighting.</li>
-
                                                                 </ul>
-
-
                                                             </div>
                                                         </div>
 
@@ -2446,12 +2380,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 8 : Advanced Bhangra dance choreography</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learning more advanced Bhangra dance routines.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Understanding the role of storytelling in Bhangra dance.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learning more advanced Bhangra dance routines. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the role of storytelling in Bhangra dance.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Bhangra dance competitions and events.</li>
-
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2461,14 +2392,10 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 9 : Contemporary Bhangra dance</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn to combine Bhangra with contemporary dance styles.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Focus on improvisation and self-expression in Bhangra dance. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn to combine Bhangra with contemporary dance styles. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on improvisation and self-expression in Bhangra dance. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Bhangra fusion music.</li>
-
                                                                 </ul>
-
                                                             </div>
                                                         </div>
 
@@ -2477,12 +2404,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 10 : Fusion Bhangra dance performances</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn and rehearse a fusion Bhangra dance performance.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Focus on incorporating different dance styles in Bhangra dance. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn and rehearse a fusion Bhangra dance performance. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on incorporating different dance styles in Bhangra dance. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to video production and editing for dance performances.</li>
-
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2492,11 +2416,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 11: Choreography and production</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Collaborate with other students to create a Bhangra dance production.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Focus on teamwork and communication in dance productions. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Introduction to marketing and promotion for dance productions.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Collaborate with other students to create a Bhangra dance production. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on teamwork and communication in dance productions. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to marketing and promotion for dance productions.</li>
 
                                                                 </ul>
                                                             </div>
@@ -2507,10 +2429,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 12 : Final performance and showcase</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Rehearse and perform a full Bhangra dance production.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Focus on showcasing the skills and techniques learned throughout the course. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Rehearse and perform a full Bhangra dance production. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on showcasing the skills and techniques learned throughout the course. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Celebration of completion of the course and achievement of dance goals.</li>
                                                                 </ul>
                                                             </div>
@@ -2530,8 +2450,6 @@
                             </div>
                     </section>
                 </div>
-
-
 
                 <!-- Folk -->
                 <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
@@ -2582,7 +2500,6 @@
                                             <span class="elementor-button-text">Testimonials</span>
                                         </span>
                                     </a>
-
                                 </li>
                                 <li class="list-inline-item col-lg-2 col-md-2 col-6">
                                     <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
@@ -2603,7 +2520,6 @@
                                 <li class="col-lg-1 ">
 
                                 </li>
-
                             </ul>
                         </div>
                     </section>
@@ -2749,12 +2665,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 2 : Intermediate Folk Dance Techniques</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> More advanced Bhangra footwork and movements.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Focus on building stamina and strength.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating hand and arm movements in Folk dance.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> More advanced Bhangra footwork and movements. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on building stamina and strength.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating hand and arm movements in Folk dance.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2827,7 +2740,6 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on advanced folk dance movements and footwork.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating more complex hand and arm movements in dance routines.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to folk acrobatics and lifts.</li>
-
                                                                 </ul>
                                                             </div>
                                                         </div>

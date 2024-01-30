@@ -54,6 +54,25 @@ function formatDateTime($dateTimeString)
                         <div class="card-body">
                             <div class="tab-content">
 
+
+                                <?php
+                                // ...
+
+                                // Function to check the brightness of a color
+                                function getBrightness($hex)
+                                {
+                                    // Remove the hash from the color code
+                                    $hex = str_replace("#", "", $hex);
+
+                                    // Convert hex to RGB values
+                                    $r = hexdec(substr($hex, 0, 2));
+                                    $g = hexdec(substr($hex, 2, 2));
+                                    $b = hexdec(substr($hex, 4, 2));
+
+                                    // Calculate brightness (standard formula)
+                                    return (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+                                } ?>
+
                                 <div class=" active tab-pane" id="FacultyImages">
                                     <?php if (!empty($FacultyVideoData)) { ?>
                                         <div class="row">
@@ -72,7 +91,12 @@ function formatDateTime($dateTimeString)
                                                     $fullImagePath = base_url($imagePath);
 
                                                     // Generate a random background color based on the student's name
-                                                    $randomColor = '#' . substr(md5($faculty->student_name), 0, 4); ?>
+                                                    $randomColor = '#' . substr(md5($faculty->student_name), 0, 6);
+
+                                                    // Ensure sufficient contrast with white
+                                                    while (getBrightness($randomColor) < 140) {
+                                                        $randomColor = '#' . substr(md5($faculty->student_name . rand()), 0, 6);
+                                                    } ?>
 
                                                     <div class="col-md-3 mt-3">
                                                         <div class="position-relative videoofs">
@@ -96,7 +120,7 @@ function formatDateTime($dateTimeString)
                                                                                 <strong> Image Date:</strong>
                                                                                 <?= formatDateTime($faculty->DateTime); ?>
                                                                                 <br>
-                                                                                Faculty Name &nbsp; : &nbsp; <?= $faculty->faculty_name; ?>
+                                                                                Faculty Name &nbsp; : &nbsp; <?= $faculty->faculty_name; ?><br>
                                                                                 <?php if ($faculty->group_name) : ?>
                                                                                     Group Name &nbsp; : &nbsp; <?= $faculty->group_name; ?>
                                                                                 <?php endif; ?>
@@ -130,7 +154,16 @@ function formatDateTime($dateTimeString)
                                                     $fullImagePath = base_url($imagePath);
 
                                                     // Generate a random background color based on the student's name
-                                                    $randomColor = '#' . substr(md5($faculty->Student_name), 0, 4); ?>
+                                                    // $randomColor = '#' . substr(md5($faculty->Student_name), 0, 4); 
+
+
+                                                    // Generate a random background color based on the student's name
+                                                    $randomColor = '#' . substr(md5($faculty->Student_name), 0, 6);
+
+                                                    // Ensure sufficient contrast with white
+                                                    while (getBrightness($randomColor) < 128) {
+                                                        $randomColor = '#' . substr(md5($faculty->Student_name . rand()), 0, 6);
+                                                    } ?>
 
                                                     <div class="col-md-3 mt-3">
                                                         <div class="position-relative videoofs">

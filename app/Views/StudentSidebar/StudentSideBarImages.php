@@ -98,8 +98,6 @@ function formatDateTime($dateTimeString)
                                                                                 <strong> Image Date:</strong>
                                                                                 <?= formatDateTime($faculty->DateTime); ?>
                                                                                 <br>
-
-
                                                                             <?php endif; ?>
                                                                         </p>
                                                                     </div>
