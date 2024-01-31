@@ -2126,31 +2126,19 @@
 
                                         I've taken several online courses, but this singing class stands out for its exceptional quality. The instructor's passion, knowledge, and dedication make it worth every penny. </p>
                                 </div>
-
-
-
                             </div>
                             <div class="carousel-item motmusic">
                                 <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-
                                     <h4>Wanna (Dubai)</h4>
-                                    <p>
-
-
-                                        This online singing class has opened doors for me that I never thought possible. The networking opportunities and industry insights provided have been priceless.
+                                    <p> This online singing class has opened doors for me that I never thought possible. The networking opportunities and industry insights provided have been priceless.
                                     </p>
                                 </div>
-
                             </div>
 
                             <div class="carousel-item motmusic">
                                 <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-
-
                                     <h4>Lucy (USA)</h4>
                                     <p>
                                         The supportive community within this online singing class is second to none. The friendships I've formed and the encouragement I've received have made the learning experience even more enjoyable.
@@ -2172,11 +2160,8 @@
                             <div class="carousel-item motmusic">
                                 <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-
                                     <h4>Sanjay S ( Canada)</h4>
                                     <p>
-
                                         I'm impressed by the diversity of genres covered in this online singing class. From classical to contemporary, the
                                         curriculum caters to all musical interests.
                                     </p>
@@ -2186,12 +2171,8 @@
                             <div class="carousel-item motmusic">
                                 <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-
-
                                     <h4>Fathima (Dubai)</h4>
                                     <p>
-
                                         The flexibility of this online singing class has allowed me to pursue my passion without disrupting my busy schedule. I<br />can learn at my own pace and revisit lessons whenever I need.</p>
                                 </div>
                             </div>
@@ -2199,26 +2180,16 @@
                             <div class="carousel-item motmusic">
                                 <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-
                                     <h4>Isabella (UK)</h4>
-                                    <p>
-
-                                        I'm thrilled with the progress I've made in just a few months of joining this online singing class. The step-by-step approach and systematic exercises have been incredibly effective.</p>
-
+                                    <p> I'm thrilled with the progress I've made in just a few months of joining this online singing class. The step-by-step approach and systematic exercises have been incredibly effective.</p>
                                 </div>
                             </div>
 
                             <div class="carousel-item motmusic">
                                 <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-
-
                                     <h4>Gayathri (Bangalore)</h4>
                                     <p>
-
-
                                         This online singing class provides a holistic learning experience. Along with vocal techniques, it focuses on
                                         performance skills, stage presence, and even music theory. </p>
                                 </div>
@@ -2227,11 +2198,8 @@
                             <div class="carousel-item motmusic">
                                 <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
                                     <h4>Jassi (Canada)</h4>
-
                                     <p>
-
                                         I've always wanted to sing with confidence, and this online class has helped me achieve just that. The instructor's support and the nurturing environment have boosted my self-belief.</p>
                                     </p>
                                 </div>
@@ -2240,18 +2208,12 @@
                             <div class="carousel-item motmusic">
                                 <div class="carousel-caption">
                                     <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-
                                     <h4>Victoria ( New Zealand)</h4>
-
                                     <p>
                                         The e-learning platform used for this singing class is intuitive and visually appealing. It enhances the learning experience and keeps me motivated to practice consistently. </p>
-
                                 </div>
                             </div>
                         </div>
-
-
 
                         <a class="carousel-control-prev mta" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
