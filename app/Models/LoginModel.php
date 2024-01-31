@@ -417,4 +417,12 @@ class LoginModel extends Model
         return $this->db->table('register')
             ->select('*')->where('email', $email)->update($data);
     }
+    public function getUserByEmail($email)
+    {
+        return $this->db->table('register')
+            ->select('*')
+            ->where('email', $email)
+            ->get()
+            ->getRowArray();
+    }
 }

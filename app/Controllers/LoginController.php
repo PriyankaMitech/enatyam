@@ -168,8 +168,46 @@ class LoginController extends BaseController
         } else
             return false;
     }
-    public function saveuserdata()
+    // public function saveuserdata()
+    // {
+    //     // print_r($_POST);die;
+    //     $email = $this->request->getPost('email');
+    //     $course = $this->request->getPost('courses_id_g');
+    //     $sub_course = $this->request->getPost('sub_courses_id_g');
+    //     $age = $this->request->getPost('age');
+    //     $experience = $this->request->getPost('experience');
+    //     $SessionType = $this->request->getPost('SessionType');
+    //     $country = $this->request->getPost('country');
+    //     $experienceInput = $this->request->getPost('experienceInput');
+    //     $loginModel = new LoginModel();
 
+    //     $data = [
+    //         'course' => $course,
+    //         'sub_course' => $sub_course,
+    //         'age' => $age,
+    //         'is_register_done' => 'Y',
+    //         'country' => $country,
+    //         'experience' => $experience,
+    //         'experienceInput' => $experienceInput,
+    //         'SessionType' => $SessionType,
+    //     ];
+    //     $affectedRows = $loginModel->updateUserByEmail($email, $data);
+    //     $msg = 'Your registration is done';
+    //     $Subject = 'Registration Confirmation';
+    //     $ccEmails = ['cc1@example.com', 'cc2@example.com'];
+    //     $tital = 'congratulations You Are Registration Confirmation';
+    //     sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
+    //     // $mobile_number='917588525387';
+    //     // $massage='hieee You Are register';
+    //     // sendwhatsappmassage($mobile_number,$massage);
+    //     $phoneNumber = $data['mobile_no'];
+    //     $templates = "survey";
+    //     whatsapp($phoneNumber, $templates);
+    //     session()->setFlashdata('success', 'Registration successful.');
+
+    //     return redirect()->to('Home');
+    // }
+    public function saveuserdata()
     {
         $email = $this->request->getPost('email');
         $course = $this->request->getPost('courses_id_g');
@@ -180,7 +218,6 @@ class LoginController extends BaseController
         $country = $this->request->getPost('country');
         $experienceInput = $this->request->getPost('experienceInput');
         $loginModel = new LoginModel();
-
         $data = [
             'course' => $course,
             'sub_course' => $sub_course,
@@ -190,18 +227,26 @@ class LoginController extends BaseController
             'experience' => $experience,
             'experienceInput' => $experienceInput,
             'SessionType' => $SessionType,
-        ];
+        ]; 
         $affectedRows = $loginModel->updateUserByEmail($email, $data);
+        $updatedUserData = $loginModel->getUserByEmail($email);
+        if (isset($updatedUserData['mobile_no'])) {
+            $phoneNumber = $updatedUserData['mobile_no'];
+            $templates = "new_food_menu";
+            whatsapp($phoneNumber, $templates);
+        } else {
+           
+        }
         $msg = 'Your registration is done';
         $Subject = 'Registration Confirmation';
         $ccEmails = ['cc1@example.com', 'cc2@example.com'];
-        $tital = 'congratulations You Are Registration Confirmation';
+        $tital = 'Congratulations! You Are Registration Confirmation';
         sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
+    
         session()->setFlashdata('success', 'Registration successful.');
-
+    
         return redirect()->to('Home');
     }
-
     public function checkLoginDetails()
     {
         $request = \Config\Services::request();

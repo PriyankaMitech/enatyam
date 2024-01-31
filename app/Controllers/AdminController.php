@@ -73,7 +73,7 @@ class AdminController extends BaseController
                 ];
                 $data['Faculty'] = $model->joinfourtables($select1, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, $wherecond, 'DESC');
                 // echo '<pre>';
-                // print_r($data['Faculty']);
+                // print_r($data['PendingDemo']);
                 // die;
                 return view('AdminDashboard', $data);
             } else {
@@ -83,19 +83,41 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
-
     public function AssignTecherForDemo()
     {
-
         $model = new AdminModel();
-        $postData = $this->request->getPost();
-        $model->edit($postData);
-        // $session = session();
-        // $session->setFlashdata('success', 'Teacher assigned for Demo.');
+        $postData = $this->request->getPost(); 
+        $data = [
+            'AssignTecher_id' => $this->request->getVar('faculty_id'),
+            'meetlink' => $this->request->getVar('meetlink'),
+            'Book_Date_Time' => $this->request->getVar('Book_Date_Time'),
+        ];
+        $db = \Config\Database::Connect();  
+        if ($this->request->getVar('studentid') != "") {
+            $db->table('free_demo_table')
+                ->where('D_id', $this->request->getVar('studentid'))
+                ->update($data);
+    
+            $updatedData = $db->table('free_demo_table')
+                ->where('D_id', $this->request->getVar('studentid'))
+                ->get()
+                ->getRowArray();
+    
+            if ($updatedData) {
+                $phoneNumber = $updatedData['phone'];
+                $templates = "demo_booking_";
+                $date = $updatedData['Book_Date'];
+                $time = $updatedData['Book_Date_Time'];
+                $meetlink = $updatedData['meetlink'];
+                $msg = "Your Demo Will Schedule on $date in $time. Join this link: $meetlink";
+                whatsapp($phoneNumber, $templates, $msg);
+    
+                session()->setFlashdata('success', 'Demo added successfully.');
+            }
+        }
+    
         return redirect()->to('Admindashboard');
     }
-
-
     public function AssignTecherToStudent()
     {
         $model = new AdminModel();

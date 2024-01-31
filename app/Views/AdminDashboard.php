@@ -461,114 +461,103 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="col-md-12 card" id="pending-demo-table" style="display:none">
-                                <div class="card-header">
-                                    <h3 class="card-title">Pending Demo List</h3>
-                                </div>
-                                <div class="card-body table-responsive">
-                                    <table class="table table-hover text-nowrap">
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Booking Date</th>
-                                                <th>Reshedule Date</th>
+                         
+                <div class="col-md-12 card" id="pending-demo-table" style="display:none">
+                    <div class="card-header">
+                        <h3 class="card-title">Pending Demo List</h3>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Booking Date</th>
+                                    <th>Booking Time</th>
+                                    <th>give Time</th>
+                                    <th>Reschedule Date</th>
+                                    <th>Faculty</th>
+                                    <th>Course</th>
+                                    <th>Sub Course</th>
+                                    <th>Assign Faculty Status</th>
+                                    <th>Link</th>
+                                    <th>Assign</th>
+                                </tr>
+                            </thead>
+                            <?php usort($PendingDemo, function ($a, $b) {
+                                return strtotime($b->Book_Date) - strtotime($a->Book_Date);
+                            }); ?>
+                            <?php
+                            if (!empty($PendingDemo)) { ?>
+                                <?php foreach ($PendingDemo as $facult) : ?>
+                                    <tr>
+                                        <form action="<?php echo base_url("AssignTecherForDemo"); ?>" method="POST">
+                                            <input type="hidden" name="studentid" value="<?= $facult->D_id ?>">
+                                            <td><?= $facult->name ?></td>
+                                            <td><?= $facult->email ?></td>
+                                            <td><?= date('j F Y', strtotime($facult->Book_Date)); ?></td>
+                                            <td><?= $facult->Start_Time ?>/<?= $facult->End_Time ?></td>
+                                   <td>
+                <input type="time" name="Book_Date_Time" min="<?= $facult->Start_Time ?>" max="<?= $facult->End_Time ?>">
+            </td>
+                                            <td>
+                                                <?php
+                                                if ($facult->Reshedule_date && $facult->Reshedule_date != '0000-00-00') {
+                                                    echo date('j F Y', strtotime($facult->Reshedule_date));
+                                                } else {
+                                                    echo 'Not available';
+                                                }
+                                                ?>
+                                            </td>
+                                        
+                                            <td>
+                                                <select name="faculty_id">
+                                                    <option value="" selected>Select Faculty</option>
+                                                    <?php foreach ($Faculty as $facultyItems) : ?>
+                                                        <?php if ($facultyItems->course == $facult->course && $facultyItems->sub_course == $facult->sub_course) : ?>
+                                                            <option value="<?= $facultyItems->id ?>" <?php if ($facult->AssignTecher_id == $facultyItems->id) {
+                                                                                                    echo "selected";
+                                                                                                } ?>>
+                                                                <?= $facultyItems->full_name ?>
+                                                            </option>
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </td>
+                                            <td><?= $facult->courses_name ?></td>
+                                            <td><?= $facult->sub_courses_name ?></td>
+                                            <td>
+                                                <?php if ($facult->AssignTecher_id > 0) : ?>
+                                                    <p>Assign</p>
+                                                <?php else : ?>
+                                                    <p>Not Assign</p>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="meetlink" placeholder="Enter Meeting Link">
+                                            </td>
+                                            <td>
 
-                                                <th>Faculty</th>
-                                                <th>Course</th>
-                                                <th>Sub Course</th>
-                                                <th>Assign Faculty Status</th>
-                                                <th>Assign</th>
-                                            </tr>
-                                        </thead>
-                                        <?php usort($PendingDemo, function (
-                                            $a,
-                                            $b
-                                        ) {
-                                            return strtotime($b->Book_Date) -
-                                                strtotime($a->Book_Date);
-                                        }); ?>
-                                        <?php
-                                        // echo "<pre>";print_r($PendingDemo);exit();
-                                        if (!empty($PendingDemo)) { ?>
-                                            <?php foreach ($PendingDemo as $facult) : ?>
-                                                <tr>
-                                                    <form action="<?php echo base_url(
-                                                                        "AssignTecherForDemo"
-                                                                    ); ?>" method="POST">
-                                                        <input type="hidden" name="studentid" value="<?= $facult->D_id ?>">
-                                                        <td><?= $facult->name ?></td>
-                                                        <td><?= $facult->email ?></td>
-                                                        <td><?= date('j F Y', strtotime($facult->Book_Date)); ?></td>
-                                                        <td>
-                                                            <?php
-                                                            if ($facult->Reshedule_date && $facult->Reshedule_date != '0000-00-00') {
-                                                                echo date('j F Y', strtotime($facult->Reshedule_date));
-                                                            } else {
-                                                                echo 'Not available';
-                                                            }
-                                                            ?>
-                                                        </td>
-                                                        <td>
+                                        <?php if (
+                                                    $facult->AssignTecher_id > 0
+                                                ) { ?>
+                                    <button type="submit" name="change_faculty_button" class="btn btn-info" style="font-size: 12px;">Change Faculty</button>
+                                            <?php } else { ?>
+                                    <button type="submit" name="assign_button" class="btn btn-warning" style="font-size: 13px;">Assign</button>
+                                            <?php } ?>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php } else { ?>
+                                <tr>
+                                    <td class="text-center" colspan=10>No data available</td>
+                                </tr>
+                            <?php } ?>
+                        </table>
+                    </div>
+                </div>
 
-
-                                                            <select name="faculty_id">
-                                                                <option value="" selected>Select Faculty</option>
-
-                                                                <?php foreach ($Faculty as $facultyItems) : ?>
-
-                                                                    <?php if ($facultyItems->course == $facult->course && $facultyItems->sub_course == $facult->sub_course) : ?>
-                                                                        <option value="<?= $facultyItems->id ?>" <?php if (
-                                                                                                                        $facult->AssignTecher_id ==
-                                                                                                                        $facultyItems->id
-                                                                                                                    ) {
-                                                                                                                        echo "selected";
-                                                                                                                    } ?>>
-                                                                            <?= $facultyItems->full_name ?>
-                                                                        </option>
-                                                                    <?php endif; ?>
-                                                                <?php endforeach; ?>
-                                                            </select>
-
-                                                        </td>
-                                                        <td><?= $facult->courses_name ?></td>
-                                                        <td><?= $facult->sub_courses_name ?></td>
-                                                        <td>
-                                                            <?php if (
-                                                                $facult->AssignTecher_id >
-                                                                0
-                                                            ) : ?>
-                                                                <p>Assign</p>
-                                                            <?php else : ?>
-                                                                <p>Not Assign</p>
-                                                            <?php endif; ?>
-                                                        </td>
-                                                        <td>
-
-
-
-
-                                                            <?php if (
-                                                                $facult->AssignTecher_id > 0
-                                                            ) { ?>
-                                                                <button type="submit" name="change_faculty_button" class="btn btn-info" style="font-size: 12px;">Change
-                                                                    Faculty</button>
-                                                            <?php } else { ?>
-                                                                <button type="submit" name="assign_button" class="btn btn-warning" style="font-size: 13px;">Assign</button>
-                                                            <?php } ?>
-                                                        </td>
-                                                    </form>
-                                                </tr>
-                                            <?php endforeach; ?>
-                                        <?php } else { ?>
-                                            <tr>
-                                                <td class="text-center" colspan=8>No data available</td>
-
-                                            </tr>
-                                        <?php } ?>
-                                    </table>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
