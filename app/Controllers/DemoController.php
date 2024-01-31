@@ -34,6 +34,11 @@ class DemoController extends BaseController
         // exit();
         $demoModel->save($data);
         $session = session();
+        $phoneNumber = $data['phone'];
+        $templates = "survey";
+        $msg = "Your Demo Booked";
+        whatsapp($phoneNumber, $templates,$msg,);
+
         $session->setFlashdata('success', 'Demo booked successfully!');
         return redirect()->to('Home');
     }
