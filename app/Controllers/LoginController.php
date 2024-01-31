@@ -8,7 +8,7 @@ use CodeIgniter\Controller;
 use League\OAuth2\Client\Provider\Google;
 
 helper('sms_helper');
-
+require_once FCPATH . 'vendor/autoload.php';
 
 class LoginController extends BaseController
 {
@@ -204,7 +204,8 @@ class LoginController extends BaseController
 
     public function checkLoginDetails()
     {
-        $request = \Config\Services::request();
+        $request = \CodeIgniter\Config\Services::request();
+    $session = \CodeIgniter\Config\Services::session();
         $loginModel = new LoginModel();
 
         $username = $request->getPost('username');
@@ -213,36 +214,76 @@ class LoginController extends BaseController
         if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
             $result = $loginModel->getUserByEmailAndPassword($username, $password);
         } else {
-
             $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
         }
-        // print_r($result);die;
+
         if (!empty($result)) {
             switch ($result['role']) {
                 case 'Admin':
-                    return redirect()->to('Admindashboard');
                 case 'sub_admin':
                     return redirect()->to('Admindashboard');
                 case 'Faculty':
-                    $this->session->set($result);
+                    $session->set($result);
                     return redirect()->to('FacultyDashboard');
                 case 'Student':
-                    // print_r('$result');die;
-                    $this->session->set($result);
+                    $session->set($result);
                     return redirect()->to('StudentDashboard');
                 default:
-                    print_r('$der');
-                    die;
-                    $this->session->setFlashdata('errormessage', 'Invalid role.');
-
+                    $session->setFlashdata('errormessage', 'Invalid role.');
                     return redirect()->to('Home');
             }
         } else {
-            $this->session->setFlashdata('errormessage', 'Password is wrong.');
+            $session->setFlashdata('errormessage', 'Password is wrong.');
 
+            // Interakt API Call
+            // $apiKey = 'NE9vYmtLckVyVzIydmtoX3A3cFRwN0d0ZXFfMEpfNzNpeXNEbThmVVpJWTo=';
+            
+            // $interaktRequest = new \HTTP_Request2();
+            // $interaktRequest->setUrl('https://api.interakt.ai/v1/public/track/users/');
+            // $interaktRequest->setMethod(\HTTP_Request2::METHOD_POST);
+            // $interaktRequest->setConfig(['follow_redirects' => true]);
+            // $interaktRequest->setHeader([
+            //     'Content-Type' => 'application/json',
+            //     'Authorization' => 'Basic ' . $apiKey,
+            // ]);
+            // // Adjust the data according to your needs
+            // $interaktRequest->setBody('{
+            //     "userId": "1",
+            //     "phoneNumber": "7588525387",
+            //     "countryCode": "+91",
+            //     "traits": {
+            //         "name": "John Doe",
+            //         "email": "johndoe@gmail.com"
+            //     },
+            //     "message": "Login details are incorrect",
+            //     "tags": ["sample-tag-1", "sample-tag-2"]
+            // }');
+            
+            // try {
+            //     $interaktResponse = $interaktRequest->send();
+            
+            //     if ($interaktResponse->getStatus() == 202) {
+            //         echo 'Accepted: ' . $interaktResponse->getBody();
+            //        exit();
+            //     } else {
+            //         echo 'Unexpected HTTP status: ' . $interaktResponse->getStatus() . ' ' . $interaktResponse->getReasonPhrase();
+            //         exit();
+
+            //     }
+            // } catch (HTTP_Request2_Exception $e) {
+            //     echo 'Error: ' . $e->getMessage();
+            //     exit();
+
+            // }
+
+
+            
+            
             return redirect()->to('Home');
         }
+            
     }
+
 
     public function ModelForLogin()
     {
