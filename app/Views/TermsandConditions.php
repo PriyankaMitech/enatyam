@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+<?php include('header.php'); ?>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="public/css/footer.css">
-    <link rel="stylesheet" href="public/css/TermsandConditions.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <!-- fontawesome icon cdn -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- jQuery library -->
-</head>
-
-<body>
 
     <section class="contactus">
 
@@ -53,54 +35,88 @@
             </div>
         </div>
         <div class="container cont-lg">
-            <div class="row ">
+            <div class="row termsconp">
                 <div class="col-lg-12">
-                    <h4>Welcome to Enatyam</h4>
+                    <h4><b><u>Terms and Conditions:</u></b></h4>
+                    <p>Welcome to www.enatyam.com. These terms and conditions outline the rules and regulations
+                        for using our website and accessing our online dance, music, and yoga training services.
+                    </p>
 
-                    <ul class="term-ul">
-                        <li>
-                            <span><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            </span>
-                            <span> Hi, we’re Enatyam, and welcome! When we say ‘we’, ‘us’ or ‘Enatyam‘ it’s because that’s who we are and we own and run the Enatyam sites.
-                            </span>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold"> Acceptance of Terms:</div>
+                                By accessing and using www.enatyam.com, you agree to comply with and be bound by these
+                                terms and conditions. If you do not agree with any part of these terms, please refrain from
+                                using our website.
+                            </div>
                         </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">User Registration:</div>
+                                To access certain features or services, you may be required to register an account. You are
+                                responsible for providing accurate and current information. Keep your login credentials
+                                confidential, and notify us immediately of any unauthorized use.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Payment and Refunds:</div>
+                                Payments for our online training services are processed securely. Refund policies are outlined
+                                in each respective service offering. Any additional charges, such as registration fee,
+                                convenience fee, currency exchange fees, are your responsibility.
 
-                        <li>
-                            <span><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            </span>
-                            <span> Enatyam’s ecosystem of digital marketplaces helps people like you get creative and earn online. When you create an account and accept these terms you become a student of our classes. You will have an Enatyam account that will allow you to attend and watch the classes.
-                            </span>
+                            </div>
                         </li>
-                        <li>
-                            <span><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            </span>
-                            <span> The Enatyam site is a platform that allow students to leearn diffrent forms of dance through digitial platform.
-                            </span>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            </span>
-                            <span> The items on Enatyam are owned by us. We take ownership of the items or get any rights to use the items other than to make them available on and promote our sites.
-                            </span>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                            </span>
-                            <span> During your time with us you agree to follow the ground rules outlined in these terms so please read and understand them. If you don’t accept the terms then we’ll be sad, but you will need to leave because your presence on and use of Enatyam sites is conditional on your acceptance to be bound by these terms and the Privacy Policy whether you become a student or not.
-                            </span>
-                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">User Conduct:</div>
+                                You agree not to use our website for any unlawful or prohibited activities. This includes but is
+                                not limited to:
+                                <ul>
+                                    <li>Violating any applicable laws or regulations.</li>
+                                    <li>Infringing on the rights of others.</li>
+                                    <li>Attempting to gain unauthorized access to our systems.</li> 
+                                </ul>
 
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Termination of Services:</div>
+                                We reserve the right to terminate or suspend your access to our services at any time, for any
+                                reason, without notice. This includes the right to terminate services if we believe you have
+                                violated these terms and conditions.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Disclaimers:</div>
+                                Our website and services are provided "as is" without any warranties, expressed or implied.
+                                We do not guarantee the accuracy, completeness, or suitability of the information and
+                                materials found on our website.
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Changes to Terms:</div>
+                                We reserve the right to modify these terms and conditions at any time. Any changes will be
+                                effective immediately upon posting on our website. It is your responsibility to review these
+                                terms regularly.
+                            </div>
+                        </li>
+                       
+                    </ol>
 
-                    </ul>
+                    <p>If you have any questions or concerns about these terms and conditions, please contact us at <br> <b>[Your Contact Information]. </b></p>
+                    
+
                 </div>
             </div>
         </div>
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-</body>
+  
+<hr>
 <?php include('footer.php'); ?>
 
 </html>
