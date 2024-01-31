@@ -44,11 +44,7 @@ class Home extends BaseController
 
         return view('RefundPolicy');
     }
-    public function TermsAndConditions()
-    {
 
-        return view('TermsAndConditions');
-    }
     public function Career()
     {
         $model = new AdminModel();
@@ -66,6 +62,11 @@ class Home extends BaseController
     {
 
         return view('PrivacyPolicy');
+    }
+    public function termsandconditions()
+    {
+
+        return view('termsandconditions');
     }
     public function Dance()
     {

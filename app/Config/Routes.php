@@ -60,6 +60,8 @@ $routes->get('Carrier', 'Home::Carrier');
 $routes->get('test', 'Home::test');
 
 $routes->get('PrivacyPolicy', 'Home::PrivacyPolicy');
+$routes->get('termsandconditions', 'Home::termsandconditions');
+
 $routes->get('Dance', 'Home::Dance');
 $routes->get('Home', 'Home::home');
 $routes->get('music', 'Home::music');

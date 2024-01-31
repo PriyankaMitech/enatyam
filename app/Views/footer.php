@@ -21,6 +21,9 @@
                     <li>
                         <a href="Yoga">Yoga</a>
                     </li>
+                    <li>
+                        <a href="termsandconditions">Terms and Conditions</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-md-4 col-6 footer-div pt-4">
@@ -36,8 +39,12 @@
                     <li>
                         <a href="<?php echo base_url('Career'); ?>">Career</a>
                     </li>
+                    <li>
 
                     <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="termsanPrivacyPolicydconditions">Privacy Policy</a>
                     </li>
                 </ul>
             </div>
@@ -924,8 +931,8 @@
                 } else {
                     email_error_msg = "";
                 }
-                if ($("#phone").val()) {
-                    if (!phoneno_regx.test($("#phone").val())) {
+                if ($("#phone1").val()) {
+                    if (!phoneno_regx.test($("#phone1").val())) {
                         phone_error_msg = "Please enter valid 10 digits phone number.";
                     } else {
                         phone_error_msg = "";
@@ -2056,7 +2063,12 @@ $(function() {
 
 
 
-<?php } ?>
+<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy'){ ?>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <?php } ?>
 
 
 <script src="<?php echo base_url() ?>public/js/jquery.validate.min.js"></script>
@@ -2184,6 +2196,13 @@ $(function() {
         // Show the login modal
         $('#loginformpopup').modal('show');
     }
+
+    function showprivacypolicyModal() {
+    
+        // Show the registration modal
+        $('#privacypolicy').modal('show');
+    }
+
 
 
 

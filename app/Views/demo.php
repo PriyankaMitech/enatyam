@@ -69,7 +69,7 @@
                                             </div>
 
                                             <div>
-                                                <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="phone" pattern="[0-9]{10}" placeholder="Phone *" value="" type="tel" name="phone" required>
+                                                <input class="form-control" size="40" aria-required="true" aria-invalid="false" id="phone1" pattern="[0-9]{10}" placeholder="Phone *" value="" type="tel" name="phone" required>
                                                 <span style="color:red;" id="phonespanid"></span>
                                             </div>
 

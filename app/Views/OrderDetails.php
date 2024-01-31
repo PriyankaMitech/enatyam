@@ -254,7 +254,7 @@ $return_url = site_url().'PaymentController/payment';
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label f-label" for="flexCheckDefault">
-                I have read and agree to the website <a href="<?php echo base_url('privacypolicy'); ?>"> terms
+                I have read and agree to the website <a target="_blank" href="<?php echo base_url(); ?>termsandconditions"> terms
                     and conditions *</a>
             </label>
         </div>
