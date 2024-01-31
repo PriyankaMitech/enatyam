@@ -331,9 +331,13 @@ $return_url = site_url().'PaymentController/payment';
     // }
 
 
+    var dynamicAmount = <?php echo $amount; ?>;
+
+
     var razorpay_options = {
         key: "<?php echo $key_id; ?>",
-        amount: "<?php echo $amount; ?>",
+        amount: "",
+        amount: dynamicAmount * 100, //
         name: "<?php echo $name; ?>",
         description: "Order # <?php echo $merchant_order_id; ?>",
         netbanking: true,
@@ -360,6 +364,7 @@ $return_url = site_url().'PaymentController/payment';
 
 
     function razorpaySubmit(el) {
+       
     var checkbox = document.getElementById('flexCheckDefault');
     
     if (checkbox.checked) {
