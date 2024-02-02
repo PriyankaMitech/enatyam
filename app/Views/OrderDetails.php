@@ -43,7 +43,7 @@ $key_id = RAZOR_KEY_ID;
 $currency_code = $currency_code;  
           
 $per_session_price = $matchingRecords->Per_Session_Price; 
-$amount = $matchingRecords->Total_Price;
+$amount = $matchingRecords->Total_Price * 100;
 // $amount = '100';
 $billing_id = $lastinsert_id;
 $merchant_order_id = $id;
@@ -331,13 +331,12 @@ $return_url = site_url().'PaymentController/payment';
     // }
 
 
-    var dynamicAmount = <?php echo $amount; ?>;
 
 
     var razorpay_options = {
         key: "<?php echo $key_id; ?>",
         amount: "",
-        amount: dynamicAmount * 100, //
+        amount: <?php echo $amount; ?>, //
         name: "<?php echo $name; ?>",
         description: "Order # <?php echo $merchant_order_id; ?>",
         netbanking: true,

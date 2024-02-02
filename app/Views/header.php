@@ -263,6 +263,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     <?php } else if ($page == 'demo') { ?>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
+
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/demoprofile.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
@@ -272,6 +273,20 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <?php }else if($page == 'demobooking'){ ?>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/demobooking.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+        
     <?php } else if ($page == 'Checkout' || $page == 'BillingInformation') { ?>
 
         <link rel="stylesheet" href="public/css/Checkout.css">
@@ -373,7 +388,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             </div>
         <?php endif; ?>
     </div>
-    <section class="tophead ">
+    <section class="tophead">
         <nav class="navbar navbar-expand-lg">
             <div class="container  pd0">
                 <!-- <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
@@ -384,7 +399,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                 <div class="collapse navbar-collapse nav1" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li>
+                        <!-- <li>
                             <a href="tel:+91-70205%2009962" target="_blank" rel="nofollow noopener">
                                 <span><i class="fa fa-phone" aria-hidden="true"></i></span>
                                 <span class="text">+91-70205 09962</span>
@@ -395,20 +410,30 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                 <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
                                 <span class="text">hello@enatyam.com</span>
                             </a>
-                        </li>
+                        </li> -->
+                        <li>
+                        <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
+                        <img src="public/images/logosrem.png" alt="Enatyam">
+        </li>
+                    </a>
                     </ul>
 
                     <div>
                         <div class="">
                             <?php if (!(session()->get('sessiondata'))) : ?>
                                 <div class="loginmenu">
-                                    <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                                    
+                                <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh btntft" style="width: auto;">
+                                    Book your free trial
+                                </a>
+                        
+                                    <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
                                     <a class="login" href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
                                 </div>
                             <?php else : ?>
                                 <div class="loginmenu">
                                     <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
-                                    <a class="Dashboard" href="<?php echo base_url(); ?>Dashboard">Dashboard</a>
+                                    <a class="Dashboard" href="<?php echo base_url(); ?>Dashboard" style="border-right: 1px solid #f7f7f7;">Dashboard</a>
                                     <a class="logout" href="<?php echo base_url(); ?>logout">Logout</a>
                                 </div>
                             <?php endif; ?>
@@ -426,23 +451,24 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                     <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button> -->
-                    <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
-                        <img src="public/images/logo1.png" alt="Enatyam">
-                    </a>
+                    <!-- <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
+                        <img src="public/images/logosrem.png" alt="Enatyam">
+                    </a> -->
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav main menu ms-auto">
-                            <a href="https://api.whatsapp.com/send?phone=+919421796800&amp;text=Got%20reference%20from%20your%20Digital%20vCard.%20Want%20to%20know%20more%20about%20your%20products%20and%20services." target="_blank">Whatsapp</a>
                             <a class="nav-link active px-2" href="<?php echo base_url('Home'); ?>">Home</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>
                             <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>
-                            <a class="nav-link px-2" href="<?php echo base_url('Yoga'); ?>">Yoga</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
-                            <a class="nav-link px-2" href="<?php echo base_url('Career'); ?>">Career</a>
+                            <a class="nav-link px-2" href="<?php echo base_url('Yoga'); ?>">Yoga</a>
+                            <a class="nav-link px-2" href="<?php echo base_url('Pricing'); ?>">Pricing</a>
+
+                            <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
                         </div>
-                        <div class="navbar-nav">
-                            <a href="<?php echo base_url('demo'); ?>" class="btn btndemoh" style="width: auto;">BOOK
+                        <!-- <div class="navbar-nav">
+                            <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh" style="width: auto;">BOOK
                                 YOUR FREE DEMO</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 

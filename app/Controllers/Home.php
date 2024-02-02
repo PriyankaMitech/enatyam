@@ -186,10 +186,14 @@ class Home extends BaseController
 
         return view('demoprofile2');
     }
-    public function demo1()
+    public function demobooking()
     {
+        $model = new AdminModel();
+        $wherecond1 = array('is_deleted' => 'N');
 
-        return view('demo1');
+        $data['country_data'] = $model->getalldata('countries', $wherecond1);
+
+        return view('demobooking');
     }
     public function demo()
     {
