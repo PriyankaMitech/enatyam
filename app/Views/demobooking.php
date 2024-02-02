@@ -5,9 +5,6 @@
     <div class="container container_bookdemo">
         <div class="typesOfYoga-tab">
 
-
-
-
             <div class="tab-content" id="pills-tabContent">
                 <!-- Prenatal Yoga   -->
                 <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel" aria-labelledby="pills-PrenatalYoga-tab">

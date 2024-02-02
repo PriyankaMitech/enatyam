@@ -106,6 +106,7 @@ $routes->get('demoprofile', 'Home::demoprofile');
 $routes->get('demoprofile2', 'Home::demoprofile2');
 $routes->get('demo1', 'Home::demo1');
 $routes->get('demo', 'Home::demo');
+$routes->get('demobooking', 'Home::demobooking');
 
 //routes for admin
 $routes->post('AdminController/addStudent', 'AdminController::addStudent');
