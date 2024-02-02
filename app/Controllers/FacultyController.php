@@ -98,52 +98,72 @@ class FacultyController extends BaseController
     return view('sendEmail');
   }
 
-
-
   public function uploadVideo()
-  {
+{
     date_default_timezone_set('Asia/Kolkata');
     $data = session();
     $studentId = $this->request->getPost('student_id');
     $registerId =  $data->get('id');
     $facultyModel = new FacultyModel();
+    $model = new AdminModel();
     $videoFile = $this->request->getFile('videoFile');
     $type = $_FILES['videoFile']['type'];
     $fileName = $_FILES['videoFile']['name'];
 
     $videoFilename = $videoFile->getName();
-    // print_r($videoFilename);
-    // die;
 
     switch ($type) {
-      case 'image/gif':
-      case 'image/jpg':
-      case 'image/png':
-      case 'image/jpeg':
-
-        $videoFile->move(ROOTPATH . 'public\uploads\images\facultyUploadedImages');
-
-        $videoFilename = $videoFile->getName();
-
-        break;
-      case 'avi':
-      case 'flv':
-      case 'wmv':
-      case 'mp3':
-      case 'mp4':
-      case 'video/mp4':
-      case 'wma':
-
-        $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
-        break;
+        case 'image/gif':
+        case 'image/jpg':
+        case 'image/png':
+        case 'image/jpeg':
+            $videoFile->move(ROOTPATH . 'public\uploads\images\facultyUploadedImages');
+            $videoFilename = $videoFile->getName();
+            break;
+        case 'avi':
+        case 'flv':
+        case 'wmv':
+        case 'mp3':
+        case 'mp4':
+        case 'video/mp4':
+        case 'wma':
+            $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
+            break;
     }
 
     $facultyModel->updateStudentVideo($studentId, $registerId, $fileName);
+    $wherecond = ['student_id' => $studentId];
+    $wherecond1 = ['id' => $registerId];
+
+    // Get faculty mobile number
+    $facultyMobileNumber = $model->get_single_data('register', $wherecond1);
+    $studentMobileNumber = $model->get_single_data('student', $wherecond); 
+    $name = $studentMobileNumber->student_name;
+    if (!empty($facultyMobileNumber)) {
+        $phoneNumber = $facultyMobileNumber->mobile_no;
+        $templates = "new_food_menu";
+        $msg = "video uploaded to student $name. Start time";
+        whatsapp($phoneNumber, $templates, $msg);
+    }
+    // Get student mobile number 
+    if (!empty($studentMobileNumber)) {
+        $phoneNumber = $studentMobileNumber->mobile_no;
+       
+        $templates = "new_food_menu";
+        $msg = "video uploaded by faculty to you. Start time";
+        whatsapp($phoneNumber, $templates, $msg);
+    }
+
+    // Send message to admin
+    $adminNumber = "7588525387";
+    $msg = "Faculty has uploaded to student $name Video";
+    $templates = "new_food_menu";
+    whatsappadmin($adminNumber, $templates, $msg);
 
     return redirect()->to('FacultyDashboard');
-    //  session_destroy();
-  }
+}
 
+  
   public function fetchvideotostudentdashboard()
   {
     if (isset($_SESSION['sessiondata'])) {
@@ -317,29 +337,64 @@ class FacultyController extends BaseController
     return view('notification');
   }
 
+  // public function submitAttendance()
+  // {
+  //   $model = new Facultymodel();
+
+  //   $data = [
+  //     'student_registerid'  => $this->request->getPost('studentId'),
+  //     'Attendance_status'   => $this->request->getPost('attendance'),
+  //     'Session_no'          => $this->request->getPost('session'),
+  //   ];
+
+  //   $result = $model->insertAttendance($data);
+
+  //   // Check if the insertion was successful
+  //   if ($result) {
+  //     $response = ['success' => true, 'message' => 'Attendance added successfully.'];
+  //   } else {
+  //     $response = ['success' => false, 'message' => 'Attendance not added.'];
+  //   }
+
+  //   // Return the JSON response
+  //   return $this->response->setJSON($response);
+  // }
   public function submitAttendance()
   {
-    $model = new Facultymodel();
-
-    $data = [
-      'student_registerid'  => $this->request->getPost('studentId'),
-      'Attendance_status'   => $this->request->getPost('attendance'),
-      'Session_no'          => $this->request->getPost('session'),
-    ];
-
-    $result = $model->insertAttendance($data);
-
-    // Check if the insertion was successful
-    if ($result) {
-      $response = ['success' => true, 'message' => 'Attendance added successfully.'];
-    } else {
-      $response = ['success' => false, 'message' => 'Attendance not added.'];
-    }
-
-    // Return the JSON response
-    return $this->response->setJSON($response);
+      $model = new Facultymodel();
+      $adminmodel = new AdminModel(); 
+      $data = [
+          'student_registerid' => $this->request->getPost('studentId'),
+          'Attendance_status'  => $this->request->getPost('attendance'),
+          'Session_no'         => $this->request->getPost('session'),
+      ];
+      $result = $model->insertAttendance($data);
+      $student_registerid = $this->request->getPost('studentId');
+      $Attendance_status = $this->request->getPost('attendance');
+      $sessionno= $this->request->getPost('session');
+      if ($Attendance_status == 'p') {
+          $stetus = 'present';
+      } elseif ($Attendance_status == 'a') {
+          $stetus = 'apsend';
+      } 
+      $wherecond = ['id' => $student_registerid];
+      $studentMobileNumber = $adminmodel->get_single_data('register', $wherecond);
+  
+      if ($result) {
+          $phoneNumber = (!empty($studentMobileNumber)) ? $studentMobileNumber->mobile_no : '';
+          $templates = "new_food_menu";
+          $msg = "Your attendance has been recorded successfully. Status: $stetus.$sessionno";
+          whatsapp($phoneNumber, $templates, $msg);
+  
+          $adminNumber = "7588525387";
+          $msg = "Attendance has been taken by faculty. Status: $stetus.session no.$sessionno";
+          whatsappadmin($adminNumber, $templates, $msg);
+          $response = ['success' => true, 'message' => 'Attendance added successfully.'];
+      } else {
+          $response = ['success' => false, 'message' => 'Attendance not added.'];
+      }
+      return $this->response->setJSON($response);
   }
-
   public function save_schedule_data()
   {
     $model = new facultymodel();
@@ -374,53 +429,120 @@ class FacultyController extends BaseController
     echo view('schedule/index', $data);
   }
 
+  // public function save_schedule()
+  // {
+
+  //   $model = new AdminModel();
+  //   $wherecond = array('faculty_registerid' => $this->request->getVar('id'));
+  //   $data['schedule_data'] = $model->getalldata('schedule_list', $wherecond);
+  //   $single = $model->getsinglerow('schedule_list', $wherecond);
+  //   $db = \Config\Database::Connect();
+  //   if (empty($single)) {
+  //     $selectedDaysArray = $this->request->getVar('days[]'); // Assuming days[] is an array from the form
+  //     $selectedDaysString = implode(',', $selectedDaysArray);
+  //     $data = [
+  //       'faculty_registerid' => $this->request->getVar('session_id'),
+  //       'days' => $selectedDaysString,
+  //       'start_date' => $this->request->getVar('start_date'),
+  //       'end_date' => $this->request->getVar('end_date'),
+  //       'start_time' => $this->request->getVar('start_time'),
+  //       'end_time' => $this->request->getVar('end_time'),
+  //       'created_on' => date('Y:m:d H:i:s'),
+  //     ];
+  //     $add_data = $db->table('schedule_list');
+  //     $add_data->insert($data);
+  //     session()->setFlashdata('success', 'Schedule added successfully.');
+  //   } else {
+
+  //     $selectedDaysArray = $this->request->getVar('days[]');
+
+  //     $selectedDaysArray[] = $single->days;
+
+  //     $selectedDaysString = implode(',', $selectedDaysArray);
+
+  //     $data = [
+  //       'faculty_registerid' => $this->request->getVar('session_id'),
+  //       'days' => $selectedDaysString,
+  //       'start_date' => $single->start_date,
+  //       'end_date' => $single->end_date,
+  //       'start_time' => $single->start_time,
+  //       'end_time' => $single->end_time,
+  //     ];
+
+  //     $update_data = $db->table('schedule_list')->where('faculty_registerid', $this->request->getVar('id'));
+  //     $update_data->update($data);
+  //     session()->setFlashdata('success', 'Schedule updated successfully.');
+  //   }
+
+  //   return redirect()->to('giveschedule');
+  // }
   public function save_schedule()
   {
-
-    $model = new AdminModel();
-    $wherecond = array('faculty_registerid' => $this->request->getVar('id'));
-    $data['schedule_data'] = $model->getalldata('schedule_list', $wherecond);
-    $single = $model->getsinglerow('schedule_list', $wherecond);
-    $db = \Config\Database::Connect();
-    if (empty($single)) {
-      $selectedDaysArray = $this->request->getVar('days[]'); // Assuming days[] is an array from the form
-      $selectedDaysString = implode(',', $selectedDaysArray);
-      $data = [
-        'faculty_registerid' => $this->request->getVar('session_id'),
-        'days' => $selectedDaysString,
-        'start_date' => $this->request->getVar('start_date'),
-        'end_date' => $this->request->getVar('end_date'),
-        'start_time' => $this->request->getVar('start_time'),
-        'end_time' => $this->request->getVar('end_time'),
-        'created_on' => date('Y:m:d H:i:s'),
-      ];
-      $add_data = $db->table('schedule_list');
-      $add_data->insert($data);
-      session()->setFlashdata('success', 'Schedule added successfully.');
-    } else {
-
-      $selectedDaysArray = $this->request->getVar('days[]');
-
-      $selectedDaysArray[] = $single->days;
-
-      $selectedDaysString = implode(',', $selectedDaysArray);
-
-      $data = [
-        'faculty_registerid' => $this->request->getVar('session_id'),
-        'days' => $selectedDaysString,
-        'start_date' => $single->start_date,
-        'end_date' => $single->end_date,
-        'start_time' => $single->start_time,
-        'end_time' => $single->end_time,
-      ];
-
-      $update_data = $db->table('schedule_list')->where('faculty_registerid', $this->request->getVar('id'));
-      $update_data->update($data);
-      session()->setFlashdata('success', 'Schedule updated successfully.');
-    }
-
-    return redirect()->to('giveschedule');
+      $model = new AdminModel();
+      $wherecond = array('faculty_registerid' => $this->request->getVar('id'));
+      $data['schedule_data'] = $model->getalldata('schedule_list', $wherecond);
+      $single = $model->getsinglerow('schedule_list', $wherecond);
+      $db = \Config\Database::Connect();
+  
+      if (empty($single)) {
+          // Insert schedule data
+          $selectedDaysArray = $this->request->getVar('days[]');
+          $selectedDaysString = implode(',', $selectedDaysArray);
+          $data = [
+              'faculty_registerid' => $this->request->getVar('session_id'),
+              'days' => $selectedDaysString,
+              'start_date' => $this->request->getVar('start_date'),
+              'end_date' => $this->request->getVar('end_date'),
+              'start_time' => $this->request->getVar('start_time'),
+              'end_time' => $this->request->getVar('end_time'),
+              'created_on' => date('Y:m:d H:i:s'),
+          ];
+  
+          $add_data = $db->table('schedule_list');
+          $add_data->insert($data);
+  
+          // Fetch mobile number from register table
+          $facultyData = $model->getsinglerow('register', ['id' => $this->request->getVar('session_id')]);
+          $mobileNumber = $facultyData->mobile_no;
+  
+          session()->setFlashdata('success', 'Schedule added successfully. Mobile Number: ' . $mobileNumber);
+      } else {
+          // Update schedule data
+          $selectedDaysArray = $this->request->getVar('days[]');
+          $selectedDaysArray[] = $single->days;
+          $selectedDaysString = implode(',', $selectedDaysArray);
+  
+          $data = [
+              'faculty_registerid' => $this->request->getVar('session_id'),
+              'days' => $selectedDaysString,
+              'start_date' => $single->start_date,
+              'end_date' => $single->end_date,
+              'start_time' => $single->start_time,
+              'end_time' => $single->end_time,
+          ];
+  
+          $update_data = $db->table('schedule_list')->where('faculty_registerid', $this->request->getVar('id'));
+          $update_data->update($data);
+  
+          // Fetch mobile number from register table
+          $facultyData = $model->getsinglerow('register', ['id' => $this->request->getVar('session_id')]);
+          $mobileNumber = $facultyData->mobile_no;
+      // print_r($mobileNumber);die;
+       $phoneNumber = $mobileNumber;
+       $templates = "new_food_menu";
+       $msg ="your register succesfully";
+       whatsapp($phoneNumber, $templates, $msg);
+       $adminNumber = "7588525387";
+       $templates = "new_food_menu";
+       $msg = "Faculty give slots";
+       whatsappadmin($adminNumber, $templates, $msg);
+          session()->setFlashdata('success', 'Schedule updated successfully. Mobile Number: ');
+      }
+  
+      return redirect()->to('giveschedule');
   }
+  
+
   public function sendmeetinglink()
   {
     $link = $this->request->getPost('linkInput');
