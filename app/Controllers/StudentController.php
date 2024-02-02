@@ -590,29 +590,98 @@ class StudentController extends BaseController
     }
 
 
+    // public function selectslotsbystudent()
+    // {
+
+    //     $model = new AdminModel();
+    //     $wherecond = ['student_id' => $this->request->getVar('student_id')];
+    //     $single = $model->getsinglerow('tbl_student_shedule', $wherecond);
+    //     $startTime = '';
+    //     $endTime = '';
+
+    //     $db = \Config\Database::Connect();
+
+    //     // Extract start and end times from 'shedules_time'
+    //     $sheduleTimes = explode(' - ', $this->request->getVar('shedules_time'));
+
+    //     if (isset($sheduleTimes[0]) && isset($sheduleTimes[1])) {
+    //         $startTime = $sheduleTimes[0];
+    //         $endTime = $sheduleTimes[1];
+    //     }
+
+    //     $selectedDaysArray = $this->request->getVar('days[]');
+    //     $selectedDaysString = implode(',', $selectedDaysArray);
+
+
+    //     $data = [
+    //         'student_id' => $this->request->getVar('student_id'),
+    //         'faculty_id' => $this->request->getVar('faculty_id'),
+    //         'days' => $selectedDaysString,
+    //         'start_date' => $this->request->getVar('start_date'),
+    //         'end_date' => $this->request->getVar('end_date'),
+    //         'shedules_time' => $this->request->getVar('shedules_time'),
+    //         'start_time' => $startTime,
+    //         'end_time' => $endTime,
+    //         'created_on' => date('Y:m:d H:i:s'),
+    //     ];
+
+    //     $isAvailable = $this->checkAvailability($data);
+
+
+    //     if ($isAvailable) {
+    //         if (empty($single)) {
+    //             $add_data = $db->table('tbl_student_shedule');
+    //             $add_data->insert($data);
+    //             session()->setFlashdata('success', 'Data added successfully.');
+    //         } else {
+    //             $selectedDaysArray = $this->request->getVar('days[]');
+
+    //             $selectedDaysArray[] = $single->days;
+
+    //             $selectedDaysString = implode(',', $selectedDaysArray);
+
+    //             $datas = [
+    //                 'student_id' => $this->request->getVar('student_id'),
+    //                 'faculty_id' => $this->request->getVar('faculty_id'),
+    //                 'days' => $selectedDaysString,
+    //                 'start_date' => $single->start_date,
+    //                 'end_date' => $single->end_date,
+    //                 'shedules_time' => $single->shedules_time,
+    //                 'start_time' => $single->start_time,
+    //                 'end_time' => $single->end_time,
+    //             ];
+
+    //             $update_data = $db->table('tbl_student_shedule')->where('student_id', $this->request->getVar('student_id'));
+    //             $update_data->update($datas);
+    //             session()->setFlashdata('success', 'Data updated successfully.');
+    //         }
+    //     } else {
+    //         session()->setFlashdata('errormessage', 'Selected days and time are not available.');
+    //     }
+
+    //     return redirect()->to('SelectDate');
+    // }
     public function selectslotsbystudent()
     {
-
         $model = new AdminModel();
         $wherecond = ['student_id' => $this->request->getVar('student_id')];
         $single = $model->getsinglerow('tbl_student_shedule', $wherecond);
         $startTime = '';
         $endTime = '';
-
+    
         $db = \Config\Database::Connect();
-
+    
         // Extract start and end times from 'shedules_time'
         $sheduleTimes = explode(' - ', $this->request->getVar('shedules_time'));
-
+    
         if (isset($sheduleTimes[0]) && isset($sheduleTimes[1])) {
             $startTime = $sheduleTimes[0];
             $endTime = $sheduleTimes[1];
         }
-
+    
         $selectedDaysArray = $this->request->getVar('days[]');
         $selectedDaysString = implode(',', $selectedDaysArray);
-
-
+    
         $data = [
             'student_id' => $this->request->getVar('student_id'),
             'faculty_id' => $this->request->getVar('faculty_id'),
@@ -624,25 +693,55 @@ class StudentController extends BaseController
             'end_time' => $endTime,
             'created_on' => date('Y:m:d H:i:s'),
         ];
-
+    
         $isAvailable = $this->checkAvailability($data);
-
-
+    
+        $student_id = $this->request->getVar('student_id');
+        $faculty_id = $this->request->getVar('faculty_id');
         if ($isAvailable) {
             if (empty($single)) {
                 $add_data = $db->table('tbl_student_shedule');
                 $add_data->insert($data);
+                $wherecond = ['id' => $student_id];
+                $wherecond1 = ['id' => $faculty_id];
+
+
+                $studentMobileNumber = $model->get_single_data('register', $wherecond);
+                $facultyMobileNumber = $model->get_single_data('register', $wherecond1);
+                // echo "<pre>";print_r($facultyMobileNumber);die;
+                $phoneNumber = '';
+                $phoneNumber = '';
+
+            if(!empty($studentMobileNumber)){
+                        $phoneNumber = $studentMobileNumber->mobile_no;
+            }
+                $templates = "new_food_menu";
+                $msg = "Your slots have been selected successfully. Start time: $startTime, End time: $endTime.";
+                whatsapp($phoneNumber, $templates, $msg);
+
+                if($facultyMobileNumber){
+    
+                $phoneNumber = $facultyMobileNumber->mobile_no;
+                }
+                $msg = "A student has selected slots. Please be prepared.";
+                whatsapp($phoneNumber, $templates, $msg);
+    
+                $adminNumber = "7588525387";
+                $msg = "student has selected slots. Student:";
+
+                whatsappadmin($adminNumber, $templates, $msg);
+    
                 session()->setFlashdata('success', 'Data added successfully.');
             } else {
                 $selectedDaysArray = $this->request->getVar('days[]');
-
+    
                 $selectedDaysArray[] = $single->days;
-
+    
                 $selectedDaysString = implode(',', $selectedDaysArray);
-
+    
                 $datas = [
-                    'student_id' => $this->request->getVar('student_id'),
-                    'faculty_id' => $this->request->getVar('faculty_id'),
+                    'student_id' => $student_id,
+                    'faculty_id' => $faculty_id,
                     'days' => $selectedDaysString,
                     'start_date' => $single->start_date,
                     'end_date' => $single->end_date,
@@ -650,18 +749,42 @@ class StudentController extends BaseController
                     'start_time' => $single->start_time,
                     'end_time' => $single->end_time,
                 ];
-
-                $update_data = $db->table('tbl_student_shedule')->where('student_id', $this->request->getVar('student_id'));
+    
+                $update_data = $db->table('tbl_student_shedule')->where('student_id', $student_id);
                 $update_data->update($datas);
+                $wherecond = ['id' => $student_id];
+                $wherecond1 = ['id' => $faculty_id];
+                $studentMobileNumber = $model->get_single_data('register', $wherecond);
+                $facultyMobileNumber = $model->get_single_data('register', $wherecond1);
+                $phoneNumber = '';
+                $phoneNumber = '';
+                if(!empty($studentMobileNumber)){
+                    $phoneNumber = $studentMobileNumber->mobile_no;
+        }
+            $templates = "new_food_menu";
+            $msg = "Your slots have been selected successfully. Start time: $startTime, End time: $endTime.";
+            whatsapp($phoneNumber, $templates, $msg);
+
+            if($facultyMobileNumber){
+
+            $phoneNumber = $facultyMobileNumber->mobile_no;
+            }
+            $msg = "A student has selected one more day. Please be prepared.";
+            whatsapp($phoneNumber, $templates, $msg);
+
+            $adminNumber = "7588525387";
+            $msg = "student has selected one more day . Student:";
+
+            whatsappadmin($adminNumber, $templates, $msg);
                 session()->setFlashdata('success', 'Data updated successfully.');
             }
         } else {
             session()->setFlashdata('errormessage', 'Selected days and time are not available.');
         }
-
+    
         return redirect()->to('SelectDate');
     }
-
+    
     protected function checkAvailability($data)
     {
         $model = new AdminModel();
