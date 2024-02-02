@@ -1,50 +1,64 @@
 <footer>
     <div class="container cont-width">
         <div class="row">
-            <div class="col-md-4 col-12 footer-div">
-                <img src="public/images/logo.png" />
+            <div class="col-md-4 col-12 footer-div flid">
+                <img src="public/images/logos.png" />
                 <p class=" mt-2">At Enatyam, we are providing you with professional training of dance forms originating
                     from the Indian subcontinent. Our talented mentors have been trained to provide you with an amazing
                     dancing experience.</p>
             </div>
-            <div class="col-md-4 col-6 footer-div pt-4">
+            <div class="col-md-4 col-6 footer-div pt-4 fu">
                 <ul class="row">
                     <li>
-                        <a href="Home">Home</a>
+                        <a href="<?=base_url(); ?>Dance">Dance</a>
+
+                    </li>
+                    
+                    <li>
+                        <a href="<?=base_url(); ?>music">Music</a>
+                    </li>
+                 
+                    <li>
+                        <a href="<?=base_url(); ?>Instruments">Instruments</a>
                     </li>
                     <li>
-                        <a href="Dance">Dance</a>
+                        <a href="<?=base_url(); ?>Yoga">Yoga</a>
                     </li>
                     <li>
-                        <a href="music">Music</a>
+                        <a href="<?=base_url(); ?>language">Language</a>
                     </li>
                     <li>
-                        <a href="Yoga">Yoga</a>
+                        <a href="<?=base_url(); ?>shopping">Shopping</a>
                     </li>
                     <li>
-                        <a href="termsandconditions">Terms and Conditions</a>
+                        <a href="<?=base_url(); ?>Career">Become a teacher</a>
                     </li>
+                  
                 </ul>
             </div>
-            <div class="col-md-4 col-6 footer-div pt-4">
+            <div class="col-md-4 col-6 footer-div pt-4 fu1">
                 <ul>
                     <li>
-                        <a href="Instruments">Instruments</a>
-                    </li>
-
-                    <li>
-                        <a href="<?php echo base_url('Contactus'); ?>"> Contact Us</a>
-                    </li>
-
-                    <li>
-                        <a href="<?php echo base_url('Career'); ?>">Career</a>
+                        <a href="<?=base_url(); ?>Contactus"> Contact Us</a>
                     </li>
                     <li>
-
-                    <a href="#">Blog</a>
+                        <a href="<?=base_url(); ?>Career">Career</a>
+                    </li>
+                    
+                    <li>
+                        <a href="<?=base_url(); ?>PrivacyPolicy">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="termsanPrivacyPolicydconditions">Privacy Policy</a>
+                        <a href="<?=base_url(); ?>termsandconditions">Terms and Conditions</a>
+                    </li>
+                    <li>
+                        <a href="<?=base_url(); ?>refundpolic">Refund Police</a>
+                    </li>
+                    <li>
+                        <a href="<?=base_url(); ?>Blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="<?=base_url(); ?>Investors">Investors</a>
                     </li>
                 </ul>
             </div>
@@ -53,10 +67,18 @@
         <div class="row">
             <div class="col-md-12 col-12 mt-3">
                 <div class="social-div text-center">
-                    <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><i class="fa fa-instagram"></i></a>
+                    <!-- <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><i class="fa fa-instagram"></i></a>
                     <a href="https://twitter.com/e_natyam?s=08" class="twitter-div"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     <a href="https://m.facebook.com/enatyam/" class="facebook-div"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" class="youtube-div"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    <a href="#" class="youtube-div"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> -->
+
+                    <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><img src="public/images/whatsapp.png" /></a>
+                    <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><img src="public/images/instagram.png" /></a>
+                    
+                    <a href="https://twitter.com/e_natyam?s=08" class="twitter-div"><img src="public/images/linkedin.png" /></a>
+                    
+                    <a href="https://m.facebook.com/enatyam/" class="facebook-div"><img src="public/images/facebook.png" /></a>
+                    <a href="#" class="youtube-div"><img src="public/images/network.png" /></a>
                 </div>
             </div>
 
@@ -68,11 +90,38 @@
                     <a href="">Chennai</a>
                     <a href="">Mumbai</a>
                     <a href="">Delhi</a>
+                    <a href="">Gurgaon</a>
                     <a href="">Kolkata</a>
                     <a href="">Lucknow</a>
                     <a href="">Ahmedabad</a>
                 </div>
             </div>
+
+            <div class="col-md-12 col-12 mt-3">
+                <div class="footer-links text-center">
+                    <a href="">New York</a>
+                    <a href="">California</a>
+                    <a href="">San Francisco</a>
+                    <a href="">Houston</a>
+                    <a href="">Dallas</a>
+                    <a href="">Atlanta</a>
+                    <a href="">Washington</a>
+                    <a href="">Boston</a>
+                    <a href="">New Jersey</a>
+                    <a href="">Chicago</a>
+                    <a href="">London</a>
+                    <a href="">Amsterdam</a>
+                    <a href="">Sydney</a>
+                    <a href="">Melbourne</a>
+                    <a href="">Abu Dhabi</a>
+
+
+
+
+
+                </div>
+            </div>
+
 
             <div class="col-md-12 col-12 mt-3">
                 <div class="footer-links-sub text-center">
@@ -88,15 +137,23 @@
                 </div>
             </div>
 
+            <div class="col-md-12 col-12 text-center mitechlink">
+                <div class="copyright-p">
+                    <p>© Enatyam / Designed and Developed by <span >❤</span> <a href="https://www.marketingintelligence.tech">MI Tech Solutions
+                            Pvt. Ltd. </a></p>
+                        
+                </div>
+            </div>
+
+        
+
         </div>
+      
     </div>
-    <div class="footer-row text-center ">
-        <div class="copyright-p">
-            <p>© Enatyam / Designed and Developed by <a href="https://www.marketingintelligence.tech">MI Tech Solutions
-                    Pvt. Ltd. </a></p>
-        </div>
-    </div>
+  
+ 
 </footer>
+<div class="footerdiv"></div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard') { ?>
@@ -896,6 +953,138 @@
             });
         });
     </script>
+
+<?php } else if ($page == 'demobooking') { ?>
+
+    
+
+<script>
+    $(document).ready(function () {
+        $(".ageb").click(function () {
+            var buttonValue = $(this).text();
+
+            $("#ageInput").val(buttonValue);
+
+
+            // You can use the buttonValue in further processing or send it to the server, etc.
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(".classd").click(function () {
+            var buttonValue = $(this).text();
+
+            $("#statusc").val(buttonValue);
+
+            // You can use the buttonValue in further processing or send it to the server, etc.
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#demobookingform').validate({
+            rules: {
+                name: {
+                    required: true,
+
+                },
+                email: {
+                    required: true,
+                },
+                phone:{
+                    required : true,
+                },
+                Age1:{
+                    required : true,
+                },
+                exprience: {
+                    required: true,
+
+                },
+                Country: {
+                    required: true,
+                },
+                State:{
+                    required : true,
+                },
+                District:{
+                    required : true,
+                },
+
+                courses_id_d:{
+                    required : true,
+                },
+                sub_courses_id_d: {
+                    required: true,
+
+                },
+                Book_Date: {
+                    required: true,
+                },
+                Start_Time:{
+                    required : true,
+                },
+                End_Time:{
+                    required : true,
+                },
+                
+            },
+            messages: {
+                name: {
+                    required: 'Please enter name.',
+
+                },
+                email: {
+                    required: 'Please enter email.',
+                },
+                phone:{
+                    required: 'Please enter phone no.',
+                },
+                Age1: {
+                    required: 'Please select age.',
+
+                },
+                exprience: {
+                    required: 'Please select exprience.',
+
+                },
+                Country: {
+                    required: 'Please select country.',
+                },
+                State:{
+                    required: 'Please enter state.',
+                },
+                District: {
+                    required: 'Please enter district.',
+
+                },
+
+                courses_id_d: {
+                    required: 'Please select course.',
+
+                },
+                sub_courses_id_d: {
+                    required: 'Please select sub courses.',
+
+                },
+                Book_Date: {
+                    required: 'Please select date.',
+                },
+                Start_Time:{
+                    required: 'Please enter start time.',
+                },
+                End_Time: {
+                    required: 'Please enter end time.',
+
+                },
+            },
+        });
+    });
+</script>
+
 
 
 <?php } else if ($page == 'demo') { ?>

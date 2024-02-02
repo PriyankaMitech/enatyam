@@ -31,9 +31,9 @@ background-color:aqua;
   margin: 0px 20px 0px 0px;
 }
 
-.tophead .loginmenu a:first-child {
+/* .tophead .loginmenu a:first-child {
   border-right: 1px solid #f7f7f7;
-}
+} */
 
 .tophead .loginmenu a {
   color: #fff;
@@ -176,6 +176,13 @@ div {
   color: #ffffff !important;
   /* background: none; */
 }
+.btntft{
+  background-color: #ff1561 !important;
+  padding: 0px 7px !important;
+
+}
+
+
 
 .btndemo:hover {
   background-color: #737373 !important;
