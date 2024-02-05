@@ -5,6 +5,9 @@ body {
   font-family: "Roboto", sans-serif !important;
   scroll-behavior: smooth;
 }
+.MusicSec ,.container-fluid{
+  --bs-gutter-x: 0rem !important;
+}
 
 .tophead {
   position: fixed;
@@ -23,6 +26,47 @@ body {
   font-weight: 500 !important;
   font-size: 14px;
 }
+
+.MusicSec {
+  width: 100%;
+  background-color: black;
+  }
+  
+  .musicText {
+  text-emphasis-color: white;
+  }
+  
+  ul.thumbnailList {
+  font-size: 16px;
+  font-weight: 400;
+  }
+  
+  .HomeVideo {
+  display: block;
+  width: 100%;
+  /* height: auto; */
+  margin-top: 20%;
+  margin-left: 2%;
+  height: 400px;
+  }
+  
+  .dancefimg {
+  width: 100px !important;
+  height: 100px !important;
+  }
+  
+  .studioText {
+  align-items: center;
+  /* margin-bottom: 45px; */
+  margin-bottom: 0px !important;
+  /* color: black; */
+  color: black;
+  /* Set the text color to black */
+  font-size: 47px;
+  font-weight: 800;
+  /* Set the font-weight to bold for emphasis */
+  margin-top: -40px;
+  }
 
 /* .tophead .navbar ul li a:hover{
 background-color:aqua;
