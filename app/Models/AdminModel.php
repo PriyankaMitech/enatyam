@@ -215,33 +215,58 @@ class AdminModel extends Model
             return false;
         }
     }
+    // public function add($data)
+    // {
+    //     //   print_r($data['studentid']);die;
+    //     $builder1 = $this->db->table($this->table2);
+    //     $builder1->set('Assign_Techer_id', $data['faculty_name']);
+    //     $builder1->set('Session_Start_Date', $data['Session_Start_Date']);
+    //     $builder1->where('register_id', $data['studentid']);
+    //     $result1 = $builder1->update();
+
+    //     // Update Assign_Techer_id and Session_Start_Date in table1
+    //     $builder2 = $this->db->table($this->table1);
+    //     $builder2->set('Assign_Techer_id', $data['faculty_name']);
+    //     $builder2->set('Session_Start_Date', $data['Session_Start_Date']);
+    //     $builder2->where('id', $data['studentid']);
+    //     $result2 = $builder2->update();
 
 
+    //     if ($result1 && $result2) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
     public function add($data)
     {
-        //   print_r($data['studentid']);die;
         $builder1 = $this->db->table($this->table2);
         $builder1->set('Assign_Techer_id', $data['faculty_name']);
         $builder1->set('Session_Start_Date', $data['Session_Start_Date']);
         $builder1->where('register_id', $data['studentid']);
         $result1 = $builder1->update();
-
-        // Update Assign_Techer_id and Session_Start_Date in table1
+    
+       
         $builder2 = $this->db->table($this->table1);
         $builder2->set('Assign_Techer_id', $data['faculty_name']);
         $builder2->set('Session_Start_Date', $data['Session_Start_Date']);
         $builder2->where('id', $data['studentid']);
         $result2 = $builder2->update();
-
-
+    
+        
+        $builder3 = $this->db->table('register');
+        $builder3->select('mobile_no');
+        $builder3->where('id',$data['faculty_name']);
+        $query = $builder3->get();
+        $row = $query->getRow();
+    
+        $phoneNumber = $row->mobile_no;
         if ($result1 && $result2) {
-            return true;
+            return $phoneNumber;
         } else {
             return false;
         }
     }
-
-
 
     public function getConductedDemoStatus()
     {
@@ -1312,5 +1337,14 @@ class AdminModel extends Model
             ->get()->getRow();
 
         return !empty($result);
+    }
+
+    public function getMobileNumberById($student_id)
+    {
+        print_r($student_id);die;
+        $wherecond = ['id' => $student_id];
+        $user = $this->getsinglerow('register', $wherecond);
+
+        return ($user) ? $user->mobile_no : null;
     }
 }

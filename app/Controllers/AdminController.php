@@ -121,13 +121,21 @@ class AdminController extends BaseController
     public function AssignTecherToStudent()
     {
         $model = new AdminModel();
-
+    
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
-            $result = $model->add($postData);
-
-            if ($result) {
+            $mobileNumber = $model->add($postData);
+    
+            if ($mobileNumber) {
                 $session = session();
+                $templates = "new_food_menu";
+                $msg = "Your register successfully.";
+                whatsapp($mobileNumber, $templates, $msg);
+                $adminNumber ="7588525387";
+                $templates = "new_food_menu";
+                $msg = "Faculty gave slots.";
+                whatsappadmin($adminNumber, $templates, $msg);
+    
                 $session->setFlashdata('success', 'Faculty assigned successfully!');
                 return redirect()->to('Admindashboard');
             } else {
