@@ -238,82 +238,24 @@ div.dataTables_wrapper div.dataTables_filter input {
                             <tr>
                                 <th>Student Name</th>
                                 <th>Start Time</th>
-                                <th>End Time</th>
+                               
                                 <th>Action</th>
-                                <th>Attendance</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($todaysession as $session) : ?>
                             <tr>
-                                <td><?= $session->full_name; ?></td>
-                                <td><?= formatDate($session->start_time); ?></td>
-                                <td><?= formatDate($session->end_time); ?></td>
+                                <td><?= $session->student_name; ?></td>
+                                <td><?= $session->shedules_time; ?></td>
+                               
                                 <td>
-                                    <form action="join_session.php" method="get">
-                                        <input type="hidden" name="session_id" value="<?= $session->id; ?>">
-                                        <button type="submit" class="btn btn-primary">Join</button>
-                                    </form>
+                                <a href="<?=base_url(); ?>fetchTofacultyShuduleSidebar">Join</a>
                                 </td>
-                                <td>
-                                    <!-- Button to open the modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                        data-target="#attendanceModal<?= $session->id; ?>">
-                                        Take Attendance
-                                    </button>
-                                </td>
+                               
                             </tr>
 
-                            <!-- Modal for each session -->
-                            <div class="modal fade" id="attendanceModal<?= $session->id; ?>" tabindex="-1" role="dialog"
-                                aria-labelledby="attendanceModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="attendanceModalLabel">Attendance for
-                                                <?= $session->full_name; ?></h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="submitAttendance" method="post">
-                                                <div class="form-row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="attendance" id="presentRadio" value="present"
-                                                                checked>
-                                                            <label class="form-check-label" for="presentRadio">
-                                                                Present
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio"
-                                                                name="attendance" id="absentRadio" value="absent">
-                                                            <label class="form-check-label" for="absentRadio">
-                                                                Absent
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-row mt-3">
-                                                    <div class="col">
-                                                        <input type="hidden" name="session_id"
-                                                            value="<?= $session->student_register_id; ?>">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Cancel</button>
-                                                        <button type="submit" class="btn btn-primary">Submit
-                                                            Attendance</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -323,7 +265,6 @@ div.dataTables_wrapper div.dataTables_filter input {
             </div>
 
             <!-- Add a PHP function to format time -->
-            <?php function formatDate($time) { $dateTime = new DateTime($time); return $dateTime->format('H:i');}?>
             <div class="col-md-12 card" id="GroupTableshow" style="display:none">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
@@ -417,29 +358,24 @@ div.dataTables_wrapper div.dataTables_filter input {
                     </div>
                 </div>
                 <div class="card-body">
-                    <?php if (!empty($data)): ?>
+                    <?php if (!empty($conductedClasses)): ?>
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
-                                <th>Join Date</th>
-                                <th>Action</th>
+                                <th>Session no</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($data as $row) : ?>
+                            <?php foreach ($conductedClasses as $rows) : ?>
                             <tr>
-                                <td><?php echo $row['register_id']; ?></td>
-                                <td><?php echo $row['student_name']; ?></td>
-                                <!-- Format the date as day monthname year -->
-                                <td><?php echo date('d F Y', strtotime($row['created_at'])); ?></td>
-                                <td>
-                                    <a href="<?php echo base_url()?>chatuser/<?php echo $row['register_id']; ?>"
-                                        class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
-                                    <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>"
-                                        class="btn btn-sm badge-primary"><i class="fas fa-file-upload"></i></a>
-                                </td>
+                                <td></td>
+                               <td><?php echo $rows->student_name; ?></td>
+                                <td><?php echo $rows->Session_no; ?></td>
+                                <td><?php echo $rows->date; ?></td>
+                               
                             </tr>
                             <?php endforeach; ?>
                         </tbody>

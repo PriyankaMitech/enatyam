@@ -115,7 +115,10 @@ class CarrierController extends BaseController
 
             // echo "<pre>";print_r($data);exit();
 
-
+            $adminNumber = "7588525387";
+            $msg = "new faculty Application resived";
+            $templates = "new_food_menu";
+            whatsappadmin($adminNumber, $templates, $msg);
             $carrierModel->save($data);
             $session = session();
             $session->setFlashdata('success', 'Application has been submitted successfully.');
