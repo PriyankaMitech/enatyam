@@ -143,21 +143,37 @@ class facultymodel extends Model
 
         return $result;
     }
+    // public function gettodayssessiontofaculty($teacherId)
+    // {
+
+    //     $today = date('Y-m-d');
+    //     $dayOfWeek = date('l', strtotime($today));
+
+    //     $query = $this->db->table('schedule')
+    //         ->select('schedule.*, register.full_name') // Select necessary columns
+    //         ->join('register', 'register.id = schedule.student_register_id', 'left') // Perform a left join
+    //         ->where('schedule.faculty_register_id', $teacherId)
+    //         ->where('schedule.Day', $dayOfWeek)
+    //         ->where('schedule.student_register_id >', 0)
+    //         ->get();
+
+    //     return $query->getResult();
+    // }
     public function gettodayssessiontofaculty($teacherId)
     {
+        $currentDay = date('l'); // Get the current day name
 
-        $today = date('Y-m-d');
-        $dayOfWeek = date('l', strtotime($today));
+    $query = $this->db->table('tbl_student_shedule')
+        ->select('tbl_student_shedule.*, register.full_name as student_name')
+        ->join('register', 'register.id = tbl_student_shedule.student_id', 'left')
+        ->where('tbl_student_shedule.faculty_id', $teacherId)
+        ->like('tbl_student_shedule.days', $currentDay, 'both')
+        ->get();
 
-        $query = $this->db->table('schedule')
-            ->select('schedule.*, register.full_name') // Select necessary columns
-            ->join('register', 'register.id = schedule.student_register_id', 'left') // Perform a left join
-            ->where('schedule.faculty_register_id', $teacherId)
-            ->where('schedule.Day', $dayOfWeek)
-            ->where('schedule.student_register_id >', 0)
-            ->get();
+    $result = $query->getResult();
 
-        return $query->getResult();
+    return $result;
+    
     }
     public function getStudentList($registerId)
     {
@@ -186,6 +202,18 @@ class facultymodel extends Model
 
         // echo $this->db->getLastQuery();die;
         return $result;
+    }
+    public function conductedClasses($registerId)
+    {
+        $query = $this->db->table('attendeance_table')
+        ->select('attendeance_table.*, register.full_name as student_name')
+        ->join('register', 'register.id = attendeance_table.student_registerid', 'left')
+        ->where('attendeance_table.faculty_id', $registerId)
+        ->get();
+    $result = $query->getResult();
+
+    return $result;
+    
     }
     public function updateAttendance($sessionId, $attendance, $currentConductedSessions)
     {

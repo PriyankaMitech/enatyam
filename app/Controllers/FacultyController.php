@@ -56,6 +56,8 @@ class FacultyController extends BaseController
         $adminModel = model('AdminModel');
 
         $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
+        
+        // print_r($todaysession);die;
         $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
         $wherecond1 = array('id' => $teacherId);
 
@@ -80,10 +82,12 @@ class FacultyController extends BaseController
 
         $todayDate = date('Y-m-d H:i:s');
         $displayedNotificationCount = 0;
-
+        $conductedClasses= $facultymodel->conductedClasses($teacherId);
+        // print_r($conductedClasses);die;
         return view('faculty', [
           'data' => $data,
           'todaysession' => $todaysession,
+          'conductedClasses'=>$conductedClasses,
           'group_data' => $group_data,
           'notificationCount' => $displayedNotificationCount,
         ]);
@@ -325,7 +329,8 @@ class FacultyController extends BaseController
     $model = new facultymodel();
     $data['studentList'] = $model->getStudentList($registerId);
     $data['GroupList'] = $model->getGroupList($registerId);
-    // print_r($GroupList['GroupList']);die;
+   
+    // print_r($data['conductedClasses']);die;
     //  echo '<pre>'; print_r($data['GroupList']);die;
     return view('FacultysideBar/Studentattendance', $data);
   }
@@ -337,36 +342,18 @@ class FacultyController extends BaseController
     return view('notification');
   }
 
-  // public function submitAttendance()
-  // {
-  //   $model = new Facultymodel();
-
-  //   $data = [
-  //     'student_registerid'  => $this->request->getPost('studentId'),
-  //     'Attendance_status'   => $this->request->getPost('attendance'),
-  //     'Session_no'          => $this->request->getPost('session'),
-  //   ];
-
-  //   $result = $model->insertAttendance($data);
-
-  //   // Check if the insertion was successful
-  //   if ($result) {
-  //     $response = ['success' => true, 'message' => 'Attendance added successfully.'];
-  //   } else {
-  //     $response = ['success' => false, 'message' => 'Attendance not added.'];
-  //   }
-
-  //   // Return the JSON response
-  //   return $this->response->setJSON($response);
-  // }
   public function submitAttendance()
   {
+    $result = session();
+    $registerId = $result->get('id');
+
       $model = new Facultymodel();
       $adminmodel = new AdminModel(); 
       $data = [
           'student_registerid' => $this->request->getPost('studentId'),
           'Attendance_status'  => $this->request->getPost('attendance'),
           'Session_no'         => $this->request->getPost('session'),
+          'faculty_id'         =>$registerId,
       ];
       $result = $model->insertAttendance($data);
       $student_registerid = $this->request->getPost('studentId');
