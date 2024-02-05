@@ -191,6 +191,7 @@ class LoginController extends BaseController
         ]; 
         $affectedRows = $loginModel->updateUserByEmail($email, $data);
         $updatedUserData = $loginModel->getUserByEmail($email);
+
       
     if (isset($updatedUserData['mobile_no'])) {
         // Send WhatsApp message to user
@@ -205,6 +206,7 @@ class LoginController extends BaseController
         $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
         whatsappadmin($adminNumber, $templates, $msg);
     } else {
+
            
         }
         $msg = 'Your registration is done';

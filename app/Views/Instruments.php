@@ -4,7 +4,7 @@
         <video class="video-dance banerforinstuments" controls="false" autoplay="1" loop="1" id="danceVideo">
             <source src="public/images/instrument/instrument-video-1.mp4" type="video/mp4">
         </video>
-        <div class="video-section">
+        <!-- <div class="video-section">
             <div class="row video-row">
                 <div class="col-4 video-col1">
                     <P>We are commited to your</P>
@@ -25,7 +25,7 @@
                     <img src="public/images/instrument/music-pc.svg">
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
     </div>

@@ -6,7 +6,7 @@
 
         </video>
 
-        <div class="video-section">
+        <!-- <div class="video-section">
             <div class="row video-row">
                 <div class="col-4 video-col1">
                     <P>We are commited to your </p>
@@ -23,7 +23,7 @@
                     <img src="public/images/bhangra-3-e1687254641497-132x100.png">
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <section class="mt-4 ">

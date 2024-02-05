@@ -114,11 +114,17 @@
 
                                 </li>
 
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                    <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+                                <?php else : ?>
+                                    <a class="btn btn-primary" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
 
+                                <?php endif; ?>
 
                                 <span style="margin-left: 50px;">
                                     <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
                                 </span>
+
 
 
 
@@ -189,6 +195,12 @@
                                     </span>
 
                                 </li>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+    <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+<?php else : ?>
+    <a class="btn btn-primary" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Book Now</a>
+
+<?php endif; ?>
 
                                 <span style="margin-left: 50px;">
                                     <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
@@ -262,6 +274,12 @@
                                     </span>
 
                                 </li>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+    <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+<?php else : ?>
+    <a class="btn btn-primary" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Book Now</a>
+
+<?php endif; ?>
 
                                 <span style="margin-left: 50px;">
                                     <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
@@ -342,6 +360,12 @@
                                     </span>
 
                                 </li>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+    <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+<?php else : ?>
+    <a class="btn btn-primary" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Book Now</a>
+
+<?php endif; ?>
 
                                 <span style="margin-left: 50px;">
                                     <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
@@ -417,6 +441,12 @@
                                     </span>
 
                                 </li>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+    <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+<?php else : ?>
+    <a class="btn btn-primary" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Book Now</a>
+
+<?php endif; ?>
 
                                 <span style="margin-left: 50px;">
                                     <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
@@ -490,6 +520,13 @@
 
                                 </li>
 
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                    <input class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+                                <?php else : ?>
+                                    <a class="btn btn-primary" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Book Now</a>
+
+                                <?php endif; ?>
+                                                                
                                 <span style="margin-left: 50px;">
                                     <a href="<?=base_url();?>Home#pricing-section" target="_blank">Know More</a>
                                 </span>

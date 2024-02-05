@@ -1,4 +1,5 @@
 <?php include('header.php'); ?>
+
 <!-- <div class="wrapper-container ">
         <div class="video-container">
             <video class="video-dance" controls="0" autoplay="1" loop="1" id="danceVideo">
@@ -20,11 +21,13 @@
 
 <div class="wrapper-container">
     <div class="video-container">
+       
         <video class="video-dance musicv" controls="1" autoplay="0" loop="0">
             <source src="public/images/Music/music.mp4" type="video/mp4">
+
         </video>
 
-        <div class="video-section">
+        <!-- <div class="video-section">
             <div class="row video-row">
                 <div class="col-4 video-col1">
                     <P>We are commited to your </p>
@@ -41,7 +44,7 @@
                     <img src="public/images/banner.svg">
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <section class="btnSection mftm pl-0 ">
