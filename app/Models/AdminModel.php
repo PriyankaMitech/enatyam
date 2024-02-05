@@ -1341,10 +1341,21 @@ class AdminModel extends Model
 
     public function getMobileNumberById($student_id)
     {
-        print_r($student_id);die;
+       // print_r($student_id);die;
         $wherecond = ['id' => $student_id];
         $user = $this->getsinglerow('register', $wherecond);
 
         return ($user) ? $user->mobile_no : null;
     }
+    public function getFacultyAttendance()
+    {
+        return $this->db->table('attendeance_table')
+            ->select('attendeance_table.*, register_faculty.full_name as faculty_name, register_student.full_name as student_name, payment.no_of_session')
+            ->join('register as register_faculty', 'register_faculty.id = attendeance_table.faculty_id', 'left')
+            ->join('register as register_student', 'register_student.id = attendeance_table.student_registerid', 'left')
+            ->join('payment', 'payment.user_id = attendeance_table.student_registerid', 'left')
+            ->get()
+            ->getResult();
+    }
+    
 }

@@ -278,7 +278,7 @@ $routes->post('newpassword', 'StudentController::newpassword');
 $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule');
 
 $routes->get('AdminList', 'AdminController::AdminList');
-
+$routes->get('FacultyAttendance', 'AdminController::FacultyAttendance');
 
 
 // Routes for Faculty
