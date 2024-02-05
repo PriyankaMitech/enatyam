@@ -23,7 +23,7 @@
             <source src="public/images/Yoga/YogaVideo.mp4" type="video/mp4">
         </video>
 
-        <div class="video-section">
+        <!-- <div class="video-section">
             <div class="row video-row">
                 <div class="col-4 video-col1">
                     <P>We are commited to your </p>
@@ -40,7 +40,7 @@
                     <img src="public/images/banner.svg">
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <section class="btnSection1">

@@ -233,7 +233,8 @@ class LoginController extends BaseController
         if (isset($updatedUserData['mobile_no'])) {
             $phoneNumber = $updatedUserData['mobile_no'];
             $templates = "new_food_menu";
-            whatsapp($phoneNumber, $templates);
+            $msg = "your register succesfully";
+            whatsapp($phoneNumber, $templates, $msg);
         } else {
            
         }

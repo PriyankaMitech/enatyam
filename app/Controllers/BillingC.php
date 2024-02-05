@@ -80,6 +80,7 @@ class BillingC extends BaseController
             // $PricingId = $matchingRecords->PricingType_Id;
             $res = $this->session->set('PricingType_Id', $PricingId);
 
+
             $data['matchingRecords'] = $matchingRecords;
 
             return view('Checkout', $data);

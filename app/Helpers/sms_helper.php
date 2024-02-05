@@ -122,7 +122,7 @@ require_once 'src/SMTP.php';
 //         echo $response;
 
 //  }
-function whatsapp($phoneNumber,$templates,$msg,)
+function whatsapp($phoneNumber,$templates,$msg)
 {
  
     $curl = curl_init();
