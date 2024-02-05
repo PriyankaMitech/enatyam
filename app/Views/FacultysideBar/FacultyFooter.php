@@ -643,7 +643,7 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
             },
             error: function (error) {
                 console.log(error);
-                alert('An error occurred while submitting attendance.');
+                location.reload();
             }
         });
     }
