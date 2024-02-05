@@ -965,7 +965,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>Attendance" class="nav-link">
+                                            <a href="<?php echo base_url() ?>FacultyAttendance" class="nav-link">
                                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                                 <p>Attendance</p>
                                             </a>

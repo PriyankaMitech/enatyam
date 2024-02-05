@@ -358,32 +358,37 @@ div.dataTables_wrapper div.dataTables_filter input {
                     </div>
                 </div>
                 <div class="card-body">
-                    <?php if (!empty($conductedClasses)): ?>
-                    <table class="table table-hover text-nowrap">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Session no</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($conductedClasses as $rows) : ?>
-                            <tr>
-                                <td></td>
-                               <td><?php echo $rows->student_name; ?></td>
-                                <td><?php echo $rows->Session_no; ?></td>
-                                <td><?php echo $rows->date; ?></td>
-                               
-                            </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                    <?php else: ?>
-                    <p>No classes found.</p>
-                    <?php endif; ?>
-                </div>
+    <?php if (!empty($conductedClasses)): ?>
+        <table class="table table-hover text-nowrap">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Session no</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $idCounter = 1; // Initialize the ID counter
+                foreach ($conductedClasses as $rows) : ?>
+                    <tr>
+                        <td><?php echo $idCounter; ?></td>
+                        <td><?php echo $rows->student_name; ?></td>
+                        <td><?php echo $rows->Session_no; ?></td>
+                        <td><?php echo date('l F j, Y', strtotime($rows->date)); ?></td>
+                        <td><?php echo date('g:i A', strtotime($rows->date)); ?></td>
+                    </tr>
+                    <?php $idCounter++; // Increment the ID counter ?>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    <?php else: ?>
+        <p>No classes found.</p>
+    <?php endif; ?>
+</div>
+
             </div>
             <div class="modal fade" id="groupListModal" tabindex="-1" role="dialog"
                 aria-labelledby="groupListModalLabel" aria-hidden="true">

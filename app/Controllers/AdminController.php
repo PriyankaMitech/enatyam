@@ -1878,7 +1878,7 @@ class AdminController extends BaseController
 
             if ($email !== null && $password !== null) {
                 $data['schedule_data'] = $model->getstudentslots();
-                //   echo "<pre>";print_r($data['schedule_data']);exit();
+                //    echo "<pre>";print_r($data['schedule_data']);exit();
                 echo view('AdminSideBar/StudentselectedSlots', $data);
             } else {
                 return redirect()->to(base_url());
@@ -1965,5 +1965,12 @@ class AdminController extends BaseController
         } else {
             return json_encode([]);
         }
+    }
+    public function FacultyAttendance()
+    {
+        $model = new AdminModel();
+        $data['attendance'] = $model->getFacultyAttendance();
+        // print_r($data['attendance']);die;
+        echo view('AdminSideBar/FacultyAttendance', $data);;
     }
 }
