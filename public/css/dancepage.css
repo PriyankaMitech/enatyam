@@ -318,3 +318,6 @@ body {
 .heading {
   padding-top: 10%;
 }
+.video-dance.musicv{
+    object-fit: fill;
+  }

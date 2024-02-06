@@ -1569,190 +1569,189 @@
 
 <?php include('bookdemocallb.php'); ?>
 <section class="faq-section">
-    <div class="container cont-width">
-        <div class="row">
-            <div class="col-lg-1 col-md-1 col-12 faqd"><img src="public/images/logo2.png" class="dancefimg" /></div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-12 faqdance">
+<div class="container cont-width">
+<div class="row">
+<div class="col-lg-1 col-md-1 col-12 faqd"><img src="public/images/logo2.png" class="dancefimg" /></div>
+<div class="row">
+<div class="col-lg-6 col-md-6 col-12 faqdance">
 
-                    <div class="accordion">
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
-                                What types of yoga classes do you offer online?
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    We offer a variety of yoga classes online, including vinyasa, hatha, restorative,
-                                    yin,
-                                    and more..</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            Do I need to have any prior experience with yoga to join your online classes?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                No, our online classes are suitable for all levels, from beginner to advanced.</div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            What equipment do I need for online yoga classes?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                You will need a yoga mat and any additional props that your instructor recommends, such
-                                as blocks, straps, or blankets.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            How do I join an online yoga class?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Simply sign up for a class on our website and we will provide you with a link to join
-                                the class online. </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            Can I join a class at any time, or do I need to join at a speciﬁc time? </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Our online classes are offered at speciﬁc times, so you will need to join the class
-                                at the designated time. </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            What if I can't make it to a live online class? </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                We also offer on-demand classes that you can access at any time, so you can
-                                practice yoga on your own schedule.</div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            Is there any special software or technology required to join an online yoga class?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                You will need a device (such as a computer, tablet, or smartphone) with internet
-                                access and a webcam in order to join our online classes. </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            How long are your online yoga classes?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Our classes typically run for 60-90 minutes, depending on the type of class.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
+<div class="">
+        <div class="accordion-item">
+        <div class="accordion-item-header">
+        What types of yoga classes do you offer online?
+        </div>
+        <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+        We offer a variety of yoga classes online, including vinyasa, hatha, restorative, yin,
+        and more..</div>
+        </div>
+        </div>
+</div>
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+Do I need to have any prior experience with yoga to join your online classes?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+No, our online classes are suitable for all levels, from beginner to advanced.</div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+What equipment do I need for online yoga classes?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+You will need a yoga mat and any additional props that your instructor recommends, such
+as blocks, straps, or blankets.
+</div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+How do I join an online yoga class?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+Simply sign up for a class on our website and we will provide you with a link to join
+the class online. </div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+Can I join a class at any time, or do I need to join at a speciﬁc time? </div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+Our online classes are offered at speciﬁc times, so you will need to join the class
+at the designated time. </div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+What if I can't make it to a live online class? </div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+We also offer on-demand classes that you can access at any time, so you can
+practice yoga on your own schedule.</div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+Is there any special software or technology required to join an online yoga class?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+You will need a device (such as a computer, tablet, or smartphone) with internet
+access and a webcam in order to join our online classes. </div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+How long are your online yoga classes?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+Our classes typically run for 60-90 minutes, depending on the type of class.
+</div>
+</div>
+</div>
+<!-- </div> -->
 
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            Can I interact with the instructor during an online class?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Yes, our online classes include interactive elements such as Q&A sessions
-                                and feedback from the instructor. </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            What is online yoga?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Online yoga is the practice of yoga that is done through a virtual platform
-                                like Zoom, Skype, or YouTube. It allows you to practice yoga from the
-                                comfort of your own home.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            What equipment do I need for online yoga?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                All you need is a yoga mat, comfortable clothing, and a stable internet
-                                connection. Some classes may also require additional props like blocks,
-                                straps, and blankets.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            How do I choose the right online yoga class for me?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Consider your experience level, the type of yoga you prefer, and your
-                                goals when choosing an online yoga class. Look for classes that are
-                                tailored to your needs and interests.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            Can I ask questions during an online yoga class?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Yes, most online yoga classes offer the opportunity to ask questions and
-                                receive feedback. You can use the chat feature or unmute yourself to ask
-                                questions during the class. </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">
-                            Is online yoga as effective as in-person yoga?
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Online yoga can be just as effective as in-person yoga, as long as you
-                                have a good internet connection and a dedicated space to practice. Many
-                                online yoga classes offer personalized instruction and modiﬁcations to
-                                help you get the most out of your practice. </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+Can I interact with the instructor during an online class?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+Yes, our online classes include interactive elements such as Q&A sessions
+and feedback from the instructor. </div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+What is online yoga?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+Online yoga is the practice of yoga that is done through a virtual platform
+like Zoom, Skype, or YouTube. It allows you to practice yoga from the
+comfort of your own home.
+</div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+What equipment do I need for online yoga?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+All you need is a yoga mat, comfortable clothing, and a stable internet
+connection. Some classes may also require additional props like blocks,
+straps, and blankets.
+</div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+How do I choose the right online yoga class for me?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+Consider your experience level, the type of yoga you prefer, and your
+goals when choosing an online yoga class. Look for classes that are
+tailored to your needs and interests.
+</div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<div class="accordion-item-header">
+Can I ask questions during an online yoga class?
+</div>
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+Yes, most online yoga classes offer the opportunity to ask questions and
+receive feedback. You can use the chat feature or unmute yourself to ask
+questions during the class. </div>
+</div>
+</div>
+<!-- </div> -->
+<!-- <div class="accordion"> -->
+<div class="accordion-item">
+<!-- <div class="accordion-item-header">
+Is online yoga as effective as in-person yoga?
+</div> -->
+<div class="accordion-item-body">
+<div class="accordion-item-body-content">
+Online yoga can be just as effective as in-person yoga, as long as you
+have a good internet connection and a dedicated space to practice. Many
+online yoga classes offer personalized instruction and modiﬁcations to
+help you get the most out of your practice. </div>
+</div>
+</div>
+</div>
+<!-- </div> -->
 
                 <div class="col-lg-6 col-md-6 col-12 faqdance">
                     <!-- <div class="accordion"> -->
