@@ -52,7 +52,7 @@
                         <a href="<?=base_url(); ?>termsandconditions">Terms and Conditions</a>
                     </li>
                     <li>
-                        <a href="<?=base_url(); ?>refundpolicy">Refund Police</a>
+                        <a href="<?=base_url(); ?>refundpolicy">Refund Policy</a>
                     </li>
                     <li>
                         <a href="<?=base_url(); ?>blog">Blog</a>
@@ -134,6 +134,27 @@
                     <a href="">New Zealand</a>
                     <a href="">India</a>
                     <a href="">Dubai</a>
+                </div>
+            </div>
+
+           
+
+
+            <div class="col-md-12 col-12 mt-3">
+                <div class="social-div text-center">
+                    <!-- <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/e_natyam?s=08" class="twitter-div"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://m.facebook.com/enatyam/" class="facebook-div"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" class="youtube-div"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> -->
+
+                    <img src="public/images/Home/maestro.svg" />
+                    <img src="public/images/Home/payU.svg" />
+                    <img src="public/images/Home/visa.svg" />
+                    <img src="public/images/Home/mastercard.svg" />
+
+              
+                    <img src="public/images/Home/Rupay.svg" />
+                  
                 </div>
             </div>
 

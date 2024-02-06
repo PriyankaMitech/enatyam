@@ -1,9 +1,8 @@
 <?php include('header.php'); ?>
 <div class="wrapper-container">
     <div class="video-container">
-        <video class="video-dance musicv" controls="1" autoplay="0" loop="0">
+        <video class="video-dance musicv" width="100%"  height = "21.5rem%" controls="1" autoplay="0" loop="0">
             <source src="public/images/Dance/DanceVidio.mp4" type="video/mp4">
-
         </video>
 
         <!-- <div class="video-section">
