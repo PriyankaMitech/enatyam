@@ -82,6 +82,7 @@
                 </div>
             </div>
 
+           
             <div class="col-md-12 col-12 mt-3">
                 <div class="footer-links text-center">
                     <a href="">Pune</a>
@@ -137,6 +138,7 @@
                 </div>
             </div>
 
+          
             <div class="col-md-12 col-12 text-center mitechlink">
                 <div class="copyright-p">
                     <p>© Enatyam / Designed and Developed by <span >❤</span> <a href="https://www.marketingintelligence.tech">MI Tech Solutions
@@ -144,6 +146,8 @@
                         
                 </div>
             </div>
+
+            
 
         
 
