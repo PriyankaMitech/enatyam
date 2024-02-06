@@ -2260,7 +2260,7 @@ $(function() {
 
 <?php }else if ($page == 'blog'){ ?>
 
-<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy'|| || $page == 'refundpolicy'){ ?>
+<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'refundpolicy'){ ?>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
