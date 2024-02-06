@@ -1,38 +1,30 @@
 <?php include('header.php'); ?>
 <section class="s_header-section">
-    <div class="container-fluid">
-
-        <!-- image & button -->
-        <div class="row">
-
-            <div class="col-lg-12" style="padding-left:0px">
-                <img src="public/images/image1.png" class="banner" width="100%" />
-                <div class="row">
-
-
+    <div class="container-fluid mt-2">
+        <div class="row mt-5">
+            <div class="col-lg-8 mt-5">
+                <div class="d-flex justify-content-center mt-5">
+               <iframe width="80%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <!-- <div class="col-lg-8 ">
-                    <button class="button-content" role="button">
-                        <span class="button-content-wrapper">
-                            <span class="button-text">Start Now </span>
-                        </span>
-                    </button>
-                    </div> -->
-                <!-- pc image      -->
-                <!-- <div class="col-log-8 col-sm-12 sc_heading text-center">
-                        <p class="title-pc">Your time @ Your Place .</p>
-                        <img decoding="async" width="150" height="100" src="public/image/pc-img.svg"
-                            class="attachment-full size-full wp-image-17039" alt loading="lazy" />
-                    </div> -->
-
             </div>
-            <!--  form  page         -->
-
+            <div class="col-lg-4 mt-3">
+                <!-- <div class="row mt-5"> -->
+                    <!-- <div class="col-lg-6 mt-5">
+                        <img src="public/images/Dance/bharatanatyam2.png" class="img-fluid" alt="Image 2">
+                    </div>
+                    <div class="col-lg-6  mt-5">
+                        <img src="public/images/instrument/c-2.svg" class="img-fluid" alt="Image 3">
+                    </div> -->
+                    <!-- <div class="col-lg-6"> -->
+                        <img src="public/images/Home/1.png" class="img-fluid mt-5" alt="Image 4">
+                    <!-- </div> -->
+                   
+                <!-- </div> -->
+            </div>
         </div>
-
     </div>
-
 </section>
+
 
 
 <div class="howenatyamWorks mt-5">
@@ -77,7 +69,8 @@
                 <p class="hwDesc">Use enatyam SecurePay to pay and start your Classes.</p>
             </div>
             <div class="col-md-4 col-4"></div>
-            <div class="col-md-4 col-4"><a href="<?php echo base_url('demo'); ?>" class="btn btnstart textAlignCen">Get Started</a> </div>
+            <div class="col-md-4 col-4"><a href="<?php echo base_url('demo'); ?>" class="btn btnstart textAlignCen">Get
+                    Started</a> </div>
             <div class="col-md-4 col-4"></div>
         </div>
 
@@ -108,54 +101,54 @@
         <div class="typesOfDance-tab">
 
             <!-- <ul class="row nav nav-pills" id="pills-tab" role="tablist"> -->
-                <!-- Kathak -->
-                <!-- <li class="col-lg-1 nav-item hide">
+            <!-- Kathak -->
+            <!-- <li class="col-lg-1 nav-item hide">
                 </li>
                 <li class="col-lg-2 col-md-3  col-6 nav-item " role="presentation">
                     <button class="nav-link active" id="pills-Kathak-tab" data-bs-toggle="pill" data-bs-target="#pills-Kathak" type="button" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</button>
                 </li> -->
-                <!-- Bharatnatyam -->
-                <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
+            <!-- Bharatnatyam -->
+            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Bharatnatyam-tab" data-bs-toggle="pill" data-bs-target="#pills-Bharatnatyam" type="button" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</button>
                 </li> -->
-                <!-- Bollywood Dance -->
-                <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
+            <!-- Bollywood Dance -->
+            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-BollywoodDance-tab" data-bs-toggle="pill" data-bs-target="#pills-BollywoodDance" type="button" role="tab" aria-controls="pills-BollywoodDance" aria-selected="false">Bollywood Dance</button>
                 </li> -->
-                <!-- Hindustani Vocal -->
-                <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
+            <!-- Hindustani Vocal -->
+            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-HindustaniVocal-tab" data-bs-toggle="pill" data-bs-target="#pills-HindustaniVocal" type="button" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="false">Hindustani Vocal</button>
                 </li> -->
-                <!-- Carnatic Vocal -->
-                <!-- <li class="col-lg-2 col-md-3 col-6 av-item" role="presentation">
+            <!-- Carnatic Vocal -->
+            <!-- <li class="col-lg-2 col-md-3 col-6 av-item" role="presentation">
                     <button class="nav-link" id="pills-CarnaticVocal-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocal" type="button" role="tab" aria-controls="pills-CarnaticVocal" aria-selected="false">Carnatic Vocal</button>
                 </li> -->
-                <!-- Western Singing -->
-                <!-- <li class="col-lg-1 nav-item hide">
+            <!-- Western Singing -->
+            <!-- <li class="col-lg-1 nav-item hide">
                 </li>
                 <li class="col-lg-1 nav-item hide">
                 </li> -->
-                <!-- Western Singing -->
-                <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
+            <!-- Western Singing -->
+            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-WesternSinging-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternSinging" type="button" role="tab" aria-controls="pills-WesternSinging" aria-selected="false">Western Singing</button>
                 </li> -->
-                <!-- Guitar -->
-                <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
+            <!-- Guitar -->
+            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Guitar-tab" data-bs-toggle="pill" data-bs-target="#pills-Guitar" type="button" role="tab" aria-controls="pills-Guitar" aria-selected="false">Guitar</button>
                 </li> -->
-                <!-- Keyboard -->
-                <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
+            <!-- Keyboard -->
+            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Keyboard-tab" data-bs-toggle="pill" data-bs-target="#pills-Keyboard" type="button" role="tab" aria-controls="pills-Keyboard" aria-selected="false">Keyboard</button>
                 </li> -->
-                <!-- Yoga -->
-                <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
+            <!-- Yoga -->
+            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Yoga-tab" data-bs-toggle="pill" data-bs-target="#pills-Yoga" type="button" role="tab" aria-controls="pills-Yoga" aria-selected="false">Yoga</button>
                 </li> -->
-                <!-- Coming Soon -->
-                <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
+            <!-- Coming Soon -->
+            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-ComingSoon-tab" data-bs-toggle="pill" data-bs-target="#pills-ComingSoon" type="button" role="tab" aria-controls="pills-ComingSoon" aria-selected="false">Coming Soon</button>
                 </li> -->
-                <!-- <li class="col-lg-1 nav-item hide">
+            <!-- <li class="col-lg-1 nav-item hide">
                 </li> -->
 
             <!-- </ul>  -->
@@ -173,13 +166,16 @@
                             <h5 class="text-white" style="text-align: center;">Kathak </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php base_url(); ?>public/images/Home/4.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
 
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>3569</p>
                                     </li>
@@ -196,13 +192,16 @@
                             <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
 
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -215,12 +214,15 @@
                             <h5 class="text-white" style="text-align: center;">Bollywood </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Home/1.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -233,12 +235,15 @@
                             <h5 class="text-white" style="text-align: center;">Western Dance </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Home/1.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -251,12 +256,15 @@
                             <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Home/11.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -268,12 +276,15 @@
                             <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Home/11.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -285,12 +296,15 @@
                             <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Home/11.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -302,12 +316,15 @@
                             <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Home/11.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -319,12 +336,15 @@
                             <h5 class="text-white" style="text-align: center;">Yoga </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -336,12 +356,15 @@
                             <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -353,12 +376,15 @@
                             <h5 class="text-white" style="text-align: center;">Nuitritional Guidance </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -370,12 +396,15 @@
                             <h5 class="text-white" style="text-align: center;">Musical Instruments </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/Music/music.png" alt="" style="width: 175px; height: 150px;">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/Music/music.png" alt=""
+                                        style="width: 175px; height: 150px;">
                                 </a>
                             </div>
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
+                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
@@ -434,42 +463,43 @@
                                     <li class="list-inline-item text-white ml-5">⭐</li>
                             </div>
                         </div>-->
-</div>
-</div>
-</div>
+                    </div>
+                </div>
+            </div>
 
 
-<div class="row">
-<div class="col-md-6 col-12">
-<img src="public/images/Home/4.png" class="danceimg1 home">
-<!-- public/images/Home/4.png -->
-</div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <img src="public/images/Home/4.png" class="danceimg1 home">
+                    <!-- public/images/Home/4.png -->
+                </div>
 
-<div class="col-md-6 col-12 text-col mt-5">
-<!-- <h3 class="heading"> - Kathak</h3> -->
-<div class="text-right">
-<div class="h1 text-center">Online Dance Classes</div>
-</div>
-<p class="text-justify text-center mt-5">
-Embark on a dance adventure like never before with
-our diverse range of online classes. Immerse yourself in
-the classical elegance of Kathak, the grace of
-Bharatanatyam, the vibrant energy of Bollywood, and
-the contemporary flair of Western dance forms. Our
-expert instructors bring these styles to life, providing
-personalized guidance in every online session. Whether
-you're a beginner or a seasoned dancer, our platform
-ensures a seamless and enjoyable learning experience.
-Join us and let the rhythm fuel you passion .
+                <div class="col-md-6 col-12 text-col mt-5">
+                    <!-- <h3 class="heading"> - Kathak</h3> -->
+                    <div class="text-right">
+                        <div class="h1 text-center">Online Dance Classes</div>
+                    </div>
+                    <p class="text-justify text-center mt-5">
+                        Embark on a dance adventure like never before with
+                        our diverse range of online classes. Immerse yourself in
+                        the classical elegance of Kathak, the grace of
+                        Bharatanatyam, the vibrant energy of Bollywood, and
+                        the contemporary flair of Western dance forms. Our
+                        expert instructors bring these styles to life, providing
+                        personalized guidance in every online session. Whether
+                        you're a beginner or a seasoned dancer, our platform
+                        ensures a seamless and enjoyable learning experience.
+                        Join us and let the rhythm fuel you passion .
 
-</p>
-<div class="text-center mt-4">
-<a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance" target="_blank">START NOW</a>
-</div>
-</div>
-</div>
+                    </p>
+                    <div class="text-center mt-4">
+                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance" target="_blank">START
+                            NOW</a>
+                    </div>
+                </div>
+            </div>
 
-<div class="MusicSec">
+            <div class="MusicSec">
                 <div class="row m-0">
                     <div class="col-md-6 col-12 text-col mt-5 p-0">
                         <!-- <h3 class="heading"> - Kathak</h3> -->
@@ -492,7 +522,8 @@ Join us and let the rhythm fuel you passion .
                             aspirations reach new heights!
                         </p>
                         <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music" target="_blank">START NOW</a>
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music" target="_blank">START
+                                NOW</a>
                         </div>
                     </div>
 
@@ -522,7 +553,8 @@ Join us and let the rhythm fuel you passion .
                             tranquility meets strength. Seek solace in our expert-led sessions,
                             designed to heal chronic diseases through the therapeutic power of
                             yoga. Complementing our mindful practices is personalized online
-                            nutritional guidance, ensuring a comprehensive approach to your wellbeing. Our renowned faculty, known for their expertise, are dedicated
+                            nutritional guidance, ensuring a comprehensive approach to your wellbeing. Our renowned
+                            faculty, known for their expertise, are dedicated
                             to guiding you towards a harmonious life. Join enatyam for a
                             profound experience that nurtures your mind, body, and soul to
                             achieve optimal wellness.
@@ -530,7 +562,8 @@ Join us and let the rhythm fuel you passion .
 
                         </p>
                         <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga" target="_blank">START NOW</a>
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga" target="_blank">START
+                                NOW</a>
                         </div>
                     </div>
                 </div>
@@ -558,7 +591,8 @@ Join us and let the rhythm fuel you passion .
                             melody begin – learn, play, and create with us!
                         </p>
                         <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments" target="_blank">START NOW</a>
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments"
+                                target="_blank">START NOW</a>
                         </div>
                     </div>
 
@@ -568,7 +602,7 @@ Join us and let the rhythm fuel you passion .
                 </div>
             </div>
 
-                     
+
 
             <!-- <div class="tab-content mt-1" id="pills-tabContent">
                 <Kathak 
@@ -1147,285 +1181,305 @@ Join us and let the rhythm fuel you passion .
 <!-- Happy faces -->
 <!-- superstar slide -->
 <section class="faculty-section mt-5">
-<div class="container cont-width mt-5">
-<div class="row heading-div m-0">
-<div class="col-lg-12 col-12 text-center">
-<h3>Happy Faces
-</h3>
-<span class="line"></span>
+    <div class="container cont-width mt-5">
+        <div class="row heading-div m-0">
+            <div class="col-lg-12 col-12 text-center">
+                <h3>Happy Faces
+                </h3>
+                <span class="line"></span>
 
-</div>
+            </div>
 
-</div>
-<div class="row">
-<div class="col-lg-12">
-<div class="owl-carousel owl-theme">
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/veera.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/veera.jpg" />
-</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/veera.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/veera.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/priti.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/priti.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/priti.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/priti.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/neha.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/neha.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/neha.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/neha.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/priyanka.jpeg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/priyanka.jpeg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/priyanka.jpeg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/priyanka.jpeg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/priya.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/priya.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/priya.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/priya.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/sweta.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/sweta.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/sweta.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/sweta.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/jaya.png" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/jaya.png" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/jaya.png" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/jaya.png" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/ketki.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/ketki.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/ketki.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/ketki.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/Koyali.png" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/Koyali.png" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/Koyali.png" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/Koyali.png" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/krutika.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/krutika.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/krutika.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/krutika.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/Anila.jpeg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/Anila.jpeg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/Anila.jpeg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/Anila.jpeg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/Anika.jpg" />
-</div>
-<div class="happyFaces-div1 mt-2">
-<img src="public/images/Anika.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/Anika.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-2">
+                                <img src="public/images/Anika.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/Ila.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/Ila.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/Ila.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/Ila.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/Samira.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/Samira.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/Samira.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/Samira.jpg" />
+                            </div>
 
-</div>
-</div>
-<div class="item">
-<div class="happyFaces-div">
-<div class="happyFaces-div1 mb-5">
-<img src="public/images/sanjay.jpg" />
-</div>
-<div class="happyFaces-div1 mt-5">
-<img src="public/images/sanjay.jpg" />
-</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="public/images/sanjay.jpg" />
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="public/images/sanjay.jpg" />
+                            </div>
 
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
-                    <section class="stories-section">
-                    <div class="container">
-                    <div class="row">
-                    <div class="sc_heading text-center scm">
-                    Testimonials<span class="line"></span>
-                    </div>
-                    </div>
+<section class="stories-section">
+    <div class="container">
+        <div class="row">
+            <div class="sc_heading text-center scm">
+                Testimonials<span class="line"></span>
+            </div>
+        </div>
 
-                    <div class="line_1">
-                    <div class="row">
-                    
-                    
+        <div class="line_1">
+            <div class="row">
 
 
-                    <!-- </div> -->
-                    
-                    <!-- </div> -->
-                    <div class="col-xs-6 col-md-6 col-lg-6 col-12">
+
+
+                <!-- </div> -->
+
+                <!-- </div> -->
+                <div class="col-xs-6 col-md-6 col-lg-6 col-12">
                     <!-- <div class="col-md-6 col-lg-6 col-12"> -->
                     <div class="row">
-                    <div class="col-md-12 col-lg-12 col-12">
-                    <!-- <div class="ST_Inspire-element ST_Inspire-element-3e3fada ST_Inspire-widget ST_Inspire-widget-video" data-id="3e3fada" data-settings="{"youtube_url":"https:\/\/youtu.be\/LxDF2EzI-8Y","autoplay":"yes","mute":"yes","video_type":"youtube","controls":"yes"}" data-widget_type="video.default"> -->
-                    <!-- <div class="ST_Inspire-widget-container"> -->
-                    <!-- <div class="ST_Inspire-wrapper ST_Inspire-open-inline"> -->
-                    <!-- <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="enatyam kathak student feedback II Swara USA II kathak for beginners II" width="640" height="100%" src="https://www.youtube.com/embed/LxDF2EzI-8Y?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=1" id="widget2"></iframe> -->
-                    <!-- <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Kathak online learning expereince on enatyam II Tia Canada II kids kathak learning from beginners" width="640" height="360" src="https://www.youtube.com/embed/aV_xErXRUYE?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=11" id="widget12"></iframe> -->
-                    <!-- <img src="<?php echo base_url(); ?>public/images/dummy.mp4" /> -->
+                        <div class="col-md-12 col-lg-12 col-12">
 
-                    <video width="100%" height="425" controls>
-                    <source src="<?php echo base_url(); ?>public/images/dummy.mp4" type="video/mp4">
-                    <!-- Your browser does not support the video tag. -->
-                    </video>
+
+                            <video width="100%" height="425" controls>
+                                <source src="<?php echo base_url(); ?>public/images/dummy.mp4" type="video/mp4">
+                                <!-- Your browser does not support the video tag. -->
+                            </video>
+                        </div>
+                        <!-- </div> -->
                     </div>
-                    <!-- </div> -->
-                    </div>
-                    </div>
-                    <div class="col-xs-6 col-md-6 col-lg-6 col-12">
+                </div>
+                <div class="col-xs-6 col-md-6 col-lg-6 col-12">
                     <!-- <div class="col-md-6 col-lg-6 col-12"> -->
                     <div class="row">
-                    <div class="col-md-6 col-lg-6 col-12">
-                    <div class="ST_Inspire-element ST_Inspire-element-6ca1fbd ST_Inspire-widget ST_Inspire-widget-video" data-id="6ca1fbd" data-element_type="widget" data-settings="{"youtube_url":"https:\/\/youtu.be\/qXWNN-sakqk","video_type":"youtube","controls":"yes"}" data-widget_type="video.default">
-                    <div class="ST_Inspire-widget-container">
-                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-                    <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="enatyam kathak student feedback and progressII kids beginners kathak batch II Roohi Delhi" width="640" height="360" src="https://www.youtube.com/embed/qXWNN-sakqk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=3" id="widget4"></iframe>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-12">
-                    <div class="ST_Inspire-element ST_Inspire-element-66164fa ST_Inspire-widget ST_Inspire-widget-video" data-id="66164fa" data-element_type="widget" data-settings="{"youtube_url":"https:\/\/youtu.be\/96eSNaPxFBc","video_type":"youtube","controls":"yes"}" data-widget_type="video.default">
-                    <div class="ST_Inspire-widget-container">
-                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
+                        <div class="col-md-6 col-lg-6 col-12">
+                            <div class="ST_Inspire-element ST_Inspire-element-6ca1fbd ST_Inspire-widget ST_Inspire-widget-video"
+                                data-id="6ca1fbd" data-element_type="widget" data-settings="{"
+                                youtube_url":"https:\/\/youtu.be\/qXWNN-sakqk","video_type":"youtube","controls":"yes"}"
+                                data-widget_type="video.default">
+                                <div class="ST_Inspire-widget-container">
+                                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
+                                        <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            title="enatyam kathak student feedback and progressII kids beginners kathak batch II Roohi Delhi"
+                                            width="640" height="360"
+                                            src="https://www.youtube.com/embed/qXWNN-sakqk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=3"
+                                            id="widget4"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-12">
+                            <div class="ST_Inspire-element ST_Inspire-element-66164fa ST_Inspire-widget ST_Inspire-widget-video"
+                                data-id="66164fa" data-element_type="widget" data-settings="{"
+                                youtube_url":"https:\/\/youtu.be\/96eSNaPxFBc","video_type":"youtube","controls":"yes"}"
+                                data-widget_type="video.default">
+                                <div class="ST_Inspire-widget-container">
+                                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
 
-                    <video width="640" height="260" controls>
-                    <source src="https://www.youtube.com/watch?v=96eSNaPxFBc" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
+                                        <video width="640" height="260" controls>
+                                            <source src="https://www.youtube.com/watch?v=96eSNaPxFBc" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
 
-                    <div class="col-md-6 col-lg-6 col-12">
-                    <div class="ST_Inspire-element ST_Inspire-element-6b952c1 ST_Inspire-widget ST_Inspire-widget-video" data-id="6b952c1" data-element_type="widget" data-settings="{"youtube_url":"https:\/\/youtu.be\/XLAu2-6zcxQ","video_type":"youtube","controls":"yes"}" data-widget_type="video.default">
-                    <div class="ST_Inspire-widget-container">
-                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-                    <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="fatema learning experience on enatyam platform testimonial" width="640" height="360" src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" id="widget8"></iframe>
-                    </div>
-                    </div>
-                    </div>
+                        <div class="col-md-6 col-lg-6 col-12">
+                            <div class="ST_Inspire-element ST_Inspire-element-6b952c1 ST_Inspire-widget ST_Inspire-widget-video"
+                                data-id="6b952c1" data-element_type="widget" data-settings="{"
+                                youtube_url":"https:\/\/youtu.be\/XLAu2-6zcxQ","video_type":"youtube","controls":"yes"}"
+                                data-widget_type="video.default">
+                                <div class="ST_Inspire-widget-container">
+                                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
+                                        <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            title="fatema learning experience on enatyam platform testimonial"
+                                            width="640" height="360"
+                                            src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+                                            id="widget8"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-12">
+                            <div class="ST_Inspire-element ST_Inspire-element-c74e2f6 ST_Inspire-widget ST_Inspire-widget-video"
+                                data-id="c74e2f6" data-element_type="widget" data-settings="{"
+                                youtube_url":"https:\/\/youtu.be\/djM1jTlnLlk","video_type":"youtube","controls":"yes"}"
+                                data-widget_type="video.default">
+                                <div class="ST_Inspire-widget-container">
+                                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
+                                        <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            title="kathak online class #enatyam" width="640" height="360"
+                                            src="https://www.youtube.com/embed/djM1jTlnLlk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=9"
+                                            id="widget10"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="col-md-6 col-lg-6 col-12">
-                    <div class="ST_Inspire-element ST_Inspire-element-c74e2f6 ST_Inspire-widget ST_Inspire-widget-video" data-id="c74e2f6" data-element_type="widget" data-settings="{"youtube_url":"https:\/\/youtu.be\/djM1jTlnLlk","video_type":"youtube","controls":"yes"}" data-widget_type="video.default">
-                    <div class="ST_Inspire-widget-container">
-                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-                    <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="kathak online class #enatyam" width="640" height="360" src="https://www.youtube.com/embed/djM1jTlnLlk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=9" id="widget10"></iframe>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- </div> -->
-                    </div>
-
-                    </div>
+                </div>
 
 
 
 
 
-                    <!-- <div class="col-md-4 col-lg-4 col-12">
+                <!-- <div class="col-md-4 col-lg-4 col-12">
                     <div class="ST_Inspire-element ST_Inspire-element-aa0bc0c ST_Inspire-widget ST_Inspire-widget-video" data-id="aa0bc0c" data-element_type="widget" data-settings="{"youtube_url":"https:\/\/youtu.be\/aV_xErXRUYE","video_type":"youtube","controls":"yes"}" data-widget_type="video.default">
                     <div class="ST_Inspire-widget-container">
                     <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
@@ -1436,14 +1490,14 @@ Join us and let the rhythm fuel you passion .
 
                     </div> -->
 
-                    <!-- <div class="col-md-12 col-lg-12 col-12 ST_Inspire-widget-container2 mb-5">
+                <!-- <div class="col-md-12 col-lg-12 col-12 ST_Inspire-widget-container2 mb-5">
                     <a class="btn join-now-btn" href="<? // php // echo base_url('demo');
                     ?>">Inspired ?<br>Join Now!</a>
                     </div> -->
-                    </div>
-                    </div>
-                    </div>
-                    </section>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!-- Line Sepretor Part -->
@@ -1472,7 +1526,8 @@ Join us and let the rhythm fuel you passion .
 <section class="comming-section" style="display:none">
     <div class="container cont-width">
         <div class="row">
-            <div class="col-lg-12 text-center coming-soon-img "><img src="public/images/logo3.png" width="15%" class="commingsoonimg" /></div>
+            <div class="col-lg-12 text-center coming-soon-img "><img src="public/images/logo3.png" width="15%"
+                    class="commingsoonimg" /></div>
             <div class="col-lg-12" style="padding-left:opx">
                 <div class="accordion-item">
                 </div>
@@ -1490,13 +1545,18 @@ Join us and let the rhythm fuel you passion .
                         </ul>
                     </div>
                     <div class="col-lg-6 col-md-5  ">
-                        <p class="comming-soon-p">Exciting times ahead! We are thrilled to announce that a new <br>subject tailored specifically for kids is on its way to our eLearning<br> platform. Currently in the test phase, this engaging and educational <br> content is designed to spark curiosity and fuel young minds. Stay <br> tuned as we prepare to
+                        <p class="comming-soon-p">Exciting times ahead! We are thrilled to announce that a new
+                            <br>subject tailored specifically for kids is on its way to our eLearning<br> platform.
+                            Currently in the test phase, this engaging and educational <br> content is designed to spark
+                            curiosity and fuel young minds. Stay <br> tuned as we prepare to
                             launch an enriching learning experience for<br> children everywhere!</p>
                         <P class="comming-soon-p">
-                            Join our exclusive test run program and experience the future of education firsthand. Limited spots available!
+                            Join our exclusive test run program and experience the future of education firsthand.
+                            Limited spots available!
                         </P>
                         <P class="comming-soon-p">
-                            write us to be the part of our test run program :<br><b><a href="mailTo:hello@enatyam.com"> hello@enatyam.com</a></b>
+                            write us to be the part of our test run program :<br><b><a href="mailTo:hello@enatyam.com">
+                                    hello@enatyam.com</a></b>
                         </p>
                     </div>
                 </div>
@@ -1693,201 +1753,204 @@ help you get the most out of your practice. </div>
 </div>
 <!-- </div> -->
 
-<div class="col-lg-6 col-md-6 col-12 faqdance">
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
+                <div class="col-lg-6 col-md-6 col-12 faqdance">
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
 
-Is online yoga as effective as in-person yoga?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-Online yoga can be just as effective as in-person yoga, as long as you
-have a good internet connection and a dedicated space to practice. Many
-online yoga classes offer personalized instruction and modiﬁcations to
-help you get the most out of your practice. </div>
-</div>
-</div>
-<!-- </div> -->
+                            Is online yoga as effective as in-person yoga?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Online yoga can be just as effective as in-person yoga, as long as you
+                                have a good internet connection and a dedicated space to practice. Many
+                                online yoga classes offer personalized instruction and modiﬁcations to
+                                help you get the most out of your practice. </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
 
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
 
-Can I practice online yoga if I am a beginner? </div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-Yes, online yoga is suitable for beginners. Many online yoga classes
-offer modiﬁed poses and variations to accommodate different experience
-levels. </div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
+                            Can I practice online yoga if I am a beginner? </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Yes, online yoga is suitable for beginners. Many online yoga classes
+                                offer modiﬁed poses and variations to accommodate different experience
+                                levels. </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
 
-How often should I practice online yoga?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-The frequency of your online yoga practice depends on your goals and
-schedule. It's generally recommended to practice yoga at least 2-3 times
-a week for maximum beneﬁts. </div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
+                            How often should I practice online yoga?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                The frequency of your online yoga practice depends on your goals and
+                                schedule. It's generally recommended to practice yoga at least 2-3 times
+                                a week for maximum beneﬁts. </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
 
-What are the beneﬁts of practicing online yoga?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-The beneﬁts of practicing online yoga are similar to those of in-person
-yoga, including improved ﬂexibility, strength, balance, and stress
-relief. Additionally, practicing yoga from home can save you time and
-money on commuting to a studio.
-</div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
-What would be my batch timing ?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-<ul style="padding-left: 1rem;">
-<li>Age group 6 to 13: 1-4 PM</li>
-<li>Age group 14 to 20: 4-7 PM</li>
-<li>Age group 21 to 45: 7 to 9 PM</li>
-<li>Age group 45+: 6:30-10:30 PM</li>
-<li>International Students (USA/Europe): 8PM to 12PM IST</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
-How many students will be accommodated in a single batch?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-Per batch maximum 6 students will be admitted.
-</div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
-Will the course provide a certificate?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-Yes, we do provide certifications after completion of course.
-</div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
-How to cover up if I missed a session?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-We provide recorded content of the class to cover whatever is missed.
-</div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
-What are the policies for refund if i am not comfortable with the class?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-We have no question asked refund policy and all the balances will be
-transferred within a weeks time. </div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
-What are the minimum qualifications and prerequisites to attend the classes?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-No, minimum qualifications required, anyone above 6+ can attend.
-</div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
-How can I arrange a doubt clearing session?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-You can record your practice video and our mentors will do counselling after every class and give you suggestions if required. </div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
-How do I contact the team in case of any doubts and queries?
-</div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-You can drop a mail at contact@www.enatyam.org and our team will get in touch with you within 24-48 hours.
-</div>
-</div>
-</div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-<div class="accordion-item">
-<div class="accordion-item-header">
-I’ve done the payment but haven’t received the access to my classes yet? </div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-You can drop a mail at contact@www.enatyam.org and our team will get in touch with you within 24-48 hours. </div>
-</div>
-</div>
-</div>
-<!-- </div> -->
-</div>
-</div>
-</div>
+                            What are the beneﬁts of practicing online yoga?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                The beneﬁts of practicing online yoga are similar to those of in-person
+                                yoga, including improved ﬂexibility, strength, balance, and stress
+                                relief. Additionally, practicing yoga from home can save you time and
+                                money on commuting to a studio.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            What would be my batch timing ?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                <ul style="padding-left: 1rem;">
+                                    <li>Age group 6 to 13: 1-4 PM</li>
+                                    <li>Age group 14 to 20: 4-7 PM</li>
+                                    <li>Age group 21 to 45: 7 to 9 PM</li>
+                                    <li>Age group 45+: 6:30-10:30 PM</li>
+                                    <li>International Students (USA/Europe): 8PM to 12PM IST</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            How many students will be accommodated in a single batch?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Per batch maximum 6 students will be admitted.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            Will the course provide a certificate?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Yes, we do provide certifications after completion of course.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            How to cover up if I missed a session?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                We provide recorded content of the class to cover whatever is missed.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            What are the policies for refund if i am not comfortable with the class?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                We have no question asked refund policy and all the balances will be
+                                transferred within a weeks time. </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            What are the minimum qualifications and prerequisites to attend the classes?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                No, minimum qualifications required, anyone above 6+ can attend.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            How can I arrange a doubt clearing session?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                You can record your practice video and our mentors will do counselling after every class
+                                and give you suggestions if required. </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            How do I contact the team in case of any doubts and queries?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                You can drop a mail at contact@www.enatyam.org and our team will get in touch with you
+                                within 24-48 hours.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            I’ve done the payment but haven’t received the access to my classes yet? </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                You can drop a mail at contact@www.enatyam.org and our team will get in touch with you
+                                within 24-48 hours. </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
 
 </section>
 
 
 <!-- The studio that goes with you -->
 <section class="">
-<div class="container">
-<div class="row">
-<!-- <div class="row heading-div m-0"> -->
-<!-- <div class="col-lg-12 col-12 text-center"> -->
-<h1 class="studioText text-center ">The Studio That Moves With You</h1>
-<!-- <span class="line"></span> -->
-<img src="<?php echo base_url(); ?>public/images/Home/GoesWhereverGo!.png" />
-<!-- </div> -->
-<!-- </div> -->
+    <div class="container">
+        <div class="row">
+            <!-- <div class="row heading-div m-0"> -->
+            <!-- <div class="col-lg-12 col-12 text-center"> -->
+            <h1 class="studioText text-center ">The Studio That Moves With You</h1>
+            <!-- <span class="line"></span> -->
+            <img src="<?php echo base_url(); ?>public/images/Home/GoesWhereverGo!.png" />
+            <!-- </div> -->
+            <!-- </div> -->
 
 
-<!-- C:\xampp\htdocs\enatyam\public\images\Home\GoesWherever YouGo!-2.png -->
-</div>
-</div>
+            <!-- C:\xampp\htdocs\enatyam\public\images\Home\GoesWherever YouGo!-2.png -->
+        </div>
+    </div>
 </section>
 
 
