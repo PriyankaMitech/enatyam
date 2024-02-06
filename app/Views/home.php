@@ -27,7 +27,7 @@
 
 
 
-<div class="howenatyamWorks mt-5">
+<div class="howenatyamWorks mt-5" style="display:none">
     <div class="heading text-center">
         <b<h3 class="title-3">How enatyam Works?</h3></b><span class="line"></span>
     </div>
@@ -94,7 +94,7 @@
         <span class="line"></span>
     </div>
 </div>
-<section class="mb-5">
+<section class=" mb-5">
     <div class="container-fluid">
 
         <!-- pills -->
@@ -468,7 +468,7 @@
             </div>
 
 
-            <div class="row">
+            <div class="row p-5">
                 <div class="col-md-6 col-12">
                     <img src="public/images/Home/4.png" class="danceimg1 home">
                     <!-- public/images/Home/4.png -->
@@ -500,7 +500,7 @@
             </div>
 
             <div class="MusicSec">
-                <div class="row m-0">
+                <div class="row m-0 p-5">
                     <div class="col-md-6 col-12 text-col mt-5 p-0">
                         <!-- <h3 class="heading"> - Kathak</h3> -->
                         <div class="text-right">
@@ -534,7 +534,7 @@
                 </div>
             </div>
 
-            <div class="">
+            <div class="p-5">
                 <div class="row m-0">
                     <div class="col-md-6 col-12 p-0">
                         <img src="public/images/Home/14.png" class="danceimg1 home">
@@ -569,7 +569,7 @@
                 </div>
             </div>
 
-            <div class="MusicSec">
+            <div class="MusicSec p-5">
                 <div class="row m-0">
                     <div class="col-md-6 col-12 text-col mt-5 p-0">
                         <!-- <h3 class="heading"> - Kathak</h3> -->
@@ -962,19 +962,16 @@
 <!-- superstar slide -->
 
 
-<section class="faculty-section">
-    <div class="container cont-width">
-        <div class="row heading-div m-0">
-            <div class="col-lg-12 col-12 text-center">
-                <h3>Super Star Faculty
-                </h3>
-                <span class="line"></span>
+<section class="MusicSec faculty-section p-5">
+    <div class="cont-width">
 
-            </div>
-
-        </div>
         <div class="row">
+        <h3 class="text-white p-3" style="text-align:center">Super Star Faculty<br>
+        <span class="line"></span> 
+                </h3>
+                
             <div class="col-lg-12">
+           
                 <div class="owl-carousel owl-theme">
                     <div class="item">
                         <div class="faculty-div">
@@ -982,8 +979,8 @@
                                 <img src="public/images/veera.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Veera</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Veera</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Yoga
                                 </div>
                             </div>
@@ -995,8 +992,8 @@
                                 <img src="public/images/priti.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Priti</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Priti</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Kathak Dance
                                 </div>
                             </div>
@@ -1008,8 +1005,8 @@
                                 <img src="public/images/neha.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Neha</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Neha</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Semi Classical Dance
                                 </div>
                             </div>
@@ -1021,8 +1018,8 @@
                                 <img src="public/images/priyanka.jpeg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Priyanka</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Priyanka</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Kathak Dance
                                 </div>
                             </div>
@@ -1034,8 +1031,8 @@
                                 <img src="public/images/priya.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Priya</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Priya</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Yoga
                                 </div>
                             </div>
@@ -1047,8 +1044,8 @@
                                 <img src="public/images/sweta.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">sweta</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">sweta</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Carnatic Music
                                 </div>
                             </div>
@@ -1060,8 +1057,8 @@
                                 <img src="public/images/jaya.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Jaya</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Jaya</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Bharatanatyam Dance
                                 </div>
                             </div>
@@ -1073,8 +1070,8 @@
                                 <img src="public/images/ketki.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">ketki</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">ketki</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Hindustani Music
                                 </div>
                             </div>
@@ -1086,8 +1083,8 @@
                                 <img src="public/images/Koyali.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Koyali</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Koyali</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Hindustani Music
                                 </div>
                             </div>
@@ -1099,8 +1096,8 @@
                                 <img src="public/images/krutika.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">krutika</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">krutika</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Semi Classical Dance
                                 </div>
                             </div>
@@ -1112,8 +1109,8 @@
                                 <img src="public/images/Anila.jpeg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Anila</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Anila</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Bollywood Dance
                                 </div>
                             </div>
@@ -1125,8 +1122,8 @@
                                 <img src="public/images/Anika.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Anika</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Anika</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Yoga
                                 </div>
                             </div>
@@ -1138,8 +1135,8 @@
                                 <img src="public/images/Ila.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Ila</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Ila</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Bollywood Singing
                                 </div>
                             </div>
@@ -1151,8 +1148,8 @@
                                 <img src="public/images/Samira.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Samira</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Samira</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Yoga
                                 </div>
                             </div>
@@ -1164,8 +1161,8 @@
                                 <img src="public/images/sanjay.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name">Sanjay</div>
-                                <div class="faculty-content-team__member-position">
+                                <div class="faculty-content-team__member-name text-white">Sanjay</div>
+                                <div class="faculty-content-team__member-position text-white">
                                     Yoga
                                 </div>
                             </div>
@@ -1199,6 +1196,7 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/veera.jpg" />
                             </div>
+                            
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/veera.jpg" />
                             </div>
@@ -1366,36 +1364,33 @@
 </section>
 
 
-<section class="stories-section">
+<section class="stories-section MusicSec">
     <div class="container">
-        <div class="row">
-            <div class="sc_heading text-center scm">
-                Testimonials<span class="line"></span>
-            </div>
-        </div>
+
 
         <div class="line_1">
             <div class="row">
 
+            <h3 class="text-white p-3" style="text-align:center"> Testimonials<br>
+        <span class="line"></span> 
+                </h3>
 
 
+             
+                <div class="col-xs-6 col-md-6 col-lg-6 col-12 ">
+                   
 
-                <!-- </div> -->
-
-                <!-- </div> -->
-                <div class="col-xs-6 col-md-6 col-lg-6 col-12">
-                    <!-- <div class="col-md-6 col-lg-6 col-12"> -->
-                    <div class="row">
-                        <div class="col-md-12 col-lg-12 col-12">
-
-
-                            <video width="100%" height="425" controls>
-                                <source src="<?php echo base_url(); ?>public/images/dummy.mp4" type="video/mp4">
-                                <!-- Your browser does not support the video tag. -->
-                            </video>
-                        </div>
-                        <!-- </div> -->
+                    <div >
+                                        <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            title="fatema learning experience on enatyam platform testimonial"
+                                            width="540" height="480"
+                                            src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+                                            id="widget8"></iframe>
                     </div>
+                                  
+                          
+                   
                 </div>
                 <div class="col-xs-6 col-md-6 col-lg-6 col-12">
                     <!-- <div class="col-md-6 col-lg-6 col-12"> -->
@@ -1410,7 +1405,7 @@
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="enatyam kathak student feedback and progressII kids beginners kathak batch II Roohi Delhi"
-                                            width="640" height="360"
+                                            width="640" height="260"
                                             src="https://www.youtube.com/embed/qXWNN-sakqk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=3"
                                             id="widget4"></iframe>
                                     </div>
@@ -1423,12 +1418,13 @@
                                 youtube_url":"https:\/\/youtu.be\/96eSNaPxFBc","video_type":"youtube","controls":"yes"}"
                                 data-widget_type="video.default">
                                 <div class="ST_Inspire-widget-container">
-                                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
-
-                                        <video width="640" height="260" controls>
-                                            <source src="https://www.youtube.com/watch?v=96eSNaPxFBc" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
+                                <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
+                                        <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            title="fatema learning experience on enatyam platform testimonial"
+                                            width="640" height="260"
+                                            src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+                                            id="widget8"></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -1446,7 +1442,7 @@
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="fatema learning experience on enatyam platform testimonial"
-                                            width="640" height="360"
+                                            width="640" height="260"
                                             src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
                                             id="widget8"></iframe>
                                     </div>
@@ -1463,7 +1459,7 @@
                                     <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            title="kathak online class #enatyam" width="640" height="360"
+                                            title="kathak online class #enatyam" width="640" height="260"
                                             src="https://www.youtube.com/embed/djM1jTlnLlk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=9"
                                             id="widget10"></iframe>
                                     </div>
@@ -1568,20 +1564,23 @@
 
 
 <?php include('bookdemocallb.php'); ?>
-<section class="faq-section">
+<section class="faq-section MusicSec">
 <div class="container cont-width">
+<!-- <div class="row">
+<div class="col-lg-1 col-md-1 col-12 faqd"><img src="public/images/logo2.png" class="dancefimg" /></div> -->
 <div class="row">
-<div class="col-lg-1 col-md-1 col-12 faqd"><img src="public/images/logo2.png" class="dancefimg" /></div>
-<div class="row">
+<h3 class="text-white p-3" style="text-align:center"> FAQ<br>
+        <span class="line"></span> 
+                </h3>
 <div class="col-lg-6 col-md-6 col-12 faqdance">
 
 <div class="">
         <div class="accordion-item">
-        <div class="accordion-item-header">
+        <div class="accordion-item-header text-white">
         What types of yoga classes do you offer online?
         </div>
         <div class="accordion-item-body">
-        <div class="accordion-item-body-content">
+        <div class="accordion-item-body-content text-white">
         We offer a variety of yoga classes online, including vinyasa, hatha, restorative, yin,
         and more..</div>
         </div>
@@ -1589,22 +1588,22 @@
 </div>
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 Do I need to have any prior experience with yoga to join your online classes?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 No, our online classes are suitable for all levels, from beginner to advanced.</div>
 </div>
 </div>
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 What equipment do I need for online yoga classes?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 You will need a yoga mat and any additional props that your instructor recommends, such
 as blocks, straps, or blankets.
 </div>
@@ -1613,11 +1612,11 @@ as blocks, straps, or blankets.
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 How do I join an online yoga class?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 Simply sign up for a class on our website and we will provide you with a link to join
 the class online. </div>
 </div>
@@ -1625,10 +1624,10 @@ the class online. </div>
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 Can I join a class at any time, or do I need to join at a speciﬁc time? </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 Our online classes are offered at speciﬁc times, so you will need to join the class
 at the designated time. </div>
 </div>
@@ -1636,10 +1635,10 @@ at the designated time. </div>
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 What if I can't make it to a live online class? </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 We also offer on-demand classes that you can access at any time, so you can
 practice yoga on your own schedule.</div>
 </div>
@@ -1647,11 +1646,11 @@ practice yoga on your own schedule.</div>
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 Is there any special software or technology required to join an online yoga class?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 You will need a device (such as a computer, tablet, or smartphone) with internet
 access and a webcam in order to join our online classes. </div>
 </div>
@@ -1659,11 +1658,11 @@ access and a webcam in order to join our online classes. </div>
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 How long are your online yoga classes?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 Our classes typically run for 60-90 minutes, depending on the type of class.
 </div>
 </div>
@@ -1672,11 +1671,11 @@ Our classes typically run for 60-90 minutes, depending on the type of class.
 
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 Can I interact with the instructor during an online class?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 Yes, our online classes include interactive elements such as Q&A sessions
 and feedback from the instructor. </div>
 </div>
@@ -1684,11 +1683,11 @@ and feedback from the instructor. </div>
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 What is online yoga?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 Online yoga is the practice of yoga that is done through a virtual platform
 like Zoom, Skype, or YouTube. It allows you to practice yoga from the
 comfort of your own home.
@@ -1698,11 +1697,11 @@ comfort of your own home.
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 What equipment do I need for online yoga?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 All you need is a yoga mat, comfortable clothing, and a stable internet
 connection. Some classes may also require additional props like blocks,
 straps, and blankets.
@@ -1712,11 +1711,11 @@ straps, and blankets.
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 How do I choose the right online yoga class for me?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 Consider your experience level, the type of yoga you prefer, and your
 goals when choosing an online yoga class. Look for classes that are
 tailored to your needs and interests.
@@ -1726,11 +1725,11 @@ tailored to your needs and interests.
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<div class="accordion-item-header text-white">
 Can I ask questions during an online yoga class?
 </div>
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 Yes, most online yoga classes offer the opportunity to ask questions and
 receive feedback. You can use the chat feature or unmute yourself to ask
 questions during the class. </div>
@@ -1743,7 +1742,7 @@ questions during the class. </div>
 Is online yoga as effective as in-person yoga?
 </div> -->
 <div class="accordion-item-body">
-<div class="accordion-item-body-content">
+<div class="accordion-item-body-content text-white">
 Online yoga can be just as effective as in-person yoga, as long as you
 have a good internet connection and a dedicated space to practice. Many
 online yoga classes offer personalized instruction and modiﬁcations to
@@ -1756,12 +1755,12 @@ help you get the most out of your practice. </div>
                 <div class="col-lg-6 col-md-6 col-12 faqdance">
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
 
                             Is online yoga as effective as in-person yoga?
                         </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 Online yoga can be just as effective as in-person yoga, as long as you
                                 have a good internet connection and a dedicated space to practice. Many
                                 online yoga classes offer personalized instruction and modiﬁcations to
@@ -1772,11 +1771,11 @@ help you get the most out of your practice. </div>
 
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
 
                             Can I practice online yoga if I am a beginner? </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 Yes, online yoga is suitable for beginners. Many online yoga classes
                                 offer modiﬁed poses and variations to accommodate different experience
                                 levels. </div>
@@ -1785,12 +1784,12 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
 
                             How often should I practice online yoga?
                         </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 The frequency of your online yoga practice depends on your goals and
                                 schedule. It's generally recommended to practice yoga at least 2-3 times
                                 a week for maximum beneﬁts. </div>
@@ -1799,12 +1798,12 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
 
                             What are the beneﬁts of practicing online yoga?
                         </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 The beneﬁts of practicing online yoga are similar to those of in-person
                                 yoga, including improved ﬂexibility, strength, balance, and stress
                                 relief. Additionally, practicing yoga from home can save you time and
@@ -1815,11 +1814,11 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
                             What would be my batch timing ?
                         </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 <ul style="padding-left: 1rem;">
                                     <li>Age group 6 to 13: 1-4 PM</li>
                                     <li>Age group 14 to 20: 4-7 PM</li>
@@ -1833,7 +1832,7 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
                             How many students will be accommodated in a single batch?
                         </div>
                         <div class="accordion-item-body">
@@ -1845,11 +1844,11 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
                             Will the course provide a certificate?
                         </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 Yes, we do provide certifications after completion of course.
                             </div>
                         </div>
@@ -1857,7 +1856,7 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
                             How to cover up if I missed a session?
                         </div>
                         <div class="accordion-item-body">
@@ -1869,11 +1868,11 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
                             What are the policies for refund if i am not comfortable with the class?
                         </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 We have no question asked refund policy and all the balances will be
                                 transferred within a weeks time. </div>
                         </div>
@@ -1881,11 +1880,11 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
                             What are the minimum qualifications and prerequisites to attend the classes?
                         </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 No, minimum qualifications required, anyone above 6+ can attend.
                             </div>
                         </div>
@@ -1893,11 +1892,11 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
                             How can I arrange a doubt clearing session?
                         </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 You can record your practice video and our mentors will do counselling after every class
                                 and give you suggestions if required. </div>
                         </div>
@@ -1905,11 +1904,11 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
                             How do I contact the team in case of any doubts and queries?
                         </div>
                         <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                            <div class="accordion-item-body-content text-white">
                                 You can drop a mail at contact@www.enatyam.org and our team will get in touch with you
                                 within 24-48 hours.
                             </div>
@@ -1918,10 +1917,10 @@ help you get the most out of your practice. </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                     <div class="accordion-item">
-                        <div class="accordion-item-header">
+                        <div class="accordion-item-header text-white">
                             I’ve done the payment but haven’t received the access to my classes yet? </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
+                        <div class="accordion-item-body"> 
+                            <div class="accordion-item-body-content text-white">
                                 You can drop a mail at contact@www.enatyam.org and our team will get in touch with you
                                 within 24-48 hours. </div>
                         </div>
@@ -1936,8 +1935,8 @@ help you get the most out of your practice. </div>
 
 
 <!-- The studio that goes with you -->
-<section class="">
-    <div class="container">
+<section class="p-5">
+    <div class="container pt-5">
         <div class="row">
             <!-- <div class="row heading-div m-0"> -->
             <!-- <div class="col-lg-12 col-12 text-center"> -->
