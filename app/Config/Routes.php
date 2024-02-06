@@ -33,7 +33,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('Contactus', 'Home::Contactus');
-$routes->get('RefundPolicy', 'Home::RefundPolicy');
+$routes->get('refundpolicy', 'Home::RefundPolicy');
 $routes->get('TermsAndConditions', 'Home::TermsAndConditions');
 $routes->get('Career', 'Home::Career');
 

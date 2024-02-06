@@ -52,7 +52,7 @@
                         <a href="<?=base_url(); ?>termsandconditions">Terms and Conditions</a>
                     </li>
                     <li>
-                        <a href="<?=base_url(); ?>refundpolic">Refund Police</a>
+                        <a href="<?=base_url(); ?>refundpolicy">Refund Police</a>
                     </li>
                     <li>
                         <a href="<?=base_url(); ?>blog">Blog</a>
@@ -2257,7 +2257,11 @@ $(function() {
 
 
 
-<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy'|| $page == 'blog'){ ?>
+
+<?php }else if ($page == 'blog'){ ?>
+
+<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy'|| || $page == 'refundpolicy'){ ?>
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
