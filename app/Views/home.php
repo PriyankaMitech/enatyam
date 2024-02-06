@@ -1516,18 +1516,18 @@ Join us and let the rhythm fuel you passion .
 <div class="col-lg-6 col-md-6 col-12 faqdance">
 
 <div class="accordion">
-<div class="accordion-item">
-<div class="accordion-item-header">
-What types of yoga classes do you offer online?
+        <div class="accordion-item">
+        <div class="accordion-item-header">
+        What types of yoga classes do you offer online?
+        </div>
+        <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+        We offer a variety of yoga classes online, including vinyasa, hatha, restorative, yin,
+        and more..</div>
+        </div>
+        </div>
 </div>
-<div class="accordion-item-body">
-<div class="accordion-item-body-content">
-We offer a variety of yoga classes online, including vinyasa, hatha, restorative, yin,
-and more..</div>
-</div>
-</div>
-</div>
-<div class="accordion">
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 Do I need to have any prior experience with yoga to join your online classes?
@@ -1537,8 +1537,8 @@ Do I need to have any prior experience with yoga to join your online classes?
 No, our online classes are suitable for all levels, from beginner to advanced.</div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 What equipment do I need for online yoga classes?
@@ -1550,8 +1550,8 @@ as blocks, straps, or blankets.
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 How do I join an online yoga class?
@@ -1562,8 +1562,8 @@ Simply sign up for a class on our website and we will provide you with a link to
 the class online. </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 Can I join a class at any time, or do I need to join at a speciﬁc time? </div>
@@ -1573,8 +1573,8 @@ Our online classes are offered at speciﬁc times, so you will need to join the 
 at the designated time. </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 What if I can't make it to a live online class? </div>
@@ -1584,8 +1584,8 @@ We also offer on-demand classes that you can access at any time, so you can
 practice yoga on your own schedule.</div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 Is there any special software or technology required to join an online yoga class?
@@ -1596,8 +1596,8 @@ You will need a device (such as a computer, tablet, or smartphone) with internet
 access and a webcam in order to join our online classes. </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 How long are your online yoga classes?
@@ -1608,9 +1608,9 @@ Our classes typically run for 60-90 minutes, depending on the type of class.
 </div>
 </div>
 </div>
-</div>
+<!-- </div> -->
 
-<div class="accordion">
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 Can I interact with the instructor during an online class?
@@ -1621,8 +1621,8 @@ Yes, our online classes include interactive elements such as Q&A sessions
 and feedback from the instructor. </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 What is online yoga?
@@ -1635,8 +1635,8 @@ comfort of your own home.
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 What equipment do I need for online yoga?
@@ -1649,8 +1649,8 @@ straps, and blankets.
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 How do I choose the right online yoga class for me?
@@ -1663,8 +1663,8 @@ tailored to your needs and interests.
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 Can I ask questions during an online yoga class?
@@ -1676,8 +1676,8 @@ receive feedback. You can use the chat feature or unmute yourself to ask
 questions during the class. </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 Is online yoga as effective as in-person yoga?
@@ -1691,10 +1691,10 @@ help you get the most out of your practice. </div>
 </div>
 </div>
 </div>
-</div>
+<!-- </div> -->
 
 <div class="col-lg-6 col-md-6 col-12 faqdance">
-<div class="accordion">
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 
@@ -1708,9 +1708,9 @@ online yoga classes offer personalized instruction and modiﬁcations to
 help you get the most out of your practice. </div>
 </div>
 </div>
-</div>
+<!-- </div> -->
 
-<div class="accordion">
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 
@@ -1722,8 +1722,8 @@ offer modiﬁed poses and variations to accommodate different experience
 levels. </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 
@@ -1736,8 +1736,8 @@ schedule. It's generally recommended to practice yoga at least 2-3 times
 a week for maximum beneﬁts. </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 
@@ -1752,8 +1752,8 @@ money on commuting to a studio.
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 What would be my batch timing ?
@@ -1770,8 +1770,8 @@ What would be my batch timing ?
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 How many students will be accommodated in a single batch?
@@ -1782,8 +1782,8 @@ Per batch maximum 6 students will be admitted.
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 Will the course provide a certificate?
@@ -1794,8 +1794,8 @@ Yes, we do provide certifications after completion of course.
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 How to cover up if I missed a session?
@@ -1806,8 +1806,8 @@ We provide recorded content of the class to cover whatever is missed.
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 What are the policies for refund if i am not comfortable with the class?
@@ -1818,8 +1818,8 @@ We have no question asked refund policy and all the balances will be
 transferred within a weeks time. </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 What are the minimum qualifications and prerequisites to attend the classes?
@@ -1830,8 +1830,8 @@ No, minimum qualifications required, anyone above 6+ can attend.
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 How can I arrange a doubt clearing session?
@@ -1841,8 +1841,8 @@ How can I arrange a doubt clearing session?
 You can record your practice video and our mentors will do counselling after every class and give you suggestions if required. </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 How do I contact the team in case of any doubts and queries?
@@ -1853,8 +1853,8 @@ You can drop a mail at contact@www.enatyam.org and our team will get in touch wi
 </div>
 </div>
 </div>
-</div>
-<div class="accordion">
+<!-- </div> -->
+<!-- <div class="accordion"> -->
 <div class="accordion-item">
 <div class="accordion-item-header">
 I’ve done the payment but haven’t received the access to my classes yet? </div>
@@ -1864,7 +1864,7 @@ You can drop a mail at contact@www.enatyam.org and our team will get in touch wi
 </div>
 </div>
 </div>
-</div>
+<!-- </div> -->
 </div>
 </div>
 </div>

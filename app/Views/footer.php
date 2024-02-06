@@ -1648,6 +1648,9 @@
     <script src="<?= base_url(); ?>public/js/custom.js">
     </script>
     <script>
+          function showcarier(){
+            $('#carier').toggle();
+          }
         function handleSubmit(collapse_val)
 
 

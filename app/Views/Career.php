@@ -30,40 +30,34 @@
 </section>
 <section class="career-main-section ">
     <div class="container ">
+ 
         <div class="row">
-            <div class="col-lg-12 text-center aanidiv">
-
-                <h3>Apply An Instructor
-                </h3>
-                <p class="text-grey">Lorem ipsum dolor sit amet, consectetur
-
-                </p>
-                <span class="line"> </span>
-                <p class="light-grey">Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis
-                    dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis
-                    unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                </p>
+            <h3 class="text-center">If teaching and arts are your passions: join us now ! </h3>
+            <div class="col-md-6 col-12">
+                <img src="public/images/guitar.jpg" class="danceimg1 home">
+            <!-- public/images/Home/4.png -->
             </div>
-        </div>
-    </div>
-</section>
 
-<section class="career-main-section pt-0">
-    <div class="container ">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h3>Steps to become a Faculty</h3>
-                <p class="text-grey">Lorem ipsum dolor sit amet, consectetur</p>
-                <span class="line"> </span>
+            <div class="col-md-6 col-12 text-col mt-5">
+                <h4 class="heading">Leave everything else to us if you can tick right</h4>
+             
+                    <ul class="list-unstyled">
+                        <li class="mt-3"><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Master's degree in performing arts (Dance ,Music or Yoga )</li>
+                        <li class="mt-3"><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Passionate about teaching</li>
+                        <li class="mt-3"><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Reliable internet connectivity </li>
+                        <li class="mt-3"><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Willingness to work in flexible hours</li>
+                    </ul>
+                    
+                
+
+                        <input class="btn btnstart " onclick="showcarier()" type="button"  value="Join Now" />
+
             </div>
-        </div>
-    </div>
-</section>
 
-<div class="demo_page">
+            <div class="demo_page" id="carier" style="display:none">
     <div class="container Faculty demopage">
         <div class="accordion" id="accordionExample">
-            <div class="steps">
+            <!-- <div class="steps">
                 <progress id="progress" class="progressbarcarrier" value=0 max=100></progress>
                 <div class="step-item">
                     <button class="step-button text-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -91,7 +85,7 @@
                 </div>
 
 
-            </div>
+            </div> -->
             <form action="<?php echo base_url(); ?>carrier_h" method="post" enctype="multipart/form-data">
                 <div class="card cards">
                     <div id="headingOne">
@@ -381,6 +375,25 @@
         </div>
     </div>
 </div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- <section class="career-main-section pt-0 mt-5">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>Steps to become a Faculty</h3>
+                <p class="text-grey">Lorem ipsum dolor sit amet, consectetur</p>
+                <span class="line"> </span>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
 <div class="container ">
     <div class="row">
         <div class="col-lg-12 nsrad">
