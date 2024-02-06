@@ -68,6 +68,7 @@ $routes->get('music', 'Home::music');
 $routes->get('Instruments', 'Home::Instruments');
 $routes->get('Yoga', 'Home::Yoga');
 $routes->get('profile', 'Home::Profile');
+$routes->get('blog', 'Home::blog');
 $routes->get('StartNowPricing', 'Home::StartNowPricing');
 $routes->get('home', 'Home::returnhome');
 $routes->get('shop', 'Home::shop'); //i remove for cart issue 

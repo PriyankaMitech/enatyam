@@ -55,7 +55,7 @@
                         <a href="<?=base_url(); ?>refundpolic">Refund Police</a>
                     </li>
                     <li>
-                        <a href="<?=base_url(); ?>Blog">Blog</a>
+                        <a href="<?=base_url(); ?>blog">Blog</a>
                     </li>
                     <li>
                         <a href="<?=base_url(); ?>Investors">Investors</a>
@@ -2144,6 +2144,8 @@ $(function() {
 });
 </script> -->
 
+
+
 <?php } else if ($page == 'Checkout') { ?>
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -2252,14 +2254,14 @@ $(function() {
 
 
 
-<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy'){ ?>
+<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy'|| $page == 'blog'){ ?>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <?php } ?>
 
-
+   
 <script src="<?php echo base_url() ?>public/js/jquery.validate.min.js"></script>
 <script src="<?php echo base_url() ?>public/js/jquery.barrating.min.js"></script>
 
