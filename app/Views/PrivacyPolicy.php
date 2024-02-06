@@ -135,5 +135,3 @@
 
 <hr>
 <?php include('footer.php'); ?>
-
-</html>

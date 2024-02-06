@@ -600,3 +600,13 @@ input[type="checkbox"] {
 .menub {
   text-align: end;
 }
+
+.danceimg1.home {
+  height: 271px;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  width: 400px;
+  margin-left: 15%;
+}
