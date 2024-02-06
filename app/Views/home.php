@@ -1515,7 +1515,7 @@ Join us and let the rhythm fuel you passion .
 <div class="row">
 <div class="col-lg-6 col-md-6 col-12 faqdance">
 
-<div class="accordion">
+<div class="">
         <div class="accordion-item">
         <div class="accordion-item-header">
         What types of yoga classes do you offer online?
@@ -1679,9 +1679,9 @@ questions during the class. </div>
 <!-- </div> -->
 <!-- <div class="accordion"> -->
 <div class="accordion-item">
-<div class="accordion-item-header">
+<!-- <div class="accordion-item-header">
 Is online yoga as effective as in-person yoga?
-</div>
+</div> -->
 <div class="accordion-item-body">
 <div class="accordion-item-body-content">
 Online yoga can be just as effective as in-person yoga, as long as you

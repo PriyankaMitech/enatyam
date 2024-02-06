@@ -341,10 +341,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
 
 
-    <?php }else if($page == 'blog' ){ ?>
-
-    <?php }else if($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'refundpolicy'){
-
+        <?php }else if($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'blog'){
     ?>
 
     <link rel="stylesheet" href="public/css/footer.css">
