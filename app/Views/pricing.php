@@ -365,7 +365,7 @@ $name               = "RazorPay Infovistar";
                                 <form name="razorpay-form" id="razorpay-form" action="<?php echo base_url() ?>payment" method="POST">
                                     <div class="row pricing-card-section">
                                         <div class="col-lg-4">
-                                            <div class="card text-center card-1">
+                                            <div class="card text-center card-4">
                                                 <div class="price-card-head">
                                                     <h3>Basic</h3>
                                                     <span class="line"></span>
@@ -471,7 +471,7 @@ $name               = "RazorPay Infovistar";
 
                                         </div>
                                         <div class="col-lg-4">
-                                            <div class="card text-center card-2">
+                                            <div class="card text-center card-5">
                                                 <div class="price-card-head">
                                                     <h3>Pro</h3>
                                                     <span class="line"></span>
@@ -574,7 +574,7 @@ $name               = "RazorPay Infovistar";
 
                                         </div>
                                         <div class="col-lg-4">
-                                            <div class="card text-center card-3">
+                                            <div class="card text-center card-6">
                                                 <div class="price-card-head">
                                                     <h3>Elite</h3>
                                                     <span class="line"></span>
