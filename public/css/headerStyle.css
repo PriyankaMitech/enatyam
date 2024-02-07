@@ -326,9 +326,9 @@ button:disabled {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
-.owl-item {
-  width: 255.5px !important;
-  margin-right: 10px;
+.owl-item{
+  width: 255.5px !important;;
+  margin-right:146px!important;
 }
 .list-inline-item.thumbnailListItem:not(:last-child) {
   margin-right: 0rem !important;
