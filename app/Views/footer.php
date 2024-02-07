@@ -84,7 +84,7 @@
 
            
             <div class="col-md-12 col-12 mt-3">
-                <div class="footer-links text-center">
+                <div class="footer-links-sub text-center">
                     <a href="">Pune</a>
                     <a href="">Bangalore</a>
                     <a href="">Hyderabad</a>
@@ -99,7 +99,7 @@
             </div>
 
             <div class="col-md-12 col-12 mt-3">
-                <div class="footer-links text-center">
+                <div class="footer-links-sub text-center">
                     <a href="">New York</a>
                     <a href="">California</a>
                     <a href="">San Francisco</a>
@@ -142,11 +142,11 @@
                 </div>
             </div>
 
-            <div class="col-md-12 col-12 text-center mitechlink">
+            <div class="col-md-12 col-12 text-left mitechlink">
                 <div class="copyright-p">
 
-                    <p>© Enatyam / Designed and Developed by 
-                        |
+                        <p>Copyright © 2024 Enatyam  | Powered by 
+                        
                      <a href="https://www.marketingintelligence.tech">MI Tech Solutions
                             Pvt. Ltd. </a></p>
                         

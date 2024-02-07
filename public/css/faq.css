@@ -32,7 +32,7 @@ footer {
   padding: 0px 0rem 0px 0rem;
   min-height: 3.5rem;
   line-height: 1.25rem;
-  font-weight: bold;
+  font-weight: 400;
   display: flex;
   align-items: center;
   position: relative;

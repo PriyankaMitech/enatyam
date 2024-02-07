@@ -174,19 +174,20 @@
 
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItem">
                                         <p>3569</p>
                                     </li>
-                                    <li class="list-inline-item text-white ml-5">4.99</li>
-                                    <li class="list-inline-item text-white">⭐</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white">4.99</li>
+                                    
                             </div>
-
-
-
                         </div>
-
 
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
@@ -200,13 +201,19 @@
 
                             <div class="float-left" style="padding-left: 65px;margin-top:0%">
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItem">
                                         <p>2698</p>
                                     </li>
+                                   
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                                    
                             </div>
                         </div>
 
@@ -226,8 +233,16 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+
+
+
+
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
                             </div>
                         </div>
 
@@ -247,8 +262,13 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white">4.9</li>
+                                    
                             </div>
                         </div>
 
@@ -268,8 +288,13 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                                   
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
@@ -288,8 +313,13 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                                  
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
@@ -308,8 +338,13 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                            
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
@@ -328,8 +363,13 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                                    
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
@@ -348,8 +388,13 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
@@ -368,8 +413,13 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                                 
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
@@ -388,8 +438,13 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                           
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
@@ -408,8 +463,13 @@
                                     <li class="list-inline-item text-white">
                                         <p>2698</p>
                                     </li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                               
                             </div>
                         </div>
                         <!-- <div class="col-lg-3 col-md-4 col-6 mb-5 mt-5">
@@ -426,7 +486,7 @@
                                         <p>2698</p>
                                     </li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                                    <li class="list-inline-item text-white ml-5"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6 mb-5 mt-5">
@@ -443,7 +503,7 @@
                                         <p>2698</p>
                                     </li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                                    <li class="list-inline-item text-white ml-5"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6 mb-5 mt-5">
@@ -460,7 +520,7 @@
                                         <p>2698</p>
                                     </li>
                                     <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5">⭐</li>
+                                    <li class="list-inline-item text-white ml-5"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                             </div>
                         </div>-->
                     </div>
@@ -900,7 +960,7 @@
                     <span class="fas fa-book-reader"></span>
                 </div>
                 <div class="sc-heading">
-                    <h3 class="heading__primary">2. Trial class</h3>
+                    <h3 class="heading__primary">2. Demo class</h3>
                 </div>
                 <div class="desc-icon-box">
                     <div class="desc-content">Book a FREE live demo session.</div>
