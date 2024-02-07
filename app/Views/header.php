@@ -427,15 +427,15 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                 <div class="loginmenu">
                                     
                                 <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh btntft" style="width: auto;">
-                                    Book your free trial
+                                    Book Demo
                                 </a>
                         
-                                    <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
+                                    <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
                                     <a class="login" href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
                                 </div>
                             <?php else : ?>
                                 <div class="loginmenu">
-                                    <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a> -->
+                                    <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
                                     <a class="Dashboard" href="<?php echo base_url(); ?>Dashboard" style="border-right: 1px solid #f7f7f7;">Dashboard</a>
                                     <a class="logout" href="<?php echo base_url(); ?>logout">Logout</a>
                                 </div>

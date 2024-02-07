@@ -41,9 +41,9 @@
                     <li>
                         <a href="<?=base_url(); ?>Contactus"> Contact Us</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="<?=base_url(); ?>Career">Career</a>
-                    </li>
+                    </li> -->
                     
                     <li>
                         <a href="<?=base_url(); ?>PrivacyPolicy">Privacy Policy</a>
@@ -150,7 +150,7 @@
                     <a href="#" class="youtube-div"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> -->
 
                     <img src="public/images/Home/maestro.svg" />
-                    <img src="public/images/Home/payU.svg" />
+                    <!-- <img src="public/images/Home/payU.svg" /> -->
                     <img src="public/images/Home/visa.svg" />
                     <img src="public/images/Home/mastercard.svg" />
 
@@ -163,7 +163,9 @@
 
             <div class="col-md-12 col-12 text-center mitechlink">
                 <div class="copyright-p">
-                    <p>© Enatyam / Designed and Developed by <span >❤</span> <a href="https://www.marketingintelligence.tech">MI Tech Solutions
+                    <p>© Enatyam / Designed and Developed by <span >
+                        |
+                    </span> <a href="https://www.marketingintelligence.tech">MI Tech Solutions
                             Pvt. Ltd. </a></p>
                         
                 </div>
