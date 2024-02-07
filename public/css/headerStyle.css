@@ -162,8 +162,7 @@ div {
   display: block;
   padding: 0.5rem 1rem;
   /* padding: 0.5rem 2rem; */
-  color: #110101 !important;
- 
+  color: #fff !important;
 }
 
 .nav-link:hover {
