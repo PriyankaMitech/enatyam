@@ -44,7 +44,11 @@ class Home extends BaseController
 
         return view('RefundPolicy');
     }
+    public function invester()
+    {
 
+        return view('invester');
+    }
     public function Career()
     {
         $model = new AdminModel();

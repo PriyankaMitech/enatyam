@@ -58,7 +58,7 @@
                         <a href="<?=base_url(); ?>blog">Blog</a>
                     </li>
                     <li>
-                        <a href="<?=base_url(); ?>Investors">Investors</a>
+                        <a href="<?=base_url(); ?>invester">Investors</a>
                     </li>
                 </ul>
             </div>
@@ -163,9 +163,9 @@
 
             <div class="col-md-12 col-12 text-center mitechlink">
                 <div class="copyright-p">
-                    <p>© Enatyam / Designed and Developed by <span >
+                    <p>© Enatyam / Designed and Developed by 
                         |
-                    </span> <a href="https://www.marketingintelligence.tech">MI Tech Solutions
+                     <a href="https://www.marketingintelligence.tech">MI Tech Solutions
                             Pvt. Ltd. </a></p>
                         
                 </div>
@@ -2288,7 +2288,7 @@ $(function() {
 
 
 
-<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'refundpolicy'|| $page == 'blog'){ ?>
+<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'refundpolicy'|| $page == 'blog'|| $page == 'invester'){ ?>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->

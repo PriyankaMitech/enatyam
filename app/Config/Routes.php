@@ -34,6 +34,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('Contactus', 'Home::Contactus');
 $routes->get('refundpolicy', 'Home::RefundPolicy');
+$routes->get('invester', 'Home::invester');
 $routes->get('TermsAndConditions', 'Home::TermsAndConditions');
 $routes->get('Career', 'Home::Career');
 
