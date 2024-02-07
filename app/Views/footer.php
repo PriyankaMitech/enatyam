@@ -41,9 +41,9 @@
                     <li>
                         <a href="<?=base_url(); ?>Contactus"> Contact Us</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="<?=base_url(); ?>Career">Career</a>
-                    </li>
+                    </li> -->
                     
                     <li>
                         <a href="<?=base_url(); ?>PrivacyPolicy">Privacy Policy</a>
@@ -58,7 +58,7 @@
                         <a href="<?=base_url(); ?>blog">Blog</a>
                     </li>
                     <li>
-                        <a href="<?=base_url(); ?>Investors">Investors</a>
+                        <a href="<?=base_url(); ?>invester">Investors</a>
                     </li>
                 </ul>
             </div>
@@ -135,7 +135,7 @@
             <div class="col-md-12 col-12 mt-3">
                 <div class="social-div text-center">
                     <img src="public/images/Home/maestro.svg" />
-                    <img src="public/images/Home/payU.svg" />
+                    <!-- <img src="public/images/Home/payU.svg" /> -->
                     <img src="public/images/Home/visa.svg" />
                     <img src="public/images/Home/mastercard.svg" />
                     <img src="public/images/Home/Rupay.svg" /> 
@@ -144,8 +144,13 @@
 
             <div class="col-md-12 col-12 text-center mitechlink">
                 <div class="copyright-p">
-                    <p>© Enatyam / Designed and Developed by <span >❤</span> <a href="https://www.marketingintelligence.tech">MI Tech Solutions
-                            Pvt. Ltd. </a></p>   
+
+                    <p>© Enatyam / Designed and Developed by 
+                        |
+                     <a href="https://www.marketingintelligence.tech">MI Tech Solutions
+                            Pvt. Ltd. </a></p>
+                        
+
                 </div>
             </div>
         </div>
@@ -2259,7 +2264,7 @@ $(function() {
 
 
 
-<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'refundpolicy'|| $page == 'blog'){ ?>
+<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'refundpolicy'|| $page == 'blog'|| $page == 'invester'){ ?>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
