@@ -12,7 +12,7 @@ class DemoModel extends Model
     public function getTodayDemo($currentDate, $registerId)
     {
         return $this->where('AssignTecher_id', $registerId)
-            ->where('DATE(Book_Date_Time)', $currentDate)
+            ->where('DATE(Book_Date)', $currentDate)
             ->findAll();
     }
     public function getAssignTecherData($registerId)

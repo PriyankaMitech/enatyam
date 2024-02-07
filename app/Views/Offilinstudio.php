@@ -5,7 +5,7 @@
     <div class="container cont-width">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
-                <h1><b>Career</b></h1>
+                <h1><b>OFFLINESTUDIO</b></h1>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
                     <li><i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </li>
                     <li>
-                        Career
+                    Offlinestudio
                     </li>
                 </ul>
             </div>
