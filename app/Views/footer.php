@@ -115,14 +115,8 @@
                     <a href="">Sydney</a>
                     <a href="">Melbourne</a>
                     <a href="">Abu Dhabi</a>
-
-
-
-
-
                 </div>
             </div>
-
 
             <div class="col-md-12 col-12 mt-3">
                 <div class="footer-links-sub text-center">
@@ -138,46 +132,25 @@
                 </div>
             </div>
 
-
-           
-
-
             <div class="col-md-12 col-12 mt-3">
                 <div class="social-div text-center">
-                    <!-- <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><i class="fa fa-instagram"></i></a>
-                    <a href="https://twitter.com/e_natyam?s=08" class="twitter-div"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="https://m.facebook.com/enatyam/" class="facebook-div"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" class="youtube-div"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> -->
-
                     <img src="public/images/Home/maestro.svg" />
                     <img src="public/images/Home/payU.svg" />
                     <img src="public/images/Home/visa.svg" />
                     <img src="public/images/Home/mastercard.svg" />
-
-              
-                    <img src="public/images/Home/Rupay.svg" />
-                  
+                    <img src="public/images/Home/Rupay.svg" /> 
                 </div>
             </div>
-
 
             <div class="col-md-12 col-12 text-center mitechlink">
                 <div class="copyright-p">
                     <p>© Enatyam / Designed and Developed by <span >❤</span> <a href="https://www.marketingintelligence.tech">MI Tech Solutions
-                            Pvt. Ltd. </a></p>
-                        
+                            Pvt. Ltd. </a></p>   
                 </div>
             </div>
-
-            
-
-        
-
         </div>
-      
     </div>
-  
- 
+
 </footer>
 <div class="footerdiv"></div>
 
