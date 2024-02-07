@@ -31,6 +31,7 @@ body {
 .MusicSec {
   width: 100%;
   background-color: black;
+  max-height: 800px;  
 }
 
 .musicText {
@@ -328,7 +329,7 @@ button:disabled {
 }
 .owl-item{
   width: 255.5px !important;;
-  margin-right:146px!important;
+    /* margin-right:146px!important; */
 }
 .list-inline-item.thumbnailListItem:not(:last-child) {
   margin-right: 0rem !important;
