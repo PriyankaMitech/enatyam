@@ -5,7 +5,8 @@ body {
   font-family: "Roboto", sans-serif !important;
   scroll-behavior: smooth;
 }
-.MusicSec ,.container-fluid{
+.MusicSec,
+.container-fluid {
   --bs-gutter-x: 0rem !important;
 }
 
@@ -30,38 +31,38 @@ body {
 .MusicSec {
   width: 100%;
   background-color: black;
-  }
-  
-  .musicText {
+}
+
+.musicText {
   text-emphasis-color: white;
-  }
-  
-  ul.thumbnailList {
+}
+
+ul.thumbnailList {
   font-size: 16px;
   font-weight: 400;
-  }
-  
-  .HomeVideo {
+}
+
+.HomeVideo {
   display: block;
   width: 100%;
   margin-top: 20%;
   margin-left: 2%;
   height: 400px;
-  }
-  
-  .dancefimg {
+}
+
+.dancefimg {
   width: 100px !important;
   height: 100px !important;
-  }
-  
-  .studioText {
+}
+
+.studioText {
   align-items: center;
   margin-bottom: 0px !important;
   color: black;
   font-size: 47px;
   font-weight: 800;
   margin-top: -40px;
-  }
+}
 
 /* .tophead .navbar ul li a:hover{
 background-color:aqua;
@@ -124,7 +125,7 @@ div {
   padding-top: 5px;
 }
 
-.navbar>.container-fluid {
+.navbar > .container-fluid {
   padding: 0px 70px;
 }
 
@@ -162,7 +163,7 @@ div {
   display: block;
   padding: 0.5rem 1rem;
   /* padding: 0.5rem 2rem; */
-  color: #fff !important;
+  color: #fff;
 }
 
 .nav-link:hover {
@@ -174,11 +175,11 @@ div {
   padding-left: 0.5rem;
 }
 
-.tophead .navbar-nav>ul {
+.tophead .navbar-nav > ul {
   font-size: 14px;
 }
 
-.navbar-nav>li {
+.navbar-nav > li {
   float: none;
   display: inline-block;
   zoom: 1;
@@ -195,7 +196,7 @@ div {
   /* margin-left: 100px; */
   font-size: 13px !important;
   font-weight: 400 !important;
-  background-color: #8c52ff !important;
+  background-color: #ff1561 !important;
   line-height: 38px !important;
   /* padding: 5px 25px !important; */
   border-radius: 25px !important;
@@ -208,20 +209,17 @@ div {
   /* margin-left: 100px; */
   font-size: 13px !important;
   font-weight: 400 !important;
-  background-color: #8c52ff !important;
+  background-color: #ff1561 !important;
   line-height: 38px !important;
   padding: 5px 25px !important;
   border-radius: 25px !important;
   color: #ffffff !important;
   /* background: none; */
 }
-.btntft{
+.btntft {
   background-color: #ff1561 !important;
   padding: 0px 7px !important;
-
 }
-
-
 
 .btndemo:hover {
   background-color: #737373 !important;
@@ -272,7 +270,6 @@ div {
 .btn.disabled,
 .btn:disabled,
 fieldset:disabled .btn {
-
   pointer-events: visible;
 }
 
@@ -286,9 +283,9 @@ button:not(:disabled) {
 } */
 
 /* Apply default cursor style when the button is disabled */
-[type=button]:disabled,
-[type=reset]:disabled,
-[type=submit]:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled,
 button:disabled {
   cursor: not-allowed !important;
 }
@@ -296,7 +293,6 @@ button:disabled {
 .error {
   color: #ff0067;
   font-size: 12px;
-
 }
 
 #flash-message-container {
@@ -315,8 +311,6 @@ button:disabled {
   margin-bottom: 10px;
 }
 
-
-
 #flash-success-container {
   position: fixed;
   top: 10px;
@@ -333,8 +327,7 @@ button:disabled {
   margin-bottom: 10px;
 }
 
-.owl-item{
-  width: 255.5px !important;;
-  margin-right:10px;
-
+.owl-item {
+  width: 255.5px !important;
+  margin-right: 10px;
 }
