@@ -240,7 +240,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
             }
         </style>
-    <?php } else if ($page == 'Career') { ?>
+    <?php } else if ($page == 'Career' ||$page == 'Offilinstudio') { ?>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
@@ -505,7 +505,10 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 <a class="nav-link px-2" href="<?php echo base_url('Yoga'); ?>">Yoga</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Career'); ?>">Career</a>
-                <a href="<?php echo base_url('demo'); ?>" class="btn btndemoh mt-2">BOOK YOUR FREE DEMO</a>
+                <a class="nav-link px-2" href="<?php echo base_url('Pricing'); ?>">Pricing</a>
+
+                 <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
+                <a href="<?php echo base_url('demo'); ?>" class="btn btndemoh mt-2">BOOK DEMO</a>
 
             </div>
             <div id="overlay"></div>

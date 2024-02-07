@@ -72,6 +72,11 @@ class Home extends BaseController
 
         return view('termsandconditions');
     }
+    public function Offilinstudio()
+    {
+
+        return view('Offilinstudio');
+    }
     public function Dance()
     {
 

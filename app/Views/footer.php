@@ -1635,7 +1635,7 @@
 
 
 
-<?php } elseif ($page == 'Career') { ?>
+<?php } elseif ($page == 'Career'||$page == 'Offilinstudio') { ?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
@@ -1647,7 +1647,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
 
-
+<script>
+function toggleForm() {
+    var pincode = document.getElementById('inputPassword2').value;
+    if (pincode.trim() === '') {
+        document.getElementById('pincodeError').style.display = 'block';
+        return;
+    }
+    document.getElementById('joinForm').style.display = 'block';
+}
+</script>
 
     <script src="<?= base_url(); ?>public/js/custom.js">
     </script>
