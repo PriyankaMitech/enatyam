@@ -207,7 +207,8 @@ class Home extends BaseController
 
         $data['country_data'] = $model->getalldata('countries', $wherecond1);
 
-        return view('demobooking');
+
+        return view('demobooking',$data);
     }
     public function demo()
     {

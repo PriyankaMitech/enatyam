@@ -88,7 +88,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn">
+                    <section class="learningBtn ">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
