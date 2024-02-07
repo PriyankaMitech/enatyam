@@ -216,7 +216,8 @@ div {
   color: #ffffff !important;
   /* background: none; */
 }
-.btntft {
+.btntft{
+
   background-color: #ff1561 !important;
   padding: 0px 7px !important;
 }
@@ -326,8 +327,11 @@ button:disabled {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
+.owl-item{
+  width: 255.5px !important;;
+  margin-right:10px;
+}
+.list-inline-item.thumbnailListItem:not(:last-child) {
+  margin-right: 0rem!important;
 
-.owl-item {
-  width: 255.5px !important;
-  margin-right: 10px;
 }

@@ -84,7 +84,7 @@
 
            
             <div class="col-md-12 col-12 mt-3">
-                <div class="footer-links text-center">
+                <div class="footer-links-sub text-center">
                     <a href="">Pune</a>
                     <a href="">Bangalore</a>
                     <a href="">Hyderabad</a>
@@ -99,7 +99,7 @@
             </div>
 
             <div class="col-md-12 col-12 mt-3">
-                <div class="footer-links text-center">
+                <div class="footer-links-sub text-center">
                     <a href="">New York</a>
                     <a href="">California</a>
                     <a href="">San Francisco</a>
@@ -142,11 +142,11 @@
                 </div>
             </div>
 
-            <div class="col-md-12 col-12 text-center mitechlink">
+            <div class="col-md-12 col-12 text-left mitechlink">
                 <div class="copyright-p">
 
-                    <p>© Enatyam / Designed and Developed by 
-                        |
+                        <p>Copyright © 2024 Enatyam  | Powered by 
+                        
                      <a href="https://www.marketingintelligence.tech">MI Tech Solutions
                             Pvt. Ltd. </a></p>
                         
@@ -1635,7 +1635,7 @@
 
 
 
-<?php } elseif ($page == 'Career') { ?>
+<?php } elseif ($page == 'Career'||$page == 'Offilinstudio') { ?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
@@ -1647,7 +1647,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
 
-
+<script>
+function toggleForm() {
+    var pincode = document.getElementById('inputPassword2').value;
+    if (pincode.trim() === '') {
+        document.getElementById('pincodeError').style.display = 'block';
+        return;
+    }
+    document.getElementById('joinForm').style.display = 'block';
+}
+</script>
 
     <script src="<?= base_url(); ?>public/js/custom.js">
     </script>

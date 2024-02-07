@@ -334,12 +334,12 @@
                     <p>StudentAttendance</p>
                   </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a href="" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Class</p>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </li>
 
@@ -368,7 +368,7 @@
               </ul>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon 	fa fa-credit-card"></i>
                 <p>
@@ -386,7 +386,7 @@
                 </li>
 
               </ul>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon far fa-comment-dots"></i>
