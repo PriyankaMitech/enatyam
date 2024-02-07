@@ -18,7 +18,7 @@ body {
   /* margin-left: 100px; */
   font-size: 13px;
   font-weight: 400;
-  /* background-color: #8c52ff; */
+  /* background-color: #ff1561; */
   line-height: normal;
   padding: 10px 25px;
   /* padding: 1em 1.5em; */
@@ -38,7 +38,7 @@ body {
 
 .list-inline .active,
 .learning .list-inline .active {
-  background-color: #8c52ff !important;
+  background-color: #ff1561 !important;
 }
 
 .list-inline .bigger {
@@ -132,7 +132,7 @@ body {
 
 .module-text i {
   padding-right: 10px;
-  color: #8c52ff;
+  color: #ff1561;
   padding-top: 5px;
 }
 
@@ -220,7 +220,7 @@ body {
 .typesOfYoga-tab .nav-pills .nav-link.active,
 .typesOfYoga-tab .nav-pills .nav-link.big.active,
 .modulesec .monthtypes.active {
-  background-color: #8c52ff;
+  background-color: #ff1561;
 }
 
 .typesOfYoga-tab .nav-pills .nav-link.big {
@@ -270,7 +270,7 @@ body {
   /* margin-left: 100px; */
   font-size: 13px !important;
   font-weight: 400 !important;
-  background-color: #8c52ff !important;
+  background-color: #ff1561 !important;
   line-height: 38px !important;
   /* padding: 5px 25px !important; */
   border-radius: 25px !important;
