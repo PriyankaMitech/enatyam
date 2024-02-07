@@ -16,6 +16,7 @@
 .ptage{
   background-color: #fff ;
   color: black;
+  border-color: #ff1561;
 }
 .bookdemos{
   padding-top: 10rem;
@@ -54,7 +55,7 @@
 .Step_step__mxxn1 {
 
   font-weight: 600;
-  color: #15cca0;
+  color: #ff1561 ;
 }
 .Step_step__mxxn1 span {
   color: #fff;
@@ -66,7 +67,7 @@
 .age_button
 {
   font-weight: 700;
-    background: #0c9;
+    background: #ff1561;
     color: #fff;
     width: auto;
     margin: 0 10px 10px 0;
@@ -113,5 +114,6 @@ select{
   
 }
 .changec{
-  background-color: #0c9 !important;
+  background-color: #ff1561  !important;
+  border-color: #ff1561 !important;
 }

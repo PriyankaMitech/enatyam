@@ -20,7 +20,7 @@
 
                                         <div class="row fetures text-white">
                                             <div class="col-md-3">
-                                                <img class="fatures" src="public/images/instructors.svg" >
+                                                <img class="fatures" src="public/images/instructors-svg.svg" >
                                                 <span>Top Instructors<span>
                                             </div>
                                             <div class="col-md-3">
@@ -28,11 +28,11 @@
                                                 <span>2 Live classes per week<span>
                                             </div>
                                             <div class="col-md-3">
-                                                <img class="fatures text-white" src="public/images/materials.svg" >
+                                                <img class="fatures text-white" src="public/images/materials-svg.svg" >
                                                 <span>Revision Material<span>
                                             </div>
                                             <div class="col-md-3">
-                                                <img class="fatures text-white" src="public/images/certification.svg" >
+                                                <img class="fatures text-white" src="public/images/certification-svg.svg" >
                                                 <span>Performance & Certificate<span>
                                             </div>
                                         </div>
@@ -71,39 +71,27 @@
                                             <span class="col-md-8">
                                                 <button type="button" class="btn btn-primary ptage ageb">Below 10 Yrs</button>
                                                 <button type="button" class="btn btn-primary ptage ageb" >10-15 Yrs</button>
-                                                <button type="button" class="btn btn-primary ptage ageb" >10-15 Yrs</button>
                                                 <button type="button" class="btn btn-primary ptage ageb" >16-25 Yrs</button>
-
                                                 <button type="button" class="btn btn-primary ptage ageb" >Above 25 Yrs</button>
                                             <span>
                                                 <input type="hidden" id="ageInput" name="Age1">
-
                                         </div>
 
-
                                         <div class="row tpm">
-                                            <span class="col-md-4 text-white fmname">If you learned Any classes* : </span>
+                                            <span class="col-md-4 text-white fmname">Have you learned Any classes*: </span>
                                             <span class="col-md-8 BookingSecondPage_formInput__n8MhF">
                                             <button type="button" class="btn btn-primary ptage classd" >Yes</button>
                                                 <button type="button" class="btn btn-primary ptage classd" >No</button>                                 
                                             <span>
                                             <input type="hidden" id="statusc" name="exprience">
-
-
-                                        </div>
-
-
-
-
-                                        
+                                        </div>                                        
                                     </div>
-            
                                 </div>
                                 <div class="col-md-8">
                                     <div class="Step_step__mxxn1 tpm">Step <!-- -->2<!-- -->&nbsp;:&nbsp;&nbsp;&nbsp;<span>Other Details</span></div>
                                         
                                     <div class="row tpms">
-                                            <span class="col-md-4 text-white fmname">Select Country :* </span>
+                                            <span class="col-md-4 text-white fmname">Select Country* : </span>
 
                                             <div class="col-md-8 form-group slcsfieldsd ">
                                                     <select class="form-control" id="inputCountry" name="Country">
@@ -129,17 +117,12 @@
 
                                     </div>
                                     <div class="row tpm">
-                                        <span class="col-md-4 text-white fmname">State* :</span>
+                                        <span class="col-md-4 text-white fmname">City* :</span>
                                         <span class="col-md-8 BookingSecondPage_formInput__n8MhF">
                                             <input type="text" name="State" value="" >                                      
                                         <span>
                                     </div>
-                                    <div class="row tpm">
-                                        <span class="col-md-4 text-white fmname">District:* :</span>
-                                        <span class="col-md-8 BookingSecondPage_formInput__n8MhF">
-                                            <input type="text" name="District" value="" >                                      
-                                        <span>
-                                    </div>
+
                                     <div class="Step_step__mxxn1 tpm">Step <!-- -->3<!-- -->&nbsp;:&nbsp;&nbsp;&nbsp;<span>Choose a class</span></div>
                                             
                                             
@@ -185,20 +168,18 @@
                                                 <span>
 
                                             </div>
-                                            <div class="row tpm">
+                                            <!-- <div class="row tpm">
                                                 <span class="col-md-4 text-white fmname">Start Time:* :</span>
                                                 <span class="col-md-8 BookingSecondPage_formInput__n8MhF">
                                                     <input type="time" name="Start_Time" value="" >                                      
                                                 <span>
-
-                                            </div>
-                                            <div class="row tpm">
+                                            </div> -->
+                                            <!-- <div class="row tpm">
                                                 <span class="col-md-4 text-white fmname">End Time:* :</span>
                                                 <span class="col-md-8 BookingSecondPage_formInput__n8MhF">
                                                     <input type="time" name="End_Time" value="" >                                      
                                                 <span>
-
-                                            </div>
+                                            </div> -->
 
                                             <div class="BookingSecondPage_stickyBottom__G_tzG tpm">
                                                 <div class="text-white tpm">
