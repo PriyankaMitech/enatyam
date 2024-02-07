@@ -239,9 +239,6 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
 
-
-
-
                                     <li class="list-inline-item text-white ml-5">4.9</li>
                             </div>
                         </div>
@@ -528,7 +525,7 @@
             </div>
 
 
-            <div class="row p-5">
+            <div class="row p-5 MusicSec1">
                 <div class="col-md-6 col-12">
                     <img src="public/images/Home/4.png" class="danceimg1 home">
                     <!-- public/images/Home/4.png -->
@@ -559,8 +556,8 @@
                 </div>
             </div>
 
-            <div class="MusicSec">
-                <div class="row m-0 p-5">
+            <div class="MusicSec MusicSec1">
+                <div class="row m-0     ">
                     <div class="col-md-6 col-12 text-col mt-5 p-0">
                         <!-- <h3 class="heading"> - Kathak</h3> -->
                         <div class="text-right">
@@ -594,7 +591,7 @@
                 </div>
             </div>
 
-            <div class="p-5">
+            <div class="p-5 MusicSec1">
                 <div class="row m-0">
                     <div class="col-md-6 col-12 p-0">
                         <img src="public/images/Home/14.png" class="danceimg1 home">
@@ -629,7 +626,7 @@
                 </div>
             </div>
 
-            <div class="MusicSec p-5">
+            <div class="MusicSec p-5 MusicSec1">
                 <div class="row m-0">
                     <div class="col-md-6 col-12 text-col mt-5 p-0">
                         <!-- <h3 class="heading"> - Kathak</h3> -->

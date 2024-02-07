@@ -31,6 +31,10 @@ body {
 .MusicSec {
   width: 100%;
   background-color: black;
+ 
+}
+.MusicSec1 {
+
   max-height: 800px;  
 }
 
