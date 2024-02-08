@@ -65,8 +65,8 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12 col-12 mt-3">
-                <div class="social-div text-center">
+            <div class="col-md-1 col-12 mt-3 ">
+                <div class="social-div ">
                     <!-- <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><i class="fa fa-instagram"></i></a>
                     <a href="https://twitter.com/e_natyam?s=08" class="twitter-div"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     <a href="https://m.facebook.com/enatyam/" class="facebook-div"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -83,8 +83,8 @@
             </div>
 
            
-            <div class="col-md-12 col-12 mt-3">
-                <div class="footer-links-sub text-center">
+            <div class="col-md-11 col-12 mt-3">
+                <div class="footer-links-sub " style="text-align: center;">
                     <a href="">Pune</a>
                     <a href="">Bangalore</a>
                     <a href="">Hyderabad</a>
@@ -96,10 +96,8 @@
                     <a href="">Lucknow</a>
                     <a href="">Ahmedabad</a>
                 </div>
-            </div>
-
-            <div class="col-md-12 col-12 mt-3">
-                <div class="footer-links-sub text-center">
+         
+                <div class="footer-links-sub mt-4" style="text-align: center;">
                     <a href="">New York</a>
                     <a href="">California</a>
                     <a href="">San Francisco</a>
@@ -116,10 +114,8 @@
                     <a href="">Melbourne</a>
                     <a href="">Abu Dhabi</a>
                 </div>
-            </div>
-
-            <div class="col-md-12 col-12 mt-3">
-                <div class="footer-links-sub text-center">
+          
+                <div class="footer-links-sub mt-4  " style="text-align: center;">
                     <a href="">USA</a>
                     <a href="">Canada</a>
                     <a href="">UK</a>
@@ -142,7 +138,7 @@
                 </div>
             </div>
 
-            <div class="col-md-12 col-12 text-left mitechlink">
+            <div class="col-md-12 col-12 text-center mitechlink">
                 <div class="copyright-p">
 
                         <p>Copyright © 2024 Enatyam  | Powered by 

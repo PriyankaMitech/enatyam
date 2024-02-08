@@ -352,7 +352,7 @@ class StudentController extends BaseController
             $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
             $wherecond = array('faculty_registerid' => $assignTeacherId);
 
-            $data['fshedules'] =  $model->getsinglerow('schedule_list', $wherecond);
+            $data['fshedules'] =  $model->getalldata('schedule_list', $wherecond);
 
             $wherecond = array('faculty_registerid' => $assignTeacherId);
 

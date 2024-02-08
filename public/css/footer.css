@@ -176,7 +176,7 @@ footer {
 .social-div a {
   width: 40px;
   height: 40px;
-  display: inline-block;
+  display: block;
 
   text-align: center;
   line-height: 40px;
@@ -184,6 +184,7 @@ footer {
   color: #fff;
   font-size: 22px;
   margin-right: 15px;
+  margin-bottom:15px
 }
 .social-div img {
   width: 43px;
@@ -191,22 +192,22 @@ footer {
 
 .insta-div {
   background: #8d9187;
-  margin-top: 45px;
+  /* margin-top: 45px; */
 }
 
 .twitter-div {
   background: #33a6df;
-  margin-top: 45px;
+  /* margin-top: 45px; */
 }
 
 .facebook-div {
   background: #4e658d;
-  margin-top: 45px;
+  /* margin-top: 45px; */
 }
 
 .youtube-div {
   background: #d13220;
-  margin-top: 45px;
+  /* margin-top: 45px; */
 }
 
 .footer-links a {
@@ -224,8 +225,9 @@ footer .mt-3 {
 .footer-links-sub a {
   color: #fff;
   font-size: 15px;
-  margin-right: 14px;
-  margin-top: 45px;
+  margin-right: 25px;
+  /* margin-top: 45px; */
+  line-height: 36px;
 }
 
 footer a {

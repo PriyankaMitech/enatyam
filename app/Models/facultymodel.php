@@ -323,4 +323,15 @@ class facultymodel extends Model
             ->where('register_id', $studentId)
             ->update(['video_name' => $videoFilename]);
     }
+    public function insertshedule($data)
+    {
+        return $this->db->table('schedule_list')->insert($data);
+    }
+    public function getslots($session_id)
+    {
+        return $this->db->table('schedule_list')
+        ->where('faculty_registerid', $session_id)
+        ->get()
+        ->getResultArray();
+    }
 }
