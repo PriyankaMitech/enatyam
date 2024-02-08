@@ -10,9 +10,9 @@
                             <input type="hidden" name="id" value="<?php echo esc($session_id); ?>">
                             <!-- Day Selection, Start Date, and End Date in one row -->
                             <div class="col">
-                                <div class="form-group mt-4">
+                                <div class="form-group">
                                     <label for="day" class="form-label">Select Day:</label>
-                                    <select id="day" name="day" class="form-select">
+                                    <select id="day" name="day" class="form-select form-control">
                                         <option>select</option>
                                         <option value="Monday">Monday</option>
                                         <option value="Tuesday">Tuesday</option>
