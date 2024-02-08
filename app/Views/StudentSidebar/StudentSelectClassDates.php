@@ -33,12 +33,23 @@
 
 
                                                 <?php if (!empty($single)) { ?>
-                                                <?php if (!empty($fshedules)) : ?>
+                                                <?php if (!empty($fshedules)) :
+                                                    // echo "<pre>";print_r($fshedules);exit();
+                                                    ?>
+                                                  <?php 
+                                                                    $selectedDays = array(); // Initialize an empty array to store all days
+
+                                                                    foreach($fshedules as $data) {
+                                                                        $selectedDays = array_merge($selectedDays, explode(',', $data->days)); // Merge days from each iteration
+                                                                    }
+
+                                                                    $selectedDays = array_unique($selectedDays);
+
+                                                                    ?>
                                                    
                                                         <div class="form-group mb-2">
                                                             <label class="control-label">Select Day's</label>
                                                             <?php
-                                                            $selectedDays = explode(',', $fshedules->days); // Assuming $fshedules contains your data
                                                             $selectedDays1 = explode(',', $single->days);
                                                             $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
@@ -58,8 +69,18 @@
                                                         <?php if (!empty($fshedules)) : ?>
                                                             <div class="form-group mb-2">
                                                                 <label class="control-label">Select Day's</label>
+                                                                <?php 
+                                                                    $selectedDays = array(); // Initialize an empty array to store all days
+
+                                                                    foreach($fshedules as $data) {
+                                                                        $selectedDays = array_merge($selectedDays, explode(',', $data->days)); // Merge days from each iteration
+                                                                    }
+
+                                                                    $selectedDays = array_unique($selectedDays);
+
+                                                                    ?>
+
                                                                 <?php
-                                                                $selectedDays = explode(',', $fshedules->days); // Assuming $fshedules contains your data
                                                                 $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
                                                                 foreach ($allDays as $day) :
@@ -185,13 +206,23 @@ var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 <script>
 $(document).ready(function() {
     var selectedDays = [];
-    var addedTimeSlots = [];
+var addedTimeSlots = [];
 
-    $('input[name="days[]"]').on('change', function() {
-        // selectedDays = [];
+$('input[name="days[]"]').on('change', function() {
+    // Clear the selectedDays array
+    selectedDays = [];
 
-        fetchData(selectedDays);
+    // Loop through all checked checkboxes and add their values to selectedDays
+    $('input[name="days[]"]:checked').each(function() {
+        selectedDays.push($(this).val());
     });
+
+    // var_dump(selectedDays); // Output variable information for debugging
+// alert(selectedDays);
+
+    // Now you have an array of the values of the selected days (selectedDays)
+    fetchData(selectedDays);
+});
 
 
     // function resetDropdownAndFetchData() {
@@ -225,12 +256,14 @@ $(document).ready(function() {
     }
 
 function fetchData(selectedDays) {
+    // alert(selectedDays);
+    
     $.ajax({
         url: '<?= base_url(); ?>get_shedule_data_for_student',
         type: 'POST',
         data: {
-            selectedDays: selectedDays,
-        },
+    selectedDays: selectedDays
+},
         dataType: 'json',
         success: function (data) {
             if (!Array.isArray(data)) {
