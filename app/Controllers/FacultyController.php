@@ -709,4 +709,42 @@ class FacultyController extends BaseController
     // Show the page even if session data is not set
     return view('StudentuplodedVidio', ['dataFound' => false]);
   }
+  public function fshedule()
+  {
+    $result = session();
+    $session_id = $result->get('id');
+    $model = new facultymodel();
+    $data['session_id'] = $session_id;
+    $data['myslots']= $model->getslots($session_id);
+   // print_r($data['myslots']);die;
+    echo view('FacultysideBar/facultyshudule',$data);
+  }
+
+public function saveshedule()
+{
+ // print_r($_POST);die;
+  $id =  $this->request->getPost('id');
+  $day = $this->request->getPost('day');
+  $start_date = $this->request->getPost('start_date');
+  $end_date = $this->request->getPost('end_date');
+  $start_time = $this->request->getPost('start_time');
+  $end_time = $this->request->getPost('end_time');
+
+  // Prepare the data to be inserted
+  $data = [
+     'faculty_registerid'=>$id,
+      'days' => $day,
+      'start_date' => $start_date,
+      'end_date' => $end_date,
+      'start_time' => $start_time,
+      'end_time' => $end_time
+  ];
+
+  // Insert the data into the database using the model
+  $model = new facultymodel();
+  $model->insertshedule($data); 
+  return redirect()->to('fshedule');
 }
+}
+  
+

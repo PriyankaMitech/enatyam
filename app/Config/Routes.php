@@ -295,6 +295,10 @@ $routes->get('FacultyDashboard', 'FacultyController::fetchDataByAssignTeacherId'
 $routes->post('save_schedule_data', 'FacultyController::save_schedule_data');
 $routes->post('checkData', 'FacultyController::checkData');
 $routes->get('giveschedule', 'FacultyController::giveschedule');
+$routes->get('fshedule', 'FacultyController::fshedule');
+$routes->post('saveshedule', 'FacultyController::saveshedule');
+$routes->get('saveshedule', 'FacultyController::saveshedule');
+
 $routes->post('giveschedule', 'FacultyController::giveschedule');
 $routes->post('sendmeetinglink', 'FacultyController::sendmeetinglink');
 $routes->post('setlinkforgroup', 'FacultyController::setlinkforgroup');
