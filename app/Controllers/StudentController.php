@@ -541,6 +541,14 @@ class StudentController extends BaseController
     public function get_shedule_data_for_student()
     {
 
+//         $postData = $this->request->getPost();
+// echo "<pre>"; print_r($postData); exit();
+        $selectedDays = $this->request->getPost('selectedDays');
+
+        // echo "hiii";
+
+        // echo "<pre>";print_r($selectedDays);exit();
+
         $result = session();
         $registerId = $result->get('id');
 
@@ -553,7 +561,8 @@ class StudentController extends BaseController
         if (!empty($Sheduledatafromfaculty)) {
             $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
         }
-        $selectedDays = $this->request->getPost('selectedDays');
+      
+
         $currentYear = date('Y');
         $currentMonth = date('m');
         $startDate = "{$currentYear}-{$currentMonth}-01 00:00:00";
@@ -565,8 +574,7 @@ class StudentController extends BaseController
             'start_date >= ' => $startDate,
             'end_date <= ' => $endDate,
         ];
-
-        // echo "<pre>";print_r($selectedDays);exit();
+// echo $this->request->getPost('selectedDays');
 
         $shedule_data = $model->getalldataforstudent('schedule_list', $wherecond, $selectedDays);
 
