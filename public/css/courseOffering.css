@@ -83,13 +83,11 @@ body {
   font-weight: 400;
 }
 .danceimg1.home {
-
   height: 400px;
   max-width: 100%;
   border: none;
   border-radius: 0;
   box-shadow: none;
   width: 400px;
-  margin-top: 5%;
   margin-left: 15%;
-  }
+}

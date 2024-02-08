@@ -21,12 +21,14 @@ class DemoController extends BaseController
             'Age' => $this->request->getPost('Age1'),
             'exprience' => $this->request->getPost('exprience'),
             'Country' => $this->request->getPost('Country'),
-            'State' => $this->request->getPost('State'),
-            'District' => $this->request->getPost('District'),
+            'city' => $this->request->getPost('city'),
+
+            // 'State' => $this->request->getPost('State'),
+            // 'District' => $this->request->getPost('District'),
             // 'Book_Date_Time' => $this->request->getPost('Book_Date_Time')
             'Book_Date' => $this->request->getPost('Book_Date'),
-            'Start_Time' => $this->request->getPost('Start_Time'),
-            'End_Time' => $this->request->getPost('End_Time'),
+            // 'Start_Time' => $this->request->getPost('Start_Time'),
+            // 'End_Time' => $this->request->getPost('End_Time'),
 
         ];
         // echo "<pre>";

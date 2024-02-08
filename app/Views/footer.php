@@ -174,7 +174,7 @@
     <script>
         $('.owl-carousel').owlCarousel({
             loop: true,
-            margin: 10,
+            margin: 38,
             nav: true,
             dots: false,
             autoplay: true,
@@ -186,6 +186,8 @@
                 0: {
                     items: 1
                 },
+
+                
                 600: {
                     items: 2
                 },
@@ -439,7 +441,7 @@
                     items: 3
                 },
                 1000: {
-                    items: 3
+                    items: 4
                 }
             }
         })

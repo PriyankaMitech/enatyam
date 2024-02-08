@@ -231,12 +231,24 @@
   width: 100%;
   border-top: 0.1px solid rgba(0, 0, 0, 0.01);
 }
-
+.omcd {
+  padding: 3% 3% 0% 3%;
+}
 .heading-div h3 {
-  font-size: 30px;
+  font-size: 33px;
   font-weight: 600;
   color: #000;
   font-family: "Roboto Slab", serif !important;
+}
+.MusicSec1 .h1 {
+  font-size: 33px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.heading_new .title_4 {
+  font-size: 33px;
+  font-weight: 600;
 }
 
 /* Stories CSS  */
@@ -271,7 +283,9 @@
   height: 6cm;
 }
 
-.ST_Inspire-widget-video .ST_Inspire-open-inline .ST_Inspire-custom-embed-image-overlay {
+.ST_Inspire-widget-video
+  .ST_Inspire-open-inline
+  .ST_Inspire-custom-embed-image-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -286,7 +300,10 @@
   text-align: center;
 }
 
-.ST_Inspire-widget-video .ST_Inspire-custom-embed-image-overlay:hover .ST_Inspire-custom-embed-play i {
+.ST_Inspire-widget-video
+  .ST_Inspire-custom-embed-image-overlay:hover
+  .ST_Inspire-custom-embed-play
+  i {
   opacity: 1;
 }
 
@@ -300,8 +317,8 @@
   object-fit: cover;
 }
 
-.e-con-inner>.ST_Inspire-widget-video,
-.e-con>.ST_Inspire-widget-video {
+.e-con-inner > .ST_Inspire-widget-video,
+.e-con > .ST_Inspire-widget-video {
   width: var(--container-widget-width);
   --flex-grow: var(--container-widget-flex-grow);
 }
@@ -377,21 +394,21 @@
 
 .Alp-number-suffix {
   text-align: left;
-  font-size: 35px;
+  font-size: 15px;
   flex-grow: 1;
   white-space: pre-wrap;
 }
 
 .Alp-title {
   text-align: center;
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2;
   color: #ffffff;
 }
 
 .counter-value {
-  font-size: 40px;
+  font-size: 20px;
 }
 
 /* .Alp {
@@ -407,7 +424,7 @@
   min-height: 1px;
   position: relative;
   --widgets-spacing: 20px;
-  padding: 25px;
+  padding: 15px;
   /* margin-bottom: 30px; */
 }
 
@@ -429,20 +446,37 @@
   margin-bottom: 30px;
   margin-top: 65px;
 }
-
+.linessf {
+  margin-top: 8px;
+}
+.hpb {
+  height: 900px;
+}
+.MusicSec h3 {
+  font-size: 33px;
+  font-weight: 600;
+}
+/* .faculty-div {
+  margin: 5%;
+} */
 /* <!-- How To Get Started CSS --> */
-
+.hft h3 {
+  padding-left: 50px;
+  /* text-align: center; */
+}
+.hft p {
+  padding-top: 10px;
+}
 .how_Started-section {
   background-color: #fad32c;
 }
 
 .icon {
-  background-color: #8c52ff;
-
+  background-color: #ff1561;
   font-size: 20px;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
   border-style: none;
   margin-left: 56px;
   border-radius: 100% 100% 100% 100%;
@@ -450,7 +484,7 @@
 
 icon:hover {
   /* Set your hover styles here */
-  background-color: #FF0067;
+  background-color: #ff0067;
   /* Set your desired background color on hover */
 }
 
@@ -466,20 +500,16 @@ icon:hover {
 
 .heading__primary {
   text-transform: none;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 29px;
   margin-top: 4px;
-  margin-bottom: 15px;
 }
 
 .desc-content {
   text-transform: none;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 25px;
-  margin-top: 4px;
-  margin-bottom: 50px;
+  font-size: 13px;
+  line-height: 21px;
   font-family: "Roboto Slab", Sans-serif;
   color: #47625a;
 }

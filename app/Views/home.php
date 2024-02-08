@@ -1,25 +1,18 @@
 <?php include('header.php'); ?>
 <section class="s_header-section">
     <div class="container-fluid mt-2">
-        <div class="row mt-5">
-            <div class="col-lg-8 mt-5">
-                <div class="d-flex justify-content-center mt-5">
-               <iframe width="80%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <div class="row ">
+            <div class="col-lg-8 p-5">
+                <div class="bannervs">
+                    <video class="video-dance bannerv"  controls="1" autoplay="0" loop="0">
+                        <source src="public/images/Dance/DanceVidio.mp4" type="video/mp4">
+                    </video>                
                 </div>
             </div>
-            <div class="col-lg-4 mt-3">
-                <!-- <div class="row mt-5"> -->
-                    <!-- <div class="col-lg-6 mt-5">
-                        <img src="public/images/Dance/bharatanatyam2.png" class="img-fluid" alt="Image 2">
-                    </div>
-                    <div class="col-lg-6  mt-5">
-                        <img src="public/images/instrument/c-2.svg" class="img-fluid" alt="Image 3">
-                    </div> -->
-                    <!-- <div class="col-lg-6"> -->
-                        <img src="public/images/Home/1.png" class="img-fluid mt-5" alt="Image 4">
-                    <!-- </div> -->
-                   
-                <!-- </div> -->
+            <div class="col-lg-4">
+            <div class="banneris">
+                <img src="public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
+                </div>
             </div>
         </div>
     </div>
@@ -172,7 +165,7 @@
                                 </a>
                             </div>
 
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -199,7 +192,7 @@
                                 </a>
                             </div>
 
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -226,7 +219,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -252,7 +245,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -278,7 +271,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -303,7 +296,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -328,7 +321,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -353,7 +346,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;">
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -378,7 +371,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -403,7 +396,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;">
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -428,7 +421,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -453,7 +446,7 @@
                                         style="width: 175px; height: 150px;">
                                 </a>
                             </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
+                            <div class="float-left cimgb" style="display:none;" >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
@@ -469,63 +462,13 @@
                                
                             </div>
                         </div>
-                        <!-- <div class="col-lg-3 col-md-4 col-6 mb-5 mt-5">
-                            <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                            <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="#" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/175x125" alt="">
-                                </a>
-                            </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
-                                        <p>2698</p>
-                                    </li>
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6 mb-5 mt-5">
-                            <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                            <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="#" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/175x125" alt="">
-                                </a>
-                            </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
-                                        <p>2698</p>
-                                    </li>
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6 mb-5 mt-5">
-                            <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                            <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="#" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/175x125" alt="">
-                                </a>
-                            </div>
-                            <div class="float-left" style="padding-left: 65px;margin-top:0%">
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2" aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
-                                        <p>2698</p>
-                                    </li>
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white ml-5"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                            </div>
-                        </div>-->
+                      
                     </div>
                 </div>
             </div>
 
 
-            <div class="row p-5 MusicSec1">
+            <div class="row p-3 MusicSec1">
                 <div class="col-md-6 col-12">
                     <img src="public/images/Home/4.png" class="danceimg1 home">
                     <!-- public/images/Home/4.png -->
@@ -534,9 +477,9 @@
                 <div class="col-md-6 col-12 text-col mt-5">
                     <!-- <h3 class="heading"> - Kathak</h3> -->
                     <div class="text-right">
-                        <div class="h1 text-center">Online Dance Classes</div>
-                    </div>
-                    <p class="text-justify text-center mt-5">
+                        <div class="h1">Online Dance Classes</div>
+                   </div>
+                    <p class="text-justify">
                         Embark on a dance adventure like never before with
                         our diverse range of online classes. Immerse yourself in
                         the classical elegance of Kathak, the grace of
@@ -557,13 +500,13 @@
             </div>
 
             <div class="MusicSec MusicSec1">
-                <div class="row m-0     ">
-                    <div class="col-md-6 col-12 text-col mt-5 p-0">
+                <div class="row m-0 omcd">
+                    <div class="col-md-6 col-12 text-col p-0">
                         <!-- <h3 class="heading"> - Kathak</h3> -->
                         <div class="text-right">
-                            <div class="h1 text-center text-white">Online Music Classes</div>
+                            <div class="h1  text-white">Online Music Classes</div>
                         </div>
-                        <p class="text-justify text-white text-center mt-5">
+                        <p class="text-justify text-white ">
                             Dive into the soulful world of Indian music with our
                             diverse online classes. Elevate your vocal prowess with
                             Hindustani and Carnatic vocal classes, where classical
@@ -591,19 +534,19 @@
                 </div>
             </div>
 
-            <div class="p-5 MusicSec1">
+            <div class="p-3 MusicSec1">
                 <div class="row m-0">
                     <div class="col-md-6 col-12 p-0">
                         <img src="public/images/Home/14.png" class="danceimg1 home">
 
                     </div>
 
-                    <div class="col-md-6 col-12 text-col mt-5 p-0">
+                    <div class="col-md-6 col-12 text-col mt-3 p-0">
                         <!-- <h3 class="heading"> - Kathak</h3> -->
                         <div class="text-right">
-                            <div class="h1 text-center">Online Yoga Classes</div>
+                            <div class="h1 ">Online Yoga Classes</div>
                         </div>
-                        <p class="text-justify text-center mt-5">
+                        <p class="text-justify ">
                             Embark on a transformative journey with our online platform, offering
                             a holistic blend of yoga, meditation, and nutritional guidance. Immerse
                             yourself in rejuvenating online yoga and meditation classes, where
@@ -626,14 +569,14 @@
                 </div>
             </div>
 
-            <div class="MusicSec p-5 MusicSec1">
-                <div class="row m-0">
-                    <div class="col-md-6 col-12 text-col mt-5 p-0">
+            <div class="MusicSec MusicSec1">
+                <div class="row m-0 omcd">
+                    <div class="col-md-6 col-12 text-col p-0">
                         <!-- <h3 class="heading"> - Kathak</h3> -->
-                        <div class="text-right mb-5">
-                            <div class="h1 text-center text-white mb-5">Online Music Instruments Classes</div>
+                        <div class="text-right ">
+                            <div class="h1 text-white">Online Music Instruments Classes</div>
                         </div>
-                        <p class=" text-justify text-white text-center mt-5">
+                        <p class="text-justify text-white ">
                             Strum, Pluck, and Play: Unleash Your Musical Potential
                             Online!
                             Discover the joy of playing musical instruments with our
@@ -658,179 +601,13 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <!-- <div class="tab-content mt-1" id="pills-tabContent">
-                <Kathak 
-                <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <img src="public/images/Home/kathak.svg" class="danceimg home">
-                        </div>
-
-                        <div class="col-md-6 col-12 text-col mt-5">
-                            <h3 class="heading"> - Kathak</h3>
-                            <p class="">
-                                Looking for the best online Kathak classes with a comprehensive syllabus? Look no further than our platform! Our online Kathak classes are designed to provide you with an immersive learning experience that will help you master this beautiful dance form. Our syllabus covers everything from the basics of footwork and hand gestures to complex choreography and improvisation techniques. With our experienced instructors and state-of-the-art technology, you can learn Kathak from the comfort of your own home and at your own pace. Join us today and discover the joy of Kathak dancing!
-                            </p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 bhratnatyam 
-                <div class="tab-pane fade show" id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <img src="public/images/Home/bharatnatyam.svg" class="danceimg home">
-                        </div>
-                        <div class="col-md-6 col-12 text-col mt-5">
-                            <h3 class="heading"> - Bharatnatyam</h3>
-                            <p>
-                                Experience the grace and beauty of Bharatanatyam with our online dance classes! Our syllabus covers the fundamentals of this ancient Indian classical dance form, from basic postures and hand gestures to complex choreography and improvisation techniques. Our experienced instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn Bharatanatyam from the comfort of your own home and at your own pace. Join our community of dancers today and discover the rich cultural heritage and artistry of Bharatanatyam! </p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-             Bollywood Dance 
-                <div class="tab-pane fade show" id="pills-BollywoodDance" role="tabpanel" aria-labelledby="pills-BollywoodDance-tab">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <img src="public/images/Home/bollywood-dance.png" class="danceimg home">
-                        </div>
-                        <div class="col-md-6 col-12 text-col mt-5">
-                            <h3 class="heading"> - Bollywood Dance</h3>
-                            <p>
-                                Ready to add some Bollywood ﬂair to your dance routine? Our online Bollywood dance classes have got you covered! Our expert instructors will guide you through everything from basic steps to complex choreography, helping you master the signature moves of Bollywood dance. Our comprehensive syllabus includes techniques for Bollywood-style footwork, hand gestures, and facial expressions, as well as tips for incorporating your own personal style into your dancing. With our ﬂexible scheduling and convenient online platform, you can learn Bollywood dance from anywhere, at any time. Join us today and start moving to the beat of Bollywood!</p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               HindustaniVocal
-                <div class="tab-pane fade show" id="pills-HindustaniVocal" role="tabpanel" aria-labelledby="pills-HindustaniVocal-tab">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <img src="public/images/Home/hindustani-vocal.png" class="danceimg home">
-                        </div>
-
-                        <div class="col-md-6 col-12 text-col mt-5">
-                            <h3 class="heading"> - Hindustani Vocal</h3>
-                            <p>
-                                Looking for an immersive and authentic Hindustani vocal learning experience? Join our Online Hindustani Vocal Class today! Unlock the rich heritage of Indian classical music from the comfort of your home. Our expert instructors provide comprehensive lessons tailored to all skill levels, whether you’re a beginner or advanced learner. Explore the intricacies of ragas, taal, and classical techniques while honing your voice and expression. With interactive virtual sessions, personalized feedback, and a supportive community, you’ll experience remarkable progress in no time. Embark on a soulful journey into the realm of Hindustani music. Enroll in our Online Hindustani Vocal Class and discover the beauty of this ancient art form. </p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                CarnaticVocal
-                <div class="tab-pane fade show" id="pills-CarnaticVocal" role="tabpanel" aria-labelledby="pills-CarnaticVocal-tab">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <img src="public/images/Home/carnatic-vocal.svg" class="danceimg home">
-                        </div>
-
-                        <div class="col-md-6 col-12 text-col mt-5">
-                            <h3 class="heading"> - Carnatic Vocal</h3>
-                            <p>
-                                Embark on a melodious journey through the divine sounds of Carnatic music with our Online Carnatic Vocal Class. Discover the rich heritage and intricate nuances of this classical South Indian art form from the comfort of your own home. Our experienced instructors provide comprehensive lessons for all skill levels, from beginners to advanced learners. Dive deep into the world of ragas, talas, and improvisation, while refining your vocal technique and expression. With interactive virtual sessions, personalized guidance, and a supportive community, you’ll witness remarkable progress in your Carnatic vocal skills. Enroll in our Online Carnatic Vocal Class today and unleash your musical talent. </p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                Western Singing 
-                <div class="tab-pane fade show" id="pills-WesternSinging" role="tabpanel" aria-labelledby="pills-WesternSinging-tab">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <img src="public/images/Home/western.png" class="danceimg home">
-                        </div>
-
-                        <div class="col-md-6 col-12 text-col mt-5">
-                            <h3 class="heading"> - Western Singing</h3>
-                            <p>
-                                Unleash your inner diva and elevate your singing skills with our Online Western Singing Class. Whether you’re a beginner or an experienced vocalist, our comprehensive virtual lessons cater to all skill levels. Discover the fundamentals of Western singing, including vocal technique, breath control, pitch, and expression. From pop to rock, jazz to R&B, our expert instructors will guide you through various genres and help you develop your unique style. With interactive sessions, personalized feedback, and a supportive community, you’ll witness remarkable progress in your vocal abilities. Enroll in our Online Western Singing Class today and let your voice soar to new heights. </p>
-
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                Guitar  
-                <div class="tab-pane fade show" id="pills-Guitar" role="tabpanel" aria-labelledby="pills-Guitar-tab">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <img src="public/images/Home/guitar.svg" class="danceimg home">
-                        </div>
-                        <div class="col-md-6 col-12 text-col mt-5">
-                            <h3 class="heading"> - Guitar</h3>
-                            <p>
-                                Looking to master the guitar from the comfort of your own home? Our comprehensive online guitar course is designed to take you from a beginner to a conﬁdent player in no time. With expert instruction and step-by-step lessons, you’ll learn essential techniques, chord progressions, scales, and music theory. Our interactive platform offers practice exercises, video tutorials, and personalized feedback to ensure your progress. Whether you’re into rock, blues, or acoustic styles, our course covers a wide range of genres and helps you develop your own unique sound. Join our online guitar course today and unleash your musical potential with convenience and ﬂexibility. </p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-          Keyboard 
-                <div class="tab-pane fade show" id="pills-Keyboard" role="tabpanel" aria-labelledby="pills-Keyboard-tab">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <img src="public/images/Home/keyboard.svg" class="danceimg home">
-                        </div>
-
-                        <div class="col-md-6 col-12 text-col mt-5">
-                            <h3 class="heading"> - Keyboard</h3>
-                            <p>
-                                Unlock the magic of the keyboard with our online keyboard course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this versatile instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering keyboard techniques, music theory, and popular repertoire. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of playing your favorite songs, exploring different genres, or even composing your own music, our online keyboard course offers convenience, ﬂexibility, and expert guidance to help you become a skilled keyboardist. <br><br>
-                                Enroll today and let your musical journey begin!</p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               Yoga
-                <div class="tab-pane fade show" id="pills-Yoga" role="tabpanel" aria-labelledby="pills-Yoga-tab">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <img src="public/images/Home/yoga.svg" class="danceimg home">
-                        </div>
-
-                        <div class="col-md-6 col-12 text-col mt-5">
-                            <h3 class="heading"> - Yoga</h3>
-                            <p>
-                                Online everyday yoga classes offer a convenient and effective way to incorporate yoga into your daily routine. Yoga is a great way to improve overall health and wellness, reduce stress and anxiety, and increase strength and ﬂexibility. With online classes, you can practice yoga from the comfort of your own home, at a time that works for you. <br><br>
-                                Additionally, online classes often offer a variety of options, from quick morning stretches to longer, more intensive classes, so you can ﬁnd a class that ﬁts your schedule and ﬁtness level. Joining an online everyday yoga class can be a great way to improve your physical and mental wellbeing and make yoga a regular part of your daily routine.</p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 Coming Soon 
-                <div class="tab-pane fade show" id="pills-ComingSoon" role="tabpanel" aria-labelledby="pills-ComingSoon-tab">
-                    <div class="row">
-                        <div class="col-md-12 col-12 mt-5">
-                            <h6 class="heading ml-5"> - Coming Soon </h6>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+          
         </div>
     </div>
 </section>
 <!-- Stories That Inspire - Section -->
 
-<section class="learning_Platform-section mb-5">
+<section class="learning_Platform-section mb-3">
     <div class="container">
         <div class="row">
             <div class="heading_new text-center imlalp">
@@ -916,18 +693,12 @@
 </section>
 
 
-<!-- Line Sepretor Part -->
-
-
-
-<!-- How To Get Started? -->
-
-<section class="how_Started-section">
+<section class="how_Started-section pb-3">
     <div class="container">
         <div class="row m-0">
             <div class="heading_new text-center">
                 <b>
-                    <h3 class="title_4"> How To Get Started? <span class="line"></span></h3>
+                    <h3 class="title_4 "> How To Get Started? <span class="line"></span></h3>
                 </b>
             </div>
         </div>
@@ -1022,10 +793,12 @@
 <section class="MusicSec faculty-section p-5">
     <div class="cont-width">
 
-        <div class="row">
-        <h3 class="text-white p-3" style="text-align:center">Super Star Faculty<br>
-        <span class="line"></span> 
-                </h3>
+        <div class="row ">
+        <h3 class="text-white pb-5" style="text-align:center">Super Star Faculty
+        <span class="line linessf"></span> 
+
+        </h3>
+      
                 
             <div class="col-lg-12">
            
@@ -1234,7 +1007,7 @@
 
 <!-- Happy faces -->
 <!-- superstar slide -->
-<section class="faculty-section mt-5">
+<section class="faculty-section p-3">
     <div class="container cont-width mt-5">
         <div class="row heading-div m-0">
             <div class="col-lg-12 col-12 text-center">
@@ -1246,27 +1019,49 @@
 
         </div>
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 hpb">
                 <div class="owl-carousel owl-theme">
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/veera.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Raj</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
+                           
                             
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/veera.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Raj</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
+                 
                         </div>
                     </div>
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/priti.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/priti.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1275,9 +1070,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/neha.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/neha.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1286,9 +1091,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/priyanka.jpeg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/priyanka.jpeg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1297,9 +1112,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/priya.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/priya.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1308,9 +1133,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/sweta.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/sweta.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1319,9 +1154,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/jaya.png" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/jaya.png" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1330,9 +1175,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/ketki.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/ketki.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1341,9 +1196,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Koyali.png" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/Koyali.png" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1352,9 +1217,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/krutika.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/krutika.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1363,9 +1238,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Anila.jpeg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/Anila.jpeg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1374,9 +1259,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Anika.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-2">
                                 <img src="public/images/Anika.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1385,9 +1280,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Ila.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/Ila.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1396,9 +1301,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Samira.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/Samira.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1407,9 +1322,19 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/sanjay.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/sanjay.jpg" />
+                                <div class="text-white hft">
+                                    <h3>Riya</h3>
+                                    <p >Why do we use it?
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                </div>
                             </div>
 
                         </div>
@@ -1421,16 +1346,16 @@
 </section>
 
 
-<section class="stories-section MusicSec">
+<section class="stories-section MusicSec p-3">
     <div class="container">
 
 
         <div class="line_1">
             <div class="row">
-
-            <h3 class="text-white p-3" style="text-align:center"> Testimonials<br>
-        <span class="line"></span> 
+                <h3 class="text-white p-3" style="text-align:center"> Testimonials<br>
+                    <span class="line"></span> 
                 </h3>
+                
 
 
              
