@@ -221,12 +221,12 @@
                       </p>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a href="<?php echo base_url() ?>reschedule" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Leave</p>
                     </a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <a href="<?php echo base_url() ?>StudentAttendancerecord" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>

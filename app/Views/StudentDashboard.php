@@ -10,6 +10,18 @@
         overflow-y: auto;
         max-height: 200px; /* Adjust the maximum height for side-scrolling */
     }
+    .img-back {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    /* background-image: url("path/to/your/image.jpg"); */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Do not repeat the background */
+    opacity: 0.5; /* Adjust the opacity for transparency */
+    margin-left: 200px;
+}
 </style>
 
 <div class="content-wrapper">
@@ -34,7 +46,7 @@
     <div class="container-fluid">
     <div class="row">
     <div class="col-md-3 col-sm-6 col-12">
-        <a href="<?=base_url();?>ScheduleStudent" class="info-box bg-info">
+        <a href="<?=base_url();?>StudentAttendancerecord" class="info-box bg-info">
             <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">My Attendance</span>
@@ -55,10 +67,30 @@
         </a>
         <!-- /.info-box -->
     </div>
+    <div class="col-md-3 col-sm-6 col-12">
+        <a href="<?=base_url();?>SelectDate" class="info-box bg-info">
+            <span class="info-box-icon"><i class='fas fa-address-card'></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text"> Faculty Availability</span>
+            </div>
+            <!-- /.info-box-content -->
+        </a>
+        <!-- /.info-box -->
+    </div>
+    <div class="col-md-3 col-sm-6 col-12">
+        <a href="<?=base_url();?>UplodeVideo" class="info-box bg-warning">
+            <span class="info-box-icon"><i class='fas fa-address-card'></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Uplode Video</span>
+            </div>
+            <!-- /.info-box-content -->
+        </a>
+        <!-- /.info-box -->
+    </div>
     <!-- /.col -->
 </div>
 
-
+<img class="img-back" src="public/images/Studentimage.png" alt="Centered Image">
     </div>
   </section>
 </div>
