@@ -138,7 +138,7 @@ $name               = "RazorPay Infovistar";
 
                                                 <div>
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <input class="btn shop-now-btn" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+                                                        <input class="btn shop-now-btn"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
                                                     <?php else : ?>
                                                         <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
 
@@ -482,26 +482,21 @@ $name               = "RazorPay Infovistar";
                                                     </h2>
                                                     <h4>₹ 450 per session</h4>
                                                     <h4>Total Price: 22950 <span class="del-price"><del>24950 </del></span></h4>
-
                                                     <img src="public/images/pro.png" />
                                                     <p style="color:#fff;font-size:16px;margin:20px 0px">Duration : 200 Days</p>
 
                                                     <ul class="" style="padding-left:0px!important">
-
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-check-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Group Live Class- upto 10 students.
-
                                                             </span>
                                                         </li>
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-check-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Practice Video- Unlimited.
@@ -511,7 +506,6 @@ $name               = "RazorPay Infovistar";
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-check-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Time : IST 5 Pm to 7 PM.
@@ -521,7 +515,6 @@ $name               = "RazorPay Infovistar";
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-check-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Weekly -quiz.
@@ -530,34 +523,27 @@ $name               = "RazorPay Infovistar";
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-check-circle-o"></i>
-
                                                             </span>
                                                             <span>
-
                                                                 Learn Any 1 subject.
                                                             </span>
                                                         </li>
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-times-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Learn at your own Pace - customisation.
                                                             </span>
                                                         </li>
-
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-times-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 24 X 7 unlimited support for content & doubt clearing.
-
                                                             </span>
                                                         </li>
-
                                                     </ul>
                                                     <div>
 
@@ -565,11 +551,9 @@ $name               = "RazorPay Infovistar";
                                                             <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
                                                         <?php else : ?>
                                                             <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Book Now</a>
-
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
-
                                             </div>
 
                                         </div>
@@ -593,37 +577,30 @@ $name               = "RazorPay Infovistar";
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-check-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Group Live Class- upto 10 students.
-
                                                             </span>
                                                         </li>
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-check-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Practice Video- Unlimited.
-
                                                             </span>
                                                         </li>
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-check-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Time : IST 5 Pm to 7 PM.
-
                                                             </span>
                                                         </li>
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-check-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Weekly -quiz.
@@ -641,23 +618,19 @@ $name               = "RazorPay Infovistar";
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-times-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Learn at your own Pace - customisation.
                                                             </span>
                                                         </li>
-
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-times-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 24 X 7 unlimited support for content & doubt clearing.
                                                             </span>
                                                         </li>
-
                                                     </ul>
 
                                                     <div>

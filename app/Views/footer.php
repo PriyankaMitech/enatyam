@@ -1,17 +1,16 @@
 <footer>
     <div class="container cont-width">
         <div class="row">
-            <div class="col-md-4 col-12 footer-div flid">
+            <div class="col-md-3 col-12 footer-div flid">
                 <img src="public/images/logos.png" />
                 <p class=" mt-2">At Enatyam, we are providing you with professional training of dance forms originating
                     from the Indian subcontinent. Our talented mentors have been trained to provide you with an amazing
                     dancing experience.</p>
             </div>
-            <div class="col-md-4 col-6 footer-div pt-4 fu">
+            <div class="col-md-3 col-6 footer-div pt-2 fu">
                 <ul class="row">
                     <li>
                         <a href="<?=base_url(); ?>Dance">Dance</a>
-
                     </li>
                     
                     <li>
@@ -24,6 +23,10 @@
                     <li>
                         <a href="<?=base_url(); ?>Yoga">Yoga</a>
                     </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-6 footer-div pt-2 fu">
+                <ul class="row">
                     <li>
                         <a href="<?=base_url(); ?>language">Language</a>
                     </li>
@@ -33,14 +36,14 @@
                     <li>
                         <a href="<?=base_url(); ?>Career">Become a teacher</a>
                     </li>
-                  
-                </ul>
-            </div>
-            <div class="col-md-4 col-6 footer-div pt-4 fu1">
-                <ul>
                     <li>
                         <a href="<?=base_url(); ?>Contactus"> Contact Us</a>
                     </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-6 footer-div pt-2 fu1">
+                <ul>
+                 
                     <!-- <li>
                         <a href="<?=base_url(); ?>Career">Career</a>
                     </li> -->
@@ -62,6 +65,8 @@
                     </li>
                 </ul>
             </div>
+
+          
         </div>
 
         <div class="row">
@@ -409,7 +414,73 @@
 
 
         });
+        $(".question-text").each(function() {
+        var $el = $(this);
+        var originalText = $el.text();
+        var maxLength = 60; // Maximum length before truncation
+
+        if (originalText.length > maxLength) {
+            var truncatedText = originalText.substring(0, maxLength) + '...';
+            $el.text(truncatedText);
+            $el.data('fullText', originalText);
+            $el.data('isTruncated', true);
+        } else {
+            $el.data('isTruncated', false);
+        }
+    });
+
+    $(".accordion-item-header").click(function() {
+        var $question = $(this).find('.question-text');
+        var fullText = $question.data('fullText');
+        var isTruncated = $question.data('isTruncated');
+
+        if (isTruncated) {
+            $question.text(fullText);
+            $question.data('isTruncated', false);
+        } else {
+            var maxLength = 60; // Maximum length before truncation
+            var truncatedText = fullText.substring(0, maxLength);
+            $question.text(truncatedText);
+            $question.data('isTruncated', true);
+        }
+    });
     </script>
+
+
+<!-- <script>
+$(document).ready(function() {
+    $(".question-text").each(function() {
+        var $el = $(this);
+        var originalText = $el.text();
+        var maxLength = 50; // Maximum length before truncation
+
+        if (originalText.length > maxLength) {
+            var truncatedText = originalText.substring(0, maxLength) + '...';
+            $el.text(truncatedText);
+            $el.data('fullText', originalText);
+            $el.data('isTruncated', true);
+        } else {
+            $el.data('isTruncated', false);
+        }
+    });
+
+    $(".accordion-item-header").click(function() {
+        var $question = $(this).find('.question-text');
+        var fullText = $question.data('fullText');
+        var isTruncated = $question.data('isTruncated');
+
+        if (isTruncated) {
+            $question.text(fullText);
+            $question.data('isTruncated', false);
+        } else {
+            var maxLength = 50; // Maximum length before truncation
+            var truncatedText = fullText.substring(0, maxLength);
+            $question.text(truncatedText);
+            $question.data('isTruncated', true);
+        }
+    });
+});
+</script> -->
 
 
 <?php } else if ($page == 'Instruments') { ?>
