@@ -95,10 +95,7 @@
         </div>
     </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
