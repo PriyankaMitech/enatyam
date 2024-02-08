@@ -119,7 +119,7 @@
                                     <div class="row tpm">
                                         <span class="col-md-4 text-white fmname">City* :</span>
                                         <span class="col-md-8 BookingSecondPage_formInput__n8MhF">
-                                            <input type="text" name="State" value="" >                                      
+                                            <input type="text" name="city" value="" >                                      
                                         <span>
                                     </div>
 
