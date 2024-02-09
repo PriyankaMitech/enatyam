@@ -261,7 +261,7 @@
         $(".question-text").each(function() {
         var $el = $(this);
         var originalText = $el.text();
-        var maxLength = 60; // Maximum length before truncation
+        var maxLength = 50; // Maximum length before truncation
 
         if (originalText.length > maxLength) {
             var truncatedText = originalText.substring(0, maxLength) + '...';
@@ -282,7 +282,7 @@
             $question.text(fullText);
             $question.data('isTruncated', false);
         } else {
-            var maxLength = 60; // Maximum length before truncation
+            var maxLength = 50; // Maximum length before truncation
             var truncatedText = fullText.substring(0, maxLength);
             $question.text(truncatedText);
             $question.data('isTruncated', true);
@@ -447,7 +447,7 @@
         $(".question-text").each(function() {
         var $el = $(this);
         var originalText = $el.text();
-        var maxLength = 60; // Maximum length before truncation
+        var maxLength = 50; // Maximum length before truncation
 
         if (originalText.length > maxLength) {
             var truncatedText = originalText.substring(0, maxLength) + '...';
@@ -468,7 +468,7 @@
             $question.text(fullText);
             $question.data('isTruncated', false);
         } else {
-            var maxLength = 60; // Maximum length before truncation
+            var maxLength = 50; // Maximum length before truncation
             var truncatedText = fullText.substring(0, maxLength);
             $question.text(truncatedText);
             $question.data('isTruncated', true);
