@@ -3,11 +3,11 @@
         <div class="row">
             <div class="col-md-3 col-12 footer-div flid">
                 <img src="public/images/logos.png" />
-                <p class=" mt-2">At Enatyam, we are providing you with professional training of dance forms originating
+                <p class="mt-2">At Enatyam, we are providing you with professional training of dance forms originating
                     from the Indian subcontinent. Our talented mentors have been trained to provide you with an amazing
                     dancing experience.</p>
             </div>
-            <div class="col-md-3 col-6 footer-div pt-2 fu">
+            <div class="col-md-3 col-6 footer-div fu">
                 <ul class="row">
                     <li>
                         <a href="<?=base_url(); ?>Dance">Dance</a>
@@ -25,13 +25,16 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-3 col-6 footer-div pt-2 fu">
+            <div class="col-md-3 col-6 footer-div fu">
                 <ul class="row">
-                    <li>
+                    <!-- <li>
                         <a href="<?=base_url(); ?>language">Language</a>
                     </li>
                     <li>
                         <a href="<?=base_url(); ?>shopping">Shopping</a>
+                    </li> -->
+                    <li>
+                        <a href="<?=base_url(); ?>blog">Blog</a>
                     </li>
                     <li>
                         <a href="<?=base_url(); ?>Career">Become a teacher</a>
@@ -39,9 +42,12 @@
                     <li>
                         <a href="<?=base_url(); ?>Contactus"> Contact Us</a>
                     </li>
+                    <li>
+                        <a href="<?=base_url(); ?>invester">Investors</a>
+                    </li>
                 </ul>
             </div>
-            <div class="col-md-3 col-6 footer-div pt-2 fu1">
+            <div class="col-md-3 col-6 footer-div fu1">
                 <ul>
                  
                     <!-- <li>
@@ -57,9 +63,9 @@
                     <li>
                         <a href="<?=base_url(); ?>refundpolicy">Refund Policy</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="<?=base_url(); ?>blog">Blog</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="<?=base_url(); ?>invester">Investors</a>
                     </li>
@@ -70,7 +76,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-1 col-12 mt-3 ">
+            <div class="col-md-1 col-12">
                 <div class="social-div ">
                     <!-- <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><i class="fa fa-instagram"></i></a>
                     <a href="https://twitter.com/e_natyam?s=08" class="twitter-div"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -88,7 +94,7 @@
             </div>
 
            
-            <div class="col-md-11 col-12 mt-3">
+            <div class="col-md-11 col-12 ">
                 <div class="footer-links-sub " style="text-align: center;">
                     <a href="">Pune</a>
                     <a href="">Bangalore</a>
@@ -102,7 +108,7 @@
                     <a href="">Ahmedabad</a>
                 </div>
          
-                <div class="footer-links-sub mt-4" style="text-align: center;">
+                <div class="footer-links-sub " style="text-align: center;">
                     <a href="">New York</a>
                     <a href="">California</a>
                     <a href="">San Francisco</a>
@@ -120,7 +126,7 @@
                     <a href="">Abu Dhabi</a>
                 </div>
           
-                <div class="footer-links-sub mt-4  " style="text-align: center;">
+                <div class="footer-links-sub " style="text-align: center;">
                     <a href="">USA</a>
                     <a href="">Canada</a>
                     <a href="">UK</a>
@@ -131,29 +137,24 @@
                     <a href="">India</a>
                     <a href="">Dubai</a>
                 </div>
-            </div>
 
-            <div class="col-md-12 col-12 mt-3">
-                <div class="social-div text-center">
+                <div class="social-div text-center pt-5">
                     <img src="public/images/Home/maestro.svg" />
                     <!-- <img src="public/images/Home/payU.svg" /> -->
                     <img src="public/images/Home/visa.svg" />
                     <img src="public/images/Home/mastercard.svg" />
                     <img src="public/images/Home/Rupay.svg" /> 
                 </div>
+                <div class="copyright-p ">
+                    <p >Copyright © 2024 Enatyam  | Powered by 
+
+                    <a href="https://www.marketingintelligence.tech">MI Tech Solutions
+                        </a></p>
+
+
+                    </div>
             </div>
 
-            <div class="col-md-12 col-12 text-center mitechlink">
-                <div class="copyright-p">
-
-                        <p>Copyright © 2024 Enatyam  | Powered by 
-                        
-                     <a href="https://www.marketingintelligence.tech">MI Tech Solutions
-                            Pvt. Ltd. </a></p>
-                        
-
-                </div>
-            </div>
         </div>
     </div>
 
@@ -2593,6 +2594,7 @@ $(function() {
 <script>
     let prevScrollPos = window.pageYOffset;
     const navbar = document.querySelector('.tophead');
+    const logoImage = document.querySelector('.thim-logo img'); // Select the image inside the thim-logo class
 
     window.addEventListener('scroll', () => {
         const currentScrollPos = window.pageYOffset;
@@ -2604,6 +2606,7 @@ $(function() {
             // Scrolling up or at the top
             navbar.style.transform = 'translateY(0)';
             navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+
         }
 
         prevScrollPos = currentScrollPos;
@@ -2613,8 +2616,12 @@ $(function() {
     window.addEventListener('load', () => {
         if (window.pageYOffset === 0) {
             navbar.style.backgroundColor = 'transparent';
+            logoImage.src = 'public/images/logo.png'; // Replace with the path to your new image
+
         }
     });
+
+
 </script>
 <script>
     $(document).ready(function() {
