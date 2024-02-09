@@ -672,8 +672,8 @@ class StudentController extends BaseController
     public function selectslotsbystudent()
     {
         $model = new AdminModel();
-        $wherecond = ['student_id' => $this->request->getVar('student_id')];
-        $single = $model->getsinglerow('tbl_student_shedule', $wherecond);
+        // $wherecond = ['student_id' => $this->request->getVar('student_id')];
+        // $single = $model->getsinglerow('tbl_student_shedule', $wherecond);
         $startTime = '';
         $endTime = '';
     
@@ -741,25 +741,25 @@ class StudentController extends BaseController
     
                 session()->setFlashdata('success', 'Data added successfully.');
             } else {
-                $selectedDaysArray = $this->request->getVar('days[]');
+                // $selectedDaysArray = $this->request->getVar('days[]');
     
-                $selectedDaysArray[] = $single->days;
+                // $selectedDaysArray[] = $single->days;
     
-                $selectedDaysString = implode(',', $selectedDaysArray);
+                // $selectedDaysString = implode(',', $selectedDaysArray);
     
-                $datas = [
-                    'student_id' => $student_id,
-                    'faculty_id' => $faculty_id,
-                    'days' => $selectedDaysString,
-                    'start_date' => $single->start_date,
-                    'end_date' => $single->end_date,
-                    'shedules_time' => $single->shedules_time,
-                    'start_time' => $single->start_time,
-                    'end_time' => $single->end_time,
-                ];
+                // $datas = [
+                //     'student_id' => $student_id,
+                //     'faculty_id' => $faculty_id,
+                //     'days' => $selectedDaysString,
+                //     'start_date' => $single->start_date,
+                //     'end_date' => $single->end_date,
+                //     'shedules_time' => $single->shedules_time,
+                //     'start_time' => $single->start_time,
+                //     'end_time' => $single->end_time,
+                // ];
     
                 $update_data = $db->table('tbl_student_shedule')->where('student_id', $student_id);
-                $update_data->update($datas);
+                $update_data->update($data);
                 $wherecond = ['id' => $student_id];
                 $wherecond1 = ['id' => $faculty_id];
                 $studentMobileNumber = $model->get_single_data('register', $wherecond);

@@ -32,40 +32,7 @@
                                             <div class="col-md-12">
 
 
-                                                <?php if (!empty($single)) { ?>
-                                                <?php if (!empty($fshedules)) :
-                                                    // echo "<pre>";print_r($fshedules);exit();
-                                                    ?>
-                                                  <?php 
-                                                                    $selectedDays = array(); // Initialize an empty array to store all days
-
-                                                                    foreach($fshedules as $data) {
-                                                                        $selectedDays = array_merge($selectedDays, explode(',', $data->days)); // Merge days from each iteration
-                                                                    }
-
-                                                                    $selectedDays = array_unique($selectedDays);
-
-                                                                    ?>
-                                                   
-                                                        <div class="form-group mb-2">
-                                                            <label class="control-label">Select Day's</label>
-                                                            <?php
-                                                            $selectedDays1 = explode(',', $single->days);
-                                                            $allDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-                                                            foreach ($allDays as $day) :
-                                                                $isChecked =  in_array($day, $selectedDays1) ? 'checked' : '';
-                                                                $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
-                                                            ?>
-                                                                <div class="form-check">
-                                                                    <input type="checkbox" class="form-check-input" name="days[]" value="<?= $day ?>" <?= $isChecked ?> <?= $isDisabled ?>>
-                                                                    <label class="form-check-label"><?= $day ?></label>
-                                                                </div>
-                                                            <?php endforeach; ?>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                <?php }else{ ?>
-
+                                            
                                                         <?php if (!empty($fshedules)) : ?>
                                                             <div class="form-group mb-2">
                                                                 <label class="control-label">Select Day's</label>
@@ -87,7 +54,7 @@
                                                                     $isDisabled = in_array($day, $selectedDays) ? '' : 'disabled';
                                                                 ?>
                                                                     <div class="form-check">
-                                                                        <input type="checkbox" class="days form-check-input" name="days[]" value="<?= $day ?>"  <?= $isDisabled ?>>
+                                                                        <input type="radio" class="days form-check-input" name="days[]" value="<?= $day ?>"  <?= $isDisabled ?>>
                                                                         <label class="form-check-label"><?= $day ?></label>
                                                                     </div>
                                                                 <?php endforeach; ?>
@@ -116,7 +83,6 @@
                                                                 <option value="">Please select Time</option>
                                                             </select>
                                                         </div>
-                                                <?php } ?>   
 
                                             
                                                 </div>
