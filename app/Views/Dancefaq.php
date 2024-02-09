@@ -8,7 +8,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                What types of yoga classes do you offer online?
+                            <span class="question-text"> What types of yoga classes do you offer online?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -20,7 +20,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                Do I need to have any prior experience with yoga to join your online classes?
+                            <span class="question-text"> Do I need to have any prior experience with yoga to join your online classes? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -31,7 +31,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                What equipment do I need for online yoga classes?
+                            <span class="question-text">  What equipment do I need for online yoga classes? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -44,7 +44,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                How do I join an online yoga class?
+                            <span class="question-text">  How do I join an online yoga class?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -56,7 +56,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                Can I join a class at any time, or do I need to join at a speciﬁc time? </div>
+                            <span class="question-text"> Can I join a class at any time, or do I need to join at a speciﬁc time?</span> </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
                                     Our online classes are offered at speciﬁc times, so you will need to join the class
@@ -67,7 +67,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                What if I can't make it to a live online class? </div>
+                            <span class="question-text"> What if I can't make it to a live online class? </span></div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
                                     We also offer on-demand classes that you can access at any time, so you can
@@ -78,7 +78,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                Is there any special software or technology required to join an online yoga class?
+                            <span class="question-text"> Is there any special software or technology required to join an online yoga class? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -90,7 +90,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                How long are your online yoga classes?
+                            <span class="question-text"> How long are your online yoga classes?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -102,7 +102,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                Can I interact with the instructor during an online class?
+                            <span class="question-text"> Can I interact with the instructor during an online class?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -114,7 +114,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                What is online yoga?
+                            <span class="question-text"> What is online yoga?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -128,7 +128,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                What equipment do I need for online yoga?
+                            <span class="question-text"> What equipment do I need for online yoga?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -142,7 +142,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                How do I choose the right online yoga class for me?
+                            <span class="question-text"> How do I choose the right online yoga class for me?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -156,7 +156,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                Can I ask questions during an online yoga class?
+                            <span class="question-text"> Can I ask questions during an online yoga class?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -169,7 +169,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                Is online yoga as effective as in-person yoga?
+                            <span class="question-text"> Is online yoga as effective as in-person yoga?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -186,8 +186,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                Is online yoga as effective as in-person yoga?
+                            <span class="question-text"> Is online yoga as effective as in-person yoga?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -201,8 +200,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                Can I practice online yoga if I am a beginner? </div>
+                            <span class="question-text"> Can I practice online yoga if I am a beginner?</span> </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
                                     Yes, online yoga is suitable for beginners. Many online yoga classes
@@ -214,8 +212,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                How often should I practice online yoga?
+                            <span class="question-text"> How often should I practice online yoga? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -228,8 +225,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                What are the beneﬁts of practicing online yoga?
+                            <span class="question-text"> What are the beneﬁts of practicing online yoga? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -244,7 +240,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                                What would be my batch timing ?
+                            <span class="question-text">  What would be my batch timing ? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -262,8 +258,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                How many students will be accommodated in a single batch?
+                            <span class="question-text"> How many students will be accommodated in a single batch?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -275,8 +270,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                Will the course provide a certificate?
+                            <span class="question-text"> Will the course provide a certificate? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -288,8 +282,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                How to cover up if I missed a session?
+                            <span class="question-text"> How to cover up if I missed a session? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -301,8 +294,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                What are the policies for refund if i am not comfortable with the class?
+                            <span class="question-text"> What are the policies for refund if i am not comfortable with the class? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -314,8 +306,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                What are the minimum qualifications and prerequisites to attend the classes?
+                            <span class="question-text"> What are the minimum qualifications and prerequisites to attend the classes? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -327,8 +318,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                How can I arrange a doubt clearing session?
+                            <span class="question-text"> How can I arrange a doubt clearing session? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -339,8 +329,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                How do I contact the team in case of any doubts and queries?
+                            <span class="question-text"> How do I contact the team in case of any doubts and queries? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -352,8 +341,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-
-                                I’ve done the payment but haven’t received the access to my classes yet? </div>
+                            <span class="question-text"> I’ve done the payment but haven’t received the access to my classes yet? </span> </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
                                     You can drop a mail at contact@www.enatyam.org and our team will get in touch with you within 24-48 hours. </div>

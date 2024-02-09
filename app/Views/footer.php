@@ -256,6 +256,37 @@
                 }
             });
         });
+
+        $(".question-text").each(function() {
+        var $el = $(this);
+        var originalText = $el.text();
+        var maxLength = 60; // Maximum length before truncation
+
+        if (originalText.length > maxLength) {
+            var truncatedText = originalText.substring(0, maxLength) + '...';
+            $el.text(truncatedText);
+            $el.data('fullText', originalText);
+            $el.data('isTruncated', true);
+        } else {
+            $el.data('isTruncated', false);
+        }
+    });
+
+    $(".accordion-item-header").click(function() {
+        var $question = $(this).find('.question-text');
+        var fullText = $question.data('fullText');
+        var isTruncated = $question.data('isTruncated');
+
+        if (isTruncated) {
+            $question.text(fullText);
+            $question.data('isTruncated', false);
+        } else {
+            var maxLength = 60; // Maximum length before truncation
+            var truncatedText = fullText.substring(0, maxLength);
+            $question.text(truncatedText);
+            $question.data('isTruncated', true);
+        }
+    });
     </script>
 
     <!-- <script>
