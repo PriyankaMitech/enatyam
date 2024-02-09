@@ -281,7 +281,7 @@
                     </div>
                     <!-- /.card -->
 
-                    <div class="col-md-12">
+                    <!-- <div class="col-md-12">
                     <div class="card">
                     <div class="card-body">
                     <div class="row">
@@ -328,7 +328,7 @@
                             </div>
                     </div>
                     </div>
-                </div>
+                </div> -->
                 </div>
                 
                 <!-- /.col -->
