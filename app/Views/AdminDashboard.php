@@ -500,7 +500,7 @@ th {
                             if (!empty($PendingDemo)) { ?>
                                         <?php foreach ($PendingDemo as $facult) : ?>
                                         <tr>
-                                            <form action="<?php echo base_url("AssignTecherForDemo"); ?>" method="POST">
+                                            <form action="<?php echo base_url(); ?>AssignTecherForDemo" method="POST">
                                                 <input type="hidden" name="studentid" value="<?= $facult->D_id ?>">
                                                 <td><?= $facult->name ?></td>
                                                 <td><?= $facult->email ?></td>
@@ -702,7 +702,7 @@ th {
                                         }
                                     ?>
                                 <tr>
-                                    <form action="<?= base_url("AssignTecherToStudent") ?>" method="POST">
+                                    <form action="<?= base_url(); ?>AssignTecherToStudent" method="POST">
                                         <input type="hidden" name="studentid" value="<?= $data->id ?>">
                                         <td style="width:100px">
                                             <p><?= $data->full_name ?><sup> <?php echo $new; ?></sup></p>

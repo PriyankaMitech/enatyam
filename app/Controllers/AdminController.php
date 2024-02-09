@@ -1804,6 +1804,8 @@ class AdminController extends BaseController
             if (!empty($faculity_data)) {
                 $wherecond1 = array('faculty_registerid' => $faculity_data->id);
                 $shedule_data = $model->getalldata('schedule_list', $wherecond1);
+
+                // echo "<pre>";print_r($shedule_data);exit();
             }
             return json_encode($shedule_data);
         } else {

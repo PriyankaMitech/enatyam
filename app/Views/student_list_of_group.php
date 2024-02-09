@@ -281,7 +281,7 @@
 
 
                                                                                 <?php if (!empty($days_data)) : ?>
-                                                                                    <div class="col-md-12">
+                                                                                    <div class="col-md-12" style="display:none">
 
 
                                                                                         <div class="form-group mb-2">
@@ -531,7 +531,7 @@
                                                                                     <div class="col-md-12">
 
 
-                                                                                        <div class="form-group mb-2">
+                                                                                        <div class="form-group mb-2" style="display:none">
                                                                                             <label class="control-label">Select Day's</label>
                                                                                             <?php
                                                                                             $selectedDays = explode(',', $days_data->days); // Assuming $fshedules contains your data

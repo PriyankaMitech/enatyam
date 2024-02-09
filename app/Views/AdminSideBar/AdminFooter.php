@@ -1549,29 +1549,27 @@
                     },
                     dataType: 'json',
                     success: function(data) {
-                        // Extracting days from the schedule data
-                        var scheduleDays = data.length > 0 ? data[0].days.split(',') : [];
-
                         // Clear existing checkboxes
                         $('.form-check').remove();
 
-                        // Generate checkboxes
+                        // Extract all unique days from the data
+                        var allUniqueDays = [...new Set(data.map(item => item.days))];
+
+                        // Generate checkboxes for all possible days
                         $.each(allDays, function(index, day) {
-                            var isChecked = scheduleDays.includes(day);
-                            console.log(isChecked); // Add this line to log the value of isChecked
+                            var isChecked = data.some(item => item.days === day);
                             var disabled = isChecked ? '' : 'disabled';
 
                             var checkboxHtml = `
-                            <div class="form-check col-md-6">
-                                <input type="checkbox" id="days" class="form-check-input days" name="days[]" value="${day}" ${disabled}>
-                                <label class="form-check-label" for="days">${day}</label>
-                            </div>
-                        `;
+                                <div class="form-check col-md-6">
+                                    <input type="radio" class="form-check-input days" name="days[]" value="${day}" ${isChecked ? '' : ''} ${disabled}>
+                                    <label class="form-check-label" for="days">${day}</label>
+                                </div>
+                            `;
                             $('.checkboxdays').append(checkboxHtml);
-
-
                         });
                     }
+
                 });
             } else {
                 // Clear existing checkboxes if faculty_id_g is not selected
@@ -1586,9 +1584,9 @@
         $('.checkboxdays').on('change', '.days', function() {
             var selectedDays = [];
 
-            // var selectedDays = $('.days:checked').map(function() {
-            //     return this.value;
-            // }).get();
+            var selectedDays = $('.days:checked').map(function() {
+                return this.value;
+            }).get();
             fetchData(selectedDays);
 
         });
