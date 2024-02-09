@@ -26,17 +26,15 @@ $name               = "RazorPay Infovistar";
 
             <div class="col-lg-12">
                 <ul class="nav nav-pills mb-3 row" id="pills-tab" role="tablist">
-                    <li class="nav-item col-md-6 col-lg-6 col-6" role="presentation">
+                    <li class="nav-item col-md-6 col-lg-6 col-6 oops" role="presentation">
                         <button class="price-btn active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                            <p>One on One</p>
-                            <p>Private Session</p>
+                            <p>One on One Private Session</p>
                         </button>
                     </li>
                     <li class="nav-item col-md-6 col-lg-6 col-6" role="presentation">
                         <button class="price-btn" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
 
-                            <p>Group Session</p>
-                            <p>Up to 10 Students</p>
+                            <p>Group Session Up to 10 Students</p>
                         </button>
                     </li>
 
