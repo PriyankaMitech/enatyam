@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12 faqdance">
 
-                    <div class="accordion">
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 What types of yoga classes do you offer online?
@@ -16,8 +16,8 @@
                                     and more..</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 Do I need to have any prior experience with yoga to join your online classes?
@@ -27,8 +27,8 @@
                                     No, our online classes are suitable for all levels, from beginner to advanced.</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 What equipment do I need for online yoga classes?
@@ -40,8 +40,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 How do I join an online yoga class?
@@ -52,8 +52,8 @@
                                     the class online. </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 Can I join a class at any time, or do I need to join at a speciﬁc time? </div>
@@ -63,8 +63,8 @@
                                     at the designated time. </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 What if I can't make it to a live online class? </div>
@@ -74,8 +74,8 @@
                                     practice yoga on your own schedule.</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 Is there any special software or technology required to join an online yoga class?
@@ -86,8 +86,8 @@
                                     access and a webcam in order to join our online classes. </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 How long are your online yoga classes?
@@ -98,8 +98,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 Can I interact with the instructor during an online class?
@@ -110,8 +110,8 @@
                                     and feedback from the instructor. </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 What is online yoga?
@@ -124,8 +124,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 What equipment do I need for online yoga?
@@ -138,8 +138,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 How do I choose the right online yoga class for me?
@@ -152,8 +152,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 Can I ask questions during an online yoga class?
@@ -165,8 +165,8 @@
                                     questions during the class. </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion">
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
                                 Is online yoga as effective as in-person yoga?
@@ -179,7 +179,7 @@
                                     help you get the most out of your practice. </div>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-12 faqdance">

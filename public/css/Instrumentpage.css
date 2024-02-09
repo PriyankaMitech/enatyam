@@ -221,6 +221,7 @@ body {
 .typesOfYoga-tab .nav-pills .nav-link.big.active,
 .modulesec .monthtypes.active {
   background-color: #ff1561;
+  color: #fff !important;
 }
 
 .typesOfYoga-tab .nav-pills .nav-link.big {
