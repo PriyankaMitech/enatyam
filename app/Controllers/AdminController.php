@@ -139,7 +139,7 @@ class AdminController extends BaseController
                 $session->setFlashdata('success', 'Faculty assigned successfully!');
                 return redirect()->to('Admindashboard');
             } else {
-                return redirect()->to('error');
+                return redirect()->to('Admindashboard');
             }
         }
     }
