@@ -464,7 +464,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Yoga'); ?>">Yoga</a>
-                            <a class="nav-link px-2" href="<?php echo base_url('Pricing'); ?>">Pricing</a>
+                            <a class="nav-link px-2" href="#pricing">Pricing</a>
 
                             <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
                         </div>
