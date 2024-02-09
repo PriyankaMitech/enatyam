@@ -457,7 +457,7 @@ th {
                                                 <small class="badge badge-success ">Not available</small>
                                                 <?php else : ?>
                                                 <a
-                                                    href="http://localhost/enatyam/getDemoDetails#custom-tabs-four-messages">Reschedule</a>
+                                                    href="<?=base_url(); ?>getDemoDetails">Reschedule</a>
                                                 <?php endif; ?>
                                             </td>
                                         </tr>
