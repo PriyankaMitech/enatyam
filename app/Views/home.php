@@ -1025,20 +1025,18 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/veera.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Raj</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Raj</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                            
                             
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/veera.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Raj</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Raj</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1049,18 +1047,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/priti.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/priti.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1070,18 +1066,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/neha.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/neha.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1091,18 +1085,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/priyanka.jpeg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/priyanka.jpeg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1112,18 +1104,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/priya.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/priya.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1133,18 +1123,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/sweta.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/sweta.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1154,18 +1142,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/jaya.png" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/jaya.png" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1175,18 +1161,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/ketki.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/ketki.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1196,18 +1180,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Koyali.png" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/Koyali.png" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1217,18 +1199,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/krutika.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/krutika.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1238,18 +1218,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Anila.jpeg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/Anila.jpeg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1259,18 +1237,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Anika.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-2">
                                 <img src="public/images/Anika.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1280,18 +1256,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Ila.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/Ila.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1301,18 +1275,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/Samira.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/Samira.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1322,18 +1294,16 @@
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="public/images/sanjay.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="public/images/sanjay.jpg" />
-                                <div class="text-white hft">
-                                    <h3>Riya</h3>
-                                    <p >Why do we use it?
-                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
 
@@ -1378,21 +1348,21 @@
                     <!-- <div class="col-md-6 col-lg-6 col-12"> -->
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-12">
-                            <div class="ST_Inspire-element ST_Inspire-element-6ca1fbd ST_Inspire-widget ST_Inspire-widget-video"
-                                data-id="6ca1fbd" data-element_type="widget" data-settings="{"
-                                youtube_url":"https:\/\/youtu.be\/qXWNN-sakqk","video_type":"youtube","controls":"yes"}"
+                        <div class="ST_Inspire-element ST_Inspire-element-66164fa ST_Inspire-widget ST_Inspire-widget-video"
+                                data-id="66164fa" data-element_type="widget" data-settings="{"
+                                youtube_url":"https:\/\/youtu.be\/96eSNaPxFBc","video_type":"youtube","controls":"yes"}"
                                 data-widget_type="video.default">
                                 <div class="ST_Inspire-widget-container">
-                                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
+                                <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            title="enatyam kathak student feedback and progressII kids beginners kathak batch II Roohi Delhi"
+                                            title="fatema learning experience on enatyam platform testimonial"
                                             width="640" height="260"
-                                            src="https://www.youtube.com/embed/qXWNN-sakqk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=3"
-                                            id="widget4"></iframe>
+                                            src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+                                            id="widget8"></iframe>
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
                         <div class="col-md-6 col-lg-6 col-12">
                             <div class="ST_Inspire-element ST_Inspire-element-66164fa ST_Inspire-widget ST_Inspire-widget-video"
@@ -1433,20 +1403,21 @@
                         </div>
 
                         <div class="col-md-6 col-lg-6 col-12">
-                            <div class="ST_Inspire-element ST_Inspire-element-c74e2f6 ST_Inspire-widget ST_Inspire-widget-video"
-                                data-id="c74e2f6" data-element_type="widget" data-settings="{"
-                                youtube_url":"https:\/\/youtu.be\/djM1jTlnLlk","video_type":"youtube","controls":"yes"}"
+                        <div class="ST_Inspire-element ST_Inspire-element-66164fa ST_Inspire-widget ST_Inspire-widget-video"
+                                data-id="66164fa" data-element_type="widget" data-settings="{"
+                                youtube_url":"https:\/\/youtu.be\/96eSNaPxFBc","video_type":"youtube","controls":"yes"}"
                                 data-widget_type="video.default">
                                 <div class="ST_Inspire-widget-container">
-                                    <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
+                                <div class="ST_Inspire-wrapper ST_Inspire-open-inline">
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            title="kathak online class #enatyam" width="640" height="260"
-                                            src="https://www.youtube.com/embed/djM1jTlnLlk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=9"
-                                            id="widget10"></iframe>
+                                            title="fatema learning experience on enatyam platform testimonial"
+                                            width="640" height="260"
+                                            src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+                                            id="widget8"></iframe>
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
 
                     </div>

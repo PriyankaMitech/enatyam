@@ -1282,7 +1282,7 @@ class AdminModel extends Model
             $query->whereIn('days', $selectedDays);
         }
 
-        $result = $query->get()->getRow();
+        $result = $query->get()->getResult();
         // echo'<pre>'; print_r($this->db->getLastQuery());die;
 
         return $result;

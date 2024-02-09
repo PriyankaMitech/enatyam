@@ -450,18 +450,20 @@
   margin-top: 8px;
 }
 .hpb {
-  height: 900px;
+  height: 600px;
 }
 .MusicSec h3 {
   font-size: 33px;
   font-weight: 600;
 }
+
 /* .faculty-div {
   margin: 5%;
 } */
 /* <!-- How To Get Started CSS --> */
-.hft h3 {
+.hft h5 {
   padding-left: 50px;
+  font-weight: 600;
   /* text-align: center; */
 }
 .hft p {
