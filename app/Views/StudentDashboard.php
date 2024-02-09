@@ -10,18 +10,7 @@
         overflow-y: auto;
         max-height: 200px; /* Adjust the maximum height for side-scrolling */
     }
-    .img-back {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    height: 100vh;
-    /* background-image: url("path/to/your/image.jpg"); */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the background */
-    background-repeat: no-repeat; /* Do not repeat the background */
-    opacity: 0.5; /* Adjust the opacity for transparency */
-    margin-left: 200px;
-}
+
 </style>
 
 <div class="content-wrapper">
@@ -90,7 +79,6 @@
     <!-- /.col -->
 </div>
 
-<img class="img-back" src="public/images/Studentimage.png" alt="Centered Image">
     </div>
   </section>
 </div>

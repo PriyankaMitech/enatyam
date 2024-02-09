@@ -11,6 +11,12 @@
   margin: 0 auto;
   border-radius: 0px;
 }
+.bdemo {
+  font-weight: 600;
+}
+.bdemo:hover {
+  color: #fff;
+}
 
 .text-center {
   align-items: center;

@@ -406,7 +406,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <a href="tel:+91-70205%2009962" target="_blank" rel="nofollow noopener">
                                 <span><i class="fa fa-phone" aria-hidden="true"></i></span>
                                 <span class="text">+91-70205 09962</span>
-                            </a>
+                            </
                         </li>
                         <li>
                             <a href="mailto:hello@enatyam.com" target="_blank" rel="nofollow noopener">
