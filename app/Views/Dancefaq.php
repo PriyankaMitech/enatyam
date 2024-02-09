@@ -166,19 +166,8 @@
                             </div>
                         </div>
                     <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
-                            <span class="question-text"> Is online yoga as effective as in-person yoga?</span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    Online yoga can be just as effective as in-person yoga, as long as you
-                                    have a good internet connection and a dedicated space to practice. Many
-                                    online yoga classes offer personalized instruction and modiﬁcations to
-                                    help you get the most out of your practice. </div>
-                            </div>
-                        </div>
+                  
+                      
                     <!-- </div> -->
                 </div>
 

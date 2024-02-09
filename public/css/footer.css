@@ -283,4 +283,8 @@ footer a:hover {
   a:hover {
     color: #f0f4fa !important;
   }
+  .col-md-3.col-6.footer-div.fu .f-ul {
+    --bs-gutter-x: 0!important;
+}
+
 }

@@ -26,7 +26,9 @@
                 </ul>
             </div>
             <div class="col-md-3 col-6 footer-div fu">
+                <div class="f-ul">
                 <ul class="row">
+                    
                     <!-- <li>
                         <a href="<?=base_url(); ?>language">Language</a>
                     </li>
@@ -46,6 +48,7 @@
                         <a href="<?=base_url(); ?>invester">Investors</a>
                     </li>
                 </ul>
+                </div>
             </div>
             <div class="col-md-3 col-6 footer-div fu1">
                 <ul>
