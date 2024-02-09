@@ -12,6 +12,7 @@ class DemoController extends BaseController
         // print_r($_POST);die;
 
         $demoModel = new DemoModel();
+        $phone = $this->request->getPost('phone');
         $data = [
             'name' => $this->request->getPost('name'),
             'email' => $this->request->getPost('email'),
@@ -36,7 +37,7 @@ class DemoController extends BaseController
         // exit();
         $demoModel->save($data);
         $session = session();
-        $phoneNumber = $data['phone'];
+        $phoneNumber = $phone;
         $templates = "survey";
         $msg = "Your Demo Booked";
         whatsapp($phoneNumber, $templates,$msg,);
