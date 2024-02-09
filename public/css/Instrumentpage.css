@@ -214,7 +214,8 @@ body {
   border-radius: 28px !important;
   width: 162px !important;
   height: 60px !important;
-  background-color: #737373;
+  background-color: #fff;
+  color: #000 !important;
 }
 
 .typesOfYoga-tab .nav-pills .nav-link.active,
