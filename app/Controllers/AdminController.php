@@ -1253,9 +1253,6 @@ class AdminController extends BaseController
         return json_encode($student_data);
     }
 
-
-
-
     public function get_faculty_data()
     {
         $model = new AdminModel();
@@ -1405,10 +1402,21 @@ class AdminController extends BaseController
                 $profile_id = $uri->getSegment(2);
 
 
-                $wherecond = array('student_id ' => $profile_id);
+                $wherecond = array('student_id' => $profile_id);
 
                 $data['profile_data'] = $model->getcorcessforstudentprofile('student', $wherecond);
+                $student_registerid = $data['profile_data']->register_id;
+                $wherecond1 = array('student_registerid' => $student_registerid);
 
+                $data['attendanceRecord'] = $model->fetchAttendanceForStudent($student_registerid);
+                $select = 'payment.*, register.full_name';
+                $table1 = 'payment';
+                $table2 = 'register';
+                $joinCond = 'register.id = payment.user_id';
+                $wherecond = array('user_id' => $student_registerid);
+                $type = 'left';
+                $data['paymentRecord'] = $model->jointwotables($select,$table1,$table2,$joinCond,$wherecond,$type);
+                // echo'attendance:<pre>';print_r($data['paymentRecord']);die;
 
                 return view('AdminSideBar/viewprofiles', $data);
             } else {
@@ -1672,15 +1680,7 @@ class AdminController extends BaseController
             session()->setFlashdata('success', 'Data updated successfully.');
         }
 
-
-
-
-
-
-
-
         // Update data in 'register' table using student IDs
-
 
         return redirect()->to('student_list_of_group');
     }
@@ -1812,9 +1812,6 @@ class AdminController extends BaseController
             return json_encode([]);
         }
     }
-
-
-
 
     public function payments()
     {

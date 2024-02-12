@@ -1130,9 +1130,26 @@ class AdminModel extends Model
                 ->getRow();
             $attendanceRecord->no_of_session = $paymentData ? $paymentData->no_of_session : null;
         }
-
+// echo'<pre>';print_r($result);die;
         return $result;
     }
+
+    public function fetchAttendanceForStudent($student_registerid)
+{
+    $attendanceRecord = $this->db->table('attendeance_table')
+                                  ->select('attendeance_table.*, register.full_name, payment.no_of_session')
+                                  ->join('register', 'register.id = attendeance_table.student_registerid', 'left')
+                                  ->join('payment', 'payment.user_id = attendeance_table.student_registerid', 'left')
+                                  ->where('attendeance_table.student_registerid', $student_registerid)
+                                  ->get()
+                                  ->getResult();
+                                //  echo'<pre>'; print_r($attendanceRecord);die;
+                                if (!empty($attendanceRecord)) {
+                                    return $attendanceRecord;
+                                } else {
+                                    return false;
+                                }
+}
 
 
 
@@ -1170,7 +1187,6 @@ class AdminModel extends Model
         return $result;
     }
 
-
     public function jointhreetables($select, $table1, $table2, $table3, $joinCond, $joinCond2, $wherecond, $type)
     {
         $result = $this->db->table($table1)  // Use $table1 variable here
@@ -1184,8 +1200,6 @@ class AdminModel extends Model
         return $result;
     }
 
-
-
     public function jointhreetableswwc($select, $table1, $table2, $table3, $joinCond, $joinCond2, $type)
     {
         $result = $this->db->table($table1)  // Use $table1 variable here
@@ -1197,7 +1211,6 @@ class AdminModel extends Model
         //    echo $this->db->getLastQuery();die;
         return $result;
     }
-
 
     public function joinfourtables($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $wherecond, $type)
     {
