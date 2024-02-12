@@ -197,7 +197,6 @@
                                                             $dateTime = new DateTime($Password->created_at);
                                                             $date = $dateTime->format('Y-m-d');
                                                             ?>
-
                                                             <td><?= $date ?></td>
                                                             <td><?= $Password->full_name ?></td>
                                                             <td><?= $Password->email ?></td>
@@ -209,6 +208,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <input type="hidden" name="id" value="<?= $Password->id ?>">
+                                                                    <input type="hidden" name="mobile_no" value="<?= $Password->mobile_no ?>">
                                                                     <button class="btn btn-info" type="submit">Update Password</button>
                                                                 </td>
                                                             </form>

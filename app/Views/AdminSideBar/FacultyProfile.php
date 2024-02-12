@@ -101,7 +101,7 @@
                                     </div>
                                     <div class="user-details">
                                         <h4 class="user-name mb-0"><?= $faculty->faculty_name ?></h4>
-                                        <p class="mbless"><?= $faculty->email ?></p>
+                                        <p class="mbless"><?= $faculty->phone ?></p>
 
                                     </div>
                                 </div>

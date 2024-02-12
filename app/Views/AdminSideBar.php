@@ -743,7 +743,7 @@
                                     <a href="#" class="nav-link">
                                         <i class=" nav-icon fa fa-calendar"></i>
                                         <p>
-                                            Schedule
+                                           Demo
                                             <i class="right fas fa-angle-left"></i>
                                         </p>
                                     </a>

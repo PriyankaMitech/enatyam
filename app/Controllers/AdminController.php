@@ -390,11 +390,12 @@ class AdminController extends BaseController
                 if ($action === 'approve') {
                     $model2 = new LoginModel();
                     $lastUpdatedCareerData = $model->getresultofResultofapplication($D_id);
-
+// print_r($lastUpdatedCareerData);die;
                     if ($lastUpdatedCareerData) {
                         $registerData = [
                             'full_name' => $lastUpdatedCareerData['name'],
                             'email' => $lastUpdatedCareerData['email'],
+                            'mobile_no' => $lastUpdatedCareerData['phone'],
                             'is_register_done' => 'Y',
                             'role' => 'Faculty',
                             'carrier_id' =>  $D_id,
@@ -428,8 +429,10 @@ class AdminController extends BaseController
     }
     public function createpassword()
     {
+        // print_r($_POST);die;
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
+        $phone = $this->request->getPost('mobile_no');
         $id = $this->request->getPost('id');
         $msg = 'Your password has been  updated. ';
         $Subject = 'Your Application Approved';
@@ -437,6 +440,10 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $result = $model->updatePassword($id, $password);
         if ($result) {
+            $phoneNumber = $phone;
+            $templates = "demo_booking_";
+            $msg = "Your Application Approved Your Password is: $password";
+            whatsapp($phoneNumber, $templates, $msg);
             sendConfirmationEmail($email, $password, $msg, $Subject, $tital);
             $this->session->setFlashdata('success', 'Password updated successfully.');
         } else {
@@ -1253,6 +1260,9 @@ class AdminController extends BaseController
         return json_encode($student_data);
     }
 
+
+
+
     public function get_faculty_data()
     {
         $model = new AdminModel();
@@ -1402,21 +1412,10 @@ class AdminController extends BaseController
                 $profile_id = $uri->getSegment(2);
 
 
-                $wherecond = array('student_id' => $profile_id);
+                $wherecond = array('student_id ' => $profile_id);
 
                 $data['profile_data'] = $model->getcorcessforstudentprofile('student', $wherecond);
-                $student_registerid = $data['profile_data']->register_id;
-                $wherecond1 = array('student_registerid' => $student_registerid);
 
-                $data['attendanceRecord'] = $model->fetchAttendanceForStudent($student_registerid);
-                $select = 'payment.*, register.full_name';
-                $table1 = 'payment';
-                $table2 = 'register';
-                $joinCond = 'register.id = payment.user_id';
-                $wherecond = array('user_id' => $student_registerid);
-                $type = 'left';
-                $data['paymentRecord'] = $model->jointwotables($select,$table1,$table2,$joinCond,$wherecond,$type);
-                // echo'attendance:<pre>';print_r($data['paymentRecord']);die;
 
                 return view('AdminSideBar/viewprofiles', $data);
             } else {
@@ -1680,7 +1679,15 @@ class AdminController extends BaseController
             session()->setFlashdata('success', 'Data updated successfully.');
         }
 
+
+
+
+
+
+
+
         // Update data in 'register' table using student IDs
+
 
         return redirect()->to('student_list_of_group');
     }
@@ -1812,6 +1819,9 @@ class AdminController extends BaseController
             return json_encode([]);
         }
     }
+
+
+
 
     public function payments()
     {
