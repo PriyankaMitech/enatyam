@@ -136,7 +136,7 @@ $name               = "RazorPay Infovistar";
 
                                                 <div>
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <input class="btn shop-now-btn"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+                                                        <input class="btn shop-now-btn" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
                                                     <?php else : ?>
                                                         <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
 
