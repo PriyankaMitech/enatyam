@@ -83,7 +83,6 @@ class FacultyController extends BaseController
         $todayDate = date('Y-m-d H:i:s');
         $displayedNotificationCount = 0;
         $conductedClasses= $facultymodel->conductedClasses($teacherId);
-        // print_r($conductedClasses);die;
         return view('faculty', [
           'data' => $data,
           'todaysession' => $todaysession,
@@ -91,8 +90,12 @@ class FacultyController extends BaseController
           'group_data' => $group_data,
           'notificationCount' => $displayedNotificationCount,
         ]);
+
+        // echo "<pre>";print_r($group_data);exit();
+
       }
     }
+
 
     return redirect()->to(base_url());
   }
