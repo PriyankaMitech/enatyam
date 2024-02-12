@@ -60,51 +60,53 @@
                                 <?php }else{ ?>
                                     <img class="profile-user-img img-fluid img-circle" src="<?=base_url(); ?>public/images/user.png" alt="User profile picture">
 
-                                <?php } ?>                            </div>
+                                <?php } ?>                           
+                            </div>
 
                             <h3 class="profile-username text-center"><?=$profile_data->student_name;  ?></h3>
-
-                            
-                                <p class="text-muted text-center"><?=$profile_data->courses_name;  ?> - <?=$profile_data->sub_courses_name;  ?></p>
-                           
-  
-
+                            <ul class="list-group list-group-unbordered mb-3">
+                                <li class="list-group-item">
+                                    <b>Mobile No. :</b> <a class="float-right"><?=$profile_data->mobile_no;  ?></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Email Id :</b> <a class="float-right"><?=$profile_data->email;  ?></a>
+                                </li> 
+                            </ul>
                         </div>
-                    </div>
+                    </div>    
+                </div>
+                <!-- /.col -->
+                <div class="col-md-9">
                     <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">About Me</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                        <strong><i class="fa fa-envelope" aria-hidden="true"></i> Email Id</strong>
-                            <p class="text-muted"><?=$profile_data->email;  ?></p>
-
-                            <hr>
-
-                            <strong><i class="fa fa-phone" aria-hidden="true"></i></i> Mobile Number</strong>
-                            <p class="text-muted"><?=$profile_data->mobile_no;  ?></p>
-                            <hr>    
+                            <strong><i class="fa fa-envelope" aria-hidden="true"></i> Course - Subcourse</strong>
+                            <p class="text-muted"><?=$profile_data->courses_name;  ?> - <?=$profile_data->sub_courses_name;  ?></p>
+                                <hr>
                             <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
                             <p class="text-muted"><?=$profile_data->country;  ?></p> 
                         </div>
                         <!-- /.card-body -->
                     </div>
-                    <!-- /.card -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-9">
                     <div class="card">
                         <div class="card-header p-2">
                             <ul class="nav nav-pills">
-                                <li class="nav-item"><a class="nav-link active" href="#videos" data-toggle="tab">Videos</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#images" data-toggle="tab">Images</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#payment" data-toggle="tab">Payment</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Schedule</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Videos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#attendance" data-toggle="tab">Attendance</a></li>
                             </ul>
+
+    
+
                         </div><!-- /.card-header -->
                         <div class="card-body">
-                        <div class="card-body">
+                        <!-- <div class="card-body"> -->
                             <div class="tab-content">
-                                <div class="active tab-pane" id="videos">
+                                <div class="tab-pane" id="videos">
                                     <section class="content">
                                         <div class="container-fluid">
                                             <div class="row">
@@ -141,23 +143,14 @@
 
                                                             echo '<span class="time"><i class="fas fa-clock"></i> ' . $timeAgo . '</span>';
                                                             ?>
-                                                        </span>
+                                                    </span>
 
                                                     <h3 class="timeline-header"><a href="#"><?=$profile_data->student_name;  ?></a> shared a video</h3>
-
-                                            
-                                                        
-                                                            
-                                                                <div class="timeline-body">
-                                                        <div class="embed-responsive embed-responsive-16by9">
-                                                        <iframe class="embed-responsive-item" src="<?=base_url();?>public/uploads/videos/<?=$data->video_name;  ?>" allowfullscreen></iframe>
+                                                        <div class="timeline-body">
+                                                            <div class="embed-responsive embed-responsive-16by9">
+                                                                <iframe class="embed-responsive-item" src="<?=base_url();?>public/uploads/videos/<?=$data->video_name;  ?>" allowfullscreen></iframe>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                               
-                                                     
-                                       
-                                            
-                                             
                                                     </div>
                                                 </div>
                                                 <!-- END timeline item -->
@@ -249,19 +242,115 @@
                                 </div>
                                 <!-- /.tab-pane -->
 
-                             
+                                <div class="tab-pane" id="attendance">
+                                    <section class="content">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                        <?php if(!empty($attendanceRecord)){ ?>
+                                                            <h3 class="card-title">Attendance Table</h3>
+                                                        </div>
+                                                        <!-- /.card-header -->
+                                                        <div class="card-body table-responsive p-0">
+                                                            <table class="table table-hover text-nowrap">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>No</th>
+                                                                        <th>Session Start Date</th>
+                                                                        <th>Attendance Status</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>            
+                                                                    <?php foreach ($attendanceRecord as $index => $record): ?>
+                                                                        <tr>
+                                                                            <td><?= $index + 1 ?></td>
+                                                                            <td><?= $record->date ?></td>
+                                                                            <td><?= $record->Attendance_status === 'p' ? 'Present' : 'Absent' ?></td>
+                                                                        </tr>
+                                                                    <?php endforeach; ?>
+                                                                
+                                                                    <?php }else{ ?>
+                                                                        Data is not available.
+                                                                    <?php } ?>
+                                                    `           </tbody>
+                                                            </table>           
+                                                        </div> 
+                                                         <!-- /.card-body -->
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div> 
                                 <!-- /.tab-pane -->
+
+
+                                <div class="active tab-pane" id="payment">
+                                    <section class="content">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                        <?php if(!empty($paymentRecord)){ ?>
+                                                            <h3 class="card-title">Payment Record </h3>
+                                                        </div>
+                                                        <!-- /.card-header -->
+                                                        <div class="card-body table-responsive p-0">
+                                                            <table class="table table-hover text-nowrap">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>No</th>
+                                                                        <th>Student Name</th>
+                                                                        <th>Merchant Id</th>
+                                                                        <th> total Session</th>
+                                                                        <th>Amount </th>
+                                                                        <th>Status</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>            
+                                                                    <?php foreach ($paymentRecord as $index => $record): ?>
+                                                                        <tr>
+                                                                            <td><?= $index + 1 ?></td>
+                                                                            <td><?= $record->full_name ?></td>
+                                                                            <td><?= $record->merchant_trans_id  ?></td>
+                                                                            <td><?= $record->no_of_session  ?></td>
+                                                                            <td><?= $record->total_amount  ?></td>
+                                                                            <td><?= $record->status === 'Y' ? 'Successful' :'Fail' ?></td>
+                                                                        </tr>
+                                                                    <?php endforeach; ?>
+                                                                
+                                                                    <?php }else{ ?>
+                                                                        Data is not available.
+                                                                    <?php } ?>
+                                                    `           </tbody>
+                                                            </table>           
+                                                        </div> 
+                                                         <!-- /.card-body -->
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div> 
                             </div>
                             <!-- /.tab-content -->
                         </div><!-- /.card-body -->
-                        </div><!-- /.card-body -->
+                        <!-- </div>/.card-body -->
+                        <!-- </div> -->
+                        <!-- /.card -->
                     </div>
-                    <!-- /.card -->
+                    <!-- /.col -->
                 </div>
                 <!-- /.col -->
             </div>
             <!-- /.row -->
-        </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
 </div>
