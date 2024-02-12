@@ -287,6 +287,8 @@ $routes->get('FacultyAttendance', 'AdminController::FacultyAttendance');
 $routes->get('FacultyProfile', 'Home::FacultyProfile');
 $routes->get('FacultySchedule', 'DemoController::todayDemo');
 $routes->post('DemoController/resheduleDemo', 'DemoController::resheduleDemo');
+$routes->post('demostatus', 'DemoController::demostatus');
+
 $routes->get('SelectSlot', 'FacultyController::MonthlyCalendar');
 // $routes->get('MonthlyCalendar', 'FacultyController::MonthlyCalendar');
 $routes->get('StudentUploadedVideo', 'FacultyController::StudentuplodedVidio');

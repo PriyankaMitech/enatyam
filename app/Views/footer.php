@@ -69,9 +69,9 @@
                     <!-- <li>
                         <a href="<?=base_url(); ?>blog">Blog</a>
                     </li> -->
-                    <li>
+                    <!-- <li>
                         <a href="<?=base_url(); ?>invester">Investors</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
 

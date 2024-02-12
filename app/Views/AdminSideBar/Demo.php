@@ -60,13 +60,13 @@ th {
                             <div class="card-header p-0 border-bottom-0">
                                 <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill"
+                                        <a class="nav-link" id="custom-tabs-four-home-tab" data-toggle="pill"
                                             href="#custom-tabs-four-home" role="tab"
                                             aria-controls="custom-tabs-four-home" aria-selected="false">Conducted
                                             Demo</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link " id="custom-tabs-four-profile-tab" data-toggle="pill"
+                                        <a class="nav-link active" id="custom-tabs-four-profile-tab" data-toggle="pill"
                                             href="#custom-tabs-four-profile" role="tab"
                                             aria-controls="custom-tabs-four-profile" aria-selected="true">Pending
                                             Demo</a>
@@ -82,7 +82,7 @@ th {
                             </div>
                             <div class="card-body">
                                 <div class="tab-content" id="custom-tabs-four-tabContent">
-                                    <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel"
+                                    <div class="tab-pane fade " id="custom-tabs-four-home" role="tabpanel"
                                         aria-labelledby="custom-tabs-four-home-tab">
                                         <?php if (!empty($ConductedDemo)): ?>
                                         <table class="table table-bordered">
@@ -102,7 +102,7 @@ th {
                                                     <td><?= $Demo->courses_name ?>/<?= $Demo->sub_courses_name ?></td>
                                                     <td><?= $Demo->email ?></td>
                                                     <td><?= $Demo->phone ?></td>
-                                                    <td></td>
+                                                    <td><?= $Demo->Conducted_Demo_Date ?></td>
                                                 </tr>
                                                 <?php endforeach; ?>
                                             </tbody>
@@ -111,7 +111,7 @@ th {
                                         <p class="text-center">No demos conducted</p>
                                         <?php endif; ?>
                                     </div>
-                                    <div class="tab-pane fade " id="custom-tabs-four-profile" role="tabpanel"
+                                    <div class="tab-pane fade active show" id="custom-tabs-four-profile" role="tabpanel"
                                         aria-labelledby="custom-tabs-four-profile-tab">
                                         <?php if (!empty($PendingDemo)): ?>
                                         <table class="table table-bordered">

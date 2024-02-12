@@ -80,8 +80,8 @@ table td {
                                             <tr>
                                                 <th>Name</th>
                                                 <th>Date/Time</th>
-                                                <!-- <th>Course/subcorce</th> -->
                                                 <th>Join</th>
+                                                <th>Remark</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -94,10 +94,19 @@ table td {
                                                     <a href="<?= $item['meetlink'] ?>"
                                                         target="_blank"><?= $item['meetlink'] ?></a>
                                                 </td>
+                                                <td>
+                                                    <form action="demostatus" method="POST">
+                                                        <input type="hidden" name="student_id"
+                                                            value="<?= $item['D_id'] ?>">
+                                                        <button type="submit" name="attendance" value="Y"
+                                                            class="btn btn-success">Attended</button>
+                                                        <button type="submit" name="attendance" value="N"
+                                                            class="btn btn-danger">Unattended</button>
+                                                    </form>
+                                                </td>
                                             </tr>
                                             <?php endforeach; ?>
                                         </tbody>
-
                                     </table>
                                     <?php else : ?>
                                     <!-- If $data is empty, display a message -->
@@ -114,9 +123,10 @@ table td {
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Date/Time</th>
+                                                <th>Time/Date</th>
+                                                <th>meeting Link</th>
 
-                                                <th>Status</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -127,24 +137,14 @@ table td {
                                                             if ($ite['Reshedule_date'] !== null) {
                                                                 echo $ite['Reshedule_date'] . ' ' . $ite['Reshedule_Time'];
                                                             } else {
-                                                                echo $ite['Book_Date_Time'];
+                                                                echo $ite['Book_Date_Time'] . ' / ' . $ite['Book_Date'];
                                                             }
                                                             ?></td>
-
                                                 <td>
-                                                    <?php
-                                                        $today = date('Y-m-d');
-                                                        $demoDate = date('Y-m-d', strtotime($ite['Book_Date_Time']));
-
-                                                        if ($today < $demoDate) {
-                                                            echo '<p style="background-color: darkgoldenrod;">Be ready For Take Demo</p>';
-                                                        } elseif ($ite['Reshedule_date'] !== null && strtotime($ite['Reshedule_date']) > strtotime($today)) {
-                                                            echo '<p style="background-color: aquamarine;">Be ready For Take Demo</p>';
-                                                        } else {
-                                                            echo '<p style="background-color: aquamarine;">Wait For Reschedule</p>';
-                                                        }
-                                                        ?>
+                                                    <a href="<?= $ite['meetlink']; ?>"
+                                                        target="_blank"><?= $ite['meetlink']; ?></a>
                                                 </td>
+
                                             </tr>
 
                                             <?php endforeach; ?>

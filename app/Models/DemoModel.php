@@ -26,4 +26,13 @@ class DemoModel extends Model
             ->update(['Conducted_Demo' => $action]);
             
     }
+    public function updatedata($student_id,$attendance)
+    {
+        return $this->db->table('free_demo_table')
+        ->where('D_id', $student_id)
+        ->update([
+            'Conducted_Demo' => $attendance,
+            'Conducted_Demo_Date' => date('Y-m-d') 
+        ]);
+    }
 }
