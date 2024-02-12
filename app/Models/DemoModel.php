@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class DemoModel extends Model
 {
     protected $table = 'free_demo_table'; // Change to your actual table name
-    protected $allowedFields = ['name', 'email', 'phone', 'course', 'sub_course', 'Age', 'exprience,','AssignTecher_id', 'information', 'Country', 'city', 'Book_Date_Time','Book_Date',];
+    protected $allowedFields = ['name', 'email', 'phone', 'course', 'sub_course', 'Age', 'exprience','AssignTecher_id', 'information', 'Country', 'city', 'Book_Date_Time','Book_Date',];
 
     public function getTodayDemo($currentDate, $registerId)
     {

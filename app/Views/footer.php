@@ -1100,6 +1100,9 @@ $(document).ready(function() {
                 },
                 phone:{
                     required : true,
+                    minlength: 10, // Minimum length of 10 digits
+                    maxlength: 10, // Maximum length of 10 digits
+                    digits: true 
                 },
                 Age1:{
                     required : true,

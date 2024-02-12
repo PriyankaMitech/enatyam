@@ -214,13 +214,13 @@
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
-                  <!-- <li class="nav-item">
+                  <li class="nav-item">
                     <a href="<?php echo base_url() ?>ScheduleStudent" class="nav-link">
                       <i class="nav-icon fas fa-calendar-alt"></i>
                       <p> Schedule
                       </p>
                     </a>
-                  </li> -->
+                  </li>
                   <!-- <li class="nav-item">
                     <a href="<?php echo base_url() ?>reschedule" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
