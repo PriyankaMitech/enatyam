@@ -287,7 +287,11 @@ div.dataTables_wrapper div.dataTables_filter input {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php if(!empty($group_data)) { $i=1; ?>
+                            <?php
+                            // echo "<pre>";print_r($group_data);exit();
+                            if(!empty($group_data)) { $i=1; ?>
+
+                                
                                 <?php foreach($group_data as $datas) {
                                     
                                     
@@ -298,9 +302,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 
                                     if (!empty($student_id)) {
-                                        // echo "<pre>";print_r($student_id);
                                         foreach ($student_id as $student_id_data) {
-                                            // echo "<pre>";print_r($student_id_data);
                                                 $wherec = array('id' => $student_id_data);
                                             // Assuming you have a method in your model to get student names by ID
                                             $student = $adminModel->getsinglerow('register',$wherec);
@@ -308,7 +310,11 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 
                                             // Assuming the method returns an object with a 'name' property
-                                            $studentNames[] = $student->full_name;
+                                            // $studentNames[] = $student->full_name;
+
+                                            if (is_object($student) && property_exists($student, 'full_name')) {
+                                                    $studentNames[] = $student->full_name;
+                                             }
 
                                             // echo "<pre>";print_r($student);exit();
 
