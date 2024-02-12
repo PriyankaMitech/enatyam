@@ -1064,32 +1064,28 @@ $(document).ready(function() {
 
 <?php } else if ($page == 'demobooking') { ?>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
     $(document).ready(function () {
         $(".ageb").click(function () {
             var buttonValue = $(this).text();
-
             $("#ageInput").val(buttonValue);
-
-
-            // You can use the buttonValue in further processing or send it to the server, etc.
+            $(".ageb").removeClass("active");
+            $(this).addClass("active");
         });
-    });
-</script>
 
-<script>
-    $(document).ready(function () {
         $(".classd").click(function () {
             var buttonValue = $(this).text();
-
             $("#statusc").val(buttonValue);
-
-            // You can use the buttonValue in further processing or send it to the server, etc.
+            $(".classd").removeClass("active");
+            $(this).addClass("active");
         });
     });
 </script>
+
 
 <script>
     $(document).ready(function() {
@@ -2382,7 +2378,8 @@ $(function() {
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
     <?php } ?>
 
    
