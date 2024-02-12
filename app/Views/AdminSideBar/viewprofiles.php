@@ -79,7 +79,7 @@
                 <div class="col-md-9">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">About Me</h3>
+                            <h3 class="card-title">Student Details</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -95,9 +95,10 @@
                         <div class="card-header p-2">
                             <ul class="nav nav-pills">
                                 <li class="nav-item"><a class="nav-link active" href="#payment" data-toggle="tab">Payment</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Schedule</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Videos</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#attendance" data-toggle="tab">Attendance</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#videos" data-toggle="tab">Videos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Schedule</a></li>
+                                
                             </ul>
 
     
@@ -112,6 +113,7 @@
                                             <div class="row">
                                             <div class="col-md-12">
                                             <?php if(!empty($video_data)){ ?>
+                                                <!-- <?php //echo'<pre>';print_r($video_data);die; ?> -->
                                                 <?php foreach($video_data as $data){ ?>
 
                                                     <?php
