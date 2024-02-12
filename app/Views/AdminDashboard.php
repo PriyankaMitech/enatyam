@@ -189,8 +189,8 @@ th {
                                     <th>Name</th>
                                     <th>Course</th>
                                     <th>Sub Course</th>
-                                    <th>Start Time</th>
-                                    <th>End Time</th>
+                                    <th>Date</th>
+                                  
                                 </tr>
                             </thead>
                             <tbody>
@@ -200,8 +200,8 @@ th {
                                     <td><?= $row->name ?></td>
                                     <td><?= $row->courses_name ?></td>
                                     <td><?= $row->sub_courses_name ?></td>
-                                    <td><?= $row->Start_Time ?></td>
-                                    <td><?= $row->End_Time ?></td>
+                                    <td><?= $row->Book_Date ?></td>
+                                    
                                 </tr>
                                 <?php endforeach; ?>
                                 <?php else : ?>
@@ -285,12 +285,12 @@ th {
                                                 <td><?= $faculty->courses_name ?></td>
 
                                                 <td><?= $faculty->sub_courses_name ?></td>
-
-                                                <td>
+                                                <td><?= $faculty->Conducted_Demo_Date ?></td>
+                                                
                                                     <input type="hidden" name="email" value="<?= $faculty->email ?>">
                                                     <!-- <button class="btn btn-primary" type="submit">Add
                                                             Student</button> -->
-                                                </td>
+                                               
                                             </form>
                                         </tr>
                                         <?php endforeach; ?>
@@ -346,7 +346,7 @@ th {
                                             <td><?= date(
                                                             "d/m/Y",
                                                             strtotime(
-                                                                $status->Booking_Date_Time
+                                                                $status->Book_Date
                                                             )
                                                         ) ?></td>
                                             <td>
@@ -419,17 +419,20 @@ th {
                                                             ?>
                                                 <?php if (!empty($matchingFaculties)) : ?>
                                                 <form action="AssignTecherForDemo" method="post">
-                                                    <select name="faculty_id" class="form-control">
-                                                        <?php foreach ($matchingFaculties as $faculty) : ?>
-                                                        <option value="<?= $faculty->id ?>">
-                                                            <?= $faculty->full_name ?>
-                                                        </option>
-                                                        <?php endforeach; ?>
-                                                    </select>
-                                                    <input type="hidden" name="studentid" value="<?= $status->D_id ?>">
-                                                    <button type="submit" class="btn btn-success mt-1 ml-3">Assign
-                                                       </button>
-                                                       
+                                                    <div style="display: flex; align-items: center;">
+                                                        <select name="faculty_id" class="form-control">
+                                                            <option value="">Select</option>
+                                                            <?php foreach ($matchingFaculties as $faculty) : ?>
+                                                            <option value="<?= $faculty->id ?>">
+                                                                <?= $faculty->full_name ?>
+                                                            </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                        <input type="hidden" name="studentid"
+                                                            value="<?= $status->D_id ?>">
+                                                        <button type="submit"
+                                                            class="btn btn-success ml-3">Assign</button>
+                                                    </div>
                                                 </form>
                                                 <?php else : ?>
                                                 <!-- <p>No faculty available</p> -->
@@ -553,7 +556,8 @@ th {
                                                     <a href="<?php echo htmlspecialchars($facult->meetlink); ?>"
                                                         target="_blank"><?php echo htmlspecialchars($facult->meetlink); ?></a>
                                                     <?php else : ?>
-                                                    <input type="text" name="meetlink" placeholder="Enter Meeting Link" require>
+                                                    <input type="text" name="meetlink" placeholder="Enter Meeting Link"
+                                                        require>
                                                     <?php endif; ?>
                                                 </td>
                                                 <td>

@@ -96,4 +96,15 @@ class DemoController extends BaseController
         $result =  $demoModel->demoreshedule($id, $action);
         return redirect()->to('getDemoDetails');
     }
+    public function demostatus()
+    {
+        //print_r($_POST);die;
+        $session = session();
+        $student_id = $_POST['student_id'];
+        $attendance = $_POST['attendance'];
+        $demoModel = new DemoModel();
+       $updatestaus =$demoModel->updatedata($student_id,$attendance);
+       $session->setFlashdata('success', 'Demo status updeted!');
+       return redirect()->to('FacultySchedule');
+    }
 }
