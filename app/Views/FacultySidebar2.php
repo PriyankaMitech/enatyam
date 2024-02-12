@@ -303,18 +303,18 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <li class="nav-item">
+                <!-- <li class="nav-item"> -->
                   <!-- <a href="<?php echo base_url() ?>SelectSlot" class="nav-link">
                     <i class="nav-icon fas fa-edit"></i>
                     <p> Add Schedule
                     </p>
                   </a> -->
-                  <a href="<?php echo base_url() ?>giveschedule" class="nav-link">
+                  <!-- <a href="<?php echo base_url() ?>giveschedule" class="nav-link">
                     <i class="nav-icon fas fa-edit"></i>
                     <p> Add Schedule
                     </p>
                   </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a href="<?php echo base_url() ?>fshedule" class="nav-link">
                     <i class="nav-icon fas fa-calendar-alt"></i>
