@@ -117,15 +117,15 @@
                         <div class="modal-body rounded-0">
                             <div class="container-fluid">
                                 <dl>
-                                    <!-- <dt class="text-muted">Title</dt>
-                                    <dd id="title" class="fw-bold fs-4"></dd>
-                                    <dt class="text-muted">Description</dt>
+                                    <!-- <dt class="text-muted">Faculty Name</dt>
+                                    <dd id="title" class="fw-bold fs-4"></dd> -->
+                                    <dt class="text-muted">Link for Meeting</dt>
                                     <a>
                                         <dd id="description" class=""></dd>
-                                    </a> -->
-                                    <dt class="text-muted">Start</dt>
+                                    </a>
+                                    <dt class="text-muted">Start Time</dt>
                                     <dd id="start" class=""></dd>
-                                    <dt class="text-muted">End</dt>
+                                    <dt class="text-muted">End Time </dt>
                                     <dd id="end" class=""></dd>
                                 </dl>
                             </div>

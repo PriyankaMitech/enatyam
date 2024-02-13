@@ -41,6 +41,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/faq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/footer.css">

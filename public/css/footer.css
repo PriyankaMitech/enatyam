@@ -140,11 +140,11 @@ footer {
   text-align: justify;
 }
 .fu {
-  padding-left: 10%;
+  padding-left: 9%;
   padding-top: 88px;
 }
 .fu1 {
-  padding-left: 8%;
+  padding-left: 7%;
   padding-top: 88px;
 }
 
@@ -172,9 +172,9 @@ footer {
   background-color: #040404;
   padding-top: 2%;
 }
-.copyright-p {
+/* .copyright-p {
   text-align: center;
-}
+} */
 .copyright-p p {
   margin-bottom: 0px !important;
 }
@@ -284,7 +284,6 @@ footer a:hover {
     color: #f0f4fa !important;
   }
   .col-md-3.col-6.footer-div.fu .f-ul {
-    --bs-gutter-x: 0!important;
-}
-
+    --bs-gutter-x: 0 !important;
+  }
 }

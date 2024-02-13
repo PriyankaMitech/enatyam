@@ -1,17 +1,19 @@
 <?php include('header.php'); ?>
+
+
 <section class="s_header-section">
     <div class="container-fluid mt-2">
         <div class="row ">
             <div class="col-lg-8 p-5">
                 <div class="bannervs">
                     <video class="video-dance bannerv"  controls="1" autoplay="0" loop="0">
-                        <source src="public/images/Dance/DanceVidio.mp4" type="video/mp4">
+                        <source src="<?=base_url(); ?>public/images/Dance/DanceVidio.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>
             <div class="col-lg-4">
             <div class="banneris">
-                <img src="public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
+                <img src="<?=base_url(); ?>public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
                 </div>
             </div>
         </div>
@@ -46,18 +48,18 @@
 
         <div class="row workSections text-center m-0">
             <div class="col-md-4 col-4 howWorkBlock howWorkBlock1">
-                <img src="public/images/hew1.png" class="lazyImage" width="14" height="14" alt="" />
+                <img src="<?=base_url(); ?>public/images/hew1.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">1</span> <span>Book a Demo</span></p>
                 <p class="hwDesc">Book a Free Demo Class with a Tutor.</p>
             </div>
             <div class="col-md-4 col-4 howWorkBlock">
-                <img src="public/images/hew2.png" class="lazyImage" width="14" height="14" alt="" />
+                <img src="<?=base_url(); ?>public/images/hew2.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">2</span> <span>Join LIVE Demo Class</span></p>
                 <p class="hwDesc">Attend the Demo class as scheduled.</p>
             </div>
 
             <div class="col-md-4 col-4 howWorkBlock howWorkBlock3">
-                <img src="public/images/hew3.png" class="lazyImage" width="14" height="14" alt="" />
+                <img src="<?=base_url(); ?>public/images/hew3.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">3</span> <span>Pay and Start</span></p>
                 <p class="hwDesc">Use enatyam SecurePay to pay and start your Classes.</p>
             </div>
@@ -470,7 +472,7 @@
 
             <div class="row p-3 MusicSec1">
                 <div class="col-md-6 col-12">
-                    <img src="public/images/Home/4.png" class="danceimg1 home">
+                    <img src="<?=base_url(); ?>public/images/Home/4.png" class="danceimg1 home">
                     <!-- public/images/Home/4.png -->
                 </div>
 
@@ -528,7 +530,7 @@
                     </div>
 
                     <div class="col-md-6 col-12 p-0 text-center">
-                        <img src="public/images/Home/11.png" class="danceimg home">
+                        <img src="<?=base_url(); ?>public/images/Home/11.png" class="danceimg home">
 
                     </div>
                 </div>
@@ -537,7 +539,7 @@
             <div class="p-3 MusicSec1">
                 <div class="row m-0">
                     <div class="col-md-6 col-12 p-0">
-                        <img src="public/images/Home/14.png" class="danceimg1 home">
+                        <img src="<?=base_url(); ?>public/images/Home/14.png" class="danceimg1 home">
 
                     </div>
 
@@ -597,7 +599,7 @@
                     </div>
 
                     <div class="col-md-6 col-12 p-0 text-center">
-                        <img src="public/images/instrument/c-2.svg" class="danceimg home">
+                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg home">
                     </div>
                 </div>
             </div>
@@ -803,10 +805,10 @@
             <div class="col-lg-12">
            
                 <div class="owl-carousel owl-theme">
-                    <div class="item">
+                    <div class="item" onclick="showModal('Veera', 'Yoga', 'public/images/veera.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/veera.jpg" />
+                                <img src="<?=base_url(); ?>public/images/veera.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Veera</div>
@@ -816,10 +818,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Priti', 'Kathak Dance', 'public/images/priti.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/priti.jpg" />
+                                <img src="<?=base_url(); ?>public/images/priti.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Priti</div>
@@ -829,10 +831,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Neha', 'Semi Classical Dance' ,'public/images/neha.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/neha.jpg" />
+                                <img src="<?=base_url(); ?>public/images/neha.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Neha</div>
@@ -842,10 +844,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Priyanka', 'Kathak Dance', 'public/images/priyanka.jpeg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/priyanka.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Priyanka</div>
@@ -855,10 +857,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Priya', 'Yoga', 'public/images/priya.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/priya.jpg" />
+                                <img src="<?=base_url(); ?>public/images/priya.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Priya</div>
@@ -868,23 +870,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Sweta', 'Carnatic Music', 'public/images/sweta.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/sweta.jpg" />
+                                <img src="<?=base_url(); ?>public/images/sweta.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">sweta</div>
+                                <div class="faculty-content-team__member-name text-white">Sweta</div>
                                 <div class="faculty-content-team__member-position text-white">
                                     Carnatic Music
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.png')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/jaya.png" />
+                                <img src="<?=base_url(); ?>public/images/jaya.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Jaya</div>
@@ -894,10 +896,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Veera', 'Hindustani Music', 'public/images/ketki.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/ketki.jpg" />
+                                <img src="<?=base_url(); ?>public/images/ketki.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">ketki</div>
@@ -907,10 +909,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Koyali', 'Hindustani Music', 'public/images/Koyali.png')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Koyali.png" />
+                                <img src="<?=base_url(); ?>public/images/Koyali.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Koyali</div>
@@ -920,10 +922,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('krutika', 'Semi Classical Dance' ,'public/images/krutika.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/krutika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/krutika.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">krutika</div>
@@ -933,10 +935,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Anila', 'Bollywood Dance' ,'public/images/Anila.jpeg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Anila.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Anila</div>
@@ -946,10 +948,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Anika', 'Yoga' ,'public/images/Anika.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Anika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Anika.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Anika</div>
@@ -959,10 +961,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Ila', 'Bollywood Singing', 'public/images/Ila.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Ila.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Ila.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Ila</div>
@@ -972,10 +974,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Samira', 'Yoga', 'public/images/Samira.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Samira.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Samira.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Samira</div>
@@ -985,10 +987,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="showModal('Sanjay', 'Yoga', 'public/images/sanjay.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/sanjay.jpg" />
+                                <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Sanjay</div>
@@ -1024,7 +1026,7 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/veera.jpg" />
+                                <img src="<?=base_url(); ?>public/images/veera.jpg" />
                                 <div class="hft">
                                     <h5>Raj</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1033,7 +1035,7 @@
                            
                             
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/veera.jpg" />
+                                <img src="<?=base_url(); ?>public/images/veera.jpg" />
                                 <div class="hft">
                                     <h5>Raj</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1046,14 +1048,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/priti.jpg" />
+                                <img src="<?=base_url(); ?>public/images/priti.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/priti.jpg" />
+                                <img src="<?=base_url(); ?>public/images/priti.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1065,14 +1067,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/neha.jpg" />
+                                <img src="<?=base_url(); ?>public/images/neha.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/neha.jpg" />
+                                <img src="<?=base_url(); ?>public/images/neha.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1084,14 +1086,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/priyanka.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/priyanka.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1103,14 +1105,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/priya.jpg" />
+                                <img src="<?=base_url(); ?>public/images/priya.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/priya.jpg" />
+                                <img src="<?=base_url(); ?>public/images/priya.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1122,14 +1124,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/sweta.jpg" />
+                                <img src="<?=base_url(); ?>public/images/sweta.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/sweta.jpg" />
+                                <img src="<?=base_url(); ?>public/images/sweta.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1141,14 +1143,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/jaya.png" />
+                                <img src="<?=base_url(); ?>public/images/jaya.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/jaya.png" />
+                                <img src="<?=base_url(); ?>public/images/jaya.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1160,14 +1162,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/ketki.jpg" />
+                                <img src="<?=base_url(); ?>public/images/ketki.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/ketki.jpg" />
+                                <img src="<?=base_url(); ?>public/images/ketki.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1179,14 +1181,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/Koyali.png" />
+                                <img src="<?=base_url(); ?>public/images/Koyali.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/Koyali.png" />
+                                <img src="<?=base_url(); ?>public/images/Koyali.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1198,14 +1200,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/krutika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/krutika.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/krutika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/krutika.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1217,14 +1219,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/Anila.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/Anila.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1236,14 +1238,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/Anika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Anika.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-2">
-                                <img src="public/images/Anika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Anika.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1255,14 +1257,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/Ila.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Ila.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/Ila.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Ila.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1274,14 +1276,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/Samira.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Samira.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/Samira.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Samira.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1293,14 +1295,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="public/images/sanjay.jpg" />
+                                <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="public/images/sanjay.jpg" />
+                                <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1475,7 +1477,7 @@
 <section class="comming-section" style="display:none">
     <div class="container cont-width">
         <div class="row">
-            <div class="col-lg-12 text-center coming-soon-img "><img src="public/images/logo3.png" width="15%"
+            <div class="col-lg-12 text-center coming-soon-img "><img src="<?=base_url(); ?>public/images/logo3.png" width="15%"
                     class="commingsoonimg" /></div>
             <div class="col-lg-12" style="padding-left:opx">
                 <div class="accordion-item">
@@ -1520,7 +1522,7 @@
 <section class="faq-section MusicSec">
 <div class="container cont-width">
 <!-- <div class="row">
-<div class="col-lg-1 col-md-1 col-12 faqd"><img src="public/images/logo2.png" class="dancefimg" /></div> -->
+<div class="col-lg-1 col-md-1 col-12 faqd"><img src="<?=base_url(); ?>public/images/logo2.png" class="dancefimg" /></div> -->
 <div class="row">
 <h3 class="text-white p-3" style="text-align:center"> FAQ<br>
         <span class="line"></span> 
@@ -1902,5 +1904,25 @@
 </section>
 
 
+<div id="facultyModal" class="modal">
+
+    <div class="modal-content wm">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="staff-wrapper maxwidth"> 
+    
+            <article class="staff-box"> 
+                <img src="" alt="Susan Stark"  id="imgf" />
+                <header id="facultyName"></header>
+                <div id="facultyDesignation"></div>
+
+                <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is...</p>
+                <!-- <a href="mailto:">sstark@asn-online.org</a> -->
+            </article>
+        </div>
+    </div>
+</div>
+
+
 
 <?php include('footer.php'); ?>
+

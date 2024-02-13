@@ -356,15 +356,29 @@ class StudentController extends BaseController
 
             $wherecond = array('faculty_registerid' => $assignTeacherId);
 
-            $data['schedule_data'] =  $model->getalldata('schedule_list', $wherecond);
+            // $data['schedule_data'] =  $model->getalldata('schedule_list', $wherecond);
 
             $wherecond1 = array('student_id' =>  $registerId);
             $data['single'] = $model->getsinglerow('tbl_student_shedule', $wherecond1);
 
 
-            // $data['schedule_data'] = $model->getalldata('tbl_student_shedule',$wherecond1);
-
+                // echo "<pre>";print_r($_SESSION);exit();
             $wherecond2 = array('faculty_id' => $assignTeacherId);
+            $session_type = $result->get('SessionType');
+
+            $wherecond3 = '';
+
+
+            if ($session_type != 'OneToOneSession') {
+                $wherecond3 = "FIND_IN_SET('$registerId', groupstudentname) > 0";
+            } else {
+                $wherecond3 = array('student_id' => $registerId);
+
+                
+            }
+
+            $data['schedule_data'] = $model->getalldata('tbl_student_shedule',$wherecond3);
+
 
             $data['slot_data'] =  $model->getalldata('tbl_student_shedule', $wherecond2);
 
