@@ -653,6 +653,8 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
         // Serialize form data for the specific group
         var formData = $('#attendanceForm_' + groupName).serialize();
 
+        alert(formData);
+
         $.ajax({
             type: 'POST',
             url: 'submitAttendance', // Adjust the URL as per your route configuration

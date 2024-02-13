@@ -172,11 +172,12 @@ footer {
   background-color: #040404;
   padding-top: 2%;
 }
-/* .copyright-p {
+.copyright-p {
   text-align: center;
-} */
+}
 .copyright-p p {
   margin-bottom: 0px !important;
+  font-size: 15px;
 }
 
 .mitechlink span {
