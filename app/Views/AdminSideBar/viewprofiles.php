@@ -96,12 +96,12 @@
                             <ul class="nav nav-pills">
                                 <li class="nav-item"><a class="nav-link active" href="#payment" data-toggle="tab">Payment</a></li>
 
-                                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Schedule</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#schedule" data-toggle="tab">Schedule</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#videos" data-toggle="tab">Videos</a></li>
 
                                 <li class="nav-item"><a class="nav-link" href="#attendance" data-toggle="tab">Attendance</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#videos" data-toggle="tab">Videos</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Schedule</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="#videos" data-toggle="tab">Videos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Schedule</a></li> -->
                                 
                             </ul>
 
@@ -117,7 +117,7 @@
                                             <div class="row">
                                             <div class="col-md-12">
                                             <?php if(!empty($video_data)){ ?>
-                                                <!-- <?php //echo'<pre>';print_r($video_data);die; ?> -->
+                                                <!-- <?php// echo'<pre>';print_r($video_data);die; ?> -->
                                                 <?php foreach($video_data as $data){ ?>
 
                                                     <?php
@@ -154,7 +154,7 @@
                                                     <h3 class="timeline-header"><a href="#"><?=$profile_data->student_name;  ?></a> shared a video</h3>
                                                         <div class="timeline-body">
                                                             <div class="embed-responsive embed-responsive-16by9">
-                                                                <iframe class="embed-responsive-item" src="<?=base_url();?>public/uploads/videos/<?=$data->video_name;  ?>" allowfullscreen></iframe>
+                                                                <iframe class="embed-responsive-item" src="<?=base_url();?>public/uploads/StudentStudyvideos/<?=$data->video_name;  ?>" allowfullscreen></iframe>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -343,6 +343,55 @@
                                         </div>
                                     </section>
                                 </div> 
+
+                            <div class="tab-pane" id="schedule">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <?php if(!empty($schedule_data)){ ?>
+                                            <h3 class="card-title">Schedule for <?= $schedule_data[0]->student_name ?></h3>
+                                    </div>
+                                    
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <table class="table table-bordered table- table-responsive">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Student Name</th>
+                                                    <th>Faculty Name</th>
+                                                    <th>Days</th>
+                                                    <th>Link</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>Start Time</th>
+                                                    <th>End Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($schedule_data as $slot): ?>
+                                                <tr>
+                                                    <td><?= $slot->id ?></td>
+                                                    <td><?= $slot->student_name ?></td>
+                                                    <td><?= $slot->faculty_name ?></td>
+                                                    <td><?= $slot->days ?></td>
+                                                    <td><a href="<?= $slot->meetlink ?>" target="_blank"><?= $slot->meetlink ?></a></td>
+                                                    <td><?= $slot->start_date ?></td>
+                                                    <td><?= $slot->end_date ?></td>
+                                                    <td><?= $slot->start_time ?></td>
+                                                    <td><?= $slot->end_time ?></td>
+                                                </tr>
+                                                <?php endforeach; ?>
+                                                <?php }else{ ?>
+                                                        Data is not available.
+                                                <?php } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+                            </div>    
+
                             </div>
                             <!-- /.tab-content -->
                         </div><!-- /.card-body -->

@@ -132,7 +132,7 @@
                                 <li class="nav-item"><a class="nav-link active" href="#attendance" data-toggle="tab">Attendance</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#schedule" data-toggle="tab">Schedule</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#videos" data-toggle="tab">Videos</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#images" data-toggle="tab">Images</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="#images" data-toggle="tab">Images</a></li> -->
                             </ul>
                         </div><!-- /.card-header -->
                         <div class="card-body">
@@ -143,7 +143,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                             <?php if(!empty($video_data)){ ?>
-                                                <!-- <?php// echo'<pre>';print_r($video_data);die; ?> -->
+                                                <!-- <?php //echo'<pre>';print_r($video_data);die; ?> -->
                                                 <?php foreach($video_data as $data){ ?>
 
                                                     <?php
@@ -184,7 +184,7 @@
                                                             
                                                                 <div class="timeline-body">
                                                         <div class="embed-responsive embed-responsive-16by9">
-                                                        <iframe class="embed-responsive-item" src="<?=base_url();?>public/uploads/videos/<?=$data->video_name;  ?>" allowfullscreen></iframe>
+                                                        <iframe class="embed-responsive-item" src="<?=base_url();?>public/uploads/FacultyUplodedVideos/<?=$data->video_name;  ?>" allowfullscreen></iframe>
                                                         </div>
                                                     </div>
                                                

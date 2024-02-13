@@ -620,6 +620,7 @@ class AdminModel extends Model
             ->getResult();
             // echo $this->db->getLastQuery();die;
             // echo'<pre>';print_r($scheduleData);die;
+            return $scheduleData;
     }
     public function  getAllSlots($wherecond)
     {
