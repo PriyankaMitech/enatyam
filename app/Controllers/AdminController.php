@@ -1420,6 +1420,36 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
     }
 
 
+    // public function viewProfiles()
+    // {
+    //     $model = new AdminModel();
+
+    //     if (isset($_SESSION['sessiondata'])) {
+    //         $sessionData = $_SESSION['sessiondata'];
+
+    //         $email = $sessionData['email'] ?? null;
+    //         $password = $sessionData['password'] ?? null;
+
+    //         if ($email !== null && $password !== null) {
+    //             $uri = service('uri');
+
+    //             // Get the second segment of the URI
+    //             $profile_id = $uri->getSegment(2);
+
+
+    //             $wherecond = array('student_id ' => $profile_id);
+
+    //             $data['profile_data'] = $model->getcorcessforstudentprofile('student', $wherecond);
+
+
+    //             return view('AdminSideBar/viewprofiles', $data);
+    //         } else {
+    //             return redirect()->to(base_url());
+    //         }
+    //     } else {
+    //         return redirect()->to(base_url());
+    //     }
+    // }
     public function viewProfiles()
     {
         $model = new AdminModel();
@@ -1437,10 +1467,24 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
                 $profile_id = $uri->getSegment(2);
 
 
-                $wherecond = array('student_id ' => $profile_id);
+                $wherecond = array('student_id' => $profile_id);
 
                 $data['profile_data'] = $model->getcorcessforstudentprofile('student', $wherecond);
+                $student_registerid = $data['profile_data']->register_id;
+                $wherecond1 = array('student_registerid' => $student_registerid);
 
+                $data['attendanceRecord'] = $model->fetchAttendanceForStudent($student_registerid);
+                $select = 'payment.*, register.full_name';
+                $table1 = 'payment';
+                $table2 = 'register';
+                $joinCond = 'register.id = payment.user_id';
+                $wherecond = array('user_id' => $student_registerid);
+                $type = 'left';
+                $data['paymentRecord'] = $model->jointwotables($select,$table1,$table2,$joinCond,$wherecond,$type);
+                // echo'attendance:<pre>';print_r($data['paymentRecord']);die;
+
+                $data['schedule_data'] = $model->getStudentSchedule($profile_id);
+                //  echo'schedule_data:<pre>';print_r($data['schedule_data']);die;
 
                 $data['schedule_data'] = $model->getStudentSchedule($profile_id);
                 //  echo'schedule_data:<pre>';print_r($data['schedule_data']);die;
@@ -1453,7 +1497,6 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
             return redirect()->to(base_url());
         }
     }
-
     public function demo_classes()
     {
         $model = new AdminModel();

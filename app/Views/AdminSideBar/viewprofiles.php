@@ -95,6 +95,10 @@
                         <div class="card-header p-2">
                             <ul class="nav nav-pills">
                                 <li class="nav-item"><a class="nav-link active" href="#payment" data-toggle="tab">Payment</a></li>
+
+                                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Schedule</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#videos" data-toggle="tab">Videos</a></li>
+
                                 <li class="nav-item"><a class="nav-link" href="#attendance" data-toggle="tab">Attendance</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#videos" data-toggle="tab">Videos</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Schedule</a></li>
