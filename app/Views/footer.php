@@ -177,6 +177,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+    function showModal(name, designation, img) {
+
+
+        $("#facultyName").text("Name: " + name);
+        $("#facultyDesignation").text("Designation: " + designation);
+        $("#imgf").attr("src", img);
+
+
+        // Show modal
+        $("#facultyModal").show();
+        $("body").addClass("modal-open");
+    }
+
+    // Close modal function
+    window.closeModal = function() {
+        $("#facultyModal").hide();
+    };
+    window.closeModal = function() {
+        $("#facultyModal").hide();
+
+        // Remove class from body to enable scrolling
+        $("body").removeClass("modal-open");
+    };
+</script>
+    <script>
     let prevScrollPos = window.pageYOffset;
     const navbar = document.querySelector('.tophead');
     const logoImage = document.querySelector('.thim-logo img'); // Select the image inside the thim-logo class
