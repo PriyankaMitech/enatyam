@@ -1369,20 +1369,7 @@ class AdminModel extends Model
             ->get()
             ->getResult();
     }
-    public function getStudentSchedule($studentId)
-    {
-        $scheduleData = $this->db->table('tbl_student_shedule')
-            ->select('tbl_student_shedule.*, faculty.full_name as faculty_name, student.full_name as student_name')
-            ->join('register as faculty', 'faculty.id = tbl_student_shedule.faculty_id', 'left')
-            ->join('register as student', 'student.id = tbl_student_shedule.student_id', 'left')
-            ->where('tbl_student_shedule.student_id', $studentId)
-            ->where('tbl_student_shedule.faculty_id IS NOT NULL')
-            ->where('student.SessionType', 'OneToOneSession')  // Add this line if needed
-            ->get()
-            ->getResult();
-            // echo $this->db->getLastQuery();die;
-            // echo'<pre>';print_r($scheduleData);die;
-    }
+
     
 
 
