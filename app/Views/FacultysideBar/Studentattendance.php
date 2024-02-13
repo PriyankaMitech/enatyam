@@ -99,14 +99,16 @@
                                         <h3 class="card-title">Group: <?= $student->groupName ?></h3>
                                     </div>
                                     <div class="card-body">
-                                        <form id="attendanceForm_<?= $student->groupName ?>" action="#" method="post">
+                                    <form id="attendanceForm_<?= $student->groupName ?>" action="submitAttendance" method="post">
+
+                                        <!-- <form id="attendanceForm_<?= $student->groupName ?>" action="#" method="post"> -->
                                             <table id="example1" class="table table-bordered table-striped">
                                                 <thead>
                                                     <tr>
                                                         <th>Name</th>
                                                         <th>Attendance</th>
-                                                        <th>Session</th>
-                                                        <th>Action</th>
+                                                        <!-- <th>Session</th> -->
+                                                        <!-- <th>Action</th> -->
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -128,7 +130,7 @@
                                                                     for="absent<?= $student->id ?>">Absent</label>
                                                             </div>
                                                         </td>
-                                                        <td>
+                                                        <!-- <td>
                                                             <select class="form-control"
                                                                 name="session[<?= $student->id ?>]">
                                                                 <option value="">Select</option>
@@ -136,12 +138,12 @@
                                                                 <option value="<?= $i ?>">Session <?= $i ?></option>
                                                                 <?php endfor; ?>
                                                             </select>
-                                                        </td>
-                                                        <td>
+                                                        </td> -->
+                                                        <!-- <td>
                                                             <button type="button" class="btn btn-primary"
-                                                                onclick="submitAttendance(<?= $student->id ?>)">Submit
+                                                                onclick="submitGroupAttendance('<?= $student->groupName ?>')">Submit
                                                                 Attendance</button>
-                                                        </td>
+                                                        </td> -->
                                                     </tr>
                                                     <?php
                                         $currentGroup = $student->groupName;
@@ -149,6 +151,22 @@
                                         ?>
                                                 </tbody>
                                             </table>
+                                            <div class="c0l-md-12 p-2">
+                                                <select class="form-control"
+                                                    name="session[<?= $student->id ?>]">
+                                                    <option value="">Select</option>
+                                                    <?php for ($i = 1; $i <= $student->no_of_session; $i++): ?>
+                                                    <option value="<?= $i ?>">Session <?= $i ?></option>
+                                                    <?php endfor; ?>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="c0l-md-12 p-2">
+                                                    
+                                                <button type="button" class="btn btn-primary"
+                                                                onclick="submitGroupAttendance('<?= $student->groupName ?>')">Submit
+                                                                Attendance</button>
+                                            </div>
                                         </form>
                                     </div>
                                 </div> 
