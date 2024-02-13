@@ -110,9 +110,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <?php
-            endif;
-            ?>
+                                                    <?php endif; ?>
                                                     <tr>
                                                         <td><?= $student->full_name ?></td>
                                                         <td>
@@ -141,19 +139,19 @@
                                                         </td>
                                                         <td>
                                                             <button type="button" class="btn btn-primary"
-                                                                onclick=" (<?= $student->id ?>)">Submit
+                                                                onclick="submitAttendance(<?= $student->id ?>)">Submit
                                                                 Attendance</button>
                                                         </td>
                                                     </tr>
                                                     <?php
-            $currentGroup = $student->groupName;
-            endforeach;
-            ?>
+                                        $currentGroup = $student->groupName;
+                                        endforeach;
+                                        ?>
                                                 </tbody>
                                             </table>
                                         </form>
                                     </div>
-                                </div>
+                                </div> 
                             </div>
 
                         </div>
