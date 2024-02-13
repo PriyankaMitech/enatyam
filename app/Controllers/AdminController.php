@@ -1471,6 +1471,7 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
 
                 $data['profile_data'] = $model->getcorcessforstudentprofile('student', $wherecond);
                 $student_registerid = $data['profile_data']->register_id;
+                //  echo'attendance:<pre>';print_r($student_registerid);die;
                 $wherecond1 = array('student_registerid' => $student_registerid);
 
                 $data['attendanceRecord'] = $model->fetchAttendanceForStudent($student_registerid);
@@ -1483,11 +1484,11 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
                 $data['paymentRecord'] = $model->jointwotables($select,$table1,$table2,$joinCond,$wherecond,$type);
                 // echo'attendance:<pre>';print_r($data['paymentRecord']);die;
 
-                $data['schedule_data'] = $model->getStudentSchedule($profile_id);
+                $data['schedule_data'] = $model->getStudentSchedule($student_registerid);
                 //  echo'schedule_data:<pre>';print_r($data['schedule_data']);die;
 
-                $data['schedule_data'] = $model->getStudentSchedule($profile_id);
-                //  echo'schedule_data:<pre>';print_r($data['schedule_data']);die;
+               
+               
 
                 return view('AdminSideBar/viewprofiles', $data);
             } else {
