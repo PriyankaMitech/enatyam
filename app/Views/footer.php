@@ -177,6 +177,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector('.tophead');
+    const logoImage = document.querySelector('.thim-logo img'); // Select the image inside the thim-logo class
+
+    window.addEventListener('scroll', () => {
+        const currentScrollPos = window.pageYOffset;
+
+        if (currentScrollPos > prevScrollPos) {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up or at the top
+            navbar.style.transform = 'translateY(0)';
+            navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+
+        }
+
+        prevScrollPos = currentScrollPos;
+    });
+
+    // Ensure initial state is transparent if at the top
+    window.addEventListener('load', () => {
+        if (window.pageYOffset === 0) {
+            navbar.style.backgroundColor = 'transparent';
+            logoImage.src = 'public/images/logo.png'; // Replace with the path to your new image
+
+        }
+    });
+
+
+</script>
+    <script>
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 38,
@@ -2594,38 +2626,7 @@ $(function() {
     });
 </script>
 
-<script>
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector('.tophead');
-    const logoImage = document.querySelector('.thim-logo img'); // Select the image inside the thim-logo class
 
-    window.addEventListener('scroll', () => {
-        const currentScrollPos = window.pageYOffset;
-
-        if (currentScrollPos > prevScrollPos) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up or at the top
-            navbar.style.transform = 'translateY(0)';
-            navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-
-        }
-
-        prevScrollPos = currentScrollPos;
-    });
-
-    // Ensure initial state is transparent if at the top
-    window.addEventListener('load', () => {
-        if (window.pageYOffset === 0) {
-            navbar.style.backgroundColor = 'transparent';
-            logoImage.src = 'public/images/logo.png'; // Replace with the path to your new image
-
-        }
-    });
-
-
-</script>
 <script>
     $(document).ready(function() {
         $('#username').on('input', function() {
@@ -3156,6 +3157,40 @@ $(function() {
             });
         });
     });
+</script>
+
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector('.tophead');
+    const logoImage = document.querySelector('.thim-logo img'); // Select the image inside the thim-logo class
+
+    window.addEventListener('scroll', () => {
+        const currentScrollPos = window.pageYOffset;
+
+        if (currentScrollPos > prevScrollPos) {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up or at the top
+            navbar.style.transform = 'translateY(0)';
+            navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+
+        }
+
+        prevScrollPos = currentScrollPos;
+    });
+
+    // Ensure initial state is transparent if at the top
+    window.addEventListener('load', () => {
+        if (window.pageYOffset === 0) {
+            navbar.style.backgroundColor = 'transparent';
+            logoImage.src = 'public/images/logoss.png'; // Replace with the path to your new image
+
+        }
+    });
+
+
 </script>
 
 
