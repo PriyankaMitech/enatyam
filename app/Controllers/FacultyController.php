@@ -347,8 +347,9 @@ class FacultyController extends BaseController
 
   public function submitAttendance()
   {
-    $result = session();
-    $registerId = $result->get('id');
+    // print_r($_POST);die;
+      $result = session();
+      $registerId = $result->get('id');
 
       $model = new Facultymodel();
       $adminmodel = new AdminModel(); 
@@ -358,6 +359,7 @@ class FacultyController extends BaseController
           'Session_no'         => $this->request->getPost('session'),
           'faculty_id'         =>$registerId,
       ];
+      // print_r($data);die;
       $result = $model->insertAttendance($data);
       $student_registerid = $this->request->getPost('studentId');
       $Attendance_status = $this->request->getPost('attendance');

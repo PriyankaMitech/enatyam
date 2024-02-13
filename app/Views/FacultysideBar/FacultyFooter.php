@@ -648,7 +648,31 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
         });
     }
 </script>
+<script>
+    function submitGroupAttendance(groupName) {
+        // Serialize form data for the specific group
+        var formData = $('#attendanceForm_' + groupName).serialize();
 
+        $.ajax({
+            type: 'POST',
+            url: 'submitAttendance', // Adjust the URL as per your route configuration
+            data: formData,
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+                    // Reload the page after successful insertion
+                    location.reload(true);
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function (error) {
+                console.log(error);
+                location.reload();
+            }
+        });
+    }
+</script>
 </body>
 
 </html>
