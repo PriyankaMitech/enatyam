@@ -493,7 +493,9 @@ class AdminController extends BaseController
 
             if ($email !== null && $password !== null) {
                 $data['schedule_data'] = $model->getFacultyslots();
+
                 //   echo "<pre>";print_r($data['schedule_data']);exit();
+
                 return view('AdminSideBar/FacultysidebarShedule', $data);
             } else {
                 return redirect()->to(base_url());
@@ -1388,9 +1390,32 @@ class AdminController extends BaseController
         $wherecond = array('D_id' => $profile_id);
         // print_r($wherecond);die;
         $data['profile_data'] = $model->getsinglerow1('carrier', $wherecond);
+        $wherecond1 = array('carrier_id' => $profile_id);
+        $facultyData = $model->getsinglerow('register',$wherecond1);
+        $faculty_register_id = $facultyData->id;
+        // echo'<pre>';print_r($faculty_register_id);die;
         $data['faculty_slots'] = $model->getAllSlots($wherecond);
         //  echo "<pre>"; print_r($data['profile_data']);exit();
-
+        $select = 'attendeance_table.*, register_faculty.full_name as faculty_name, register_student.full_name as student_name, payment.no_of_session';
+        $table1 = 'attendeance_table';
+        $table2 = 'register as register_faculty';
+        $table3 = 'register as register_student';
+        $table4 = 'payment';
+        $joinCond = 'register_faculty.id = attendeance_table.faculty_id';
+        $joinCond2 = 'register_student.id = attendeance_table.student_registerid';
+        $joinCond3 = 'payment.user_id = attendeance_table.student_registerid';
+        // $wherecond2 =  array('faculty_id' => $faculty_register_id);  
+         $wherecond2 = [
+            'attendeance_table.faculty_id' => $faculty_register_id, 
+        ];
+        $type ='left';
+        $data['attendanceRecord'] = $model->joinfourtables($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $wherecond2, $type);
+//    echo'<pre>';print_r($data['attendanceRecord']);die;
+$wherecond3 = [
+    'schedule_list.faculty_registerid' => $faculty_register_id, 
+];
+$data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_name as faculty_name', 'schedule_list', 'register', 'register.id = schedule_list.faculty_registerid',  $wherecond3, 'left');
+//    echo'<pre>';print_r($data['scheduleRecord']);die;
         return view('AdminSideBar/viewprofilefaculty', $data);
     }
 
@@ -1457,6 +1482,9 @@ class AdminController extends BaseController
                 $type = 'left';
                 $data['paymentRecord'] = $model->jointwotables($select,$table1,$table2,$joinCond,$wherecond,$type);
                 // echo'attendance:<pre>';print_r($data['paymentRecord']);die;
+
+                $data['schedule_data'] = $model->getStudentSchedule($profile_id);
+                //  echo'schedule_data:<pre>';print_r($data['schedule_data']);die;
 
                 $data['schedule_data'] = $model->getStudentSchedule($profile_id);
                 //  echo'schedule_data:<pre>';print_r($data['schedule_data']);die;
@@ -2022,7 +2050,8 @@ class AdminController extends BaseController
     {
         $model = new AdminModel();
         $data['attendance'] = $model->getFacultyAttendance();
-        // print_r($data['attendance']);die;
+
+        // echo'<pre>';print_r($data['attendance']);die;
         echo view('AdminSideBar/FacultyAttendance', $data);;
     }
 }

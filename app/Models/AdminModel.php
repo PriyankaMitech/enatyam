@@ -1226,19 +1226,37 @@ class AdminModel extends Model
         return $result;
     }
 
+    // public function joinfourtables($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $wherecond, $type)
+    // {
+    //     // print_r($table2);die;
+    //     $result = $this->db->table($table1)  // Use $table1 variable here
+    //         ->select($select)
+    //         ->join($table2, $joinCond, $type)
+    //         ->join($table3, $joinCond2, $type)
+    //         ->join($table4, $joinCond3, $type)
+    //         ->where($wherecond)
+    //         ->get()
+    //         ->getResult();
+    //         echo $this->db->getLastQuery();die;
+    //     return $result;
+    // }
+
     public function joinfourtables($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $wherecond, $type)
-    {
-        $result = $this->db->table($table1)  // Use $table1 variable here
-            ->select($select)
-            ->join($table2, $joinCond, $type)
-            ->join($table3, $joinCond2, $type)
-            ->join($table4, $joinCond3, $type)
-            ->where($wherecond)
-            ->get()
-            ->getResult();
-        //    echo $this->db->getLastQuery();die;
-        return $result;
-    }
+{
+    $result = $this->db->table($table1)  // Use $table1 variable here
+        ->select($select)
+        ->join($table2, $joinCond, $type)
+        ->join($table3, $joinCond2, $type)
+        ->join($table4, $joinCond3, $type)
+        ->where($wherecond) // Here is where you're trying to use $wherecond
+        ->get()
+        ->getResult();
+
+    // echo $this->db->getLastQuery(); // Echoing the query for debugging purposes
+
+    return $result;
+}
+
 
 
     public function joinfourtableswwc($select, $table1, $table2, $table3, $table4, $joinCond, $joinCond2, $joinCond3, $type)
@@ -1351,7 +1369,21 @@ class AdminModel extends Model
             ->get()
             ->getResult();
     }
-
+    public function getStudentSchedule($studentId)
+    {
+        $scheduleData = $this->db->table('tbl_student_shedule')
+            ->select('tbl_student_shedule.*, faculty.full_name as faculty_name, student.full_name as student_name')
+            ->join('register as faculty', 'faculty.id = tbl_student_shedule.faculty_id', 'left')
+            ->join('register as student', 'student.id = tbl_student_shedule.student_id', 'left')
+            ->where('tbl_student_shedule.student_id', $studentId)
+            ->where('tbl_student_shedule.faculty_id IS NOT NULL')
+            ->where('student.SessionType', 'OneToOneSession')  // Add this line if needed
+            ->get()
+            ->getResult();
+            // echo $this->db->getLastQuery();die;
+            // echo'<pre>';print_r($scheduleData);die;
+    }
+    
 
 
 
