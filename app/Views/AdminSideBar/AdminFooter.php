@@ -1379,7 +1379,7 @@
                     success: function(data) {
                         $('#student_id').empty();
                         $.each(data, function(key, value) {
-                            $('#student_id').append('<option value="' + value.id + '">' + value.full_name + '</option>');
+                            $('#student_id').append('<option value="' + value.id + '">' + value.full_name +' - ' + value.SessionsCount + ' Session '+'</option>');
                         });
 
                         // Retrieve the selected student IDs from the hidden input field
