@@ -740,28 +740,28 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
                                         <i class=" nav-icon fa fa-calendar"></i>
                                         <p>
                                            Demo
-                                            <i class="right fas fa-angle-left"></i>
+                                            <!-- <i class="right fas fa-angle-left"></i> -->
                                         </p>
                                     </a>
-                                    <ul class="nav nav-treeview">
+                                    <!-- <ul class="nav nav-treeview"> -->
                                         <!-- <li class="nav-item"  >
                                 <a href="<?php echo base_url() ?>AdminList" class="nav-link">
                                     <i class="nav-icon fas fa-calendar-alt"></i>
                                     <p>Admin List</p>
                                 </a>
                             </li> -->
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Demo</p>
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <!-- Add other Schedule menu items with access level checks here -->
-                                    </ul>
+                                    <!-- </ul> -->
                                 </li>
 
                                 <!-- Menu Menu -->

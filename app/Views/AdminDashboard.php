@@ -100,7 +100,7 @@ th {
                             <?php else : ?>
                             <h3>0</h3>
                             <?php endif; ?>
-                            <p>Today Demo Session</p>
+                            <p>Today's Demo Sessions</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>

@@ -121,7 +121,7 @@
                                                                     </button>
 
                                                                     <button type="submit" class="btn btn-sm btn-danger" name="action" value="decline" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Decline">
-                                                                        <i class="fas fa-trash"></i>
+                                                                    <i class="fa fa-remove"></i>
                                                                     </button>
                                                                 </form>
                                                             </td>

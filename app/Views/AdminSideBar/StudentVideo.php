@@ -11,6 +11,7 @@
         padding: 15px;
         text-align: center;
     }
+  
 </style>
 
 
@@ -49,14 +50,19 @@
 
                             </ul>
                             <div class="text-right mt-0">
-                                <a href="<?php echo base_url() ?>uploaded_video" class="btn btn-primary">Back</a>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <small class="badge badge-danger videoBadge">Videos and Images will be deleted after 7 days. Kindly download if required.</small>
+                                    </div>
+                                    <div>
+                                        <a href="<?php echo base_url() ?>uploaded_video" class="btn btn-primary">Back</a>
+                                    </div>
+                                </div>
                             </div>
-
-
                         </div>
 
                         <div class="card-body">
-
+                        
                             <div class="tab-content">
                                 <!-- <div class="active tab-pane" id="activity">
                                     <?php if (!empty($FacultyVideoData)) {
@@ -156,7 +162,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
+                                                
                                             </form>
                                             <hr>
                                             <div class="row mt-4" id="facultyVideosContainer">
@@ -184,7 +190,9 @@
 
                                                                         <?php
                                                                         // Generate a random background color based on the student's name
-                                                                        $randomColor = '#' . substr(md5($data->student_name), 0, 6); ?>
+                                                                        $randomColor = '#ffbbd7;' ?>
+                                                                         <!-- $randomColor = '#' . substr(md5($data->student_name), 0, 6);  -->
+                                                                       
                                                                         <div class="ribbon-wrapper ribbon-lg">
                                                                             <!-- <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg"> -->
                                                                             <div class="ribbon" style="background-color: <?= $randomColor ?>; text-lg">
