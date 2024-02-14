@@ -136,6 +136,8 @@ $routes->get('chatuser', 'AdminController::chatuser');
 $routes->post('chat', 'AdminController::chatwithteacher');
 $routes->get('chatuser/(:any)', 'AdminController::singlechat/$1');
 $routes->get('add_notifications', 'AdminController::add_notifications');
+$routes->get('insertChat', 'AdminController::insertChat');
+
 $routes->post('insertChat', 'AdminController::insertChat');
 $routes->post('setnotification', 'AdminController::setnotification');
 $routes->get('viewProfile', 'AdminController::viewProfile');

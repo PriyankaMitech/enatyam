@@ -726,7 +726,7 @@ class AdminController extends BaseController
 
 
 
-            echo view('Chatuser', $result);
+            echo view('chatuser', $result);
         } else {
             return redirect()->to(base_url());
         }
@@ -757,6 +757,7 @@ class AdminController extends BaseController
 
             $wherecond4 = ['id' => $receiverid[1]];
             $result['chat_user_data'] = $model->get_single_data('register', $wherecond4);
+            $result['receiverids'] =  ['receiverid' => $receiverid[1]];
 
 
 
@@ -788,7 +789,7 @@ class AdminController extends BaseController
         $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3, $receiverid[1]);
 
         // echo '<pre>';print_r($result['getstud']);die;
-        echo view('Chatuser', $result);
+        echo view('chatuser', $result);
     }
 
     public function chatwithteacher()
