@@ -33,8 +33,9 @@
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 40px;
+  padding: 12px 40px 40px 40px!important; /* top right bottom left */
 }
+
 
 .btn-light {
   width: 100%;
@@ -109,4 +110,14 @@
 
 .pricing-section {
   margin-top: 6% !important;
+}
+.termsConditions {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+}
+.modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left!important;
 }

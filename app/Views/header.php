@@ -364,14 +364,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/Login.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/Register.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/hederresponsive.css">
-
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/resposivestyle.css">
-    <style>
-        .termsConditions {
-            font-size: 12px;
-            font-weight: 400;
-        }
-    </style>
 
 </head>
 
@@ -593,7 +586,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
     <div class="modal fade" id="userformmodal" tabindex="-1" aria-labelledby="userformmodalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content userModal">
                 <div class="modal-header">
                     <h5 class="modal-title" id="userformmodalLabel">User Form</h5>
 
@@ -729,15 +722,21 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                     </div>
                     <div class="modal-body">
+                        <div class="termsConditions">Welcome to www.enatyam.com. These terms and conditions outline the rules and regulations for using our website and accessing our online dance, music, and yoga training services.</div>
                         <ul>
-                            <li class="termsConditions">1. Register for an account: To access and purchase the online courses, you must first register for an account on the website. If you already have an account, simply log in using your username and password.</li>
-                            <li class="termsConditions">2. Select and purchase courses: Browse through the list of courses available on the website and select the ones you wish to purchase. Each course is treated as a separate offer, so make sure to add each course to your cart individually.</li>
-                            <li class="termsConditions">3. Review and agree to the fees: Before completing the purchase, carefully review the fees indicated for each course. By selecting a course, you agree to pay the specified fees.</li>
-                            <li class="termsConditions">4. Provide valid payment information: During the checkout process, you will be prompted to provide valid payment information. This may include credit card details or other payment methods accepted by the company. Ensure that the information provided is accurate and up to date.</li>
-                            <li class="termsConditions">5. Complete the payment: Once you have provided the payment information, proceed to complete the payment. The company or its affiliates will process the payment based on the chosen payment method.</li>
-                            <li class="termsConditions"> 6. Access the purchased courses: After successful payment, you will gain access to the courses you have purchased. Log in to your account and navigate to the course section to start learning.</li>
-                            <li class="termsConditions">7. Comply with course terms: While accessing and using the courses, make sure to comply with the terms outlined in the agreement. This includes not sharing or distributing course material to third parties.</li>
-                            <li class="termsConditions">8. Complete the course: Work through the course material at your own pace and complete all the required activities and assessments. Take advantage of any interactive features or forums available to enhance your learning experience.</li>
+                            <li class="termsConditions"><b>1. Acceptance of Terms:</b> By accessing and using www.enatyam.com, you agree to comply with and be bound by these terms and conditions. If you do not agree with any part of these terms, please refrain from using our website.</li>
+                            <li class="termsConditions"><b>2. User Registration:</b> To access certain features or services, you may be required to register an account. You are responsible for providing accurate and current information. Keep your login credentials confidential, and notify us immediately of any unauthorized use.</li>
+                            <li class="termsConditions"><b>3. Payment and Refunds:</b> Payments for our online training services are processed securely. Refund policies are outlined in each respective service offering. Any additional charges, such as registration fee, convenience fee, currency exchange fees, are your responsibility.</li>
+                            <li class="termsConditions"><b>4. User Conduct: </b>
+You agree not to use our website for any unlawful or prohibited activities. This includes but is not limited to:<br>
+• Violating any applicable laws or regulations.<br>
+• Infringing on the rights of others.<br>
+• Attempting to gain unauthorized access to our systems.</li>
+                            <li class="termsConditions"><b>5.Termination of Services: </b>We reserve the right to terminate or suspend your access to our services at any time, for any reason, without notice. This includes the right to terminate services if we believe you have violated these terms and conditions.</li>
+                            <li class="termsConditions"> <b>6. Disclaimers:</b> Our website and services are provided "as is" without any warranties, expressed or implied. We do not guarantee the accuracy, completeness, or suitability of the information and materials found on our website.</li>
+                            <li class="termsConditions"><b> Changes to Terms:</b> We reserve the right to modify these terms and conditions at any time. Any changes will be effective immediately upon posting on our website. It is your responsibility to review these terms regularly.</li>
+                            <li class="termsConditions">If you have any questions or concerns about these terms and conditions, please contact us at<br>
+[Your Contact Information].</li>
                         </ul>
                     </div>
                     <div class="modal-footer">
