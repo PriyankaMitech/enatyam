@@ -93,7 +93,7 @@
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
-                                    <h3 class="heading"> - Hindustani Vocal</h3>
+                                    <h3 class="heading"> Hindustani Vocal</h3>
                                     <p>
                                         Looking for an immersive and authentic Hindustani vocal learning experience?
                                         Join our Online Hindustani Vocal Class today! Unlock the rich heritage of Indian classical music from the comfort of your home.
@@ -171,7 +171,7 @@
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
@@ -482,7 +482,7 @@
                                     <img src="public/images/Music/musicImg1.svg" class="danceimg">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
-                                    <h3 class="heading"> - Carnatic Vocal</h3>
+                                    <h3 class="heading"> Carnatic Vocal</h3>
                                     <p>
                                         Embark on a melodious journey through the divine sounds of Carnatic music with our Online Carnatic Vocal Class.
                                         Discover the rich heritage and intricate nuances of this classical South Indian art form from the comfort of your own home.
@@ -558,7 +558,7 @@
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -860,7 +860,7 @@
                                     <img src="public/images/Music/musicImg1.svg" class="danceimg">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
-                                    <h3 class="heading"> - Semi Classical</h3>
+                                    <h3 class="heading"> Semi Classical</h3>
                                     <p>
                                         Unlock the mesmerizing blend of classical and contemporary music with our Online Semi-Classical Singing Class.
                                         Dive into the world of semi-classical music, where traditional Indian melodies meet modern compositions.
@@ -936,7 +936,7 @@
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1244,7 +1244,7 @@
                                     <img src="public/images/Music/musicImg1.svg" class="danceimg">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
-                                    <h3 class="heading"> - Western Singing</h3>
+                                    <h3 class="heading"> Western Singing</h3>
                                     <p>
                                         Unleash your inner diva and elevate your singing skills with our Online Western Singing Class.
                                         Whether you’re a beginner or an experienced vocalist, our comprehensive virtual lessons cater to all skill levels.
@@ -1321,7 +1321,7 @@
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1632,7 +1632,7 @@
                                     <img src="public/images/Music/musicImg1.svg" class="danceimg">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-col musicp">
-                                    <h3 class="heading"> - Playback Singing </h3>
+                                    <h3 class="heading"> Playback Singing </h3>
                                     <p>
                                         Unleash your inner playback singer and bring your favorite melodies to life with our Online Playback Singing Class.
                                         Perfect for aspiring singers and enthusiasts alike, our comprehensive virtual lessons will help you master the art of playback singing.
@@ -1709,7 +1709,7 @@
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>

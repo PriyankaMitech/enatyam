@@ -542,6 +542,7 @@ class AdminModel extends Model
 
     public function insert_formdata($column, $table, $insertdata)
     {
+        // echo "<pre>";print_r($insertdata);exit();
         $result['insert'] = $this->db->table($table)->insert($insertdata);
         if ($result['insert']) {
             $insertedID = $this->db->insertID();
@@ -984,54 +985,111 @@ class AdminModel extends Model
     }
 
 
-    public function insert_payment($insertdata)
-    {
+//     public function insert_payment($insertdata)
+//     {
+// echo "<pre>";print_r($_SESSION);
 
-        $sql = "insert into payment_details (";
-        $sql1 = " values ( ";
+//         echo "<pre>";print_r($insertdata);exit();
 
-        if (isset($insertdata->error)) {
-            foreach ($insertdata->error as $key => $value) {
-                if (is_object($value)) {
-                    $d = json_encode($value);
-                    $sql1 .= '"' . htmlspecialchars($d) . '", ';
-                    $sql .= htmlspecialchars($key) . ', ';
-                } else {
-                    $sql .= htmlspecialchars($key) . ', ';
-                    $sql1 .= '"' . htmlspecialchars($value) . '", ';
-                }
-            }
-        } else {
-            foreach ($insertdata as $key => $value) {
-                if (!is_object($value)) {
-                    $sql1 .= '"' . htmlspecialchars($value) . '", ';
-                    $sql .= htmlspecialchars($key) . ', ';
-                }
-                if (is_object($value)) {
-                    foreach ($value as $ke => $val) {
-                        $sql .= htmlspecialchars($ke) . ', ';
-                        $sql1 .= '"' . htmlspecialchars($val) . '", ';
-                    }
-                }
-            }
-        }
+//         $sql = "insert into payment_details (";
+//         $sql1 = " values ( ";
 
-        $res = substr($sql, 0, strlen($sql) - 2) . ")";
-        $res1 = substr($sql1, 0, strlen($sql1) - 2) . ")";
-        $result = $this->db->query($res . $res1);
+//         if (isset($insertdata->error)) {
+//             foreach ($insertdata->error as $key => $value) {
+//                 if (is_object($value)) {
+//                     $d = json_encode($value);
+//                     $sql1 .= '"' . htmlspecialchars($d) . '", ';
+//                     $sql .= htmlspecialchars($key) . ', ';
+//                 } else {
+//                     $sql .= htmlspecialchars($key) . ', ';
+//                     $sql1 .= '"' . htmlspecialchars($value) . '", ';
+//                 }
+//             }
+//         } else {
+//             foreach ($insertdata as $key => $value) {
+//                 if (!is_object($value)) {
+//                     $sql1 .= '"' . htmlspecialchars($value) . '", ';
+//                     $sql .= htmlspecialchars($key) . ', ';
+//                 }
+//                 if (is_object($value)) {
+//                     foreach ($value as $ke => $val) {
+//                         $sql .= htmlspecialchars($ke) . ', ';
+//                         $sql1 .= '"' . htmlspecialchars($val) . '", ';
+//                     }
+//                 }
+//             }
+//         }
 
-
-        $this->db->table('register')
-            ->where('id', $_SESSION['sessiondata']['id'])
-            ->update(['Payment_status' => 'Y']);
+//         $res = substr($sql, 0, strlen($sql) - 2) . ")";
+//         $res1 = substr($sql1, 0, strlen($sql1) - 2) . ")";
+//         $result = $this->db->query($res . $res1);
 
 
-        if ($result) {
-            return true;
-        } else {
-            return false;
-        }
+//         $this->db->table('register')
+//             ->where('id', $_SESSION['sessiondata']['id'])
+//             ->update(['Payment_status' => 'Y']);
+
+
+//         if ($result) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
+
+
+public function insert_payment($insertdata)
+{
+    // echo "<pre>";print_r($_SESSION);exit();
+    // echo "<pre>";print_r($insertdata);exit();
+    // Assume $insertdata is an object with payment details
+$amount = $insertdata->amount/100;
+    $data = array(
+        'id' => $insertdata->id,  // Change 'id' to the actual column name
+        'entity' => $insertdata->entity,
+        'amount' => $amount,
+        'currency' => $insertdata->currency,
+        'status' => $insertdata->status,
+        'order_id' => $insertdata->order_id,
+        'invoice_id' => $insertdata->invoice_id,
+        'international' => $insertdata->international,
+        'method' => $insertdata->method,
+        'amount_refunded' => $insertdata->amount_refunded,
+        'refund_status' => $insertdata->refund_status,
+        'captured' => $insertdata->captured,
+        'description' => $insertdata->description,
+        'card_id' => $insertdata->card_id,
+        'bank' => $insertdata->bank,
+        'wallet' => $insertdata->wallet,
+        'vpa' => $insertdata->vpa,
+
+        'fee' => $insertdata->fee,
+        'tax' => $insertdata->tax,
+     
+   
+        // ... other columns ...
+    );
+
+    // Insert payment details into the payment_details table using Query Builder
+    $this->db->table('payment_details')->insert($data);
+    $wherec = ['PricingType_Id' => $_SESSION['merchant_order_id']];
+    $productdata =  $this->get_single_data('sessions_pricing', $wherec);
+    $sessionc = '';
+    if(!empty($productdata)){
+        $sessionc = $productdata->No_of_Sessions; 
     }
+    // Update the user's payment status and merchant_order_id
+    $this->db->table('register')
+        ->set('Payment_status', 'Y')
+        ->set('merchant_order_id', $_SESSION['merchant_order_id'])
+        ->set('SessionsCount', $sessionc)
+        ->where('id', $_SESSION['sessiondata']['id'])
+        ->update();
+
+    return true;  // Assuming everything went well
+}
+
+
 
     public function getGroupsForCourse($course, $subcourse)
     {

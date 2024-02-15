@@ -54,13 +54,14 @@ class PaymentController extends BaseController
             $this->session->set('razorpay_payment_id', $this->request->getPost('razorpay_payment_id'));
             $this->session->set('merchant_order_id', $this->request->getPost('merchant_order_id'));
             $currency_code = 'INR';
+            
             $amount = $this->request->getPost('total_amount');
 
             $success = false;
             $error = '';
             try {
                 $ch = $this->curl_handler($razorpay_payment_id, $amount);
-                //execute post
+                // execute post
                 $result = curl_exec($ch);
                 $finaloutput = json_decode($result);
                 $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -106,6 +107,7 @@ class PaymentController extends BaseController
                     sendConfirmationEmail($email,$ccEmails, $Subject, $msg);
                     
                     $paydetails = $adminmodel->insert_payment($finaloutput);
+                    $_POST['total_amount'] = $_POST['total_amount']/100;
                     $_POST['status'] = 'Y';
                     $payment = $adminmodel->insert_formdata('id', 'payment', $_POST);
                     
