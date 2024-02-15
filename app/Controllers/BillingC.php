@@ -64,7 +64,6 @@ class BillingC extends BaseController
         $session = session();
 
         $id = $this->request->getGet('id');
-
         if (!(session()->get('sessiondata'))) {
 
             echo "Not set session";

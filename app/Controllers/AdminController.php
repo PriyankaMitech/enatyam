@@ -1762,7 +1762,7 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
         // Update data in 'register' table using student IDs
 
 
-        return redirect()->to('student_list_of_group');
+        return redirect()->to('create_group');
     }
 
 
