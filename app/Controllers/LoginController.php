@@ -120,8 +120,11 @@ class LoginController extends BaseController
                 $savestud = $loginModel->setStudentName($getdata);
                 $sms = 'Dear customer, your OTP for registration is ' . $otp . '. do not share to anyone. Thank you OTPIMS';
                 $output = sendSMS($_POST['mobile_no'], $sms);
-                // $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
-
+                 $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
+                //  $mobileNumber =$_POST['mobile_no'];
+                //  $templates = "new_food_menu";
+                //  $msg = "Your register successfully.$emailotp";
+                //  whatsapp($mobileNumber, $templates, $msg);
                 $result['status'] = '200';
                 $result = array(
                     'mobile' => $_POST['mobile_no'],
