@@ -32,7 +32,7 @@ $page = $uri->getSegment(count($pages));
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Demo Classes List</h3>
+                        <h3 class="card-title">Schedule</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">

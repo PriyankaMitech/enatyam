@@ -767,7 +767,7 @@
                                 <!-- Menu Menu -->
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <i class=" nav-icon fa fa-calendar"></i>
+                                        <i class=" nav-icon fa fa-bars"></i>
                                         <p>
                                             Menu
                                             <i class="right fas fa-angle-left"></i>
@@ -794,7 +794,7 @@
                                 <!-- Menu Master -->
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <i class=" nav-icon fa fa-calendar"></i>
+                                        <i class=" nav-icon fa fa-database"></i>
                                         <p>
                                             Master
                                             <i class="right fas fa-angle-left"></i>
@@ -1024,7 +1024,7 @@
                                 <!-- Finance Menu -->
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <i class="nav-icon 	fa fa-credit-card"></i>
+                                        <i class="nav-icon 	fas fa-landmark"></i>
                                         <p>
                                             Finance
                                             <i class="right fas fa-angle-left"></i>
