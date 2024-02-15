@@ -494,10 +494,13 @@
                         Join us and let the rhythm fuel you passion .
 
                     </p>
-                    <div class="text-center mt-4">
+                    <!-- <div class="text-center mt-4">
                         <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance" target="_blank">START
                             NOW</a>
-                    </div>
+                    </div> -->
+                    <div class="text-center mt-4">
+    <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance">START NOW</a>
+</div>
                 </div>
             </div>
 
@@ -523,10 +526,13 @@
                             essence of Indian music. Join us and let your musical
                             aspirations reach new heights!
                         </p>
-                        <div class="text-center mt-4">
+                        <!-- <div class="text-center mt-4">
                             <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music" target="_blank">START
                                 NOW</a>
-                        </div>
+                        </div> -->
+                        <div class="text-center mt-4">
+    <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music">START NOW</a>
+</div>
                     </div>
 
                     <div class="col-md-6 col-12 p-0 text-center">
@@ -563,10 +569,13 @@
 
 
                         </p>
-                        <div class="text-center mt-4">
+                        <!-- <div class="text-center mt-4">
                             <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga" target="_blank">START
                                 NOW</a>
-                        </div>
+                        </div> -->
+                        <div class="text-center mt-4">
+    <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga">START NOW</a>
+</div>
                     </div>
                 </div>
             </div>
@@ -592,10 +601,13 @@
                             is a step towards unlocking your musical prowess. Let the
                             melody begin – learn, play, and create with us!
                         </p>
-                        <div class="text-center mt-4">
+                        <!-- <div class="text-center mt-4">
                             <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments"
                                 target="_blank">START NOW</a>
-                        </div>
+                        </div> -->
+                        <div class="text-center mt-4">
+    <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments">START NOW</a>
+</div>
                     </div>
 
                     <div class="col-md-6 col-12 p-0 text-center">
