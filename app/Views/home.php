@@ -818,6 +818,14 @@
                                     Yoga
                                 </div>
                             </div>
+
+                             <div class="overlay-text">
+                                <h4 class="hedingfsf">Veera</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
+
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Priti', 'Kathak Dance', 'public/images/priti.jpg')">
@@ -831,6 +839,12 @@
                                     Kathak Dance
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Priti</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Neha', 'Semi Classical Dance' ,'public/images/neha.jpg')">
@@ -844,6 +858,12 @@
                                     Semi Classical Dance
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Neha</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Priyanka', 'Kathak Dance', 'public/images/priyanka.jpeg')">
@@ -857,6 +877,12 @@
                                     Kathak Dance
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Priyanka</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Priya', 'Yoga', 'public/images/priya.jpg')">
@@ -870,6 +896,12 @@
                                     Yoga
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Priya</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Sweta', 'Carnatic Music', 'public/images/sweta.jpg')">
@@ -883,6 +915,12 @@
                                     Carnatic Music
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Sweta</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.png')">
@@ -896,6 +934,12 @@
                                     Bharatanatyam Dance
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Jaya</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Veera', 'Hindustani Music', 'public/images/ketki.jpg')">
@@ -909,6 +953,12 @@
                                     Hindustani Music
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">ketki</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Koyali', 'Hindustani Music', 'public/images/Koyali.png')">
@@ -922,6 +972,12 @@
                                     Hindustani Music
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Koyali</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('krutika', 'Semi Classical Dance' ,'public/images/krutika.jpg')">
@@ -935,6 +991,12 @@
                                     Semi Classical Dance
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">krutika</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Anila', 'Bollywood Dance' ,'public/images/Anila.jpeg')">
@@ -948,6 +1010,12 @@
                                     Bollywood Dance
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Anila</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Anika', 'Yoga' ,'public/images/Anika.jpg')">
@@ -961,6 +1029,12 @@
                                     Yoga
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Anika</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Ila', 'Bollywood Singing', 'public/images/Ila.jpg')">
@@ -974,6 +1048,12 @@
                                     Bollywood Singing
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Ila</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Samira', 'Yoga', 'public/images/Samira.jpg')">
@@ -987,6 +1067,12 @@
                                     Yoga
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Samira</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                     <div class="item" onclick="showModal('Sanjay', 'Yoga', 'public/images/sanjay.jpg')">
@@ -1000,6 +1086,12 @@
                                     Yoga
                                 </div>
                             </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Sanjay</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
                         </div>
                     </div>
                 </div>
