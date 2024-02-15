@@ -2056,4 +2056,124 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
         // echo'<pre>';print_r($data['attendance']);die;
         echo view('AdminSideBar/FacultyAttendance', $data);;
     }
+
+    public function search()
+{
+    $searchKeyword = $this->request->getPost('searchKeyword');
+
+    // echo  $searchKeyword;
+
+
+    if (isset($_SESSION['sessiondata'])) {
+        $model = new AdminModel();
+
+
+        $result['getuser'] = [];
+
+        if ($_SESSION['sessiondata']['role'] == 'Admin') {
+            $chatCountWhere = array(
+                'receiver_id' => $_SESSION['sessiondata']['id'],
+                'status' => 'N'
+            );
+            $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
+
+            $wherecondFaculty = array('is_register_done' => 'Y', 'role' => 'Faculty', 'full_name LIKE' => $searchKeyword . '%',);
+            $result['faculty'] = $model->getalldata('register', $wherecondFaculty);
+
+
+
+            // For Student
+            $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y' , 'full_name LIKE' => $searchKeyword . '%',);
+            $result['student'] = $model->getalldata('register', $wherecondStudent);
+
+            $result['getuser'] = [];
+
+            if ((!empty($result['faculty'])) && is_array($result['faculty']) && (!empty($result['student'])) && is_array($result['student'])) {
+                $result['getuser'] = array_merge($result['faculty'], $result['student']);
+            } elseif (!empty($result['faculty']) && is_array($result['faculty'])) {
+                $result['getuser'] = $result['faculty'];
+            } elseif (!empty($result['student']) && is_array($result['student'])) {
+                $result['getuser'] = $result['student'];
+            } else {
+                $result['getuser'] = [];
+            }
+        } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+            $chatCountWhere = array(
+                'receiver_id' => $_SESSION['sessiondata']['id'],
+                'status' => 'N'
+            );
+            $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
+
+
+            $wherecondFaculty = array('role' => 'Admin',  'full_name LIKE' => $searchKeyword . '%',);
+            $result['admin'] = $model->getalldata('register', $wherecondFaculty);
+
+            $wherecondStudent = array('is_register_done' => 'Y', 'role' => 'Student', 'Payment_status' => 'Y', 'Assign_Techer_id' => $_SESSION['sessiondata']['id'],  'full_name LIKE' => $searchKeyword . '%',);
+            $result['student'] = $model->getalldata('register', $wherecondStudent);
+
+
+            // $wherecond = array('Assign_Techer_id' => $_SESSION['sessiondata']['id']);
+            // $result['getuser'] = $model->getalldata('register', $wherecond);
+            if (is_array($result['admin']) && is_array($result['student'])) {
+                $result['getuser'] = array_merge($result['admin'], $result['student']);
+            } elseif (is_array($result['admin'])) {
+                $result['getuser'] = $result['admin'];
+            } elseif (is_array($result['student'])) {
+                $result['getuser'] = $result['student'];
+            }
+        } else if ($_SESSION['sessiondata']['role'] == 'Student') {
+            $chatCountWhere = array(
+                'receiver_id' => $_SESSION['sessiondata']['id'],
+                'status' => 'N'
+            );
+            $result['chat_count'] = $model->getalldata('online_chat', $chatCountWhere);
+
+            // $wherecond = array('id' => $_SESSION['sessiondata']['Assign_Techer_id']);
+            // $result['getuser'] = $model->chatfaculty('register', $wherecond);
+
+            // echo "<pre>";print_r( $result['getuser'] );exit();
+
+
+            $wherecondFaculty = array('role' => 'Admin',  'full_name LIKE' => $searchKeyword . '%',);
+            $result['admin'] = $model->getalldata('register', $wherecondFaculty,);
+
+            $wherecondStudent = array('role' => 'Faculty', 'id' => $_SESSION['sessiondata']['Assign_Techer_id'],  'full_name LIKE' => $searchKeyword . '%',);
+            $result['faculty'] = $model->getalldata('register', $wherecondStudent);
+
+            if (is_array($result['admin']) && is_array($result['faculty'])) {
+                $result['getuser'] = array_merge($result['admin'], $result['faculty']);
+            } elseif (is_array($result['admin'])) {
+                $result['getuser'] = $result['admin'];
+            } elseif (is_array($result['faculty'])) {
+                $result['getuser'] = $result['faculty'];
+            }
+        }
+
+
+
+
+        echo view('chatuser', $result);
+    } else {
+        return redirect()->to(base_url());
+    }
+
+
+
+
+    // $model = new AdminModel();
+    
+    // // Retrieve the search keyword from the form
+    
+
+    // // Perform a search in the 'register' table based on the name
+    // $searchResult = $model->getalldata('register', $wherecond);
+
+    // // echo "<pre>";print_r($searchResult);exit();
+
+    // // Pass the search result to the view
+    // $data['chat_user_data'] = $searchResult;
+
+    // // Load your view with the search result
+    // return view('search_results', $data);
+}
 }

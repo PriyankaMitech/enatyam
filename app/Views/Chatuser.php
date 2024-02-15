@@ -30,6 +30,10 @@ if (isset($_SESSION['sessiondata'])) {
     .contacts-list-info1 {
         color: #000 !important;
     }
+    .serachdiv{
+        width: 94%;
+    display: inline-block;
+    }
 </style>
 
 
@@ -41,7 +45,22 @@ if (isset($_SESSION['sessiondata'])) {
                     <!-- <div class="card card-success card-outline direct-chat direct-chat-success direct-chat-contacts-open"> -->
 
                     <div class="card card-success card-outline direct-chat direct-chat-success">
-                        <div class="card-header">
+                        <div class="card-header">  
+                            <div class="serachdiv">     
+                            <?php if ($page == 'chatuser' || $page == 'search'): ?>
+                                <form id="searchForm" action="<?= base_url(); ?>search" method="post">
+                                    <div class="input-group">
+                                        <input type="text" name="searchKeyword" class="form-control form-control-lg" placeholder="Type your keywords here">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-lg btn-default">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            <?php endif; ?>
+
+                            </div>
                             <?php if (!empty($chat_user_data)) { ?>
 
                                 <h3 class="card-title"><?php echo $chat_user_data->full_name ?></h3>
@@ -659,7 +678,11 @@ if (isset($_SESSION['sessiondata'])) {
                             $receiverid = null; // or whatever default value you want to set
                         }
                         // $receiverid = current_url(true)->getSegment(3);
-                        // echo  $receiverid; exit();
+                        // echo "<pre>";print_r($getuser);
+                        if (isset($receiverids['receiverid'])) {
+                            // Echo the value of the 'receiverid' key
+                            $receiverid = $receiverids['receiverid'];
+                        } 
                         if (!empty($receiverid)) { ?>
                             <div class="card-footer">
                                 <form action="#" id="chatform" method="post">
