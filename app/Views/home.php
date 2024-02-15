@@ -160,7 +160,7 @@
                         <div class="col-lg-3 col-md-4 col-6 ">
                             <h5 class="text-white" style="text-align: center;">Kathak </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php base_url(); ?>public/images/Home/4.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -187,7 +187,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -215,7 +215,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Bollywood </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -241,7 +241,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Western Dance </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -267,7 +267,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -292,7 +292,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -317,7 +317,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -342,7 +342,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -367,7 +367,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Yoga </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>Yoga" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -392,7 +392,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>Yoga" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -417,7 +417,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Nuitritional Guidance </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>Yoga" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -442,7 +442,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Musical Instruments </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
-                                <a href="<?= base_url(); ?>Yoga" target="_blank" class="d-block h-100">
+                                <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Music/music.png" alt=""
                                         style="width: 175px; height: 150px;">
@@ -477,7 +477,7 @@
                 </div>
 
                 <div class="col-md-6 col-12 text-col mt-5">
-                    <!-- <h3 class="heading"> - Kathak</h3> -->
+                    <!-- <h3 class="heading"> Kathak</h3> -->
                     <div class="text-right">
                         <div class="h1">Online Dance Classes</div>
                    </div>
@@ -495,7 +495,7 @@
 
                     </p>
                     <div class="text-center mt-4">
-                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance" target="_blank">START
+                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance" target="">START
                             NOW</a>
                     </div>
                 </div>
@@ -504,7 +504,7 @@
             <div class="MusicSec MusicSec1">
                 <div class="row m-0 omcd">
                     <div class="col-md-6 col-12 text-col p-0">
-                        <!-- <h3 class="heading"> - Kathak</h3> -->
+                        <!-- <h3 class="heading"> Kathak</h3> -->
                         <div class="text-right">
                             <div class="h1  text-white">Online Music Classes</div>
                         </div>
@@ -524,7 +524,7 @@
                             aspirations reach new heights!
                         </p>
                         <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music" target="_blank">START
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music" target="">START
                                 NOW</a>
                         </div>
                     </div>
@@ -544,7 +544,7 @@
                     </div>
 
                     <div class="col-md-6 col-12 text-col mt-3 p-0">
-                        <!-- <h3 class="heading"> - Kathak</h3> -->
+                        <!-- <h3 class="heading"> Kathak</h3> -->
                         <div class="text-right">
                             <div class="h1 ">Online Yoga Classes</div>
                         </div>
@@ -564,7 +564,7 @@
 
                         </p>
                         <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga" target="_blank">START
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga" target="">START
                                 NOW</a>
                         </div>
                     </div>
@@ -574,7 +574,7 @@
             <div class="MusicSec MusicSec1">
                 <div class="row m-0 omcd">
                     <div class="col-md-6 col-12 text-col p-0">
-                        <!-- <h3 class="heading"> - Kathak</h3> -->
+                        <!-- <h3 class="heading"> Kathak</h3> -->
                         <div class="text-right ">
                             <div class="h1 text-white">Online Music Instruments Classes</div>
                         </div>
@@ -594,7 +594,7 @@
                         </p>
                         <div class="text-center mt-4">
                             <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments"
-                                target="_blank">START NOW</a>
+                                target="">START NOW</a>
                         </div>
                     </div>
 

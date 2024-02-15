@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 <div class="wrapper-container ">
     <div class="video-container">
-        <video class="video-dance banerforinstuments" controls="false" autoplay="1" loop="1" id="danceVideo">
+        <video class="video-dance banerforinstuments" controls="false" autoplay="1" loop="1" id="danceVideo" >
             <source src="public/images/instrument/instrument-video-1.mp4" type="video/mp4">
         </video>
         <!-- <div class="video-section">
@@ -98,7 +98,7 @@
                             <img src="public/images/instrument/g-1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Guitar</h3>
+                            <h3 class="heading"> Guitar</h3>
 
                             <p class="">
                                 The course focuses on making life healthier and building core stength by practicing Yoga in scientific way . Online prenatal yoga classes provide expectant mothers with a convenient and accessible way to stay active and healthy throughout their pregnancy. These classes are designed to help pregnant women reduce stress, alleviate common pregnancy-related discomforts, and prepare for childbirth. Online classes offer flexibility for busy schedules and can be accessed from the comfort of one’s own home. In addition to physical benefits, prenatal yoga classes can also provide emotional support and a sense of community for expectant mothers. With the rise of virtual platforms, there has never been a better time to take advantage of the many benefits of online prenatal yoga classes.ogical well-being, and overall health.
@@ -163,7 +163,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -506,7 +506,7 @@
                             <img src="public/images/instrument/fluteImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Flute</h3>
+                            <h3 class="heading"> Flute</h3>
 
                             <p class="">
                                 Discover the enchanting world of ﬂute playing with our online ﬂute course. Designed for beginners and intermediate players, this comprehensive program will guide you through the fundamentals of ﬂute technique, note reading, and music theory. Over the course of 12 months, you’ll learn to produce beautiful melodies and explore a variety of musical genres. Our expert instructors will provide step-by-step video lessons, personalized feedback, and practice materials to enhance your progress. Whether you’re passionate about classical, jazz, or world music, our online ﬂute course offers convenience and ﬂexibility, empowering you to become a skilled ﬂutist from the comfort of your home. Enroll now and let the music take ﬂight!
@@ -571,7 +571,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -913,7 +913,7 @@
                             <img src="public/images/instrument/tablaImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Tabla</h3>
+                            <h3 class="heading"> Tabla</h3>
 
                             <p class="">
                                 Embark on a rhythmic journey with our online tabla course. Perfect for beginners and intermediate players, this comprehensive program delves into the art of playing the tabla, a versatile Indian percussion instrument. Over 12 months, you’ll master the intricacies of tabla strokes, bols (syllables), and the rhythmic patterns of Indian classical music. Our experienced instructors will provide engaging video lessons, personalized feedback, and practice materials to enhance your skills. Whether you aspire to perform solo or accompany other musicians, our online tabla course offers convenience and ﬂexibility, allowing you to learn and excel at your own pace. Join us today and explore the captivating world of tabla rhythms!
@@ -978,7 +978,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1306,7 +1306,7 @@
                             <img src="public/images/instrument/sitarImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Sitar</h3>
+                            <h3 class="heading"> Sitar</h3>
 
                             <p class="">
 
@@ -1376,7 +1376,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1693,7 +1693,7 @@
                             <img src="public/images/instrument/VeenaImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Veena</h3>
+                            <h3 class="heading"> Veena</h3>
 
                             <p class="">
                                 Immerse yourself in the serene melodies of the veena with our online veena course. Designed for beginners and intermediate players, this comprehensive program will help you master this ancient Indian string instrument. Over 12 months, you’ll learn veena techniques, ﬁngering, and the intricacies of Indian classical music. Our experienced instructors will provide engaging video lessons, personalized feedback, and practice materials to enhance your progress. Whether you seek to explore the spiritual realm of Carnatic music or captivate audiences with your veena skills, our online course offers convenience and ﬂexibility.
@@ -1760,7 +1760,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2068,7 +2068,7 @@
                             <img src="public/images/instrument/pianoImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Piano</h3>
+                            <h3 class="heading"> Piano</h3>
 
                             <p class="">
 
@@ -2136,7 +2136,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2443,7 +2443,7 @@
                             <img src="public/images/instrument/VeenaImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Violin</h3>
+                            <h3 class="heading"> Violin</h3>
 
                             <p class="">
 
@@ -2511,7 +2511,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2818,7 +2818,7 @@
                             <img src="public/images/instrument/drumImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Drum</h3>
+                            <h3 class="heading"> Drum</h3>
 
                             <p class="">
                                 Experience the rhythm and power of drums with our online drum course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this dynamic percussion instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering drumming techniques, rudiments, and rhythmic patterns. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of rocking out in a band or exploring different drumming styles, our online drum course offers convenience, ﬂexibility, and expert guidance to help you become a skilled drummer.
@@ -2885,7 +2885,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -3194,7 +3194,7 @@
                             <img src="public/images/instrument/keyboardImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Keyboard</h3>
+                            <h3 class="heading"> Keyboard</h3>
 
                             <p class="">
                                 Unlock the magic of the keyboard with our online keyboard course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this versatile instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering keyboard techniques, music theory, and popular repertoire. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of playing your favorite songs, exploring different genres, or even composing your own music, our online keyboard course offers convenience, ﬂexibility, and expert guidance to help you become a skilled keyboardist.
@@ -3260,7 +3260,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -3569,7 +3569,7 @@
                             <img src="public/images/instrument/VeenaImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> - Harmonium</h3>
+                            <h3 class="heading"> Harmonium</h3>
                             <p class="">
                                 Discover the soulful melodies of the harmonium with our online harmonium course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this beloved Indian keyboard instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering harmonium techniques, notation reading, and Indian classical music. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you aspire to accompany devotional singing or explore the versatility of the harmonium, our online course offers convenience, ﬂexibility, and expert guidance to help you become a skilled harmonium player.
                                 Enroll today and let the harmonium melodies resonate!</p>
@@ -3632,7 +3632,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> - What you will learn</h3>
+                                    <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>

@@ -52,6 +52,8 @@ $routes->post('check_group_name', 'AdminController::check_group_name');
 
 
 
+
+
 $routes->get('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
 $routes->post('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
 
@@ -111,6 +113,15 @@ $routes->get('demo', 'Home::demo');
 $routes->get('demobooking', 'Home::demobooking');
 
 //routes for admin
+
+
+$routes->get('search', 'AdminController::search');
+$routes->post('search', 'AdminController::search');
+
+$routes->get('search/(any)', 'AdminController::singlechat/$i');
+$routes->post('search/(any)', 'AdminController::singlechat/$i');
+
+
 $routes->post('AdminController/addStudent', 'AdminController::addStudent');
 $routes->get('givestudent', 'AdminController::givestudent');
 $routes->get('create_group', 'AdminController::create_group');

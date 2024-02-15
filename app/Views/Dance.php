@@ -78,7 +78,7 @@
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                            <h3 class="heading"> - Kathak</h3>
+                            <h3 class="heading"> Kathak</h3>
                             <p>
                                 Looking for the best online Kathak classes with a comprehensive syllabus? Look no further than our platform! Our online Kathak classes are designed to provide you with an immersive learning experience that will help you master this beautiful dance form. Our syllabus covers everything from the basics of footwork and hand gestures to complex choreography and improvisation techniques. With our experienced instructors and state-of-the-art technology, you can learn Kathak from the comfort of your own home and at your own pace. Join us today and discover the joy of Kathak dancing!
                             </p>
@@ -148,7 +148,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3> - What you will learn</h3>
+                                    <h3>What you will learn</h3>
                                     <p class="">
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                     </p>
@@ -464,7 +464,7 @@
                             <img src="public/images/Dance/Bharatnatyam.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
-                            <h3 class="heading"> - Bharatnatyam</h3>
+                            <h3 class="heading"> Bharatnatyam</h3>
                             <p>
                                 Experience the grace and beauty of Bharatanatyam with our online dance classes! Our syllabus covers the fundamentals of this ancient Indian classical dance form, from basic postures and hand gestures to complex choreography and improvisation techniques. Our experienced instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn Bharatanatyam from the comfort of your own home and at your own pace. Join our community of dancers today and discover the rich cultural heritage and artistry of Bharatanatyam!
                             </p>
@@ -533,7 +533,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3> - What you will learn</h3>
+                                    <h3>What you will learn</h3>
                                     <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                     </p>
@@ -850,7 +850,7 @@
                             <img src="public/images/Dance/odissi.png" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
-                            <h3 class="heading"> - Odissi</h3>
+                            <h3 class="heading"> Odissi</h3>
                             <p>
                                 Explore the captivating rhythms and movements of Odissi with our online dance classes! Our expert instructors offer a comprehensive syllabus that covers the basics of this traditional Indian classical dance form, from footwork and hand gestures to complex choreography and storytelling techniques. Our personalized approach and state-of-the-art technology allow you to learn Odissi from anywhere in the world, at your own pace. Whether you’re a beginner or an experienced dancer, our online Odissi classes provide a fun and engaging way to develop your skills and deepen your appreciation of this beautiful art form. Join us today and discover the magic of Odissi!
                             </p>
@@ -919,7 +919,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3> - What you will learn</h3>
+                                    <h3>What you will learn</h3>
                                     <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                     </p>
@@ -1144,7 +1144,7 @@
                             <img src="public/images/Dance/bollywood-dance.png" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
-                            <h3 class="heading"> - Bollywood</h3>
+                            <h3 class="heading"> Bollywood</h3>
                             <p>
                                 Ready to add some Bollywood ﬂair to your dance routine? Our online Bollywood dance classes have got you covered! Our expert instructors will guide you through everything from basic steps to complex choreography, helping you master the signature moves of Bollywood dance. Our comprehensive syllabus includes techniques for Bollywood-style footwork, hand gestures, and facial expressions, as well as tips for incorporating your own personal style into your dancing. With our ﬂexible scheduling and convenient online platform, you can learn Bollywood dance from anywhere, at any time. Join us today and start moving to the beat of Bollywood!
                             </p>
@@ -1213,7 +1213,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3> - What you will learn</h3>
+                                    <h3>What you will learn</h3>
                                     <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                     </p>
@@ -1414,7 +1414,7 @@
                             <img src="public/images/Dance/western-dance.png" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
-                            <h3 class="heading"> - Western</h3>
+                            <h3 class="heading"> Western</h3>
                             <p>
                                 Get ready to move to the rhythm of Western dance with our online classes! Our syllabus covers a variety of styles, from contemporary and jazz to hip-hop and tap dance. Our expert instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our state-of-the-art technology and convenient online platform, you can learn Western dance from anywhere in the world, at your own pace. Whether you’re a beginner or an experienced dancer, our online classes provide a fun and engaging way to explore the richness of Western dance culture. Join us today and let’s dance!
                             </p>
@@ -1484,7 +1484,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3> - What you will learn</h3>
+                                    <h3>What you will learn</h3>
                                     <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                     </p>
@@ -1804,7 +1804,7 @@
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
-                            <h3 class="heading"> - Semi-classical</h3>
+                            <h3 class="heading"> Semi-classical</h3>
 
                             <p>
                                 Unleash your inner artist with our online semi-classical dance classes! Our syllabus covers the fusion of classical and contemporary dance styles, blending the grace and elegance of classical dance with the energy and excitement of modern dance. Our expert instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn semi-classical dance from the comfort of your own home and at your own pace. Whether you’re a beginner or an experienced dancer, our online classes provide a fun and engaging way to explore the richness of Indian dance culture. Join us today and let’s dance!
@@ -1875,7 +1875,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3> - What you will learn</h3>
+                                    <h3>What you will learn</h3>
                                     <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                     </p>
@@ -2097,7 +2097,7 @@
                             <img src="public/images/Dance/bhangra.png" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
-                            <h3 class="heading"> - Bhangra</h3>
+                            <h3 class="heading"> Bhangra</h3>
                             <p>
                                 Get ready to experience the vibrant energy and infectious rhythm of Bhangra with our online dance classes! Our syllabus covers the basics of this traditional Punjabi dance form, from footwork and hand gestures to the high-energy movements that make Bhangra so exhilarating. Our expert instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our state-of-the-art technology and convenient online platform, you can learn Bhangra dance from anywhere in the world, at your own pace. Whether you’re a beginner or an experienced dancer, our online classes provide a fun and engaging way to explore the richness of Bhangra dance culture.
                                 Join us today and let’s dance to the beat of Bhangra!
@@ -2166,7 +2166,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3> - What you will learn</h3>
+                                    <h3>What you will learn</h3>
                                     <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                     </p>
@@ -2457,7 +2457,7 @@
                             <img src="public/images/Dance/folk-dance.png" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
-                            <h3 class="heading"> - Folk</h3>
+                            <h3 class="heading"> Folk</h3>
 
                             <p>
                                 Explore the richness and diversity of traditional folk dances with our online classes! Our syllabus covers a variety of styles from different regions of India, including Garba, Bihu, Dandiya, and more. Our expert instructors provide personalized guidance and support to help you perfect your technique and develop your own unique style. With our convenient online platform, you can learn these dynamic and expressive folk dances from the comfort of your own home and at your own pace. Whether you’re a beginner or an experienced dancer, our online classes provide a fun and engaging way to discover the beauty and richness of Indian folk dance culture.
@@ -2527,7 +2527,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3> - What you will learn</h3>
+                                    <h3>What you will learn</h3>
                                     <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
                                     </p>

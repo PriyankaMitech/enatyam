@@ -109,7 +109,7 @@
                             <img src="public/images/Yoga/prenatalYoga.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left text-col">
-                            <h3 class="heading"> - Prenatal Yoga</h3>
+                            <h3 class="heading"> Prenatal Yoga</h3>
 
                             <p class="">
                                 The course focuses on making life healthier and building core stength by practicing Yoga in scientific way . Online prenatal yoga classes provide expectant mothers with a convenient and accessible way to stay active and healthy throughout their pregnancy. These classes are designed to help pregnant women reduce stress, alleviate common pregnancy-related discomforts, and prepare for childbirth. Online classes offer flexibility for busy schedules and can be accessed from the comfort of one’s own home. In addition to physical benefits, prenatal yoga classes can also provide emotional support and a sense of community for expectant mothers. With the rise of virtual platforms, there has never been a better time to take advantage of the many benefits of online prenatal yoga classes.ogical well-being, and overall health.
@@ -175,7 +175,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basis Postures for warm up ( practice before start of Yoga session ).</span>
@@ -526,7 +526,7 @@
                             <img src="public/images/Yoga/StressReductionImg.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h3 class="heading"> - Stress Reduction Yoga</h3>
+                            <h3 class="heading"> Stress Reduction Yoga</h3>
                             <p>
                                 Online stress reduction yoga is becoming increasingly popular as people look for ways to manage their stress levels in a busy and demanding world. Stress reduction yoga combines physical poses, breathing exercises, and mindfulness techniques to help reduce stress and anxiety, improve focus and concentration, and promote relaxation. Online classes offer the convenience of practicing from home and at any time of the day.
 
@@ -590,7 +590,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -931,7 +931,7 @@
                             <img src="public/images/Yoga/FlexibilityYogaImg.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h3 class="heading"> - Flexibility Yoga</h3>
+                            <h3 class="heading"> Flexibility Yoga</h3>
                             <p class="">
                                 Online ﬂexibility yoga classes provide a convenient and effective way to improve ﬂexibility and range of motion. Yoga is a low-impact form of exercise that focuses on stretching and relaxation techniques, which can help to increase ﬂexibility and reduce stiffness in the body. Online classes offer a ﬂexible option for people to practice yoga from the comfort of their own homes, at their own pace.
                                 Additionally, online classes often offer a range of options, from beginner to advanced, so people of all ﬁtness levels can ﬁnd a class that meets their needs.
@@ -997,7 +997,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1346,7 +1346,7 @@
                             <img src="public/images/Yoga/WeightLossYogaImg.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h3 class="heading"> - Weight Loss Yoga</h3>
+                            <h3 class="heading"> Weight Loss Yoga</h3>
                             <p class="">
                                 Online weight loss yoga classes offer a convenient and effective way to shed those extra pounds and achieve a healthy body weight. Yoga can be a great addition to a weight loss program, as it helps to increase strength, ﬂexibility, and mindfulness. Online classes provide a ﬂexible option for people to practice yoga from the comfort of their own homes, at their own pace.
 
@@ -1412,7 +1412,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1759,7 +1759,7 @@
                             <img src="public/images/Yoga/EverydayYoga.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h3 class="heading"> - Everyday Yoga</h3>
+                            <h3 class="heading"> Everyday Yoga</h3>
                             <p class="">
                                 Online everyday yoga classes offer a convenient and effective way to incorporate yoga into your daily routine. Yoga is a great way to improve overall health and wellness, reduce stress and anxiety, and increase strength and ﬂexibility. With online classes, you can practice yoga from the comfort of your own home, at a time that works for you.
 
@@ -1825,7 +1825,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2171,7 +2171,7 @@
                             <img src="public/images/Yoga/chronicYoga.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h3 class="heading"> - Yoga for Chronic Disease</h3>
+                            <h3 class="heading"> Yoga for Chronic Disease</h3>
                             <p class="">
                                 Online yoga classes for chronic disease offer a safe and effective way to manage symptoms and improve quality of life for those living with chronic conditions. Yoga has been shown to be effective in managing symptoms of chronic diseases such as arthritis, diabetes, blood pressure and heart disease etc . Online classes provide a ﬂexible option for people to practice yoga from the comfort of their own homes, at their own pace.
 
@@ -2237,7 +2237,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2583,7 +2583,7 @@
                             <img src="public/images/Yoga/YogaforKids.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h3 class="heading"> - Yoga for Kids</h3>
+                            <h3 class="heading"> Yoga for Kids</h3>
                             <p class="">
                                 Online yoga classes for kids offer a fun and engaging way to promote physical activity and mindfulness in children. Yoga can help children to develop strength, ﬂexibility, balance, and focus, while also reducing stress and anxiety. Online classes provide a convenient and accessible option for parents to introduce yoga to their children at home.
 
@@ -2649,7 +2649,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2994,7 +2994,7 @@
                             <img src="public/images/Yoga/MeditationImg.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h3 class="heading"> - Meditation</h3>
+                            <h3 class="heading"> Meditation</h3>
                             <p class="">
                                 Online meditation and mindfulness classes offer a convenient and effective way to reduce stress, increase self-awareness, and improve overall wellbeing. Meditation and mindfulness practices involve focusing on the present moment and becoming more aware of your thoughts, emotions, and physical sensations. Online classes provide a ﬂexible option for people to practice meditation and mindfulness from the comfort of their own homes, at their own pace.
 
@@ -3060,7 +3060,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -3105,7 +3105,7 @@
                             <img src="public/images/Yoga/CustomizeYogaImg.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h3 class="heading"> - Customise your Yoga Plan</h3>
+                            <h3 class="heading"> Customise your Yoga Plan</h3>
                             <p>
                                 Online customized yoga sessions offer a personalized and effective way to practice yoga according to your individual needs and goals. A customized yoga practice can help individuals to address speciﬁc concerns, such as chronic pain, injuries, or stress-related issues. Online customized sessions provide a ﬂexible option for people to practice yoga from the comfort of their own homes, with guidance from experienced teachers who can tailor the practice to their individual needs.
 
@@ -3173,7 +3173,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -3218,7 +3218,7 @@
                             <img src="public/images/Yoga/NutritionCounsellingImg.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <h3 class="heading"> - Nutrition Counselling</h3>
+                            <h3 class="heading"> Nutrition Counselling</h3>
                             <p class="textPara1">
                                 Nutritionist will provide personalized recommendations and support to help you achieve your health goals, whether it’s weight loss, managing chronic conditions, or improving athletic performance. Online counseling provides a ﬂexible option for people to receive nutrition advice and support from the comfort of their own homes, at a time that works for them.
                                 Additionally, online counseling often uses digital tools and resources to help clients track their progress and stay motivated. Joining an online nutritional counseling program can be a great way to receive personalized support, improve your diet and lifestyle habits, and achieve optimal health. </p>
@@ -3282,7 +3282,7 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3 class="heading"> -What you will learn</h3>
+                                    <h3 class="heading">What you will learn</h3>
 
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
