@@ -176,6 +176,7 @@ class AdminModel extends Model
             ->where('students.Payment_status', 'Y')
             ->orderBy('students.created_at', 'desc')
             ->get();
+            // echo'<pre>';print_r($this->db->getLastQuery());die;
 
         return $query->getResult();
     }
@@ -772,6 +773,106 @@ class AdminModel extends Model
             return false;
         }
     }
+    // public function insertNotification($result)
+    // {
+    //     echo"<pre>";print_r($result);die; 
+    //     $selectedFacultyIds = $result['selected_faculty'];
+    //     $selectedStudentIds = $result['selected_students'];
+    //     $notificationDescription = $result['notification_description'];
+    //     $notification_date = $result['notification_date'];
+    //     $admin_id = $result['admin_id'];
+    //     $facultyData = [];
+    //     $studentData = [];
+
+    //     if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
+
+    //         $facultyData[] = [
+    //             'register_id' => 'All',
+    //             'notification_description' => $notificationDescription,
+    //             'user_type' => 'faculty',
+    //             'timestamp' => $notification_date,
+    //             'admin_id' => $admin_id,
+    //             'created_on' => date('Y:m:d H:i:s'),
+    //         ];
+    //     } elseif (is_array($selectedFacultyIds)) {
+    //         foreach ($selectedFacultyIds as $facultyId) {
+
+    //             $facultyData[] = [
+    //                 'register_id' => $facultyId,
+    //                 'notification_description' => $notificationDescription,
+    //                 'user_type' => 'faculty',
+    //                 'timestamp' => $notification_date,
+    //                 'admin_id' => $admin_id,
+    //                 'created_on' => date('Y:m:d H:i:s'),
+    //             ];
+    //         }
+    //     } elseif (is_array($selectedFacultyIds)) {
+    //         foreach ($selectedFacultyIds as $facultyId) {
+    //             $facultyData[] = [
+    //                 'register_id' => $facultyId,
+    //                 'notification_description' => $notificationDescription,
+    //                 'user_type' => 'faculty',
+    //                 'timestamp' => $notification_date,
+    //             ];
+    //         }
+    //     }
+
+    //     if (is_array($selectedStudentIds) && in_array('all', $selectedStudentIds)) {
+    //         $studentData[] = [
+    //             'register_id' => 'All',
+    //             'notification_description' => $notificationDescription,
+    //             'user_type' => 'student',
+    //             'timestamp' => $notification_date,
+    //             'admin_id' => $admin_id,
+    //             'created_on' => date('Y:m:d H:i:s'),
+    //         ];
+    //     } elseif (is_array($selectedStudentIds)) {
+    //         foreach ($selectedStudentIds as $studentId) {
+
+    //             $studentData[] = [
+    //                 'register_id' => $studentId,
+    //                 'notification_description' => $notificationDescription,
+    //                 'user_type' => 'student',
+    //                 'timestamp' => $notification_date,
+    //                 'admin_id' => $admin_id,
+    //                 'created_on' => date('Y:m:d H:i:s'),
+    //             ];
+    //         }
+    //     } elseif (is_array($selectedStudentIds)) {
+    //         foreach ($selectedStudentIds as $studentId) {
+    //             $studentData[] = [
+    //                 'register_id' => $studentId,
+    //                 'notification_description' => $notificationDescription,
+    //                 'user_type' => 'student',
+    //                 'timestamp' => $notification_date,
+    //             ];
+    //         }
+    //     }
+    //     if (!empty($facultyData)) {
+    //         $res1 = $this->db->table('notificationtable')->insertBatch($facultyData);
+    //         if ($res1) {
+    //             return true; // Return true if faculty insert is successful
+    //         }
+    //         // echo "res :";
+    //         // if ($res1) {
+    //         //     print_r($res1);
+    //         // }
+    //     }
+    //     if (!empty($studentData)) {
+    //         $res2 =  $this->db->table('notificationtable')->insertBatch($studentData);
+    //         if ($res2) {
+    //             return true; // Return true if student insert is successful
+    //         }
+    //         // echo "res :";
+    //         // if ($res2) {
+    //         //     //print_r($res1);
+    //         //     print_r($res2);
+    //         //     die;
+    //         // }
+    //     }
+    //     return false; // Return false if no insert operation is successful
+    // }
+
     public function insertNotification($result)
     {
         $selectedFacultyIds = $result['selected_faculty'];
@@ -779,97 +880,56 @@ class AdminModel extends Model
         $notificationDescription = $result['notification_description'];
         $notification_date = $result['notification_date'];
         $admin_id = $result['admin_id'];
+    
+        // Split the selected faculty and student IDs into arrays
+        $facultyIdsArray = explode(',', $selectedFacultyIds);
+        $studentIdsArray = explode(',', $selectedStudentIds);
+    
+        // Prepare data for faculty insertion
         $facultyData = [];
-        $studentData = [];
-
-        if (is_array($selectedFacultyIds) && in_array('all', $selectedFacultyIds)) {
-
+        foreach ($facultyIdsArray as $facultyId) {
             $facultyData[] = [
-                'register_id' => 'All',
+                'register_id' => $facultyId,
                 'notification_description' => $notificationDescription,
                 'user_type' => 'faculty',
                 'timestamp' => $notification_date,
                 'admin_id' => $admin_id,
-                'created_on' => date('Y:m:d H:i:s'),
+                'created_on' => date('Y-m-d H:i:s'),
             ];
-        } elseif (is_array($selectedFacultyIds)) {
-            foreach ($selectedFacultyIds as $facultyId) {
-
-                $facultyData[] = [
-                    'register_id' => $facultyId,
-                    'notification_description' => $notificationDescription,
-                    'user_type' => 'faculty',
-                    'timestamp' => $notification_date,
-                    'admin_id' => $admin_id,
-                    'created_on' => date('Y:m:d H:i:s'),
-                ];
-            }
-        } elseif (is_array($selectedFacultyIds)) {
-            foreach ($selectedFacultyIds as $facultyId) {
-                $facultyData[] = [
-                    'register_id' => $facultyId,
-                    'notification_description' => $notificationDescription,
-                    'user_type' => 'faculty',
-                    'timestamp' => $notification_date,
-                ];
-            }
         }
-
-        if (is_array($selectedStudentIds) && in_array('all', $selectedStudentIds)) {
+    
+        // Prepare data for student insertion
+        $studentData = [];
+        foreach ($studentIdsArray as $studentId) {
             $studentData[] = [
-                'register_id' => 'All',
+                'register_id' => $studentId,
                 'notification_description' => $notificationDescription,
                 'user_type' => 'student',
                 'timestamp' => $notification_date,
                 'admin_id' => $admin_id,
-                'created_on' => date('Y:m:d H:i:s'),
+                'created_on' => date('Y-m-d H:i:s'),
             ];
-        } elseif (is_array($selectedStudentIds)) {
-            foreach ($selectedStudentIds as $studentId) {
-
-                $studentData[] = [
-                    'register_id' => $studentId,
-                    'notification_description' => $notificationDescription,
-                    'user_type' => 'student',
-                    'timestamp' => $notification_date,
-                    'admin_id' => $admin_id,
-                    'created_on' => date('Y:m:d H:i:s'),
-                ];
-            }
-        } elseif (is_array($selectedStudentIds)) {
-            foreach ($selectedStudentIds as $studentId) {
-                $studentData[] = [
-                    'register_id' => $studentId,
-                    'notification_description' => $notificationDescription,
-                    'user_type' => 'student',
-                    'timestamp' => $notification_date,
-                ];
-            }
         }
+    
+        // Insert data into the database
+        $facultyInserted = false;
+        $studentInserted = false;
         if (!empty($facultyData)) {
-            $res1 = $this->db->table('notificationtable')->insertBatch($facultyData);
-            if ($res1) {
-                return true; // Return true if faculty insert is successful
-            }
-            // echo "res :";
-            // if ($res1) {
-            //     print_r($res1);
-            // }
+            $facultyInserted = $this->db->table('notificationtable')->insertBatch($facultyData);
         }
         if (!empty($studentData)) {
-            $res2 =  $this->db->table('notificationtable')->insertBatch($studentData);
-            if ($res2) {
-                return true; // Return true if student insert is successful
-            }
-            // echo "res :";
-            // if ($res2) {
-            //     //print_r($res1);
-            //     print_r($res2);
-            //     die;
-            // }
+            $studentInserted = $this->db->table('notificationtable')->insertBatch($studentData);
         }
-        return false; // Return false if no insert operation is successful
+    
+        // Check if insertion is successful
+        if ($facultyInserted && $studentInserted) {
+            return true;
+        } else {
+            return false;
+        }
     }
+    
+
 
     public function getUserRole($teacherId, $userType)
     {

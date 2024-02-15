@@ -641,7 +641,7 @@
         document.getElementById("FacultyVideoContainer").style.display = "block";
     });
 </script>
-<script>
+<!-- <script>
     document.addEventListener("DOMContentLoaded", function() {
         var userTypeSelect = document.getElementById("inputUserType");
         var studentFormElements = document.getElementById("studentFormElements");
@@ -686,7 +686,100 @@
 
         toggleFormElementsVisibility();
     });
+</script> -->
+
+<script>
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     var userTypeSelect = document.getElementById("inputUserType");
+    //     var studentFormElements = document.getElementById("studentFormElements");
+    //     var facultyFormElements = document.getElementById("facultyFormElements");
+    //     var selectAllStudentsCheckbox = document.getElementById("selectAllStudents");
+    //     var selectAllFacultyCheckbox = document.getElementById("selectAllFaculty");
+
+    //     function toggleFormElementsVisibility() {
+    //         var userType = userTypeSelect.value;
+
+    //         studentFormElements.style.display = "none";
+    //         facultyFormElements.style.display = "none";
+
+    //         if (userType === "student" || userType === "both") {
+    //             studentFormElements.style.display = "block";
+    //         }
+
+    //         if (userType === "faculty" || userType === "both") {
+    //             facultyFormElements.style.display = "block";
+    //         }
+    //     }
+
+    //     userTypeSelect.addEventListener("change", function() {
+    //         toggleFormElementsVisibility();
+    //     });
+
+    //     selectAllStudentsCheckbox.addEventListener("change", function() {
+    //         var studentCheckboxes = document.querySelectorAll('input[name="selected_students[]"]');
+    //         studentCheckboxes.forEach(function(checkbox) {
+    //             checkbox.checked = selectAllStudentsCheckbox.checked;
+    //         });
+    //     });
+
+    //     selectAllFacultyCheckbox.addEventListener("change", function() {
+    //         var facultyCheckboxes = document.querySelectorAll('input[name="selected_faculty[]"]');
+    //         facultyCheckboxes.forEach(function(checkbox) {
+    //             checkbox.checked = selectAllFacultyCheckbox.checked;
+    //         });
+    //     });
+
+    //     toggleFormElementsVisibility();
+
+    //     $('#courses_id_n').on('change', function() {
+    //         var courseId = $(this).val();
+    //         var subCourseId = $('#sub_courses_id_n').val();
+    //         // loadStudentList(courseId, subCourseId);
+    //     });
+
+    //     $('#sub_courses_id_n').on('change', function() {
+    //         var courseId = $('#courses_id_n').val();
+    //         var subCourseId = $(this).val();
+    //         // loadStudentList(courseId, subCourseId);
+    //     });
+
+        // function loadStudentList(courseId, subCourseId) {
+        //     $.ajax({
+        //         url: 'your-api-url-to-fetch-students',
+        //         type: 'POST',
+        //         data: {
+        //             course_id: courseId,
+        //             sub_course_id: subCourseId
+        //         },
+        //         dataType: 'json',
+        //         success: function(data) {
+        //             var studentCheckboxList = document.getElementById("student_checkbox_list");
+        //             studentCheckboxList.innerHTML = ""; // Clear existing list
+        //             data.forEach(function(student) {
+        //                 var checkbox = document.createElement("input");
+        //                 checkbox.setAttribute("type", "checkbox");
+        //                 checkbox.setAttribute("name", "selected_students[]");
+        //                 checkbox.setAttribute("value", student.id);
+
+        //                 var label = document.createElement("label");
+        //                 label.innerHTML = student.full_name;
+
+        //                 var div = document.createElement("div");
+        //                 div.appendChild(checkbox);
+        //                 div.appendChild(label);
+
+        //                 studentCheckboxList.appendChild(div);
+        //             });
+        //         }
+        //     });
+        // }
+
+    //     $('#courses_id_n').trigger('change');
+    //     $('#sub_courses_id_n').trigger('change');
+    // });
 </script>
+
+
 
 
 <script>
@@ -1442,7 +1535,6 @@
     });
 </script>
 
-
 <script>
     $(document).ready(function() {
         // Get the current date in 'YYYY-MM-DD' format
@@ -1831,6 +1923,331 @@
         });
     });
 </script>
+
+<script>
+    // $(document).ready(function() {
+    //     $('#courses_id_n').on('change', function() {
+    //         var countryId = $(this).val();
+    //         console.log(countryId)
+    //         if (countryId) {
+    //             $.ajax({
+    //                 url: '<?= base_url(); ?>get_sub_courses_data',
+    //                 type: 'POST',
+    //                 data: {
+    //                     courses_id_g : countryId
+    //                 },
+    //                 dataType: 'json',
+    //                 success: function(data) {
+    //                     $('#sub_courses_id_n').empty();
+    //                     $('#sub_courses_id_n').append('<option value="">Please select sub Courses</option>');
+    //                     $.each(data, function(key, value) {
+    //                         $('#sub_courses_id_n').append('<option value="' + value.id + '">' + value.sub_courses_name + '</option>');
+    //                     });
+
+    //                     // Retrieve the selected state ID from the hidden input field
+    //                     var selectedStateId = $('#selected_sub_courses_id_n').val();
+
+    //                     // Select the state in the dropdown
+    //                     $('#sub_courses_id_n').val(selectedStateId);
+    //                 }
+    //             });
+    //         } else {
+    //             $('#sub_courses_id_n').empty();
+    //             $('#sub_courses_id_n').append('<option value="">Please Select State</option>');
+    //         }
+    //     });
+
+    //     // Trigger change event on #courses_id_g
+    //     $('#courses_id_n').trigger('change');
+    // });
+</script>
+<script>
+    // $(document).ready(function() {
+    //     $('#sub_courses_id_n').on('change', function() {
+    //         function loadStudentData() {
+    //             var subcoursesID = $('#sub_courses_id_n').val();
+    //             var courses_id_g = $('#courses_id_n').val();
+
+    //             $.ajax({
+    //                 url: '<?= base_url(); ?>get_student_data',
+    //                 type: 'POST',
+    //                 data: {
+    //                     sub_courses_id_g: subcoursesID,
+    //                     courses_id_g: courses_id_g,
+    //                 },
+    //                 dataType: 'json',
+    //                 success: function(data) {
+    //                     $('#student_id').empty();
+    //                     $('#student_checkbox_list').empty();
+    //             $.each(data, function(key, value) {
+    //                 $('#student_checkbox_list').append('<div class="form-check">' +
+    //                     '<input class="form-check-input" type="checkbox" value="' + value.id + '" name="student_id[]"' +
+    //                     (value.selected ? 'checked' : '') + '>' +
+    //                     '<label class="form-check-label" for="student' + value.id + '">' +
+    //                     value.full_name +
+    //                     '</label>' +
+    //                     '</div>');
+    //             });
+    //                     // Retrieve the selected student IDs from the hidden input field
+    //                     var selectedStudentIds = $('#selected_student_id').val();
+
+    //                     // Convert the comma-separated string to an array of integers
+    //                     var selectedIdsArray = selectedStudentIds.split(',').map(Number);
+
+    //                     // Initialize Select2 and set the selected values
+    //                     $('#student_id').select2();
+    //                     $('#student_id').val(selectedIdsArray).trigger('change');
+    //                 }
+    //             });
+    //         }
+
+       
+
+    //         // Use setTimeout to ensure that the document is fully loaded before trying to load student and faculty data
+    //         setTimeout(function() {
+    //             loadStudentData();
+                
+    //         }, 1000);
+
+    //         // Event listener for change on #sub_courses_id_g
+    //         $('#sub_courses_id_n').on('change', function() {
+    //             loadStudentData();
+    //         });
+    //     });
+
+    // });
+
+    // $(document).ready(function() {
+    //     $('#sub_courses_id_n').on('change', function() {
+    //         function loadStudentData() {
+    //             var subcoursesID = $('#sub_courses_id_g').val();
+    //             var courses_id_n = $('#courses_id_n').val();
+
+    //             $.ajax({
+    //                 url: '<?= base_url(); ?>get_student_data',
+    //                 type: 'POST',
+    //                 data: {
+    //                     sub_courses_id_n: subcoursesID,
+    //                     courses_id_n: courses_id_n,
+    //                 },
+    //                 dataType: 'json',
+    //                 success: function(data) {
+    //                     console.log(data);
+    //                     $('#student_id').empty();
+    //                     $.each(data, function(key, value) {
+    //                         $('#student_id').append('<option value="' + value.id + '">' + value.full_name + '</option>');
+    //                     });
+
+    //                     // Retrieve the selected student IDs from the hidden input field
+    //                     var selectedStudentIds = $('#selected_student_id').val();
+
+    //                     // Convert the comma-separated string to an array of integers
+    //                     var selectedIdsArray = selectedStudentIds.split(',').map(Number);
+
+    //                     // Initialize Select2 and set the selected values
+    //                     $('#student_id').select2();
+    //                     $('#student_id').val(selectedIdsArray).trigger('change');
+    //                 }
+    //             });
+    //         }
+
+    //         // Function to load faculty data
+    //         // function loadFacultyData() {
+    //         //     var subcoursesID = $('#sub_courses_id_n').val();
+    //         //     var courses_id_g = $('#courses_id_n').val();
+
+
+
+    //         //     $.ajax({
+    //         //         url: '<?= base_url(); ?>get_faculty_data',
+    //         //         type: 'POST',
+    //         //         data: {
+    //         //             sub_courses_id_n: subcoursesID,
+    //         //             courses_id_n: courses_id_n,
+    //         //         },
+    //         //         dataType: 'json',
+
+    //         //         success: function(data) {
+    //         //             $('#faculty_id_n').empty();
+    //         //             $('#faculty_id_n').append('<option value="">Please select faculty</option>');
+    //         //             $.each(data, function(key, value) {
+    //         //                 $('#faculty_id_n').append('<option value="' + value.faculty_id + '">' + value.name + '</option>');
+    //         //             });
+
+    //         //             // Retrieve the selected faculty ID from the hidden input field
+    //         //             var selectedFacultyId = $('#selected_faculty_id').val();
+
+    //         //             // Select the faculty in the dropdown
+    //         //             $('#faculty_id_n').val(selectedFacultyId);
+    //         //         }
+    //         //     });
+    //         // }
+
+    //         // Use setTimeout to ensure that the document is fully loaded before trying to load student and faculty data
+    //         // setTimeout(function() {
+    //         //     loadStudentData();
+    //         //     loadFacultyData();
+    //         // }, 1000);
+
+    //         // Event listener for change on #sub_courses_id_g
+    //         $('#sub_courses_id_n').on('change', function() {
+    //             loadStudentData();
+    //         });
+    //     });
+
+    // });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#courses_id_n').on('change', function() {
+            var countryId = $(this).val();
+            console.log(countryId)
+            if (countryId) {
+                $.ajax({
+                    url: '<?= base_url(); ?>get_sub_courses_data',
+                    type: 'POST',
+                    data: {
+                        courses_id_g: countryId
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#sub_courses_id_n').empty();
+                        $('#sub_courses_id_n').append('<option value="">Please select sub Courses</option>');
+                        $.each(data, function(key, value) {
+                            $('#sub_courses_id_n').append('<option value="' + value.id + '">' + value.sub_courses_name + '</option>');
+                        });
+
+                        // Retrieve the selected state ID from the hidden input field
+                        var selectedStateId = $('#selected_sub_courses_id_n').val();
+
+                        // Select the state in the dropdown
+                        $('#sub_courses_id_n').val(selectedStateId);
+                    }
+                });
+            } else {
+                $('#sub_courses_id_n').empty();
+                $('#sub_courses_id_n').append('<option value="">Please Select State</option>');
+            }
+        });
+
+        // Trigger change event on #courses_id_n
+        $('#courses_id_n').trigger('change');
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#sub_courses_id_n').on('change', function() {
+            function loadStudentData() {
+                var subcoursesID = $('#sub_courses_id_n').val();
+                var courses_id_n = $('#courses_id_n').val();
+                $('.checbox').show();
+
+                $.ajax({
+                    url: '<?= base_url(); ?>get_student_data',
+                    type: 'POST',
+                    data: {
+                        sub_courses_id_g: subcoursesID,
+                        courses_id_g: courses_id_n,
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#student_id_n').empty();
+                        $.each(data, function(key, value) {
+                            $('#student_id_n').append('<input type="checkbox" class="student_checkbox" name="student_ids[]" value="' + value.id + '"> ' + value.full_name + '<br>');
+                        });
+
+                        // Retrieve the selected student IDs from the hidden input field
+                        var selectedStudentIds = $('#selected_student_id').val();
+                        console.log(selectedStudentIds);
+
+                        // Convert the comma-separated string to an array of integers
+                        var selectedIdsArray = selectedStudentIds.split(',').map(Number);
+
+                        // Set the checkboxes to checked based on the selected student IDs
+                        $('#student_id_n input[type="checkbox"]').each(function() {
+                            if ($.inArray(parseInt($(this).val()), selectedIdsArray) !== -1) {
+                                $(this).prop('checked', true);
+                            }
+                        });
+                    }
+                });
+            }
+
+            function loadFacultyData() {
+                var subcoursesID = $('#sub_courses_id_n').val();
+                var courses_id_n = $('#courses_id_n').val();
+
+                $.ajax({
+                    url: '<?= base_url(); ?>get_faculty_data',
+                    type: 'POST',
+                    data: {
+                        sub_courses_id_g: subcoursesID,
+                        courses_id_g: courses_id_n,
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#faculty_id_n').empty();
+                        $.each(data, function(key, value) {
+                            $('#faculty_id_n').append('<input type="checkbox" class="faculty_checkbox" name="faculty_ids[]" value="' + value.faculty_id + '"> ' + value.name + '<br>');
+                        });
+
+                        // Retrieve the selected faculty IDs from the hidden input field
+                        var selectedFacultyIds = $('#selected_faculty_id').val();
+                        cobnsole.log(selectedFacultyIds);
+                        // Convert the comma-separated string to an array of integers
+                        var selectedIdsArray = selectedFacultyIds.split(',').map(Number);
+
+                        // Set the checkboxes to checked based on the selected faculty IDs
+                        $('#faculty_id_n input[type="checkbox"]').each(function() {
+                            if ($.inArray(parseInt($(this).val()), selectedIdsArray) !== -1) {
+                                $(this).prop('checked', true);
+                            }
+                        });
+                    }
+                });
+            }
+
+            // Use setTimeout to ensure that the document is fully loaded before trying to load student and faculty data
+            setTimeout(function() {
+                loadStudentData();
+                loadFacultyData();
+            }, 1000);
+
+            // Event listener for change on #sub_courses_id_n
+            $('#sub_courses_id_n').on('change', function() {
+                loadStudentData();
+                loadFacultyData();
+            });
+        });
+
+        // Select all students checkbox
+        $('#select_all_students').on('change', function() {
+            $('.student_checkbox').prop('checked', $(this).prop('checked'));
+        });
+
+        // Select all faculty checkbox
+        $('#select_all_faculty').on('change', function() {
+            $('.faculty_checkbox').prop('checked', $(this).prop('checked'));
+        });
+
+        // Event listener for individual student checkboxes
+        $(document).on('change', '.student_checkbox', function() {
+            if (!$(this).prop('checked')) {
+                $('#select_all_students').prop('checked', false);
+            }
+        });
+
+        // Event listener for individual faculty checkboxes
+        $(document).on('change', '.faculty_checkbox', function() {
+            if (!$(this).prop('checked')) {
+                $('#select_all_faculty').prop('checked', false);
+            }
+        });
+    });
+</script>
+
 
 
 

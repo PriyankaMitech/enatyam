@@ -28,6 +28,17 @@
                     <div class="card-header">
                         <h3 class="card-title">Students Videos</h3>
                     </div>
+
+                    <div class="text-right mt-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <small class="badge badge-danger videoBadge">Videos and Images will be deleted after 7 days. Kindly download if required.</small>
+                                    </div>
+                                    <div>
+                                        <a href="<?php echo base_url() ?>uploaded_video" class="btn btn-primary">Back</a>
+                                    </div>
+                                </div>
+                            </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <form action="#" method="post" id="studentVideoForm">
