@@ -854,6 +854,11 @@ class AdminController extends BaseController
         $model = new AdminModel();
         $data['admins'] = $model->get_students();
         $data['Faculty'] = $model->getFaculty();
+        // echo'<pre>';print_r($data['Faculty']);die;
+        $wherecond = array('is_deleted' => 'N');
+
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+        $data['faculty_data'] = $model->getalldata('faculty', $wherecond);
         echo view('AdminSideBar/add_notifications', $data);
     }
 
@@ -1233,6 +1238,24 @@ class AdminController extends BaseController
         }
     }
 
+    public function getSubCourses()
+    {
+        $model = new AdminModel();
+
+        $courses_id_n = $this->request->getPost('courses_id_n');
+
+        if ($courses_id_n) {
+            $wherecond1 = array('is_deleted' => 'N', 'courses_id' => $courses_id_n);
+
+            $sub_courses = $model->getalldata('tbl_sub_courses', $wherecond1);
+
+            // echo "<pre>";print_r($sub_courses);exit();
+            return json_encode($sub_courses);
+        } else {
+            return json_encode([]);
+        }
+    }
+
 
     public function get_student_data()
     {
@@ -1249,6 +1272,35 @@ class AdminController extends BaseController
 
         $whereCondition = '';
         $whereCondition = ['is_deleted' => 'N', 'Assign_Techer_id' => NULL, 'Payment_status' =>  $Payment_status, 'SessionType' => $GroupSession, 'groupName' => NULL, 'course' => $courses_id_g, 'sub_course' => $sub_courses_id_g];
+
+
+        $student_data = $model->getalldata('register', $whereCondition);
+
+        // $lastQuery = $model->getLastQuery();
+
+        // // Now you can use $lastQuery for debugging or logging purposes
+        // echo "Last Query: " . $lastQuery;exit();
+
+
+
+        return json_encode($student_data);
+    }
+
+    public function getStudentData()
+    {
+
+        $model = new AdminModel();
+
+        $sub_courses_id_n = $this->request->getPost('sub_courses_id_n');
+        $courses_id_n = $this->request->getPost('courses_id_n');
+        // $GroupSession = 'GroupSession';
+        $Payment_status = 'Y';
+
+
+
+
+        $whereCondition = '';
+        $whereCondition = ['is_deleted' => 'N',  'Payment_status' =>  $Payment_status, 'course' => $courses_id_n, 'sub_course' => $sub_courses_id_n];
 
 
         $student_data = $model->getalldata('register', $whereCondition);
@@ -1329,9 +1381,29 @@ class AdminController extends BaseController
         // print_r($admin_id);
         // exit();
         $model = new AdminModel();
+
+        $selectedgroupstudentnamesString = '';
+
+        $selectedgroupstudentnameArray = $this->request->getVar('student_ids');
+        //  echo "<pre>";
+        // print_r($selectedgroupstudentnameArray);
+        // exit();
+        if (!empty($selectedgroupstudentnameArray)) {
+            $selectedgroupstudentnamesString = implode(',', $selectedgroupstudentnameArray);
+        }
+
+        $selectedgroupfacultynamesString = '';
+
+        $selectedgroupfacultynameArray = $this->request->getVar('faculty_ids');
+        if (!empty($selectedgroupfacultynameArray)) {
+            $selectedgroupfacultynamesString = implode(',', $selectedgroupfacultynameArray);
+        }
+        
         $result = [
-            'selected_faculty' => $this->request->getPost('selected_faculty'),
-            'selected_students' => $this->request->getPost('selected_students'),
+            // 'selected_faculty' => $this->request->getPost('selected_faculty'),
+            // 'selected_students' => $this->request->getPost('selected_students'),
+            'selected_faculty' => $selectedgroupfacultynamesString,
+            'selected_students' => $selectedgroupstudentnamesString,
             'notification_description' => $this->request->getPost('notification_description'),
             'notification_date' =>  $this->request->getPost('notification_date'),
             'admin_id' => $admin_id,

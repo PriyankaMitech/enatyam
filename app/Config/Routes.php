@@ -232,6 +232,9 @@ $routes->post('get_faculty_data', 'AdminController::get_faculty_data');
 
 $routes->post('get_shedule_data', 'AdminController::get_shedule_data');
 
+$routes->post('getSubCourses', 'AdminController::getSubCourses');
+$routes->post('getStudentData', 'AdminController::getStudentData');
+
 
 
 
