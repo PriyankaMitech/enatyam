@@ -741,7 +741,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
-                                        <i class=" nav-icon fa fa-calendar"></i>
+                                        <i class=" nav-icon fa fa-laptop"></i>
                                         <p>
                                            Demo
                                             <!-- <i class="right fas fa-angle-left"></i> -->
