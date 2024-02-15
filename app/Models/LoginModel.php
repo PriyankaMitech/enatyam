@@ -268,6 +268,7 @@ class LoginModel extends Model
                 'mobile_no'          => $result->mobile_no,
                 'Payment_status'     => $result->Payment_status,
                 'access_level'      => $result->access_level,
+                'SessionType'        => $result->SessionType,
 
             ];
 
@@ -335,18 +336,28 @@ class LoginModel extends Model
 
     //     return !empty($result);
     // }
+    // public function checkExist($value, $column, $table)
+    // {
+    //     $result = $this->db
+    //         ->table($table)
+    //         ->select($column)
+    //         ->where([$column => '' . $value . ''])
+    //         ->get()->getRow();
+
+    //     return !empty($result);
+    // }
+
     public function checkExist($value, $column, $table)
     {
         $result = $this->db
-            ->table($table)
-            ->select($column)
-            ->where([$column => '' . $value . ''])
-            ->get()->getRow();
+        ->table($table)
+        ->select('id')
+        ->where("email", $value)
+        ->orWhere("mobile_no", $value)
+        ->get()->getRow();
 
-        return !empty($result);
+       return !empty($result);
     }
-
-
 
 
 

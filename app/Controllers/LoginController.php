@@ -228,7 +228,6 @@ class LoginController extends BaseController
 
         $username = $request->getPost('username');
         $password = $request->getPost('password');
-
         if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
             $result = $loginModel->getUserByEmailAndPassword($username, $password);
         } else {
@@ -251,51 +250,7 @@ class LoginController extends BaseController
                     return redirect()->to('Home');
             }
         } else {
-            $session->setFlashdata('errormessage', 'Password is wrong.');
-
-            // Interakt API Call
-            // $apiKey = 'NE9vYmtLckVyVzIydmtoX3A3cFRwN0d0ZXFfMEpfNzNpeXNEbThmVVpJWTo=';
-            
-            // $interaktRequest = new \HTTP_Request2();
-            // $interaktRequest->setUrl('https://api.interakt.ai/v1/public/track/users/');
-            // $interaktRequest->setMethod(\HTTP_Request2::METHOD_POST);
-            // $interaktRequest->setConfig(['follow_redirects' => true]);
-            // $interaktRequest->setHeader([
-            //     'Content-Type' => 'application/json',
-            //     'Authorization' => 'Basic ' . $apiKey,
-            // ]);
-            // // Adjust the data according to your needs
-            // $interaktRequest->setBody('{
-            //     "userId": "1",
-            //     "phoneNumber": "7588525387",
-            //     "countryCode": "+91",
-            //     "traits": {
-            //         "name": "John Doe",
-            //         "email": "johndoe@gmail.com"
-            //     },
-            //     "message": "Login details are incorrect",
-            //     "tags": ["sample-tag-1", "sample-tag-2"]
-            // }');
-            
-            // try {
-            //     $interaktResponse = $interaktRequest->send();
-            
-            //     if ($interaktResponse->getStatus() == 202) {
-            //         echo 'Accepted: ' . $interaktResponse->getBody();
-            //        exit();
-            //     } else {
-            //         echo 'Unexpected HTTP status: ' . $interaktResponse->getStatus() . ' ' . $interaktResponse->getReasonPhrase();
-            //         exit();
-
-            //     }
-            // } catch (HTTP_Request2_Exception $e) {
-            //     echo 'Error: ' . $e->getMessage();
-            //     exit();
-
-            // }
-
-
-            
+            $session->setFlashdata('errormessage', 'Password is wrong.');  
             
             return redirect()->to('Home');
         }
@@ -305,6 +260,9 @@ class LoginController extends BaseController
 
     public function ModelForLogin()
     {
+        // echo "<pre>";
+        // print_r($_SESSION);
+        // echo "</pre>";die;
         return view('ModelForLogin');
     }
 
