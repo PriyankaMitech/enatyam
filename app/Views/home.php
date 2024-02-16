@@ -7,7 +7,7 @@
             <div class="col-lg-8 p-5">
                 <div class="bannervs">
                     <video class="video-dance bannerv"  controls="1" autoplay="0" loop="0">
-                        <source src="<?=base_url(); ?>public/images/Dance/DanceVidio.mp4" type="video/mp4">
+                        <source src="<?=base_url(); ?>public/images/Home/Video for home page header.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>

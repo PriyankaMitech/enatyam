@@ -19,8 +19,8 @@
     </div> -->
 <div class="wrapper-container">
     <div class="video-container">
-        <video class="video-dance musicv" controls="1" autoplay="0" loop="0">
-            <source src="public/images/Yoga/YogaVideo.mp4" type="video/mp4">
+        <video class="video-dance yogav" controls="1" autoplay="0" loop="0">
+            <source src="public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
         </video>
 
         <!-- <div class="video-section">
