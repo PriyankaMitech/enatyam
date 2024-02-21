@@ -478,12 +478,12 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             <!-- mobile nav -->
             <div class="container-fluid d-block d-lg-none">
                 <div class="row mx-0">
-                    <div class="col-6">
+                    <div class="col-8">
                         <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
-                            <img src="public/images/logo1.png" alt="Enatyam">
+                            <img src="public/images/logo.png" alt="Enatyam" class="logoh">
                         </a>
                     </div>
-                    <div class="col-6 text-right my-auto menub">
+                    <div class="col-4 text-right my-auto menub">
                         <i class="fa fa-bars" id="menu-icon"></i>
                     </div>
                 </div>

@@ -1,48 +1,33 @@
 <?php include('header.php'); ?>
-<!-- <div class="wrapper-container ">
-        <div class="video-container">
-            <video class="video-dance" controls="0" autoplay="1" loop="1" id="yogaVideo">
-                <source src="public/images/Yoga/YogaVideo.mp4" type="video/mp4">
-                <div class="row video-row">
-                    <div class="col-4 video-col1">
-                        text1
-                    </div>
-                    <div class="col-4">
-                        text2
-                    </div>
-                    <div class="col-4">
-                        text3
-                    </div>
-                </div>
-            </video>
-        </div>
-    </div> -->
+<!-- 
 <div class="wrapper-container">
     <div class="video-container">
         <video class="video-dance yogav" controls="1" autoplay="0" loop="0">
             <source src="public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
         </video>
 
-        <!-- <div class="video-section">
-            <div class="row video-row">
-                <div class="col-4 video-col1">
-                    <P>We are commited to your </p>
-                    <p>commitment.</P>
-                    <a class="btn btn-dark btnstrt p-2" href="<?= base_url(); ?>Home#pricing-section" ?> <span class="button-text">Start Now if you are <br> commited </span></a>
-                </div>
+       
+    </div>
+</div> -->
 
-                <div class="col-4 video-col1">
-                    <p>30 minutes of Music a day will</p>
-                    <p>change your life.</p>
-                </div>
-                <div class="col-4 video-col1">
-                    <p>Your time @ Your Place .</p>
-                    <img src="public/images/banner.svg">
+<section class="s_header-section">
+    <div class="container-fluid mt-2">
+        <div class="row ">
+            <div class="col-lg-8 p-5">
+                <div class="bannervs">
+                    <video class="video-dance bannerv"  controls="1" autoplay="0" loop="0">
+                        <source src="<?=base_url(); ?>public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
+                    </video>                
                 </div>
             </div>
-        </div> -->
+            <div class="col-lg-4">
+            <div class="banneris">
+                <img src="<?=base_url(); ?>public/images/Yoga/yogablack.png" class="img-fluid mt-5" alt="Image 4">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 <section class="btnSection1">
     <div class="container">
         <div class="typesOfYoga-tab">

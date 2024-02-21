@@ -4,14 +4,14 @@
 <section class="s_header-section">
     <div class="container-fluid mt-2">
         <div class="row ">
-            <div class="col-lg-8 p-5">
+            <div class="col-lg-8 col-md-8 col-12 p-5">
                 <div class="bannervs">
                     <video class="video-dance bannerv"  controls="1" autoplay="0" loop="0">
                         <source src="<?=base_url(); ?>public/images/Home/Video for home page header.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 ">
             <div class="banneris">
                 <img src="<?=base_url(); ?>public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
                 </div>
@@ -89,67 +89,15 @@
         <span class="line"></span>
     </div>
 </div>
-<section class=" mb-5">
-    <div class="container-fluid">
+<section class="mb-5">
+    <div class="">
 
         <!-- pills -->
         <div class="typesOfDance-tab">
 
-            <!-- <ul class="row nav nav-pills" id="pills-tab" role="tablist"> -->
-            <!-- Kathak -->
-            <!-- <li class="col-lg-1 nav-item hide">
-                </li>
-                <li class="col-lg-2 col-md-3  col-6 nav-item " role="presentation">
-                    <button class="nav-link active" id="pills-Kathak-tab" data-bs-toggle="pill" data-bs-target="#pills-Kathak" type="button" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</button>
-                </li> -->
-            <!-- Bharatnatyam -->
-            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
-                    <button class="nav-link" id="pills-Bharatnatyam-tab" data-bs-toggle="pill" data-bs-target="#pills-Bharatnatyam" type="button" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</button>
-                </li> -->
-            <!-- Bollywood Dance -->
-            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
-                    <button class="nav-link" id="pills-BollywoodDance-tab" data-bs-toggle="pill" data-bs-target="#pills-BollywoodDance" type="button" role="tab" aria-controls="pills-BollywoodDance" aria-selected="false">Bollywood Dance</button>
-                </li> -->
-            <!-- Hindustani Vocal -->
-            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
-                    <button class="nav-link" id="pills-HindustaniVocal-tab" data-bs-toggle="pill" data-bs-target="#pills-HindustaniVocal" type="button" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="false">Hindustani Vocal</button>
-                </li> -->
-            <!-- Carnatic Vocal -->
-            <!-- <li class="col-lg-2 col-md-3 col-6 av-item" role="presentation">
-                    <button class="nav-link" id="pills-CarnaticVocal-tab" data-bs-toggle="pill" data-bs-target="#pills-CarnaticVocal" type="button" role="tab" aria-controls="pills-CarnaticVocal" aria-selected="false">Carnatic Vocal</button>
-                </li> -->
-            <!-- Western Singing -->
-            <!-- <li class="col-lg-1 nav-item hide">
-                </li>
-                <li class="col-lg-1 nav-item hide">
-                </li> -->
-            <!-- Western Singing -->
-            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
-                    <button class="nav-link" id="pills-WesternSinging-tab" data-bs-toggle="pill" data-bs-target="#pills-WesternSinging" type="button" role="tab" aria-controls="pills-WesternSinging" aria-selected="false">Western Singing</button>
-                </li> -->
-            <!-- Guitar -->
-            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
-                    <button class="nav-link" id="pills-Guitar-tab" data-bs-toggle="pill" data-bs-target="#pills-Guitar" type="button" role="tab" aria-controls="pills-Guitar" aria-selected="false">Guitar</button>
-                </li> -->
-            <!-- Keyboard -->
-            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
-                    <button class="nav-link" id="pills-Keyboard-tab" data-bs-toggle="pill" data-bs-target="#pills-Keyboard" type="button" role="tab" aria-controls="pills-Keyboard" aria-selected="false">Keyboard</button>
-                </li> -->
-            <!-- Yoga -->
-            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
-                    <button class="nav-link" id="pills-Yoga-tab" data-bs-toggle="pill" data-bs-target="#pills-Yoga" type="button" role="tab" aria-controls="pills-Yoga" aria-selected="false">Yoga</button>
-                </li> -->
-            <!-- Coming Soon -->
-            <!-- <li class="col-lg-2 col-md-3 col-6 nav-item" role="presentation">
-                    <button class="nav-link" id="pills-ComingSoon-tab" data-bs-toggle="pill" data-bs-target="#pills-ComingSoon" type="button" role="tab" aria-controls="pills-ComingSoon" aria-selected="false">Coming Soon</button>
-                </li> -->
-            <!-- <li class="col-lg-1 nav-item hide">
-                </li> -->
-
-            <!-- </ul>  -->
-
+           
             <div class="MusicSec">
-                <div class="container-fluid">
+                <div class="">
 
                     <!-- <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Thumbnail Gallery</h1> -->
 
@@ -157,13 +105,13 @@
 
                     <div class="row text-lg-start">
 
-                        <div class="col-lg-3 col-md-4 col-6 ">
+                        <div class="col-lg-3 col-md-4 col-12 ">
                             <h5 class="text-white" style="text-align: center;">Kathak </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php base_url(); ?>public/images/Home/4.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
 
@@ -184,13 +132,13 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                        src="<?php echo base_url(); ?>public/images/Home/5.png" alt=""
+                                       >
                                 </a>
                             </div>
 
@@ -212,13 +160,13 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Bollywood </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;" >
@@ -238,13 +186,13 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Western Dance </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;" >
@@ -264,13 +212,13 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;" >
@@ -289,13 +237,13 @@
                                    
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;" >
@@ -314,13 +262,13 @@
                                   
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;" >
@@ -339,13 +287,13 @@
                             
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;">
@@ -364,13 +312,13 @@
                                     
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Yoga </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;" >
@@ -389,13 +337,13 @@
                                     <li class="list-inline-item text-white ml-5">4.9</li>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;">
@@ -414,13 +362,13 @@
                                  
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Nuitritional Guidance </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;" >
@@ -439,13 +387,13 @@
                            
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-12">
                             <h5 class="text-white" style="text-align: center;">Musical Instruments </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Music/music.png" alt=""
-                                        style="width: 175px; height: 150px;">
+                                       >
                                 </a>
                             </div>
                             <div class="float-left cimgb" style="display:none;" >
@@ -1425,10 +1373,8 @@
 
 
              
-                <div class="col-xs-6 col-md-6 col-lg-6 col-12 ">
-                   
-
-                    <div >
+                <div class="col-lg-6 col-md-6 col-12 ">
+                    <div>
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="fatema learning experience on enatyam platform testimonial"
@@ -1436,11 +1382,8 @@
                                             src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
                                             id="widget8"></iframe>
                     </div>
-                                  
-                          
-                   
                 </div>
-                <div class="col-xs-6 col-md-6 col-lg-6 col-12">
+                <div class="col-lg-6 col-md-6 col-12">
                     <!-- <div class="col-md-6 col-lg-6 col-12"> -->
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-12">
