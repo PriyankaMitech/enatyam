@@ -2112,6 +2112,8 @@
                     },
                     dataType: 'json',
                     success: function(data) {
+                        console.log("resoponse");
+                        console.log(data);
                         $('#sub_courses_id_n').empty();
                         $('#sub_courses_id_n').append('<option value="">Please select sub Courses</option>');
                         $.each(data, function(key, value) {
@@ -2120,7 +2122,8 @@
 
                         // Retrieve the selected state ID from the hidden input field
                         var selectedStateId = $('#selected_sub_courses_id_n').val();
-
+                        console.log("resoponse11");
+                        console.log(selectedStateId);    
                         // Select the state in the dropdown
                         $('#sub_courses_id_n').val(selectedStateId);
                     }
@@ -2195,7 +2198,7 @@
 
                         // Retrieve the selected faculty IDs from the hidden input field
                         var selectedFacultyIds = $('#selected_faculty_id').val();
-                        cobnsole.log(selectedFacultyIds);
+                        console.log(selectedFacultyIds);
                         // Convert the comma-separated string to an array of integers
                         var selectedIdsArray = selectedFacultyIds.split(',').map(Number);
 

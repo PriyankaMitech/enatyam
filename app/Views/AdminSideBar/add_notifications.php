@@ -40,6 +40,7 @@
                       <select class="form-control" name="courses_id_n" id="courses_id_n" >
                           <option >Please select course</option>
                           <?php if(!empty($courses_data)){?>
+                          
                               <?php foreach ($courses_data as $data){ ?>
                                   <option value="<?=$data->id; ?>"
                                       <?php if ((!empty($single_data)) && $single_data->courses_id_n === $data->id ) { echo 'selected'; } ?>>
@@ -182,7 +183,7 @@
 
 
 
-<?php echo view('AdminSideBar/AdminFooter.php');?>  
+<?php echo view('AdminSideBar/AdminFooter');?>  
 
 
 
