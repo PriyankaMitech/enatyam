@@ -1209,21 +1209,17 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/1.png" />
                                 <div class="hft">
-                                    <h5>Raj</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                             </div>
-                           
-                            
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/2.png" />
                                 <div class="hft">
-                                    <h5>Raj</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                             </div>
-
-                 
                         </div>
                     </div>
                     <div class="item">
@@ -1231,18 +1227,17 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/3.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/4.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
@@ -1250,18 +1245,17 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/5.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/7-2.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
@@ -1269,18 +1263,17 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/8.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/9.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
@@ -1288,18 +1281,32 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/11-1.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Meera (canada)</h5>
+                                    <p>During pandemic, I found Enatyam E Learning Kathak dance Platform for
+                                    my daughter Meera. It has been now 3+ years and she has done tremendous progress. Meera
+                                    finds it very comfortable to learn online. We never thought E-learning could be so much
+                                    impactfull. Each dance step is taught with proper theoretical explanation which helps to
+                                    bring out facial and body expressions which is the heart of any dance form. Along with regular
+                                    online classes, students get enough practice by sharing practice videos. We are grateful to
+                                    Enatyam classes for adjusting different time zones. Meera is confident that she will achieve
+                                    her milestone in Kathak dance with the help on Enatyam E-Learning Kathak dance Platform.
+                                    Thank you</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/16.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Aahana ( Canada)</h5>
+                                    <p> Enrolling in Enatyam's online Kathak class has been a transformative
+                                    experience for my 7-year-old daughter. The instructors' passion and dedication to this
+                                    classical dance form are evident in every session. Through clear and engaging instruction,
+                                    they break down complex movements into manageable steps, allowing students to progress
+                                    at their own pace. Despite the virtual format, the classes are interactive and personalized,
+                                    fostering a strong sense of connection within the dance community. I'm grateful for the
+                                    opportunity to learn Kathak with Enatyam and would highly recommend it to anyone seeking
+                                    to embark on a journey of cultural discovery and artistic expression.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
@@ -1307,37 +1314,50 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/17.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Lavanya (Dubai)</h5>
+                                    <p>Initially I was bit hesitant to go for online kathak classes.But Enatyam has
+                                    been an incredible online platform which transformed my journey into the world of kathak.
+                                    The instructor is not only highly skilled but also deeply passionate about sharing the art form.
+                                    The online platform Enatyam is seamless, offering convenient scheduling and high-quality
+                                    instruction. I highly recommend Enatyam to anyone looking to embark on a transformative
+                                    dance journey.
+                                    </p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/19-2.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Sweta ( Australia)</h5>
+                                    <p>< I'm new to yoga, and Enatyam is the perfect starting point. The
+                                    classes are not intimidating, and the instructors break down each pose in a way that's
+                                    easy to understand. Feeling more zen already!
+                                    </p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/20-1.png" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/20-2.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Sneha (Canada )</h5>
+                                    <p >Enatyam's yoga classes are like a breath of fresh air. The instructors
+                                    create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual
+                                    that I genuinely look forward to.</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/10-1.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Tia’mom ( Canada)</h5>
+                                    <p>My daughter Antara has been learning Kathak from Enatyam for
+                                    almost 3 years now. Our overall experience has been extremely satisfactory. The class timings
+                                    are adjusted as per our convenience since we are overseas. The pace of teaching both theory
+                                    and practical is based as per the student's needs. I would recommend it for any parent who
+                                    wants to enroll their kids for any of the various art forms that they offer.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
@@ -1345,18 +1365,21 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/21-1.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Kavita ( Pune)</h5>
+                                    <p> I've tried a few online yoga platforms, but Enatyam stands out. The
+                                    variety of classes keeps things interesting, and the instructors feel like friends guiding
+                                    you through a mindful journey. Highly recommend!"</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/23-1.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Ayesha ( Singapore )</h5>
+                                    <p>Enatyam's yoga is a perfect fit for a busy mom like me. The quick
+                                    sessions are manageable, and the instructors make it feel like a mini wellness retreat.
+                                    Grateful for this accessible and effective platform!"</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
@@ -1364,18 +1387,22 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/24-1.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Rajiv ( Lucknow )</h5>
+                                    <p>The variety of yoga classes on Enatyam is impressive. Whether I need a
+                                    gentle stretch or an energizing flow, there's something for every mood. The instructors
+                                    make it easy for anyone to enjoy the benefits of yoga</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/25.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Vikram ( Delhi )</h5>
+                                    <p>Enatyam's yoga classes have made me realize that yoga is for everyone.
+                                    The inclusive approach of the instructors and the straightforward guidance make it a
+                                    comfortable and enjoyable practice."
+                                    </p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
@@ -1383,18 +1410,22 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/27-1.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5> Vishal ( Chandigarh ) </h5>
+                                    <p>I've always struggled to stick with a workout routine, but
+                                    Enatyam's yoga has been a consistent part of my day. The short sessions fit into my
+                                    schedule, and the instructors' encouragement keeps me motivated."</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/28-1.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5> Kajal ( Delhi ) </h5>
+                                    <p>I appreciate how Enatyam's yoga classes cater to various levels. Whether
+                                    you're a beginner or an experienced yogi, there's always room for growth. The instructors
+                                    make sure everyone feels welcome."
+                                    </p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
@@ -1402,18 +1433,22 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/29-1.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Scarlett family ( Germany ) </h5>
+                                    <p>yoga is a daily dose of positivity for me . The instructors
+                                    radiate good vibes, and the classes have become my source of calm in the midst of a
+                                    busy schedule. A fantastic platform for holistic well-being!"
+                                    </p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/31.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Emma ( UK )</h5>
+                                    <p>yoga is my daily escape from the hustle. The instructors make it easy to
+                                    disconnect and focus on the present moment. It's a simple yet powerful practice that has
+                                    become a non-negotiable in my routine</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="item">
@@ -1421,15 +1456,42 @@
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/32.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5>Michael (Mike) ( USA)</h5>
+                                    <p>Enatyam's yoga is like a personal wellness retreat at home. The
+                                    instructors create a serene atmosphere, and the classes feel like a journey into both
+                                    physical and mental well-being. Truly transformative
+                                    </p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-2">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/16.png" />
                                 <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                    <h5> Oorja Sinha ( Pune)</h5>
+                                    <p>I made significant improvement in my dancing under the guidance of
+                                    Priti mam, I was able to complete first year exam in Kathak. Earlier I could only dream of
+                                    learning Kathak but this dream became a reality with the blessings and dedication of my
+                                    teacher.Priti mam teaches with immense patience and detail. E-natyam allows me to learn
+                                    from anywhere with convenient timings from amazing gurus. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/18-1.png" />
+                                <div class="hft">
+                                    <h5>Aiden C ( London -Uk)</h5>
+                                    <p>Enatyam's yoga courses are a total game-changer for me. The
+                                    instructors keep it real, making every pose feel achievable. It's like having a personal yoga
+                                    guide right in my living room.</p>
+                                </div>
+                            </div>
+                            <div class="happyFaces-div1 mt-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/4.png" />
+                                <div class="hft">
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                             </div>
                         </div>
@@ -1443,17 +1505,11 @@
 
 <section class="stories-section MusicSec p-3">
     <div class="container">
-
-
         <div class="line_1">
             <div class="row">
                 <h3 class="text-white p-3" style="text-align:center"> Testimonials<br>
                     <span class="line"></span> 
-                </h3>
-                
-
-
-             
+                </h3> 
                 <div class="col-lg-6 col-md-6 col-12 ">
                     <div>
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
@@ -1503,7 +1559,6 @@
                         </div>
                     </div>
                     <div class="row">
-
                         <div class="col-md-6 col-lg-6 col-12">
                             <div class="ST_Inspire-element ST_Inspire-element-6b952c1 ST_Inspire-widget ST_Inspire-widget-video"
                                 data-id="6b952c1" data-element_type="widget" data-settings="{"
@@ -1539,14 +1594,8 @@
                                 </div>
                                 </div>
                         </div>
-
                     </div>
-
                 </div>
-
-
-
-
 
                 <!-- <div class="col-md-4 col-lg-4 col-12">
                     <div class="ST_Inspire-element ST_Inspire-element-aa0bc0c ST_Inspire-widget ST_Inspire-widget-video" data-id="aa0bc0c" data-element_type="widget" data-settings="{"youtube_url":"https:\/\/youtu.be\/aV_xErXRUYE","video_type":"youtube","controls":"yes"}" data-widget_type="video.default">
@@ -1574,16 +1623,6 @@
 
 
 <!-- Indias Most Loved Art learning Platform -->
-
-
-
-
-
-
-
-
-
-
 
 <?php include('pricing.php'); ?>
 
@@ -1630,11 +1669,6 @@
                     </div>
                 </div>
 </section>
-
-
-
-
-
 
 <?php include('bookdemocallb.php'); ?>
 <section class="faq-section MusicSec">
