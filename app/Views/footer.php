@@ -177,18 +177,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-    function showModal(name, designation, img) {
+    // function showModal(name, designation, img) {
 
 
-        $("#facultyName").text("Name: " + name);
-        $("#facultyDesignation").text("Designation: " + designation);
-        $("#imgf").attr("src", img);
+    //     $("#facultyName").text("Name: " + name);
+    //     $("#facultyDesignation").text("Designation: " + designation);
+    //     $("#imgf").attr("src", img);
 
 
-        // Show modal
-        $("#facultyModal").show();
-        $("body").addClass("modal-open");
-    }
+    //     // Show modal
+    //     $("#facultyModal").show();
+    //     $("body").addClass("modal-open");
+    // }
+
+    function showModal(name, designation, img, qualifications, certifications, experience,FacultyDetails) {
+    $("#facultyName").text("Name: " + name);
+    $("#facultyDesignation").text("Designation: " + designation);
+    $("#imgf").attr("src", img);
+    $("#facultyQualifications").text("Qualification: " + qualifications);
+    $("#facultyCertifications").text("Certification: " + certifications);
+    $("#facultyExperience").text("Experience: " + experience);
+    $("#FacultyDetails").text("Techniques: " + FacultyDetails);
+
+    // Show modal
+    $("#facultyModal").show();
+    $("body").addClass("modal-open");
+}
+
 
     // Close modal function
     window.closeModal = function() {

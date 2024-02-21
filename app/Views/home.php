@@ -508,13 +508,11 @@
                             to guiding you towards a harmonious life. Join enatyam for a
                             profound experience that nurtures your mind, body, and soul to
                             achieve optimal wellness.
-
-
                         </p>
 
                         <div class="text-center mt-4">
-    <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga">START NOW</a>
-</div>
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga">START NOW</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -755,6 +753,29 @@
             <div class="col-lg-12">
            
                 <div class="owl-carousel owl-theme">
+                <div class="item" onclick="showModal('Aditya', 'Yoga Faculty', 'public/images/facultyProfileLatest/2.png','M.Sc.(Human Consciousness and Yogic Science)','Certification YTTC: 200 Hours & E-RYT 500','4 years +','Hath Yoga, Yoga for Strength and Fitness-Weight management- Yoga for anxiety and stress management , Mindfulness practices - Weight Loss, Flexibility and Fitness,Chronic illness')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/2.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Aditya</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+
+                             <div class="overlay-text">
+                                <h4 class="hedingfsf">Aditya</h4>
+                                    <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
+                                    <!-- <p>Certification YTTC: 200 Hours & E-RYT 500</p> -->
+                                    <p>Experience 4+ years</p>
+                                    <p>Read more...</p>                                        
+                                    <p></p>
+                             </div>
+
+                        </div>
+                    </div>
                     <div class="item" onclick="showModal('Veera', 'Yoga', 'public/images/veera.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
@@ -776,22 +797,23 @@
 
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Priti', 'Kathak Dance', 'public/images/priti.jpg')">
+                    <div class="item" onclick="showModal('Priti S', 'Kathak Dance Faculty', 'public/images/priti.jpg','M.A. in Performing Arts(Kathak)', 'Gold Medalist in Kathak (University Topper)','15 Years +','Kathak, Semi classical and Choreography, An internationally acclaimed kathak artist and professionally trained and graced many international stage')">
                         <div class="faculty-div">
-                            <div class="faculty-div1">
+                            <div class="faculty-div1">  
                                 <img src="<?=base_url(); ?>public/images/priti.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Priti</div>
+                                <div class="faculty-content-team__member-name text-white">Priti S</div>
                                 <div class="faculty-content-team__member-position text-white">
                                     Kathak Dance
                                 </div>
                             </div>
                             <div class="overlay-text">
                                 <h4 class="hedingfsf">Priti</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
+                                <p>M.A. in Performing Arts(Kathak), Gold Medalist in Kathak (University Topper)<br></p>
+                                <p>Experience 15 Years +</p>
+                                <p>Read more...</p>
+
                              </div>
                         </div>
                     </div>
@@ -814,63 +836,139 @@
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Priyanka', 'Kathak Dance', 'public/images/priyanka.jpeg')">
+                    <div class="item" onclick="showModal('Priyanka B', 'Kathak Dance Faculty', 'public/images/priyanka.jpeg','M.A. in Performing Arts(Kathak)','','5 Years +','Kathak, Semi classical and Choreography, Worked with many Bollywood choreographer and performed at many national level renowed stages')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Priyanka</div>
+                                <div class="faculty-content-team__member-name text-white">Priyanka B</div>
                                 <div class="faculty-content-team__member-position text-white">
                                     Kathak Dance
                                 </div>
                             </div>
                             <div class="overlay-text">
-                                <h4 class="hedingfsf">Priyanka</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
+                                <h4 class="hedingfsf">Priyanka B</h4>
+                                <p>M.A. in Performing Arts(Kathak)<br></p>
+                                <p>Experience: 5 Years +</p>
+                                <p>Read more...</p>    
+
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Priya', 'Yoga', 'public/images/priya.jpg')">
+                    <div class="item" onclick="showModal('Supriya', 'Yoga Faculty', 'public/images/facultyProfileLatest/4.png','Post Gratuate Diploma in Yoga Science','YTTC 100hrs','Experience 3 Years +','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/priya.jpg" />
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/4.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Priya</div>
+                                <div class="faculty-content-team__member-name text-white">Supriya</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga 
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Supriya</h4>
+                                <p>Yoga Faculty</p>
+                                <p>Post Gratuate Diploma in Yoga Science</p>
+                                <!-- <p>Certification: YTTC 100hrs</p> -->
+                                <p>Experience - 3 Years + </p>
+                                    <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
+                                    <p class="">Read More...</p>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="item" onclick="showModal('Amrita M', 'Yoga', 'public/images/facultyProfileLatest/6.png', 'M.Sc.(Human Consciousness and Yogic Science)', 'YTTC 125 Hrs', '3+ years','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
+
+
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/6.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Amrita M</div>
                                 <div class="faculty-content-team__member-position text-white">
                                     Yoga
                                 </div>
                             </div>
                             <div class="overlay-text">
-                                <h4 class="hedingfsf">Priya</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
+                                <h4 class="hedingfsf">Amrita M</h4>
+                                <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
+                                <!-- <p>Certification: YTTC 125 Hrs</p> -->
+                                <p>Experience 3+ years </p>
+                                <p>Read more...</p>
+                                    <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Sweta', 'Carnatic Music', 'public/images/sweta.jpg')">
+
+                    <div class="item" onclick="showModal('Shekhar Pathak', 'Yoga Faculty', 'public/images/facultyProfileLatest/8.png','Phd - Yogic Science, M.Sc.(Human Consciousness and Yogic Science)','Certification: YTTC 125 Hrs','10 years +','Yogic management of Diseases - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/8.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Shekhar Pathak</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Shekhar Pathak</h4>
+                                <p>Phd - Yogic Science<br></p>
+                                <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
+                                <!-- <p>Certification: YTTC 125 Hrs</p> -->
+                                <p>Experience 10 years + </p>
+                                <p>Read more...</p>
+                                    <!-- <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="item" onclick="showModal('Vivek R', 'Yoga Faculty', 'public/images/facultyProfileLatest/9.png','Phd - Yogic and Sports science, M.Sc.(Human Consciousness and Yogic Science), Diploma in Counselling Psychotherapy, B.Sc. in Military Science','YTTC 125 Hrs','4 years +','Hath Yoga, Yoga Nidra, Yoga for Strength and General Fitness, Weight management, Yoga for anxiety and stress management, Mindfulness practices, Weight Loss, Flexibility and Fitness, Chronic illness')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/10.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Vivek R</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Vivek R</h4>
+                                <p>Phd - Yogic and Sports science<br></p>
+                                <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
+                                <p>Diploma in Counselling Psychotherapy<br></p>
+                                <p>Read more...</p>
+                                <!-- <p>Certification: YTTC 125 Hrs</p>
+                                <p>Experience 3+ years </p>
+                                
+                                    <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
+                             </div>
+                        </div>
+                    </div>
+                    <div class="item" onclick="showModal('Swetha', 'Carnatic Music', 'public/images/sweta.jpg','MA in Carnatic Vocal','Trained over 500 students in Carnatic classical music','Teaching Experience 10 Years +','Carnatic Vocal and Sanskrit Chanting')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/sweta.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Sweta</div>
+                                <div class="faculty-content-team__member-name text-white">Swetha</div>
                                 <div class="faculty-content-team__member-position text-white">
                                     Carnatic Music
                                 </div>
                             </div>
                             <div class="overlay-text">
-                                <h4 class="hedingfsf">Sweta</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
+                                <h4 class="hedingfsf">Swetha</h4>
+                                   <p>MA in Carnatic Vocal</p>
+                                   <p>Experience 10 Years +</p>
+                                   <p>Read more...</p>
+                            </div>
                         </div>
                     </div>
+                    
                     <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.png')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
@@ -890,60 +988,101 @@
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Veera', 'Hindustani Music', 'public/images/ketki.jpg')">
+                    <div class="item" onclick="showModal('Ketki M', 'Hindustani Music Faculty', 'public/images/ketki.jpg','MA in Hindustani Vocal','Doordarshan Grade Artist','6 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal cords, ragas and sur')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/ketki.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">ketki</div>
+                                <div class="faculty-content-team__member-name text-white">Ketki M</div>
                                 <div class="faculty-content-team__member-position text-white">
                                     Hindustani Music
                                 </div>
                             </div>
                             <div class="overlay-text">
                                 <h4 class="hedingfsf">ketki</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
+                                <p>MA in Hindustani Vocal<br></p>
+                                <p>Experience 6 years +</p>    
+                                <p>Read more...</p>    
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Koyali', 'Hindustani Music', 'public/images/Koyali.png')">
+                    <div class="item" onclick="showModal('Koyali S', 'Hindustani Music Faculty', 'public/images/Koyali.png','MA in Hindustani Vocal','Doordarshan Grade Artist, Trained 500+ students, nurturing musical excellence', '10 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal cords, ragas and sur')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/Koyali.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Koyali</div>
+                                <div class="faculty-content-team__member-name text-white">Koyali S</div>
                                 <div class="faculty-content-team__member-position text-white">
                                     Hindustani Music
                                 </div>
                             </div>
                             <div class="overlay-text">
-                                <h4 class="hedingfsf">Koyali</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
+                                <h4 class="hedingfsf">Koyali S</h4>
+                                <p>MA in Hindustani Vocal<br></p>
+                                <p>Experience 10 Years +</p>
+                                <p>Read more...</p>    
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('krutika', 'Semi Classical Dance' ,'public/images/krutika.jpg')">
+                    <div class="item" onclick="showModal('Krutika B', 'Bollywood Dance Faculty' ,'public/images/krutika.jpg','Bollywood Dance','Certified Bollywood Dance faculty with training from Shaimak Davar Institute','4 Years +','Collaborated with renowned choreographers, blending expertise in Choreography and performance for a dynamic teaching approach')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/krutika.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">krutika</div>
+                                <div class="faculty-content-team__member-name text-white">Krutika B</div>
                                 <div class="faculty-content-team__member-position text-white">
-                                    Semi Classical Dance
+                                    Bollywood Dance
                                 </div>
                             </div>
                             <div class="overlay-text">
-                                <h4 class="hedingfsf">krutika</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
+                                <h4 class="hedingfsf">Krutika B</h4>
+                                <p>Bollywood Dance</p>
+                                <p>Certified Bollywood Dance faculty with training from Shaimak Davar Institute</p>
+                                <p>Read more...</p>
+                                   
+                             </div>
+                        </div>
+                    </div>
+                    <div class="item" onclick="showModal('Anika S', 'MA in Hindustani Vocal Faculty' ,'public/images/user.png','Hindustani Vocal','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/user.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Anika S</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                Hindustani Vocal
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Anika S</h4>
+                                <p>Hindustani Vocal</p>
+                                <p>Doordarshan Grade Artist</p>
+                                <p>Read more...</p>    
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="item" onclick="showModal('Malvika', 'MA in Bharatnatyam Faculty' ,'public/images/user.png','Bharatnatyam','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/user.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Malvika</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                Bharatnatyam
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Anika S</h4>
+                                <p>Hindustani Dance</p>
+                                <p>MA in Bharatnatyam</p>
+                                <p>Read more...</p>
+                                   
                              </div>
                         </div>
                     </div>
@@ -1068,7 +1207,7 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/veera.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/1.png" />
                                 <div class="hft">
                                     <h5>Raj</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1077,7 +1216,7 @@
                            
                             
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/veera.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/2.png" />
                                 <div class="hft">
                                     <h5>Raj</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1090,14 +1229,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/priti.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/3.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/priti.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/4.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1109,14 +1248,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/neha.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/5.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/neha.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/7-2.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1128,14 +1267,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/8.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/9.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1147,14 +1286,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/priya.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/11-1.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/priya.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/16.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1166,14 +1305,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/sweta.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/17.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/sweta.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/19-2.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1185,14 +1324,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/jaya.png" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/20-1.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/jaya.png" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/10-1.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1204,14 +1343,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/ketki.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/21-1.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/ketki.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/23-1.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1223,14 +1362,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/Koyali.png" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/24-1.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/Koyali.png" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/25.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1242,14 +1381,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/krutika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/27-1.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/krutika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/28-1.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1261,14 +1400,14 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/29-1.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/31.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
@@ -1280,77 +1419,19 @@
                     <div class="item">
                         <div class="happyFaces-div">
                             <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/Anika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/32.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
                             <div class="happyFaces-div1 mt-2">
-                                <img src="<?=base_url(); ?>public/images/Anika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/16.png" />
                                 <div class="hft">
                                     <h5>Riya</h5>
                                     <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
                                 </div>
                             </div>
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/Ila.jpg" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                            <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/Ila.jpg" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/Samira.jpg" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                            <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/Samira.jpg" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                            <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -1951,8 +2032,11 @@
                 <img src="" alt="Susan Stark"  id="imgf" />
                 <header id="facultyName"></header>
                 <div id="facultyDesignation"></div>
-
-                <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is...</p>
+                <div id="facultyQualifications"></div>
+                <div id="facultyCertifications"></div>
+                <div id="facultyExperience"></div>
+                <div id="FacultyDetails"></div>
+                <!-- <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is...</p> -->
                 <!-- <a href="mailto:">sstark@asn-online.org</a> -->
             </article>
         </div>

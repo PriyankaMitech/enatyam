@@ -70,10 +70,7 @@
                   </div>
                 </div>
 
-              
-                
-
-                <div class="col-md-4">
+                <div class="col-md-4"> 
                   <div class="form-group">
                     <label>Student</label>
                     <input type="hidden" id="selected_student_id" value="<?php if (isset($single_data)) { echo ($single_data->student_id); } ?>">
