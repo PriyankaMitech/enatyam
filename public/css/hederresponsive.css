@@ -5,7 +5,7 @@
 @media (max-width: 767px) {
   .fa-bars {
     color: #fff;
-    font-size: 20px;
+    font-size: 31px;
   }
   #fixed-menu {
     position: fixed;
@@ -99,9 +99,8 @@
   }
 
   #navbarSupportedContent {
-    display: block;
+    display: inline-block !important;
     background-color: transparent;
-    display: flex;
     align-items: center;
   }
   .tophead .navbar ul li a {

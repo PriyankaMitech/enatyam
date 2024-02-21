@@ -14,6 +14,50 @@
   .thim-logo {
     display: none;
   } */
+  .tophead .navbar {
+    display: none;
+  }
+  #navbarSupportedContent img {
+    display: none;
+  }
+  .loginmenu {
+    display: none;
+  }
+  .banneris {
+    display: none;
+  }
+  .bannervs {
+    padding-top: 25%;
+    margin-left: 0;
+  }
+  iframe {
+    width: 100px;
+  }
+  .danceimg1.home {
+    margin-left: 0%;
+  }
+  .MusicSec {
+    width: 100%;
+  }
+  .container {
+    --bs-gutter-x: 0rem !important;
+  }
+  .row {
+    --bs-gutter-x: 0rem;
+  }
+  footer {
+    width: 100%;
+  }
+
+  .ThumbnailImg {
+    padding: 5% 18%;
+  }
+  /* #navbarSupportedContent .mb-2 {
+    margin-bottom: -2.5rem !important;
+  } */
+  .s_header-section .p-5 {
+    padding: 10px !important;
+  }
   .typesOfDance-tab > ul > li {
     margin-top: 0px !important;
   }
@@ -463,6 +507,7 @@
   }
   .menub {
     text-align: end !important;
+    padding: 14px;
   }
   .fdcd {
     width: 310px !important;

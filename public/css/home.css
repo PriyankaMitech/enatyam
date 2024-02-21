@@ -11,6 +11,14 @@
   height: 100%;
   overflow: hidden;
 }
+.ThumbnailImg img {
+  width: 100%;
+  height: auto;
+}
+
+.ThumbnailImg {
+  padding: 5% 25%;
+}
 
 .modal-content {
   padding: 20px;
@@ -89,5 +97,5 @@ body.modal-open {
 .modal-content.userModal {
   padding: 20px;
   border-radius: 5px;
-  text-align: left!important;
+  text-align: left !important;
 }
