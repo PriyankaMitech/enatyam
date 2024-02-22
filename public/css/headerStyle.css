@@ -50,7 +50,7 @@ body {
 }
 
 .MusicSec {
-  width: 101%;
+  width: 100%;
   background-color: black;
 }
 .MusicSec1 {
@@ -360,8 +360,11 @@ button:disabled {
   margin-bottom: 10px;
 }
 .owl-item {
-  width: 255.5px !important;
+  /* width: 255.5px !important; */
   /* margin-right:146px!important; */
+}
+.faculty-section2 {
+  display: none;
 }
 .list-inline-item.thumbnailListItem:not(:last-child) {
   margin-right: 0rem !important;

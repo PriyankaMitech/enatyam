@@ -256,17 +256,15 @@
             dots: false,
             autoplay: true,
             slideTransition: 'linear',
-            autoplaySpeed: 3000,
-            slideSpeed: 3000,
-            paginationSpeed: 3000,
+            // autoplaySpeed: 3000,
+            // slideSpeed: 3000,
+            // paginationSpeed: 3000,
             responsive: {
                 0: {
                     items: 1
                 },
-
-                
                 600: {
-                    items: 2
+                    items: 1
                 },
                 1000: {
                     items: 4
@@ -290,9 +288,9 @@
 
                 }, {
 
-                    duration: 3500,
+                    // duration: 3500,
 
-                    easing: 'swing',
+                    // easing: 'swing',
 
                     step: function(now) {
 
@@ -365,98 +363,6 @@
     });
     </script>
 
-    <!-- <script>
-        function validateForm() {
-            var name = document.forms["registrationForm"]["full_name"].value;
-            var email = document.forms["registrationForm"]["email"].value;
-            var mobile_no = document.forms["registrationForm"]["mobile_no"].value;
-
-            var password = document.forms["registrationForm"]["password"].value;
-            var cpassword = document.forms["registrationForm"]["confirm_pass"].value;
-
-            // Reset error messages
-            document.getElementById("nameError").textContent = "";
-            document.getElementById("emailError").textContent = "";
-            document.getElementById("mobile_noError").textContent = "";
-            document.getElementById("passwordError").textContent = "";
-            document.getElementById("confirmpasswordError").textContent = "";
-
-            var valid = true;
-
-            // Confirm password == password
-            if (password !== cpassword) {
-                document.getElementById("confirmpasswordError").textContent = "Password does not match";
-                valid = false;
-            }
-
-            // Password length check
-            if (password.length <= 7) {
-                document.getElementById("passwordError").textContent = "You have to enter at least 8 characters!";
-                valid = false;
-            }
-
-            if (name === "") {
-                document.getElementById("nameError").textContent = "Name is required.";
-                valid = false;
-            }
-
-            if (email === "" && mobile_no === "") {
-                document.getElementById("emailError").textContent = "Either Email or Mobile no is required.";
-                document.getElementById("mobile_noError").textContent = "Either Email or Mobile no is required.";
-                valid = false;
-            } else if (email !== "" && !isValidEmail(email)) {
-                document.getElementById("emailError").textContent = "Invalid email format.";
-                valid = false;
-            }
-
-            if (password === "") {
-                document.getElementById("passwordError").textContent = "Password is required minimum 8 characters.";
-                valid = false;
-            }
-
-            if (cpassword === "") {
-                document.getElementById("confirmpasswordError").textContent = "Confirm Password is required.";
-                valid = false;
-            }
-
-            // if (role === "") {
-            //     document.getElementById("roleerror").textContent = "Select the role.";
-            //     valid = false;
-            // }
-
-
-            let input = document.querySelector(".terms");
-            let button = document.querySelector(".clicktoTerms");
-            button.disabled = true;
-            input.addEventListener("change", stateHandle);
-
-            function stateHandle() {
-                if (document.querySelector(".terms").value === "") {
-                    button.disabled = true;
-                } else {
-                    button.disabled = false;
-                }
-            }
-
-            return valid;
-        }
-
-        function isValidEmail(email) {
-            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-            return emailRegex.test(email);
-        }
-
-
-        function isValidEmail(email) {
-            // Simple email format validation (you can use a more advanced regular expression)
-            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-            return emailRegex.test(email);
-        }
-    </script> -->
-
-
-
-
 <?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga') { ?>
 
 
@@ -502,7 +408,7 @@
                     items: 1
                 },
                 600: {
-                    items: 3
+                    items: 1
                 },
                 1000: {
                     items: 4    
@@ -612,7 +518,7 @@ $(document).ready(function() {
                     items: 1
                 },
                 600: {
-                    items: 3
+                    items: 1
                 },
                 1000: {
                     items: 4
@@ -3232,6 +3138,8 @@ $(function() {
 
 
 </script>
+
+
 
 
 
