@@ -444,8 +444,8 @@
                     </p>
 
                     <div class="text-center mt-4">
-    <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance">START NOW</a>
-</div>
+                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance">START NOW</a>
+                    </div>
                 </div>
             </div>
 
@@ -539,14 +539,14 @@
                             melody begin – learn, play, and create with us!
                         </p>
    
-                        <div class="text-center mt-4">
-    <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments">START NOW</a>
+                        <div class="text-center mt-4 ">
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments">START NOW</a>
 
                         </div>
 
                     </div>
 
-                    <div class="col-md-6 col-12 p-0 text-center">
+                    <div class="col-md-6 col-12 p-0 text-center omici">
                         <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg home">
                     </div>
                 </div>
@@ -1190,7 +1190,7 @@
 
 <!-- Happy faces -->
 <!-- superstar slide -->
-<section class="faculty-section p-3">
+<section class="faculty-section faculty-section1 p-3">
     <div class="container cont-width mt-5">
         <div class="row heading-div m-0">
             <div class="col-lg-12 col-12 text-center">
@@ -1204,8 +1204,8 @@
         <div class="row">
             <div class="col-lg-12 hpb">
                 <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="happyFaces-div">
+                    <div class="item ">
+                        <div class="happyFaces-div row">
                             <div class="happyFaces-div1 mb-5">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/1.png" />
                                 <div class="hft">
@@ -1494,6 +1494,184 @@
                                     <p></p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="faculty-section faculty-section2 p-3">
+    <div class="container cont-width mt-5">
+        <div class="row heading-div m-0">
+            <div class="col-lg-12 col-12 text-center">
+                <h3>Happy Faces
+                </h3>
+                <span class="line"></span>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12 hpb">
+                <div class="owl-carousel owl-theme">
+                    <div class="item ">
+                        <div class="happyFaces-div row">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/1.png" />
+                                <div class="hft">
+                                    <h5>Raj</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                           
+                            
+                           
+
+                 
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/3.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                      
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/5.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/8.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                          
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/11-1.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                           
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/17.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                         
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/20-1.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                          
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/21-1.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                           
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/24-1.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                          
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/27-1.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                           
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/29-1.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                          
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="happyFaces-div">
+                            <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/32.png" />
+                                <div class="hft">
+                                    <h5>Riya</h5>
+                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
+                                </div>
+                            </div>
+                          
                         </div>
                     </div>
                 </div>
