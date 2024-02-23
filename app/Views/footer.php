@@ -215,6 +215,27 @@
         // Remove class from body to enable scrolling
         $("body").removeClass("modal-open");
     };
+
+
+    function showReview(name, img, ReviewDetails) {
+    $("#ReviewName").text("Name: " + name);
+    $("#imgh").attr("src", img);
+    $("#ReviewDetails").text("" + ReviewDetails);
+
+    // Show modal
+    $("#reviewModal").show();
+    $("body").addClass("modal-open");
+}
+ // Close modal function
+ window.closeModal = function() {
+        $("#reviewModal").hide();
+    };
+    window.closeModal = function() {
+        $("#reviewModal").hide();
+
+        // Remove class from body to enable scrolling
+        $("body").removeClass("modal-open");
+    };
 </script>
     <script>
     let prevScrollPos = window.pageYOffset;
@@ -363,6 +384,75 @@
             $question.data('isTruncated', true);
         }
     });
+
+    // document.addEventListener("DOMContentLoaded", function() {
+    // // Initialize the Owl Carousel
+    // $('.owl-carousel').owlCarousel({
+    //     loop: true,
+    //     margin: 10,
+    //     responsiveClass: true,
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //             nav: true
+    //         },
+    //         600: {
+    //             items: 2,
+    //             nav: true
+    //         },
+    //         1000: {
+    //             items: 3,
+    //             nav: true,
+    //             loop: false
+    //         }
+    //     }
+    // });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    var reviewContainers = document.querySelectorAll(".happyFaces-div1");
+
+    reviewContainers.forEach(function(container) {
+        var content = container.querySelector(".hft p");
+        var readMoreText = document.createElement("span");
+        readMoreText.className = "read-more-text"; // Apply CSS class to style it like a hyperlink
+        readMoreText.innerText = "Read More";
+
+        // Set the maximum length of content to show before hiding
+        var maxLength = 100; // Adjust this value as needed
+
+        var fullContent = content.innerHTML; // Store the full content
+
+        // Check if content length exceeds maximum length
+        if (content.innerText.length > maxLength) {
+            // Hide overflowing content initially
+            content.innerHTML = fullContent.substring(0, maxLength) + "...";
+
+            // Append the "Read More" text
+            content.insertAdjacentElement("afterend", readMoreText);
+
+            // Event listener for the "Read More" text
+            readMoreText.addEventListener("click", function() {
+                // Toggle between showing/hiding the full content
+                if (content.classList.contains("expanded")) {
+                    content.innerHTML = fullContent.substring(0, maxLength) + "...";
+                    readMoreText.innerText = "Read More";
+                    content.classList.remove("expanded");
+                } else {
+                    content.innerHTML = fullContent;
+                    readMoreText.innerText = "Read Less";
+                    content.classList.add("expanded");
+                }
+            });
+        }
+    });
+});
+
+
+
+
+
+
+    
     </script>
 
     <!-- <script>
@@ -1823,14 +1913,46 @@ $(document).ready(function() {
     </script>
 
 <script>
-function toggleForm() {
-    var pincode = document.getElementById('inputPassword2').value;
-    if (pincode.trim() === '') {
-        document.getElementById('pincodeError').style.display = 'block';
-        return;
-    }
-    document.getElementById('joinForm').style.display = 'block';
-}
+
+$(document).ready(function() {
+    $('#toggleForm').click(function() {
+        var pincode = $('#pincodeAdress').val();
+        if (pincode.length != 6 || isNaN(pincode)) {
+            $('#pincodeError').show();
+            $('#addressResult').hide();
+        } else {
+            $('#pincodeError').hide();
+            $.ajax({
+                url: '<?php echo base_url(); ?>offlineAddress',
+                type: 'POST',
+                data: {pincode: pincode},
+                success: function(response) {
+                    console.log(response);
+                    if (response !== "No address found for this pincode.") {
+                        var addresses = JSON.parse(response);
+                        if (addresses.length > 0) {
+                            var address = addresses[0].address; // Extracting the address property from the first object
+                            $('#addressResult').text(address).show();
+                            $('#getform').show();
+                            $('#joinForm').hide();
+                        } else {
+                            $('#addressResult').text("No address found for this pincode.").show();
+                            $('#getform').hide();
+                            $('#joinForm').show();
+                        }
+                    } else {
+                        $('#addressResult').text(response).show();
+                        $('#getform').hide();
+                        $('#joinForm').show();
+                    }
+                }
+            });
+        }
+    });
+});
+
+
+
 </script>
 
     <script src="<?= base_url(); ?>public/js/custom.js">
