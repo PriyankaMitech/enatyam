@@ -64,4 +64,36 @@ class RegisterController extends BaseController
         }
     }
 
+    public function contact(){
+        $session = session();
+        $registerModel = new RegisterModel();
+        $contactData =[
+        'name' => $this->request->getVar('name'),
+        'email' => $this->request->getVar('email'),
+        'mobNumber' => $this->request->getVar('mobNumber'),
+        'interestedIn' => $this->request->getVar('interestedIn'),
+        'message' => $this->request->getVar('message')
+        ];
+        // echo'<pre>';print_r($contactData);die;
+        $result = $registerModel->saveContactUs($contactData);
+
+    }
+
+    public function offlineAddress() {
+        $session = session();
+        $registerModel = new RegisterModel();
+        $pincode = $this->request->getVar('pincode');
+        $result = $registerModel->checkOfflineAddress($pincode);
+        // Perform necessary operations to get the address based on the pincode
+        if ($result) {
+            $address = $result; // Get address based on pincode
+            // Encode the address array as JSON and return
+            return json_encode($address);
+        } else {
+            // If no address found, return appropriate response
+            return "No address found for this pincode.";
+        }
+    }
+    
+
 }

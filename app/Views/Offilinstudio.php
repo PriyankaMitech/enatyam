@@ -31,29 +31,39 @@
 <section class="career-main-section">
     <div class="container">
         <div class="row">
-            <h3 class="text-center">Find us we are here for you !</h3>
-            <div class="col-md-6 col-12">
-                <img src="public/images/guitar.jpg" style="border-radius: 100px;" class="danceimg1 home">
-            </div>
+            <h3 class="text-center">Unlock & Experience Excellence with Our World-Class Studio Facilities!</h3>
+           
+            <form class="offlineStudioform" action="<?php echo base_url(); ?>offlineAddress" method="post" id="offlineStudioform">
+    <div class="col-md-12 col-12 text-col mt-5 text-center">
+        <h4 class="heading text-center">Enter Your area Pincode to Discover Our Studios</h4>
+        <div class="text-center">
+            <input type="text" class="form-control mr-sm-2 small-input"  name="pincode" id="pincodeAdress" placeholder="pincode" title="Please enter maximum 6 digits">
+        </div>
+        <span id="pincodeError" class="text-danger" style="display: none;">Please enter a valid pin code.</span>
+        <div id="addressResult" style="display: none;"></div>
+        <input class="btn btnstart"  type="button" value="Find us" id="toggleForm"/>
+    </div>
+</form>
 
-            <div class="col-md-6 col-12 text-col mt-5">
-                <h4 class="heading">Find us we are here for you</h4>
-                <ul class="list-unstyled">
-                    <li class="mt-3"><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>##</li>
-                    <li class="mt-3"><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> ##</li>
-                    <li class="mt-3"><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> ##</li>
-                    <li class="mt-3"><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> ##</li>
-                </ul>
-                <input type="text" class="form-control mr-sm-2" id="inputPassword2" placeholder="pincode"
-                    title="Please enter maximum 6 digits">
-                <span id="pincodeError" class="text-danger" style="display: none;">Please enter the pin code.</span>
-                <input class="btn btnstart" onclick="toggleForm()" type="button" value="Find us" />
-            </div>
         </div>
     </div>
+    
     <div class="container" id="joinForm" style="display: none;">
         <div class="row">
-            <h3 class="text-center mt-5">Coming soon!</h3>
+            
+            <h6 class="text-center mt-5">We're sorry, but our studio services are not available in your area at the moment. Stay
+                tuned for updates! We'll keep you posted once we expand our services to your location. Thank you for your interest and patience!</h6>
+        </div>
+    </div>
+    <div class="container" id="getform" style="display: none;">
+        <div class="row">
+            <div class="col-md-6">
+            <!-- <img src="<?=base_url(); ?>public/images/happyfaces/1.png" /> -->
+            </div>
+            <div class="col-md-6">
+            <h3 class="text-center">Enatyam Studio</h3>
+            <h6 class="text-center mt-5"></h6>
+            </div>
         </div>
     </div>
 </section>

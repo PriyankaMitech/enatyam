@@ -40,6 +40,9 @@ $routes->get('Career', 'Home::Career');
 $routes->get('Offilinstudio', 'Home::Offilinstudio');
 $routes->get('chechk_username_id', 'Home::chechk_username_id');
 $routes->post('chechk_username_id', 'Home::chechk_username_id');
+$routes->post('contact', 'RegisterController::contact');
+$routes->post('offlineAddress', 'RegisterController::offlineAddress');
+
 
 
 

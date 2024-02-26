@@ -85,16 +85,18 @@
                     <h2>Fill the form below so we can get to know you and your needs better.</h2>
 
                 </div>
-                <form>
+                <form name="contactUsForm" method="post" action="<?php echo base_url(); ?>contact" id="contactUsForm">
+
+                <form >
 
                     <div class="col-lg-12">
                     
-                        <input type="text" class="form-control" placeholder="Name *" /> 
-                        <input type="text" class="form-control" placeholder="Email *" /> 
-                        <input type="text" class="form-control" placeholder="Mobile number *" /> 
-                        <input type="text" class="form-control" placeholder="Intrested In *" /> 
+                        <input type="text" class="form-control" placeholder="Name *" name="name" /> 
+                        <input type="text" class="form-control" placeholder="Email *"  name="email"/> 
+                        <input type="text" class="form-control" placeholder="Mobile number *" name="mobNumber" /> 
+                        <input type="text" class="form-control" placeholder="Intrested In *" name="interestedIn"/> 
 
-                        <textarea class="form-control"placeholder="Message*" rows="3" ></textarea>
+                        <textarea class="form-control"placeholder="Message*" rows="3" name="message"></textarea>
 
                    
                     </div>
