@@ -253,7 +253,7 @@ class Home extends BaseController
                         $count = 0;
                     }
 
-                    return view('StudentDashboard', [
+                     return view('StudentDashboard', [
                         'data' => $data,
                         'notifications' => $notifications,
                         'notificationCount' => $count,

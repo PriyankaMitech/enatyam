@@ -175,34 +175,67 @@ class facultymodel extends Model
     return $result;
     
     }
+    // public function getStudentList($registerId)
+    // {
+    //     $result = $this->db->table('register')
+    //         ->select('register.*, payment.no_of_session')
+    //         ->join('payment', 'register.id = payment.user_id', 'left')
+    //         ->where('register.role', 'Student')
+    //         ->where('register.SessionType', 'OneToOneSession')
+    //         ->where('register.Assign_Techer_id', $registerId)
+    //         ->get()
+    //         ->getResult();
+
+    //     // echo $this->db->getLastQuery();die;
+    //     return $result;
+    // }
+
     public function getStudentList($registerId)
     {
         $result = $this->db->table('register')
-            ->select('register.*, payment.no_of_session')
+            ->select('register.*, payment.no_of_session, GROUP_CONCAT(DISTINCT attendeance_table.Session_no) AS Session_nos')
             ->join('payment', 'register.id = payment.user_id', 'left')
+            ->join('attendeance_table', 'register.id = attendeance_table.student_registerid', 'left')
             ->where('register.role', 'Student')
             ->where('register.SessionType', 'OneToOneSession')
             ->where('register.Assign_Techer_id', $registerId)
+            ->groupBy('register.id')
             ->get()
             ->getResult();
-
+    
         // echo $this->db->getLastQuery();die;
         return $result;
     }
+    // public function getGroupList($registerId)
+    // {
+    //     $result = $this->db->table('register')
+    //         ->select('register.*, payment.no_of_session')
+    //         ->join('payment', 'register.id = payment.user_id', 'left')
+    //         ->where('register.role', 'Student')
+    //         ->where('register.SessionType', 'GroupSession')
+    //         ->where('register.Assign_Techer_id', $registerId)
+    //         ->get()
+    //         ->getResult();
+
+    //     // echo $this->db->getLastQuery();die;
+    //     return $result;
+    // }
     public function getGroupList($registerId)
-    {
-        $result = $this->db->table('register')
-            ->select('register.*, payment.no_of_session')
-            ->join('payment', 'register.id = payment.user_id', 'left')
-            ->where('register.role', 'Student')
-            ->where('register.SessionType', 'GroupSession')
-            ->where('register.Assign_Techer_id', $registerId)
-            ->get()
-            ->getResult();
+{
+    $result = $this->db->table('register')
+        ->select('register.*, payment.no_of_session, GROUP_CONCAT(DISTINCT attendeance_table.Session_no) AS Session_nos')
+        ->join('payment', 'register.id = payment.user_id', 'left')
+        ->join('attendeance_table', 'register.id = attendeance_table.student_registerid', 'left')
+        ->where('register.role', 'Student')
+        ->where('register.SessionType', 'GroupSession')
+        ->where('register.Assign_Techer_id', $registerId)
+        ->groupBy('register.id')
+        ->get()
+        ->getResult();
 
-        // echo $this->db->getLastQuery();die;
-        return $result;
-    }
+    // echo $this->db->getLastQuery();die;
+    return $result;
+}
     public function conductedClasses($registerId)
     {
         $query = $this->db->table('attendeance_table')
