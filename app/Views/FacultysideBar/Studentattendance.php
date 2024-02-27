@@ -56,13 +56,18 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <select class="form-control"
-                                                                name="session[<?= $student->id ?>]">
-                                                                <option value="">Select</option>
-                                                                <?php for ($i = 1; $i <= $student->no_of_session; $i++): ?>
-                                                                <option value="<?= $i ?>">Session <?= $i ?></option>
-                                                                <?php endfor; ?>
-                                                            </select>
+                                                        <select class="form-control" name="session[<?= $student->id ?>]">
+                                                            <option value="">Select</option>
+                                                            <?php 
+                                                            // Convert Session_nos string to an array
+                                                            $excludedSessions = explode(',', $student->Session_nos);
+                                                            for ($i = 1; $i <= $student->no_of_session; $i++): 
+                                                                // Check if the current session number is not in the excludedSessions array
+                                                                if (!in_array($i, $excludedSessions)): ?>
+                                                                    <option value="<?= $i ?>">Session <?= $i ?></option>
+                                                            <?php endif; ?>
+                                                            <?php endfor; ?>
+                                                        </select>
                                                         </td>
                                                         <td>
                                                             <button type="button" class="btn btn-primary"
@@ -129,13 +134,18 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <select class="form-control"
-                                                                name="session[<?= $student->id ?>]">
-                                                                <option value="">Select</option>
-                                                                <?php for ($i = 1; $i <= $student->no_of_session; $i++): ?>
-                                                                <option value="<?= $i ?>">Session <?= $i ?></option>
-                                                                <?php endfor; ?>
-                                                            </select>
+                                                        <select class="form-control" name="session[<?= $student->id ?>]">
+    <option value="">Select</option>
+    <?php 
+    // Convert Session_nos string to an array
+    $excludedSessions = explode(',', $student->Session_nos);
+    for ($i = 1; $i <= $student->no_of_session; $i++): 
+        // Check if the current session number is not in the excludedSessions array
+        if (!in_array($i, $excludedSessions)): ?>
+            <option value="<?= $i ?>">Session <?= $i ?></option>
+    <?php endif; ?>
+    <?php endfor; ?>
+</select>
                                                         </td>
                                                         <td>
                                                             <button type="button" class="btn btn-primary"

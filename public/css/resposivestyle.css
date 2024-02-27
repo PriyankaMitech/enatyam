@@ -14,6 +14,95 @@
   .thim-logo {
     display: none;
   } */
+  .hpb {
+    height: auto;
+  }
+  .happyFaces-div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hft h5 {
+    padding-left: 0px;
+  }
+
+  .happyFaces-div1 img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  .stories-section,
+  h3 {
+    margin-top: 0px;
+  }
+  .faculty-section2,
+  .happyFaces-div,
+  .happyFaces-div1 {
+    text-align: center;
+  }
+
+  .faculty-section2,
+  .happyFaces-div,
+  .happyFaces-div1,
+  img {
+    width: 100% !important;
+  }
+  .faculty-section1 {
+    display: none;
+  }
+  .faculty-section2 {
+    display: block;
+  }
+  .faculty-content-team__member-name {
+    margin-top: 20px;
+  }
+  .Alp-main {
+    padding: 24px;
+  }
+  .MusicSec h3 {
+    margin-top: 21px;
+  }
+  .faculty-section {
+    padding: 1rem !important;
+  }
+  .MusicSec1 {
+    max-height: 900px;
+  }
+  .omici {
+    margin-top: -17px;
+  }
+
+  .MusicSec {
+    width: 100%;
+  }
+  .text-container {
+    overflow: hidden;
+    max-height: 3.6em; /* Adjust the height based on your preference */
+    position: relative;
+  }
+
+  .text-container p {
+    margin-bottom: 0; /* Remove the default bottom margin */
+  }
+
+  .expanded {
+    max-height: none;
+  }
+
+  .danceimg1.home {
+    height: auto;
+
+    width: 100%;
+    margin-left: 0%;
+  }
+  .omcd {
+    padding: 5%;
+  }
+  .danceimg.home {
+    height: auto;
+
+    width: 100%;
+  }
   .tophead .navbar {
     display: none;
   }
@@ -31,14 +120,13 @@
     margin-left: 0;
   }
   iframe {
-    width: 100px;
+    height: auto;
+    width: 100%;
   }
   .danceimg1.home {
     margin-left: 0%;
   }
-  .MusicSec {
-    width: 100%;
-  }
+
   .container {
     --bs-gutter-x: 0rem !important;
   }
@@ -214,8 +302,25 @@
   .co {
     margin-bottom: 6px;
   }
-  .stories-section {
+  /* .stories-section {
     margin-top: 20%;
+  } */
+  .stories-section {
+    margin-top: -15%;
+  }
+  .pltag {
+    padding: 5px;
+  }
+  .pddn {
+    display: none;
+  }
+  .ppsb {
+    padding: 20px 20px;
+  }
+
+  .price-btn {
+    width: 100% !important;
+    padding: 4px 30px !important;
   }
 
   .line_1 {
@@ -234,7 +339,19 @@
     margin-bottom: 14px !important;
   }
   .icon1 {
-    margin-left: 32px !important;
+    margin-left: 51px !important;
+  }
+  .icon2 {
+    margin-left: 54px !important;
+  }
+  .icon3 {
+    margin-left: 55px !important;
+  }
+  .icon4 {
+    margin-left: 56px !important;
+  }
+  .icon5 {
+    margin-left: 52px !important;
   }
   .sc_heading {
     font-size: 31px !important;
@@ -294,7 +411,7 @@
     width: 50% !important;
   }
   .pricing-card-section .card {
-    margin-bottom: 54px;
+    margin-bottom: 34px;
   }
   .mftm {
     padding-top: 20px !important;
