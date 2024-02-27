@@ -1932,7 +1932,7 @@ $(document).ready(function() {
                         var addresses = JSON.parse(response);
                         if (addresses.length > 0) {
                             var address = addresses[0].address; // Extracting the address property from the first object
-                            $('#addressResult').text(address).show();
+                            // $('#addressResult').text(address).show();
                             $('#getform').show();
                             $('#joinForm').hide();
                         } else {
@@ -2846,7 +2846,7 @@ $(function() {
 
 <script>
     $(document).ready(function() {
-        $('#mobile_no').on('input', function() {
+        $('#txtMobileNo').on('input', function() {
             var mobile_no = $(this).val();
             // alert(username);
 
@@ -2862,7 +2862,7 @@ $(function() {
                         $('.submitButton').prop('disabled', false);
 
                     } else if (response == 'true') {
-                        $('#mobile_noError').text('This mobile number is allredy available.');
+                        $('#mobile_noError').text('This mobile number is already available.');
                         $('.submitButton').prop('disabled', true);
                     }
                 }
@@ -3085,7 +3085,7 @@ $(function() {
                 var formData = $(form).serialize();
 
                 // Check if all required fields are filled
-                if ($('#mobile_no').val() && $('#email').val()) {
+                if ($('#txtMobileNo').val() && $('#email').val()) {
                     // Your mobile verification AJAX call
                     $.ajax({
                         url: "verifymobile",

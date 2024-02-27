@@ -59,13 +59,14 @@ class LoginController extends BaseController
     {
         $validation = \Config\Services::validation(); // Get the validation instance
         $loginModel = new LoginModel();
-
+        // print_r($getdata);die;
         $loginModel->insert($data);
         $last_insert_id = $loginModel->getInsertID();
         $getdata = [
             'full_name' => $this->request->getVar('full_name'),
             'email' => $this->request->getVar('email'),
-            'mobile_no' => $this->request->getVar('mobile_no'),
+            'mobile_no' => $this->request->getVar('mobile_number'),
+            'countrie_code'=> $this->request->getVar('countrie_code'),
             'role' => 'Student',
             'password' => $this->request->getVar('password'),
             'confirm_pass' => $this->request->getVar('confirm_pass'),
@@ -77,6 +78,8 @@ class LoginController extends BaseController
             'experienceInput' => $this->request->getVar('experienceInput'),
 
         ];
+        // print_r($getdata);die;
+        // echo'<pre>';print_r($getdata);die;
 
         $this->session->set('user_id', $this->request->getVar($last_insert_id));
         $this->session->set('username', $this->request->getVar('full_name'));
@@ -105,7 +108,7 @@ class LoginController extends BaseController
         $emailotp = rand(999, 9999);
         if ($_POST['otp'] == '' && $_POST['emailotp'] == '') {
             $loginModel = new LoginModel();
-            $result['mobileexist'] = $loginModel->checkExist($_POST['mobile_no'], 'mobile_no', 'register');
+            $result['mobileexist'] = $loginModel->checkExist($_POST['mobile_number'], 'mobile_no', 'register');
             $result['emailexist'] = $loginModel->checkExist($_POST['email'], 'email', 'register');
 
             if ($result['mobileexist'] == '' && $result['emailexist'] == '') {
@@ -119,7 +122,7 @@ class LoginController extends BaseController
                 ];
                 $savestud = $loginModel->setStudentName($getdata);
                 $sms = 'Dear customer, your OTP for registration is ' . $otp . '. do not share to anyone. Thank you OTPIMS';
-                $output = sendSMS($_POST['mobile_no'], $sms);
+                $output = sendSMS($_POST['mobile_number'], $sms);
                  $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
                 //  $mobileNumber =$_POST['mobile_no'];
                 //  $templates = "new_food_menu";
@@ -127,7 +130,7 @@ class LoginController extends BaseController
                 //  whatsapp($mobileNumber, $templates, $msg);
                 $result['status'] = '200';
                 $result = array(
-                    'mobile' => $_POST['mobile_no'],
+                    'mobile' => $_POST['mobile_number'],
                     'email' => $_POST['email'],
                     'otp' => $otp,
                     'emailotp' => $emailotp
@@ -139,7 +142,7 @@ class LoginController extends BaseController
                 echo json_encode($result);
             }
         } else {
-            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['mobile_no'], $_POST['email']);
+            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['mobile_number'], $_POST['email']);
             // print_r($checkotp);
             echo json_encode($checkotp);
         }
@@ -152,8 +155,9 @@ class LoginController extends BaseController
         $data = [
             'full_name' => $postdata['full_name'],
             'email' => $postdata['email'],
-            'mobile_no' => $postdata['mobile_no'],
+            'mobile_no' => $postdata['mobile_number'],
             'confirm_pass' => $postdata['confirm_pass'],
+            // 'countrie_code' => $postdata['countrie_code'],
             'password' => $postdata['password'],
             'role' => 'Student',
             'otp' => $otp,
@@ -217,7 +221,7 @@ class LoginController extends BaseController
         sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
     
         session()->setFlashdata('success', 'Registration successful.');
-    
+    // return view('home');
         return redirect()->to('Home');
     }
     public function checkLoginDetails()
