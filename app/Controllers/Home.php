@@ -282,7 +282,7 @@ class Home extends BaseController
     $session = session();
     $user_id = $session->get('id');
     $expiresessions = $adminModel->getSessionno($user_id);
-            
+    
     if (isset($_SESSION['sessiondata'])) {
         $sessionData = $_SESSION['sessiondata'];
         $email = $sessionData['email'] ?? null;
@@ -292,7 +292,7 @@ class Home extends BaseController
             // If Payment_status is 'Y' and SessionsCount matches expiration session
             if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
                 $user_id = $session->get('id');
-             
+           
                 if ($expiresessions == $sessionData['SessionsCount']) {
                     $status = 'N';
                     $renewal = 'Y';
@@ -304,20 +304,21 @@ class Home extends BaseController
                 $data['user_data'] = $login_model->get_user_data($user_id);
                 $notifications = $adminModel->getUser($user_id);
             
-                $count = count($notifications);
+                $count = 0;
 
-                if ($notifications) {
-                    $count = count($notifications);
-                } else {
-                    $count = 0;
-                }
+                    if ($notifications) {
+                        $count = count($notifications);
+                    } else {
+                        $count = 0;
+                    }
 
                 return view('StudentDashboard', [
                     'data' => $data,
                     'notifications' => $notifications,
                     'notificationCount' => $count,
                 ]);
-            } else {                
+            } else {         
+                  
                 return redirect()->to('ModelForLogin');
             }
         } else {
