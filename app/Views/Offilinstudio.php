@@ -40,7 +40,7 @@
             <input type="text" class="form-control mr-sm-2 small-input"  name="pincode" id="pincodeAdress" placeholder="pincode" title="Please enter maximum 6 digits">
         </div>
         <span id="pincodeError" class="text-danger" style="display: none;">Please enter a valid pin code.</span>
-        <div id="addressResult" style="display: none;"></div>
+        <!-- <div id="addressResult" style="display: none;"></div> -->
         <input class="btn btnstart"  type="button" value="Find us" id="toggleForm"/>
     </div>
 </form>

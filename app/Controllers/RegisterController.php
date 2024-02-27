@@ -41,7 +41,7 @@ class RegisterController extends BaseController
         
         $data = $registerModel->where('email', $email)->first();
         
-        if($data){
+        if($data){  
             $pass = $data['password'];
             $authenticatePassword = password_verify($password, $pass);
             if($authenticatePassword){
