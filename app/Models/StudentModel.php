@@ -276,23 +276,27 @@ class StudentModel extends Model
     }
 
 
+    
     // public function getattandance($registerId)
     // {
-    //     // Query the 'attendeance_table' table to get attendance data for a specific student
-    //     return $this->db->table('attendeance_table')
-    //         ->where('student_registerid', $registerId)
+
+    //     $result = $this->db->table('attendeance_table')
+    //         ->join('register', 'register.id = attendeance_table.student_registerid')
+    //         ->where('attendeance_table.student_registerid', $registerId)
     //         ->get()
     //         ->getResult();
+
+    //     return $result;
     // }
     public function getattandance($registerId)
-    {
+{
+    $result = $this->db->table('attendeance_table')
+                       ->join('register', 'register.id = attendeance_table.student_registerid')
+                       ->where('attendeance_table.student_registerid', $registerId)
+                       ->where('attendeance_table.renewal', null) // Adding condition for renewal column being null
+                       ->get()
+                       ->getResult();
 
-        $result = $this->db->table('attendeance_table')
-            ->join('register', 'register.id = attendeance_table.student_registerid')
-            ->where('attendeance_table.student_registerid', $registerId)
-            ->get()
-            ->getResult();
-
-        return $result;
-    }
+    return $result;
+}
 }

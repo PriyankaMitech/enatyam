@@ -239,6 +239,7 @@ class LoginModel extends Model
                 'Payment_status'     => $result->Payment_status,
                 'access_level'       => $result->access_level,
                 'is_logged_in'       => 'Y',
+                'SessionsCount'      =>$result->SessionsCount,
             ];
 
             $session->set('sessiondata', $sessiondata);
@@ -271,6 +272,7 @@ class LoginModel extends Model
                 'SessionType'        => $result->SessionType,
                 'Payment_status'     => $result->Payment_status,
                 'access_level'       => $result->access_level,
+                'SessionsCount'      =>$result->SessionsCount,
                 'is_logged_in'       => 'Y',
             ];
 

@@ -1522,5 +1522,36 @@ $amount = $insertdata->amount/100;
             ->get()
             ->getResult();
     }
+    public function getSessionno($user_id)
+    {
+        $query = $this->db->table('attendeance_table')
+                     ->selectMax('Session_no')
+                     ->where('student_registerid', $user_id)
+                     ->get()
+                     ->getRow();
     
+        $maxSessionNumber = $query->Session_no;
+    
+        return $maxSessionNumber;
+    }
+    public function updatePaymentStatus($user_id, $status)
+    {
+        $data = [
+            'Payment_status' => $status
+        ];
+    
+        $this->db->table('register')
+                 ->where('id', $user_id)
+                 ->update($data);
+    }
+    public function updadteattandance($user_id, $renewal)
+    {
+        $data = [
+            'renewal' => $renewal
+        ];
+    
+        $this->db->table('attendeance_table')
+                 ->where('student_registerid', $user_id)
+                 ->update($data);
+    }
 }
