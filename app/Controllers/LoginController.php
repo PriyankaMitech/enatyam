@@ -225,7 +225,6 @@ class LoginController extends BaseController
         $request = \CodeIgniter\Config\Services::request();
     $session = \CodeIgniter\Config\Services::session();
         $loginModel = new LoginModel();
-
         $username = $request->getPost('username');
         $password = $request->getPost('password');
         if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
@@ -233,6 +232,7 @@ class LoginController extends BaseController
         } else {
             $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
         }
+        // print_r($result);die;
 
         if (!empty($result)) {
             switch ($result['role']) {
