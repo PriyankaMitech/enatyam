@@ -334,7 +334,7 @@ class FacultyController extends BaseController
     $data['GroupList'] = $model->getGroupList($registerId);
    
     // print_r($data['studentList']);die;
-   //  echo '<pre>'; print_r($data['GroupList']);die;
+    // echo '<pre>'; print_r($data['GroupList']);die;
     return view('FacultysideBar/Studentattendance', $data);
   }
 
