@@ -546,17 +546,17 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                                 <span id="mobile_noError" class="error"></span>
                             </div> -->
-                            <div class="form-group">
-                                    <label for="mobile_no">Enter your whatsapp number<span class="required">*</span></label>
+                            <div class="form-group m-2">
+                                    <!-- <label for="mobile_no">Enter your whatsapp number<span class="required">*</span></label> -->
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-4">
                                             <select name="countrie_code" class="form-control countrycode"
                                                 id="lenValidate"></select>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-8">
                                             <input required type="text" autocomplete="off" class="form-control"
                                                 value="<?php echo set_value("mobile_number");?>" name="mobile_number"
-                                                id="txtMobileNo" placeholder="Enter Mobile No."
+                                                id="txtMobileNo" placeholder="Enter your whatsapp number"
                                                 onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
                                                 <span id="mobile_noError" class="error"></span>
                                         </div>
