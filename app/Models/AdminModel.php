@@ -1522,15 +1522,28 @@ $amount = $insertdata->amount/100;
             ->get()
             ->getResult();
     }
+    // public function getSessionno($user_id)
+    // {
+    //     $query = $this->db->table('attendeance_table')
+    //                  ->selectMax('Session_no')
+    //                  ->where('student_registerid', $user_id)
+    //                  ->get()
+    //                  ->getRow();
+    
+    //     $maxSessionNumber = $query->Session_no;
+    
+    //     return $maxSessionNumber;
+    // }
+
     public function getSessionno($user_id)
     {
-        $query = $this->db->table('attendeance_table')
-                     ->selectMax('Session_no')
-                     ->where('student_registerid', $user_id)
+        $query = $this->db->table('register')
+                     ->selectMax('SessionsCount')
+                     ->where('id', $user_id)
                      ->get()
                      ->getRow();
     
-        $maxSessionNumber = $query->Session_no;
+        $maxSessionNumber = $query->SessionsCount;
     
         return $maxSessionNumber;
     }

@@ -2379,9 +2379,9 @@ $(function() {
             }, "Please enter letters only.");
 
             // Add custom method for mobile number validation
-            $.validator.addMethod("validMobileNumber", function(value, element) {
-                return this.optional(element) || /^[0-9]{10}$/i.test(value);
-            }, "Please enter a valid 10-digit mobile number.");
+            // $.validator.addMethod("validMobileNumber", function(value, element) {
+            //     return this.optional(element) || /^[0-9]$/i.test(value);
+            // }, "Please enter a valid mobile number.");
 
             // Add custom method for pin code validation
             $.validator.addMethod("validPincode", function(value, element) {
@@ -2425,7 +2425,7 @@ $(function() {
                     },
                     phone: {
                         required: true,
-                        validMobileNumber: true
+                        // validMobileNumber: true
                     }
                 },
                 messages: {

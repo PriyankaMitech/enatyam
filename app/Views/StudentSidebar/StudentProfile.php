@@ -119,9 +119,10 @@
                                                         $studentCountryCode = $profileData->code; // This would be dynamically fetched in a real-world scenario
                                                         // Generate the CSS class
                                                         $cssClass = "ip2location-flag-32 flag-square flag-" . strtolower($studentCountryCode);
+                                                        // echo'<pre>';print_r($cssClass);die;
                                                         ?>
                                                         <span class="timeline-country"><?= $profileData->country ?></span>
-                                                        <span class=" timeline-country <?= $cssClass ?>"></span>
+                                                        <span class="timeline-country <?= $cssClass ?>"></span>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-6 change-country">

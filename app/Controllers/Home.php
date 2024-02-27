@@ -303,7 +303,9 @@ class Home extends BaseController
                 $login_model = new LoginModel();
                 $data['user_data'] = $login_model->get_user_data($user_id);
                 $notifications = $adminModel->getUser($user_id);
+                
             
+
                 $count = 0;
 
                     if ($notifications) {
