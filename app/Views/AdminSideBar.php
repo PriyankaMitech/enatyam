@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.css">
 
     <link rel="stylesheet" href="<?= base_url(); ?>dist/css/adminlte.min.css">
+    <link href="<?php echo base_url() ?>image_sprite/ip2location-image-sprite.css" rel="stylesheet">
 
 
     <style>

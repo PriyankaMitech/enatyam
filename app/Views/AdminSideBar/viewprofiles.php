@@ -87,7 +87,21 @@
                             <p class="text-muted"><?=$profile_data->courses_name;  ?> - <?=$profile_data->sub_courses_name;  ?></p>
                                 <hr>
                             <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
-                            <p class="text-muted"><?=$profile_data->country;  ?></p> 
+                            <p class="text-muted">
+                                <span><?=$profile_data->country;  ?></span>
+                            <?php
+                                                        // Suppose $studentCountryCode contains the student's country code, e.g., "vn"
+                                                        // echo'<pre>';print_r($country_data);die;
+                                                        if(!empty($country_data)){
+                                                        $studentCountryCode = $country_data->code; 
+                                                        }// This would be dynamically fetched in a real-world scenario
+                                                        // Generate the CSS class
+                                                        $cssClass = "ip2location-flag-32 flag-square flag-" . strtolower($studentCountryCode);
+                                                        // echo'<pre>';print_r($cssClass);die;
+                                                        ?>
+                                                        <!-- <span class="timeline-country"><?= $profile_data->country ?></span> -->
+                                                        <span class=" <?= $cssClass ?> text-right"></span></p> 
+                           
                         </div>
                         <!-- /.card-body -->
                     </div>

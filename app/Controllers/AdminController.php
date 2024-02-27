@@ -1543,18 +1543,27 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
                 $wherecond = array('student_id' => $profile_id);
 
                 $data['profile_data'] = $model->getcorcessforstudentprofile('student', $wherecond);
+                $student_country = $data['profile_data']->country;
+                // echo'country:<pre>';print_r($student_country);die;
+                $wherecond1 = array('name' => $student_country);
+                $data['country_data'] = $model->getsinglerow('countries', $wherecond1);
+                // echo'country:<pre>';print_r($data['country_data']);die;
                 $student_registerid = $data['profile_data']->register_id;
-                //  echo'attendance:<pre>';print_r($student_registerid);die;
+                //  echo'country:<pre>';print_r($student_country);die;
                 $wherecond1 = array('student_registerid' => $student_registerid);
 
                 $data['attendanceRecord'] = $model->fetchAttendanceForStudent($student_registerid);
                 $select = 'payment.*, register.full_name';
                 $table1 = 'payment';
                 $table2 = 'register';
+                $table3 = 'countries'; 
                 $joinCond = 'register.id = payment.user_id';
+                // $joinCond2 =  'register.country = countries.name';
                 $wherecond = array('user_id' => $student_registerid);
                 $type = 'left';
                 $data['paymentRecord'] = $model->jointwotables($select,$table1,$table2,$joinCond,$wherecond,$type);
+                
+
                 // echo'attendance:<pre>';print_r($data['paymentRecord']);die;
 
                 $data['schedule_data'] = $model->getStudentSchedule($student_registerid);

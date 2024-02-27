@@ -1329,7 +1329,7 @@
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
                                         <img src="<?=base_url(); ?>public/images/happyfaces/11-1.png" />
-                                        <p class="reviewName">Meera (canada)</p>
+                                        <div class=""> <p class="reviewName">Meera (canada)</p></div>
                                     </div>    
                                 </div>
                             </div>
