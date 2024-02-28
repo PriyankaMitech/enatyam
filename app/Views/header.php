@@ -2101,7 +2101,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     let dropDown = document.getElementById("lenValidate")
     for (let i = 0; i < details.length; i++) {
         //let txtOption = '<option value="' + details[i]['code'] + '"' + ' name="' + details[i]['data-phoneLength'] + '">' + details[i]['label'] + '</option>';
-        let txtOption = '<option value="' + details[i]['code'] + '"' + ' data-phonelength="' + details[i][
+        let txtOption = '<option value="' + details[i]['phone'] + '"' + ' data-phonelength="' + details[i][
             'data-phoneLength'
         ] + '">' + details[i]['label'] + '</option>';
         console.log(txtOption)

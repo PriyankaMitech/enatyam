@@ -3022,7 +3022,7 @@ $(function() {
                                     $('#signupbtn').val('Sign Up')
                                 } else {
                                     if (response.email.status == '200') {
-                                        console.log('response1')
+                                        console.log(response)
                                         $('#otperror').addClass('d-none');
                                         $('#registerformpopup').modal('hide');
                                         $('#userformmodal').modal('show');
