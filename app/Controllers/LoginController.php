@@ -59,14 +59,14 @@ class LoginController extends BaseController
     {
         $validation = \Config\Services::validation(); // Get the validation instance
         $loginModel = new LoginModel();
-        // print_r($getdata);die;
+        // print_r($data);die;
         $loginModel->insert($data);
         $last_insert_id = $loginModel->getInsertID();
         $getdata = [
             'full_name' => $this->request->getVar('full_name'),
             'email' => $this->request->getVar('email'),
             'mobile_no' => $this->request->getVar('mobile_number'),
-            'countrie_code'=> $this->request->getVar('countrie_code'),
+            'Phone_countryCode'=> $this->request->getVar('countrie_code'),
             'role' => 'Student',
             'password' => $this->request->getVar('password'),
             'confirm_pass' => $this->request->getVar('confirm_pass'),
@@ -116,10 +116,12 @@ class LoginController extends BaseController
                 $getdata = [
                     'student_name' => $this->request->getVar('full_name'),
                     'email' => $this->request->getVar('email'),
-                    'mobile_no' => $this->request->getVar('mobile_no'),
+                    'mobile_no' => $this->request->getVar('mobile_number'),
+                    'Phone_countryCode' => $this->request->getVar('countrie_code'),
                     'register_id' => $insert['lastinsertid']
 
                 ];
+                // echo'<pre>';print_r($getdata);die;
                 $savestud = $loginModel->setStudentName($getdata);
                 $sms = 'Dear customer, your OTP for registration is ' . $otp . '. do not share to anyone. Thank you OTPIMS';
                 $output = sendSMS($_POST['mobile_number'], $sms);
@@ -157,7 +159,7 @@ class LoginController extends BaseController
             'email' => $postdata['email'],
             'mobile_no' => $postdata['mobile_number'],
             'confirm_pass' => $postdata['confirm_pass'],
-            // 'countrie_code' => $postdata['countrie_code'],
+            'Phone_countryCode' => $this->request->getVar('countrie_code'),
             'password' => $postdata['password'],
             'role' => 'Student',
             'otp' => $otp,
