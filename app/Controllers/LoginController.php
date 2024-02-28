@@ -108,7 +108,7 @@ class LoginController extends BaseController
         $emailotp = rand(999, 9999);
         if ($_POST['otp'] == '' && $_POST['emailotp'] == '') {
             $loginModel = new LoginModel();
-            $result['mobileexist'] = $loginModel->checkExist($_POST['mobile_number'], 'mobile_no', 'register');
+            $result['mobileexist'] = $loginModel->checkExist($this->request->getVar('countrie_code') . '-' .$_POST['mobile_number'], 'mobile_no', 'register');
             $result['emailexist'] = $loginModel->checkExist($_POST['email'], 'email', 'register');
 
             if ($result['mobileexist'] == '' && $result['emailexist'] == '') {
@@ -116,7 +116,8 @@ class LoginController extends BaseController
                 $getdata = [
                     'student_name' => $this->request->getVar('full_name'),
                     'email' => $this->request->getVar('email'),
-                    'mobile_no' => $this->request->getVar('mobile_number'),
+                    // 'mobile_no' => $this->request->getVar('mobile_number'),
+                    'mobile_no' => $this->request->getVar('countrie_code') . '-' . $this->request->getVar('mobile_number'),
                     'Phone_countryCode' => $this->request->getVar('countrie_code'),
                     'register_id' => $insert['lastinsertid']
 
@@ -144,7 +145,7 @@ class LoginController extends BaseController
                 echo json_encode($result);
             }
         } else {
-            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['mobile_number'], $_POST['email']);
+            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['countrie_code'].'-'.$_POST['mobile_number'], $_POST['email']);
             // print_r($checkotp);
             echo json_encode($checkotp);
         }
@@ -157,7 +158,8 @@ class LoginController extends BaseController
         $data = [
             'full_name' => $postdata['full_name'],
             'email' => $postdata['email'],
-            'mobile_no' => $postdata['mobile_number'],
+            // 'mobile_no' => $this->request->getVar('countrie_code').'-'.$postdata['mobile_number'],
+            'mobile_no' => $this->request->getVar('countrie_code') . '-' . $postdata['mobile_number'],
             'confirm_pass' => $postdata['confirm_pass'],
             'Phone_countryCode' => $this->request->getVar('countrie_code'),
             'password' => $postdata['password'],
