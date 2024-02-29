@@ -39,7 +39,7 @@ $name               = "RazorPay Infovistar";
                     </li>
 
                 </ul>
-                <div class="tab-content" id="pills-tabContent">
+                <div class="tab-content pr" id="pills-tabContent">
                     <div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                         <div class="row">
                             <div class="col-lg-10 col-md-10 col-12">
