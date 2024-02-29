@@ -1241,31 +1241,45 @@ $amount = $insertdata->amount/100;
     }
 
     public function fetchattandance()
-    {
-        $result = $this->db->table('attendeance_table')->get()->getResult();
+{
+    $result = $this->db->table('attendeance_table')->get()->getResult();
 
-        foreach ($result as &$attendanceRecord) {
-            $student_registerid = $attendanceRecord->student_registerid;
+    $renewalYes = []; // Array to store records with renewal = 'Y'
+    $renewalNull = []; // Array to store records with renewal = null
 
-            // Fetch student name from 'register' table
-            $studentData = $this->db->table('register')
-                ->select('full_name') // Adjust the column name accordingly
-                ->where('id', $student_registerid)
-                ->get()
-                ->getRow();
-            $attendanceRecord->student_name = $studentData ? $studentData->full_name : null;
+    foreach ($result as &$attendanceRecord) {
+        $student_registerid = $attendanceRecord->student_registerid;
 
-            // Fetch no_of_session from 'payment' table
-            $paymentData = $this->db->table('payment')
-                ->select('no_of_session') // Adjust the column name accordingly
-                ->where('user_id', $student_registerid)
-                ->get()
-                ->getRow();
-            $attendanceRecord->no_of_session = $paymentData ? $paymentData->no_of_session : null;
+        // Fetch student name from 'register' table
+        $studentData = $this->db->table('register')
+            ->select('full_name') // Adjust the column name accordingly
+            ->where('id', $student_registerid)
+            ->get()
+            ->getRow();
+        $attendanceRecord->student_name = $studentData ? $studentData->full_name : null;
+
+        // Fetch no_of_session from 'payment' table
+        $paymentData = $this->db->table('payment')
+            ->select('no_of_session') // Adjust the column name accordingly
+            ->where('user_id', $student_registerid)
+            ->get()
+            ->getRow();
+        $attendanceRecord->no_of_session = $paymentData ? $paymentData->no_of_session : null;
+
+        // Categorize records based on renewal field
+        if ($attendanceRecord->renewal === 'Y') {
+            $renewalYes[] = $attendanceRecord;
+        } elseif ($attendanceRecord->renewal === null) {
+            $renewalNull[] = $attendanceRecord;
         }
-// echo'<pre>';print_r($result);die;
-        return $result;
     }
+
+    return [
+        'renewalYes' => $renewalYes,
+        'renewalNull' => $renewalNull,
+    ];
+}
+
 
     public function fetchAttendanceForStudent($student_registerid)
 {
