@@ -1181,7 +1181,19 @@
   .owl-next i{
     margin-top: 0px !important;
   }
-  .ST_Inspire-video{
-    padding: 20px;
-  }
+  .ST_Inspire-video {
+    padding: 0px;
+    width: 100%;
+    height: 474px;
+}
+.price-card-body span:last-child {
+
+  font-size: 12px;
+}
+.price-card-body .fa-check-circle-o {
+
+  font-size: 25px;
+
+}
+
 }

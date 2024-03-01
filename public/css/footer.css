@@ -168,7 +168,7 @@ footer {
 }
 
 footer {
-  width: 101%;
+  width: 100%;
   background-color: #040404;
   padding-top: 2%;
 }
@@ -286,5 +286,8 @@ footer a:hover {
   }
   .col-md-3.col-6.footer-div.fu .f-ul {
     --bs-gutter-x: 0 !important;
+  }
+  .ST_Inspire-video{
+width: 100% !important;
   }
 }
