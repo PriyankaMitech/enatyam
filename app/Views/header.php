@@ -547,7 +547,6 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                 <span id="mobile_noError" class="error"></span>
                             </div> -->
                             <div class="form-group m-2">
-                                    <!-- <label for="mobile_no">Enter your whatsapp number<span class="required">*</span></label> -->
                                     <div class="row">
                                         <div class="col-md-4">
                                             <select name="countrie_code" class="form-control countrycode"
@@ -561,7 +560,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                                 <span id="mobile_noError" class="error"></span>
                                         </div>
                                     </div>
-                                </div>  
+                            </div>  
 
                             <div class="form-group m-2">
 

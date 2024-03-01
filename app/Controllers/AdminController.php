@@ -855,12 +855,17 @@ class AdminController extends BaseController
     }
 
     public function studentAttendance()
-    {
-        $model = new AdminModel();
-        $data['attendance'] = $model->fetchattandance();
-            // echo '<pre>'; print_r($data['attendance']);die;
-        return view('AdminSideBar/studentAttendance', $data);
-    }
+{
+    $model = new AdminModel();
+    $attendanceData = $model->fetchattandance();
+
+    // Separate the data into renewalYes and renewalNull arrays
+    $data['renewalYes'] = $attendanceData['renewalYes'];
+    $data['renewalNull'] = $attendanceData['renewalNull'];
+    //  echo '<pre>'; print_r($data['renewalNull']);die;
+    return view('AdminSideBar/studentAttendance', $data);
+}
+
     public function add_notifications()
     {
         $model = new AdminModel();
