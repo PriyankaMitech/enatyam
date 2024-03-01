@@ -82,124 +82,6 @@ require_once 'src/SMTP.php';
         
     }
 
-//  function whatsapp($phoneNumber)
-//  {
-
-//         $curl = curl_init();
-
-//         curl_setopt_array($curl, array(
-//         CURLOPT_URL => 'https://api.interakt.ai/v1/public/message/',
-//         CURLOPT_RETURNTRANSFER => true,
-//         CURLOPT_ENCODING => '',
-//         CURLOPT_MAXREDIRS => 10,
-//         CURLOPT_TIMEOUT => 0,
-//         CURLOPT_FOLLOWLOCATION => true,
-//         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-//         CURLOPT_CUSTOMREQUEST => 'POST',
-//         CURLOPT_POSTFIELDS =>'{
-//             "countryCode": "+91",
-//             "phoneNumber": "9372184591",
-//             "callbackData": "some text here",
-//             "type": "Template",
-//             "template": {
-//                 "name": "new_food_menu",
-//                 "languageCode": "en",
-//                 "bodyValues": [
-//                     "body_variable_value_1"
-                   
-//                 ]
-//             }
-//         }',
-//         CURLOPT_HTTPHEADER => array(
-//             'Authorization: Basic <QVVyMUllOHdubDkxb1d6cGxwdEl6bXlEV3pQaUdYdmoyVlI5TzJFd0ZEdzo=>',
-//             'Content-Type: application/json'
-//         ),
-//         ));
-
-//         $response = curl_exec($curl);
-
-//         curl_close($curl);
-//         echo $response;
-
-//  }
-// function whatsapp($phoneNumber,$templates,$msg = null)
-// {
- 
-//     $curl = curl_init();
-
-//     $data = array(
-//         "countryCode" => "+91",
-//         "phoneNumber" => $phoneNumber, // Use the passed phone number here
-//         "callbackData" => "some text here",
-//         "type" => "Template",
-//         "template" => array(
-//             "name" => $templates,
-//             "languageCode" => "en",
-//             "bodyValues" => array(
-//                 $msg
-//             )
-//         )
-//     );
-//     $payload = json_encode($data);
-//     curl_setopt_array($curl, array(
-//         CURLOPT_URL => 'https://api.interakt.ai/v1/public/message/',
-//         CURLOPT_RETURNTRANSFER => true,
-//         CURLOPT_ENCODING => '',
-//         CURLOPT_MAXREDIRS => 10,
-//         CURLOPT_TIMEOUT => 0,
-//         CURLOPT_FOLLOWLOCATION => true,
-//         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-//         CURLOPT_CUSTOMREQUEST => 'POST',
-//         CURLOPT_POSTFIELDS => $payload,
-//         CURLOPT_HTTPHEADER => array(
-//             'Authorization: Basic <QVVyMUllOHdubDkxb1d6cGxwdEl6bXlEV3pQaUdYdmoyVlI5TzJFd0ZEdzo=>',
-//             'Content-Type: application/json'
-//         ),
-//     ));
-//     $response = curl_exec($curl);
-//  //   print_r($response);die;
-//     curl_close($curl);
-//     echo $response;
-// }
-// function whatsappadmin($adminNumber,$templates,$msg = null)
-// {
- 
-//     $curl = curl_init();
-
-//     $data = array(
-//         "countryCode" => "+91",
-//         "phoneNumber" => $adminNumber, // Use the passed phone number here
-//         "callbackData" => "some text here",
-//         "type" => "Template",
-//         "template" => array(
-//             "name" => $templates,
-//             "languageCode" => "en",
-//             "bodyValues" => array(
-//                 $msg
-//             )
-//         )
-//     );
-//     $payload = json_encode($data);
-//     curl_setopt_array($curl, array(
-//         CURLOPT_URL => 'https://api.interakt.ai/v1/public/message/',
-//         CURLOPT_RETURNTRANSFER => true,
-//         CURLOPT_ENCODING => '',
-//         CURLOPT_MAXREDIRS => 10,
-//         CURLOPT_TIMEOUT => 0,
-//         CURLOPT_FOLLOWLOCATION => true,
-//         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-//         CURLOPT_CUSTOMREQUEST => 'POST',
-//         CURLOPT_POSTFIELDS => $payload,
-//         CURLOPT_HTTPHEADER => array(
-//             'Authorization: Basic <QVVyMUllOHdubDkxb1d6cGxwdEl6bXlEV3pQaUdYdmoyVlI5TzJFd0ZEdzo=>',
-//             'Content-Type: application/json'
-//         ),
-//     ));
-//     $response = curl_exec($curl);
-//  //  print_r($response);die;
-//     curl_close($curl);
-//     echo $response;
-// }
 
 // function whatsapp($phoneNumber, $templates, $msg = null) // new Api
 // {
@@ -232,19 +114,12 @@ require_once 'src/SMTP.php';
 //     echo $response;
 // }
 
-// function whatsapp($phoneNumber, $templates, $msg = null) {
 
+// function whatsapp($phoneNumber,$templates, $msg = null)
+// {
+//    // print_r($phoneNumber);die;
 //     $curl = curl_init();
     
-//     // Define the message body based on the $msg parameter
-//     $messageBody = '';
-//     if ($msg !== null) {
-//         $messageBody = ', {
-//             "type": "text",
-//             "text": "' . $msg . '"
-//         }';
-//     }
-
 //     curl_setopt_array($curl, array(
 //       CURLOPT_URL => 'https://app2.cunnekt.com/v1/sendnotification',
 //       CURLOPT_RETURNTRANSFER => true,
@@ -254,29 +129,19 @@ require_once 'src/SMTP.php';
 //       CURLOPT_FOLLOWLOCATION => true,
 //       CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 //       CURLOPT_CUSTOMREQUEST => 'POST',
-//       CURLOPT_POSTFIELDS => '{
-//         "mobile": "' . $phoneNumber . '",
-//         "templateid": "' . $templates . '",
+//       CURLOPT_POSTFIELDS =>'{
+//         "mobile": "$phoneNumber",
+//         "templateid": "$templates",
+//         "overridebot": "yes/no",
 //         "template": {
-//             "components": [{
-//                     "type": "header",
-//                     "parameters": [{
-//                             "type": "image",
-//                             "image": {
-//                                 "link": "https://yourdomain.com/filename.jpg"
-//                             }
-//                         }
-//                     ]
-//                 }, 
+//             "components": [
 //                 {
 //                     "type": "body",
-//                     "parameters": [{
+//                     "parameters": [
+//                         {
 //                             "type": "text",
-//                             "text": "variable_1_value"
-//                         }, {
-//                             "type": "text",
-//                             "text": "variable_2_value"
-//                         }' . $messageBody . '
+//                             "text": "1234"
+//                         }
 //                     ]
 //                 }
 //             ]
@@ -288,7 +153,106 @@ require_once 'src/SMTP.php';
 //     ));
     
 //     $response = curl_exec($curl);
-    
+//    print_r($response);die;
 //     curl_close($curl);
 //     echo $response;
+    
 // }
+
+function whatsapp($phoneNumber, $templates = null, $msg = null)
+{
+    $curl = curl_init();
+
+    $data = array(
+        "mobile" => $phoneNumber,
+        "templateid" => $templates,
+        "overridebot" => "yes/no",
+        "template" => array(
+            "components" => array(
+                array(
+                    "type" => "body",
+                    "parameters" => array(
+                        array(
+                            "type" => "text",
+                            "text" => $msg
+                        )
+                    )
+                )
+            )
+        )
+    );
+    $payload = json_encode($data);
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://app2.cunnekt.com/v1/sendnotification',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => $payload,
+        CURLOPT_HTTPHEADER => array(
+            'API-KEY: 8565a06df4aecfdb8b80d41797ba5b24547033b6',
+            'Content-Type: application/json'
+        ),
+    ));
+
+    $response = curl_exec($curl);
+    if ($response === false) {
+        $error = curl_error($curl);
+        return false;
+    }
+    curl_close($curl);
+   
+}
+function whatsappadmin($phoneNumber, $templates = null, $msg = null)
+{
+    $curl = curl_init();
+
+    $data = array(
+        "mobile" => $phoneNumber,
+        "templateid" => $templates,
+        "overridebot" => "yes/no",
+        "template" => array(
+            "components" => array(
+                array(
+                    "type" => "body",
+                    "parameters" => array(
+                        array(
+                            "type" => "text",
+                            "text" => $msg
+                        )
+                    )
+                )
+            )
+        )
+    );
+    $payload = json_encode($data);
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://app2.cunnekt.com/v1/sendnotification',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => $payload,
+        CURLOPT_HTTPHEADER => array(
+            'API-KEY: 8565a06df4aecfdb8b80d41797ba5b24547033b6',
+            'Content-Type: application/json'
+        ),
+    ));
+
+    $response = curl_exec($curl);
+
+    if ($response === false) {
+        $error = curl_error($curl);
+        return false;
+    }
+    curl_close($curl);
+   
+}

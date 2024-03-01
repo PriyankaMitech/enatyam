@@ -727,6 +727,8 @@ class FacultyController extends BaseController
 
 public function saveshedule()
 {
+  $result = session();
+  $facultyId = $result->get('id');
  // print_r($_POST);die;
   $id =  $this->request->getPost('id');
   $day = $this->request->getPost('day');
@@ -747,9 +749,20 @@ public function saveshedule()
 
   // Insert the data into the database using the model
   $model = new facultymodel();
+  $adminmodel = new AdminModel();
   $model->insertshedule($data); 
+  $Facultycontact = $adminmodel->Facultycontact($facultyId);
+  $phoneNumber = $Facultycontact;
+  $templates = "5VjwbxevOb7NCYWmsqd9WT";
+  $msg ="You Give Slots";
+  whatsapp($phoneNumber, $templates, $msg);
+
+ 
+  $adminNumber = "918010041115";
+  $templates = "5VjwbxevOb7NCYWmsqd9WT";
+  $msg = "New slots Given by Faculty ";
+  whatsappadmin($adminNumber, $templates, $msg);
   return redirect()->to('fshedule');
 }
-}
-  
 
+}
