@@ -1743,7 +1743,7 @@
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="fatema learning experience on enatyam platform testimonial"
-                                            width="540" height="480"
+                                         
                                             src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
                                             id="widget8"></iframe>
                     </div>
@@ -1761,7 +1761,7 @@
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="fatema learning experience on enatyam platform testimonial"
-                                            width="640" height="260"
+                                         
                                             src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
                                             id="widget8"></iframe>
                                     </div>
@@ -1778,7 +1778,7 @@
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="fatema learning experience on enatyam platform testimonial"
-                                            width="640" height="260"
+                                         
                                             src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
                                             id="widget8"></iframe>
                                     </div>
@@ -1797,7 +1797,7 @@
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="fatema learning experience on enatyam platform testimonial"
-                                            width="640" height="260"
+                                         
                                             src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
                                             id="widget8"></iframe>
                                     </div>
@@ -1815,7 +1815,7 @@
                                         <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="fatema learning experience on enatyam platform testimonial"
-                                            width="640" height="260"
+                                         
                                             src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
                                             id="widget8"></iframe>
                                     </div>
