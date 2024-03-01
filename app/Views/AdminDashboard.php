@@ -807,8 +807,8 @@ th {
                                 <tr>
                                     <td><?= $faculty->full_name ?></td>
                                     <td><?= $faculty->email ?></td>
-                                    <td><?= $data->courses_name; ?></td>
-                                    <td><?= $data->sub_courses_name; ?></td>
+                                    <td><?= $faculty->courses_name; ?></td>
+                                    <td><?= $faculty->sub_courses_name; ?></td>
                                     <td><?= $faculty->phone ?></td>
                                     <!-- <td><button onclick="showStudentTable(this)" class="btn btn-info">Assign -->
                                     <!-- Students</button></td> -->

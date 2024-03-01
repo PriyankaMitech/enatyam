@@ -84,56 +84,68 @@ class AdminController extends BaseController
         }
     }
     public function AssignTecherForDemo()
-    {
-        $model = new AdminModel();
-        $postData = $this->request->getPost(); 
-        $data = [
-            'AssignTecher_id' => $this->request->getVar('faculty_id'),
-            'meetlink' => $this->request->getVar('meetlink'),
-            'Book_Date_Time' => $this->request->getVar('Book_Date_Time'),
-        ];
-        $db = \Config\Database::Connect();  
-        if ($this->request->getVar('studentid') != "") {
-            $db->table('free_demo_table')
-                ->where('D_id', $this->request->getVar('studentid'))
-                ->update($data);
+{
+    $model = new AdminModel();
+    $postData = $this->request->getPost(); 
+    $facultyId = $this->request->getVar('faculty_id');
+    $Facultycontact = $model->Facultycontact($facultyId);
+    $data = [
+        'AssignTecher_id' => $facultyId, // Use the variable here
+        'meetlink' => $this->request->getVar('meetlink'),
+        'Book_Date_Time' => $this->request->getVar('Book_Date_Time'),
+    ];
+
+    $db = \Config\Database::Connect();  
     
-            $updatedData = $db->table('free_demo_table')
-                ->where('D_id', $this->request->getVar('studentid'))
-                ->get()
-                ->getRowArray();
-    
-            if ($updatedData) {
-                $phoneNumber = $updatedData['phone'];
-                $templates = "demo_booking_";
-                $date = $updatedData['Book_Date'];
-                $time = $updatedData['Book_Date_Time'];
-                $meetlink = $updatedData['meetlink'];
-                $msg = "Your Demo Will Schedule on $date in $time. Join this link: $meetlink";
-                whatsapp($phoneNumber, $templates, $msg);
-    
-                session()->setFlashdata('success', 'Demo added successfully.');
-            }
+    if ($this->request->getVar('studentid') != "") {
+        $db->table('free_demo_table')
+            ->where('D_id', $this->request->getVar('studentid'))
+            ->update($data);
+
+        $updatedData = $db->table('free_demo_table')
+            ->where('D_id', $this->request->getVar('studentid'))
+            ->get()
+            ->getRowArray();
+
+        if ($updatedData) {
+            // Removed the print_r and die statement for production
+            
+            $phoneNumber = $updatedData['phone'];
+            $templates = "5VjwbxevOb7NCYWmsqd9WT";
+            $date = $updatedData['Book_Date'];
+            $time = $updatedData['Book_Date_Time'];
+            $meetlink = $updatedData['meetlink'];
+            $msg = "Your Demo Will Schedule on $date in $time. Join this link: $meetlink";
+            whatsapp($phoneNumber, $templates, $msg);
+            $phoneNumber = $Facultycontact;
+            $templates = "5VjwbxevOb7NCYWmsqd9WT";
+            $date = $updatedData['Book_Date'];
+            $time = $updatedData['Book_Date_Time'];
+            $meetlink = $updatedData['meetlink'];
+            $msg = "You have Assing For Demo on $date in $time. Join this link For Demo: $meetlink";
+            whatsapp($phoneNumber, $templates, $msg);
+            session()->setFlashdata('success', 'Demo added successfully.');
         }
-    
-        return redirect()->to('Admindashboard');
     }
+
+    return redirect()->to('Admindashboard');
+}
     public function AssignTecherToStudent()
     {
         $model = new AdminModel();
     
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
-            $mobileNumber = $model->add($postData);
+            $phoneNumber = $model->add($postData);
     
-            if ($mobileNumber) {
+            if ($phoneNumber) {
                 $session = session();
-                $templates = "new_food_menu";
-                $msg = "Your register successfully.";
-                whatsapp($mobileNumber, $templates, $msg);
-                $adminNumber ="7588525387";
-                $templates = "new_food_menu";
-                $msg = "Faculty gave slots.";
+                $templates = "5VjwbxevOb7NCYWmsqd9WT";
+                $msg = "You assign student";
+                whatsapp($phoneNumber, $templates, $msg);
+                $adminNumber ="917588525387";
+                $templates = "5VjwbxevOb7NCYWmsqd9WT";
+                $msg = "Asign faculty To student";
                 whatsappadmin($adminNumber, $templates, $msg);
     
                 $session->setFlashdata('success', 'Faculty assigned successfully!');
@@ -441,7 +453,7 @@ class AdminController extends BaseController
         $result = $model->updatePassword($id, $password);
         if ($result) {
             $phoneNumber = $phone;
-            $templates = "demo_booking_";
+            $templates = "GXBExIqMbqW8QVtJwQnBWT";
             $msg = "Your Application Approved Your Password is: $password";
             whatsapp($phoneNumber, $templates, $msg);
             sendConfirmationEmail($email, $password, $msg, $Subject, $tital);

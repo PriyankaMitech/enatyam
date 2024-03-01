@@ -231,6 +231,36 @@
   .title_4 {
     margin-top: 0px;
   }
+  .fu {
+    padding-left: 13%;
+    padding-top: 50px;
+    margin-right: -20px;
+  }
+  .fu1 {
+    padding-left: 22%;
+    padding-top: 40px;
+    margin-left: 25px;
+  }
+  .social-div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.flk{
+  margin: 10px;
+}
+.crd{
+  margin-top: -33px;
+  margin-left: 50px;
+}
+.crdn {
+  width: 50px!important; /* Adjust width as per your requirement */
+  margin: 4px; /* Maintains aspect ratio */
+}
+.copyright-p {
+  text-align: center;
+}
   .desc-content {
     font-size: 11px;
     font-weight: 200;
@@ -268,6 +298,13 @@
   .btn-book,
   .btn-request {
     margin: 0px;
+    margin-bottom: 10px;
+  }
+  .faqdance{
+    margin: -11px;
+  }
+  .tx{
+    margin: 10px;
   }
   footer {
     padding: 5% 0px;
@@ -1087,5 +1124,11 @@
   }
   .banerforinstuments {
     height: 760px !important;
+  }
+  .owl-carousel .clone {
+    display: none;
+  }
+  .pr{
+    margin: 0px;
   }
 }

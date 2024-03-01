@@ -1536,31 +1536,31 @@ $amount = $insertdata->amount/100;
             ->get()
             ->getResult();
     }
-    // public function getSessionno($user_id)
-    // {
-    //     $query = $this->db->table('attendeance_table')
-    //                  ->selectMax('Session_no')
-    //                  ->where('student_registerid', $user_id)
-    //                  ->get()
-    //                  ->getRow();
-    
-    //     $maxSessionNumber = $query->Session_no;
-    
-    //     return $maxSessionNumber;
-    // }
-
     public function getSessionno($user_id)
     {
-        $query = $this->db->table('register')
-                     ->selectMax('SessionsCount')
-                     ->where('id', $user_id)
+        $query = $this->db->table('attendeance_table')
+                     ->selectMax('Session_no')
+                     ->where('student_registerid', $user_id)
                      ->get()
                      ->getRow();
     
-        $maxSessionNumber = $query->SessionsCount;
+        $maxSessionNumber = $query->Session_no;
     
         return $maxSessionNumber;
     }
+
+    // public function getSessionno($user_id)
+    // {
+    //     $query = $this->db->table('register')
+    //                  ->selectMax('SessionsCount')
+    //                  ->where('id', $user_id)
+    //                  ->get()
+    //                  ->getRow();
+    
+    //     $maxSessionNumber = $query->SessionsCount;
+    
+    //     return $maxSessionNumber;
+    // }
     public function updatePaymentStatus($user_id, $status)
     {
         $data = [
@@ -1581,4 +1581,21 @@ $amount = $insertdata->amount/100;
                  ->where('student_registerid', $user_id)
                  ->update($data);
     }
+
+    public function Facultycontact($facultyId)
+    {
+        $query = $this->db->table('register')
+        ->select('mobile_no')
+        ->where('id', $facultyId)
+        ->get();
+
+        if ($query->getNumRows() > 0) {
+        $result = $query->getRow();
+        $phoneNumber = $result->mobile_no;
+
+     return $phoneNumber;
+      } else {
+  return false;
+  }
+ }
 }
