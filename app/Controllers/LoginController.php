@@ -116,21 +116,21 @@ class LoginController extends BaseController
                 $getdata = [
                     'student_name' => $this->request->getVar('full_name'),
                     'email' => $this->request->getVar('email'),
-                    // 'mobile_no' => $this->request->getVar('mobile_number'),
-                    'mobile_no' => $this->request->getVar('countrie_code') . '-' . $this->request->getVar('mobile_number'),
+                    'mobile_no' => $this->request->getVar('mobile_number'),
                     'Phone_countryCode' => $this->request->getVar('countrie_code'),
-                    'register_id' => $insert['lastinsertid']
+                    'register_id' => $insert['lastinsertid'],
+                    'mobileWithCode'=> $this->request->getVar('countrie_code').$this->request->getVar('mobile_number'),
 
                 ];
-                // echo'<pre>';print_r($getdata);die;
-                $savestud = $loginModel->setStudentName($getdata);
-                $sms = 'Dear customer, your OTP for registration is ' . $otp . '. do not share to anyone. Thank you OTPIMS';
-                $output = sendSMS($_POST['mobile_number'], $sms);
+
+                $phoneNumber =$getdata['mobileWithCode'];
+                $templates = "5VjwbxevOb7NCYWmsqd9WT";
+                 $msg = $emailotp;
+                 whatsapp($phoneNumber,$templates,$msg);
+                 $savestud = $loginModel->setStudentName($getdata);
+                 $sms = 'Dear customer, your OTP for registration is ' . $otp . '. do not share to anyone. Thank you OTPIMS';
+                 $output = sendSMS($_POST['mobile_number'], $sms);
                  $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
-                //  $mobileNumber =$_POST['mobile_no'];
-                //  $templates = "new_food_menu";
-                //  $msg = "Your register successfully.$emailotp";
-                //  whatsapp($mobileNumber, $templates, $msg);
                 $result['status'] = '200';
                 $result = array(
                     'mobile' => $_POST['mobile_number'],
@@ -145,8 +145,8 @@ class LoginController extends BaseController
                 echo json_encode($result);
             }
         } else {
-            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['countrie_code'].'-'.$_POST['mobile_number'], $_POST['email']);
-            // print_r($checkotp);
+            // $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['countrie_code'].$_POST['mobile_number'], $_POST['email']);
+            $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['mobile_number'], $_POST['email']);
             echo json_encode($checkotp);
         }
     }
@@ -154,14 +154,15 @@ class LoginController extends BaseController
     public function savedata($postdata, $otp, $emailotp)
     {
         $loginModel = new LoginModel();
-
         $data = [
             'full_name' => $postdata['full_name'],
             'email' => $postdata['email'],
             // 'mobile_no' => $this->request->getVar('countrie_code').'-'.$postdata['mobile_number'],
-            'mobile_no' => $this->request->getVar('countrie_code') . '-' . $postdata['mobile_number'],
+            // 'mobile_no' => $this->request->getVar('countrie_code') . $postdata['mobile_number'],
+            'mobile_no' => $postdata['mobile_number'],
             'confirm_pass' => $postdata['confirm_pass'],
             'Phone_countryCode' => $this->request->getVar('countrie_code'),
+            'mobileWithCode' => $this->request->getVar('countrie_code') . $postdata['mobile_number'],
             'password' => $postdata['password'],
             'role' => 'Student',
             'otp' => $otp,
@@ -206,15 +207,15 @@ class LoginController extends BaseController
     if (isset($updatedUserData['mobile_no'])) {
         // Send WhatsApp message to user
         $phoneNumber = $updatedUserData['mobile_no'];
-        $templates = "zbIe3aJ1iQky81nDotrjWT";
+        $templates = "5VjwbxevOb7NCYWmsqd9WT";
         $msg ="your register succesfully";
-        // whatsapp($phoneNumber, $templates, $msg);
+        whatsapp($phoneNumber, $templates, $msg);
 
        
-        // $adminNumber = "7588525387";
-        // $templates = "new_food_menu";
-        // $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
-        // whatsappadmin($adminNumber, $templates, $msg);
+        $adminNumber = "918010041115";
+        $templates = "5VjwbxevOb7NCYWmsqd9WT";
+        $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
+        whatsappadmin($adminNumber, $templates, $msg);
     } else {
            
         }
