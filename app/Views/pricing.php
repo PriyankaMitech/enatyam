@@ -42,7 +42,7 @@ $name               = "RazorPay Infovistar";
                 <div class="tab-content pr" id="pills-tabContent">
                     <div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                         <div class="row">
-                            <div class="col-lg-10 col-md-10 col-12">
+                            <div class="col-lg-10 col-md-12 col-12">
                                 <div class="row pricing-card-section sd">
                                     <div class="col-lg-4 col-md-4 col-12 ppsb">
                                         <div class="card text-center card-1">
@@ -136,7 +136,7 @@ $name               = "RazorPay Infovistar";
 
                                                 <div>
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <input class="btn shop-now-btn" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
                                                     <?php else : ?>
                                                         <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
 
@@ -350,7 +350,7 @@ $name               = "RazorPay Infovistar";
                                 </div>
                                 </form>
                             </div>
-                            <div class="col-lg-2 col-md-2 pddn">
+                            <div class="col-lg-2  pddn">
                                 <img src="public/images/price.png" width="100%" class="opman" />
 
                             </div>
