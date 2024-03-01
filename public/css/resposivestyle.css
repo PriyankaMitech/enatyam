@@ -702,6 +702,9 @@
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  .pddn{
+    display: none;
+  }
   .footer-div ul {
     list-style: none;
     padding-top: 30%;
@@ -1092,7 +1095,7 @@
     font-size: 23px !important;
   }
   .faqdance {
-    padding: 0px 0px 0px 100px;
+    padding: 0px 0px 0px 41px;
   }
   .modulesec {
     margin-top: 5rem;
@@ -1128,7 +1131,57 @@
   .owl-carousel .clone {
     display: none;
   }
-  .pr{
-    margin: 0px;
+  .bannervs {
+    padding-top: 25%;    padding-left: 0%;
+}
+  .banneris {
+    padding-top: 47%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+  /* .pr{
+    margin: 32px -50px 10px 50px;
+  } */
+  .danceimg1.home {
+
+    margin-left: 0%;
+}
+  .bt{
+    margin-top: 83px;
+  }
+  .row {
+    
+    margin-right: calc(-.0 * var(--bs-gutter-x));
+    margin-left: calc(-.0 * var(--bs-gutter-x));
+}
+
+
+
+
+.item {
+  width: 100%;
+  margin-right: 0;
+}
+ .hpb {
+    height: auto;
+  }
+  .happyFaces-div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: none !important;
+    justify-content: center;
+    width: auto;
+  }
+
+  .owl-prev i{
+    margin-top: 0px !important;
+  }
+  .owl-next i{
+    margin-top: 0px !important;
+  }
+  .ST_Inspire-video{
+    padding: 20px;
   }
 }
