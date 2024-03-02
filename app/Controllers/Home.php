@@ -288,7 +288,8 @@ class Home extends BaseController
         $email = $sessionData['email'] ?? null;
         $password = $sessionData['password'] ?? null;
         if ($email !== null && $password !== null) {
-            
+          
+
             // If Payment_status is 'Y' and SessionsCount matches expiration session
             if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
                 $user_id = $session->get('id');
@@ -298,6 +299,7 @@ class Home extends BaseController
                     $renewal = 'Y';
                     $adminModel->updadteattandance($user_id, $renewal);
                     $adminModel->updatePaymentStatus($user_id, $status);
+                    
                 }
 
                 $login_model = new LoginModel();
