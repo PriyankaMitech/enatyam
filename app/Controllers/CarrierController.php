@@ -95,6 +95,7 @@ class CarrierController extends BaseController
             $data = [
                 'name' => $this->request->getPost('name'),
                 'email' => $this->request->getPost('email'),
+                
                 'phone' => $this->request->getPost('phone'),
                 'course' => $this->request->getPost('courses'),
                 'sub_course' => $this->request->getPost('sub_courses'),
