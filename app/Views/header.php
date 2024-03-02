@@ -581,7 +581,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
                             <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
 
-                            <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a>
+                            <!-- <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a> -->
 
                         </form>
                     </div>
@@ -2106,6 +2106,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         console.log(txtOption)
         // let txtOption = '<option value="' + details[i]['code'] + '">' + details[i]['label'] + '</option>';
         dropDown.innerHTML = dropDown.innerHTML + txtOption
+        console.log(dropDown.innerHTML)
     }
 
 });

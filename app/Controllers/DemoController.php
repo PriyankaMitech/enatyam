@@ -16,13 +16,15 @@ class DemoController extends BaseController
         $data = [
             'name' => $this->request->getPost('name'),
             'email' => $this->request->getPost('email'),
-            'phone' => $this->request->getPost('phone'),
+            'Phone_countryCode' => $this->request->getPost('telephone_country_code'),
+            'phone' => $this->request->getPost('mobile_number'),
             'course' => $this->request->getPost('courses_id_d'),
             'sub_course' => $this->request->getPost('sub_courses_id_d'),
             'Age' => $this->request->getPost('Age1'),
             'exprience' => $this->request->getPost('exprience'),
             'Country' => $this->request->getPost('Country'),
             'city' => $this->request->getPost('city'),
+            'mobileWithCode'=>$this->request->getPost('telephone_country_code').$this->request->getPost('mobile_number'),
 
             // 'State' => $this->request->getPost('State'),
             // 'District' => $this->request->getPost('District'),

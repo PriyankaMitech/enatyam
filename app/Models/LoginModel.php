@@ -9,7 +9,7 @@ class LoginModel extends Model
 
     protected $table = 'register';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['full_name', 'email', 'mobile_no', 'role', 'password', 'confirm_pass', 'otp', 'emailotp', 'is_register_done', 'course', 'sub_course', 'age', 'experience', 'experienceInput','Phone_countryCode'];
+    protected $allowedFields = ['full_name', 'email', 'mobile_no', 'role', 'password', 'confirm_pass', 'otp', 'emailotp', 'is_register_done', 'course', 'sub_course', 'age', 'experience', 'experienceInput','Phone_countryCode','mobileWithCode'];
 
     public function insertTable1Data($registerData)
     {
