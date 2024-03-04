@@ -622,7 +622,7 @@ th {
                                             <input type="hidden" name="studentid" value="<?= $facult->D_id ?>">
                                             <td><?= $facult->name ?></td>
                                             <td><?= $facult->email ?></td>
-                                            <td><?= $facult->Date ?></td>
+                                            <td><?= $facult->Dates ?></td>
 
                                             <td>
                                                 <select name="faculty_name">
