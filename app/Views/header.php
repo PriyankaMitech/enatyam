@@ -478,6 +478,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             <!-- mobile nav -->
             <div class="container-fluid d-block d-lg-none">
                 <div class="row mx-0">
+
+                    
                     <div class="col-8">
                         <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
                             <img src="public/images/logo.png" alt="Enatyam" class="logoh">
@@ -501,9 +503,25 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Career'); ?>">Career</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Pricing'); ?>">Pricing</a>
+                <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
+                <?php if (!(session()->get('sessiondata'))) : ?>
 
-                 <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
-                <a href="<?php echo base_url('demo'); ?>" class="btn btndemoh mt-2">BOOK DEMO</a>
+                <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
+                <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh mt-2">BOOK DEMO</a>
+
+                <?php else : ?>
+
+                    <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
+
+
+                <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                <a class="nav-link px-2"  href="<?php echo base_url(); ?>Dashboard" style="border-right: 1px solid #f7f7f7;">Dashboard</a>
+                <a class="nav-link px-2"  href="<?php echo base_url(); ?>logout">Logout</a>
+
+                    <?php endif; ?>
+              
 
             </div>
             <div id="overlay"></div>
@@ -548,11 +566,11 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             </div> -->
                             <div class="form-group m-2">
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 col-4">
                                             <select name="countrie_code" class="form-control countrycode"
                                                 id="lenValidate"></select>
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-8 col-8">
                                             <input required type="text" autocomplete="off" class="form-control"
                                                 value="<?php echo set_value("mobile_number");?>" name="mobile_number"
                                                 id="txtMobileNo" placeholder="Enter your whatsapp number"

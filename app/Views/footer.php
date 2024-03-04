@@ -227,10 +227,10 @@
     $("body").addClass("modal-open");
 }
  // Close modal function
- window.closeModal = function() {
+ window.closeModal1 = function() {
         $("#reviewModal").hide();
     };
-    window.closeModal = function() {
+    window.closeModal1 = function() {
         $("#reviewModal").hide();
 
         // Remove class from body to enable scrolling
