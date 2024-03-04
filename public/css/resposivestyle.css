@@ -14,6 +14,80 @@
   .thim-logo {
     display: none;
   } */
+  /* .bsimg {
+    display: none;
+  } */
+  .learningBtn {
+    margin-bottom: 30px;
+  }
+  .dancepage {
+    padding: 10px;
+  }
+  .ageb {
+    width: 150px;
+    margin: 10px 8px 5px 0px;
+  }
+  .fmname {
+    line-height: 2;
+  }
+  .Step_step__mxxn1 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .tpm {
+    margin-top: 4px;
+    padding: 10px;
+  }
+  .fetures span {
+    font-size: 12px;
+    margin-left: 6.5px;
+  }
+
+  .bfdf {
+    padding: 4px 4px;
+  }
+  .fatures {
+    width: 10%;
+  }
+  .bookdemos {
+    padding-top: 5rem;
+    padding-bottom: 5px;
+  }
+  .bookdimg {
+    padding: 20px;
+  }
+  .ST_Inspire-video1 {
+    height: 6cm !important;
+  }
+  #reviewModal {
+    top: 50% !important;
+  }
+  .vm {
+    padding: 91px 6px !important;
+  }
+  #facultyModal {
+    top: 42% !important;
+  }
+  .wm {
+    width: 100% !important;
+  }
+  .close {
+    top: 116px;
+    right: 0px;
+  }
+  .staff-wrapper {
+    padding: 50px 0px;
+  }
+  .modal-body {
+    padding: 10px 0px !important;
+  }
+  .modal-content {
+    padding: 22px 6px;
+  }
+  .modal {
+    top: 37%;
+    left: 50%;
+  }
   .hpb {
     height: auto;
   }
@@ -35,24 +109,7 @@
   h3 {
     margin-top: 0px;
   }
-  .faculty-section2,
-  .happyFaces-div,
-  .happyFaces-div1 {
-    text-align: center;
-  }
 
-  .faculty-section2,
-  .happyFaces-div,
-  .happyFaces-div1,
-  img {
-    width: 100% !important;
-  }
-  .faculty-section1 {
-    display: none;
-  }
-  .faculty-section2 {
-    display: block;
-  }
   .faculty-content-team__member-name {
     margin-top: 20px;
   }
@@ -148,6 +205,7 @@
   }
   .typesOfDance-tab > ul > li {
     margin-top: 0px !important;
+    padding: 5px;
   }
   .accordion-item {
     margin: 0rem !important;
@@ -233,34 +291,37 @@
   }
   .fu {
     padding-left: 13%;
-    padding-top: 50px;
+    padding-top: 17px;
     margin-right: -20px;
   }
   .fu1 {
-    padding-left: 22%;
-    padding-top: 40px;
-    margin-left: 25px;
+    padding-left: 6%;
+    padding-top: 13px;
+    margin-left: 96px;
   }
   .social-div {
     display: flex;
     flex-direction: row;
-    margin-left: 40px;
-    margin-top: 30px;
-}
-.flk{
-  margin: 10px;
-}
-.crd{
-  margin-top: -33px;
-  margin-left: 50px;
-}
-.crdn {
-  width: 50px!important; /* Adjust width as per your requirement */
-  margin: 4px; /* Maintains aspect ratio */
-}
-.copyright-p {
-  text-align: center;
-}
+    margin-left: 50px;
+    margin-top: 22px;
+  }
+  .footer-links-sub a {
+    line-height: 31px;
+  }
+  .flk {
+    margin: 10px 0px 10px 20px;
+  }
+  .crd {
+    margin-top: -33px;
+    margin-left: 50px;
+  }
+  .crdn {
+    width: 50px !important; /* Adjust width as per your requirement */
+    margin: 4px; /* Maintains aspect ratio */
+  }
+  .copyright-p {
+    text-align: center;
+  }
   .desc-content {
     font-size: 11px;
     font-weight: 200;
@@ -300,10 +361,10 @@
     margin: 0px;
     margin-bottom: 10px;
   }
-  .faqdance{
+  .faqdance {
     margin: -11px;
   }
-  .tx{
+  .tx {
     margin: 10px;
   }
   footer {
@@ -456,14 +517,14 @@
   .video-dance {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto !important;
   }
 
   .typesOfDance-tab .nav-pills .nav-link {
     width: 100%;
     height: 50px;
     margin: 5px 0px 5px 0px;
-    background-color: #737373;
+    background-color: #ffffff;
   }
   .mot {
     margin-top: 33%;
@@ -699,10 +760,10 @@
   }
 }
 
-/* For Tablet Screen max-width: 991 min-width: 768*/  
+/* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
-  .pddn{
+  .pddn {
     display: none;
   }
   .footer-div ul {
@@ -1132,37 +1193,33 @@
     display: none;
   }
   .bannervs {
-    padding-top: 25%;    padding-left: 0%;
-}
+    padding-top: 25%;
+    padding-left: 0%;
+  }
   .banneris {
     padding-top: 47%;
     margin-right: 0px;
     margin-left: 0px;
-}
+  }
   /* .pr{
     margin: 32px -50px 10px 50px;
   } */
   .danceimg1.home {
-
     margin-left: 0%;
-}
-  .bt{
+  }
+  .bt {
     margin-top: 83px;
   }
   .row {
-    
-    margin-right: calc(-.0 * var(--bs-gutter-x));
-    margin-left: calc(-.0 * var(--bs-gutter-x));
-}
+    margin-right: calc(-0 * var(--bs-gutter-x));
+    margin-left: calc(-0 * var(--bs-gutter-x));
+  }
 
-
-
-
-.item {
-  width: 100%;
-  margin-right: 0;
-}
- .hpb {
+  .item {
+    width: 100%;
+    margin-right: 0;
+  }
+  .hpb {
     height: auto;
   }
   .happyFaces-div1 {
@@ -1175,25 +1232,21 @@
     width: auto;
   }
 
-  .owl-prev i{
+  .owl-prev i {
     margin-top: 0px !important;
   }
-  .owl-next i{
+  .owl-next i {
     margin-top: 0px !important;
   }
   .ST_Inspire-video {
     padding: 0px;
     width: 100%;
     height: 474px;
-}
-.price-card-body span:last-child {
-
-  font-size: 12px;
-}
-.price-card-body .fa-check-circle-o {
-
-  font-size: 25px;
-
-}
-
+  }
+  .price-card-body span:last-child {
+    font-size: 12px;
+  }
+  .price-card-body .fa-check-circle-o {
+    font-size: 25px;
+  }
 }

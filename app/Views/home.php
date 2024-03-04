@@ -47,7 +47,7 @@
                     </video>                
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 ">
+            <div class="col-lg-4 col-md-4 bsimg">
             <div class="banneris">
                 <img src="<?=base_url(); ?>public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
                 </div>
@@ -1513,222 +1513,14 @@
                 </div>
             </div>
         </div>
-        <!-- Add a container for the pop-up modal -->
-<!-- <div id="reviewModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div id="reviewContent"></div>
-  </div>
-</div> -->
+
 
 <div class="row">
-  <!-- Replace image paths and names with actual values -->
-    <!-- <div class="col-lg-12 hpb">
-                <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <div class="hft col-md-3">
-                                    <button class="review-trigger">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/11-1.png" />
-                                    <span class="name">Meera (canada)</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <div class="col-md-3">
-                                    <button class="review-trigger">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/16.png"  alt="Image 2">
-                                    <span class="name">Aahana ( Canada)</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    </div> -->
+ 
 </section>
 
 
-<section class="faculty-section faculty-section2 p-3">
-    <div class="container cont-width mt-5">
-        <div class="row heading-div m-0">
-            <div class="col-lg-12 col-12 text-center">
-                <h3>Happy Faces
-                </h3>
-                <span class="line"></span>
 
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-lg-12 hpb">
-                <div class="owl-carousel owl-theme">
-                    <div class="item ">
-                        <div class="happyFaces-div row">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/1.png" />
-                                <div class="hft">
-                                    <h5>Raj</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                           
-                            
-                           
-
-                 
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/3.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                      
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/5.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/8.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                          
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/11-1.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/17.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                         
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/20-1.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                          
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/21-1.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/24-1.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                          
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/27-1.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                           
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/29-1.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                          
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="happyFaces-div">
-                            <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/32.png" />
-                                <div class="hft">
-                                    <h5>Riya</h5>
-                                    <p >It is a long established fact that a reader will be distracted by the readable content of a...</p>
-                                </div>
-                            </div>
-                          
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 <section class="stories-section MusicSec p-3">
@@ -1740,7 +1532,7 @@
                 </h3> 
                 <div class="col-lg-6 col-md-6 col-12 ">
                     <div>
-                                        <iframe class="ST_Inspire-video" frameborder="0" allowfullscreen="1"
+                                        <iframe class="ST_Inspire-video ST_Inspire-video1" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="fatema learning experience on enatyam platform testimonial"
                                          
@@ -2287,8 +2079,8 @@
 <div id="facultyModal" class="modal">
 
     <div class="modal-content wm">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="staff-wrapper maxwidth"> 
+    <span class="close" onclick="closeModal()">×</span>
+            <div class="staff-wrapper maxwidth"> 
     
             <article class="staff-box"> 
                 <img src="" alt="Susan Stark"  id="imgf" />
@@ -2307,7 +2099,7 @@
 
 <div id="reviewModal" class="modal">
     <div class="modal-content wm">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close" onclick="closeModal1()">&times;</span>
         <div class="staff-wrapper maxwidth"> 
             <article class="staff-box"> 
                 <img src="" alt="Susan Stark"  id="imgh" />

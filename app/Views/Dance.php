@@ -25,7 +25,7 @@
         </div> -->
     </div>
 </div>
-<section class="mt-4 ">
+<section class="mt-4 dancepage">
     <div class="container">
 
         <!-- pills -->
