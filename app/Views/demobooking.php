@@ -7,8 +7,7 @@
 
             <div class="tab-content" id="pills-tabContent">
                 <!-- Prenatal Yoga   -->
-                <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel"
-                    aria-labelledby="pills-PrenatalYoga-tab">
+                <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel" aria-labelledby="pills-PrenatalYoga-tab">
                     <form action="<?php base_url(); ?>bookDemo" method="post" id="demobookingform">
                         <div class="row">
 
@@ -62,13 +61,18 @@
                                 </div>
 
 
-                                <div class="row tpm">
-                                    <span class="col-lg-4 col-md-4 col-12 text-white fmname">Phone No* :</span>
-                                    <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
-                                        <input type="text" name="phone" value="">
-                                        <span>
 
-                                </div>
+
+                                    <div class="row tpm">
+                                        <label class="col-md-4 text-white fmname" for="mobile_no">Mobile No.<span class="required">*</span></label>
+                                        <div class="col-md-2">
+                                            <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"></select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input required type="text" autocomplete="off" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
 
                                 <div class="row tpm">
                                     <span class="col-lg-4 col-md-4 col-12 text-white fmname">Age group* :</span>
@@ -106,11 +110,11 @@
 
                                         <option value="">Select Country</option>
                                         <?php if (!empty($country_data)) { ?>
-                                        <?php foreach ($country_data as $data) : ?>
-                                        <option value="<?= $data->name; ?>">
-                                            <?= $data->name; ?>
-                                        </option>
-                                        <?php endforeach; ?>
+                                            <?php foreach ($country_data as $data) : ?>
+                                                <option value="<?= $data->name; ?>">
+                                                    <?= $data->name; ?>
+                                                </option>
+                                            <?php endforeach; ?>
                                         <?php } ?>
 
                                         <span style="color:red;" id="Countryspanid">
@@ -140,30 +144,33 @@
                             <div class="row tpm">
                                 <span class="col-lg-4 col-md-4 col-12 text-white fmname">Please select course* :</span>
 
+
                                 <div class="col-lg-8 col-md-8 col-12 form-group " id="category_div">
                                     <select class="form-control" name="courses_id_d" id="courses_id_d"
                                         style="width: 100%;">
+
                                         <option>Please select course</option>
                                         <?php if (!empty($courses_data)) { ?>
-                                        <?php foreach ($courses_data as $data) { ?>
-                                        <option value="<?= $data->id; ?>" <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id) 
-                                                                            {
-                                                                                echo 'selected';
-                                                                            } 
-                                                                        ?>>
-                                            <?= $data->courses_name; ?>
-                                        </option>
-                                        <?php } ?>
+                                            <?php foreach ($courses_data as $data) { ?>
+                                                <option value="<?= $data->id; ?>" <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id) {
+                                                                                        echo 'selected';
+                                                                                    }
+                                                                                    ?>>
+                                                    <?= $data->courses_name; ?>
+                                                </option>
+                                            <?php } ?>
                                         <?php } ?>
                                     </select>
                                     <span style="color:red;" id="coursespanid"></span>
                                 </div>
                             </div>
                             <div class="row tpm">
+
                                 <span class="col-lg-4 col-md-4 col-12 text-white fmname">Please select sub courses* :</span>
                                 <div class="col-lg-8 col-md-8 col-12 sub_category_div form-group" id="sub_category_div">
                                     <input type="hidden" id="selected_sub_courses_id_d"
                                         value="<?php if (isset($edit)) {echo ($edit['sub_courses_id_d']);} ?>">
+
                                     <select name="sub_courses_id_d" id="sub_courses_id_d" class="form-control">
                                         <option value="">Please select sub courses</option>
                                     </select>
@@ -174,10 +181,12 @@
 
 
                             <div class="row tpm">
+
                                 <span class="col-lg-4 col-md-4 col-12 text-white fmname">Demo Class Date:* :</span>
                                 <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
                                     <input type="date" name="Book_Date" min="<?= date('Y-m-d', strtotime('+1 day')) ?>"
                                         value="">
+
                                     <span>
 
                             </div>
@@ -207,11 +216,16 @@
                         </div>
                 </div>
             </div>
+
+      
+
+  
             </form>
+
         </div>
 
     </div>
-    </div>
+
 </section>
 
 
