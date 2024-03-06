@@ -162,10 +162,7 @@ class LoginController extends BaseController
             'full_name' => $postdata['full_name'],
             'email' => $postdata['email'],
             // 'mobile_no' => $this->request->getVar('countrie_code').'-'.$postdata['mobile_number'],
-
-            // 'mobile_no' => $this->request->getVar('countrie_code') . $postdata['mobile_number'],
             'mobile_no' => $postdata['mobile_number'],
-
             'confirm_pass' => $postdata['confirm_pass'],
             'Phone_countryCode' => $this->request->getVar('countrie_code'),
             'mobileWithCode' => $this->request->getVar('countrie_code') . $postdata['mobile_number'],

@@ -862,7 +862,11 @@ class AdminController extends BaseController
     // Separate the data into renewalYes and renewalNull arrays
     $data['renewalYes'] = $attendanceData['renewalYes'];
     $data['renewalNull'] = $attendanceData['renewalNull'];
-    //  echo '<pre>'; print_r($data['renewalNull']);die;
+    //  echo "records with Renewal Yes"; echo '<pre>'; print_r($data['renewalYes']);
+    
+    // echo '<pre>'; print_r($data['renewalYes']);
+    // echo "records with Renewal Null"; echo '<pre>'; print_r($data['renewalNull']);die;
+     
     return view('AdminSideBar/studentAttendance', $data);
 }
 

@@ -228,9 +228,9 @@
                     <div class="col-lg-3 col-md-4 col-6 ">
                         <h5 class="text-white" style="text-align: center;">Kathak </h5>
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.png"
-                                    alt="" style="width: 175px; height: 150px;">
+                            <a href="<?= base_url(); ?>HistoryofKathak" target="_blank" class="d-block h-100">
+                                <img class="img-fluid img-thumbnail blogimg" src="<?php base_url(); ?>public/images/blog/historyofkathak.png"
+                                    alt="" style="width: 180px; height: 150px;">
                             </a>
                         </div>
                         
@@ -238,12 +238,12 @@
 
 
                     <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
+                        <h5 class="text-white" style="text-align: center;"> Kathak</h5>
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                <img class="img-fluid img-thumbnail blogimg"
+                                    src="<?php echo base_url(); ?>public/images/blog/footwork.png" alt=""
+                                    style="width: 180px; height: 150px;">
                             </a>
                         </div>
 
@@ -254,8 +254,8 @@
                         <h5 class="text-white" style="text-align: center;">Bollywood </h5>
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
+                                <img class="img-fluid img-thumbnail blogimg"
+                                    src="<?php echo base_url(); ?>public/images/blog/mudra.png" alt=""
                                     style="width: 175px; height: 150px;">
                             </a>
                         </div>

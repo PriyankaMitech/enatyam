@@ -379,3 +379,12 @@ button:disabled {
   margin-top: 8%;
   margin-left: 43%;
 }
+.blogimg{
+  
+    padding: 0.25rem;
+    background-color: transparent;
+    border: 0px solid #dee2e6;
+    border-radius: 0;
+    max-width: 100%;
+    height: auto;
+}
