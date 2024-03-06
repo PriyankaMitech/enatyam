@@ -216,25 +216,32 @@ class AdminModel extends Model
             return false;
         }
     }
+  
     // public function add($data)
     // {
-    //     //   print_r($data['studentid']);die;
     //     $builder1 = $this->db->table($this->table2);
     //     $builder1->set('Assign_Techer_id', $data['faculty_name']);
     //     $builder1->set('Session_Start_Date', $data['Session_Start_Date']);
     //     $builder1->where('register_id', $data['studentid']);
     //     $result1 = $builder1->update();
-
-    //     // Update Assign_Techer_id and Session_Start_Date in table1
+    
+       
     //     $builder2 = $this->db->table($this->table1);
     //     $builder2->set('Assign_Techer_id', $data['faculty_name']);
     //     $builder2->set('Session_Start_Date', $data['Session_Start_Date']);
     //     $builder2->where('id', $data['studentid']);
     //     $result2 = $builder2->update();
-
-
+    
+        
+    //     $builder3 = $this->db->table('register');
+    //     $builder3->select('mobile_no');
+    //     $builder3->where('id',$data['faculty_name']);
+    //     $query = $builder3->get();
+    //     $row = $query->getRow();
+    
+    //     $phoneNumber = $row->mobile_no;
     //     if ($result1 && $result2) {
-    //         return true;
+    //         return $phoneNumber;
     //     } else {
     //         return false;
     //     }
@@ -247,28 +254,34 @@ class AdminModel extends Model
         $builder1->where('register_id', $data['studentid']);
         $result1 = $builder1->update();
     
-       
         $builder2 = $this->db->table($this->table1);
         $builder2->set('Assign_Techer_id', $data['faculty_name']);
         $builder2->set('Session_Start_Date', $data['Session_Start_Date']);
         $builder2->where('id', $data['studentid']);
         $result2 = $builder2->update();
     
-        
         $builder3 = $this->db->table('register');
         $builder3->select('mobile_no');
-        $builder3->where('id',$data['faculty_name']);
+        $builder3->where('id', $data['faculty_name']);
         $query = $builder3->get();
         $row = $query->getRow();
     
+        $builder4 = $this->db->table('register');
+        $builder4->select('mobile_no');
+        $builder4->where('id', $data['studentid']);
+        $query2 = $builder4->get(); // Changed variable name for clarity
+        $row2 = $query2->getRow(); // Changed variable name for clarity
+    
         $phoneNumber = $row->mobile_no;
+        $studentPhoneNumber = $row2->mobile_no;  // Renamed variable for clarity
+    
         if ($result1 && $result2) {
-            return $phoneNumber;
+            // Return both phone numbers
+            return [$phoneNumber, $studentPhoneNumber];
         } else {
             return false;
         }
     }
-
     public function getConductedDemoStatus()
     {
         return $this->db->table('free_demo_table')->where('AssignTecher_id >', 0)->get()->getResult();
@@ -1541,10 +1554,11 @@ $amount = $insertdata->amount/100;
         $query = $this->db->table('attendeance_table')
                      ->selectMax('Session_no')
                      ->where('student_registerid', $user_id)
+                     ->where('renewal', null) 
                      ->get()
                      ->getRow();
     
-        $maxSessionNumber = $query->Session_no;
+        $maxSessionNumber = $query->Session_no ?? 0; 
     
         return $maxSessionNumber;
     }

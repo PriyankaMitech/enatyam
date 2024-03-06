@@ -8,7 +8,7 @@
                         <div class="card-header p-0 pt-1">
                             <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill"
+                                    <a class="nav-link active" id="custom-tabs-two-profile-tab" data-toggle="pill"
                                         href="#custom-tabs-two-profile" role="tab"
                                         aria-controls="custom-tabs-two-profile" aria-selected="true">Individual</a>
                                 </li>
@@ -22,7 +22,7 @@
 
                         <div class="card-body">
                             <div class="tab-content" id="custom-tabs-two-tabContent">
-                                <div class="tab-pane fade" id="custom-tabs-two-profile" role="tabpanel"
+                                <div class="tab-pane fade active show" id="custom-tabs-two-profile" role="tabpanel"
                                     aria-labelledby="custom-tabs-two-profile-tab">
                                     <!--  -->
                                     <div class="card-body">

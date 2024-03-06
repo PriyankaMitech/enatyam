@@ -115,47 +115,85 @@ class AdminController extends BaseController
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
-            $msg = "Your Demo Will Schedule on $date in $time. Join this link: $meetlink";
+            $msg = "Your Demo Will Schedule on $date at $time. Join this link: $meetlink";
             whatsapp($phoneNumber, $templates, $msg);
             $phoneNumber = $Facultycontact;
             $templates = "5VjwbxevOb7NCYWmsqd9WT";
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
-            $msg = "You have Assing For Demo on $date in $time. Join this link For Demo: $meetlink";
+            $msg = "You have Assing For Demo on $date at $time. Join this link For Demo: $meetlink";
             whatsapp($phoneNumber, $templates, $msg);
-            session()->setFlashdata('success', 'Demo added successfully.');
+            $phoneNumber = "917588525387";
+            $templates = "5VjwbxevOb7NCYWmsqd9WT";
+            $date = $updatedData['Book_Date'];
+            $time = $updatedData['Book_Date_Time'];
+            $meetlink = $updatedData['meetlink'];
+            $msg = "New Demo Will Be on $date at $time. Join this link For Demo: $meetlink";
+            whatsappadmin($phoneNumber, $templates, $msg);
+            session()->setFlashdata('success', 'Demo Schedule successfully.');
         }
     }
 
     return redirect()->to('Admindashboard');
 }
+    // public function AssignTecherToStudent()
+    // {
+    //     $model = new AdminModel();
+    
+    //     if ($this->request->getMethod() === 'post') {
+    //         $postData = $this->request->getPost();
+    //         $phoneNumber = $model->add($postData);
+    
+    //         if ($phoneNumber) {
+    //             $session = session();
+    //             $templates = "5VjwbxevOb7NCYWmsqd9WT";
+    //             $msg = "You assign student";
+    //             whatsapp($phoneNumber, $templates, $msg);
+    //             $adminNumber ="917588525387";
+    //             $templates = "5VjwbxevOb7NCYWmsqd9WT";
+    //             $msg = "Asign faculty To student";
+    //             whatsappadmin($adminNumber, $templates, $msg);
+    
+    //             $session->setFlashdata('success', 'Faculty assigned successfully!');
+    //             return redirect()->to('Admindashboard');
+    //         } else {
+    //         return redirect()->to('Admindashboard');
+    //         }
+    //     }
+    // }
     public function AssignTecherToStudent()
     {
         $model = new AdminModel();
     
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
-            $phoneNumber = $model->add($postData);
-    
-            if ($phoneNumber) {
+            $result = $model->add($postData); 
+ 
+            if ($result) {
+               
+                list($phoneNumber,$studentphoneNumber) = $result;
                 $session = session();
+                $phoneNumber=$phoneNumber;
+                $templates = "5VjwbxevOb7NCYWmsqd9WT";
+                $msg = "You assign student";
+                whatsapp($phoneNumber, $templates, $msg);
+                $phoneNumber=$studentphoneNumber;
                 $templates = "5VjwbxevOb7NCYWmsqd9WT";
                 $msg = "You assign student";
                 whatsapp($phoneNumber, $templates, $msg);
                 $adminNumber ="917588525387";
                 $templates = "5VjwbxevOb7NCYWmsqd9WT";
-                $msg = "Asign faculty To student";
+                $msg = "Assign faculty To student";
                 whatsappadmin($adminNumber, $templates, $msg);
     
                 $session->setFlashdata('success', 'Faculty assigned successfully!');
                 return redirect()->to('Admindashboard');
             } else {
-            return redirect()->to('Admindashboard');
+                return redirect()->to('Admindashboard');
             }
         }
     }
-
     public function getAdminSideBarAll()
     {
 
