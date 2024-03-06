@@ -5,18 +5,84 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
-  /* .hide {
-    display: none;
+  .modal {
+    top: -75px;
   }
-  .pd0 {
-    padding: 0px 13px !important;
+  .rcbtnoffline {
+    padding: 10px;
   }
-  .thim-logo {
-    display: none;
-  } */
-  /* .bsimg {
-    display: none;
-  } */
+  #toggleForm {
+    width: 51%;
+    height: 50px;
+  }
+  .small-input {
+    width: 70%;
+    margin-top: 6%;
+    margin-left: 15%;
+  }
+  .offlinei {
+    padding-top: 10px;
+  }
+  .rcbtn {
+    padding: 10px;
+  }
+  .btnc {
+    font-size: 13px !important;
+    line-height: 35px !important;
+  }
+  .ittmi {
+    margin-top: 10% !important;
+  }
+  .learningBtnI {
+    margin-bottom: 0px !important;
+  }
+  .ptfi {
+    padding: 10px !important;
+    text-align: justify;
+  }
+  .learningBtnyoga {
+    padding: 10px;
+  }
+  .yogabtn {
+    padding: 10px;
+  }
+  .yogapagecotent {
+    padding: 10px;
+    text-align: justify;
+  }
+  .btnSection1 {
+    padding: 10px 0px 0px 0px;
+  }
+  .learningBtny {
+    margin-bottom: 0px !important;
+  }
+  .bookdemocallb {
+    padding: 20px 10px;
+  }
+  .faq-section .pb-5 {
+    margin-top: 0px;
+  }
+
+  .mft {
+    margin-top: 11px;
+    padding: 10px;
+  }
+  #pills-tab,
+  .nav-item {
+    padding: 0px 5px 0px 5px;
+  }
+  .learningsec {
+    padding: 10px;
+  }
+
+  .faq-section {
+    padding: 0px 10px !important;
+    margin-top: 20px;
+  }
+  .mlearingbtn {
+    margin-bottom: -9px !important;
+    padding: 10px;
+  }
   .learningBtn {
     margin-bottom: 30px;
   }
@@ -84,10 +150,13 @@
   .modal-content {
     padding: 22px 6px;
   }
-  .modal {
-    top: 37%;
-    left: 50%;
-  }
+  /* .modal {
+    top: 0%;
+    left: 0%;
+  } */
+  /* #registerformpopup {
+    top: -97px;
+  } */
   .hpb {
     height: auto;
   }
@@ -235,10 +304,10 @@
     font-size: 25px !important;
     margin-top: 31px !important;
   }
-  .btnstart {
+  /* .btnstart {
     font-size: 8px !important;
     line-height: 24px !important;
-  }
+  } */
   .btnSection {
     padding: 0px 0px 0px 0px !important;
   }
@@ -362,7 +431,7 @@
     margin-bottom: 10px;
   }
   .faqdance {
-    margin: -11px;
+    margin: 0px;
   }
   .tx {
     margin: 10px;
@@ -372,6 +441,10 @@
   }
   .modulesec {
     margin-top: 13%;
+    padding: 10px;
+  }
+  .testmonialsm {
+    padding: 10px;
   }
   .video-section {
     display: none;
@@ -504,9 +577,11 @@
   .faqd {
     padding: 10px;
     text-align: center;
+    margin-bottom: 20px;
   }
   .dancefimg {
     width: 50% !important;
+    height: auto !important;
   }
   .pricing-card-section .card {
     margin-bottom: 34px;
@@ -537,6 +612,8 @@
   }
   .musicp {
     margin-top: -3%;
+    padding: 10px;
+    text-align: justify;
   }
   .list-inline-item:not(:last-child) {
     margin-right: 0rem;
@@ -592,7 +669,7 @@
     margin-top: 9% !important;
   }
   .career-main-section {
-    padding: 0px 0px !important;
+    padding: 10px;
   }
   .step-button[aria-expanded="true"] {
     width: 50px !important;
@@ -763,6 +840,10 @@
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  .bannervs {
+    padding-top: 13%;
+    margin-left: 0px;
+  }
   .pddn {
     display: none;
   }
@@ -874,7 +955,7 @@
   }
   .pricing-section {
     margin-top: 6rem !important;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
   .price-btn {
     padding: 5px 5px;
@@ -1068,10 +1149,7 @@
   .contactus h1::before {
     height: 40px !important;
   }
-  .career-main-section h3 {
-    font-size: 24px !important;
-    margin-top: 9% !important;
-  }
+
   .light-grey {
     margin-top: 10px !important;
   }
@@ -1172,8 +1250,9 @@
     margin: 0rem auto;
   }
   .faq-section {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
+
   .learningsec .list-group .mb-4 {
     margin-bottom: 0.5rem !important;
   }
@@ -1183,12 +1262,7 @@
   .faqd img {
     width: 100px;
   }
-  .typesOfYoga-tab .nav-pills .nav-link {
-    width: 115px !important;
-  }
-  .banerforinstuments {
-    height: 760px !important;
-  }
+
   .owl-carousel .clone {
     display: none;
   }
@@ -1208,7 +1282,7 @@
     margin-left: 0%;
   }
   .bt {
-    margin-top: 83px;
+    margin-top: 45px !important;
   }
   .row {
     margin-right: calc(-0 * var(--bs-gutter-x));
@@ -1248,5 +1322,126 @@
   }
   .price-card-body .fa-check-circle-o {
     font-size: 25px;
+  }
+  .price-btn {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+  .pricing-card-section .card {
+    border-radius: 15px;
+    padding: 10px !important;
+  }
+  .fu {
+    padding-left: 0px;
+    padding-top: 16px;
+  }
+  .fuu {
+    padding-left: 20px !important;
+  }
+  .fu,
+  ul {
+    padding-left: 0px;
+  }
+  .fuu {
+    padding-left: 10px;
+  }
+  .fu1 {
+    padding-left: 0px;
+    padding-top: 16px;
+  }
+  .flid img {
+    width: 100%;
+    height: auto;
+  }
+  .footer-div p {
+    font-size: 13px;
+  }
+  .container {
+    max-width: 781px;
+  }
+  .musicv {
+    height: auto !important;
+  }
+  .modal {
+    top: -240px;
+  }
+  .modal-body {
+    padding: 18px 0px 0px 0px !important;
+  }
+  .mfaq {
+    padding-bottom: 30px !important;
+  }
+  .yogapagebtn {
+    padding: 0px;
+  }
+  .typesOfYoga-tab .nav-pills .nav-link {
+    width: 100% !important;
+    height: 68px;
+    font-size: 12px;
+  }
+  .dancefaq {
+    padding: 0px 0px;
+  }
+  .faqd {
+    padding-bottom: 30px;
+  }
+  .banerforinstuments {
+    height: auto !important;
+  }
+  .btnSectionI {
+    padding: 0px 0px 0px 0px;
+  }
+  .career-main-section h3 {
+    font-size: 25px !important;
+    margin-top: 2% !important;
+  }
+  .career-main-section .text-col {
+    margin-top: 0rem !important;
+  }
+
+  .small-input {
+    width: 200px;
+    margin-top: 10%;
+    margin-left: 37%;
+  }
+  .offlineStudioform h5 {
+    padding-top: 23px;
+    font-size: 20px;
+  }
+  .bfdf {
+    padding: 5px;
+  }
+  .tpm {
+    margin-top: 0px;
+  }
+  .Step_step__mxxn1 {
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+  .fatures {
+    width: 9%;
+  }
+  .fetures span {
+    font-size: 13px;
+  }
+  .Title_main__VrmF4 {
+    font-size: 29px;
+  }
+  .fmname {
+    font-size: 15px;
+  }
+  .BookingSecondPage_formInput__n8MhF,
+  .seletbook {
+    padding: 10px !important;
+  }
+  .ageb {
+    margin: 5px;
+    width: 130px;
+  }
+  .ptage {
+    margin: 5px;
+  }
+  .changec {
+    margin: 5px;
   }
 }

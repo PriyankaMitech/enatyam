@@ -39,7 +39,7 @@
             </div>
 
             <div class="col-md-6 col-12 text-col mt-5">
-                <h4 class="heading">Leave everything else to us if you can tick right</h4>
+                <h5 class="heading">Leave everything else to us if you can tick right</h5>
              
                     <ul class="list-unstyled">
                         <li class="mt-3"><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Master's degree in performing arts (Dance ,Music or Yoga )</li>
@@ -50,7 +50,7 @@
                     
                 
 
-                        <input class="btn btnstart " onclick="showcarier()" type="button"  value="Join Now" />
+                        <input class="btn btnstart btnc" onclick="showcarier()" type="button"  value="Join Now" />
 
             </div>
 
@@ -394,7 +394,7 @@
 </section> -->
 
 
-<div class="container ">
+<div class="container rcbtn">
     <div class="row">
         <div class="col-lg-12 nsrad">
 
