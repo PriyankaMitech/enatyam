@@ -293,12 +293,14 @@ class Home extends BaseController
             // If Payment_status is 'Y' and SessionsCount matches expiration session
             if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
                 $user_id = $session->get('id');
-           
+                // print_r($sessionData);
+                //             print_r($expiresessions);die;
                 if ($expiresessions == $sessionData['SessionsCount']) {
                     $status = 'N';
                     $renewal = 'Y';
                     $adminModel->updadteattandance($user_id, $renewal);
                     $adminModel->updatePaymentStatus($user_id, $status);
+                   
                     
                 }
 

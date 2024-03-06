@@ -181,37 +181,38 @@ div.dataTables_wrapper div.dataTables_filter input {
                     </div>
                 </div>
                 <div class="card-body">
-                    <?php if (!empty($data)): ?>
-                    <table class="table table-hover text-nowrap">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Join Date</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($data as $row) : ?>
-                            <tr>
-                                <td><?php echo $row['register_id']; ?></td>
-                                <td><?php echo $row['student_name']; ?></td>
-                                <!-- Format the date as day monthname year -->
-                                <td><?php echo date('d F Y', strtotime($row['created_at'])); ?></td>
-                                <td>
-                                    <a href="<?php echo base_url()?>chatuser/<?php echo $row['register_id']; ?>"
-                                        class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
-                                    <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>"
-                                        class="btn btn-sm  badge-primary"><i class="fas fa-file-upload"></i></a>
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                    <?php else: ?>
-                    <p>No students are assigned.</p>
-                    <?php endif; ?>
-                </div>
+    <?php if (!empty($data)): ?>
+    <table class="table table-hover text-nowrap">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Join Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php $counter = 1; ?>
+            <?php foreach ($data as $row) : ?>
+            <tr>
+                <td><?php echo $counter++; ?></td>
+                <td><?php echo $row['student_name']; ?></td>
+                <!-- Format the date as day monthname year -->
+                <td><?php echo date('d F Y', strtotime($row['created_at'])); ?></td>
+                <td>
+                    <a href="<?php echo base_url()?>chatuser/<?php echo $row['register_id']; ?>"
+                        class="btn btn-sm bg-teal"><i class="fas fa-comments"></i></a>
+                    <a href="<?php echo base_url() ?>facultyinfo?student_id=<?php echo $row['student_id']; ?>"
+                        class="btn btn-sm  badge-primary"><i class="fas fa-file-upload"></i></a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?php else: ?>
+    <p>No students are assigned.</p>
+    <?php endif; ?>
+</div>
             </div>
             <div class="col-md-12 card" id="todaySessionsTableshow" style="display:none;">
                 <div class="card-header">
