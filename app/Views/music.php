@@ -27,24 +27,7 @@
 
         </video>
 
-        <!-- <div class="video-section">
-            <div class="row video-row">
-                <div class="col-4 video-col1">
-                    <P>We are commited to your </p>
-                    <p>commitment.</P>
-                    <a class="btn btn-dark btnstrt p-2" href="<?= base_url(); ?>Home#pricing-section" ?> <span class="button-text">Start Now if you are<br> commited </span></a>
-                </div>
-
-                <div class="col-4 video-col1">
-                    <p>30 minutes of Music a day will</p>
-                    <p>change your life.</p>
-                </div>
-                <div class="col-4 video-col1">
-                    <p>Your time @ Your Place .</p>
-                    <img src="public/images/banner.svg">
-                </div>
-            </div>
-        </div> -->
+       
     </div>
 </div>
 <section class="btnSection mftm pl-0 ">
@@ -112,7 +95,7 @@
                     </section>
 
 
-                    <section class="learningBtn">
+                    <section class="learningBtn mlearingbtn">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2019,7 +2002,7 @@
 
 
 <!-- Testimonials -->
-<section class="testimonials mftm mtt" id="testimonials">
+<section class="testimonials mftm mtt testmonialsm" id="testimonials">
     <div class="container">
         <div class="row">
             <span class="text-center mb-0"> <button type="button" class="btn btndemo step mkathak">Testimonials</button></span>

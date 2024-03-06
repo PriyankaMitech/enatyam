@@ -1,4 +1,4 @@
-<section class="faq-section">
+<section class="faq-section mfaq">
     <div class="container cont-width">
         <div class="row">
             <div class="col-lg-1 " style="padding-left:0px"><img src="public/images/logo2.png" width="100%" /></div>
