@@ -43,6 +43,7 @@ $routes->post('chechk_username_id', 'Home::chechk_username_id');
 $routes->post('contact', 'RegisterController::contact');
 $routes->get('offlineAddress', 'RegisterController::offlineAddress');
 $routes->post('offlineAddress', 'RegisterController::offlineAddress');
+$routes->get('HistoryofKathak', 'Home::HistoryofKathak');
 
 
 

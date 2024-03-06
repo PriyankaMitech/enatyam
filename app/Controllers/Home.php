@@ -375,4 +375,9 @@ class Home extends BaseController
             }
         }
     }
+    public function HistoryofKathak()
+    {
+
+        return view('Blog/historyofkathak');
+    }
 }

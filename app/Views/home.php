@@ -509,8 +509,8 @@
                         </p>
 
                         <div class="text-center mt-4">
-    <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music">START NOW</a>
-</div>
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music">START NOW</a>
+                        </div>
                     </div>
 
                     <div class="col-md-6 col-12 p-0 text-center">
