@@ -48,7 +48,7 @@
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
   .cont-main-section {
-    padding: 20px 10px;
+    padding: 20px 0px;
   }
   .dblog {
     text-align: justify !important;
