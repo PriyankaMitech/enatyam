@@ -1,21 +1,5 @@
 <?php include('header.php'); ?>
-<style>
-    .btn-primary{
-        border-radius: 48px;
-        background-color: #E8155A;
-        margin-top: 10px;
-        width: 89px;
-        border-color: aliceblue;
-    }
-    .text-lg-start1{
-        background-color: #FAD32C;
-        padding: 29px 0px;
-    }
-    .text-lg-start{
-        padding: 29px 0px;
-    }
-    /* .video{border-radius: 10px;margin-bottom: 10px;} */
-</style>
+
 <section class="contactus">
 
     <div class="container cont-width">
@@ -47,75 +31,73 @@
     </div>
 </section>
 <section class="cont-main-section">
-<div class="container">
-   <div class="row">
+<div class="container-fluid">
+   <div class="row pdblog">
       <!-- Video Section -->
-      <div class="col-md-8 video">
+      <div class="col-lg-8 col-md-6 col-12 video videoofblog">
          <!-- Video Here -->
          <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
       </div>
       <!-- Button Section -->
-      <div class="col-md-4">
+      <div class="col-lg-4 col-md-6 col-12">
    <!-- First Row of Buttons -->
-   <div class="row mb-3">
-      <div class="col-md-3 mb-3">
+   <div class="row pdblog1">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks ">
          <button class="btn btn-primary btn-block">Kathak </button>
       </div>
-      <div class="col-md-3 mb-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks ">
          <button class="btn btn-primary btn-block">Odds</button>
       </div>
-      <div class="col-md-3 mb-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Bollywood</button>
       </div>
-      <div class="col-md-3 mb-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Odds</button>
       </div>
-   </div>
+
    <!-- Second Row of Buttons -->
-   <div class="row mb-3">
-      <div class="col-md-3 mb-3">
+
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Kathakali</button>
       </div>
-      <div class="col-md-3 mb-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Satriya</button>
       </div>
-      <div class="col-md-3 mb-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Hip Hop</button>
       </div>
-      <div class="col-md-3 mb-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Salsa</button>
       </div>
-   </div>
+
    <!-- Third Row of Buttons -->
-   <div class="row mb-3">
-      <div class="col-md-3 mb-3">
+
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Button</button>
       </div>
-      <div class="col-md-3 mb-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Button</button>
       </div>
-      <div class="col-md-3 mb-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Button</button>
       </div>
-      <div class="col-md-3 mb-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Button</button>
       </div>
-   </div>
+
    <!-- Fourth Row of Buttons -->
-   <div class="row">
-      <div class="col-md-3">
+
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Button</button>
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Button</button>
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-4 col-md-4 col-4 btnblocks">
          <button class="btn btn-primary btn-block">Button</button>
       </div>
-      <div class="col-md-3">
-         <button class="btn btn-primary btn-block">Button</button>
-      </div>
-   </div>
+   
+  
 </div>
 
 
@@ -133,7 +115,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.png"
-                                    alt="" style="width: 175px; height: 150px;">
+                                    alt="" >
                             </a>
                         </div>
                         
@@ -145,8 +127,8 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    src="<?php echo base_url(); ?>public/images/Home/5.png" alt=""
+                                    >
                             </a>
                         </div>
 
@@ -159,7 +141,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                       
@@ -171,7 +153,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -183,7 +165,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -194,7 +176,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -205,7 +187,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -216,7 +198,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -230,7 +212,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>HistoryofKathak" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail blogimg" src="<?php base_url(); ?>public/images/blog/historyofkathak.png"
-                                    alt="" style="width: 180px; height: 150px;">
+                                    alt="" >
                             </a>
                         </div>
                         
@@ -243,7 +225,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail blogimg"
                                     src="<?php echo base_url(); ?>public/images/blog/footwork.png" alt=""
-                                    style="width: 180px; height: 150px;">
+                                    >
                             </a>
                         </div>
 
@@ -256,7 +238,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail blogimg"
                                     src="<?php echo base_url(); ?>public/images/blog/mudra.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -268,7 +250,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -280,7 +262,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -291,7 +273,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -302,7 +284,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -313,7 +295,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -327,7 +309,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.png"
-                                    alt="" style="width: 175px; height: 150px;">
+                                    alt="" >
                             </a>
                         </div>
                        
@@ -339,8 +321,8 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    src="<?php echo base_url(); ?>public/images/Home/5.png" alt=""
+                                    >
                             </a>
                         </div>
 
@@ -353,7 +335,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -365,7 +347,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -377,7 +359,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -388,7 +370,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -399,7 +381,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -410,7 +392,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -424,7 +406,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.png"
-                                    alt="" style="width: 175px; height: 150px;">
+                                    alt="" >
                             </a>
                         </div>
                        
@@ -436,8 +418,8 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    src="<?php echo base_url(); ?>public/images/Home/5.png" alt=""
+                                    >
                             </a>
                         </div>
 
@@ -450,7 +432,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -462,7 +444,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -474,7 +456,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -485,7 +467,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -496,7 +478,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -507,7 +489,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -520,7 +502,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.png"
-                                    alt="" style="width: 175px; height: 150px;">
+                                    alt="" >
                             </a>
                         </div>
                         
@@ -532,8 +514,8 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    src="<?php echo base_url(); ?>public/images/Home/5.png" alt=""
+                                    >
                             </a>
                         </div>
 
@@ -546,7 +528,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -558,7 +540,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -570,7 +552,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -581,7 +563,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -592,7 +574,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -603,7 +585,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -617,7 +599,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.png"
-                                    alt="" style="width: 175px; height: 150px;">
+                                    alt="" >
                             </a>
                         </div>
                        
@@ -629,8 +611,8 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    src="<?php echo base_url(); ?>public/images/Home/5.png" alt=""
+                                    >
                             </a>
                         </div>
 
@@ -643,7 +625,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                        
@@ -655,7 +637,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -667,7 +649,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -678,7 +660,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -689,7 +671,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -700,7 +682,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -714,7 +696,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.png"
-                                    alt="" style="width: 175px; height: 150px;">
+                                    alt="" >
                             </a>
                         </div>
                         
@@ -726,8 +708,8 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    src="<?php echo base_url(); ?>public/images/Home/5.png" alt=""
+                                    >
                             </a>
                         </div>
 
@@ -740,7 +722,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -752,7 +734,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -764,7 +746,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -775,7 +757,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -786,7 +768,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -797,7 +779,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -811,7 +793,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.png"
-                                    alt="" style="width: 175px; height: 150px;">
+                                    alt="" >
                             </a>
                         </div>
                         
@@ -823,8 +805,8 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Dance/bharatanatyam2.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    src="<?php echo base_url(); ?>public/images/Home/5.png" alt=""
+                                    >
                             </a>
                         </div>
 
@@ -837,7 +819,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -849,7 +831,7 @@
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -861,7 +843,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -872,7 +854,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -883,7 +865,7 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
@@ -894,19 +876,13 @@
                             <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail"
                                     src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
-                                    style="width: 175px; height: 150px;">
+                                    >
                             </a>
                         </div>
                         
                     </div>
                 </div>
                 </div>
-                
-            
-               
-                
-
-
 
 </section>
 

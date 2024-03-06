@@ -13,7 +13,7 @@
 
         <!-- pills -->
         <div class="typesOfDance-tab">
-            <div class="row p-3 MusicSec1">
+            <div class="row p-3 ">
             <div class="col-md-12 col-12">
             <p class="fst-italic font-weight-bold text-justify">
                         Kathak, a classical dance form originating from the Indian subcontinent, is a mesmerizing
@@ -45,7 +45,7 @@
                 </div>
             </div>
         <!-- </div> -->
-                <div class="row p-3 MusicSec1">
+                <div class="row p-3 ">
                     <div class="col-md-6 col-12">
                         <div class="text-right">
                             <div class="h3">Regional Variations :</div>
@@ -74,11 +74,11 @@
                 </div>
 
            
-                <div class="row p-3 MusicSec1">
+                <div class="row p-3 ">
                     <div class="col-md-6 col-12">
                         <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg1 home">
                     </div>
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-6 col-12  pt-3">
                         <div class="text-right">
                             <div class="h3">Kathak in Modern Times :</div>
                         </div>
@@ -93,7 +93,10 @@
                         with Western dance forms, experimentation with music genres, and innovative choreography
                         have contributed to the globalization of Kathak. How has Kathak adapted to modern contexts,
                         and what is its role as a cultural ambassador on the global stage?</p>
-                        <div class="text-right">
+                       
+                    </div>
+
+                    <div class="col-md-12 col-12 pt-3">
                             <div class="h3">Kathak's Impact and Evolution :</div>
                         <p class="text-justify">
                         Explore the impact of Kathak on Indian culture, its representation in cinema, and its evolving
@@ -106,15 +109,10 @@
                         visionaries who have preserved, nurtured, and propelled Kathak into the vibrant cultural
                         landscape that it embodies today.</p>
                         </div>
-                    </div>
                 </div>
             
 
-                <div class="col-md-6 col-12 text-col mt-5">
-                        <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance">START NOW</a>
-                        </div>
-                </div>
+               
             </div>  
         </div>
     </div>
@@ -123,5 +121,4 @@
 
 
 
-<hr>
 <?php include APPPATH . 'Views/footer.php'; ?>
