@@ -125,8 +125,8 @@ class LoginController extends BaseController
 
                 ];
 
-                $phoneNumber =$getdata['mobileWithCode'];
-                $templates = "5VjwbxevOb7NCYWmsqd9WT";
+                 $phoneNumber =$getdata['mobileWithCode'];
+                 $templates = "408169718530084";
                  $msg = $emailotp;
                  whatsapp($phoneNumber,$templates,$msg);
                  $savestud = $loginModel->setStudentName($getdata);
@@ -213,13 +213,13 @@ class LoginController extends BaseController
     if (isset($updatedUserData['mobile_no'])) {
         // Send WhatsApp message to user
         $phoneNumber = $updatedUserData['mobile_no'];
-        $templates = "5VjwbxevOb7NCYWmsqd9WT";
+        $templates = "7174342849318162";
         $msg ="your register succesfully";
         whatsapp($phoneNumber, $templates, $msg);
 
        
         $adminNumber = "918010041115";
-        $templates = "5VjwbxevOb7NCYWmsqd9WT";
+        $templates = "7174342849318162";
         $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
         whatsappadmin($adminNumber, $templates, $msg);
     } else {
