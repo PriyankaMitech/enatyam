@@ -201,7 +201,7 @@ class facultymodel extends Model
                                   ) AS latest_payment';
     
         $result = $this->db->table('register')
-            ->select('register.*, latest_payment.no_of_session, GROUP_CONCAT(DISTINCT attendeance_table.Session_no) AS Session_nos')
+            ->select('register.*, latest_payment.no_of_session, GROUP_CONCAT(DISTINCT attendeance_table.Session_no) AS Session_nos, latest_payment.id as payment_id')
             ->join($latestPaymentSubquery, 'register.id = latest_payment.user_id', 'left')
             ->join('attendeance_table', 'register.id = attendeance_table.student_registerid AND attendeance_table.renewal IS NULL', 'left')
             ->where('register.role', 'Student')
@@ -210,6 +210,7 @@ class facultymodel extends Model
             ->groupBy('register.id')
             ->get()
             ->getResult();
+            // echo'<pre>';print_r($result);exit();
     
         return $result;
     }

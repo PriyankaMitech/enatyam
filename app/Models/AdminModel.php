@@ -1294,6 +1294,9 @@ $amount = $insertdata->amount/100;
 }
 
 
+
+
+
     public function fetchAttendanceForStudent($student_registerid)
 {
     $attendanceRecord = $this->db->table('attendeance_table')
