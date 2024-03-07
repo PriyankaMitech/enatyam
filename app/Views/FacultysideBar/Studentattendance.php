@@ -70,6 +70,8 @@
                                                         </select>
                                                         </td>
                                                         <td>
+                                                             <!-- Add a hidden input for payment_id -->
+                                                        <input type="hidden" name="payment_id[<?= $student->id ?>]" value="<?= $student->payment_id ?>">
                                                             <button type="button" class="btn btn-primary"
                                                                 onclick="submitAttendance(<?= $student->id ?>)">Submit
                                                                 Attendance</button>

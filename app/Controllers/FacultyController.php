@@ -358,6 +358,8 @@ class FacultyController extends BaseController
           'Attendance_status'  => $this->request->getPost('attendance'),
           'Session_no'         => $this->request->getPost('session'),
           'faculty_id'         =>$registerId,
+          'payment_id'  => $this->request->getPost('payment_id'),
+
       ];
       // print_r($data);die;
       $result = $model->insertAttendance($data);

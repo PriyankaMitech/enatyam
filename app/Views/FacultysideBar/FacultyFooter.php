@@ -622,11 +622,16 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
         var isPresentChecked = $('input[name="attendance[' + studentId + '][present]"]').is(':checked');
         var isAbsentChecked = $('input[name="attendance[' + studentId + '][absent]"]').is(':checked');
         var attendanceValue = isPresentChecked ? 'p' : (isAbsentChecked ? 'a' : '');
+
         var formData = {
             'studentId': studentId,
             'attendance': attendanceValue,
-            'session': $('select[name="session[' + studentId + ']"]').val() || ''
+            'session': $('select[name="session[' + studentId + ']"]').val() || '',
+            'payment_id': $('input[name="payment_id[' + studentId + ']"]').val() || '' // Retrieve payment_id
+
         };
+    //    console.log(formData);exit();
+
 
         $.ajax({
             type: 'POST',
