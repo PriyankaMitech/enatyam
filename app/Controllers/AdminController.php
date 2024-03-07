@@ -111,21 +111,21 @@ class AdminController extends BaseController
             // Removed the print_r and die statement for production
             
             $phoneNumber = $updatedData['phone'];
-            $templates = "5VjwbxevOb7NCYWmsqd9WT";
+            $templates = "930840461869403";
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
-            $msg = "Your Demo Will Schedule on $date at $time. Join this link: $meetlink";
+            $msg = "Your Demo Will Schedule on $date  at $time. Join this link: $meetlink";
             whatsapp($phoneNumber, $templates, $msg);
             $phoneNumber = $Facultycontact;
-            $templates = "5VjwbxevOb7NCYWmsqd9WT";
+            $templates = "930840461869403";
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
-            $msg = "You have Assing For Demo on $date at $time. Join this link For Demo: $meetlink";
+            $msg = "You have Assing For Demo on $date  at $time. Join this link For Demo: $meetlink";
             whatsapp($phoneNumber, $templates, $msg);
             $phoneNumber = "917588525387";
-            $templates = "5VjwbxevOb7NCYWmsqd9WT";
+            $templates = "930840461869403";
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
