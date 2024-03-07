@@ -8,12 +8,12 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.02);
 }
 
-.faculty-div img {
+/* .faculty-div img {
   border-radius: 50%;
   border: none;
   padding: 7px;
   position: relative;
-}
+} */
 
 .faculty-div1::before {
   content: "";

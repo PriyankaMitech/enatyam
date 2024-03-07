@@ -190,52 +190,7 @@
     //     $("body").addClass("modal-open");
     // }
 
-    function showModal(name, designation, img, qualifications, certifications, experience,FacultyDetails) {
-    $("#facultyName").text("Name: " + name);
-    $("#facultyDesignation").text("Designation: " + designation);
-    $("#imgf").attr("src", img);
-    $("#facultyQualifications").text("Qualification: " + qualifications);
-    $("#facultyCertifications").text("Certification: " + certifications);
-    $("#facultyExperience").text("Experience: " + experience);
-    $("#FacultyDetails").text("Techniques: " + FacultyDetails);
 
-    // Show modal
-    $("#facultyModal").show();
-    $("body").addClass("modal-open");
-}
-
-
-    // Close modal function
-    window.closeModal = function() {
-        $("#facultyModal").hide();
-    };
-    window.closeModal = function() {
-        $("#facultyModal").hide();
-
-        // Remove class from body to enable scrolling
-        $("body").removeClass("modal-open");
-    };
-
-
-    function showReview(name, img, ReviewDetails) {
-    $("#ReviewName").text("Name: " + name);
-    $("#imgh").attr("src", img);
-    $("#ReviewDetails").text("" + ReviewDetails);
-
-    // Show modal
-    $("#reviewModal").show();
-    $("body").addClass("modal-open");
-}
- // Close modal function
- window.closeModal1 = function() {
-        $("#reviewModal").hide();
-    };
-    window.closeModal1 = function() {
-        $("#reviewModal").hide();
-
-        // Remove class from body to enable scrolling
-        $("body").removeClass("modal-open");
-    };
 </script>
     <script>
     let prevScrollPos = window.pageYOffset;
@@ -2618,12 +2573,57 @@ setInputFilter(document.getElementById("txtMobileNo"), function(value) {
     return /^\d*$/.test(value);
 }, "Must be a number");
 
+
+
+function showModal(name, designation, img, qualifications, certifications, experience,FacultyDetails) {
+    $("#facultyName").text("Name: " + name);
+    $("#facultyDesignation").text("Designation: " + designation);
+    $("#imgf").attr("src", img);
+    $("#facultyQualifications").text("Qualification: " + qualifications);
+    $("#facultyCertifications").text("Certification: " + certifications);
+    $("#facultyExperience").text("Experience: " + experience);
+    $("#FacultyDetails").text("Techniques: " + FacultyDetails);
+
+    // Show modal
+    $("#facultyModal").show();
+    $("body").addClass("modal-open");
+}
+
+
+    // Close modal function
+    window.closeModal = function() {
+        $("#facultyModal").hide();
+    };
+    window.closeModal = function() {
+        $("#facultyModal").hide();
+
+        // Remove class from body to enable scrolling
+        $("body").removeClass("modal-open");
+    };
+
+
+    function showReview(name, img, ReviewDetails) {
+    $("#ReviewName").text("Name: " + name);
+    $("#imgh").attr("src", img);
+    $("#ReviewDetails").text("" + ReviewDetails);
+
+    // Show modal
+    $("#reviewModal").show();
+    $("body").addClass("modal-open");
+}
+ // Close modal function
+ window.closeModal1 = function() {
+        $("#reviewModal").hide();
+    };
+    window.closeModal1 = function() {
+        $("#reviewModal").hide();
+
+        // Remove class from body to enable scrolling
+        $("body").removeClass("modal-open");
+    };
+
+
 </script>
-
-
-
-</script>
-
 
 
 
