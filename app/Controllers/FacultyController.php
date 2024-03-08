@@ -805,7 +805,7 @@ public function saveshedule()
   $msg ="Your slot is Added in Your schedule";
   whatsapp($phoneNumber, $templates, $msg);
  // $phoneNumber = "917588525387";
-  $templates = "959322439105873";
+  $templates = "930840461869403";
   $msg = "New slots Given by Faculty";
   whatsappadmin($templates, $msg);
   return redirect()->to('fshedule');

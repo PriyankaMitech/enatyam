@@ -210,12 +210,12 @@ class LoginController extends BaseController
     if (isset($updatedUserData['mobile_no'])) {
         // Send WhatsApp message to user
         $phoneNumber = $updatedUserData['mobile_no'];
-        $templates = "7174342849318162";
+        $templates = "930840461869403";
         $msg ="your register succesfully";
         whatsapp($phoneNumber, $templates, $msg);
 
       //  $adminNumber = "918010041115";
-        $templates = "7174342849318162";
+        $templates = "930840461869403";
         $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
         whatsappadmin($templates, $msg);
     } else {
