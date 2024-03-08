@@ -2094,13 +2094,13 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                     <div class="row">
                                         <div class="col-md-4 col-4">
                                             <select name="countrie_code" class="form-control countrycode"
-                                                id="lenValidate"></select>
+                                                id="lenValidate" required></select>
                                         </div>
                                         <div class="col-md-8 col-8">
                                             <input required type="text" autocomplete="off" class="form-control"
                                                 value="<?php echo set_value("mobile_number");?>" name="mobile_number"
                                                 id="txtMobileNo" placeholder="Enter your whatsapp number"
-                                                onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
+                                                onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))" >
                                                 <span id="mobile_noError" class="error"></span>
                                         </div>
                                     </div>

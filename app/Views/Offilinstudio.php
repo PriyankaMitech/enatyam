@@ -2,7 +2,7 @@
 
 </style>
 <section class="contactus">
-    <div class="container cont-width">
+    <div class="container cont-width offline">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
                 <h1><b>OFFLINESTUDIO</b></h1>
@@ -11,8 +11,12 @@
     </div>
 </section>
 <section class="cont-main-section">
-    <div class="container ">
+    <div class="container-fluid">
         <div class="row">
+        <div class="col-md-12 col-12">
+                    <img src="<?=base_url(); ?>public/images/offlineStudio-2.png" class="">
+                    <!-- public/images/Home/4.png -->
+                </div>
             <div class="col-lg-12">
                 <ul class="breadcrumb-ul">
                     <li>
