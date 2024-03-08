@@ -302,7 +302,7 @@ class Home extends BaseController
                     $adminModel->updatePaymentStatus($user_id, $status);
                     $session = session();
                     $session->destroy();
-                    return redirect()->to('/')
+                    return redirect()->to('/');
                     
                 }
 
