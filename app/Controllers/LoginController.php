@@ -214,11 +214,10 @@ class LoginController extends BaseController
         $msg ="your register succesfully";
         whatsapp($phoneNumber, $templates, $msg);
 
-       
-        $adminNumber = "918010041115";
+      //  $adminNumber = "918010041115";
         $templates = "7174342849318162";
         $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
-        whatsappadmin($adminNumber, $templates, $msg);
+        whatsappadmin($templates, $msg);
     } else {
            
         }

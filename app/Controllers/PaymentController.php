@@ -73,10 +73,10 @@ class PaymentController extends BaseController
                     //Check success response
                     if ($http_status === 200 and isset($response_array['error']) === false) {
                         $success = true;
-                        $adminNumber = "7588525387";
+                      //  $adminNumber = "7588525387";
                         $msg = "payment resived rs ..";
-                        $templates = "new_food_menu";
-                        whatsappadmin($adminNumber, $templates, $msg);
+                        $templates = "930840461869403";
+                        whatsappadmin($templates, $msg);
                     } else {
                         $success = false;
                         if (!empty($response_array['error']['code'])) {
