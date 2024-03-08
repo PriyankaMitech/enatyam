@@ -43,10 +43,10 @@ class DemoController extends BaseController
         $phoneNumber = $phone;
         $templates = "2120394968319524";
         demoBook($phoneNumber,$templates);
-        $phoneNumber = "917588525387";
+       // $phoneNumber = "917588525387";
         $templates = "2120394968319524";
          $msg = "New Demo Booked Sucessfully";
-         whatsappadmin($phoneNumber,$templates,$msg,);
+         whatsappadmin($templates,$msg,);
          $session->setFlashdata('success', 'Demo booked successfully!');
         return redirect()->to('Home');
     }

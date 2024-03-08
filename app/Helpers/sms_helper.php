@@ -130,12 +130,12 @@ function whatsapp($phoneNumber, $templates = null, $msg = null)
     curl_close($curl);
    
 }
-function whatsappadmin($phoneNumber, $templates = null, $msg = null)
+function whatsappadmin($templates = null, $msg = null)
 {
     $curl = curl_init();
 
     $data = array(
-        "mobile" => $phoneNumber,
+        "mobile" =>"917588525387",
         "templateid" => $templates,
         "overridebot" => "yes/no",
         "template" => array(
@@ -171,7 +171,7 @@ function whatsappadmin($phoneNumber, $templates = null, $msg = null)
     ));
 
     $response = curl_exec($curl);
-
+// print_r($response);die;
     if ($response === false) {
         $error = curl_error($curl);
         return false;
