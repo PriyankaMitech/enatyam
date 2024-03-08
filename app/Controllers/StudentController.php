@@ -72,7 +72,7 @@ class StudentController extends BaseController
         $registerId = $session->get('id');
         $StudentModel = new StudentModel();
         $registerData = $StudentModel->getAllRegisterData($registerId, ['full_name', 'Assign_Techer_id']);
-
+        $model = new AdminModel();
         $assignTeacherId = $registerData[0]->Assign_Techer_id;
         // echo "Teacher name ";
         // print_r($assignTeacherId);
@@ -100,7 +100,15 @@ class StudentController extends BaseController
 
             // Save image name, Assign_Teacher_id, and registerId to the database
             $StudentModel->insert(['name' => $imageName, 'type' => 'image', 'Faculty_id' => $assignTeacherId, 'register_id' => $registerId, 'Student_name' => $full_name]);
-
+            $wherecond = ['id' => $assignTeacherId];
+            $facultyMobileNumber = $model->get_single_data('register', $wherecond);
+            $phoneNumber=$facultyMobileNumber->mobileWithCode;
+            $templates = "930840461869403";
+            $msg = "You have new video/images from student";
+            whatsapp($phoneNumber, $templates, $msg);
+            $templates = "930840461869403";
+            $msg = "new Video uploded By student";
+            whatsappadmin($templates, $msg);
             // Set success message in session
             $session->setFlashdata('success', 'Image uploaded successfully.');
         }
@@ -112,7 +120,16 @@ class StudentController extends BaseController
 
             // Save video name, Assign_Teacher_id, and registerId to the database
             $StudentModel->insert(['name' => $videoName, 'type' => 'video', 'Faculty_id' => $assignTeacherId, 'register_id' => $registerId, 'Student_name' => $full_name]);
+            $wherecond = ['id' => $assignTeacherId];
+            $facultyMobileNumber = $model->get_single_data('register', $wherecond);
+            $phoneNumber=$facultyMobileNumber->mobileWithCode;
 
+            $templates = "930840461869403";
+            $msg = "You have new video/images from student";
+            whatsapp($phoneNumber, $templates, $msg);
+            $templates = "930840461869403";
+            $msg = "new Video uploded By student";
+            whatsappadmin($templates, $msg);
             // Set success message in session
             $session->setFlashdata('success', 'Video uploaded successfully.');
         }
@@ -737,21 +754,23 @@ class StudentController extends BaseController
             if(!empty($studentMobileNumber)){
                         $phoneNumber = $studentMobileNumber->mobile_no;
             }
-                $templates = "new_food_menu";
-                $msg = "Your slots have been selected successfully. Start time: $startTime, End time: $endTime.";
+                $templates = "930840461869403";
+                $msg = "You selected slots  successfully. session start at $startTime and and on  $endTime  this time will same for all sessions";
                 whatsapp($phoneNumber, $templates, $msg);
 
                 if($facultyMobileNumber){
     
                 $phoneNumber = $facultyMobileNumber->mobile_no;
                 }
-                $msg = "A student has selected slots. Please be prepared.";
+                $templates = "930840461869403";
+                $msg = "A student has selected slots. Please be prepared.session start at  $startTime End on $endTime this time will same for all sessions";
                 whatsapp($phoneNumber, $templates, $msg);
     
-                $adminNumber = "7588525387";
-                $msg = "student has selected slots. Student:";
+               // $phoneNumber = "917588525387";
+                $templates = "930840461869403";
+                $msg = "student has selected slots.";
 
-                whatsappadmin($adminNumber, $templates, $msg);
+                whatsappadmin($templates, $msg);
     
                 session()->setFlashdata('success', 'Data added successfully.');
             } else {
@@ -783,21 +802,23 @@ class StudentController extends BaseController
                 if(!empty($studentMobileNumber)){
                     $phoneNumber = $studentMobileNumber->mobile_no;
         }
-            $templates = "new_food_menu";
-            $msg = "Your slots have been selected successfully. Start time: $startTime, End time: $endTime.";
-            whatsapp($phoneNumber, $templates, $msg);
+        $templates = "930840461869403";
+        $msg = "You selected slots  successfully. session start at $startTime and and on  $endTime  this time will same for all sessions";
+        whatsapp($phoneNumber, $templates, $msg);
 
             if($facultyMobileNumber){
 
             $phoneNumber = $facultyMobileNumber->mobile_no;
             }
-            $msg = "A student has selected one more day. Please be prepared.";
-            whatsapp($phoneNumber, $templates, $msg);
+            $templates = "930840461869403";
+                $msg = "A student has selected slots. Please be prepared.session start at  $startTime End on $endTime this time will same for all sessions";
+                whatsapp($phoneNumber, $templates, $msg);
+                
+              //  $phoneNumber = "917588525387";
+                $templates = "930840461869403";
+                $msg = "student has selected slots.";
 
-            $adminNumber = "7588525387";
-            $msg = "student has selected one more day . Student:";
-
-            whatsappadmin($adminNumber, $templates, $msg);
+                whatsappadmin($templates, $msg);
                 session()->setFlashdata('success', 'Data updated successfully.');
             }
         } else {

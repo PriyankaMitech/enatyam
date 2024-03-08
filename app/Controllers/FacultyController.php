@@ -147,25 +147,26 @@ class FacultyController extends BaseController
     $studentMobileNumber = $model->get_single_data('student', $wherecond); 
     $name = $studentMobileNumber->student_name;
     if (!empty($facultyMobileNumber)) {
-        $phoneNumber = $facultyMobileNumber->mobile_no;
-        $templates = "new_food_menu";
-        $msg = "video uploaded to student $name. Start time";
+   
+        $phoneNumber = $facultyMobileNumber->mobileWithCode;
+        $templates = "930840461869403";
+        $msg = "uploaded video/image  to student $name";
         whatsapp($phoneNumber, $templates, $msg);
     }
     // Get student mobile number 
     if (!empty($studentMobileNumber)) {
-        $phoneNumber = $studentMobileNumber->mobile_no;
+        $phoneNumber = $studentMobileNumber->mobileWithCode;
        
-        $templates = "new_food_menu";
-        $msg = "video uploaded by faculty to you. Start time";
+        $templates = "930840461869403";
+        $msg = "uploaded video/image  by faculty to you.";
         whatsapp($phoneNumber, $templates, $msg);
     }
 
     // Send message to admin
-    $adminNumber = "7588525387";
-    $msg = "Faculty has uploaded to student $name Video";
-    $templates = "new_food_menu";
-    whatsappadmin($adminNumber, $templates, $msg);
+  //  $phoneNumber = "917588525387";
+    $msg = "Faculty has uploaded video/image to student $name";
+    $templates = "930840461869403";
+    whatsappadmin($templates, $msg);
 
     return redirect()->to('FacultyDashboard');
 }
@@ -358,7 +359,7 @@ class FacultyController extends BaseController
           'Attendance_status'  => $this->request->getPost('attendance'),
           'Session_no'         => $this->request->getPost('session'),
           'faculty_id'         =>$registerId,
-          'payment_id'  => $this->request->getPost('payment_id'),
+           'payment_id'  => $this->request->getPost('payment_id'),
 
       ];
       // print_r($data);die;
@@ -375,14 +376,15 @@ class FacultyController extends BaseController
       $studentMobileNumber = $adminmodel->get_single_data('register', $wherecond);
   
       if ($result) {
-          $phoneNumber = (!empty($studentMobileNumber)) ? $studentMobileNumber->mobile_no : '';
-          $templates = "new_food_menu";
-          $msg = "Your attendance has been recorded successfully. Status: $stetus.$sessionno";
+          $phoneNumber = (!empty($studentMobileNumber)) ? $studentMobileNumber->mobileWithCode : '';
+          $templates = "930840461869403";
+          $msg = "Your attendance has been recorded successfully. You $stetus in session no .$sessionno";
           whatsapp($phoneNumber, $templates, $msg);
-  
-          $adminNumber = "7588525387";
-          $msg = "Attendance has been taken by faculty. Status: $stetus.session no.$sessionno";
-          whatsappadmin($adminNumber, $templates, $msg);
+          $templates = "930840461869403";
+
+         // $phoneNumber = "917588525387";
+          $msg = "Attendance has been taken by faculty. Status of session is $stetus and session no is $sessionno";
+          whatsappadmin($templates, $msg);
           $response = ['success' => true, 'message' => 'Attendance added successfully.'];
       } else {
           $response = ['success' => false, 'message' => 'Attendance not added.'];
@@ -472,6 +474,7 @@ class FacultyController extends BaseController
   // }
   public function save_schedule()
   {
+    
       $model = new AdminModel();
       $wherecond = array('faculty_registerid' => $this->request->getVar('id'));
       $data['schedule_data'] = $model->getalldata('schedule_list', $wherecond);
@@ -523,13 +526,13 @@ class FacultyController extends BaseController
           $mobileNumber = $facultyData->mobile_no;
       // print_r($mobileNumber);die;
        $phoneNumber = $mobileNumber;
-       $templates = "new_food_menu";
+       $templates = "930840461869403";
        $msg ="your register succesfully";
        whatsapp($phoneNumber, $templates, $msg);
-       $adminNumber = "7588525387";
-       $templates = "new_food_menu";
+      // $adminNumber = "917588525387";
+       $templates = "930840461869403";
        $msg = "Faculty give slots";
-       whatsappadmin($adminNumber, $templates, $msg);
+       whatsappadmin($templates, $msg);
           session()->setFlashdata('success', 'Schedule updated successfully. Mobile Number: ');
       }
   
@@ -539,11 +542,20 @@ class FacultyController extends BaseController
 
   public function sendmeetinglink()
   {
+    $result = session();
+    $session_id = $result->get('id');
     $link = $this->request->getPost('linkInput');
     $id = $this->request->getPost('student_registerid');
     $model = new facultymodel();
+    $modell = new AdminModel();
     $meetLinkUpdated = $model->updatemeeetlink($id, $link);
+    $studentdataData = $modell->getsinglerow('register', ['id' => $id]);
+    $mobileNumber = $studentdataData->mobileWithCode;
     if ($meetLinkUpdated == 1) {
+      $phoneNumber = $mobileNumber;
+      $templates = "930840461869403";
+      $msg ="This session $link link send from faculty and its Valid for all sessions join this link for all sessions ";
+      whatsapp($phoneNumber, $templates, $msg);
       session()->setFlashdata('success', 'Link added successfully.');
     } else {
       session()->setFlashdata('success', 'Failed to update link.');
@@ -789,15 +801,13 @@ public function saveshedule()
   $model->insertshedule($data); 
   $Facultycontact = $adminmodel->Facultycontact($facultyId);
   $phoneNumber = $Facultycontact;
-  $templates = "5VjwbxevOb7NCYWmsqd9WT";
-  $msg ="You Give Slots";
+  $templates = "930840461869403";
+  $msg ="Your slot is Added in Your schedule";
   whatsapp($phoneNumber, $templates, $msg);
-
- 
-  $adminNumber = "918010041115";
-  $templates = "5VjwbxevOb7NCYWmsqd9WT";
-  $msg = "New slots Given by Faculty ";
-  whatsappadmin($adminNumber, $templates, $msg);
+ // $phoneNumber = "917588525387";
+  $templates = "959322439105873";
+  $msg = "New slots Given by Faculty";
+  whatsappadmin($templates, $msg);
   return redirect()->to('fshedule');
 }
 
