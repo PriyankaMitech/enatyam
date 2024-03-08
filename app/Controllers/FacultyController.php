@@ -567,6 +567,9 @@ class FacultyController extends BaseController
 
   public function setlinkforgroup()
   {
+    // echo "<pre>";print_r($_POST);exit();
+    $model = new AdminModel();
+
     $data = [
 
       'meetlink' => $this->request->getVar('linkInput'),
@@ -577,6 +580,58 @@ class FacultyController extends BaseController
 
       $update_data = $db->table('tbl_student_shedule')->where('groupname', $this->request->getVar('group_name'));
       $update_data->update($data);
+
+      $wherecond1   = ['id' => $this->request->getVar('faculty_id')];
+
+      $faculty_data = $model->getsinglerow('register', $wherecond1);
+      
+      $link = $this->request->getVar('linkInput');
+      $groupname = $this->request->getVar('group_name');
+          //   print_r($faculty_data);die;
+      if($faculty_data){
+              $phoneNumber = (!empty($faculty_data)) ? $faculty_data->mobileWithCode : '';
+              $msg = "This session " . $link . " link send from student succefully.";
+              $templates = "930840461869403";
+              whatsapp($phoneNumber,$templates,$msg);
+      
+      }
+          $templates = "930840461869403";
+          $msg = "This session " . $link . " link sent from faculty and it's valid for all sessions for this ".$groupname. "Join this link for all sessions.";
+
+          whatsappadmin($templates, $msg);
+
+          $wherecond = array('is_deleted' => 'N', 'group_name' => $this->request->getVar('group_name'));
+          $groupData = $model->get_single_data('tbl_group', $wherecond);
+      
+          if (!empty($groupData)) {
+            $group_id = $groupData->id;
+            $studentIdsString = $groupData->student_id;
+      
+            $getstudentids = explode(',', $studentIdsString);
+          }
+      
+          foreach ($getstudentids as $studentId) {
+                // $wherecond1 = array('is_deleted' => 'N', 'register_id' => $studentId);
+                $wherecond1 = array('register_id' => $studentId);
+      
+                $studentData = $model->get_single_data('student', $wherecond1);
+      
+                if (!empty($studentData)) {
+      
+                  // Update database with file information for each student
+      
+      
+                  $phoneNumber = (!empty($studentData)) ? $studentData->mobileWithCode : '';
+      
+                  $msg = "This session " . $link . " link sent from faculty and it's valid for all sessions for this ".$groupname. "Join this link for all sessions.";
+                  // $msg = "Group Created Successfully by " . session('sessiondata')['user_name'] . ". The group name is '" . $this->request->getVar('group_name') . "'. This group is assigned to you.";
+                  $templates = "930840461869403";
+                  whatsapp($phoneNumber,$templates,$msg);
+      
+                }
+              }
+      
+
       session()->setFlashdata('success', 'link added successfully.');
     } else {
 
