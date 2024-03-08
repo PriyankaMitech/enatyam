@@ -300,7 +300,9 @@ class Home extends BaseController
                     $renewal = 'Y';
                     $adminModel->updadteattandance($user_id, $renewal);
                     $adminModel->updatePaymentStatus($user_id, $status);
-                   
+                    $session = session();
+                    $session->destroy();
+                    return redirect()->to('/')
                     
                 }
 
