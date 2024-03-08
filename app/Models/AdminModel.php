@@ -1537,13 +1537,67 @@ $amount = $insertdata->amount/100;
     }
     public function getFacultyAttendance()
     {
-        return $this->db->table('attendeance_table')
-            ->select('attendeance_table.*, register_faculty.full_name as faculty_name, register_student.full_name as student_name, payment.no_of_session')
-            ->join('register as register_faculty', 'register_faculty.id = attendeance_table.faculty_id', 'left')
-            ->join('register as register_student', 'register_student.id = attendeance_table.student_registerid', 'left')
-            ->join('payment', 'payment.user_id = attendeance_table.student_registerid', 'left')
+        // $result = $this->db->table('attendeance_table')
+        //     ->select('attendeance_table.*, register_faculty.full_name as faculty_name, register_student.full_name as student_name, payment.no_of_session')
+        //     ->join('register as register_faculty', 'register_faculty.id = attendeance_table.faculty_id', 'left')
+        //     ->join('register as register_student', 'register_student.id = attendeance_table.student_registerid', 'left')
+        //     ->join('payment', 'payment.user_id = attendeance_table.student_registerid', 'left')
+        //     ->get()
+        //     ->getResult();
+        //     echo'<pre>';print_r($this->db->getLastQuery());
+
+// Fetch attendance data
+// Fetch attendance data
+$query = $this->db->table('attendeance_table')
+    ->get()
+    ->getResult();
+
+// Iterate through attendance data and add names and session count to the result
+foreach ($query as $attendance) {
+    // Check if student_registerid is present
+    if ($attendance->student_registerid) {
+        // Fetch student name from register table
+        $student = $this->db->table('register')
+            ->select('full_name')
+            ->where('id', $attendance->student_registerid)
             ->get()
-            ->getResult();
+            ->getRow();
+
+        // Add student name to the result
+        $attendance->student_name = $student ? $student->full_name : null;
+    }
+
+    // Check if faculty_id is present
+    if ($attendance->faculty_id) {
+        // Fetch faculty name from register table
+        $faculty = $this->db->table('register')
+            ->select('full_name')
+            ->where('id', $attendance->faculty_id)
+            ->get()
+            ->getRow();
+
+        // Add faculty name to the result
+        $attendance->faculty_name = $faculty ? $faculty->full_name : null;
+    }
+
+    // Check if payment_id is present
+    if ($attendance->payment_id) {
+        // Fetch no_of_session from payment table
+        $payment = $this->db->table('payment')
+            ->select('no_of_session')
+            ->where('id', $attendance->payment_id)
+            ->get()
+            ->getRow();
+
+        // Add no_of_session to the result
+        $attendance->no_of_session = $payment ? $payment->no_of_session : null;
+    }
+}
+
+// Now, $query result contains student_name, faculty_name, and no_of_session in each row
+
+return $query;
+                    //  echo "<pre>";print_r($query);exit();
     }
     public function getSessionno($user_id)
     {

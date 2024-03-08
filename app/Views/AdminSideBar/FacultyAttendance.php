@@ -43,27 +43,28 @@
         <tbody>
             <?php $counter = 1; ?>
             <?php $displayedIds = []; ?>
-            <?php foreach ($attendance as $row): ?>
-                <?php if (!in_array($row->student_registerid, $displayedIds)): ?>
-                    <?php
-                    // Count the conducted sessions for the current student
-                    $conductedSessionsCount = array_reduce($attendance, function ($carry, $item) use ($row) {
-                        return $carry + ($item->student_registerid == $row->student_registerid);
-                    }, 0);
-                    ?>
-                    <tr>
-                        <td><?= $counter++ ?></td>
-                        <td><?= $row->faculty_name ?></td>
-                        <td><?= $row->student_name ?></td>
-                        <td><?= $row->no_of_session ?></td>
-                        <td><?= $conductedSessionsCount ?></td>
-                        <!-- <td></td>
-                        <td></td> -->
-                        <!-- ... other columns ... -->
-                    </tr>
-                    <?php $displayedIds[] = $row->student_registerid; ?>
-                <?php endif; ?>
-            <?php endforeach; ?>
+            <!-- <?php //echo "<pre>";print_r($attendance);exit(); ?> -->
+            <?php
+// Group attendance data by payment_id
+$groupedAttendance = [];
+foreach ($attendance as $row) {
+    $paymentId = $row->payment_id;
+    if (!isset($groupedAttendance[$paymentId])) {
+        $groupedAttendance[$paymentId] = $row;
+    }
+}
+?>
+
+<?php foreach ($groupedAttendance as $paymentId => $row): ?>
+    <tr>
+        <td><?= $counter++ ?></td>
+        <td><?= $row->faculty_name ?></td>
+        <td><?= $row->student_name ?></td>
+        <td><?= $row->no_of_session ?></td>
+        <!-- ... other columns ... -->
+    </tr>
+<?php endforeach; ?>
+
         </tbody>
     </table>
 </div>
