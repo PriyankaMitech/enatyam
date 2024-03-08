@@ -83,6 +83,7 @@ require_once 'src/SMTP.php';
     }
 function whatsapp($phoneNumber, $templates = null, $msg = null)
 {
+    // echo $phoneNumber;exit();
     $curl = curl_init();
 
     $data = array(
@@ -122,7 +123,7 @@ function whatsapp($phoneNumber, $templates = null, $msg = null)
     ));
 
     $response = curl_exec($curl);
- //  print_r($response);die;
+  //print_r($response);die;
     if ($response === false) {
         $error = curl_error($curl);
         return false;
@@ -135,7 +136,10 @@ function whatsappadmin($templates = null, $msg = null)
     $curl = curl_init();
 
     $data = array(
-        "mobile" =>"917588525387",
+
+        "mobile" => "917588525387",
+
+
         "templateid" => $templates,
         "overridebot" => "yes/no",
         "template" => array(

@@ -671,7 +671,7 @@ class FacultyController extends BaseController
 
         // Move the file to the destination path
         $videoFile->move($destinationPath, $fileName);
-
+// echo "<pre>";print_r($getstudentids);exit();
         // Iterate through each student ID and update the database
         foreach ($getstudentids as $studentId) {
           // $wherecond1 = array('is_deleted' => 'N', 'register_id' => $studentId);
@@ -684,7 +684,41 @@ class FacultyController extends BaseController
 
             // Update database with file information for each student
             $facultyModel->updateStudentVideoforgroup($studentidd, $faculty_id, $fileName, $group_id);
+
+
+            $phoneNumber = (!empty($studentData)) ? $studentData->mobileWithCode : '';
+
+            $msg = 'Video/Image uploaded succefully for you by '.session('sessiondata')['user_name'];
+            // $msg = "Group Created Successfully by " . session('sessiondata')['user_name'] . ". The group name is '" . $this->request->getVar('group_name') . "'. This group is assigned to you.";
+            $templates = "930840461869403";
+            whatsapp($phoneNumber,$templates,$msg);
+
           }
+
+          $wherecond1   = ['id' => $faculty_id];
+
+          $faculty_data = $model->getsinglerow('register', $wherecond1);
+
+              //   print_r($faculty_data);die;
+          if($faculty_data){
+                  $phoneNumber = (!empty($faculty_data)) ? $faculty_data->mobileWithCode : '';
+
+
+                  $msg = 'Video/Image uploaded succefully.';
+                  $templates = "930840461869403";
+      
+                          //  print_r($phoneNumber);die;
+                  whatsapp($phoneNumber,$templates,$msg);
+
+          }
+
+
+          $templates = "930840461869403";
+          $msg = "Video/Image uploaded succefully by faculty";
+
+          whatsappadmin($templates, $msg);
+  
+
         }
 
         return redirect()->to('FacultyDashboard');

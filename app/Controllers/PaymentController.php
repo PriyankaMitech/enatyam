@@ -45,7 +45,12 @@ class PaymentController extends BaseController
 
     public function payment()
     {
+
+
+      
+        // echo "<pre>";print_r($_POST);exit();
         $adminmodel = new AdminModel();
+        $amount1 = $this->request->getPost('total_amount')/100;
         if (!empty($this->request->getPost('razorpay_payment_id')) && !empty($this->request->getPost('merchant_order_id'))) {
 
             $razorpay_payment_id     = $this->request->getPost('razorpay_payment_id');
@@ -72,11 +77,21 @@ class PaymentController extends BaseController
                     $response_array = json_decode($result, true);
                     //Check success response
                     if ($http_status === 200 and isset($response_array['error']) === false) {
+                        // echo "<pre>";print_r($_SESSION);exit();
+
                         $success = true;
-                      //  $adminNumber = "7588525387";
-                        $msg = "payment resived rs ..";
+
+                        $msg = "Payment successfully done by " . session('sessiondata')['user_name'] . " Rs.$amount1. and he/she selected for " . session('sessiondata')['SessionType']. "session.";
+                        $msg1 = "Payment Successfully Done...!!!";
                         $templates = "930840461869403";
+
+                        $number = session('sessiondata')['mobileWithCode'];
+
+                        whatsapp($number, $templates, $msg1);
+
                         whatsappadmin($templates, $msg);
+
+
                     } else {
                         $success = false;
                         if (!empty($response_array['error']['code'])) {
@@ -132,6 +147,7 @@ class PaymentController extends BaseController
         $data['title'] = 'Razorpay Success | Infovistar';
         $data['transactionid'] = $this->session->get('razorpay_payment_id');
         $data['Orderid'] = $this->session->get('merchant_order_id');
+
         echo view('payment_s', $data);
     }
 
