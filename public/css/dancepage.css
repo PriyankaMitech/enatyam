@@ -325,3 +325,43 @@ body {
 .video-dance.musicv {
   object-fit: fill;
 }
+.staff-box {
+  border: solid 2px #ff0066;
+  background: radial-gradient(circle at 50% 0%, #fff 25%, #f4bdd3);
+  padding: 0.6rem;
+  padding-top: 0;
+  text-align: center;
+  width: 100%;
+  /* max-width: 280px; */
+  max-width: 500px;
+  margin-top: 64px;
+  box-shadow: inset 0 10px #ff0066, 0 1px 10px #0343;
+}
+
+.staff-box img {
+  margin-top: -60px;
+  margin-bottom: 1px;
+  border-radius: 50%;
+  border: solid 3px #f8afcc;
+  width: 100%;
+  max-width: 128px;
+  aspect-ratio: 1/1;
+}
+.staff-box header {
+  font-size: 1.2em;
+  line-height: 1;
+  font-weight: bold;
+}
+.staff-box p,
+.staff-box a {
+  display: block;
+  font-size: 16px;
+  margin: 0.5em 0;
+  line-height: 1.05;
+}
+.modal-content.userModal {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left !important;
+}
+
