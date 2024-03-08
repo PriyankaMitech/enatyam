@@ -124,7 +124,7 @@ class FacultyController extends BaseController
         case 'image/jpg':
         case 'image/png':
         case 'image/jpeg':
-            $videoFile->move(ROOTPATH . 'public\uploads\images\facultyUploadedImages');
+            $videoFile->move(ROOTPATH . 'public/uploads/images/facultyUploadedImages');
             $videoFilename = $videoFile->getName();
             break;
         case 'avi':
@@ -134,7 +134,7 @@ class FacultyController extends BaseController
         case 'mp4':
         case 'video/mp4':
         case 'wma':
-            $videoFile->move(ROOTPATH . 'public\uploads\FacultyUplodedVideos');
+            $videoFile->move(ROOTPATH . 'public/uploads/FacultyUplodedVideos');
             break;
     }
 
