@@ -240,6 +240,7 @@ class LoginModel extends Model
                 'access_level'       => $result->access_level,
                 'is_logged_in'       => 'Y',
                 'SessionsCount'      =>$result->SessionsCount,
+                'mobileWithCode'     =>$result->mobileWithCode,
             ];
 
             $session->set('sessiondata', $sessiondata);

@@ -1813,9 +1813,53 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
                     'created_on' => date('Y-m-d H:i:s'),
                 ];
 
+               
+
                 $add_data = $db->table('tbl_group');
                 $add_data->insert($data);
+                // Whatsup call
 
+                $wherecond1   = ['id' => $this->request->getVar('faculty_id_g')];
+
+                $faculty_data = $model->getsinglerow('register', $wherecond1);
+
+                    //   print_r($faculty_data);die;
+                if($faculty_data){
+                        $phoneNumber = (!empty($faculty_data)) ? $faculty_data->mobileWithCode : '';
+
+
+                        $msg = "Group Created Successfully by " . session('sessiondata')['user_name'] . ". The group name is '" . $this->request->getVar('group_name') . "'. This group is assigned to you.";
+                        $templates = "930840461869403";
+            
+                                //  print_r($phoneNumber);die;
+                        whatsapp($phoneNumber,$templates,$msg);
+                
+                        $templates = "930840461869403";
+                        $msg = "Group Creted Succefully.";
+
+                        whatsappadmin($templates, $msg);
+                }
+
+                $studentIds = explode(',', $data['student_id']);
+                foreach ($studentIds as $studentId) {
+                 
+
+                    $wherecond2   = ['id' => $studentId];
+
+                    $student_data = $model->getsinglerow('register', $wherecond2);
+
+                    if($student_data){
+                        $phoneNumber = (!empty($student_data)) ? $student_data->mobileWithCode : '';
+
+
+                        $msg = "Group Created Successfully by " . session('sessiondata')['user_name'] . ". The group name is '" . $this->request->getVar('group_name') . "'. This group is assigned to you.";
+                        $templates = "930840461869403";
+                        whatsapp($phoneNumber,$templates,$msg);
+
+                    }
+
+                    }
+                    // whatsup call end
 
                 if (!empty($this->request->getVar('student_id'))) {
                     $registerUpdateData = [
