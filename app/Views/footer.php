@@ -3092,7 +3092,11 @@ function showModal(name, designation, img, qualifications, certifications, exper
                 confirm_pass: {
                     required: true,
                     equalTo: '#password'
-                }
+                },
+                countrie_code: {
+                required: true
+            },
+            
             },
             messages: {
                 full_name: {
@@ -3115,7 +3119,11 @@ function showModal(name, designation, img, qualifications, certifications, exper
                 confirm_pass: {
                     required: 'Please confirm your password.',
                     equalTo: 'Passwords do not match.'
-                }
+                },
+                countrie_code: {
+                required: 'Please select a country code.'
+            },
+            
             },
             submitHandler: function(form) {
                 var formData = $(form).serialize();

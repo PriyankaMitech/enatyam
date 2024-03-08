@@ -397,7 +397,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     const  details = [{
             "code": "N.A.",
             "label": "Please click to select country code",
-            "phone": "000",
+            "phone": "",
             "data-phoneLength": 0
         },
         {
