@@ -1,3 +1,15 @@
+@media only screen and (max-width: 767px) {
+  .modal {
+    top: 274px !important;
+    left: 181px !important;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .modal {
+    top: 28% !important;
+  }
+}
 .ST_Inspire-video1 {
   border: 0;
   width: 100% !important;

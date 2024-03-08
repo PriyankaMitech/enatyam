@@ -13,14 +13,14 @@
 <section class="s_header-section">
     <div class="container-fluid mt-2">
         <div class="row ">
-            <div class="col-lg-8 p-5">
+            <div class="col-lg-8 col-md-8 col-12 p-5">
                 <div class="bannervs">
                     <video class="video-dance bannerv"  controls="1" autoplay="0" loop="0">
                         <source src="<?=base_url(); ?>public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-12">
             <div class="banneris">
                 <img src="<?=base_url(); ?>public/images/Yoga/yogablack.png" class="img-fluid mt-5" alt="Image 4">
                 </div>
@@ -28,7 +28,7 @@
         </div>
     </div>
 </section>
-<section class="btnSection1">
+<section class="btnSection1 yogapagebtn">
     <div class="container">
         <div class="typesOfYoga-tab">
 
@@ -86,7 +86,7 @@
                 </li>
             </ul>
 
-            <div class="tab-content" id="pills-tabContent">
+            <div class="tab-content " id="pills-tabContent">
                 <!-- Prenatal Yoga   -->
                 <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel" aria-labelledby="pills-PrenatalYoga-tab">
                     <div class="row">
@@ -96,16 +96,16 @@
                         <div class="col-lg-6 col-md-6 col-12 text-left text-col">
                             <h3 class="heading"> Prenatal Yoga</h3>
 
-                            <p class="">
+                            <p class="yogapagecotent">
                                 The course focuses on making life healthier and building core stength by practicing Yoga in scientific way . Online prenatal yoga classes provide expectant mothers with a convenient and accessible way to stay active and healthy throughout their pregnancy. These classes are designed to help pregnant women reduce stress, alleviate common pregnancy-related discomforts, and prepare for childbirth. Online classes offer flexibility for busy schedules and can be accessed from the comfort of one’s own home. In addition to physical benefits, prenatal yoga classes can also provide emotional support and a sense of community for expectant mothers. With the rise of virtual platforms, there has never been a better time to take advantage of the many benefits of online prenatal yoga classes.ogical well-being, and overall health.
                             </p>
-                            <div class="text-end mt-4">
+                            <div class="text-end mt-4 yogabtn">
                                 <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
                             </div>
 
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn learningBtny learningBtnyoga">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 col-md-1 hide">

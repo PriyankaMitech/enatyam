@@ -19,19 +19,19 @@
                                 <h1 class="heading Title_main__VrmF4"> Book Free Online Trial Class.</h1>
 
                                 <div class="row fetures text-white">
-                                    <div class="col-lg-3 col-md-3 col-6 bfdf">
+                                    <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures" src="public/images/instructors-svg.svg">
                                         <span>Top Instructors<span>
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-6 bfdf">
+                                    <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/live.svg">
                                         <span>2 Live classes per week<span>
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-6 bfdf">
+                                    <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/materials-svg.svg">
                                         <span>Revision Material<span>
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-6 bfdf">
+                                    <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/certification-svg.svg">
                                         <span>Performance & Certificate<span>
                                     </div>
@@ -65,10 +65,10 @@
 
                                     <div class="row tpm">
                                         <label class="col-md-4 text-white fmname" for="mobile_no">Mobile No.<span class="required">*</span></label>
-                                        <div class="col-md-2">
+                                        <div class="col-md-2 seletbook">
                                             <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"></select>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 seletbook">
                                             <input required type="text" autocomplete="off" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
                                         </div>
                                     </div>
@@ -76,7 +76,7 @@
 
                                 <div class="row tpm">
                                     <span class="col-lg-4 col-md-4 col-12 text-white fmname">Age group* :</span>
-                                    <span class="col-lg-8 col-md-8 col-12">
+                                    <span class="col-lg-8 col-md-8 col-12 seletbook">
                                         <button type="button" class="btn btn-primary ptage ageb active">Below 10
                                             Yrs</button>
                                         <button type="button" class="btn btn-primary ptage ageb">10-15 Yrs</button>
@@ -88,7 +88,7 @@
 
                                 <div class="row tpm">
                                     <span class="col-lg-4 col-md-4 col-12 text-white fmname">Have you learned Any classes*:</span>
-                                    <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
+                                    <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF seletbook">
                                         <button type="button" class="btn btn-primary ptage classd active">Yes</button>
                                         <button type="button" class="btn btn-primary ptage classd">No</button>
                                     </span>
@@ -105,7 +105,7 @@
                             <div class="row tpm">
                                 <span class="col-lg-4 col-md-4 col-12 text-white fmname">Select Country* : </span>
 
-                                <div class="col-lg-8 col-md-8 col-12 form-group slcsfieldsd ">
+                                <div class="col-lg-8 col-md-8 col-12 ">
                                     <select class="form-control" id="inputCountry" name="Country">
 
                                         <option value="">Select Country</option>
@@ -145,7 +145,7 @@
                                 <span class="col-lg-4 col-md-4 col-12 text-white fmname">Please select course* :</span>
 
 
-                                <div class="col-lg-8 col-md-8 col-12 form-group " id="category_div">
+                                <div class="col-lg-8 col-md-8 col-12 form-group seletbook" id="category_div">
                                     <select class="form-control" name="courses_id_d" id="courses_id_d"
                                         style="width: 100%;">
 
@@ -167,7 +167,7 @@
                             <div class="row tpm">
 
                                 <span class="col-lg-4 col-md-4 col-12 text-white fmname">Please select sub courses* :</span>
-                                <div class="col-lg-8 col-md-8 col-12 sub_category_div form-group" id="sub_category_div">
+                                <div class="col-lg-8 col-md-8 col-12 sub_category_div form-group seletbook"  id="sub_category_div">
                                     <input type="hidden" id="selected_sub_courses_id_d"
                                         value="<?php if (isset($edit)) {echo ($edit['sub_courses_id_d']);} ?>">
 

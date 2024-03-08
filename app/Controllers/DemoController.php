@@ -12,7 +12,7 @@ class DemoController extends BaseController
         // print_r($_POST);die;
 
         $demoModel = new DemoModel();
-        $phone = $this->request->getPost('phone');
+       
         $data = [
             'name' => $this->request->getPost('name'),
             'email' => $this->request->getPost('email'),
@@ -34,20 +34,20 @@ class DemoController extends BaseController
             // 'End_Time' => $this->request->getPost('End_Time'),
 
         ];
+        $phone = $data['mobileWithCode'];
         // echo "<pre>";
-        // print_r($data);
+        // print_r($phone);
         // exit();
         $demoModel->save($data);
         $session = session();
         $phoneNumber = $phone;
-        $templates = "5VjwbxevOb7NCYWmsqd9WT";
-        $msg = "Your Demo Booked Sucessfully";
-        whatsapp($phoneNumber,$templates,$msg,);
-        $phoneNumber = "917588525387";
-        $templates = "5VjwbxevOb7NCYWmsqd9WT";
-        $msg = "New Demo Booked Sucessfully";
-        whatsappadmin($phoneNumber,$templates,$msg,);
-        $session->setFlashdata('success', 'Demo booked successfully!');
+        $templates = "2120394968319524";
+        demoBook($phoneNumber,$templates);
+       // $phoneNumber = "917588525387";
+        $templates = "2120394968319524";
+         $msg = "New Demo Booked Sucessfully";
+         whatsappadmin($templates,$msg,);
+         $session->setFlashdata('success', 'Demo booked successfully!');
         return redirect()->to('Home');
     }
 

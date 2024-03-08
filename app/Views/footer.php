@@ -1,13 +1,13 @@
 <footer>
     <div class="container cont-width">
         <div class="row">
-            <div class="col-md-3 col-12 footer-div flid">
+            <div class="col-lg-3 col-md-3 col-12 footer-div flid">
                 <img src="public/images/logos.png" />
                 <p class="mt-2 tx">At Enatyam, we are providing you with professional training of dance forms originating
                     from the Indian subcontinent. Our talented mentors have been trained to provide you with an amazing
                     dancing experience.</p>
             </div>
-            <div class="col-md-3 col-6 footer-div fu">
+            <div class="col-lg-3 col-md-3 col-6 footer-div fu fuu">
                 <ul class="row">
                     <li>
                         <a href="<?=base_url(); ?>Dance">Dance</a>
@@ -25,7 +25,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-3 col-6 footer-div fu">
+            <div class="col-lg-3 col-md-3 col-6 footer-div fu">
                 <div class="f-ul">
                 <ul class="row">
                     
@@ -50,7 +50,7 @@
                 </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-6 footer-div fu1">
+            <div class="col-lg-3 col-md-3 col-6 footer-div fu1">
                 <ul>
                  
                     <!-- <li>
@@ -454,7 +454,7 @@
                     items: 1
                 },
                 600: {
-                    items: 1
+                    items: 3
                 },
                 1000: {
                     items: 4    
@@ -564,7 +564,7 @@ $(document).ready(function() {
                     items: 1
                 },
                 600: {
-                    items: 1
+                    items: 3
                 },
                 1000: {
                     items: 4

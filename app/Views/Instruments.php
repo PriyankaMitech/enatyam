@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<section class="btnSection">
+<section class="btnSection btnSectionI">
     <div class="container">
         <div class="typesOfYoga-tab">
 
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn learningBtnI">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -3946,7 +3946,7 @@
 
 
 
-<section class="testimonials ittm" id="testimonials">
+<section class="testimonials ittmi" id="testimonials">
     <div class="container">
         <div class="row">
             <span class="text-center mbft"> <button type="button" class="btn btndemo step mfi">Testimonials</button></span>

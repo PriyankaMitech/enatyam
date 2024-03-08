@@ -359,7 +359,7 @@ $name               = "RazorPay Infovistar";
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
                         <div class="row">
-                            <div class="col-lg-10 col-md-10 col-12">
+                            <div class="col-lg-10 col-md-12 col-12">
                                 <form name="razorpay-form" id="razorpay-form" action="<?php echo base_url() ?>payment" method="POST">
                                     <div class="row pricing-card-section">
                                         <div class="col-lg-4 col-md-4 col-12 ppsb">
@@ -647,7 +647,7 @@ $name               = "RazorPay Infovistar";
                                 </form>
                             </div>
 
-                            <div class="col-lg-2 col-md-2 pddn">
+                            <div class="col-lg-2 pddn">
                                 <img src="public/images/price.png" class="opman" width="100%" />
 
                             </div>

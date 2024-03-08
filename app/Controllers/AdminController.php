@@ -111,26 +111,26 @@ class AdminController extends BaseController
             // Removed the print_r and die statement for production
             
             $phoneNumber = $updatedData['phone'];
-            $templates = "5VjwbxevOb7NCYWmsqd9WT";
+            $templates = "930840461869403";
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
-            $msg = "Your Demo Will Schedule on $date at $time. Join this link: $meetlink";
+            $msg = "Your Demo Will Schedule on $date  at $time. Join this link: $meetlink";
             whatsapp($phoneNumber, $templates, $msg);
             $phoneNumber = $Facultycontact;
-            $templates = "5VjwbxevOb7NCYWmsqd9WT";
+            $templates = "930840461869403";
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
-            $msg = "You have Assing For Demo on $date at $time. Join this link For Demo: $meetlink";
+            $msg = "You have Assing For Demo on $date  at $time. Join this link For Demo: $meetlink";
             whatsapp($phoneNumber, $templates, $msg);
-            $phoneNumber = "917588525387";
-            $templates = "5VjwbxevOb7NCYWmsqd9WT";
+          //  $phoneNumber = "917588525387";
+            $templates = "930840461869403";
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
             $msg = "New Demo Will Be on $date at $time. Join this link For Demo: $meetlink";
-            whatsappadmin($phoneNumber, $templates, $msg);
+            whatsappadmin($templates, $msg);
             session()->setFlashdata('success', 'Demo Schedule successfully.');
         }
     }
@@ -175,17 +175,17 @@ class AdminController extends BaseController
                 list($phoneNumber,$studentphoneNumber) = $result;
                 $session = session();
                 $phoneNumber=$phoneNumber;
-                $templates = "5VjwbxevOb7NCYWmsqd9WT";
-                $msg = "You assign student";
+                $templates = "930840461869403";
+                $msg = "You have assign new  student";
                 whatsapp($phoneNumber, $templates, $msg);
                 $phoneNumber=$studentphoneNumber;
-                $templates = "5VjwbxevOb7NCYWmsqd9WT";
-                $msg = "You assign student";
+                $templates = "930840461869403";
+                $msg = "You have assign faculty";
                 whatsapp($phoneNumber, $templates, $msg);
-                $adminNumber ="917588525387";
-                $templates = "5VjwbxevOb7NCYWmsqd9WT";
-                $msg = "Assign faculty To student";
-                whatsappadmin($adminNumber, $templates, $msg);
+              //  $adminNumber ="917588525387";
+                $templates = "930840461869403";
+                $msg = "Assign faculty successfully";
+                whatsappadmin($templates, $msg);
     
                 $session->setFlashdata('success', 'Faculty assigned successfully!');
                 return redirect()->to('Admindashboard');
@@ -446,6 +446,7 @@ class AdminController extends BaseController
                             'full_name' => $lastUpdatedCareerData['name'],
                             'email' => $lastUpdatedCareerData['email'],
                             'mobile_no' => $lastUpdatedCareerData['phone'],
+                            'mobileWithCode' => $lastUpdatedCareerData['mobileWithCode'],
                             'is_register_done' => 'Y',
                             'role' => 'Faculty',
                             'carrier_id' =>  $D_id,
@@ -488,11 +489,17 @@ class AdminController extends BaseController
         $Subject = 'Your Application Approved';
         $tital = 'congratulations You Are Selected';
         $model = new AdminModel();
+        
+  
         $result = $model->updatePassword($id, $password);
+           $wherecond = ['id' => $id];
+            $studentMobileNumber = $model->get_single_data('register', $wherecond);
+           
         if ($result) {
-            $phoneNumber = $phone;
-            $templates = "GXBExIqMbqW8QVtJwQnBWT";
-            $msg = "Your Application Approved Your Password is: $password";
+          
+            $phoneNumber = $studentMobileNumber->mobileWithCode;
+            $templates = "930840461869403";
+            $msg = "Your Application Approved Your account  Password is $password";
             whatsapp($phoneNumber, $templates, $msg);
             sendConfirmationEmail($email, $password, $msg, $Subject, $tital);
             $this->session->setFlashdata('success', 'Password updated successfully.');
@@ -1813,9 +1820,53 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
                     'created_on' => date('Y-m-d H:i:s'),
                 ];
 
+               
+
                 $add_data = $db->table('tbl_group');
                 $add_data->insert($data);
+                // Whatsup call
 
+                $wherecond1   = ['id' => $this->request->getVar('faculty_id_g')];
+
+                $faculty_data = $model->getsinglerow('register', $wherecond1);
+
+                    //   print_r($faculty_data);die;
+                if($faculty_data){
+                        $phoneNumber = (!empty($faculty_data)) ? $faculty_data->mobileWithCode : '';
+
+
+                        $msg = "Group Created Successfully by " . session('sessiondata')['user_name'] . ". The group name is '" . $this->request->getVar('group_name') . "'. This group is assigned to you.";
+                        $templates = "930840461869403";
+            
+                                //  print_r($phoneNumber);die;
+                        whatsapp($phoneNumber,$templates,$msg);
+                
+                        $templates = "930840461869403";
+                        $msg = "Group Creted Succefully.";
+
+                        whatsappadmin($templates, $msg);
+                }
+
+                $studentIds = explode(',', $data['student_id']);
+                foreach ($studentIds as $studentId) {
+                 
+
+                    $wherecond2   = ['id' => $studentId];
+
+                    $student_data = $model->getsinglerow('register', $wherecond2);
+
+                    if($student_data){
+                        $phoneNumber = (!empty($student_data)) ? $student_data->mobileWithCode : '';
+
+
+                        $msg = "Group Created Successfully by " . session('sessiondata')['user_name'] . ". The group name is '" . $this->request->getVar('group_name') . "'. This group is assigned to you.";
+                        $templates = "930840461869403";
+                        whatsapp($phoneNumber,$templates,$msg);
+
+                    }
+
+                    }
+                    // whatsup call end
 
                 if (!empty($this->request->getVar('student_id'))) {
                     $registerUpdateData = [
