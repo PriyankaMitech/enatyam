@@ -80,7 +80,6 @@ class PaymentController extends BaseController
                         // echo "<pre>";print_r($_SESSION);exit();
 
                         $success = true;
-
                         $msg = "Payment successfully done by " . session('sessiondata')['user_name'] . " Rs.$amount1. and he/she selected for " . session('sessiondata')['SessionType']. "session.";
                         $msg1 = "Payment Successfully Done...!!!";
                         $templates = "930840461869403";
