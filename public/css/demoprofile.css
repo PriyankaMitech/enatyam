@@ -314,3 +314,6 @@ input[type="checkbox"] {
     margin-top: 10px;
     text-decoration: none;
 }
+.row.noStudioRow{
+    display:block!important;
+  }

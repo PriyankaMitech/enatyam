@@ -600,6 +600,15 @@ input[type="checkbox"] {
 .menub {
   text-align: end;
 }
+.studioImg {
+  /* height: 400px!important; */
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  width: 400px;
+  /* margin-left: 15%; */
+}
 
 .danceimg1.home {
   height: 271px;
@@ -624,3 +633,5 @@ input[type="checkbox"] {
   padding-bottom: 110px;
   background-position: center;
 }
+
+

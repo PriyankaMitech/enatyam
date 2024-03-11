@@ -113,3 +113,10 @@
 .greenCheckbox li{
   list-style-type: none;
 }
+.cont-main-section.offline {
+  background: #fad32c;
+  padding: 0px 0px!important;
+}
+.row.noStudioRow{
+  display:block!important;
+}
