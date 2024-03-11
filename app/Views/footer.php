@@ -1859,9 +1859,10 @@ $(document).ready(function() {
                     console.log(response);
                     if (response !== "No address found for this pincode.") {
                         var addresses = JSON.parse(response);
+
                         if (addresses.length > 0) {
                             var address = addresses[0].address; // Extracting the address property from the first object
-                            // $('#addressResult').text(address).show();
+                             $('#addressResult').text(address).show();
                             $('#getform').show();
                             $('#joinForm').hide();
                         } else {
