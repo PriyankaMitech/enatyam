@@ -346,7 +346,9 @@ class AdminController extends BaseController
                 $wherecond2 = [
                     'free_demo_table.Conducted_Demo' => 'Y',
                 ];
+              
                 $data['ConductedDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond2, 'DESC');
+             
                 return view('AdminSideBar/Demo', $data);
             } else {
                 return redirect()->to(base_url());
@@ -510,6 +512,8 @@ class AdminController extends BaseController
     }
     public function ResheduleByadmin()
     {
+      //  print_r($_POST);die;
+        $mobileWithCode =$this->request->getPost('mobileWithCode');
         $email = $this->request->getPost('email');
         $AssignTecher_id = $this->request->getPost('AssignTecher_id');
         $date = $this->request->getPost('Reshedule_date');
@@ -525,6 +529,10 @@ class AdminController extends BaseController
             $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time);
             $Subject = 'Your Demo Rescheduled';
             $msg = "Your Demo Has Been Rescheduled - Date: $date, Time: $time";
+            $phoneNumber = $mobileWithCode;
+            $templates = "930840461869403";
+            $msg ="your Demo will be Rescheduled succesfully Join same link for Demo - Date: $date, Time: $time";
+            whatsapp($phoneNumber, $templates, $msg);
             if ($result == 1) {
                 sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
                 $this->session->setFlashdata('success', 'Demo Rescheduled Successfully.');
@@ -907,8 +915,8 @@ class AdminController extends BaseController
     // Separate the data into renewalYes and renewalNull arrays
     $data['renewalYes'] = $attendanceData['renewalYes'];
     $data['renewalNull'] = $attendanceData['renewalNull'];
-    //  echo "records with Renewal Yes"; echo '<pre>'; print_r($data['renewalYes']);
-    //  echo "records with Renewal Null"; echo '<pre>'; print_r($data['renewalNull']);die;
+    //  echo "records with Renewal Yes"; echo '<pre>'; print_r($data['renewalYes']);die;
+    //   echo "records with Renewal Null"; echo '<pre>'; print_r($data['renewalNull']);die;
      
     return view('AdminSideBar/studentAttendance', $data);
 }

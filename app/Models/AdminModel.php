@@ -1277,6 +1277,7 @@ $amount = $insertdata->amount/100;
             ->where('user_id', $student_registerid)
             ->get()
             ->getRow();
+       //     print_r($paymentData);die;
         $attendanceRecord->no_of_session = $paymentData ? $paymentData->no_of_session : null;
 
         // Categorize records based on renewal field
@@ -1599,32 +1600,28 @@ foreach ($query as $attendance) {
 return $query;
                     //  echo "<pre>";print_r($query);exit();
     }
-    public function getSessionno($user_id)
+    public function getpaymentsession($user_id)
     {
-        $query = $this->db->table('attendeance_table')
-                     ->selectMax('Session_no')
-                     ->where('student_registerid', $user_id)
-                     ->where('renewal', null) 
+        $query = $this->db->table('payment')
+                     ->select('no_of_session')
+                     ->where('user_id', $user_id)
+                     ->orderBy('created_at', 'desc')
                      ->get()
                      ->getRow();
     
-        $maxSessionNumber = $query->Session_no ?? 0; 
-    
-        return $maxSessionNumber;
+        return $query->no_of_session ?? 0;
     }
-
-    // public function getSessionno($user_id)
-    // {
-    //     $query = $this->db->table('register')
-    //                  ->selectMax('SessionsCount')
-    //                  ->where('id', $user_id)
-    //                  ->get()
-    //                  ->getRow();
-    
-    //     $maxSessionNumber = $query->SessionsCount;
-    
-    //     return $maxSessionNumber;
-    // }
+    public function getSessionno($user_id)
+    {
+        $query = $this->db->table('attendeance_table')
+                         ->where('student_registerid', $user_id)
+                         ->where('renewal', null) 
+                         ->orderBy('date', 'desc')
+                         ->get()
+                         ->getRow();
+        
+        return $query;
+    }
     public function updatePaymentStatus($user_id, $status)
     {
         $data = [

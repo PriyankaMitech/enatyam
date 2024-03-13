@@ -38,47 +38,60 @@
                                                 </thead>
                                                 <tbody>
                                                     <?php foreach ($studentList as $student): ?>
+                                                    <?php $attendanceVerified = false; ?>
+                                                    <?php foreach ($varifyattandance as $attendance): ?>
+                                                    <?php if ($attendance->student_registerid == $student->id && $attendance->renewal === null && $attendance->verify_by_student === null): ?>
+                                                    <?php $attendanceVerified = true; ?>
+                                                    <?php break; ?>
+                                                    <?php endif; ?>
+                                                    <?php endforeach; ?>
                                                     <tr>
                                                         <td><?= $student->full_name ?></td>
                                                         <td>
                                                             <div class="form-check">
                                                                 <input class="form-check-input" type="checkbox"
                                                                     name="attendance[<?= $student->id ?>][present]"
-                                                                    id="present<?= $student->id ?>" value="p">
+                                                                    id="present<?= $student->id ?>" value="p" required>
                                                                 <label class="form-check-label"
                                                                     style="margin-right:54px;"
                                                                     for="present<?= $student->id ?>">Present</label>
                                                                 <input class="form-check-input" type="checkbox"
                                                                     name="attendance[<?= $student->id ?>][absent]"
-                                                                    id="absent<?= $student->id ?>" value="a">
+                                                                    id="absent<?= $student->id ?>" value="a" required>
                                                                 <label class="form-check-label"
                                                                     for="absent<?= $student->id ?>">Absent</label>
                                                             </div>
                                                         </td>
                                                         <td>
-                                                        <select class="form-control" name="session[<?= $student->id ?>]">
-                                                            <option value="">Select</option>
-                                                            <?php 
-                                                            // Convert Session_nos string to an array
-                                                            $excludedSessions = explode(',', $student->Session_nos);
-                                                            for ($i = 1; $i <= $student->no_of_session; $i++): 
-                                                                // Check if the current session number is not in the excludedSessions array
-                                                                if (!in_array($i, $excludedSessions)): ?>
-                                                                    <option value="<?= $i ?>">Session <?= $i ?></option>
-                                                            <?php endif; ?>
-                                                            <?php endfor; ?>
-                                                        </select>
+                                                            <select class="form-control" name="session[<?= $student->id ?>]">
+                                                                <?php 
+                                                                // Convert Session_nos string to an array
+                                                                $excludedSessions = explode(',', $student->Session_nos);
+                                                                for ($i = 1; $i <= $student->no_of_session; $i++): 
+                                                                    // Check if the current session number is not in the excludedSessions array
+                                                                    if (!in_array($i, $excludedSessions)): ?>
+                                                                        <option value="<?= $i ?>">Session <?= $i ?></option>
+                                                                    <?php endif; ?>
+                                                                <?php endfor; ?>
+                                                            </select>
                                                         </td>
                                                         <td>
-                                                             <!-- Add a hidden input for payment_id -->
-                                                        <input type="hidden" name="payment_id[<?= $student->id ?>]" value="<?= $student->payment_id ?>">
+                                                            <!-- Add a hidden input for payment_id -->
+                                                            <input type="hidden" name="payment_id[<?= $student->id ?>]"
+                                                                value="<?= $student->payment_id ?>">
+                                                            <?php if ($attendanceVerified): ?>
+                                                            <span class="text-danger"> Last session Attendance not
+                                                                verified by student</span>
+                                                            <?php else: ?>
                                                             <button type="button" class="btn btn-primary"
                                                                 onclick="submitAttendance(<?= $student->id ?>)">Submit
                                                                 Attendance</button>
+                                                            <?php endif; ?>
                                                         </td>
                                                     </tr>
                                                     <?php endforeach; ?>
                                                 </tbody>
+
                                             </table>
                                         </form>
                                     </div>
@@ -136,18 +149,19 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                        <select class="form-control" name="session[<?= $student->id ?>]">
-    <option value="">Select</option>
-    <?php 
+                                                            <select class="form-control"
+                                                                name="session[<?= $student->id ?>]">
+                                                                <option value="">Select</option>
+                                                                <?php 
     // Convert Session_nos string to an array
     $excludedSessions = explode(',', $student->Session_nos);
     for ($i = 1; $i <= $student->no_of_session; $i++): 
         // Check if the current session number is not in the excludedSessions array
         if (!in_array($i, $excludedSessions)): ?>
-            <option value="<?= $i ?>">Session <?= $i ?></option>
-    <?php endif; ?>
-    <?php endfor; ?>
-</select>
+                                                                <option value="<?= $i ?>">Session <?= $i ?></option>
+                                                                <?php endif; ?>
+                                                                <?php endfor; ?>
+                                                            </select>
                                                         </td>
                                                         <td>
                                                             <button type="button" class="btn btn-primary"
@@ -163,7 +177,7 @@
                                             </table>
                                         </form>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
 
                         </div>

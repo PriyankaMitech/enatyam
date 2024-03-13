@@ -228,61 +228,17 @@ class Home extends BaseController
 
         return view('FacultyProfile');
     }
-    // public function StudentDashboard()
-    // {
-    //     $adminModel = model('AdminModel');
-    //     $session = session();
-    //     $user_id = $session->get('id');
-    //     $expiresessions =$adminModel->getSessionno($user_id);
-            
-    //     if (isset($_SESSION['sessiondata'])) {
-    //         $sessionData = $_SESSION['sessiondata'];
-    //         $email = $sessionData['email'] ?? null;
-    //         $password = $sessionData['password'] ?? null;
-    //         if ($email !== null && $password !== null) {
-    //             $session = session();
-    //               print_r($sessionData);
-    //             print_r($expiresessions);die;
 
-    //             if ($session->has('id') && $sessionData['Payment_status'] == 'Y' || $sessionData['SessionsCount']== $expiresessions) {
-    //                 $user_id = $session->get('id');
-
-    //                 $login_model = new LoginModel();
-                   
-    //                 $data['user_data'] = $login_model->get_user_data($user_id);
-    //                 $notifications = $adminModel->getUser($user_id);
-                
-              
-    //                 $count = 0;
-
-    //                 if ($notifications) {
-    //                     $count = count($notifications);
-    //                 } else {
-    //                     $count = 0;
-    //                 }
-
-    //                  return view('StudentDashboard', [
-    //                     'data' => $data,
-    //                     'notifications' => $notifications,
-    //                     'notificationCount' => $count,
-    //                 ]);
-    //             } else {
-    //                 return redirect()->to('ModelForLogin');
-    //             }
-    //         } else {
-    //             return redirect()->to(base_url());
-    //         }
-    //     } else {
-    //         return redirect()->to(base_url());
-    //     }
-    // }
     public function StudentDashboard()
 {
     $adminModel = model('AdminModel');
     $session = session();
     $user_id = $session->get('id');
     $expiresessions = $adminModel->getSessionno($user_id);
-    
+    $sessioncont = $expiresessions->Session_no ?? null;
+     $paymentsessions = $adminModel->getpaymentsession($user_id);
+     $sessioncont = $expiresessions->Session_no ?? null;
+
     if (isset($_SESSION['sessiondata'])) {
         $sessionData = $_SESSION['sessiondata'];
         $email = $sessionData['email'] ?? null;
@@ -293,9 +249,9 @@ class Home extends BaseController
             // If Payment_status is 'Y' and SessionsCount matches expiration session
             if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
                 $user_id = $session->get('id');
-                // print_r($sessionData);
-                //             print_r($expiresessions);die;
-                if ($expiresessions == $sessionData['SessionsCount']) {
+            //    print_r($sessioncont);
+            //                 print_r($paymentsessions);die;
+                if ($sessioncont == $paymentsessions) {
                     $status = 'N';
                     $renewal = 'Y';
                     $adminModel->updadteattandance($user_id, $renewal);
@@ -336,6 +292,63 @@ class Home extends BaseController
         return redirect()->to(base_url());
     }
 }
+// public function StudentDashboard()
+// {
+//     $adminModel = model('AdminModel');
+//     $session = session();
+   
+//     $user_id = $session->get('id');
+//     $expiresessions = $adminModel->getSessionno($user_id);
+
+//     // Check if $expiresessions is not null before accessing its properties
+//     if ($expiresessions !== null && isset($expiresessions->Session_no) && isset($expiresessions->payment_id)) {
+//         $sessioncont = $expiresessions->Session_no;
+//         $payment_id = $expiresessions->payment_id;
+//         $paymentsessions = $adminModel->getpaymentsession($payment_id);
+
+//         if (isset($_SESSION['sessiondata'])) {
+//             $sessionData = $_SESSION['sessiondata'];
+//             $email = $sessionData['email'] ?? null;
+//             $password = $sessionData['password'] ?? null;
+//             if ($email !== null && $password !== null) {
+//                 // If Payment_status is 'Y' and SessionsCount matches expiration session
+//                 if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
+//                     $user_id = $session->get('id');
+//                     if ($sessioncont == $paymentsessions) {
+//                         $status = 'N';
+//                         $renewal = 'Y';
+//                         $adminModel->updadteattandance($user_id, $renewal);
+//                         $adminModel->updatePaymentStatus($user_id, $status);
+//                         $session->destroy();
+//                         return redirect()->to('/');
+//                     }
+
+//                     $login_model = new LoginModel();
+//                     $data['user_data'] = $login_model->get_user_data($user_id);
+//                     $notifications = $adminModel->getUser($user_id);
+
+//                     $count = count($notifications);
+//                     return view('StudentDashboard', [
+//                         'data' => $data,
+//                         'notifications' => $notifications,
+//                         'notificationCount' => $count,
+//                     ]);
+//                 } else {         
+//                     return redirect()->to('ModelForLogin');
+//                 }
+//             } else {
+              
+//                 return redirect()->to(base_url());
+//             }
+            
+//         } else {
+//             return redirect()->to(base_url());
+//         }
+//     } else {
+//         // Handle case where $expiresessions or its properties are null
+//         return redirect()->to('ModelForLogin');
+//     }
+// }
     public function chechk_username_id()
     {
         $loginModel = new LoginModel();

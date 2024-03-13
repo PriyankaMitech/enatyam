@@ -862,10 +862,32 @@ class StudentController extends BaseController
         $registerId = $result->get('id');
         $model = new StudentModel();
         $attendance['attendance'] = $model->getattandance($registerId);
-  //  print_r($attendance['attendance']);die;
+    // echo '<pre>';print_r($attendance['attendance']);die;
         // Load the view and pass the $attendance data to it
         return view('StudentSidebar/studentAttenadnace', $attendance);
     }
-    
+    public function submit_review() {
+      //  print_r($_POST);die;
+        $model = new StudentModel();
+        $data = [
+            'rating' => $this->request->getPost('rating'),
+            'student_id' => $this->request->getPost('student_id'),
+            'Session_no' => $this->request->getPost('Session_no'),
+            'faculty_id' => $this->request->getPost('faculty_id'),
+            'course' => $this->request->getPost('course'),
+            'sub_course' => $this->request->getPost('sub_course')
+        ];
+        
+        $model->insertfeedback($data);
 
-}
+        $varify =[
+            'verify_by_student' => $this->request->getPost('verify_by_student'),
+            'student_id' => $this->request->getPost('student_id'),
+            'Session_no' => $this->request->getPost('Session_no'),
+        ] ;
+
+        $model->insertvarify($varify);
+        return redirect()->to('StudentAttendancerecord');
+    }
+    }
+  

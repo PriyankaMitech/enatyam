@@ -10,20 +10,20 @@
                             <input type="hidden" name="id" value="<?php echo esc($session_id); ?>">
                             <!-- Day Selection, Start Date, and End Date in one row -->
                             <div class="col">
-                                <div class="form-group">
-                                    <label for="day" class="form-label">Select Day:</label>
-                                    <select id="day" name="day" class="form-select form-control">
-                                        <option>select</option>
-                                        <option value="Monday">Monday</option>
-                                        <option value="Tuesday">Tuesday</option>
-                                        <option value="Wednesday">Wednesday</option>
-                                        <option value="Thursday">Thursday</option>
-                                        <option value="Friday">Friday</option>
-                                        <option value="Saturday">Saturday</option>
-                                        <option value="Sunday">Sunday</option>
-                                    </select>
-                                </div>
-                            </div>
+    <div class="form-group">
+        <label for="day" class="form-label">Select Day:</label>
+        <select id="day" name="day" class="form-select form-control" required>
+            <option value="">Select</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+    </div>
+</div>
                             <div class="col">
                                 <div class="form-group">
                                     <label for="start_date" class="control-label">Start Date</label>

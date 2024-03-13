@@ -218,6 +218,7 @@ th {
                                                         </td>
                                                         <td>
                                                             <input type="hidden" name="action" value="N">
+                                                            <input type="hidden" name="mobileWithCode" value="<?= $PDemo->mobileWithCode ?>">
                                                             <input type="hidden" name="D_id"
                                                                 value="<?= $PDemo->D_id ?>">
                                                             <input type="hidden" name="AssignTecher_id"

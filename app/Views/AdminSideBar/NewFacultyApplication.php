@@ -160,7 +160,7 @@
                                                             <td><?= $facult->email ?></td>
                                                             <td><?= $facult->courses_name ?>/<?= $facult->sub_courses_name ?>
                                                             </td>
-                                                            <td><a href="<?= base_url(); ?>viewProfile/<?= $faculty->D_id ?>" type="submit" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View">
+                                                            <td><a href="<?= base_url(); ?>viewProfile/<?= $facult->D_id ?>" type="submit" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View">
                                                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                                                 </a></td>
                                                             <td>
