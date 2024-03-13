@@ -1,57 +1,21 @@
 <?php include('header.php'); ?>
-<style>
-    /* Style for the pop-up modal */
-/* .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-} */
 
-/* .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-} */
-
-/* .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-} */
-
-/* .close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-} */
-
-</style>
 
 <section class="s_header-section">
     <div class="container-fluid mt-2">
         <div class="row ">
-            <div class="col-lg-8 col-md-8 col-12 p-5">
+            <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv"  controls="1" autoplay="0" loop="0">
+                    <video class="video-dance bannerv" autoplay loop muted  controls="1">
                         <source src="<?=base_url(); ?>public/images/Home/Video for home page header.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 bsimg">
+            <!-- <div class="col-lg-4 col-md-4 bsimg">
             <div class="banneris">
                 <img src="<?=base_url(); ?>public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -119,12 +83,6 @@
 <!-- Line Sepretor Part -->
 
 
-<div class="row heading-div m-0 pt-5">
-    <div class="col-lg-12 text-center co">
-        <h3>Courses Offering</h3>
-        <span class="line"></span>
-    </div>
-</div>
 <section class="mb-5">
     <div class="">
 
@@ -140,30 +98,38 @@
                     <hr class="mt-2 mb-5">
 
                     <div class="row text-lg-start">
+                    <div class="col-lg-12 col-md-12 col-12 coh">
+                        <h3 class="text-white" style="text-align:center">Courses Offering
+                        <span class="line linessf"></span> </h3>
+                    </div>
+
+  
 
                         <div class="col-lg-3 col-md-4 col-12 ">
                             <h5 class="text-white" style="text-align: center;">Kathak </h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/Home/4.png" alt=""
+                                        src="<?php base_url(); ?>public/images/Home/4-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
 
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem">
+                                    <li class="list-inline-item text-white thumbnailListItem thumbnailListItemp">
                                         <p>3569</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white">4.99</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                                     
                             </div>
                         </div>
@@ -173,25 +139,26 @@
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/5.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/5-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
 
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem">
+                                    <li class="list-inline-item text-white thumbnailListItem thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
                                    
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
+
                                     
                             </div>
                         </div>
@@ -201,24 +168,25 @@
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/1-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
 
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                             </div>
                         </div>
 
@@ -227,23 +195,24 @@
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/1.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/1-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                                     
                             </div>
                         </div>
@@ -253,23 +222,24 @@
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/11-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                                    
                             </div>
                         </div>
@@ -278,23 +248,24 @@
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/11-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                                   
                             </div>
                         </div>
@@ -303,23 +274,24 @@
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/11-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                             
                             </div>
                         </div>
@@ -328,23 +300,24 @@
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/11.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/11-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;">
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                                     
                             </div>
                         </div>
@@ -357,20 +330,21 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
 
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-12">
@@ -382,19 +356,20 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;">
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                                  
                             </div>
                         </div>
@@ -407,19 +382,20 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                            
                             </div>
                         </div>
@@ -432,19 +408,20 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb" style="display:none;" >
+                            <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white">
+                                    <li class="list-inline-item text-white thumbnailListItemp">
                                         <p>2698</p>
                                     </li>
+                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
                                     <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+
                                
                             </div>
                         </div>
@@ -679,6 +656,456 @@
 </section>
 
 
+
+<!-- superstar slide -->
+
+
+<section class="MusicSec faculty-section p-5">
+    <div class="cont-width">
+
+        <div class="row ">
+        <h3 class="text-white pb-5" style="text-align:center">Superstar Faculty
+        <span class="line linessf"></span> 
+
+        </h3>
+      
+                
+            <div class="col-lg-12">
+           
+                <div class="owl-carousel owl-theme">
+                    <div class="item" onclick="showModal('Aditya', 'Yoga Faculty', 'public/images/facultyProfileLatest/2.png','M.Sc.(Human Consciousness and Yogic Science)','Certification YTTC: 200 Hours & E-RYT 500','4 years +','Hath Yoga, Yoga for Strength and Fitness-Weight management- Yoga for anxiety and stress management , Mindfulness practices - Weight Loss, Flexibility and Fitness,Chronic illness')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/2.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Aditya</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+
+                             <div class="overlay-text">
+                                <h4 class="hedingfsf">Aditya</h4>
+                                    <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
+                                    <!-- <p>Certification YTTC: 200 Hours & E-RYT 500</p> -->
+                                    <p>Experience 4+ years</p>
+                                    <p>Read more...</p>                                        
+                                    <p></p>
+                             </div>
+                        </div>
+                    </div>
+                    <!-- <div class="item" onclick="showModal('Veera', 'Yoga', 'public/images/veera.jpg')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/veera.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Veera</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+
+                             <div class="overlay-text">
+                                <h4 class="hedingfsf">Veera</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
+
+                        </div>
+                    </div> -->
+                    <div class="item" onclick="showModal('Priti S', 'Kathak Dance Faculty', 'public/images/priti.jpg','M.A. in Performing Arts(Kathak)', 'Gold Medalist in Kathak (University Topper)','15 Years +','Kathak, Semi classical and Choreography, An internationally acclaimed kathak artist and professionally trained and graced many international stage')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">  
+                                <img src="<?=base_url(); ?>public/images/priti.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Priti S</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Kathak Dance
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Priti</h4>
+                                <p>M.A. in Performing Arts(Kathak), Gold Medalist in Kathak (University Topper)<br></p>
+                                <p>Experience 15 Years +</p>
+                                <p>Read more...</p>
+
+                             </div>
+                        </div>
+                    </div>
+                    <!-- <div class="item" onclick="showModal('Neha', 'Semi Classical Dance' ,'public/images/neha.jpg')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/neha.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Neha</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Semi Classical Dance
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Neha</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
+                        </div>
+                    </div> -->
+                    <div class="item" onclick="showModal('Priyanka B', 'Kathak Dance Faculty', 'public/images/priyanka.jpeg','M.A. in Performing Arts(Kathak)','','5 Years +','Kathak, Semi classical and Choreography, Worked with many Bollywood choreographer and performed at many national level renowed stages')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Priyanka B</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Kathak Dance
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Priyanka B</h4>
+                                <p>M.A. in Performing Arts(Kathak)<br></p>
+                                <p>Experience: 5 Years +</p>
+                                <p>Read more...</p>    
+
+                             </div>
+                        </div>
+                    </div>
+                    <div class="item" onclick="showModal('Supriya', 'Yoga Faculty', 'public/images/facultyProfileLatest/4.png','Post Gratuate Diploma in Yoga Science','YTTC 100hrs','Experience 3 Years +','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/4.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Supriya</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga 
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Supriya</h4>
+                                <p>Yoga Faculty</p>
+                                <p>Post Gratuate Diploma in Yoga Science</p>
+                                <!-- <p>Certification: YTTC 100hrs</p> -->
+                                <p>Experience - 3 Years + </p>
+                                    <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
+                                    <p class="">Read More...</p>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="item" onclick="showModal('Amrita M', 'Yoga', 'public/images/facultyProfileLatest/6.png', 'M.Sc.(Human Consciousness and Yogic Science)', 'YTTC 125 Hrs', '3+ years','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
+
+
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/6.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Amrita M</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Amrita M</h4>
+                                <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
+                                <!-- <p>Certification: YTTC 125 Hrs</p> -->
+                                <p>Experience 3+ years </p>
+                                <p>Read more...</p>
+                                    <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="item" onclick="showModal('Shekhar Pathak', 'Yoga Faculty', 'public/images/facultyProfileLatest/8.png','Phd - Yogic Science, M.Sc.(Human Consciousness and Yogic Science)','Certification: YTTC 125 Hrs','10 years +','Yogic management of Diseases - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/8.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Shekhar Pathak</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Shekhar Pathak</h4>
+                                <p>Phd - Yogic Science<br></p>
+                                <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
+                                <!-- <p>Certification: YTTC 125 Hrs</p> -->
+                                <p>Experience 10 years + </p>
+                                <p>Read more...</p>
+                                    <!-- <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="item" onclick="showModal('Vivek R', 'Yoga Faculty', 'public/images/facultyProfileLatest/10.png','Phd - Yogic and Sports science, M.Sc.(Human Consciousness and Yogic Science), Diploma in Counselling Psychotherapy, B.Sc. in Military Science','YTTC 125 Hrs','4 years +','Hath Yoga, Yoga Nidra, Yoga for Strength and General Fitness, Weight management, Yoga for anxiety and stress management, Mindfulness practices, Weight Loss, Flexibility and Fitness, Chronic illness')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/10.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Vivek R</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Vivek R</h4>
+                                <p>Phd - Yogic and Sports science<br></p>
+                                <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
+                                <p>Diploma in Counselling Psychotherapy<br></p>
+                                <p>Read more...</p>
+                                <!-- <p>Certification: YTTC 125 Hrs</p>
+                                <p>Experience 3+ years </p>
+                                
+                                    <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
+                             </div>
+                        </div>
+                    </div>
+                    <div class="item" onclick="showModal('Swetha', 'Carnatic Music', 'public/images/sweta.jpg','MA in Carnatic Vocal','Trained over 500 students in Carnatic classical music','Teaching Experience 10 Years +','Carnatic Vocal and Sanskrit Chanting')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/sweta.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Swetha</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Carnatic Music
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Swetha</h4>
+                                   <p>MA in Carnatic Vocal</p>
+                                   <p>Experience 10 Years +</p>
+                                   <p>Read more...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.png')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/jaya.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Jaya</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Bharatanatyam Dance
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Jaya</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
+                        </div>
+                    </div> -->
+                    <div class="item" onclick="showModal('Ketki M', 'Hindustani Music Faculty', 'public/images/ketki.jpg','MA in Hindustani Vocal','Doordarshan Grade Artist','6 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal cords, ragas and sur')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/ketki.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Ketki M</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Hindustani Music
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">ketki</h4>
+                                <p>MA in Hindustani Vocal<br></p>
+                                <p>Experience 6 years +</p>    
+                                <p>Read more...</p>    
+                             </div>
+                        </div>
+                    </div>
+                    <div class="item" onclick="showModal('Koyali S', 'Hindustani Music Faculty', 'public/images/Koyali.png','MA in Hindustani Vocal','Doordarshan Grade Artist, Trained 500+ students, nurturing musical excellence', '10 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal cords, ragas and sur')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/Koyali.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Koyali S</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Hindustani Music
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Koyali S</h4>
+                                <p>MA in Hindustani Vocal<br></p>
+                                <p>Experience 10 Years +</p>
+                                <p>Read more...</p>    
+                             </div>
+                        </div>
+                    </div>
+                    <div class="item" onclick="showModal('Krutika B', 'Bollywood Dance Faculty' ,'public/images/krutika.jpg','Bollywood Dance','Certified Bollywood Dance faculty with training from Shaimak Davar Institute','4 Years +','Collaborated with renowned choreographers, blending expertise in Choreography and performance for a dynamic teaching approach')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/krutika.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Krutika B</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Bollywood Dance
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Krutika B</h4>
+                                <p>Bollywood Dance</p>
+                                <p>Certified Bollywood Dance faculty with training from Shaimak Davar Institute</p>
+                                <p>Read more...</p>
+                                   
+                             </div>
+                        </div>
+                    </div>
+                    <!-- <div class="item" onclick="showModal('Anika S', 'MA in Hindustani Vocal Faculty' ,'public/images/user.png','Hindustani Vocal','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/user.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Anika S</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                Hindustani Vocal
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Anika S</h4>
+                                <p>Hindustani Vocal</p>
+                                <p>Doordarshan Grade Artist</p>
+                                <p>Read more...</p>    
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="item" onclick="showModal('Malvika', 'MA in Bharatnatyam Faculty' ,'public/images/user.png','Bharatnatyam','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/user.png" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Malvika</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                Bharatnatyam
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Anika S</h4>
+                                <p>Hindustani Dance</p>
+                                <p>MA in Bharatnatyam</p>
+                                <p>Read more...</p>
+                                   
+                             </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Anila', 'Bollywood Dance' ,'public/images/Anila.jpeg')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Anila</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Bollywood Dance
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Anila</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Anika', 'Yoga' ,'public/images/Anika.jpg')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/Anika.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Anika</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Anika</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Ila', 'Bollywood Singing', 'public/images/Ila.jpg')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/Ila.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Ila</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Bollywood Singing
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Ila</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Samira', 'Yoga', 'public/images/Samira.jpg')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/Samira.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Samira</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Samira</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Sanjay', 'Yoga', 'public/images/sanjay.jpg')">
+                        <div class="faculty-div">
+                            <div class="faculty-div1">
+                                <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
+                            </div>
+                            <div class="faculty-content mt-lg-4">
+                                <div class="faculty-content-team__member-name text-white">Sanjay</div>
+                                <div class="faculty-content-team__member-position text-white">
+                                    Yoga
+                                </div>
+                            </div>
+                            <div class="overlay-text">
+                                <h4 class="hedingfsf">Sanjay</h4>
+                                    <p>What is Lorem Ipsum?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+                                    <p>
+                             </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="how_Started-section pb-3">
     <div class="container">
         <div class="row m-0">
@@ -773,751 +1200,9 @@
 
     </div>
 </section>
-<!-- superstar slide -->
 
 
-<section class="MusicSec faculty-section p-5">
-    <div class="cont-width">
 
-        <div class="row ">
-        <h3 class="text-white pb-5" style="text-align:center">Super Star Faculty
-        <span class="line linessf"></span> 
-
-        </h3>
-      
-                
-            <div class="col-lg-12">
-           
-                <div class="owl-carousel owl-theme">
-                    <div class="item" onclick="showModal('Aditya', 'Yoga Faculty', 'public/images/facultyProfileLatest/2.png','M.Sc.(Human Consciousness and Yogic Science)','Certification YTTC: 200 Hours & E-RYT 500','4 years +','Hath Yoga, Yoga for Strength and Fitness-Weight management- Yoga for anxiety and stress management , Mindfulness practices - Weight Loss, Flexibility and Fitness,Chronic illness')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/2.png" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Aditya</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-
-                             <div class="overlay-text">
-                                <h4 class="hedingfsf">Aditya</h4>
-                                    <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
-                                    <!-- <p>Certification YTTC: 200 Hours & E-RYT 500</p> -->
-                                    <p>Experience 4+ years</p>
-                                    <p>Read more...</p>                                        
-                                    <p></p>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Veera', 'Yoga', 'public/images/veera.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/veera.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Veera</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-
-                             <div class="overlay-text">
-                                <h4 class="hedingfsf">Veera</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Priti S', 'Kathak Dance Faculty', 'public/images/priti.jpg','M.A. in Performing Arts(Kathak)', 'Gold Medalist in Kathak (University Topper)','15 Years +','Kathak, Semi classical and Choreography, An internationally acclaimed kathak artist and professionally trained and graced many international stage')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">  
-                                <img src="<?=base_url(); ?>public/images/priti.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Priti S</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Kathak Dance
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Priti</h4>
-                                <p>M.A. in Performing Arts(Kathak), Gold Medalist in Kathak (University Topper)<br></p>
-                                <p>Experience 15 Years +</p>
-                                <p>Read more...</p>
-
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Neha', 'Semi Classical Dance' ,'public/images/neha.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/neha.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Neha</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Semi Classical Dance
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Neha</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Priyanka B', 'Kathak Dance Faculty', 'public/images/priyanka.jpeg','M.A. in Performing Arts(Kathak)','','5 Years +','Kathak, Semi classical and Choreography, Worked with many Bollywood choreographer and performed at many national level renowed stages')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Priyanka B</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Kathak Dance
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Priyanka B</h4>
-                                <p>M.A. in Performing Arts(Kathak)<br></p>
-                                <p>Experience: 5 Years +</p>
-                                <p>Read more...</p>    
-
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Supriya', 'Yoga Faculty', 'public/images/facultyProfileLatest/4.png','Post Gratuate Diploma in Yoga Science','YTTC 100hrs','Experience 3 Years +','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/4.png" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Supriya</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga 
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Supriya</h4>
-                                <p>Yoga Faculty</p>
-                                <p>Post Gratuate Diploma in Yoga Science</p>
-                                <!-- <p>Certification: YTTC 100hrs</p> -->
-                                <p>Experience - 3 Years + </p>
-                                    <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
-                                    <p class="">Read More...</p>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Amrita M', 'Yoga', 'public/images/facultyProfileLatest/6.png', 'M.Sc.(Human Consciousness and Yogic Science)', 'YTTC 125 Hrs', '3+ years','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
-
-
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/6.png" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Amrita M</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Amrita M</h4>
-                                <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
-                                <!-- <p>Certification: YTTC 125 Hrs</p> -->
-                                <p>Experience 3+ years </p>
-                                <p>Read more...</p>
-                                    <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
-                             </div>
-                        </div>
-                    </div>
-
-                    <div class="item" onclick="showModal('Shekhar Pathak', 'Yoga Faculty', 'public/images/facultyProfileLatest/8.png','Phd - Yogic Science, M.Sc.(Human Consciousness and Yogic Science)','Certification: YTTC 125 Hrs','10 years +','Yogic management of Diseases - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/8.png" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Shekhar Pathak</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Shekhar Pathak</h4>
-                                <p>Phd - Yogic Science<br></p>
-                                <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
-                                <!-- <p>Certification: YTTC 125 Hrs</p> -->
-                                <p>Experience 10 years + </p>
-                                <p>Read more...</p>
-                                    <!-- <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
-                             </div>
-                        </div>
-                    </div>
-
-                    <div class="item" onclick="showModal('Vivek R', 'Yoga Faculty', 'public/images/facultyProfileLatest/9.png','Phd - Yogic and Sports science, M.Sc.(Human Consciousness and Yogic Science), Diploma in Counselling Psychotherapy, B.Sc. in Military Science','YTTC 125 Hrs','4 years +','Hath Yoga, Yoga Nidra, Yoga for Strength and General Fitness, Weight management, Yoga for anxiety and stress management, Mindfulness practices, Weight Loss, Flexibility and Fitness, Chronic illness')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/10.png" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Vivek R</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Vivek R</h4>
-                                <p>Phd - Yogic and Sports science<br></p>
-                                <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
-                                <p>Diploma in Counselling Psychotherapy<br></p>
-                                <p>Read more...</p>
-                                <!-- <p>Certification: YTTC 125 Hrs</p>
-                                <p>Experience 3+ years </p>
-                                
-                                    <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Swetha', 'Carnatic Music', 'public/images/sweta.jpg','MA in Carnatic Vocal','Trained over 500 students in Carnatic classical music','Teaching Experience 10 Years +','Carnatic Vocal and Sanskrit Chanting')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/sweta.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Swetha</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Carnatic Music
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Swetha</h4>
-                                   <p>MA in Carnatic Vocal</p>
-                                   <p>Experience 10 Years +</p>
-                                   <p>Read more...</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.png')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/jaya.png" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Jaya</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Bharatanatyam Dance
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Jaya</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Ketki M', 'Hindustani Music Faculty', 'public/images/ketki.jpg','MA in Hindustani Vocal','Doordarshan Grade Artist','6 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal cords, ragas and sur')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/ketki.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Ketki M</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Hindustani Music
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">ketki</h4>
-                                <p>MA in Hindustani Vocal<br></p>
-                                <p>Experience 6 years +</p>    
-                                <p>Read more...</p>    
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Koyali S', 'Hindustani Music Faculty', 'public/images/Koyali.png','MA in Hindustani Vocal','Doordarshan Grade Artist, Trained 500+ students, nurturing musical excellence', '10 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal cords, ragas and sur')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Koyali.png" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Koyali S</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Hindustani Music
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Koyali S</h4>
-                                <p>MA in Hindustani Vocal<br></p>
-                                <p>Experience 10 Years +</p>
-                                <p>Read more...</p>    
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Krutika B', 'Bollywood Dance Faculty' ,'public/images/krutika.jpg','Bollywood Dance','Certified Bollywood Dance faculty with training from Shaimak Davar Institute','4 Years +','Collaborated with renowned choreographers, blending expertise in Choreography and performance for a dynamic teaching approach')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/krutika.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Krutika B</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Bollywood Dance
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Krutika B</h4>
-                                <p>Bollywood Dance</p>
-                                <p>Certified Bollywood Dance faculty with training from Shaimak Davar Institute</p>
-                                <p>Read more...</p>
-                                   
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Anika S', 'MA in Hindustani Vocal Faculty' ,'public/images/user.png','Hindustani Vocal','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/user.png" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Anika S</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                Hindustani Vocal
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Anika S</h4>
-                                <p>Hindustani Vocal</p>
-                                <p>Doordarshan Grade Artist</p>
-                                <p>Read more...</p>    
-                             </div>
-                        </div>
-                    </div>
-
-                    <div class="item" onclick="showModal('Malvika', 'MA in Bharatnatyam Faculty' ,'public/images/user.png','Bharatnatyam','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/user.png" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Malvika</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                Bharatnatyam
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Anika S</h4>
-                                <p>Hindustani Dance</p>
-                                <p>MA in Bharatnatyam</p>
-                                <p>Read more...</p>
-                                   
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Anila', 'Bollywood Dance' ,'public/images/Anila.jpeg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Anila</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Bollywood Dance
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Anila</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Anika', 'Yoga' ,'public/images/Anika.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Anika.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Anika</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Anika</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Ila', 'Bollywood Singing', 'public/images/Ila.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Ila.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Ila</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Bollywood Singing
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Ila</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Samira', 'Yoga', 'public/images/Samira.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Samira.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Samira</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Samira</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="item" onclick="showModal('Sanjay', 'Yoga', 'public/images/sanjay.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Sanjay</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Sanjay</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Happy faces -->
-<!-- superstar slide -->
-<section class="faculty-section faculty-section1 p-3">
-    <div class="container cont-width mt-5">
-        <div class="row heading-div m-0">
-            <div class="col-lg-12 col-12 text-center">
-                <h3>Happy Faces
-                </h3>
-                <span class="line"></span>
-
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-lg-12 hpb">
-                <div class="owl-carousel owl-theme">
-
-                        <div class="item">
-                            <div class="item in" onclick="showReview('', 'public/images/happyfaces/1.png', '')">
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/1.png" />
-                                            <div class="hft">
-                                                <h5></h5>
-                                                <p></p>
-                                            </div>
-                                    </div>
-                              </div>
-                          </div>
-
-                   
-                        </div>
-                        <div class="item">
-                            <div class="item in" onclick="showReview('', 'public/images/happyfaces/3.png', '')">
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/3.png" />
-                                        <div class="hft">
-                                            <h5></h5>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item in" onclick="showReview('', 'public/images/happyfaces/4.png', '')">
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/4.png" />
-                                        <div class="hft">
-                                            <p class="reviewName"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item in" onclick="showReview('', 'public/images/happyfaces/5.png', '')">
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/5.png" />
-                                        <div class="hft">
-                                        <p class="reviewName"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item in" onclick="showReview('', 'public/images/happyfaces/7-2.png', '')">
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/7-2.png" />
-                                        <div class="hft">
-                                            <p class="reviewName"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item in" onclick="showReview('', 'public/images/happyfaces/8.png', '')">
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/8.png" />
-                                        <div class="hft">
-                                            <p class="reviewName"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item in" onclick="showReview('', 'public/images/happyfaces/9.png', '')">
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/9.png" />
-                                        <div class="hft">
-                                            <p class="reviewName"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   
-
-                        <div class="item"> 
-                            <div class="item in" onclick="showReview('Meera (canada)', 'public/images/happyfaces/11-1.png', 'During pandemic, I found Enatyam E Learning Kathak dance Platform for my daughter Meera. It has been now 3+ years and she has done tremendous progress. Meera finds it very comfortable to learn online. We never thought E-learning could be so much impactful. Each dance step is taught with proper theoretical explanation which helps to bring out facial and body expressions which is the heart of any dance form. Along with regular online classes, students get enough practice by sharing practice videos. We are grateful to Enatyam classes for adjusting different time zones. Meera is confident that she will achieve her milestone in Kathak dance with the help on Enatyam E-Learning Kathak dance Platform. Thank you')">
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/11-1.png" />
-                                        <div class=""> <p class="reviewName">Meera (canada)</p></div>
-                                    </div>    
-                                </div>
-                            </div>
-                    
-                            <div class="item in" onclick="showReview('Aahana ( Canada)', 'public/images/happyfaces/16.png', 'Enrolling in Enatyam\'s online Kathak class has been a transformative experience for my 7-year-old daughter. The instructors\' passion and dedication to this classical dance form are evident in every session. Through clear and engaging instruction, they break down complex movements into manageable steps, allowing students to progress at their own pace. Despite the virtual format, the classes are interactive and personalized, fostering a strong sense of connection within the dance community. I\'m grateful for the opportunity to learn Kathak with Enatyam and would highly recommend it to anyone seeking to embark on a journey of cultural discovery and artistic expression.')">
-                            <!-- Your content here -->
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/16.png" />
-                                        <p class="reviewName">Aahana ( Canada)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    <div class="item"> 
-                        <div class="item in" onclick="showReview('Lavanya (Dubai)', 'public/images/happyfaces/17.png', 'Initially I was bit hesitant to go for online kathak classes.But Enatyam has been an incredible online platform which transformed my journey into the world of kathak.The instructor is not only highly skilled but also deeply passionate about sharing the art form.The online platform Enatyam is seamless, offering convenient scheduling and high-quality instruction. I highly recommend Enatyam to anyone looking to embark on a transformative dance journey.')">
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/17.png" />
-                                <p class="reviewName">Lavanya (Dubai)</p>
-                                </div>    
-                            </div>
-                        </div>
-                    
-                        <div class="item in" onclick="showReview('Sweta ( Australia)', 'public/images/happyfaces/19-2.png', 'I\'m new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that\'s easy to understand. Feeling more zen already!')">
-                        <!-- Your content here -->
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/19-2.png" />
-                                <p class="reviewName">Sweta ( Australia)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item"> 
-                        <div class="item in" onclick="showReview('Sneha (Canada )', 'public/images/happyfaces/20-2.png', 'Enatyam\'s yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It\'s become a daily ritual that I genuinely look forward to.')">
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/20-2.png" />
-                                <p class="reviewName">Sneha (Canada )</p>
-                                </div>    
-                            </div>
-                        </div>
-                    
-                        <div class="item in" onclick="showReview('Tia’mom ( Canada)', 'public/images/happyfaces/10-1.png', 'My daughter Antara has been learning Kathak from Enatyam for almost 3 years now. Our overall experience has been extremely satisfactory. The class timings are adjusted as per our convenience since we are overseas. The pace of teaching both theory and practical is based as per the student\'s needs. I would recommend it for any parent who wants to enroll their kids for any of the various art forms that they offer.')">
-                        <!-- Your content here -->
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/10-1.png" />
-                                <p class="reviewName">Tia’mom ( Canada)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item"> 
-                        <div class="item in" onclick="showReview('Kavita ( Pune)', 'public/images/happyfaces/21-1.png', 'I\'ve tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!')">
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/21-1.png" />
-                                <p class="reviewName">Kavita ( Pune)</p>
-                                </div>    
-                            </div>
-                        </div>
-                    
-                        <div class="item in" onclick="showReview('Ayesha ( Singapore )', 'public/images/happyfaces/23-1.png', 'Enatyam\'s yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat.Grateful for this accessible and effective platform!')">
-                        <!-- Your content here -->
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/23-1.png" />
-                                <p class="reviewName">Ayesha ( Singapore )</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item"> 
-                        <div class="item in" onclick="showReview('Rajiv ( Lucknow )', 'public/images/happyfaces/24-1.png', 'The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there\'s something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga')">
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/24-1.png" />
-                                <p class="reviewName">Rajiv ( Lucknow )</p>
-                                </div>    
-                            </div>
-                        </div>
-                    
-                        <div class="item in" onclick="showReview('Vikram ( Delhi )', 'public/images/happyfaces/25.png', 'Enatyam\'s yoga classes have made me realize that yoga is for everyone.The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.')">
-                        <!-- Your content here -->
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/25.png" />
-                                <p class="reviewName">Vikram ( Delhi )</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item"> 
-                        <div class="item in" onclick="showReview('Vishal ( Chandigarh )', 'public/images/happyfaces/27-1.png', 'I\'ve always struggled to stick with a workout routine, but Enatyam\'s yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors\' encouragement keeps me motivated.')">
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/27-1.png" />
-                                <p class="reviewName">Vishal ( Chandigarh )</p>
-                                </div>    
-                            </div>
-                        </div>
-                    
-                        <div class="item in" onclick="showReview('Kajal ( Delhi )', 'public/images/happyfaces/28-1.png', 'I appreciate how Enatyam\'s yoga classes cater to various levels. Whether you\'re a beginner or an experienced yogi, there\'s always room for growth. The instructors make sure everyone feels welcome.')">
-                        <!-- Your content here -->
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/28-1.png" />
-                                <p class="reviewName">Kajal ( Delhi )</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <div class="item"> 
-                        <div class="item in" onclick="showReview('Scarlett family ( Germany )', 'public/images/happyfaces/29-1.png', 'yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!')">
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/29-1.png" />
-                                <p class="reviewName"> Scarlett family ( Germany )</p>
-                                </div>    
-                            </div>
-                        </div>
-                    
-                        <div class="item in" onclick="showReview('Emma ( UK )', 'public/images/happyfaces/31.png', 'yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It\'s a simple yet powerful practice that has become a non-negotiable in my routine')">
-                        <!-- Your content here -->
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/31.png" />
-                                <p class="reviewName">Emma ( UK )</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="item"> 
-                        <div class="item in" onclick="showReview('Michael (Mike) ( USA)', 'public/images/happyfaces/32.png', 'Enatyam\'s yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative')">
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/32.png" />
-                                <p class="reviewName">Michael (Mike) ( USA)</p>
-                                </div>    
-                            </div>
-                        </div>
-                    
-                        <div class="item in" onclick="showReview('Oorja Sinha ( Pune)', 'public/images/happyfaces/16.png', 'I made significant improvement in my dancing under the guidance of Priti mam, I was able to complete first year exam in Kathak. Earlier I could only dream of learning Kathak but this dream became a reality with the blessings and dedication of my teacher.Priti mam teaches with immense patience and detail. E-natyam allows me to learn from anywhere with convenient timings from amazing gurus.')">
-                        <!-- Your content here -->
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/16.png" />
-                                <p class="reviewName">Oorja Sinha ( Pune)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                
-                    <div class="item"> 
-                        <div class="item in" onclick="showReview('Aiden C ( London -Uk)', 'public/images/happyfaces/18-1.png', 'Enatyam\'s yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It\'s like having a personal yoga guide right in my living room.')">
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/18-1.png" />
-                                <p class="reviewName">Aiden C ( London -Uk)</p>
-                                </div>    
-                            </div>
-                        </div>
-                    
-                        <div class="item in" onclick="showReview('', 'public/images/happyfaces/4.png', '')">
-                        <!-- Your content here -->
-                            <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/4.png" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>         
-                </div>
-            </div>
-        </div>
-
-
-<div class="row">
- 
-</section>
 
 
 
@@ -1638,13 +1323,219 @@
 </section>
 
 
+<!-- Happy faces -->
+<!-- superstar slide -->
+<section class="faculty-section faculty-section1 p-3">
+    <div class="container cont-width mt-5">
+        <div class="row heading-div m-0">
+            <div class="col-lg-12 col-12 text-center">
+                <h3>Happy Faces
+                </h3>
+                <span class="line"></span>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12 hpb">
+                <div class="owl-carousel owl-theme">
+
+                        <!-- <div class="item">
+                        <div class="item in" onclick="showReview('Aiden C ( London -Uk)', 'public/images/happyfaces/1h.png', 'Enatyam\'s yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It\'s like having a personal yoga guide right in my living room.')">
+
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.png" />
+                                            <div class="hft">
+                                                <h5>Aiden C ( London -Uk)</h5>
+                                                <p>Enatyam's yoga courses are a total game-changer for me... 
+                                           
+                                                </p>
+                                            </div>
+                                    </div>
+                              </div>
+
+                              
+                          </div>
+
+                   
+                        </div> -->
+                        <div class="item">
+                            <div class="item in" onclick="showReview('Aiden C ( London -Uk)', 'public/images/happyfaces/1h.png', 'Enatyam\'s yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It\'s like having a personal yoga guide right in my living room.')">
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.png" />
+                                            <div class="hft">
+                                                <h5>Aiden C ( London -Uk)</h5>
+                                                <p>Enatyam's yoga courses are a total game-changer for me... 
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item in" onclick="showReview('Sweta (Australia)', 'public/images/happyfaces/2h.png', 'I\'m new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that\'s easy to understand. Feeling more zen already!')">
+                                    <div class="happyFaces-div">
+                                        <div class="happyFaces-div1 mb-5">
+                                            <img src="<?=base_url(); ?>public/images/happyfaces/2h.png" />
+                                            <div class="hft">
+                                                <h5>Sweta ( Australia)</h5>
+                                                <p>I'm new to yoga, and Enatyam is the perfect starting point...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                        <div class="item in" onclick="showReview('Sneha (Canada)', 'public/images/happyfaces/3h.png', 'Enatyam\'s yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It\'s become a daily ritual that I genuinely look forward to.')">
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/3h.png" />
+                                        <div class="hft">
+                                            <h5>Sneha (Canada )</h5>
+                                        <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item in" onclick="showReview('Kavita (Pune)', 'public/images/happyfaces/4h.png', 'I\'ve tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!')">
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mt-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/4h.png" />
+                                        <div class="hft">
+                                            <h5>Kavita ( Pune)</h5>
+                                            <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item in" onclick="showReview('Ayesha ( Singapore )', 'public/images/happyfaces/6h.png', 'Enatyam\'s yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!')">
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/6h.png" />
+                                        <div class="hft">
+                                            <h5>Ayesha ( Singapore )</h5>
+                                            <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item in" onclick="showReview('Rajiv ( Lucknow )', 'public/images/happyfaces/7h.png', 'The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there\'s something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.')">
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mt-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/7h.png" />
+                                        <div class="hft">
+                                            <h5>Rajiv ( Lucknow )</h5>
+
+                                            <p class="reviewName">The variety of yoga classes on Enatyam is impressive...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+
+                        <div class="item"> 
+                            <div class="item in" onclick="showReview('Vikram ( Delhi )', 'public/images/happyfaces/8h.png', 'Enatyam\'s yoga classes have made me realize that yoga is for everyone. The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.')">
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/8h.png" />
+                                        
+                                        <div class="hft">
+                                        <h5>Vikram ( Delhi )</h5>
+                                        <p class="reviewName">Enatyam's yoga classes have made me realize that yoga is for everyone...</p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                    
+                            <div class="item in" onclick="showReview('Vishal ( Chandigarh )', 'public/images/happyfaces/10h.png', 'I\'ve always struggled to stick with a workout routine, but Enatyam\'s yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors\' encouragement keeps me motivated.')">
+                            <!-- Your content here -->
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mt-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/10h.png" />
+                                        <div class="hft">
+                                            <h5>Vishal ( Chandigarh )</h5>
+                                            <p class="reviewName">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="item"> 
+                        <div class="item in" onclick="showReview('Kajal ( Delhi )', 'public/images/happyfaces/11h.png', 'I appreciate how Enatyam\'s yoga classes cater to various levels. Whether you\'re a beginner or an experienced yogi, there\'s always room for growth. The instructors make sure everyone feels welcome.')">
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mb-5">
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/11h.png" />
+                                    <div class="hft">
+                                        <h5>Kajal ( Delhi )</h5>
+                                        <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels... </p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    
+                        <div class="item in" onclick="showReview('Scarlett family ( Germany )', 'public/images/happyfaces/12h.png', 'Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!')">
+                        <!-- Your content here -->
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mt-5">
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/12h.png" />
+                                    <div class="hft">
+                                        <h5>Scarlett family ( Germany )</h5>
+                                        <p class="reviewName">Yoga is a daily dose of positivity for me... </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item"> 
+                        <div class="item in" onclick="showReview('Emma ( UK )', 'public/images/happyfaces/14h.png', 'Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It\'s a simple yet powerful practice that has become a non-negotiable in my routine.')">
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/14h.png" />
+                                    <div class="hft">
+                                        <h5>Emma ( UK )</h5>
+                                        <p class="reviewName">Yoga is my daily escape from the hustle...</p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    
+                        <div class="item in" onclick="showReview('Michael (Mike) ( USA)', 'public/images/happyfaces/15h.png', 'Enatyam\'s yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative')">
+                        <!-- Your content here -->
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mt-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/15h.png" />
+                                    <div class="hft">
+                                        <h5>Michael (Mike) ( USA)</h5>
+                                        <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </div>
+
+
+<div class="row">
+ 
+</section>
+
+
 <!-- Line Sepretor Part -->
 
 
 
 <!-- Indias Most Loved Art learning Platform -->
 
-<?php include('pricing.php'); ?>
+<?php include('pricingforhome.php'); ?>
 
 
 <!-- one stop solution -->
@@ -2058,8 +1949,8 @@
 
 
 <!-- The studio that goes with you -->
-<section class="p-5">
-    <div class="container pt-5">
+<section class="tstmwy">
+    <div class="container ">
         <div class="row">
             <!-- <div class="row heading-div m-0"> -->
             <!-- <div class="col-lg-12 col-12 text-center"> -->

@@ -10,6 +10,25 @@
     top: 28% !important;
   }
 }
+.bookdemocallbh {
+  padding: 4% 0% 0% 0% !important;
+}
+.tstmwy {
+  padding: 5% 0% 0% 0%;
+}
+.pricing-section {
+  padding-top: 5%;
+}
+.how_Started-section {
+  padding-top: 5%;
+}
+.learning_Platform-section {
+  padding-bottom: 5%;
+}
+.coh {
+  padding-bottom: 49px !important;
+}
+
 .ST_Inspire-video1 {
   border: 0;
   width: 100% !important;
@@ -35,7 +54,7 @@
 }
 
 .ThumbnailImg {
-  padding: 5% 25%;
+  padding: 0% 23%;
 }
 
 .modal-content {

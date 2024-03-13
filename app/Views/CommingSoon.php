@@ -3,7 +3,7 @@
    <div class="container cont-width">
       <div class="row heading-div ">
          <div class="col-lg-12 text-center">
-            <h3>Super Star Faculty
+            <h3>Superstar Faculty
             </h3>
             <span class="line"></span>
 

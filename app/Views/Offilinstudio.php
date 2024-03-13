@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-md-12 col-12">
-                    <img src="<?=base_url(); ?>public/images/offlineStudio-2.png" class="">
+                    <img src="<?=base_url(); ?>public/images/offilinestudeo1.png" class="" style="width:100%">
                     <!-- public/images/Home/4.png -->
                 </div>
             <div class="col-lg-12">

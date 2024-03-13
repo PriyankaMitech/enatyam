@@ -39,6 +39,7 @@ body {
 .list-inline .active,
 .learning .list-inline .active {
   background-color: #ff1561 !important;
+  color: #fff !important;
 }
 
 .list-inline .bigger {
@@ -165,7 +166,7 @@ body {
 .carousel-caption {
   /* color: #fff; */
   color: #666666;
-  top: 146px;
+  top: 11px;
   font-size: 15px;
 }
 
@@ -324,4 +325,55 @@ body {
 }
 .ptfi {
   padding-top: 3%;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem !important;
+}
+.carousel-caption {
+  position: relative !important;
+  /* right: 30px !important; */
+  left: 7% !important;
+  text-align: center !important;
+}
+.semicolone {
+  padding: 0px 0px 0px 77px !important;
+}
+.himg {
+  padding: 0% 0% 0% 10%;
+}
+
+.haimg {
+  border-radius: 20px;
+  border-bottom: 9px #ff285b solid;
+  border-right: 9px #ff285b solid;
+  width: 50%;
+}
+.haimg:hover {
+  border-radius: 20px;
+  border-bottom: 9px #ff285b solid;
+  border-left: 9px #ff285b solid;
+  border-right: none;
+
+  width: 50%;
+}
+.semicolone span {
+  padding: 0px 0px 0px 136px !important;
+  text-align: center;
+}
+.testimonialsdiv {
+  margin-bottom: 0px !important;
+}
+.modulesdiv h3 {
+  /* font-size: 36px; */
+  font-weight: 700;
+}
+.testimonialsdiv h3 {
+  /* font-size: 36px; */
+  font-weight: 700;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  bottom: 124px !important;
+  width: 5% !important;
 }

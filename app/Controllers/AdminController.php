@@ -414,6 +414,7 @@ class AdminController extends BaseController
                 $data['carrer'] = $filteredCareerData;
                 $data['cansalList'] = $model->getrejectedList();
                 $data['createPassword'] = $model->getNullPasswordRecords();
+                
                 return view('AdminSideBar/NewFacultyApplication', $data);
             } else {
                 return redirect()->to(base_url());

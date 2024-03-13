@@ -1,8 +1,21 @@
-<section class="MusicSec faculty-section p-5">
+<!-- superstar slide -->
+
+
+<!-- superstar slide -->
+
+<style>
+    .ssf h3{
+        font-weight:800;
+    }
+    .carousel-inner {
+    height: 282px;
+}
+</style>
+<section class="faculty-section p-5">
     <div class="cont-width">
 
-        <div class="row ">
-        <h3 class="text-white pb-5" style="text-align:center">Super Star Faculty
+        <div class="row ssf">
+        <h3 class="pb-5" style="text-align:center">Superstar Faculty
         <span class="line linessf"></span> 
 
         </h3>
@@ -17,8 +30,8 @@
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/2.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Aditya</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Aditya</div>
+                                <div class="faculty-content-team__member-position ">
                                     Yoga
                                 </div>
                             </div>
@@ -33,14 +46,14 @@
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Veera', 'Yoga', 'public/images/veera.jpg')">
+                    <!-- <div class="item" onclick="showModal('Veera', 'Yoga', 'public/images/veera.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/veera.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Veera</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Veera</div>
+                                <div class="faculty-content-team__member-position ">
                                     Yoga
                                 </div>
                             </div>
@@ -53,15 +66,15 @@
                              </div>
 
                         </div>
-                    </div>
+                    </div> -->
                     <div class="item" onclick="showModal('Priti S', 'Kathak Dance Faculty', 'public/images/priti.jpg','M.A. in Performing Arts(Kathak)', 'Gold Medalist in Kathak (University Topper)','15 Years +','Kathak, Semi classical and Choreography, An internationally acclaimed kathak artist and professionally trained and graced many international stage')">
                         <div class="faculty-div">
                             <div class="faculty-div1">  
                                 <img src="<?=base_url(); ?>public/images/priti.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Priti S</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Priti S</div>
+                                <div class="faculty-content-team__member-position ">
                                     Kathak Dance
                                 </div>
                             </div>
@@ -74,14 +87,14 @@
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Neha', 'Semi Classical Dance' ,'public/images/neha.jpg')">
+                    <!-- <div class="item" onclick="showModal('Neha', 'Semi Classical Dance' ,'public/images/neha.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/neha.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Neha</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Neha</div>
+                                <div class="faculty-content-team__member-position ">
                                     Semi Classical Dance
                                 </div>
                             </div>
@@ -92,15 +105,15 @@
                                     <p>
                              </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="item" onclick="showModal('Priyanka B', 'Kathak Dance Faculty', 'public/images/priyanka.jpeg','M.A. in Performing Arts(Kathak)','','5 Years +','Kathak, Semi classical and Choreography, Worked with many Bollywood choreographer and performed at many national level renowed stages')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Priyanka B</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Priyanka B</div>
+                                <div class="faculty-content-team__member-position ">
                                     Kathak Dance
                                 </div>
                             </div>
@@ -119,8 +132,8 @@
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/4.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Supriya</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Supriya</div>
+                                <div class="faculty-content-team__member-position ">
                                     Yoga 
                                 </div>
                             </div>
@@ -143,8 +156,8 @@
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/6.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Amrita M</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Amrita M</div>
+                                <div class="faculty-content-team__member-position ">
                                     Yoga
                                 </div>
                             </div>
@@ -165,8 +178,8 @@
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/8.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Shekhar Pathak</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Shekhar Pathak</div>
+                                <div class="faculty-content-team__member-position ">
                                     Yoga
                                 </div>
                             </div>
@@ -182,14 +195,14 @@
                         </div>
                     </div>
 
-                    <div class="item" onclick="showModal('Vivek R', 'Yoga Faculty', 'public/images/facultyProfileLatest/9.png','Phd - Yogic and Sports science, M.Sc.(Human Consciousness and Yogic Science), Diploma in Counselling Psychotherapy, B.Sc. in Military Science','YTTC 125 Hrs','4 years +','Hath Yoga, Yoga Nidra, Yoga for Strength and General Fitness, Weight management, Yoga for anxiety and stress management, Mindfulness practices, Weight Loss, Flexibility and Fitness, Chronic illness')">
+                    <div class="item" onclick="showModal('Vivek R', 'Yoga Faculty', 'public/images/facultyProfileLatest/10.png','Phd - Yogic and Sports science, M.Sc.(Human Consciousness and Yogic Science), Diploma in Counselling Psychotherapy, B.Sc. in Military Science','YTTC 125 Hrs','4 years +','Hath Yoga, Yoga Nidra, Yoga for Strength and General Fitness, Weight management, Yoga for anxiety and stress management, Mindfulness practices, Weight Loss, Flexibility and Fitness, Chronic illness')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/10.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Vivek R</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Vivek R</div>
+                                <div class="faculty-content-team__member-position ">
                                     Yoga
                                 </div>
                             </div>
@@ -212,8 +225,8 @@
                                 <img src="<?=base_url(); ?>public/images/sweta.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Swetha</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Swetha</div>
+                                <div class="faculty-content-team__member-position ">
                                     Carnatic Music
                                 </div>
                             </div>
@@ -226,14 +239,14 @@
                         </div>
                     </div>
                     
-                    <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.png')">
+                    <!-- <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.png')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/jaya.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Jaya</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Jaya</div>
+                                <div class="faculty-content-team__member-position ">
                                     Bharatanatyam Dance
                                 </div>
                             </div>
@@ -244,15 +257,15 @@
                                     <p>
                              </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="item" onclick="showModal('Ketki M', 'Hindustani Music Faculty', 'public/images/ketki.jpg','MA in Hindustani Vocal','Doordarshan Grade Artist','6 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal cords, ragas and sur')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/ketki.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Ketki M</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Ketki M</div>
+                                <div class="faculty-content-team__member-position ">
                                     Hindustani Music
                                 </div>
                             </div>
@@ -270,8 +283,8 @@
                                 <img src="<?=base_url(); ?>public/images/Koyali.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Koyali S</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Koyali S</div>
+                                <div class="faculty-content-team__member-position ">
                                     Hindustani Music
                                 </div>
                             </div>
@@ -289,8 +302,8 @@
                                 <img src="<?=base_url(); ?>public/images/krutika.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Krutika B</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Krutika B</div>
+                                <div class="faculty-content-team__member-position ">
                                     Bollywood Dance
                                 </div>
                             </div>
@@ -303,14 +316,14 @@
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Anika S', 'MA in Hindustani Vocal Faculty' ,'public/images/user.png','Hindustani Vocal','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
+                    <!-- <div class="item" onclick="showModal('Anika S', 'MA in Hindustani Vocal Faculty' ,'public/images/user.png','Hindustani Vocal','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/user.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Anika S</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Anika S</div>
+                                <div class="faculty-content-team__member-position ">
                                 Hindustani Vocal
                                 </div>
                             </div>
@@ -329,8 +342,8 @@
                                 <img src="<?=base_url(); ?>public/images/user.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Malvika</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Malvika</div>
+                                <div class="faculty-content-team__member-position ">
                                 Bharatnatyam
                                 </div>
                             </div>
@@ -342,15 +355,15 @@
                                    
                              </div>
                         </div>
-                    </div>
-                    <div class="item" onclick="showModal('Anila', 'Bollywood Dance' ,'public/images/Anila.jpeg')">
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Anila', 'Bollywood Dance' ,'public/images/Anila.jpeg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Anila</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Anila</div>
+                                <div class="faculty-content-team__member-position ">
                                     Bollywood Dance
                                 </div>
                             </div>
@@ -361,15 +374,15 @@
                                     <p>
                              </div>
                         </div>
-                    </div>
-                    <div class="item" onclick="showModal('Anika', 'Yoga' ,'public/images/Anika.jpg')">
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Anika', 'Yoga' ,'public/images/Anika.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/Anika.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Anika</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Anika</div>
+                                <div class="faculty-content-team__member-position ">
                                     Yoga
                                 </div>
                             </div>
@@ -380,15 +393,15 @@
                                     <p>
                              </div>
                         </div>
-                    </div>
-                    <div class="item" onclick="showModal('Ila', 'Bollywood Singing', 'public/images/Ila.jpg')">
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Ila', 'Bollywood Singing', 'public/images/Ila.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/Ila.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Ila</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Ila</div>
+                                <div class="faculty-content-team__member-position ">
                                     Bollywood Singing
                                 </div>
                             </div>
@@ -399,15 +412,15 @@
                                     <p>
                              </div>
                         </div>
-                    </div>
-                    <div class="item" onclick="showModal('Samira', 'Yoga', 'public/images/Samira.jpg')">
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Samira', 'Yoga', 'public/images/Samira.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/Samira.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Samira</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Samira</div>
+                                <div class="faculty-content-team__member-position ">
                                     Yoga
                                 </div>
                             </div>
@@ -418,15 +431,15 @@
                                     <p>
                              </div>
                         </div>
-                    </div>
-                    <div class="item" onclick="showModal('Sanjay', 'Yoga', 'public/images/sanjay.jpg')">
+                    </div> -->
+                    <!-- <div class="item" onclick="showModal('Sanjay', 'Yoga', 'public/images/sanjay.jpg')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Sanjay</div>
-                                <div class="faculty-content-team__member-position text-white">
+                                <div class="faculty-content-team__member-name ">Sanjay</div>
+                                <div class="faculty-content-team__member-position ">
                                     Yoga
                                 </div>
                             </div>
@@ -437,7 +450,7 @@
                                     <p>
                              </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

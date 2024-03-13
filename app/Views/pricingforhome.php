@@ -11,11 +11,11 @@ $email              = 'coexistech@gmail.com';
 $phone              = '9158876092';
 $name               = "RazorPay Infovistar";
 ?>
-<section class="pricing-section " id="pricing">
+<section class="pricing-section MusicSec" id="pricing">
     <div class="container ">
         <div class="row heading-div m-0">
             <div class="col-lg-12 text-center op" id="pricing-section">
-                <h3 >Our Pricing
+                <h3 class="text-white">Our Pricing
                 </h3>
                 <span class="line"></span>
 
