@@ -299,4 +299,13 @@ class StudentModel extends Model
 
     return $result;
 }
+public function insertfeedback($data) {
+    $this->db->table('feedback')->insert($data);
+}
+public function insertvarify($varify) {
+    $this->db->table('attendeance_table')
+             ->where('student_registerid', $varify['student_id'])
+             ->where('Session_no', $varify['Session_no'])
+             ->update(['verify_by_student' => $varify['verify_by_student']]);
+}
 }

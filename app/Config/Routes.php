@@ -373,6 +373,8 @@ $routes->post('check_slot_availability', 'StudentController::check_slot_availabi
 
 $routes->get('feedback', 'StudentController::feedback');
 $routes->post('savefeedback', 'StudentController::savefeedback');
+$routes->post('submit_review', 'StudentController::submit_review');
+
 $routes->post('SessionConduct', 'StudentController::SessionConduct');
 $routes->post('submitForm', 'StudentController::submitForm');
 $routes->get('reschedule', 'StudentController::reschedule');

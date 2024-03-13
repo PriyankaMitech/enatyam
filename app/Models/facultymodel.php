@@ -176,22 +176,6 @@ class facultymodel extends Model
     
     }
    
-    // public function getStudentList($registerId)
-    // {
-    //     $result = $this->db->table('register')
-    //         ->select('register.*, payment.no_of_session, GROUP_CONCAT(DISTINCT attendeance_table.Session_no) AS Session_nos')
-    //         ->join('payment', 'register.id = payment.user_id', 'left')
-    //         ->join('attendeance_table', 'register.id = attendeance_table.student_registerid', 'left')
-    //         ->where('register.role', 'Student')
-    //         ->where('register.SessionType', 'OneToOneSession')
-    //         ->where('register.Assign_Techer_id', $registerId)
-    //         ->groupBy('register.id')
-    //         ->get()
-    //         ->getResult();
-    
-    //     // echo $this->db->getLastQuery();die;
-    //     return $result;
-    // }
     public function getStudentList($registerId)
     {
         $latestPaymentSubquery = '(SELECT * FROM payment p WHERE p.id IN 
@@ -214,6 +198,7 @@ class facultymodel extends Model
     
         return $result;
     }
+   
     // public function getGroupList($registerId)
     // {
     //     $result = $this->db->table('register')
@@ -344,13 +329,30 @@ class facultymodel extends Model
             return 0;
         }
     }
+    // public function insertAttendance($data)
+    // {
+    //     print_r($data);die;
+    //     return $this->db->table('attendeance_table')->insert($data);
+    // }
+
+
     public function insertAttendance($data)
     {
-        return $this->db->table('attendeance_table')->insert($data);
+        // Check the Attendance_status
+        if ($data['Attendance_status'] === 'a') {
+            // Increment no_of_session by 1 for the given payment_id
+            $this->db->table('payment')
+                ->where('billing_id', $data['payment_id'])
+                ->increment('no_of_session');
+                return $this->db->table('attendeance_table')->insert($data);
+        } else {
+            // If Attendance_status is 'P', insert into attendance_table directly
+            return $this->db->table('attendeance_table')->insert($data);
+        }
+    
+        // Insert data into the attendance table
+     
     }
-
-
-
 
     public function updateStudentVideoforgroup($studentId, $registerId, $videoFilename, $groupid)
     {
@@ -379,5 +381,15 @@ class facultymodel extends Model
         ->where('faculty_registerid', $session_id)
         ->get()
         ->getResultArray();
+    }
+
+    public function getvrfyattandnace($registerId)
+    {
+        $result = $this->db->table('attendeance_table')
+                        ->where('renewal IS NULL')
+                        ->where('verify_by_student IS NULL')
+                        ->get()
+                        ->getResult();
+        return $result;
     }
 }
