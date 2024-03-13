@@ -193,34 +193,30 @@
 
 </script>
     <script>
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector('.tophead');
-    const logoImage = document.querySelector('.thim-logo img'); // Select the image inside the thim-logo class
+    // let prevScrollPos = window.pageYOffset;
+    // const navbar = document.querySelector('.tophead');
+    // const logoImage = document.querySelector('.thim-logo img');
 
-    window.addEventListener('scroll', () => {
-        const currentScrollPos = window.pageYOffset;
+    // window.addEventListener('scroll', () => {
+    //     const currentScrollPos = window.pageYOffset;
 
-        if (currentScrollPos > prevScrollPos) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up or at the top
-            navbar.style.transform = 'translateY(0)';
-            navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+    //     if (currentScrollPos > prevScrollPos) {
+    //         navbar.style.transform = 'translateY(-100%)';
+    //     } else {
+    //         navbar.style.transform = 'translateY(0)';
+    //         navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
 
-        }
+    //     }
 
-        prevScrollPos = currentScrollPos;
-    });
+    //     prevScrollPos = currentScrollPos;
+    // });
 
-    // Ensure initial state is transparent if at the top
-    window.addEventListener('load', () => {
-        if (window.pageYOffset === 0) {
-            navbar.style.backgroundColor = 'transparent';
-            logoImage.src = 'public/images/logo.png'; // Replace with the path to your new image
-
-        }
-    });
+    // window.addEventListener('load', () => {
+    //     if (window.pageYOffset === 0) {
+    //         navbar.style.backgroundColor = 'transparent';
+    //         logoImage.src = 'public/images/logo.png'; 
+    //     }
+    // });
 
 
 </script>
@@ -342,10 +338,10 @@
     var reviewContainers = document.querySelectorAll(".happyFaces-div1");
 
     reviewContainers.forEach(function(container) {
-        var content = container.querySelector(".hft p");
-        var readMoreText = document.createElement("span");
-        readMoreText.className = "read-more-text"; // Apply CSS class to style it like a hyperlink
-        readMoreText.innerText = "Read More";
+        // var content = container.querySelector(".hft p");
+        // var readMoreText = document.createElement("span");
+        // readMoreText.className = "read-more-text"; // Apply CSS class to style it like a hyperlink
+        // readMoreText.innerText = "Read More";
 
         // Set the maximum length of content to show before hiding
         var maxLength = 100; // Adjust this value as needed
@@ -3368,35 +3364,60 @@ function showModal(name, designation, img, qualifications, certifications, exper
 
 
 <script>
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector('.tophead');
-    const logoImage = document.querySelector('.thim-logo img'); // Select the image inside the thim-logo class
+    // let prevScrollPos = window.pageYOffset;
+    // const navbar = document.querySelector('.tophead');
+    // const logoImage = document.querySelector('.thim-logo img'); 
 
-    window.addEventListener('scroll', () => {
-        const currentScrollPos = window.pageYOffset;
+    // window.addEventListener('scroll', () => {
+    //     const currentScrollPos = window.pageYOffset;
 
-        if (currentScrollPos > prevScrollPos) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
+    //     if (currentScrollPos > prevScrollPos) {
+    //         navbar.style.transform = 'translateY(-100%)';
+    //     } else {
+    //         navbar.style.transform = 'translateY(0)';
+    //         navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
+
+    //     }
+
+    //     prevScrollPos = currentScrollPos;
+    // });
+
+    // window.addEventListener('load', () => {
+    //     if (window.pageYOffset === 0) {
+    //         navbar.style.backgroundColor = 'transparent';
+    //         logoImage.src = 'public/images/logoss.png'; 
+
+    //     }
+    // });
+</script>
+<script>
+    $(document).ready(function(){
+        // Retrieve the active link from local storage
+        var activeLink = localStorage.getItem('activeLink');
+        // Set "Home" as active by default if no stored active link
+        if (!activeLink) {
+            $('.navbar-nav a[href="<?php echo base_url('Home'); ?>"]').addClass('active');
+            // Store the default active link in local storage
+            localStorage.setItem('activeLink', '<?php echo base_url('Home'); ?>');
         } else {
-            // Scrolling up or at the top
-            navbar.style.transform = 'translateY(0)';
-            navbar.style.backgroundColor = currentScrollPos === 0 ? 'transparent' : 'black';
-
+            // Add "active" class to the stored active link
+            $('.navbar-nav a[href="' + activeLink + '"]').addClass('active');
         }
 
-        prevScrollPos = currentScrollPos;
-    });
+        // Add click event handler to all navigation links
+        $('.navbar-nav a').click(function(){
+            // Remove "active" class from all navigation links
+            $('.navbar-nav a').removeClass('active');
+            // Add "active" class to the clicked navigation link
+            $(this).addClass('active');
 
-    // Ensure initial state is transparent if at the top
-    window.addEventListener('load', () => {
-        if (window.pageYOffset === 0) {
-            navbar.style.backgroundColor = 'transparent';
-            logoImage.src = 'public/images/logoss.png'; // Replace with the path to your new image
-
-        }
+            // Store the clicked link in local storage
+            localStorage.setItem('activeLink', $(this).attr('href'));
+        });
     });
 </script>
+
+
 </body>
 
 </html>

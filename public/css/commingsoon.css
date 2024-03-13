@@ -161,7 +161,7 @@ ul {
   background-color: #ff1561 !important;
   padding: 14px 30px !important;
   border-radius: 40px !important;
-  margin-top: 40px;
+  margin-top: 14px;
   font-size: 15px !important;
   transition: 0.5s;
 }
@@ -261,40 +261,68 @@ a:hover {
 
 .pricing-card-section .card {
   border-radius: 15px;
-  padding: 15px !important;
+  padding: 10px 5px !important;
 }
 
 .card-1 {
-  background-color: transparent;
-  background-image: linear-gradient(90deg, #8c52ff 0%, #ff8161 100%);
+  /* background-color: transparent;
+  background-image: linear-gradient(90deg, #8c52ff 0%, #ff8161 100%); */
+  background-color: #fff;
 }
 
 .price-card-head h3 {
-  color: #fff;
+  color: #000;
   font-size: 30px;
   font-weight: 600;
   font-family: "Roboto slab", serif !important;
 }
 
 .price-card-head .line {
-  background: #000 !important;
+  background: #e61357 !important;
   width: 40px !important;
 }
 
 .price-card-body h2 {
-  color: #fff;
+  color: #000;
   font-size: 25px;
   font-weight: 600;
   font-family: "Roboto slab", serif !important;
 }
 
 .price-card-body h4 {
-  color: #fff;
+  color: #000;
   font-weight: 600;
   font-size: 18px;
   font-family: "Roboto slab", serif !important;
   margin: 25px 0px;
 }
+.price-card-head h3 {
+  color: #000;
+}
+.card-1 .price-card-body p {
+  color: #000;
+}
+
+.card-1:hover {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #cbfcc5 0%, #ffd215 100%);
+}
+.card-1:hover .shop-now-btn {
+  color: #ff236e !important;
+  background-color: #fafafa !important;
+}
+
+/* .card-1:hover .price-card-body h2,
+.card-1:hover .price-card-head h3,
+.card-1:hover .price-card-body p,
+.card-1:hover li span {
+  color: #fff;
+}
+
+.card-1:hover p,
+li {
+  color: #fff;
+} */
 
 .del-price {
   color: #737373 !important;
@@ -312,12 +340,12 @@ a:hover {
 .price-card-body .fa-check-circle-o {
   width: 3.5rem;
   font-size: 28px;
-  color: #00c661;
+  color: #05f900;
 }
 
 .price-card-body span:last-child {
   color: #000;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: normal;
   /* margin: auto */
   text-align: justify;
@@ -370,7 +398,8 @@ a:hover {
   width: 100%;
   height: 80%;
   background: #fff;
-  border: 2px dashed #000;
+  border-radius: 10%;
+  /* border: 2px dashed #000; */
   z-index: 999;
   color: #000;
   left: 0;
@@ -387,8 +416,9 @@ a:hover {
 }
 
 .faculty-div img {
+  border-radius: 10%;
   /* border-radius: 50%; */
-  border: 2px dashed #bba0a0;
+  /* border: 2px dashed #bba0a0; */
   padding: 7px;
   position: relative;
 }

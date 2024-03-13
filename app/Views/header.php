@@ -1980,7 +1980,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                     </a> -->
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav main menu ms-auto">
-                            <a class="nav-link active px-2" href="<?php echo base_url('Home'); ?>">Home</a>
+                            <a class="nav-link px-2" href="<?php echo base_url('Home'); ?>">Home</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>
                             <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>

@@ -1,16 +1,7 @@
 <?php include('header.php'); ?>
-<!-- 
-<div class="wrapper-container">
-    <div class="video-container">
-        <video class="video-dance yogav" controls="1" autoplay="0" loop="0">
-            <source src="public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
-        </video>
 
-       
-    </div>
-</div> -->
 
-<section class="s_header-section">
+<!-- <section class="s_header-section">
     <div class="container-fluid mt-2">
         <div class="row ">
             <div class="col-lg-8 col-md-8 col-12 p-5">
@@ -25,6 +16,25 @@
                 <img src="<?=base_url(); ?>public/images/Yoga/yogablack.png" class="img-fluid mt-5" alt="Image 4">
                 </div>
             </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="s_header-section">
+    <div class="container-fluid mt-2">
+        <div class="row ">
+            <div class="col-lg-12 col-md-12 col-12 p-5">
+                <div class="bannervs">
+                    <video class="video-dance bannerv" autoplay loop muted controls="1">
+                        <source src="<?=base_url(); ?>public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
+                    </video>                
+                </div>
+            </div>
+            <!-- <div class="col-lg-4 col-md-4 bsimg">
+            <div class="banneris">
+                <img src="<?=base_url(); ?>public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
+                </div>
+            </div> -->
         </div>
     </div>
 </section>

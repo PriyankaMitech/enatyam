@@ -5,13 +5,26 @@ body {
   font-family: "Roboto", sans-serif !important;
   scroll-behavior: smooth;
 }
+
+.cimgbr {
+  padding-bottom: 20px;
+}
+.thumbnailList {
+  text-align: center;
+}
+.cimgb {
+  margin-top: -5%;
+}
+.thumbnailListItemp {
+  padding-right: 55px;
+}
 .MusicSec,
 .container-fluid {
   --bs-gutter-x: 0rem !important;
 }
 .bannervs {
-  padding-top: 13%;
-  margin-left: 86px;
+  padding-top: 8%;
+  /* margin-left: 86px; */
 }
 .banneris {
   padding-top: 26%;
@@ -22,18 +35,18 @@ body {
 .bannerv {
   border-radius: 30px;
   width: 100% !important;
-  max-height: 350px !important;
+  max-height: 400px !important;
   background-color: #000;
-  padding: 5%;
-}
-.cimgb {
-  padding-left: 65px;
-  margin-top: -5%;
+  padding: 1%;
 }
 
 .tophead {
   position: fixed;
   width: 100%;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: rgb(255 40 92) !important;
 }
 
 body {
@@ -219,15 +232,14 @@ div {
   width: 100%;
   /* margin-left: 100px; */
   font-size: 13px !important;
-  font-weight: 600 !important;
-  background-color: #ff1561 !important;
+  font-weight: 400 !important;
+  background-color: #fff !important;
   line-height: 38px !important;
   /* padding: 5px 25px !important; */
   border-radius: 25px !important;
-  color: #ffffff !important;
+  color: #000000 !important;
   /* background: none; */
 }
-
 .btndemoh {
   /* width: 100%; */
   /* margin-left: 100px; */
@@ -246,8 +258,8 @@ div {
 }
 
 .btndemo:hover {
-  background-color: #fff !important;
-  color: #000 !important;
+  background-color: #ff285b !important;
+  color: #fff !important;
 }
 
 .headingSectionTitle {
@@ -369,7 +381,7 @@ button:disabled {
 .list-inline-item.thumbnailListItem:not(:last-child) {
   margin-right: 0rem !important;
 }
-.reviewName{
+.reviewName {
   font-size: 14px;
   color: #000;
   font-weight: 500;
@@ -379,12 +391,11 @@ button:disabled {
   margin-top: 8%;
   margin-left: 43%;
 }
-.blogimg{
-  
-    padding: 0.25rem;
-    background-color: transparent;
-    border: 0px solid #dee2e6;
-    border-radius: 0;
-    max-width: 100%;
-    height: auto;
+.blogimg {
+  padding: 0.25rem;
+  background-color: transparent;
+  border: 0px solid #dee2e6;
+  border-radius: 0;
+  max-width: 100%;
+  height: auto;
 }
