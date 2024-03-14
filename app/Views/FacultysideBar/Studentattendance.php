@@ -97,7 +97,7 @@
                                     </div>
 
                                 </div>
-                                <div class="tab-pane fade show active" id="custom-tabs-two-messages" role="tabpanel"
+                                <div class="tab-pane " id="custom-tabs-two-messages" role="tabpanel"
                                     aria-labelledby="custom-tabs-two-messages-tab">
                                     <!--  -->
                                     <div class="card-body">

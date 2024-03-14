@@ -1,4 +1,40 @@
 <?php include('header.php'); ?>
+<style>
+.address {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    flex: 1;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    max-width: 50%;
+}
+ul li{
+ 
+    color: #fff;
+
+}
+.wcsf1{
+    padding: 0% 0% 0% 22%;
+}
+.wcsf2{
+    padding: 0% 0% 0% 14%;
+}
+
+.offiline-section{
+    padding-top:50px;
+}
+
+
+
 
 </style>
 <!-- <section class="contactus">
@@ -32,7 +68,7 @@
         </div>
     </div>
 </section>
-<section class="career-main-section">
+<section class="offiline-section ">
     <div class="container">
         <div class="row">
             <h3 class="text-center">Unlock & Experience Excellence with Our World-Class Studio Facilities!</h3>
@@ -42,8 +78,9 @@
                     <h5 class="heading text-center">Enter Your area Pincode to Discover Our Studios</h5>
                     <div class="text-center offlinei">
                         <input type="text" class="form-control mr-sm-2 small-input"  name="pincode" id="pincodeAdress" placeholder="pincode" title="Please enter maximum 6 digits">
+                        <span id="pincodeError" class="text-danger" style="display: none;">Please enter a valid pin code.</span>
+
                     </div>
-                    <span id="pincodeError" class="text-danger" style="display: none;">Please enter a valid pin code.</span>
                     <!-- <div id="addressResult" style="display: none;"></div> -->
                     <input class="btn btnstart"  type="button" value="Find us" id="toggleForm"/>
                 </div>
@@ -54,8 +91,11 @@
     <div class="container" id="joinForm" style="display: none;">
         <div class="row noStudioRow">
             
-            <h6 class="text-center mt-5">We're sorry, but our studio services are not available in your area at the moment. Stay
-                tuned for updates! We'll keep you posted once we expand our services to your location. Thank you for your interest and patience!</h6>
+            <h4 class="text-center">We're sorry, but our studio services are not available in your area at the moment. Stay
+                                tuned for updates! We'll keep you posted once we expand our services to your
+
+                                location. Thank you for your interest and patience!
+            </h4>
         </div>
     </div>
     <div class="container" id="getform" style="display: none;">
@@ -71,24 +111,49 @@
 
         
 
-        <div class="row p-3 MusicSec1">
-                <div class="col-md-6 col-12">
-                    <img src="<?=base_url(); ?>public/images/Dance/bollywood-dance.png" class="studioImg">
-                    <!-- public/images/Home/4.png -->
-                </div>
-
-                <div class="col-md-6 col-12 text-col mt-5">
-                    <!-- <h3 class="heading"> Kathak</h3> -->
-                    <div class="text-right">
-                        <div class="h3">Enatyam Studio</div>
-                   </div>
-                    <p class="text-justify" id="addressResult">
-                    </p>
-
-                    
-                </div>
-            </div>
+        <div class="row p-3 ">
+    <!-- <div class="col-md-6 col-12">
+        <img id="image" src="" class="studioImg">
+    </div> -->
+    <div class="col-md-12 col-12 text-col mt-5" id="addressDetails">
+        <!-- Address details will be appended here -->
     </div>
+</div>
+
+    </div>
+</section>
+
+<section class="MusicSec faculty-section p-5">
+
+<div class="container ">
+    <div class="row" >
+    <h3 class="text-white pb-5" style="text-align:center">World-Class Studio Facilities!
+        <span class="line linessf"></span> 
+    </h3>
+        <div class="col-md-6 wcsf1" >
+            <ul>
+                <li>Waiting Area for Parents/Guardians</li>
+                <li>CCTV Security</li>
+                <li>Storage Space</li>
+                <li>Natural Lighting</li>
+                <li>Professional Lighting</li>
+                <li>Safety Features</li>
+            </ul>
+
+        </div>
+        <div class="col-md-6 wcsf2"  >
+        <ul>
+                <li>Spacious Floors</li>
+                <li>Large Mirrors</li>
+                <li>Quality Sound System</li>
+                <li>Climate Control</li>
+                <li>Changing Rooms</li>
+                <li>Wi-Fi Access</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
 </section>
 
 
@@ -102,6 +167,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 
 <?php include('footer.php'); ?>

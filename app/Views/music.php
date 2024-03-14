@@ -107,7 +107,7 @@
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
                                     <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
-                                    <a href="#learnmusic" class="btn btndemo step" role="button">
+                                    <a href="#learnmusic" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -189,11 +189,15 @@
                     <!--  3rd section : modules section (month) -->
                     <section class="modulesec" id="mod-music">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center mbfim">
                                         <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
@@ -494,7 +498,7 @@
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
                                     <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
-                                    <a href="#learncarnatic" class="btn btndemo step" role="button">
+                                    <a href="#learncarnatic" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -578,11 +582,15 @@
 
                     <section class="modulesec" id="mod-carnatic">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center mbfim">
                                         <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
@@ -872,7 +880,7 @@
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
                                     <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
-                                    <a href="#learnsemi" class="btn btndemo step" role="button">
+                                    <a href="#learnsemi" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -956,11 +964,15 @@
 
                     <section class="modulesec" id="mod-semi">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center mbfim">
                                         <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
@@ -1257,7 +1269,7 @@
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
                                     <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
-                                    <a href="#learnwestern" class="btn btndemo step" role="button">
+                                    <a href="#learnwestern" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -1341,11 +1353,15 @@
 
                     <section class="modulesec" id="mod-western">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center mbfim">
                                         <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
@@ -1645,7 +1661,7 @@
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
                                     <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
-                                    <a href="#learnplay" class="btn btndemo step" role="button">
+                                    <a href="#learnplay" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -1729,11 +1745,15 @@
 
                     <section class="modulesec" id="mod-play">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mzfm"> <button type="button" class="btn btndemo mkathak">Modules</button></span>
-                            </div>
+                     
                             <div class="month-row">
                                 <div class="row">
+                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center mbfim">
                                         <img src="public/images/Music/musicImg3.svg" class="danceimg danceimg5">
 
@@ -2007,13 +2027,16 @@
 <!-- Testimonials -->
 <section class="testimonials mftm mtt testmonialsm" id="testimonials">
     <div class="container">
-        <div class="row">
-            <span class="text-center mb-0"> <button type="button" class="btn btndemo step mkathak">Testimonials</button></span>
-        </div>
+       
         <div class="month-row">
             <div class="row">
+            <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                <h3>Testimonials
+                </h3>
+                <span class="line"></span>
+
+            </div>
                 <div class="col-lg-6 col-md-6 col-12">
-                    <!-- slider -->
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item motmusic active">

@@ -206,11 +206,15 @@
 
                     <section class="modulesec mtfyogm" id="mod-yoga">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mb-0"> <button type="button" class="btn btndemo mkathak" fdprocessedid="gv47vp">Modules</button></span>
-                            </div>
+                       
                             <div class="month-row">
                                 <div class="row ">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                         <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
@@ -622,11 +626,15 @@
 
                     <section class="modulesec mtfyogm" id="mod-yoga1">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mb-0"> <button type="button" class="btn btndemo mkathak" fdprocessedid="gv47vp">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                         <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
@@ -1028,11 +1036,14 @@
                     </section>
                     <section class="modulesec mtfyogm" id="mod-yoga2">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mb-0"> <button type="button" class="btn btndemo mkathak" fdprocessedid="gv47vp">Modules</button></span>
-                            </div>
                             <div class="month-row">
                                 <div class="row">
+                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                         <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
@@ -1443,11 +1454,14 @@
                     </section>
                     <section class="modulesec mtfyogm" id="mod-yoga3">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mb-0"> <button type="button" class="btn btndemo mkathak" fdprocessedid="gv47vp">Modules</button></span>
-                            </div>
                             <div class="month-row">
                                 <div class="row">
+                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                         <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
@@ -1856,11 +1870,14 @@
                     </section>
                     <section class="modulesec mtfyogm" id="mod-yoga4">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mb-0"> <button type="button" class="btn btndemo mkathak" fdprocessedid="gv47vp">Modules</button></span>
-                            </div>
                             <div class="month-row">
                                 <div class="row">
+                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                         <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
@@ -2268,11 +2285,14 @@
                     </section>
                     <section class="modulesec mtfyogm" id="mod-yoga5">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mb-0"> <button type="button" class="btn btndemo mkathak" fdprocessedid="gv47vp">Modules</button></span>
-                            </div>
                             <div class="month-row">
                                 <div class="row">
+                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                         <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
@@ -2680,11 +2700,14 @@
                     </section>
                     <section class="modulesec mtfyogm" id="mod-yoga6">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mb-0"> <button type="button" class="btn btndemo mkathak" fdprocessedid="gv47vp">Modules</button></span>
-                            </div>
                             <div class="month-row">
                                 <div class="row">
+                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                         <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
@@ -3313,11 +3336,14 @@
                     </section>
                     <section class="modulesec mtfyogm" id="mod-yoga9">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mb-0"> <button type="button" class="btn btndemo mkathak" fdprocessedid="gv47vp">Modules</button></span>
-                            </div>
                             <div class="month-row">
                                 <div class="row">
+                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                         <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
 
@@ -3625,12 +3651,17 @@
 
 <section class="testimonials tyoga" id="testimonials">
     <div class="container">
-        <div class="row">
-            <span class="text-center mb-0"> <button type="button" class="btn btndemo step ttm" fdprocessedid="43q1ao">Testimonials</button></span>
-        </div>
+        
         <div class="">
             <div class="row">
+                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                    <h3>Testimonials
+                    </h3>
+                    <span class="line"></span>
+
+                </div>
                 <div class="col-lg-6 col-md-6 col-12">
+
                     <!-- slider -->
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">

@@ -1695,6 +1695,7 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
     {
         $model = new AdminModel();
         $data['student_list'] = $model->get_students();
+        // echo "<pre>";print_r($data['student_list'] );exit();
         echo view('student_list', $data);
     }
 

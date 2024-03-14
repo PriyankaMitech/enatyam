@@ -44,7 +44,7 @@
    <!-- First Row of Buttons -->
    <div class="row pdblog1">
       <div class="col-lg-4 col-md-4 col-4 btnblocks ">
-         <button class="btn btn-primary btn-block">Kathak </button>
+         <button class="btn btn-primary btn-block active">Kathak </button>
       </div>
       <div class="col-lg-4 col-md-4 col-4 btnblocks ">
          <button class="btn btn-primary btn-block">Odds</button>

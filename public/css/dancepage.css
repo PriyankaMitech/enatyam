@@ -23,6 +23,7 @@
 .list-inline .active,
 .learning .list-inline .active {
   background-color: #ff1561 !important;
+  color: #fff !important;
 }
 
 .list-inline .bigger {
@@ -212,7 +213,7 @@ body {
   border-radius: 28px !important;
   width: 162px;
   height: 60px;
-  
+
   background-color: #fff;
   color: #000 !important;
 }
@@ -364,4 +365,3 @@ body {
   border-radius: 5px;
   text-align: left !important;
 }
-

@@ -114,7 +114,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments" class="btn btndemo step active " role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -197,11 +197,15 @@
                     </section>
                     <section class="modulesec tmm" id="mod-instruments">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -522,7 +526,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments1" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments1" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -606,11 +610,15 @@
 
                     <section class="modulesec tmm" id="mod-instruments1">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -929,7 +937,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments2" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments2" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -1013,11 +1021,15 @@
 
                     <section class="modulesec tmm" id="mod-instruments2">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -1325,7 +1337,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments3" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments3" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -1410,11 +1422,15 @@
                     </section>
                     <section class="modulesec tmm" id="mod-instruments3">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -1711,7 +1727,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments4" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments4" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -1794,11 +1810,15 @@
                     </section>
                     <section class="modulesec tmm" id="mod-instruments4">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -2087,7 +2107,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments5" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments5" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -2170,11 +2190,15 @@
                     </section>
                     <section class="modulesec tmm" id="mod-instruments5">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                            
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -2462,7 +2486,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments6" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments6" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -2545,11 +2569,15 @@
                     </section>
                     <section class="modulesec tmm" id="mod-instruments6">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                           
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -2836,7 +2864,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments7" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments7" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -2919,11 +2947,15 @@
                     </section>
                     <section class="modulesec tmm" id="mod-instruments7">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                           
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -3211,7 +3243,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments8" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments8" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -3294,11 +3326,15 @@
                     </section>
                     <section class="modulesec tmm" id="mod-instruments8">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                           
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -3584,7 +3620,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learninstruments9" class="btn btndemo step" role="button">
+                                    <a href="#learninstruments9" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -3668,11 +3704,15 @@
 
                     <section class="modulesec tmm" id="mod-instruments9">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center mbfmi"> <button type="button" class="btn btndemo step mfi">Modules</button></span>
-                            </div>
+                          
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
                                         <img src="public/images/instrument/s-3.svg" class="danceimg mimg1">
 
@@ -3946,11 +3986,15 @@
 
 <section class="testimonials ittmi" id="testimonials">
     <div class="container">
-        <div class="row">
-            <span class="text-center mbft"> <button type="button" class="btn btndemo step mfi">Testimonials</button></span>
-        </div>
+       
         <div class="month-row">
             <div class="row">
+            <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                        <h3>Testimonials
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <!-- slider -->
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
