@@ -579,6 +579,27 @@ class AdminModel extends Model
             return false;
         }
     }
+    public function getsingleroworderby($table, $wherecon, $orderby) {
+        // Build the query
+        $query = $this->db->table($table)->where($wherecon);
+    
+        // Apply ordering
+        foreach ($orderby as $field => $order) {
+            $query->orderBy($field, $order);
+        }
+    
+        // Get the result
+        $result = $query->get()->getRow();
+    
+        if ($result) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
+    
+    
+    
     public function getsinglerow1($table, $wherecond)
     {
 

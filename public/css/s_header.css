@@ -211,7 +211,7 @@
   margin-bottom: 30px;
   font-size: 13px !important;
   font-weight: 400 !important;
-  background-color: #8c52ff !important;
+  background-color: #ff285b !important;
   line-height: 38px !important;
   padding: 5px 25px !important;
   border-radius: 25px !important;
@@ -356,7 +356,7 @@
 .join-now-btn {
   /* line-height: 30px; */
   color: #fff;
-  background: #8c52ff !important;
+  background: #ff285b !important;
   padding: 10px 24px;
   border-radius: 50px !important;
   display: inline-block;
@@ -545,7 +545,7 @@ icon:hover {
 
 .list-inline .active,
 .learning .list-inline .active {
-  background-color: #8c52ff !important;
+  background-color: #ff285b !important;
 }
 
 .textP {

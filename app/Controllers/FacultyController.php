@@ -364,6 +364,7 @@ class FacultyController extends BaseController
       ];
       // print_r($data);die;
       $result = $model->insertAttendance($data);
+      
       $student_registerid = $this->request->getPost('studentId');
       $Attendance_status = $this->request->getPost('attendance');
       $sessionno= $this->request->getPost('session');

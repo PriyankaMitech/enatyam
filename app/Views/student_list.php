@@ -38,6 +38,8 @@
                     <tr>
                         <th>Sr.No</th>
                         <th>Payment Status</th>
+                        <th>Renewal Status</th>
+
                         <th>Name</th>
                         <th>Email</th>
                         <th>Course - Sub Course</th>
@@ -49,8 +51,45 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <?php if(!empty($student_list)){ $i='1';?>
+                    <?php
+                                          // echo "<pre>";print_r($student_list);exit();
+
+                    if(!empty($student_list)){ $i='1';?>
                     <?php foreach ($student_list as $data) {
+                      $adminModel = new \App\Models\AdminModel(); //
+                      $wherecon = array('student_registerid' => $data->id);
+                      $orderby = array('date' => 'DESC');
+                      $attendeance_details = $adminModel->getsingleroworderby('attendeance_table', $wherecon, $orderby);
+
+                      $days = 0;
+                      if($data->SessionsCount){
+                      $days= $data->SessionsCount;
+
+                      }
+
+                      if(!empty($attendeance_details)){
+
+                        $wherecon = array('id' => $attendeance_details->payment_id);
+
+                      $payment_details = $adminModel->getsinglerow('payment', $wherecon);
+
+                      if(!empty($payment_details)){
+
+                      $days = $payment_details->no_of_session -  $attendeance_details->Session_no;
+                      }
+
+                      // echo $days;
+
+
+                      
+                      }
+                      
+
+
+
+                      // echo "<pre>";print_r($attendeance_details);exit();
+    
+
                       
                       $createdAt = strtotime($data->created_at);
                       $currentDate = strtotime(date("Y-m-d"));
@@ -76,6 +115,7 @@
                                 <?php } ?>
                           
                             </td>
+                            <td><?php if($days == '0') { ?> <?php if($data->Payment_status == 'N'){ ?>  <small class="badge badge-danger"> Plase Pay </small> <?php }else{ ?> <small class="badge badge-success"> <?php echo $days ?> Days For Renewal</small> <?php } ?> <?php }else if($days == '2' && $days == '1'){  ?><small class="badge badge-danger"> <?php echo $days; ?> days Remaining For Renewal Please Hurry Up.</small>  <?php }else{ ?> <small class="badge badge-success"> <?php echo $days ?> Days For Renewal</small> <?php } ?></td>
                             <td style="width:100px"><p><?= $data->full_name ?><sup> <?php echo $new; ?></sup></p></td>
                             <td><?= $data->email; ?></td>
                             <td><?= $data->courses_name; ?> - <?= $data->sub_courses_name; ?></td>

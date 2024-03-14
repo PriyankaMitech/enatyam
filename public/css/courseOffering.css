@@ -1,6 +1,6 @@
 .list-inline .active,
 .learning .list-inline .active {
-  background-color: #8c52ff !important;
+  background-color: #ff285b !important;
 }
 
 .text-col .textP {
@@ -64,7 +64,7 @@ body {
 .typesOfDance-tab .nav-pills .nav-link.active,
 .typesOfDance-tab .nav-pills .nav-link.big.active,
 .modulesec .monthtypes.active {
-  background-color: #8c52ff;
+  background-color: #ff285b;
 }
 .typesOfDance-tab .nav-pills .nav-link:hover {
   color: white !important;

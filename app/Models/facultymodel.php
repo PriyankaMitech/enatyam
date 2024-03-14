@@ -338,11 +338,12 @@ class facultymodel extends Model
 
     public function insertAttendance($data)
     {
+        // echo "<pre>";print_r($data);exit();
         // Check the Attendance_status
         if ($data['Attendance_status'] === 'a') {
             // Increment no_of_session by 1 for the given payment_id
             $this->db->table('payment')
-                ->where('billing_id', $data['payment_id'])
+                ->where('id', $data['payment_id'])
                 ->increment('no_of_session');
                 return $this->db->table('attendeance_table')->insert($data);
         } else {
