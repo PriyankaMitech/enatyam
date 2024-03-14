@@ -1,3 +1,6 @@
+.owl-carousel.owl-drag .owl-item {
+  cursor: pointer !important;
+}
 .mobilepageview {
   display: none;
 }

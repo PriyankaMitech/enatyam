@@ -41,10 +41,10 @@ footer {
   border: 1px solid rgba(0, 0, 0, 0.02);
 }
 .accordion-item:hover .accordion-item-header {
-  color: #8c52ff;
+  color: #ff285b;
 }
 .accordion-item-header.active {
-  color: #8c52ff;
+  color: #ff285b;
 }
 
 .accordion-item-header::after {

@@ -123,7 +123,7 @@
                                 </li>
 
                                 <li class="col-lg-2 col-md-3 col-6 list-inline-item ">
-                                    <a href="#learnyoga" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -543,7 +543,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learnyoga1" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga1" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -953,7 +953,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learnyoga2" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga2" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -1371,7 +1371,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learnyoga3" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga3" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -1787,7 +1787,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learnyoga4" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga4" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -2202,7 +2202,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learnyoga5" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga5" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -2617,7 +2617,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learnyoga6" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga6" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -3031,7 +3031,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learnyoga7" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga7" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -3144,7 +3144,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learnyoga8" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga8" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>
@@ -3253,7 +3253,7 @@
                                 </li>
 
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
-                                    <a href="#learnyoga9" class="btn btndemo step" role="button">
+                                    <a href="#learnyoga9" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">What you will learn</span>
                                         </span>

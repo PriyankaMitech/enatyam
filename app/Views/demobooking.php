@@ -1,5 +1,78 @@
 <?php include('header.php'); ?>
+<style>
+select {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  appearance: none; /* Removes default dropdown arrow */
+  -webkit-appearance: none; /* For older versions of Chrome/Safari */
+  -moz-appearance: none; /* For older versions of Firefox */
+}
 
+select::-ms-expand {
+  display: none; /* Hides arrow on Internet Explorer/Edge */
+}
+
+/* Styling the selected option */
+select option:checked {
+  background-color: #ff1561 !important;
+  color: #fff!important;
+}
+
+/* Styling the dropdown options on hover */
+/* This won't work reliably across all browsers */
+select option:hover {
+  background-color: #ff1561!important;
+  color: #fff!important;
+}
+
+
+
+select option:checked {
+    background-color: #ff1561 !important; /* Your desired color */
+    color: white; /* Text color for better visibility */
+}
+
+select:hover option:hover {
+    background-color: red !important;
+    color: white;
+}
+
+/* Define the color for the first option */
+select option:first-child {
+    background-color: #ff1561; /* Your desired color */
+    color: white; /* Text color for better visibility */
+}
+
+
+
+.form-control:focus {
+color: #000 !important;
+    border-color: #e9175b !important;
+
+    box-shadow: 0 0 0 0.25rem #ff006738 !important;
+}
+
+select{
+    cursor: pointer
+}
+
+input[type="date"] {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
 
 <section class="btnSection1 bookdemos">
     <div class="container container_bookdemo">
@@ -66,7 +139,7 @@
                                     <div class="row tpm">
                                         <label class="col-md-4 text-white fmname" for="mobile_no">Mobile No.<span class="required">*</span></label>
                                         <div class="col-md-2 seletbook">
-                                            <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"></select>
+                                            <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"  onfocus='this.size=12;' onblur='this.size=1;' onchange='this.size=1; this.blur();'></select>
                                         </div>
                                         <div class="col-md-6 seletbook">
                                             <input required type="text" autocomplete="off" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
@@ -106,7 +179,7 @@
                                 <span class="col-lg-4 col-md-4 col-12 text-white fmname">Select Country* : </span>
 
                                 <div class="col-lg-8 col-md-8 col-12 ">
-                                    <select class="form-control" id="inputCountry" name="Country">
+                                    <select class="form-control" id="inputCountry" name="Country" onfocus='this.size=12;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
 
                                         <option value="">Select Country</option>
                                         <?php if (!empty($country_data)) { ?>

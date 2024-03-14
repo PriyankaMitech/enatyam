@@ -39,12 +39,12 @@
                                                 <tbody>
                                                     <?php foreach ($studentList as $student): ?>
                                                     <?php $attendanceVerified = false; ?>
-                                                    <?php foreach ($varifyattandance as $attendance): ?>
+                                                    <?php if(!empty($varifyattandance)){foreach ($varifyattandance as $attendance): ?>
                                                     <?php if ($attendance->student_registerid == $student->id && $attendance->renewal === null && $attendance->verify_by_student === null): ?>
                                                     <?php $attendanceVerified = true; ?>
                                                     <?php break; ?>
                                                     <?php endif; ?>
-                                                    <?php endforeach; ?>
+                                                    <?php endforeach;} ?>
                                                     <tr>
                                                         <td><?= $student->full_name ?></td>
                                                         <td>
@@ -103,11 +103,22 @@
                                     <div class="card-body">
                                         <?php
                                     $currentGroup = null;
+
+                                    // echo "<pre>";print_r($GroupList);exit();
                                     foreach ($GroupList as $student):
+
+                                        $adminModel = new \App\Models\AdminModel(); //
+                                        $wherecon = array('user_id' => $student->id);
+                                        $orderby = array('created_at' => 'DESC');
+                                        $pament_details = $adminModel->getsingleroworderby('payment', $wherecon, $orderby);
+
+                                    // echo "<pre>";print_r($pament_details);exit();
+   
                                         if ($currentGroup !== $student->groupName):
                                             // Close previous card and start a new card for a different group
                                             if ($currentGroup !== null):
                                     ?>
+
                                         </tbody>
                                         </table>
                                         </form>
@@ -135,6 +146,8 @@
                                                         <td><?= $student->full_name ?></td>
                                                         <td>
                                                             <div class="form-check">
+                                                            <input type="hidden" name="payment_id[<?= $student->id ?>]"
+                                                                value="<?php if(!empty($pament_details)){ echo $pament_details->id; } ?>">
                                                                 <input class="form-check-input" type="checkbox"
                                                                     name="attendance[<?= $student->id ?>][present]"
                                                                     id="present<?= $student->id ?>" value="p">
