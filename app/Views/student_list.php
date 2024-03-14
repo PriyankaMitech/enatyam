@@ -37,6 +37,7 @@
                   <thead>
                     <tr>
                         <th>Sr.No</th>
+                        <th>Payment Status</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Course - Sub Course</th>
@@ -49,10 +50,33 @@
                   </thead>
                   <tbody>
                     <?php if(!empty($student_list)){ $i='1';?>
-                    <?php foreach ($student_list as $data) { ?>
+                    <?php foreach ($student_list as $data) {
+                      
+                      $createdAt = strtotime($data->created_at);
+                      $currentDate = strtotime(date("Y-m-d"));
+                      $tenDaysAgo = strtotime("-10 days");
+                      $new = "";
+                      if (
+                          $createdAt >= $tenDaysAgo &&
+                          ($createdAt = $currentDate)
+                      ) {
+                          $new = '<small class="badge badge-info">New</small>';
+                      }
+                      ?>
                         <tr>
                             <td><?= $i; ?></td>
-                            <td><?= $data->full_name; ?></td>
+                            <td><?php if($data->Payment_status == 'Y'){ ?>
+                              <small class="badge badge-success">Done</small>
+
+                                
+                              <?php }else{ ?>
+                               
+                                <small class="badge badge-danger"> Not Done</small>
+
+                                <?php } ?>
+                          
+                            </td>
+                            <td style="width:100px"><p><?= $data->full_name ?><sup> <?php echo $new; ?></sup></p></td>
                             <td><?= $data->email; ?></td>
                             <td><?= $data->courses_name; ?> - <?= $data->sub_courses_name; ?></td>
                             <td><?= $data->teacher_name; ?></td>
@@ -67,13 +91,6 @@
                                 echo "<td>No date available</td>";
                             }
                             ?>
-
-
-
-
-
-                    
-
                         </tr>
                         <?php $i++;} ?>
                         <?php } ?>

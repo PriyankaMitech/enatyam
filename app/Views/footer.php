@@ -1838,7 +1838,6 @@ $(document).ready(function() {
     </script>
 
 <script>
-
 $(document).ready(function() {
     $('#toggleForm').click(function() {
         var pincode = $('#pincodeAdress').val();
@@ -1857,17 +1856,45 @@ $(document).ready(function() {
                         var addresses = JSON.parse(response);
 
                         if (addresses.length > 0) {
-                            var address = addresses[0].address; // Extracting the address property from the first object
-                             $('#addressResult').text(address).show();
+                            // Clear previous data
+                            $('#addressDetails').empty();
+
+                            // Iterate through addresses
+                            addresses.forEach(function(addressObj) {
+                                var name = addressObj.name;
+                                var address = addressObj.address;
+                                var contact = addressObj.contact_no;
+                                var googleLocation = addressObj.google_location;
+
+                                var $addressDiv = $('<div></div>').addClass('address');
+                                
+                                // Image on one side
+                                var $imageDiv = $('<div></div>').addClass('image');
+                                var imageName = addressObj.img; // Image for each address
+                                $imageDiv.append('<img src="http://localhost/enatyam/public/images/Dance/' + imageName + '" alt="Address Image">');
+
+                                // Text on the other side
+                                var $textDiv = $('<div></div>').addClass('text');
+                                $textDiv.append('<h3>' + name + '</h3>');
+                                $textDiv.append('<p>' + address + '</p>');
+                                $textDiv.append('<p><b>Contact No:</b> ' + contact + '</p>');
+                                $textDiv.append('<p><b>Google Location:</b> ' + googleLocation + '</p>');
+
+                                $addressDiv.append($imageDiv);
+                                $addressDiv.append($textDiv);
+
+                                $('#addressDetails').append($addressDiv);
+                            });
+
                             $('#getform').show();
                             $('#joinForm').hide();
                         } else {
-                            $('#addressResult').text("No address found for this pincode.").show();
+                            $('#addressDetails').html('<p>No address found for this pincode.</p>');
                             $('#getform').hide();
                             $('#joinForm').show();
                         }
                     } else {
-                        $('#addressResult').text(response).show();
+                        $('#addressResult').html(response).show();
                         $('#getform').hide();
                         $('#joinForm').show();
                     }
@@ -1876,6 +1903,15 @@ $(document).ready(function() {
         }
     });
 });
+
+
+
+
+
+
+
+
+
 
 
 

@@ -206,7 +206,7 @@ body {
 }
 
 .typesOfYoga-tab .nav-pills .nav-link {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 13px;
   border-radius: 28px !important;
   width: 100%;
@@ -224,7 +224,7 @@ body {
 .typesOfYoga-tab .nav-pills .nav-link.active,
 .typesOfYoga-tab .nav-pills .nav-link.big.active,
 .modulesec .monthtypes.active {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 13px;
   background-color: #ff1561;
   color: #fff !important;

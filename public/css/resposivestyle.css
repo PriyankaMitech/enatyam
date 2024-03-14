@@ -1,3 +1,6 @@
+.mobilepageview {
+  display: none;
+}
 .btnstrt {
   background-color: #f68535 !important;
   border-radius: 50px 50px 50px 50px !important;
@@ -9,19 +12,21 @@
   border-color: #e8155a !important;
 }
 .btn-primary:hover {
-  color: #000 !important;
-  background-color: #ffffff !important;
-  border-color: #e8155a !important;
+  color: #fff !important;
+  background-color: #e81559 !important;
+  border-color: #d50046 !important;
 }
+
 .btnblocks {
   margin-bottom: 10px;
 }
 
 .btn-primary {
   border-radius: 48px;
-  background-color: #e8155a;
+  background-color: #ffffff;
   margin-top: 10px;
   width: 100%;
+  color: #000;
   border-color: aliceblue;
 }
 .text-lg-start1 {
@@ -53,9 +58,9 @@
 }
 
 .btn-primary.active {
-  color: #000;
-  background-color: #fff;
-  border-color: #fff;
+  color: #fff;
+  background-color: #e81559;
+  border-color: #e81559;
 }
 .btn-primary.active:focus {
   box-shadow: 0 0 0 0.25rem rgb(233 23 91) !important;
@@ -63,6 +68,12 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  .homapageview {
+    display: none;
+  }
+  .mobilepageview {
+    display: block;
+  }
   .cont-main-section {
     padding: 20px 0px;
   }
