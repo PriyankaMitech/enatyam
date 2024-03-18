@@ -3984,7 +3984,7 @@
 
 
 
-<section class="testimonials ittmi" id="testimonials">
+<section class="testimonials ittmi" id="testimonials" style="display:none">
     <div class="container">
        
         <div class="month-row">
@@ -4199,6 +4199,8 @@
         </div>
     </div>
 </section>
+<?php include('test.php'); ?>
+
 <?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>
 

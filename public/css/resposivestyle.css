@@ -1,3 +1,6 @@
+.footer-listing {
+  display: none;
+}
 .owl-carousel.owl-drag .owl-item {
   cursor: pointer !important;
 }
@@ -18,6 +21,11 @@
   color: #fff !important;
   background-color: #e81559 !important;
   border-color: #d50046 !important;
+}
+.hs h3 {
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  font-family: "Roboto Slab", Sans-serif !important;
 }
 
 .btnblocks {
@@ -71,6 +79,24 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  #playlist button {
+    height: 119px !important;
+  }
+  #video-player iframe {
+    height: auto !important;
+  }
+  .parent-container {
+    padding: 0px 0px 0px 0px !important;
+  }
+  #playlist {
+    display: grid !important;
+  }
+  .footer-listing {
+    display: list-item;
+  }
+  .footer-listingall {
+    display: none;
+  }
   .homapageview {
     display: none;
   }
@@ -238,8 +264,8 @@
     width: 100% !important;
   }
   .close {
-    top: 116px;
-    right: 0px;
+    top: 142px;
+    right: 19px;
   }
   .staff-wrapper {
     padding: 50px 0px;
@@ -401,8 +427,10 @@
     font-size: 25px !important;
   }
   .heading-div h3 {
-    font-size: 25px !important;
+    font-size: 34px !important;
     margin-top: 31px !important;
+    font-weight: 800 !important;
+    font-family: "Roboto Slab", Sans-serif !important;
   }
   /* .btnstart {
     font-size: 8px !important;
@@ -940,6 +968,25 @@
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  #playlist {
+    display: grid;
+  }
+  .homapageview {
+    display: none;
+  }
+  .mobilepageview {
+    display: block;
+  }
+  .parent-container {
+    padding: 0px 0px 0px 0px !important;
+  }
+  #playlist button {
+    height: 119px !important;
+  }
+  .happyFaces-div .mt-5 {
+    margin-top: 0px !important;
+  }
+
   .bannervs {
     padding-top: 13%;
     margin-left: 0px;
@@ -973,7 +1020,7 @@
   }
   .how_Started-section {
     margin-bottom: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
   .Alp-title {
     font-size: 18px;
@@ -1041,8 +1088,23 @@
   .carousel-control-next {
     height: 87%;
   }
+
   .testimonials {
-    height: 395px !important;
+    height: 395px;
+  }
+  .testimonialdance {
+    height: auto !important;
+  }
+  .ssf h3 {
+    font-size: 34px;
+    font-weight: 800;
+  }
+  /* .hs {
+    padding-top: 40px;
+  } */
+  .hs h3 {
+    font-size: 34px;
+    font-weight: 800;
   }
   .card {
     margin-bottom: 65px;
@@ -1054,8 +1116,14 @@
     display: none;
   }
   .pricing-section {
-    margin-top: 6rem !important;
+    /* margin-top: 6rem ; */
     margin-bottom: 0rem;
+  }
+  .pricingforhome {
+    padding-top: 66px;
+  }
+  .owl-theme .owl-nav {
+    margin-top: 0px !important;
   }
   .price-btn {
     padding: 5px 5px;
@@ -1153,8 +1221,14 @@
   .mot {
     margin-top: 12%;
   }
-  .motd {
+  /* .motd {
     margin-top: -32%;
+  } */
+  .carousel-inner {
+    height: auto !important;
+  }
+  .semicolone span {
+    padding: 0px 0px 0px 8px !important;
   }
   .mot1 {
     margin-top: 0px;
@@ -1169,7 +1243,15 @@
     margin-top: 43px;
   }
   .heading-div h3 {
-    font-size: 23px;
+    font-size: 34px;
+    font-weight: 800;
+    color: #000;
+    font-family: "Roboto Slab", serif !important;
+  }
+  .hs h3 {
+    font-size: 34px;
+    font-weight: 800;
+    font-family: "Roboto Slab", serif !important;
   }
 
   .mkathak {
@@ -1199,6 +1281,7 @@
     width: 100%;
   }
   .danceimgy {
+    padding-top: 5% !important;
     width: 50% !important;
   }
   .cify {
@@ -1367,8 +1450,15 @@
     display: none;
   }
   .bannervs {
-    padding-top: 25%;
+    padding-top: 11%;
     padding-left: 0%;
+  }
+  .typesOfDance-tab .mb-5 {
+    margin-bottom: 1rem !important;
+  }
+  .ThumbnailImg {
+    padding: 0% 14%;
+    margin-bottom: 1rem !important;
   }
   .banneris {
     padding-top: 47%;
@@ -1382,7 +1472,13 @@
     margin-left: 0%;
   }
   .bt {
-    margin-top: 45px !important;
+    margin-top: 23px !important;
+  }
+  .title_4 {
+    margin-top: 0px;
+  }
+  .learning_Platform-section {
+    padding-top: 30px;
   }
   .row {
     margin-right: calc(-0 * var(--bs-gutter-x));

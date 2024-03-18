@@ -1976,7 +1976,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 <span class="navbar-toggler-icon"></span>
                 </button> -->
                     <!-- <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
-                        <img src="public/images/logosrem.png" alt="Enatyam">
+                        <img src="public/images/logos.png" alt="Enatyam">
                     </a> -->
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav main menu ms-auto">

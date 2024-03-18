@@ -192,7 +192,7 @@
                             
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                <div class="col-lg-12 col-12 text-center hs">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -585,7 +585,7 @@
                             
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                <div class="col-lg-12 col-12 text-center hs">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -967,7 +967,7 @@
                             
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                <div class="col-lg-12 col-12 text-center hs">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -1356,7 +1356,7 @@
                             
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                <div class="col-lg-12 col-12 text-center hs">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -1748,7 +1748,7 @@
                      
                             <div class="month-row">
                                 <div class="row">
-                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                                    <div class="col-lg-12 col-12 text-center hs">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -2025,12 +2025,12 @@
 
 
 <!-- Testimonials -->
-<section class="testimonials mftm mtt testmonialsm" id="testimonials">
+<section class="testimonials mftm mtt testmonialsm" id="testimonials" style="display:none">
     <div class="container">
        
         <div class="month-row">
             <div class="row">
-            <div class="col-lg-12 col-12 text-center testimonialsdiv">
+            <div class="col-lg-12 col-12 text-center hs">
                 <h3>Testimonials
                 </h3>
                 <span class="line"></span>
@@ -2245,6 +2245,8 @@
         </div>
     </div>
 </section>
+
+<?php include('test.php'); ?>
 
 <?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>

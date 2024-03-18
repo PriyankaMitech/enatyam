@@ -101,8 +101,25 @@ class Home extends BaseController
     }
     public function Home()
     {
+        $model = new AdminModel();
+        $wherecond1 = array('is_deleted' => 'N');
+        $data['country_data'] = $model->getalldata('countries', $wherecond1);
 
-        return view('home');
+        $data['katakc'] = $model->getstarcount();
+        $data['bharatanatyam'] = $model->getstarcount1();
+        $data['bollywood'] = $model->getstarcount2();
+        $data['westerndnce'] = $model->getstarcount3();
+        $data['hindustanivocal'] = $model->getstarcount4();
+        $data['carnaticvocal'] = $model->getstarcount5();
+        $data['bollywoodsinging'] = $model->getstarcount6();
+        $data['playbacksinging'] = $model->getstarcount7();
+        $data['yoga'] = $model->getstarcount8();
+        $data['meditation'] = $model->getstarcount9();
+        $data['nuitritionalguidance'] = $model->getstarcount10();
+        $data['musicalinstruments'] = $model->getstarcount11();
+
+
+        return view('home',$data);
     }
     public function blog()
     {
