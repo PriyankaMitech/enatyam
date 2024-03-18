@@ -55,16 +55,11 @@
  /* FOR DEMO */
 .parent-container {
   width: 100%;
-  max-width: var(--parent-container-max-width);
+  /* max-width: var(--parent-container-max-width); */
   margin: 0 auto;
-  padding-top:50px;
+  padding:0px 40px 0px 40px;
 }
-@media only screen and (max-width: 980px) {
-  .parent-container {
-  padding-top:0;
-}
-  
-}
+
 
 
 /* BEGIN YOUTUBE PLAYER CSS */
@@ -75,10 +70,10 @@
 }
 
 #video-player iframe {
-  aspect-ratio: var(--video-aspect-ratio); 
-  width: 100% !important;
-  height: auto !important;
-  backgroun:black;
+    aspect-ratio: var(--video-aspect-ratio);
+    width: 100% !important;
+    height: 416px ;
+      background:black;
 }
 
 #video-caption {
@@ -108,10 +103,11 @@
 #playlist {
   background-color: #ff1561;
   overflow: scroll-x;
-  padding-top: 15px;
-  padding-bottom: 25px;
+  padding-right: 23px;
+  /* padding-top: 15px;
+  padding-bottom: 25px; */
   /* grid layout for playlist */
-  display: grid;
+  /* display: grid; */
   grid-gap: 10px;
   grid-template-columns: repeat(
     auto-fill,
@@ -144,11 +140,14 @@
   overflow: hidden;
    border: solid 2px var(--playlist-button-border-color);
   filter: brightness(0.7);
-  height: 100%;
-  background-size: cover;
+  /* height: 100%; */
+  width:100%;
+  height: 208px;  background-size: cover;
   background-position: center;
-  padding-left: 10px;
-  padding-right:10px;
+  /* padding-left: 10px;
+  padding-right:10px; */
+  padding: 10px;
+    margin: 10px;
   letter-spacing:1px;
     transition: all 300ms ease;
   
@@ -174,6 +173,8 @@
 #playlist button:active {
   transform: scale(0.95);
   color:#000;
+  padding: 10px;
+    margin: 10px;
 }
 
 /* MEDIA QUERY for PLAYLIST BUTTON*/
@@ -1665,7 +1666,7 @@ if($datas->total_ratings != ''){
 
 
 
-<section class="stories-section MusicSec homapageview p-3">
+<section class="stories-section MusicSec homapageview p-3" style="display:none">
     <div class="container">
         <div class="line_1">
             <div class="row">
@@ -1780,85 +1781,62 @@ if($datas->total_ratings != ''){
 </section>
 <section class="stories-section MusicSec homapageview p-3">
     <section class="parent-container">
+    <h3 class="text-white p-3" style="text-align:center"> Testimonials<br>
+                    <span class="line"></span> 
+                </h3> 
       <aside class="row" id="video-player">
-        <div class="col-md-6">
-        <iframe
-          id="YouTube-Iframe"
-          class="lazyload"
-          src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        
+        <div class="col-md-6 p-2">
+        <iframe src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted></iframe>
 
-        <div class="text-white" id="video-caption">Chapal Hart ♩ AMERICAN PRIDE</div>
+        <!-- <div class="text-white" id="video-caption">Chapal Hart ♩ AMERICAN PRIDE</div> -->
                     </div>
         <div id="playlist" class="col-md-6">
-
+            <div class="row">
+            <div class="col-md-6">
           <button
-            class="lazyload"
-            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            class="lazyload active"
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
             data-caption="Chapal Hart ♩ American Pride">
             <img src="<?php echo base_url('public/images/play.jpg'); ?>" alt="Thumbnail Image" width="100%">
 
-            Chapal Hart ♩ AMERICAN PRIDE
         </button>
-                  <button
-    class="lazyload active"
-    data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
-    data-caption="Jon Batiste ♩  FREEDOM"
->
-    <img src="<?php echo base_url('public/images/neha.jpg'); ?>" alt="Thumbnail Image" width="100%">
-    Jon Batiste ♩  FREEDOM
-</button>
+            </div>
+            <div class="col-md-6">
 
-          <button
-            class="lazyload"
+        <button
+            class="lazyload  "
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Jon Batiste ♩  FREEDOM">
+            <img src="<?php echo base_url('public/images/play1.jpg'); ?>" alt="Thumbnail Image" width="100%">
+        </button>
+        </div>
+            <div class="col-md-6">
+
+        <button
+            class="lazyload "
             data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
-            data-caption="Jon Batiste ♩  FREEDOM"
-          >
-          <img src="<?php echo base_url('public/images/kathakhome.jpeg'); ?>" alt="Thumbnail Image" width="100%">
-
-            Jon Batiste
-          </button>
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Jon Batiste ♩  FREEDOM">
+            <img src="<?php echo base_url('public/images/play2.jpg'); ?>" alt="Thumbnail Image" width="100%">
+        </button>
+        </div>
+            <div class="col-md-6">
 
           <!-- MORE VIDEO BUTTONS  -->
 
-          <button
-            class="lazyload"
+        <button
+            class="lazyload "
             data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
-            data-caption="Luke James ♩ SHINE ON"
-          >
-          <img src="<?php echo base_url('public/images/jaya.png'); ?>" alt="Thumbnail Image" width="100%">
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Luke James ♩ SHINE ON">
+            <img src="<?php echo base_url('public/images/play3.jpg'); ?>" alt="Thumbnail Image" width="100%">
+        </button>
+            </div>
+        </div>
 
-            Luke James
-          </button>
-
-          <button
-            class="lazyload"
-            data-bg="//img.youtube.com/vi/cGoguR2gYn8/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
-            data-caption="Luke James ♩ 2013 .  Beyoncé .  Mrs. Carter Show"
-          >
-          <img src="<?php echo base_url('public/images/palayv.jpeg'); ?>" alt="Thumbnail Image" width="100%">
-
-            Luke James
-          </button>
-
-          <button
-            class="lazyload"
-            data-bg="//img.youtube.com/vi/QlOfJTeXqKU/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/QlOfJTeXqKU?autoplay=1"
-            data-caption="Shamarr Allen ♩ Dance with Me"
-          >
-          <img src="<?php echo base_url('public/images/musiclass1.jpg'); ?>" alt="Thumbnail Image" width="100%">
-
-            Shamarr Allen
-          </button>
-
-          
+       
+            </div> 
         </div>
       </aside>
     </section>
@@ -1866,59 +1844,49 @@ if($datas->total_ratings != ''){
 
 
 <section class="stories-section MusicSec mobilepageview p-3">
+    <h3 class="text-white p-3" style="text-align:center"> Testimonials<br>
+        <span class="line"></span> 
+    </h3> 
     <section class="parent-container">
       <aside id="video-player">
-        <iframe
-          id="YouTube-Iframe"
-          class="lazyload"
-          src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      <iframe src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted></iframe>
 
-        <div id="video-caption">Chapal Hart ♩ AMERICAN PRIDE</div>
+
+        <!-- <div id="video-caption">Chapal Hart ♩ AMERICAN PRIDE</div> -->
 
         <div id="playlist">
-          <button
+        <button
             class="lazyload active"
-            data-bg="//img.youtube.com/vi/DjfMEE2krr4/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/DjfMEE2krr4?autoplay=1"
-            data-caption="Chapal Hart ♩ American Pride"
-          >
-            Chapal Hart
-          </button>
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Chapal Hart ♩ American Pride">
+            <img src="<?php echo base_url('public/images/play.jpg'); ?>" alt="Thumbnail Image" width="100%">
 
-          <button
-            class="lazyload"
-            data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/3YHVC1DcHmo?autoplay=1"
-            data-caption="Jon Batiste ♩  FREEDOM"
-          >
-            Jon Batiste
-          </button>
+        </button>
+
+        <button
+            class="lazyload  "
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Jon Batiste ♩  FREEDOM">
+            <img src="<?php echo base_url('public/images/play1.jpg'); ?>" alt="Thumbnail Image" width="100%">
+        </button>
 
           <!-- MORE VIDEO BUTTONS  -->
 
           <button
-            class="lazyload"
-            data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/1GupNeliuLA?autoplay=1"
-            data-caption="Luke James ♩ SHINE ON"
-          >
-            Luke James
-          </button>
+            class="lazyload  "
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Jon Batiste ♩  FREEDOM">
+            <img src="<?php echo base_url('public/images/play2.jpg'); ?>" alt="Thumbnail Image" width="100%">
+        </button>
 
-          <button
-            class="lazyload"
-            data-bg="//img.youtube.com/vi/cGoguR2gYn8/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/cGoguR2gYn8?autoplay=1"
-            data-caption="Luke James ♩ 2013 .  Beyoncé .  Mrs. Carter Show"
-          >
-            Luke James
-          </button>
+        <button
+            class="lazyload  "
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Jon Batiste ♩  FREEDOM">
+            <img src="<?php echo base_url('public/images/play3.jpg'); ?>" alt="Thumbnail Image" width="100%">
+        </button>
 
-          <button
+          <!-- <button
             class="lazyload"
             data-bg="//img.youtube.com/vi/QlOfJTeXqKU/sddefault.jpg"
             data-iframe="https://www.youtube.com/embed/QlOfJTeXqKU?autoplay=1"
@@ -1961,7 +1929,7 @@ if($datas->total_ratings != ''){
             data-caption="Oz Cylone ♩ Codepen Iframe Embed"
           >
             Codepen
-          </button>
+          </button> -->
         </div>
       </aside>
     </section>
@@ -2815,33 +2783,20 @@ if($datas->total_ratings != ''){
 
 
 <?php include('footer.php'); ?>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    // Vanilla JS 
-document.querySelectorAll("#video-player button").forEach(button => {
-    button.addEventListener("click", function () {
-        // Get data attributes for buttons
-        var iframesrc = this.getAttribute("data-iframe");
-        var caption = this.getAttribute("data-caption");
-        
-        // Target the respective iframe and caption elements in HTML by ID
-        // and update with content of data-attribute in PLAYLIST BUTTON HTML MARK-UP
-        document.querySelector("#video-player #video-caption").innerHTML = caption;
-        document.querySelector("#video-player iframe").setAttribute("src", iframesrc);
-        
-        // Toggle button active class
-        document.querySelectorAll("#video-player button").forEach(btn => {
-            btn.classList.remove("active");
-        });
-        this.classList.add("active");
-    });
-});
+    $(document).ready(function() {
+        $("#video-player button").click(function() {
+            var iframesrc = $(this).data("iframe") + "&autoplay=1"; // Append autoplay parameter
+            var caption = $(this).data("caption");
 
-// Scroll Playlist horizontally with mousewheel on hover
-const scrollContainer = document.querySelector("#playlist");
-scrollContainer.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    scrollContainer.scrollLeft += evt.deltaY;
-});
+            $("#video-player #video-caption").html(caption);
+            $("#video-player iframe").attr("src", iframesrc);
+
+            $("#video-player button").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
 </script>
+
 

@@ -23,6 +23,14 @@
                     <li>
                         <a href="<?=base_url(); ?>Yoga">Yoga</a>
                     </li>
+
+                    <li class="footer-listing">
+                        <a href="<?=base_url(); ?>PrivacyPolicy">Privacy Policy</a>
+                    </li>
+
+                    <li class="footer-listing">
+                        <a href="<?=base_url(); ?>refundpolicy">Refund Policy</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 col-6 footer-div fu">
@@ -47,10 +55,14 @@
                     <li>
                         <a href="<?=base_url(); ?>invester">Investors</a>
                     </li>
+
+                    <li class="footer-listing">
+                        <a href="<?=base_url(); ?>termsandconditions">Terms and Conditions</a>
+                    </li>
                 </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-6 footer-div fu1">
+            <div class="col-lg-3 col-md-3 col-6 footer-div fu1 footer-listingall">
                 <ul>
                  
                     <!-- <li>

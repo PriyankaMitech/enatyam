@@ -3649,7 +3649,7 @@
 </section>
 
 
-<section class="testimonials tyoga" id="testimonials">
+<section class="testimonials tyoga" id="testimonials" style="display:none">
     <div class="container">
         
         <div class="">
@@ -3765,6 +3765,7 @@
     </div>
     </div>
 </section>
+<?php include('test.php'); ?>
 
 <?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>

@@ -11,10 +11,10 @@
     height: 282px;
 }
 </style>
-<section class="faculty-section p-5">
+<section class="faculty-section ">
     <div class="cont-width">
 
-        <div class="row ssf">
+        <div class="row ssf hs">
         <h3 class="pb-5" style="text-align:center">Superstar Faculty
         <span class="line linessf"></span> 
 

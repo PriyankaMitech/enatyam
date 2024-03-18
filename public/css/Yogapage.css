@@ -329,9 +329,9 @@ body {
   margin-top: 7%;
   margin-bottom: 5%;
 }
-.carousel-item {
+/* .carousel-item {
   top: 126px !important;
-}
+} */
 
 /* testimonil end */
 .heading {
@@ -340,4 +340,7 @@ body {
 
 .mtfyogm {
   margin-top: 7%;
+}
+.faculty-section {
+  padding: 0% 5%;
 }
