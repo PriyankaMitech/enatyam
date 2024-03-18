@@ -1,5 +1,275 @@
 <?php include('header.php'); ?>
 
+<style>
+    /* 
+    
+░░░░░░░░░░░░░░░░░░░▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄░░
+██░░██░░░░░░░░░░░▄█░░░░░░████░░████████▄
+██▄▄██░░░░░░░░░░░████░░██████░░█████████
+▀████▀░████░█░░█░████░░█░██░█░▄▄░█░░▄▄██
+░░██░░░█░░█░█▄▄█░████░░█░░░░█░▀▀░█░░▄▄██
+░░██░░░████░████░▀███▄▄█▄▄▄▄█▄▄▄▄█▄▄▄▄█▀
+░░░░░░░░░░░░░░░░░░░▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀░░
+
+
+ */
+
+
+
+
+:root {
+  /* DEFAULT YOUTUBE VIDEO ASPECT RATIO */
+  --video-aspect-ratio: 16 / 9; 
+/* PLAYER CONTAINER STYLES*/
+ --player-font: Montserrat;
+ --player-background-color: #000000;
+ --player-border-color: rgb(252 39 104); --player-border-width: 5px; /* <-- 0 = no border */
+  /* PLAYLIST STYLES */
+  --playlist-background-color: rgba(32, 58, 144, 0.75);
+    /* PLAYLIST BUTTON STYLES */
+  --playlist-button-font-size: 18px;
+  --playlist-button-mobile-font-size 15px;
+  --playlist-button-text-color: rgba(255, 255, 255, 1);
+  --playlist-button-border-color: rgba(255, 255, 255, 0.5);
+  --playlist-button-border-hover-color: rgba(223, 197, 111, 0.90);
+  --playlist-button-border-active-color: rgba(255, 255, 255, 0.8);
+  --playlist-button-text-color: rgba(255, 255, 255, 1);
+  --playlist-button-text-transform: lowercase; /* <--  uppercase - lowercase- normal - etc.*/
+  /* PLAYER BUTTON WIDTH 
+     Sets aspect ratio width and height in scrolling playlist grid */
+ --playlist-button-width: 190px;
+ --playlist-button-mobile-width: 163px;
+
+    /* CAPTION STYLES */
+  --caption-container-padding: 15px; /* <-- PADDING SETS CONTAINER HEIGHT*/
+  --caption-container-mobile-padding: 15px; 
+  --caption-font-size: 20px;
+  --caption-font-mobile-size: 18px;
+  --caption-text-transform: uppercase; /* <--  uppercase - lowercase- normal - etc.*/
+
+  /* MAX WIDTH of PLAYER */
+  --parent-container-max-width: 980px; /* <-- PLAY WITH ME */
+}
+
+
+ /* FOR DEMO */
+.parent-container {
+  width: 100%;
+  max-width: var(--parent-container-max-width);
+  margin: 0 auto;
+  padding-top:50px;
+}
+@media only screen and (max-width: 980px) {
+  .parent-container {
+  padding-top:0;
+}
+  
+}
+
+
+/* BEGIN YOUTUBE PLAYER CSS */
+
+#video-player {
+  border: var(--player-border-width) solid var(--player-border-color);
+  background-color: var(--player-background-color);
+}
+
+#video-player iframe {
+  aspect-ratio: var(--video-aspect-ratio); 
+  width: 100% !important;
+  height: auto !important;
+  backgroun:black;
+}
+
+#video-caption {
+  font-size: var(--caption-text-size);
+  letter-spacing: 2px;
+  text-transform: var(--caption-text-transform);
+  width: 100%;
+  overflow: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* top padding less 5 pixels.  Looked nicer.  */
+  padding-top: calc(var(--caption-container-padding) - 5px);
+  padding-bottom: var(--caption-container-padding);
+}
+
+/* MEDIA QUERY for CAPTION */
+
+@media only screen and (max-width: 980px) {
+ #video-caption {
+  letter-spacing: 0px;
+  padding-top: calc(var(--caption-container-mobile-padding) - 5px);
+  padding-bottom: var(--caption-container-mobile-padding);
+}
+
+}
+
+#playlist {
+  background-color: #ff1561;
+  overflow: scroll-x;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  /* grid layout for playlist */
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--playlist-button-width), 1fr)
+  );
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(var(--playlist-button-width), 1fr);
+  overflow-x: auto;
+  
+}  
+
+/* MEDIA QUERY for PLAYLIST GRID */
+
+@media only screen and (max-width: 980px) {
+  #playlist {
+   grid-auto-columns: minmax(var(--playlist-button-mobile-width), 1fr);
+   grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--playlist-button-mobile-width), 1fr)
+  ); }
+}
+
+#playlist button {
+
+  aspect-ratio: var(--video-aspect-ratio);
+  width: var(--playlist-button-width);
+  font-size: var(--playlist-button-font-size);
+  color: #000;
+  text-transform: var(--playlist-button-text-transform);
+  overflow: hidden;
+   border: solid 2px var(--playlist-button-border-color);
+  filter: brightness(0.7);
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  padding-left: 10px;
+  padding-right:10px;
+  letter-spacing:1px;
+    transition: all 300ms ease;
+  
+/* CUSTOM PLAYLIST BUTTON CURSOR  */
+ 
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMi1jMDAwIDc5LjU2NmViYzViNCwgMjAyMi8wNS8wOS0wODoyNTo1NSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QURDQ0ZGRURGMUFBMTFFQ0JCQTFDMDBCMDE0NDg5M0QiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QURDQ0ZGRUVGMUFBMTFFQ0JCQTFDMDBCMDE0NDg5M0QiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRENDRkZFQkYxQUExMUVDQkJBMUMwMEIwMTQ0ODkzRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRENDRkZFQ0YxQUExMUVDQkJBMUMwMEIwMTQ0ODkzRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ps/vyusAAAdxSURBVHja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),
+    auto;
+}
+
+
+#playlist button:hover {
+  filter: brightness(1);
+   border:solid 2px var(--playlist-button-border-hover-color);
+}
+
+
+#playlist button:focus, #playlist button.active {
+   filter: brightness(1);
+    border:solid 2px var(--playlist-button-border-active-color);
+  cursor:none !important;
+}
+
+#playlist button:active {
+  transform: scale(0.95);
+  color:#000;
+}
+
+/* MEDIA QUERY for PLAYLIST BUTTON*/
+
+@media only screen and (max-width: 979px) {
+  #playlist button {
+  width: var(--playlist-button-mobile-width);
+  font-size: var(--playlist-button-mobile-font-size);
+  padding-top: calc(var(--caption-container-mobile-padding) - 5px);
+  padding-bottom: var(--caption-container-mobile-padding);
+  font-size: var( --caption-font-mobile-size);
+  letter-spacing: 0px;
+}
+
+}
+
+
+/*  END PLAYER MARK-UP */
+
+
+/* DEMO PAGE STUFF */
+
+
+/* ADD STROKE TO TEXT  */
+
+#video-player h2,
+h3,
+button,
+#video-caption
+{
+  text-transform:letter-spacing:2px;
+
+}
+
+
+article {padding-top:50px;padding-bottom:300px;opacity:0.90}
+article h2, h3 {line-height:1;margin:0;}
+article h2 {padding-bottom:5px;font-size:30px;text-transform:uppercase;letter-spacing:2px;}
+article h3 {font-size:25px;letter-spacing:1px;}
+article p {font-size:21px;letter-spacing:1px;}
+
+
+@media only screen and (max-width: 980px) {
+  article {padding-top:35px;padding-left:20px;padding-right:20px;padding-bottom:300px;}
+article h2, h3 {line-height:1;margin:0;}
+article h2 {padding-bottom:5px;font-size:21px;text-transform:uppercase;letter-spacing:2px;}
+article h3 {font-size:18px;letter-spacing:1px;}
+article p {font-size:16px;letter-spacing:1px;}
+}
+
+body, html {  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-fon-smoothing: grayscale;
+}
+
+
+body {
+  background: #111;
+
+}
+
+@media only screen and (max-width: 980px) {
+  
+body {
+  padding-top: 0px;
+}
+
+}
+
+
+
+
+
+
+/* ===================================================*
+    
+     ."".    ."",       
+     |  |   /  /
+     |  |  /  /
+     |  | /  /
+     |  |/  ;-._ 
+     }  ` _/  / ;
+     |  /` ) /  /             PEACE and LOVE
+     | /  /_/\_/\
+     |/  /      |           Mark in New Orleans
+     (  ' \ '-  |
+      \    `.  /
+       |      |
+       |      |
+
+	
+	
+/* ===================================================*/
+</style>
+
 
 <section class="s_header-section">
     <div class="container-fluid mt-2">
@@ -110,13 +380,12 @@
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/Home/4-rbg.png" alt=""
-                                       >
+                                        src="<?php base_url(); ?>public/images/Home/4-rbg.png" alt="">
                                 </a>
                             </div>
 
                             <div class="float-left cimgb cimgbr"  >
-                                <ul class="list-inline thumbnailList">
+                                <ul class="list-inline thumbnailList"> 
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItem thumbnailListItemp">
@@ -127,7 +396,25 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">4.99</li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($katakc)) { 
+                                            foreach($katakc as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>
+
+
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                     
@@ -156,8 +443,25 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($bharatanatyam)) { 
+                                            foreach($bharatanatyam as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }
+                                             
+                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
 
                                     
                             </div>
@@ -184,7 +488,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
 
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($bollywood)) { 
+                                            foreach($bollywood as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                             </div>
@@ -210,7 +530,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">4.9</li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($westerndnce)) { 
+                                            foreach($westerndnce as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                     
@@ -237,8 +573,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($hindustanivocal)) { 
+                                            foreach($hindustanivocal as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                    
                             </div>
@@ -263,8 +614,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($carnaticvocal)) { 
+                                            foreach($carnaticvocal as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                   
                             </div>
@@ -289,8 +655,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($bollywoodsinging)) { 
+                                            foreach($bollywoodsinging as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                             
                             </div>
@@ -315,7 +696,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($playbacksinging)) { 
+                                            foreach($playbacksinging as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                     
@@ -342,8 +739,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
 
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($yoga)) { 
+                                            foreach($yoga as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                             </div>
                         </div>
@@ -367,8 +779,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($meditation)) { 
+                                            foreach($meditation as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                  
                             </div>
@@ -393,8 +820,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($nuitritionalguidance)) { 
+                                            foreach($nuitritionalguidance as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                            
                             </div>
@@ -419,8 +861,23 @@
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white ml-5">4.9</li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                    <li class="list-inline-item text-white">
+                                        <?php
+                                        if (!empty($musicalinstruments)) { 
+                                            foreach($musicalinstruments as $datas){
+                                            
+if($datas->total_ratings != ''){
+                                            
+                                            echo $datas->total_ratings; // Echo the total_ratings value
+
+                                                }else{
+                                                echo "4.99";
+                                                }                                            }
+                                        } else { 
+                                            echo "4.99"; // Default value if the data is not available
+                                        } 
+                                        ?>
+                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                
                             </div>
@@ -1208,7 +1665,7 @@
 
 
 
-<section class="stories-section MusicSec p-3">
+<section class="stories-section MusicSec homapageview p-3">
     <div class="container">
         <div class="line_1">
             <div class="row">
@@ -1320,6 +1777,194 @@
             </div>
         </div>
     </div>
+</section>
+<section class="stories-section MusicSec homapageview p-3">
+    <section class="parent-container">
+      <aside class="row" id="video-player">
+        <div class="col-md-6">
+        <iframe
+          id="YouTube-Iframe"
+          class="lazyload"
+          src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <div class="text-white" id="video-caption">Chapal Hart ♩ AMERICAN PRIDE</div>
+                    </div>
+        <div id="playlist" class="col-md-6">
+
+          <button
+            class="lazyload"
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Chapal Hart ♩ American Pride">
+            <img src="<?php echo base_url('public/images/play.jpg'); ?>" alt="Thumbnail Image" width="100%">
+
+            Chapal Hart ♩ AMERICAN PRIDE
+        </button>
+                  <button
+    class="lazyload active"
+    data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+    data-caption="Jon Batiste ♩  FREEDOM"
+>
+    <img src="<?php echo base_url('public/images/neha.jpg'); ?>" alt="Thumbnail Image" width="100%">
+    Jon Batiste ♩  FREEDOM
+</button>
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Jon Batiste ♩  FREEDOM"
+          >
+          <img src="<?php echo base_url('public/images/kathakhome.jpeg'); ?>" alt="Thumbnail Image" width="100%">
+
+            Jon Batiste
+          </button>
+
+          <!-- MORE VIDEO BUTTONS  -->
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Luke James ♩ SHINE ON"
+          >
+          <img src="<?php echo base_url('public/images/jaya.png'); ?>" alt="Thumbnail Image" width="100%">
+
+            Luke James
+          </button>
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/cGoguR2gYn8/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+            data-caption="Luke James ♩ 2013 .  Beyoncé .  Mrs. Carter Show"
+          >
+          <img src="<?php echo base_url('public/images/palayv.jpeg'); ?>" alt="Thumbnail Image" width="100%">
+
+            Luke James
+          </button>
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/QlOfJTeXqKU/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/QlOfJTeXqKU?autoplay=1"
+            data-caption="Shamarr Allen ♩ Dance with Me"
+          >
+          <img src="<?php echo base_url('public/images/musiclass1.jpg'); ?>" alt="Thumbnail Image" width="100%">
+
+            Shamarr Allen
+          </button>
+
+          
+        </div>
+      </aside>
+    </section>
+</section>
+
+
+<section class="stories-section MusicSec mobilepageview p-3">
+    <section class="parent-container">
+      <aside id="video-player">
+        <iframe
+          id="YouTube-Iframe"
+          class="lazyload"
+          src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <div id="video-caption">Chapal Hart ♩ AMERICAN PRIDE</div>
+
+        <div id="playlist">
+          <button
+            class="lazyload active"
+            data-bg="//img.youtube.com/vi/DjfMEE2krr4/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/DjfMEE2krr4?autoplay=1"
+            data-caption="Chapal Hart ♩ American Pride"
+          >
+            Chapal Hart
+          </button>
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/3YHVC1DcHmo?autoplay=1"
+            data-caption="Jon Batiste ♩  FREEDOM"
+          >
+            Jon Batiste
+          </button>
+
+          <!-- MORE VIDEO BUTTONS  -->
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/1GupNeliuLA?autoplay=1"
+            data-caption="Luke James ♩ SHINE ON"
+          >
+            Luke James
+          </button>
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/cGoguR2gYn8/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/cGoguR2gYn8?autoplay=1"
+            data-caption="Luke James ♩ 2013 .  Beyoncé .  Mrs. Carter Show"
+          >
+            Luke James
+          </button>
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/QlOfJTeXqKU/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/QlOfJTeXqKU?autoplay=1"
+            data-caption="Shamarr Allen ♩ Dance with Me"
+          >
+            Shamarr Allen
+          </button>
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/Hit10kFN2BQ/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/Hit10kFN2BQ?autoplay=1"
+            data-caption="Shamarr Allen ♩ I LOVE YOU"
+          >
+            Shamarr Allen
+          </button>
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/4WtmkES0X48/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/4WtmkES0X48?autoplay=1"
+            data-caption="Kermit Ruffins ♩ Drop me Off in New Orleans"
+          >
+            Kermit Ruffins
+          </button>
+
+          <button
+            class="lazyload"
+            data-bg="//img.youtube.com/vi/89Lum1zkRuU/sddefault.jpg"
+            data-iframe="https://www.youtube.com/embed/89Lum1zkRuU?autoplay=1"
+            data-caption="Luke James x Nu Deco Ensemble ♩ reprise two"
+          >
+            Luke James
+          </button>
+
+          <button
+            class="lazyload"
+            data-bg="https://assets.codepen.io/191814/palyer-codepen.jpg?width=300&height=216&format=auto"
+            data-iframe="https://codepen.io/mark_sottek/embed/zYWKKmz?default-tab=result&theme-id=dark"
+            data-caption="Oz Cylone ♩ Codepen Iframe Embed"
+          >
+            Codepen
+          </button>
+        </div>
+      </aside>
+    </section>
 </section>
 
 
@@ -2170,4 +2815,33 @@
 
 
 <?php include('footer.php'); ?>
+
+<script>
+    // Vanilla JS 
+document.querySelectorAll("#video-player button").forEach(button => {
+    button.addEventListener("click", function () {
+        // Get data attributes for buttons
+        var iframesrc = this.getAttribute("data-iframe");
+        var caption = this.getAttribute("data-caption");
+        
+        // Target the respective iframe and caption elements in HTML by ID
+        // and update with content of data-attribute in PLAYLIST BUTTON HTML MARK-UP
+        document.querySelector("#video-player #video-caption").innerHTML = caption;
+        document.querySelector("#video-player iframe").setAttribute("src", iframesrc);
+        
+        // Toggle button active class
+        document.querySelectorAll("#video-player button").forEach(btn => {
+            btn.classList.remove("active");
+        });
+        this.classList.add("active");
+    });
+});
+
+// Scroll Playlist horizontally with mousewheel on hover
+const scrollContainer = document.querySelector("#playlist");
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+});
+</script>
 

@@ -1680,4 +1680,140 @@ return $query;
   return false;
   }
  }
+
+ public function getstarcount()
+ {
+     $allData = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('course', '1')
+         ->get()
+         ->getResult(); // Change getRow() to getResult()
+         
+     return $allData;
+ }
+ public function getstarcount1()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('sub_course', '3')
+         ->get()
+         ->getResult(); // Change getRow() to getResult()
+
+         return $totalRatings;
+
+ }
+
+ public function getstarcount2()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('sub_course', '5')
+         ->get()
+         ->getResult(); // Change getRow() to getResult()
+         return $totalRatings;
+
+ }
+
+ public function getstarcount3()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('sub_course', '6')
+         ->get()
+         ->getResult(); // Change getRow() to getResult()
+         return $totalRatings;
+
+ }
+ 
+ public function getstarcount4()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('sub_course', '7')
+         ->get()
+         ->getResult();
+
+         return $totalRatings;
+
+ }
+
+ public function getstarcount5()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('sub_course', '8')
+         ->get()
+         ->getResult();
+
+         return $totalRatings;
+
+ }
+
+ public function getstarcount6()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('course', '3')
+         ->get()
+         ->getResult();
+
+         return $totalRatings;
+
+ }
+ public function getstarcount7()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('course', '3')
+         ->get()
+         ->getResult();
+
+         return $totalRatings;
+
+ }
+ public function getstarcount8()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('course', '2')
+         ->get()
+         ->getResult();
+
+         return $totalRatings;
+
+ }
+ public function getstarcount9()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('sub_course', '17')
+         ->get()
+         ->getResult();
+
+         return $totalRatings;
+
+ }
+ public function getstarcount10()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('sub_course', '19')
+         ->get()
+         ->getResult();
+
+         return $totalRatings;
+
+ }
+
+ public function getstarcount11()
+ {
+     $totalRatings = $this->db->table('feedback')
+         ->selectSum('rating', 'total_ratings')
+         ->where('course', '3')
+         ->get()
+         ->getResult();
+
+         return $totalRatings;
+
+ }
 }

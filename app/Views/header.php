@@ -1937,7 +1937,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                         </li> -->
                         <li>
                         <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
-                        <img src="public/images/logosrem.png" alt="Enatyam">
+                        <img src="public/images/logos.png" alt="Enatyam">
         </li>
                     </a>
                     </ul>
@@ -2008,7 +2008,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                     
                     <div class="col-8">
                         <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
-                            <img src="public/images/logo.png" alt="Enatyam" class="logoh">
+                            <img src="public/images/logos.png" alt="Enatyam" class="logoh">
                         </a>
                     </div>
                     <div class="col-4 text-right my-auto menub">

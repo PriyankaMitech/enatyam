@@ -73,9 +73,10 @@
   font-weight: 600;
   cursor: pointer;
   position: absolute;
-  top: 22px;
-  right: 50px;
-  color: #fff;
+  top: 112px;
+  right: 104px;
+  color: #000;
+  z-index: 9999999;
 }
 body.modal-open {
   overflow: hidden;
@@ -91,6 +92,7 @@ body.modal-open {
   padding: 18px 0px;
   gap: 2px 14px;
   justify-items: center;
+  z-index: -999999;
 }
 
 .purpleAliens {
