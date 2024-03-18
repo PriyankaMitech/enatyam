@@ -141,7 +141,9 @@ class FacultyController extends BaseController
     $facultyModel->updateStudentVideo($studentId, $registerId, $fileName);
     $wherecond = ['student_id' => $studentId];
     $wherecond1 = ['id' => $registerId];
-
+    
+    $id=$registerId ;
+    $facultyname=$facultyModel->getname($id);
     // Get faculty mobile number
     $facultyMobileNumber = $model->get_single_data('register', $wherecond1);
     $studentMobileNumber = $model->get_single_data('student', $wherecond); 
@@ -150,7 +152,8 @@ class FacultyController extends BaseController
    
         $phoneNumber = $facultyMobileNumber->mobileWithCode;
         $templates = "930840461869403";
-        $msg = "uploaded video/image  to student $name";
+         $msg = "uploaded video/image  to student $name";
+
         whatsapp($phoneNumber, $templates, $msg);
     }
     // Get student mobile number 
@@ -158,13 +161,15 @@ class FacultyController extends BaseController
         $phoneNumber = $studentMobileNumber->mobileWithCode;
        
         $templates = "930840461869403";
-        $msg = "uploaded video/image  by faculty to you.";
+        // $msg = "uploaded video/image  by faculty to you.";
+        $msg = "Hello $name, Your teacher $facultyname has uploaded a practice video just for you! Dive in and hone your skills. Enjoy practicing!";
+
         whatsapp($phoneNumber, $templates, $msg);
     }
 
     // Send message to admin
   //  $phoneNumber = "917588525387";
-    $msg = "Faculty has uploaded video/image to student $name";
+    $msg = "faculty $facultyname has uploaded video/image to student $name";
     $templates = "930840461869403";
     whatsappadmin($templates, $msg);
 
@@ -364,7 +369,7 @@ class FacultyController extends BaseController
       ];
       // print_r($data);die;
       $result = $model->insertAttendance($data);
-      
+     
       $student_registerid = $this->request->getPost('studentId');
       $Attendance_status = $this->request->getPost('attendance');
       $sessionno= $this->request->getPost('session');
@@ -375,16 +380,21 @@ class FacultyController extends BaseController
       } 
       $wherecond = ['id' => $student_registerid];
       $studentMobileNumber = $adminmodel->get_single_data('register', $wherecond);
-  
+      $id=$data['student_registerid'];
+      $studentname=$model->getname($id);
+      $id=$data['faculty_id'];
+      $facultyname=$model->getname($id);
       if ($result) {
           $phoneNumber = (!empty($studentMobileNumber)) ? $studentMobileNumber->mobileWithCode : '';
           $templates = "930840461869403";
-          $msg = "Your attendance has been recorded successfully. You $stetus in session no .$sessionno";
+          $msg = "Dear $studentname, Well done!! You have completed your $sessionno Session Your teacher has kindly requested you to punch your attendance on the Enatyam website. Don't forget to mark your";
+
+     //     $msg = "Your attendance has been recorded successfully. You $stetus in session no .$sessionno";
           whatsapp($phoneNumber, $templates, $msg);
           $templates = "930840461869403";
 
          // $phoneNumber = "917588525387";
-          $msg = "Attendance has been taken by faculty. Status of session is $stetus and session no is $sessionno";
+          $msg = "Attendance has been taken by $facultyname.student name $studentname Status of session is $stetus and session no is $sessionno";
           whatsappadmin($templates, $msg);
           $response = ['success' => true, 'message' => 'Attendance added successfully.'];
       } else {
@@ -840,7 +850,7 @@ public function saveshedule()
   $end_date = $this->request->getPost('end_date');
   $start_time = $this->request->getPost('start_time');
   $end_time = $this->request->getPost('end_time');
-
+  
   // Prepare the data to be inserted
   $data = [
      'faculty_registerid'=>$id,
@@ -854,15 +864,19 @@ public function saveshedule()
   // Insert the data into the database using the model
   $model = new facultymodel();
   $adminmodel = new AdminModel();
+  $id=$id;
+  $facultyname=$model->getname($id);
   $model->insertshedule($data); 
   $Facultycontact = $adminmodel->Facultycontact($facultyId);
   $phoneNumber = $Facultycontact;
   $templates = "930840461869403";
-  $msg ="Your slot is Added in Your schedule";
+  // $msg ="Your slot is Added in Your schedule";
+  $msg = "Dear $facultyname, Congratulations! You have successfully provided your available time slots. Thank you for your cooperation and dedication to our scheduling process.";
+
   whatsapp($phoneNumber, $templates, $msg);
  // $phoneNumber = "917588525387";
   $templates = "930840461869403";
-  $msg = "New slots Given by Faculty";
+  $msg = "New slots Given by $facultyname";
   whatsappadmin($templates, $msg);
   return redirect()->to('fshedule');
 }

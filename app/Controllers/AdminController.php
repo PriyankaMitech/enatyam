@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\AdminModel;
 use App\Models\CarrierModel;
+use App\Models\facultymodel;
 use App\Models\LoginModel;
 use CodeIgniter\Controller;
 
@@ -122,7 +123,9 @@ class AdminController extends BaseController
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
-            $msg = "You have Assing For Demo on $date  at $time. Join this link For Demo: $meetlink";
+         //  $msg = "You have Assing For Demo on $date  at $time. Join this link For Demo: $meetlink";
+            $msg = "Hello , We're pleased to inform you that an admin has assigned a demo to you. Demo Date:$date Time: $time Demo Link: $meetlink Link Keep spreading your knowledge!";
+
             whatsapp($phoneNumber, $templates, $msg);
           //  $phoneNumber = "917588525387";
             $templates = "930840461869403";
@@ -165,22 +168,30 @@ class AdminController extends BaseController
     public function AssignTecherToStudent()
     {
         $model = new AdminModel();
-    
+        $facultymodel = new facultymodel();
         if ($this->request->getMethod() === 'post') {
             $postData = $this->request->getPost();
+            //print_r($postData);die;
+
             $result = $model->add($postData); 
- 
+            $id=$postData['studentid'];
+            $studentname=$facultymodel->getname($id);
+            $id=$postData['faculty_name'];
+            $facultyname=$facultymodel->getname($id);
+            $Session_Start_Date=$postData['Session_Start_Date'];
             if ($result) {
                
                 list($phoneNumber,$studentphoneNumber) = $result;
                 $session = session();
                 $phoneNumber=$phoneNumber;
                 $templates = "930840461869403";
-                $msg = "You have assign new  student";
+              //  $msg = "You have assign new  student";
+                $msg = "Hello  $facultyname, We're pleased to inform you that you've been assigned $studentname for classes starting from $Session_Start_Date We're confident that your expertise will greatly benefit  $studentname. Please prepare accordingly, and we wish you a successful and fulfilling teaching experience.";
+
                 whatsapp($phoneNumber, $templates, $msg);
                 $phoneNumber=$studentphoneNumber;
                 $templates = "930840461869403";
-                $msg = "You have assign faculty";
+                $msg = "Hello $studentname You have assign faculty $facultyname";
                 whatsapp($phoneNumber, $templates, $msg);
               //  $adminNumber ="917588525387";
                 $templates = "930840461869403";
@@ -492,17 +503,21 @@ class AdminController extends BaseController
         $Subject = 'Your Application Approved';
         $tital = 'congratulations You Are Selected';
         $model = new AdminModel();
+        $facultymodel = new facultymodel();
         
   
         $result = $model->updatePassword($id, $password);
            $wherecond = ['id' => $id];
             $studentMobileNumber = $model->get_single_data('register', $wherecond);
-           
+            $id=$id;
+            $facultyname=$facultymodel->getname($id);
         if ($result) {
           
             $phoneNumber = $studentMobileNumber->mobileWithCode;
             $templates = "930840461869403";
-            $msg = "Your Application Approved Your account  Password is $password";
+         //   $msg = "Your Application Approved Your account  Password is $password";
+         $msg = "Hello $facultyname, Great news! Your profile has been approved by our backend team. You can now log in using your login ID: $email Password: $password  We're excited to have you on board and look forward to your valuable contributions.";
+
             whatsapp($phoneNumber, $templates, $msg);
             sendConfirmationEmail($email, $password, $msg, $Subject, $tital);
             $this->session->setFlashdata('success', 'Password updated successfully.');

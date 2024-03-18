@@ -81,7 +81,9 @@ class PaymentController extends BaseController
 
                         $success = true;
                         $msg = "Payment successfully done by " . session('sessiondata')['user_name'] . " Rs.$amount1. and he/she selected for " . session('sessiondata')['SessionType']. "session.";
-                        $msg1 = "Payment Successfully Done...!!!";
+                        // $msg1 = "Payment Successfully Done...!!!";
+                        $msg1 = "Dear " . session('sessiondata')['user_name'] . ", 🎉 Thank You and Congratulations on completing enrollment and payment Rs." . $amount1 . "! 🎉 You're now officially part of our learning community! Get ready for an enriching journey ahead. Please reach out to our customer care for any assistance.";
+
                         $templates = "930840461869403";
 
                         $number = session('sessiondata')['mobileWithCode'];

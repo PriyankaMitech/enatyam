@@ -46,7 +46,7 @@ class CarrierController extends BaseController
                 ($videos && $videos->isValid()) ||
                 ($img && $img->isValid())
             ) {
-                echo "hiii";
+                
 
                 // Define the destination folders using FCPATH
                 $uploadPath = FCPATH . 'public/uploads/cv';
@@ -118,6 +118,13 @@ class CarrierController extends BaseController
             // echo "<pre>";print_r($data);exit();
 
             // $phoneNumber = "917588525387";
+
+            $phoneNumber = $data['mobileWithCode'];
+         //   print_r($phoneNumber);die;
+            $templates = "930840461869403";
+            $msg = "Hello {$data['name']}, Congratulations on successfully uploading your profile! Our backend team is currently working on scrutinizing it. We'll get back to you shortly with any further steps or feedback. Thank you for your patience and cooperation.";
+
+            whatsapp($phoneNumber, $templates, $msg);
             $msg = "new faculty Application resived";
             $templates = "930840461869403";
             whatsappadmin($templates, $msg);
