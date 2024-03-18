@@ -393,4 +393,14 @@ class facultymodel extends Model
                         ->getResult();
         return $result;
     }
+    public function getname($id)
+    {
+        $result = $this->db->table('register')
+            ->select('full_name') 
+            ->where('id', $id)
+            ->get()
+            ->getRow(); 
+    
+        return $result->full_name; // Returning only the name
+    }
 }

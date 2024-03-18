@@ -127,12 +127,15 @@ class LoginController extends BaseController
 
                  $phoneNumber =$getdata['mobileWithCode'];
                  $templates = "408169718530084";
+         //        $name=$getdata['full_name'];
                  $msg = $emailotp;
+               
                  whatsapp($phoneNumber,$templates,$msg);
                  $savestud = $loginModel->setStudentName($getdata);
                  $sms = 'Dear customer, your OTP for registration is ' . $otp . '. do not share to anyone. Thank you OTPIMS';
+               
                  $output = sendSMS($_POST['mobile_number'], $sms);
-                 $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
+                // $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
                 $result['status'] = '200';
                 $result = array(
                     'mobile' => $_POST['mobile_number'],
@@ -209,15 +212,17 @@ class LoginController extends BaseController
       
     if (isset($updatedUserData['mobile_no'])) {
         // Send WhatsApp message to user
-        $phoneNumber = $updatedUserData['mobile_no'];
+        $phoneNumber = $updatedUserData['mobileWithCode'];
         $templates = "930840461869403";
-        $msg ="your register succesfully";
+        $msg = "We're thrilled to inform you that your registration was successful! You're now officially part of Enatyam learning community. Should you have any questions or need assistance, feel free to reach out to us. We're here to support you every step of the way. Welcome aboard, and let the learning adventure begin! Best Regards,";
         whatsapp($phoneNumber, $templates, $msg);
 
       //  $adminNumber = "918010041115";
         $templates = "930840461869403";
-        $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
-        whatsappadmin($templates, $msg);
+      //  $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
+      $msg = "New student registered: " . $updatedUserData['full_name'] . " Email: " . $updatedUserData['email'];
+
+      whatsappadmin($templates, $msg);
     } else {
            
         }

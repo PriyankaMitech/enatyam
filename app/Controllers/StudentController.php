@@ -6,6 +6,7 @@ use App\Models\AdminModel;
 use App\Models\StudentModel;
 use CodeIgniter\Controller;
 use App\Models\LoginModel;
+use App\Models\FacultyModel;
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -71,6 +72,7 @@ class StudentController extends BaseController
         $session = session();
         $registerId = $session->get('id');
         $StudentModel = new StudentModel();
+        $facultyModel = new FacultyModel();
         $registerData = $StudentModel->getAllRegisterData($registerId, ['full_name', 'Assign_Techer_id']);
         $model = new AdminModel();
         $assignTeacherId = $registerData[0]->Assign_Techer_id;
@@ -91,6 +93,13 @@ class StudentController extends BaseController
         // Get uploaded files
         $image = $this->request->getFile('imageFile');
         $video = $this->request->getFile('videoFile');
+       
+       
+        $id=$registerId;
+        $studentname=$facultyModel->getname($id);
+        $id=$assignTeacherId;
+        $facultyname=$facultyModel->getname($id);
+
 
         // Check if an image was uploaded
         if ($image && $image->isValid() && !$image->hasMoved()) {
@@ -104,10 +113,12 @@ class StudentController extends BaseController
             $facultyMobileNumber = $model->get_single_data('register', $wherecond);
             $phoneNumber=$facultyMobileNumber->mobileWithCode;
             $templates = "930840461869403";
-            $msg = "You have new video/images from student";
+        //    $msg = "You have new video/images from student";
+           $msg = "Hello $facultyname, You've student $studentname successfully uploaded a practice video/image!";
+
             whatsapp($phoneNumber, $templates, $msg);
             $templates = "930840461869403";
-            $msg = "new Video uploded By student";
+            $msg = "new Video uploded By $studentname to faculty $facultyname";
             whatsappadmin($templates, $msg);
             // Set success message in session
             $session->setFlashdata('success', 'Image uploaded successfully.');
@@ -125,10 +136,10 @@ class StudentController extends BaseController
             $phoneNumber=$facultyMobileNumber->mobileWithCode;
 
             $templates = "930840461869403";
-            $msg = "You have new video/images from student";
+            $msg ="Hello $facultyname, You've student $studentname successfully uploaded a practice video/image!";
             whatsapp($phoneNumber, $templates, $msg);
             $templates = "930840461869403";
-            $msg = "new Video uploded By student";
+            $msg = "new Video uploded By $studentname to faculty $facultyname";
             whatsappadmin($templates, $msg);
             // Set success message in session
             $session->setFlashdata('success', 'Video uploaded successfully.');
@@ -868,7 +879,11 @@ class StudentController extends BaseController
     }
     public function submit_review() {
       //  print_r($_POST);die;
+      $result = session();
+      $registerId = $result->get('id');
         $model = new StudentModel();
+        $modell = new AdminModel();
+        $facultyModel =new FacultyModel();
         $data = [
             'rating' => $this->request->getPost('rating'),
             'student_id' => $this->request->getPost('student_id'),
@@ -879,7 +894,7 @@ class StudentController extends BaseController
         ];
         
         $model->insertfeedback($data);
-
+       
         $varify =[
             'verify_by_student' => $this->request->getPost('verify_by_student'),
             'student_id' => $this->request->getPost('student_id'),
@@ -887,6 +902,19 @@ class StudentController extends BaseController
         ] ;
 
         $model->insertvarify($varify);
+        $wherecond = ['id' => $registerId];
+        $id=$registerId ;
+        $studentname=$facultyModel->getname($id);
+        $studentMobileNumber = $modell->get_single_data('register', $wherecond);
+        $phoneNumber=$studentMobileNumber->mobileWithCode;
+        if($studentMobileNumber){
+
+            $phoneNumber = $studentMobileNumber->mobileWithCode;
+            }
+            $templates = "930840461869403";
+            $msg = "Hello $studentname, Thank you so much for marking your attendance. Your participation is greatly appreciated!";
+
+            whatsapp($phoneNumber, $templates, $msg);
         return redirect()->to('StudentAttendancerecord');
     }
     }
