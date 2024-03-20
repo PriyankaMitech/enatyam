@@ -35,4 +35,14 @@ class DemoModel extends Model
             'Conducted_Demo_Date' => date('Y-m-d') 
         ]);
     }
+    public function getRecordsForToday()
+    {
+        $todayDate = date('Y-m-d');
+    
+        $query = $this->where('Book_Date', $todayDate)
+                      ->where('AssignTecher_id IS NOT NULL')
+                      ->findAll();
+    
+        return $query;
+    }
 }

@@ -412,4 +412,6 @@ class Home extends BaseController
 
         return view('Blog/historyofkathak');
     }
+
+  
 }
