@@ -87,7 +87,7 @@ class Home extends BaseController
     public function termsandconditions()
     {
 
-        return view('termsandconditions');
+        return view('TermsandConditions');
     }
     public function Offilinstudio()
     {
