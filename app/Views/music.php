@@ -90,7 +90,7 @@
                                         Enroll in our Online Hindustani Vocal Class and discover the beauty of this ancient art form.
                                     </p>
                                     <div class="text-end mt-4">
-                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
                                     </div>
                                 </div>
                             </div>
@@ -481,7 +481,7 @@
                                         With interactive virtual sessions, personalized guidance, and a supportive community, you’ll witness remarkable progress in your Carnatic vocal skills.
                                         Enroll in our Online Carnatic Vocal Class today and unleash your musical talent.
                                     <div class="text-end mt-4">
-                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
                                     </div>
                                 </div>
                             </div>
@@ -863,7 +863,7 @@
                                         Enroll in our Online Semi-Classical Singing Class today and unleash your artistic prowess.
                                     </p>
                                     <div class="text-end mt-4">
-                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
                                     </div>
                                 </div>
                             </div>
@@ -1252,7 +1252,7 @@
                                         Enroll in our Online Western Singing Class today and let your voice soar to new heights.
                                     </p>
                                     <div class="text-end mt-4">
-                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
                                     </div>
                                 </div>
                             </div>
@@ -1645,7 +1645,7 @@
                                     </p>
                                     <!-- <div class="btn btndemoh">START NOW</div> -->
                                     <div class="text-end mt-4">
-                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">START NOW</a>
+                                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
                                     </div>
                                 </div>
                             </div>

@@ -914,7 +914,7 @@ if($datas->total_ratings != ''){
                     </p>
 
                     <div class="text-center mt-4">
-                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance">START NOW</a>
+                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance">Explore More</a>
                     </div>
                 </div>
             </div>
@@ -943,7 +943,7 @@ if($datas->total_ratings != ''){
                         </p>
 
                         <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music">START NOW</a>
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music">Explore More</a>
                         </div>
                     </div>
 
@@ -981,7 +981,7 @@ if($datas->total_ratings != ''){
                         </p>
 
                         <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga">START NOW</a>
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -1010,7 +1010,7 @@ if($datas->total_ratings != ''){
                         </p>
    
                         <div class="text-center mt-4 ">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments">START NOW</a>
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments">Explore More</a>
 
                         </div>
 

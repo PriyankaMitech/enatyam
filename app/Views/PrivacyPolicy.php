@@ -37,7 +37,7 @@
     <div class="container cont-lg">
         <div class="row termsconp">
             <div class="col-lg-12">
-                <h4><b><u>Terms and Conditions:</u></b></h4>
+                <h4><b><u>Privacy Policy:</u></b></h4>
                 <p>At enatyam.com, we are committed to safeguarding your privacy and ensuring the security of
                     your personal information. This Privacy Policy outlines how we collect, use, and protect the
                     data we gather from our users.
