@@ -136,9 +136,9 @@ $name               = "RazorPay Infovistar";
 
                                                 <div>
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Explore Pricing">
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Explore Pricing</a>
 
                                                     <?php endif; ?>
                                                 </div>
@@ -237,9 +237,9 @@ $name               = "RazorPay Infovistar";
                                                 </ul>
                                                 <div>
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Explore Pricing</a>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -337,9 +337,9 @@ $name               = "RazorPay Infovistar";
 
                                                 <div>
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Explore Pricing</a>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -455,9 +455,9 @@ $name               = "RazorPay Infovistar";
 
                                                     <div>
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Explore Pricing</a>
 
                                                         <?php endif; ?>
                                                     </div>
@@ -546,9 +546,9 @@ $name               = "RazorPay Infovistar";
                                                     <div>
 
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Explore Pricing</a>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
@@ -633,9 +633,9 @@ $name               = "RazorPay Infovistar";
 
                                                     <div>
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Explore Pricing</a>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>

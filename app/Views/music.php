@@ -5,7 +5,8 @@
 <!-- <div class="wrapper-container">
     <div class="video-container">
        
-        <video class="video-dance musicv" controls="1" autoplay="0" loop="0">
+        <video class="video-dance musicv"                     <video class="video-dance bannerv" autoplay loop muted >
+ autoplay="0" loop="0">
             <source src="public/images/Music/music.mp4" type="video/mp4">
 
         </video>
@@ -20,7 +21,8 @@
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted controls="1">
+                    <video class="video-dance bannerv" autoplay loop muted                     <video class="video-dance bannerv" autoplay loop muted >
+>
                         <source src="<?=base_url(); ?>public/images/Music/music.mp4" type="video/mp4">
                     </video>                
                 </div>
@@ -192,7 +194,7 @@
                             
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center hs">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -585,7 +587,7 @@
                             
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center hs">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -967,7 +969,7 @@
                             
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center hs">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -1356,7 +1358,7 @@
                             
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center hs">
+                                <div class="col-lg-12 col-12 text-center testimonialsdiv">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -1748,7 +1750,7 @@
                      
                             <div class="month-row">
                                 <div class="row">
-                                    <div class="col-lg-12 col-12 text-center hs">
+                                    <div class="col-lg-12 col-12 text-center testimonialsdiv">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -2025,12 +2027,12 @@
 
 
 <!-- Testimonials -->
-<section class="testimonials mftm mtt testmonialsm" id="testimonials" style="display:none">
+<section class="testimonials mftm mtt testmonialsm" id="testimonials">
     <div class="container">
        
         <div class="month-row">
             <div class="row">
-            <div class="col-lg-12 col-12 text-center hs">
+            <div class="col-lg-12 col-12 text-center testimonialsdiv">
                 <h3>Testimonials
                 </h3>
                 <span class="line"></span>
@@ -2245,8 +2247,6 @@
         </div>
     </div>
 </section>
-
-<?php include('test.php'); ?>
 
 <?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>

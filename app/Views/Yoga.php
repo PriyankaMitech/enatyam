@@ -6,7 +6,8 @@
         <div class="row ">
             <div class="col-lg-8 col-md-8 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv"  controls="1" autoplay="0" loop="0">
+                    <video class="video-dance bannerv"                      <video class="video-dance bannerv" autoplay loop muted >
+ autoplay="0" loop="0">
                         <source src="<?=base_url(); ?>public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
                     </video>                
                 </div>
@@ -25,7 +26,8 @@
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted controls="1">
+                    <video class="video-dance bannerv" autoplay loop muted                     <video class="video-dance bannerv" autoplay loop muted >
+>
                         <source src="<?=base_url(); ?>public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
                     </video>                
                 </div>
@@ -3649,7 +3651,7 @@
 </section>
 
 
-<section class="testimonials tyoga" id="testimonials" style="display:none">
+<section class="testimonials tyoga" id="testimonials">
     <div class="container">
         
         <div class="">
@@ -3765,7 +3767,6 @@
     </div>
     </div>
 </section>
-<?php include('test.php'); ?>
 
 <?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>

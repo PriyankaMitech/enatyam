@@ -15,7 +15,8 @@
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted controls="1">
+                    <video class="video-dance bannerv" autoplay loop muted                     <video class="video-dance bannerv" autoplay loop muted >
+>
                         <source src="<?=base_url(); ?>public/images/instrument/instrument-video-1.mp4" type="video/mp4">
                     </video>                
                 </div>
@@ -3984,7 +3985,7 @@
 
 
 
-<section class="testimonials ittmi" id="testimonials" style="display:none">
+<section class="testimonials ittmi" id="testimonials">
     <div class="container">
        
         <div class="month-row">
@@ -4199,8 +4200,6 @@
         </div>
     </div>
 </section>
-<?php include('test.php'); ?>
-
 <?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>
 

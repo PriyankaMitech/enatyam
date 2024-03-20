@@ -157,7 +157,7 @@ footer {
 
 .footer-div a {
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   text-decoration: none;
 }
@@ -234,7 +234,7 @@ footer .mt-3 {
 }
 
 .footer-links-sub a {
-  color: #fff;
+  color: #909898;
   font-size: 15px;
   margin-right: 25px;
   /* margin-top: 45px; */
@@ -287,7 +287,7 @@ footer a:hover {
   .col-md-3.col-6.footer-div.fu .f-ul {
     --bs-gutter-x: 0 !important;
   }
-  .ST_Inspire-video{
-width: 100% !important;
+  .ST_Inspire-video {
+    width: 100% !important;
   }
 }

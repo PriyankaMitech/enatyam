@@ -57,7 +57,7 @@
                     </li>
 
                     <li class="footer-listing">
-                        <a href="<?=base_url(); ?>termsandconditions">Terms and Conditions</a>
+                        <a href="<?=base_url(); ?>termsandconditions">Terms & Conditions</a>
                     </li>
                 </ul>
                 </div>
@@ -73,7 +73,7 @@
                         <a href="<?=base_url(); ?>PrivacyPolicy">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="<?=base_url(); ?>termsandconditions">Terms and Conditions</a>
+                        <a href="<?=base_url(); ?>termsandconditions">Terms & Conditions</a>
                     </li>
                     <li>
                         <a href="<?=base_url(); ?>refundpolicy">Refund Policy</a>
@@ -86,7 +86,6 @@
                     </li> -->
                 </ul>
             </div>
-
           
         </div>
 
@@ -384,35 +383,6 @@
         }
     });
 });
-
-
-    
-// $(".select2").select2();
-
-
-
-
-
-// window.addEventListener("DOMContentLoaded", (event) => {
-//     console.log("DOM fully loaded and parsed");
-//     // let details = JSON.parse(countyCode)
-//     let dropDown = document.getElementById("lenValidate")
-//     for (let i = 0; i < details.length; i++) {
-//         //let txtOption = '<option value="' + details[i]['code'] + '"' + ' name="' + details[i]['data-phoneLength'] + '">' + details[i]['label'] + '</option>';
-//         let txtOption = '<option value="' + details[i]['phone'] + '"' + ' data-phonelength="' + details[i][
-//             'data-phoneLength'
-//         ] + '">' + details[i]['label'] + '</option>';
-//         console.log(txtOption)
-//         // let txtOption = '<option value="' + details[i]['code'] + '">' + details[i]['label'] + '</option>';
-//         dropDown.innerHTML = dropDown.innerHTML + txtOption
-//         console.log(dropDown.innerHTML)
-//     }
-// });
-
-
-
-
-
 
 
 </script>
@@ -2647,25 +2617,6 @@ function showModal(name, designation, img, qualifications, certifications, exper
     };
 
 
-    function showReview(name, img, ReviewDetails) {
-    $("#ReviewName").text("Name: " + name);
-    $("#imgh").attr("src", img);
-    $("#ReviewDetails").text("" + ReviewDetails);
-
-    // Show modal
-    $("#reviewModal").show();
-    $("body").addClass("modal-open");
-}
- // Close modal function
- window.closeModal1 = function() {
-        $("#reviewModal").hide();
-    };
-    window.closeModal1 = function() {
-        $("#reviewModal").hide();
-
-        // Remove class from body to enable scrolling
-        $("body").removeClass("modal-open");
-    };
 
 
 </script>

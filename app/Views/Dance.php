@@ -1,7 +1,8 @@
 <?php include('header.php'); ?>
 <!-- <div class="wrapper-container">
     <div class="video-container">
-        <video class="video-dance musicv" width="100%"  height = "21.5rem%" controls="1" autoplay="0" loop="0">
+        <video class="video-dance musicv" width="100%"  height = "21.5rem%"                     <video class="video-dance bannerv" autoplay loop muted >
+ autoplay="0" loop="0">
             <source src="public/images/Dance/DanceVidio.mp4" type="video/mp4">
         </video>
 
@@ -18,8 +19,7 @@
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted  controls="1">
-                        <source src="<?=base_url(); ?>public/images/Dance/DanceVidio.mp4" type="video/mp4">
+                    <video class="video-dance bannerv" autoplay loop muted  >                        <source src="<?=base_url(); ?>public/images/Dance/DanceVidio.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>
@@ -543,9 +543,9 @@
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
-                                    <!-- <p>
+                                    <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
-                                    </p> -->
+                                    </p>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic postures and hand gestures.</span>
@@ -929,9 +929,9 @@
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
-                                    <!-- <p>
+                                    <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
-                                    </p> -->
+                                    </p>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic postures and hand gestures.</span>
@@ -1223,9 +1223,9 @@
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
-                                    <!-- <p>
+                                    <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
-                                    </p> -->
+                                    </p>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic postures and hand gestures.</span>
@@ -1494,9 +1494,9 @@
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
-                                    <!-- <p>
+                                    <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
-                                    </p> -->
+                                    </p>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic postures and hand gestures.</span>
@@ -1885,9 +1885,9 @@
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
-                                    <!-- <p>
+                                    <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
-                                    </p> -->
+                                    </p>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic postures and hand gestures.</span>
@@ -2176,9 +2176,9 @@
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
-                                    <!-- <p>
+                                    <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
-                                    </p> -->
+                                    </p>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic postures and hand gestures.</span>
@@ -2537,9 +2537,9 @@
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
-                                    <!-- <p>
+                                    <p>
                                         Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
-                                    </p> -->
+                                    </p>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic postures and hand gestures.</span>
@@ -2819,7 +2819,7 @@
     </div>
 </section>
 <!-- </section> -->
-<section class="testimonials testimonialdance" id="testimonials">
+<section class="testimonials mft" id="testimonials">
     <div class="container-fluid">
         <!-- <div class="row">
             <span class="text-center testimonialsdiv"><button type="button" class="btn step mkathak">Testimonials</button></span>
