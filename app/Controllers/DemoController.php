@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\DemoModel;
+use App\Models\AdminModel;
 
 class DemoController extends BaseController
 {
@@ -111,5 +112,93 @@ class DemoController extends BaseController
        $updatestaus =$demoModel->updatedata($student_id,$attendance);
        $session->setFlashdata('success', 'Demo status updeted!');
        return redirect()->to('FacultySchedule');
+    }
+
+    // public function senddemoremainder()
+    // {
+    //     $demoModel = new DemoModel();
+    //     $model = new AdminModel();
+    //     $recordsForToday = $demoModel->getRecordsForToday();
+        
+    //     foreach ($recordsForToday as $record) {
+    //         // Ensure $record is an array
+    //         if (is_array($record)) {
+    //             $bookDate = $record['Book_Date'];
+    //             $bookDateTime = $record['Book_Date_Time'];
+    //             $assignTeacherId = $record['AssignTecher_id']; 
+    //             $phoneNumber = $record['mobileWithCode'];
+    //             $studentname = $record['name'];
+    //             $templates = "959322439105873";
+    //             $msg = "Hello $studentname, Demo Alert! Your demo session is approaching. It will start in the next 15 minutes. Date: $bookDate, Time: $bookDateTime. Feel free to invite your friends and family to attend the demo with you.";
+    
+    //             whatsapp($phoneNumber, $templates, $msg);
+                
+    //             $wherecond1 = [
+    //                 'id' => $assignTeacherId,
+    //             ];
+    
+    //             $teacher_data = $model->getsinglerow('register', $wherecond1);
+    //             if ($teacher_data) {
+    //                 // Access properties using arrow operator
+    //                 $teacherName = $teacher_data->full_name;
+    //                 $teacherMobile = $teacher_data->mobileWithCode;
+    //                 $phoneNumber = $teacherMobile;
+    //                 $msg = "Hello $teacherName, Demo Alert! Your demo session is approaching. It will start in the next 15 minutes. Date: $bookDate, Time: $bookDateTime. Feel free to invite your friends and family to attend the demo with you.";
+    
+    //                 whatsapp($phoneNumber, $templates, $msg);
+    //                 echo "sucess";
+    //             }
+    //         } else {
+    //             echo "by";
+    //             // Handle case where $record is not an array
+    //             // Log an error, skip the record, or handle it as appropriate for your application
+    //         }
+    //     }
+    // }
+    public function senddemoremainder()
+    {
+        // Set the default time zone
+        date_default_timezone_set('Asia/Kolkata');
+    
+        $demoModel = new DemoModel();
+        $model = new AdminModel();
+        $recordsForToday = $demoModel->getRecordsForToday();
+        $currentDateTime = strtotime(date('Y-m-d H:i:s')); // Current timestamp
+        
+        foreach ($recordsForToday as $record) {
+            // Ensure $record is an array
+            if (is_array($record)) {
+                $bookDate = $record['Book_Date'];
+                $bookDateTime = $record['Book_Date_Time'];
+                $assignTeacherId = $record['AssignTecher_id']; 
+                $phoneNumber = $record['mobileWithCode'];
+                $studentname = $record['name'];
+                $bookingTimestamp = strtotime("$bookDate $bookDateTime");
+                $reminderTimestamp = $bookingTimestamp - (15 * 60);
+                $wherecond1 = [
+                    'id' => $assignTeacherId,
+                ];
+    
+                $teacher_data = $model->getsinglerow('register', $wherecond1);
+                if ($currentDateTime >= $reminderTimestamp) {
+                    $phoneNumber = $record['mobileWithCode'];
+                    $templates = "930840461869403";
+                    $msg = "Hello $studentname, Demo Alert! Your demo session is approaching. It will start in the next 15 minutes. Date: $bookDate, Time: $bookDateTime. Feel free to invite your friends and family to attend the demo with you.";
+                    whatsapp($phoneNumber, $templates, $msg);
+                    
+                        $teacherName = $teacher_data->full_name;
+                        $teacherMobile = $teacher_data->mobileWithCode;
+                        $phoneNumber = $teacherMobile;
+                        $templates = "930840461869403";
+                        $msg = "Hello $teacherName, Demo Alert! Your demo session is approaching. It will start in the next 15 minutes. Date: $bookDate, Time: $bookDateTime. Feel free to invite your friends and family to attend the demo with you.";
+                        whatsapp($phoneNumber, $templates, $msg);
+                        echo "success";
+                    
+                }
+            } else {
+                echo "by";
+               
+            }
+        }
     }
 }
