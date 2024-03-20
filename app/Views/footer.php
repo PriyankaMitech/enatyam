@@ -1209,11 +1209,27 @@ $(document).ready(function() {
         console.log(demodropDown.innerHTML)
     }
 
+     // Find index of India in the details array
+   let defaultIndex = details.findIndex(country => country.code === "IN");
+    
+    // Set default selected country to India
+    demoDropDown.selectedIndex = defaultIndex; 
+      // Trigger change event to apply mobile number length validation for India
+    demoDropDown.dispatchEvent(new Event('change'));
+
 });
 </script>
     <script>
     let demoDropDown = document.getElementById("telephoneCountryCode")
     let demoMobileNo = document.getElementById("Code_MobileNo")
+        // Find index of India in the details array
+   let defaultIndex = details.findIndex(country => country.code === "IN");
+    
+    // Set default selected country to India
+    demoDropDown.selectedIndex = defaultIndex; 
+      // Trigger change event to apply mobile number length validation for India
+    demoDropDown.dispatchEvent(new Event('change'));
+
     
     demoDropDown.addEventListener('change', function() {
         demoMobileNo.maxLength = event.target.options[event.target.selectedIndex].dataset.phonelength
@@ -2390,6 +2406,78 @@ $(document).ready(function() {
             $("#inputDistrict").html(htmlString);
 
         });
+
+        window.addEventListener("DOMContentLoaded", (event) => {
+        console.log("DOM fully loaded and parsed");
+        let dropDown = document.getElementById("phoneCountryCode")
+        for (let i = 0; i < details.length; i++) {
+        //let txtOption = '<option value="' + details[i]['code'] + '"' + ' name="' + details[i]['data-phoneLength'] + '">' + details[i]['label'] + '</option>';
+        let txtOption = '<option value="' + details[i]['phone'] + '"' + ' data-phonelength="' + details[i][
+            'data-phoneLength'
+        ] + '">' + details[i]['label'] + '</option>';
+        console.log(txtOption)
+        // let txtOption = '<option value="' + details[i]['code'] + '">' + details[i]['label'] + '</option>';
+        dropDown.innerHTML = dropDown.innerHTML + txtOption
+        console.log(dropDown.innerHTML)
+    }
+
+        // Find index of India in the details array
+   let defaultIndex = details.findIndex(country => country.code === "IN");
+    
+    // Set default selected country to India
+    dropDown.selectedIndex = defaultIndex; 
+      // Trigger change event to apply mobile number length validation for India
+    dropDown.dispatchEvent(new Event('change'));
+
+});
+
+let careerDropDown = document.getElementById("phoneCountryCode")
+let careerMobileNo = document.getElementById("code_mobileNo")
+
+
+careerDropDown.addEventListener('change', function(event) {
+    let selectedOption = event.target.options[event.target.selectedIndex];
+    careerMobileNo.minLength = selectedOption.dataset.phonelength;
+    careerMobileNo.maxLength = selectedOption.dataset.phonelength;
+    careerMobileNo.placeholder = "limit: " + selectedOption.dataset.phonelength + " characters";
+});
+
+
+// Restricts input for the given textbox to the given inputFilter.
+function setInputFilter(textbox, inputFilter, errMsg) {
+    ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop", "focusout"].forEach(function(
+        event) {
+        textbox.addEventListener(event, function(e) {
+            if (inputFilter(this.value)) {
+                // Accepted value.
+                if (["keydown", "mousedown", "focusout"].indexOf(e.type) >= 0) {
+                    this.classList.remove("input-error");
+                    this.setCustomValidity("");
+                }
+
+                this.oldValue = this.value;
+                this.oldSelectionStart = this.selectionStart;
+                this.oldSelectionEnd = this.selectionEnd;
+            } else if (this.hasOwnProperty("oldValue")) {
+                // Rejected value: restore the previous one.
+                this.classList.add("input-error");
+                this.setCustomValidity(errMsg);
+                this.reportValidity();
+                this.value = this.oldValue;
+                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+            } else {
+                // Rejected value: nothing to restore.
+                this.value = "";
+            }
+        });
+    });
+}
+
+
+setInputFilter(document.getElementById("code_mobileNo"), function(value) {
+    return /^\d*$/.test(value);
+}, "Must be a number");
+
     </script>
 
     <!-- <script>
@@ -2541,7 +2629,17 @@ $(function() {
         dropDown.innerHTML = dropDown.innerHTML + txtOption
         console.log(dropDown.innerHTML)
     }
+     // Find index of India in the details array
+   let defaultIndex = details.findIndex(country => country.code === "IN");
+    
+    // Set default selected country to India
+    dropDown.selectedIndex = defaultIndex; 
+
+      // Trigger change event to apply mobile number length validation for India
+      dropDown.dispatchEvent(new Event('change'));
 });
+
+  
 
 let dpDown = document.getElementById("lenValidate")
 let ipMobileNo = document.getElementById("txtMobileNo")
