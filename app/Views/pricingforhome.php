@@ -44,7 +44,7 @@ $name               = "RazorPay Infovistar";
                         <div class="row">
                             <div class="col-lg-10 col-md-12 col-12">
                                 <div class="row pricing-card-section sd">
-                                    <div class="col-lg-4 col-md-4 col-12 ppsb">
+                                    <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
                                         <div class="card text-center card-1">
                                             <div class="price-card-head">
                                                 <h3 >Basic</h3>
@@ -147,7 +147,7 @@ $name               = "RazorPay Infovistar";
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-12 ppsb">
+                                    <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
                                         <div class="card text-center card-1">
                                             <div class="price-card-head">
                                                 <h3>Pro</h3>
@@ -247,7 +247,7 @@ $name               = "RazorPay Infovistar";
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-12 ppsb">
+                                    <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
                                         <div class="card text-center card-1">
                                             <div class="price-card-head">
                                                 <h3>Elite</h3>
@@ -362,7 +362,7 @@ $name               = "RazorPay Infovistar";
                             <div class="col-lg-10 col-md-12 col-12">
                                 <form name="razorpay-form" id="razorpay-form" action="<?php echo base_url() ?>payment" method="POST">
                                     <div class="row pricing-card-section">
-                                        <div class="col-lg-4 col-md-4 col-12 ppsb">
+                                        <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
                                             <div class="card text-center card-1">
                                                 <div class="price-card-head">
                                                     <h3>Basic</h3>
@@ -468,7 +468,7 @@ $name               = "RazorPay Infovistar";
                                             </div>
 
                                         </div>
-                                        <div class="col-lg-4 col-md-4 col-12 ppsb">
+                                        <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
                                             <div class="card text-center card-1">
                                                 <div class="price-card-head">
                                                     <h3>Pro</h3>
@@ -555,7 +555,7 @@ $name               = "RazorPay Infovistar";
                                             </div>
 
                                         </div>
-                                        <div class="col-lg-4 col-md-4 col-12 ppsb">
+                                        <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
                                             <div class="card text-center card-1">
                                                 <div class="price-card-head">
                                                     <h3>Elite</h3>

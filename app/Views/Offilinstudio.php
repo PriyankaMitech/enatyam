@@ -49,7 +49,7 @@ ul li{
 <section class="">
     <div class="container-fluid">
         <div class="row">
-        <div class="col-md-12 col-12">
+        <div class="col-md-12 col-12 offilinestudeobaneer">
                     <img src="<?=base_url(); ?>public/images/offilinestudeo1.png" class="" style="width:100%">
                     <!-- public/images/Home/4.png -->
                 </div>
@@ -158,7 +158,7 @@ ul li{
 
 
 
-<div class="container rcbtnoffline">
+<!-- <div class="container rcbtnoffline">
     <div class="row">
         <div class="col-lg-12 nsrad">
 
@@ -166,7 +166,9 @@ ul li{
                 back</a>
         </div>
     </div>
-</div>
+</div> -->
+
+<?php include('bookdemocallb.php'); ?>
 
 
 

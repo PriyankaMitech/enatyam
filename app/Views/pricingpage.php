@@ -1,3 +1,5 @@
+<?php include('header.php'); ?>
+
 <?php
 $description        = "Product Description";
 $txnid              = date("YmdHis");
@@ -11,7 +13,8 @@ $email              = 'coexistech@gmail.com';
 $phone              = '9158876092';
 $name               = "RazorPay Infovistar";
 ?>
-<section class="pricing-section " id="pricing">
+
+<section class="pricing-section pricingsfor" id="pricing">
     <div class="container ">
         <div class="row heading-div m-0">
             <div class="col-lg-12 text-center op" id="pricing-section">
@@ -663,3 +666,5 @@ $name               = "RazorPay Infovistar";
         </div>
     </div>
 </section>
+
+<?php include('footer.php'); ?>

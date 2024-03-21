@@ -13,7 +13,9 @@
 
 
  */
-
+#facultyModal .close {
+  right: 111px !important;
+}
 
 
 
@@ -391,7 +393,7 @@ body {
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItem thumbnailListItemp">
-                                        <p>3569</p>
+                                        3569
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -438,7 +440,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItem thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                    
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
@@ -483,7 +485,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -526,7 +528,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -569,7 +571,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -610,7 +612,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -651,7 +653,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -692,7 +694,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -734,7 +736,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -775,7 +777,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -816,7 +818,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -857,7 +859,7 @@ if($datas->total_ratings != ''){
                                     <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
                                             aria-hidden="true"></i></li>
                                     <li class="list-inline-item text-white thumbnailListItemp">
-                                        <p>2698</p>
+                                        2698
                                     </li>
                                     <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
                                     <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
@@ -1154,27 +1156,7 @@ if($datas->total_ratings != ''){
                              </div>
                         </div>
                     </div>
-                    <!-- <div class="item" onclick="showModal('Veera', 'Yoga', 'public/images/veera.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/veera.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Veera</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-
-                             <div class="overlay-text">
-                                <h4 class="hedingfsf">Veera</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-
-                        </div>
-                    </div> -->
+                 
                     <div class="item" onclick="showModal('Priti S', 'Kathak Dance Faculty', 'public/images/priti.jpg','M.A. in Performing Arts(Kathak)', 'Gold Medalist in Kathak (University Topper)','15 Years +','Kathak, Semi classical and Choreography, An internationally acclaimed kathak artist and professionally trained and graced many international stage')">
                         <div class="faculty-div">
                             <div class="faculty-div1">  
@@ -1190,8 +1172,7 @@ if($datas->total_ratings != ''){
                                 <h4 class="hedingfsf">Priti</h4>
                                 <p>M.A. in Performing Arts(Kathak), Gold Medalist in Kathak (University Topper)<br></p>
                                 <p>Experience 15 Years +</p>
-                                <p>Read more...</p>
-
+ <p><b>Read more...</b></p> 
                              </div>
                         </div>
                     </div>
@@ -1273,8 +1254,7 @@ if($datas->total_ratings != ''){
                                 <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
                                 <!-- <p>Certification: YTTC 125 Hrs</p> -->
                                 <p>Experience 3+ years </p>
-                                <p>Read more...</p>
-                                    <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
+ <p><b>Read more...</b></p>                                     <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
                              </div>
                         </div>
                     </div>
@@ -1296,8 +1276,7 @@ if($datas->total_ratings != ''){
                                 <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
                                 <!-- <p>Certification: YTTC 125 Hrs</p> -->
                                 <p>Experience 10 years + </p>
-                                <p>Read more...</p>
-                                    <!-- <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
+ <p><b>Read more...</b></p>                                     <!-- <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
                              </div>
                         </div>
                     </div>
@@ -1318,8 +1297,7 @@ if($datas->total_ratings != ''){
                                 <p>Phd - Yogic and Sports science<br></p>
                                 <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
                                 <p>Diploma in Counselling Psychotherapy<br></p>
-                                <p>Read more...</p>
-                                <!-- <p>Certification: YTTC 125 Hrs</p>
+ <p><b>Read more...</b></p>                                 <!-- <p>Certification: YTTC 125 Hrs</p>
                                 <p>Experience 3+ years </p>
                                 
                                     <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
@@ -1341,8 +1319,7 @@ if($datas->total_ratings != ''){
                                 <h4 class="hedingfsf">Swetha</h4>
                                    <p>MA in Carnatic Vocal</p>
                                    <p>Experience 10 Years +</p>
-                                   <p>Read more...</p>
-                            </div>
+    <p><b>Read more...</b></p>                             </div>
                         </div>
                     </div>
                     
@@ -1418,8 +1395,7 @@ if($datas->total_ratings != ''){
                                 <h4 class="hedingfsf">Krutika B</h4>
                                 <p>Bollywood Dance</p>
                                 <p>Certified Bollywood Dance faculty with training from Shaimak Davar Institute</p>
-                                <p>Read more...</p>
-                                   
+ <p><b>Read more...</b></p>                                    
                              </div>
                         </div>
                     </div>
@@ -1458,8 +1434,7 @@ if($datas->total_ratings != ''){
                                 <h4 class="hedingfsf">Anika S</h4>
                                 <p>Hindustani Dance</p>
                                 <p>MA in Bharatnatyam</p>
-                                <p>Read more...</p>
-                                   
+ <p><b>Read more...</b></p>                                    
                              </div>
                         </div>
                     </div> -->
@@ -1826,7 +1801,7 @@ if($datas->total_ratings != ''){
 
 <!-- Happy faces -->
 <!-- superstar slide -->
-<section class="faculty-section faculty-section1 p-3">
+<section class="faculty-section faculty-sectiononhome p-3">
     <div class="container cont-width mt-5">
         <div class="row heading-div m-0">
             <div class="col-lg-12 col-12 text-center">

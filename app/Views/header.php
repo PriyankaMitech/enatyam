@@ -35,7 +35,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
-    <?php if ($page == 'enatyam' || $page == 'Home' ) {
+    <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'pricing' ) {
 
     ?>
 
@@ -53,14 +53,11 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
         <link rel="stylesheet" href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
 
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+      
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-        <!-- fontawesome icon cdn -->
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- owl carousel css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -83,9 +80,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 position: absolute;
                 right: -12px;
                 top: -14px;
-                /* background: crimson; */
-                /* opacity: 1; */
-                /* color: #fff!important; */
+ 
                 break-after: avoid;
                 border: 1px solid #000;
                 padding: 6px;
@@ -98,23 +93,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         </style>
 
     <?php } else if ($page == 'Dance') { ?>
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css">
-
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
-
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/DanceInstructer.css">
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"> </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+      
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
@@ -323,8 +302,6 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-        <!-- fontawesome icon cdn -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -350,17 +327,14 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     ?>
 
     <link rel="stylesheet" href="public/css/footer.css">
-    <!-- <link rel="stylesheet" href="public/css/headerStyle.css"> -->
 
     <link rel="stylesheet" href="public/css/TermsandConditions.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <!-- fontawesome icon cdn -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- jQuery library -->
 
     
 
@@ -369,10 +343,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<!-- fontawesome icon cdn -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- jQuery library -->
 
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/footer.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
@@ -1914,58 +1886,49 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     </div>
     <section class="tophead">
         <nav class="navbar navbar-expand-lg">
-            <div class="container  pd0">
-                <!-- <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-
-                <div class="collapse navbar-collapse nav1" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- <li>
-                            <a href="tel:+91-70205%2009962" target="_blank" rel="nofollow noopener">
-                                <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-                                <span class="text">+91-70205 09962</span>
-                            </
-                        </li>
-                        <li>
-                            <a href="mailto:hello@enatyam.com" target="_blank" rel="nofollow noopener">
-                                <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                                <span class="text">hello@enatyam.com</span>
-                            </a>
-                        </li> -->
-                        <li>
-                        <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
-                        <img src="public/images/logos.png" alt="Enatyam">
-        </li>
-                    </a>
-                    </ul>
-
-                    <div>
-                        <div class="">
-                            <?php if (!(session()->get('sessiondata'))) : ?>
-                                <div class="loginmenu">
-                                    
-                                <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh btntft" style="width: auto;">
-                                    Book Demo
-                                </a>
-                        
-                                    <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
-                                    <a class="login" href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
-                                </div>
-                            <?php else : ?>
-                                <div class="loginmenu">
-                                    <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
-                                    <a class="Dashboard" href="<?php echo base_url(); ?>Dashboard" style="border-right: 1px solid #f7f7f7;">Dashboard</a>
-                                    <a class="logout" href="<?php echo base_url(); ?>logout">Logout</a>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
+    <div class="container pd0">
+        <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
+            <img src="public/images/logos.png" alt="Enatyam">
+        </a>
+        <ul class="navbar-nav main-menu ms-auto">
+            <li class="nav-item">
+                <a class="nav-link px-2" href="<?php echo base_url('Home'); ?>">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2" href="<?php echo base_url('Yoga'); ?>">Yoga</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2" href="<?php echo base_url('pricing'); ?>">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
+            </li>
+        </ul>
+        <?php if (!(session()->get('sessiondata'))) : ?>
+            <div class="loginmenu">
+                <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh btntft" style="width: auto;">Book Demo</a>
+                <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
+                <a class="login" href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
             </div>
-        </nav>
+        <?php else : ?>
+            <div class="loginmenu">
+                <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
+                <a class="Dashboard" href="<?php echo base_url(); ?>Dashboard" style="border-right: 1px solid #f7f7f7;">Dashboard</a>
+                <a class="logout" href="<?php echo base_url(); ?>logout">Logout</a>
+            </div>
+        <?php endif; ?>
+    </div>
+</nav>
+
 
         <div class="nav-container">
 
@@ -1978,14 +1941,14 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                     <!-- <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
                         <img src="public/images/logosrem.png" alt="Enatyam">
                     </a> -->
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav main menu ms-auto">
                             <a class="nav-link px-2" href="<?php echo base_url('Home'); ?>">Home</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>
                             <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
                             <a class="nav-link px-2" href="<?php echo base_url('Yoga'); ?>">Yoga</a>
-                            <a class="nav-link px-2" href="#pricing">Pricing</a>
+                            <a class="nav-link px-2" href="<?php echo base_url('pricing'); ?>">Pricing</a>
 
                             <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
                         </div>
@@ -2028,21 +1991,21 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 <a class="nav-link px-2" href="<?php echo base_url('Yoga'); ?>">Yoga</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Career'); ?>">Career</a>
-                <a class="nav-link px-2" href="<?php echo base_url('Pricing'); ?>">Pricing</a>
+                <a class="nav-link px-2" href="<?php echo base_url('pricing'); ?>">Pricing</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
                 <?php if (!(session()->get('sessiondata'))) : ?>
 
-                <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
                 <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
                 <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh mt-2">BOOK DEMO</a>
 
                 <?php else : ?>
 
-                    <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                    <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
                 <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
 
 
-                <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
                 <a class="nav-link px-2"  href="<?php echo base_url(); ?>Dashboard" style="border-right: 1px solid #f7f7f7;">Dashboard</a>
                 <a class="nav-link px-2"  href="<?php echo base_url(); ?>logout">Logout</a>
 
@@ -2064,7 +2027,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
 
                     <div class="register_form">
-                        <h4 class="titel pt-3">Register a new account</h4>
+                        <h4 class="titel pt-3">Sign Up a new account</h4>
 
 
                         <form name="registrationForm" method="post" action="<?php echo base_url(); ?>register" id="registerform">
@@ -2226,7 +2189,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <input type="checkbox" id="termsCheckbox"> I agree to the <a href="#" id="termsLinhfgk" data-bs-toggle="modal" data-bs-target="#staticBackdrop">terms and conditions</a>
                         </label>
                         <input type="submit" id="btncheck" disabled class="btn btn-light mt-3">
-                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Register</a>
+                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Sign Up</a>
                     </form>
                     <!-- End of User Form -->
                 </div>
@@ -2264,7 +2227,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                     <!-- <button class="btn btn-light mt-3 submitButton" value="Login" id="submitButton" type="submit">Login</button> -->
 
                     <p>Not a member yet?
-                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Register</a>
+                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
                     </p>
                     </form>
                 </div>

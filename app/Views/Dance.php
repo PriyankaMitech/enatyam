@@ -2819,24 +2819,17 @@
     </div>
 </section>
 <!-- </section> -->
-<section class="testimonials mft" id="testimonials">
+<section class="testimonials dancet ft" id="testimonials">
     <div class="container-fluid">
-        <!-- <div class="row">
-            <span class="text-center testimonialsdiv"><button type="button" class="btn step mkathak">Testimonials</button></span>
-        </div> -->
-
-        
-        <div class="month-row">
-            <div class="row">
+        <div class="row">
             <div class="col-lg-12 col-12 text-center testimonialsdiv">
                 <h3>Testimonials
                 </h3>
                 <span class="line"></span>
-
             </div>
-                <!-- Main Carousel -->
-                <div class="col-lg-12 col-md-12 col-12 testimonialsp">
-                    <div id="combinedCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Main Carousel -->
+            <div class="col-lg-12 col-md-12 col-12 testimonialsp">
+                <div id="combinedCarousel" class="carousel slide" data-ride="carousel"> 
                         <div class="carousel-inner">
                             <div class="carousel-item motd active">
                                 <div class="row">
@@ -3062,7 +3055,6 @@
                             <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    </div>
                 </div>
             </div>
         </div>

@@ -1,3 +1,143 @@
+/* refunt guarantee section start*/
+.bookdemoclub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.bookdemoclub h5 {
+  font-size: 80px;
+  font-weight: 900;
+
+  font-family: "Roboto Slab", Sans-serif !important;
+  color: black;
+}
+.bookdemoclub p {
+  font-size: 29px;
+  color: #787878;
+}
+.bookdemoclub .content {
+  text-align: center;
+}
+.bookdemoclub .content2 p {
+  font-size: 29px;
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+.bookdemoclub .content2 a {
+  height: 80px;
+  width: 100%;
+  font-size: 29px;
+  background-color: #ff1561;
+  --bs-btn-border-color: #ff1561;
+  border-radius: 42px;
+}
+
+.bookdemoclub .content2 a:hover {
+  --bs-btn-border-color: #ff1561;
+}
+
+.bookdemoclub .content2 img {
+  width: 64px;
+}
+
+/* refunt guarantee section end */
+.row {
+  --bs-gutter-x: 0 rem !important;
+}
+.learningBtn .list-inline-item:not(:last-child) {
+  padding: 5px;
+}
+.typesOfYoga-tab > ul > li {
+  padding: 5px;
+}
+.pfp {
+  padding: 10px;
+}
+.carousel {
+  margin-top: 50px;
+}
+.semicolone {
+  text-align: left;
+  color: #000;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.semicolone:hover {
+  color: #fff !important; /* Change this to your desired color */
+}
+.carousel-inner {
+  height: 297px;
+}
+
+.carousel-caption {
+  color: #666666;
+  top: 11px;
+  font-size: 15px;
+}
+.carousel-caption {
+  position: relative !important;
+  /* right: 30px !important; */
+  left: 7% !important;
+  text-align: center !important;
+}
+.haimg {
+  border-radius: 20px;
+  border-bottom: 9px #ff285b solid;
+  border-right: 9px #ff285b solid;
+  width: 50%;
+}
+.haimg:hover {
+  border-radius: 20px;
+  border-bottom: 9px #ff285b solid;
+  border-left: 9px #ff285b solid;
+  border-right: none;
+
+  width: 50%;
+}
+.semicolone span {
+  padding: 0px 0px 0px 9px;
+  text-align: center;
+}
+.testimonialdance .hs {
+  margin-bottom: 0px !important;
+}
+/* .testimonialsdiv {
+  margin-bottom: 0px !important;
+} */
+.semicolone {
+  text-align: center;
+}
+.himg {
+  padding: 0% 0% 0% 14%;
+}
+.offilinestudeobaneer {
+  padding-top: 5%;
+}
+.navbar {
+  --bs-navbar-padding-y: 0px !important;
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+#facultyModal .modal-content {
+  border: var(--bs-modal-border-width) solid rgb(0 0 0 / 0%) !important;
+  padding: 86px 0px;
+}
+#facultyModal .close {
+  font-size: 34px;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  top: 173px;
+  right: 145px;
+  color: #000;
+  z-index: 9999999;
+}
+
+.pricingsfor {
+  padding-top: 14% !important;
+}
 .footer-listing {
   display: none;
 }
@@ -79,6 +219,70 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  /* refunt guarantee section start*/
+  .bookdemoclub h5 {
+    font-size: 23px;
+  }
+  .bookdemoclub {
+    padding: 0px;
+  }
+  .bookdemoclub p {
+    font-size: 15px;
+  }
+  .bookdemoclub .content img {
+    width: 100%;
+  }
+  .bookdemoclub .content2 p {
+    font-size: 13px;
+  }
+  .bookdemoclub .content2 img {
+    width: 52px;
+  }
+  .bookdemoclub .content2 a {
+    height: 63px;
+    width: 70%;
+    font-size: 21px;
+  }
+  .content2 .content-s {
+    padding-bottom: 20px;
+  }
+
+  /* refunt guarantee section end*/
+  .happyFaces-div .mb-5 {
+    margin-bottom: 0rem !important;
+  }
+  #facultyModal .close {
+    top: 201px;
+    right: 14px;
+  }
+  #facultyModal {
+    padding: 20px;
+
+    top: 38% !important;
+  }
+
+  .semicolone {
+    font-size: 17px;
+  }
+
+  .carousel-inner {
+    height: auto;
+  }
+  .carousel-caption {
+    top: 28%;
+    left: 0% !important;
+    padding: 42px;
+  }
+  .testimonials .himg {
+    display: none;
+  }
+  .testimonials .carousel-control-next,
+  .testimonials .carousel-control-prev {
+    top: 26%;
+
+    bottom: 0px !important;
+    width: 5% !important;
+  }
   .footer-div a {
     font-size: 15px;
   }
@@ -209,9 +413,10 @@
     margin-top: 11px;
     padding: 10px;
   }
+
   #pills-tab,
   .nav-item {
-    padding: 0px 5px 0px 5px;
+    padding: 5px 5px 5px 5px;
   }
   .learningsec {
     padding: 10px;
@@ -273,9 +478,7 @@
   .vm {
     padding: 91px 6px !important;
   }
-  #facultyModal {
-    top: 42% !important;
-  }
+
   .wm {
     width: 100% !important;
   }
@@ -673,10 +876,19 @@
   }
   .typesOfDance-tab .nav-pills .nav-link.big {
     width: 100%;
-    height: 50px;
+    height: 42px;
   }
-  .pricing-section {
-    margin-top: 10% !important;
+  .list-group .mb-4 {
+    margin-bottom: 0.5rem !important;
+  }
+  .pricingforhome {
+    margin-top: 0% !important;
+  }
+  .pricingforhome .mb-5 {
+    margin-bottom: 0rem !important;
+  }
+  .pricingforhome .heading-div h3 {
+    margin-top: 55px !important;
   }
   .kathakp {
     margin-top: 6%;
@@ -699,17 +911,17 @@
     width: 100% !important;
   }
   .modulesec .monthtypes {
-    margin: 0px 0px 10px 0px;
+    /* margin: 0px 0px 10px 0px; */
   }
   .carousel {
-    margin-top: -130px;
+    margin-top: -133px;
   }
+
   .carousel-inner {
-    height: 424px;
+    height: 419px;
+    padding: 50px 0px;
   }
-  .testimonialsp {
-    height: 187px;
-  }
+
   .owl-theme .owl-dots .owl-dot span {
     width: 9px !important;
     height: 9px !important;
@@ -741,8 +953,8 @@
 
   .typesOfDance-tab .nav-pills .nav-link {
     width: 100%;
-    height: 50px;
-    margin: 5px 0px 5px 0px;
+    height: 42px;
+    margin: 0px 0px 0px 0px;
     background-color: #ffffff;
   }
   .mot {
@@ -1105,9 +1317,6 @@
     height: 87%;
   }
 
-  .testimonials {
-    height: 395px;
-  }
   .testimonialdance {
     height: auto !important;
   }
@@ -1147,12 +1356,11 @@
   .imgmodule {
     margin-bottom: 0px !important;
   }
-  .testimonialsdiv {
+  /* .testimonialsdiv {
     margin-bottom: 0px !important;
-  }
+  } */
   .mft {
     margin-top: 5rem;
-    margin-bottom: 6rem;
   }
 
   .coming-soon-ul li {
@@ -1182,6 +1390,7 @@
   .typesOfDance-tab > ul > li {
     margin-top: 15px !important;
     font-size: 10px;
+    padding: 5px;
   }
   .typesOfDance-tab .nav-pills .nav-link {
     width: 100% !important;
@@ -1256,7 +1465,7 @@
     height: 44%;
   }
   .carousel {
-    margin-top: 43px;
+    margin-top: 22px;
   }
   .heading-div h3 {
     font-size: 34px;
@@ -1466,7 +1675,7 @@
     display: none;
   }
   .bannervs {
-    padding-top: 11%;
+    padding-top: 1%;
     padding-left: 0%;
   }
   .typesOfDance-tab .mb-5 {
@@ -1681,13 +1890,91 @@
   .cont-main-section {
     padding: 20px 10px;
   }
-  .logoh {
-    display: none;
-  }
+
   .faculty-section1 {
     height: 505px;
   }
   .pricingforhome {
     padding-top: 10%;
   }
+  .navbar-expand-lg {
+    display: none;
+  }
+  ul.thumbnailList {
+    font-size: 14px;
+  }
+  #loginformpopup {
+    top: 28% !important;
+  }
+  #registerformpopup {
+    top: 28% !important;
+  }
+  #facultyModal {
+    top: 43% !important;
+  }
+  #facultyModal .modal-content {
+    top: 16%;
+    padding: 0px 0px;
+    border: var(--bs-modal-border-width) solid rgb(0 0 0 / 0%);
+    width: 100%;
+  }
+  #facultyModal .close {
+    font-size: 34px;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    top: 92px;
+    right: 17px;
+    color: #000;
+    z-index: 9999999;
+  }
+  .faculty-section .owl-next i {
+    top: 80px;
+  }
+  .faculty-section .owl-prev i {
+    top: 80px;
+  }
+  .carousel-caption {
+    top: 0px;
+  }
+  .himg {
+    padding: 0% 0% 0% 11%;
+  }
+  .btnSectionI .mft {
+    margin-bottom: 0rem;
+  }
+  .pricing-section .nav-pills {
+    margin-bottom: 1rem !important;
+  }
+
+  .music .testimonialsdiv {
+    padding-bottom: 52px !important;
+  }
+
+  .musict {
+    padding-bottom: 52px !important;
+  }
+  .dancet {
+    padding-bottom: 52px !important;
+  }
+
+  /* refunt guarantee section start*/
+  .bookdemoclub h5 {
+    font-size: 52px;
+  }
+  .bookdemoclub p {
+    font-size: 19px;
+  }
+  .bookdemoclub .content2 p {
+    font-size: 19px;
+  }
+  .bookdemoclub .content2 a {
+    height: 63px;
+    font-size: 22px;
+  }
+  .bookdemoclub .content2 img {
+    width: 50px;
+  }
+
+  /* refunt guarantee section end*/
 }

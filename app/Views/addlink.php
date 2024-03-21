@@ -18,7 +18,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill"
                                         href="#custom-tabs-two-messages" role="tab"
-                                        aria-controls="custom-tabs-two-messages" aria-selected="false">Google Meet
+                                        aria-controls="custom-tabs-two-messages" aria-selected="false">Meet
                                         Link</a>
                                 </li>
                             </ul>
