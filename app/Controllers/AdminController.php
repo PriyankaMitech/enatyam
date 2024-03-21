@@ -84,16 +84,84 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
-    public function AssignTecherForDemo()
+//     public function AssignTecherForDemo()
+// {
+//     $model = new AdminModel();
+//     $postData = $this->request->getPost(); 
+//     $facultyId = $this->request->getVar('faculty_id');
+//     $Facultycontact = $model->Facultycontact($facultyId);
+//     $data = [
+//         'AssignTecher_id' => $facultyId, // Use the variable here
+//         'meetlink' => $this->request->getVar('meetlink'),
+//         'Book_Date_Time' => $this->request->getVar('Book_Date_Time'),
+//     ];
+
+//     $db = \Config\Database::Connect();  
+    
+//     if ($this->request->getVar('studentid') != "") {
+//         $db->table('free_demo_table')
+//             ->where('D_id', $this->request->getVar('studentid'))
+//             ->update($data);
+
+//         $updatedData = $db->table('free_demo_table')
+//             ->where('D_id', $this->request->getVar('studentid'))
+//             ->get()
+//             ->getRowArray();
+
+//         if ($updatedData) {
+//             // Removed the print_r and die statement for production
+            
+//             $phoneNumber = $updatedData['phone'];
+//             $templates = "930840461869403";
+//             $date = $updatedData['Book_Date'];
+//             $time = $updatedData['Book_Date_Time'];
+//             $meetlink = $updatedData['meetlink'];
+//             $msg = "Your Demo Will Schedule on $date  at $time. Join this link: $meetlink";
+//             whatsapp($phoneNumber, $templates, $msg);
+//             $phoneNumber = $Facultycontact;
+//             $templates = "930840461869403";
+//             $date = $updatedData['Book_Date'];
+//             $time = $updatedData['Book_Date_Time'];
+//             $meetlink = $updatedData['meetlink'];
+//          //  $msg = "You have Assing For Demo on $date  at $time. Join this link For Demo: $meetlink";
+//             $msg = "Hello , We're pleased to inform you that an admin has assigned a demo to you. Demo Date:$date Time: $time Demo Link: $meetlink Link Keep spreading your knowledge!";
+
+//             whatsapp($phoneNumber, $templates, $msg);
+//           //  $phoneNumber = "917588525387";
+//             $templates = "930840461869403";
+//             $date = $updatedData['Book_Date'];
+//             $time = $updatedData['Book_Date_Time'];
+//             $meetlink = $updatedData['meetlink'];
+//             $msg = "New Demo Will Be on $date at $time. Join this link For Demo: $meetlink";
+//             whatsappadmin($templates, $msg);
+//             session()->setFlashdata('success', 'Demo Schedule successfully.');
+//         }
+//     }
+
+//     return redirect()->to('Admindashboard');
+// }
+public function AssignTecherForDemo()
 {
     $model = new AdminModel();
     $postData = $this->request->getPost(); 
     $facultyId = $this->request->getVar('faculty_id');
     $Facultycontact = $model->Facultycontact($facultyId);
+    
+    // Get the Book_Date_Time from the request
+    $bookDateTime = $this->request->getVar('Book_Date_Time');
+    
+    // Convert Book_Date_Time to timestamp
+    $bookTimestamp = strtotime($bookDateTime);
+    
+    // Subtract 15 minutes from the Book_Date_Time
+    $reminderTimestamp = $bookTimestamp - (15 * 60);
+
+    // Prepare the data to be updated
     $data = [
-        'AssignTecher_id' => $facultyId, // Use the variable here
+        'AssignTecher_id' => $facultyId,
         'meetlink' => $this->request->getVar('meetlink'),
-        'Book_Date_Time' => $this->request->getVar('Book_Date_Time'),
+        'Book_Date_Time' => $bookDateTime, // Use the original Book_Date_Time
+        'buffertime' => date('H:i:s', $reminderTimestamp) // Extract only the time component
     ];
 
     $db = \Config\Database::Connect();  
@@ -109,8 +177,6 @@ class AdminController extends BaseController
             ->getRowArray();
 
         if ($updatedData) {
-            // Removed the print_r and die statement for production
-            
             $phoneNumber = $updatedData['phone'];
             $templates = "930840461869403";
             $date = $updatedData['Book_Date'];
@@ -123,11 +189,8 @@ class AdminController extends BaseController
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
             $meetlink = $updatedData['meetlink'];
-         //  $msg = "You have Assing For Demo on $date  at $time. Join this link For Demo: $meetlink";
             $msg = "Hello , We're pleased to inform you that an admin has assigned a demo to you. Demo Date:$date Time: $time Demo Link: $meetlink Link Keep spreading your knowledge!";
-
             whatsapp($phoneNumber, $templates, $msg);
-          //  $phoneNumber = "917588525387";
             $templates = "930840461869403";
             $date = $updatedData['Book_Date'];
             $time = $updatedData['Book_Date_Time'];
@@ -139,32 +202,9 @@ class AdminController extends BaseController
     }
 
     return redirect()->to('Admindashboard');
-}
-    // public function AssignTecherToStudent()
-    // {
-    //     $model = new AdminModel();
-    
-    //     if ($this->request->getMethod() === 'post') {
-    //         $postData = $this->request->getPost();
-    //         $phoneNumber = $model->add($postData);
-    
-    //         if ($phoneNumber) {
-    //             $session = session();
-    //             $templates = "5VjwbxevOb7NCYWmsqd9WT";
-    //             $msg = "You assign student";
-    //             whatsapp($phoneNumber, $templates, $msg);
-    //             $adminNumber ="917588525387";
-    //             $templates = "5VjwbxevOb7NCYWmsqd9WT";
-    //             $msg = "Asign faculty To student";
-    //             whatsappadmin($adminNumber, $templates, $msg);
-    
-    //             $session->setFlashdata('success', 'Faculty assigned successfully!');
-    //             return redirect()->to('Admindashboard');
-    //         } else {
-    //         return redirect()->to('Admindashboard');
-    //         }
-    //     }
-    // }
+}  
+ 
+
     public function AssignTecherToStudent()
     {
         $model = new AdminModel();
@@ -536,18 +576,19 @@ class AdminController extends BaseController
         $time = $this->request->getPost('Reshedule_Time');
         $result = $this->request->getPost('http://localhost/enatyam/getDemoDetails#custom-tabs-four-profile');
         $D_id = $this->request->getPost('D_id');
+        $meetlink  = $this->request->getPost('meetlink');
         $model = new AdminModel();
         $registerRecord = $model->findname($AssignTecher_id);
 
         if (!empty($registerRecord)) {
             $firstRecord = reset($registerRecord);
             $ccEmails = [$firstRecord->email];
-            $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time);
+            $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time,$meetlink);
             $Subject = 'Your Demo Rescheduled';
             $msg = "Your Demo Has Been Rescheduled - Date: $date, Time: $time";
             $phoneNumber = $mobileWithCode;
             $templates = "930840461869403";
-            $msg ="your Demo will be Rescheduled succesfully Join same link for Demo - Date: $date, Time: $time";
+            $msg ="your Demo will be Rescheduled succesfully Join on this $meetlink link for Demo - Date: $date, Time: $time";
             whatsapp($phoneNumber, $templates, $msg);
             if ($result == 1) {
                 sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
@@ -1709,7 +1750,7 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
     public function student()
     {
         $model = new AdminModel();
-        $data['student_list'] = $model->get_students();
+        $data['student_list'] = $model->getallstudents();
         // echo "<pre>";print_r($data['student_list'] );exit();
         echo view('student_list', $data);
     }

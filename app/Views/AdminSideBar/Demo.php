@@ -185,6 +185,7 @@ th {
                                                     <th>Email</th>
                                                     <th>Contact Number</th>
                                                     <th>Reschedule Date/Time</th>
+                                                    <th>meeting link</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -216,6 +217,8 @@ th {
                                                                 <!-- Time input field -->
                                                             </div>
                                                         </td>
+                                                        <td><input type="text" name="meetlink" placeholder="Enter Meeting Link"
+                                                        require></td>
                                                         <td>
                                                             <input type="hidden" name="action" value="N">
                                                             <input type="hidden" name="mobileWithCode" value="<?= $PDemo->mobileWithCode ?>">
@@ -226,8 +229,12 @@ th {
                                                             <input type="hidden" name="email"
                                                                 value="<?= $PDemo->email ?>">
                                                             <!-- Add this line for the email -->
-                                                            <button class="btn btn-info"
-                                                                type="submit">Reschedule</button>
+                                                            <!-- <button class="btn btn-info"
+                                                                type="submit">Reschedule</button> -->
+                                                                <button type="submit" class="btn btn-success ml-3" id="assignButton">Reschedule</button>
+<div class="loader-container" id="loaderContainer">
+  <div class="loader"></div>
+</div>
                                                         </td>
                                                     </form>
                                                 </tr>

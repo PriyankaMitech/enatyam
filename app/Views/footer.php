@@ -94,13 +94,14 @@
                 <div class="social-div ">
                    
 
-                    <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><img src="public/images/whatsapp.png" /></a>
+                    <a href="https://wa.me/919272122001 " class="insta-div"><img src="public/images/whatsapp.png" /></a>
+
                     <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><img src="public/images/instagram.png" /></a>
                     
-                    <a href="https://twitter.com/e_natyam?s=08" class="twitter-div"><img src="public/images/linkedin.png" /></a>
+                    <a href="https://www.linkedin.com/company/enatyam/" class="twitter-div"><img src="public/images/linkedin.png" /></a>
                     
-                    <a href="https://m.facebook.com/enatyam/" class="facebook-div"><img src="public/images/facebook.png" /></a>
-                    <a href="#" class="youtube-div"><img src="public/images/network.png" /></a>
+                    <a href="https://www.facebook.com/profile.php?id=100049347683143&mibextid=rS40aB7S9Ucbxw6v" class="facebook-div"><img src="public/images/facebook.png" /></a>
+                    <a href="https://youtube.com/@enatyamindia?si=WO5gb1OdOEyWgBj8" class="youtube-div"><img src="public/images/network.png" /></a>
                 </div>
             </div>
 

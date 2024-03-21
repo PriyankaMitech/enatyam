@@ -169,7 +169,7 @@ $routes->get('viewProfiles/(:any)', 'AdminController::viewProfiles/$1');
 
 $routes->post('update_seen_status', 'AdminController::update_seen_status');
 $routes->get('update_seen_status', 'AdminController::update_seen_status');
-$routes->get('senddemoremainder', 'DemoController::senddemoremainder');
+$routes->get('DemoController/senddemoremainder', 'DemoController::senddemoremainder');
 
 
 

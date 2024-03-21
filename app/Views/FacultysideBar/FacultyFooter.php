@@ -619,6 +619,7 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
 </script>
 <script>
     function submitAttendance(studentId) {
+        $('#loader').show();
         var isPresentChecked = $('input[name="attendance[' + studentId + '][present]"]').is(':checked');
         var isAbsentChecked = $('input[name="attendance[' + studentId + '][absent]"]').is(':checked');
         var attendanceValue = isPresentChecked ? 'p' : (isAbsentChecked ? 'a' : '');
@@ -638,6 +639,7 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
             url: 'submitAttendance',
             data: formData,
             success: function (response) {
+                $('#loader').hide();
                 if (response.success) {
                     alert(response.message);
                     // Reload the page after successful insertion
@@ -665,6 +667,7 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
             url: 'submitAttendance', // Adjust the URL as per your route configuration
             data: formData,
             success: function (response) {
+                $('#loader').hide();
                 if (response.success) {
                     alert(response.message);
                     // Reload the page after successful insertion

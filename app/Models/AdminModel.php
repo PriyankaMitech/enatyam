@@ -173,12 +173,27 @@ class AdminModel extends Model
             ->join('tbl_sub_courses', 'tbl_sub_courses.id = students.sub_course', 'left')
             ->where('students.role', 'Student')
             ->where('students.is_register_done', 'Y')
-            // ->where('students.Payment_status', 'Y')
+          ->where('students.Payment_status', 'Y')
             ->orderBy('students.created_at', 'desc')
             ->get();
             // echo'<pre>';print_r($this->db->getLastQuery());die;
 
         return $query->getResult();
+    }
+    public function getallstudents()
+    {
+        $query = $this->db->table('register AS students')
+        ->select('students.*, IFNULL(teachers.full_name, "Not Assigned") as teacher_name, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name')
+        ->join('register AS teachers', 'teachers.id = students.Assign_Techer_id', 'left')
+        ->join('tbl_courses', 'tbl_courses.id = students.course', 'left')
+        ->join('tbl_sub_courses', 'tbl_sub_courses.id = students.sub_course', 'left')
+        ->where('students.role', 'Student')
+        ->where('students.is_register_done', 'Y')
+        ->orderBy('students.created_at', 'desc')
+        ->get();
+        // echo'<pre>';print_r($this->db->getLastQuery());die;
+
+    return $query->getResult();
     }
 
     public function getFaculty()
@@ -474,7 +489,7 @@ class AdminModel extends Model
             ->where('id', $id)
             ->update(['password' => $password, 'confirm_pass' => $password]);
     }
-    public function BackToprndinglistofdemo($D_id, $result, $date, $time)
+    public function BackToprndinglistofdemo($D_id, $result, $date, $time,$meetlink)
     {
         return $this->db->table('free_demo_table')
             ->where('D_id', $D_id)
@@ -482,7 +497,7 @@ class AdminModel extends Model
                 'Conducted_Demo' => 'N',
                 'Reshedule_date' => $date,
                 'Book_Date' => $date,
-
+                'meetlink'  =>$meetlink,
                 'Reshedule_Time' => $time
             ]);
     }
