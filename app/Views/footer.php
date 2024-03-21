@@ -92,10 +92,7 @@
         <div class="row">
             <div class="col-md-1 col-12 icn">
                 <div class="social-div ">
-                    <!-- <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><i class="fa fa-instagram"></i></a>
-                    <a href="https://twitter.com/e_natyam?s=08" class="twitter-div"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="https://m.facebook.com/enatyam/" class="facebook-div"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" class="youtube-div"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> -->
+                   
 
                     <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><img src="public/images/whatsapp.png" /></a>
                     <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><img src="public/images/instagram.png" /></a>
@@ -160,9 +157,9 @@
                     <img class="crdn" src="public/images/Home/Rupay.svg" /> 
                 </div>
                 <div class="copyright-p ">
-                    <p >Copyright © 2024 Enatyam  | Powered by 
+                    <p >Copyright © 2024 Enatyam  | Designed & Development by  
 
-                    <a href="https://www.marketingintelligence.tech">MI Tech Solutions
+                    <a href="https://www.marketingintelligence.tech">Enatyam.
                         </a></p>
 
 
@@ -176,7 +173,7 @@
 <div class="footerdiv"></div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard') { ?>
+<?php if ($page == 'enatyam' || $page == 'Home' || $page == 'StudentDashboard' || $page == 'pricing') { ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" crossorigin="anonymous"></script>

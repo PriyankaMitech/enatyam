@@ -155,21 +155,6 @@ body {
   margin-left: 18px;
 }
 
-.carousel {
-  margin-top: 50px;
-}
-
-.carousel-inner {
-  height: 500px;
-}
-
-.carousel-caption {
-  /* color: #fff; */
-  color: #666666;
-  top: 11px;
-  font-size: 15px;
-}
-
 /* new added */
 .btnSection .list-inline .dancetypes.yoga {
   padding: 0px !important;
@@ -187,12 +172,15 @@ body {
   margin-top: 21px;
   color: rgb(51, 51, 51);
 }
+.nav-item1 {
+  padding: 5px;
+}
 
-.month-row .month-list .dancetypes .monthbtn,
+/* .month-row .month-list .dancetypes .monthbtn,
 .typesOfYoga-tab .nav-pills .nav-link.kathak {
   width: 109px !important;
   height: 60px;
-}
+} */
 
 body {
   background-color: #fad32c;
@@ -207,14 +195,14 @@ body {
 }
 
 .typesOfYoga-tab > ul > li {
-  margin-top: 15px !important;
+  /* margin-top: 15px !important; */
   font-size: 13px;
 }
 
 .typesOfYoga-tab .nav-pills .nav-link {
   border-radius: 28px !important;
-  width: 112px !important;
-  height: 68px !important;
+  width: 100% !important;
+  height: 39px !important;
   background-color: #fff;
   color: #000 !important;
 }
@@ -236,6 +224,7 @@ body {
 .typesOfYoga-tab .nav-pills .nav-link:hover,
 .modulesec .monthtypes:hover {
   color: white !important;
+  background-color: #ff1561;
 }
 
 .modulesec .monthtypes {
@@ -298,25 +287,16 @@ body {
   font-size: 37px !important;
   color: #7e006f !important;
 }
-.semicolone {
-  text-align: left;
-  color: #000;
-  font-size: 20px;
-  font-weight: 900;
-}
 
-.semicolone:hover {
-  color: #fff !important; /* Change this to your desired color */
-}
 /* .faculty-section {
   margin-top: 6% !important;
 } */
 .mfi {
   width: 100px !important;
 }
-.nav-item1 {
+/* .nav-item1 {
   margin-top: 3%;
-}
+} */
 .ittm {
   margin-top: 7%;
 }
@@ -327,46 +307,6 @@ body {
   padding-top: 3%;
 }
 
-.row {
-  --bs-gutter-x: 1.5rem !important;
-}
-.carousel-caption {
-  position: relative !important;
-  /* right: 30px !important; */
-  left: 7% !important;
-  text-align: center !important;
-}
-.semicolone {
-  padding: 0px 0px 0px 77px !important;
-}
-.himg {
-  padding: 0% 0% 0% 10%;
-}
-
-.haimg {
-  border-radius: 20px;
-  border-bottom: 9px #ff285b solid;
-  border-right: 9px #ff285b solid;
-  width: 50%;
-}
-.haimg:hover {
-  border-radius: 20px;
-  border-bottom: 9px #ff285b solid;
-  border-left: 9px #ff285b solid;
-  border-right: none;
-
-  width: 50%;
-}
-.semicolone span {
-  padding: 0px 0px 0px 9px;
-  text-align: center;
-}
-.testimonialdance .hs {
-  margin-bottom: 0px !important;
-}
-.testimonialsdiv {
-  margin-bottom: 0px !important;
-}
 .modulesdiv h3 {
   /* font-size: 36px; */
   font-weight: 700;

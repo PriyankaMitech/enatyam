@@ -23,7 +23,7 @@ body {
   --bs-gutter-x: 0rem !important;
 }
 .bannervs {
-  padding-top: 8%;
+  padding-top: 4%;
   /* margin-left: 86px; */
 }
 .banneris {
@@ -113,11 +113,10 @@ background-color:aqua;
 } */
 
 .tophead .loginmenu a {
-  color: #fff;
+  color: #cac7c7;
   padding: 0px 20px 0px 20px;
   text-decoration: none;
-  font-size: 14px;
-  /* font-size: 16px; */
+  font-size: 12px;
   font-weight: 400;
 }
 
@@ -234,7 +233,7 @@ div {
   font-size: 13px !important;
   font-weight: 400 !important;
   background-color: #fff !important;
-  line-height: 38px !important;
+  line-height: 27px !important;
   /* padding: 5px 25px !important; */
   border-radius: 25px !important;
   color: #000000 !important;
@@ -243,10 +242,10 @@ div {
 .btndemoh {
   /* width: 100%; */
   /* margin-left: 100px; */
-  font-size: 13px !important;
+  font-size: 11px !important;
   font-weight: 400 !important;
   background-color: #ff1561 !important;
-  line-height: 38px !important;
+  line-height: 30px !important;
   padding: 5px 25px !important;
   border-radius: 25px !important;
   color: #ffffff !important;
@@ -290,11 +289,6 @@ div {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-.btnSection {
-  padding: 60px 0px 0px 85px;
-  padding: 60px 0px 0px 0px;
 }
 
 /* NAVBAR TRANSITION */

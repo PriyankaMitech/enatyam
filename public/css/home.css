@@ -4,40 +4,10 @@
     left: 181px !important;
   }
 }
-
-@media only screen and (max-width: 991px) and (min-width: 768px) {
-  #loginformpopup {
-    top: 28% !important;
-  }
-  #registerformpopup {
-    top: 28% !important;
-  }
-  #facultyModal {
-    top: 43% !important;
-  }
-  #facultyModal .modal-content {
-    top: 25%;
-    padding: 0px 0px;
-    border: var(--bs-modal-border-width) solid rgb(0 0 0 / 0%);
-    width: 100%;
-  }
-  #facultyModal .close {
-    font-size: 34px;
-    font-weight: 600;
-    cursor: pointer;
-    position: absolute;
-    top: 92px;
-    right: 17px;
-    color: #000;
-    z-index: 9999999;
-  }
-  .faculty-section .owl-next i {
-    top: 80px;
-  }
-  .faculty-section .owl-prev i {
-    top: 80px;
-  }
+.faculty-sectiononhome {
+  height: 853px;
 }
+
 .homapageview .owl-next i {
   top: 40%;
 }
@@ -45,9 +15,6 @@
   top: 40%;
 }
 
-.faculty-section1 {
-  height: 934px;
-}
 .centered-image {
   display: block;
   margin: 0 auto;
@@ -119,16 +86,6 @@
   width: 50% !important;
 }
 
-.close {
-  font-size: 34px;
-  font-weight: 600;
-  cursor: pointer;
-  position: absolute;
-  top: 112px;
-  right: 146px;
-  color: #000;
-  z-index: 9999999;
-}
 body.modal-open {
   overflow: hidden;
 }

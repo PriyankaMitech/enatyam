@@ -3651,123 +3651,247 @@
 </section>
 
 
-<section class="testimonials tyoga" id="testimonials">
-    <div class="container">
-        
-        <div class="">
-            <div class="row">
-                <div class="col-lg-12 col-12 text-center testimonialsdiv">
-                    <h3>Testimonials
-                    </h3>
-                    <span class="line"></span>
-
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-
-                    <!-- slider -->
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<section class="testimonials mft" id="testimonials">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-12 text-center testimonialsdiv">
+                <h3>Testimonials
+                </h3>
+                <span class="line"></span>
+            </div>
+            <!-- Main Carousel -->
+            <div class="col-lg-12 col-md-12 col-12 testimonialsp">
+                <div id="combinedCarousel" class="carousel slide" data-ride="carousel"> 
                         <div class="carousel-inner">
-                            <div class="carousel-item cify active">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Smitha, USA</h4>
-                                    <p class="">
-                                        I've been practicing yoga for years, but I've never felt as connected to my practice as I do with this online class. The instructor's cues are so clear and easy to follow, and I love being able to practice in the comfort of my own home.</p>
+                            <div class="carousel-item motd active">
+                                <div class="row">
+                               
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aiden C ( London -Uk )<span></p>
+                                            <p>Enatyam's yoga courses are a total game-changer for me.<br> The instructors keep it real, making every pose feel achievable. <br>It's like having a personal yoga guide right in my living room.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/1h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item cify">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Angela, UK</h4>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sweta ( Australia )</span></p>
+                                            <p>I'm new to yoga, and Enatyam is the perfect starting point.<br> The classes are not intimidating, and  <br>the instructors break down each pose in a way that's easy to understand.<br> Feeling more zen already!</p>
+                                        </div>
+                                    </div>
 
-                                    <p>I was hesitant to try an online yoga class, but I'm so glad I did! The teacher is incredibly knowledgeable and supportive, and I've noticed a huge improvement in my flexibility and strength since I started taking the class.</p>
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/2h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item cify">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sneha ( Canada )</span></p>
+                                            <p>Enatyam's yoga classes are like a breath of fresh air. <br> The instructors create a friendly atmosphere, making the sessions enjoyable. <br> It's become a daily ritual that I genuinely look forward to."</p>
+                                        </div>
+                                    </div>
 
-                                    <p>I have to say, I was skeptical about the idea of doing yoga online. But this class has exceeded my expectations in every way. The instructor is attentive and engaging, and I love being able to fit a yoga practice into my busy schedule without leaving the house.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item cify">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <p>I'm a beginner when it comes to yoga, but this class has been perfect for me. The instructor is patient and encouraging, and the online format allows me to take things at my own pace without feeling self-conscious. I can't wait to see how much progress I'll make over time!</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item cify">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <p>I've tried a lot of different yoga classes, both in person and online, but this one is by far my favorite. The instructor has a way of making every practice feel fresh and challenging, and the online community is so supportive and welcoming. I feel grateful to be a part of it!</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item cify">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Supriya</h4>
-
-                                    <p> I absolutely loved taking yoga classes online with enatyam ! Her classes are challenging, yet accessible for all levels. I felt so much more centered and relaxed after each session. Highly recommend! </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item cify">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <p>I've been practicing yoga for years, but I was a bit skeptical about doing it online. Enatyam yoga classes are just as effective as in-person sessions, and able to provide adjustments and modifications virtually. I'll definitely be taking more online classes in the future. </p>
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/3h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item cify">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kavita ( Pune )</span></p>
+                                            <p>I've tried a few online yoga platforms, but Enatyam stands out.<br> The variety of classes keeps things interesting, and <br>the instructors feel like friends guiding you through a mindful journey. <br> Highly recommend!"</p>
+                                        </div>
+                                    </div>
 
-                                    <p class="testimonialPara">As someone who's new to yoga, I was nervous about taking an online class. Teacher instructions were clear and easy to follow, and I never felt lost or confused. I'm so glad I tried it! </p>
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/4h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item cify">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
-                                    <p>I've been dealing with back pain for years, and online yoga classes with enatyam have been a game changer. His gentle approach has helped me relieve tension and improve my flexibility. I'm so grateful! </p>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Ayesha ( Singapore )</span></p>
+                                            <p>Enatyam's yoga is a perfect fit for a busy mom like me. <br> The quick
+                                                sessions are manageable, and <br>the instructors make it feel like a mini wellness retreat. <br>
+                                                Grateful for this accessible and effective platform!
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/6h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="carousel-item cify">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
 
-                                    <p>Taking yoga classes online with enatyam has been such a blessing during the pandemic. Her positive energy and calming presence have helped me stay centered and focused during these challenging times. Thank you! </p>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Rajiv ( Lucknow )</span></p>
+                                            <p>The variety of yoga classes on Enatyam is impressive. Whether I need a <br>
+                                                gentle stretch or an energizing flow, <br> there's something for every mood.  The instructors
+                                                make <br> it easy for anyone to enjoy the benefits of yoga.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/7h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
-                            <a class="carousel-control-prev mta" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next mta" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vikram ( Delhi )</span></p>
+                                            <p>Enatyam's yoga classes have made me realize that yoga is for everyone. <br>
+                                                The inclusive approach of the instructors and <br>the straightforward guidance make it a
+                                                comfortable and enjoyable practice."
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/8h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vishal ( Chandigarh )</span></p>
+                                            <p>I've always struggled to stick with a workout routine, <br> but
+                                                Enatyam's yoga has been a consistent part of my day. <br>The short sessions fit into my
+                                                schedule, and the instructors'<br> encouragement keeps me motivated."
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/10h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kajal ( Delhi )</span></p>
+                                            <p>I appreciate how Enatyam's yoga classes cater to various levels.<br> Whether
+                                                you're a beginner or an experienced yogi, there's always  <br>room for growth. The instructors
+                                                make sure everyone feels welcome."
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/11h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Scarlett family ( Germany )</span></p>
+                                            <p>Yoga is a daily dose of positivity for me . The instructors <br>
+                                                radiate good vibes, and the classes have become <br>my source of calm in the midst of a
+                                                busy schedule.<br> A fantastic platform for holistic well-being!"
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/12h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Emma ( UK )</span></p>
+                                            <p>Yoga is my daily escape from the hustle. The instructors make it easy to<br>
+                                                disconnect and focus on the present moment.It's a simple yet powerful  <br>practice that has
+                                                become a non-negotiable in my routine.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/14h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Michael (Mike) ( USA)</span></p>
+                                            <p>Enatyam's yoga is like a personal wellness retreat at home. <br>The
+                                                instructors create a serene atmosphere,<br> and the classes feel like a journey into both 
+                                                physical <br> and mental well-being. Truly transformative
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/15h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more carousel items as needed -->
                         </div>
 
-                    </div>
-
-
+                        <a class="carousel-control-prev" href="#combinedCarousel" role="button" data-slide="prev">
+                            <span aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#combinedCarousel" role="button" data-slide="next">
+                            <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                 </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <img src="public/images/Yoga/yoga-test.svg" class="danceimg">
-                </div>
-
             </div>
-
         </div>
-
-    </div>
-    </div>
     </div>
 </section>
-
 <?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>
 <?php include('Dancefaq.php'); ?>

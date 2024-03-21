@@ -47,7 +47,10 @@
   margin: 0px;
   list-style-type: none;
   border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
+
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .breadcrumb-ul li {
@@ -583,7 +586,7 @@ input[type="checkbox"] {
   margin-bottom: 30px;
   font-size: 13px !important;
   font-weight: 400 !important;
-  background-color:#ff1561 !important;
+  background-color: #ff1561 !important;
   line-height: 30px !important;
   padding: 5px 40px !important;
   border-radius: 25px !important;
@@ -633,5 +636,3 @@ input[type="checkbox"] {
   padding-bottom: 110px;
   background-position: center;
 }
-
-

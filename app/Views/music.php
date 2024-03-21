@@ -21,7 +21,7 @@
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted                     <video class="video-dance bannerv" autoplay loop muted >
+                    <video class="video-dance bannerv" autoplay loop muted                   
 >
                         <source src="<?=base_url(); ?>public/images/Music/music.mp4" type="video/mp4">
                     </video>                
@@ -1353,7 +1353,7 @@
                     </section>
                     <!--  3rd section : modules section (month) -->
 
-                    <section class="modulesec" id="mod-western">
+                    <section class="modulesec music" id="mod-western">
                         <div class="container">
                             
                             <div class="month-row">
@@ -2027,221 +2027,242 @@
 
 
 <!-- Testimonials -->
-<section class="testimonials mftm mtt testmonialsm" id="testimonials">
-    <div class="container">
-       
-        <div class="month-row">
-            <div class="row">
+<section class="testimonials mft musict" id="testimonials">
+    <div class="container-fluid">
+        <div class="row">
             <div class="col-lg-12 col-12 text-center testimonialsdiv">
                 <h3>Testimonials
                 </h3>
                 <span class="line"></span>
-
             </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <!-- Main Carousel -->
+            <div class="col-lg-12 col-md-12 col-12 testimonialsp">
+                <div id="combinedCarousel" class="carousel slide" data-ride="carousel"> 
                         <div class="carousel-inner">
-                            <div class="carousel-item motmusic active">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Amrita (USA)</h4>
-                                    <p> I can't thank this online singing class enough for the incredible transformation it has brought to my voice. The
-                                        structured lessons, personalized feedback, and supportive community have made all the difference. Highly
-                                        recommended!</p>
+                            <div class="carousel-item motd active">
+                                <div class="row">
+                               
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aiden C ( London -Uk )<span></p>
+                                            <p>Enatyam's yoga courses are a total game-changer for me.<br> The instructors keep it real, making every pose feel achievable. <br>It's like having a personal yoga guide right in my living room.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/1h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sweta ( Australia )</span></p>
+                                            <p>I'm new to yoga, and Enatyam is the perfect starting point.<br> The classes are not intimidating, and  <br>the instructors break down each pose in a way that's easy to understand.<br> Feeling more zen already!</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/2h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sneha ( Canada )</span></p>
+                                            <p>Enatyam's yoga classes are like a breath of fresh air. <br> The instructors create a friendly atmosphere, making the sessions enjoyable. <br> It's become a daily ritual that I genuinely look forward to."</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/3h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kavita ( Pune )</span></p>
+                                            <p>I've tried a few online yoga platforms, but Enatyam stands out.<br> The variety of classes keeps things interesting, and <br>the instructors feel like friends guiding you through a mindful journey. <br> Highly recommend!"</p>
+                                        </div>
+                                    </div>
 
-                                    <h4>Mahima (UK)</h4>
-                                    <p>
-                                        This online singing class is a hidden gem! The instructor's expertise and the comprehensive curriculum have taken my singing to new heights. The e-learning platform is user-friendly, making learning a breeze.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <h4>Riddhi M ( USA)</h4>
-                                    <p>
-                                        I'm amazed at how quickly I've improved my vocal range and control through this online singing class. The instructor's
-                                        guidance and the interactive sessions have been invaluable.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Shivi ( Australia )</h4>
-                                    <p>
-
-                                        If you're looking for a top-notch online singing class, look no further! The professionalism, attention to detail, and
-                                        passion for teaching are unmatched. I couldn't be happier with my progress. </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <h4>Amelia (Canada)</h4>
-                                    <p>
-
-                                        I've tried several online singing classes, and this one is by far the best. The curriculum is well-structured, the instructor is knowledgeable, and the support from fellow students is incredible. </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-
-                                    <h4>Scarlett ( UK)</h4>
-                                    <p>
-
-                                        This online singing class has helped me overcome my stage fright and build confidence in my voice. The techniques taught are practical and effective. I'm grateful for this transformative experience. </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Sanjana (Bangalore)</h4>
-                                    <p>
-                                        As a beginner, this online singing class has been a perfect fit for me. The step-by-step approach and patient guidance have allowed me to progress at my own pace.
-                                    </p>
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/4h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Lakshmi (Hyderabad)</h4>
-                                    <p class="testimonialPara">
-                                        I've always dreamt of singing professionally, and this online class is helping me turn that dream into a reality. The instructor's mentorship and the comprehensive curriculum have been invaluable.
-                                </div>
-                                </p>
-                            </div>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Ayesha ( Singapore )</span></p>
+                                            <p>Enatyam's yoga is a perfect fit for a busy mom like me. <br> The quick
+                                                sessions are manageable, and <br>the instructors make it feel like a mini wellness retreat. <br>
+                                                Grateful for this accessible and effective platform!
+                                            </p>
+                                        </div>
+                                    </div>
 
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Abhinav ( Germany )</h4>
-                                    <p>
-
-                                        The convenience of learning from home combined with the expert instruction of this online singing class is a winning combination. I'm amazed at my progress and excited to continue this journey.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Pratibha S( Singapore )</h4>
-                                    <p>
-
-                                        I've taken several online courses, but this singing class stands out for its exceptional quality. The instructor's passion, knowledge, and dedication make it worth every penny. </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Wanna (Dubai)</h4>
-                                    <p> This online singing class has opened doors for me that I never thought possible. The networking opportunities and industry insights provided have been priceless.
-                                    </p>
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/6h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Lucy (USA)</h4>
-                                    <p>
-                                        The supportive community within this online singing class is second to none. The friendships I've formed and the encouragement I've received have made the learning experience even more enjoyable.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Rajiv ( Lucknow )</span></p>
+                                            <p>The variety of yoga classes on Enatyam is impressive. Whether I need a <br>
+                                                gentle stretch or an energizing flow, <br> there's something for every mood.  The instructors
+                                                make <br> it easy for anyone to enjoy the benefits of yoga.
+                                            </p>
+                                        </div>
+                                    </div>
 
-                                    <h4>Shidharth ( Dubai )</h4>
-                                    <p>
-                                        I never thought online learning could be this engaging and effective until I joined this singing class. The interactive
-                                        sessions and personalized attention make it feel like a one-on-one lesson.
-                                    </p>
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/7h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Sanjay S ( Canada)</h4>
-                                    <p>
-                                        I'm impressed by the diversity of genres covered in this online singing class. From classical to contemporary, the
-                                        curriculum caters to all musical interests.
-                                    </p>
-                                </div>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vikram ( Delhi )</span></p>
+                                            <p>Enatyam's yoga classes have made me realize that yoga is for everyone. <br>
+                                                The inclusive approach of the instructors and <br>the straightforward guidance make it a
+                                                comfortable and enjoyable practice."
+                                            </p>
+                                        </div>
+                                    </div>
 
-                            </div>
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Fathima (Dubai)</h4>
-                                    <p>
-                                        The flexibility of this online singing class has allowed me to pursue my passion without disrupting my busy schedule. I<br />can learn at my own pace and revisit lessons whenever I need.</p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Isabella (UK)</h4>
-                                    <p> I'm thrilled with the progress I've made in just a few months of joining this online singing class. The step-by-step approach and systematic exercises have been incredibly effective.</p>
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/8h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Gayathri (Bangalore)</h4>
-                                    <p>
-                                        This online singing class provides a holistic learning experience. Along with vocal techniques, it focuses on
-                                        performance skills, stage presence, and even music theory. </p>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vishal ( Chandigarh )</span></p>
+                                            <p>I've always struggled to stick with a workout routine, <br> but
+                                                Enatyam's yoga has been a consistent part of my day. <br>The short sessions fit into my
+                                                schedule, and the instructors'<br> encouragement keeps me motivated."
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/10h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Jassi (Canada)</h4>
-                                    <p>
-                                        I've always wanted to sing with confidence, and this online class has helped me achieve just that. The instructor's support and the nurturing environment have boosted my self-belief.</p>
-                                    </p>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kajal ( Delhi )</span></p>
+                                            <p>I appreciate how Enatyam's yoga classes cater to various levels.<br> Whether
+                                                you're a beginner or an experienced yogi, there's always  <br>room for growth. The instructors
+                                                make sure everyone feels welcome."
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/11h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item motmusic">
-                                <div class="carousel-caption">
-                                    <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i></p>
-                                    <h4>Victoria ( New Zealand)</h4>
-                                    <p>
-                                        The e-learning platform used for this singing class is intuitive and visually appealing. It enhances the learning experience and keeps me motivated to practice consistently. </p>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Scarlett family ( Germany )</span></p>
+                                            <p>Yoga is a daily dose of positivity for me . The instructors <br>
+                                                radiate good vibes, and the classes have become <br>my source of calm in the midst of a
+                                                busy schedule.<br> A fantastic platform for holistic well-being!"
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/12h.png" class="haimg">
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Emma ( UK )</span></p>
+                                            <p>Yoga is my daily escape from the hustle. The instructors make it easy to<br>
+                                                disconnect and focus on the present moment.It's a simple yet powerful  <br>practice that has
+                                                become a non-negotiable in my routine.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/14h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Michael (Mike) ( USA)</span></p>
+                                            <p>Enatyam's yoga is like a personal wellness retreat at home. <br>The
+                                                instructors create a serene atmosphere,<br> and the classes feel like a journey into both 
+                                                physical <br> and mental well-being. Truly transformative
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/15h.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more carousel items as needed -->
                         </div>
 
-                        <a class="carousel-control-prev mta" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#combinedCarousel" role="button" data-slide="prev">
                             <span aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next mta" href="#carouselExampleControls" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#combinedCarousel" role="button" data-slide="next">
                             <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <img src="public/images/Music/musicImg4.png" class="danceimg">
                 </div>
             </div>
         </div>

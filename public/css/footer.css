@@ -102,11 +102,11 @@ footer {
 .btnnew:hover {
   text-decoration: none;
 }
-
+/* 
 .btn-book,
 .btn-request {
   margin: 10px;
-}
+} */
 
 .btn-request {
   background-color: #e46544;

@@ -51,6 +51,11 @@ class Home extends BaseController
 
         return view('Contactus');
     }
+    public function pricing()
+    {
+
+        return view('pricingpage');
+    }
     public function test()
     {
 
