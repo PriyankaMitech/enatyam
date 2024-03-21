@@ -48,7 +48,14 @@
 <script src="<?= base_url(); ?>plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="<?= base_url(); ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
+<script>const assignButton = document.getElementById('assignButton');
+const loaderContainer = document.getElementById('loaderContainer');
 
+// Add click event listener to the button
+assignButton.addEventListener('click', function() {
+  // Show the loader container when the button is clicked
+  loaderContainer.style.display = 'block';
+});</script>
 <!-- AdminLTE App -->
 <script src="<?= base_url(); ?>dist/js/adminlte.min.js"></script>
 

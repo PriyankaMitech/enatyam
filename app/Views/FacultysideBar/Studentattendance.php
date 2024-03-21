@@ -1,7 +1,104 @@
 <?php echo view('FacultySidebar2'); ?>
+<style>
+.loader-container {
+    position: fixed;
+    /* Position the container relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    z-index: 9999;
+    /* Ensure the loader is above other content */
+}
+
+.loader {
+    color: black;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: absolute;
+    /* Position the loader relative to the container */
+    top: 50%;
+    /* Center the loader vertically */
+    left: 50%;
+    /* Center the loader horizontally */
+    margin-top: -0.5em;
+    /* Adjust margin to vertically center */
+    margin-left: -0.5em;
+    /* Adjust margin to horizontally center */
+    text-indent: -9999em;
+    animation: mulShdSpin 1.3s infinite linear;
+    transform: translateZ(0);
+    background-color: transparent;
+    /* Transparent background */
+}
+
+@keyframes mulShdSpin {
+
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em,
+            2em -2em 0 0em, 3em 0 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 0;
+    }
+
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em,
+            3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 -1em;
+    }
+
+    25% {
+        box-shadow: 0 -3em 0 -0.5em,
+            2em -2em 0 0, 3em 0 0 0.2em,
+            2em 2em 0 0, 0 3em 0 -1em,
+            -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 -1em;
+    }
+
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em,
+            -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em,
+            -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0,
+            -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em,
+            3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+</style>
+
 <div class="content-wrapper">
     <div class="content-header">
+
         <div class="container-fluid">
+
             <div class="row">
                 <div class="col-12 col-sm-12">
                     <div class="card card-primary card-tabs">
@@ -19,7 +116,9 @@
                                 </li>
                             </ul>
                         </div>
-
+                        <div id="loader"  style="display: none;" class="loader-container">
+                            <div class="loader"></div>
+                        </div>
                         <div class="card-body">
                             <div class="tab-content" id="custom-tabs-two-tabContent">
                                 <div class="tab-pane fade active show" id="custom-tabs-two-profile" role="tabpanel"
@@ -63,15 +162,16 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <select class="form-control" name="session[<?= $student->id ?>]">
+                                                            <select class="form-control"
+                                                                name="session[<?= $student->id ?>]">
                                                                 <?php 
                                                                 // Convert Session_nos string to an array
                                                                 $excludedSessions = explode(',', $student->Session_nos);
                                                                 for ($i = 1; $i <= $student->no_of_session; $i++): 
                                                                     // Check if the current session number is not in the excludedSessions array
                                                                     if (!in_array($i, $excludedSessions)): ?>
-                                                                        <option value="<?= $i ?>">Session <?= $i ?></option>
-                                                                    <?php endif; ?>
+                                                                <option value="<?= $i ?>">Session <?= $i ?></option>
+                                                                <?php endif; ?>
                                                                 <?php endfor; ?>
                                                             </select>
                                                         </td>
@@ -146,8 +246,9 @@
                                                         <td><?= $student->full_name ?></td>
                                                         <td>
                                                             <div class="form-check">
-                                                            <input type="hidden" name="payment_id[<?= $student->id ?>]"
-                                                                value="<?php if(!empty($pament_details)){ echo $pament_details->id; } ?>">
+                                                                <input type="hidden"
+                                                                    name="payment_id[<?= $student->id ?>]"
+                                                                    value="<?php if(!empty($pament_details)){ echo $pament_details->id; } ?>">
                                                                 <input class="form-check-input" type="checkbox"
                                                                     name="attendance[<?= $student->id ?>][present]"
                                                                     id="present<?= $student->id ?>" value="p">

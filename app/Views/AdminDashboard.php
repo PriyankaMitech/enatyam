@@ -67,6 +67,7 @@ th {
 .tc a {
     color: #fff !important;
 }
+
 </style>
 
 
@@ -190,7 +191,7 @@ th {
                                     <th>Course</th>
                                     <th>Sub Course</th>
                                     <th>Date</th>
-                                  
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -201,7 +202,7 @@ th {
                                     <td><?= $row->courses_name ?></td>
                                     <td><?= $row->sub_courses_name ?></td>
                                     <td><?= $row->Book_Date ?></td>
-                                    
+
                                 </tr>
                                 <?php endforeach; ?>
                                 <?php else : ?>
@@ -286,11 +287,11 @@ th {
 
                                                 <td><?= $faculty->sub_courses_name ?></td>
                                                 <td><?= $faculty->Conducted_Demo_Date ?></td>
-                                                
-                                                    <input type="hidden" name="email" value="<?= $faculty->email ?>">
-                                                    <!-- <button class="btn btn-primary" type="submit">Add
+
+                                                <input type="hidden" name="email" value="<?= $faculty->email ?>">
+                                                <!-- <button class="btn btn-primary" type="submit">Add
                                                             Student</button> -->
-                                               
+
                                             </form>
                                         </tr>
                                         <?php endforeach; ?>
@@ -430,8 +431,11 @@ th {
                                                         </select>
                                                         <input type="hidden" name="studentid"
                                                             value="<?= $status->D_id ?>">
-                                                        <button type="submit"
-                                                            class="btn btn-success ml-3">Assign</button>
+                                                        <button type="submit" class="btn btn-success ml-3"
+                                                            id="assignButton">Assign</button>
+                                                        <div class="loader-container" id="loaderContainer">
+                                                            <div class="loader"></div>
+                                                        </div>
                                                     </div>
                                                 </form>
                                                 <?php else : ?>
@@ -459,8 +463,7 @@ th {
                                                 <!-- <span>No reschedule available</span> -->
                                                 <small class="badge badge-success ">Not available</small>
                                                 <?php else : ?>
-                                                <a
-                                                    href="<?=base_url(); ?>getDemoDetails">Reschedule</a>
+                                                <a href="<?=base_url(); ?>getDemoDetails">Reschedule</a>
                                                 <?php endif; ?>
                                             </td>
                                         </tr>
