@@ -1,17 +1,6 @@
 <?php include('header.php'); ?>
-<!-- <div class="wrapper-container">
-    <div class="video-container">
-        <video class="video-dance musicv" width="100%"  height = "21.5rem%"                     <video class="video-dance bannerv" autoplay loop muted >
- autoplay="0" loop="0">
-            <source src="public/images/Dance/DanceVidio.mp4" type="video/mp4">
-        </video>
 
 
-    </div>
-</div> -->
-<style>
-
-</style>
 
 
 <section class="s_header-section">
@@ -19,23 +8,20 @@
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted  >                        <source src="<?=base_url(); ?>public/images/Dance/DanceVidio.mp4" type="video/mp4">
+                    <video class="video-dance bannerv" autoplay loop muted  >  
+                        <source src="<?=base_url(); ?>public/images/Dance/DanceVidio.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>
-            <!-- <div class="col-lg-4 col-md-4 bsimg">
-            <div class="banneris">
-                <img src="<?=base_url(); ?>public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
-                </div>
-            </div> -->
+         
         </div>
     </div>
 </section>
-<section class="mt-4 dancepage">
+<section class="mt-4 dancepage MusicSec">
     <div class="container">
 
         <!-- pills -->
-        <div class="typesOfDance-tab">
+        <div class="typesOfDance-tab ">
 
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="col-lg-1 col-md-1 dancebthide ">
@@ -3070,12 +3056,15 @@
 
 <?php include('InstruInstructer.php'); ?>
 
+
+
 <?php include('pricing.php'); ?>
 
-<?php include('bookdemocallb.php'); ?>
 
 
 
 <?php include('Dancefaq.php'); ?>
+
+<?php include('bookdemocallb.php'); ?>
 
 <?php include('footer.php'); ?>

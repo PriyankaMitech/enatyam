@@ -10,9 +10,9 @@ class DemoController extends BaseController
 {
     public function bookDemo()
     {
-        // print_r($_POST);die;
-
         $demoModel = new DemoModel();
+        $db = \Config\Database::Connect();
+
        
         $data = [
             'name' => $this->request->getPost('name'),
@@ -26,13 +26,7 @@ class DemoController extends BaseController
             'Country' => $this->request->getPost('Country'),
             'city' => $this->request->getPost('city'),
             'mobileWithCode'=>$this->request->getPost('telephone_country_code').$this->request->getPost('mobile_number'),
-
-            // 'State' => $this->request->getPost('State'),
-            // 'District' => $this->request->getPost('District'),
-            // 'Book_Date_Time' => $this->request->getPost('Book_Date_Time')
             'Book_Date' => $this->request->getPost('Book_Date'),
-            // 'Start_Time' => $this->request->getPost('Start_Time'),
-            // 'End_Time' => $this->request->getPost('End_Time'),
 
         ];
         $phone = $data['mobileWithCode'];
@@ -40,6 +34,44 @@ class DemoController extends BaseController
         // print_r($phone);
         // exit();
         $demoModel->save($data);
+
+        $register_data = [
+            'full_name' => $this->request->getPost('name'),
+            'email' => $this->request->getPost('email'),
+            'mobile_no' => $this->request->getPost('mobile_number'),
+            'password' => $this->request->getPost('password'),
+            'confirm_pass' => $this->request->getPost('password'),
+            'Phone_countryCode' => $this->request->getPost('telephone_country_code'),
+            'mobileWithCode'=>$this->request->getPost('telephone_country_code').$this->request->getPost('mobile_number'),
+            'role' => 'Student',
+            'is_register_done' => 'Y',
+            'SessionType' => 'OneToOneSession',
+            'course' => $this->request->getPost('courses_id_d'),
+            'sub_course' => $this->request->getPost('sub_courses_id_d'),
+        ];
+
+        $add_data = $db->table('register');
+        $add_data->insert($register_data);
+
+        $last_insert_id = $db->insertID();
+
+        $student_data = [
+            'student_name' => $this->request->getPost('name'),
+            'register_id' => $last_insert_id,
+            'email' => $this->request->getPost('email'),
+            'mobile_no' => $this->request->getPost('mobile_number'),
+          
+            'Phone_countryCode' => $this->request->getPost('telephone_country_code'),
+            'mobileWithCode'=>$this->request->getPost('telephone_country_code').$this->request->getPost('mobile_number'),
+
+        ];
+
+        $add_data = $db->table('student');
+        $add_data->insert($student_data);
+
+
+
+
         $session = session();
         $phoneNumber = $phone;
         $templates = "1247772206608012";
