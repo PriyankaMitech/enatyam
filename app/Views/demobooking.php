@@ -128,7 +128,17 @@ input[type="date"] {
                                 <div class="row tpm">
                                     <span class="col-lg-4 col-md-4 col-12 text-white fmname">Email* :</span>
                                     <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
-                                        <input type="email" name="email" value="">
+                                        <input type="email" name="email" value="" id="demoemail">
+                                        <span id="demoemailError"></span>
+
+</span>
+
+                                </div>
+
+                                <div class="row tpm">
+                                    <span class="col-lg-4 col-md-4 col-12 text-white fmname">Password* :</span>
+                                    <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
+                                        <input type="password" name="password" value="">
                                         <span>
 
                                 </div>
@@ -136,13 +146,16 @@ input[type="date"] {
 
 
 
+
                                     <div class="row tpm">
                                         <label class="col-md-4 text-white fmname" for="mobile_no">Mobile No.<span class="required">*</span></label>
                                         <div class="col-md-2 seletbook">
-                                            <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"  onfocus='this.size=12;' onblur='this.size=1;' onchange='this.size=1; this.blur();'></select>
+                                            <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"  ></select>
                                         </div>
                                         <div class="col-md-6 seletbook">
-                                            <input required type="text" autocomplete="off" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
+                                            <input required type="text" autocomplete="off" id="demoMobileNo" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
+                                            <span id="demoMobileNoError"></span>
+
                                         </div>
                                     </div>
                                 <!-- </div> -->
@@ -179,7 +192,7 @@ input[type="date"] {
                                 <span class="col-lg-4 col-md-4 col-12 text-white fmname">Select Country* : </span>
 
                                 <div class="col-lg-8 col-md-8 col-12 ">
-                                    <select class="form-control" id="inputCountry" name="Country" onfocus='this.size=12;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                                    <select class="form-control" id="inputCountry" name="Country" >
 
                                         <option value="">Select Country</option>
                                         <?php if (!empty($country_data)) { ?>

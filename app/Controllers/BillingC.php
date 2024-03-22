@@ -34,9 +34,33 @@ class BillingC extends BaseController
 
 
             ];
+            $db = \Config\Database::Connect();
+
             $BillingM->insert($insertdata);
-            $country = $this->request->getPost('country');
-            $result = $BillingM->updateCountry($country);
+
+            $user_id = $_SESSION['id'];
+            // echo $this->request->getGet('id');
+            // echo "<pre>";print_r($_SESSION);exit();
+            $updatedata = [];
+            if($_SESSION['PricingType_Id'] == '1' || $_SESSION['PricingType_Id'] == '2' || $_SESSION['PricingType_Id'] == '3'){
+
+            $updatedata = [
+                'country' => $this->request->getPost('country'),
+                'SessionType' => 'OneToOneSession',
+            ];
+            }else if($_SESSION['PricingType_Id'] == '4' || $_SESSION['PricingType_Id'] == '4' || $_SESSION['PricingType_Id'] == '6'){
+                $updatedata = [
+                    'country' => $this->request->getPost('country'),
+                    'SessionType' => 'GroupSession',
+                ];
+            }
+
+
+            $update_data = $db->table('register')->where('id',$user_id);
+            $update_data->update($updatedata);
+
+            // $country = $this->request->getPost('country');
+            // $result = $BillingM->updateCountry($country);
             // print_r($result);
             // die;
 

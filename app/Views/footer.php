@@ -323,6 +323,7 @@
             $el.data('fullText', originalText);
             $el.data('isTruncated', true);
         } else {
+            
             $el.data('isTruncated', false);
         }
     });
@@ -480,41 +481,6 @@
     </script>
 
 
-<!-- <script>
-$(document).ready(function() {
-    $(".question-text").each(function() {
-        var $el = $(this);
-        var originalText = $el.text();
-        var maxLength = 50; // Maximum length before truncation
-
-        if (originalText.length > maxLength) {
-            var truncatedText = originalText.substring(0, maxLength) + '...';
-            $el.text(truncatedText);
-            $el.data('fullText', originalText);
-            $el.data('isTruncated', true);
-        } else {
-            $el.data('isTruncated', false);
-        }
-    });
-
-    $(".accordion-item-header").click(function() {
-        var $question = $(this).find('.question-text');
-        var fullText = $question.data('fullText');
-        var isTruncated = $question.data('isTruncated');
-
-        if (isTruncated) {
-            $question.text(fullText);
-            $question.data('isTruncated', false);
-        } else {
-            var maxLength = 50; // Maximum length before truncation
-            var truncatedText = fullText.substring(0, maxLength);
-            $question.text(truncatedText);
-            $question.data('isTruncated', true);
-        }
-    });
-});
-</script> -->
-
 
 <?php } else if ($page == 'Instruments') { ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -562,42 +528,13 @@ $(document).ready(function() {
 
 
 <?php } else if ($page == 'instuments') { ?>
-    <!-- <script>
-    const accordionItemHeaders = document.querySelectorAll(
-        ".accordion-item-header"
-    );
-
-    accordionItemHeaders.forEach((accordionItemHeader) => {
-        accordionItemHeader.addEventListener("click", (event) => {
-            // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
-
-            const currentlyActiveAccordionItemHeader = document.querySelector(
-                ".accordion-item-header.active"
-            );
-            if (
-                currentlyActiveAccordionItemHeader &&
-                currentlyActiveAccordionItemHeader !== accordionItemHeader
-            ) {
-                currentlyActiveAccordionItemHeader.classList.toggle("active");
-                currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-            }
-            accordionItemHeader.classList.toggle("active");
-            const accordionItemBody = accordionItemHeader.nextElementSibling;
-            if (accordionItemHeader.classList.contains("active")) {
-                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-            } else {
-                accordionItemBody.style.maxHeight = 0;
-            }
-        });
-    });
-    </script> -->
+  
 
 
 
 
 <?php } else if ($page == 'Carrier') { ?>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -3508,6 +3445,61 @@ function showModal(name, designation, img, qualifications, certifications, exper
 
             // Store the clicked link in local storage
             localStorage.setItem('activeLink', $(this).attr('href'));
+        });
+    });
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        $('#demoemail').on('input', function() {
+            var username = $(this).val();
+            // alert(username);
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_username_id',
+                data: {
+                    username: username
+                },
+                success: function(response) {
+                    if (response === 'true') {
+                        $('#demoemailError').text('This username is allready available');
+                        $('.changec').prop('disabled', true);
+
+                    } else if (response == 'false') {
+                        $('#demoemailError').text('');
+                        $('.changec').prop('disabled', false);
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#demoMobileNo').on('input', function() {
+            var mobile_no = $(this).val();
+            // alert(username);
+
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url(); ?>/chechk_mobile_no_id',
+                data: {
+                    mobile_no: mobile_no
+                },
+                success: function(response) {
+                    if (response === 'false') {
+                        $('#demoMobileNoError').text('');
+                        $('.submitButton').prop('disabled', false);
+
+                    } else if (response === 'true') {
+                        $('#demoMobileNoError').text('This mobile number is already available.');
+                        $('.submitButton').prop('disabled', true);
+                    }
+                }
+            });
         });
     });
 </script>

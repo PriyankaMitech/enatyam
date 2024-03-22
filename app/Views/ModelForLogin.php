@@ -3,6 +3,12 @@
 
 
 <style>
+    .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-container {
     display: flex;
     justify-content: space-between;
@@ -81,6 +87,18 @@ ul li{
     font-size: 17px;
     font-weight: 500;
 }
+.pricing-card-section .card {
+    padding: 10px 10px !important;
+}
+.price-card-body .fa-times-circle-o {
+    width: 2.5rem;
+}
+.price-card-body .fa-check-circle-o {
+    width: 2.5rem;
+}
+.price-card-body span:last-child {
+    font-size: 13px;
+}
 
 </style>
   <!-- Content Wrapper. Contains page content -->
@@ -115,13 +133,30 @@ ul li{
           <!-- /.card-header -->
           <div class="card-body">
           <div class="container-fluid">
-            <?php  if ($_SESSION['SessionType'] == 'OneToOneSession') { ?>
-            <label>Private Session</label>
+            
+
             <div class="row">
+          <div class="col-12 col-sm-12">
+            <div class="card card-primary card-tabs">
+              <div class="card-header p-0 pt-1">
+                <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link <?php if ($_SESSION['SessionType'] == 'OneToOneSession') { ?>  active <?php } ?>" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">One on One Private Session</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link <?php if ($_SESSION['SessionType'] == 'GroupSession') { ?>  active <?php } ?>"    id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Group Session Up to 10 Students</a>
+                  </li>
+                 
+                </ul>
+              </div>
+              <div class="card-body" style="background-color: #f4f4f4;">
+                <div class="tab-content" id="custom-tabs-one-tabContent">
+                  <div class="tab-pane fade <?php if ($_SESSION['SessionType'] == 'OneToOneSession') { ?>  show active <?php } ?> " id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                        <div class="row">
                             <div class="col-lg-10 col-md-12 col-12">
                                 <div class="row pricing-card-section sd">
-                                    <div class="col-lg-4 col-md-4 col-12 ppsb">
-                                        <div class="card text-center button1-card">
+                                    <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
+                                        <div class="card text-center card-1">
                                             <div class="price-card-head">
                                                 <h3 >Basic</h3>
                                                 <span class="line"></span>
@@ -129,11 +164,11 @@ ul li{
                                             <div class="price-card-body">
                                                 <h2>8 Sessions
                                                 </h2>
-                                                <h4>₹ 1200/- Session</h4>
-                                                <h4>Total Price : ₹ 9600/- <br> <span class="del-price"><del>₹ 10105/- </del></span></h4>
+                                                <h4>₹ 1200 /- session</h4>
+                                                <h4>Total Price: ₹ 9600 /- <br><span class="del-price"><del> ₹ 10105 /- </del></span></h4>
 
                                                 <img src="public/images/price-coupn.png" />
-                                                <p >Duration : 60 Days</p>
+                                                <p style="">Duration : 60 Days</p>
 
                                                 <ul style="padding-left:0px!important">
 
@@ -210,11 +245,11 @@ ul li{
                                                 </ul>
 
 
-                                                <div style="text-align: center; margin-top: 31px;">
+                                                <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book Now">
+                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Explore Pricing">
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Explore Pricing</a>
 
                                                     <?php endif; ?>
                                                 </div>
@@ -223,8 +258,8 @@ ul li{
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-12 ppsb">
-                                        <div class="card text-center button1-card">
+                                    <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
+                                        <div class="card text-center card-1">
                                             <div class="price-card-head">
                                                 <h3>Pro</h3>
                                                 <span class="line"></span>
@@ -233,8 +268,8 @@ ul li{
                                             <div class="price-card-body">
                                                 <h2>21 Sessions
                                                 </h2>
-                                                <h4>₹ 1090/- Session</h4>
-                                                <h4>Total Price : ₹ 22890/- <span class="del-price"><del>₹ 24880/- </del></span></h4>
+                                                <h4>₹ 1090 /- session</h4>
+                                                <h4>Total Price: ₹ 22890 /- <br> <span class="del-price"><del> ₹ 24880 /- </del></span></h4>
 
                                                 <img src="public/images/pro.png" />
                                                 <p >Duration : 120 Days</p>
@@ -311,11 +346,11 @@ ul li{
                                                     </li>
 
                                                 </ul>
-                                                <div style="text-align: center;">
+                                                <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Explore Pricing</a>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -323,8 +358,8 @@ ul li{
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-12 ppsb">
-                                        <div class="card text-center button1-card">
+                                    <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
+                                        <div class="card text-center card-1">
                                             <div class="price-card-head">
                                                 <h3>Elite</h3>
                                                 <span class="line"></span>
@@ -332,8 +367,8 @@ ul li{
 
                                             <div class="price-card-body">
                                                 <h2>51 Sessions</h2>
-                                                <h4>₹ 975/- session</h4>
-                                                <h4>Total Price : ₹ 49725/- <span class="del-price"><del>₹ 59910/- </del></span></h4>
+                                                <h4>₹ 975 /- session</h4>
+                                                <h4>Total Price: ₹ 49725 /- <br><span class="del-price"><del> ₹ 59910 /- </del></span></h4>
 
                                                 <img src="public/images/Elite.png" />
                                                 <p >Duration : 360 Days</p>
@@ -411,11 +446,11 @@ ul li{
 
                                                 </ul>
 
-                                                <div style="text-align: center;">
+                                                <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Book Now</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Explore Pricing</a>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -431,14 +466,15 @@ ul li{
 
                             </div>
                         </div>
-            <?php } else {?>
-            <label>Group Session</label>
-            <div class="row">
+                   
+                  </div>
+                  <div class="tab-pane fade <?php if ($_SESSION['SessionType'] == 'GroupSession') { ?>  show active <?php } ?>" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                  <div class="row">
                             <div class="col-lg-10 col-md-12 col-12">
                                 <form name="razorpay-form" id="razorpay-form" action="<?php echo base_url() ?>payment" method="POST">
                                     <div class="row pricing-card-section">
-                                        <div class="col-lg-4 col-md-4 col-12 ppsb">
-                                            <div class="card text-center button1-card">
+                                        <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
+                                            <div class="card text-center card-1">
                                                 <div class="price-card-head">
                                                     <h3>Basic</h3>
                                                     <span class="line"></span>
@@ -447,8 +483,8 @@ ul li{
                                                 <div class="price-card-body">
                                                     <h2>21 Sessions
                                                     </h2>
-                                                    <h4>₹ 475/- Session</h4>
-                                                    <h4>Total Price : ₹ 9990/- <br><span class="del-price"><del>₹ 10500/- </del></span></h4>
+                                                    <h4>₹ 475 /- session</h4>
+                                                    <h4>Total Price: ₹ 9990 /- <br><span class="del-price"><del> ₹ 10500 /- </del></span></h4>
 
                                                     <img src="public/images/price-coupn.png" />
                                                     <p >Duration : 120 Days</p>
@@ -528,11 +564,11 @@ ul li{
                                                     </ul>
 
 
-                                                    <div style="text-align:center; margin-top:20%">
+                                                    <div class="button-container">
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Explore Pricing</a>
 
                                                         <?php endif; ?>
                                                     </div>
@@ -543,8 +579,8 @@ ul li{
                                             </div>
 
                                         </div>
-                                        <div class="col-lg-4 col-md-4 col-12 ppsb">
-                                            <div class="card text-center button1-card">
+                                        <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
+                                            <div class="card text-center card-1">
                                                 <div class="price-card-head">
                                                     <h3>Pro</h3>
                                                     <span class="line"></span>
@@ -553,8 +589,8 @@ ul li{
                                                 <div class="price-card-body">
                                                     <h2>51 Sessions
                                                     </h2>
-                                                    <h4>₹ 450/- Session</h4>
-                                                    <h4>Total Price: ₹ 22950/- <br><span class="del-price"><del>₹ 2495/- </del></span></h4>
+                                                    <h4>₹ 450 /- session</h4>
+                                                    <h4>Total Price: ₹ 22950 /- <br><span class="del-price"><del>₹ 24950 /- </del></span></h4>
                                                     <img src="public/images/pro.png" />
                                                     <p >Duration : 200 Days</p>
 
@@ -618,20 +654,20 @@ ul li{
                                                             </span>
                                                         </li>
                                                     </ul>
-                                                    <div style="text-align:center; margin-top:12%">
+                                                    <div class="button-container">
 
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Explore Pricing</a>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
                                             </div>
 
                                         </div>
-                                        <div class="col-lg-4 col-md-4 col-12 ppsb">
-                                            <div class="card text-center button1-card">
+                                        <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
+                                            <div class="card text-center card-1">
                                                 <div class="price-card-head">
                                                     <h3>Elite</h3>
                                                     <span class="line"></span>
@@ -639,8 +675,8 @@ ul li{
 
                                                 <div class="price-card-body">
                                                     <h2>101 Sessions</h2>
-                                                    <h4>₹ 423/- Session</h4>
-                                                    <h4>Total Price: ₹ 429777 <br><span class="del-price"><del>₹ 51777/- </del></span></h4>
+                                                    <h4>₹ 423 /- session</h4>
+                                                    <h4>Total Price: ₹ 429777 /- <br> <span class="del-price"><del>₹ 51777 /- </del></span></h4>
 
                                                     <img src="public/images/Elite.png" />
                                                     <p >Duration : 360 Days</p>
@@ -706,11 +742,11 @@ ul li{
                                                         </li>
                                                     </ul>
 
-                                                    <div style="text-align:center">
+                                                    <div class="button-container">
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Book Now</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Explore Pricing</a>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
@@ -727,8 +763,15 @@ ul li{
 
                             </div>
 
-                        </div>
-            <?php } ?>
+                        </div>                  </div>
+                
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+       
+        </div>
         </div>
             <!-- /.row -->
 

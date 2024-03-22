@@ -14,7 +14,7 @@ $name               = "RazorPay Infovistar";
 <section class="pricing-section MusicSec pricingforhome" id="pricing">
     <div class="container ">
         <div class="row heading-div m-0">
-            <div class="col-lg-12 text-center op" id="pricing-section">
+            <div class="col-lg-12 text-center op testimonialsdiv" id="pricing-section">
                 <h3 class="text-white">Our Pricing
                 </h3>
                 <span class="line"></span>
