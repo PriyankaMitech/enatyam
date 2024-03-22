@@ -67,7 +67,6 @@ th {
 .tc a {
     color: #fff !important;
 }
-
 </style>
 
 
@@ -395,7 +394,7 @@ th {
                                             <th>Sub Course</th>
 
                                             <th>Demo Date</th>
-                                            <th>Assign faculty</th>
+                                            <!-- <th>Assign faculty</th> -->
                                             <th>Reschedule</th>
                                         </tr>
                                         <?php if (!empty($UnattendedDemoList)) : ?>
@@ -407,7 +406,7 @@ th {
                                             <td><?= $status->sub_courses_name ?></td>
 
                                             <td><?php echo $status->Book_Date; ?></td>
-                                            <td>
+                                            <!-- <td>
                                                 <?php if ($status->AssignTecher_id === null) : ?>
                                                 <?php
                                                             $matchingFaculties = array_filter(
@@ -439,7 +438,7 @@ th {
                                                     </div>
                                                 </form>
                                                 <?php else : ?>
-                                                <!-- <p>No faculty available</p> -->
+                                                
                                                 <small class="badge badge-success ">No faculty available</small>
                                                 <?php endif; ?>
                                                 <?php else : ?>
@@ -457,14 +456,26 @@ th {
                                                             }
                                                             ?>
                                                 <?php endif; ?>
-                                            </td>
-                                            <td>
+                                            </td> -->
+                                            <!-- <td>
                                                 <?php if ($status->AssignTecher_id == null) : ?>
-                                                <!-- <span>No reschedule available</span> -->
+                                            
                                                 <small class="badge badge-success ">Not available</small>
                                                 <?php else : ?>
                                                 <a href="<?=base_url(); ?>getDemoDetails">Reschedule</a>
                                                 <?php endif; ?>
+                                            </td> -->
+                                            <td>
+                                                <form method="post" action="DemoController/resheduleDemo">
+                                                    <input type="hidden" name="action" value="Reschedule">
+                                                    <input type="hidden" name="D_id"
+                                                        value="<?php echo htmlspecialchars($status->D_id); ?>">
+                                                    <button type="submit" class="btn btn-danger"
+                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                        title="Add to Reschedule">
+                                                        <i class="fa fa-plus" aria-hidden="true"></i> Add to Reschedule
+                                                    </button>
+                                                </form>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
@@ -512,14 +523,24 @@ th {
                                                 <td><?= $facult->email ?></td>
                                                 <td><?= date('j F Y', strtotime($facult->Book_Date)); ?></td>
 
-                                                <td>
+                                                <!-- <td>
                                                     <?php if (($facult->Book_Date_Time)) : ?>
                                                     <input type="time" name="Book_Date_Time"
                                                         value="<?= $facult->Book_Date_Time ?>" disabled>
                                                     <?php else : ?>
                                                     <input type="time" name="Book_Date_Time" require>
                                                     <?php endif; ?>
+                                                </td> -->
+                                                <td>
+                                                    <?php if (!empty($facult->Reshedule_Time)) : ?>
+                                                    <input type="time" name="Book_Date_Time"
+                                                        value="<?= $facult->Reshedule_Time ?>" disabled>
+                                                    <?php else : ?>
+                                                    <input type="time" name="Book_Date_Time"
+                                                        value="<?= $facult->Book_Date_Time ?>" required>
+                                                    <?php endif; ?>
                                                 </td>
+
                                                 <td>
                                                     <?php
                                                 if ($facult->Reshedule_date && $facult->Reshedule_date != '0000-00-00') {
