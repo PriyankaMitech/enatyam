@@ -66,13 +66,13 @@ th {
                                             Demo</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="custom-tabs-four-profile-tab" data-toggle="pill"
+                                        <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill"
                                             href="#custom-tabs-four-profile" role="tab"
                                             aria-controls="custom-tabs-four-profile" aria-selected="true">Pending
                                             Demo</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="custom-tabs-four-messages-tab" data-toggle="pill"
+                                        <a class="nav-link active" id="custom-tabs-four-messages-tab" data-toggle="pill"
                                             href="#custom-tabs-four-messages" role="tab"
                                             aria-controls="custom-tabs-four-messages" aria-selected="false">Reschedule
                                             please</a>
@@ -111,7 +111,7 @@ th {
                                         <p class="text-center">No demos conducted</p>
                                         <?php endif; ?>
                                     </div>
-                                    <div class="tab-pane fade active show" id="custom-tabs-four-profile" role="tabpanel"
+                                    <div class="tab-pane fade " id="custom-tabs-four-profile" role="tabpanel"
                                         aria-labelledby="custom-tabs-four-profile-tab">
                                         <?php if (!empty($PendingDemo)): ?>
                                         <table class="table table-bordered">
@@ -174,8 +174,11 @@ th {
                                         <p class="text-center">No pending demos</p>
                                         <?php endif; ?>
                                     </div>
-                                    <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel"
-                                        aria-labelledby="custom-tabs-four-messages-tab">
+                                    <div id="loader" style="display: none;" class="loader-container">
+                                        <div class="loader"></div>
+                                    </div>
+                                    <div class="tab-pane fade active show" id="custom-tabs-four-messages"
+                                        role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
                                         <?php if (!empty($resheduleDemo)): ?>
                                         <table class="table table-bordered">
                                             <thead>
@@ -185,7 +188,9 @@ th {
                                                     <th>Email</th>
                                                     <th>Contact Number</th>
                                                     <th>Reschedule Date/Time</th>
+
                                                     <th>meeting link</th>
+                                                    <th>Assign faculty</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -217,24 +222,43 @@ th {
                                                                 <!-- Time input field -->
                                                             </div>
                                                         </td>
-                                                        <td><input type="text" name="meetlink" placeholder="Enter Meeting Link"
-                                                        require></td>
+                                                        <td><input type="text" name="meetlink"
+                                                                placeholder="Enter Meeting Link" required></td>
+                                                        <td>
+                                                            <?php if ($PDemo->courses_name && $PDemo->sub_courses_name) : ?>
+                                                            <select name="faculty_id">
+                                                                <option value="" selected>Select Faculty</option>
+                                                                <?php foreach ($Faculty as $facultyItems) : ?>
+                                                                <?php if ($facultyItems->courses_name == $PDemo->courses_name && $facultyItems->sub_courses_name == $PDemo->sub_courses_name) : ?>
+                                                                <option value="<?= $facultyItems->id ?>">
+                                                                    <?= $facultyItems->full_name ?>
+                                                                </option>
+                                                                <?php endif; ?>
+                                                                <?php endforeach; ?>
+                                                            </select>
+                                                            <?php else : ?>
+                                                            <p>No course and sub-course specified.</p>
+                                                            <?php endif; ?>
+                                                        </td>
                                                         <td>
                                                             <input type="hidden" name="action" value="N">
-                                                            <input type="hidden" name="mobileWithCode" value="<?= $PDemo->mobileWithCode ?>">
+                                                            <input type="hidden" name="mobileWithCode"
+                                                                value="<?= $PDemo->mobileWithCode ?>">
                                                             <input type="hidden" name="D_id"
                                                                 value="<?= $PDemo->D_id ?>">
                                                             <input type="hidden" name="AssignTecher_id"
-                                                                value="<?= $PDemo->AssignTecher_id ?>">
+                                                                value="<?= $facultyItems->id ?>">
                                                             <input type="hidden" name="email"
                                                                 value="<?= $PDemo->email ?>">
                                                             <!-- Add this line for the email -->
                                                             <!-- <button class="btn btn-info"
                                                                 type="submit">Reschedule</button> -->
-                                                                <button type="submit" class="btn btn-success ml-3" id="assignButton">Reschedule</button>
-<div class="loader-container" id="loaderContainer">
-  <div class="loader"></div>
-</div>
+                                                            <button type="submit" class="btn btn-success ml-3"
+                                                                id="assignButton">Reschedule</button>
+                                                            <div class="loader-container" id="loaderContainer"
+                                                                style="display: none;">
+                                                                <div class="loader"></div>
+                                                            </div>
                                                         </td>
                                                     </form>
                                                 </tr>

@@ -3223,12 +3223,14 @@ function showModal(name, designation, img, qualifications, certifications, exper
                 // Check if all required fields are filled
                 if ($('#txtMobileNo').val() && $('#email').val()) {
                     // Your mobile verification AJAX call
+                    $('#loader').show();
                     $.ajax({
                         url: "verifymobile",
                         type: "POST",
                         data: formData,
                         dataType: "JSON",
                         success: function(response) {
+                            $('#loader').hide();
                             console.log(response)
                             $('#mobile_noError').addClass('d-none');
                             $('#otperror').addClass('d-none');
@@ -3262,7 +3264,7 @@ function showModal(name, designation, img, qualifications, certifications, exper
                                         $('#signupbtn').val('Sign Up')
                                         // $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
                                         $('#emailotp').removeClass('d-none').after(
-                                            '<span class="error" id="otperror">Enter otp sent to your email</span>'
+                                            '<span class="error" id="otperror">Enter otp sent to your whats app </span>'
                                         )
                                     }
 
@@ -3456,7 +3458,15 @@ function showModal(name, designation, img, qualifications, certifications, exper
         });
     });
 </script>
+<script>
+    function showLoader() {
+  $('#loader').show(); // Show the loader
+}
 
+function hideLoader() {
+  $('#loader').hide(); // Hide the loader
+}
+</script>
 
 <script>
     // let prevScrollPos = window.pageYOffset;

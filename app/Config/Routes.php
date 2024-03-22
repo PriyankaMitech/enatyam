@@ -323,6 +323,8 @@ $routes->get('giveschedule', 'FacultyController::giveschedule');
 $routes->get('fshedule', 'FacultyController::fshedule');
 $routes->post('saveshedule', 'FacultyController::saveshedule');
 $routes->get('saveshedule', 'FacultyController::saveshedule');
+$routes->get('payment_request', 'FacultyController::withdrowpayment');
+$routes->post('Payment_msg', 'FacultyController::Payment_msg');
 
 $routes->post('giveschedule', 'FacultyController::giveschedule');
 $routes->post('sendmeetinglink', 'FacultyController::sendmeetinglink');
@@ -374,6 +376,8 @@ $routes->post('selectslotsbystudent', 'StudentController::selectslotsbystudent')
 $routes->post('check_slot_availability', 'StudentController::check_slot_availability');
 
 $routes->get('feedback', 'StudentController::feedback');
+$routes->get('View_certificate', 'StudentController::certificate');
+
 $routes->post('savefeedback', 'StudentController::savefeedback');
 $routes->post('submit_review', 'StudentController::submit_review');
 

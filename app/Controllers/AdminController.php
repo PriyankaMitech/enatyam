@@ -52,8 +52,9 @@ class AdminController extends BaseController
                 $data['PendingDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond, 'DESC');
                 $wherecondr = [
                     'free_demo_table.Book_Date =' => $today,
+                    'free_demo_table.Reshedule_date =' => $today,
                 ];
-                $data['records'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecondr, 'DESC');
+                $data['records'] = $model->jointhreetablesor($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecondr, 'DESC');
                 $wherecond1 = [
                     'free_demo_table.Conducted_Demo' => 'N',
 
@@ -143,7 +144,7 @@ class AdminController extends BaseController
 public function AssignTecherForDemo()
 {
     $model = new AdminModel();
-    $postData = $this->request->getPost(); 
+    $postData = $this->request->getPost();  
     $facultyId = $this->request->getVar('faculty_id');
     $Facultycontact = $model->Facultycontact($facultyId);
     
@@ -374,8 +375,16 @@ public function AssignTecherForDemo()
 
             if ($email !== null && $password !== null) {
                 $model = new AdminModel();
-                $data['Faculty'] = $model->getFaculty();
+                $select1 = 'register.*, carrier.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
+                $joinCond4 = 'register.carrier_id = carrier.D_id';
+                $joinCond5 = 'carrier.course = tbl_courses.id';
+                $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';
+                $wherecond = [
+                    'register.role' => 'Faculty',
+                ];
+                $data['Faculty'] = $model->joinfourtables($select1, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, $wherecond, 'DESC');
 
+              //  $data['Faculty'] = $model->getFaculty();
                 $select = 'free_demo_table.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name,';
                 $joinCond = 'free_demo_table.course = tbl_courses.id';
                 $joinCond2 = 'free_demo_table.sub_course = tbl_sub_courses.id';
@@ -383,17 +392,17 @@ public function AssignTecherForDemo()
 
                 $wherecond = [
                     'free_demo_table.Conducted_Demo' => 'N',
-                    'free_demo_table.Reshedule_date' => null,
+                    'free_demo_table.Book_Date >=' => $today,
                 ];
 
                 $data['PendingDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond, 'DESC');
+//  print_r($data['PendingDemo']);die;
 
                 $wherecond1 = [
                     'free_demo_table.Conducted_Demo' => 'Reschedule',
                 ];
 
                 $data['resheduleDemo'] = $model->jointhreetables($select, 'free_demo_table ', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond, $joinCond2, $wherecond1, 'DESC');
-
                 $wherecond2 = [
                     'free_demo_table.Conducted_Demo' => 'Y',
                 ];
@@ -568,7 +577,7 @@ public function AssignTecherForDemo()
     }
     public function ResheduleByadmin()
     {
-      //  print_r($_POST);die;
+        print_r($_POST);die;
         $mobileWithCode =$this->request->getPost('mobileWithCode');
         $email = $this->request->getPost('email');
         $AssignTecher_id = $this->request->getPost('AssignTecher_id');
@@ -579,16 +588,21 @@ public function AssignTecherForDemo()
         $meetlink  = $this->request->getPost('meetlink');
         $model = new AdminModel();
         $registerRecord = $model->findname($AssignTecher_id);
-
+          
         if (!empty($registerRecord)) {
             $firstRecord = reset($registerRecord);
             $ccEmails = [$firstRecord->email];
-            $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time,$meetlink);
+            $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time,$meetlink,$AssignTecher_id);
             $Subject = 'Your Demo Rescheduled';
             $msg = "Your Demo Has Been Rescheduled - Date: $date, Time: $time";
             $phoneNumber = $mobileWithCode;
             $templates = "930840461869403";
             $msg ="your Demo will be Rescheduled succesfully Join on this $meetlink link for Demo - Date: $date, Time: $time";
+            whatsapp($phoneNumber, $templates, $msg);
+            $facultymono = $model->Facultycontact($AssignTecher_id);
+            $phoneNumber = $facultymono;
+            $templates = "930840461869403";
+            $msg ="your Have asign for Demo  Join on this $meetlink link for Demo - Date: $date, Time: $time";
             whatsapp($phoneNumber, $templates, $msg);
             if ($result == 1) {
                 sendConfirmationEmail($email, $ccEmails, $Subject, $msg);

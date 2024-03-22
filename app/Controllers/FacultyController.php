@@ -880,5 +880,23 @@ public function saveshedule()
   whatsappadmin($templates, $msg);
   return redirect()->to('fshedule');
 }
-
+public function withdrowpayment()
+{
+  echo view('FacultysideBar/withdrowpayment');
+}
+public function Payment_msg()
+{
+  $result = session();
+  $facultyId = $result->get('id'); 
+  $model = new facultymodel();
+  $id=$facultyId;
+  $facultyname=$model->getname($id);
+  $request = service('request');
+  $msg = $request->getPost('massage');
+  $templates = "930840461869403";
+  $msg = "$facultyname ,$msg";
+  whatsappadmin($templates, $msg);
+  return redirect()->to('payment_request');
+}
+ // print_r($msg);die;
 }

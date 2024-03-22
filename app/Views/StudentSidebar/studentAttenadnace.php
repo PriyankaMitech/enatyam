@@ -1,14 +1,20 @@
 <?php
-// Check if either renewal or verify_by_student is null for the last record
 $showReviewModal = false;
-$lastAttendance = end($attendance); // Get the last record
-if (is_null($lastAttendance->renewal) && is_null($lastAttendance->verify_by_student)) {
-    $showReviewModal = true;
-    // Check previous session attendance status
-    $previousSessionStatus = $lastAttendance->Attendance_status == 'p' ? 'present' : 'absent';
+
+// Check if the $attendance array is not empty
+if (!empty($attendance)) {
+    // Get the last record
+    $lastAttendance = end($attendance);
+
+    // Check if the last record exists and has the properties 'renewal' and 'verify_by_student'
+    if ($lastAttendance && is_null($lastAttendance->renewal) && is_null($lastAttendance->verify_by_student)) {
+        $showReviewModal = true;
+        
+        // Check previous session attendance status
+        $previousSessionStatus = $lastAttendance->Attendance_status == 'p' ? 'present' : 'absent';
+    }
 }
 ?>
-
 <?php echo view('StudentSidebar/Studentsidebar'); ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->

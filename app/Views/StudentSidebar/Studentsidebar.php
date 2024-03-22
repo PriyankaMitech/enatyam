@@ -312,6 +312,12 @@
                     </a>
                   </li>
                   <li class="nav-item">
+                    <a href="<?php echo base_url() ?>View_certificate" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Certificate</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
                     <a href="<?php echo base_url() ?>feedback" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Feedback</p>
