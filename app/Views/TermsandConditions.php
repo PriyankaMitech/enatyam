@@ -108,7 +108,7 @@
                        
                     </ol>
 
-                    <p>If you have any questions or concerns about these terms and conditions, please contact us at <br> <b>[Your Contact Information]. </b></p>
+                    <p>If you have any questions or concerns about these terms and conditions, please contact us at <br> <b>+91 9011223285. </b></p>
                     
 
                 </div>

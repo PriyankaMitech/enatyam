@@ -1,4 +1,8 @@
 /* refunt guarantee section start*/
+.hft p {
+  text-align: center;
+  font-size: 14px;
+}
 .bookdimg {
   padding: 33px 20px;
 }

@@ -118,7 +118,7 @@
                             This Privacy Policy may be updated periodically to reflect changes in our practices. We
                             encourage you to review this page for the latest information.<br>
                             By using our website, you agree to the terms outlined in this Privacy Policy. If you have any
-                            questions or concerns, please contact us at [Your Contact Information].<br>
+                            questions or concerns, please contact us at +91 9011223285.<br>
                             <b>Effective Date: </b>31.01.2024
                         </div>
                     </li>
