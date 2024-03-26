@@ -845,21 +845,42 @@ public function saveshedule()
   $facultyId = $result->get('id');
  // print_r($_POST);die;
   $id =  $this->request->getPost('id');
-  $day = $this->request->getPost('day');
+  $days = $this->request->getPost('day');
   $start_date = $this->request->getPost('start_date');
-  $end_date = $this->request->getPost('end_date');
+  // $end_date = $this->request->getPost('end_date');
   $start_time = $this->request->getPost('start_time');
   $end_time = $this->request->getPost('end_time');
+
+  
+  $currentYear = date('Y');
+  $nextYear =   $currentYear + 1;
+   // Extract year, month, and day from start_date
+   [$year, $month, $day] = explode('-', $start_date);
+  //  echo '<pre>';print_r($currentYear);exit();
+
+// Create a common start and end date for the entire year
+
+$commonStartDate = $currentYear .'-'.$month.'-'.$day ;
+$commonEndDate = $nextYear . '-'.$month.'-'.$day;
+
+// Validate and modify date format
+$commonStartDate = date('Y-m-d', strtotime($commonStartDate));
+$commonEndDate = date('Y-m-d', strtotime($commonEndDate));
+
+$db = \Config\Database::Connect();
+$insertedSchedules = 0;
+// $db->table('schedule_list')->where('faculty_registerid', $facultyId)->delete();
   
   // Prepare the data to be inserted
   $data = [
      'faculty_registerid'=>$id,
-      'days' => $day,
-      'start_date' => $start_date,
-      'end_date' => $end_date,
+      'days' => $days,
+      'start_date' => $commonStartDate,
+      'end_date' => $commonEndDate,
       'start_time' => $start_time,
       'end_time' => $end_time
   ];
+
 
   // Insert the data into the database using the model
   $model = new facultymodel();
@@ -880,6 +901,7 @@ public function saveshedule()
   whatsappadmin($templates, $msg);
   return redirect()->to('fshedule');
 }
+
 public function withdrowpayment()
 {
   echo view('FacultysideBar/withdrowpayment');

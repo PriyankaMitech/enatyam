@@ -9,39 +9,29 @@
                         <div class="row">
                             <input type="hidden" name="id" value="<?php echo esc($session_id); ?>">
                             <!-- Day Selection, Start Date, and End Date in one row -->
-                            <div class="col">
-    <div class="form-group">
-        <label for="day" class="form-label">Select Day:</label>
-        <select id="day" name="day" class="form-select form-control" required>
-            <option value="">Select</option>
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-        </select>
-    </div>
-</div>
-                            <div class="col">
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="start_date" class="control-label">Start Date</label>
-                                    <input type="date" class="form-control form-control-sm rounded-0" name="start_date"
-                                        id="start_date" value="<?php echo date('Y-m-d', strtotime('+1 day')); ?>"
-                                        readonly>
+                                    <label for="day" class="form-label">Select Day:</label>
+                                    <select id="day" name="day" class="form-select form-control" required>
+                                        <option value="">Select</option>
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wednesday">Wednesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
+                                        <option value="Sunday">Sunday</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="end_date" class="control-label">End Date</label>
-                                    <input type="date" class="form-control form-control-sm rounded-0" name="end_date"
-                                        id="end_date" value="<?php echo date('Y-m-t'); ?>" readonly>
-                                </div>
+                           
+                            <div class="form-group">
+                                <!-- Hidden input field for start_date -->
+                                <input type="hidden" name="start_date" id="start_date" value="<?php echo date('Y-m-d', strtotime('+1 day')); ?>">
                             </div>
-                        </div>
-                        <!-- Start Time, End Time, and Add Time Button in another row -->
-                        <div class="row">
+                     
+                          
+
                             <div class="col">
                                 <div class="form-group">
                                     <label for="time" class="form-label">Start Time:</label>
@@ -54,8 +44,18 @@
                                     <input type="time" id="time" name="end_time" class="form-control">
                                 </div>
                             </div>
+                            <!-- <div class="col">
+                                <div class="form-group">
+                                    <label for="end_date" class="control-label">End Date</label>
+                                    <input type="date" class="form-control form-control-sm rounded-0" name="end_date"
+                                        id="end_date" value="<?php echo date('Y-m-t'); ?>" readonly>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- Start Time, End Time, and Add Time Button in another row -->
+                        <div class="row">
                             <div class="col mt-2">
-                                <div class="form-group mt-4">
+                                <div class="form-group mt-4 text-right">
                                     <button type="submit" class="btn btn-primary">Add Time</button>
                                 </div>
                             </div>
