@@ -1,4 +1,8 @@
 /* refunt guarantee section start*/
+.BillingInformation .bip {
+  padding: 5px;
+}
+
 .hft p {
   text-align: center;
   font-size: 14px;
