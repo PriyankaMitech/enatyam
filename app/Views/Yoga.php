@@ -480,12 +480,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 11: Yoga for Labor and Delivery</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Prenatal yoga poses for labor and delivery.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Breathing techniques for labor and delivery. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of prenatal yoga for labor and delivery.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of Choreography for Stage Performances.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Prenatal yoga poses for labor and delivery. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Breathing techniques for labor and delivery. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of prenatal yoga for labor and delivery.</li>   
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -735,7 +732,7 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 2: Yoga for Breathing and Relaxation</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Breathing techniques for relaxation and stress relief./li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Breathing techniques for relaxation and stress relief.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Stress reduction yoga poses for relaxation. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of relaxation for reducing stress.</li>
                                                                 </ul>
@@ -1129,12 +1126,10 @@
                                                             </div>
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 1: Introduction to Flexibility Yoga</h5>
-
                                                                 <ul class="icon-list-items">
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the beneﬁts of ﬂexibility yoga.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic ﬂexibility yoga poses and modiﬁcations.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Proper alignment and breathing techniques for safe practice.</li>
-
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1145,14 +1140,11 @@
                                                                 <p> Week- 2 syllabus will cover below points:</p>
                                                             </div>
                                                             <div class="month-text">
-                                                                <h5 class="MonthHeading">Week 2: Yoga for Breathing and Relaxation</h5>
+                                                                <h5 class="MonthHeading">Week 2: Yoga for Hamstring Flexibility </h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Week 2: Yoga for Hamstring Flexibility
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Flexibility yoga poses for stretching the hamstrings. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating hamstring stretching into a ﬂexibility yoga practice.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of hamstring ﬂexibility for overall ﬂexibility and mobility.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the hamstrings. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating hamstring stretching into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of hamstring ﬂexibility for overall ﬂexibility and mobility. </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1166,14 +1158,10 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 3: Yoga for Hip Flexibility</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Flexibility yoga poses for stretching the hips.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating hip stretching into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the hips. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating hip stretching into a ﬂexibility yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Beneﬁts of hip ﬂexibility for overall ﬂexibility and mobility. </li>
-
-                                                                </ul>
+                                                                </ul> 
                                                             </div>
                                                         </div>
 
@@ -1185,11 +1173,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 4: Yoga for Shoulder Flexibility</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the shoulders.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating shoulder stretching into a ﬂexibility yoga practice. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of shoulder ﬂexibility for overall ﬂexibility and mobility.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the shoulders. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating shoulder stretching into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of shoulder ﬂexibility for overall ﬂexibility and mobility. </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1202,10 +1188,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 5: Yoga for Spine Flexibility</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the spine.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating spine stretching into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the spine. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating spine stretching into a ﬂexibility yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of spine ﬂexibility for overall ﬂexibility and mobility.</li>
                                                                 </ul>
                                                             </div>
@@ -1219,10 +1203,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 6: Yoga for Chest and Heart Opening</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for opening the chest and heart.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating chest and heart opening into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for opening the chest and heart. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating chest and heart opening into a ﬂexibility yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of chest and heart opening for overall ﬂexibility and mobility.</li>
                                                                 </ul>
                                                             </div>
@@ -1235,14 +1217,11 @@
                                                                 <p> Week- 7 syllabus will cover below points:</p>
                                                             </div>
                                                             <div class="month-text">
-                                                                <h5 class="MonthHeading">Week 7: Yoga for Full-Body Flexibilityf</h5>
+                                                                <h5 class="MonthHeading">Week 7: Yoga for Full-Body Flexibility</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the entire body.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating full-body stretching into a ﬂexibility yoga practice. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of full-body ﬂexibility for overall ﬂexibility and mobility.</li>
-
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the entire body. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating full-body stretching into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of full-body ﬂexibility for overall ﬂexibility and mobility. </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1255,10 +1234,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 8: Yoga for Wrist and Hand Flexibility</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the wrists and hands.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating wrist and hand stretching into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the wrists and hands. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating wrist and hand stretching into a ﬂexibility yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of wrist and hand ﬂexibility for overall ﬂexibility and mobility.</li>
                                                                 </ul>
                                                             </div>
@@ -1269,15 +1246,11 @@
                                                             <div class="content">
                                                                 <p> Week- 9 syllabus will cover below points:</p>
                                                             </div>
-
-
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 9: Yoga for Ankle and Foot Flexibility</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the ankles and feet.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating ankle and foot stretching into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for stretching the ankles and feet. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating ankle and foot stretching into a ﬂexibility yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of ankle and foot ﬂexibility for overall ﬂexibility and mobility.</li>
                                                                 </ul>
                                                             </div>
@@ -1291,12 +1264,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 10: Yoga for Balance and Stability</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Balancing ﬂexibility yoga poses for stability and core strength.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating balance training into a ﬂexibility yoga practice.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of balance training for improving ﬂexibility and mobility.</li>
-
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Balancing ﬂexibility yoga poses for stability and core strength. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating balance training into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of balance training for improving ﬂexibility and mobility. </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1309,10 +1279,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 11: Yoga for Relaxation and Stress Reduction</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for relaxation and stress reduction.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating relaxation and stress reduction into a ﬂexibility yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Flexibility yoga poses for relaxation and stress reduction. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating relaxation and stress reduction into a ﬂexibility yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of relaxation and stress reduction for improving ﬂexibility and mobility.</li>
                                                                 </ul>
                                                             </div>
@@ -1326,10 +1294,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 12: Yoga for Overall Well-being</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> PFlexibility yoga poses for overall well-being.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Understanding the connection between ﬂexibility yoga and a healthy lifestyle.. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> PFlexibility yoga poses for overall well-being. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the connection between ﬂexibility yoga and a healthy lifestyle. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of ﬂexibility yoga for overall well-being.</li>
                                                                 </ul>
                                                             </div>
@@ -1338,12 +1304,9 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
                             </div>
-
                     </section>
                 </div>
 
@@ -1357,7 +1320,6 @@
                             <h3 class="heading"> Weight Loss Yoga</h3>
                             <p class="">
                                 Online weight loss yoga classes offer a convenient and effective way to shed those extra pounds and achieve a healthy body weight. Yoga can be a great addition to a weight loss program, as it helps to increase strength, ﬂexibility, and mindfulness. Online classes provide a ﬂexible option for people to practice yoga from the comfort of their own homes, at their own pace.
-
                                 Additionally, online classes often offer a variety of options, from beginner to advanced, so people of all ﬁtness levels can ﬁnd a class that meets their needs. Joining an online weight loss yoga class can be a great way to jumpstart your weight loss journey and achieve your ﬁtness goals.
                             </p>
                             <div class="text-end mt-4">
@@ -1369,9 +1331,7 @@
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
-
                                 </li>
-
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
                                     <a href="#learnyoga3" class="btn btndemo step active" role="button">
                                         <span class="elementor-button-content-wrapper">
@@ -1392,7 +1352,6 @@
                                             <span class="elementor-button-text">Testimonials</span>
                                         </span>
                                     </a>
-
                                 </li>
                                 <li class="list-inline-item col-lg-2 col-md-2 col-6">
                                     <a href="#Instructors" class="btn btndemo step" role="button">
@@ -1409,9 +1368,7 @@
                                     </a>
                                 </li>
                                 <li class="col-lg-1 ">
-
                                 </li>
-
                             </ul>
                         </div>
                     </section>
@@ -1442,14 +1399,10 @@
                                             <span class="list-text">Nutritional guidance.</span>
                                         </li>
                                     </ul>
-
-
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
-
                                     <img src="public/images/Yoga/YogaImg2.svg" class="danceimg">
-
                                 </div>
                             </div>
                         </div>
@@ -1462,15 +1415,11 @@
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
-
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
                                         <img src="public/images/Yoga/YogaImg3.svg" class="danceimgy">
-
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
-
-
                                         <!-- trying new tab  -->
                                         <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                             <!-- Week 1 -->
@@ -1538,7 +1487,6 @@
                                                 </div>
 
                                                 <div class="module-text">
-
                                                     <div class="tab-content" id="pills-tabContent">
                                                         <!-- Week 1 -->
                                                         <div class="tab-pane fade show active" id="pills-WeightLossMonth1" role="tabpanel" aria-labelledby="pills-WeightLossMonth1-tab">
@@ -1547,12 +1495,10 @@
                                                             </div>
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 1: Introduction to Yoga for Weight Loss</h5>
-
                                                                 <ul class="icon-list-items">
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic yoga poses for weight loss.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Breathing techniques for weight loss.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Mindfulness and meditation for weight loss./li>
-
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Mindfulness and meditation for weight loss.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1565,10 +1511,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 2: Yoga for Digestion</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Poses that aid digestion and improve metabolism.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Breathing techniques for digestive health.. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Poses that aid digestion and improve metabolism. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Breathing techniques for digestive health. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the connection between digestion and weight loss.</li>
                                                                 </ul>
                                                             </div>
@@ -1579,15 +1523,11 @@
                                                             <div class="content">
                                                                 <p> Week- 3 syllabus will cover below points:</p>
                                                             </div>
-
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 3: Yoga for Strength</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Yoga poses for building strength and toning muscles.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating strength training into a yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for building strength and toning muscles. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating strength training into a yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Beneﬁts of strength training for weight loss. </li>
                                                                 </ul>
                                                             </div>
@@ -1601,13 +1541,10 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 4: Yoga for Balance and Stability</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Balancing yoga poses for stability and core strength.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating balance training into a yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Balancing yoga poses for stability and core strength.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating balance training into a yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of balance training for weight loss.</li>
                                                                 </ul>
-
                                                             </div>
                                                         </div>
 
@@ -1619,13 +1556,10 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 5: Yoga for Flexibility</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for improving ﬂexibility and range of motion.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating stretching into a yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for improving ﬂexibility and range of motion. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating stretching into a yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of ﬂexibility training for weight loss.</li>
                                                                 </ul>
-
                                                             </div>
                                                         </div>
 
@@ -1637,10 +1571,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 6: Yoga for Stress Relief</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for stress relief and relaxation.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Breathing techniques for stress reduction. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for stress relief and relaxation. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Breathing techniques for stress reduction. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the connection between stress and weight gain.</li>
                                                                 </ul>
                                                             </div>
@@ -1648,17 +1580,14 @@
 
                                                         <!-- Week 7 -->
                                                         <div class="tab-pane fade" id="pills-WeightLossMonth7" role="tabpanel" aria-labelledby="pills-WeightLossMonth7-tab">
-
                                                             <div class="content">
                                                                 <p> Week- 7 syllabus will cover below points:</p>
                                                             </div>
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 7: Yoga for Cardiovascular Health</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses that get your heart rate up and improve cardiovascular health.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating cardio into a yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses that get your heart rate up and improve cardiovascular health. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating cardio into a yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of cardiovascular exercise for weight loss.</li>
                                                                 </ul>
                                                             </div>
@@ -1672,10 +1601,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 8: Yoga for Detoxiﬁcation</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses that aid in detoxiﬁcation and elimination of toxins.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating detoxiﬁcation practices into a yoga practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses that aid in detoxiﬁcation and elimination of toxins. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating detoxiﬁcation practices into a yoga practice. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the connection between detoxiﬁcation and weight loss.</li>
                                                                 </ul>
                                                             </div>
@@ -1686,15 +1613,11 @@
                                                             <div class="content">
                                                                 <p> Week- 9 syllabus will cover below points:</p>
                                                             </div>
-
-
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 9: Yoga for Mindful Eating</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Mindful eating practices for weight loss.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Yoga poses for improving body awareness and self-control. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Mindful eating practices for weight loss. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for improving body awareness and self-control. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Beneﬁts of mindful eating for weight loss.</li>
                                                                 </ul>
                                                             </div>
@@ -1708,10 +1631,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 10: Yoga for Energy and Vitality</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for boosting energy and vitality.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Incorporating energizing practices into a yoga practice.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for boosting energy and vitality. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating energizing practices into a yoga practice.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the connection between energy and weight loss.</li>
                                                                 </ul>
                                                             </div>
@@ -1725,11 +1646,9 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 11: Yoga for Self-Love and Acceptance</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for self-love and acceptance.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Breathing techniques for self-acceptance.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Understanding the connection between self-love and weight loss.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for self-love and acceptance. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Breathing techniques for self-acceptance.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the connection between self-love and weight loss.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1742,10 +1661,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Week 12: Yoga for Maintenance and Sustainability</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for maintaining weight loss and building a sustainable practice.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Creating a long-term yoga plan for weight loss and overall health. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Yoga poses for maintaining weight loss and building a sustainable practice. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Creating a long-term yoga plan for weight loss and overall health. </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Reviewing the beneﬁts of yoga for weight loss and health.</li>
                                                                 </ul>
                                                             </div>
@@ -1754,12 +1671,9 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
                             </div>
-
                     </section>
                 </div>
 
@@ -3522,7 +3436,7 @@
                                                                     </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
                                                                         The beneﬁts of healthy eating for stress reduction and overall well-being. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Mindful eating and its impact on mental health..</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Mindful eating and its impact on mental health.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>

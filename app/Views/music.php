@@ -181,10 +181,18 @@
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
+                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
+                                                                    including microphone techniques, stage movement, and connecting with an audience</span>
+                                        </li>
 
                                     </ul>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-12"><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="learnMusicImg">     
+                                        <img src="public/images/Music/musicImg2.svg" class="danceimg">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -293,10 +301,8 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 2 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Practice of basic Sargam (vocal exercises).
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Introduction to Alankars (musical patterns). </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on developing proper breath control and voice projection </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Alankars (musical patterns). </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learning and practicing basic compositions in Raagas like Bhairavi and Yaman .</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Understanding the concept of Aaroh and Avroh (ascending and descending notes).</li>
                                                                 </ul>
@@ -573,10 +579,18 @@
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
+                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
+                                                                    including microphone techniques, stage movement, and connecting with an audience</span>
+                                        </li>
 
                                     </ul>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-12 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                <div class="col-lg-6 col-md-6 col-12 ">
+                                    <div class="learnMusicImg">     
+                                        <img src="public/images/Music/musicImg2.svg" class="danceimg">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -955,10 +969,18 @@
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
+                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
+                                                                    including microphone techniques, stage movement, and connecting with an audience</span>
+                                        </li>
 
                                     </ul>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-12 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                <div class="col-lg-6 col-md-6 col-12 ">
+                                    <div class="learnMusicImg">     
+                                        <img src="public/images/Music/musicImg2.svg" class="danceimg">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -1344,10 +1366,18 @@
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
+                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
+                                                                    including microphone techniques, stage movement, and connecting with an audience</span>
+                                        </li>
 
                                     </ul>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-12 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                <div class="col-lg-6 col-md-6 col-12 ">
+                                    <div class="learnMusicImg">     
+                                        <img src="public/images/Music/musicImg2.svg" class="danceimg">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -1736,10 +1766,18 @@
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
+                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
+                                                                    including microphone techniques, stage movement, and connecting with an audience</span>
+                                        </li>
 
                                     </ul>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-12 "><img src="public/images/Music/musicImg2.svg" class="danceimg"></div>
+                                <div class="col-lg-6 col-md-6 col-12 ">
+                                    <div class="learnMusicImg">    
+                                        <img src="public/images/Music/musicImg2.svg" class="danceimg">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
