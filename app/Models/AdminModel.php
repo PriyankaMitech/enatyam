@@ -1864,5 +1864,15 @@ return $query;
 
     return $coupan_codes;
 }
+public function gettodaysallsessions()
+{
+    $todayDayName = date('l');
 
+    $query = $this->db->table('tbl_student_shedule')
+                    ->where('days', $todayDayName)
+                    ->get()
+                    ->getResult();
+
+    return $query;
+}
 }

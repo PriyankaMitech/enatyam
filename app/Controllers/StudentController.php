@@ -922,5 +922,12 @@ class StudentController extends BaseController
             whatsapp($phoneNumber, $templates, $msg);
         return redirect()->to('StudentAttendancerecord');
     }
+    public function Coupon_Codes()
+    {
+        $model = new AdminModel();
+        $data['Coupan_code'] =$model->getallCoupan_code();
+      //  print_r($data['Coupan_code']);die;
+        return view('StudentSidebar/Coupon_Codes',$data);
+    }
     }
   

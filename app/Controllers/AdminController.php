@@ -2475,7 +2475,7 @@ public function coupon_code_generate()
 
     return redirect()->to('Coupan_code');
 
-
+}
 public function update_remark()
     {
 
@@ -2495,6 +2495,80 @@ public function update_remark()
         return redirect()->to('Admindashboard#');
     }
     
-
-}
+   
+    public function gettodaysession()
+    {
+        $model = new AdminModel();
+        $facultymodel = new facultymodel();
+        $data['allsession'] = $model->gettodaysallsessions();
+    
+        // Loop through each session
+        foreach ($data['allsession'] as $session) {
+            // Get student name
+            $studentName = $facultymodel->getname($session->student_id);
+            
+            // Get faculty name
+            $facultyName = $facultymodel->getname($session->faculty_id);
+    
+            // Fetch student mobile number
+            $whereStudent = ['id' => $session->student_id];
+            $studentMobileNumber = $model->get_single_data('register', $whereStudent);
+    
+            // Fetch faculty mobile number
+            $whereFaculty = ['id' => $session->faculty_id];
+            $facultyMobileNumber = $model->get_single_data('register', $whereFaculty);
+    
+            // Print session details along with student and faculty names and mobile numbers
+            echo "Session ID: {$session->id}<br>";
+            echo "Student Name: {$studentName}<br>";
+            echo "Student Mobile Number: {$studentMobileNumber->mobileWithCode}<br>";
+            echo "Faculty Name: {$facultyName}<br>";
+            echo "Faculty Mobile Number: {$facultyMobileNumber->mobileWithCode}<br>";
+            echo "Days: {$session->days}<br>";
+            echo "Start Date: {$session->start_date}<br>";
+            echo "End Date: {$session->end_date}<br>";
+            echo "Shedules Time: {$session->shedules_time}<br>";
+            echo "Meet Link: {$session->meetlink}<br>";
+            echo "<hr>";
+    
+            // Split session shedules time into start and end time
+            $sheduleTimes = explode(' - ', $session->shedules_time);
+            $startTime = $sheduleTimes[0]; // Start time
+    
+            // Get current timestamp and session start time
+            date_default_timezone_set('Asia/Kolkata');
+            $currentTime = time();
+            $sessionStartTime = strtotime(date('Y-m-d') . ' ' . $startTime);
+    
+            // Calculate the difference in seconds between current time and session start time
+            $timeDifference = $sessionStartTime - $currentTime;
+    
+            // Check if the session starts within the next 15 minutes
+            if ($timeDifference <= (15 * 60) && $timeDifference > 0) {
+                // Adjust time difference to include additional 30 seconds before and after
+                $adjustedTimeDifference = $timeDifference - 30;
+    
+                // Check if the adjusted time difference is within the range of 15 minutes and 30 seconds to 14 minutes and 30 seconds
+                if ($adjustedTimeDifference <= (15.5 * 60) && $adjustedTimeDifference >= (14.5 * 60)) {
+                    // Send WhatsApp message to student
+                    $phoneNumber = $studentMobileNumber->mobileWithCode;
+                    $msg = "Your session starts in the next 15 minutes. Join this link: {$session->meetlink}";
+                    $templates = "930840461869403";
+                    if (whatsapp($phoneNumber, $templates, $msg)) {
+                        echo "WhatsApp message sent successfully to student.<br>";
+                    } else {
+                        echo "Failed to send WhatsApp message to student.<br>";
+                    }
+    
+                    $phoneNumber = $facultyMobileNumber->mobileWithCode;
+                    if (whatsapp($phoneNumber, $templates, $msg)) {
+                        echo "WhatsApp message sent successfully to faculty.<br>";
+                    } else {
+                        echo "Failed to send WhatsApp message to faculty.<br>";
+                    }
+                }
+            }
+        }
+    }
+    
 }
