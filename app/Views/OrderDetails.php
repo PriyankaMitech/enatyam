@@ -42,11 +42,16 @@ $furl = $furl;
 $key_id = RAZOR_KEY_ID;
 $currency_code = $currency_code;  
           
-$per_session_price = $matchingRecords->Per_Session_Price; 
+$per_session_price = $matchingRecords->Per_Session_Price;
 
+// Assuming $billingdetails contains the discount information
+$discount = isset($billingdetails['ccdiscount']) ? $billingdetails['ccdiscount'] : 0; // Default discount to 0 if not set
 
-$amount = $matchingRecords->Total_Price * 100;
-// $amount = '100';
+// Calculate the total price after discount
+$totalPrice = $matchingRecords->Total_Price;
+$discountAmount = ($totalPrice * $discount) / 100;
+$amount = ($totalPrice - $discountAmount) * 100; // Convert to paisa (assuming the amount is in rupees)
+
 $billing_id = $lastinsert_id;
 $merchant_order_id = $id;
 $card_holder_name = 'TechArise Team';
@@ -71,8 +76,8 @@ $return_url = site_url().'PaymentController/payment';
   <input type="hidden" name="no_of_session" id="no_of_session" value="<?php echo $matchingRecords->No_of_Sessions; ?>"/>
   <input type="hidden" name="description" id="description" value="<?php echo $matchingRecords->Description; ?>"/>
   <input type="hidden" name="duration" id="duration" value="<?php echo $matchingRecords->Duration; ?>"/>
-
 </form>
+
 
 <div class="container cont-width">
     <div class="row">
@@ -180,12 +185,15 @@ $return_url = site_url().'PaymentController/payment';
                         <th class="product-No-of-Sessions">No Of Sessions </th>
                         <th class="product-Duration">Duration </th>
                         <th class="product-PerSession-Price"> Per Session Price</th>
+                        <th>Discount</th>
                         <th class="product-total">Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="cart_item">
-                        <?php if (!empty($matchingRecords)) : ?>
+                        <?php 
+                        
+                        if (!empty($matchingRecords)) : ?>
                             <td class="product-name">
                                 <span id="pname"><?php echo $matchingRecords->Name; ?></span>
 
@@ -201,20 +209,42 @@ $return_url = site_url().'PaymentController/payment';
                             <td class="product-PerSession-Price">
                                 <span id="price">₹</span><?php echo $matchingRecords->Per_Session_Price  ?></span>
                             </td>
-
+                            <td class="product-PerSession-discont">
+                                <?php if (!empty($billingdetails) && isset($billingdetails['ccdiscount'])) { ?>
+                                    <span id="discont"><?php echo $billingdetails['ccdiscount']; ?> %</span>
+                                <?php } ?>
+                            </td>
                             <td class="product-total">
-                                <span id="total">₹</span><?php echo $matchingRecords->Total_Price   ?></span>
+                            <?php if (!empty($billingdetails) && isset($billingdetails['ccdiscount'])) { 
+                                // Convert discount percentage to decimal
+                                $discountPercentage = $billingdetails['ccdiscount'] / 100;
+                                // Calculate the discount amount
+                                $discountAmount = $matchingRecords->Total_Price * $discountPercentage;
+                                // Calculate the discounted price
+                                $discountedPrice = $matchingRecords->Total_Price - $discountAmount;
+                                ?>
+                                <span id="total">₹ <?php echo number_format($discountedPrice, 2); ?> </span>
+                            <?php } ?>
                             </td>
                     </tr>
                 </tbody>
                 <tfoot>
 
                     <tr class="">
-                        <td colspan="5" style="padding:1rem;"> </td>
+                        <td colspan="6" style="padding:1rem;"> </td>
                     </tr>
                     <tr class="order-total">
-                        <td colspan="4"> <span class="woocommerce-Price-amount amount"><b>Total</b> </td>
-                        <td><b>₹<?php echo $matchingRecords->Total_Price ?></b></td>
+                        <td colspan="5"> <span class="woocommerce-Price-amount amount"><b>Total</b> </td>
+                        <td><b>   <?php if (!empty($billingdetails) && isset($billingdetails['ccdiscount'])) { 
+                                // Convert discount percentage to decimal
+                                $discountPercentage = $billingdetails['ccdiscount'] / 100;
+                                // Calculate the discount amount
+                                $discountAmount = $matchingRecords->Total_Price * $discountPercentage;
+                                // Calculate the discounted price
+                                $discountedPrice = $matchingRecords->Total_Price - $discountAmount;
+                                ?>
+                                <span id="total">₹ <?php echo number_format($discountedPrice, 2); ?> </span>
+                            <?php } ?></b></td>
                     </tr>
 
                 <?php endif; ?>

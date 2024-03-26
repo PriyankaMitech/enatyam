@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class BillingM extends Model
 {
     protected $table = 'billing_details'; // Change to your actual table name
-    protected $allowedFields = ['Fname',  'Lname', 'notes', 'country', 'address', 'city', 'pincode', 'phone', 'email'];
+    protected $allowedFields = ['Fname',  'Lname', 'notes', 'country', 'address', 'city', 'pincode', 'phone', 'email','coupon_code'];
 
     public function getSessionPricingData($id)
     {
