@@ -304,7 +304,9 @@ $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule
 
 $routes->get('AdminList', 'AdminController::AdminList');
 $routes->get('FacultyAttendance', 'AdminController::FacultyAttendance');
+$routes->post('coupon_code_generate', 'AdminController::coupon_code_generate');
 
+$routes->get('Coupan_code', 'AdminController::Coupan_code');
 
 // Routes for Faculty
 $routes->get('FacultyProfile', 'Home::FacultyProfile');

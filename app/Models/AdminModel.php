@@ -1852,4 +1852,17 @@ return $query;
          return $totalRatings;
 
  }
+  public function getallCoupan_code()
+{
+    $current_date = date('Y-m-d');
+
+    $coupan_codes = $this->db->table('Coupan_code')
+                             ->where('expiry_date >=', $current_date)
+                             ->where('Stetus', 'Y')
+                             ->get()
+                             ->getResult();
+
+    return $coupan_codes;
+}
+
 }

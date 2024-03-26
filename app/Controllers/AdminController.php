@@ -2445,4 +2445,35 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
     // // Load your view with the search result
     // return view('search_results', $data);
 }
+
+public function Coupan_code()
+{
+    $model = new AdminModel();
+   $data['Coupan_code'] =$model->getallCoupan_code();
+//    print_r($Coupan_codes['Coupan_code']);die;
+    echo view('AdminSideBar/Coupan_code',$data);
+}
+public function coupon_code_generate()
+{
+    // print_r($_POST);die;
+    $db = \Config\Database::connect();
+
+    $expiry_date = $this->request->getPost('expiry_date');
+    $coupon_code = $this->request->getPost('Coupan_code');
+    $percentage = $this->request->getPost('percentage');
+
+
+    $data = [
+        'expiry_date' => $expiry_date,
+        'Coupan_code' => $coupon_code,
+        'percentage' =>$percentage
+
+    ];
+
+    $builder = $db->table('coupan_code'); 
+    $builder->insert($data);
+
+    return redirect()->to('Coupan_code');
+
+}
 }
