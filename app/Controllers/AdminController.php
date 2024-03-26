@@ -2476,7 +2476,7 @@ public function coupon_code_generate()
     return redirect()->to('Coupan_code');
 }
 
-}
+
 public function update_remark()
     {
 
