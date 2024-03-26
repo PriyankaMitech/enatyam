@@ -2475,5 +2475,26 @@ public function coupon_code_generate()
 
     return redirect()->to('Coupan_code');
 
+
+public function update_remark()
+    {
+
+        $data = [
+        
+            'remark' => $this->request->getVar('selectedValue'),
+     
+        ];
+
+        $db = \Config\Database::Connect();
+
+            $update_data = $db->table('free_demo_table')->where('D_id', $this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'remark updated successfully.');
+        
+
+        return redirect()->to('Admindashboard#');
+    }
+    
+
 }
 }
