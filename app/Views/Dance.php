@@ -136,36 +136,67 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnKathak">
+                    <section class="learningsec" id="lear">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
                                     <p class="">
-                                        Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
+                                    The Kathak syllabus consists of a progressive series of steps and techniques that build
+                        upon each other to create a complete dance form. Here is a brief overview of the Kathak
+                        syllabus:
                                     </p>
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Basic postures and hand gestures.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Tatkaar - Basic Footwork</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Focuses on the footwork and rhythms.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Aamad - Introduction of Rhythm</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Introduces the spins and turns.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Tora and Tukda - Combination of Footwork and Rhythm</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Chakkars.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Tihai - Combination of Three Rhythmic Cycles</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Explores complex footwork patterns.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Chakkar - Spins and Turns</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Delves into abhinaya, the art of facial expressions.</span>
-                                        </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                                Combines all the elements into a cohesive dance piece.</span>
+                                             Gat Bhava - Combination of Footwork and Expressions</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                             Paran - Complex Footwork Patterns</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                         Ladi - Group of Footwork Phrases</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                         Thaat - Posture and Basic Hand Gestures</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                             Parhant - Reciting the Rhythmic Cycles</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                             Abhinaya - Expression through Face and Body</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                             Raas - Combination of Expressions and Rhythm</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                             Tarana - Combination of Rhythm and Melody</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                             Padhant - Reciting the Syllables and Rhythmic Patterns</span>
                                         </li>
                                     </ul>
 
@@ -285,7 +316,7 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
                                                                         Introduction to Tatkar (Footwork with Bells). </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Simple Hand and Feet Coordination.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Kathak postures. Rhythm and Timing.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Kathak postures.</li>
                                                                 </ul>
 
                                                             </div>
@@ -527,40 +558,77 @@
                     <section class="learningsec" id="learnbharatnatyam">
                         <div class="container">
                             <div class="row mt-5">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <h3>What you will learn</h3>
-                                    <p>
-                                        Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
+                            <div  class="col-lg-12 col-md-12 col-12">
+                                 <h3 class="">What you will learn</h3>
+                                 <p>
+                                    The Bharatanatyam syllabus consists of a progressive series of steps and techniques that
+                                    build upon each other to create a complete dance form. Here is a brief overview of the
+                                    Bharatanatyam syllabus:
                                     </p>
+                                 </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                   
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Basic postures and hand gestures.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Adavus - Basic Steps</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Focuses on the footwork and rhythms.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Hasta Mudras - Hand Gestures</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Introduces the spins and turns.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Margam - A Sequence of Items</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Chakkars.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Alarippu - A Combination of Adavus and Hasta Madras</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Explores complex footwork patterns.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Jathiswaram - A Combination of Adavus and Rhythmic Patterns</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Delves into abhinaya, the art of facial expressions.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Sabdam - A Combination of Adavus, Hasta Mudras, and Expressions</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                                Combines all the elements into a cohesive dance piece.</span>
+                                             Varnam - A Combination of Adavus, Hasta Mudras, Expressions, and Narration</span>
                                         </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Padam - An Expressive Dance with Lyrics</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Tillana - A Fast-paced Dance with Complex Footwork</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">1 Shlokam - Devotional Dance with Sanskrit Verses</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Abhinaya - Expression through Face and Body</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Natya - A Narrative Dance Form</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Samyukta Hastas - Combination of Hand Gestures</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text"> Asamyukta Hastas - Single Hand Gestures</span>
+                                        </li>
+
                                     </ul>
+                                  
 
 
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <img src="public/images/Dance/2.svg" class="danceimg">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <!-- Folk -->
+                                    <p class="mt-3">
+                                    Our expert instructors provide personalized guidance and support to help you master each
+                                    level and progress to the next. With our convenient online platform, you can learn
+                                    Bharatanatyam from anywhere in the world, at your own pace. Join us today and let's start
+                                    dancing!
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -913,41 +981,76 @@
                     <section class="learningsec" id="learnodissi">
                         <div class="container">
                             <div class="row mt-5">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <h3>What you will learn</h3>
-                                    <p>
-                                        Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
+                            <div  class="col-lg-12 col-md-12 col-12">
+                                 <h3 class="">What you will learn</h3>
+                                 <p>
+                                    Our online folk dance classes offer a vibrant syllabus that showcases the diverse and rich
+                                    cultural heritage of various regions around the world. Here is an overview of our syllabus:   
                                     </p>
+                                 </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Basic postures and hand gestures.</span>
+                                        <h6>Level 1 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Basic Footwork and Hand Gestures</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Focuses on the footwork and rhythms.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Introduction to Rhythm and Timing</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Introduces the spins and turns.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Sthayee - Static Poses</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Chakkars.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Chauka - A Square Stance</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Explores complex footwork patterns.</span>
+                                        <h6>Level 2 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Intermediate Footwork and Hand Gestures</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Delves into abhinaya, the art of facial expressions.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Tribhangi - A Three-fold Bend</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Bhangis - Dance Movements with Stance Changes</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                                Combines all the elements into a cohesive dance piece.</span>
+                                            Pallavi - A Pure Dance Form</span>
+                                        </li>
+                                        <h6>Level 3 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Advanced Footwork and Hand Gestures</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Abhinaya - Expressive Interpretation of Dance</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Moksha - A Spiritual Interpretation of Dance </span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                            Guru Vandana - Offering Gratitude to the Guru</span>
                                         </li>
                                     </ul>
-
-
+                                    <p class="mt-3">
+                                 
+                                    </p>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Odissi -->
+                                    <div class="folkImg">
                                     <img src="public/images/Dance/odissi-3.png" class="danceimg">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <!-- Folk -->
+                                    <p class="mt-3">
+                                    Our expert instructors provide personalized guidance and support to help you master each
+                                    level and progress to the next. With our convenient online platform, you can learn Odissi
+                                    dance from anywhere in the world, at your own pace. Join us today and let's start dancing to
+                                    the rhythms of Odissi!
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1207,40 +1310,75 @@
                     <section class="learningsec" id="learnBollywood">
                         <div class="container">
                             <div class="row mt-5">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <h3>What you will learn</h3>
-                                    <p>
-                                        Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
+                            <div  class="col-lg-12 col-md-12 col-12">
+                                 <h3 class="">What you will learn</h3>
+                                 <p>
+                                    Our online folk dance classes offer a vibrant syllabus that showcases the diverse and rich
+                                    cultural heritage of various regions around the world. Here is an overview of our syllabus:   
                                     </p>
+                                 </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Basic postures and hand gestures.</span>
+                                        <h6>Level 1 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Basic Bollywood Dance Steps</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Focuses on the footwork and rhythms.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Introduction to Bollywood Music and Rhythm</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Introduces the spins and turns.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Hands and Feet Coordination</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Chakkars.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Bollywood-style Walks and Turns</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Explores complex footwork patterns.</span>
+                                        <h6>Level 2 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Intermediate Bollywood Dance Steps</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Delves into abhinaya, the art of facial expressions.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Complex Hand Gestures and Expressions</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Choreography for Popular Bollywood Songs</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                                Combines all the elements into a cohesive dance piece.</span>
+                                            Introduction to Bollywood Fusion Styles</span>
+                                        </li>
+                                        <h6>Level 3 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Advanced Bollywood Dance Steps</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">High-energy Performance Techniques</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Advanced Choreography for Popular Bollywood Songs</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                            Bollywood Fusion Styles</span>
                                         </li>
                                     </ul>
+                                  
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Bollywood -->
-                                    <img src="public/images/Dance/bollywood-21.png" class="danceimg">
+                                    <div class="folkImg">
+                                        <img src="public/images/Dance/bollywood-21.png" class="danceimg">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <!-- Folk -->
+                                    <p class="mt-3">
+                                    Our expert instructors provide personalized guidance and support to help you master each
+                                    level and progress to the next. With our convenient online platform, you can learn Bollywood
+                                    dance from anywhere in the world, at your own pace. Join us today and let's start dancing to
+                                    the beats of Bollywood! 
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1350,11 +1488,12 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 7-8 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the basic hasta (hand gestures) and their use in Odissi.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Basic adavus (dance steps) in different styles (bhava). </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic abhinaya (facial expressions) in different emotions (rasa).</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic adavus (dance steps) in different Nayikas (heroine) and Nayakas (hero) styles.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the concept of Taala (rhythm) and its variations.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses and movements with different emotions (rasa)</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Intermediate footwork and grooves in different styles (bhava) </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate rhythm (beat) exercises with footwork, hand claps and music</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the use of facial expressions and gestures in storytelling</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Bollywood choreography and its variations</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the use of costumes in Bollywood dance</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1363,11 +1502,12 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 9-10 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) and their variations.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate tala (rhythm) exercises with music. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate abhinaya (facial expressions) in different emotions (rasa)</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate mudras (hand gestures) and their use in Odissi.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different Nayikas (heroine) and Nayakas (hero) styles.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Bollywood choreography and its complexities</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses and movements with expressions and emotions </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate rhythm (beat) exercises with footwork, hand claps and music</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the use of different dance formations in Bollywood dance</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate use of facial expressions and gestures in storytelling</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate use of costumes in Bollywood dance</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1376,11 +1516,12 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 11-12 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses (asanas) in Odissi.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different speeds (gati). </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the basic repertoire of Abhinaya (expressive) pieces.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different positions (tribhangi, chowk and samabhanga).</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different tempos (laya). </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses and movements with different styles (bhava)</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate footwork and grooves with different emotions (rasa) </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate rhythm (beat) exercises with footwork, hand claps, and music variations</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the use of props and themes in Bollywood dance</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate use of different dance formations and group choreography </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Performance-based learning and putting together all the skills learned throughout the course </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1478,46 +1619,77 @@
                     <section class="learningsec" id="learnWestern">
                         <div class="container">
                             <div class="row mt-5">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <h3>What you will learn</h3>
-                                    <p>
-                                        Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
+                            <div class="col-lg-12 col-md-12 col-12">
+                                    <!-- Folk -->
+                                    <p class="mt-3">
+                                    Our expert instructors provide personalized guidance and support to help you master each
+                                    level and progress to the next. With our convenient online platform, you can learn Folk dance
+                                    from anywhere in the world, at your own pace. Join us today and let's explore the beauty and
+                                    diversity of Folk dance together!
                                     </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                   
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Basic postures and hand gestures.</span>
+                                        <h6>Level 1 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Basic Rhythm and Timing</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Focuses on the footwork and rhythms.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Introduction to Body Alignment and Posture</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Introduces the spins and turns.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Basic Steps and Techniques for Contemporary, Jazz, and Ballet</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Chakkars.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Choreography for Simple Dance Combinations</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Explores complex footwork patterns.</span>
+                                        <h6>Level 2 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Intermediate Techniques for Contemporary, Jazz, and Ballet</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Delves into abhinaya, the art of facial expressions.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Introduction to Hip Hop Dance Style</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Choreography for Intermediate Dance Combinations</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                                Combines all the elements into a cohesive dance piece.</span>
+                                            Expressive Interpretation of Dance</span>
+                                        </li>
+                                        <h6>Level 3 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Advanced Techniques for Contemporary, Jazz, and Ballet</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Advanced Choreography for Contemporary, Jazz, and Ballet</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Advanced Techniques for Hip Hop Dance Style</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                            Choreography for Advanced Hip Hop Dance Combinations</span>
                                         </li>
                                     </ul>
-
-
+                                
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-
-
                                     <!-- Western -->
-
-                                    <img src="public/images/Dance/western-3.png" class="danceimg">
-
+                                    <div class="folkImg">
+                                        <img src="public/images/Dance/western-3.png" class="danceimg">
+                                    </div>   
                                 </div>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <p class="mt-3">
+                                    Our expert instructors provide personalized guidance and support to help you master each
+                                    level and progress to the next. With our convenient online platform, you can learn Western
+                                    dance from anywhere in the world, at your own pace. Join us today and let's start dancing to
+                                    the beats of Western dance!
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     </section>
@@ -1655,7 +1827,7 @@
                                                                     </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
                                                                         Focus on Jazz walk, turns, and jumps. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learning a Jazz dance routine./li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learning a Jazz dance routine.</li>
 
                                                                 </ul>
                                                             </div>
@@ -1670,7 +1842,7 @@
                                                                     </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
                                                                         Focus on Ballet positions, plies, and pirouettes. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> ILearning a Ballet dance routine.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learning a Ballet dance routine.</li>
 
                                                                 </ul>
                                                             </div>
@@ -1870,9 +2042,9 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3>What you will learn</h3>
+                                    <h3 class="mt-4">What you will learn</h3>
                                     <p>
-                                        Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
+                                         
                                     </p>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1976,13 +2148,13 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 1-2 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Bollywood dance and its history.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic posture and hand gestures (mudras).</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Simple footwork and grooves.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic rhythm (beat) exercises.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the Indian ﬁlm industry and music composers.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic facial expressions and emotions (bhavas).</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic poses and movements.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to semi-classical dance and its history</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic posture and hand gestures (mudras)</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Simple footwork</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic rhythm (tala) exercises</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Introduction to the classical music and its instruments</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Abhinaya (expressions) and facial gestures (bhava)</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic poses (asanas) and movements (karanas)</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -1992,15 +2164,12 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 3-4 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to different styles of Bollywood dance.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate hand gestures (hastas) and their use in dance compositions. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate footwork and grooves.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>Intermediate rhythm (beat) exercises with hand claps.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to different Indian musical genres used in Bollywood dance.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate facial expressions and emotions (bhavas).
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the use of props in Bollywood dance.
-                                                                    </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the three primary positions</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic hand gestures (hastas) and their use in dance compositions </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic adavus (dance steps) in different tempos (laya)</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic rhythm (tala) exercises with hand claps</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Abhinaya (expressions) in different emotions (rasa)</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic poses (asanas) and their variations </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2010,12 +2179,12 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 5-6 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate hand gestures (hastas) and their use in different styles (bhava). </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate footwork and grooves in different tempos (laya). </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate rhythm (beat) exercises with footwork and hand claps.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate facial expressions and emotions (bhavas) in different songs.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Bollywood choreography and its elements.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses and movements with different expressions.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate hand gestures (hastas) and their use in dance compositions. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate footwork (tatkar and tattadavu) in different tempos (laya) </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate rhythm (tala) exercises with hand claps</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Abhinaya (expressions) in different emotions (rasa)</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the concept of Abhinaya Darpana and its application in dance</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses (asanas) and their variations </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2025,13 +2194,12 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 7-8 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the basic hasta (hand gestures) and their use in Odissi.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Basic adavus (dance steps) in different styles (bhava). </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic abhinaya (facial expressions) in different emotions (rasa).</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic adavus (dance steps) in different Nayikas (heroine) and Nayakas (hero) styles.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the concept of Taala (rhythm) and its variations.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different styles (bhava) </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate rhythm (tala) exercises with footwork </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate hand gestures (hastas) and their use in different compositions </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the concept of Natya Shastra and its relevance to dance </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Abhinaya (expressions) in different compositions </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses (asanas) and their variations </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2041,14 +2209,14 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 9-10 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) and their variations.
-                                                                    </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                                                                        Intermediate tala (rhythm) exercises with music. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate abhinaya (facial expressions) in different emotions (rasa)</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate mudras (hand gestures) and their use in Odissi.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different Nayikas (heroine) and Nayakas (hero) styles.
-                                                                    </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses (asanas) and their variations </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate footwork in different tempos (laya) </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate rhythm (tala) exercises with footwork and hand claps </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate hand gestures (hastas) and their use in different emotions (rasa) </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Abhinaya (expressions) in different compositions </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the basic repertoire of semi-classical dance</li>
+
+                                                                    
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2058,12 +2226,12 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 11-12 :</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses (asanas) in Odissi.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different speeds (gati). </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the basic repertoire of Abhinaya (expressive) pieces.</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different positions (tribhangi, chowk and samabhanga).</li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different tempos (laya).
-                                                                    </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Abhinaya (expressions) in different styles (bhava) </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate poses (asanas) and their variations </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate adavus (dance steps) in different rhythms (tala) </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate rhythm (tala) exercises with footwork, hand claps and music </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate hand gestures (hastas) and their use in different styles (bhava) </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Abhinaya (expressions) in different compositions </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2161,9 +2329,9 @@
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <h3>What you will learn</h3>
+                                    <h3 class="">What you will learn</h3>
                                     <p>
-                                        Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
+                                         
                                     </p>
                                     <ul class="list-group">
                                         <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2304,7 +2472,8 @@
                                                                 <h5 class="MonthHeading">Month 2 : Intermediate Bhangra dance techniques</h5>
                                                                 <ul class="icon-list-items">
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> More advanced Bhangra footwork and movements. </li>
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating hand and arm movements in Bhangra dance.</li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on building stamina and strength </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating hand and arm movements in Bhangra dance. </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2521,40 +2690,76 @@
                     <section class="learningsec" id="learnFolk">
                         <div class="container">
                             <div class="row mt-5">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <h3>What you will learn</h3>
-                                    <p>
-                                        Our online Kathak dance classes are the perfect way to begin! Our comprehensive syllabus consists of seven steps that cover the essential elements of Kathak dance.
+                                 <div  class="col-lg-12 col-md-12 col-12">
+                                 <h3 class="">What you will learn</h3>
+                                 <p>
+                                    Our online folk dance classes offer a vibrant syllabus that showcases the diverse and rich
+                                    cultural heritage of various regions around the world. Here is an overview of our syllabus:   
                                     </p>
+                                 </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    
+                                    
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Basic postures and hand gestures.</span>
+                                        <h6>Level 1 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Introduction to Folk Dance Styles from Various Regions</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Focuses on the footwork and rhythms.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Basic Steps and Techniques for Folk Dance Styles</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Introduces the spins and turns.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Understanding Rhythm and Timing for Folk Dance</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Chakkars.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Choreography for Simple Folk Dance Combinations</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Explores complex footwork patterns.</span>
+                                        <h6>Level 2 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Intermediate Techniques for Folk Dance Styles</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                                            <span class="list-text">Delves into abhinaya, the art of facial expressions.</span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Advanced Rhythm and Timing for Folk Dance</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Choreography for Intermediate Folk Dance Combinations</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                                Combines all the elements into a cohesive dance piece.</span>
+                                            Expressive Interpretation of Folk Dance</span>
+                                        </li>
+                                        <h6>Level 3 :</h6>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Advanced Techniques for Folk Dance Styles</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Advanced Choreography for Folk Dance Styles</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">Combining Different Folk Dance Styles</span>
+                                        </li>
+                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                            <span class="list-text">
+                                            Presentation Techniques for Folk Dance Performances</span>
                                         </li>
                                     </ul>
 
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Folk -->
+                                    <div class="folkImg">
                                     <img src="public/images/Dance/folk-dance-2.png" class="danceimg">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <!-- Folk -->
+                                    <p class="mt-3">
+                                    Our expert instructors provide personalized guidance and support to help you master each
+                                    level and progress to the next. With our convenient online platform, you can learn Folk dance
+                                    from anywhere in the world, at your own pace. Join us today and let's explore the beauty and
+                                    diversity of Folk dance together!
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -2659,7 +2864,7 @@
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 2 : Intermediate Folk Dance Techniques</h5>
                                                                 <ul class="icon-list-items">
-                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> More advanced Bhangra footwork and movements. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> More advanced folk dance footwork and movements </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on building stamina and strength.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Incorporating hand and arm movements in Folk dance.</li>
                                                                 </ul>
@@ -2717,7 +2922,7 @@
                                                         <!-- Month 7 -->
                                                         <div class="tab-pane fade" id="pills-FolkMonth7" role="tabpanel" aria-labelledby="pills-FolkMonth7-tab">
                                                             <div class="month-text">
-                                                                <h5 class="MonthHeading">Month 7 : Choreography and Performance/h5>
+                                                                <h5 class="MonthHeading">Month 7 : Choreography and Performance </h5>
                                                                     <ul class="icon-list-items">
                                                                         <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn and rehearse a full Folk dance performance. </li>
                                                                         <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on stage presence and audience engagement. </li>
