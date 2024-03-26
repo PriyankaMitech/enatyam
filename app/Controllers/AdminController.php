@@ -2497,7 +2497,7 @@ public function update_remark()
     }
     
 
-public function gettodaysession()
+    public function gettodaysession()
     {
         $model = new AdminModel();
         $facultymodel = new facultymodel();
@@ -2507,7 +2507,7 @@ public function gettodaysession()
         foreach ($data['allsession'] as $session) {
             // Get student name
             $studentName = $facultymodel->getname($session->student_id);
-            
+    
             // Get faculty name
             $facultyName = $facultymodel->getname($session->faculty_id);
     
@@ -2539,7 +2539,7 @@ public function gettodaysession()
             // Get current timestamp and session start time
             date_default_timezone_set('Asia/Kolkata');
             $currentTime = time();
-            $sessionStartTime = strtotime(date('Y-m-d') . ' ' . $startTime);
+            $sessionStartTime = strtotime($startTime);
     
             // Calculate the difference in seconds between current time and session start time
             $timeDifference = $sessionStartTime - $currentTime;
@@ -2550,10 +2550,10 @@ public function gettodaysession()
                 $adjustedTimeDifference = $timeDifference - 30;
     
                 // Check if the adjusted time difference is within the range of 15 minutes and 30 seconds to 14 minutes and 30 seconds
-                if ($adjustedTimeDifference <= (15.5 * 60) && $adjustedTimeDifference >= (14.5 * 60)) {
+                if ($adjustedTimeDifference <= (14.5 * 60) && $adjustedTimeDifference >= (14 * 60)) {
                     // Send WhatsApp message to student
                     $phoneNumber = $studentMobileNumber->mobileWithCode;
-                    $msg = "Your session starts in the next 15 minutes. Join this link: {$session->meetlink}";
+                    $msg = "$studentName Your session starts in the next 15 minutes. Join this link: {$session->meetlink}";
                     $templates = "930840461869403";
                     if (whatsapp($phoneNumber, $templates, $msg)) {
                         echo "WhatsApp message sent successfully to student.<br>";
@@ -2561,7 +2561,10 @@ public function gettodaysession()
                         echo "Failed to send WhatsApp message to student.<br>";
                     }
     
+                    // Send WhatsApp message to faculty
                     $phoneNumber = $facultyMobileNumber->mobileWithCode;
+                    $msg = "$facultyName Your session starts in the next 15 minutes. Join this link: {$session->meetlink}";
+
                     if (whatsapp($phoneNumber, $templates, $msg)) {
                         echo "WhatsApp message sent successfully to faculty.<br>";
                     } else {
@@ -2570,7 +2573,5 @@ public function gettodaysession()
                 }
             }
         }
-    
-    
-}
+    }
 }
