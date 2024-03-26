@@ -2445,4 +2445,25 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
     // // Load your view with the search result
     // return view('search_results', $data);
 }
+
+
+public function update_remark()
+    {
+
+        $data = [
+        
+            'remark' => $this->request->getVar('selectedValue'),
+     
+        ];
+
+        $db = \Config\Database::Connect();
+
+            $update_data = $db->table('free_demo_table')->where('D_id', $this->request->getVar('id'));
+            $update_data->update($data);
+            session()->setFlashdata('success', 'remark updated successfully.');
+        
+
+        return redirect()->to('Admindashboard#');
+    }
+    
 }

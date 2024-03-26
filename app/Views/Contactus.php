@@ -41,8 +41,14 @@
                     <div class="cont-card text-center cont-card1">
                         <img class="iconc" src="public/images/mobile-phone.png" />
 
-                        <h3><a href="tel:70205 09962">Call Us</a> </h3>
-                        <p><a href="tel:70205 09962">+91 70205 09962</a></p>
+                        <h3><a href="tel:+91-20-67873249">Call Us</a> </h3>
+                        <p><b>Customer Support : </b><a href="tel:+91-20-67873249">+91-20-67873249</a><br>
+                        <b>Whatsapp : </b><a>+91-9272122001</a><br>
+                        <b>Teacher Support : </b><a href="tel:+91-7020509962">+91-7020509962</a>
+                    </p>
+                    
+
+
 
                     </div>
 
@@ -52,8 +58,8 @@
                     <div class="cont-card text-center cont-card2">
                         <img class="iconc" src="public/images/mail.png" />
 
-                        <h3><a href="mailTo:contact@enatyam.com">Mail Us</a> </h3>
-                        <p><a href="mailTo:contact@enatyam.com">contact@enatyam.com
+                        <h3><a href="mailTo:hello@enatyam.com">Mail Us</a> </h3>
+                        <p><a href="mailTo:hello@enatyam.com">hello@enatyam.com
 
 
 
@@ -67,9 +73,12 @@
                     <div class="cont-card text-center cont-card3">
                         <img class="iconc" src="public/images/pin.png" />
 
-                        <h3><a href="mailTo:contact@enatyam.com">Address</a> </h3>
-                        <p><a href="mailTo:contact@enatyam.com">T3-Godrej Hills -2 Baner Village Pune , Maharashtra -411045
-
+                        <h3><a >Address</a> </h3>
+                        <p><a >
+                           ENATYAM INDIA PVT.LTD. <br> 
+                            T3-GODREJ HILLS2 - BANER <br>
+                            NEAR SUNNY'S WORLD <br>
+                            PUNE, MAHARASTRA 411045.
 
 
                             </a></p>

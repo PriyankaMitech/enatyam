@@ -326,4 +326,51 @@ class LoginController extends BaseController
         }
         return redirect()->to('profilemanagment');
     }
+
+    public function demojoininglink(){
+        $model = new AdminModel();
+        $wherecond = ['register_id' => $_SESSION['sessiondata']['id'],
+        'Conducted_Demo' => 'N'
+    ];
+    $orderby = array('created_on' => 'DESC');
+
+    $data['demo_data'] = $model->getsingleroworderby('free_demo_table', $wherecond, $orderby);
+
+        
+        // echo "<pre>";print_r( $data['demo_data']);exit();
+        return view('demojoininglink',$data);
+
+    }
+
+    public function referandearn(){
+        // $model = new AdminModel();
+        // $wherecond = ['register_id' => $_SESSION['sessiondata']['id']];
+        // $data['demo_data'] = $model->get_single_data('free_demo_table', $wherecond);
+        
+        // echo "<pre>";print_r( $data['demo_data']);exit();
+        return view('referandearn');
+
+    }
+
+    public function bookdemo2(){
+        $model = new AdminModel();
+        $wherecond = ['register_id' => $_SESSION['sessiondata']['id'],
+                      'Conducted_Demo' => 'N'
+                        ];
+        $orderby = array('created_on' => 'DESC');
+
+        $data['demo_data'] = $model->getsingleroworderby('free_demo_table', $wherecond, $orderby);
+
+        $wherecond = array('is_deleted' => 'N');
+
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+
+        
+        
+        // echo "<pre>";print_r( $data['courses_data']);exit();
+        return view('bookdemo2',$data);
+
+    }
+
+    
 }

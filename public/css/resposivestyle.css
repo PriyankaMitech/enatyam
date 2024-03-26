@@ -3,6 +3,18 @@
   text-align: center;
   font-size: 14px;
 }
+.contact-card-section .cont-cardcp {
+  padding: 10px;
+}
+.contact-card-section .cont-cardcp .cont-card1 {
+  height: 276px;
+}
+.contact-card-section .cont-cardcp .cont-card2 {
+  height: 276px;
+}
+.contact-card-section .cont-cardcp .cont-card3 {
+  height: 276px;
+}
 .bookdimg {
   padding: 33px 20px;
 }
