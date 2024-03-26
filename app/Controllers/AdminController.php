@@ -2476,7 +2476,7 @@ public function coupon_code_generate()
     return redirect()->to('Coupan_code');
 }
 
-}
+
 public function update_remark()
     {
 
@@ -2496,8 +2496,8 @@ public function update_remark()
         return redirect()->to('Admindashboard#');
     }
     
-   
-    public function gettodaysession()
+
+public function gettodaysession()
     {
         $model = new AdminModel();
         $facultymodel = new facultymodel();
@@ -2570,6 +2570,7 @@ public function update_remark()
                 }
             }
         }
-    }
     
+    
+}
 }
