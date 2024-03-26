@@ -267,8 +267,11 @@ class DemoController extends BaseController
 
         $wherecond = ['register_id' => $_SESSION['sessiondata']['id']];
         $demo_data = $model->getalldata('free_demo_table', $wherecond);
+        $democ = 0;
+        if(!empty(($demo_data))){
 
         $democ = count($demo_data);
+        }
 
         // echo "<pre>";print_r($democ);exit();
         if ($democ <= 2) { // Check if count is less than or equal to 3
