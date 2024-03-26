@@ -293,6 +293,7 @@ $routes->get('edit_group/(:any)', 'AdminController::edit_group/$1');
 
 
 $routes->get('AddNewUser', 'AdminController::add_new_user');
+$routes->get('gettodaysession', 'AdminController::gettodaysession');
 
 $routes->post('edit_user/(:any)', 'AdminController::AdduserByadmin/$1');
 $routes->get('edit_user/(:any)', 'AdminController::get_user/$1');
@@ -394,6 +395,7 @@ $routes->post('check_slot_availability', 'StudentController::check_slot_availabi
 
 $routes->get('feedback', 'StudentController::feedback');
 $routes->get('View_certificate', 'StudentController::certificate');
+$routes->get('Coupon_Codes', 'StudentController::Coupon_Codes');
 
 $routes->post('savefeedback', 'StudentController::savefeedback');
 $routes->post('submit_review', 'StudentController::submit_review');

@@ -708,7 +708,7 @@ if (!empty($counter_data)) {
                   </li>
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>ModelForLogin" class="nav-link">
+                    <a href="<?php echo base_url() ?>Coupon_Codes" class="nav-link">
                     <i class=" nav-icon fa fa-gift"></i>
                       <p>Coupon Codes</p>
                     </a>
