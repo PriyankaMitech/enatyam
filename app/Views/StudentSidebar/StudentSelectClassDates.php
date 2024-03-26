@@ -1,4 +1,5 @@
-<?php echo view('StudentSidebar/Studentsidebar'); ?>
+<?php include('Studentsidebar.php'); ?>
+
 
 <link rel="stylesheet" href="public/calendar/fullcalendar/lib/main.min.css">
 <script src="public/calendar/js/jquery-3.6.0.min.js"></script>
@@ -165,7 +166,7 @@ foreach($schedule_data as $data){
 
 <script src="public/calendar/js/script.js"></script>
 
-<?php echo view('StudentSidebar/StudentFooter.php'); ?>
+<?php include('StudentFooter.php') ; ?>
 <script>
 var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>

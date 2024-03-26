@@ -190,8 +190,16 @@ $wherecond = [
 $orderby = ['created_on' => 'DESC'];
 
 $counter_data = $adminModel->getsingleroworderby('free_demo_table', $wherecond, $orderby);
+$currentDayOfWeek = date('l');
+$wherecond2 = [
+  'student_id' => $_SESSION['sessiondata']['id'],
+  'days' => $currentDayOfWeek
+];
 
-// echo "<pre>";print_r($counter_data);exit();
+$scounter_data = $adminModel->getsinglerow('tbl_student_shedule',$wherecond2);
+
+
+// echo "<pre>";print_r($scounter_data);exit();
 ?>
   <div id="flash-message-container">
     <?php if (session()->has('errormessage')) : ?>
@@ -271,7 +279,90 @@ $counter_data = $adminModel->getsingleroworderby('free_demo_table', $wherecond, 
 
 
 
+     
       <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        <?php 
+date_default_timezone_set('Asia/Kolkata');
+
+if (!empty($scounter_data)) {
+    // Convert start time string to DateTime object
+    $startTime = $scounter_data->start_time;
+    
+    // Get the current time
+    $currentTime = new DateTime();
+    
+    // Convert the current time to a string in a specific format
+    $currentTimeString = $currentTime->format('H:i:s');
+
+
+  //   echo $currentTimeString;
+
+  //  exit();
+
+
+  // echo $startTime;
+  // echo $currentTimeString;exit();
+
+    // Check if the current time is greater than or equal to the start time
+    if ($startTime > $currentTimeString ) {
+
+        // Display the countdown timer
+?>
+<main  id="countdown-container">
+    <div class='cards'>
+        <div class='card hours'>
+            <div class='flip-card'>
+                <div class='top-half'>00</div>
+            </div>
+            <p>Hours</p>
+        </div>
+
+        <div class='card minutes'>
+            <div class='flip-card'>
+                <div class='top-half'>00</div>
+            </div>
+            <p>Minutes</p>
+        </div>
+
+        <div class='card seconds'>
+            <div class='flip-card'>
+                <div class='top-half'>00</div>
+            </div>
+            <p>Seconds</p>
+        </div>
+    </div>
+</main>
+<?php } else {?>
+    
+    <main id="countdown-container" style="display:none">
+    <div class='cards'>
+        <div class='card hours'>
+            <div class='flip-card'>
+                <div class='top-half'>00</div>
+            </div>
+            <p>Hours</p>
+        </div>
+
+        <div class='card minutes'>
+            <div class='flip-card'>
+                <div class='top-half'>00</div>
+            </div>
+            <p>Minutes</p>
+        </div>
+
+        <div class='card seconds'>
+            <div class='flip-card'>
+                <div class='top-half'>00</div>
+            </div>
+            <p>Seconds</p>
+        </div>
+    </div>
+</main>
+  <?php  }}
+
+?>
+        </li>
         <?php if ($_SESSION['sessiondata']['Payment_status'] == 'Y') { ?>
           <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
@@ -329,6 +420,7 @@ $counter_data = $adminModel->getsingleroworderby('free_demo_table', $wherecond, 
 
                 <?php } ?>
               </div>
+
               <a href="<?= base_url(); ?>notification" class="dropdown-item dropdown-footer">See All Messages</a>
             </div>
           </li>
@@ -423,6 +515,9 @@ if (!empty($counter_data)) {
     }
 }
 ?>
+
+
+
 
 <!-- <a class="nav-link" data-widget="fullscreen" href="#" role="button">
             <i class="fas fa-expand-arrows-alt"></i>

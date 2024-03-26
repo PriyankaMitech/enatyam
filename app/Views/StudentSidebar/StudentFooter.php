@@ -438,18 +438,7 @@
 
 
 <?php
-// $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
 
-// $wherecond = [
-//     'register_id' => $_SESSION['sessiondata']['id'],
-//     'Conducted_Demo' => 'N'
-// ];
-// $orderby = ['created_on' => 'DESC'];
-
-// $counter_data = $adminModel->getsingleroworderby('free_demo_table', $wherecond, $orderby);
-
-// echo "<pre>";print_r($counter_data);
-// exit();
 
 if (!empty($counter_data)) {
     // Convert date and time strings to DateTime objects
@@ -512,6 +501,74 @@ initializeClock(countdownDate);
 
 
 <?php } ?>
+
+
+<?php
+
+
+if (!empty($scounter_data)) {
+    // Convert date and time strings to DateTime objects
+    $bookDate = new DateTime(date('Y-m-d'));
+    $bookTime = new DateTime($scounter_data->start_time);
+    
+    // Combine date and time
+    $bookDateTime = new DateTime($bookDate->format('Y-m-d') . ' ' . $bookTime->format('H:i:s'));
+// echo $bookDateTime;exit();
+    // Add 14 days to the combined datetime
+    $bookDateTime->add(new DateInterval('P14D'));
+    
+    // Format the combined datetime into JavaScript compatible format
+    $jsBookDateTime = $bookDateTime->format('Y/m/d H:i:s');
+?>
+
+<script>
+const countdownDate = new Date("<?php echo $jsBookDateTime; ?>");
+
+const hours = document.querySelector(".hours").querySelector(".flip-card");
+const minutes = document.querySelector(".minutes").querySelector(".flip-card");
+const seconds = document.querySelector(".seconds").querySelector(".flip-card");
+
+function getTimeRemaining(endtime) {
+  const total = Date.parse(endtime) - Date.parse(new Date());
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 60);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+
+  return {
+    total,
+    hours,
+    minutes,
+    seconds
+  };
+}
+
+function initializeClock(endtime) {
+  function updateClock() {
+    const t = getTimeRemaining(endtime);
+
+    hours.querySelector(".top-half").innerText = ("0" + t.hours).slice(-2);
+    minutes.querySelector(".top-half").innerText = ("0" + t.minutes).slice(-2);
+    seconds.querySelector(".top-half").innerText = ("0" + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  const timeinterval = setInterval(updateClock, 1000);
+}
+
+initializeClock(countdownDate);
+</script>
+
+
+
+
+
+<?php } ?>
+
+
 
 </div>
 </body>

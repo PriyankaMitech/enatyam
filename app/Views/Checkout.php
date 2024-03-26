@@ -37,23 +37,23 @@
         </div>
     </section>
 
-    <div class="container cont-width">
+    <div class="container cont-width BillingInformation">
         <div class="row">
             <div class="col-lg-12  ">
                 <form class="check-form" action="<?php echo base_url(); ?>BillingInformation" method="post" id="checkoutForm">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 bip">
                             <h5>BILLING DETAILS</h5>
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 bip">
                                     <label>First name <sup>*</sup></label>
                                     <input type="text" name="Fname" class="form-control" id="Fname" value="<?php echo $_SESSION['user_name'] ?>" />
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 bip">
                                     <label>Last name <sup>*</sup></label>
                                     <input type="text" name="Lname" class="form-control" id="Lname" />
                                 </div>
-                                <div class="col-lg-12">
+                                <div class="col-lg-12 bip">
                                     <label>Country/Region <sup>*</sup></label>
                                     <select class="form-select form-control required" name="country" aria-label="Default select example" id="country" >
 
@@ -333,7 +333,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 bip">
                             <h5>ADDITIONAL DETAILS</h5>
                             <label>Order notes (optional)
                             </label>
