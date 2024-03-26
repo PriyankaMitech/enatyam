@@ -2474,6 +2474,7 @@ public function coupon_code_generate()
     $builder->insert($data);
 
     return redirect()->to('Coupan_code');
+}
 
 
 public function update_remark()
@@ -2496,5 +2497,4 @@ public function update_remark()
     }
     
 
-}
 }
