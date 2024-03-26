@@ -31,6 +31,8 @@ class BillingC extends BaseController
                 'pincode' => $this->request->getPost('pincode'),
                 'phone' => $this->request->getPost('phone'),
                 'email' => $this->request->getPost('email'),
+                // 'coupon_code' => $this->request->getPost('coupon_code'),
+
 
 
             ];

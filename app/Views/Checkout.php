@@ -11,7 +11,8 @@
 
         <div class="container cont-width">
             <div class="row">
-                <div class="col-lg-12">
+                                             <div class="col-lg-12 bip">
+
                     <h1>Checkout</h1>
                 </div>
             </div>
@@ -21,7 +22,8 @@
     <section class="cont-main-section">
         <div class="container cont-width">
             <div class="row">
-                <div class="col-lg-12">
+                                             <div class="col-lg-12 bip">
+
                     <ul class="breadcrumb-ul">
                         <li>
                             <a href="">Home</a>
@@ -305,30 +307,40 @@
                                     </select>
                                 </div>
 
-                                <div class="col-lg-12">
+                                <div class="col-lg-12 bip">
 
                                     <label>Street address <sup>*</sup></label>
                                     <input type="text" name="address" placeholder="House number and street name" id="address" class="form-control">
                                 </div>
 
-                                <div class="col-lg-12">
+                                                             <div class="col-lg-12 bip">
+
 
                                     <label>Town / City <sup>*</sup></label>
                                     <input type="text" name="city" placeholder="House number and street name" id="city" class="form-control">
                                 </div>
 
-                                <div class="col-lg-12">
+                                                             <div class="col-lg-12 bip">
+
                                     <label>Postcode/ZIP <sup>*</sup></label>
                                     <input type="text" name="pincode" placeholder="Pincode number and Zip" id="pincode" class="form-control">
                                 </div>
-                                <div class="col-lg-12">
+                                                             <div class="col-lg-12 bip">
+
                                     <label>Mobile Number<sup>*</sup></label>
                                     <input type="text" name="phone" placeholder="Enter Your Mobile number" id="phone" class="form-control" value="<?php echo $_SESSION['mobile_no'] ?>" readonly  pattern="[0-9]{10}">
                                 </div>
-                                <div class="col-lg-12">
+                                                             <div class="col-lg-12 bip">
+
                                     <label>Email<sup>*</sup></label>
                                     <input type="email" name="email" placeholder="Enter Your Email " id="Email" class="form-control" value="<?php echo $_SESSION['email'] ?>" readonly>
                                 </div>
+
+                                <!-- <div class="col-lg-12 bip">
+
+                                <label>Coupon Code</label>
+                                <input type="text" name="coupon_code" placeholder="Enter Your Coupon Code " id="coupon_code" class="form-control" >
+                                </div> -->
 
                             </div>
                         </div>
@@ -340,6 +352,8 @@
                             <textarea class="form-control " name="notes" placeholder="Notes about your order, e.g. special notes for delivery.">
                            </textarea>
                         </div>
+
+                     
                         <div class=" mt-3 text-center">
                             <button class="btn btn-success" type="submit" id="checkoutButton">Submit</button>
                         </div>
@@ -368,7 +382,8 @@
                         </span>
                     </div>
             </div>
-            <div class="col-lg-12">
+                                         <div class="col-lg-12 bip">
+
                 <div class="pay-method ">
                     <p>Pay securely by Credit or Debit card or Internet Banking through Razorpay.</p>
                 </div>
