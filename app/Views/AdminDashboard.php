@@ -206,7 +206,7 @@ th {
                                 <?php endforeach; ?>
                                 <?php else : ?>
                                 <tr>
-                                    <td class="text-center" colspan="2">No data available</td>
+                                    <td class="text-center" colspan="4">No data available</td>
                                 </tr>
                                 <?php endif; ?>
                             </tbody>
@@ -296,7 +296,7 @@ th {
                                         <?php endforeach; ?>
                                         <?php } else { ?>
                                         <tr>
-                                            <td class="text-center" colspan=3>No data available</td>
+                                            <td class="text-center" colspan=5>No data available</td>
 
                                         </tr>
                                         <?php } ?>
@@ -321,6 +321,8 @@ th {
 
                                                 <th>Demo Date</th>
                                                 <th>Status</th>
+                                                <th>Remark</th>
+
                                             </tr>
                                         </thead>
                                         <?php // Sort the $alldemolist array in descending order based on the Booking_Date_Time field
@@ -335,9 +337,12 @@ th {
                                                     $a->Booking_Date_Time
                                                 );
                                         }); ?>
-                                        <?php if (!empty($alldemolist)) { ?>
+                                        <?php if (!empty($alldemolist)) {
+                                            // echo "<pre>";print_r($alldemolist);exit();
+                                            ?>
                                         <?php foreach ($alldemolist
                                                 as $status) : ?>
+                                                
                                         <tr>
                                             <td><?= $status->name ?></td>
                                             <td><?= $status->courses_name ?></td>
@@ -368,11 +373,22 @@ th {
                                                 <small class="badge badge-danger"> Rescheduled</small>
                                                 <?php endif; ?>
                                             </td>
+                                            <td>
+                                            <select class="form-control"  name="remark" onchange="updateRemark(this, <?=$status->D_id; ?>)" >
+                                                <option value="" selected>Select remark</option>
+                                                <option value="Interested" <?php if ($status->remark == 'Interested') {
+                                                echo "selected";
+                                            } ?>>Interested</option>
+                                                <option value="Not Interested" <?php if ($status->remark == 'Not Interested') {
+                                                echo "Not selected";
+                                            } ?>>Not Interested</option>
+                                            </select>
+                                            </td>
                                         </tr>
                                         <?php endforeach; ?>
                                         <?php } else { ?>
                                         <tr>
-                                            <td class="text-center" colspan=4>No data available</td>
+                                            <td class="text-center" colspan=5>No data available</td>
 
                                         </tr>
                                         <?php } ?>
@@ -887,3 +903,24 @@ th {
 
 
 <?php echo view("AdminSideBar/AdminFooter.php"); ?>
+<script>
+function updateRemark(selectElement, id) {
+    var selectedValue =  selectElement.value;
+    var id = id;
+
+    // Make AJAX request
+    $.ajax({
+        type: "POST",
+        url: "<?=base_url(); ?>update_remark", // URL to your server-side script
+        data: { id: id, selectedValue: selectedValue },
+        success: function(response) {
+            // Handle success response
+            console.log("Remark updated successfully");
+        },
+        error: function(xhr, status, error) {
+            // Handle error response
+            console.error("Error updating remark:", error);
+        }
+    });
+}
+</script>

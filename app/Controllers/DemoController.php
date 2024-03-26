@@ -14,26 +14,7 @@ class DemoController extends BaseController
         $db = \Config\Database::Connect();
 
        
-        $data = [
-            'name' => $this->request->getPost('name'),
-            'email' => $this->request->getPost('email'),
-            'Phone_countryCode' => $this->request->getPost('telephone_country_code'),
-            'phone' => $this->request->getPost('mobile_number'),
-            'course' => $this->request->getPost('courses_id_d'),
-            'sub_course' => $this->request->getPost('sub_courses_id_d'),
-            'Age' => $this->request->getPost('Age1'),
-            'exprience' => $this->request->getPost('exprience'),
-            'Country' => $this->request->getPost('Country'),
-            'city' => $this->request->getPost('city'),
-            'mobileWithCode'=>$this->request->getPost('telephone_country_code').$this->request->getPost('mobile_number'),
-            'Book_Date' => $this->request->getPost('Book_Date'),
-
-        ];
-        $phone = $data['mobileWithCode'];
-        // echo "<pre>";
-        // print_r($phone);
-        // exit();
-        $demoModel->save($data);
+      
 
         $register_data = [
             'full_name' => $this->request->getPost('name'),
@@ -68,6 +49,35 @@ class DemoController extends BaseController
 
         $add_data = $db->table('student');
         $add_data->insert($student_data);
+
+
+
+        $data = [
+            'register_id' =>  $last_insert_id,
+            'name' => $this->request->getPost('name'),
+            'email' => $this->request->getPost('email'),
+            'Phone_countryCode' => $this->request->getPost('telephone_country_code'),
+            'phone' => $this->request->getPost('mobile_number'),
+            'course' => $this->request->getPost('courses_id_d'),
+            'sub_course' => $this->request->getPost('sub_courses_id_d'),
+            'Age' => $this->request->getPost('Age1'),
+            'exprience' => $this->request->getPost('exprience'),
+            'Country' => $this->request->getPost('Country'),
+            'city' => $this->request->getPost('city'),
+            'mobileWithCode'=>$this->request->getPost('telephone_country_code').$this->request->getPost('mobile_number'),
+            'Book_Date' => $this->request->getPost('Book_Date'),
+
+        ];
+
+        // echo "<pre>";print_r($data);exit();
+        $demodata = $db->table('free_demo_table');
+        $demodata->insert($data);
+        $phone = $data['mobileWithCode'];
+        
+        // echo "<pre>";
+        // print_r($phone);
+        // exit();
+        // $demoModel->save($data);
 
 
 
@@ -245,5 +255,63 @@ class DemoController extends BaseController
                 echo "by";
             }
         }
+    }
+
+    public function set_data_demo_booking(){
+        $model = new AdminModel();
+        $wherecond = ['id' => $_SESSION['sessiondata']['id']];
+        $register_data = $model->get_single_data('register', $wherecond);
+        // echo "<pre>";print_r($_POST);
+        $db = \Config\Database::Connect();
+
+
+        $wherecond = ['register_id' => $_SESSION['sessiondata']['id']];
+        $demo_data = $model->getalldata('free_demo_table', $wherecond);
+
+        $democ = count($demo_data);
+
+        // echo "<pre>";print_r($democ);exit();
+        if ($democ <= 2) { // Check if count is less than or equal to 3
+            if(!empty($register_data)){
+
+        
+        $data = [
+            'register_id' => $register_data->id,
+            'name' => $register_data->full_name,
+            'email' => $register_data->email,
+            'Phone_countryCode' => $register_data->Phone_countryCode,
+            'phone' => $register_data->mobile_no,
+            'course' => $this->request->getPost('courses_id_d'),
+            'sub_course' => $this->request->getPost('sub_courses_id_d'),
+            'Age' => $register_data->age,
+            'exprience' => $register_data->experienceInput,
+            'Country' => $register_data->country,
+            // 'city' => $register_data->experienceInput,
+            'mobileWithCode'=>$register_data->mobileWithCode,
+            'Book_Date' => $this->request->getPost('Book_Date'),
+
+        ];
+        $demodata = $db->table('free_demo_table');
+        $demodata->insert($data);
+        session()->setFlashdata('success', 'Book demo successfully.');
+
+        $updatedata = [
+            'course' => $this->request->getPost('courses_id_d'),
+            'sub_course' => $this->request->getPost('sub_courses_id_d'),
+        ];
+        $update_data = $db->table('register')->where('id', $_SESSION['sessiondata']['id']);
+        $update_data->update($updatedata);
+
+        return redirect()->to('bookdemo2');
+
+
+    }
+}else{
+    session()->setFlashdata('errormessage', 'You cannot book demos more than three demos.');
+    return redirect()->to('bookdemo2');
+
+}
+       
+
     }
 }
