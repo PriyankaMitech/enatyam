@@ -489,7 +489,7 @@ class AdminModel extends Model
             ->where('id', $id)
             ->update(['password' => $password, 'confirm_pass' => $password]);
     }
-    public function BackToprndinglistofdemo($D_id, $result, $date, $time,$meetlink)
+    public function BackToprndinglistofdemo($D_id, $result, $date, $time,$meetlink,$AssignTecher_id)
     {
         return $this->db->table('free_demo_table')
             ->where('D_id', $D_id)
@@ -498,6 +498,7 @@ class AdminModel extends Model
                 'Reshedule_date' => $date,
                 'Book_Date' => $date,
                 'meetlink'  =>$meetlink,
+                'AssignTecher_id' =>$AssignTecher_id,
                 'Reshedule_Time' => $time
             ]);
     }
@@ -1392,7 +1393,26 @@ $amount = $insertdata->amount/100;
         //    echo $this->db->getLastQuery();die;
         return $result;
     }
+    public function jointhreetablesor($select, $table1, $table2, $table3, $joinCond, $joinCond2, $wherecond, $type)
+{
+    $today = date('Y-m-d');
 
+    $wherecondr = [
+        'free_demo_table.Book_Date =' => $today,
+        'free_demo_table.Reshedule_date =' => $today,
+    ];
+
+    $result = $this->db->table($table1)
+        ->select($select)
+        ->join($table2, $joinCond, $type)
+        ->join($table3, $joinCond2, $type)
+        ->where($wherecond)
+        ->orWhere($wherecondr) // Add the OR condition here
+        ->get()
+        ->getResult();
+
+    return $result;
+}
     public function jointhreetableswwc($select, $table1, $table2, $table3, $joinCond, $joinCond2, $type)
     {
         $result = $this->db->table($table1)  // Use $table1 variable here
@@ -1682,13 +1702,14 @@ return $query;
     public function Facultycontact($facultyId)
     {
         $query = $this->db->table('register')
-        ->select('mobile_no')
+        ->select('mobileWithCode')
         ->where('id', $facultyId)
         ->get();
 
         if ($query->getNumRows() > 0) {
         $result = $query->getRow();
-        $phoneNumber = $result->mobile_no;
+        // print_r($result);die;
+        $phoneNumber = $result->mobileWithCode;
 
      return $phoneNumber;
       } else {
@@ -1831,4 +1852,17 @@ return $query;
          return $totalRatings;
 
  }
+  public function getallCoupan_code()
+{
+    $current_date = date('Y-m-d');
+
+    $coupan_codes = $this->db->table('Coupan_code')
+                             ->where('expiry_date >=', $current_date)
+                             ->where('Stetus', 'Y')
+                             ->get()
+                             ->getResult();
+
+    return $coupan_codes;
+}
+
 }

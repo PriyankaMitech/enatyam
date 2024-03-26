@@ -6,7 +6,7 @@ use App\Models\AdminModel;
 use App\Models\StudentModel;
 use CodeIgniter\Controller;
 use App\Models\LoginModel;
-use App\Models\FacultyModel;
+use App\Models\facultymodel;
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -23,6 +23,11 @@ class StudentController extends BaseController
     public function StudentVideouplode()
     {
         return view('StuUplodeVideo');
+    }
+    public function certificate() {
+
+        return view('StudentSidebar/certificates');
+        
     }
     public function profilemanagment()
     {
@@ -72,7 +77,7 @@ class StudentController extends BaseController
         $session = session();
         $registerId = $session->get('id');
         $StudentModel = new StudentModel();
-        $facultyModel = new FacultyModel();
+        $facultyModel = new facultymodel();
         $registerData = $StudentModel->getAllRegisterData($registerId, ['full_name', 'Assign_Techer_id']);
         $model = new AdminModel();
         $assignTeacherId = $registerData[0]->Assign_Techer_id;

@@ -22,9 +22,177 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+  <style>
+    @keyframes flip-top {
+  to {
+    transform: rotateX(90deg);
+  }
+}
+@keyframes flip-bottom {
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  
+}
+main .cards {
+  display: flex;
+  gap: 15px;
+  
+}
+main .cards .card {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 0rem !important;
+}
+main .cards .card p {
+  color: #8486a9;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0rem !important;
+}
+main .cards .card .flip-card {
+  display: flex;
+  flex-direction: column;
+    position: relative;
+    margin: 10px auto;
+}
+main .cards .card .top-half,
+main .cards .card .bottom-half,
+main .cards .card .top-flip,
+main .cards .card .bottom-flip {
+  color: #fb6087;
+  font-size: 35px;
+  height: 43px;
+  width: 77px;
+  padding: 23px 7px;
+  overflow: hidden;
+  text-align: center;
+  will-change: transform !important;
+}
+main .cards .card .top-half,
+main .cards .card .top-flip {
+  color: #d54d6f;
+  border-radius: 5px 5px 0 0;
+  background-color: #2c2c44;
+}
+main .cards .card .top-half::before,
+main .cards .card .top-flip::before {
+  content: "";
+  background-color: #191a24;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+}
+main .cards .card .top-half::after,
+main .cards .card .top-flip::after {
+  content: "";
+  background-color: #191a24;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+}
+main .cards .card .bottom-half,
+main .cards .card .bottom-flip {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 0 0 5px 5px;
+  background-color: #343650;
+  box-shadow: 0 -2px 5px 0 rgba(71, 83, 115, 0.7) inset;
+}
+main .cards .card .bottom-half::before,
+main .cards .card .bottom-flip::before {
+  content: "";
+  background-color: #191a24;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+main .cards .card .bottom-half::after,
+main .cards .card .bottom-flip::after {
+  content: "";
+  background-color: #191a24;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+main .cards .card .top-flip {
+  position: absolute;
+  transform-origin: bottom;
+  transform: rotateX(0deg);
+  animation: flip-top 0.5s ease-in forwards;
+}
+main .cards .card .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  transform-origin: top;
+  transform: rotateX(90deg);
+  animation: flip-bottom 0.5s ease-out 0.5s;
+}
+
+
+
+@media screen and (min-width: 700px) {
+  main h1 {
+    font-size: 31px;
+  }
+  main .cards {
+    gap: 25px;
+  }
+  main .cards .top-half,
+main .cards .bottom-half,
+main .cards .top-flip,
+main .cards .bottom-flip {
+  font-size: 27px !important;
+    height: 42px !important;
+    width: 72px !important;
+    padding: 0px 0px !important;
+  }
+}
+  </style>
 </head>
 
 <body>
+<?php
+
+$adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
+
+$wherecond = [
+    'register_id' => $_SESSION['sessiondata']['id'],
+    'Conducted_Demo' => 'N'
+];
+$orderby = ['created_on' => 'DESC'];
+
+$counter_data = $adminModel->getsingleroworderby('free_demo_table', $wherecond, $orderby);
+
+// echo "<pre>";print_r($counter_data);exit();
+?>
   <div id="flash-message-container">
     <?php if (session()->has('errormessage')) : ?>
       <div class="flash-message">
@@ -81,8 +249,13 @@
 
 
   ?>
+
+  
   <div class="wrapper">
+  
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+    
       <!-- Left navbar links -->
       <ul class="navbar-nav">
         <!-- <li class="nav-item">
@@ -95,6 +268,8 @@
           <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
         </li>
       </ul>
+
+
 
       <ul class="navbar-nav ml-auto">
         <?php if ($_SESSION['sessiondata']['Payment_status'] == 'Y') { ?>
@@ -159,12 +334,103 @@
           </li>
         <?php } ?>
         <li class="nav-item">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <?php 
+date_default_timezone_set('Asia/Kolkata');
+
+if (!empty($counter_data)) {
+    // Convert date and time strings to DateTime objects
+   $bookDate = $counter_data->Book_Date;
+
+  //  echo $bookDate; exit();
+    $bookTime = $counter_data->Book_Date_Time;
+    
+    // Combine date and time
+    $bookDateTime = new DateTime($bookDate . ' ' . $bookTime);
+     $currentDate = date('Y-m-d'); 
+    // Get current date and time
+    $currentDateTime = new DateTime();
+
+
+    // Check if current date matches booked date or if current time is greater than booked time
+    if ($currentDate != $bookDate || $currentDateTime >= $bookDateTime) {
+?>
+
+<main id="countdown-container" style="display:none !important">
+
+<div class='cards'>
+  <div class='card hours'>
+    <div class='flip-card'>
+      <div class='top-half'>00</div>
+      <!-- <div class='bottom-half'>00</div> -->
+    </div>
+    <p>Hours</p>
+  </div>
+
+  <div class='card minutes'>
+    <div class='flip-card'>
+      <div class='top-half'>00</div>
+      <!-- <div class='bottom-half'>00</div> -->
+    </div>
+    <p>Minutes</p>
+  </div>
+
+  <div class='card seconds'>
+    <div class='flip-card'>
+      <div class='top-half'>00</div>
+      <!-- <div class='bottom-half'>00</div> -->
+    </div>
+    <p>Seconds</p>
+  </div>
+
+</div>
+</main>
+ 
+
+<?php 
+    } else {
+        // Display none if conditions are not met
+?>
+ <main id="countdown-container">
+
+<div class='cards'>
+  <div class='card hours'>
+    <div class='flip-card'>
+      <div class='top-half'>00</div>
+      <!-- <div class='bottom-half'>00</div> -->
+    </div>
+    <p>Hours</p>
+  </div>
+
+  <div class='card minutes'>
+    <div class='flip-card'>
+      <div class='top-half'>00</div>
+      <!-- <div class='bottom-half'>00</div> -->
+    </div>
+    <p>Minutes</p>
+  </div>
+
+  <div class='card seconds'>
+    <div class='flip-card'>
+      <div class='top-half'>00</div>
+      <!-- <div class='bottom-half'>00</div> -->
+    </div>
+    <p>Seconds</p>
+  </div>
+
+</div>
+</main>
+ <?php 
+    }
+}
+?>
+
+<!-- <a class="nav-link" data-widget="fullscreen" href="#" role="button">
             <i class="fas fa-expand-arrows-alt"></i>
-          </a>
+          </a> -->
         </li>
       </ul>
     </nav>
+    
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
       <div class="sidebar">
@@ -312,6 +578,12 @@
                     </a>
                   </li>
                   <li class="nav-item">
+                    <a href="<?php echo base_url() ?>View_certificate" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Certificate</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
                     <a href="<?php echo base_url() ?>feedback" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Feedback</p>
@@ -325,8 +597,41 @@
                       <p>Plan details</p>
                     </a>
                   </li>
+
+                  <li class="nav-item">
+                    <a href="<?php echo base_url() ?>bookdemo2" class="nav-link">
+                    <i class=" nav-icon fa fa-calendar"></i>
+                      <p>Book Demo</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="<?php echo base_url() ?>demojoininglink" class="nav-link">
+                    <i class=" nav-icon fa fa-link"></i>
+                      <p>Demo Joining Link</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="<?php echo base_url() ?>ModelForLogin" class="nav-link">
+                    <i class=" nav-icon fa fa-gift"></i>
+                      <p>Coupon Codes</p>
+                    </a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a href="<?php echo base_url() ?>referandearn" class="nav-link">
+                    <i class=" nav-icon fa fa-money"></i>
+                      <p>Refer and Earn</p>
+                    </a>
+                  </li>
                 <?php } ?>
+
+                
                 </ul>
         </nav>
       </div>
     </aside>
+
+             

@@ -54,6 +54,8 @@ $routes->get('chechk_menu_name_id', ' AdminController::chechk_menu_name_id');
 $routes->post('chechk_menu_name_id', 'AdminController::chechk_menu_name_id');
 
 
+
+
 $routes->get('check_group_name', ' AdminController::check_group_name');
 $routes->post('check_group_name', 'AdminController::check_group_name');
 
@@ -99,7 +101,15 @@ $routes->post('AddToCart', 'ProductController::AddToCart'); //add to cart
 $routes->get('showData', 'ProductController::showData'); //fetch data from database
 $routes->get('removeProduct/(:num)', 'ProductController::removeProduct/$1'); //removev cart item
 $routes->post('sessions/store', 'SessionsController::store');
-// $routes->get('AdminDashboard', 'Home::AdminDashboard');
+
+$routes->get('demojoininglink', 'LoginController::demojoininglink');
+$routes->get('referandearn', 'LoginController::referandearn');
+$routes->get('bookdemo2', 'LoginController::bookdemo2');
+
+
+
+
+
 
 $routes->get('register', 'LoginController::register');
 $routes->post('register', 'LoginController::register');
@@ -119,11 +129,16 @@ $routes->get('demo1', 'Home::demo1');
 $routes->get('demo', 'Home::demo');
 $routes->get('demobooking', 'Home::demobooking');
 
+$routes->post('set_data_demo_booking', 'DemoController::set_data_demo_booking');
+
 //routes for admin
 
 
 $routes->get('search', 'AdminController::search');
 $routes->post('search', 'AdminController::search');
+
+$routes->get('update_remark', 'AdminController::update_remark');
+$routes->post('update_remark', 'AdminController::update_remark');
 
 $routes->get('search/(any)', 'AdminController::singlechat/$i');
 $routes->post('search/(any)', 'AdminController::singlechat/$i');
@@ -304,7 +319,9 @@ $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule
 
 $routes->get('AdminList', 'AdminController::AdminList');
 $routes->get('FacultyAttendance', 'AdminController::FacultyAttendance');
+$routes->post('coupon_code_generate', 'AdminController::coupon_code_generate');
 
+$routes->get('Coupan_code', 'AdminController::Coupan_code');
 
 // Routes for Faculty
 $routes->get('FacultyProfile', 'Home::FacultyProfile');
@@ -323,6 +340,8 @@ $routes->get('giveschedule', 'FacultyController::giveschedule');
 $routes->get('fshedule', 'FacultyController::fshedule');
 $routes->post('saveshedule', 'FacultyController::saveshedule');
 $routes->get('saveshedule', 'FacultyController::saveshedule');
+$routes->get('payment_request', 'FacultyController::withdrowpayment');
+$routes->post('Payment_msg', 'FacultyController::Payment_msg');
 
 $routes->post('giveschedule', 'FacultyController::giveschedule');
 $routes->post('sendmeetinglink', 'FacultyController::sendmeetinglink');
@@ -374,6 +393,8 @@ $routes->post('selectslotsbystudent', 'StudentController::selectslotsbystudent')
 $routes->post('check_slot_availability', 'StudentController::check_slot_availability');
 
 $routes->get('feedback', 'StudentController::feedback');
+$routes->get('View_certificate', 'StudentController::certificate');
+
 $routes->post('savefeedback', 'StudentController::savefeedback');
 $routes->post('submit_review', 'StudentController::submit_review');
 

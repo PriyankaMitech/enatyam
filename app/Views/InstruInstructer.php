@@ -13,7 +13,7 @@
 <section class="MusicSec faculty-section p-5">
     <div class="cont-width">
 
-        <div class="row ">
+        <div class="row testimonialsdiv">
         <h3 class="text-white pb-5" style="text-align:center">Superstar Faculty
         <span class="line linessf"></span> 
 

@@ -15,13 +15,15 @@
     }
 </style>
 
-<section class="s_header-section">
+<section class="s_header-section ">
     <div class="container-fluid mt-2">
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
+
                     <video class="video-dance bannerv" autoplay loop muted >                    
                         <!-- <video class="video-dance bannerv" autoplay loop muted > -->
+
                         <source src="<?=base_url(); ?>public/images/instrument/instrument-video-1.mp4" type="video/mp4">
                     </video>                
                 </div>
@@ -35,7 +37,7 @@
     </div>
 </section>
 
-<section class="btnSection btnSectionI">
+<section class="btnSection btnSectionI MusicSec p-3 ">
     <div class="container">
         <div class="typesOfYoga-tab">
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">

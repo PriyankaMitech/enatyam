@@ -67,7 +67,6 @@ th {
 .tc a {
     color: #fff !important;
 }
-
 </style>
 
 
@@ -207,7 +206,7 @@ th {
                                 <?php endforeach; ?>
                                 <?php else : ?>
                                 <tr>
-                                    <td class="text-center" colspan="2">No data available</td>
+                                    <td class="text-center" colspan="4">No data available</td>
                                 </tr>
                                 <?php endif; ?>
                             </tbody>
@@ -297,7 +296,7 @@ th {
                                         <?php endforeach; ?>
                                         <?php } else { ?>
                                         <tr>
-                                            <td class="text-center" colspan=3>No data available</td>
+                                            <td class="text-center" colspan=5>No data available</td>
 
                                         </tr>
                                         <?php } ?>
@@ -322,6 +321,8 @@ th {
 
                                                 <th>Demo Date</th>
                                                 <th>Status</th>
+                                                <th>Remark</th>
+
                                             </tr>
                                         </thead>
                                         <?php // Sort the $alldemolist array in descending order based on the Booking_Date_Time field
@@ -336,9 +337,12 @@ th {
                                                     $a->Booking_Date_Time
                                                 );
                                         }); ?>
-                                        <?php if (!empty($alldemolist)) { ?>
+                                        <?php if (!empty($alldemolist)) {
+                                            // echo "<pre>";print_r($alldemolist);exit();
+                                            ?>
                                         <?php foreach ($alldemolist
                                                 as $status) : ?>
+                                                
                                         <tr>
                                             <td><?= $status->name ?></td>
                                             <td><?= $status->courses_name ?></td>
@@ -369,11 +373,22 @@ th {
                                                 <small class="badge badge-danger"> Rescheduled</small>
                                                 <?php endif; ?>
                                             </td>
+                                            <td>
+                                            <select class="form-control"  name="remark" onchange="updateRemark(this, <?=$status->D_id; ?>)" >
+                                                <option value="" selected>Select remark</option>
+                                                <option value="Interested" <?php if ($status->remark == 'Interested') {
+                                                echo "selected";
+                                            } ?>>Interested</option>
+                                                <option value="Not Interested" <?php if ($status->remark == 'Not Interested') {
+                                                echo "Not selected";
+                                            } ?>>Not Interested</option>
+                                            </select>
+                                            </td>
                                         </tr>
                                         <?php endforeach; ?>
                                         <?php } else { ?>
                                         <tr>
-                                            <td class="text-center" colspan=4>No data available</td>
+                                            <td class="text-center" colspan=5>No data available</td>
 
                                         </tr>
                                         <?php } ?>
@@ -395,7 +410,7 @@ th {
                                             <th>Sub Course</th>
 
                                             <th>Demo Date</th>
-                                            <th>Assign faculty</th>
+                                            <!-- <th>Assign faculty</th> -->
                                             <th>Reschedule</th>
                                         </tr>
                                         <?php if (!empty($UnattendedDemoList)) : ?>
@@ -407,7 +422,7 @@ th {
                                             <td><?= $status->sub_courses_name ?></td>
 
                                             <td><?php echo $status->Book_Date; ?></td>
-                                            <td>
+                                            <!-- <td>
                                                 <?php if ($status->AssignTecher_id === null) : ?>
                                                 <?php
                                                             $matchingFaculties = array_filter(
@@ -439,7 +454,7 @@ th {
                                                     </div>
                                                 </form>
                                                 <?php else : ?>
-                                                <!-- <p>No faculty available</p> -->
+                                                
                                                 <small class="badge badge-success ">No faculty available</small>
                                                 <?php endif; ?>
                                                 <?php else : ?>
@@ -457,14 +472,26 @@ th {
                                                             }
                                                             ?>
                                                 <?php endif; ?>
-                                            </td>
-                                            <td>
+                                            </td> -->
+                                            <!-- <td>
                                                 <?php if ($status->AssignTecher_id == null) : ?>
-                                                <!-- <span>No reschedule available</span> -->
+                                            
                                                 <small class="badge badge-success ">Not available</small>
                                                 <?php else : ?>
                                                 <a href="<?=base_url(); ?>getDemoDetails">Reschedule</a>
                                                 <?php endif; ?>
+                                            </td> -->
+                                            <td>
+                                                <form method="post" action="DemoController/resheduleDemo">
+                                                    <input type="hidden" name="action" value="Reschedule">
+                                                    <input type="hidden" name="D_id"
+                                                        value="<?php echo htmlspecialchars($status->D_id); ?>">
+                                                    <button type="submit" class="btn btn-danger"
+                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                        title="Add to Reschedule">
+                                                        <i class="fa fa-plus" aria-hidden="true"></i> Add to Reschedule
+                                                    </button>
+                                                </form>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
@@ -512,14 +539,24 @@ th {
                                                 <td><?= $facult->email ?></td>
                                                 <td><?= date('j F Y', strtotime($facult->Book_Date)); ?></td>
 
-                                                <td>
+                                                <!-- <td>
                                                     <?php if (($facult->Book_Date_Time)) : ?>
                                                     <input type="time" name="Book_Date_Time"
                                                         value="<?= $facult->Book_Date_Time ?>" disabled>
                                                     <?php else : ?>
                                                     <input type="time" name="Book_Date_Time" require>
                                                     <?php endif; ?>
+                                                </td> -->
+                                                <td>
+                                                    <?php if (!empty($facult->Reshedule_Time)) : ?>
+                                                    <input type="time" name="Book_Date_Time"
+                                                        value="<?= $facult->Reshedule_Time ?>" disabled>
+                                                    <?php else : ?>
+                                                    <input type="time" name="Book_Date_Time"
+                                                        value="<?= $facult->Book_Date_Time ?>" required>
+                                                    <?php endif; ?>
                                                 </td>
+
                                                 <td>
                                                     <?php
                                                 if ($facult->Reshedule_date && $facult->Reshedule_date != '0000-00-00') {
@@ -866,3 +903,24 @@ th {
 
 
 <?php echo view("AdminSideBar/AdminFooter.php"); ?>
+<script>
+function updateRemark(selectElement, id) {
+    var selectedValue =  selectElement.value;
+    var id = id;
+
+    // Make AJAX request
+    $.ajax({
+        type: "POST",
+        url: "<?=base_url(); ?>update_remark", // URL to your server-side script
+        data: { id: id, selectedValue: selectedValue },
+        success: function(response) {
+            // Handle success response
+            console.log("Remark updated successfully");
+        },
+        error: function(xhr, status, error) {
+            // Handle error response
+            console.error("Error updating remark:", error);
+        }
+    });
+}
+</script>

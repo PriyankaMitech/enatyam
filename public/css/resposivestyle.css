@@ -1,5 +1,69 @@
 /* refunt guarantee section start*/
-.bookdemoclub {
+.hft p {
+  text-align: center;
+  font-size: 14px;
+}
+.contact-card-section .cont-cardcp {
+  padding: 10px;
+}
+.contact-card-section .cont-cardcp .cont-card1 {
+  height: 276px;
+}
+.contact-card-section .cont-cardcp .cont-card2 {
+  height: 276px;
+}
+.contact-card-section .cont-cardcp .cont-card3 {
+  height: 276px;
+}
+.bookdimg {
+  padding: 33px 20px;
+}
+.heading_new .title_4 {
+  font-size: 34px;
+  font-weight: 800;
+  font-family: "Roboto Slab", Sans-serif !important;
+}
+.testimonialsdiv h3 {
+  font-size: 34px;
+  font-weight: 800;
+  font-family: "Roboto Slab", Sans-serif !important;
+}
+
+.MusicSec h3 {
+  color: #fff;
+}
+.MusicSec .month-text h5 {
+  color: #fff;
+}
+.MusicSec p {
+  color: #fff;
+}
+.MusicSec li {
+  color: #fff;
+}
+.MusicSec .learningsec .list-icon i {
+  color: #ff1561;
+}
+.MusicSec .content {
+  color: #fff;
+}
+.owl-stage-outer p {
+  color: #000;
+}
+.MusicSec .faqdance .accordion-item {
+  color: #fff;
+}
+.pricingforhome #pills-profile-tab p {
+  color: #000;
+}
+.pricingforhome #pills-profile-tab p:hover {
+  color: #fff;
+}
+.pricingforhome .price-card-head h3 {
+  color: #000;
+}
+
+.bookdemoclub .learningsec .list-icon i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +200,7 @@
 }
 
 .pricingsfor {
-  padding-top: 14% !important;
+  padding-top: 9% !important;
 }
 .footer-listing {
   display: none;

@@ -26,7 +26,7 @@
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted                     <video class="video-dance bannerv" autoplay loop muted >
+                    <video class="video-dance bannerv" autoplay loop muted>
 >
                         <source src="<?=base_url(); ?>public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
                     </video>                
@@ -40,7 +40,7 @@
         </div>
     </div>
 </section>
-<section class="btnSection1 yogapagebtn">
+<section class="btnSection1 yogapagebtn MusicSec">
     <div class="container">
         <div class="typesOfYoga-tab">
 

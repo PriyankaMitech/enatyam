@@ -1,9 +1,12 @@
-<section class="faq-section mfaq">
+<section class="faq-section mfaq MusicSec">
     <div class="container cont-width">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-1 col-md-1 col-12 faqd"><img src="public/images/logo2.png" class="dancefimg" /></div>
-        </div>
-        <div class="row">
+        </div> -->
+        <div class="row testimonialsdiv">
+        <h3 class="text-white p-3 " style="text-align:center"> FAQ<br>
+        <span class="line"></span> 
+                </h3>
             <div class="col-lg-6 col-md-6 col-12 faqdance">
 
                 <!-- <div class="accordion"> -->

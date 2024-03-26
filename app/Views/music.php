@@ -2,19 +2,6 @@
 
 
 
-<!-- <div class="wrapper-container">
-    <div class="video-container">
-       
-        <video class="video-dance musicv"                     <video class="video-dance bannerv" autoplay loop muted >
- autoplay="0" loop="0">
-            <source src="public/images/Music/music.mp4" type="video/mp4">
-
-        </video>
-
-       
-    </div>
-</div> -->
-
 
 <section class="s_header-section">
     <div class="container-fluid mt-2">
@@ -35,7 +22,7 @@
         </div>
     </div>
 </section>
-<section class="btnSection mftm pl-0 ">
+<section class="btnSection mftm pl-0 MusicSec">
     <div class="container">
 
         <!-- pills -->

@@ -1,7 +1,15 @@
 .danceimgbd {
   width: 100%;
 }
-
+#demoemailError {
+  color: #ff1561;
+}
+#demoMobileNoError {
+  color: #ff1561;
+}
+.seletbook {
+  padding: 5px 5px;
+}
 .Title_main__VrmF4 {
   font-size: 30px;
   font-weight: 700;
@@ -24,7 +32,7 @@
   height: auto;
 }
 .container_bookdemo {
-  max-width: 1300px !important;
+  max-width: 1444px !important;
 }
 .fatures {
   width: 12%;
