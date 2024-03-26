@@ -336,11 +336,11 @@
                                     <input type="email" name="email" placeholder="Enter Your Email " id="Email" class="form-control" value="<?php echo $_SESSION['email'] ?>" readonly>
                                 </div>
 
-                                <!-- <div class="col-lg-12 bip">
+                                <div class="col-lg-12 bip">
 
                                 <label>Coupon Code</label>
                                 <input type="text" name="coupon_code" placeholder="Enter Your Coupon Code " id="coupon_code" class="form-control" >
-                                </div> -->
+                                </div>
 
                             </div>
                         </div>

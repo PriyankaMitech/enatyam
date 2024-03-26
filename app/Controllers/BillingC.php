@@ -5,6 +5,8 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\BillingM;
 use CodeIgniter\Config\Services;
+use App\Models\AdminModel;
+
 
 class BillingC extends BaseController
 {
@@ -17,8 +19,16 @@ class BillingC extends BaseController
     }
     public function BillingInformation()
     {
+        $model = new AdminModel();
+
         $BillingM = new BillingM();
         $session = session();
+        $wherecond = ['Coupan_code' => $this->request->getPost('coupon_code')];
+        $coupandata = $model->get_single_data('coupan_code', $wherecond);
+        if(!empty($coupandata)){
+            $ccdiscount = $coupandata->percentage;
+        }
+        // echo "<pre>";print_r($coupandata);exit();
         if ($this->request->getMethod() === 'post') {
             $insertdata = [
                 'Fname' => $this->request->getPost('Fname'),
@@ -31,10 +41,8 @@ class BillingC extends BaseController
                 'pincode' => $this->request->getPost('pincode'),
                 'phone' => $this->request->getPost('phone'),
                 'email' => $this->request->getPost('email'),
-                // 'coupon_code' => $this->request->getPost('coupon_code'),
-
-
-
+                'coupon_code' => $this->request->getPost('coupon_code'),
+                'ccdiscount' => $ccdiscount,
             ];
             $db = \Config\Database::Connect();
 
@@ -82,6 +90,8 @@ class BillingC extends BaseController
         $data['furl'] = site_url() . 'PaymentController/failed';;
         $data['currency_code'] = 'INR';
         $data['lastinsert_id'] = $lastinsert_id;
+
+        // echo "<pre>";print_r($data['billingdetails']);exit();
         return view('OrderDetails', $data);
     }
 
