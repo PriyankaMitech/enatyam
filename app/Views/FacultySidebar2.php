@@ -26,6 +26,27 @@
 
 
   <style>
+    .bottom-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.nav-sidebar .nav-item a {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #ce7aba 0%, #f6d549 100%);
+  color: #000;
+}
+
+[class*="sidebar-dark-"] .nav-treeview > .nav-item > .nav-link {
+  color: #000;
+}
+
+.nav-sidebar .nav-item .active-nav-link {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #b8b8b8 0%, #fefdfb 100%);
+}
     .error {
       color: red !important;
     }
@@ -52,6 +73,13 @@
 </head>
 
 <body>
+<?php 
+$uri = new \CodeIgniter\HTTP\URI(current_url(true));
+$pages = $uri->getSegments();
+$page = $uri->getSegment(count($pages));
+
+
+?>
 
   <?php
   $session = \Config\Services::session();
@@ -286,7 +314,7 @@
 
 
             <li class="nav-item">
-              <a href="<?= base_url(); ?>FacultyDashboard" class="nav-link">
+              <a href="<?= base_url(); ?>FacultyDashboard" class="nav-link <?php if($page == 'FacultyDashboard') { echo "active-nav-link";  }?>">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                   Dashboard
@@ -316,27 +344,27 @@
                   </a>
                 </li> -->
                 <li class="nav-item">
-                  <a href="<?php echo base_url() ?>fshedule" class="nav-link">
+                  <a href="<?php echo base_url() ?>fshedule" class="nav-link <?php if($page == 'fshedule') { echo "active-nav-link";  }?>">
                     <i class="nav-icon fas fa-calendar-alt"></i>
                     <p>Give Schedule
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url() ?>fetchTofacultyShuduleSidebar" class="nav-link">
+                  <a href="<?php echo base_url() ?>fetchTofacultyShuduleSidebar" class="nav-link <?php if($page == 'fetchTofacultyShuduleSidebar') { echo "active-nav-link";  }?>">
                     <i class="nav-icon fas fa-calendar-alt"></i>
                     <p>My Schedule
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url() ?>FacultySchedule" class="nav-link">
+                  <a href="<?php echo base_url() ?>FacultySchedule" class="nav-link <?php if($page == 'FacultySchedule') { echo "active-nav-link";  }?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Demo Class</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url() ?>StudentAttendance" class="nav-link">
+                  <a href="<?php echo base_url() ?>StudentAttendance" class="nav-link <?php if($page == 'StudentAttendance') { echo "active-nav-link";  }?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>StudentAttendance</p>
                   </a>
@@ -360,13 +388,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="<?php echo base_url() ?>StudentUploadedVideo" class="nav-link">
+                  <a href="<?php echo base_url() ?>StudentUploadedVideo" class="nav-link <?php if($page == 'StudentUploadedVideo') { echo "active-nav-link";  }?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Videos</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url() ?>StudentUploadedImages" class="nav-link">
+                  <a href="<?php echo base_url() ?>StudentUploadedImages" class="nav-link <?php if($page == 'StudentUploadedImages') { echo "active-nav-link";  }?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Images</p>
                   </a>
@@ -405,14 +433,14 @@
               <ul class="nav nav-treeview">
 
                 <li class="nav-item">
-                  <a href="<?= base_url(); ?>chatuser" class="nav-link">
+                  <a href="<?= base_url(); ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Chat</p>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="<?php echo base_url() ?>payment_request" class="nav-link">
+                  <a href="<?php echo base_url() ?>payment_request" class="nav-link <?php if($page == 'payment_request') { echo "active-nav-link";  }?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Payment Request</p>
                   </a>
@@ -424,6 +452,7 @@
         </nav>
         <!-- /.sidebar-menu -->
       </div>
+      <img src="<?= base_url(); ?>public/images/demobk.png" class="bottom-image">
 
       <!-- /.sidebar -->
     </aside>

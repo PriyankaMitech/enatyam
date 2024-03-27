@@ -50,6 +50,27 @@
 
 
     <style>
+            .bottom-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.nav-sidebar .nav-item a {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #ce7aba 0%, #f6d549 100%);
+  color: #000;
+}
+
+[class*="sidebar-dark-"] .nav-treeview > .nav-item > .nav-link {
+  color: #000;
+}
+
+.nav-sidebar .nav-item .active-nav-link {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #b8b8b8 0%, #fefdfb 100%);
+}
         .payment-card #example1_wrapper .btn-group {
             display: none !important;
 
@@ -142,6 +163,13 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+<?php 
+$uri = new \CodeIgniter\HTTP\URI(current_url(true));
+$pages = $uri->getSegments();
+$page = $uri->getSegment(count($pages));
+
+
+?>
 
     <div id="flash-success-container">
         <?php if (session()->has('success')) : ?>
@@ -255,7 +283,7 @@
                                                             } else {
                                                                 echo "style='display:none'";
                                                             } ?>>
-                                        <a href="<?= base_url(); ?>Admindashboard" class="nav-link">
+                                        <a href="<?= base_url(); ?>Admindashboard" class="nav-link <?php if($page == 'Admindashboard') { echo "active-nav-link";  }?>">
                                             <i class="nav-icon fas fa-th"></i>
                                             <p>
                                                 Dashboard
@@ -292,7 +320,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
+                                                <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link <?php if($page == 'getDemoDetails') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Demo</p>
                                                 </a>
@@ -320,7 +348,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url(); ?>add_menu" class="nav-link">
+                                                <a href="<?php echo base_url(); ?>add_menu" class="nav-link <?php if($page == 'add_menu') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-edit"></i>
                                                     <p>Add menu</p>
                                                 </a>
@@ -330,7 +358,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url(); ?>menu_list" class="nav-link">
+                                                <a href="<?php echo base_url(); ?>menu_list" class="nav-link <?php if($page == 'menu_list') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Menu List</p>
                                                 </a>
@@ -358,7 +386,7 @@
                                                                             echo "style='display:none'";
                                                                         } ?>>
                                             <li class="nav-item">
-                                                <a href="<?php echo base_url(); ?>add_courses" class="nav-link">
+                                                <a href="<?php echo base_url(); ?>add_courses" class="nav-link <?php if($page == 'add_courses') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-edit"></i>
                                                     <p>Add courses</p>
                                                 </a>
@@ -368,7 +396,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url(); ?>courses_list" class="nav-link">
+                                                <a href="<?php echo base_url(); ?>courses_list" class="nav-link <?php if($page == 'courses_list') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Courses List</p>
                                                 </a>
@@ -379,7 +407,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url(); ?>add_sub_courses" class="nav-link">
+                                                <a href="<?php echo base_url(); ?>add_sub_courses" class="nav-link <?php if($page == 'add_sub_courses') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-edit"></i>
                                                     <p>Add sub courses</p>
                                                 </a>
@@ -389,7 +417,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url(); ?>sub_courses_list" class="nav-link">
+                                                <a href="<?php echo base_url(); ?>sub_courses_list" class="nav-link <?php if($page == 'sub_courses_list') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Sub courses List</p>
                                                 </a>
@@ -417,7 +445,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url(); ?>AddNewUser" class="nav-link">
+                                                <a href="<?php echo base_url(); ?>AddNewUser" class="nav-link <?php if($page == 'AddNewUser') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-edit"></i>
                                                     <p>Add New User</p>
                                                 </a>
@@ -427,7 +455,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url(); ?>user_list" class="nav-link">
+                                                <a href="<?php echo base_url(); ?>user_list" class="nav-link <?php if($page == 'user_list') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>User List</p>
                                                 </a>
@@ -459,7 +487,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>uploaded_video" class="nav-link">
+                                                <a href="<?php echo base_url() ?>uploaded_video" class="nav-link <?php if($page == 'uploaded_video') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon far fa-image"></i>
                                                     <p>Videos</p>
                                                 </a>
@@ -471,7 +499,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>UploadedImages" class="nav-link">
+                                                <a href="<?php echo base_url() ?>UploadedImages" class="nav-link <?php if($page == 'UploadedImages') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon far fa-image"></i>
                                                     <p>Images</p>
                                                 </a>
@@ -501,7 +529,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>studentProfiledata" class="nav-link">
+                                                <a href="<?php echo base_url() ?>studentProfiledata" class="nav-link <?php if($page == 'studentProfiledata') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Profile</p>
                                                 </a>
@@ -511,7 +539,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>Attendance" class="nav-link">
+                                                <a href="<?php echo base_url() ?>Attendance" class="nav-link <?php if($page == 'Attendance') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-calendar-alt"></i>
                                                     <p>Attendance</p>
                                                 </a>
@@ -541,7 +569,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>create_group" class="nav-link">
+                                                <a href="<?php echo base_url() ?>create_group" class="nav-link <?php if($page == 'create_group') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Create Groups</p>
                                                 </a>
@@ -551,7 +579,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>student_list_of_group" class="nav-link">
+                                                <a href="<?php echo base_url() ?>student_list_of_group" class="nav-link <?php if($page == 'student_list_of_group') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Groups List</p>
                                                 </a>
@@ -580,7 +608,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>getAdminSideBarAll" class="nav-link">
+                                                <a href="<?php echo base_url() ?>getAdminSideBarAll" class="nav-link <?php if($page == 'getAdminSideBarAll') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Profile</p>
                                                 </a>
@@ -590,7 +618,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>FacultyShedule" class="nav-link">
+                                                <a href="<?php echo base_url() ?>FacultyShedule" class="nav-link <?php if($page == 'FacultyShedule') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-calendar-alt"></i>
                                                     <p>Schedule</p>
                                                 </a>
@@ -600,7 +628,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>Attendance" class="nav-link">
+                                                <a href="<?php echo base_url() ?>Attendance" class="nav-link <?php if($page == 'Attendance') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-calendar-alt"></i>
                                                     <p>Attendance</p>
                                                 </a>
@@ -610,7 +638,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>NewFacultyApplication" class="nav-link">
+                                                <a href="<?php echo base_url() ?>NewFacultyApplication" class="nav-link <?php if($page == 'NewFacultyApplication') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-calendar-alt"></i>
                                                     <p>New Enrollment</p>
                                                 </a>
@@ -637,7 +665,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>demo_classes" class="nav-link">
+                                                <a href="<?php echo base_url() ?>demo_classes" class="nav-link <?php if($page == 'demo_classes') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Demo Classes</p>
                                                 </a>
@@ -647,7 +675,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>student" class="nav-link">
+                                                <a href="<?php echo base_url() ?>student" class="nav-link <?php if($page == 'student') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Student</p>
                                                 </a>
@@ -658,7 +686,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>faculty" class="nav-link">
+                                                <a href="<?php echo base_url() ?>faculty" class="nav-link <?php if($page == 'faculty') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Faculty</p>
                                                 </a>
@@ -669,7 +697,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>payment_history" class="nav-link">
+                                                <a href="<?php echo base_url() ?>payment_history" class="nav-link <?php if($page == 'payment_history') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Payment History</p>
                                                 </a>
@@ -709,7 +737,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>payments" class="nav-link">
+                                                <a href="<?php echo base_url() ?>payments" class="nav-link <?php if($page == 'payments') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon fas fa-book"></i>
                                                     <p>Student Payments</p>
                                                 </a>
@@ -744,7 +772,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?= base_url() ?>chatuser" class="nav-link">
+                                                <a href="<?= base_url() ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Chat
                                                     </p>
@@ -765,7 +793,7 @@
                                                                     } else {
                                                                         echo "style='display:none'";
                                                                     } ?>>
-                                                <a href="<?php echo base_url() ?>add_notifications" class="nav-link">
+                                                <a href="<?php echo base_url() ?>add_notifications" class="nav-link <?php if($page == 'add_notifications') { echo "active-nav-link";  }?>">
                                                     <i class="far fa-circle nav-icon"></i>
                                                     <p>Notifications</p>
                                                 </a>
@@ -815,7 +843,7 @@
 
                                 <!-- Schedule Menu -->
                                 <li class="nav-item">
-                                    <a href="<?= base_url(); ?>Admindashboard" class="nav-link">
+                                    <a href="<?= base_url(); ?>Admindashboard" class="nav-link <?php if($page == 'Admindashboard') { echo "active-nav-link";  }?>">
                                         <i class="nav-icon fas fa-th"></i>
                                         <p>
                                             Dashboard
@@ -824,7 +852,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link">
+                                    <a href="<?php echo base_url() ?>getDemoDetails" class="nav-link <?php if($page == 'getDemoDetails') { echo "active-nav-link";  }?>">
                                         <i class=" nav-icon fa fa-laptop"></i>
                                         <p>
                                            Demo
@@ -859,13 +887,13 @@
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>add_menu" class="nav-link">
+                                            <a href="<?php echo base_url(); ?>add_menu" class="nav-link <?php if($page == 'add_menu') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-edit"></i>
                                                 <p>Add menu</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>menu_list" class="nav-link">
+                                            <a href="<?php echo base_url(); ?>menu_list" class="nav-link <?php if($page == 'menu_list') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Menu List</p>
                                             </a>
@@ -886,26 +914,26 @@
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>add_courses" class="nav-link">
+                                            <a href="<?php echo base_url(); ?>add_courses" class="nav-link <?php if($page == 'add_courses') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-edit"></i>
                                                 <p>Add courses</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>courses_list" class="nav-link">
+                                            <a href="<?php echo base_url(); ?>courses_list" class="nav-link <?php if($page == 'courses_list') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Courses List</p>
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>add_sub_courses" class="nav-link">
+                                            <a href="<?php echo base_url(); ?>add_sub_courses" class="nav-link <?php if($page == 'add_sub_courses') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-edit"></i>
                                                 <p>Add sub courses</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>sub_courses_list" class="nav-link">
+                                            <a href="<?php echo base_url(); ?>sub_courses_list" class="nav-link <?php if($page == 'sub_courses_list') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Sub courses List</p>
                                             </a>
@@ -926,13 +954,13 @@
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>AddNewUser" class="nav-link">
+                                            <a href="<?php echo base_url(); ?>AddNewUser" class="nav-link <?php if($page == 'AddNewUser') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-edit"></i>
                                                 <p>Add New User</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url(); ?>user_list" class="nav-link">
+                                            <a href="<?php echo base_url(); ?>user_list" class="nav-link <?php if($page == 'user_list') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>User List</p>
                                             </a>
@@ -950,7 +978,7 @@
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>uploaded_video" class="nav-link">
+                                            <a href="<?php echo base_url() ?>uploaded_video" class="nav-link <?php if($page == 'uploaded_video') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon far fa-image"></i>
                                                 <p>Videos</p>
                                             </a>
@@ -958,7 +986,7 @@
 
 
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>UploadedImages" class="nav-link">
+                                            <a href="<?php echo base_url() ?>UploadedImages" class="nav-link <?php if($page == 'UploadedImages') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon far fa-image"></i>
                                                 <p>Images</p>
                                             </a>
@@ -978,19 +1006,19 @@
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>studentProfiledata" class="nav-link">
+                                            <a href="<?php echo base_url() ?>studentProfiledata" class="nav-link <?php if($page == 'studentProfiledata') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Profile</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>Attendance" class="nav-link">
+                                            <a href="<?php echo base_url() ?>Attendance" class="nav-link <?php if($page == 'Attendance') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                                 <p>Attendance</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>studentSlots" class="nav-link">
+                                            <a href="<?php echo base_url() ?>studentSlots" class="nav-link <?php if($page == 'studentSlots') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                                 <p>Schedule</p>
                                             </a>
@@ -1010,13 +1038,13 @@
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>create_group" class="nav-link">
+                                            <a href="<?php echo base_url() ?>create_group" class="nav-link <?php if($page == 'create_group') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Create Groups</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>student_list_of_group" class="nav-link">
+                                            <a href="<?php echo base_url() ?>student_list_of_group" class="nav-link <?php if($page == 'student_list_of_group') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Groups List</p>
                                             </a>
@@ -1037,25 +1065,25 @@
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>getAdminSideBarAll" class="nav-link">
+                                            <a href="<?php echo base_url() ?>getAdminSideBarAll" class="nav-link <?php if($page == 'getAdminSideBarAll') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Profile</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>FacultyShedule" class="nav-link">
+                                            <a href="<?php echo base_url() ?>FacultyShedule" class="nav-link <?php if($page == 'FacultyShedule') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                                 <p>Schedule</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>FacultyAttendance" class="nav-link">
+                                            <a href="<?php echo base_url() ?>FacultyAttendance" class="nav-link <?php if($page == 'FacultyAttendance') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                                 <p>Attendance</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>NewFacultyApplication" class="nav-link">
+                                            <a href="<?php echo base_url() ?>NewFacultyApplication" class="nav-link <?php if($page == 'NewFacultyApplication') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                                 <p>New Enrollment</p>
                                             </a>
@@ -1074,27 +1102,27 @@
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>demo_classes" class="nav-link">
+                                            <a href="<?php echo base_url() ?>demo_classes" class="nav-link <?php if($page == 'demo_classes') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-book"></i>
                                                 <p>Demo Classes</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>student" class="nav-link">
+                                            <a href="<?php echo base_url() ?>student" class="nav-link <?php if($page == 'student') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-book"></i>
                                                 <p>Student</p>
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>faculty" class="nav-link">
+                                            <a href="<?php echo base_url() ?>faculty" class="nav-link <?php if($page == 'faculty') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-book"></i>
                                                 <p>Faculty</p>
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>payment_history" class="nav-link">
+                                            <a href="<?php echo base_url() ?>payment_history" class="nav-link <?php if($page == 'payment_history') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-book"></i>
                                                 <p>Payment History</p>
                                             </a>
@@ -1122,13 +1150,13 @@
                                             </a>
                                         </li> -->
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>payments" class="nav-link">
+                                            <a href="<?php echo base_url() ?>payments" class="nav-link <?php if($page == 'payments') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-book"></i>
                                                 <p>Student Payments</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>Coupan_code" class="nav-link">
+                                            <a href="<?php echo base_url() ?>Coupan_code" class="nav-link <?php if($page == 'Coupan_code') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-book"></i>
                                                 <p>Coupan code</p>
                                             </a>
@@ -1149,7 +1177,7 @@
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
-                                            <a href="<?= base_url() ?>chatuser" class="nav-link">
+                                            <a href="<?= base_url() ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Chat
                                                 </p>
@@ -1162,7 +1190,7 @@
                                             </a>
                                         </li> -->
                                         <li class="nav-item">
-                                            <a href="<?php echo base_url() ?>add_notifications" class="nav-link">
+                                            <a href="<?php echo base_url() ?>add_notifications" class="nav-link  <?php if($page == 'add_notifications') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p>Notifications</p>
                                             </a>
@@ -1176,6 +1204,8 @@
 
                     </div>
                     <!-- /.sidebar -->
+                    <img src="<?= base_url(); ?>public/images/demobk.png" class="bottom-image">
+
                 </aside>
         <?php }
         } ?>

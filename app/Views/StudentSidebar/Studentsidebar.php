@@ -24,6 +24,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
   <style>
+
     @keyframes flip-top {
   to {
     transform: rotateX(90deg);
@@ -179,6 +180,14 @@ main .cards .bottom-flip {
 </head>
 
 <body>
+
+<?php 
+$uri = new \CodeIgniter\HTTP\URI(current_url(true));
+$pages = $uri->getSegments();
+$page = $uri->getSegment(count($pages));
+
+
+?>
 <?php
 
 $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
@@ -550,7 +559,7 @@ if (!empty($counter_data)) {
             </a>
             <?php if ($_SESSION['sessiondata']['Payment_status'] == 'Y') { ?>
               <li class="nav-item">
-                <a href="<?= base_url(); ?>StudentDashboard" class="nav-link">
+                <a href="<?= base_url(); ?>StudentDashboard" class="nav-link <?php if($page == 'StudentDashboard') { echo "active-nav-link";  }?>">
                   <i class="nav-icon fas fa-th"></i>
                   <p>
                     Dashboard
@@ -558,7 +567,7 @@ if (!empty($counter_data)) {
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url() ?>StudentProfile" class="nav-link">
+                <a href="<?php echo base_url() ?>StudentProfile" class="nav-link <?php if($page == 'StudentProfile') { echo "active-nav-link";  }?>">
                   <i class="nav-icon 	fa fa-child"></i>
                   <p>
                     Profile
@@ -589,13 +598,13 @@ if (!empty($counter_data)) {
                     </a>
                   </li> -->
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>SelectDate" class="nav-link">
+                    <a href="<?php echo base_url() ?>SelectDate" class="nav-link <?php if($page == 'SelectDate') { echo "active-nav-link";  }?>">
                     <i class="nav-icon fas fa-calendar-alt"></i>
                       <p>My Schedule</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>StudentAttendancerecord" class="nav-link">
+                    <a href="<?php echo base_url() ?>StudentAttendancerecord" class="nav-link <?php if($page == 'StudentAttendancerecord') { echo "active-nav-link";  }?>">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Attendance</p>
                     </a>
@@ -614,13 +623,13 @@ if (!empty($counter_data)) {
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>UplodeVideo" class="nav-link">
+                    <a href="<?php echo base_url() ?>UplodeVideo" class="nav-link <?php if($page == 'UplodeVideo') { echo "active-nav-link";  }?>">
                       <i class="far fa-circle nav-icon"></i>
                       <p> Add Videos / Images</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link">
+                    <a href="<?php echo base_url() ?>StudentSideBarVideo" class="nav-link <?php if($page == 'StudentSideBarVideo') { echo "active-nav-link";  }?>">
                       <i class="nav-icon far fa-image"></i>
                       <p>Videos</p>
                     </a>
@@ -628,7 +637,7 @@ if (!empty($counter_data)) {
 
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>StudentSideBarImages" class="nav-link">
+                    <a href="<?php echo base_url() ?>StudentSideBarImages" class="nav-link <?php if($page == 'StudentSideBarImages') { echo "active-nav-link";  }?>">
                       <i class="nav-icon far fa-image"></i>
                       <p>Images</p>
                     </a>
@@ -667,19 +676,19 @@ if (!empty($counter_data)) {
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>chatuser" class="nav-link">
+                    <a href="<?php echo base_url() ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Chat</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>View_certificate" class="nav-link">
+                    <a href="<?php echo base_url() ?>View_certificate" class="nav-link <?php if($page == 'View_certificate') { echo "active-nav-link";  }?>">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Certificate</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>feedback" class="nav-link">
+                    <a href="<?php echo base_url() ?>feedback" class="nav-link <?php if($page == 'feedback') { echo "active-nav-link";  }?>">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Feedback</p>
                     </a>
@@ -687,28 +696,28 @@ if (!empty($counter_data)) {
                 <?php }
               if ($_SESSION['sessiondata']['Payment_status'] == 'N') { ?>
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>ModelForLogin" class="nav-link">
+                    <a href="<?php echo base_url() ?>ModelForLogin" class="nav-link <?php if($page == 'ModelForLogin') { echo "active-nav-link";  }?>">
                       <i class="nav-icon fas fa-th"></i>
                       <p>Plan details</p>
                     </a>
                   </li>
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>bookdemo2" class="nav-link">
+                    <a href="<?php echo base_url() ?>bookdemo2" class="nav-link <?php if($page == 'bookdemo2') { echo "active-nav-link";  }?>">
                     <i class=" nav-icon fa fa-calendar"></i>
                       <p>Book Demo</p>
                     </a>
                   </li>
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>demojoininglink" class="nav-link">
+                    <a href="<?php echo base_url() ?>demojoininglink" class="nav-link <?php if($page == 'demojoininglink') { echo "active-nav-link";  }?>">
                     <i class=" nav-icon fa fa-link"></i>
                       <p>Demo Joining Link</p>
                     </a>
                   </li>
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>Coupon_Codes" class="nav-link">
+                    <a href="<?php echo base_url() ?>Coupon_Codes" class="nav-link <?php if($page == 'Coupon_Codes') { echo "active-nav-link";  }?>">
                     <i class=" nav-icon fa fa-gift"></i>
                       <p>Coupon Codes</p>
                     </a>
@@ -716,7 +725,7 @@ if (!empty($counter_data)) {
 
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url() ?>referandearn" class="nav-link">
+                    <a href="<?php echo base_url() ?>referandearn" class="nav-link <?php if($page == 'referandearn') { echo "active-nav-link";  }?>">
                     <i class=" nav-icon fa fa-money"></i>
                       <p>Refer and Earn</p>
                     </a>
@@ -727,6 +736,8 @@ if (!empty($counter_data)) {
                 </ul>
         </nav>
       </div>
+      <img src="<?= base_url(); ?>public/images/demobk.png" class="bottom-image">
+
     </aside>
 
              
