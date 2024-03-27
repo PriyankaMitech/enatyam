@@ -459,6 +459,10 @@ $routes->get('getnotificationCount', 'AdminController::getnotificationCount');
 
 $routes->get('getnotificationchatCount', 'AdminController::getnotificationchatCount');
 
+$routes->get('getNewStudentCount', 'AdminController::getNewStudentCount');
+
+$routes->get('getNewFacultyCount', 'AdminController::getNewFacultyCount');
+
 
 
 
