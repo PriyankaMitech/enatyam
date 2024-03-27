@@ -32,7 +32,6 @@ $(function () {
     headerToolbar: {
       left: "prev,next today",
       right: "dayGridMonth,dayGridWeek,list",
-
       center: "title",
     },
     selectable: true,
@@ -76,6 +75,17 @@ $(function () {
     eventDidMount: function (info) {
       var eventElement = info.el;
       eventElement.querySelector(".fc-event-time").style.display = "none"; // Hide the time div
+
+      // Compare event start date with current date
+      var eventStartDate = moment(info.event.start);
+      var currentDate = moment();
+      if (eventStartDate.isAfter(currentDate, 'day')) {
+        // Event is in the future, add an "upcoming" badge
+        var badge = document.createElement('div');
+        badge.classList.add('badge', 'bg-success', 'position-relative', 'top-0', 'start-0');
+        badge.textContent = 'Upcoming';
+        eventElement.appendChild(badge);
+      }
     },
     editable: true,
   });
