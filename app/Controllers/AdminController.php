@@ -2625,9 +2625,10 @@ public function update_remark()
         if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
            
         $data = $model->getRecordsBefore7Days();
+        // echo "<pre>";print_r($data);exit();
 
-        $notification_count = count($data);
-        return $this->response->setJSON(['notification_count' => $notification_count]);
+        // $notification_count = count($data);
+        return $this->response->setJSON(['notification_count' => $data['totalCount']]);
 
     } else {
         // Return an error message if the user is not authorized
@@ -2648,7 +2649,7 @@ public function update_remark()
             $chat_count = $model->getalldata('online_chat', $chatCountWhere);
             $data = $model->getRecordsBefore7Days();
 
-            $notification_count = count($data);
+            $notification_count = $data['totalCount'];
 
 
             $count_data = count($chat_count);
