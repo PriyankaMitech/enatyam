@@ -1267,6 +1267,7 @@ $amount = $insertdata->amount/100;
 
         // Return combined results or handle them as needed
         // return array_merge($resultCarrier, $resultRegister);
+        // echo $totalCount;exit();
         return [
             'newFacultyCount' => count($resultCarrier),
             'newStudentCount' => count($resultRegister),
