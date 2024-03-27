@@ -2629,6 +2629,25 @@ public function update_remark()
 
         // $notification_count = count($data);
         return $this->response->setJSON(['notification_count' => $data['totalCount']]);
+    } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+        $teacherId = $_SESSION['sessiondata']['id'];
+            $userType = 'faculty';
+          
+            // Rest of your code
+            $notifications = $model->getUserRole($teacherId, $userType);
+    
+            $notification_count = count($notifications);
+            return $this->response->setJSON(['notification_count' => $notification_count]);
+
+    } else if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Student') {
+
+
+        $student_id = $_SESSION['sessiondata']['id'];
+        $userType = 'student';
+        $notifications = $model->getUserRole($student_id, $userType);
+
+        $notification_count = count($notifications);
+        return $this->response->setJSON(['notification_count' => $notification_count]);
 
     } else {
         // Return an error message if the user is not authorized

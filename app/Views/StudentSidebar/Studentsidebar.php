@@ -376,10 +376,12 @@ if (!empty($scounter_data)) {
           <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
               <i class="far fa-bell"></i>
-              <?php $displayedNotificationCount = 0; ?>
+              <!-- <?php $displayedNotificationCount = 0; ?>
               <span class="badge badge-danger navbar-badge">
-                <?= $count; ?>
-              </span>
+                <?//= $count; ?>
+              </span> -->
+
+              <span class="notificationCounter badge badge-danger navbar-badge"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
               <div class="notification-scroll">
@@ -670,15 +672,17 @@ if (!empty($counter_data)) {
                 <a href="#" class="nav-link">
                   <i class="nav-icon far fa-comment-dots"></i>
                   <p>
-                    Massages <span class="chatCounter">
+                    Massages 
                     <i class="right fas fa-angle-left"></i>
+                    <span class="chatCounter badge badge-danger right"></span>
+
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="<?php echo base_url() ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Chat</p>
+                      <p>Chat <span class="chatCounter badge badge-danger right"></span></p>
                     </a>
                   </li>
                   <li class="nav-item">
