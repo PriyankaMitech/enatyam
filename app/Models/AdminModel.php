@@ -352,6 +352,7 @@ class AdminModel extends Model
         return $this->db->table('student')
             ->select('student.*, register.Payment_status')
             ->join('register', 'register.id = student.register_id', 'left')
+            ->orderBy('created_on','DESC')
             ->get()
             ->getResult();
     }
@@ -1228,6 +1229,7 @@ $amount = $insertdata->amount/100;
             ->where('DATE(Booking_Date_Time) >=', $sevenDaysAgo)
             ->where('DATE(Booking_Date_Time) <=', date('Y-m-d'))
             ->where('Result_of_application', 'Pending')
+            ->orderBy('created_on','DESC')
             ->get();
 
         // Query for new student registrations through register
@@ -1235,7 +1237,12 @@ $amount = $insertdata->amount/100;
             ->select('register.*, register.full_name as nname')
             ->where('DATE(created_on) >=', $sevenDaysAgo)
             ->where('DATE(created_on) <=', date('Y-m-d'))
-            ->where('Payment_status', 'Y')
+            // ->where('Payment_status', 'Y')
+            ->where('role', 'Student')
+            ->orderBy('created_on', 'DESC') // Add the orderBy clause here
+
+
+
             ->get();
         // echo $this->db->getLastQuery();
         // die;

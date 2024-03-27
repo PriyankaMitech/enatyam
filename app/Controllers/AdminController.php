@@ -8,7 +8,11 @@ use App\Models\facultymodel;
 use App\Models\LoginModel;
 use CodeIgniter\Controller;
 
+// use CodeIgniter\API\ResponseTrait;
+
+
 use CodeIgniter\HTTP\Request;
+
 
 helper('sms_helper');
 class AdminController extends BaseController
@@ -2574,4 +2578,109 @@ public function update_remark()
             }
         }
     }
+
+    public function getChatCount()
+    {
+        $model = new AdminModel();
+
+        // Check if the user is logged in and is an admin
+        if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
+            $chatCountWhere = array(
+                'receiver_id' => $_SESSION['sessiondata']['id'],
+                'status' => 'N'
+            );
+            $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+            $count_data = count($chat_count);
+
+            // Manually create and return a JSON response
+            return $this->response->setJSON(['chat_count' => $count_data]);
+        } else if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Student') {
+            $chatCountWhere = array(
+                'receiver_id' => $_SESSION['sessiondata']['id'],
+                'status' => 'N'
+            );
+            $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+             $count_data = count($chat_count);
+             return $this->response->setJSON(['chat_count' => $count_data]);
+
+        } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+                $chatCountWhere = array(
+                    'receiver_id' => $_SESSION['sessiondata']['id'],
+                    'status' => 'N'
+                );
+
+            $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+            $count_data = count($chat_count);
+            return $this->response->setJSON(['chat_count' => $count_data]);
+
+        } else {
+            // Return an error message if the user is not authorized
+            return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+        }
+    }
+
+    public function getnotificationCount(){
+        $model = new AdminModel();
+
+        if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
+           
+        $data = $model->getRecordsBefore7Days();
+
+        $notification_count = count($data);
+        return $this->response->setJSON(['notification_count' => $notification_count]);
+
+    } else {
+        // Return an error message if the user is not authorized
+        return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+    }
+
+    }
+    public function getnotificationchatCount(){
+
+        $model = new AdminModel();
+
+        // Check if the user is logged in and is an admin
+        if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
+            $chatCountWhere = array(
+                'receiver_id' => $_SESSION['sessiondata']['id'],
+                'status' => 'N'
+            );
+            $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+            $data = $model->getRecordsBefore7Days();
+
+            $notification_count = count($data);
+
+
+            $count_data = count($chat_count);
+
+            $totalcount = $notification_count + $count_data;
+
+            // Manually create and return a JSON response
+            return $this->response->setJSON(['notificationchat_count' => $totalcount]);
+        } else if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Student') {
+            $chatCountWhere = array(
+                'receiver_id' => $_SESSION['sessiondata']['id'],
+                'status' => 'N'
+            );
+            $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+             $count_data = count($chat_count);
+             return $this->response->setJSON(['notificationchat_count' => $count_data]);
+
+        } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
+                $chatCountWhere = array(
+                    'receiver_id' => $_SESSION['sessiondata']['id'],
+                    'status' => 'N'
+                );
+
+            $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+            $count_data = count($chat_count);
+            return $this->response->setJSON(['notificationchat_count' => $count_data]);
+
+        } else {
+            // Return an error message if the user is not authorized
+            return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+        }
+
+    }
+    
 }

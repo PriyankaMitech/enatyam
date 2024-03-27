@@ -9,3 +9,9 @@ ALTER TABLE `free_demo_table` ADD `status` VARCHAR(10) NOT NULL DEFAULT 'Y' AFTE
 26-03-2024
 ALTER TABLE `billing_details` ADD `coupon_code` VARCHAR(100) NULL DEFAULT NULL AFTER `PricingType_Id`;
 ALTER TABLE `billing_details` ADD `ccdiscount` INT(20) NULL DEFAULT NULL AFTER `coupon_code`;
+
+
+27-06-2024
+ALTER TABLE `carrier` ADD `created_on` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `img`;
+ALTER TABLE `carrier` ADD `Phone_countryCode` VARCHAR(10) NULL DEFAULT NULL AFTER `course`;
+ALTER TABLE `carrier` ADD `mobileWithCode` VARCHAR(20) NULL DEFAULT NULL AFTER `phone`;

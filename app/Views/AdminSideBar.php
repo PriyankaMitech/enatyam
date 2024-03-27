@@ -50,6 +50,9 @@
 
 
     <style>
+        .navbar-badge {
+  font-weight: 700 !important;
+        }
             .bottom-image {
   position: absolute;
   bottom: 0;
@@ -193,7 +196,7 @@ $page = $uri->getSegment(count($pages));
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="<?= base_url(); ?>Home" class="nav-link">Home</a>
+                    <a href="<?= base_url(); ?>Home" class="nav-link">Home </a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
@@ -213,7 +216,10 @@ $page = $uri->getSegment(count($pages));
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <span class="badge badge-warning navbar-badge"><?= $counteing ?></span>
+                        <!-- <span class="badge badge-warning navbar-badge"><?//= $counteing ?></span> -->
+
+                        <span class="notificationCounter badge badge-danger navbar-badge"></span>
+
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                         <span class="dropdown-item dropdown-header"><?= $counteing ?> Notifications</span>
@@ -769,42 +775,87 @@ $page = $uri->getSegment(count($pages));
                                         <a href="#" class="nav-link">
                                             <i class="nav-icon far fa-comment-dots"></i>
                                             <p>
-                                                Messages
+                                                Messages 
+
+                                               
                                                 <i class="right fas fa-angle-left"></i>
+                                                <span class="notificationchatCounter badge badge-danger right"></span>
+
                                             </p>
+
                                         </a>
                                         <ul class="nav nav-treeview">
-                                            <li class="nav-item" <?php if (in_array('chatuser', $access_levels)) {
-                                                                        echo "style='display:block'";
-                                                                    } else {
-                                                                        echo "style='display:none'";
-                                                                    } ?>>
-                                                <a href="<?= base_url() ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Chat
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <!-- <li class="nav-item" <?php if (in_array('Email', $access_levels)) {
-                                                                            echo "style='display:block'";
-                                                                        } else {
-                                                                            echo "style='display:none'";
-                                                                        } ?>>
-                                                <a href="email" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Email</p>
-                                                </a>
-                                            </li> -->
-                                            <li class="nav-item" <?php if (in_array('add_notifications', $access_levels)) {
-                                                                        echo "style='display:block'";
-                                                                    } else {
-                                                                        echo "style='display:none'";
-                                                                    } ?>>
-                                                <a href="<?php echo base_url() ?>add_notifications" class="nav-link <?php if($page == 'add_notifications') { echo "active-nav-link";  }?>">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Notifications</p>
-                                                </a>
-                                            </li>
+                                        <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon far fa-comment-dots"></i>
+                                        <p>
+                                            Messages
+                                            <i class="right fas fa-angle-left"> </i>
+                                            <span class="chatCounter badge badge-danger right"></span>
+
+                                            
+                                        </p>
+                                        
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="<?= base_url() ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Chat<span class="chatCounter badge badge-danger right"></span>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <!-- <li class="nav-item">
+                                            <a href="<?php echo base_url() ?>email" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Email</p>
+                                            </a>
+                                        </li> -->
+                                        <!-- <li class="nav-item">
+                                            <a href="<?php echo base_url() ?>add_notifications" class="nav-link  <?php if($page == 'add_notifications') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Notifications<span class="notificationCounter badge badge-danger right"></span></p>
+                                            </a>
+                                        </li> -->
+                                        <!-- Add other Messages menu items with access level checks here -->
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon far fa-comment-dots"></i>
+                                        <p>
+                                            Notification
+                                            <i class="right fas fa-angle-left"> </i>
+                                           
+
+                                            
+                                        </p>
+                                        
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <!-- <li class="nav-item">
+                                            <a href="<?= base_url() ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Chat<span class="chatCounter badge badge-danger right"></span>
+                                                </p>
+                                            </a>
+                                        </li> -->
+                                        <!-- <li class="nav-item">
+                                            <a href="<?php echo base_url() ?>email" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Email</p>
+                                            </a>
+                                        </li> -->
+                                        <li class="nav-item">
+                                            <a href="<?php echo base_url() ?>add_notifications" class="nav-link  <?php if($page == 'add_notifications') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Add Notifications</p>
+                                            </a>
+                                        </li>
+                                        <!-- Add other Messages menu items with access level checks here -->
+                                    </ul>
+                                </li>
                                             <!-- Add other Messages menu items with access level checks here -->
                                         </ul>
                                     </li>
@@ -1179,14 +1230,18 @@ $page = $uri->getSegment(count($pages));
                                         <i class="nav-icon far fa-comment-dots"></i>
                                         <p>
                                             Messages
-                                            <i class="right fas fa-angle-left"></i>
+                                            <i class="right fas fa-angle-left"> </i>
+                                            <span class="chatCounter badge badge-danger right"></span>
+
+                                            
                                         </p>
+                                        
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
                                             <a href="<?= base_url() ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
-                                                <p>Chat
+                                                <p>Chat<span class="chatCounter badge badge-danger right"></span>
                                                 </p>
                                             </a>
                                         </li>
@@ -1196,10 +1251,46 @@ $page = $uri->getSegment(count($pages));
                                                 <p>Email</p>
                                             </a>
                                         </li> -->
+                                        <!-- <li class="nav-item">
+                                            <a href="<?php echo base_url() ?>add_notifications" class="nav-link  <?php if($page == 'add_notifications') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Notifications<span class="notificationCounter badge badge-danger right"></span></p>
+                                            </a>
+                                        </li> -->
+                                        <!-- Add other Messages menu items with access level checks here -->
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon far fa-comment-dots"></i>
+                                        <p>
+                                            Notification
+                                            <i class="right fas fa-angle-left"> </i>
+                                           
+
+                                            
+                                        </p>
+                                        
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <!-- <li class="nav-item">
+                                            <a href="<?= base_url() ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Chat<span class="chatCounter badge badge-danger right"></span>
+                                                </p>
+                                            </a>
+                                        </li> -->
+                                        <!-- <li class="nav-item">
+                                            <a href="<?php echo base_url() ?>email" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Email</p>
+                                            </a>
+                                        </li> -->
                                         <li class="nav-item">
                                             <a href="<?php echo base_url() ?>add_notifications" class="nav-link  <?php if($page == 'add_notifications') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
-                                                <p>Notifications</p>
+                                                <p>Add Notifications</p>
                                             </a>
                                         </li>
                                         <!-- Add other Messages menu items with access level checks here -->

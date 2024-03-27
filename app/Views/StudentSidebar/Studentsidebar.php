@@ -279,7 +279,7 @@ $scounter_data = $adminModel->getsinglerow('tbl_student_shedule',$wherecond2);
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li> -->
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
+          <a href="<?php echo base_url(); ?>" class="nav-link">Home </span></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="<?php echo base_url(); ?>logout" class="nav-link">Logout</a>
@@ -670,7 +670,7 @@ if (!empty($counter_data)) {
                 <a href="#" class="nav-link">
                   <i class="nav-icon far fa-comment-dots"></i>
                   <p>
-                    Massages
+                    Massages <span class="chatCounter">
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
