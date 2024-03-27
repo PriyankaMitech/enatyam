@@ -1243,6 +1243,12 @@ $amount = $insertdata->amount/100;
         // Combine the results from both queries
         $resultCarrier = $queryCarrier->getResult();
         $resultRegister = $queryRegister->getResult();
+        // echo'<pre>';print_r(count($resultRegister));
+        // die;
+        // Calculate total count
+        $totalCount = count($resultCarrier) + count($resultRegister);
+
+   
 
         // Notify the admin about both scenarios
         // You can implement your notification logic here, for example, sending an email or triggering a notification system.
@@ -1253,7 +1259,14 @@ $amount = $insertdata->amount/100;
         // mail('admin@example.com', 'Notification', $adminNotification);
 
         // Return combined results or handle them as needed
-        return array_merge($resultCarrier, $resultRegister);
+        // return array_merge($resultCarrier, $resultRegister);
+        return [
+            'newFacultyCount' => count($resultCarrier),
+            'newStudentCount' => count($resultRegister),
+            'totalCount' => $totalCount,
+            'resultCarrier' =>$resultCarrier,
+            'resultRegister'=>$resultRegister
+        ];
     }
 
     public function chechk_courses_id_id($courses_id, $sub_courses_name)
