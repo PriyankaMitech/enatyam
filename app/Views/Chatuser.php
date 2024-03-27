@@ -13,7 +13,7 @@ if (isset($_SESSION['sessiondata'])) {
     } elseif ($role == 'Student') {
         echo view('StudentSidebar/Studentsidebar');
     } else {
-        echo view('AdminSideBar');
+        include __DIR__ . '/AdminSideBar.php';
     }
 }
 ?>
@@ -83,7 +83,7 @@ if (isset($_SESSION['sessiondata'])) {
                                 <button type="button" class="btn btn-tool chatopen position-relative" title="Contacts" data-widget="chat-pane-toggle">
                                     <i class="fas fa-comments"></i>
                                     <?php if (!empty($chat_count)) : ?>
-                                        <span class="badge badge-danger position-absolute top-0 start-100 translate-middle"><?= count($chat_count); ?></span>
+                                        <span class="badge badge-danger position-absolute top-0 start-100 translate-middle"><span class="chatCounter"></span></span>
                                     <?php endif; ?>
                                 </button>
 
@@ -715,7 +715,7 @@ if (isset($_SESSION['sessiondata'])) {
     } elseif ($role == 'Student') {
         echo view('StudentSidebar/StudentFooter');
     } else {
-        echo view('AdminSideBar/AdminFooter');
+        include('AdminSideBar/AdminFooter');
     }
 }
 ?>
@@ -748,3 +748,6 @@ if (isset($_SESSION['sessiondata'])) {
         }
     }
 </script>
+
+
+

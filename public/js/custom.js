@@ -76,8 +76,9 @@ $(document).ready(function () {
     sendMessage();
   });
 
-  $(".chatmsg").keypress(function(event) {
-    if (event.which === 13) { // Check if Enter key is pressed (Enter key has keycode 13)
+  $(".chatmsg").keypress(function (event) {
+    if (event.which === 13) {
+      // Check if Enter key is pressed (Enter key has keycode 13)
       event.preventDefault(); // Prevent default form submission behavior
       sendMessage();
     }
@@ -85,7 +86,8 @@ $(document).ready(function () {
 
   function sendMessage() {
     var messageInput = $(".chatmsg").val().trim(); // Get the message and remove leading/trailing whitespace
-    if (messageInput !== "") { // Check if the message is not empty
+    if (messageInput !== "") {
+      // Check if the message is not empty
       var formdata = $("#chatform").serialize();
       if (formdata) {
         $.ajax({
@@ -274,3 +276,87 @@ var options = {
 //         // alert(response.error.metadata.order_id);
 //         // alert(response.error.metadata.payment_id);
 // });
+
+$(document).ready(function () {
+  // Function to update chat count
+  function updateChatCount() {
+    $.ajax({
+      url: "http://localhost/enatyam/getChatCount", // URL to fetch chat count
+      type: "GET",
+      dataType: "json", // Expect JSON response
+      success: function (response) {
+        if (response.chat_count !== undefined) {
+          $(".chatCounter").text(response.chat_count);
+        } else {
+          // Handle error or unauthorized access
+          $(".chatCounter").text("Error: " + response.error);
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error(status, error);
+      },
+    });
+  }
+
+  // Initial call to update chat count
+  updateChatCount();
+
+  // Set interval to update chat count every 5 seconds
+  setInterval(updateChatCount, 5000);
+});
+
+$(document).ready(function () {
+  // Function to update chat count
+  function updatenotificationCount() {
+    $.ajax({
+      url: "http://localhost/enatyam/getnotificationCount", // URL to fetch chat count
+      type: "GET",
+      dataType: "json", // Expect JSON response
+      success: function (response) {
+        if (response.notification_count !== undefined) {
+          $(".notificationCounter").text(response.notification_count);
+        } else {
+          // Handle error or unauthorized access
+          $(".notificationCounter").text("Error: " + response.error);
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error(status, error);
+      },
+    });
+  }
+
+  // Initial call to update chat count
+  updatenotificationCount();
+
+  // Set interval to update chat count every 5 seconds
+  setInterval(updatenotificationCount, 5000);
+});
+
+$(document).ready(function () {
+  // Function to update chat count
+  function updatenotificationchatCount() {
+    $.ajax({
+      url: "http://localhost/enatyam/getnotificationchatCount", // URL to fetch chat count
+      type: "GET",
+      dataType: "json", // Expect JSON response
+      success: function (response) {
+        if (response.notificationchat_count !== undefined) {
+          $(".notificationchatCounter").text(response.notificationchat_count);
+        } else {
+          // Handle error or unauthorized access
+          $(".notificationchatCounter").text("Error: " + response.error);
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error(status, error);
+      },
+    });
+  }
+
+  // Initial call to update chat count
+  updatenotificationchatCount();
+
+  // Set interval to update chat count every 5 seconds
+  setInterval(updatenotificationchatCount, 5000);
+});
