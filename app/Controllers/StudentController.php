@@ -386,6 +386,8 @@ class StudentController extends BaseController
             $wherecond = array('faculty_registerid' => $assignTeacherId);
 
             $data['fshedules'] =  $model->getalldata('schedule_list', $wherecond);
+            // echo "<pre>";print_r($data);exit();
+
 
             $wherecond = array('faculty_registerid' => $assignTeacherId);
 
@@ -608,6 +610,9 @@ class StudentController extends BaseController
         if (!empty($Sheduledatafromfaculty)) {
             $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
         }
+        // $wherecond = array('faculty_registerid' => $assignTeacherId);
+
+        //     $data['fshedules'] =  $model->getalldata('schedule_list', $wherecond);
       
 
         $currentYear = date('Y');
@@ -618,8 +623,9 @@ class StudentController extends BaseController
         // Prepare the WHERE condition for the query
         $wherecond = [
             'faculty_registerid' => $assignTeacherId,
-            'start_date >= ' => $startDate,
-            'end_date <= ' => $endDate,
+            'days' =>$selectedDays
+            // 'start_date >= ' => $startDate,
+            // 'end_date <= ' => $endDate,
         ];
 // echo $this->request->getPost('selectedDays');
 

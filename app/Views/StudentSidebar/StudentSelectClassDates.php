@@ -161,6 +161,7 @@ foreach($schedule_data as $data){
     $edate = date("F d, Y h:i A",strtotime($data->end_date));
     $sched_res[$data->id] = $data;
 }
+
 }
 ?>
 
@@ -175,7 +176,9 @@ $(document).ready(function() {
     var selectedDays = [];
 var addedTimeSlots = [];
 
+
 $('input[name="days[]"]').on('change', function() {
+
     // Clear the selectedDays array
     selectedDays = [];
 
@@ -185,19 +188,41 @@ $('input[name="days[]"]').on('change', function() {
     });
 
     // var_dump(selectedDays); // Output variable information for debugging
-// alert(selectedDays);
+    // alert(selectedDays);
 
     // Now you have an array of the values of the selected days (selectedDays)
     fetchData(selectedDays);
+
+
 });
 
 
-    // function resetDropdownAndFetchData() {
-    //     $('#shedules_time').empty();
-    //     $('#shedules_time').append('<option value="">Please select time</option>');
-    //     addedTimeSlots = []; // Reset added time slots
-    //     fetchData(selectedDays);
-    // }
+    function resetDropdownAndFetchData() {
+        $('#shedules_time').empty();
+        $('#shedules_time').append('<option value="">Please select time</option>');
+        addedTimeSlots = []; // Reset added time slots
+        fetchData(selectedDays);
+        
+        
+$('input[name="days[]"]').on('change', function() {
+
+    // Clear the selectedDays array
+    selectedDays = [];
+
+    // Loop through all checked checkboxes and add their values to selectedDays
+    $('input[name="days[]"]:checked').each(function() {
+        selectedDays.push($(this).val());
+    });
+
+    // var_dump(selectedDays); // Output variable information for debugging
+    // alert(selectedDays);
+
+    // Now you have an array of the values of the selected days (selectedDays)
+    fetchData(selectedDays);
+
+
+});
+    }
 
     function createOneHourSlots(start, end) {
         var slots = [];
@@ -225,6 +250,8 @@ $('input[name="days[]"]').on('change', function() {
 function fetchData(selectedDays) {
     // alert(selectedDays);
     
+    // Refresh the page before executing fetchData function
+    // location.reload();
     $.ajax({
         url: '<?= base_url(); ?>get_shedule_data_for_student',
         type: 'POST',
@@ -328,3 +355,36 @@ resetDropdownAndFetchData();
         });
     });
 </script>
+
+<script>
+    $(document).ready(function() {
+        var facultySchedules = <?= json_encode($fshedules) ?>;
+
+        // Function to update the end date based on the selected day
+        function updateEndDate(selectedDay) {
+            var endDate = ''; // Default end date
+            
+            // Loop through faculty schedules to find the end date for the selected day
+            facultySchedules.forEach(function(schedule) {
+                if (schedule.days.includes(selectedDay)) {
+                    endDate = schedule.end_date;
+                }
+            });
+
+            // Set the value of the end date input field
+            $('.end_date').val(endDate);
+        }
+
+        // Event listener for changes in the selected day(s)
+        $('input[name="days[]"]').on('change', function() {
+            // Get the value of the selected day
+            var selectedDay = $(this).val();
+
+            // Update the end date based on the selected day
+            updateEndDate(selectedDay);
+        });
+
+        // Additional initialization code if needed
+    });
+</script>
+

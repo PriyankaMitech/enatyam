@@ -841,9 +841,10 @@ class FacultyController extends BaseController
 
 public function saveshedule()
 {
+
   $result = session();
   $facultyId = $result->get('id');
- // print_r($_POST);die;
+//  print_r($_POST);die;
   $id =  $this->request->getPost('id');
   $days = $this->request->getPost('day');
   $start_date = $this->request->getPost('start_date');
@@ -856,7 +857,7 @@ public function saveshedule()
   $nextYear =   $currentYear + 1;
    // Extract year, month, and day from start_date
    [$year, $month, $day] = explode('-', $start_date);
-  //  echo '<pre>';print_r($currentYear);exit();
+  //  echo '<pre>';print_r($start_date);exit();
 
 // Create a common start and end date for the entire year
 
