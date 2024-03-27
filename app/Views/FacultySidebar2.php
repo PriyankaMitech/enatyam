@@ -213,9 +213,10 @@ $page = $uri->getSegment(count($pages));
           <a class="nav-link" data-toggle="dropdown" href="#">
             <i class="far fa-bell"></i>
             <?php $displayedNotificationCount = 0; ?>
-            <span class="badge badge-danger navbar-badge">
-              <?= $count; ?>
-            </span>
+            <!-- <span class="badge badge-danger navbar-badge">
+              <?//=$count; ?>
+            </span> -->
+            <span class="notificationCounter badge badge-danger navbar-badge"></span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
             <div class="notification-scroll">
@@ -426,8 +427,9 @@ $page = $uri->getSegment(count($pages));
               <a href="#" class="nav-link">
                 <i class="nav-icon far fa-comment-dots"></i>
                 <p>
-                  Massages
+                  Massages 
                   <i class="right fas fa-angle-left"></i>
+                  <span class="chatCounter badge badge-danger right"></span>
                 </p>
               </a>
               <ul class="nav nav-treeview">
@@ -435,7 +437,7 @@ $page = $uri->getSegment(count($pages));
                 <li class="nav-item">
                   <a href="<?= base_url(); ?>chatuser" class="nav-link <?php if($page == 'chatuser') { echo "active-nav-link";  }?>">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Chat</p>
+                    <p>Chat <span class="chatCounter badge badge-danger right"></span></p>
                   </a>
                 </li>
 

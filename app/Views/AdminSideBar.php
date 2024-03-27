@@ -222,7 +222,7 @@ $page = $uri->getSegment(count($pages));
 
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <span class="dropdown-item dropdown-header"><?= $counteing ?> Notifications</span>
+                        <span class="dropdown-item dropdown-header"><?//= $counteing ?> <span class="notificationCounter"></span>  Notifications</span>
                         <div class="dropdown-divider"></div>
 
                         <?php foreach ($resultCarrier as $notification) : ?>
@@ -779,7 +779,7 @@ $page = $uri->getSegment(count($pages));
 
                                                
                                                 <i class="right fas fa-angle-left"></i>
-                                                <span class="notificationchatCounter badge badge-danger right"></span>
+                                                <span class="chatCounter badge badge-danger right"></span>
 
                                             </p>
 
