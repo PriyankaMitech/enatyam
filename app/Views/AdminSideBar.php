@@ -202,7 +202,12 @@ $page = $uri->getSegment(count($pages));
             <?php
             $adminModel = new \App\Models\AdminModel();
             $data = $adminModel->getRecordsBefore7Days();
-            $counteing = count($data);
+            // echo'<pre>';print_r($data);die;
+            $counteing = ($data['totalCount']);
+            // echo'<pre>';print_r($counteing);die;
+            // $counting = $data['totalCount'];
+            $resultCarrier = $data['resultCarrier'];
+            $resultRegister = $data['resultRegister'];
             ?>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
@@ -214,18 +219,19 @@ $page = $uri->getSegment(count($pages));
                         <span class="dropdown-item dropdown-header"><?= $counteing ?> Notifications</span>
                         <div class="dropdown-divider"></div>
 
-                        <?php foreach ($data as $notification) : ?>
-                            <?php if (isset($notification->D_id)) : ?>
-                                <a href="<?= base_url() ?>NewFacultyApplication" class="dropdown-item">
-                                    <i class="fas fa-users  mr-2"></i><?= $notification->nname ?>
-                                </a>
-                            <?php elseif (isset($notification->id)) : ?>
-                                <a href="<?= base_url(); ?>studentProfiledata" class="dropdown-item">
-                                    <i class="fas fa-users  mr-2"></i><?= $notification->nname ?>
-                                </a>
-                            <?php endif ?>
-                            <div class="dropdown-divider"></div>
-                        <?php endforeach; ?>
+                        <?php foreach ($resultCarrier as $notification) : ?>
+                <a href="<?= base_url() ?>NewFacultyApplication" class="dropdown-item">
+                    <i class="fas fa-users mr-2"></i><?= $notification->nname ?>
+                </a>
+                <div class="dropdown-divider"></div>
+            <?php endforeach; ?>
+
+            <?php foreach ($resultRegister as $notification) : ?>
+                <a href="<?= base_url(); ?>studentProfiledata" class="dropdown-item">
+                    <i class="fas fa-users mr-2"></i><?= $notification->nname ?>
+                </a>
+                <div class="dropdown-divider"></div>
+            <?php endforeach; ?>
 
                     </div>
 
@@ -520,6 +526,7 @@ $page = $uri->getSegment(count($pages));
                                             <i class="nav-icon 	fa fa-child"></i>
                                             <p>
                                                 Student
+                                                <span class="badge badge-warning navbar-badge"><?= $counteing ?></span>
                                                 <i class="right fas fa-angle-left"></i>
                                             </p>
                                         </a>
@@ -1001,7 +1008,7 @@ $page = $uri->getSegment(count($pages));
                                         <i class="nav-icon 	fa fa-child"></i>
                                         <p>
                                             Student
-                                            <i class="right fas fa-angle-left"></i>
+                                            <i class="right fas fa-angle-left"></i><span class="badge badge-danger right"><?= $data['newStudentCount'] ?></span>
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
@@ -1060,7 +1067,7 @@ $page = $uri->getSegment(count($pages));
                                         <i class="nav-icon 	fa fa-users"></i>
                                         <p>
                                             Faculty
-                                            <i class="right fas fa-angle-left"></i>
+                                            <i class="right fas fa-angle-left"></i><span class="badge badge-danger right "><?= $data['newFacultyCount'] ?></span>
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
