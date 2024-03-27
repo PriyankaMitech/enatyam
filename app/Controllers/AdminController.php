@@ -2683,5 +2683,40 @@ public function update_remark()
         }
 
     }
+
+    public function getNewStudentCount(){
+        $model = new AdminModel();
+
+        if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
+           
+        $data = $model->getRecordsBefore7Days();
+        // echo "<pre>";print_r($data);exit();
+
+        // $notification_count = count($data);
+        return $this->response->setJSON(['newStudentCount' => $data['newStudentCount']]);
+
+    } else {
+        // Return an error message if the user is not authorized
+        return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+    }
     
+}
+
+public function getNewFacultyCount(){
+    $model = new AdminModel();
+
+    if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
+       
+    $data = $model->getRecordsBefore7Days();
+    // echo "<pre>";print_r($data);exit();
+
+    // $notification_count = count($data);
+    return $this->response->setJSON(['newFacultyCount' => $data['newFacultyCount']]);
+
+} else {
+    // Return an error message if the user is not authorized
+    return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+}
+
+}
 }

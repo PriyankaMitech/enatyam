@@ -1240,9 +1240,6 @@ $amount = $insertdata->amount/100;
             // ->where('Payment_status', 'Y')
             ->where('role', 'Student')
             ->orderBy('created_on', 'DESC') // Add the orderBy clause here
-
-
-
             ->get();
         // echo $this->db->getLastQuery();
         // die;
@@ -1254,8 +1251,6 @@ $amount = $insertdata->amount/100;
         // die;
         // Calculate total count
         $totalCount = count($resultCarrier) + count($resultRegister);
-
-   
 
         // Notify the admin about both scenarios
         // You can implement your notification logic here, for example, sending an email or triggering a notification system.

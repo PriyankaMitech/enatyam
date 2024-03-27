@@ -360,3 +360,59 @@ $(document).ready(function () {
   // Set interval to update chat count every 5 seconds
   setInterval(updatenotificationchatCount, 5000);
 });
+
+$(document).ready(function () {
+  // Function to update Student count
+  function updatnewStudentCount() {
+    $.ajax({
+      url: "http://localhost/enatyam/getNewStudentCount", // URL to fetch Student count
+      type: "GET",
+      dataType: "json", // Expect JSON response
+      success: function (response) {
+        if (response.newStudentCount !== undefined) {
+          $(".newStudentCounter").text(response.newStudentCount);
+        } else {
+          // Handle error or unauthorized access
+          $(".newStudentCounter").text("Error: " + response.error);
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error(status, error);
+      },
+    });
+  }
+
+  // Initial call to update Student count
+  updatnewStudentCount();
+
+  // Set interval to update Student count every 5 seconds
+  setInterval(updatnewStudentCount, 5000);
+});
+
+$(document).ready(function () {
+  // Function to update Faculty count
+  function updatnewFacultyCount() {
+    $.ajax({
+      url: "http://localhost/enatyam/getNewFacultyCount", // URL to fetch Faculty count
+      type: "GET",
+      dataType: "json", // Expect JSON response
+      success: function (response) {
+        if (response.newFacultyCount !== undefined) {
+          $(".newFacultyCounter").text(response.newFacultyCount);
+        } else {
+          // Handle error or unauthorized access
+          $(".newFacultyCounter").text("Error: " + response.error);
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error(status, error);
+      },
+    });
+  }
+
+  // Initial call to update Faculty count
+  updatnewFacultyCount();
+
+  // Set interval to update Faculty count every 5 seconds
+  setInterval(updatnewFacultyCount, 5000);
+});

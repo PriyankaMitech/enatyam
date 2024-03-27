@@ -1059,7 +1059,8 @@ $page = $uri->getSegment(count($pages));
                                         <i class="nav-icon 	fa fa-child"></i>
                                         <p>
                                             Student
-                                            <i class="right fas fa-angle-left"></i><span class="badge badge-danger right"><?= $data['newStudentCount'] ?></span>
+                                            <i class="right fas fa-angle-left"></i>
+                                            <span class="newStudentCounter badge badge-danger navbar-badge right"></span>
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
@@ -1118,7 +1119,7 @@ $page = $uri->getSegment(count($pages));
                                         <i class="nav-icon 	fa fa-users"></i>
                                         <p>
                                             Faculty
-                                            <i class="right fas fa-angle-left"></i><span class="badge badge-danger right "><?= $data['newFacultyCount'] ?></span>
+                                            <i class="right fas fa-angle-left"></i><span class="newFacultyCounter badge badge-danger navbar-badge right"></span>
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
