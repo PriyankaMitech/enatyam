@@ -25,6 +25,7 @@ class BillingC extends BaseController
         $session = session();
         $wherecond = ['Coupan_code' => $this->request->getPost('coupon_code')];
         $coupandata = $model->get_single_data('coupan_code', $wherecond);
+        $ccdiscount = 0;
         if(!empty($coupandata)){
             $ccdiscount = $coupandata->percentage;
         }
