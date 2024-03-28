@@ -434,7 +434,7 @@ $(document).ready(function () {
         ) {
           response.facultyNotifications.forEach(function (notification) {
             $(".facultyNotifications").append(`
-            <a href="${notification.url}" class="dropdown-item">
+            <a href="http://localhost/enatyam/NewFacultyApplication" class="dropdown-item">
               <i class="fas fa-users mr-2"></i>${notification.nname} - Faculty
             </a>
             <div class="dropdown-divider"></div>
@@ -471,7 +471,7 @@ $(document).ready(function () {
         ) {
           response.studentNotifications.forEach(function (notification) {
             $(".studentNotifications").append(`
-            <a href="${notification.url}" class="dropdown-item">
+            <a href="http://localhost/enatyam/studentProfiledata" class="dropdown-item">
               <i class="fas fa-users mr-2"></i>${notification.nname} - Student
             </a>
             <div class="dropdown-divider"></div>
@@ -510,7 +510,7 @@ $(document).ready(function () {
           response.newNotifications.forEach(function (notification) {
             $(".notification-scroll").append(`
                           <!-- Your HTML template for displaying a notification -->
-                          <a href="#" class="dropdown-item view-notification">
+                          <a href="http://localhost/enatyam/notification" class="dropdown-item view-notification">
                               <!-- Message Start -->
                               <div class="media">
                                   <img src="http://localhost/enatyam/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
