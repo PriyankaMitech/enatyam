@@ -2232,171 +2232,151 @@ if($datas->total_ratings != ''){
 <h3 class="text-white p-3" style="text-align:center"> FAQ<br>
         <span class="line"></span> 
                 </h3>
-<div class="col-lg-6 col-md-6 col-12 faqdance">
-
-<div class="">
+    <div class="col-lg-6 col-md-6 col-12 faqdance">
         <div class="accordion-item">
-        <div class="accordion-item-header text-white">
-        <span class="question-text"> What types of yoga classes do you offer online? </span>
+            <div class="accordion-item-header text-white">
+                <span class="question-text"> A brief idea about Enatyam and Mission & Vision of Enatyam </span>
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content text-white">
+                Enatyam is an online platform dedicated to the promotion and preservation of Indian performing arts. Through our comprehensive courses, students can explore a wide
+                range of dance styles, singing, music instruments, and yoga. We believe in enabling everyone to pursue their hobbies, even amidst busy schedules and other constraints. Enatyam
+                started with the vision to promote Indian art, encourage participation, and make it accessible to everyone, thereby allowing individuals to rekindle their passion for dance, music, and
+                other artistic pursuits.
+                <b>Mission: </b> The enatyam India is a technology enable most trusted and innovative e-learning platform for Indian Classical art forms.<br>
+                <b>Vision : </b> To be the most trusted and respected company setting the highest standards of quality education and make classical art accessible to global audience at affordable Price.
+                </div>
+            </div>
         </div>
-        <div class="accordion-item-body">
-        <div class="accordion-item-body-content text-white">
-        We offer a variety of yoga classes online, including vinyasa, hatha, restorative, yin,
-        and more..</div>
+        <div class="accordion-item">
+            <div class="accordion-item-header text-white">
+                <span class="question-text"> Is Enatyam.com's operation and services limited to India or available worldwide? </span>
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content text-white">
+                    Enatyam.com is available worldwide. Our online platform allows students from any corner of the globe to access our courses and resources, enabling us to reach a diverse
+                    community of learners passionate about Indian performing arts.
+                </div>
+            </div>
         </div>
-        </div>
-</div>
-<!-- <div class="accordion"> -->
-            <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> Do I need to have any prior experience with yoga to join your online classes?</span>
-            </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            No, our online classes are suitable for all levels, from beginner to advanced.</div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-            <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> What equipment do I need for online yoga classes?</span>
-            </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            You will need a yoga mat and any additional props that your instructor recommends, such
-            as blocks, straps, or blankets.
-            </div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-            <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> How do I join an online yoga class?</span>
-            </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            Simply sign up for a class on our website and we will provide you with a link to join
-            the class online. </div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-            <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> Can I join a class at any time, or do I need to join at a speciﬁc time? </span> </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            Our online classes are offered at speciﬁc times, so you will need to join the class
-            at the designated time. </div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-            <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> What if I can't make it to a live online class?</span> </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            We also offer on-demand classes that you can access at any time, so you can
-            practice yoga on your own schedule.</div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-            <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> Is there any special software or technology required to join an online yoga class?</span>
-            </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            You will need a device (such as a computer, tablet, or smartphone) with internet
-            access and a webcam in order to join our online classes. </div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
-            <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> How long are your online yoga classes?</span>
-            </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            Our classes typically run for 60-90 minutes, depending on the type of class.
-            </div>
-            </div>
-            </div>
-<!-- </div> -->
 
-<!-- <div class="accordion"> -->
             <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> Can I interact with the instructor during an online class?</span>
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> What makes Enatyam.com different from other online platforms?</span>
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    Enatyam.com stands out from other online platforms due to its focus on Indian performing arts, personalized instruction, interactive learning environment, and
+                    commitment to cultural authenticity and diversity. Our platform offers a holistic approach to dance education, combining tradition with innovation to inspire and empower students
+                    worldwide.
+                    </div>
+                </div>
             </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            Yes, our online classes include interactive elements such as Q&A sessions
-            and feedback from the instructor. </div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
+
             <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> What is online yoga? </span>
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> how can I sign up for a trial class on Enatyam.com?</span>
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    To sign up for a trial class, navigate to the course you're interested in, and check if a trial session is available. Follow the prompts to register for the trial class and experience our
+                    teaching firsthand.
+                    </div>
+                </div>
             </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            Online yoga is the practice of yoga that is done through a virtual platform
-            like Zoom, Skype, or YouTube. It allows you to practice yoga from the
-            comfort of your own home.
-            </div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
+
             <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> What equipment do I need for online yoga?</span>
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> What types of courses are offered on Enatyam.com? </span> 
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    Enatyam.com offers a diverse array of courses in performing arts including dance, music, singing, yoga, and more. Explore our catalog to find courses tailored to your interests and
+                    skill level. 
+                    </div>
+                </div>
             </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            All you need is a yoga mat, comfortable clothing, and a stable internet
-            connection. Some classes may also require additional props like blocks,
-            straps, and blankets.
-            </div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
+
             <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> How do I choose the right online yoga class for me?</span>
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> What is the registration process for enrolling in a course? </span>
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    Registration on Enatyam.com is effortless. Simply create an account, select your desired course, and follow prompts to enroll securely. Need assistance? Our team is ready to help.
+                    </div>
+                </div>
             </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            Consider your experience level, the type of yoga you prefer, and your
-            goals when choosing an online yoga class. Look for classes that are
-            tailored to your needs and interests.
-            </div>
-            </div>
-            </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
+
             <div class="accordion-item">
-            <div class="accordion-item-header text-white">
-            <span class="question-text"> Can I ask questions during an online yoga class?</span>
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> Can I get a refund if I need to cancel my enrollment in a course?</span>
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    If you're unsatisfied with your course experience, you may be eligible for a refund within a specified period as per our <a href="<?php echo base_url();?>refundpolicy">refund policy.</a> Please refer to our terms and conditions for
+                    detailed information.
+                    </div>
+                </div>
             </div>
-            <div class="accordion-item-body">
-            <div class="accordion-item-body-content text-white">
-            Yes, most online yoga classes offer the opportunity to ask questions and
-            receive feedback. You can use the chat feature or unmute yourself to ask
-            questions during the class. </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> Can I temporarily pause my membership?</span>
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    Yes, we understand that life can sometimes get in the way of your studies. You have the flexibility to pause your membership for a predefined period, allowing you to take
+                    a break without losing access to your course materials or progress.
+                    </div>
+                </div>
             </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> Do courses on Enatyam.com offer certification upon completion? </span>
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    While some courses may offer certificates of completion, our primary focus is on imparting practical skills and knowledge that you can apply in your artistic endeavors. 
+                    </div>
+                </div>
             </div>
-<!-- </div> -->
-<!-- <div class="accordion"> -->
+
+            <div class="accordion-item">
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> Is attendance mandatory for online courses on Enatyam.com? </span>
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    Attendance is mandatory for Enatyam.com's online courses. Students must log in and mark attendance. While batch class students cannot cancel, those in private one-on-one
+                    classes can cancel with 12-hour notice. Your dedication to attendance enriches your learning journey and course progress.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> How can I purchase a course on Enatyam.com? </span>
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    Purchasing a course is simple. Select your desired course, proceed to checkout, and complete the purchase securely using our online payment system.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-item-header text-white">
+                    <span class="question-text"> What billing options are available for course purchases?</span>
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content text-white">
+                    We accept payments via major credit cards, debit cards, net banking, PayPal, and other popular methods ensuring a seamless and protected transaction process.
+                    </div>
+                </div>
+            </div>       
+
             <div class="accordion-item">
             <!-- <div class="accordion-item-header">
             <span class="question-text"> Is online yoga as effective as in-person yoga? </span>
@@ -2413,104 +2393,98 @@ if($datas->total_ratings != ''){
 <!-- </div> -->
 
                 <div class="col-lg-6 col-md-6 col-12 faqdance">
-                    <!-- <div class="accordion"> -->
+              
                     <div class="accordion-item">
                         <div class="accordion-item-header text-white">
-                        <span class="question-text"> Is online yoga as effective as in-person yoga? </span>
+                            <span class="question-text"> Are there any prerequisites for enrolling in courses on Enatyam.com?</span>
                         </div>
                         <div class="accordion-item-body">
                             <div class="accordion-item-body-content text-white">
-                                Online yoga can be just as effective as in-person yoga, as long as you
-                                have a good internet connection and a dedicated space to practice. Many
-                                online yoga classes offer personalized instruction and modiﬁcations to
-                                help you get the most out of your practice. </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header text-white">
-                        <span class="question-text"> Can I practice online yoga if I am a beginner?</span> </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content text-white">
-                                Yes, online yoga is suitable for beginners. Many online yoga classes
-                                offer modiﬁed poses and variations to accommodate different experience
-                                levels. </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header text-white">
-                        <span class="question-text"> How often should I practice online yoga?</span>
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content text-white">
-                                The frequency of your online yoga practice depends on your goals and
-                                schedule. It's generally recommended to practice yoga at least 2-3 times
-                                a week for maximum beneﬁts. </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header text-white">
-                        <span class="question-text"> What are the beneﬁts of practicing online yoga?</span>
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content text-white">
-                                The beneﬁts of practicing online yoga are similar to those of in-person
-                                yoga, including improved ﬂexibility, strength, balance, and stress
-                                relief. Additionally, practicing yoga from home can save you time and
-                                money on commuting to a studio.
+                            Most of our courses welcome learners of all levels. Check the course description for any specific prerequisites or recommended skill levels. 
                             </div>
                         </div>
                     </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
+             
                     <div class="accordion-item">
                         <div class="accordion-item-header text-white">
-                        <span class="question-text"> What would be my batch timing ? </span>
+                            <span class="question-text"> What qualifications do the faculty members at Enatyam.com have? </span>
                         </div>
                         <div class="accordion-item-body">
                             <div class="accordion-item-body-content text-white">
-                                <ul style="padding-left: 1rem;">
-                                    <li>Age group 6 to 13: 1-4 PM</li>
-                                    <li>Age group 14 to 20: 4-7 PM</li>
-                                    <li>Age group 21 to 45: 7 to 9 PM</li>
-                                    <li>Age group 45+: 6:30-10:30 PM</li>
-                                    <li>International Students (USA/Europe): 8PM to 12PM IST</li>
-                                </ul>
+                            Our faculty members are seasoned professionals with extensive experience in their respective fields of performing arts. They bring expertise, passion, and dedication to
+                            their teaching. 
                             </div>
                         </div>
                     </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
+                   
                     <div class="accordion-item">
                         <div class="accordion-item-header text-white">
-                        <span class="question-text"> How many students will be accommodated in a single batch?</span>
+                            <span class="question-text"> How is the curriculum structured for your online courses? </span>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content text-white">
+                            Our online course curriculum is meticulously organized to ensure a comprehensive learning experience. It encompasses a structured progression through fundamental
+                            concepts to advanced techniques, accompanied by engaging multimedia content and interactive exercises tailored to each student's level.
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="accordion-item">
+                        <div class="accordion-item-header text-white">
+                            <span class="question-text"> Are practice videos available for courses? </span>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content text-white">
+                            Yes, many of our courses include practice videos to supplement your learning experience, providing visual demonstrations and guidance.
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="accordion-item">
+                        <div class="accordion-item-header text-white">
+                            <span class="question-text"> What if I didn’t like a class? </span>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content text-white">
+                            If you're dissatisfied with a class, please reach out to us with your feedback. We'll do our best to address your concerns and ensure your satisfaction.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="accordion-item">
+                        <div class="accordion-item-header text-white">
+                            <span class="question-text"> What if I miss a class? </span>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content text-white">
+                            Don't worry if you miss a class; recordings or supplementary materials may be available for you to catch up on missed content. Additionally, you can communicate with
+                            instructors for further assistance or clarification.
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="accordion-item">
+                        <div class="accordion-item-header text-white">
+                            <span class="question-text"> Can I switch to a different course after enrolling in one?</span>
                         </div>
                         <div class="accordion-item-body">
                             <div class="accordion-item-body-content">
-                                Per batch maximum 6 students will be admitted.
+                            Yes, you may be able to switch to a different course depending on availability and our policy. Contact our support team for assistance with course changes.
                             </div>
                         </div>
                     </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
+                 
                     <div class="accordion-item">
                         <div class="accordion-item-header text-white">
-                        <span class="question-text"> Will the course provide a certificate?</span>
+                            <span class="question-text">Can I receive individualized feedback on my assignments or performances?</span>
                         </div>
                         <div class="accordion-item-body">
                             <div class="accordion-item-body-content text-white">
-                                Yes, we do provide certifications after completion of course.
+                            Yes, our instructors provide personalized feedback to help you improve your skills and refine your performances. Reach out to instructors for feedback on your work.
                             </div>
                         </div>
                     </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
+               
                     <div class="accordion-item">
                         <div class="accordion-item-header text-white">
                         <span class="question-text"> How to cover up if I missed a session?</span>
@@ -2521,66 +2495,31 @@ if($datas->total_ratings != ''){
                             </div>
                         </div>
                     </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
+                   
                     <div class="accordion-item">
                         <div class="accordion-item-header text-white">
-                        <span class="question-text">What are the policies for refund if i am not comfortable with the class?</span>
+                            <span class="question-text">Are there networking opportunities with other students or professionals in the field? </span>
                         </div>
                         <div class="accordion-item-body">
                             <div class="accordion-item-body-content text-white">
-                                We have no question asked refund policy and all the balances will be
-                                transferred within a weeks time. </div>
+                            Yes, our platform facilitates networking opportunities through discussion forums, live events, and community features where you can connect with other students and
+                            professionals.
+                             </div>
                         </div>
                     </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
+                
                     <div class="accordion-item">
                         <div class="accordion-item-header text-white">
-                        <span class="question-text"> What are the minimum qualifications and prerequisites to attend the classes?</span>
+                            <span class="question-text"> How can I get assistance with technical issues while taking a course? </span>
                         </div>
                         <div class="accordion-item-body">
                             <div class="accordion-item-body-content text-white">
-                                No, minimum qualifications required, anyone above 6+ can attend.
+                            If you encounter technical issues, our dedicated support team is here to assist you. Reach out to us via email or through our website, and we'll promptly address your
+                            concerns
                             </div>
                         </div>
                     </div>
                     <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header text-white">
-                        <span class="question-text"> How can I arrange a doubt clearing session?</span>
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content text-white">
-                                You can record your practice video and our mentors will do counselling after every class
-                                and give you suggestions if required. </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header text-white">
-                        <span class="question-text">How do I contact the team in case of any doubts and queries?</span>
-                        </div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content text-white">
-                                You can drop a mail at contact@www.enatyam.org and our team will get in touch with you
-                                within 24-48 hours.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                    <div class="accordion-item">
-                        <div class="accordion-item-header text-white">
-                        <span class="question-text"> I’ve done the payment but haven’t received the access to my classes yet? </span></div>
-                        <div class="accordion-item-body"> 
-                            <div class="accordion-item-body-content text-white">
-                                You can drop a mail at contact@www.enatyam.org and our team will get in touch with you
-                                within 24-48 hours. </div>
-                        </div>
-                    </div>
                 </div>
                 <!-- </div> -->
             </div>
@@ -2594,16 +2533,8 @@ if($datas->total_ratings != ''){
 <section class="tstmwy">
     <div class="container ">
         <div class="row">
-            <!-- <div class="row heading-div m-0"> -->
-            <!-- <div class="col-lg-12 col-12 text-center"> -->
             <h1 class="studioText text-center ">The Studio That Moves With You</h1>
-            <!-- <span class="line"></span> -->
-            <img src="<?php echo base_url(); ?>public/images/Home/GoesWhereverGo!.png" />
-            <!-- </div> -->
-            <!-- </div> -->
-
-
-            <!-- C:\xampp\htdocs\enatyam\public\images\Home\GoesWherever YouGo!-2.png -->
+            <img src="<?php echo base_url(); ?>public/images/Home/GoesWhereverGo!.png" /> 
         </div>
     </div>
 </section>
@@ -2623,8 +2554,6 @@ if($datas->total_ratings != ''){
                 <div id="facultyCertifications"></div>
                 <div id="facultyExperience"></div>
                 <div id="FacultyDetails"></div>
-                <!-- <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is...</p> -->
-                <!-- <a href="mailto:">sstark@asn-online.org</a> -->
             </article>
         </div>
     </div>
@@ -2642,8 +2571,6 @@ if($datas->total_ratings != ''){
         </div>
     </div>
 </div>
-
-
 
 <?php include('footer.php'); ?>
 

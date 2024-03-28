@@ -11,7 +11,7 @@ class RegisterModel extends Model
 
     public function saveContactUs($data)
     {
-       $res =  $this->db->table('tbl_contact')->insert($data);
+      //  $res =  $this->db->table('tbl_contact')->insert($data);
        
     }
 

@@ -312,7 +312,8 @@
             });
         });
 
-        $(".question-text").each(function() {
+    // Truncate question text on page load
+    $(".question-text").each(function() {
         var $el = $(this);
         var originalText = $el.text();
         var maxLength = 50; // Maximum length before truncation
@@ -321,9 +322,9 @@
             var truncatedText = originalText.substring(0, maxLength) + '...';
             $el.text(truncatedText);
             $el.data('fullText', originalText);
+            $el.data('truncatedText', truncatedText); // Store truncated text separately
             $el.data('isTruncated', true);
         } else {
-            
             $el.data('isTruncated', false);
         }
     });
@@ -331,18 +332,18 @@
     $(".accordion-item-header").click(function() {
         var $question = $(this).find('.question-text');
         var fullText = $question.data('fullText');
+        var truncatedText = $question.data('truncatedText'); // Retrieve truncated text
         var isTruncated = $question.data('isTruncated');
 
         if (isTruncated) {
             $question.text(fullText);
             $question.data('isTruncated', false);
         } else {
-            var maxLength = 50; // Maximum length before truncation
-            var truncatedText = fullText.substring(0, maxLength);
-            $question.text(truncatedText);
+            $question.text(truncatedText); // Use truncated text instead of recalculating
             $question.data('isTruncated', true);
         }
     });
+
 
     document.addEventListener("DOMContentLoaded", function() {
     var reviewContainers = document.querySelectorAll(".happyFaces-div1");
@@ -1755,6 +1756,58 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
+       <script>
+$(document).ready(function() {
+            // Add custom method for letters only validation
+            $.validator.addMethod("lettersOnly", function(value, element) {
+                return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
+            }, "Please enter letters only.");
+            
+            $.validator.addMethod("validEmail", function(value, element) {
+                // Use a regular expression for basic email validation
+                return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value);
+            }, "Please enter a valid email address.");
+
+
+       // Initialize form validation
+            $('#contactUsForm').validate({
+                rules: {
+                    name: {
+                        required: true,
+                        lettersOnly: true
+                    },
+                    email: {
+                        required: true,
+                        validEmail: true // Use the custom method here
+                    },
+                    mobNumber: {
+                        required: true,
+                        // validMobileNumber: true
+                    },
+                    interestedIn: {
+                        required: true
+                    },
+                },
+                messages: {
+                    name: {
+                        required: 'Please enter your name.',
+                        lettersOnly: 'Please enter letters only.' // Custom error message
+                    },
+                    interestedIn: {
+                        required: 'Please enter your interest.'
+                    },
+                    email: {
+                        required: 'Please enter your email address.',
+                        validEmail: 'Please enter a valid email address.' // Custom error message
+                    },
+                    mobNumber: {
+                        required: 'Please enter your Mobile number.'
+                    }
+
+                }
+            });
+        });
+        </script>
 
 
 
