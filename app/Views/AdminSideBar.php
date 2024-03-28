@@ -1215,12 +1215,12 @@ $page = $uri->getSegment(count($pages));
                                                 <p>Student Payments</p>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a href="<?php echo base_url() ?>Coupan_code" class="nav-link <?php if($page == 'Coupan_code') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-book"></i>
                                                 <p>Coupan code</p>
                                             </a>
-                                        </li>
+                                        </li> -->
 
                                         <!-- Add other Finance menu items with access level checks here -->
                                     </ul>
