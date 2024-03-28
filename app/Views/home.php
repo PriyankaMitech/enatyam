@@ -476,7 +476,7 @@ if($datas->total_ratings != ''){
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/1-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/6-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
@@ -562,7 +562,7 @@ if($datas->total_ratings != ''){
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/11-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/10-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
@@ -644,7 +644,7 @@ if($datas->total_ratings != ''){
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/11-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/8-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
@@ -685,7 +685,7 @@ if($datas->total_ratings != ''){
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/11-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/7-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
@@ -727,7 +727,7 @@ if($datas->total_ratings != ''){
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/13-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
@@ -809,7 +809,7 @@ if($datas->total_ratings != ''){
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Yoga/CopyOfMeditations.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Home/14-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
