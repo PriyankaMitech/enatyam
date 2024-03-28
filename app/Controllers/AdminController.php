@@ -2738,4 +2738,75 @@ public function getNewFacultyCount(){
 }
 
 }
+
+
+public function getNewFacultyNotifications(){
+    $model = new AdminModel();
+
+    if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
+       
+    $data = $model->getRecordsBefore7Days();
+    // echo "<pre>";print_r($data);exit();
+
+    // $notification_count = count($data);
+    return $this->response->setJSON(['facultyNotifications' => $data['resultCarrier']]);
+
+} else {
+    // Return an error message if the user is not authorized
+    return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+}
+
+}
+
+public function getNewStudentNotifications(){
+    $model = new AdminModel();
+
+    if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
+       
+    $data = $model->getRecordsBefore7Days();
+    // echo "<pre>";print_r($data);exit();
+
+    // $notification_count = count($data);
+    return $this->response->setJSON(['studentNotifications' => $data['resultRegister']]);
+
+} else {
+    // Return an error message if the user is not authorized
+    return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+}
+
+
+}
+
+public function updateNotifications(){
+    $model = new AdminModel();
+
+    if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Faculty') {
+       
+        $teacherId = $_SESSION['sessiondata']['id'];
+        $userType = 'faculty';
+      
+        // Rest of your code
+        $notifications = $model->getUserRole($teacherId, $userType);
+
+        // echo "<pre>";print_r($notifications);exit();
+
+       
+        return $this->response->setJSON(['newNotifications' => $notifications]);
+
+    }else if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Student') {
+
+
+            $student_id = $_SESSION['sessiondata']['id'];
+            $userType = 'student';
+            $notifications = $model->getUserRole($student_id, $userType);
+    
+          
+            return $this->response->setJSON(['newNotifications' => $notifications]);
+} else {
+    // Return an error message if the user is not authorized
+    return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+}
+
+
+}
 }

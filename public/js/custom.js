@@ -416,3 +416,138 @@ $(document).ready(function () {
   // Set interval to update Faculty count every 5 seconds
   setInterval(updatnewFacultyCount, 5000);
 });
+
+$(document).ready(function () {
+  function updateFacultyNotifications() {
+    $.ajax({
+      url: "http://localhost/enatyam/getNewFacultyNotifications", // URL to fetch new faculty notifications
+      type: "GET",
+      dataType: "json", // Expect JSON response
+      success: function (response) {
+        // Clear existing notifications
+        $(".facultyNotifications").empty();
+
+        // Append new faculty notifications
+        if (
+          response.facultyNotifications !== undefined &&
+          response.facultyNotifications.length > 0
+        ) {
+          response.facultyNotifications.forEach(function (notification) {
+            $(".facultyNotifications").append(`
+            <a href="${notification.url}" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i>${notification.nname} - Faculty
+            </a>
+            <div class="dropdown-divider"></div>
+          `);
+          });
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error(status, error);
+      },
+    });
+  }
+
+  updateFacultyNotifications();
+
+  // Set interval to update Faculty count every 5 seconds
+  setInterval(updateFacultyNotifications, 5000);
+});
+
+$(document).ready(function () {
+  function updateStudentNotifications() {
+    $.ajax({
+      url: "http://localhost/enatyam/getNewStudentNotifications", // URL to fetch new student notifications
+      type: "GET",
+      dataType: "json", // Expect JSON response
+      success: function (response) {
+        // Clear existing notifications
+        $(".studentNotifications").empty();
+
+        // Append new student notifications
+        if (
+          response.studentNotifications !== undefined &&
+          response.studentNotifications.length > 0
+        ) {
+          response.studentNotifications.forEach(function (notification) {
+            $(".studentNotifications").append(`
+            <a href="${notification.url}" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i>${notification.nname} - Student
+            </a>
+            <div class="dropdown-divider"></div>
+          `);
+          });
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error(status, error);
+      },
+    });
+  }
+
+  updateStudentNotifications();
+
+  // Set interval to update Faculty count every 5 seconds
+  setInterval(updateStudentNotifications, 5000);
+});
+
+$(document).ready(function () {
+  // Function to update notifications
+  function updateNotifications() {
+    $.ajax({
+      url: "http://localhost/enatyam/updateNotifications", // URL to fetch new notifications
+      type: "GET",
+      dataType: "json", // Expect JSON response
+      success: function (response) {
+        // Clear existing notifications
+        $(".notification-scroll").empty();
+
+        // Append new notifications
+        if (
+          response.newNotifications !== undefined &&
+          response.newNotifications.length > 0
+        ) {
+          response.newNotifications.forEach(function (notification) {
+            $(".notification-scroll").append(`
+                          <!-- Your HTML template for displaying a notification -->
+                          <a href="#" class="dropdown-item view-notification">
+                              <!-- Message Start -->
+                              <div class="media">
+                                  <img src="http://localhost/enatyam/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                  <div class="media-body">
+                                      <h3 class="dropdown-item-title">
+                                          ${notification.full_name}
+                                          <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                                      </h3>
+                                      <p class="text-sm">
+                                          ${notification.notification_description}
+                                      </p>
+                                      <p class="text-sm text-muted">
+                                          ${notification.timestamp}
+                                      </p>
+                                  </div>
+                              </div>
+                              <!-- Message End -->
+                          </a>
+                      `);
+          });
+        } else {
+          // If no new notifications, display a message
+          $(".notification-scroll").append(
+            `<p class="p-2">No new notifications available</p>`
+          );
+          $(".notification-scroll").append(`<hr>`);
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error(status, error);
+      },
+    });
+  }
+
+  // Initial call to update notifications
+  updateNotifications();
+
+  // Set interval to update notifications every 5 seconds
+  setInterval(updateNotifications, 5000);
+});

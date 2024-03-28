@@ -225,19 +225,20 @@ $page = $uri->getSegment(count($pages));
                         <span class="dropdown-item dropdown-header"><?//= $counteing ?> <span class="notificationCounter"></span>  Notifications</span>
                         <div class="dropdown-divider"></div>
 
-                        <?php foreach ($resultCarrier as $notification) : ?>
-                <a href="<?= base_url() ?>NewFacultyApplication" class="dropdown-item">
-                    <i class="fas fa-users mr-2"></i><?= $notification->nname ?>
-                </a>
-                <div class="dropdown-divider"></div>
-            <?php endforeach; ?>
+                        <?php //  foreach ($resultCarrier as $notification) : ?>
+                <!-- <a href="<?= base_url() ?>NewFacultyApplication" class="dropdown-item">
+                    <i class="fas fa-users mr-2"></i><//?= $notification->nname ?> - Faculty
+                </a> -->
+                <div class="facultyNotifications"></div>
+                <div class="studentNotifications"></div>
+            <?php //endforeach; ?>
 
-            <?php foreach ($resultRegister as $notification) : ?>
+            <!-- <?php //foreach ($resultRegister as $notification) : ?>
                 <a href="<?= base_url(); ?>studentProfiledata" class="dropdown-item">
-                    <i class="fas fa-users mr-2"></i><?= $notification->nname ?>
+                    <i class="fas fa-users mr-2"></i><?//= $notification->nname ?> - Student
                 </a>
                 <div class="dropdown-divider"></div>
-            <?php endforeach; ?>
+            <?php //endforeach; ?> -->
 
                     </div>
 

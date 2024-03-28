@@ -463,6 +463,17 @@ $routes->get('getNewStudentCount', 'AdminController::getNewStudentCount');
 
 $routes->get('getNewFacultyCount', 'AdminController::getNewFacultyCount');
 
+$routes->get('getNewFacultyNotifications', 'AdminController::getNewFacultyNotifications');
+
+$routes->get('getNewStudentNotifications', 'AdminController::getNewStudentNotifications');
+
+$routes->get('updateNotifications', 'AdminController::updateNotifications');
+
+
+
+
+
+
 
 
 
