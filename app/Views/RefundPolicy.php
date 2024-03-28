@@ -93,7 +93,7 @@
                             <div class="fw-bold"> Changes to Refund Policy:</div>
                                 We reserve the right to modify or update our refund policy at any time. Any changes will be
                                 effective immediately and will be communicated through our website.
-                                Thank you for choosing <a href="https://enatyam.com">enatyam.com<a>. We value your trust and strive to provide you
+                                Thank you for choosing <a href="https://enatyam.com">enatyam.com</a>. We value your trust and strive to provide you
                                 with the best online training experience.<br><br>
                                 <b>Effective Date: </b>31.01.2024
                             </div>

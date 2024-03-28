@@ -3,19 +3,13 @@
 
 
     <section class="contactus">
-
         <div class="container cont-width">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>TERMS AND CONDITIONS</h1>
-
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
     <section class="cont-main-section">
         <div class="container cont-width">
@@ -78,7 +72,6 @@
                                     <li>Infringing on the rights of others.</li>
                                     <li>Attempting to gain unauthorized access to our systems.</li> 
                                 </ul>
-
                             </div>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -104,13 +97,9 @@
                                 effective immediately upon posting on our website. It is your responsibility to review these
                                 terms regularly.
                             </div>
-                        </li>
-                       
+                        </li> 
                     </ol>
-
-                    <p>If you have any questions or concerns about these terms and conditions, please contact us at <br> <b>+91 9011223285. </b></p>
-                    
-
+                    <p>If you have any questions or concerns about these terms and conditions, please contact us at <br> <b>+91 9011223285. </b></p>   
                 </div>
             </div>
         </div>

@@ -312,7 +312,8 @@
             });
         });
 
-        $(".question-text").each(function() {
+    // Truncate question text on page load
+    $(".question-text").each(function() {
         var $el = $(this);
         var originalText = $el.text();
         var maxLength = 50; // Maximum length before truncation
@@ -321,9 +322,9 @@
             var truncatedText = originalText.substring(0, maxLength) + '...';
             $el.text(truncatedText);
             $el.data('fullText', originalText);
+            $el.data('truncatedText', truncatedText); // Store truncated text separately
             $el.data('isTruncated', true);
         } else {
-            
             $el.data('isTruncated', false);
         }
     });
@@ -331,18 +332,18 @@
     $(".accordion-item-header").click(function() {
         var $question = $(this).find('.question-text');
         var fullText = $question.data('fullText');
+        var truncatedText = $question.data('truncatedText'); // Retrieve truncated text
         var isTruncated = $question.data('isTruncated');
 
         if (isTruncated) {
             $question.text(fullText);
             $question.data('isTruncated', false);
         } else {
-            var maxLength = 50; // Maximum length before truncation
-            var truncatedText = fullText.substring(0, maxLength);
-            $question.text(truncatedText);
+            $question.text(truncatedText); // Use truncated text instead of recalculating
             $question.data('isTruncated', true);
         }
     });
+
 
     document.addEventListener("DOMContentLoaded", function() {
     var reviewContainers = document.querySelectorAll(".happyFaces-div1");
