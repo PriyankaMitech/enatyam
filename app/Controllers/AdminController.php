@@ -2582,6 +2582,7 @@ public function update_remark()
     public function getChatCount()
     {
         $model = new AdminModel();
+        $count_data = 0;
 
         // Check if the user is logged in and is an admin
         if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
@@ -2590,7 +2591,9 @@ public function update_remark()
                 'status' => 'N'
             );
             $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+            if(!empty($chat_count)){
             $count_data = count($chat_count);
+            }
 
             // Manually create and return a JSON response
             return $this->response->setJSON(['chat_count' => $count_data]);
@@ -2600,7 +2603,9 @@ public function update_remark()
                 'status' => 'N'
             );
             $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+            if(!empty($chat_count)){
              $count_data = count($chat_count);
+            }
              return $this->response->setJSON(['chat_count' => $count_data]);
 
         } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
@@ -2610,7 +2615,9 @@ public function update_remark()
                 );
 
             $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+            if(!empty($chat_count)){
             $count_data = count($chat_count);
+            }
             return $this->response->setJSON(['chat_count' => $count_data]);
 
         } else {
@@ -2621,7 +2628,7 @@ public function update_remark()
 
     public function getnotificationCount(){
         $model = new AdminModel();
-
+        $notification_count = 0;
         if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
            
         $data = $model->getRecordsBefore7Days();
@@ -2635,8 +2642,10 @@ public function update_remark()
           
             // Rest of your code
             $notifications = $model->getUserRole($teacherId, $userType);
+            if(!empty($notification_count)){
     
             $notification_count = count($notifications);
+            }
             return $this->response->setJSON(['notification_count' => $notification_count]);
 
     } else if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Student') {
@@ -2645,8 +2654,9 @@ public function update_remark()
         $student_id = $_SESSION['sessiondata']['id'];
         $userType = 'student';
         $notifications = $model->getUserRole($student_id, $userType);
-
+        if(!empty($notification_count)){
         $notification_count = count($notifications);
+        }
         return $this->response->setJSON(['notification_count' => $notification_count]);
 
     } else {
@@ -2658,7 +2668,7 @@ public function update_remark()
     public function getnotificationchatCount(){
 
         $model = new AdminModel();
-
+        $count_data = 0;
         // Check if the user is logged in and is an admin
         if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
             $chatCountWhere = array(
@@ -2670,8 +2680,9 @@ public function update_remark()
 
             $notification_count = $data['totalCount'];
 
-
+            if(!empty($chat_count)){
             $count_data = count($chat_count);
+            }
 
             $totalcount = $notification_count + $count_data;
 
@@ -2682,7 +2693,9 @@ public function update_remark()
                 'receiver_id' => $_SESSION['sessiondata']['id'],
                 'status' => 'N'
             );
+            if(!empty($chat_count)){
             $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+            }
              $count_data = count($chat_count);
              return $this->response->setJSON(['notificationchat_count' => $count_data]);
 
@@ -2693,7 +2706,9 @@ public function update_remark()
                 );
 
             $chat_count = $model->getalldata('online_chat', $chatCountWhere);
+            if(!empty($chat_count)){
             $count_data = count($chat_count);
+            }
             return $this->response->setJSON(['notificationchat_count' => $count_data]);
 
         } else {
