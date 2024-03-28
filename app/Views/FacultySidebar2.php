@@ -220,7 +220,7 @@ $page = $uri->getSegment(count($pages));
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
             <div class="notification-scroll">
-              <?php
+              <!-- <?php
               if ($notifications) {
                 usort($notifications, function ($a, $b) {
                   return strtotime($a['timestamp']) - strtotime($b['timestamp']);
@@ -230,7 +230,6 @@ $page = $uri->getSegment(count($pages));
                   $todayDateTime = strtotime($todayDate);
               ?>
                   <a href="#" class="dropdown-item view-notification">
-                    <!-- Message Start -->
                     <div class="media">
                       <img src="<?php echo base_url() ?>dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                       <div class="media-body">
@@ -240,14 +239,11 @@ $page = $uri->getSegment(count($pages));
                         </h3>
                         <p class="text-sm">
                           <?php
-                          // Split the description into lines
                           $descriptionLines = explode("\n", $notification['notification_description']);
 
-                          // Display the first four lines of the description
                           $maxLines = 1;
                           echo implode("\n", array_slice($descriptionLines, 0, $maxLines));
 
-                          // If the description has more than four lines, show "..."
                           if (count($descriptionLines) > $maxLines) :
                           ?>
                             <span class="read-more-link">...</span>
@@ -258,13 +254,14 @@ $page = $uri->getSegment(count($pages));
                         </p>
                       </div>
                     </div>
-                    <!-- Message End -->
                   </a>
                 <?php endforeach;
               } else { ?>
                 <p class="p-2">No new notifications available</p>
                 <hr>
-              <?php } ?>
+              <?php } ?> -->
+
+            
 
 
 
