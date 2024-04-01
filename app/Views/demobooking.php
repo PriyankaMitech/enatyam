@@ -64,11 +64,70 @@ input[type="date"] {
 }
 
 
+.body-content img {
+    border-radius: 100%;
+   width: 100%;
+}
 
 
 
+.whatdssaus-body {
+        display: flex;
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        text-align: center; /* Center text horizontally */
+    }
 
+    .whatdssaus-body .body-content {
+        display: flex;
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        text-align: left; /* Reset text alignment */
+    }
 
+.whatdssaus .whatdssaus-header h5{
+text-align:center;
+}
+.whatdssaus .whatdssaus-header .imgs{
+text-align:center;
+}
+.userimage{
+padding: 10px;
+}
+.userdata{
+    padding: 10px;
+}
+.userdata p {
+    text-align :center;
+}
+.whatdssaus{
+    background-color: #6e5c50;
+    padding: 10px;
+    border-radius: 10px;
+}
+.whatdssausdata {
+    padding: 10px;
+}
+.whatdssaus .userimage h6{
+    padding: 10px 0px;
+text-align:center;
+}
+.heading {
+    text-align:center;
+}
+.imgs{
+    text-align:center;
+  
+}
+.scondsection{
+    padding: 10px;
+}
+.imgs img{
+    width: 100%;
+}
+.starcolor{
+    color: #fad32c !important;
+}
 
 
 
@@ -84,13 +143,122 @@ input[type="date"] {
                     <form action="<?php base_url(); ?>bookDemo" method="post" id="demobookingform">
                         <div class="row">
 
-                            <div class="col-lg-4 col-md-4 col-12 bookdimg">
-                                <img src="public/images/dance1.jpg" class="danceimgbd">
+                            <div class="col-lg-6 col-md-6 col-16 whatdssausdata">
+                                <div class="whatdssaus">
+                                    <div class="whatdssaus-header">
+                                        <h5 class="text-white ">What do students say about us?</h5>
+                                        <div class="imgs">
+                                            <img src="<?=base_url(); ?>public/images/boarder1.png" alt="Image Description">
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="whatdssaus-body">
+                                        <div class="body-content row">
+                                            <div class="col-lg-4 col-md-6 col-4 userimage">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/18h.png" alt="Image Description">
+                                                <h6 class="text-white ">Isabella (USA)</h6>
+                                            </div>
+                                            <div class="col-lg-8 col-md-6 col-8 userdata">
+                                                <p class="text-white ">
+                                                    Being an English speaker, my fondness for Krishna
+                                                    led me to Kathak with Enatyam. Their platform
+                                                    made my Kathak journey incredibly easy to follow.
+                                                    It seamlessly blends tradition with accessibility,
+                                                    it's like diving into the exciting world of Kathak
+                                                    without any hassle.
+                                                </p>
+                                            </div>
+
+                                           
+                                            <div class="col-lg-8 col-md-6 col-8 userdata">
+                                                <p class="text-white ">
+                                                    For the past year and a half, I've been learning
+                                                    Kathak from Priti Singh, and I'm incredibly
+                                                    grateful. Priti's graceful teaching style and deep
+                                                    knowledge of the subject make each session
+                                                    interesting and well-rounded. Her online lessons,
+                                                    coupled with flexible scheduling, have made my
+                                                    learning journey both convenient and enriching
+                                                </p>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-4 userimage">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/17h.png" alt="Image Description">
+                                                <h6 class="text-white ">Smitha (UK )</h6>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-4 userimage">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/12h.png" alt="Image Description">
+                                                <h6 class="text-white ">Scarlett Family (Germany )</h6>
+                                            </div>
+                                            <div class="col-lg-8 col-md-6 col-8 userdata">
+                                                <p class="text-white ">
+                                                    As a father, seeing my kids enjoy Enatyam's
+                                                    Bollywood dance classes is heartwarming. The
+                                                    instructors create an environment where learning
+                                                    feels like play. It's like they've turned our living
+                                                    room into a dance party.
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-8 col-md-6 col-8 userdata">
+                                                <p class="text-white ">
+                                                    As a father, seeing my kids enjoy Enatyam's
+                                                    Bollywood dance classes is heartwarming. The
+                                                    instructors create an environment where learning
+                                                    feels like play. It's like they've turned our living
+                                                    room into a dance party.
+
+                                                </p>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-4 userimage">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/1h.png" alt="Image Description">
+                                                <h6 class="text-white ">Kiran (Sweden)</h6>
+                                            </div>
+
+
+                                            <div class="col-lg-4 col-md-6 col-4 userimage">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/1h.png" alt="Image Description">
+                                                <h6 class="text-white ">James W (USA )</h6>
+                                            </div>
+                                            <div class="col-lg-8 col-md-6 col-8 userdata">
+                                                <p class="text-white ">
+                                                    Enatyam is revolutionizing the scene with its
+                                                    accessible yoga classes. Instructors don't just
+                                                    target the physical side but also stress the mental
+                                                    benefits of consistent yoga practice
+                                                </p>
+                                            </div>
+
+                                           
+
+                                            
+
+                                            <div class="col-lg-8 col-md-6 col-8 userdata">
+                                                <p class="text-white ">
+                                                    I appreciate how Enatyam's yoga classes cater to
+                                                    various levels. Whether you're a beginner or an
+                                                    experienced yogi, there's always room for growth.
+                                                    The instructors make sure everyone feels
+                                                    welcome
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-4 userimage">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/11h.png" alt="Image Description">
+                                                <h6 class="text-white ">Kajal (Delhi )</h6>
+                                            </div>
+
+                                           
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-lg-8 col-md-8 col-12 text-left text-col tpm">
-                                <h1 class="heading Title_main__VrmF4"> Book Free Online Trial Class.</h1>
-
+                            <div class="col-lg-6 col-md-6 col-12 text-left text-col tpm scondsection">
+                                <h1 class="heading Title_main__VrmF4"> Book Free Online Trial Class</h1>
+                                <div class="imgs">
+                                            <img src="<?=base_url(); ?>public/images/boarder1.png" alt="Image Description">
+                                </div>
                                 <div class="row fetures text-white">
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures" src="public/images/instructors-svg.svg">
@@ -118,16 +286,16 @@ input[type="date"] {
 
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-4 col-12 text-white fmname">Your name* :</span>
-                                    <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Your name<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="text" name="name" value="">
                                         <span>
 
                                 </div>
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-4 col-12 text-white fmname">Email* :</span>
-                                    <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Email<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="email" name="email" value="" id="demoemail">
                                         <span id="demoemailError"></span>
 
@@ -136,8 +304,8 @@ input[type="date"] {
                                 </div>
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-4 col-12 text-white fmname">Password* :</span>
-                                    <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Password<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="password" name="password" value="">
                                         <span>
 
@@ -148,11 +316,11 @@ input[type="date"] {
 
 
                                     <div class="row tpm">
-                                        <label class="col-md-4 text-white fmname" for="mobile_no">Mobile No.<span class="required">*</span></label>
-                                        <div class="col-md-2 seletbook">
+                                        <label class="col-lg-4 col-md-12 col-12 text-white fmname" for="mobile_no">Mobile No.<span class="starcolor">*</span> :</label>
+                                        <div class="col-lg-2 col-md-4 col-4 seletbook">
                                             <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"  ></select>
                                         </div>
-                                        <div class="col-md-6 seletbook">
+                                        <div class="col-lg-6 col-md-8 col-8 seletbook">
                                             <input required type="text" autocomplete="off" id="demoMobileNo" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
                                             <span id="demoMobileNoError"></span>
 
@@ -161,8 +329,8 @@ input[type="date"] {
                                 <!-- </div> -->
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-4 col-12 text-white fmname">Age group* :</span>
-                                    <span class="col-lg-8 col-md-8 col-12 seletbook">
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Age group<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-8 col-md-12 col-12 seletbook">
                                         <button type="button" class="btn btn-primary ptage ageb active">Below 10
                                             Yrs</button>
                                         <button type="button" class="btn btn-primary ptage ageb">10-15 Yrs</button>
@@ -173,25 +341,23 @@ input[type="date"] {
                                 </div>
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-4 col-12 text-white fmname">Have you learned Any classes*:</span>
-                                    <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF seletbook">
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Have you learned Any classes*:</span>
+                                    <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF seletbook">
                                         <button type="button" class="btn btn-primary ptage classd active">Yes</button>
                                         <button type="button" class="btn btn-primary ptage classd">No</button>
                                     </span>
                                     <input type="hidden" id="statusc" name="exprience">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-8 col-12 tpm">
+                            
                             <div class="Step_step__mxxn1 tpm">Step
                                 <!-- -->2
                                 <!-- -->&nbsp;:&nbsp;&nbsp;&nbsp;<span>Other Details</span>
                             </div>
 
                             <div class="row tpm">
-                                <span class="col-lg-4 col-md-4 col-12 text-white fmname">Select Country* : </span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Select Country<span class="starcolor">*</span> : </span>
 
-                                <div class="col-lg-8 col-md-8 col-12 ">
+                                <div class="col-lg-8 col-md-12 col-12 ">
                                     <select class="form-control" id="inputCountry" name="Country" >
 
                                         <option value="">Select Country</option>
@@ -215,8 +381,8 @@ input[type="date"] {
 
                             </div>
                             <div class="row tpm">
-                                <span class="col-lg-4 col-md-4 col-12 text-white fmname">City* :</span>
-                                <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">City<span class="starcolor">*</span> :</span>
+                                <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                     <input type="text" name="city" value="">
                                     <span>
                             </div>
@@ -228,10 +394,10 @@ input[type="date"] {
 
 
                             <div class="row tpm">
-                                <span class="col-lg-4 col-md-4 col-12 text-white fmname">Please select course* :</span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select course<span class="starcolor">*</span> :</span>
 
 
-                                <div class="col-lg-8 col-md-8 col-12 form-group seletbook" id="category_div">
+                                <div class="col-lg-8 col-md-12 col-12 form-group seletbook" id="category_div">
                                     <select class="form-control" name="courses_id_d" id="courses_id_d"
                                         style="width: 100%;">
 
@@ -252,8 +418,8 @@ input[type="date"] {
                             </div>
                             <div class="row tpm">
 
-                                <span class="col-lg-4 col-md-4 col-12 text-white fmname">Please select sub courses* :</span>
-                                <div class="col-lg-8 col-md-8 col-12 sub_category_div form-group seletbook"  id="sub_category_div">
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select sub courses<span class="starcolor">*</span> :</span>
+                                <div class="col-lg-8 col-md-12 col-12 sub_category_div form-group seletbook"  id="sub_category_div">
                                     <input type="hidden" id="selected_sub_courses_id_d"
                                         value="<?php if (isset($edit)) {echo ($edit['sub_courses_id_d']);} ?>">
 
@@ -268,38 +434,50 @@ input[type="date"] {
 
                             <div class="row tpm">
 
-                                <span class="col-lg-4 col-md-4 col-12 text-white fmname">Demo Class Date:* :</span>
-                                <span class="col-lg-8 col-md-8 col-12 BookingSecondPage_formInput__n8MhF">
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Demo Class Date<span class="starcolor">*</span> :</span>
+                                <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                     <input type="date" name="Book_Date" min="<?= date('Y-m-d', strtotime('+1 day')) ?>"
                                         value="">
 
                                     <span>
 
                             </div>
-                            <!-- <div class="row tpm">
-                                                <span class="col-md-4 text-white fmname">Start Time:* :</span>
-                                                <span class="col-md-8 BookingSecondPage_formInput__n8MhF">
-                                                    <input type="time" name="Start_Time" value="" >                                      
-                                                <span>
-                                            </div> -->
-                            <!-- <div class="row tpm">
-                                                <span class="col-md-4 text-white fmname">End Time:* :</span>
-                                                <span class="col-md-8 BookingSecondPage_formInput__n8MhF">
-                                                    <input type="time" name="End_Time" value="" >                                      
-                                                <span>
-                                            </div> -->
+                            <div class="row tpm">
 
-                            <div class="BookingSecondPage_stickyBottom__G_tzG tpm">
-                                <div class="text-white tpm">
-                                    By Confirming, you give consent to receiving Calls and WhatsApp messages from
-                                    Enatyam.
+                            <span class="col-lg-4 col-md-12 col-12 text-white fmname"> Demo Timing<span class="starcolor">*</span> :</span>
+                            <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
+                                    <p class="text-white">We'll reach out soon to find the best time for you.</p>
+
+                                <span>
+
+                            </div>
+                            <div class="BookingSecondPage_stickyBottom__G_tzG tpm row showdiv">
+                                <div class="text-white tpm col-lg-8 col-md-12 col-12 p-2">
+                                    By confirming, you agree to receive calls and WhatsApp messages from Enatyam.
+                                    No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
+                                    your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>
-                                <div class="tpm">
+                                <div class="tpm col-lg-4 col-md-12 col-12 p-2">
                                     <button type="submit" class="btn btn-success changec">Confirm Booking</button>
                                 </div>
 
                             </div>
                         </div>
+                            </div>
+                            <div class="BookingSecondPage_stickyBottom__G_tzG tpm row hidediv">
+
+                            <div class="text-white tpm col-lg-8 col-md-8 col-12 p-2">
+                                    By confirming, you agree to receive calls and WhatsApp messages from Enatyam.
+                                    No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
+                                    your time.We won't be crashing into your dreamland adventures with our calls
+                                </div>
+                                <div class="tpm col-lg-4 col-md-4 col-12 p-2">
+                                    <button type="submit" class="btn btn-success changec">Confirm Booking</button>
+                                </div>
+                                </div>
+
+                     
+                       
                 </div>
             </div>
 

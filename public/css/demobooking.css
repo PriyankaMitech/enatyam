@@ -24,9 +24,9 @@
   border-color: #ff1561;
 }
 .bookdemos {
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-bottom: 30px;
-  background-color: #212529;
+  background-color: #292626;
   font-family: Montserrat !important;
   width: 100%;
   height: auto;
@@ -41,7 +41,7 @@
   margin-top: 30px;
 }
 .fetures span {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 400;
   margin-left: 7.5px;
   white-space: nowrap;
@@ -117,4 +117,12 @@ select {
 .changec {
   background-color: #ff1561 !important;
   border-color: #ff1561 !important;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 600;
+  height: 90px;
+}
+
+.hidediv {
+  display: none;
 }
