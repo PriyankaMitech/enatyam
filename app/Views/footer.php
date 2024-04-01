@@ -228,35 +228,44 @@
 
 </script>
     <script>
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 38,
-            nav: true,
-            dots: false,
-            autoplay: true,
-            slideTransition: 'linear',
-            // autoplaySpeed: 3000,
-            // slideSpeed: 3000,
-            // paginationSpeed: 3000,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 4
-                }
-            }
-        })
-
         $(document).ready(function() {
+    var owl = $('.owl-carousel');
+    
+    owl.owlCarousel({
+        loop: true,
+        margin: 38,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        slideTransition: 'linear',
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
 
-            jQuery(".owl-prev").append("<i ></i>");
-            jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
-            jQuery(".owl-next").append("<i ></i>");
-            jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+    // Hover event to stop autoplay
+    $('.happyFaces-div').hover(
+        function() {
+            owl.trigger('stop.owl.autoplay');
+        },
+        function() {
+            owl.trigger('play.owl.autoplay');
+        }
+    );
+
+    // Custom navigation icons
+    $(".owl-prev").append("<i ></i>");
+    $(".owl-prev i").attr("class", "fa fa-arrow-left");
+    $(".owl-next").append("<i ></i>");
+    $(".owl-next i").attr("class", "fa fa-arrow-right");
 
 
             $('.counter-value').each(function() {
@@ -2675,19 +2684,20 @@ setInputFilter(document.getElementById("txtMobileNo"), function(value) {
 
 
 
-function showModal(name, designation, img, qualifications, certifications, experience,FacultyDetails) {
-    $("#facultyName").text("Name: " + name);
-    $("#facultyDesignation").text("Designation: " + designation);
+function showModal(name, designation, img, qualifications, certifications, experience, FacultyDetails) {
+    $("#facultyName").html("<strong>Name:</strong> " + name);
+    $("#facultyDesignation").html("<strong>Designation:</strong> " + designation);
     $("#imgf").attr("src", img);
-    $("#facultyQualifications").text("Qualification: " + qualifications);
-    $("#facultyCertifications").text("Certification: " + certifications);
-    $("#facultyExperience").text("Experience: " + experience);
-    $("#FacultyDetails").text("Techniques: " + FacultyDetails);
+    $("#facultyQualifications").html("<strong>Qualification:</strong> " + qualifications);
+    $("#facultyCertifications").html("<strong>Certification:</strong> " + certifications);
+    $("#facultyExperience").html("<strong>Experience:</strong> " + experience);
+    $("#FacultyDetails").html("<strong>Techniques:</strong> " + FacultyDetails);
 
     // Show modal
     $("#facultyModal").show();
     $("body").addClass("modal-open");
 }
+
 
 
     // Close modal function

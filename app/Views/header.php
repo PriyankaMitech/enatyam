@@ -2247,7 +2247,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                 <input type="password" name="password" id="password" class="form-control" aria-required="true" placeholder="Password">
                                 <span id="passwordError1" style="color: red;"></span>
                             </div>
-                            <div class="forgetmenot login-remember">
+                            <div class="forgetmenot login-remember float-center">
 
                                 <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password?</a>
                             </div>

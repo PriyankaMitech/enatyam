@@ -622,11 +622,7 @@
                                         <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Asamyukta Hastas - Single Hand Gestures</span>
                                         </li>
-
                                     </ul>
-                                  
-
-
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <img src="public/images/Dance/2.svg" class="danceimg">
@@ -644,7 +640,6 @@
                         </div>
                     </section>
 
-
                     <section class="modulesec mft" id="mod-bharatnatyam">
                         <div class="container">
         
@@ -654,7 +649,6 @@
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
-
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
                                         <img src="public/images/Dance/bharatnatyam-3.svg" class="danceimg danceimg5">
@@ -1722,7 +1716,6 @@
                                     the beats of Western dance!
                                     </p>
                                 </div>
-
                             </div>
                         </div>
                     </section>
@@ -2406,16 +2399,10 @@
                                                 Combines all the elements into a cohesive dance piece.</span>
                                         </li>
                                     </ul>
-
-
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-
-
                                     <!-- Bhangra -->
-
                                     <img src="public/images/Dance/bhangra-2.png" class="danceimg">
-
                                 </div>
                             </div>
                         </div>
@@ -3075,7 +3062,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-12 text-center testimonialsdiv">
-                <h3>Testimonials
+                <h3 class="title_4 ">Testimonials
                 </h3>
                 <span class="line"></span>
             </div>

@@ -14,7 +14,7 @@
     <div class="cont-width">
 
         <div class="row testimonialsdiv">
-        <h3 class="text-white pb-5" style="text-align:center">Superstar Faculty
+        <h3 class="text-white pb-5 " style="text-align:center">Superstar Faculty
         <span class="line linessf"></span> 
 
         </h3>
