@@ -501,9 +501,8 @@ ul li{
                                                                 <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
-                                                            <span>
-                                                                One on One Private Live Class.
-
+                                                            <span>          
+                                                                Group Live Class- upto 10 students.
                                                             </span>
                                                         </li>
                                                         <li>

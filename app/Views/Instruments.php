@@ -114,7 +114,11 @@
                             potential with convenience and flexibility.
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -574,7 +578,11 @@
                                 Discover the enchanting world of ﬂute playing with our online ﬂute course. Designed for beginners and intermediate players, this comprehensive program will guide you through the fundamentals of ﬂute technique, note reading, and music theory. Over the course of 12 months, you’ll learn to produce beautiful melodies and explore a variety of musical genres. Our expert instructors will provide step-by-step video lessons, personalized feedback, and practice materials to enhance your progress. Whether you’re passionate about classical, jazz, or world music, our online ﬂute course offers convenience and ﬂexibility, empowering you to become a skilled ﬂutist from the comfort of your home. Enroll now and let the music take ﬂight!
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -1040,7 +1048,11 @@
                                 Embark on a rhythmic journey with our online tabla course. Perfect for beginners and intermediate players, this comprehensive program delves into the art of playing the tabla, a versatile Indian percussion instrument. Over 12 months, you’ll master the intricacies of tabla strokes, bols (syllables), and the rhythmic patterns of Indian classical music. Our experienced instructors will provide engaging video lessons, personalized feedback, and practice materials to enhance your skills. Whether you aspire to perform solo or accompany other musicians, our online tabla course offers convenience and ﬂexibility, allowing you to learn and excel at your own pace. Join us today and explore the captivating world of tabla rhythms!
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -1486,7 +1498,11 @@
                                 Unleash your inner musician and join us today!
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -1915,7 +1931,11 @@
                                 Enroll now and embark on a melodic journey with the enchanting veena!
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -2340,7 +2360,11 @@
                                 Enroll today and let the music ﬂow!
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -2765,7 +2789,11 @@
                                 Enroll today and let the melodies soar!
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -3189,7 +3217,11 @@
                                 Enroll today and let the beats begin!
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -3613,8 +3645,12 @@
                             <p class="">
                                 Unlock the magic of the keyboard with our online keyboard course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this versatile instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering keyboard techniques, music theory, and popular repertoire. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of playing your favorite songs, exploring different genres, or even composing your own music, our online keyboard course offers convenience, ﬂexibility, and expert guidance to help you become a skilled keyboardist.
                                 Enroll today and let your musical journey begin! </p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <div class="text-end mt-4">
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -4038,8 +4074,12 @@
                             <p class="">
                                 Discover the soulful melodies of the harmonium with our online harmonium course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master this beloved Indian keyboard instrument from the comfort of your own home. Over 12 months, you’ll progress through step-by-step lessons covering harmonium techniques, notation reading, and Indian classical music. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you aspire to accompany devotional singing or explore the versatility of the harmonium, our online course offers convenience, ﬂexibility, and expert guidance to help you become a skilled harmonium player.
                                 Enroll today and let the harmonium melodies resonate!</p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                             <div class="text-end mt-4">
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

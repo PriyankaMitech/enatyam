@@ -87,8 +87,12 @@
                             <p class="yogapagecotent">
                                 The course focuses on making life healthier and building core stength by practicing Yoga in scientific way . Online prenatal yoga classes provide expectant mothers with a convenient and accessible way to stay active and healthy throughout their pregnancy. These classes are designed to help pregnant women reduce stress, alleviate common pregnancy-related discomforts, and prepare for childbirth. Online classes offer flexibility for busy schedules and can be accessed from the comfort of one’s own home. In addition to physical benefits, prenatal yoga classes can also provide emotional support and a sense of community for expectant mothers. With the rise of virtual platforms, there has never been a better time to take advantage of the many benefits of online prenatal yoga classes.ogical well-being, and overall health.
                             </p>
-                            <div class="text-end mt-4 yogabtn">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                            <div class="text-end mt-4">
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
 
                         </div>
@@ -916,7 +920,11 @@
                                 Joining an online ﬂexibility yoga class can be a great way to improve your physical ﬁtness and enhance your overall wellbeing.
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -1299,7 +1307,11 @@
                                 Additionally, online classes often offer a variety of options, from beginner to advanced, so people of all ﬁtness levels can ﬁnd a class that meets their needs. Joining an online weight loss yoga class can be a great way to jumpstart your weight loss journey and achieve your ﬁtness goals.
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -1667,7 +1679,11 @@
                                 Additionally, online classes often offer a variety of options, from quick morning stretches to longer, more intensive classes, so you can ﬁnd a class that ﬁts your schedule and ﬁtness level. Joining an online everyday yoga class can be a great way to improve your physical and mental wellbeing and make yoga a regular part of your daily routine.
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -2082,7 +2098,11 @@
                                 Additionally, online classes often offer modiﬁcations for poses and sequences, making it accessible for people with different physical abilities. Joining an online yoga for chronic disease class can be a great way to manage symptoms, reduce stress, and improve overall quality of life.
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -2497,7 +2517,11 @@
                                 Additionally, online classes often incorporate games, storytelling, and music to make yoga more engaging for kids. Joining an online yoga for kids class can be a great way to promote a healthy lifestyle and encourage children to develop a lifelong appreciation for exercise and mindfulness.
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -2911,7 +2935,11 @@
                                 Additionally, online classes often offer a variety of techniques, from guided meditations to mindfulness exercises, so people can ﬁnd a practice that works best for them. Joining an online meditation and mindfulness class can be a great way to reduce stress, improve mental clarity, and enhance overall wellbeing.
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -3022,7 +3050,11 @@
                                 Additionally, online customized sessions often offer one-on-one consultations, personalized sequences, and modiﬁcations for poses, making it accessible for people with different physical abilities. Joining an online customized yoga session can be a great way to address speciﬁc concerns, improve overall physical and mental wellbeing, and make yoga a truly personalized practice.
                             </p>
                             <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
                             </div>
 
                         </div>
@@ -3132,9 +3164,13 @@
                             <p class="textPara1">
                                 Nutritionist will provide personalized recommendations and support to help you achieve your health goals, whether it’s weight loss, managing chronic conditions, or improving athletic performance. Online counseling provides a ﬂexible option for people to receive nutrition advice and support from the comfort of their own homes, at a time that works for them.
                                 Additionally, online counseling often uses digital tools and resources to help clients track their progress and stay motivated. Joining an online nutritional counseling program can be a great way to receive personalized support, improve your diet and lifestyle habits, and achieve optimal health. </p>
-                            <div class="text-end mt-4">
-                                <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Home#pricing-section">Explore More</a>
-                            </div>
+                                <div class="text-end mt-4">
+                                    <?php if (!(session()->get('sessiondata'))) : ?>
+                                            <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                    <?php else : ?>
+                                            <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                    <?php endif; ?>
+                                </div>
                         </div>
                     </div>
                     <section class="learningBtn yellowb">

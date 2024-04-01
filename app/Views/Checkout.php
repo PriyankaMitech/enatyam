@@ -343,7 +343,7 @@
                         </div>
 
                         <div class=" mt-3 text-center">
-                            <button class="btn btn-success" type="submit" id="checkoutButton">Submit</button>
+                            <button class="btn shop-now-btn" type="submit" id="checkoutButton">Submit</button>
                         </div>
                     </div>
                 </form>

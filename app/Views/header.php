@@ -1927,7 +1927,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>
+                <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Singing</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
@@ -2016,7 +2016,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 </div>
                 <a class="nav-link active px-2" href="<?php echo base_url('Home'); ?>">Home</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>
-                <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>
+                <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Singing</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Yoga'); ?>">Yoga</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Career'); ?>">Career</a>
@@ -2197,18 +2197,18 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <label> Please enter Your Age</label>
                             <input type="number" name="age" id="age" class="form-control" aria-required="true" placeholder="Enter Your Age">
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label style="font-size: 14px;">Are you practicing this art (any experience in this
                                 sector)?</label><br>
                             <label style="margin-left: 100px;font-size: 14px;" for="yes">Yes</label>
                             <input type="radio" name="experience" id="yes" value="yes" class="experience-radio">
                             <label style="margin-left: 100px;font-size: 14px;" for="no">No</label>
                             <input type="radio" name="experience" id="no" value="no" class="experience-radio">
-                        </div>
-                        <div class="form-group" id="experienceDetails" style="display: none;">
+                        </div> -->
+                        <!-- <div class="form-group" id="experienceDetails" style="display: none;">
                             <label for="experienceInput">Please provide details of your experience:</label>
                             <input type="text" name="experienceInput" id="experienceInput" class="form-control">
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label style="font-size: 14px;">Select Class Types</label><br>
                             <label style="margin-top: 15px;margin-left: 13px;font-size: 14px;">GroupSession</label>

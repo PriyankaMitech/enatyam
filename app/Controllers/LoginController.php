@@ -192,7 +192,7 @@ class LoginController extends BaseController
         $course = $this->request->getPost('courses_id_g');
         $sub_course = $this->request->getPost('sub_courses_id_g');
         $age = $this->request->getPost('age');
-        $experience = $this->request->getPost('experience');
+        // $experience = $this->request->getPost('experience');
         $SessionType = $this->request->getPost('SessionType');
         $country = $this->request->getPost('country');
         $experienceInput = $this->request->getPost('experienceInput');
@@ -203,7 +203,7 @@ class LoginController extends BaseController
             'age' => $age,
             'is_register_done' => 'Y',
             'country' => $country,
-            'experience' => $experience,
+            // 'experience' => $experience,
             'experienceInput' => $experienceInput,
             'SessionType' => $SessionType,
         ]; 
