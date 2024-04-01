@@ -128,8 +128,12 @@ class Home extends BaseController
     }
     public function blog()
     {
-
-        return view('blog');
+        $model = new AdminModel();
+        $wherecond = array('is_deleted' => 'N');
+        $data['blogs']=$model->getallblogs();
+        $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+    // print_r($data['courses_data']);die;
+        return view('blog',$data);
     }
     public function music()
     {

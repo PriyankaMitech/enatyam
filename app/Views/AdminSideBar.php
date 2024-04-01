@@ -997,6 +997,19 @@ $page = $uri->getSegment(count($pages));
                                                 <p>Sub courses List</p>
                                             </a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a href="<?php echo base_url(); ?>uplode_blog" class="nav-link <?php if($page == 'uplode_blog') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Blog</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="<?php echo base_url(); ?>blog_List" class="nav-link <?php if($page == 'blog_List') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Blog List</p>
+                                            </a>
+                                        </li>
+                                        
                                         <!-- Add other Menu menu items with access level checks here -->
                                     </ul>
                                 </li>

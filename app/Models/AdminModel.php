@@ -1891,4 +1891,31 @@ public function gettodaysallsessions()
 
     return $query;
 }
+public function insertBlog($data)
+{
+    $this->db->table('blogs')->insert($data);
+    return $this->db->insertID(); // Return the ID of the inserted row
+}
+public function getallblogs(){
+    $data = $this->db->table('blogs')
+    ->where('active_status', 'Y')
+    ->get()
+    ->getResult();
+
+return $data;
+    
+}
+public function updateBlog($id, $data)
+{
+    $this->db->table('blogs')
+    ->where('id', $id)
+    ->update($data);
+}
+public function delete_blogs($id)
+{
+    $this->db->table('blogs')
+        ->where('id', $id)
+        ->set('active_status', 'N')
+        ->update();
+}
 }

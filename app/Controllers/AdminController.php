@@ -2840,4 +2840,105 @@ public function updateNotifications(){
 
 
 }
+public function uplode_blog()
+{
+    $model = new AdminModel();
+    $wherecond = array('is_deleted' => 'N');
+
+
+    $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+    //print_r($data);die;
+    echo view('AdminSideBar/uplode_blog',$data);
+}
+public function Blog_List()
+{
+    $model = new AdminModel();
+    $data['blogs'] = $model->getallblogs();
+    // print_r($data['blogs']);die;
+    echo view('AdminSideBar/blog_List',$data);
+}
+public function upload_blogs()
+{
+    helper(['form', 'url']);
+    if ($this->request->getMethod() === 'post' && $this->validate([
+        'course'=>'required',
+        'title' => 'required',
+        'short_desc' => 'required',
+        'long_desc' => 'required',
+        'image' => 'uploaded[image]|max_size[image,1024]|is_image[image]'
+    ])) {
+        $file = $this->request->getFile('image');
+        $originalName = $file->getName();
+        $model = new AdminModel();
+        $data = [
+            'course' => $this->request->getPost('course'),
+            'title' => $this->request->getPost('title'),
+            'short_desc' => $this->request->getPost('short_desc'),
+            'long_desc' => $this->request->getPost('long_desc'),
+            'image' => $originalName 
+        ];
+        $insertedId = $model->insertBlog($data);
+        if ($insertedId) {
+            $file->move(ROOTPATH . 'public/uploads/blog_img', $originalName);
+         
+            return redirect()->to('uplode_blog');
+        } else {
+            echo 'Failed to insert data into the database.';
+        }
+    } else {
+        return redirect()->back()->withInput()->with('validation', $this->validator);
+    }
+}
+public function update_blog()
+{
+    
+    helper(['form', 'url']);
+
+    // Get the data sent via POST
+    $id = $this->request->getPost('id');
+    $title = $this->request->getPost('title');
+    $short_desc = $this->request->getPost('short_desc');
+    $long_desc = $this->request->getPost('long_desc');
+
+    // Validate the data if needed
+
+    // Perform the update operation
+    $model = new AdminModel();
+    $data = [
+        'title' => $title,
+        'short_desc' => $short_desc,
+        'long_desc' => $long_desc
+    ];
+
+    // Check if a new image is uploaded
+    if (!empty($_FILES['image']['name'])) {
+        // Load the necessary helpers
+        helper('text');
+
+        // Generate a unique name for the uploaded file
+        $newName = random_string('alnum', 8) . '.' . pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+
+        // Move the uploaded image to the destination directory
+        move_uploaded_file($_FILES['image']['tmp_name'], 'public/uploads/blog_img/' . $newName);
+
+        // Update the 'image' field in the $data array
+        $data['image'] = $newName;
+    }
+
+    // Update the blog post in the database
+    $model->updateBlog($id, $data);
+
+    return redirect()->to('blog_List');
+}
+
+public function delete_blog()
+{
+    $id = $this->request->getPost('id');
+    $model = new AdminModel();
+    $delete_id =$model->delete_blogs($id);
+
+    return redirect()->to('blog_List');
+}
+
+
 }
