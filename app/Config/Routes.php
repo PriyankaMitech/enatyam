@@ -294,6 +294,11 @@ $routes->get('edit_group/(:any)', 'AdminController::edit_group/$1');
 
 $routes->get('AddNewUser', 'AdminController::add_new_user');
 $routes->get('AdminController/gettodaysession', 'AdminController::gettodaysession');
+$routes->get('uplode_blog', 'AdminController::uplode_blog');
+$routes->post('upload_blogs', 'AdminController::upload_blogs');
+$routes->get('blog_List', 'AdminController::blog_List');
+$routes->post('update_blog', 'AdminController::update_blog');
+$routes->post('delete_blog', 'AdminController::delete_blog');
 
 $routes->post('edit_user/(:any)', 'AdminController::AdduserByadmin/$1');
 $routes->get('edit_user/(:any)', 'AdminController::get_user/$1');
