@@ -380,32 +380,26 @@ body {
   
 
                         <div class="col-lg-3 col-md-4 col-6 ">
-                            <h5 class="text-white" style="text-align: center;">Kathak </h5>
+                             <h5 class="cocolor" style="text-align: center;">Kathak </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/1-rbg.png" alt="">
+                                        src="<?php base_url(); ?>public/images/courseoffering/1-rbg.png" alt="">
                                 </a>
                             </div>
 
-                            <div class="float-left cimgb cimgbr"  >
+                            <div class="cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList"> 
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem thumbnailListItemp">
-                                        3569
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                            aria-hidden="true"></i> 3569</li>
+                            
+                             
+
+
+                                    <li class="list-inline-item thumbnailListItem">  <?php
                                         if (!empty($katakc)) { 
                                             foreach($katakc as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                                if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -415,22 +409,18 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>
-
-
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                     
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
+                             <h5 class="cocolor" style="text-align: center;">Bharatanatyam </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/2-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
@@ -438,66 +428,45 @@ if($datas->total_ratings != ''){
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem thumbnailListItemp">
-                                        2698
-                                    </li>
-                                   
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                            aria-hidden="true"></i> 2698</li>
+                                    <li class="list-inline-item thumbnailListItem"> <?php
                                         if (!empty($bharatanatyam)) { 
                                             foreach($bharatanatyam as $datas){
+                                                if($datas->total_ratings != ''){
                                             
-if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
+                                                    echo $datas->total_ratings; // Echo the total_ratings value
 
                                                 }else{
-                                                echo "4.99";
+                                                    echo "4.99";
                                                 }
                                              
                                             }
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li>
 
                                     
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Bollywood </h5>
+                             <h5 class="cocolor" style="text-align: center;">Bollywood </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/3-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/3-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i> 1525</li>                        
+                                    <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($bollywood)) { 
                                             foreach($bollywood as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                                if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -507,39 +476,28 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Western Dance </h5>
+                             <h5 class="cocolor" style="text-align: center;">Western Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Home/1-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/4-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i> 354</li>                                   
+                                    <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($westerndnce)) { 
                                             foreach($westerndnce as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                            if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -549,40 +507,29 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                     
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
+                             <h5 class="cocolor" style="text-align: center;">Hindustani Vocal </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/4-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/5-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i> 2969</li>
+                                    <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($hindustanivocal)) { 
                                             foreach($hindustanivocal as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                            if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -592,38 +539,28 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                    
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
+                             <h5 class="cocolor" style="text-align: center;">Carnatic Vocal </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/5-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/6-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i> 1896</li>
+                                    <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($carnaticvocal)) { 
                                             foreach($carnaticvocal as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                            if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -633,38 +570,28 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                   
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
+                             <h5 class="cocolor" style="text-align: center;">Bollywood Singing </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/6-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"> 1525</i></li>
+                                    <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($bollywoodsinging)) { 
                                             foreach($bollywoodsinging as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                            if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -674,38 +601,28 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                             
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
+                             <h5 class="cocolor" style="text-align: center;">Playback Singing </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/7-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i>505</li>                                 
+                                    <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($playbacksinging)) { 
                                             foreach($playbacksinging as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                            if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -715,40 +632,28 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                     
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Yoga </h5>
+                             <h5 class="cocolor" style="text-align: center;">Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/8-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/9-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i> 3796</li>
+                                    <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($yoga)) { 
                                             foreach($yoga as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                            if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -758,37 +663,27 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Meditation </h5>
+                             <h5 class="cocolor" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images//Home/14-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/10-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i> 2136</li>
+                                    <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($meditation)) { 
                                             foreach($meditation as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                            if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -798,38 +693,28 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                  
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Nuitritional Guidance </h5>
+                             <h5 class="cocolor" style="text-align: center;">Nuitritional Guidance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/10-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/11-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i> 356</li>
+                                    <li class="list-inline-item thumbnailListItem"> <?php
                                         if (!empty($nuitritionalguidance)) { 
                                             foreach($nuitritionalguidance as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                            if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -839,38 +724,28 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                            
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Musical Instruments </h5>
+                             <h5 class="cocolor" style="text-align: center;">Musical Instruments </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Yoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/12-rbg.png" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/12-rbg.png" alt=""
                                        >
                                 </a>
                             </div>
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i></li>
-                                    <li class="list-inline-item text-white thumbnailListItemp">
-                                        2698
-                                    </li>
-                                    <!-- <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
-                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star-half-full" style="color:#fad32c"></i></li> -->
-                                    <li class="list-inline-item text-white">
-                                        <?php
+                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
+                                            aria-hidden="true"></i> 289</li>
+                                    <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($musicalinstruments)) { 
                                             foreach($musicalinstruments as $datas){
-                                            
-if($datas->total_ratings != ''){
+                                            if($datas->total_ratings != ''){
                                             
                                             echo $datas->total_ratings; // Echo the total_ratings value
 
@@ -880,8 +755,7 @@ if($datas->total_ratings != ''){
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
-                                        ?>
-                                    </li>                                    <li class="list-inline-item text-white thumbnailListItem"><i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                
                             </div>
@@ -1554,59 +1428,72 @@ if($datas->total_ratings != ''){
             <div class="col-lg-1"></div>
 
             <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0">
-                <!-- Icon box -->
-                <div class="icon icon-shape icon-shape-secondary rounded-circle icon1">
-                    <span class="fas fa-bell"></span>
+    <!-- Icon box -->
+                <div class="d-flex justify-content-center">
+                    <div class="icon icon-shape icon-shape-secondary rounded-circle icon1">
+                        <span class="fas fa-bell"></span>
+                    </div>
                 </div>
                 <div class="sc-heading">
-                    <h3 class="heading__primary">1. Choose the Right course</h3>
+                    <h3 class="heading__primary">1. Choose Your Course </h3>
                 </div>
                 <div class="desc-icon-box">
-                    <div class="desc-content">Choose the right course of your choice.</div>
+                    <div class="desc-content text-center">
+                        Explore our diverse range of courses covering various subjects. Discover your passion and select the perfect course to embark on your learning journey.
+                    </div>
                 </div>
                 <!-- End of Icon box -->
             </div>
 
 
+
             <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0">
                 <!-- Icon box -->
+                <div class="d-flex justify-content-center">
                 <div class="icon icon-shape icon-shape-secondary rounded-circle icon2">
                     <span class="fas fa-book-reader"></span>
                 </div>
+                                    </div>
                 <div class="sc-heading">
-                    <h3 class="heading__primary">2. Demo class</h3>
+                    <h3 class="heading__primary">2. Book Demo</h3>
                 </div>
                 <div class="desc-icon-box">
-                    <div class="desc-content">Book a FREE live demo session.</div>
+                    <div class="desc-content text-center    ">Schedule a personalized demo to experience firsthand how our courses work. Get a glimpse of our interactive learning platform and meet your potential instructors.
+                    </div>
                 </div>
                 <!-- End of Icon box -->
             </div>
 
             <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0">
                 <!-- Icon box -->
+                <div class="d-flex justify-content-center">
                 <div class="icon icon-shape icon-shape-secondary rounded-circle icon3">
                     <span class="fas fa-pen"></span>
                 </div>
+                                    </div>
                 <div class="sc-heading">
                     <h3 class="heading__primary">3. Enroll</h3>
                 </div>
                 <div class="desc-icon-box">
-                    <div class="desc-content">Register with us in any of our program.</div>
+                    <div class="desc-content text-center">Ready to dive in? Enroll in your chosen course hassle-free. Our user-friendly enrollment process ensures you're on your way to expanding your knowledge.
+                    </div>
                 </div>
                 <!-- End of Icon box -->
             </div>
 
             <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0">
                 <!-- Icon box -->
+                <div class="d-flex justify-content-center">
                 <div class="icon icon-shape icon-shape-secondary rounded-circle icon4">
                     <span class="fas fa-search-plus"></span>
                 </div>
+                                    </div>
                 <div class="sc-heading">
                     <h3 class="heading__primary">4. Start Learning</h3>
                 </div>
                 <div class="desc-icon-box">
-                    <div class="desc-content">Start learning from your home with the help of our
-                        experienced mentors.</div>
+                    <div class="desc-content text-center">Begin your learning adventure! Access engaging course materials, interactive lessons, and expert guidance from industry professionals. Start mastering new skills at your own pace.
+                    </div>
                 </div>
                 <!-- End of Icon box -->
             </div>
@@ -1614,15 +1501,17 @@ if($datas->total_ratings != ''){
 
             <div class="col-lg-2 col-md-4 col-6 text-center mb-4 mb-lg-0">
                 <!-- Icon box -->
+                <div class="d-flex justify-content-center">
                 <div class="icon icon-shape icon-shape-secondary rounded-circle icon5">
                     <span class="fas fa-certificate"></span>
                 </div>
+                                    </div>
                 <div class="sc-heading">
-                    <h3 class="heading__primary">5. Certification</h3>
+                    <h3 class="heading__primary">5. Certifications</h3>
                 </div>
                 <div class="desc-icon-box">
-                    <div class="desc-content">Get successfully complete all assessments to
-                        demonstrate your proficiency and get certification.</div>
+                    <div class="desc-content text-center">Upon successful completion of your course, earn valuable certifications recognized in your field. Showcase your expertise and take your career to new heights with our accredited credentials.
+                    </div>
                 </div>
                 <!-- End of Icon box -->
             </div>
@@ -1648,53 +1537,49 @@ if($datas->total_ratings != ''){
       <aside class="row" id="video-player">
         
         <div class="col-md-6 p-2">
-        <iframe src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted></iframe>
+        <iframe src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted></iframe>
 
         <!-- <div class="text-white" id="video-caption">Chapal Hart ♩ AMERICAN PRIDE</div> -->
                     </div>
-        <div id="playlist" class="col-md-6">
-            <div class="row">
-            <div class="col-md-6">
-          <button
-            class="lazyload active"
-            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
-            data-caption="Chapal Hart ♩ American Pride">
-            <img src="<?php echo base_url('public/images/play.jpg'); ?>" alt="Thumbnail Image" width="100%">
+                <div id="playlist" class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button
+                                class="lazyload active"
+                                data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
+                                data-caption="Chapal Hart ♩ American Pride">
+                                <img src="<?php echo base_url('public/images/play.jpg'); ?>" alt="Thumbnail Image" width="100%">
 
-        </button>
-            </div>
-            <div class="col-md-6">
+                            </button>
+                        </div>
+                    <div class="col-md-6">
 
-        <button
-            class="lazyload  "
-            data-iframe="https://www.youtube.com/embed/NzijGFASF-g?si=X06ri0G3t8iOEpM8"
-            data-caption="Jon Batiste ♩  FREEDOM">
-            <img src="<?php echo base_url('public/images/play1.jpg'); ?>" alt="Thumbnail Image" width="100%">
-        </button>
-        </div>
-            <div class="col-md-6">
-        <button
-            class="lazyload "
-            data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/b69s332yQnc?si=9I8c5ZlkC5zbeS9F"
-            data-caption="Jon Batiste ♩  FREEDOM">
-            <img src="<?php echo base_url('public/images/play2.jpg'); ?>" alt="Thumbnail Image" width="100%">
-        </button>
-        </div>
-            <div class="col-md-6">
-
-          <!-- MORE VIDEO BUTTONS  -->
-
-
-        <button
-            class="lazyload "
-            data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/eKR1C0KdLYQ?si=T3vlx1me-63_gNmg"
-            data-caption="Luke James ♩ SHINE ON">
-            <img src="<?php echo base_url('public/images/play3.jpg'); ?>" alt="Thumbnail Image" width="100%">
-        </button>
-            </div>
-        </div>
+                        <button
+                            class="lazyload  "
+                            data-iframe="https://www.youtube.com/embed/NzijGFASF-g?si=X06ri0G3t8iOEpM8"
+                            data-caption="Jon Batiste ♩  FREEDOM">
+                            <img src="<?php echo base_url('public/images/play1.jpg'); ?>" alt="Thumbnail Image" width="100%">
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button
+                            class="lazyload "
+                            data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg"
+                            data-iframe="https://www.youtube.com/embed/b69s332yQnc?si=9I8c5ZlkC5zbeS9F"
+                            data-caption="Jon Batiste ♩  FREEDOM">
+                            <img src="<?php echo base_url('public/images/play2.jpg'); ?>" alt="Thumbnail Image" width="100%">
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button
+                            class="lazyload "
+                            data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg"
+                            data-iframe="https://www.youtube.com/embed/eKR1C0KdLYQ?si=T3vlx1me-63_gNmg"
+                            data-caption="Luke James ♩ SHINE ON">
+                            <img src="<?php echo base_url('public/images/play3.jpg'); ?>" alt="Thumbnail Image" width="100%">
+                        </button>
+                    </div>
+                </div>
 
        
             </div> 

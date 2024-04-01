@@ -37,8 +37,8 @@
     </div>
 </section>
 
-<section class="btnSection btnSectionI MusicSec p-3 ">
-    <div class="container">
+<section class="btnSection btnSectionI MusicSec">
+    <div class="container dancepagec">
         <div class="typesOfYoga-tab">
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="col-lg-1 col-md-1 hidefi">
@@ -77,9 +77,9 @@
                     <button class="nav-link" id="pills-Violin-tab" data-bs-toggle="pill" data-bs-target="#pills-Violin" type="button" role="tab" aria-controls="pills-Violin" aria-selected="false">Violin</button>
                 </li>
                 <!-- Drum -->
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                <!-- <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Drum-tab" data-bs-toggle="pill" data-bs-target="#pills-Drum" type="button" role="tab" aria-controls="pills-Drum" aria-selected="false">Drum</button>
-                </li>
+                </li> -->
                 <!-- Keyboard -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <button class="nav-link" id="pills-Keyboard-tab" data-bs-toggle="pill" data-bs-target="#pills-Keyboard" type="button" role="tab" aria-controls="pills-Keyboard" aria-selected="false">Keyboard</button>
@@ -97,7 +97,7 @@
             <div class="tab-content" id="pills-tabContent">
                 <!-- Guitar   -->
                 <div class="tab-pane fade show active" id="pills-Guitar" role="tabpanel" aria-labelledby="pills-Guitar-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/g-1.svg" class="danceimg">
                         </div>
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn learningBtnI">
+                    <section class="learningBtn learningBtnI yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -169,9 +169,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learninstruments">
+                    <section class="learningsec yellowb" id="learninstruments">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -563,7 +563,7 @@
 
                 <!-- Flute  -->
                 <div class="tab-pane fade" id="pills-Flute" role="tabpanel" aria-labelledby="pills-Flute-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/fluteImg1.svg" class="danceimg">
                         </div>
@@ -578,7 +578,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -629,9 +629,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learninstruments1">
+                    <section class="learningsec yellowb" id="learninstruments1">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
 
@@ -1030,7 +1030,7 @@
 
                 <!-- Tabla -->
                 <div class="tab-pane fade show" id="pills-Tabla" role="tabpanel" aria-labelledby="pills-Tabla-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/tablaImg1.svg" class="danceimg">
                         </div>
@@ -1044,7 +1044,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1095,9 +1095,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learninstruments2">
+                    <section class="learningsec yellowb" id="learninstruments2">
                     <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
 
@@ -1475,7 +1475,7 @@
 
                 <!-- Sitar -->
                 <div class="tab-pane fade show" id="pills-Sitar" role="tabpanel" aria-labelledby="pills-Sitar-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/sitarImg1.svg" class="danceimg">
                         </div>
@@ -1490,7 +1490,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1536,9 +1536,9 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learninstruments3">
+                    <section class="learningsec yellowb" id="learninstruments3">
                     <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -1904,7 +1904,7 @@
 
                 <!-- Veena -->
                 <div class="tab-pane fade show" id="pills-Veena" role="tabpanel" aria-labelledby="pills-Veena-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/VeenaImg1.svg" class="danceimg">
                         </div>
@@ -1919,7 +1919,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1970,9 +1970,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learninstruments4">
+                    <section class="learningsec yellowb" id="learninstruments4">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -2329,7 +2329,7 @@
 
                 <!-- piano -->
                 <div class="tab-pane fade show" id="pills-Piano" role="tabpanel" aria-labelledby="pills-Piano-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/pianoImg1.svg" class="danceimg">
                         </div>
@@ -2344,7 +2344,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2395,9 +2395,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learninstruments5">
+                    <section class="learningsec yellowb" id="learninstruments5">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -2753,7 +2753,7 @@
 
                 <!-- Violin -->
                 <div class="tab-pane fade show" id="pills-Violin" role="tabpanel" aria-labelledby="pills-Violin-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/VeenaImg1.svg" class="danceimg">
                         </div>
@@ -2769,7 +2769,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2820,9 +2820,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learninstruments6">
+                    <section class="learningsec yellowb" id="learninstruments6">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -3178,7 +3178,7 @@
 
                 <!-- Drum -->
                 <div class="tab-pane fade show" id="pills-Drum" role="tabpanel" aria-labelledby="pills-Drum-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/drumImg1.svg" class="danceimg">
                         </div>
@@ -3193,7 +3193,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -3244,9 +3244,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learninstruments7">
+                    <section class="learningsec yellowb" id="learninstruments7">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -3604,7 +3604,7 @@
 
                 <!-- Keyboard -->
                 <div class="tab-pane fade show" id="pills-Keyboard" role="tabpanel" aria-labelledby="pills-Keyboard-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/keyboardImg1.svg" class="danceimg">
                         </div>
@@ -3618,7 +3618,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -3669,9 +3669,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learninstruments8">
+                    <section class="learningsec yellowb" id="learninstruments8">
                          <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -4029,7 +4029,7 @@
 
                 <!-- Harmonium -->
                 <div class="tab-pane fade show" id="pills-Harmonium" role="tabpanel" aria-labelledby="pills-Harmonium-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/VeenaImg1.svg" class="danceimg">
                         </div>
@@ -4043,7 +4043,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -4093,9 +4093,9 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learninstruments9">
+                    <section class="learningsec yellowb" id="learninstruments9">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5">
+                            <div class="row mt-5 pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">

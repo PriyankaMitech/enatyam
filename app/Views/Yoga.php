@@ -1,26 +1,6 @@
 <?php include('header.php'); ?>
 
 
-<!-- <section class="s_header-section">
-    <div class="container-fluid mt-2">
-        <div class="row ">
-            <div class="col-lg-8 col-md-8 col-12 p-5">
-                <div class="bannervs">
-                    <video class="video-dance bannerv"                      <video class="video-dance bannerv" autoplay loop muted >
- autoplay="0" loop="0">
-                        <source src="<?=base_url(); ?>public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
-                    </video>                
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-12">
-            <div class="banneris">
-                <img src="<?=base_url(); ?>public/images/Yoga/yogablack.png" class="img-fluid mt-5" alt="Image 4">
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <section class="s_header-section">
     <div class="container-fluid mt-2">
         <div class="row ">
@@ -32,16 +12,12 @@
                     </video>                
                 </div>
             </div>
-            <!-- <div class="col-lg-4 col-md-4 bsimg">
-            <div class="banneris">
-                <img src="<?=base_url(); ?>public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
-                </div>
-            </div> -->
+            
         </div>
     </div>
 </section>
-<section class="btnSection1 yogapagebtn MusicSec">
-    <div class="container">
+<section class="btnSection1 yogapagebtn MusicSec ">
+    <div class="container dancepagec">
         <div class="typesOfYoga-tab">
 
 
@@ -101,7 +77,7 @@
             <div class="tab-content " id="pills-tabContent">
                 <!-- Prenatal Yoga   -->
                 <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel" aria-labelledby="pills-PrenatalYoga-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/prenatalYoga.svg" class="danceimg">
                         </div>
@@ -117,7 +93,7 @@
 
                         </div>
                     </div>
-                    <section class="learningBtn learningBtny learningBtnyoga">
+                    <section class="learningBtn learningBtny learningBtnyoga yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 col-md-1 hide">
@@ -168,7 +144,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnyoga">
+                    <section class="learningsec yellowb" id="learnyoga">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -519,7 +495,7 @@
 
                 <!-- Stress Reduction Yoga  -->
                 <div class="tab-pane fade" id="pills-StressReduction" role="tabpanel" aria-labelledby="pills-StressReduction-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/StressReductionImg.svg" class="danceimg">
                         </div>
@@ -534,7 +510,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -584,7 +560,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learnyoga1">
+                    <section class="learningsec yellowb" id="learnyoga1">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -928,7 +904,7 @@
 
                 <!-- Flexibility Yoga -->
                 <div class="tab-pane fade show" id="pills-Flexibility" role="tabpanel" aria-labelledby="pills-Flexibility-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/FlexibilityYogaImg.svg" class="danceimg">
                         </div>
@@ -944,7 +920,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -995,7 +971,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnyoga2">
+                    <section class="learningsec yellowb" id="learnyoga2">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -1312,7 +1288,7 @@
 
                 <!-- WeightLoss Yoga -->
                 <div class="tab-pane fade show" id="pills-WeightLossYoga" role="tabpanel" aria-labelledby="pills-WeightLossYoga-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/WeightLossYogaImg.svg" class="danceimg">
                         </div>
@@ -1327,7 +1303,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1373,7 +1349,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnyoga3">
+                    <section class="learningsec yellowb" id="learnyoga3">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -1679,7 +1655,7 @@
 
                 <!--Everyday Yoga  -->
                 <div class="tab-pane fade show" id="pills-EverydayYoga" role="tabpanel" aria-labelledby="pills-EverydayYoga-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/EverydayYoga.svg" class="danceimg">
                         </div>
@@ -1695,7 +1671,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1746,7 +1722,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnyoga4">
+                    <section class="learningsec yellowb" id="learnyoga4">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -2094,7 +2070,7 @@
 
                 <!-- Yoga for chronic disease -->
                 <div class="tab-pane fade show" id="pills-YogaforChronic" role="tabpanel" aria-labelledby="pills-YogaforChronic-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/chronicYoga.svg" class="danceimg">
                         </div>
@@ -2110,7 +2086,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2161,7 +2137,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnyoga5">
+                    <section class="learningsec yellowb" id="learnyoga5">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -2509,7 +2485,7 @@
 
                 <!-- Yoga for kids -->
                 <div class="tab-pane fade show" id="pills-YogaforKids" role="tabpanel" aria-labelledby="pills-YogaforKids-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/YogaforKids.svg" class="danceimg">
                         </div>
@@ -2525,7 +2501,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2576,7 +2552,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnyoga6">
+                    <section class="learningsec yellowb" id="learnyoga6">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -2923,7 +2899,7 @@
 
                 <!-- Meditation -->
                 <div class="tab-pane fade show" id="pills-Meditation" role="tabpanel" aria-labelledby="pills-Meditation-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/MeditationImg.svg" class="danceimg">
                         </div>
@@ -2939,7 +2915,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2990,7 +2966,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnyoga7">
+                    <section class="learningsec yellowb" id="learnyoga7">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -3034,7 +3010,7 @@
 
                 <!-- Customize Yoga Plan -->
                 <div class="tab-pane fade show" id="pills-CustomiseYoga" role="tabpanel" aria-labelledby="pills-CustomiseYoga-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/CustomizeYogaImg.svg" class="danceimg">
                         </div>
@@ -3052,7 +3028,7 @@
                         </div>
 
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -3103,7 +3079,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnyoga8">
+                    <section class="learningsec yellowb" id="learnyoga8">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -3147,7 +3123,7 @@
 
                 <!-- Nutrition Yoga -->
                 <div class="tab-pane fade show" id="pills-NutritionCounselling" role="tabpanel" aria-labelledby="pills-NutritionCounselling-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Yoga/NutritionCounsellingImg.svg" class="danceimg">
                         </div>
@@ -3161,7 +3137,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -3212,7 +3188,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnyoga9">
+                    <section class="learningsec yellowb" id="learnyoga9">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">

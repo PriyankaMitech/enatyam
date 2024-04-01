@@ -2693,10 +2693,12 @@ public function update_remark()
                 'receiver_id' => $_SESSION['sessiondata']['id'],
                 'status' => 'N'
             );
-            if(!empty($chat_count)){
+           
             $chat_count = $model->getalldata('online_chat', $chatCountWhere);
-            }
+           
+            if(!empty($chat_count)){
              $count_data = count($chat_count);
+            }
              return $this->response->setJSON(['notificationchat_count' => $count_data]);
 
         } else if ($_SESSION['sessiondata']['role'] == 'Faculty') {
@@ -2720,36 +2722,44 @@ public function update_remark()
 
     public function getNewStudentCount(){
         $model = new AdminModel();
-
+        $newStudentCount = 0;
         if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
            
         $data = $model->getRecordsBefore7Days();
         // echo "<pre>";print_r($data);exit();
 
-        // $notification_count = count($data);
-        return $this->response->setJSON(['newStudentCount' => $data['newStudentCount']]);
+        if(!empty($data['newStudentCount'])){
+        $newStudentCount = count($data);
+        }
+        return $this->response->setJSON(['newStudentCount' => $newStudentCount]);
 
     } else {
         // Return an error message if the user is not authorized
-        return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+        return $this->response->setJSON(['newStudentCount' => $newStudentCount]);
+
+        // return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
     }
     
 }
 
 public function getNewFacultyCount(){
     $model = new AdminModel();
-
+    $notification_count = 0;
     if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
        
     $data = $model->getRecordsBefore7Days();
     // echo "<pre>";print_r($data);exit();
+    if(!empty($data['newFacultyCount'])){
 
-    // $notification_count = count($data);
-    return $this->response->setJSON(['newFacultyCount' => $data['newFacultyCount']]);
+    $notification_count = $data['newFacultyCount'];
+    return $this->response->setJSON(['newFacultyCount' => $notification_count]);
+    }
 
 } else {
     // Return an error message if the user is not authorized
-    return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+    return $this->response->setJSON(['newFacultyCount' => $notification_count]);
+
+    // return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
 }
 
 }
@@ -2757,36 +2767,42 @@ public function getNewFacultyCount(){
 
 public function getNewFacultyNotifications(){
     $model = new AdminModel();
-
+    $facultyNotifications = '';
     if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
        
     $data = $model->getRecordsBefore7Days();
     // echo "<pre>";print_r($data);exit();
-
-    // $notification_count = count($data);
-    return $this->response->setJSON(['facultyNotifications' => $data['resultCarrier']]);
+if(!empty($data['resultCarrier'])){
+    $facultyNotifications = $data['resultCarrier'];
+}
+    return $this->response->setJSON(['facultyNotifications' => $facultyNotifications]);
 
 } else {
     // Return an error message if the user is not authorized
-    return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+    return $this->response->setJSON(['facultyNotifications' => $facultyNotifications]);
+
+    // return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
 }
 
 }
 
 public function getNewStudentNotifications(){
     $model = new AdminModel();
-
+    $studentNotifications = '';
     if (isset($_SESSION['sessiondata']['role']) && $_SESSION['sessiondata']['role'] == 'Admin') {
        
     $data = $model->getRecordsBefore7Days();
     // echo "<pre>";print_r($data);exit();
-
-    // $notification_count = count($data);
-    return $this->response->setJSON(['studentNotifications' => $data['resultRegister']]);
+if(!empty($data['resultRegister'])){
+    $studentNotifications = $data['resultRegister'];
+}
+    return $this->response->setJSON(['studentNotifications' => $studentNotifications]);
 
 } else {
     // Return an error message if the user is not authorized
-    return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
+    return $this->response->setJSON(['studentNotifications' => $studentNotifications]);
+
+    // return $this->response->setStatusCode(403)->setJSON(['error' => 'Unauthorized access']);
 }
 
 

@@ -35,11 +35,6 @@
     transform: rotateX(0deg);
   }
 }
-
-
-
-
-
 main {
   display: flex;
   flex-direction: column;
@@ -275,9 +270,7 @@ $scounter_data = $adminModel->getsinglerow('tbl_student_shedule',$wherecond2);
     
       <!-- Left navbar links -->
       <ul class="navbar-nav">
-        <!-- <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li> -->
+ 
         <li class="nav-item d-none d-sm-inline-block">
           <a href="<?php echo base_url(); ?>" class="nav-link">Home </span></a>
         </li>
@@ -369,7 +362,6 @@ if (!empty($scounter_data)) {
     </div>
 </main>
   <?php  }}
-
 ?>
         </li>
         <?php if ($_SESSION['sessiondata']['Payment_status'] == 'Y') { ?>
@@ -385,56 +377,13 @@ if (!empty($scounter_data)) {
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notification-dropdown">
               <div class="notification-scroll">
-                <!-- <?php
-                // if ($notifications) {
-                //   $todayDate = date('Y-m-d H:i:s');
-                //   usort($notifications, function ($a, $b) {
-                //     return strtotime($a['timestamp']) - strtotime($b['timestamp']);
-                //   });
 
-                //   foreach ($notifications as $notification) :
-                //     $notificationDate = strtotime($notification['timestamp']);
-                //     $todayDateTime = strtotime($todayDate);
-
-                // ?>
-                    <a href="#" class="dropdown-item view-notification">
-                      <div class="media">
-                        <img src="<?php echo base_url() ?>dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                        <div class="media-body">
-                          <h3 class="dropdown-item-title">
-                            <?//= $notification['full_name'] ?>
-                            <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                          </h3>
-                          <p class="text-sm">
-                            <?php
-                            // $descriptionLines = explode("\n", $notification['notification_description']);
-                            // $maxLines = 1;
-                            // echo implode("\n", array_slice($descriptionLines, 0, $maxLines));
-                            // if (count($descriptionLines) > $maxLines) :
-                            // ?>
-                              <span class="read-more-link">...</span>
-                            <?//php endif; ?>
-                          </p>
-                          <p class="text-sm text-muted">
-                            <?//= $notification['timestamp'] ?>
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  <?//php endforeach;
-                // } else {
-                //   ?>
-                  <p class="p-2">
-                    No new notifications available</p>
-                  <hr>
-
-                <?php } ?> -->
               </div>
 
               <a href="<?= base_url(); ?>notification" class="dropdown-item dropdown-footer">See All Messages</a>
             </div>
           </li>
-        <?//php } ?>
+   <?php }?>
         <li class="nav-item">
           <?php 
 date_default_timezone_set('Asia/Kolkata');

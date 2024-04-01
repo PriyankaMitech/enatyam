@@ -25,7 +25,7 @@
          <p>We're here, all ears! Reach out and let's start chatting</p>
 
       </div>
-         <div class="col-lg-4 col-md-4 col-12">
+         <div class="col-lg-4 col-md-4 col-12 content-whats">
       <a href="https://wa.me/919272122001" type="button" class="btn btn-success">Chat With Us <img src="public/images/whatsapp.png"></a>
       </div>
    </div>

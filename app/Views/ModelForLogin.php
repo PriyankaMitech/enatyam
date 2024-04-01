@@ -252,9 +252,9 @@ ul li{
 
                                                 <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Explore Pricing">
+                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Buy Now">
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Buy Now</a>
 
                                                     <?php endif; ?>
                                                 </div>
@@ -353,9 +353,9 @@ ul li{
                                                 </ul>
                                                 <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Buy Now</a>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -453,9 +453,9 @@ ul li{
 
                                                 <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Buy Now</a>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -489,7 +489,7 @@ ul li{
                                                     <h2>21 Sessions
                                                     </h2>
                                                     <h4>₹ 475 /- session</h4>
-                                                    <h4>Total Price: ₹ 9990 /- <br><span class="del-price"><del> ₹ 10500 /- </del></span></h4>
+                                                    <h4>Total Price: ₹ 9975/- <br><span class="del-price"><del> ₹ 10500 /- </del></span></h4>
 
                                                     <img src="public/images/price-coupn.png" />
                                                     <p >Duration : 120 Days</p>
@@ -571,9 +571,9 @@ ul li{
 
                                                     <div class="button-container">
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Buy Now</a>
 
                                                         <?php endif; ?>
                                                     </div>
@@ -662,9 +662,9 @@ ul li{
                                                     <div class="button-container">
 
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Buy Now</a>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
@@ -681,7 +681,7 @@ ul li{
                                                 <div class="price-card-body">
                                                     <h2>101 Sessions</h2>
                                                     <h4>₹ 423 /- session</h4>
-                                                    <h4>Total Price: ₹ 429777 /- <br> <span class="del-price"><del>₹ 51777 /- </del></span></h4>
+                                                    <h4>Total Price: ₹ 42723 /- <br> <span class="del-price"><del>₹ 51777 /- </del></span></h4>
 
                                                     <img src="public/images/Elite.png" />
                                                     <p >Duration : 360 Days</p>
@@ -749,9 +749,9 @@ ul li{
 
                                                     <div class="button-container">
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Buy Now</a>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
