@@ -813,7 +813,7 @@ body {
                             singing classes, and delve into the art of playback singing
                             for a truly immersive experience. Our faculty, renowned
                             for their exceptional talent, guide you through each note,
-                            nurturing your musical journey. At enatyam , we
+                            nurturing your musical journey. At enatyam, we
                             harmonize tradition with innovation, ensuring a
                             melodious learning experience that resonates with the
                             essence of Indian music. Join us and let your musical
@@ -889,13 +889,11 @@ body {
    
                         <div class="text-center mt-4 ">
                             <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments">Explore More</a>
-
                         </div>
-
                     </div>
 
                     <div class="col-md-6 col-12 p-0 text-center omici">
-                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg home">
+                        <img src="<?=base_url(); ?>public/images/instrument/OnlineMusicHome.png" class="danceimg home">
                     </div>
                 </div>
             </div>
@@ -1000,15 +998,11 @@ body {
 
         <div class="row ">
         <h3 class="text-white pb-5" style="text-align:center">Superstar Faculty
-        <span class="line linessf"></span> 
-
-        </h3>
-      
-                
+        <span class="line linessf"></span>
+        </h3>     
             <div class="col-lg-12">
-           
                 <div class="owl-carousel owl-theme">
-                    <div class="item" onclick="showModal('Aditya', 'Yoga Faculty', 'public/images/facultyProfileLatest/2.png','M.Sc.(Human Consciousness and Yogic Science)','Certification YTTC: 200 Hours & E-RYT 500','4 years +','Hath Yoga, Yoga for Strength and Fitness-Weight management- Yoga for anxiety and stress management , Mindfulness practices - Weight Loss, Flexibility and Fitness,Chronic illness')">
+                    <div class="item" onclick="showModal('Aditya', 'Yoga Faculty', 'public/images/facultyProfileLatest/2.png','M.Sc.(Human Consciousness and Yogic Science)','Certification YTTC: 200 Hours & E-RYT 500','4 years +','Hath Yoga, Yoga for Strength and Fitness - Weight Management - Yoga for Anxiety and Stress Management, Mindfulness Practices - Weight Loss, Flexibility and Fitness, Chronic Illness')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/2.png" />
@@ -1023,7 +1017,6 @@ body {
                              <div class="overlay-text">
                                 <h4 class="hedingfsf">Aditya</h4>
                                     <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
-                                    <!-- <p>Certification YTTC: 200 Hours & E-RYT 500</p> -->
                                     <p>Experience 4+ years</p>
                                     <p><b>Read more...</b></p>                                        
                                     <p></p>
@@ -1046,7 +1039,7 @@ body {
                                 <h4 class="hedingfsf">Priti</h4>
                                 <p>M.A. in Performing Arts(Kathak), Gold Medalist in Kathak (University Topper)<br></p>
                                 <p>Experience 15 Years +</p>
- <p><b>Read more...</b></p> 
+                                <p><b>Read more...</b></p> 
                              </div>
                         </div>
                     </div>
@@ -1089,7 +1082,7 @@ body {
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Supriya', 'Yoga Faculty', 'public/images/facultyProfileLatest/4.png','Post Gratuate Diploma in Yoga Science','YTTC 100hrs','Experience 3 Years +','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
+                    <div class="item" onclick="showModal('Supriya', 'Yoga Faculty', 'public/images/facultyProfileLatest/4.png','Post Gratuate Diploma in Yoga Science','YTTC 100hrs','Experience 3 Years +','Prenatal Yoga - Yoga for Chronic Disease - Weight Management - Yoga for Kids - Meditation and Mindfulness Vinayasa Flow, Pranayama, Yoga Nidra, Yoga Therapy, Back, Neck and Knee Pains')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/4.png" />
@@ -1104,15 +1097,12 @@ body {
                                 <h4 class="hedingfsf">Supriya</h4>
                                 <p>Yoga Faculty</p>
                                 <p>Post Gratuate Diploma in Yoga Science</p>
-                                <!-- <p>Certification: YTTC 100hrs</p> -->
                                 <p>Experience - 3 Years + </p>
-                                    <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
- <p><b>Read more...</b></p>                              </div>
+                                <p><b>Read more...</b></p>                             
+                             </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Amrita M', 'Yoga', 'public/images/facultyProfileLatest/6.png', 'M.Sc.(Human Consciousness and Yogic Science)', 'YTTC 125 Hrs', '3+ years','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
-
-
+                    <div class="item" onclick="showModal('Amrita M', 'Yoga Faculty', 'public/images/facultyProfileLatest/6.png', 'M.Sc.(Human Consciousness and Yogic Science)', 'YTTC 125 Hrs', '3+ years','Prenatal Yoga - Yoga for Chronic Disease - Weight Management - Yoga for Kids - Meditation and Mindfulness Vinayasa Flow, Pranayama, Yoga Nidra, Yoga Therapy, Back, Neck and Knee Pains')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/6.png" />
@@ -1126,14 +1116,13 @@ body {
                             <div class="overlay-text">
                                 <h4 class="hedingfsf">Amrita M</h4>
                                 <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
-                                <!-- <p>Certification: YTTC 125 Hrs</p> -->
                                 <p>Experience 3+ years </p>
- <p><b>Read more...</b></p>                                     <!-- <p>techniques : Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains</p>       -->
+                                <p><b>Read more...</b></p> 
                              </div>
                         </div>
                     </div>
 
-                    <div class="item" onclick="showModal('Shekhar Pathak', 'Yoga Faculty', 'public/images/facultyProfileLatest/8.png','Phd - Yogic Science, M.Sc.(Human Consciousness and Yogic Science)','Certification: YTTC 125 Hrs','10 years +','Yogic management of Diseases - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness')">
+                    <div class="item" onclick="showModal('Shekhar Pathak', 'Yoga Faculty', 'public/images/facultyProfileLatest/8.png','Ph.D. - Yogic Science, M.Sc.(Human Consciousness and Yogic Science)','Certification: YTTC 125 Hrs','10 years +','Yogic Management of Diseases - Accupressure Therpis - Pranic Healer - Hatha Yoga - Yoga for Anxiety and Stress Management, Mindfulness Practices - Weight Loss, Flexibility and Fitness')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/8.png" />
@@ -1146,16 +1135,15 @@ body {
                             </div>
                             <div class="overlay-text">
                                 <h4 class="hedingfsf">Shekhar Pathak</h4>
-                                <p>Phd - Yogic Science<br></p>
+                                <p>Ph.D. - Yogic Science<br></p>
                                 <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
-                                <!-- <p>Certification: YTTC 125 Hrs</p> -->
                                 <p>Experience 10 years + </p>
- <p><b>Read more...</b></p>                                     <!-- <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
+                                <p><b>Read more...</b></p>   
                              </div>
                         </div>
                     </div>
 
-                    <div class="item" onclick="showModal('Vivek R', 'Yoga Faculty', 'public/images/facultyProfileLatest/10.png','Phd - Yogic and Sports science, M.Sc.(Human Consciousness and Yogic Science), Diploma in Counselling Psychotherapy, B.Sc. in Military Science','YTTC 125 Hrs','4 years +','Hath Yoga, Yoga Nidra, Yoga for Strength and General Fitness, Weight management, Yoga for anxiety and stress management, Mindfulness practices, Weight Loss, Flexibility and Fitness, Chronic illness')">
+                    <div class="item" onclick="showModal('Vivek R', 'Yoga Faculty', 'public/images/facultyProfileLatest/10.png','Ph.D. - Yogic and Sports Science, M.Sc.(Human Consciousness and Yogic Science), Diploma in Counselling Psychotherapy, B.Sc. in Military Science','YTTC 125 Hrs','4 years +','Hath Yoga, Yoga Nidra, Yoga for Strength and General Fitness, Weight Management, Yoga for Anxiety and Stress Management, Mindfulness Practices, Weight Loss, Flexibility and Fitness, Chronic Illness')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/facultyProfileLatest/10.png" />
@@ -1168,13 +1156,10 @@ body {
                             </div>
                             <div class="overlay-text">
                                 <h4 class="hedingfsf">Vivek R</h4>
-                                <p>Phd - Yogic and Sports science<br></p>
+                                <p>Ph.D. - Yogic and Sports science<br></p>
                                 <p>M.Sc.(Human Consciousness and Yogic Science)<br></p>
                                 <p>Diploma in Counselling Psychotherapy<br></p>
- <p><b>Read more...</b></p>                                 <!-- <p>Certification: YTTC 125 Hrs</p>
-                                <p>Experience 3+ years </p>
-                                
-                                    <p>techniques : Yogic management of Techniques - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness</p>       -->
+                                <p><b>Read more...</b></p>                                  
                              </div>
                         </div>
                     </div>
@@ -1193,7 +1178,8 @@ body {
                                 <h4 class="hedingfsf">Swetha</h4>
                                    <p>MA in Carnatic Vocal</p>
                                    <p>Experience 10 Years +</p>
-    <p><b>Read more...</b></p>                             </div>
+                                    <p><b>Read more...</b></p>     
+                            </div>
                         </div>
                     </div>
                     
@@ -1216,7 +1202,7 @@ body {
                              </div>
                         </div>
                     </div> -->
-                    <div class="item" onclick="showModal('Ketki M', 'Hindustani Music Faculty', 'public/images/ketki.jpg','MA in Hindustani Vocal','Doordarshan Grade Artist','6 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal cords, ragas and sur')">
+                    <div class="item" onclick="showModal('Ketki M', 'Hindustani Music Faculty', 'public/images/ketki.jpg','MA in Hindustani Vocal','Doordarshan Grade Artist','6 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal Cords, Ragas and Sur')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/ketki.jpg" />
@@ -1235,7 +1221,7 @@ body {
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Koyali S', 'Hindustani Music Faculty', 'public/images/Koyali.png','MA in Hindustani Vocal','Doordarshan Grade Artist, Trained 500+ students, nurturing musical excellence', '10 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal cords, ragas and sur')">
+                    <div class="item" onclick="showModal('Koyali S', 'Hindustani Music Faculty', 'public/images/Koyali.png','MA in Hindustani Vocal','Doordarshan Grade Artist, Trained 500+ students, Nurturing musical excellence', '10 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal Cords, Ragas and Sur')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/Koyali.png" />
@@ -1254,7 +1240,7 @@ body {
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Krutika B', 'Bollywood Dance Faculty' ,'public/images/krutika.jpg','Bollywood Dance','Certified Bollywood Dance faculty with training from Shaimak Davar Institute','4 Years +','Collaborated with renowned choreographers, blending expertise in Choreography and performance for a dynamic teaching approach')">
+                    <div class="item" onclick="showModal('Krutika B', 'Bollywood Dance Faculty' ,'public/images/krutika.jpg','Bollywood Dance','Certified Bollywood Dance Faculty with training from Shaimak Davar Institute','4 Years +','Collaborated with renowned choreographers, Blending expertise in Choreography and performance for a dynamic teaching approach')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
                                 <img src="<?=base_url(); ?>public/images/krutika.jpg" />
@@ -1269,7 +1255,7 @@ body {
                                 <h4 class="hedingfsf">Krutika B</h4>
                                 <p>Bollywood Dance</p>
                                 <p>Certified Bollywood Dance faculty with training from Shaimak Davar Institute</p>
- <p><b>Read more...</b></p>                                    
+                                <p><b>Read more...</b></p>                                    
                              </div>
                         </div>
                     </div>
@@ -1531,7 +1517,7 @@ body {
 
 <section class="stories-section MusicSec homapageview p-3">
     <section class="parent-container">
-    <h3 class="text-white p-3" style="text-align:center"> Testimonials<br>
+    <h3 class="text-white p-3 title_4 " style="text-align:center"> Testimonials<br>
                     <span class="line"></span> 
                 </h3> 
       <aside class="row" id="video-player">
@@ -1690,12 +1676,10 @@ body {
     <div class="container cont-width mt-5">
         <div class="row heading-div m-0">
             <div class="col-lg-12 col-12 text-center">
-                <h3>Happy Faces
+                <h3 class="title_4 ">Happy Faces
                 </h3>
                 <span class="line"></span>
-
             </div>
-
         </div>
         <div class="row homapageview">
             <div class="col-lg-12 hpb">
@@ -1767,15 +1751,13 @@ body {
                                         <img src="<?=base_url(); ?>public/images/happyfaces/7h.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Rajiv ( Lucknow )</h5>
-
                                             <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                   
-
+                
                         <div class="item"> 
                             <div class="item in" >
                                 <div class="happyFaces-div">
@@ -1856,9 +1838,7 @@ body {
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                  
+                    </div>  
                 </div>
             </div>
         </div>
@@ -1933,8 +1913,7 @@ body {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
+                            </div>    
                         </div>
 
                         <div class="item">
@@ -2034,9 +2013,7 @@ body {
                                     </div>
                                 </div>
                             </div>
-                    </div>
-
-                  
+                    </div> 
                 </div>
             </div>
         </div>
@@ -2105,7 +2082,7 @@ body {
 <!-- <div class="row">
 <div class="col-lg-1 col-md-1 col-12 faqd"><img src="<?=base_url(); ?>public/images/logo2.png" class="dancefimg" /></div> -->
 <div class="row">
-<h3 class="text-white p-3" style="text-align:center"> FAQ<br>
+<h3 class="text-white p-3 title_4 " style="text-align:center"> FAQ<br>
         <span class="line"></span> 
                 </h3>
     <div class="col-lg-6 col-md-6 col-12 faqdance">

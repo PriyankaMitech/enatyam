@@ -61,7 +61,7 @@ ul li{
                     <li><i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </li>
                     <li>
-                    Offlinestudio
+                    Offline Studio
                     </li>
                 </ul>
             </div>
@@ -71,11 +71,11 @@ ul li{
 <section class="offiline-section ">
     <div class="container">
         <div class="row">
-            <h3 class="text-center">Unlock & Experience Excellence with Our World-Class Studio Facilities!</h3>
+            <h3 class="text-center">Unlock & Experience Excellence With Our World-Class Studio Facilities!</h3>
         
             <form class="offlineStudioform" action="<?php echo base_url(); ?>offlineAddress" method="post" id="offlineStudioform">
                 <div class="col-md-12 col-12 text-col mt-5 text-center">
-                    <h5 class="heading text-center">Enter Your area Pincode to Discover Our Studios</h5>
+                    <h5 class="heading text-center">Enter Your Area Pincode To Discover Our Studios</h5>
                     <div class="text-center offlinei">
                         <input type="text" class="form-control mr-sm-2 small-input"  name="pincode" id="pincodeAdress" placeholder="pincode" title="Please enter maximum 6 digits">
                         <span id="pincodeError" class="text-danger" style="display: none;">Please enter a valid pin code.</span>
