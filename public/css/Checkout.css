@@ -146,8 +146,8 @@ body {
 .check-form label {
     color: #515151;
     font-size: 14px;
-    margin-bottom: 15px;
-    margin-top: 15px
+    /* margin-bottom: 15px;
+    margin-top: 15px; */
 }
 
 .form-check-label {
@@ -338,4 +338,8 @@ body {
     position: absolute;
     top: 10px;
     left: 15px;
+}
+.shop-now-btn {
+    color: #fafafa !important;
+    background-color: #ff236e !important;
 }

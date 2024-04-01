@@ -14,7 +14,7 @@
                     </li>
                     
                     <li>
-                        <a href="<?=base_url(); ?>music">Music</a>
+                        <a href="<?=base_url(); ?>music">Singing</a>
                     </li>
                  
                     <li>
@@ -158,10 +158,8 @@
                     <img class="crdn" src="public/images/Home/Rupay.svg" /> 
                 </div>
                 <div class="copyright-p ">
-                    <p >Copyright © 2024 Enatyam  | Designed & Development by  
-
-                    <a href="https://www.marketingintelligence.tech">Enatyam.
-                        </a></p>
+                    <p>  2024 © All Rights are reserved |  <a href="https://www.marketingintelligence.tech"> Enatyam India Pvt. Ltd. </a> 
+                    </p>
 
 
                     </div>

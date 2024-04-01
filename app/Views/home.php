@@ -2059,7 +2059,6 @@ if($datas->total_ratings != ''){
                                             <img src="<?=base_url(); ?>public/images/happyfaces/7h.png" class="centered-image" />
                                             <div class="hft">
                                                 <h5>Rajiv ( Lucknow )</h5>
-
                                                 <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.'</p>
                                             </div>
                                         </div>
@@ -2067,22 +2066,18 @@ if($datas->total_ratings != ''){
                                 </div>
                         </div>
                    
-
                         <div class="item"> 
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
                                         <img src="<?=base_url(); ?>public/images/happyfaces/8h.png" class="centered-image" />
-                                        
                                         <div class="hft">
                                         <h5>Vikram ( Delhi )</h5>
                                         <p class="reviewName">Enatyam's yoga classes have made me realize that yoga is for everyone. The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.</p>
                                         </div>
                                     </div>    
                                 </div>
-                            </div>
-                    
-                            
+                            </div>    
                         </div>
 
                         <div class="item">
@@ -2111,9 +2106,7 @@ if($datas->total_ratings != ''){
                                     </div>
                                 </div>    
                             </div>
-                        </div>
-                    
-                        
+                        </div>    
                     </div>
                     <div class="item">
                         <div class="item in" >
@@ -2141,9 +2134,7 @@ if($datas->total_ratings != ''){
                                     </div>
                                 </div>    
                             </div>
-                        </div>
-                    
-                        
+                        </div>    
                     </div>
                     <div class="item">
                         <div class="item in" >

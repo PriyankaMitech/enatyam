@@ -252,9 +252,9 @@ ul li{
 
                                                 <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Explore Pricing">
+                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Buy Now">
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Buy Now</a>
 
                                                     <?php endif; ?>
                                                 </div>
@@ -353,9 +353,9 @@ ul li{
                                                 </ul>
                                                 <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Buy Now</a>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -453,9 +453,9 @@ ul li{
 
                                                 <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                     <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Explore Pricing</a>
+                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Buy Now</a>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -501,9 +501,8 @@ ul li{
                                                                 <i class="fa fa-check-circle-o"></i>
 
                                                             </span>
-                                                            <span>
-                                                                One on One Private Live Class.
-
+                                                            <span>          
+                                                                Group Live Class- upto 10 students.
                                                             </span>
                                                         </li>
                                                         <li>
@@ -571,9 +570,9 @@ ul li{
 
                                                     <div class="button-container">
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Buy Now</a>
 
                                                         <?php endif; ?>
                                                     </div>
@@ -662,9 +661,9 @@ ul li{
                                                     <div class="button-container">
 
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Buy Now</a>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
@@ -749,9 +748,9 @@ ul li{
 
                                                     <div class="button-container">
                                                         <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Buy Now</a>
                                                         <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Buy Now</a>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>

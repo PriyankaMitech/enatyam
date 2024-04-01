@@ -37,6 +37,7 @@
                                         <div class="row">
                                             <div class="col-7">
                                                 <h2 class="lead"><b><?= $data->student_name ?></b></h2>
+                 
                                                 <p class="text-muted text-sm"><b>Email : </b> <?= $data->email ?> 
                                                     <br><b>Phone No : </span> <?= $data->mobile_no ?></b>
                                                 </p>
@@ -45,15 +46,28 @@
                                                 <?php }else{ ?>
                                                     <small class="badge badge-success">Paid</small>
                                                 <?php } ?>
-
                                             </div>
-                                            <div class="col-5 text-center">
-                                                <img src="<?php echo base_url() ?>public/images/user.png" alt="user-avatar" class="img-circle img-fluid">
+                                            <div class="col-5 ">
+                                                <span class=""><?php 
+                                                    $created_at = strtotime($data->created_at);
+                                                    $currentDate = strtotime(date("Y-m-d"));
+                                                    $tenDaysAgo = strtotime("-10 days");
+                                                    $new = "";
+                                                    if ($created_at >= $tenDaysAgo && $created_at <= $currentDate) {
+                                                        // $new = '<small class="badge badge-danger">New</small>';?>
+                                                        <small class="badge badge-danger float-right">New</small>
+                                                    <?php }
+                                                    // ?>
+                                                </span>
+                                                <div class="text-center">
+                                                    <img src="<?php echo base_url() ?>public/images/user.png" alt="user-avatar" class="img-circle img-fluid">
+                                                </div>
                                             </div>
                                         </div>
 
                                     </div>
                                     <div class="card-footer">
+                                
                                         <div class="text-right">
                                             <a href="<?php echo base_url()?>chatuser/<?php echo $data->register_id ; ?>" class="btn btn-sm bg-teal">
                                                 <i class="fas fa-comments"></i>

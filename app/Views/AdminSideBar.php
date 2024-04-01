@@ -1061,14 +1061,15 @@ $page = $uri->getSegment(count($pages));
                                         <p>
                                             Student
                                             <i class="right fas fa-angle-left"></i>
-                                            <span class="newStudentCounter badge badge-danger navbar-badge right"></span>
+                                            <span class="newStudentCounter badge badge-danger right"></span>
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
                                         <li class="nav-item">
                                             <a href="<?php echo base_url() ?>studentProfiledata" class="nav-link <?php if($page == 'studentProfiledata') { echo "active-nav-link";  }?>">
                                                 <i class="far fa-circle nav-icon"></i>
-                                                <p>Profile</p>
+                                                
+                                                <p>Profile <span class="newStudentCounter badge badge-danger right"></span></p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -1120,7 +1121,7 @@ $page = $uri->getSegment(count($pages));
                                         <i class="nav-icon 	fa fa-users"></i>
                                         <p>
                                             Faculty
-                                            <i class="right fas fa-angle-left"></i><span class="newFacultyCounter badge badge-danger navbar-badge right"></span>
+                                            <i class="right fas fa-angle-left"></i><span class="newFacultyCounter badge badge-danger right"></span>
                                         </p>
                                     </a>
                                     <ul class="nav nav-treeview">
@@ -1145,7 +1146,7 @@ $page = $uri->getSegment(count($pages));
                                         <li class="nav-item">
                                             <a href="<?php echo base_url() ?>NewFacultyApplication" class="nav-link <?php if($page == 'NewFacultyApplication') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-calendar-alt"></i>
-                                                <p>New Enrollment</p>
+                                                <p>New Enrollment<span class="newFacultyCounter badge badge-danger right"></span></p>
                                             </a>
                                         </li>
                                         <!-- Add other Faculty menu items with access level checks here -->
