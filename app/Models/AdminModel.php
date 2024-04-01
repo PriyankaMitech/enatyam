@@ -1891,6 +1891,7 @@ public function gettodaysallsessions()
 
     return $query;
 }
+
 public function insertBlog($data)
 {
     $this->db->table('blogs')->insert($data);
@@ -1918,4 +1919,204 @@ public function delete_blogs($id)
         ->set('active_status', 'N')
         ->update();
 }
+
+
+public function getusercount()
+{
+    $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('course', '1')
+        ->get()
+        ->getResult(); // Change getRow() to getResult()
+
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+}
+
+public function getusercount1()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('sub_course', '3')
+        ->get()
+        ->getResult(); // Change getRow() to getResult()
+
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+
+public function getusercount2()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('sub_course', '5')
+        ->get()
+        ->getResult(); // Change getRow() to getResult()
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+
+public function getusercount3()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('sub_course', '6')
+        ->get()
+        ->getResult(); // Change getRow() to getResult()
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+
+public function getusercount4()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('sub_course', '7')
+        ->get()
+        ->getResult();
+
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+
+public function getusercount5()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('sub_course', '8')
+        ->get()
+        ->getResult();
+
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+
+public function getusercount6()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('course', '3')
+        ->get()
+        ->getResult();
+
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+public function getusercount7()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('course', '3')
+        ->get()
+        ->getResult();
+
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+public function getusercount8()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('course', '2')
+        ->get()
+        ->getResult();
+
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+public function getusercount9()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('sub_course', '17')
+        ->get()
+        ->getResult();
+
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+public function getusercount10()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('sub_course', '19')
+        ->get()
+        ->getResult();
+
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+
+public function getusercount11()
+{
+ $countdata = 0;
+    $allData = $this->db->table('register')
+        ->where('course', '3')
+        ->get()
+        ->getResult();
+
+        
+        if(!empty($allData)){
+            $countdata = count($allData);
+        }
+        
+    return $countdata;
+
+}
+
+
+
 }

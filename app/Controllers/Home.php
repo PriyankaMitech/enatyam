@@ -41,6 +41,22 @@ class Home extends BaseController
         $data['nuitritionalguidance'] = $model->getstarcount10();
         $data['musicalinstruments'] = $model->getstarcount11();
 
+        $data['katakr'] = $model->getusercount();
+        $data['bharatanatyamr'] = $model->getusercount1();
+        $data['bollywoodr'] = $model->getusercount2();
+        $data['westerndncer'] = $model->getusercount3();
+        $data['hindustanivocalr'] = $model->getusercount4();
+        $data['carnaticvocalr'] = $model->getusercount5();
+        $data['bollywoodsingingr'] = $model->getusercount6();
+        $data['playbacksingingr'] = $model->getusercount7();
+        $data['yogar'] = $model->getusercount8();
+        $data['meditationr'] = $model->getusercount9();
+        $data['nuitritionalguidancer'] = $model->getusercount10();
+        $data['musicalinstrumentsr'] = $model->getusercount11();
+
+        // echo "<pre>";print_r($data['katakr']);exit();
+
+
         // echo $data['total_ratings'];exit();
         // echo "<pre>";print_r($data['bharatanatyam']);exit();
 
