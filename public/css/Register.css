@@ -59,29 +59,6 @@
   line-height: 40px;
 }
 
-/* .modal {
-    background: rgba(0,0,0,0.6);
-} */
-.icon1 {
-  margin-left: 38px !important;
-}
-
-.icon2 {
-  margin-left: 39px !important;
-}
-
-.icon3 {
-  margin-left: 38px !important;
-}
-
-.icon4 {
-  margin-left: 40px !important;
-}
-
-.icon5 {
-  margin-left: 33px !important;
-}
-
 .icon:hover {
   background-color: #ff0067;
 }

@@ -18,10 +18,10 @@
     </div>
 </section>
 <section class="mt-4 dancepage MusicSec">
-    <div class="container">
+    <div class="container dancepagec">
 
         <!-- pills -->
-        <div class="typesOfDance-tab ">
+        <div class="typesOfDance-tab">
 
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="col-lg-1 col-md-1 dancebthide ">
@@ -49,23 +49,25 @@
                 </li>
                 <li class="col-lg-1 col-md-1 dancebthide ">
                 </li>
+                <li class="col-lg-1 col-md-1 dancebthide ">
+                </li>
                 <!-- Semi-classical -->
-                <li class="col-lg-4 col-md-4 col-6 nav-item " role="presentation">
+                <li class="col-lg-2 col-md-2 col-6 nav-item " role="presentation">
                     <button class="nav-link big" id="pills-Semiclassical-tab" data-bs-toggle="pill" data-bs-target="#pills-Semiclassical" type="button" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</button>
                 </li>
                 <!-- Bhangra -->
-                <li class="col-lg-4 col-md-4 col-6 nav-item " role="presentation">
+                <li class="col-lg-2 col-md-2 col-6 nav-item " role="presentation">
                     <button class="nav-link big" id="pills-Bhangra-tab" data-bs-toggle="pill" data-bs-target="#pills-Bhangra" type="button" role="tab" aria-controls="pills-Bhangra" aria-selected="false">Bhangra</button>
                 </li>
                 <!-- Folk -->
-                <li class="col-lg-4 col-md-4 col-6 nav-item " role="presentation">
+                <li class="col-lg-2 col-md-2 col-6 nav-item " role="presentation">
                     <button class="nav-link big" id="pills-Folk-tab" data-bs-toggle="pill" data-bs-target="#pills-Folk" type="button" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</button>
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
                 <!-- Kathak -->
                 <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
                         </div>
@@ -80,7 +82,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn ">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -136,9 +138,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="lear">
+                    <section class="learningsec yellowb" id="lear">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row ">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
                                     <p class="">
@@ -485,7 +487,7 @@
 
                 <!-- Bharatnatyam -->
                 <div class="tab-pane fade" id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/Bharatnatyam.svg" class="danceimg">
                         </div>
@@ -500,7 +502,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -555,7 +557,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learnbharatnatyam">
+                    <section class="learningsec yellowb" id="learnbharatnatyam">
                         <div class="container">
                             <div class="row mt-5">
                             <div  class="col-lg-12 col-md-12 col-12">
@@ -637,12 +639,15 @@
 
                     <section class="modulesec mft" id="mod-bharatnatyam">
                         <div class="container">
-                            <div class="row">
-
-                                <span class="text-center"> <button type="button" class="btn step mkathak dancemodul">Modules</button></span>
-                            </div>
+        
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
                                         <img src="public/images/Dance/bharatnatyam-3.svg" class="danceimg danceimg5">
 
@@ -908,7 +913,7 @@
 
                 <!-- Odissi -->
                 <div class="tab-pane fade" id="pills-Odissi" role="tabpanel" aria-labelledby="pills-Odissi-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/odissi.png" class="danceimg">
                         </div>
@@ -923,7 +928,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -978,7 +983,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learnodissi">
+                    <section class="learningsec yellowb" id="learnodissi">
                         <div class="container">
                             <div class="row mt-5">
                             <div  class="col-lg-12 col-md-12 col-12">
@@ -1058,11 +1063,15 @@
 
                     <section class="modulesec mft" id="mod-odissi">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center"> <button type="button" class="btn step mkathak dancemodul">Modules</button></span>
-                            </div>
+                           
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
                                         <img src="public/images/Dance/odissi-4.png" class="danceimg danceimg5">
                                     </div>
@@ -1237,7 +1246,7 @@
 
                 <!-- Bollywood -->
                 <div class="tab-pane fade" id="pills-Bollywood" role="tabpanel" aria-labelledby="pills-Bollywood-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/bollywood-dance.png" class="danceimg">
                         </div>
@@ -1252,7 +1261,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1307,7 +1316,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learnBollywood">
+                    <section class="learningsec yellowb" id="learnBollywood">
                         <div class="container">
                             <div class="row mt-5">
                             <div  class="col-lg-12 col-md-12 col-12">
@@ -1386,11 +1395,15 @@
 
                     <section class="modulesec mft" id="mod-Bollywood">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center"> <button type="button" class="btn step mkathak dancemodul">Modules</button></span>
-                            </div>
+                          
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
                                         <img src="public/images/Dance/bollywood-3.png" class="danceimg danceimg5">
                                     </div>
@@ -1545,7 +1558,7 @@
 
                 <!-- Western -->
                 <div class="tab-pane fade" id="pills-Western" role="tabpanel" aria-labelledby="pills-Western-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/western-dance.png" class="danceimg">
                         </div>
@@ -1560,7 +1573,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1616,9 +1629,9 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnWestern">
+                    <section class="learningsec yellowb" id="learnWestern">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row">
                             <div class="col-lg-12 col-md-12 col-12">
                                     <!-- Folk -->
                                     <p class="mt-3">
@@ -1695,11 +1708,15 @@
                     </section>
                     <section class="modulesec mft" id="mod-Western">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center"> <button type="button" class="btn step mkathak dancemodul">Modules</button></span>
-                            </div>
+                           
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
                                         <img src="public/images/Dance/western-dance-2.png" class="danceimg danceimg5">
 
@@ -1966,7 +1983,7 @@
 
                 <!-- Semi-classical -->
                 <div class="tab-pane fade" id="pills-Semiclassical" role="tabpanel" aria-labelledby="pills-Semiclassical-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
                         </div>
@@ -1982,7 +1999,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2038,7 +2055,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnSemiclassical">
+                    <section class="learningsec yellowb" id="learnSemiclassical">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -2087,11 +2104,15 @@
 
                     <section class="modulesec mft" id="mod-Semiclassical">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center"> <button type="button" class="btn step mkathak dancemodul">Modules</button></span>
-                            </div>
+                        
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
                                         <img src="public/images/Dance/kathakImg3.svg" class="danceimg danceimg5">
 
@@ -2255,7 +2276,7 @@
 
                 <!-- Bhangra -->
                 <div class="tab-pane fade" id="pills-Bhangra" role="tabpanel" aria-labelledby="pills-Bhangra-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/bhangra.png" class="danceimg">
                         </div>
@@ -2271,7 +2292,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2325,7 +2346,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnBhangra">
+                    <section class="learningsec yellowb" id="learnBhangra">
                         <div class="container">
                             <div class="row mt-5">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -2374,11 +2395,15 @@
 
                     <section class="modulesec mft" id="mod-Bhangra">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center"> <button type="button" class="btn step mkathak dancemodul">Modules</button></span>
-                            </div>
+                     
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
                                         <img src="public/images/Dance/bhangra-2-1.png" class="danceimg danceimg5">
 
@@ -2616,7 +2641,7 @@
 
                 <!-- Folk -->
                 <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
-                    <div class="row">
+                    <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/folk-dance.png" class="danceimg">
                         </div>
@@ -2633,7 +2658,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2687,7 +2712,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec" id="learnFolk">
+                    <section class="learningsec yellowb" id="learnFolk">
                         <div class="container">
                             <div class="row mt-5">
                                  <div  class="col-lg-12 col-md-12 col-12">
@@ -2767,11 +2792,15 @@
 
                     <section class="modulesec mft" id="mod-Folk">
                         <div class="container">
-                            <div class="row">
-                                <span class="text-center"> <button type="button" class="btn step mkathak dancemodul">Modules</button></span>
-                            </div>
+                         
                             <div class="month-row">
                                 <div class="row">
+                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                        <h3>Modules
+                                        </h3>
+                                        <span class="line"></span>
+
+                                    </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
                                         <img src="public/images/Dance/folk-dance.png" class="danceimg danceimg5">
 

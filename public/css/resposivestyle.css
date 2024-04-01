@@ -1,6 +1,57 @@
 /* refunt guarantee section start*/
+.list-inline-item.thumbnailListItem:not(:last-child) {
+  margin-right: 5rem !important;
+}
+
+.btn-light:disabled {
+  background-color: #979797 !important;
+  border-color: #919191 !important;
+}
+.dancepagec {
+  max-width: 100% !important;
+}
+.pddyd {
+  padding: 0px 50px;
+}
+.yellowb {
+  background-color: #fad32c !important;
+  padding: 10px;
+}
+.yellowb h3 {
+  color: #000 !important;
+}
+.yellowb p {
+  color: #000 !important;
+}
+.yellowb ul li {
+  color: #000 !important;
+}
+.ms-auto {
+  margin-left: initial !important;
+}
+.nav-pills .nav-link {
+  border-radius: 28px !important;
+  width: 100%;
+  height: 50px;
+}
+.learningBtn .btndemo {
+  border-radius: 28px !important;
+  width: 100% !important;
+  height: 50px !important;
+  line-height: 38px !important;
+}
+.htgs .text-center {
+  margin-top: 6px !important;
+}
+.cocolor {
+  color: rgb(221, 207, 180);
+}
 .BillingInformation .bip {
   padding: 10px;
+}
+.typesOfDance-tab .img-thumbnail {
+  padding: 0.25rem;
+  background-color: #000;
 }
 
 .hft p {
@@ -42,7 +93,11 @@
 .MusicSec p {
   color: #fff;
 }
+.pricingforhome li {
+  color: #000;
+}
 .MusicSec li {
+  padding: 5px;
   color: #fff;
 }
 .MusicSec .learningsec .list-icon i {
@@ -88,17 +143,16 @@
   text-align: center;
 }
 .bookdemoclub .content2 p {
-  font-size: 29px;
+  font-size: 34px;
   color: #ffffff;
   margin-bottom: 0px;
 }
 .bookdemoclub .content2 a {
-  height: 80px;
-  width: 100%;
+  width: 65%;
+  padding: 20px;
   font-size: 29px;
   background-color: #ff1561;
   --bs-btn-border-color: #ff1561;
-  border-radius: 42px;
 }
 
 .bookdemoclub .content2 a:hover {
@@ -107,6 +161,17 @@
 
 .bookdemoclub .content2 img {
   width: 64px;
+}
+.bookdemoclub .content2 {
+  padding: 10px;
+}
+
+.bookdemoclub .content2 .content-whats {
+  /* background-color: #ff1561;
+  border-radius: 10px; */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
 
 /* refunt guarantee section end */
@@ -604,6 +669,7 @@
   .faculty-section {
     padding: 1rem !important;
   }
+
   .MusicSec1 {
     max-height: 900px;
   }
@@ -764,9 +830,6 @@
     line-height: 1.5;
   }
 
-  .icon {
-    margin-left: 27px;
-  }
   .heading__primary {
     font-size: 13px;
   }
@@ -924,21 +987,7 @@
     margin-top: -4px !important;
     margin-bottom: 14px !important;
   }
-  .icon1 {
-    margin-left: 51px !important;
-  }
-  .icon2 {
-    margin-left: 54px !important;
-  }
-  .icon3 {
-    margin-left: 55px !important;
-  }
-  .icon4 {
-    margin-left: 56px !important;
-  }
-  .icon5 {
-    margin-left: 52px !important;
-  }
+
   .sc_heading {
     font-size: 31px !important;
   }
@@ -1344,21 +1393,7 @@
   .howWorkBlock {
     height: 200px;
   }
-  .icon1 {
-    margin-left: 59px !important;
-  }
-  .icon2 {
-    margin-left: 62px !important;
-  }
-  .icon3 {
-    margin-left: 62px !important;
-  }
-  .icon4 {
-    margin-left: 64px !important;
-  }
-  .icon5 {
-    margin-left: 59px !important;
-  }
+
   /* .typesOfDance-tab .nav-pills .nav-link.big {
     width: 142px !important;
     height: 42px !important;

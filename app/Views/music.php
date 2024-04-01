@@ -23,7 +23,7 @@
     </div>
 </section>
 <section class="btnSection mftm pl-0 MusicSec">
-    <div class="container">
+    <div class="container dancepagec">
 
         <!-- pills -->
         <div class="typesOfDance-tab">
@@ -64,7 +64,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="public/images/Music/musicImg1.svg" class="danceimg">
+                                    <img src="public/images/courseoffering/5-rbg.png" class="danceimg" style="width: 77%;">
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
@@ -87,7 +87,7 @@
                     </section>
 
 
-                    <section class="learningBtn mlearingbtn">
+                    <section class="learningBtn mlearingbtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -142,7 +142,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learnmusic">
+                    <section class="learningsec yellowb" id="learnmusic">
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -464,7 +464,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="public/images/Music/musicImg1.svg" class="danceimg">
+                                    <img src="public/images/courseoffering/6-rbg.png" class="danceimg" style="width: 77%;">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
                                     <h3 class="heading"> Carnatic Vocal</h3>
@@ -484,7 +484,7 @@
                     </section>
                     <!-- 2nd section :  what will you learn(buttons) and learning section -->
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -539,7 +539,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learncarnatic">
+                    <section class="learningsec yellowb" id="learncarnatic">
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -854,7 +854,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="public/images/Music/musicImg1.svg" class="danceimg">
+                                <img src="public/images/courseoffering/7-rbg.png" class="danceimg" style="width: 77%;">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
                                     <h3 class="heading"> Semi Classical</h3>
@@ -874,7 +874,7 @@
                     </section>
                     <!-- 2nd section :  what will you learn(buttons) and learning section -->
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -929,7 +929,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learnsemi">
+                    <section class="learningsec yellowb" id="learnsemi">
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -1250,7 +1250,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="public/images/Music/musicImg1.svg" class="danceimg">
+                                <img src="public/images/courseoffering/8-rbg.png" class="danceimg" style="width: 77%;">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
                                     <h3 class="heading"> Western Singing</h3>
@@ -1271,7 +1271,7 @@
                     </section>
                     <!-- 2nd section :  what will you learn(buttons) and learning section -->
 
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1326,7 +1326,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learnwestern">
+                    <section class="learningsec yellowb" id="learnwestern">
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -1671,7 +1671,7 @@
                         </div>
                     </section>
                     <!-- 2nd section :  what will you learn(buttons) and learning section -->
-                    <section class="learningBtn">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1726,7 +1726,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec" id="learnplay">
+                    <section class="learningsec yellowb" id="learnplay">
                         <div class="container">
                             <div class="row kathakp">
                                 <div class="col-lg-6 col-md-6 col-12">

@@ -2635,8 +2635,9 @@ let ipMobileNo = document.getElementById("txtMobileNo")
 dpDown.addEventListener('change', function() {
     ipMobileNo.minLength = event.target.options[event.target.selectedIndex].dataset.phonelength
     ipMobileNo.maxLength = event.target.options[event.target.selectedIndex].dataset.phonelength
-    ipMobileNo.placeholder = "limit: " + event.target.options[event.target.selectedIndex].dataset.phonelength +
-        " characters"
+    // ipMobileNo.placeholder = "limit: " + event.target.options[event.target.selectedIndex].dataset.phonelength +
+    //     " characters"
+
 })
 
 // Restricts input for the given textbox to the given inputFilter.

@@ -184,12 +184,6 @@ body {
   color: rgb(51, 51, 51);
 }
 
-.month-row .month-list .dancetypes .monthbtn,
-.typesOfYoga-tab .nav-pills .nav-link.kathak {
-  width: 109px;
-  height: 60px;
-}
-
 body {
   background-color: #fad32c;
 }
@@ -209,9 +203,7 @@ body {
 .typesOfYoga-tab .nav-pills .nav-link {
   font-weight: 400;
   font-size: 13px;
-  border-radius: 28px !important;
-  width: 100%;
-  height: 50px;
+
   background-color: #fff;
   color: #000 !important;
 }
