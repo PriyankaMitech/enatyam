@@ -391,7 +391,14 @@ body {
                             <div class="cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList"> 
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 3569</li>
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($katakr)){ ?>
+                                                <?php  $totalValue = 3569 + $katakr;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                3569
+                                            <?php } ?>
+                                    </li>
                             
                              
 
@@ -428,7 +435,15 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 2698</li>
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($bharatanatyamr)){ ?>
+                                                <?php  $totalValue = 2698 + $bharatanatyamr;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                2698
+                                            <?php } ?>
+                                            
+                                    </li>
                                     <li class="list-inline-item thumbnailListItem"> <?php
                                         if (!empty($bharatanatyam)) { 
                                             foreach($bharatanatyam as $datas){
@@ -462,7 +477,14 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 1525</li>                        
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($bollywoodr)){ ?>
+                                                <?php  $totalValue = 1525 + $bollywoodr;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                1525
+                                            <?php } ?>
+                                            </li>                        
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($bollywood)) { 
                                             foreach($bollywood as $datas){
@@ -493,7 +515,14 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 354</li>                                   
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($westerndncer)){ ?>
+                                                <?php  $totalValue = 354 + $westerndncer;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                354
+                                            <?php } ?>
+                                            </li>                                   
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($westerndnce)) { 
                                             foreach($westerndnce as $datas){
@@ -525,7 +554,14 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 2969</li>
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($hindustanivocalr)){ ?>
+                                                <?php  $totalValue = 2969 + $hindustanivocalr;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                2969
+                                            <?php } ?>
+                                    </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($hindustanivocal)) { 
                                             foreach($hindustanivocal as $datas){
@@ -556,7 +592,14 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 1896</li>
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($carnaticvocalr)){ ?>
+                                                <?php  $totalValue = 1896 + $carnaticvocalr;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                1896
+                                            <?php } ?>
+                                    </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($carnaticvocal)) { 
                                             foreach($carnaticvocal as $datas){
@@ -587,7 +630,15 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"> 1525</i></li>
+                                            aria-hidden="true">
+                                            </i>
+                                            <?php if(!empty($bollywoodsingingr)){ ?>
+                                                <?php  $totalValue = 1525 + $bollywoodsingingr;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                1525
+                                            <?php } ?>
+                                        </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($bollywoodsinging)) { 
                                             foreach($bollywoodsinging as $datas){
@@ -618,7 +669,14 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i>505</li>                                 
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($playbacksingingr)){ ?>
+                                                <?php  $totalValue = 505 + $playbacksingingr;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                505
+                                            <?php } ?>
+                                            </li>                                 
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($playbacksinging)) { 
                                             foreach($playbacksinging as $datas){
@@ -649,7 +707,14 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 3796</li>
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($yogar)){ ?>
+                                                <?php  $totalValue = 3796 + $yogar;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                3796
+                                            <?php } ?>
+                                            </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($yoga)) { 
                                             foreach($yoga as $datas){
@@ -679,7 +744,14 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 2136</li>
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($meditationr)){ ?>
+                                                <?php  $totalValue = 2136 + $meditationr;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                2136
+                                            <?php } ?>
+                                            </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($meditation)) { 
                                             foreach($meditation as $datas){
@@ -710,7 +782,15 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 356</li>
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($nuitritionalguidancer)){ ?>
+                                                <?php  $totalValue = 356 + $nuitritionalguidancer;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                356
+                                            <?php } ?>
+                                            
+                                            </li>
                                     <li class="list-inline-item thumbnailListItem"> <?php
                                         if (!empty($nuitritionalguidance)) { 
                                             foreach($nuitritionalguidance as $datas){
@@ -741,7 +821,14 @@ body {
                             <div class="float-left cimgb cimgbr"  >
                                 <ul class="list-inline thumbnailList">
                                     <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i> 289</li>
+                                            aria-hidden="true"></i>
+                                            <?php if(!empty($musicalinstrumentsr)){ ?>
+                                                <?php  $totalValue = 289 + $musicalinstrumentsr;
+                                                echo $totalValue; ?>
+                                            <?php }else{ ?>
+                                                289
+                                            <?php } ?>
+                                            </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($musicalinstruments)) { 
                                             foreach($musicalinstruments as $datas){

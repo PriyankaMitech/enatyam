@@ -1,6 +1,6 @@
 /* refunt guarantee section start*/
 .list-inline-item.thumbnailListItem:not(:last-child) {
-  margin-right: 5rem !important;
+  margin-right: 4rem !important;
 }
 
 .btn-light:disabled {
@@ -352,6 +352,21 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  .userdata p {
+    font-size: 10px;
+  }
+  .whatdssaus .userimage h6 {
+    font-size: 12px;
+  }
+  .changec {
+    height: 50px;
+  }
+  .showdiv {
+    display: flex;
+  }
+  .hidediv {
+    display: none;
+  }
   /* refunt guarantee section start*/
   .bookdemoclub h5 {
     font-size: 23px;
@@ -1945,11 +1960,23 @@
   .fatures {
     width: 9%;
   }
+
   .fetures span {
-    font-size: 13px;
+    font-size: 12px;
   }
   .Title_main__VrmF4 {
-    font-size: 29px;
+    font-size: 28px;
+  }
+  .changec {
+    font-size: 21px;
+
+    height: 86px;
+  }
+  .showdiv {
+    display: none;
+  }
+  .hidediv {
+    display: flex;
   }
   .fmname {
     font-size: 15px;
