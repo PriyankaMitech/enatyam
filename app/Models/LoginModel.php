@@ -441,7 +441,7 @@ class LoginModel extends Model
             ->get()
             ->getRowArray();
     }
-    public function check_otpforwhatsups($otp, $mobile_no,)
+    public function check_otpforwhatsups($otp, $mobile_no)
     {
         $result = $this->db
             ->table('register')

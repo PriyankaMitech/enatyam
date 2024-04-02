@@ -130,7 +130,7 @@ ul li{
     <h3 class="text-white pb-5" style="text-align:center">World-Class Studio Facilities!
         <span class="line linessf"></span> 
     </h3>
-        <div class="col-md-6 wcsf1" >
+        <div class="col-lg-6 col-md-6 col-12 wcsf1" >
             <ul>
                 <li>Waiting Area for Parents/Guardians</li>
                 <li>CCTV Security</li>
@@ -141,7 +141,7 @@ ul li{
             </ul>
 
         </div>
-        <div class="col-md-6 wcsf2"  >
+        <div class="col-lg-6 col-md-6 col-12 wcsf2"  >
         <ul>
                 <li>Spacious Floors</li>
                 <li>Large Mirrors</li>

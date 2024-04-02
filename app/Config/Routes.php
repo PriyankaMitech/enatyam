@@ -106,11 +106,6 @@ $routes->get('demojoininglink', 'LoginController::demojoininglink');
 $routes->get('referandearn', 'LoginController::referandearn');
 $routes->get('bookdemo2', 'LoginController::bookdemo2');
 
-
-
-
-
-
 $routes->get('register', 'LoginController::register');
 $routes->post('register', 'LoginController::register');
 $routes->post('verifymobile', 'LoginController::verifymobile');

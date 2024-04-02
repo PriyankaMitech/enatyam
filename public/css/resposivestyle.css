@@ -10,6 +10,9 @@
 .dancepagec {
   max-width: 100% !important;
 }
+.dancedesc .wsized {
+  width: 77% !important;
+}
 .pddyd {
   padding: 0px 50px;
 }
@@ -317,9 +320,9 @@
   background-color: #fad32c;
   padding: 29px 0px;
 }
-.text-lg-start {
+/* .text-lg-start {
   padding: 29px 0px;
-}
+} */
 .pdblog {
   padding: 10px;
 }
@@ -372,7 +375,7 @@
     font-size: 23px;
   }
   .bookdemoclub {
-    padding: 0px;
+    padding: 20px;
   }
   .bookdemoclub p {
     font-size: 15px;
@@ -387,9 +390,8 @@
     width: 52px;
   }
   .bookdemoclub .content2 a {
-    height: 63px;
-    width: 70%;
-    font-size: 21px;
+    width: 79%;
+    font-size: 23px;
   }
   .content2 .content-s {
     padding-bottom: 20px;
@@ -438,10 +440,10 @@
     font-size: 9px;
   }
   .typesOfDance-tab h5 {
-    font-size: 18px;
+    font-size: 12px;
   }
   ul.thumbnailList {
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 400;
   }
   .ThumbnailImg {
@@ -578,12 +580,7 @@
     margin-bottom: -9px !important;
     padding: 10px;
   }
-  .learningBtn {
-    margin-bottom: 30px;
-  }
-  .dancepage {
-    padding: 10px;
-  }
+
   .ageb {
     width: 150px;
     margin: 10px 8px 5px 0px;
@@ -677,6 +674,15 @@
   }
   .Alp-main {
     padding: 24px;
+  }
+  .typesOfDance-tab .MusicSec h3 {
+    margin-top: 0px !important;
+  }
+  .typesOfDance-tab .list-inline-item.thumbnailListItem:not(:last-child) {
+    margin-right: 2rem !important;
+  }
+  .typesOfDance-tab .MusicSec .coh {
+    padding-bottom: 37px !important;
   }
   .MusicSec h3 {
     margin-top: 21px;
@@ -795,10 +801,13 @@
     font-size: 25px !important;
   }
   .heading-div h3 {
-    font-size: 34px !important;
+    font-size: 30px !important;
     margin-top: 31px !important;
     font-weight: 800 !important;
     font-family: "Roboto Slab", Sans-serif !important;
+  }
+  .faculty-sectiononhome {
+    height: auto;
   }
   /* .btnstart {
     font-size: 8px !important;
@@ -824,6 +833,7 @@
   } */
   .learning_Platform-section {
     margin-top: 20px;
+    padding: 10px;
   }
   .join-now-btn {
     width: 185px;
@@ -1322,6 +1332,83 @@
   }
   .footer-div ul {
     padding-left: 0rem;
+  }
+  .MusicSec h3 {
+    font-size: 30px !important;
+  }
+  .MusicSec1 .h1 {
+    font-size: 30px !important;
+  }
+  .heading_new .title_4 {
+    font-size: 30px;
+  }
+  .pddyd {
+    padding: 0px 10px;
+  }
+  /* .kathakp {
+    padding: 10px;
+  } */
+  .dancet {
+    margin-top: 20%;
+    padding: 10px;
+  }
+  .testimonialsdiv h3 {
+    font-size: 30px !important;
+  }
+  #pricing .heading-div h3 {
+    margin-top: 67px !important;
+  }
+  .bookdemoclub .content {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .dancedesc .wsized {
+    width: 100% !important;
+  }
+  .musicdancedesc {
+    padding: 10px !important;
+  }
+  .yellowb .learnMusicImg {
+    margin-top: 0% !important;
+  }
+  #mod-music .mbfim {
+    margin-top: 10px;
+  }
+  .musict {
+    margin-top: 61px !important;
+    padding: 10px;
+  }
+  .yogatest {
+    margin-top: 61px;
+    padding: 10px;
+  }
+  .learnInstrumentImg {
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+  .minstument {
+    margin-top: 11% !important;
+  }
+  .instumentestimonials {
+    margin-top: 61px;
+    padding: 10px;
+  }
+  #getform .address {
+    display: block;
+  }
+  #getform .text h3 {
+    text-align: center;
+    font-weight: 600;
+  }
+  .wcsf1 {
+    padding: 0% 0% 0% 0% !important;
+  }
+  .wcsf2 {
+    padding: 0% 0% 0% 0% !important;
   }
 }
 
