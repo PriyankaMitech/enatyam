@@ -264,9 +264,9 @@ th {
                                     <table class="table table-hover text-nowrap">
                                         <tr>
                                             <th>Name</th>
-                                            <th>email</th>
+                                            <th>Email</th>
                                             <th>Course</th>
-                                            <th>Sub course</th>
+                                            <th>Sub-Course</th>
 
 
                                             <th>Demo Date</th>
@@ -833,8 +833,8 @@ th {
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>course</th>
-                                    <th>sub course</th>
+                                    <th>Course</th>
+                                    <th>Sub-Course</th>
                                     <th>Contact Number</th>
                                     <!-- <th>Assign Students</th> -->
 

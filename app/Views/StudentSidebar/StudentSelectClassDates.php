@@ -13,7 +13,7 @@
                     <div class="col-md-9">
                         <div id="calendar"></div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 mt-3">
                         <div class="cardt rounded-0 shadow">
                             <div class="card-header bg-gradient bg-primary text-light">
                                 <h5 class="card-title">Select Schedule</h5>
