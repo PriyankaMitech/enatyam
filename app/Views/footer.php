@@ -1133,6 +1133,79 @@
 
                 },
             },
+            // submitHandler: function(form) {
+            //     var formData = $(form).serialize();
+
+            //     // Check if all required fields are filled
+            //     if ($('#demoMobileNo').val() && $('#demoemail').val()) {
+            //         // Your mobile verification AJAX call
+            //         $('#loader').show();
+            //         $.ajax({
+            //             url: "verifydemomobile",
+            //             type: "POST",
+            //             data: formData,
+            //             dataType: "JSON",
+            //             success: function(response) {
+            //                 $('#loader').hide();
+            //                 console.log(response)
+            //                 $('#demoMobileNoError').addClass('d-none');
+            //                 $('#otperror').addClass('d-none');
+            //                 $('#signupbtndemo').val('Please wait...!')
+            //                 if (response.email.status == '203') {
+            //                     console.log('response')
+            //                     $('#emailotpdemo').removeClass('d-none').after(
+            //                         '<span id="emailerrordemo">' + response.email.msg +
+            //                         '</span>')
+            //                 } else if (response.email.status == '203') {
+            //                     // $('#otp').removeClass('d-none').after('<span id="otperror">' + response.mobile.msg + '</span>')
+            //                 } else {
+            //                     // if (response.mobile.mobileexist == true) {
+            //                     //     $('#mobile_noError').addClass('d-none');
+            //                     //     $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
+            //                     // } else 
+            //                     if (response.email.emailexist == true) {
+            //                         $('#demoemailError').addClass('d-none');
+            //                         $('#demoemailError').removeClass('d-none').text(
+            //                             'Email already exist.')
+            //                         $('#signupbtndemo').val('Confirm Booking')
+            //                     } 
+
+
+            //                     if (response.email.emailexist == true) {
+            //                         $('#demoemailError').addClass('d-none');
+            //                         $('#demoemailError').removeClass('d-none').text(
+            //                             'Email already exist.')
+            //                         $('#signupbtndemo').val('Confirm Booking')
+            //                     } else {
+            //                         if (response.email.status == '200') {
+            //                             console.log(response)
+            //                             $('#otperror').addClass('d-none');
+                                
+            //                             $('#hiddenEmail').val(response.email.email);
+            //                             $('#yourFormId').submit();
+            //                         } else {
+            //                             $('#signupbtndemo').val('Confirm Booking')
+            //                             // $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
+            //                             $('#emailotpdemo').removeClass('d-none').after(
+            //                                 '<span class="error" id="otperror">Enter otp sent to your whats app </span>'
+            //                             )
+            //                         }
+
+            //                     }
+            //                 }
+            //             },
+            //             error: function(response) {
+            //                 console.log(response)
+            //                 swal.fire("Warning", "Error in login!", "warning");
+            //             }
+            //         });
+
+
+            //     } else {
+            //         // Handle the case where not all required fields are filled
+            //         alert('Please fill in all required fields.');
+            //     }
+            // }
         });
     });
    
@@ -1161,6 +1234,58 @@
     demoDropDown.dispatchEvent(new Event('change'));
 
 });
+
+$(document).ready(function(){
+    $('#verifyPhoneNumberBtn').click(function(){
+        var phoneNumber = $('#demoMobileNo').val();
+        var otpdemo = $('#otpdemo').val();
+        var telephoneCountryCode = $('#telephoneCountryCode').val();
+        // Check if the phone number is filled
+        if (phoneNumber.trim() === '') {
+            alert('Please enter a phone number.');
+            return;
+        }
+
+        // Your mobile verification AJAX call
+        $('#loader').show();
+        $.ajax({
+            url: "verifydemomobile",
+            type: "POST",
+            data: { 
+                phoneNumber: phoneNumber,
+                otpdemo: otpdemo,
+                telephoneCountryCode: telephoneCountryCode
+            },
+            dataType: "JSON",
+            success: function(response) {
+                $('#loader').hide();
+                if (response.status == '200') {
+                    // Show OTP input field
+                    $('#otpdemo').removeClass('d-none');
+                    $('#register_id').val(response.register_id);
+                    // Change button text
+                    $('#verifyPhoneNumberBtn').text('Please wait...!');
+                } else if (response.mobile.status === '201') {
+                    // Hide the verifyPhoneNumberBtn
+                    $('.changec').removeClass('d-none');
+                    $('#otpErrordemo').text('');
+
+
+                    $('#verifyPhoneNumberBtn').addClass('d-none');
+                } else if (response.mobile.status == '203') {
+                    
+                    $('#otpErrordemo').text('Enter correct otp');
+                    $('#verifyPhoneNumberBtn').text('Please wait...!');
+                } 
+            },
+            error: function(response) {
+                console.log(response);
+                swal.fire("Warning", "Error in verifying phone number!", "warning");
+            }
+        });
+    });
+});
+
 </script>
     <script>
     let demoDropDown = document.getElementById("telephoneCountryCode")

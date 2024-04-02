@@ -5,6 +5,8 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\DemoModel;
 use App\Models\AdminModel;
+use App\Models\LoginModel;
+
 
 class DemoController extends BaseController
 {
@@ -30,11 +32,19 @@ class DemoController extends BaseController
             'course' => $this->request->getPost('courses_id_d'),
             'sub_course' => $this->request->getPost('sub_courses_id_d'),
         ];
-
+        $last_insert_id = '';
+if($this->request->getPost('register_id') == ''){
         $add_data = $db->table('register');
-        $add_data->insert($register_data);
-
+        $add_data->update($register_data);
         $last_insert_id = $db->insertID();
+}else{
+    $update_data = $db->table('register')->where('id', $this->request->getVar('register_id'));
+    $update_data->update($register_data);
+    $last_insert_id = $this->request->getVar('register_id');
+}
+
+
+       
 
         $student_data = [
             'student_name' => $this->request->getPost('name'),
@@ -73,13 +83,6 @@ class DemoController extends BaseController
         $demodata = $db->table('free_demo_table');
         $demodata->insert($data);
         $phone = $data['mobileWithCode'];
-        
-        // echo "<pre>";
-        // print_r($phone);
-        // exit();
-        // $demoModel->save($data);
-
-
 
 
         $session = session();
@@ -316,5 +319,91 @@ class DemoController extends BaseController
 }
        
 
+    }
+
+    public function verifydemomobile()
+    {
+        // echo "<pre>";print_r($_POST);exit();
+        $loginModel = new LoginModel();
+        $otp = rand(999, 9999);
+        $whatsotp = rand(999, 9999);
+        if ($this->request->getVar('otpdemo') == '') {
+            $loginModel = new LoginModel();
+            $result['mobileexist'] = $loginModel->checkExist($this->request->getVar('telephoneCountryCode') . '-' .$this->request->getVar('phoneNumber'), 'mobile_no', 'register');
+
+            
+            if ($result['mobileexist'] == '' ) {
+                $insert = $this->savedata($this->request->getVar('telephoneCountryCode'), $this->request->getVar('phoneNumber'), $otp, $whatsotp);
+
+                // echo "<pre>";print_r($insert);exit();
+                $getdata = [
+                    'mobile_no' => $this->request->getVar('phoneNumber'),
+                    'Phone_countryCode' => $this->request->getVar('telephoneCountryCode'),
+                    'register_id' => $insert['lastinsertid'],
+                    'mobileWithCode'=> $this->request->getVar('telephoneCountryCode').$this->request->getVar('phoneNumber'),
+                ];
+
+                 $phoneNumber =$getdata['mobileWithCode'];
+                 $templates = "408169718530084";
+         //        $name=$getdata['full_name'];
+                 $msg = $whatsotp;
+               
+                 whatsapp($phoneNumber,$templates,$msg);
+                //  $savestud = $loginModel->setStudentName($getdata);
+                 $sms = 'Dear customer, your OTP for registration is ' . $whatsotp . '. do not share to anyone. Thank you OTPIMS';
+               
+                 $output = sendSMS($this->request->getVar('phoneNumber'), $sms);
+                // $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
+                $result['status'] = '200';
+                $result = array(
+                    'mobile' => $this->request->getVar('phoneNumber'),
+                    'otp' => $whatsotp,
+                    'status' => 200,
+                    'register_id' => $insert['lastinsertid'],
+                );
+                echo json_encode($result);
+            } else {
+                // $result['mob'] =$mob['mobileexist'] ;
+                // $result['email'] =$mob['emailexist'] ;
+                echo json_encode($result);
+            }
+        } else {
+
+            // echo "hiii";exit();
+
+            // $checkotp = $loginModel->check_otp($_POST['otp'], $_POST['emailotp'], $_POST['countrie_code'].$_POST['mobile_number'], $_POST['email']);
+            $checkotp = $loginModel->check_otpforwhatsups($this->request->getVar('otpdemo'), $this->request->getVar('phoneNumber'));
+
+            echo json_encode($checkotp);
+        }
+
+
+        
+    }
+
+
+    public function savedata($telephoneCountryCode, $phoneNumber, $otp, $whatsotp)
+    {
+        $loginModel = new LoginModel();
+        $data = [
+           
+            'mobile_no' => $phoneNumber,
+            'Phone_countryCode' => $telephoneCountryCode,
+            'mobileWithCode' => $telephoneCountryCode . $phoneNumber,
+            'role' => 'Student',
+            'otp' => $whatsotp,
+            'is_register_done' => 'N',
+        ];
+        // echo "<pre>";print_r($data);exit();
+        $result = $loginModel->insert($data);
+        $last_insert_id = $loginModel->getInsertID();
+        if ($result) {
+            $output = array(
+                'otp' => $whatsotp,
+                'lastinsertid' => $last_insert_id
+            );
+            return $output;
+        } else
+            return false;
     }
 }
