@@ -150,7 +150,7 @@
 
                     <section class="learningsec yellowb" id="learnyoga">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row ">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading">What you will learn</h3>
                                     <ul class="list-group">
@@ -3577,7 +3577,7 @@
 </section>
 
 
-<section class="testimonials mft" id="testimonials">
+<section class="testimonials mft yogatest" id="testimonials">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-12 text-center testimonialsdiv">

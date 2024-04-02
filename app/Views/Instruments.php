@@ -175,7 +175,7 @@
 
                     <section class="learningsec yellowb" id="learninstruments">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -259,7 +259,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="modulesec tmm" id="mod-instruments">
+                    <section class="modulesec tmm minstument" id="mod-instruments">
                         <div class="container">
                             
                             <div class="month-row">
@@ -727,7 +727,7 @@
                         </div>
                     </section>
 
-                    <section class="modulesec tmm" id="mod-instruments1">
+                    <section class="modulesec tmm minstument" id="mod-instruments1">
                         <div class="container">
                             
                             <div class="month-row">
@@ -1195,7 +1195,7 @@
                         </div>
                     </section>
 
-                    <section class="modulesec tmm" id="mod-instruments2">
+                    <section class="modulesec tmm minstument" id="mod-instruments2">
                         <div class="container">
                             
                             <div class="month-row">
@@ -1638,7 +1638,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="modulesec tmm" id="mod-instruments3">
+                    <section class="modulesec tmm minstument" id="mod-instruments3">
                         <div class="container">
                             
                             <div class="month-row">
@@ -2076,7 +2076,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="modulesec tmm" id="mod-instruments4">
+                    <section class="modulesec tmm minstument" id="mod-instruments4">
                         <div class="container">
                             
                             <div class="month-row">
@@ -2505,7 +2505,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="modulesec tmm" id="mod-instruments5">
+                    <section class="modulesec tmm minstument" id="mod-instruments5">
                         <div class="container">
                             
                             <div class="month-row">
@@ -2934,7 +2934,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="modulesec tmm" id="mod-instruments6">
+                    <section class="modulesec tmm minstument" id="mod-instruments6">
                         <div class="container">
                            
                             <div class="month-row">
@@ -3362,7 +3362,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="modulesec tmm" id="mod-instruments7">
+                    <section class="modulesec tmm minstument" id="mod-instruments7">
                         <div class="container">
                            
                             <div class="month-row">
@@ -3791,7 +3791,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="modulesec tmm" id="mod-instruments8">
+                    <section class="modulesec tmm minstument" id="mod-instruments8">
                         <div class="container">
                            
                             <div class="month-row">
@@ -4221,7 +4221,7 @@
                     </section>
 
 
-                    <section class="modulesec tmm" id="mod-instruments9">
+                    <section class="modulesec tmm minstument" id="mod-instruments9">
                         <div class="container">
                           
                             <div class="month-row">
@@ -4503,7 +4503,7 @@
 
 
 
-<section class="testimonials mft" id="testimonials">
+<section class="testimonials mft instumentestimonials " id="testimonials">
     <div class="container-fluid">
         <!-- <div class="row">
             <span class="text-center testimonialsdiv"><button type="button" class="btn step mkathak">Testimonials</button></span>
