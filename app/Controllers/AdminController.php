@@ -2941,4 +2941,45 @@ public function delete_blog()
 }
 
 
+
+public function sendrenewalremainder()
+{
+    $model = new AdminModel();
+    $facultymodel = new facultymodel();
+    $attendanceData = $model->fetchattandance();
+    $processedIds = [];
+    foreach ($attendanceData['renewalNull'] as $attendance) {
+        $studentId = $attendance->student_registerid;
+        if (!in_array($studentId, $processedIds)) {
+            $maxSessionNo = 0;
+            $messageSent = false;
+            foreach ($attendanceData['renewalNull'] as $record) {
+                if ($record->student_registerid == $studentId) {
+                    if ($record->renewal === null && $record->Session_no > $maxSessionNo) {
+                        $maxSessionNo = $record->Session_no;
+                    }
+                }
+            }
+            foreach ($attendanceData['renewalNull'] as $record) {
+                if ($record->student_registerid == $studentId && $record->renewal === null && $record->Session_no == $maxSessionNo) {
+                    $difference = $record->no_of_session - $record->Session_no;
+                    if ($difference == 2 && !$messageSent) {
+                        $id =$record->student_registerid;
+                        $result = $facultymodel->getnumber($id);
+
+                        $phoneNumber = $result;
+                        $templates = "930840461869403";
+                        $msg = "Your last 2 sessions remaining. If you want to continue, renew now.";
+                        whatsapp($phoneNumber, $templates, $msg);
+                        $templatesAdmin = "930840461869403";
+                        $msg = "Renewal reminder: renewal remainder for student " . $record->student_name;
+                        whatsappadmin($templatesAdmin, $msg);
+                        $messageSent = true;
+                    }
+                }
+            }
+            $processedIds[] = $studentId;
+        }
+    }
+}
 }
