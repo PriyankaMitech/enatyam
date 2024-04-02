@@ -212,13 +212,13 @@ text-align:center;
                                             </div>
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/1h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/19h.png" alt="Image Description">
                                                 <h6 class="text-white ">Kiran (Sweden)</h6>
                                             </div>
 
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/1h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/20h.png" alt="Image Description">
                                                 <h6 class="text-white ">James W (USA )</h6>
                                             </div>
                                             <div class="col-lg-8 col-md-6 col-8 userdata">
@@ -302,6 +302,7 @@ text-align:center;
 </span>
 
                                 </div>
+                      
 
                                 <div class="row tpm">
                                     <span class="col-lg-4 col-md-12 col-12 text-white fmname">Password<span class="starcolor">*</span> :</span>
@@ -315,17 +316,26 @@ text-align:center;
 
 
 
-                                    <div class="row tpm">
-                                        <label class="col-lg-4 col-md-12 col-12 text-white fmname" for="mobile_no">Mobile No.<span class="starcolor">*</span> :</label>
-                                        <div class="col-lg-2 col-md-4 col-4 seletbook">
-                                            <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"  ></select>
-                                        </div>
-                                        <div class="col-lg-6 col-md-8 col-8 seletbook">
-                                            <input required type="text" autocomplete="off" id="demoMobileNo" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
-                                            <span id="demoMobileNoError"></span>
-
-                                        </div>
+                                <div class="row tpm">
+                                    <label class="col-lg-4 col-md-12 col-12 text-white fmname" for="mobile_no">Mobile No.<span class="starcolor">*</span> :</label>
+                                    <div class="col-lg-2 col-md-4 col-4 seletbook">
+                                        <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"></select>
                                     </div>
+                                    <div class="col-lg-6 col-md-8 col-8 seletbook">
+                                        <input required type="text" autocomplete="off" id="demoMobileNo" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
+                                        <span id="demoMobileNoError"></span>
+                                    </div>
+                                    <div class="form-group m-2">
+                                        <input type='hidden' name="register_id" id="register_id">
+                                        <input type="text" name="otpdemo" id="otpdemo" class="form-control d-none" placeholder="Enter otp">
+                                        <span class="error" id="otpErrordemo" class="error"></span>
+                                    </div>
+                                    <div class="col-lg-8">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <button type="button"  id="verifyPhoneNumberBtn" class="btn btn-primary active">Verify Phone Number</button>
+                                    </div>
+                                </div>
                                 <!-- </div> -->
 
                                 <div class="row tpm">
@@ -458,7 +468,7 @@ text-align:center;
                                     your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>
                                 <div class="tpm col-lg-4 col-md-12 col-12 p-2">
-                                    <button type="submit" class="btn btn-success changec">Confirm Booking</button>
+                                    <button type="submit" class="btn btn-success changec d-none">Confirm Booking</button>
                                 </div>
 
                             </div>
@@ -472,7 +482,7 @@ text-align:center;
                                     your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>
                                 <div class="tpm col-lg-4 col-md-4 col-12 p-2">
-                                    <button type="submit" class="btn btn-success changec">Confirm Booking</button>
+                                    <button type="submit" class="btn btn-success changec d-none" id="signupbtndemo" value="Confirm Booking">Confirm Booking</button>
                                 </div>
                                 </div>
 

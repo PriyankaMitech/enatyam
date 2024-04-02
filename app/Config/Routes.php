@@ -114,6 +114,10 @@ $routes->get('bookdemo2', 'LoginController::bookdemo2');
 $routes->get('register', 'LoginController::register');
 $routes->post('register', 'LoginController::register');
 $routes->post('verifymobile', 'LoginController::verifymobile');
+$routes->post('verifydemomobile', 'DemoController::verifydemomobile');
+$routes->get('verifydemomobile', 'DemoController::verifydemomobile');
+
+
 // $routes->post('saveUser', 'LoginController::saveUser');
 $routes->post('saveuserdata', 'LoginController::saveuserdata');
 $routes->get('ModelForLogin', 'LoginController::ModelForLogin');

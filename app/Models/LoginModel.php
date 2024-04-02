@@ -441,4 +441,39 @@ class LoginModel extends Model
             ->get()
             ->getRowArray();
     }
+    public function check_otpforwhatsups($otp, $mobile_no,)
+    {
+        $result = $this->db
+            ->table('register')
+            ->select('otp')
+            ->where(['mobile_no' => $mobile_no])
+            ->get()
+            ->getRow();
+
+       
+
+        if ($otp == $result->otp) {
+            $this->db
+                ->table('register')
+                ->where(["mobile_no" => $mobile_no])
+                ->set('is_mobile_verified', 'Y')
+                ->update();
+
+            $data2 = array(
+                'msg' => 'Mobile verified',
+                'status' => '201',
+                'mobile_no' => $mobile_no
+            );
+        } else {
+            $data2 = array(
+                'msg' => 'Enter correct otp',
+                'status' => '203'
+            );
+        }
+
+        $result = array(
+            'mobile' => $data2
+        );
+        return $result;
+    }
 }
