@@ -411,7 +411,7 @@ text-align:center;
                                     <select class="form-control" name="courses_id_d" id="courses_id_d"
                                         style="width: 100%;">
 
-                                        <option>Please select course</option>
+                                        <option>Please select Course</option>
                                         <?php if (!empty($courses_data)) { ?>
                                             <?php foreach ($courses_data as $data) { ?>
                                                 <option value="<?= $data->id; ?>" <?php if ((!empty($single_data)) && $single_data->courses_id === $data->id) {

@@ -75,7 +75,7 @@ th {
                                         <a class="nav-link active" id="custom-tabs-four-messages-tab" data-toggle="pill"
                                             href="#custom-tabs-four-messages" role="tab"
                                             aria-controls="custom-tabs-four-messages" aria-selected="false">Reschedule
-                                            please</a>
+                                            Please</a>
                                     </li>
 
                                 </ul>
