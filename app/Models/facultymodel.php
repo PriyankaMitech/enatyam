@@ -403,4 +403,14 @@ class facultymodel extends Model
     
         return $result->full_name; // Returning only the name
     }
+    public function getnumber($id)
+    {
+        $result = $this->db->table('register')
+            ->select('mobileWithCode') 
+            ->where('id', $id)
+            ->get()
+            ->getRow(); 
+    
+        return $result->mobileWithCode; // Returning only the name
+    }
 }

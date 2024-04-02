@@ -453,6 +453,7 @@ $routes->get('OrderDetails', 'BillingC::OrderDetails');
 // Routes for Dashboard after login
 $routes->get('Dashboard', 'DashboardController::displayDashboard');
 $routes->get('Attendance', 'AdminController::studentAttendance');
+$routes->get('AdminController/sendrenewalremainder', 'AdminController::sendrenewalremainder');
 
 $routes->post('payment', 'PaymentController::payment');
 // $routes->post('googlelogin', 'LoginController::googlelogin');
