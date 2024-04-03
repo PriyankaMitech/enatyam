@@ -344,6 +344,5 @@
 </div> -->
 
 
-<?php include('bookdemocallb.php'); ?>
 
 <?php include('footer.php'); ?>

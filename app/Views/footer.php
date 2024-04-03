@@ -29,7 +29,7 @@
                     </li>
 
                     <li class="footer-listing">
-                        <a href="<?=base_url(); ?>refundpolicy">Refund Policy</a>
+                        <a href="<?=base_url(); ?>refundpolicy">Cancellation & Refund Policy</a>
                     </li>
                 </ul>
             </div>
@@ -76,7 +76,7 @@
                         <a href="<?=base_url(); ?>termsandconditions">Terms & Conditions</a>
                     </li>
                     <li>
-                        <a href="<?=base_url(); ?>refundpolicy">Refund Policy</a>
+                        <a href="<?=base_url(); ?>refundpolicy">Cancellation & Refund Policy</a>
                     </li>
                     <!-- <li>
                         <a href="<?=base_url(); ?>blog">Blog</a>

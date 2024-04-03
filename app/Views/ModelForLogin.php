@@ -83,7 +83,7 @@
   background-color: #fafafa !important;
 }
 .pricing-card-section ul{
-    height: 376px;
+    height: 312px;
 }
 ul li{
     list-style-type: none;
@@ -93,7 +93,7 @@ ul li{
 }
 .pricing-card-section .card {
     padding: 10px 10px !important;
-    height: 770px;
+    height: 705px;
 }
 .price-card-body .fa-times-circle-o {
     width: 2.5rem;

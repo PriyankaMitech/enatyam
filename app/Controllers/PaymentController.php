@@ -86,7 +86,7 @@ class PaymentController extends BaseController
 
                         $templates = "930840461869403";
 
-                        $number = session('sessiondata')['mobileWithCode'];
+                        $number = session('sessiondata')['mobile_no'];
 
                         whatsapp($number, $templates, $msg1);
 
