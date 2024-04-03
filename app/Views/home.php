@@ -13,9 +13,7 @@
 
 
  */
-#facultyModal .close {
-  right: 111px !important;
-}
+
 
 
 

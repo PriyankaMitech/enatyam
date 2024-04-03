@@ -28,13 +28,13 @@ $name               = "RazorPay Infovistar";
                 <ul class="nav nav-pills mb-5 row" id="pills-tab" role="tablist">
                     <li class="nav-item col-md-6 col-lg-6 col-6 pltag oops" role="presentation">
                         <button class="price-btn active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                            <p>One on One Private Session</p>
+                            <span>One on One Private Session</span>
                         </button>
                     </li>
                     <li class="nav-item col-md-6 col-lg-6 col-6 pltag" role="presentation">
                         <button class="price-btn" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
 
-                            <p>Group Session Up to 10 Students</p>
+                            <span>Group Session Up to 10 Students</span>
                         </button>
                     </li>
 
@@ -165,7 +165,7 @@ $name               = "RazorPay Infovistar";
                                                             <i class="fa fa-check-circle-o"></i>
                                                         </span>
                                                         <span>
-                                                            Group Live Class- upto 10 students.
+                                                        One on One Private Live Class.
                                                         </span>
                                                     </li>
                                                     <li>
@@ -370,7 +370,7 @@ $name               = "RazorPay Infovistar";
 
                                                             </span>
                                                             <span>
-                                                                One on One Private Live Class.
+                                                            Group Live Class- upto 10 students.
 
                                                             </span>
                                                         </li>
