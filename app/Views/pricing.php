@@ -386,8 +386,8 @@ $name               = "RazorPay Infovistar";
 
                                                             </span>
                                                             <span>
-                                                                One on One Private Live Class.
-
+                                                                
+                                                            Group Live Class- upto 10 students.
                                                             </span>
                                                         </li>
                                                         <li>
