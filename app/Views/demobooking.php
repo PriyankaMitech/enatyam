@@ -266,7 +266,7 @@ text-align:center;
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/live.svg">
-                                        <span>2 Live classes per week<span>
+                                        <span>2 Live Classes Per Week<span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/materials-svg.svg">
@@ -281,12 +281,12 @@ text-align:center;
 
                                 <div class="Step_step__mxxn1">Step
                                     <!-- -->1
-                                    <!-- -->&nbsp;:&nbsp;&nbsp;&nbsp;<span>Student details</span>
+                                    <!-- -->&nbsp;:&nbsp;&nbsp;&nbsp;<span>Student Details :-</span>
                                 </div>
 
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Your name<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Your Name<span class="starcolor">*</span> :</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="text" name="name" value="">
                                         <span>
@@ -339,7 +339,7 @@ text-align:center;
                                 <!-- </div> -->
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Age group<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Age Group<span class="starcolor">*</span> :</span>
                                     <span class="col-lg-8 col-md-12 col-12 seletbook">
                                         <button type="button" class="btn btn-primary ptage ageb active">Below 10
                                             Yrs</button>
@@ -351,7 +351,7 @@ text-align:center;
                                 </div>
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Have you learned Any classes*:</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Have you learned any Classes*:</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF seletbook">
                                         <button type="button" class="btn btn-primary ptage classd active">Yes</button>
                                         <button type="button" class="btn btn-primary ptage classd">No</button>
@@ -361,7 +361,7 @@ text-align:center;
                             
                             <div class="Step_step__mxxn1 tpm">Step
                                 <!-- -->2
-                                <!-- -->&nbsp;:&nbsp;&nbsp;&nbsp;<span>Other Details</span>
+                                <!-- -->&nbsp;:&nbsp;&nbsp;&nbsp;<span>Other Details :-</span>
                             </div>
 
                             <div class="row tpm">
@@ -399,7 +399,7 @@ text-align:center;
 
                             <div class="Step_step__mxxn1 tpm">Step
                                 <!-- -->3
-                                <!-- -->&nbsp;:&nbsp;&nbsp;&nbsp;<span>Choose a class</span>
+                                <!-- -->&nbsp;:&nbsp;&nbsp;&nbsp;<span>Choose a Class :-</span>
                             </div>
 
 

@@ -47,7 +47,7 @@
                         <a href="<?=base_url(); ?>blog">Blog</a>
                     </li>
                     <li>
-                        <a href="<?=base_url(); ?>Career">Become a teacher</a>
+                        <a href="<?=base_url(); ?>Career">Become a Teacher</a>
                     </li>
                     <li>
                         <a href="<?=base_url(); ?>Contactus"> Contact Us</a>
