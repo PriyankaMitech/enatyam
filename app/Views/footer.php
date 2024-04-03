@@ -319,37 +319,8 @@
             });
         });
 
-    // Truncate question text on page load
-    $(".question-text").each(function() {
-        var $el = $(this);
-        var originalText = $el.text();
-        var maxLength = 50; // Maximum length before truncation
+  
 
-        if (originalText.length > maxLength) {
-            var truncatedText = originalText.substring(0, maxLength) + '...';
-            $el.text(truncatedText);
-            $el.data('fullText', originalText);
-            $el.data('truncatedText', truncatedText); // Store truncated text separately
-            $el.data('isTruncated', true);
-        } else {
-            $el.data('isTruncated', false);
-        }
-    });
-
-    $(".accordion-item-header").click(function() {
-        var $question = $(this).find('.question-text');
-        var fullText = $question.data('fullText');
-        var truncatedText = $question.data('truncatedText'); // Retrieve truncated text
-        var isTruncated = $question.data('isTruncated');
-
-        if (isTruncated) {
-            $question.text(fullText);
-            $question.data('isTruncated', false);
-        } else {
-            $question.text(truncatedText); // Use truncated text instead of recalculating
-            $question.data('isTruncated', true);
-        }
-    });
 
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -454,41 +425,9 @@
             jQuery(".owl-next").append("<i ></i>");
             jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
 
-
         });
-        $(".question-text").each(function() {
-        var $el = $(this);
-        var originalText = $el.text();
-        var maxLength = 50; // Maximum length before truncation
 
-        if (originalText.length > maxLength) {
-            var truncatedText = originalText.substring(0, maxLength) + '...';
-            $el.text(truncatedText);
-            $el.data('fullText', originalText);
-            $el.data('isTruncated', true);
-        } else {
-            $el.data('isTruncated', false);
-        }
-    });
-
-    $(".accordion-item-header").click(function() {
-        var $question = $(this).find('.question-text');
-        var fullText = $question.data('fullText');
-        var isTruncated = $question.data('isTruncated');
-
-        if (isTruncated) {
-            $question.text(fullText);
-            $question.data('isTruncated', false);
-        } else {
-            var maxLength = 50; // Maximum length before truncation
-            var truncatedText = fullText.substring(0, maxLength);
-            $question.text(truncatedText);
-            $question.data('isTruncated', true);
-        }
-    });
     </script>
-
-
 
 <?php } else if ($page == 'Instruments') { ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -532,14 +471,6 @@
 
         });
     </script>
-
-
-
-<?php } else if ($page == 'instuments') { ?>
-  
-
-
-
 
 <?php } else if ($page == 'Carrier') { ?>
 
@@ -621,8 +552,6 @@
                     $("#collapseThree").collapse('show');
                 }
             }
-
-
 
             // Step-3 validation
 
@@ -2807,6 +2736,38 @@ setInputFilter(document.getElementById("txtMobileNo"), function(value) {
     return /^\d*$/.test(value);
 }, "Must be a number");
 
+  // Truncate question text on page load
+$(".question-text").each(function() {
+        var $el = $(this);
+        var originalText = $el.text();
+        var maxLength = 50; // Maximum length before truncation
+
+        if (originalText.length > maxLength) {
+            var truncatedText = originalText.substring(0, maxLength) + '...';
+            $el.text(truncatedText);
+            $el.data('fullText', originalText);
+            $el.data('truncatedText', truncatedText); // Store truncated text separately
+            $el.data('isTruncated', true);
+        } else {
+            $el.data('isTruncated', false);
+        }
+    });
+
+    $(".accordion-item-header").click(function() {
+        var $question = $(this).find('.question-text');
+        var fullText = $question.data('fullText');
+        var truncatedText = $question.data('truncatedText'); // Retrieve truncated text
+        var isTruncated = $question.data('isTruncated');
+
+        if (isTruncated) {
+            $question.text(fullText);
+            $question.data('isTruncated', false);
+        } else {
+            $question.text(truncatedText); // Use truncated text instead of recalculating
+            $question.data('isTruncated', true);
+        }
+    });
+
 
 
 function showModal(name, designation, img, qualifications, certifications, experience, FacultyDetails) {
@@ -2823,8 +2784,6 @@ function showModal(name, designation, img, qualifications, certifications, exper
     $("body").addClass("modal-open");
 }
 
-
-
     // Close modal function
     window.closeModal = function() {
         $("#facultyModal").hide();
@@ -2835,16 +2794,8 @@ function showModal(name, designation, img, qualifications, certifications, exper
         // Remove class from body to enable scrolling
         $("body").removeClass("modal-open");
     };
-
-
-
-
 </script>
-
-
-
-
-    <script>
+<script>
     $(document).ready(function() {
         $('#otpValidateForm').submit(function(e) {
             e.preventDefault();

@@ -445,7 +445,7 @@ text-align:center;
                             <div class="row tpm">
 
                                 <span class="col-lg-4 col-md-12 col-12 text-white fmname">Demo Class Date<span class="starcolor">*</span> :</span>
-                                <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
+                                <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF form-group seletbook">
                                     <input type="date" name="Book_Date" min="<?= date('Y-m-d', strtotime('+1 day')) ?>"
                                         value="">
 
