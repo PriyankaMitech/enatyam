@@ -309,6 +309,8 @@ text-align:center;
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="password" name="password" value="">
                                         <span>
+                                        <br>
+                                        <small class="smallnotedemo">Note : Password must contain at least one uppercase letter, one lowercase letter, one number,  one symbol ,and be at least 8 characters long</small>
 
                                 </div>
 
@@ -463,7 +465,7 @@ text-align:center;
                             </div>
                             <div class="BookingSecondPage_stickyBottom__G_tzG tpm row showdiv">
                                 <div class="text-white tpm col-lg-8 col-md-12 col-12 p-2">
-                                    By confirming, you agree to receive calls and WhatsApp messages from Enatyam.
+                                    By Confirm, you agree to receive calls and WhatsApp messages from Enatyam.
                                     No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
                                     your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>
@@ -477,7 +479,7 @@ text-align:center;
                             <div class="BookingSecondPage_stickyBottom__G_tzG tpm row hidediv">
 
                             <div class="text-white tpm col-lg-8 col-md-8 col-12 p-2">
-                                    By confirming, you agree to receive calls and WhatsApp messages from Enatyam.
+                                    By Confirm, you agree to receive calls and WhatsApp messages from Enatyam.
                                     No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
                                     your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>

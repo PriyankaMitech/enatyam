@@ -153,54 +153,54 @@
                         syllabus:
                                     </p>
                                     <ul class="list-group">
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Tatkaar - Basic Footwork</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Aamad - Introduction of Rhythm</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Tora and Tukda - Combination of Footwork and Rhythm</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Tihai - Combination of Three Rhythmic Cycles</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Chakkar - Spins and Turns</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                              Gat Bhava - Combination of Footwork and Expressions</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                              Paran - Complex Footwork Patterns</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                          Ladi - Group of Footwork Phrases</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                          Thaat - Posture and Basic Hand Gestures</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                              Parhant - Reciting the Rhythmic Cycles</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                              Abhinaya - Expression through Face and Body</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                              Raas - Combination of Expressions and Rhythm</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                              Tarana - Combination of Rhythm and Melody</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                              Padhant - Reciting the Syllables and Rhythmic Patterns</span>
                                         </li>
@@ -579,47 +579,47 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                    
                                     <ul class="list-group">
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Adavus - Basic Steps</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Hasta Mudras - Hand Gestures</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Margam - A Sequence of Items</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Alarippu - A Combination of Adavus and Hasta Madras</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Jathiswaram - A Combination of Adavus and Rhythmic Patterns</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Sabdam - A Combination of Adavus, Hasta Mudras, and Expressions</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                              Varnam - A Combination of Adavus, Hasta Mudras, Expressions, and Narration</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Padam - An Expressive Dance with Lyrics</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Tillana - A Fast-paced Dance with Complex Footwork</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">1 Shlokam - Devotional Dance with Sanskrit Verses</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Abhinaya - Expression through Face and Body</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Natya - A Narrative Dance Form</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Samyukta Hastas - Combination of Hand Gestures</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Asamyukta Hastas - Single Hand Gestures</span>
                                         </li>
                                     </ul>
@@ -1003,43 +1003,43 @@
                                     
                                     <ul class="list-group">
                                         <h6>Level 1 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic Footwork and Hand Gestures</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to Rhythm and Timing</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Sthayee - Static Poses</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Chauka - A Square Stance</span>
                                         </li>
                                         <h6>Level 2 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Intermediate Footwork and Hand Gestures</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Tribhangi - A Three-fold Bend</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Bhangis - Dance Movements with Stance Changes</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                             Pallavi - A Pure Dance Form</span>
                                         </li>
                                         <h6>Level 3 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Advanced Footwork and Hand Gestures</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Abhinaya - Expressive Interpretation of Dance</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Moksha - A Spiritual Interpretation of Dance </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                             Guru Vandana - Offering Gratitude to the Guru</span>
                                         </li>
@@ -1340,43 +1340,43 @@
                                     
                                     <ul class="list-group">
                                         <h6>Level 1 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic Bollywood Dance Steps</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to Bollywood Music and Rhythm</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Hands and Feet Coordination</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Bollywood-style Walks and Turns</span>
                                         </li>
                                         <h6>Level 2 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Intermediate Bollywood Dance Steps</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Complex Hand Gestures and Expressions</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Choreography for Popular Bollywood Songs</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                             Introduction to Bollywood Fusion Styles</span>
                                         </li>
                                         <h6>Level 3 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Advanced Bollywood Dance Steps</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">High-energy Performance Techniques</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Advanced Choreography for Popular Bollywood Songs</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                             Bollywood Fusion Styles</span>
                                         </li>
@@ -1659,43 +1659,43 @@
                                    
                                     <ul class="list-group">
                                         <h6>Level 1 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic Rhythm and Timing</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to Body Alignment and Posture</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic Steps and Techniques for Contemporary, Jazz, and Ballet</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Choreography for Simple Dance Combinations</span>
                                         </li>
                                         <h6>Level 2 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Intermediate Techniques for Contemporary, Jazz, and Ballet</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to Hip Hop Dance Style</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Choreography for Intermediate Dance Combinations</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                             Expressive Interpretation of Dance</span>
                                         </li>
                                         <h6>Level 3 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Advanced Techniques for Contemporary, Jazz, and Ballet</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Advanced Choreography for Contemporary, Jazz, and Ballet</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Advanced Techniques for Hip Hop Dance Style</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                             Choreography for Advanced Hip Hop Dance Combinations</span>
                                         </li>
@@ -2081,25 +2081,25 @@
                                          
                                     </p>
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic postures and hand gestures.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focuses on the footwork and rhythms.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduces the spins and turns.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Chakkars.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explores complex footwork patterns.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Delves into abhinaya, the art of facial expressions.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Combines all the elements into a cohesive dance piece.</span>
                                         </li>
@@ -2376,25 +2376,25 @@
                                          
                                     </p>
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic postures and hand gestures.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focuses on the footwork and rhythms.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduces the spins and turns.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Chakkars.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explores complex footwork patterns.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Delves into abhinaya, the art of facial expressions.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Combines all the elements into a cohesive dance piece.</span>
                                         </li>
@@ -2746,43 +2746,43 @@
                                     
                                     <ul class="list-group">
                                         <h6>Level 1 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to Folk Dance Styles from Various Regions</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic Steps and Techniques for Folk Dance Styles</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding Rhythm and Timing for Folk Dance</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Choreography for Simple Folk Dance Combinations</span>
                                         </li>
                                         <h6>Level 2 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Intermediate Techniques for Folk Dance Styles</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Advanced Rhythm and Timing for Folk Dance</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Choreography for Intermediate Folk Dance Combinations</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                             Expressive Interpretation of Folk Dance</span>
                                         </li>
                                         <h6>Level 3 :</h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Advanced Techniques for Folk Dance Styles</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Advanced Choreography for Folk Dance Styles</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Combining Different Folk Dance Styles</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                             Presentation Techniques for Folk Dance Performances</span>
                                         </li>

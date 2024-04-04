@@ -157,7 +157,7 @@ footer {
 
 .footer-div a {
   color: #fff;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   text-decoration: none;
 }
@@ -234,7 +234,7 @@ footer .mt-3 {
 }
 
 .footer-links-sub a {
-  color: #909898;
+  color: #909898 !important;
   font-size: 15px;
   margin-right: 25px;
   /* margin-top: 45px; */
@@ -251,7 +251,7 @@ footer a:hover {
 
 .footer-links-sub a:hover,
 .footer-links a:hover {
-  color: #ff0067;
+  color: #ff0067 !important;
 }
 
 .copyright-p p {

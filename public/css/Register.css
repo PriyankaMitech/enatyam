@@ -26,14 +26,13 @@
   margin-top: -40px;
 }
 
-.htgs {
+/* .htgs {
   margin-top: 35px;
-}
+} */
 
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 12px 40px 40px 40px !important; /* top right bottom left */
 }
 
 .btn-light {

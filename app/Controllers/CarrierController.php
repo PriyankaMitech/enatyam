@@ -12,9 +12,6 @@ class CarrierController extends BaseController
     {
         $carrierModel = new CarrierModel();
 
-
-
-
         if ($this->request->getMethod() === 'post') {
             // Handle file uploads
             $cvFile = $this->request->getFile('cvFile');

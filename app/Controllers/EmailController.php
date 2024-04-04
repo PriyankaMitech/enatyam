@@ -17,8 +17,12 @@ class EmailController extends BaseController
 
     public function sendEmail()
     {
-      
+		if (isset($_SESSION['sessiondata'])) {
         return view('sendEmail');
+	}else{
+        return redirect()->to(base_url());
+
+    }
         
     }
    

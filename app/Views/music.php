@@ -152,27 +152,27 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>
@@ -554,27 +554,27 @@
                                     <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>
@@ -948,27 +948,27 @@
                                     <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>
@@ -1349,27 +1349,27 @@
                                     <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>
@@ -1753,27 +1753,27 @@
                                     <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>

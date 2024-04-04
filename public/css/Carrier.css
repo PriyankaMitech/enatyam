@@ -582,9 +582,19 @@ option {
 input[type="checkbox"] {
   vertical-align: text-top;
 }
+.offlinei {
+  display: ruby-text;
+}
+.small-input {
+  width: 30% !important;
+  margin-top: 4% !important;
+  margin-left: 0% !important;
+}
 .btnstart {
+  width: auto;
+  height: 50px;
   margin-bottom: 30px;
-  font-size: 13px !important;
+  font-size: 20px !important;
   font-weight: 400 !important;
   background-color: #ff1561 !important;
   line-height: 30px !important;
