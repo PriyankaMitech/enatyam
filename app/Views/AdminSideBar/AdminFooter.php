@@ -1108,7 +1108,7 @@ assignButton.addEventListener('click', function() {
                 },
                 password: {
                     required: "Password is required.",
-                    customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long"
+                    customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number,  one symbol , and be at least 8 characters long"
                 },
 
                 // confirm_pass: {
@@ -1827,7 +1827,7 @@ assignButton.addEventListener('click', function() {
         var passwordPattern = /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?\":{}|<>]).{8,}$/;
         var passwordError = document.getElementById('passwordError');
         if (!passwordPattern.test(password)) {
-            passwordError.textContent = "Password must contain at least one uppercase letter, one special character, and be at least 8 characters long.";
+            passwordError.textContent = "Password must contain at least one uppercase letter, one lowercase letter, one number,  one symbol , and be at least 8 characters long";
         } else {
             passwordError.textContent = '';
         }

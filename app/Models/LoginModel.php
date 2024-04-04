@@ -408,7 +408,7 @@ class LoginModel extends Model
                 ->update();
 
             $data2 = array(
-                'msg' => 'Email verified',
+                'msg' => 'Mobile verified',
                 'status' => '200',
                 'email' => $email
             );

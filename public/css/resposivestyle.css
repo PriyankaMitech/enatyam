@@ -1,7 +1,73 @@
 /* refunt guarantee section start*/
-.pricing-card-section .price-card-body ul {
+.copage {
+  padding: 40px 10px !important;
+}
+.smallnote {
+  font-size: 11px;
+  color: #e57171;
+}
+.smallnotedemo {
+  font-size: 12px;
+  color: #e57171;
+}
+.tophead .navbar .container {
+  max-width: 1320px !important;
+}
+.pricingforhome {
+  padding: 66px 10px 10px 10px !important;
+}
+.yogapagebtn .yellowb .heading {
+  padding-top: 0% !important;
+}
+.MusicSec {
+  padding: 10px;
+}
+.musict .carousel-control-next,
+.musict .carousel-control-prev {
+  top: -86px !important;
+}
+.yellowb li {
+  padding: 10px 10px !important;
+}
+.how_Started-section {
+  padding-top: 20px !important;
+}
+.pricing-section #pills-tab li {
+  padding: 20px 10px !important;
+}
+.pricingsfor #pills-tab li {
+  padding: 20px 10px !important;
+}
+.pricingforhome #pills-tab li {
+  padding: 20px 10px !important;
+}
+.pricingsfor {
+  padding-top: 9% !important;
+}
+#registerformpopup .modal-body {
+  padding: 12px 0px 0px 0px !important;
+}
+#registerformpopup .countrie_code {
+  padding: 0px 5px 0px 0px;
+}
+#userformmodal .modal-body {
+  padding: 10px;
+}
+.pricing-section .tab-content ul {
+  height: 326px;
+}
+.pricing-section .tab-content li {
+  padding: 5px;
+}
+.MusicSec li {
+  padding: 5px;
+  color: #fff;
+}
+
+.pricingforhome .price-card-body ul {
   height: 325px;
 }
+
 .offilinestudeobaneer {
   padding-top: 5%;
 }
@@ -108,10 +174,7 @@
 .pricingforhome li {
   color: #000;
 }
-.MusicSec li {
-  padding: 5px;
-  color: #fff;
-}
+
 .MusicSec .learningsec .list-icon i {
   color: #ff1561;
 }
@@ -160,7 +223,7 @@
   margin-bottom: 0px;
 }
 .bookdemoclub .content2 a {
-  width: 65%;
+  width: 77%;
   padding: 20px;
   font-size: 29px;
   background-color: #ff1561;
@@ -278,9 +341,6 @@
   z-index: 9999999;
 }
 
-.pricingsfor {
-  padding-top: 9% !important;
-}
 .footer-listing {
   display: none;
 }
@@ -362,8 +422,11 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  .learningsec .list-icon i {
+    font-size: 13px;
+  }
   .learningsec ul {
-    font-size: 12px;
+    font-size: 13px;
   }
   .price-btn {
     font-size: 10px !important;
@@ -403,8 +466,8 @@
     width: 52px;
   }
   .bookdemoclub .content2 a {
-    width: 79%;
-    font-size: 23px;
+    width: 100%;
+    font-size: 22px;
   }
   .content2 .content-s {
     padding-bottom: 20px;
@@ -868,9 +931,6 @@
     line-height: 1.5;
   }
 
-  .heading__primary {
-    font-size: 13px;
-  }
   .title_4 {
     margin-top: 0px;
   }
@@ -907,22 +967,15 @@
   .copyright-p {
     text-align: center;
   }
-  .desc-content {
-    font-size: 11px;
-    font-weight: 200;
-    line-height: 15px;
-    margin-top: 4px;
-    margin-bottom: 33px;
-  }
 
   .price-btn p {
     font-size: 10px !important;
   }
   .op {
-    margin-bottom: 30px !important;
+    margin-bottom: 5px !important;
   }
   .comming-section {
-    padding: 0px 0px px !important;
+    padding: 0px 0px !important;
   }
   .commingsoonimg {
     width: 100%;
@@ -1368,9 +1421,11 @@
   .testimonialsdiv h3 {
     font-size: 30px !important;
   }
+
   #pricing .heading-div h3 {
     margin-top: 67px !important;
   }
+
   .bookdemoclub .content {
     margin-left: 0px;
     margin-top: 0px;
@@ -1426,11 +1481,89 @@
   .offilinestudeobaneer {
     padding-top: 21%;
   }
+  #registerformpopup input::placeholder {
+    font-size: 12px;
+  }
+  .pricingsfor {
+    padding-top: 22% !important;
+  }
+  .pricingsfor .op {
+    margin-bottom: 5px !important;
+  }
+  .pricing-card-section .price-card-body ul li {
+    /* height: 328px; */
+    padding: 0px !important;
+  }
+  .pricing-card-section .price-card-body ul {
+    height: 262px;
+  }
+  .MusicSec1 {
+    max-height: 947px;
+  }
+  .how_Started-section .icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+  }
+  .how_Started-section {
+    padding: 20px;
+  }
+
+  .how_Started-section .heading_new {
+    margin-bottom: 7px !important;
+  }
+  .how_Started-section .htgs {
+    margin-top: 19px;
+  }
+  .how_Started-section .heading__primary {
+    font-size: 11px;
+  }
+  .how_Started-section .desc-content {
+    padding: 5px;
+    font-size: 8px;
+    font-weight: 200;
+    line-height: 14px;
+
+    margin-bottom: 18px;
+  }
+  .how_Started-section .htgs .text-center {
+    margin-top: 0px !important;
+  }
+  .MusicSec .yellowb h3 {
+    margin-top: 0px !important;
+  }
+  #playlist button {
+    margin: 0px;
+  }
+  #playlist .co-6 {
+    padding: 10px !important;
+  }
+  /* #playlist {
+    padding-right: 0px;
+  } */
+  #playlist .row {
+    display: contents;
+  }
 }
 
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  .faculty-sectiononhome {
+    height: 600px;
+  }
+  #playlist button {
+    margin: 0px;
+  }
+  #playlist .co-6 {
+    padding: 10px !important;
+  }
+  /* #playlist {
+    padding-right: 0px;
+  } */
+  #playlist .row {
+    display: contents;
+  }
   #playlist {
     display: grid;
   }

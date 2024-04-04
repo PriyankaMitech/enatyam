@@ -1,7 +1,7 @@
 <?php echo view('StudentSidebar/Studentsidebar'); ?>
 <style>
-   .content .card-body p{
-        font-size: 36px;
+.content .card-body p {
+    font-size: 29px;
         text-align: center;
         font-weight: 700;
         line-height: normal;

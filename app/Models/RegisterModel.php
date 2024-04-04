@@ -18,7 +18,7 @@ class RegisterModel extends Model
     
     public function checkOfflineAddress($pincode)
     {
-       $res =   $this->db->table('tbl_OfflineStudio')->where('pincode', $pincode)->get()->getResult();
+       $res =   $this->db->table('tbl_offlinestudio')->where('pincode', $pincode)->get()->getResult();
        if($res){
         // echo'<pre>';print_r($res);die;
         return $res;

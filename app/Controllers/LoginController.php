@@ -19,9 +19,14 @@ class LoginController extends BaseController
     // }
     public function index()
     {
-        helper(['form']);
-        $data = [];
-        echo view('register', $data);
+        if (isset($_SESSION['sessiondata'])) {
+            helper(['form']);
+            $data = [];
+            echo view('register', $data);
+            }else{
+                return redirect()->to(base_url());
+
+            }
     }
 
     public function googlelogin()
@@ -57,6 +62,7 @@ class LoginController extends BaseController
 
     public function register()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $validation = \Config\Services::validation(); // Get the validation instance
         $loginModel = new LoginModel();
         // print_r($data);die;
@@ -99,6 +105,10 @@ class LoginController extends BaseController
         //     $data['validation'] = $validation;
         //     return redirect()->to('Home');
         // }
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function verifymobile()
@@ -276,10 +286,13 @@ class LoginController extends BaseController
 
     public function ModelForLogin()
     {
-        // echo "<pre>";
-        // print_r($_SESSION);
-        // echo "</pre>";die;
+       
+        if (isset($_SESSION['sessiondata'])) {
         return view('ModelForLogin');
+        }else{
+            return redirect()->to(base_url());
+
+        }
     }
 
 
@@ -329,30 +342,41 @@ class LoginController extends BaseController
 
     public function demojoininglink(){
         $model = new AdminModel();
+        if (isset($_SESSION['sessiondata'])) {
         $wherecond = ['register_id' => $_SESSION['sessiondata']['id'],
-        'Conducted_Demo' => 'N'
-    ];
-    $orderby = array('created_on' => 'DESC');
+            'Conducted_Demo' => 'N'
+        ];
+        $orderby = array('created_on' => 'DESC');
 
-    $data['demo_data'] = $model->getsingleroworderby('free_demo_table', $wherecond, $orderby);
+        $data['demo_data'] = $model->getsingleroworderby('free_demo_table', $wherecond, $orderby);
 
         
         // echo "<pre>";print_r( $data['demo_data']);exit();
         return view('demojoininglink',$data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
 
     }
 
     public function referandearn(){
+        if (isset($_SESSION['sessiondata'])) { 
         // $model = new AdminModel();
         // $wherecond = ['register_id' => $_SESSION['sessiondata']['id']];
         // $data['demo_data'] = $model->get_single_data('free_demo_table', $wherecond);
         
         // echo "<pre>";print_r( $data['demo_data']);exit();
         return view('referandearn');
+    }else{
+        return redirect()->to(base_url());
+
+    }
 
     }
 
     public function bookdemo2(){
+        if (isset($_SESSION['sessiondata'])) { 
         $model = new AdminModel();
         $wherecond = ['register_id' => $_SESSION['sessiondata']['id'],
                       'Conducted_Demo' => 'N'
@@ -369,6 +393,10 @@ class LoginController extends BaseController
         
         // echo "<pre>";print_r( $data['courses_data']);exit();
         return view('bookdemo2',$data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
 
     }
 

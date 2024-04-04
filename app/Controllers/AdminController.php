@@ -19,7 +19,13 @@ class AdminController extends BaseController
 {
     public function givestudent()
     {
-        return view('givestudent');
+        if (isset($_SESSION['sessiondata'])) {
+        return view('givestudent');   
+    }else{
+            return redirect()->to(base_url());
+    
+        }
+
     }
 
     public function Admindashboard()
@@ -89,62 +95,7 @@ class AdminController extends BaseController
             return redirect()->to(base_url());
         }
     }
-//     public function AssignTecherForDemo()
-// {
-//     $model = new AdminModel();
-//     $postData = $this->request->getPost(); 
-//     $facultyId = $this->request->getVar('faculty_id');
-//     $Facultycontact = $model->Facultycontact($facultyId);
-//     $data = [
-//         'AssignTecher_id' => $facultyId, // Use the variable here
-//         'meetlink' => $this->request->getVar('meetlink'),
-//         'Book_Date_Time' => $this->request->getVar('Book_Date_Time'),
-//     ];
 
-//     $db = \Config\Database::Connect();  
-    
-//     if ($this->request->getVar('studentid') != "") {
-//         $db->table('free_demo_table')
-//             ->where('D_id', $this->request->getVar('studentid'))
-//             ->update($data);
-
-//         $updatedData = $db->table('free_demo_table')
-//             ->where('D_id', $this->request->getVar('studentid'))
-//             ->get()
-//             ->getRowArray();
-
-//         if ($updatedData) {
-//             // Removed the print_r and die statement for production
-            
-//             $phoneNumber = $updatedData['phone'];
-//             $templates = "930840461869403";
-//             $date = $updatedData['Book_Date'];
-//             $time = $updatedData['Book_Date_Time'];
-//             $meetlink = $updatedData['meetlink'];
-//             $msg = "Your Demo Will Schedule on $date  at $time. Join this link: $meetlink";
-//             whatsapp($phoneNumber, $templates, $msg);
-//             $phoneNumber = $Facultycontact;
-//             $templates = "930840461869403";
-//             $date = $updatedData['Book_Date'];
-//             $time = $updatedData['Book_Date_Time'];
-//             $meetlink = $updatedData['meetlink'];
-//          //  $msg = "You have Assing For Demo on $date  at $time. Join this link For Demo: $meetlink";
-//             $msg = "Hello , We're pleased to inform you that an admin has assigned a demo to you. Demo Date:$date Time: $time Demo Link: $meetlink Link Keep spreading your knowledge!";
-
-//             whatsapp($phoneNumber, $templates, $msg);
-//           //  $phoneNumber = "917588525387";
-//             $templates = "930840461869403";
-//             $date = $updatedData['Book_Date'];
-//             $time = $updatedData['Book_Date_Time'];
-//             $meetlink = $updatedData['meetlink'];
-//             $msg = "New Demo Will Be on $date at $time. Join this link For Demo: $meetlink";
-//             whatsappadmin($templates, $msg);
-//             session()->setFlashdata('success', 'Demo Schedule successfully.');
-//         }
-//     }
-
-//     return redirect()->to('Admindashboard');
-// }
 public function AssignTecherForDemo()
 {
     $model = new AdminModel();
@@ -252,7 +203,6 @@ public function AssignTecherForDemo()
     }
     public function getAdminSideBarAll()
     {
-
         if (isset($_SESSION['sessiondata'])) {
             $sessionData = $_SESSION['sessiondata'];
             $email = $sessionData['email'] ?? null;
@@ -694,9 +644,14 @@ public function AssignTecherForDemo()
 
     public function AdminList()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
         $adminUsers = $model->getAdminUsers();
         return view('AdminSideBar/AdminList', ['adminUsers' => $adminUsers]);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function addStudent()
@@ -721,7 +676,7 @@ public function AssignTecherForDemo()
 
     public function create_group()
     {
-
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
         $data['groupSessionStudents'] = $model->getGroupSessionStudents();
         $data['OneToOneSession'] = $model->getOneToOneSessionStudents();
@@ -733,6 +688,10 @@ public function AssignTecherForDemo()
 
 
         return view('AdminSideBar/create_group', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function SelectedForGroup()
@@ -755,6 +714,7 @@ public function AssignTecherForDemo()
 
     public function StudentGroups()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
         $data['groups'] = $model->getAllGroupNames();
         $data['cource'] = $model->getcorce();
@@ -769,9 +729,14 @@ public function AssignTecherForDemo()
         // echo "<pre>"; print_r($data['records']); echo "</pre>";die();
 
         return view('AdminSideBar/StudentGroup', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
     public function AssignFacultyToGroup()
     {
+        if (isset($_SESSION['sessiondata'])) {
         // print_r($_POST);die;
         $selectedDate = $this->request->getPost('selected_date');
         $groupName = $this->request->getPost('group_name');
@@ -780,6 +745,10 @@ public function AssignTecherForDemo()
         $model = new AdminModel();
         $model->updateFacultyForGroup($groupName, $facultyId, $selectedDate);
         return redirect()->to('StudentGroups');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
     public function chatuser()
     {
@@ -934,6 +903,7 @@ public function AssignTecherForDemo()
 
     public function chatwithteacher()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
         if ($_SESSION['role'] == 'Faculty') {
             if (isset($_POST['studeid'])) {
@@ -951,24 +921,16 @@ public function AssignTecherForDemo()
         } else {
             echo 'student';
         }
-        // print_r($_SESSION);die;
-        // $receiverid = $this->request->uri->getSegments(1);
-        // $wherecond = array('Assign_Techer_id'=>$_SESSION['id']);
-        // $wherecond1 = array('id'=>$_SESSION['id']);
-        // $wherecond2 = array('sender_id'=>$_SESSION['id'], 'receiver_id'=>3);
-        // $wherecond3 = array('sender_id'=>3, 'receiver_id'=>$_SESSION['id']);
+    }else{
+        return redirect()->to(base_url());
 
-
-        // $result['getdata'] = $model->getsinglerow('register', $wherecond1);
-        // $result['getstud'] = $model->getdata('register', $wherecond);
-        // $result['chatdata'] = $model->getchat('online_chat', $wherecond2, $wherecond3);
-
-        // echo '<pre>';print_r($result);die;
-        // echo view('FacultysideBar/Chatwithstud', $result);
+    }
+       
     }
 
     public function insertChat()
     {
+       
         $formdata = $_POST;
         $wherecond = array('id ' => $formdata['sender_id']);
 
@@ -980,10 +942,12 @@ public function AssignTecherForDemo()
         // print_r($result);
         // die;
         echo json_encode($result);
+
     }
 
     public function studentAttendance()
 {
+    if (isset($_SESSION['sessiondata'])) {
     $model = new AdminModel();
     $attendanceData = $model->fetchattandance();
 
@@ -994,10 +958,15 @@ public function AssignTecherForDemo()
     //   echo "records with Renewal Null"; echo '<pre>'; print_r($data['renewalNull']);die;
      
     return view('AdminSideBar/studentAttendance', $data);
+}else{
+    return redirect()->to(base_url());
+
+}
 }
 
     public function add_notifications()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
         $data['admins'] = $model->get_students();
         $data['Faculty'] = $model->getFaculty();
@@ -1007,18 +976,27 @@ public function AssignTecherForDemo()
         $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
         $data['faculty_data'] = $model->getalldata('faculty', $wherecond);
         echo view('AdminSideBar/add_notifications', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
 
     public function add_courses()
     {
+        if (isset($_SESSION['sessiondata'])) {
 
         echo view('add_courses');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function set_courses()
     {
-
+        if (isset($_SESSION['sessiondata'])) {
         $data = [
             'courses_name' => $this->request->getVar('courses_name'),
             'created_on' => date('Y:m:d H:i:s'),
@@ -1036,10 +1014,15 @@ public function AssignTecherForDemo()
         }
 
         return redirect()->to('courses_list');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function courses_list()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
 
         $wherecond = array('is_deleted' => 'N');
@@ -1048,10 +1031,16 @@ public function AssignTecherForDemo()
         $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
         // echo "<pre>";print_r($data['menu_data']);exit();
         echo view('courses_list', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function get_courses()
     {
+        
+        if (isset($_SESSION['sessiondata'])) {
 
         $model = new AdminModel();
 
@@ -1062,11 +1051,16 @@ public function AssignTecherForDemo()
         $data['single_data'] = $model->get_single_data('tbl_courses', $wherecond1);
 
         echo view('add_courses', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
 
     public function chechk_courses_name_id()
     {
+        
         $admin_model = new AdminModel();
         $courses_name = $this->request->getPost('courses_name');
 
@@ -1083,6 +1077,8 @@ public function AssignTecherForDemo()
 
     public function add_sub_courses()
     {
+        
+        if (isset($_SESSION['sessiondata'])) {
         $admin_model = new AdminModel();
         $wherecond = array('is_deleted' => 'N');
 
@@ -1091,10 +1087,16 @@ public function AssignTecherForDemo()
         // echo "<pre>";print_r($coursesname);exit();
 
         echo view('add_sub_courses', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function set_sub_courses()
     {
+        
+        if (isset($_SESSION['sessiondata'])) {
 
         $data = [
             'courses_id' => $this->request->getVar('courses_id'),
@@ -1114,10 +1116,16 @@ public function AssignTecherForDemo()
         }
 
         return redirect()->to('sub_courses_list');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function sub_courses_list()
     {
+        
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
 
         $wherecond = array('is_deleted' => 'N');
@@ -1126,11 +1134,17 @@ public function AssignTecherForDemo()
         $data['sub_courses_data'] = $model->getalldata('tbl_sub_courses', $wherecond);
         // echo "<pre>";print_r($data['menu_data']);exit();
         echo view('sub_courses_list', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function get_sub_courses()
     {
 
+        
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
 
         $sub_courses_id = $this->request->uri->getSegments(1);
@@ -1145,6 +1159,10 @@ public function AssignTecherForDemo()
 
 
         echo view('add_sub_courses', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
 
@@ -1185,15 +1203,20 @@ public function AssignTecherForDemo()
 
     public function add_menu()
     {
+        if (isset($_SESSION['sessiondata'])) {
 
         echo view('add_menu');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
 
 
     public function set_menu()
     {
-
+        if (isset($_SESSION['sessiondata'])) {
         $data = [
             'menu_name' => $this->request->getVar('menu_name'),
             'url_location' => $this->request->getVar('url_location'),
@@ -1212,12 +1235,17 @@ public function AssignTecherForDemo()
         }
 
         return redirect()->to('menu_list');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
 
 
     public function menu_list()
-    {
+    {if (isset($_SESSION['sessiondata'])) {
+
         $model = new AdminModel();
 
         $wherecond = array('is_deleted' => 'N');
@@ -1226,11 +1254,15 @@ public function AssignTecherForDemo()
         $data['menu_data'] = $model->getalldata('tbl_menu', $wherecond);
         // echo "<pre>";print_r($data['menu_data']);exit();
         echo view('menu_list', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function get_menu()
     {
-
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
 
         $menu_id = $this->request->uri->getSegments(1);
@@ -1240,6 +1272,10 @@ public function AssignTecherForDemo()
         $data['single_data'] = $model->get_single_data('tbl_menu', $wherecond1);
 
         echo view('add_menu', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
 
@@ -1304,6 +1340,7 @@ public function AssignTecherForDemo()
 
     public function AdduserByadmin()
     {
+        if (isset($_SESSION['sessiondata'])) {
 
         $accessLevels = $this->request->getVar('access_level');
 
@@ -1332,10 +1369,15 @@ public function AssignTecherForDemo()
         }
 
         return redirect()->to('user_list');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function user_list()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
 
 
@@ -1344,6 +1386,10 @@ public function AssignTecherForDemo()
 
         // echo "<pre>";print_r($data['menu_data']);exit();
         echo view('user_list', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function update_access_token()
@@ -1352,7 +1398,7 @@ public function AssignTecherForDemo()
 
     public function get_user()
     {
-
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
 
         $menu_id = $this->request->uri->getSegments(1);
@@ -1366,6 +1412,10 @@ public function AssignTecherForDemo()
 
 
         echo view('add_user', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
     public function get_sub_courses_data()
     {
@@ -1640,36 +1690,7 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
     }
 
 
-    // public function viewProfiles()
-    // {
-    //     $model = new AdminModel();
-
-    //     if (isset($_SESSION['sessiondata'])) {
-    //         $sessionData = $_SESSION['sessiondata'];
-
-    //         $email = $sessionData['email'] ?? null;
-    //         $password = $sessionData['password'] ?? null;
-
-    //         if ($email !== null && $password !== null) {
-    //             $uri = service('uri');
-
-    //             // Get the second segment of the URI
-    //             $profile_id = $uri->getSegment(2);
-
-
-    //             $wherecond = array('student_id ' => $profile_id);
-
-    //             $data['profile_data'] = $model->getcorcessforstudentprofile('student', $wherecond);
-
-
-    //             return view('AdminSideBar/viewprofiles', $data);
-    //         } else {
-    //             return redirect()->to(base_url());
-    //         }
-    //     } else {
-    //         return redirect()->to(base_url());
-    //     }
-    // }
+  
     public function viewProfiles()
     {
         $model = new AdminModel();
@@ -1775,6 +1796,7 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
 
     public function faculty()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
         // $data['faculty_list'] = $model->getFaculty();
 
@@ -1800,6 +1822,10 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
 
 
         echo view('faculty_list', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function payment_history()
@@ -2026,13 +2052,6 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
         }
 
 
-
-
-
-
-
-
-        // Update data in 'register' table using student IDs
 
 
         return redirect()->to('create_group');
@@ -2323,11 +2342,16 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
     }
     public function FacultyAttendance()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $model = new AdminModel();
         $data['attendance'] = $model->getFacultyAttendance();
 
         // echo'<pre>';print_r($data['attendance']);die;
-        echo view('AdminSideBar/FacultyAttendance', $data);;
+        echo view('AdminSideBar/FacultyAttendance', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function search()
@@ -2431,31 +2455,19 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
     }
 
 
-
-
-    // $model = new AdminModel();
-    
-    // // Retrieve the search keyword from the form
-    
-
-    // // Perform a search in the 'register' table based on the name
-    // $searchResult = $model->getalldata('register', $wherecond);
-
-    // // echo "<pre>";print_r($searchResult);exit();
-
-    // // Pass the search result to the view
-    // $data['chat_user_data'] = $searchResult;
-
-    // // Load your view with the search result
-    // return view('search_results', $data);
 }
 
 public function Coupan_code()
 {
+    if (isset($_SESSION['sessiondata'])) {
     $model = new AdminModel();
    $data['Coupan_code'] =$model->getallCoupan_code();
 //    print_r($Coupan_codes['Coupan_code']);die;
     echo view('AdminSideBar/Coupan_code',$data);
+}else{
+    return redirect()->to(base_url());
+
+}
 }
 public function coupon_code_generate()
 {
@@ -2841,7 +2853,8 @@ public function updateNotifications(){
 
 }
 public function uplode_blog()
-{
+{ if (isset($_SESSION['sessiondata'])) {
+
     $model = new AdminModel();
     $wherecond = array('is_deleted' => 'N');
 
@@ -2849,13 +2862,22 @@ public function uplode_blog()
     $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
     //print_r($data);die;
     echo view('AdminSideBar/uplode_blog',$data);
+    }else{
+        return redirect()->to(base_url());
+    
+    }
 }
 public function Blog_List()
 {
+    if (isset($_SESSION['sessiondata'])) {
     $model = new AdminModel();
     $data['blogs'] = $model->getallblogs();
     // print_r($data['blogs']);die;
     echo view('AdminSideBar/blog_List',$data);
+}else{
+    return redirect()->to(base_url());
+
+}
 }
 public function upload_blogs()
 {
@@ -2891,6 +2913,7 @@ public function upload_blogs()
 }
 public function update_blog()
 {
+    if (isset($_SESSION['sessiondata'])) {
     
     helper(['form', 'url']);
 
@@ -2929,15 +2952,25 @@ public function update_blog()
     $model->updateBlog($id, $data);
 
     return redirect()->to('blog_List');
+}else{
+    return redirect()->to(base_url());
+
+}
 }
 
 public function delete_blog()
 {
+    if (isset($_SESSION['sessiondata'])) {
     $id = $this->request->getPost('id');
     $model = new AdminModel();
     $delete_id =$model->delete_blogs($id);
 
     return redirect()->to('blog_List');
+    
+}else{
+    return redirect()->to(base_url());
+
+}
 }
 
 

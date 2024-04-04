@@ -362,12 +362,10 @@ body {
         <div class="typesOfDance-tab">
 
            
-            <div class="MusicSec">
+            <div class="MusicSec copage">
                 <div class="">
 
-                    <!-- <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Thumbnail Gallery</h1> -->
 
-                    <hr class="mt-2 mb-5">
 
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 coh">
@@ -1600,159 +1598,48 @@ body {
 
 
 
-<section class="stories-section MusicSec homapageview p-3">
+<section class="stories-section MusicSec  p-3">
     <section class="parent-container">
-    <h3 class="text-white p-3 title_4 " style="text-align:center"> Testimonials<br>
-                    <span class="line"></span> 
-                </h3> 
-      <aside class="row" id="video-player">
-        
-        <div class="col-md-6 p-2">
-        <iframe src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted></iframe>
-
-        <!-- <div class="text-white" id="video-caption">Chapal Hart ♩ AMERICAN PRIDE</div> -->
+        <h3 class="text-white p-3 title_4" style="text-align:center"> Testimonials<br>
+            <span class="line"></span> 
+        </h3> 
+        <aside class="row" id="video-player">
+            <div class="col-lg-6 col-md-12 col-sm-12 p-2">
+                <iframe src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted></iframe>
+            </div>
+            <div id="playlist" class="col-lg-6 col-md-12 col-sm-12">
+                <div class="row">
+                    <div class="col-6">
+                        <button class="lazyload active" data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" data-caption="Chapal Hart ♩ American Pride">
+                            <img src="<?php echo base_url('public/images/play.jpg'); ?>" alt="Thumbnail Image" width="100%">
+                        </button>
                     </div>
-                <div id="playlist" class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button
-                                class="lazyload active"
-                                data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
-                                data-caption="Chapal Hart ♩ American Pride">
-                                <img src="<?php echo base_url('public/images/play.jpg'); ?>" alt="Thumbnail Image" width="100%">
-
-                            </button>
-                        </div>
-                    <div class="col-md-6">
-
-                        <button
-                            class="lazyload  "
-                            data-iframe="https://www.youtube.com/embed/NzijGFASF-g?si=X06ri0G3t8iOEpM8"
-                            data-caption="Jon Batiste ♩  FREEDOM">
+                    <div class="col-6">
+                        <button class="lazyload" data-iframe="https://www.youtube.com/embed/NzijGFASF-g?si=X06ri0G3t8iOEpM8" data-caption="Jon Batiste ♩ FREEDOM">
                             <img src="<?php echo base_url('public/images/play1.jpg'); ?>" alt="Thumbnail Image" width="100%">
                         </button>
                     </div>
-                    <div class="col-md-6">
-                        <button
-                            class="lazyload "
-                            data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg"
-                            data-iframe="https://www.youtube.com/embed/b69s332yQnc?si=9I8c5ZlkC5zbeS9F"
-                            data-caption="Jon Batiste ♩  FREEDOM">
+                    <div class="col-6">
+                        <button class="lazyload" data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg" data-iframe="https://www.youtube.com/embed/b69s332yQnc?si=9I8c5ZlkC5zbeS9F" data-caption="Jon Batiste ♩ FREEDOM">
                             <img src="<?php echo base_url('public/images/play2.jpg'); ?>" alt="Thumbnail Image" width="100%">
                         </button>
                     </div>
-                    <div class="col-md-6">
-                        <button
-                            class="lazyload "
-                            data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg"
-                            data-iframe="https://www.youtube.com/embed/eKR1C0KdLYQ?si=T3vlx1me-63_gNmg"
-                            data-caption="Luke James ♩ SHINE ON">
+                    <div class="col-6">
+                        <button class="lazyload" data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg" data-iframe="https://www.youtube.com/embed/eKR1C0KdLYQ?si=T3vlx1me-63_gNmg" data-caption="Luke James ♩ SHINE ON">
                             <img src="<?php echo base_url('public/images/play3.jpg'); ?>" alt="Thumbnail Image" width="100%">
                         </button>
                     </div>
                 </div>
-
-       
-            </div> 
-        </div>
-      </aside>
+            </div>
+        </aside>
     </section>
 </section>
 
 
-<section class="stories-section MusicSec mobilepageview p-3">
-    <h3 class="text-white p-3" style="text-align:center"> Testimonials<br>
-        <span class="line"></span> 
-    </h3> 
-    <section class="parent-container">
-      <aside id="video-player">
-      <iframe src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted></iframe>
 
 
-        <!-- <div id="video-caption">Chapal Hart ♩ AMERICAN PRIDE</div> -->
-
-        <div id="playlist">
-        <button
-            class="lazyload active"
-            data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=1&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7"
-            data-caption="Chapal Hart ♩ American Pride">
-            <img src="<?php echo base_url('public/images/play.jpg'); ?>" alt="Thumbnail Image" width="100%">
-
-        </button>
-
-        <button
-            class="lazyload  "
-            data-iframe="https://www.youtube.com/embed/NzijGFASF-g?si=X06ri0G3t8iOEpM8"
-            data-caption="Jon Batiste ♩  FREEDOM">
-            <img src="<?php echo base_url('public/images/play1.jpg'); ?>" alt="Thumbnail Image" width="100%">
-        </button>
-
-          <!-- MORE VIDEO BUTTONS  -->
-
-          <button
-            class="lazyload  "
-            data-iframe="https://www.youtube.com/embed/b69s332yQnc?si=9I8c5ZlkC5zbeS9F"
-            data-caption="Jon Batiste ♩  FREEDOM">
-            <img src="<?php echo base_url('public/images/play2.jpg'); ?>" alt="Thumbnail Image" width="100%">
-        </button>
 
 
-        <button
-            class="lazyload  "
-            data-iframe="https://www.youtube.com/embed/eKR1C0KdLYQ?si=T3vlx1me-63_gNmg"
-            data-caption="Jon Batiste ♩  FREEDOM">
-            <img src="<?php echo base_url('public/images/play3.jpg'); ?>" alt="Thumbnail Image" width="100%">
-        </button>
-
-
-          <!-- <button
-            class="lazyload"
-            data-bg="//img.youtube.com/vi/QlOfJTeXqKU/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/QlOfJTeXqKU?autoplay=1"
-            data-caption="Shamarr Allen ♩ Dance with Me"
-          >
-            Shamarr Allen
-          </button>
-
-          <button
-            class="lazyload"
-            data-bg="//img.youtube.com/vi/Hit10kFN2BQ/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/Hit10kFN2BQ?autoplay=1"
-            data-caption="Shamarr Allen ♩ I LOVE YOU"
-          >
-            Shamarr Allen
-          </button>
-
-          <button
-            class="lazyload"
-            data-bg="//img.youtube.com/vi/4WtmkES0X48/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/4WtmkES0X48?autoplay=1"
-            data-caption="Kermit Ruffins ♩ Drop me Off in New Orleans"
-          >
-            Kermit Ruffins
-          </button>
-
-          <button
-            class="lazyload"
-            data-bg="//img.youtube.com/vi/89Lum1zkRuU/sddefault.jpg"
-            data-iframe="https://www.youtube.com/embed/89Lum1zkRuU?autoplay=1"
-            data-caption="Luke James x Nu Deco Ensemble ♩ reprise two"
-          >
-            Luke James
-          </button>
-
-          <button
-            class="lazyload"
-            data-bg="https://assets.codepen.io/191814/palyer-codepen.jpg?width=300&height=216&format=auto"
-            data-iframe="https://codepen.io/mark_sottek/embed/zYWKKmz?default-tab=result&theme-id=dark"
-            data-caption="Oz Cylone ♩ Codepen Iframe Embed"
-          >
-            Codepen
-          </button> -->
-        </div>
-      </aside>
-    </section>
-</section>
 
 
 <!-- Happy faces -->
@@ -1808,7 +1695,7 @@ body {
                             </div>
                             <div class="item in" >
                                 <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
+                                    <div class="happyFaces-div1 ">
                                         <img src="<?=base_url(); ?>public/images/happyfaces/4h.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Kavita ( Pune)</h5>
@@ -1832,7 +1719,7 @@ body {
                             </div>
                             <div class="item in" >
                                 <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
+                                    <div class="happyFaces-div1 ">
                                         <img src="<?=base_url(); ?>public/images/happyfaces/7h.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Rajiv ( Lucknow )</h5>
@@ -1860,7 +1747,7 @@ body {
                             <div class="item in">
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
+                                    <div class="happyFaces-div1 ">
                                         <img src="<?=base_url(); ?>public/images/happyfaces/10h.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Vishal ( Chandigarh )</h5>
@@ -1887,7 +1774,7 @@ body {
                         <div class="item in" >
                         <!-- Your content here -->
                             <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
+                                <div class="happyFaces-div1 ">
                                     <img src="<?=base_url(); ?>public/images/happyfaces/12h.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Scarlett family ( Germany )</h5>
@@ -1914,7 +1801,7 @@ body {
                         <div class="item in" >
                         <!-- Your content here -->
                             <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
+                                <div class="happyFaces-div1 ">
                                 <img src="<?=base_url(); ?>public/images/happyfaces/15h.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Michael (Mike) ( USA)</h5>
@@ -1977,7 +1864,7 @@ body {
                         <div class="item">
                             <div class="item in" >
                                 <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
+                                    <div class="happyFaces-div1 ">
                                         <img src="<?=base_url(); ?>public/images/happyfaces/4h.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Kavita ( Pune)</h5>
@@ -2004,7 +1891,7 @@ body {
                         <div class="item">
                             <div class="item in" >
                                     <div class="happyFaces-div">
-                                        <div class="happyFaces-div1 mt-5">
+                                        <div class="happyFaces-div1 ">
                                             <img src="<?=base_url(); ?>public/images/happyfaces/7h.png" class="centered-image" />
                                             <div class="hft">
                                                 <h5>Rajiv ( Lucknow )</h5>
@@ -2033,7 +1920,7 @@ body {
                             <div class="item in" >
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
+                                    <div class="happyFaces-div1 ">
                                         <img src="<?=base_url(); ?>public/images/happyfaces/10h.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Vishal ( Chandigarh )</h5>
@@ -2061,7 +1948,7 @@ body {
                         <div class="item in" >
                         <!-- Your content here -->
                             <div class="happyFaces-div">
-                                <div class="happyFaces-div1 mt-5">
+                                <div class="happyFaces-div1 ">
                                     <img src="<?=base_url(); ?>public/images/happyfaces/12h.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Scarlett family ( Germany )</h5>
@@ -2089,7 +1976,7 @@ body {
                         <div class="item in" >
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mt-5">
+                                    <div class="happyFaces-div1 ">
                                     <img src="<?=base_url(); ?>public/images/happyfaces/15h.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Michael (Mike) ( USA)</h5>

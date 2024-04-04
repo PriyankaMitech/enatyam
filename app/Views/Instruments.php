@@ -180,73 +180,73 @@
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>
@@ -645,73 +645,73 @@
 
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>
@@ -1115,73 +1115,73 @@
 
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>
@@ -1559,73 +1559,73 @@
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>
@@ -1997,73 +1997,73 @@
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>
@@ -2426,73 +2426,73 @@
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>
@@ -2855,73 +2855,73 @@
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>
@@ -3283,73 +3283,73 @@
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>
@@ -3712,73 +3712,73 @@
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>
@@ -4140,73 +4140,73 @@
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
                                         <h6 class="mt-2"><b>Step 1: Introduction to the Instrument</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Overview of the instrument, its history, and its role in different musical genres. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Introduction to the parts and components of the instrument. </span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Explanation of how the instrument produces sound and basic maintenance tips.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 2: Instrument Technique and Basics</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Proper posture and positioning for optimal playing.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Technique exercises to develop finger dexterity, hand coordination, and control.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to basic playing techniques specific to the instrument.</span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 3: Music Theory Fundamentals</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to music notation, including reading sheet music or tablature.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding rhythm, notes, scales, and intervals.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Basic understanding of key signatures and time signatures. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 4: Repertoire and Song Study</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduction to a selection of beginner-level songs or pieces suitable for the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Breakdown of songs into sections for practice and learning.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Focus on playing songs with proper technique and expression. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 5: Music Theory Application</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Building on previous knowledge, expand understanding of music theory concepts.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Exploring chord progressions, harmonization, and basic improvisation.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Analysis of songs to understand their musical structure and composition. </span>
                                         </li>
                                         <h6 class="mt-2"> <b>Step 6: Performance Skills and Interpretation</b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Developing performance skills through regular practice and playing exercises.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Understanding dynamics, phrasing, articulation, and expression.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Techniques for stage presence and overcoming performance anxiety. </span>
                                         </li>
                                         <h6 class="mt-2"><b>Step 7: Advanced Techniques and Personalization </b></h6>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Introduce advanced playing techniques specific to the instrument.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Encourage exploration of different musical genres and styles.</span>
                                         </li>
-                                        <li class="mb-1"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Provide resources for further learning and self-study beyond the course. </span>
                                         </li>    
                                     </ul>

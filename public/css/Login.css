@@ -1,4 +1,3 @@
-
 .modal-content {
   width: 95%;
   margin: 0 auto;
@@ -7,29 +6,27 @@
 }
 
 .text-center {
-  text-align: center!important;
+  text-align: center !important;
   margin-bottom: 45px;
   margin-top: -40px;
 }
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 55px;
-  border-radius:0px
+
+  border-radius: 0px;
 }
 .btn-light {
-width: 100%;
-background-color: #ff0067;
-margin-bottom: 20px;
-color: white;
+  width: 100%;
+  background-color: #ff0067;
+  margin-bottom: 20px;
+  color: white;
 }
-.teacher{
+.teacher {
   margin-top: 20px;
 }
-.titel{
-
- 
-  font-family: 'Roboto Slab', serif!important;
+.titel {
+  font-family: "Roboto Slab", serif !important;
   font-size: 24px;
   font-weight: 600;
   position: relative;
@@ -39,11 +36,11 @@ color: white;
   text-transform: none;
   line-height: 40px;
 }
-.lost-pass-link{
+.lost-pass-link {
   color: #337ab7 !important;
   margin-left: 0%;
 }
-.t4{
+.t4 {
   text-align: center;
 }
 .forgetmenot {

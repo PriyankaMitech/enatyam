@@ -68,6 +68,7 @@ class DashboardController extends BaseController
 
     public function studentList()
     {
+        if (isset($_SESSION)) {
         // echo "in studentList";
         $session = session();
         //print_r($session->get());die;
@@ -75,6 +76,10 @@ class DashboardController extends BaseController
         $data['Studentdata'] =   $loginModel->getStudentList();
         //   print_r($Studentdata);die;
         return  view('faculty', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function displayDashboard()

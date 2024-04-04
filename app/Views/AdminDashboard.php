@@ -653,7 +653,8 @@ th {
                                         <th>Assign</th>
                                         <th>Stetus</th>
                                     </tr>
-                                    <?php foreach ($PendingDemo as $facult) : ?>
+                                    <?php
+                                    foreach ($PendingDemo as $facult) : ?>
 
                                     <tr>
                                         <form action="<?php echo base_url(
