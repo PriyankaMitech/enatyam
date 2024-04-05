@@ -212,7 +212,7 @@
                         <h5 class="text-white" style="text-align: center;">Kathak </h5>
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>HistoryofKathak" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail blogimg" src="<?php base_url(); ?>public/images/blog/historyofkathak.png"
+                                <img class="img-fluid img-thumbnail blogimg" src="<?php base_url(); ?>public/images/blog/historyofkathak.webp"
                                     alt="" >
                             </a>
                         </div>
@@ -225,7 +225,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail blogimg"
-                                    src="<?php echo base_url(); ?>public/images/blog/footwork.png" alt=""
+                                    src="<?php echo base_url(); ?>public/images/blog/footwork.webp" alt=""
                                     >
                             </a>
                         </div>
@@ -238,7 +238,7 @@
                         <div class="ThumbnailImg mb-4" style="text-align: center;">
                             <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
                                 <img class="img-fluid img-thumbnail blogimg"
-                                    src="<?php echo base_url(); ?>public/images/blog/mudra.png" alt=""
+                                    src="<?php echo base_url(); ?>public/images/blog/mudra.webp" alt=""
                                     >
                             </a>
                         </div>

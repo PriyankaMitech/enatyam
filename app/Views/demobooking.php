@@ -128,8 +128,23 @@ text-align:center;
 .starcolor{
     color: #fad32c !important;
 }
-
-
+.topfeatures .bfdf{
+padding: 5px;
+}
+.topfeatures {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bfdf {
+        text-align: center;
+    }
+    .fatures {
+        width: 18%;
+        height: auto; /* Adjust as needed */
+        display: block;
+        margin: 0 auto; /* Centers the image horizontally */
+    }
 
 </style>
 
@@ -259,25 +274,27 @@ text-align:center;
                                 <div class="imgs">
                                             <img src="<?=base_url(); ?>public/images/boarder1.png" alt="Image Description">
                                 </div>
-                                <div class="row fetures text-white">
+                                <div class="row fetures text-white topfeatures">
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures" src="public/images/instructors-svg.svg">
-                                        <span>Top Instructors<span>
+                                        <span>Top Instructors</span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/live.svg">
-                                        <span>2 Live Classes Per Week<span>
+                                        <span>2 Live Classes Per Week</span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/materials-svg.svg">
-                                        <span>Revision Material<span>
+                                        <span>Revision Material</span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/certification-svg.svg">
-                                        <span>Performance & Certificate<span>
+                                        <span>Performance & Certificate</span>
                                     </div>
                                 </div>
                                 <div class="StickyAdsFooter_hr__Tx8qF hiddenXs"></div>
+                                <small class="smallnotedemo">Note : All fields are mandatory</small>
+
 
                                 <div class="Step_step__mxxn1">Step
                                     <!-- -->1
@@ -286,29 +303,29 @@ text-align:center;
 
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Your Name<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Your Name :</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="text" name="name" value="">
-                                        <span>
+                                    </span>
 
                                 </div>
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Email<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Email :</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="email" name="email" value="" id="demoemail">
                                         <span id="demoemailError"></span>
 
-</span>
+
 
                                 </div>
                       
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Password<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Password :</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="password" name="password" value="">
-                                        <span>
+                                    </span>
                                         <br>
                                         <small class="smallnotedemo">Note : Password must contain at least one uppercase letter, one lowercase letter, one number,  one symbol ,and be at least 8 characters long</small>
 
@@ -319,7 +336,7 @@ text-align:center;
 
 
                                 <div class="row tpm">
-                                    <label class="col-lg-4 col-md-12 col-12 text-white fmname" for="mobile_no">Mobile No.<span class="starcolor">*</span> :</label>
+                                    <label class="col-lg-4 col-md-12 col-12 text-white fmname" for="mobile_no">Mobile No. :</label>
                                     <div class="col-lg-2 col-md-4 col-4 seletbook">
                                         <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"></select>
                                     </div>
@@ -341,7 +358,7 @@ text-align:center;
                                 <!-- </div> -->
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Age Group<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Age Group :</span>
                                     <span class="col-lg-8 col-md-12 col-12 seletbook">
                                         <button type="button" class="btn btn-primary ptage ageb active">Below 10
                                             Yrs</button>
@@ -367,7 +384,7 @@ text-align:center;
                             </div>
 
                             <div class="row tpm">
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Select Country<span class="starcolor">*</span> : </span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Select Country : </span>
 
                                 <div class="col-lg-8 col-md-12 col-12 ">
                                     <select class="form-control" id="inputCountry" name="Country" >
@@ -393,7 +410,7 @@ text-align:center;
 
                             </div>
                             <div class="row tpm">
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">City<span class="starcolor">*</span> :</span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">City :</span>
                                 <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                     <input type="text" name="city" value="">
                                     <span>
@@ -406,7 +423,7 @@ text-align:center;
 
 
                             <div class="row tpm">
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select course<span class="starcolor">*</span> :</span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select course :</span>
 
 
                                 <div class="col-lg-8 col-md-12 col-12 form-group seletbook" id="category_div">
@@ -430,7 +447,7 @@ text-align:center;
                             </div>
                             <div class="row tpm">
 
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select sub courses<span class="starcolor">*</span> :</span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select sub courses :</span>
                                 <div class="col-lg-8 col-md-12 col-12 sub_category_div form-group seletbook"  id="sub_category_div">
                                     <input type="hidden" id="selected_sub_courses_id_d"
                                         value="<?php if (isset($edit)) {echo ($edit['sub_courses_id_d']);} ?>">
@@ -446,7 +463,7 @@ text-align:center;
 
                             <div class="row tpm">
 
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Demo Class Date<span class="starcolor">*</span> :</span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Demo Class Date :</span>
                                 <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                     <input type="date" name="Book_Date" min="<?= date('Y-m-d', strtotime('+1 day')) ?>"
                                         value="">
@@ -456,12 +473,8 @@ text-align:center;
                             </div>
                             <div class="row tpm">
 
-                            <span class="col-lg-4 col-md-12 col-12 text-white fmname"> Demo Timing<span class="starcolor">*</span> :</span>
-                            <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
-                                    <p class="text-white">We'll reach out soon to find the best time for you.</p>
-
-                                <span>
-
+                            <span class="col-lg-12 col-md-12 col-12 text-white fmname"> Demo Timing -  We'll reach out soon to find the best time for you.</span>
+                            
                             </div>
                             <div class="BookingSecondPage_stickyBottom__G_tzG tpm row showdiv">
                                 <div class="text-white tpm col-lg-8 col-md-12 col-12 p-2">

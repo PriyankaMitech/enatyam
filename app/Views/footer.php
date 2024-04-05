@@ -1933,7 +1933,7 @@ $(document).ready(function() {
                                 $textDiv.append('<h3>' + name + '</h3>');
                                 $textDiv.append('<p>' + address + '</p>');
                                 $textDiv.append('<p><b>Contact No:</b> ' + contact + '</p>');
-                                $textDiv.append('<p><b>Google Location:</b> ' + googleLocation + '</p>');
+                                $textDiv.append('<p><b>Google Location:</b> <a href="'+ googleLocation + '">' + googleLocation + '</a></p>');
 
                                 $addressDiv.append($imageDiv);
                                 $addressDiv.append($textDiv);
