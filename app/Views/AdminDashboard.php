@@ -214,9 +214,6 @@ th {
                     </div>
                 </div>
                 <div class="col-lg-12">
-
-
-
                     <div class="div-hide" id="faculty-table2" style="display:none">
                         <div class="row">
                             <div class="col-lg-3">
@@ -653,6 +650,8 @@ th {
                                         <th>Assign</th>
                                         <th>Stetus</th>
                                     </tr>
+                                    
+                                    <?php if(!empty($PendingDemo)){?>
                                     <?php foreach ($PendingDemo as $facult) : ?>
 
                                     <tr>
@@ -662,7 +661,7 @@ th {
                                             <input type="hidden" name="studentid" value="<?= $facult->D_id ?>">
                                             <td><?= $facult->name ?></td>
                                             <td><?= $facult->email ?></td>
-                                            <td><?= $facult->Dates ?></td>
+                                            <td><?= $facult->Dates ?></td>  
 
                                             <td>
                                                 <select name="faculty_name">
@@ -673,6 +672,7 @@ th {
                                                         <?= $faculty->full_name ?>
                                                     </option>
                                                     <?php endforeach; ?>
+                                                  
                                                 </select>
                                             </td>
                                             <td>
@@ -690,6 +690,7 @@ th {
                                         </form>
                                     </tr>
                                     <?php endforeach; ?>
+                                    <?php } ?>
                                 </table>
                             </td>
                             <td id="toggle-table7"><b><?= count(
@@ -809,6 +810,11 @@ th {
                                             <button type="submit" name="assign_button" class="btn btn-warning"
                                                 style="font-size: 13px;">Assign</button>
                                             <?php } ?>
+                                            <!-- Add delete button -->
+                        <!-- <a href="<?= base_url(); ?>DeleteStudent/<?= $data->id ?>" class="btn btn-danger"
+                            onclick="return confirm('Are you sure you want to delete this student?')">Delete</a> -->
+
+                            <a href="<?= base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/register" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a>
                                         </td>
                                     </form>
                                 </tr>
@@ -836,7 +842,7 @@ th {
                                     <th>Course</th>
                                     <th>Sub-Course</th>
                                     <th>Contact Number</th>
-                                    <!-- <th>Assign Students</th> -->
+                                    <th>Action</th>
 
                                 </tr>
 
@@ -850,6 +856,7 @@ th {
                                     <td><?= $faculty->courses_name; ?></td>
                                     <td><?= $faculty->sub_courses_name; ?></td>
                                     <td><?= $faculty->phone ?></td>
+                                    <td> <a href="<?= base_url(); ?>delete/<?php echo base64_encode($faculty->id); ?>/register" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a></td>
                                     <!-- <td><button onclick="showStudentTable(this)" class="btn btn-info">Assign -->
                                     <!-- Students</button></td> -->
 

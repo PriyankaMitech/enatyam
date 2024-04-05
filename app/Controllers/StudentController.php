@@ -98,6 +98,7 @@ class StudentController extends BaseController
         // Get uploaded files
         $image = $this->request->getFile('imageFile');
         $video = $this->request->getFile('videoFile');
+        $pdf = $this->request->getFile('pdfFile'); // Add this line to get PDF file
        
        
         $id=$registerId;
@@ -149,6 +150,33 @@ class StudentController extends BaseController
             // Set success message in session
             $session->setFlashdata('success', 'Video uploaded successfully.');
         }
+
+         // Check if a PDF was uploaded
+    if ($pdf && $pdf->isValid() && !$pdf->hasMoved()) {
+        $pdfName = $pdf->getName();
+        $pdf->move(ROOTPATH . 'public/uploads/PDFs/studentUploadedPDFs', $pdfName);
+        // E:\xampp\htdocs\enatyam\public\uploads\PDFs\studentUploadedPDFs
+
+        // Save PDF name, Assign_Techer_id, and registerId to the database
+        $StudentModel->insert([
+            'name' => $pdfName,
+            'type' => 'pdf',
+            'Faculty_id' => $assignTeacherId,
+            'register_id' => $registerId,
+            'Student_name' => $full_name
+        ]);
+
+        // Notify faculty about the uploaded PDF
+        $facultyName = $facultyModel->getName($assignTeacherId);
+        $facultyMobileNumber = $model->get_single_data('register', ['id' => $assignTeacherId]);
+        $phoneNumber = $facultyMobileNumber->mobileWithCode;
+        $templates = "930840461869403";
+        $msg = "Hello $facultyName, $studentname has successfully uploaded a PDF.";
+        whatsapp($phoneNumber, $templates, $msg);
+
+        // Set success message in session
+        $session->setFlashdata('success', 'PDF uploaded successfully.');
+    }
 
         return redirect()->to('UplodeVideo');
     }

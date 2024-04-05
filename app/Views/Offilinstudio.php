@@ -170,8 +170,4 @@ ul li{
 
 <?php include('bookdemocallb.php'); ?>
 
-
-
-
-
 <?php include('footer.php'); ?>

@@ -480,7 +480,7 @@ $page = $uri->getSegment(count($pages));
 
 
                                     <!-- File Menu -->
-                                    <li class="nav-item" <?php if (in_array('UplodedvideoByStudent', $access_levels) || in_array('UploadedImages', $access_levels)) {
+                                    <li class="nav-item" <?php if (in_array('UplodedvideoByStudent', $access_levels) || in_array('UploadedImages', $access_levels) || in_array('UploadedPDFs', $access_levels)) {
                                                                 echo "style='display:block'";
                                                             } else {
                                                                 echo "style='display:none'";
@@ -515,6 +515,18 @@ $page = $uri->getSegment(count($pages));
                                                 <a href="<?php echo base_url() ?>UploadedImages" class="nav-link <?php if($page == 'UploadedImages') { echo "active-nav-link";  }?>">
                                                     <i class="nav-icon far fa-image"></i>
                                                     <p>Images</p>
+                                                </a>
+                                            </li>
+
+                                                <!-- PDFs -->
+                                                <li class="nav-item" <?php if (in_array('UploadedPDFs', $access_levels)) {
+                                                                        echo "style='display:block'";
+                                                                    } else {
+                                                                        echo "style='display:none'";
+                                                                    } ?>>
+                                                <a href="<?php echo base_url() ?>UploadedPDFs" class="nav-link <?php if($page == 'UploadedPDFs') { echo "active-nav-link";  }?>">
+                                                    <i class="nav-icon far fa-image"></i>
+                                                    <p>PDFs</p>
                                                 </a>
                                             </li>
 
@@ -1055,12 +1067,16 @@ $page = $uri->getSegment(count($pages));
                                                 <p>Videos</p>
                                             </a>
                                         </li>
-
-
                                         <li class="nav-item">
                                             <a href="<?php echo base_url() ?>UploadedImages" class="nav-link <?php if($page == 'UploadedImages') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon far fa-image"></i>
                                                 <p>Images</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="<?php echo base_url() ?>UploadedPDFs" class="nav-link <?php if($page == 'UploadedPDFs') { echo "active-nav-link";  }?>">
+                                                <i class="nav-icon far fa-image"></i>
+                                                <p>PDFs</p>
                                             </a>
                                         </li>
                                         <!-- Add other Student menu items with access level checks here -->

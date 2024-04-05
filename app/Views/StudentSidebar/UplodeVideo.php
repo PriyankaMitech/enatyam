@@ -76,6 +76,21 @@ if (empty($session->sessiondata['Assign_Techer_id'])) {
                         </div>
                       </div>
                     </div>
+                    <div class="form-group">
+                      <label for="UploadPDF">Upload PDF</label>
+                      <div class="input-group">
+                          <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="pdfFile" name="pdfFile" accept="application/pdf" onchange="updateLabel('pdfFile')">
+                              <label class="custom-file-label" for="pdfFile">Choose file</label>
+                          </div>
+                          <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="submit" value="Upload PDF">Upload</button>
+                          </div>
+                      </div>
+                  </div>
+
+ 
+
 
                   </div>
                 </div>

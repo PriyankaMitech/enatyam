@@ -60,17 +60,11 @@ class FacultyController extends BaseController
         // print_r($todaysession);die;
         $data = $facultymodel->where('Assign_Techer_id', $teacherId)->findAll();
         $wherecond1 = array('id' => $teacherId);
-
-
-
         $loginsingel_data = $model->getsinglerow('register', $wherecond1);
-
-
         $wherecond = '';
         if (!empty($loginsingel_data)) {
           $wherecond = ['faculty_id_g' => $loginsingel_data->id];
         }
-
 
         $select = 'tbl_group.*, tbl_courses.courses_name, tbl_sub_courses.sub_courses_name, register.full_name as name';
         $joinCond = 'tbl_group.courses_id_g = tbl_courses.id';
@@ -78,7 +72,6 @@ class FacultyController extends BaseController
         $joinCond3 = 'tbl_group.faculty_id_g = register.id';
 
         $group_data = $model->joinfourtables($select, 'tbl_group', 'tbl_courses', 'tbl_sub_courses', 'register',  $joinCond, $joinCond1, $joinCond3, $wherecond, 'DESC');
-
 
         $todayDate = date('Y-m-d H:i:s');
         $displayedNotificationCount = 0;
@@ -95,8 +88,7 @@ class FacultyController extends BaseController
 
       }
     }
-
-
+ 
     return redirect()->to(base_url());
   }
 
@@ -115,7 +107,8 @@ class FacultyController extends BaseController
     $model = new AdminModel();
     $videoFile = $this->request->getFile('videoFile');
     $type = $_FILES['videoFile']['type'];
-    $fileName = $_FILES['videoFile']['name'];
+    // $fileName = $_FILES['videoFile']['name'];
+    $fileName = $videoFile->getName();
 
     $videoFilename = $videoFile->getName();
 
@@ -124,9 +117,13 @@ class FacultyController extends BaseController
         case 'image/jpg':
         case 'image/png':
         case 'image/jpeg':
+
             $videoFile->move(ROOTPATH . 'public/uploads/images/facultyUploadedImages');
             $videoFilename = $videoFile->getName();
             break;
+        case 'application/pdf':
+            $videoFile->move(ROOTPATH . 'public/uploads/PDFs/facultyUploadedPDFs');
+            break;    
         case 'avi':
         case 'flv':
         case 'wmv':
@@ -136,6 +133,9 @@ class FacultyController extends BaseController
         case 'wma':
             $videoFile->move(ROOTPATH . 'public/uploads/FacultyUplodedVideos');
             break;
+        default:
+            // Unsupported file type
+          return redirect()->back()->with('error', 'Unsupported file type.');
     }
 
     $facultyModel->updateStudentVideo($studentId, $registerId, $fileName);
@@ -169,7 +169,7 @@ class FacultyController extends BaseController
 
     // Send message to admin
   //  $phoneNumber = "917588525387";
-    $msg = "faculty $facultyname has uploaded video/image to student $name";
+    $msg = "faculty $facultyname has uploaded video/image/pdf to student $name";
     $templates = "930840461869403";
     whatsappadmin($templates, $msg);
 
@@ -828,6 +828,51 @@ class FacultyController extends BaseController
     // Show the page even if session data is not set
     return view('StudentuplodedVidio', ['dataFound' => false]);
   }
+
+  public function studentUploadedPDFs()
+  {
+      if (isset($_SESSION['sessiondata'])) {
+          $sessionData = $_SESSION['sessiondata'];
+  
+          $email = $sessionData['email'] ?? null;
+          $password = $sessionData['password'] ?? null;
+  
+          if ($email !== null && $password !== null) {
+              $result = session();
+              $registerId = $result->get('id');
+              $db = \Config\Database::connect();
+              $table = $db->table('uplode_study_video_from_student');
+              $query = $table->where('Faculty_id', $registerId)->get();
+  
+              $results = $query->getResult();
+              $data = [];
+              foreach ($results as $result) {
+                  $extension = pathinfo($result->name, PATHINFO_EXTENSION);
+                  if ($extension === 'pdf') {
+                      $data['pdf'][] = $result;
+                  }
+              }
+  
+              // Set dataFound
+              $data['dataFound'] = count($results) > 0;
+  
+              // Get student list
+              $model = new AdminModel();
+              $data['studentList'] = $model->getStudentData();
+  
+              // Load view for PDFs
+              return view('StudentUploadedPDFs', $data);
+          }
+      }
+  
+      // Show the page even if session data is not set
+      return view('StudentuplodedVidio', ['dataFound' => false]);
+  }
+  
+  
+   
+
+
   public function fshedule()
   {
     $result = session();

@@ -76,10 +76,11 @@ class AdminController extends BaseController
                 $joinCond6 = 'carrier.sub_course = tbl_sub_courses.id';
                 $wherecond = [
                     'register.role' => 'Faculty',
+                    'register.is_deleted' => 'N',
                 ];
                 $data['Faculty'] = $model->joinfourtables($select1, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, $wherecond, 'DESC');
                 // echo '<pre>';
-                // print_r($data['PendingDemo']);
+                // print_r($data['Faculty']);
                 // die;
                 return view('AdminDashboard', $data);
             } else {
@@ -339,6 +340,32 @@ public function AssignTecherForDemo()
                 // $data['studentVideoData'];
                 // die;
                 return view('AdminSideBar/UploadedImages', $data);
+            } else {
+                return redirect()->to(base_url());
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
+    }
+
+    public function UploadedPDFs()
+    {
+
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
+
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+
+            if ($email !== null && $password !== null) {
+
+                $model = new AdminModel();
+                $data['studentVideoData'] = $model->getStudyVideoUplodedByStudent();
+                $data['FacultyVideoData'] = $model->getStudyVideoUplodedByFaculty();
+                // echo '<pre>';
+                // print_r($data['studentVideoData']);
+                // die;
+                return view('AdminSideBar/UploadedPDFs', $data);
             } else {
                 return redirect()->to(base_url());
             }

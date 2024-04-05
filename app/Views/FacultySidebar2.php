@@ -260,11 +260,6 @@ $page = $uri->getSegment(count($pages));
                 <p class="p-2">No new notifications available</p>
                 <hr>
               <?php } ?> -->
-
-            
-
-
-
             </div>
             <a href="<?= base_url(); ?>notification" class="dropdown-item dropdown-footer">See All Messages</a>
           </div>
@@ -307,9 +302,6 @@ $page = $uri->getSegment(count($pages));
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-
-
-
 
             <li class="nav-item">
               <a href="<?= base_url(); ?>FacultyDashboard" class="nav-link <?php if($page == 'FacultyDashboard') { echo "active-nav-link";  }?>">
@@ -395,6 +387,12 @@ $page = $uri->getSegment(count($pages));
                   <a href="<?php echo base_url() ?>StudentUploadedImages" class="nav-link <?php if($page == 'StudentUploadedImages') { echo "active-nav-link";  }?>">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Images</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?php echo base_url() ?>StudentUploadedPDFs" class="nav-link <?php if($page == 'StudentUploadedImages') { echo "active-nav-link";  }?>">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>PDFs</p>
                   </a>
                 </li>
 

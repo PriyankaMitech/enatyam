@@ -170,6 +170,7 @@ $routes->get('chatuser/(:any)', 'AdminController::singlechat/$1');
 $routes->get('add_notifications', 'AdminController::add_notifications');
 $routes->get('insertChat', 'AdminController::insertChat');
 
+
 $routes->post('insertChat', 'AdminController::insertChat');
 $routes->post('setnotification', 'AdminController::setnotification');
 $routes->get('viewProfile', 'AdminController::viewProfile');
@@ -198,6 +199,8 @@ $routes->get('payment_history', 'AdminController::payment_history');
 
 $routes->get('UploadedImages', 'AdminController::UploadedImages');
 $routes->post('searchFacultyVideos', 'AdminController::searchFacultyVideos');
+
+$routes->get('UploadedPDFs', 'AdminController::UploadedPDFs');
 
 $routes->get('AdminController/searchFacultyVideos', 'AdminController::searchFacultyVideos');
 
@@ -353,6 +356,7 @@ $routes->post('sendmeetinglink', 'FacultyController::sendmeetinglink');
 $routes->post('setlinkforgroup', 'FacultyController::setlinkforgroup');
 $routes->get('setlinkforgroup', 'FacultyController::setlinkforgroup');
 $routes->get('StudentUploadedImages', 'FacultyController::studentUploadedImages');
+$routes->get('StudentUploadedPDFs', 'FacultyController::studentUploadedPDFs');
 
 
 

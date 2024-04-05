@@ -49,6 +49,8 @@ function formatDateTime($dateTimeString)
                             <ul class="nav nav-pills">
                                 <li class="nav-item"><a class="nav-link active" href="#StudentImages" data-toggle="tab"> My Images</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#FacultyImages" data-toggle="tab"> Faculty Images</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#MyPDFs" data-toggle="tab"> My PDFs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#FacultyPDFs" data-toggle="tab"> Faculty PDFs</a></li>
                             </ul>
                         </div><!-- /.card-header -->
 
@@ -160,6 +162,76 @@ function formatDateTime($dateTimeString)
                                         </div>
                                     <?php } ?>
                                 </div>
+
+                                <div class="tab-pane" id="MyPDFs">
+                                    <?php if (!empty($stdvideos)) { ?>
+                                        
+                                        <div class="row">
+                                            <?php foreach ($stdvideos as $faculty) { ?>
+                                                <?php
+                                                $extension = pathinfo($faculty->name, PATHINFO_EXTENSION);
+                                                 
+                                                if ($extension == 'pdf') :
+                                                    $pdfPath = '/public/uploads/PDFs/studentUploadedPDFs/' . $faculty->name;
+                                                    $fullPdfPath = base_url($pdfPath);
+                                                    // Check if the PDF file exists
+                                                    if (file_exists(FCPATH . $pdfPath)) : ?>
+                                                        <div class="col-md-4">
+                                                            <div class="card">
+                                                                <div class="card-body">
+                                                                    <p class="card-text">
+                                                                        <?php if ($faculty) : ?>
+                                                                            <strong>PDF Date:</strong> <?= formatDateTime($faculty->DateTime); ?>
+                                                                        <?php endif; ?>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="card-footer">
+                                                                    <!-- Display the PDF using an iframe -->
+                                                                    <iframe src="<?= $fullPdfPath ?>" width="100%" height="300px" frameborder="0"></iframe>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php } ?>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+
+
+                                <div class="tab-pane" id="FacultyPDFs">
+                                    <?php if (!empty($videos)) { ?>
+                                        <div class="row">
+                                            <?php foreach ($videos as $faculty) { ?>
+                                                <?php
+                                                $extension = pathinfo($faculty->video_name, PATHINFO_EXTENSION);
+                                                if ($extension == 'pdf') :
+                                                    $pdfPath = '/public/uploads/PDFs/facultyUploadedPDFs/' . $faculty->video_name;
+                                                    $fullPdfPath = base_url($pdfPath);
+                                                    // Check if the PDF file exists
+                                                    if (file_exists(FCPATH . $pdfPath)) : ?>
+                                                        <div class="col-md-4">
+                                                            <div class="card">
+                                                                <div class="card-body">
+                                                                    <p class="card-text">
+                                                                        <?php if ($faculty) : ?>
+                                                                            <strong>PDF Date:</strong> <?= formatDateTime($faculty->DateTime); ?>
+                                                                        <?php endif; ?>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="card-footer">
+                                                                    <!-- Display the PDF using an iframe -->
+                                                                    <iframe src="<?= $fullPdfPath ?>" width="100%" height="300px" frameborder="0"></iframe>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php } ?>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+
 
                             </div>
                             <!-- /.tab-content -->
