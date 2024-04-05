@@ -34,8 +34,8 @@
         <div class="row">
             <h3 class="text-center">If teaching and arts are your passions: join us now ! </h3>
             <div class="col-md-6 col-12">
-                <img src="public/images/guitar.jpg" class="danceimg1 home">
-            <!-- public/images/Home/4.png -->
+                <img src="public/images/guitar.webp" class="danceimg1 home">
+            <!-- public/images/Home/4.webp -->
             </div>
 
             <div class="col-md-6 col-12 text-col mt-5">
