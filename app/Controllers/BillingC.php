@@ -19,6 +19,7 @@ class BillingC extends BaseController
     }
     public function BillingInformation()
     {
+        if (isset($_SESSION)) {
         $model = new AdminModel();
 
         $BillingM = new BillingM();
@@ -70,11 +71,6 @@ class BillingC extends BaseController
             $update_data = $db->table('register')->where('id',$user_id);
             $update_data->update($updatedata);
 
-            // $country = $this->request->getPost('country');
-            // $result = $BillingM->updateCountry($country);
-            // print_r($result);
-            // die;
-
             $lastinsert_id = $BillingM->getInsertID();
         }
 
@@ -94,16 +90,21 @@ class BillingC extends BaseController
 
         // echo "<pre>";print_r($data['billingdetails']);exit();
         return view('OrderDetails', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function Checkout()
     {
+      
         $session = session();
 
         $id = $this->request->getGet('id');
-        if (!(session()->get('sessiondata'))) {
+        if (isset($_SESSION)) {
 
-            echo "Not set session";
+            return redirect()->to(base_url());
         } else {
             $billingModel = new BillingM(); // Load the model
             $matchingRecords = $billingModel->getSessionPricingData($id);
@@ -121,5 +122,7 @@ class BillingC extends BaseController
 
             return view('Checkout', $data);
         }
+ 
     }
+
 }

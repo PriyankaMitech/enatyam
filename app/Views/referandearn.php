@@ -1,7 +1,7 @@
 <?php echo view('StudentSidebar/Studentsidebar'); ?>
 <style>
-   .content .card-body p{
-        font-size: 36px;
+.content .card-body p {
+    font-size: 29px;
         text-align: center;
         font-weight: 700;
         line-height: normal;
@@ -16,6 +16,14 @@
     background-color: transparent;
     background-image: linear-gradient(90deg, #ff68f8 0%, #dde100 100%);
     } */
+    .para .big{
+        font-size: 37px;
+    color: #d3008a;
+    font-weight: 900;
+    }
+    .para .bigamt{
+        font-size: xxx-large;
+    }
 </style>
 
 
@@ -48,11 +56,11 @@
                     <div class="card-body">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-1">
+                                <div class="col-lg-3 col-md-3 col-12">
                                     <img src="<?=base_url();?>public/images/referafriend.png">
                                 </div>
-                                <div class="col-md-11 text-center paradiv">
-                                    <p> <span class="para">Refer a friend and earn INR 3500. Amount <br>    credited to your wallet upon your friend's first <br> completed transaction.<span>
+                                <div class="col-lg-9 col-md-9 col-12 text-center paradiv">
+                                    <p> <span class="para"><span class="big">Refer a friend and earn INR<span class="bigamt"> 3500.</span></span>  <br>   Amount  credited to your wallet upon your friend's first <br> completed transaction.<span>
                                         
                                     </p>
                                 </div>
@@ -60,7 +68,7 @@
 
 
 
-                                <h5> Terms & Conditions</h5>
+                                <h4> Terms & Conditions</h4>
                                 <ul>
                                     <li>Referral reward of INR 3500 is applicable upon the referee's successful completion of their first transaction.</li>
                                     <li>Referrer must have an active account to receive the reward.</li>

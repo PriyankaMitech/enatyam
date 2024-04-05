@@ -34,6 +34,10 @@
     .btn-secondary {
         margin-left: 255px;
     }
+    .smallnotedemo {
+  font-size: 12px;
+  color: #6a6a6a;
+}
 </style>
 
 
@@ -205,6 +209,8 @@
                                                                 <td>
                                                                     <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Password" required oninput="validatePasswordOnInput()">
                                                                     <span id="passwordError" style="color: red;"></span>
+                                                                    <small class="smallnotedemo">(8 characters -1 uppercase, 1 lowercase, 1 numeric, 1 special character)</small>
+
                                                                 </td>
                                                                 <td>
                                                                     <input type="hidden" name="id" value="<?= $Password->id ?>">

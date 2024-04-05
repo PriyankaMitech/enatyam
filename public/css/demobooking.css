@@ -34,9 +34,7 @@
 .container_bookdemo {
   max-width: 1444px !important;
 }
-.fatures {
-  width: 12%;
-}
+
 .fetures {
   margin-top: 30px;
 }
@@ -117,10 +115,11 @@ select {
 .changec {
   background-color: #ff1561 !important;
   border-color: #ff1561 !important;
-  width: 100%;
-  font-size: 22px;
+  width: auto;
+  font-size: 20px;
   font-weight: 600;
-  height: 90px;
+  height: 50px;
+  padding: 10px;
 }
 
 .hidediv {

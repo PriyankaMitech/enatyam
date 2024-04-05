@@ -333,6 +333,7 @@ class FacultyController extends BaseController
 
   public function StudentAttendance()
   {
+    if (isset($_SESSION['sessiondata'])) {
     $result = session();
     $registerId = $result->get('id');
     $model = new facultymodel();
@@ -342,6 +343,10 @@ class FacultyController extends BaseController
     // echo '<pre>';print_r($data['studentList']);die;
     // echo '<pre>'; print_r($data['GroupList']);die;
     return view('FacultysideBar/Studentattendance', $data);
+  }else{
+    return redirect()->to(base_url());
+
+}
   }
 
 

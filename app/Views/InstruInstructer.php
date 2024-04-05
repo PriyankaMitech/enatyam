@@ -23,10 +23,10 @@
             <div class="col-lg-12">
            
                 <div class="owl-carousel owl-theme">
-                    <div class="item" onclick="showModal('Aditya', 'Yoga Faculty', 'public/images/facultyProfileLatest/2.png','M.Sc.(Human Consciousness and Yogic Science)','Certification YTTC: 200 Hours & E-RYT 500','4 years +','Hath Yoga, Yoga for Strength and Fitness-Weight management- Yoga for anxiety and stress management , Mindfulness practices - Weight Loss, Flexibility and Fitness,Chronic illness')">
+                    <div class="item" onclick="showModal('Aditya', 'Yoga Faculty', 'public/images/facultyProfileLatest/2.webp','M.Sc.(Human Consciousness and Yogic Science)','Certification YTTC: 200 Hours & E-RYT 500','4 years +','Hath Yoga, Yoga for Strength and Fitness-Weight management- Yoga for anxiety and stress management , Mindfulness practices - Weight Loss, Flexibility and Fitness,Chronic illness')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/2.png" />
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/2.webp" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Aditya</div>
@@ -104,10 +104,10 @@
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Supriya', 'Yoga Faculty', 'public/images/facultyProfileLatest/4.png','Post Gratuate Diploma in Yoga Science','YTTC 100hrs','Experience 3 Years +','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
+                    <div class="item" onclick="showModal('Supriya', 'Yoga Faculty', 'public/images/facultyProfileLatest/4.webp','Post Gratuate Diploma in Yoga Science','YTTC 100hrs','Experience 3 Years +','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/4.png" />
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/4.webp" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Supriya</div>
@@ -125,12 +125,12 @@
  <p><b>Read more...</b></p>                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Amrita M', 'Yoga', 'public/images/facultyProfileLatest/6.png', 'M.Sc.(Human Consciousness and Yogic Science)', 'YTTC 125 Hrs', '3+ years','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
+                    <div class="item" onclick="showModal('Amrita M', 'Yoga', 'public/images/facultyProfileLatest/6.webp', 'M.Sc.(Human Consciousness and Yogic Science)', 'YTTC 125 Hrs', '3+ years','Prenatal Yoga - Yoga for chronic disease - Weight management - Yoga for Kids - Meditation and mindfulness vinayasa Flow, Pranayama, Yoga nidra, Yoga Therapy, Back, neck and Knee pains')">
 
 
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/6.png" />
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/6.webp" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Amrita M</div>
@@ -148,10 +148,10 @@
                         </div>
                     </div>
 
-                    <div class="item" onclick="showModal('Shekhar Pathak', 'Yoga Faculty', 'public/images/facultyProfileLatest/8.png','Phd - Yogic Science, M.Sc.(Human Consciousness and Yogic Science)','Certification: YTTC 125 Hrs','10 years +','Yogic management of Diseases - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness')">
+                    <div class="item" onclick="showModal('Shekhar Pathak', 'Yoga Faculty', 'public/images/facultyProfileLatest/8.webp','Phd - Yogic Science, M.Sc.(Human Consciousness and Yogic Science)','Certification: YTTC 125 Hrs','10 years +','Yogic management of Diseases - Accupressure therpis - Pranic Healer - Hatha Yoga - Yoga for anxiety and stress management, Mindfulness Practices - Weight loss, Flexibility and Fitness')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/8.png" />
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/8.webp" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Shekhar Pathak</div>
@@ -170,10 +170,10 @@
                         </div>
                     </div>
 
-                    <div class="item" onclick="showModal('Vivek R', 'Yoga Faculty', 'public/images/facultyProfileLatest/10.png','Phd - Yogic and Sports science, M.Sc.(Human Consciousness and Yogic Science), Diploma in Counselling Psychotherapy, B.Sc. in Military Science','YTTC 125 Hrs','4 years +','Hath Yoga, Yoga Nidra, Yoga for Strength and General Fitness, Weight management, Yoga for anxiety and stress management, Mindfulness practices, Weight Loss, Flexibility and Fitness, Chronic illness')">
+                    <div class="item" onclick="showModal('Vivek R', 'Yoga Faculty', 'public/images/facultyProfileLatest/10.webp','Phd - Yogic and Sports science, M.Sc.(Human Consciousness and Yogic Science), Diploma in Counselling Psychotherapy, B.Sc. in Military Science','YTTC 125 Hrs','4 years +','Hath Yoga, Yoga Nidra, Yoga for Strength and General Fitness, Weight management, Yoga for anxiety and stress management, Mindfulness practices, Weight Loss, Flexibility and Fitness, Chronic illness')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/10.png" />
+                                <img src="<?=base_url(); ?>public/images/facultyProfileLatest/10.webp" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Vivek R</div>
@@ -212,10 +212,10 @@
                         </div>
                     </div>
                     
-                    <!-- <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.png')">
+                    <!-- <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.webp')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/jaya.png" />
+                                <img src="<?=base_url(); ?>public/images/jaya.webp" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Jaya</div>

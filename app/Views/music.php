@@ -64,7 +64,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="public/images/courseoffering/5-rbg.png" class="danceimg wsized" >
+                                    <img src="public/images/courseoffering/5-rbg.webp" class="danceimg wsized" >
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
@@ -152,27 +152,27 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>
@@ -468,7 +468,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="public/images/courseoffering/6-rbg.png" class="danceimg wsized" >
+                                    <img src="public/images/courseoffering/6-rbg.webp" class="danceimg wsized" >
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
                                     <h3 class="heading"> Carnatic Vocal</h3>
@@ -554,27 +554,27 @@
                                     <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>
@@ -862,7 +862,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                <img src="public/images/courseoffering/7-rbg.png" class="danceimg wsized" >
+                                <img src="public/images/courseoffering/7-rbg.webp" class="danceimg wsized" >
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
                                     <h3 class="heading"> Semi Classical</h3>
@@ -948,27 +948,27 @@
                                     <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>
@@ -1262,7 +1262,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
-                                <img src="public/images/courseoffering/8-rbg.png" class="danceimg wsized" >
+                                <img src="public/images/courseoffering/8-rbg.webp" class="danceimg wsized" >
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 text-left text-col musicp">
                                     <h3 class="heading"> Western Singing</h3>
@@ -1349,27 +1349,27 @@
                                     <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>
@@ -1753,27 +1753,27 @@
                                     <h3 class="heading"> What you will learn</h3>
 
                                     <ul class="list-group">
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Warm-ups and Techniques - Learn how to properly warm up your voice and develop essential vocal techniques such as breath control, posture, and vocal placement.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Pitch and Intonation - Improve your ability to sing in tune by practicing exercises that help you develop a keen sense of pitch and intonation.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Range Expansion - Work on expanding your vocal range through targeted exercises that gradually increase the upper and lower limits of your voice.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Vocal Exercises - Practice various vocal exercises designed to strengthen and develop your voice, including exercises that improve agility, flexibility, and control.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
                                                 Song Interpretation - Learn how to interpret songs and convey emotions effectively through your singing, focusing on techniques such as phrasing, dynamics, and expression.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">Style Exploration - Explore different musical styles and genres to broaden your repertoire and develop versatility in your singing.</span>
                                         </li>
-                                        <li class="mb-4"><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                                        <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Performance Skills - Gain confidence and stage presence by learning performance skills,
                                                                     including microphone techniques, stage movement, and connecting with an audience</span>
                                         </li>
@@ -2072,11 +2072,11 @@
 
 
 <!-- Testimonials -->
-<section class="testimonials mft musict" id="testimonials">
+<section class="testimonials dancet ft" id="testimonials">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-12 text-center testimonialsdiv">
-                <h3>Testimonials
+                <h3 class="title_4 ">Testimonials
                 </h3>
                 <span class="line"></span>
             </div>
@@ -2095,7 +2095,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/1h.png" class="haimg">
+                                        <img src="public/images/happyfaces/1h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2110,7 +2110,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/2h.png" class="haimg">
+                                        <img src="public/images/happyfaces/2h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2125,7 +2125,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/3h.png" class="haimg">
+                                        <img src="public/images/happyfaces/3h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2141,7 +2141,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/4h.png" class="haimg">
+                                        <img src="public/images/happyfaces/4h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2160,7 +2160,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/6h.png" class="haimg">
+                                        <img src="public/images/happyfaces/6h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2179,7 +2179,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/7h.png" class="haimg">
+                                        <img src="public/images/happyfaces/7h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2198,7 +2198,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/8h.png" class="haimg">
+                                        <img src="public/images/happyfaces/8h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2217,7 +2217,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/10h.png" class="haimg">
+                                        <img src="public/images/happyfaces/10h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2236,7 +2236,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/11h.png" class="haimg">
+                                        <img src="public/images/happyfaces/11h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2255,7 +2255,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/12h.png" class="haimg">
+                                        <img src="public/images/happyfaces/12h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2274,7 +2274,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/14h.png" class="haimg">
+                                        <img src="public/images/happyfaces/14h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -2293,7 +2293,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/15h.png" class="haimg">
+                                        <img src="public/images/happyfaces/15h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>

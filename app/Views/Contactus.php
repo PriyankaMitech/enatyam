@@ -94,7 +94,7 @@
                         <div class="col-lg-12 submitbc">
                             <button class="button-content " role="button">
                                 <span class="button-content-wrapper">
-                                    <span class="button-text">submit</span>
+                                    <span class="button-text">Submit</span>
                                 </span>
                             </button>
                         </div>

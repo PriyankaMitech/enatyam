@@ -160,53 +160,7 @@ if($this->request->getPost('register_id') == ''){
     }
 
     
-    // public function senddemoremainder()
-    // {
-      
-    //     date_default_timezone_set('Asia/Kolkata');
-    
-    //     $demoModel = new DemoModel();
-    //     $model = new AdminModel();
-    //     $recordsForToday = $demoModel->getRecordsForToday();
-    //     $currentTime = date('H:i:s'); // Current time in HH:MM:SS format
-    //    //  echo '<pre>';   print_r($recordsForToday);die;
-    //     foreach ($recordsForToday as $record) {
-    //         if (is_array($record)) {
-    //             $bookDate = $record['Book_Date'];
-    //             $bookDateTime = $record['Book_Date_Time'];
-    //             $assignTeacherId = $record['AssignTecher_id']; 
-    //             $phoneNumber = $record['mobileWithCode'];
-    //             $studentname = $record['name'];
-    //             $buffertime = date('H:i:s', strtotime($record['buffertime'])); // Extract time from buffertime
-                
-    //             // Print out the buffertime for checking
-    //             echo "cu: $currentTime <br>";
-    //            echo "Buffertime: $buffertime <br>";
-    
-    //             // Check if the current time matches the buffertime
-    //             if ($currentTime == $buffertime) {
-    //                 echo "hi";
-    //                 $phoneNumber = $record['mobileWithCode'];
-    //                 $templates = "930840461869403";
-    //                 $msg = "Hello $studentname, Demo Alert! Your demo session is approaching. It will start in the next 15 minutes. Date: $bookDate, Time: $bookDateTime. Feel free to invite your friends and family to attend the demo with you.";
-    //                 whatsapp($phoneNumber, $templates, $msg);
-    //                 $wherecond1 = [
-    //                     'id' => $assignTeacherId,
-    //                 ];
-    //                 $teacher_data = $model->getsinglerow('register', $wherecond1);
-    //                 $teacherName = $teacher_data->full_name;
-    //                 $teacherMobile = $teacher_data->mobileWithCode;
-    //                 $phoneNumber = $teacherMobile;
-    //                 $msg = "Hello $teacherName, Demo Alert! Your demo session is approaching. It will start in the next 15 minutes. Date: $bookDate, Time: $bookDateTime. Feel free to invite your friends and family to attend the demo with you.";
-    //                 whatsapp($phoneNumber, $templates, $msg);
-    
-    //                 echo "success";
-    //             }
-    //         } else {
-    //             echo "by";
-    //         }
-    //     }
-    // }
+   
     public function senddemoremainder()
     {
         date_default_timezone_set('Asia/Kolkata');

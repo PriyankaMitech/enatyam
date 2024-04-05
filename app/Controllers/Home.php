@@ -272,13 +272,23 @@ class Home extends BaseController
     }
     public function demoprofile()
     {
+        if (isset($_SESSION['sessiondata'])) {
 
         return view('demoprofile');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
     public function demoprofile2()
     {
+        if (isset($_SESSION['sessiondata'])) {
 
         return view('demoprofile2');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
     public function demobooking()
     {
@@ -305,8 +315,12 @@ class Home extends BaseController
     }
     public function FacultyProfile()
     {
-
+        if (isset($_SESSION['sessiondata'])) {
         return view('FacultyProfile');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function StudentDashboard()
@@ -372,63 +386,7 @@ class Home extends BaseController
         return redirect()->to(base_url());
     }
 }
-// public function StudentDashboard()
-// {
-//     $adminModel = model('AdminModel');
-//     $session = session();
-   
-//     $user_id = $session->get('id');
-//     $expiresessions = $adminModel->getSessionno($user_id);
 
-//     // Check if $expiresessions is not null before accessing its properties
-//     if ($expiresessions !== null && isset($expiresessions->Session_no) && isset($expiresessions->payment_id)) {
-//         $sessioncont = $expiresessions->Session_no;
-//         $payment_id = $expiresessions->payment_id;
-//         $paymentsessions = $adminModel->getpaymentsession($payment_id);
-
-//         if (isset($_SESSION['sessiondata'])) {
-//             $sessionData = $_SESSION['sessiondata'];
-//             $email = $sessionData['email'] ?? null;
-//             $password = $sessionData['password'] ?? null;
-//             if ($email !== null && $password !== null) {
-//                 // If Payment_status is 'Y' and SessionsCount matches expiration session
-//                 if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
-//                     $user_id = $session->get('id');
-//                     if ($sessioncont == $paymentsessions) {
-//                         $status = 'N';
-//                         $renewal = 'Y';
-//                         $adminModel->updadteattandance($user_id, $renewal);
-//                         $adminModel->updatePaymentStatus($user_id, $status);
-//                         $session->destroy();
-//                         return redirect()->to('/');
-//                     }
-
-//                     $login_model = new LoginModel();
-//                     $data['user_data'] = $login_model->get_user_data($user_id);
-//                     $notifications = $adminModel->getUser($user_id);
-
-//                     $count = count($notifications);
-//                     return view('StudentDashboard', [
-//                         'data' => $data,
-//                         'notifications' => $notifications,
-//                         'notificationCount' => $count,
-//                     ]);
-//                 } else {         
-//                     return redirect()->to('ModelForLogin');
-//                 }
-//             } else {
-              
-//                 return redirect()->to(base_url());
-//             }
-            
-//         } else {
-//             return redirect()->to(base_url());
-//         }
-//     } else {
-//         // Handle case where $expiresessions or its properties are null
-//         return redirect()->to('ModelForLogin');
-//     }
-// }
     public function chechk_username_id()
     {
         $loginModel = new LoginModel();

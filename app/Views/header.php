@@ -1950,7 +1950,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             </div>
         <?php else : ?>
             <div class="loginmenu">
-                <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
+                <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a> -->
                 <a class="Dashboard" href="<?php echo base_url(); ?>Dashboard" style="border-right: 1px solid #f7f7f7;">Dashboard</a>
                 <a class="logout" href="<?php echo base_url(); ?>logout">Logout</a>
             </div>
@@ -1961,37 +1961,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
         <div class="nav-container">
 
-            <!-- desktop nav -->
-            <nav class="navbar navbar-expand-lg d-none d-lg-block">
-                <div class="container">
-                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button> -->
-                    <!-- <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
-                        <img src="public/images/logosrem.png" alt="Enatyam">
-                    </a> -->
-                    <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav main menu ms-auto">
-                            <a class="nav-link px-2" href="<?php echo base_url('Home'); ?>">Home</a>
-                            <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>
-                            <a class="nav-link px-2" href="<?php echo base_url('music'); ?>">Music</a>
-                            <a class="nav-link px-2" href="<?php echo base_url('Instruments'); ?>">Instruments</a>
-                            <a class="nav-link px-2" href="<?php echo base_url('Yoga'); ?>">Yoga</a>
-                            <a class="nav-link px-2" href="<?php echo base_url('pricing'); ?>">Pricing</a>
+ 
 
-                            <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
-                        </div>
-                        <!-- <div class="navbar-nav">
-                            <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh" style="width: auto;">BOOK
-                                YOUR FREE DEMO</a>
-                        </div> -->
-                    </div>
-                </div>
-
-
-            </nav>
-
-            <!--  -->
 
             <!-- mobile nav -->
             <div class="container-fluid d-block d-lg-none">
@@ -2030,11 +2001,9 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                 <?php else : ?>
 
-                    <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
-                <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
+                    <!-- <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a> -->
 
 
-                <a class="nav-link px-2"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
                 <a class="nav-link px-2"  href="<?php echo base_url(); ?>Dashboard" style="border-right: 1px solid #f7f7f7;">Dashboard</a>
                 <a class="nav-link px-2"  href="<?php echo base_url(); ?>logout">Logout</a>
 
@@ -2072,12 +2041,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                 <span id="emailError" class="error"></span>
                             </div>
 
-                            <div class="form-group m-2">
-
-                                <input type="text" name="emailotp" id="emailotp" class="form-control d-none" placeholder="Enter otp sent to your email id">
-                                <span class="error" id="otpError" class="error"></span>
-                            </div>
-
+                       
                             <!-- <div class="form-group m-2">
 
                                 <input type="text" name="mobile_no" id="mobile_no" class="form-control" aria-required="true" placeholder="Enter your whatsapp number">
@@ -2086,7 +2050,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             </div> -->
                             <div class="form-group m-2">
                                     <div class="row">
-                                        <div class="col-md-4 col-4">
+                                        <div class="col-md-4 col-4 countrie_code" > 
                                             <select name="countrie_code" class="form-control countrycode"
                                                 id="lenValidate" required></select>
                                         </div>
@@ -2099,6 +2063,12 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                         </div>
                                     </div>
                             </div>  
+                            <div class="form-group m-2">
+
+                                <input type="text" name="emailotp" id="emailotp" class="form-control d-none" placeholder="Enter otp sent to your whats app">
+                                <span class="error" id="otpError" class="error" style="color:red"></span>
+                                </div>
+
 
                             <div class="form-group m-2">
 
@@ -2109,7 +2079,10 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <div class="form-group m-2">
                                 <input type="password" name="password" id="password" class="form-control" aria-required="true" placeholder="Password">
                                 <span id="passwordError" class="error"></span>
+                                <small class="smallnotedemo">(8 characters -1 uppercase, 1 lowercase, 1 numeric, 1 special character)</small>
+
                             </div>
+                            
 
                             <div class="form-group m-2">
                                 <input type="password" name="confirm_pass" id="confirm_pass" class="form-control" aria-required="true" placeholder="Repeat password">
@@ -2117,7 +2090,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             </div>
 
                             <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
-                            <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
+                            <p>Are you a member ? <a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
 
                             <!-- <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a> -->
 
@@ -2170,6 +2143,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                         </div>
 
                         <div class="form-group" id="category_div">
+                        <label for="courses_id_g">Please select course:</label>
+
                             <select class="form-control" name="courses_id_g" id="courses_id_g" style="width: 100%;">
                                 <option>Please select course</option>
                                 <?php if (!empty($courses_data)) { ?>
@@ -2185,6 +2160,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                         </div>
                         <!-- </div> -->
                         <div class="sub_category_div form-group" id="sub_category_div">
+                        <label for="sub_courses_id_g">Please select sub courses:</label>
+
                             <input type="hidden" id="selected_sub_courses_id_g" value="<?php if (isset($edit)) {
                                                                                             echo ($edit['sub_courses_id_g']);
                                                                                         } ?>">
@@ -2247,9 +2224,9 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                 <input type="password" name="password" id="password" class="form-control" aria-required="true" placeholder="Password">
                                 <span id="passwordError1" style="color: red;"></span>
                             </div>
-                            <div class="forgetmenot login-remember float-center">
+                            <div class="forgetmenot login-remember float-center ">
 
-                                <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password?</a>
+                                <a class="lost-pass-link m-2" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password ?</a>
                             </div>
                     </div>
 
@@ -2257,7 +2234,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                     <!-- <button class="btn btn-light mt-3 submitButton" value="Login" id="submitButton" type="submit">Login</button> -->
 
-                    <p>Not a member yet?
+                    <p>Not a member yet ?
                         <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
                     </p>
                     </form>

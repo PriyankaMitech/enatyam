@@ -128,8 +128,23 @@ text-align:center;
 .starcolor{
     color: #fad32c !important;
 }
-
-
+.topfeatures .bfdf{
+padding: 5px;
+}
+.topfeatures {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bfdf {
+        text-align: center;
+    }
+    .fatures {
+        width: 18%;
+        height: auto; /* Adjust as needed */
+        display: block;
+        margin: 0 auto; /* Centers the image horizontally */
+    }
 
 </style>
 
@@ -148,14 +163,14 @@ text-align:center;
                                     <div class="whatdssaus-header">
                                         <h5 class="text-white ">What do students say about us?</h5>
                                         <div class="imgs">
-                                            <img src="<?=base_url(); ?>public/images/boarder1.png" alt="Image Description">
+                                            <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description">
                                         </div>
                                        
                                     </div>
                                     <div class="whatdssaus-body">
                                         <div class="body-content row">
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/18h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/18h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Isabella (USA)</h6>
                                             </div>
                                             <div class="col-lg-8 col-md-6 col-8 userdata">
@@ -183,12 +198,12 @@ text-align:center;
                                             </div>
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/17h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/17h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Smitha (UK )</h6>
                                             </div>
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/12h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Scarlett Family (Germany )</h6>
                                             </div>
                                             <div class="col-lg-8 col-md-6 col-8 userdata">
@@ -212,13 +227,13 @@ text-align:center;
                                             </div>
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/19h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/19h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Kiran (Sweden)</h6>
                                             </div>
 
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/20h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/20h.webp" alt="Image Description">
                                                 <h6 class="text-white ">James W (USA )</h6>
                                             </div>
                                             <div class="col-lg-8 col-md-6 col-8 userdata">
@@ -244,7 +259,7 @@ text-align:center;
                                                 </p>
                                             </div>
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/11h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Kajal (Delhi )</h6>
                                             </div>
 
@@ -257,27 +272,29 @@ text-align:center;
                             <div class="col-lg-6 col-md-6 col-12 text-left text-col tpm scondsection">
                                 <h1 class="heading Title_main__VrmF4"> Book Free Online Trial Class</h1>
                                 <div class="imgs">
-                                            <img src="<?=base_url(); ?>public/images/boarder1.png" alt="Image Description">
+                                            <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description">
                                 </div>
-                                <div class="row fetures text-white">
+                                <div class="row fetures text-white topfeatures">
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures" src="public/images/instructors-svg.svg">
-                                        <span>Top Instructors<span>
+                                        <span>Top Instructors</span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/live.svg">
-                                        <span>2 Live Classes Per Week<span>
+                                        <span>2 Live Classes Per Week</span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/materials-svg.svg">
-                                        <span>Revision Material<span>
+                                        <span>Revision Material</span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
                                         <img class="fatures text-white" src="public/images/certification-svg.svg">
-                                        <span>Performance & Certificate<span>
+                                        <span>Performance & Certificate</span>
                                     </div>
                                 </div>
                                 <div class="StickyAdsFooter_hr__Tx8qF hiddenXs"></div>
+                                <small class="smallnotedemo">Note : All fields are mandatory</small>
+
 
                                 <div class="Step_step__mxxn1">Step
                                     <!-- -->1
@@ -286,29 +303,32 @@ text-align:center;
 
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Your Name<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Your Name :</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="text" name="name" value="">
-                                        <span>
+                                    </span>
 
                                 </div>
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Email<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Email :</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="email" name="email" value="" id="demoemail">
                                         <span id="demoemailError"></span>
 
-</span>
+
 
                                 </div>
                       
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Password<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Password :</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="password" name="password" value="">
-                                        <span>
+                                        <br>
+                                        <small class="smallnotedemo">(8 characters -1 uppercase, 1 lowercase, 1 numeric, 1 special character)</small>
+                                    </span>
+                                       
 
                                 </div>
 
@@ -317,29 +337,35 @@ text-align:center;
 
 
                                 <div class="row tpm">
-                                    <label class="col-lg-4 col-md-12 col-12 text-white fmname" for="mobile_no">Mobile No.<span class="starcolor">*</span> :</label>
+                                    <label class="col-lg-4 col-md-12 col-12 text-white fmname" for="mobile_no">Mobile No. :</label>
                                     <div class="col-lg-2 col-md-4 col-4 seletbook">
                                         <select name="telephone_country_code" class="form-control countrycode" id="telephoneCountryCode"></select>
                                     </div>
                                     <div class="col-lg-6 col-md-8 col-8 seletbook">
                                         <input required type="text" autocomplete="off" id="demoMobileNo" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
                                         <span id="demoMobileNoError"></span>
+                                       
+                                       
+                              
                                     </div>
-                                    <div class="form-group m-2">
-                                        <input type='hidden' name="register_id" id="register_id">
+
+                                    <div class="col-lg-4" >
+                                    </div>
+                                    <div class="col-lg-8 " >
+                                    <input type='hidden' name="register_id" id="register_id" >
                                         <input type="text" name="otpdemo" id="otpdemo" class="form-control d-none" placeholder="Enter otp">
                                         <span class="error" id="otpErrordemo" class="error"></span>
                                     </div>
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-8" >
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4" >
                                         <button type="button"  id="verifyPhoneNumberBtn" class="btn btn-primary active">Verify Phone Number</button>
                                     </div>
                                 </div>
                                 <!-- </div> -->
 
                                 <div class="row tpm">
-                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Age Group<span class="starcolor">*</span> :</span>
+                                    <span class="col-lg-4 col-md-12 col-12 text-white fmname">Age Group :</span>
                                     <span class="col-lg-8 col-md-12 col-12 seletbook">
                                         <button type="button" class="btn btn-primary ptage ageb active">Below 10
                                             Yrs</button>
@@ -365,7 +391,7 @@ text-align:center;
                             </div>
 
                             <div class="row tpm">
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Select Country<span class="starcolor">*</span> : </span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Select Country : </span>
 
                                 <div class="col-lg-8 col-md-12 col-12 ">
                                     <select class="form-control" id="inputCountry" name="Country" >
@@ -391,7 +417,7 @@ text-align:center;
 
                             </div>
                             <div class="row tpm">
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">City<span class="starcolor">*</span> :</span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">City :</span>
                                 <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                     <input type="text" name="city" value="">
                                     <span>
@@ -404,7 +430,7 @@ text-align:center;
 
 
                             <div class="row tpm">
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select course<span class="starcolor">*</span> :</span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select course :</span>
 
 
                                 <div class="col-lg-8 col-md-12 col-12 form-group seletbook" id="category_div">
@@ -428,7 +454,7 @@ text-align:center;
                             </div>
                             <div class="row tpm">
 
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select sub courses<span class="starcolor">*</span> :</span>
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Please select sub courses :</span>
                                 <div class="col-lg-8 col-md-12 col-12 sub_category_div form-group seletbook"  id="sub_category_div">
                                     <input type="hidden" id="selected_sub_courses_id_d"
                                         value="<?php if (isset($edit)) {echo ($edit['sub_courses_id_d']);} ?>">
@@ -444,8 +470,10 @@ text-align:center;
 
                             <div class="row tpm">
 
-                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Demo Class Date<span class="starcolor">*</span> :</span>
-                                <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF form-group seletbook">
+
+                                <span class="col-lg-4 col-md-12 col-12 text-white fmname">Demo Class Date :</span>
+                                <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
+
                                     <input type="date" name="Book_Date" min="<?= date('Y-m-d', strtotime('+1 day')) ?>"
                                         value="">
 
@@ -454,39 +482,32 @@ text-align:center;
                             </div>
                             <div class="row tpm">
 
-                            <span class="col-lg-4 col-md-12 col-12 text-white fmname"> Demo Timing<span class="starcolor">*</span> :</span>
-                            <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
-                                    <p class="text-white">We'll reach out soon to find the best time for you.</p>
-
-                                <span>
-
+                            <span class="col-lg-12 col-md-12 col-12 text-white fmname"> Demo Timing -  We'll reach out soon to find the best time for you.</span>
+                            
                             </div>
                             <div class="BookingSecondPage_stickyBottom__G_tzG tpm row showdiv">
-                                <div class="text-white tpm col-lg-8 col-md-12 col-12 p-2">
-                                    By confirming, you agree to receive calls and WhatsApp messages from Enatyam.
+                                <div class="text-white tpm col-lg-12 col-md-12 col-12 p-2">
+                                    By Confirm, you agree to receive calls and WhatsApp messages from Enatyam.
                                     No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
                                     your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>
-                                <div class="tpm col-lg-4 col-md-12 col-12 p-2">
+                                <div class="float-right">
                                     <button type="submit" class="btn btn-success changec d-none">Confirm Booking</button>
-                                </div>
-
+                                    </div>
                             </div>
                         </div>
                             </div>
                             <div class="BookingSecondPage_stickyBottom__G_tzG tpm row hidediv">
 
-                            <div class="text-white tpm col-lg-8 col-md-8 col-12 p-2">
-                                    By confirming, you agree to receive calls and WhatsApp messages from Enatyam.
-                                    No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
-                                    your time.We won't be crashing into your dreamland adventures with our calls
+                                <div class="text-white tpm col-lg-12 col-md-12 col-12 p-2">
+                                        By Confirm, you agree to receive calls and WhatsApp messages from Enatyam.
+                                        No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
+                                        your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>
-                                <div class="tpm col-lg-4 col-md-4 col-12 p-2">
+                                <div class="float-right">
                                     <button type="submit" class="btn btn-success changec d-none" id="signupbtndemo" value="Confirm Booking">Confirm Booking</button>
                                 </div>
-                                </div>
-
-                     
+                            </div>
                        
                 </div>
             </div>

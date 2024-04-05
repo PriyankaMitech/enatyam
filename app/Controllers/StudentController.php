@@ -74,6 +74,7 @@ class StudentController extends BaseController
     }
     public function uploadMedia()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $session = session();
         $registerId = $session->get('id');
         $StudentModel = new StudentModel();
@@ -179,6 +180,10 @@ class StudentController extends BaseController
     }
 
         return redirect()->to('UplodeVideo');
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
 
     public function StudentSideBarVideo()
@@ -319,6 +324,7 @@ class StudentController extends BaseController
     }
     public function StudentProfile()
     {
+        if (isset($_SESSION['sessiondata'])) {
         $result = session();
         $registerId = $result->get('id');
         $StudentModel = new StudentModel();
@@ -345,6 +351,10 @@ class StudentController extends BaseController
         $data['country_data'] = $model->getalldata('countries', $wherecond1);
 
         return view('StudentSidebar/StudentProfile', $data);
+    }else{
+        return redirect()->to(base_url());
+
+    }
     }
     public function Studentpasswordupdate()
     {

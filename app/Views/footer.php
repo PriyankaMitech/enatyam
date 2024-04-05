@@ -108,46 +108,46 @@
            
             <div class="col-md-11 col-12 ">
                 <div class="footer-links-sub flk" style="text-align: center;">
-                    <a href="">Pune</a>
-                    <a href="">Bangalore</a>
-                    <a href="">Hyderabad</a>
-                    <a href="">Chennai</a>
-                    <a href="">Mumbai</a>
-                    <a href="">Delhi</a>
-                    <a href="">Gurgaon</a>
-                    <a href="">Kolkata</a>
-                    <a href="">Lucknow</a>
-                    <a href="">Ahmedabad</a>
+                    <a>Pune</a>
+                    <a>Bangalore</a>
+                    <a>Hyderabad</a>
+                    <a>Chennai</a>
+                    <a>Mumbai</a>
+                    <a>Delhi</a>
+                    <a>Gurgaon</a>
+                    <a>Kolkata</a>
+                    <a>Lucknow</a>
+                    <a>Ahmedabad</a>
                 </div>
          
                 <div class="footer-links-sub flk" style="text-align: center;">
-                    <a href="">New York</a>
-                    <a href="">California</a>
-                    <a href="">San Francisco</a>
-                    <a href="">Houston</a>
-                    <a href="">Dallas</a>
-                    <a href="">Atlanta</a>
-                    <a href="">Washington</a>
-                    <a href="">Boston</a>
-                    <a href="">New Jersey</a>
-                    <a href="">Chicago</a>
-                    <a href="">London</a>
-                    <a href="">Amsterdam</a>
-                    <a href="">Sydney</a>
-                    <a href="">Melbourne</a>
-                    <a href="">Abu Dhabi</a>
+                    <a>New York</a>
+                    <a>California</a>
+                    <a>San Francisco</a>
+                    <a>Houston</a>
+                    <a>Dallas</a>
+                    <a>Atlanta</a>
+                    <a>Washington</a>
+                    <a>Boston</a>
+                    <a>New Jersey</a>
+                    <a>Chicago</a>
+                    <a>London</a>
+                    <a>Amsterdam</a>
+                    <a>Sydney</a>
+                    <a>Melbourne</a>
+                    <a>Abu Dhabi</a>
                 </div>
           
                 <div class="footer-links-sub flk" style="text-align: center;">
-                    <a href="">USA</a>
-                    <a href="">Canada</a>
-                    <a href="">UK</a>
-                    <a href="">Germany</a>
-                    <a href="">Singapore</a>
-                    <a href="">Australia</a>
-                    <a href="">New Zealand</a>
-                    <a href="">India</a>
-                    <a href="">Dubai</a>
+                    <a>USA</a>
+                    <a>Canada</a>
+                    <a>UK</a>
+                    <a>Germany</a>
+                    <a>Singapore</a>
+                    <a>Australia</a>
+                    <a>New Zealand</a>
+                    <a>India</a>
+                    <a>Dubai</a>
                 </div>
 
                 <div class="social-div text-center pt-5 crd">
@@ -972,6 +972,11 @@
                 email: {
                     required: true,
                 },
+                
+                password: {
+                    required: true,
+                    customPassword: true
+                },
                 phone:{
                     required : true,
                     minlength: 10, // Minimum length of 10 digits
@@ -1021,6 +1026,10 @@
                 email: {
                     required: 'Please enter email.',
                 },
+                password: {
+                    required: "Password is required.",
+                    customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number,  one symbol , and be at least 8 characters long"
+                },
                 phone:{
                     required: 'Please enter phone no.',
                 },
@@ -1062,79 +1071,7 @@
 
                 },
             },
-            // submitHandler: function(form) {
-            //     var formData = $(form).serialize();
-
-            //     // Check if all required fields are filled
-            //     if ($('#demoMobileNo').val() && $('#demoemail').val()) {
-            //         // Your mobile verification AJAX call
-            //         $('#loader').show();
-            //         $.ajax({
-            //             url: "verifydemomobile",
-            //             type: "POST",
-            //             data: formData,
-            //             dataType: "JSON",
-            //             success: function(response) {
-            //                 $('#loader').hide();
-            //                 console.log(response)
-            //                 $('#demoMobileNoError').addClass('d-none');
-            //                 $('#otperror').addClass('d-none');
-            //                 $('#signupbtndemo').val('Please wait...!')
-            //                 if (response.email.status == '203') {
-            //                     console.log('response')
-            //                     $('#emailotpdemo').removeClass('d-none').after(
-            //                         '<span id="emailerrordemo">' + response.email.msg +
-            //                         '</span>')
-            //                 } else if (response.email.status == '203') {
-            //                     // $('#otp').removeClass('d-none').after('<span id="otperror">' + response.mobile.msg + '</span>')
-            //                 } else {
-            //                     // if (response.mobile.mobileexist == true) {
-            //                     //     $('#mobile_noError').addClass('d-none');
-            //                     //     $('#mobile_noError').removeClass('d-none').text('Mobile no already in use.')
-            //                     // } else 
-            //                     if (response.email.emailexist == true) {
-            //                         $('#demoemailError').addClass('d-none');
-            //                         $('#demoemailError').removeClass('d-none').text(
-            //                             'Email already exist.')
-            //                         $('#signupbtndemo').val('Confirm Booking')
-            //                     } 
-
-
-            //                     if (response.email.emailexist == true) {
-            //                         $('#demoemailError').addClass('d-none');
-            //                         $('#demoemailError').removeClass('d-none').text(
-            //                             'Email already exist.')
-            //                         $('#signupbtndemo').val('Confirm Booking')
-            //                     } else {
-            //                         if (response.email.status == '200') {
-            //                             console.log(response)
-            //                             $('#otperror').addClass('d-none');
-                                
-            //                             $('#hiddenEmail').val(response.email.email);
-            //                             $('#yourFormId').submit();
-            //                         } else {
-            //                             $('#signupbtndemo').val('Confirm Booking')
-            //                             // $('#otp').removeClass('d-none').after('<span class="error" id="otperror">Enter otp sent to your mobile no.</span>')
-            //                             $('#emailotpdemo').removeClass('d-none').after(
-            //                                 '<span class="error" id="otperror">Enter otp sent to your whats app </span>'
-            //                             )
-            //                         }
-
-            //                     }
-            //                 }
-            //             },
-            //             error: function(response) {
-            //                 console.log(response)
-            //                 swal.fire("Warning", "Error in login!", "warning");
-            //             }
-            //         });
-
-
-            //     } else {
-            //         // Handle the case where not all required fields are filled
-            //         alert('Please fill in all required fields.');
-            //     }
-            // }
+           
         });
     });
    
@@ -1193,7 +1130,7 @@ $(document).ready(function(){
                     $('#otpdemo').removeClass('d-none');
                     $('#register_id').val(response.register_id);
                     // Change button text
-                    $('#verifyPhoneNumberBtn').text('Please wait...!');
+                    $('#verifyPhoneNumberBtn').text('Submit');
                 } else if (response.mobile.status === '201') {
                     // Hide the verifyPhoneNumberBtn
                     $('.changec').removeClass('d-none');
@@ -1204,7 +1141,7 @@ $(document).ready(function(){
                 } else if (response.mobile.status == '203') {
                     
                     $('#otpErrordemo').text('Enter correct otp');
-                    $('#verifyPhoneNumberBtn').text('Please wait...!');
+                    $('#verifyPhoneNumberBtn').text('Submit');
                 } 
             },
             error: function(response) {
@@ -1886,7 +1823,15 @@ $(document).ready(function() {
 
 <script>
 $(document).ready(function() {
-    $('#toggleForm').click(function() {
+    $('#toggleForm').click(getAddress); // Call the function when the button is clicked
+
+    // Bind an event handler to the form's submit event
+    $('#offlineStudioform').submit(function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        getAddress(); // Call the getAddress function
+    });
+
+    function getAddress() {
         var pincode = $('#pincodeAdress').val();
         if (pincode.length != 6 || isNaN(pincode)) {
             $('#pincodeError').show();
@@ -1925,7 +1870,7 @@ $(document).ready(function() {
                                 $textDiv.append('<h3>' + name + '</h3>');
                                 $textDiv.append('<p>' + address + '</p>');
                                 $textDiv.append('<p><b>Contact No:</b> ' + contact + '</p>');
-                                $textDiv.append('<p><b>Google Location:</b> ' + googleLocation + '</p>');
+                                $textDiv.append('<p><b>Google Location:</b> <a href="'+ googleLocation + '">' + googleLocation + '</a></p>');
 
                                 $addressDiv.append($imageDiv);
                                 $addressDiv.append($textDiv);
@@ -1948,8 +1893,10 @@ $(document).ready(function() {
                 }
             });
         }
-    });
+    }
 });
+
+
 
 
 
@@ -3055,7 +3002,7 @@ function showModal(name, designation, img, qualifications, certifications, exper
 
             $.ajax({
                 type: 'POST',
-                url: '<?= base_url(); ?>/chechk_mobile_no_id',
+                url: '<?= base_url(); ?>chechk_mobile_no_id',
                 data: {
                     mobile_no: mobile_no
                 },
@@ -3063,6 +3010,7 @@ function showModal(name, designation, img, qualifications, certifications, exper
                     if (response == 'false') {
                         $('#mobile_noError').text('');
                         $('.submitButton').prop('disabled', false);
+                        
 
                     } else if (response == 'true') {
                         $('#mobile_noError').text('This mobile number is already available.');
@@ -3281,7 +3229,7 @@ function showModal(name, designation, img, qualifications, certifications, exper
                 },
                 password: {
                     required: "Password is required.",
-                    customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long"
+                    customPassword: "Password must contain at least one uppercase letter, one lowercase letter, one number,  one symbol , and be at least 8 characters long"
                 },
                 confirm_pass: {
                     required: 'Please confirm your password.',
@@ -3313,7 +3261,7 @@ function showModal(name, designation, img, qualifications, certifications, exper
                             if (response.email.status == '203') {
                                 console.log('response')
                                 $('#emailotp').removeClass('d-none').after(
-                                    '<span id="emailerror">' + response.email.msg +
+                                    '<span id="emailerror" style="color:red">' + response.email.msg +
                                     '</span>')
                             } else if (response.email.status == '203') {
                                 // $('#otp').removeClass('d-none').after('<span id="otperror">' + response.mobile.msg + '</span>')
@@ -3641,10 +3589,14 @@ function hideLoader() {
                     if (response === 'false') {
                         $('#demoMobileNoError').text('');
                         $('.submitButton').prop('disabled', false);
+                        $('#verifyPhoneNumberBtn').prop('disabled', false);
+
 
                     } else if (response === 'true') {
                         $('#demoMobileNoError').text('This mobile number is already available.');
                         $('.submitButton').prop('disabled', true);
+                        $('#verifyPhoneNumberBtn').prop('disabled', true);
+
                     }
                 }
             });
