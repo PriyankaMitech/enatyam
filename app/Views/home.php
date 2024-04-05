@@ -976,7 +976,7 @@ body {
                     </div>
 
                     <div class="col-md-6 col-12 p-0 text-center omici">
-                        <img src="<?=base_url(); ?>public/images/instrument/OnlineMusicHome.webp" class="danceimg home">
+                        <img src="<?=base_url(); ?>public/images/instrument/OnlineMusicHome.png" class="danceimg home">
                     </div>
                 </div>
             </div>
@@ -1304,10 +1304,10 @@ body {
                              </div>
                         </div>
                     </div>
-                    <div class="item" onclick="showModal('Koyali S', 'Hindustani Music Faculty', 'public/images/Koyali.webp','MA in Hindustani Vocal','Doordarshan Grade Artist, Trained 500+ students, Nurturing musical excellence', '10 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal Cords, Ragas and Sur')">
+                    <div class="item" onclick="showModal('Koyali S', 'Hindustani Music Faculty', 'public/images/Koyali.png','MA in Hindustani Vocal','Doordarshan Grade Artist, Trained 500+ students, Nurturing musical excellence', '10 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal Cords, Ragas and Sur')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Koyali.webp" />
+                                <img src="<?=base_url(); ?>public/images/Koyali.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name text-white">Koyali S</div>
