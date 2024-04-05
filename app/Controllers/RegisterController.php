@@ -68,16 +68,27 @@ class RegisterController extends BaseController
         $session = session();
         $registerModel = new RegisterModel();
         $contactData =[
-        'name' => $this->request->getVar('name'),
-        'email' => $this->request->getVar('email'),
-        'mobNumber' => $this->request->getVar('mobNumber'),
-        'interestedIn' => $this->request->getVar('interestedIn'),
-        'message' => $this->request->getVar('message')
+            'name' => $this->request->getVar('name'),
+            'email' => $this->request->getVar('email'),
+            'mobNumber' => $this->request->getVar('mobNumber'),
+            'interestedIn' => $this->request->getVar('interestedIn'),
+            'message' => $this->request->getVar('message')
         ];
-        // echo'<pre>';print_r($contactData);die;
-        $result = $registerModel->saveContactUs($contactData);
+        
+        // If message is empty, replace it with a dash
+        $message = !empty($contactData['message']) ? $contactData['message'] : "-";
+    
+        // Construct the message with line breaks
+        $msg = "Contact us Form Details:\nName: ".$contactData['name']."\nEmail: ".$contactData['email']."\nMobile Number: ".$contactData['mobNumber']."\nInterested In: ".$contactData['interestedIn']."\nMessage: ".$message;
+    
+        $templates = "930840461869403";
+        
+        // Send message using whatsappadmin function
+        whatsappadmin($templates, $msg);
+         return redirect()->to('/');
 
     }
+    
 
     public function offlineAddress() {
         $session = session();
