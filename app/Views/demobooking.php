@@ -163,14 +163,14 @@ padding: 5px;
                                     <div class="whatdssaus-header">
                                         <h5 class="text-white ">What do students say about us?</h5>
                                         <div class="imgs">
-                                            <img src="<?=base_url(); ?>public/images/boarder1.png" alt="Image Description">
+                                            <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description">
                                         </div>
                                        
                                     </div>
                                     <div class="whatdssaus-body">
                                         <div class="body-content row">
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/18h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/18h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Isabella (USA)</h6>
                                             </div>
                                             <div class="col-lg-8 col-md-6 col-8 userdata">
@@ -198,12 +198,12 @@ padding: 5px;
                                             </div>
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/17h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/17h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Smitha (UK )</h6>
                                             </div>
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/12h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Scarlett Family (Germany )</h6>
                                             </div>
                                             <div class="col-lg-8 col-md-6 col-8 userdata">
@@ -227,13 +227,13 @@ padding: 5px;
                                             </div>
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/19h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/19h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Kiran (Sweden)</h6>
                                             </div>
 
 
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/20h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/20h.webp" alt="Image Description">
                                                 <h6 class="text-white ">James W (USA )</h6>
                                             </div>
                                             <div class="col-lg-8 col-md-6 col-8 userdata">
@@ -259,7 +259,7 @@ padding: 5px;
                                                 </p>
                                             </div>
                                             <div class="col-lg-4 col-md-6 col-4 userimage">
-                                                <img src="<?=base_url(); ?>public/images/happyfaces/11h.png" alt="Image Description">
+                                                <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" alt="Image Description">
                                                 <h6 class="text-white ">Kajal (Delhi )</h6>
                                             </div>
 
@@ -272,7 +272,7 @@ padding: 5px;
                             <div class="col-lg-6 col-md-6 col-12 text-left text-col tpm scondsection">
                                 <h1 class="heading Title_main__VrmF4"> Book Free Online Trial Class</h1>
                                 <div class="imgs">
-                                            <img src="<?=base_url(); ?>public/images/boarder1.png" alt="Image Description">
+                                            <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description">
                                 </div>
                                 <div class="row fetures text-white topfeatures">
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
@@ -325,9 +325,10 @@ padding: 5px;
                                     <span class="col-lg-4 col-md-12 col-12 text-white fmname">Password :</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF">
                                         <input type="password" name="password" value="">
-                                    </span>
                                         <br>
-                                        <small class="smallnotedemo">Note : Password must contain at least one uppercase letter, one lowercase letter, one number,  one symbol ,and be at least 8 characters long</small>
+                                        <small class="smallnotedemo">(8 characters -1 uppercase, 1 lowercase, 1 numeric, 1 special character)</small>
+                                    </span>
+                                       
 
                                 </div>
 
@@ -343,15 +344,21 @@ padding: 5px;
                                     <div class="col-lg-6 col-md-8 col-8 seletbook">
                                         <input required type="text" autocomplete="off" id="demoMobileNo" class="form-control" value="<?php echo set_value("mobile_number"); ?>" name="mobile_number" id="Code_MobileNo" placeholder="Enter Mobile No." onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
                                         <span id="demoMobileNoError"></span>
+                                       
+                                       
+                              
                                     </div>
-                                    <div class="form-group m-2">
-                                        <input type='hidden' name="register_id" id="register_id">
+
+                                    <div class="col-lg-4" >
+                                    </div>
+                                    <div class="col-lg-8 " >
+                                    <input type='hidden' name="register_id" id="register_id" >
                                         <input type="text" name="otpdemo" id="otpdemo" class="form-control d-none" placeholder="Enter otp">
                                         <span class="error" id="otpErrordemo" class="error"></span>
                                     </div>
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-8" >
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4" >
                                         <button type="button"  id="verifyPhoneNumberBtn" class="btn btn-primary active">Verify Phone Number</button>
                                     </div>
                                 </div>
@@ -477,31 +484,28 @@ padding: 5px;
                             
                             </div>
                             <div class="BookingSecondPage_stickyBottom__G_tzG tpm row showdiv">
-                                <div class="text-white tpm col-lg-8 col-md-12 col-12 p-2">
+                                <div class="text-white tpm col-lg-12 col-md-12 col-12 p-2">
                                     By Confirm, you agree to receive calls and WhatsApp messages from Enatyam.
                                     No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
                                     your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>
-                                <div class="tpm col-lg-4 col-md-12 col-12 p-2">
+                                <div class="float-right">
                                     <button type="submit" class="btn btn-success changec d-none">Confirm Booking</button>
-                                </div>
-
+                                    </div>
                             </div>
                         </div>
                             </div>
                             <div class="BookingSecondPage_stickyBottom__G_tzG tpm row hidediv">
 
-                            <div class="text-white tpm col-lg-8 col-md-8 col-12 p-2">
-                                    By Confirm, you agree to receive calls and WhatsApp messages from Enatyam.
-                                    No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
-                                    your time.We won't be crashing into your dreamland adventures with our calls
+                                <div class="text-white tpm col-lg-12 col-md-12 col-12 p-2">
+                                        By Confirm, you agree to receive calls and WhatsApp messages from Enatyam.
+                                        No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
+                                        your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>
-                                <div class="tpm col-lg-4 col-md-4 col-12 p-2">
+                                <div class="float-right">
                                     <button type="submit" class="btn btn-success changec d-none" id="signupbtndemo" value="Confirm Booking">Confirm Booking</button>
                                 </div>
-                                </div>
-
-                     
+                            </div>
                        
                 </div>
             </div>

@@ -99,22 +99,10 @@ ul li{
         </div>
     </div>
     <div class="container" id="getform" style="display: none;">
-        <!-- <div class="row p-3 MusicSec1">
-            <div class="col-md-6">
-            <img src="<?=base_url(); ?>public/images/Dance/bollywood-dance.png" />
-            </div>
-            <div class="col-md-6">
-            <h3 class="text-center">Enatyam Studio</h3>
-            <h6 class="text-center mt-5"></h6>
-            </div>
-        </div> -->
-
-        
+      
 
         <div class="row p-3 ">
-    <!-- <div class="col-md-6 col-12">
-        <img id="image" src="" class="studioImg">
-    </div> -->
+
     <div class="col-md-12 col-12 text-col mt-5" id="addressDetails">
         <!-- Address details will be appended here -->
     </div>

@@ -2079,7 +2079,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <div class="form-group m-2">
                                 <input type="password" name="password" id="password" class="form-control" aria-required="true" placeholder="Password">
                                 <span id="passwordError" class="error"></span>
-                                <small class="smallnote">Note : Password must contain at least one uppercase letter, one lowercase letter, one number,  one symbol ,and be at least 8 characters long</small>
+                                <small class="smallnotedemo">(8 characters -1 uppercase, 1 lowercase, 1 numeric, 1 special character)</small>
 
                             </div>
                             
@@ -2090,7 +2090,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             </div>
 
                             <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
-                            <p>Are you a member?<a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
+                            <p>Are you a member ? <a class="Login" href="javascript:void(0);" onclick="showLoginModal()" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
 
                             <!-- <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a> -->
 
@@ -2224,9 +2224,9 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                 <input type="password" name="password" id="password" class="form-control" aria-required="true" placeholder="Password">
                                 <span id="passwordError1" style="color: red;"></span>
                             </div>
-                            <div class="forgetmenot login-remember float-center">
+                            <div class="forgetmenot login-remember float-center ">
 
-                                <a class="lost-pass-link" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password?</a>
+                                <a class="lost-pass-link m-2" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password ?</a>
                             </div>
                     </div>
 
@@ -2234,7 +2234,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                     <!-- <button class="btn btn-light mt-3 submitButton" value="Login" id="submitButton" type="submit">Login</button> -->
 
-                    <p>Not a member yet?
+                    <p>Not a member yet ?
                         <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
                     </p>
                     </form>

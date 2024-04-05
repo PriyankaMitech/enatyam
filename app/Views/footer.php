@@ -1894,7 +1894,15 @@ $(document).ready(function() {
 
 <script>
 $(document).ready(function() {
-    $('#toggleForm').click(function() {
+    $('#toggleForm').click(getAddress); // Call the function when the button is clicked
+
+    // Bind an event handler to the form's submit event
+    $('#offlineStudioform').submit(function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        getAddress(); // Call the getAddress function
+    });
+
+    function getAddress() {
         var pincode = $('#pincodeAdress').val();
         if (pincode.length != 6 || isNaN(pincode)) {
             $('#pincodeError').show();
@@ -1956,8 +1964,10 @@ $(document).ready(function() {
                 }
             });
         }
-    });
+    }
 });
+
+
 
 
 
@@ -3041,7 +3051,7 @@ function showModal(name, designation, img, qualifications, certifications, exper
 
             $.ajax({
                 type: 'POST',
-                url: '<?= base_url(); ?>/chechk_mobile_no_id',
+                url: '<?= base_url(); ?>chechk_mobile_no_id',
                 data: {
                     mobile_no: mobile_no
                 },
@@ -3049,6 +3059,7 @@ function showModal(name, designation, img, qualifications, certifications, exper
                     if (response == 'false') {
                         $('#mobile_noError').text('');
                         $('.submitButton').prop('disabled', false);
+                        
 
                     } else if (response == 'true') {
                         $('#mobile_noError').text('This mobile number is already available.');
@@ -3627,10 +3638,14 @@ function hideLoader() {
                     if (response === 'false') {
                         $('#demoMobileNoError').text('');
                         $('.submitButton').prop('disabled', false);
+                        $('#verifyPhoneNumberBtn').prop('disabled', false);
+
 
                     } else if (response === 'true') {
                         $('#demoMobileNoError').text('This mobile number is already available.');
                         $('.submitButton').prop('disabled', true);
+                        $('#verifyPhoneNumberBtn').prop('disabled', true);
+
                     }
                 }
             });
