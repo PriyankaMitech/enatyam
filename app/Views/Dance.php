@@ -285,15 +285,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -711,15 +711,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -917,7 +917,7 @@
                 <div class="tab-pane fade" id="pills-Odissi" role="tabpanel" aria-labelledby="pills-Odissi-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/odissi.png" class="danceimg">
+                            <img src="public/images/Dance/odissi.webp" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Odissi</h3>
@@ -1051,7 +1051,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Odissi -->
                                     <div class="folkImg">
-                                    <img src="public/images/Dance/odissi-3.png" class="danceimg">
+                                    <img src="public/images/Dance/odissi-3.webp" class="danceimg">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -1079,7 +1079,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/odissi-4.png" class="danceimg danceimg5">
+                                        <img src="public/images/Dance/odissi-4.webp" class="danceimg danceimg5">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1113,15 +1113,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1254,7 +1254,7 @@
                 <div class="tab-pane fade" id="pills-Bollywood" role="tabpanel" aria-labelledby="pills-Bollywood-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/bollywood-dance.png" class="danceimg">
+                            <img src="public/images/Dance/bollywood-dance.webp" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bollywood</h3>
@@ -1387,7 +1387,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Bollywood -->
                                     <div class="folkImg">
-                                        <img src="public/images/Dance/bollywood-21.png" class="danceimg">
+                                        <img src="public/images/Dance/bollywood-21.webp" class="danceimg">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -1415,7 +1415,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/bollywood-3.png" class="danceimg danceimg5">
+                                        <img src="public/images/Dance/bollywood-3.webp" class="danceimg danceimg5">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1448,15 +1448,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1570,7 +1570,7 @@
                 <div class="tab-pane fade" id="pills-Western" role="tabpanel" aria-labelledby="pills-Western-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/western-dance.png" class="danceimg">
+                            <img src="public/images/Dance/western-dance.webp" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Western</h3>
@@ -1705,7 +1705,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Western -->
                                     <div class="folkImg">
-                                        <img src="public/images/Dance/western-3.png" class="danceimg">
+                                        <img src="public/images/Dance/western-3.webp" class="danceimg">
                                     </div>   
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -1731,7 +1731,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/western-dance-2.png" class="danceimg danceimg5">
+                                        <img src="public/images/Dance/western-dance-2.webp" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -1791,15 +1791,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2167,15 +2167,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2295,7 +2295,7 @@
                 <div class="tab-pane fade" id="pills-Bhangra" role="tabpanel" aria-labelledby="pills-Bhangra-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/bhangra.png" class="danceimg">
+                            <img src="public/images/Dance/bhangra.webp" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bhangra</h3>
@@ -2402,7 +2402,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Bhangra -->
-                                    <img src="public/images/Dance/bhangra-2.png" class="danceimg">
+                                    <img src="public/images/Dance/bhangra-2.webp" class="danceimg">
                                 </div>
                             </div>
                         </div>
@@ -2420,7 +2420,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/bhangra-2-1.png" class="danceimg danceimg5">
+                                        <img src="public/images/Dance/bhangra-2-1.webp" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2480,15 +2480,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2658,7 +2658,7 @@
                 <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/folk-dance.png" class="danceimg">
+                            <img src="public/images/Dance/folk-dance.webp" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Folk</h3>
@@ -2792,7 +2792,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Folk -->
                                     <div class="folkImg">
-                                    <img src="public/images/Dance/folk-dance-2.png" class="danceimg">
+                                    <img src="public/images/Dance/folk-dance-2.webp" class="danceimg">
                                     </div>
                                 </div>
 
@@ -2821,7 +2821,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/folk-dance.png" class="danceimg danceimg5">
+                                        <img src="public/images/Dance/folk-dance.webp" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2881,15 +2881,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -3081,7 +3081,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/1h.png" class="haimg">
+                                        <img src="public/images/happyfaces/1h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3096,7 +3096,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/2h.png" class="haimg">
+                                        <img src="public/images/happyfaces/2h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3111,7 +3111,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/3h.png" class="haimg">
+                                        <img src="public/images/happyfaces/3h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3127,7 +3127,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/4h.png" class="haimg">
+                                        <img src="public/images/happyfaces/4h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3146,7 +3146,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/6h.png" class="haimg">
+                                        <img src="public/images/happyfaces/6h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3165,7 +3165,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/7h.png" class="haimg">
+                                        <img src="public/images/happyfaces/7h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3184,7 +3184,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/8h.png" class="haimg">
+                                        <img src="public/images/happyfaces/8h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3203,7 +3203,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/10h.png" class="haimg">
+                                        <img src="public/images/happyfaces/10h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3222,7 +3222,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/11h.png" class="haimg">
+                                        <img src="public/images/happyfaces/11h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3241,7 +3241,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/12h.png" class="haimg">
+                                        <img src="public/images/happyfaces/12h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3260,7 +3260,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/14h.png" class="haimg">
+                                        <img src="public/images/happyfaces/14h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3279,7 +3279,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/15h.png" class="haimg">
+                                        <img src="public/images/happyfaces/15h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>

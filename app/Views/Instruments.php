@@ -4503,24 +4503,17 @@
 
 
 
-<section class="testimonials mft instumentestimonials " id="testimonials">
+<section class="testimonials dancet ft" id="testimonials">
     <div class="container-fluid">
-        <!-- <div class="row">
-            <span class="text-center testimonialsdiv"><button type="button" class="btn step mkathak">Testimonials</button></span>
-        </div> -->
-
-        
-        <div class="month-row">
-            <div class="row">
+        <div class="row">
             <div class="col-lg-12 col-12 text-center testimonialsdiv">
-                <h3>Testimonials
+                <h3 class="title_4 ">Testimonials
                 </h3>
                 <span class="line"></span>
-
             </div>
-                <!-- Main Carousel -->
-                <div class="col-lg-12 col-md-12 col-12 testimonialsp">
-                    <div id="combinedCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Main Carousel -->
+            <div class="col-lg-12 col-md-12 col-12 testimonialsp">
+                <div id="combinedCarousel" class="carousel slide" data-ride="carousel"> 
                         <div class="carousel-inner">
                             <div class="carousel-item motd active">
                                 <div class="row">
@@ -4533,7 +4526,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/1h.png" class="haimg">
+                                        <img src="public/images/happyfaces/1h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4548,7 +4541,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/2h.png" class="haimg">
+                                        <img src="public/images/happyfaces/2h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4563,7 +4556,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/3h.png" class="haimg">
+                                        <img src="public/images/happyfaces/3h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4579,7 +4572,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/4h.png" class="haimg">
+                                        <img src="public/images/happyfaces/4h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4598,7 +4591,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/6h.png" class="haimg">
+                                        <img src="public/images/happyfaces/6h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4617,7 +4610,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/7h.png" class="haimg">
+                                        <img src="public/images/happyfaces/7h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4636,7 +4629,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/8h.png" class="haimg">
+                                        <img src="public/images/happyfaces/8h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4655,7 +4648,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/10h.png" class="haimg">
+                                        <img src="public/images/happyfaces/10h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4674,7 +4667,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/11h.png" class="haimg">
+                                        <img src="public/images/happyfaces/11h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4693,7 +4686,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/12h.png" class="haimg">
+                                        <img src="public/images/happyfaces/12h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4712,7 +4705,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/14h.png" class="haimg">
+                                        <img src="public/images/happyfaces/14h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4731,7 +4724,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/15h.png" class="haimg">
+                                        <img src="public/images/happyfaces/15h.webp" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -4746,13 +4739,11 @@
                             <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>
 

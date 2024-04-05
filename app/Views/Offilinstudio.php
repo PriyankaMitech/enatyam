@@ -91,7 +91,7 @@ ul li{
     <div class="container" id="joinForm" style="display: none;">
         <div class="row noStudioRow">
             
-            <h4 class="text-center">We're sorry, but our studio services are not available in your area at the moment. Stay
+            <h4 class="text-center">We're sorry, our studio services are not available in your area at the moment. Stay
                                 tuned for updates! We'll keep you posted once we expand our services to your
 
                                 location. Thank you for your interest and patience!

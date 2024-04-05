@@ -19,9 +19,9 @@
 .yogapagebtn .yellowb .heading {
   padding-top: 0% !important;
 }
-.MusicSec {
+/* .MusicSec {
   padding: 10px;
-}
+} */
 .musict .carousel-control-next,
 .musict .carousel-control-prev {
   top: -86px !important;
@@ -419,9 +419,32 @@
 .btn-primary.active:focus {
   box-shadow: 0 0 0 0.25rem rgb(233 23 91) !important;
 }
+.faq-sectionforhome {
+  padding: 0px 10px 42px 10px !important;
+}
+.dancefaq {
+  padding: 26px 10px 44px 10px !important;
+}
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  .faq-sectionforhome {
+    margin-bottom: 50px;
+    padding: 0px 10px 42px 10px !important;
+  }
+  .faq-sectionforhome h3 {
+    margin-top: 0px;
+  }
+  .dancefaq {
+    margin-bottom: 50px;
+    padding: 0px 10px 42px 10px !important;
+  }
+  .dancefaq h3 {
+    margin-top: 0px;
+  }
+  .pricingforhome {
+    padding: 0px 10px 10px 10px !important;
+  }
   .learningsec .list-icon i {
     font-size: 13px;
   }
