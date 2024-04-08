@@ -208,11 +208,11 @@ padding: 5px;
                                             </div>
                                             <div class="col-lg-8 col-md-6 col-8 userdata">
                                                 <p class="text-white ">
-                                                    As a father, seeing my kids enjoy Enatyam's
-                                                    Bollywood dance classes is heartwarming. The
-                                                    instructors create an environment where learning
-                                                    feels like play. It's like they've turned our living
-                                                    room into a dance party.
+                                                Yoga is a daily dose of positivity for us . The
+                                                instructors radiate good vibes, and the classes have
+                                                become our source of calmness in the midst of a
+                                                daily hustle and bustle .A fantastic platform for
+                                                holistic well-being
                                                 </p>
                                             </div>
                                             <div class="col-lg-8 col-md-6 col-8 userdata">
@@ -484,19 +484,18 @@ padding: 5px;
 
                             <span class="col-lg-12 col-md-12 col-12 text-white fmname"> Demo Timing -  We'll reach out soon to find the best time for you.</span>
                             
-                            </div>
-                            <div class="BookingSecondPage_stickyBottom__G_tzG tpm row showdiv">
-                                <div class="text-white tpm col-lg-12 col-md-12 col-12 p-2">
-                                    By Confirm, you agree to receive calls and WhatsApp messages from Enatyam.
-                                    No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
-                                    your time.We won't be crashing into your dreamland adventures with our calls
-                                </div>
-                                <div class="float-right">
-                                    <button type="submit" class="btn btn-success changec d-none">Confirm Booking</button>
+                          
+                                <div class="BookingSecondPage_stickyBottom__G_tzG tpm row showdiv">
+                                    <div class="text-white tpm col-lg-12 col-md-12 col-12 p-2">
+                                        By Confirm, you agree to receive calls and WhatsApp messages from Enatyam.
+                                        No time zone worries—we'll handle it! Calls or WhatsApp between 8 AM to 8 PM
+                                        your time.We won't be crashing into your dreamland adventures with our calls
                                     </div>
-                            </div>
-                        </div>
-                            </div>
+                                    <div class="float-right">
+                                        <button type="submit" class="btn btn-success changec d-none">Confirm Booking</button>
+                                    </div>
+                                </div>
+                       
                             <div class="BookingSecondPage_stickyBottom__G_tzG tpm row hidediv">
 
                                 <div class="text-white tpm col-lg-12 col-md-12 col-12 p-2">
@@ -508,6 +507,8 @@ padding: 5px;
                                     <button type="submit" class="btn btn-success changec d-none" id="signupbtndemo" value="Confirm Booking">Confirm Booking</button>
                                 </div>
                             </div>
+                                                                                </div>
+                                                                                </div>
                        
                 </div>
             </div>

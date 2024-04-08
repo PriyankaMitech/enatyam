@@ -33,12 +33,12 @@
  
         <div class="row">
             <h3 class="text-center">If teaching and arts are your passions: join us now ! </h3>
-            <div class="col-md-6 col-12">
+            <div class="col-md-6 col-12 pfc">
                 <img src="public/images/guitar.webp" class="danceimg1 home">
             <!-- public/images/Home/4.webp -->
             </div>
 
-            <div class="col-md-6 col-12 text-col mt-5">
+            <div class="col-md-6 col-12 text-col mt-5 pfc">
                 <h5 class="heading">Leave everything else to us if you can tick right</h5>
              
                     <ul class="list-unstyled">

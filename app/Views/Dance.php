@@ -567,7 +567,7 @@
                     </section>
                     <section class="learningsec yellowb" id="learnbharatnatyam">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row ">
                             <div  class="col-lg-12 col-md-12 col-12">
                                  <h3 class="">What you will learn</h3>
                                  <p>
@@ -991,7 +991,7 @@
                     </section>
                     <section class="learningsec yellowb" id="learnodissi">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row">
                             <div  class="col-lg-12 col-md-12 col-12">
                                  <h3 class="">What you will learn</h3>
                                  <p>
@@ -1328,7 +1328,7 @@
                     </section>
                     <section class="learningsec yellowb" id="learnBollywood">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row">
                             <div  class="col-lg-12 col-md-12 col-12">
                                  <h3 class="">What you will learn</h3>
                                  <p>
@@ -2074,7 +2074,7 @@
 
                     <section class="learningsec yellowb" id="learnSemiclassical">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="mt-4">What you will learn</h3>
                                     <p>
@@ -2369,7 +2369,7 @@
 
                     <section class="learningsec yellowb" id="learnBhangra">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="">What you will learn</h3>
                                     <p>
@@ -2733,7 +2733,7 @@
 
                     <section class="learningsec yellowb" id="learnFolk">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row">
                                  <div  class="col-lg-12 col-md-12 col-12">
                                  <h3 class="">What you will learn</h3>
                                  <p>

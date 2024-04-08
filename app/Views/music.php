@@ -258,15 +258,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -663,15 +663,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1057,15 +1057,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1458,15 +1458,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1862,15 +1862,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
