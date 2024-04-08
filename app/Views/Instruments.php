@@ -37,7 +37,7 @@
     </div>
 </section>
 
-<section class="btnSection btnSectionI MusicSec">
+<section class="btnSection btnSectionI MusicSec instumentpage">
     <div class="container dancepagec">
         <div class="typesOfYoga-tab">
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -331,15 +331,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -639,7 +639,7 @@
 
                     <section class="learningsec yellowb" id="learninstruments1">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
 
@@ -799,15 +799,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1109,7 +1109,7 @@
 
                     <section class="learningsec yellowb" id="learninstruments2">
                     <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
 
@@ -1267,15 +1267,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -1554,7 +1554,7 @@
                     </section>
                     <section class="learningsec yellowb" id="learninstruments3">
                     <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -1710,15 +1710,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -1992,7 +1992,7 @@
 
                     <section class="learningsec yellowb" id="learninstruments4">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -2148,15 +2148,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2421,7 +2421,7 @@
 
                     <section class="learningsec yellowb" id="learninstruments5">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -2577,15 +2577,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2850,7 +2850,7 @@
 
                     <section class="learningsec yellowb" id="learninstruments6">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -3006,15 +3006,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -3278,7 +3278,7 @@
 
                     <section class="learningsec yellowb" id="learninstruments7">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -3434,15 +3434,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -3707,7 +3707,7 @@
 
                     <section class="learningsec yellowb" id="learninstruments8">
                          <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -3863,15 +3863,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -4135,7 +4135,7 @@
                     </section>
                     <section class="learningsec yellowb" id="learninstruments9">
                         <div class="container-fluid instruContainer">
-                            <div class="row mt-5 pddyd">
+                            <div class="row pddyd">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="heading"> What you will learn</h3>
                                     <ul class="list-group">
@@ -4293,15 +4293,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.png">
+                                                    <img src="public/images/Dance/icons8.webp">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.png">
+                                                    <img src="public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
 
