@@ -9,7 +9,7 @@
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
                     <video class="video-dance bannerv" autoplay loop muted  >  
-                        <source src="<?=base_url(); ?>public/images/Dance/DanceVidio.mp4" type="video/mp4">
+                        <source src="<?=base_url(); ?>public/images/Dance/Dance-page-video-2.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>

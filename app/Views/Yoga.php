@@ -8,7 +8,7 @@
                 <div class="bannervs">
                     <video class="video-dance bannerv" autoplay loop muted>
 >
-                        <source src="<?=base_url(); ?>public/images/Yoga/videoforYogaPageheader.mp4" type="video/mp4">
+                        <source src="<?=base_url(); ?>public/images/Yoga/Yoga-Page-Video.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>
