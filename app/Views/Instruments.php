@@ -24,7 +24,7 @@
                     <video class="video-dance bannerv" autoplay loop muted >                    
                         <!-- <video class="video-dance bannerv" autoplay loop muted > -->
 
-                        <source src="<?=base_url(); ?>public/images/instrument/instrument-video-1.mp4" type="video/mp4">
+                        <source src="<?=base_url(); ?>public/images/instrument/singing-and-Intruments-video.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>

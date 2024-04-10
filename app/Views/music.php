@@ -10,7 +10,7 @@
                 <div class="bannervs">
                     <video class="video-dance bannerv" autoplay loop muted                   
 >
-                        <source src="<?=base_url(); ?>public/images/Music/music.mp4" type="video/mp4">
+                        <source src="<?=base_url(); ?>public/images/instrument/singing-and-Intruments-video.mp4" type="video/mp4">
                     </video>                
                 </div>
             </div>
