@@ -19,8 +19,8 @@ class BillingC extends BaseController
     }
     public function BillingInformation()
     {
-        if (isset($_SESSION)) {
-        $model = new AdminModel();
+        if (isset($_SESSION['sessiondata'])) {
+            $model = new AdminModel();
 
         $BillingM = new BillingM();
         $session = session();
@@ -102,10 +102,8 @@ class BillingC extends BaseController
         $session = session();
 
         $id = $this->request->getGet('id');
-        if (isset($_SESSION)) {
+        if (isset($_SESSION['sessiondata'])) {
 
-            return redirect()->to(base_url());
-        } else {
             $billingModel = new BillingM(); // Load the model
             $matchingRecords = $billingModel->getSessionPricingData($id);
             $PricingId = '';
@@ -121,6 +119,9 @@ class BillingC extends BaseController
             $data['matchingRecords'] = $matchingRecords;
 
             return view('Checkout', $data);
+        } else {
+            return redirect()->to(base_url());
+
         }
  
     }

@@ -401,17 +401,14 @@ body {
 
                                     <li class="list-inline-item thumbnailListItem">  <?php
                                         if (!empty($katakc)) { 
-                                            foreach($katakc as $datas){
-                                                if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
+                                            $average_rating = number_format($katakc['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                            echo $average_rating; ?>
+                                            <?php 
                                         } else { 
                                             echo "4.99"; // Default value if the data is not available
                                         } 
+                                    }
                                         ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                     
@@ -442,20 +439,15 @@ body {
                                     </li>
                                     <li class="list-inline-item thumbnailListItem"> <?php
                                         if (!empty($bharatanatyam)) { 
-                                            foreach($bharatanatyam as $datas){
-                                                if($datas->total_ratings != ''){
-                                            
-                                                    echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                    echo "4.99";
-                                                }
-                                             
-                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li>
+                                            $average_rating = number_format($bharatanatyam['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.9"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li>
 
                                     
                             </div>
@@ -483,18 +475,15 @@ body {
                                             </li>                        
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($bollywood)) { 
-                                            foreach($bollywood as $datas){
-                                                if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($bollywood['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.8"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                             </div>
                         </div>
@@ -521,18 +510,15 @@ body {
                                             </li>                                   
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($westerndnce)) { 
-                                            foreach($westerndnce as $datas){
-                                            if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($westerndnce['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.78"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                     
                             </div>
@@ -560,18 +546,15 @@ body {
                                     </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($hindustanivocal)) { 
-                                            foreach($hindustanivocal as $datas){
-                                            if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($hindustanivocal['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.9"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                    
                             </div>
@@ -598,24 +581,21 @@ body {
                                     </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($carnaticvocal)) { 
-                                            foreach($carnaticvocal as $datas){
-                                            if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($carnaticvocal['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.9"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                   
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="cocolor" style="text-align: center;">Bollywood Singing </h5>
+                             <h5 class="cocolor" style="text-align: center;">Western Singing </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>music" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -637,18 +617,15 @@ body {
                                         </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($bollywoodsinging)) { 
-                                            foreach($bollywoodsinging as $datas){
-                                            if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($bollywoodsinging['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.8"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                             
                             </div>
@@ -675,18 +652,15 @@ body {
                                             </li>                                 
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($playbacksinging)) { 
-                                            foreach($playbacksinging as $datas){
-                                            if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($playbacksinging['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.65"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                     
                             </div>
@@ -713,18 +687,15 @@ body {
                                             </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($yoga)) { 
-                                            foreach($yoga as $datas){
-                                            if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($yoga['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.9"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                             </div>
                         </div>
@@ -750,18 +721,15 @@ body {
                                             </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($meditation)) { 
-                                            foreach($meditation as $datas){
-                                            if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($meditation['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.9"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                  
                             </div>
@@ -789,18 +757,15 @@ body {
                                             </li>
                                     <li class="list-inline-item thumbnailListItem"> <?php
                                         if (!empty($nuitritionalguidance)) { 
-                                            foreach($nuitritionalguidance as $datas){
-                                            if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($nuitritionalguidance['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.9"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                            
                             </div>
@@ -827,18 +792,15 @@ body {
                                             </li>
                                     <li class="list-inline-item thumbnailListItem"><?php
                                         if (!empty($musicalinstruments)) { 
-                                            foreach($musicalinstruments as $datas){
-                                            if($datas->total_ratings != ''){
-                                            
-                                            echo $datas->total_ratings; // Echo the total_ratings value
-
-                                                }else{
-                                                echo "4.99";
-                                                }                                            }
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
+                                            $average_rating = number_format($musicalinstruments['average_rating'], 2);
+                                            if($average_rating != 0.00){
+                                                echo $average_rating; ?>
+                                                <?php 
+                                            } else { 
+                                                echo "4.8"; // Default value if the data is not available
+                                            } 
+                                        }
+                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
 
                                
                             </div>
