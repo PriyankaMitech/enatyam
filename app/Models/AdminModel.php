@@ -1736,137 +1736,299 @@ return $query;
 
  public function getstarcount()
  {
-     $allData = $this->db->table('feedback')
-         ->selectSum('rating', 'total_ratings')
-         ->where('course', '1')
-         ->get()
-         ->getResult(); // Change getRow() to getResult()
-         
-     return $allData;
+     $totalRatings = $this->db->table('feedback')
+            ->selectSum('rating', 'total_ratings')
+            ->where('course', '1')
+            ->get()
+            ->getRowArray();
+
+        // Total number of feedbacks for the faculty
+        $feedbackCount = $this->db->table('feedback')
+        ->where('course', '1')
+        ->countAllResults();
+
+        // Calculate the average rating
+        $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+        return [
+            'total_ratings' => $totalRatings['total_ratings'],
+            'feedback_count' => $feedbackCount,
+            'average_rating' => $averageRating,
+        ];
  }
  public function getstarcount1()
  {
-     $totalRatings = $this->db->table('feedback')
-         ->selectSum('rating', 'total_ratings')
-         ->where('sub_course', '3')
-         ->get()
-         ->getResult(); // Change getRow() to getResult()
+   
 
-         return $totalRatings;
+
+         $totalRatings = $this->db->table('feedback')
+            ->selectSum('rating', 'total_ratings')
+            ->where('sub_course', '3')
+            ->get()
+            ->getRowArray();
+
+        // Total number of feedbacks for the faculty
+        $feedbackCount = $this->db->table('feedback')
+        ->where('sub_course', '3')
+        ->countAllResults();
+
+        // Calculate the average rating
+        $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+        return [
+            'total_ratings' => $totalRatings['total_ratings'],
+            'feedback_count' => $feedbackCount,
+            'average_rating' => $averageRating,
+        ];
 
  }
 
  public function getstarcount2()
  {
-     $totalRatings = $this->db->table('feedback')
+
+
+         $totalRatings = $this->db->table('feedback')
          ->selectSum('rating', 'total_ratings')
          ->where('sub_course', '5')
          ->get()
-         ->getResult(); // Change getRow() to getResult()
-         return $totalRatings;
+         ->getRowArray();
+
+     // Total number of feedbacks for the faculty
+     $feedbackCount = $this->db->table('feedback')
+     ->where('sub_course', '5')
+     ->countAllResults();
+
+     // Calculate the average rating
+     $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+     return [
+         'total_ratings' => $totalRatings['total_ratings'],
+         'feedback_count' => $feedbackCount,
+         'average_rating' => $averageRating,
+     ];
 
  }
 
  public function getstarcount3()
  {
-     $totalRatings = $this->db->table('feedback')
+         $totalRatings = $this->db->table('feedback')
          ->selectSum('rating', 'total_ratings')
          ->where('sub_course', '6')
          ->get()
-         ->getResult(); // Change getRow() to getResult()
-         return $totalRatings;
+         ->getRowArray();
+
+     // Total number of feedbacks for the faculty
+     $feedbackCount = $this->db->table('feedback')
+     ->where('sub_course', '6')
+     ->countAllResults();
+
+     // Calculate the average rating
+     $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+     return [
+         'total_ratings' => $totalRatings['total_ratings'],
+         'feedback_count' => $feedbackCount,
+         'average_rating' => $averageRating,
+     ];
+
 
  }
  
  public function getstarcount4()
  {
-     $totalRatings = $this->db->table('feedback')
+         $totalRatings = $this->db->table('feedback')
          ->selectSum('rating', 'total_ratings')
          ->where('sub_course', '7')
          ->get()
-         ->getResult();
+         ->getRowArray();
 
-         return $totalRatings;
+     // Total number of feedbacks for the faculty
+     $feedbackCount = $this->db->table('feedback')
+     ->where('sub_course', '7')
+     ->countAllResults();
+
+     // Calculate the average rating
+     $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+     return [
+         'total_ratings' => $totalRatings['total_ratings'],
+         'feedback_count' => $feedbackCount,
+         'average_rating' => $averageRating,
+     ];
 
  }
 
  public function getstarcount5()
  {
-     $totalRatings = $this->db->table('feedback')
+
+
+         $totalRatings = $this->db->table('feedback')
          ->selectSum('rating', 'total_ratings')
          ->where('sub_course', '8')
          ->get()
-         ->getResult();
+         ->getRowArray();
 
-         return $totalRatings;
+     // Total number of feedbacks for the faculty
+     $feedbackCount = $this->db->table('feedback')
+     ->where('sub_course', '8')
+     ->countAllResults();
+
+     // Calculate the average rating
+     $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+     return [
+         'total_ratings' => $totalRatings['total_ratings'],
+         'feedback_count' => $feedbackCount,
+         'average_rating' => $averageRating,
+     ];
 
  }
 
  public function getstarcount6()
  {
-     $totalRatings = $this->db->table('feedback')
+
+         $totalRatings = $this->db->table('feedback')
          ->selectSum('rating', 'total_ratings')
          ->where('course', '3')
          ->get()
-         ->getResult();
+         ->getRowArray();
 
-         return $totalRatings;
+     // Total number of feedbacks for the faculty
+     $feedbackCount = $this->db->table('feedback')
+     ->where('course', '3')
+     ->countAllResults();
+
+     // Calculate the average rating
+     $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+     return [
+         'total_ratings' => $totalRatings['total_ratings'],
+         'feedback_count' => $feedbackCount,
+         'average_rating' => $averageRating,
+     ];
 
  }
  public function getstarcount7()
  {
-     $totalRatings = $this->db->table('feedback')
-         ->selectSum('rating', 'total_ratings')
-         ->where('course', '3')
-         ->get()
-         ->getResult();
+    
+    $totalRatings = $this->db->table('feedback')
+    ->selectSum('rating', 'total_ratings')
+    ->where('course', '3')
+    ->get()
+    ->getRowArray();
 
-         return $totalRatings;
+    // Total number of feedbacks for the faculty
+    $feedbackCount = $this->db->table('feedback')
+    ->where('course', '3')
+    ->countAllResults();
+
+    // Calculate the average rating
+    $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+    return [
+        'total_ratings' => $totalRatings['total_ratings'],
+        'feedback_count' => $feedbackCount,
+        'average_rating' => $averageRating,
+    ];
 
  }
  public function getstarcount8()
  {
-     $totalRatings = $this->db->table('feedback')
+         $totalRatings = $this->db->table('feedback')
          ->selectSum('rating', 'total_ratings')
          ->where('course', '2')
          ->get()
-         ->getResult();
+         ->getRowArray();
 
-         return $totalRatings;
+     // Total number of feedbacks for the faculty
+     $feedbackCount = $this->db->table('feedback')
+     ->where('course', '2')
+     ->countAllResults();
+
+     // Calculate the average rating
+     $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+     return [
+         'total_ratings' => $totalRatings['total_ratings'],
+         'feedback_count' => $feedbackCount,
+         'average_rating' => $averageRating,
+     ];
 
  }
  public function getstarcount9()
  {
-     $totalRatings = $this->db->table('feedback')
+
+
+         $totalRatings = $this->db->table('feedback')
          ->selectSum('rating', 'total_ratings')
          ->where('sub_course', '17')
          ->get()
-         ->getResult();
+         ->getRowArray();
 
-         return $totalRatings;
+     // Total number of feedbacks for the faculty
+     $feedbackCount = $this->db->table('feedback')
+     ->where('sub_course', '17')
+     ->countAllResults();
+
+     // Calculate the average rating
+     $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+     return [
+         'total_ratings' => $totalRatings['total_ratings'],
+         'feedback_count' => $feedbackCount,
+         'average_rating' => $averageRating,
+     ];
 
  }
  public function getstarcount10()
  {
-     $totalRatings = $this->db->table('feedback')
+   
+
+
+         $totalRatings = $this->db->table('feedback')
          ->selectSum('rating', 'total_ratings')
          ->where('sub_course', '19')
          ->get()
-         ->getResult();
+         ->getRowArray();
 
-         return $totalRatings;
+     // Total number of feedbacks for the faculty
+     $feedbackCount = $this->db->table('feedback')
+     ->where('sub_course', '19')
+     ->countAllResults();
+
+     // Calculate the average rating
+     $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+     return [
+         'total_ratings' => $totalRatings['total_ratings'],
+         'feedback_count' => $feedbackCount,
+         'average_rating' => $averageRating,
+     ];
 
  }
 
  public function getstarcount11()
  {
-     $totalRatings = $this->db->table('feedback')
+    
+         $totalRatings = $this->db->table('feedback')
          ->selectSum('rating', 'total_ratings')
          ->where('course', '3')
          ->get()
-         ->getResult();
+         ->getRowArray();
 
-         return $totalRatings;
+     // Total number of feedbacks for the faculty
+     $feedbackCount = $this->db->table('feedback')
+     ->where('course', '3')
+     ->countAllResults();
+
+     // Calculate the average rating
+     $averageRating = $feedbackCount > 0 ? $totalRatings['total_ratings'] / $feedbackCount : 0;
+
+     return [
+         'total_ratings' => $totalRatings['total_ratings'],
+         'feedback_count' => $feedbackCount,
+         'average_rating' => $averageRating,
+     ];
 
  }
   public function getallCoupan_code()

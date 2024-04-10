@@ -54,7 +54,7 @@ class Home extends BaseController
         $data['nuitritionalguidancer'] = $model->getusercount10();
         $data['musicalinstrumentsr'] = $model->getusercount11();
 
-        // echo "<pre>";print_r($data['katakr']);exit();
+        // echo "<pre>";print_r($data['bharatanatyam']);exit();
 
 
         // echo $data['total_ratings'];exit();
