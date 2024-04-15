@@ -712,7 +712,7 @@ public function AssignTecherForDemo()
 
         $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
         $data['faculty_data'] = $model->getalldata('faculty', $wherecond);
-
+        // echo'<pre>';print_r($data['faculty_data']);die;
 
         return view('AdminSideBar/create_group', $data);
     }else{
@@ -1901,6 +1901,7 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
         $selectedgroupstudentnamesString = '';
 
         $selectedgroupstudentnameArray = $this->request->getVar('student_id');
+        // print_r($selectedgroupstudentnameArray);die;
         if (!empty($selectedgroupstudentnameArray)) {
             $selectedgroupstudentnamesString = implode(',', $selectedgroupstudentnameArray);
         }
@@ -2078,13 +2079,8 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
             session()->setFlashdata('success', 'Data updated successfully.');
         }
 
-
-
-
         return redirect()->to('create_group');
     }
-
-
 
     protected function checkAvailability($data)
     {
@@ -2295,18 +2291,11 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
     {
         $model = new AdminModel();
 
-
         $assignTeacherId = $this->request->getPost('facultyidg');
 
         $wherecond1 = [
-
             'id' => $assignTeacherId,
-
-
         ];
-
-
-
         $teacher_data = $model->getsinglerow('register', $wherecond1);
 
         // echo "<pre>";print_r($teacher_data);
@@ -2321,25 +2310,37 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
         $currentYear = date('Y');
         $currentMonth = date('m');
         $startDate = "{$currentYear}-{$currentMonth}-01 00:00:00";
-        $endDate = date('Y-m-t 23:59:59', strtotime($startDate));
+        // $endDate = date('Y-m-t 23:59:59', strtotime($startDate));
+
+        $currentYear = date('Y');
+        $nextYear =   $currentYear + 1;
+         // Extract year, month, and day from start_date
+         [$year, $month, $day] = explode('-', $startDate);
+        //  echo '<pre>';print_r($start_date);exit();
+      
+      // Create a common start and end date for the entire year
+      
+      $startDate = $currentYear .'-'.$month.'-'.$day ;
+    //   $endDate = $nextYear . '-'.$month.'-'.$day;
+      
+      // Validate and modify date format
+      $startDate = date('Y-m-d', strtotime($startDate));
+    //   $endDate = date('Y-m-d', strtotime($endDate));
+
+        // echo  $startDate;
+        // echo $endDate;
 
         // Prepare the WHERE condition for the query
         $wherecond = [
             'faculty_registerid' => $teacher_id,
             'start_date >= ' => $startDate,
-            'end_date <= ' => $endDate,
+            // 'end_date <= ' => $endDate,
         ];
 
-
         // Prepare the WHERE condition for the query
-
-
         // echo "<pre>";print_r($selectedDays);
 
         $shedule_data = $model->getalldataforstudent('schedule_list', $wherecond, $selectedDays);
-
-
-
 
         if (!empty($shedule_data)) {
             return json_encode($shedule_data);
@@ -2347,10 +2348,6 @@ $data['scheduleRecord'] = $model->jointwotables('schedule_list.*, register.full_
             return json_encode([]);
         }
     }
-
-
-
-
 
     public function check_group_name()
     {
