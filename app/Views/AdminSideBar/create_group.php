@@ -102,8 +102,8 @@
                     <input type="hidden" class="start_date form-control form-control-sm rounded-0" name="start_date" id="start_date"  >
 
                 </div>
-                              </div>
-                              <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
 
                 <div class="form-group mb-2">
                     <label for="end_date" class="control-label">End Date</label>
