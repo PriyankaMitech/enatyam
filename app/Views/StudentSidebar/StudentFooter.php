@@ -438,7 +438,7 @@
 
 
 <?php
-
+// echo "<pre>";print_r($counter_data);exit();
 
 if (!empty($counter_data)) {
     // Convert date and time strings to DateTime objects
@@ -461,6 +461,8 @@ const countdownDate = new Date("<?php echo $jsBookDateTime; ?>");
 const hours = document.querySelector(".hours").querySelector(".flip-card");
 const minutes = document.querySelector(".minutes").querySelector(".flip-card");
 const seconds = document.querySelector(".seconds").querySelector(".flip-card");
+
+
 
 function getTimeRemaining(endtime) {
   const total = Date.parse(endtime) - Date.parse(new Date());

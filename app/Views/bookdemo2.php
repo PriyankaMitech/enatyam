@@ -44,17 +44,20 @@
                     <div class="card-body">
                         <div class="container-fluid">
                         <?php if(!empty($demo_data)){?>
-                                <?php if($demo_data->meetlink != ''){ ?>
+                            <?php if ($demo_data->meetlink != '') { ?>
                                     <?php
-                                        $bookDateTime = strtotime($demo_data->Book_Date . ' ' . $demo_data->Book_Date_Time); // Convert date and time to timestamp
-                                        $formattedDateTime = date('d M Y', $bookDateTime); // Format timestamp as '26 Mar 2024'
-                                        $formattedTime = date('ga', $bookDateTime); // Format time as '1pm'
-                                        ?>
-                                        <p>Your demo session is confirmed for <?= $formattedTime ?> , <?= $formattedDateTime ?>. No need to book again. We'll keep you <br>posted!</p>
-                                <?php }else{ ?>
-                                    <p>Thank you for booking the demo! We'll reach out to arrange mutual time alots and keep you updated. See you soon!</p>
+                                    $bookDateTime = strtotime($demo_data->Book_Date . ' ' . $demo_data->Book_Date_Time); // Convert date and time to timestamp
+                                    $formattedDateTime = date('d M Y', $bookDateTime); // Format timestamp as '26 Mar 2024'
+                                    $formattedTime = date('ga', $bookDateTime); // Format time as '1pm'
+                                    ?>
+                                    <?php if ($bookDateTime < strtotime('today')) { ?>
+                                        <p>Your demo session was scheduled for <?= $formattedTime ?>, <?= $formattedDateTime ?>. Unfortunately, you've missed it.</p>
+                                    <?php } else { ?>
+                                        <p>Your demo session is confirmed for <?= $formattedTime ?>, <?= $formattedDateTime ?>. No need to book again. We'll keep you posted!</p>
                                     <?php } ?>
-
+                                <?php } else { ?>
+                                    <p>Thank you for booking the demo! We'll reach out to arrange mutual time slots and keep you updated. See you soon!</p>
+                                <?php } ?>
 
                             <?php }else{  ?>
                             <form method="post" action="set_data_demo_booking">

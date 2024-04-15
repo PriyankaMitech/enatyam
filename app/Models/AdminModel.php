@@ -2035,7 +2035,7 @@ return $query;
 {
     $current_date = date('Y-m-d');
 
-    $coupan_codes = $this->db->table('Coupan_code')
+    $coupan_codes = $this->db->table('coupan_code')
                              ->where('expiry_date >=', $current_date)
                              ->where('Stetus', 'Y')
                              ->get()
