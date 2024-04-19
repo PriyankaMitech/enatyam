@@ -131,6 +131,7 @@
 }
 
 #playlist button {
+    background-color: #00ffff00;
 
   aspect-ratio: var(--video-aspect-ratio);
   width: var(--playlist-button-width);
@@ -138,11 +139,11 @@
   color: #000;
   text-transform: var(--playlist-button-text-transform);
   overflow: hidden;
-   border: solid 2px var(--playlist-button-border-color);
   filter: brightness(0.7);
   /* height: 100%; */
   width:100%;
-  height: 208px;  background-size: cover;
+  height: 208px;  
+  background-size: cover;
   background-position: center;
   /* padding-left: 10px;
   padding-right:10px; */
@@ -166,8 +167,8 @@
 
 #playlist button:focus, #playlist button.active {
    filter: brightness(1);
-    border:solid 2px var(--playlist-button-border-active-color);
-  cursor:none !important;
+    /* border:solid 2px var(--playlist-button-border-active-color);
+  cursor:none !important; */
 }
 
 #playlist button:active {
@@ -837,7 +838,9 @@ body {
                     </p>
 
                     <div class="text-center mt-4">
-                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance">Explore More</a>
+                        <!-- <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Dance">Explore More</a> -->
+                        <a type="button" class="btn btndemoh" href="<?= base_url(); ?>demobooking">Book A Free Trial</a>
+
                     </div>
                 </div>
             </div>
@@ -866,7 +869,9 @@ body {
                         </p>
 
                         <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music">Explore More</a>
+                            <!-- <a type="button" class="btn btndemoh" href="<?= base_url(); ?>music">Explore More</a> -->
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>demobooking">Book A Free Trial</a>
+
                         </div>
                     </div>
 
@@ -904,7 +909,9 @@ body {
                         </p>
 
                         <div class="text-center mt-4">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga">Explore More</a>
+                            <!-- <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Yoga">Explore More</a> -->
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>demobooking">Book A Free Trial</a>
+
                         </div>
                     </div>
                 </div>
@@ -933,7 +940,9 @@ body {
                         </p>
    
                         <div class="text-center mt-4 ">
-                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments">Explore More</a>
+                            <!-- <a type="button" class="btn btndemoh" href="<?= base_url(); ?>Instruments">Explore More</a> -->
+                            <a type="button" class="btn btndemoh" href="<?= base_url(); ?>demobooking">Book A Free Trial</a>
+
                         </div>
                     </div>
 
@@ -1027,6 +1036,10 @@ body {
             </div>
             <div class="col-lg-1">
             </div>
+            <div class="col-lg-12 col-md-12 col-12 connectwusbtn">
+                <a type="button" class="btn btndemoh connectwus " href="<?= base_url(); ?>Contactus">Connect With Us</a>
+            </div>
+
         </div>
 
     </div>
@@ -1339,7 +1352,7 @@ body {
                                 <h4 class="hedingfsf">Anika S</h4>
                                 <p>Hindustani Dance</p>
                                 <p>MA in Bharatnatyam</p>
- <p><b>Read more...</b></p>                                    
+                        <p><b>Read more...</b></p>                                    
                              </div>
                         </div>
                     </div> -->
@@ -1440,6 +1453,9 @@ body {
                     </div> -->
                 </div>
             </div>
+            <div class="col-lg-12 col-md-12 col-12 connectwusbtnb">
+                <a type="button" class="btn btndemoh connectwus " href="<?= base_url(); ?>Career">Become A Teacher</a>
+            </div>
         </div>
     </div>
 </section>
@@ -1449,7 +1465,7 @@ body {
         <div class="row m-0">
             <div class="heading_new text-center">
                 <b>
-                    <h3 class="title_4 "> How To Get Started? <span class="line"></span></h3>
+                    <h3 class="title_4 "> How To Get Started ? <span class="line"></span></h3>
                 </b>
             </div>
         </div>
@@ -1548,6 +1564,9 @@ body {
             </div>
 
             <div class="col-lg-1"></div>
+            <div class="col-lg-12 col-md-12 col-12 connectwusbtns">
+                <a type="button" class="btn btndemoh connectwus " data-bs-toggle="modal" data-bs-target="#registerformpopup">Start Now</a>
+            </div>
 
         </div>
 
@@ -1567,28 +1586,28 @@ body {
         </h3> 
         <aside class="row" id="video-player">
             <div class="col-lg-6 col-md-12 col-sm-12 p-2">
-                <iframe src="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted></iframe>
+                <iframe src="https://www.youtube.com/embed/LxDF2EzI-8Y?si=3Wn_7WSJj0wgu-B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted></iframe>
             </div>
             <div id="playlist" class="col-lg-6 col-md-12 col-sm-12">
                 <div class="row">
-                    <div class="col-6">
-                        <button class="lazyload active" data-iframe="https://www.youtube.com/embed/XLAu2-6zcxQ?controls=1&rel=0&playsinline=0&modestbranding=0&enablejsapi=1&origin=https%3A%2F%2Finfobeckon.com&widgetid=7" data-caption="Chapal Hart ♩ American Pride">
-                            <img src="<?php echo base_url('public/images/play.jpg'); ?>" alt="Thumbnail Image" width="100%">
+                <div class="col-6">
+                        <button class="lazyload active" data-iframe="https://www.youtube.com/embed/LxDF2EzI-8Y?si=3Wn_7WSJj0wgu-B" data-caption="Jon Batiste ♩ FREEDOM">
+                            <img src="https://img.youtube.com/vi/LxDF2EzI-8Y/maxresdefault.jpg" alt="Thumbnail Image" width="100%">
                         </button>
                     </div>
                     <div class="col-6">
                         <button class="lazyload" data-iframe="https://www.youtube.com/embed/NzijGFASF-g?si=X06ri0G3t8iOEpM8" data-caption="Jon Batiste ♩ FREEDOM">
-                            <img src="<?php echo base_url('public/images/play1.jpg'); ?>" alt="Thumbnail Image" width="100%">
+                            <img src="https://img.youtube.com/vi/NzijGFASF-g/maxresdefault.jpg" alt="Thumbnail Image" width="100%">
                         </button>
                     </div>
                     <div class="col-6">
-                        <button class="lazyload" data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg" data-iframe="https://www.youtube.com/embed/b69s332yQnc?si=9I8c5ZlkC5zbeS9F" data-caption="Jon Batiste ♩ FREEDOM">
-                            <img src="<?php echo base_url('public/images/play2.jpg'); ?>" alt="Thumbnail Image" width="100%">
+                        <button class="lazyload" data-iframe="https://www.youtube.com/embed/b69s332yQnc?si=9I8c5ZlkC5zbeS9F" data-caption="Jon Batiste ♩ FREEDOM">
+                            <img src="https://img.youtube.com/vi/b69s332yQnc/maxresdefault.jpg" alt="Thumbnail Image" width="100%">
                         </button>
                     </div>
                     <div class="col-6">
-                        <button class="lazyload" data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg" data-iframe="https://www.youtube.com/embed/eKR1C0KdLYQ?si=T3vlx1me-63_gNmg" data-caption="Luke James ♩ SHINE ON">
-                            <img src="<?php echo base_url('public/images/play3.jpg'); ?>" alt="Thumbnail Image" width="100%">
+                        <button class="lazyload" data-iframe="https://www.youtube.com/embed/eKR1C0KdLYQ?si=T3vlx1me-63_gNmg" data-caption="Luke James ♩ SHINE ON">
+                            <img src="https://img.youtube.com/vi/eKR1C0KdLYQ/maxresdefault.jpg" alt="Thumbnail Image" width="100%">
                         </button>
                     </div>
                 </div>
@@ -1596,6 +1615,7 @@ body {
         </aside>
     </section>
 </section>
+
 
 
 

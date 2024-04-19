@@ -7,6 +7,11 @@ $page = $uri->getSegment(count($pages));
 // print_r($pages);
 // exit();
 
+$uri = service('uri');
+
+// Get the second segment of the URI
+$detail_pageblog = $uri->getSegment(1);
+
 $session = \Config\Services::session();
 $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
 
@@ -367,7 +372,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
     
 
-    <?php } else if($page == 'HistoryofKathak' ){?>
+    <?php } else if($detail_pageblog == 'HistoryofKathak' ){?>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -1917,7 +1922,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <nav class="navbar navbar-expand-lg">
     <div class="container pd0">
         <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
-            <img src="public/images/logos.png" alt="Enatyam">
+            <img src="<?=base_url();?>public/images/logos.png" alt="Enatyam">
         </a>
         <ul class="navbar-nav main-menu ms-auto">
             <li class="nav-item">
@@ -1971,7 +1976,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                     
                     <div class="col-8">
                         <a href="<?php echo base_url(); ?>" title="Enatyam - Best eLearning platform for dance and music" rel="home" class="thim-logo">
-                            <img src="public/images/logos.png" alt="Enatyam" class="logoh">
+                            <img src="<?=base_url();?>public/images/logos.png" alt="Enatyam" class="logoh">
                         </a>
                     </div>
                     <div class="col-4 text-right my-auto menub">

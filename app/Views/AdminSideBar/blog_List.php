@@ -26,6 +26,7 @@
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
+                                            <th>Sr.No</th>
                                             <th>Title</th>
                                             <th>Short Description</th>
                                             <th>Long Description</th>
@@ -34,8 +35,10 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php if(!empty($blogs)){ $i=1; ?>
                                         <?php foreach ($blogs as $blog) : ?>
                                             <tr id="row_<?php echo $blog->id; ?>">
+                                                <td><?=$i;?></td>
                                                 <td id="title_<?php echo $blog->id; ?>"><?php echo $blog->title; ?></td>
                                                 <td id="short_desc_<?php echo $blog->id; ?>" style="max-height: 40px; overflow: hidden; text-overflow: ellipsis;"><?php echo $blog->short_desc; ?></td>
                                                 <td id="long_desc_<?php echo $blog->id; ?>" style="max-height: 40px; overflow: hidden; text-overflow: ellipsis;"><?php echo $blog->long_desc; ?></td>
@@ -48,7 +51,8 @@
                                                     <i class="far fa-trash-alt me-2 text-danger btn-delete" data-id="<?php echo $blog->id; ?>"></i>
                                                 </td>
                                             </tr>
-                                        <?php endforeach; ?>
+                                        <?php $i++; endforeach; ?>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>

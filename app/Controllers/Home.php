@@ -145,9 +145,11 @@ class Home extends BaseController
     public function blog()
     {
         $model = new AdminModel();
-        $wherecond = array('is_deleted' => 'N');
         $data['blogs']=$model->getallblogs();
+        $wherecond = array('is_deleted' => 'N');
+
         $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
+    //     echo "<pre>";   
     // print_r($data['courses_data']);die;
         return view('blog',$data);
     }
@@ -430,9 +432,23 @@ class Home extends BaseController
     }
     public function HistoryofKathak()
     {
+        $model = new AdminModel();
 
-        return view('Blog/historyofkathak');
+        $uri = service('uri');
+
+        // Get the second segment of the URI
+        $blog_id = $uri->getSegment(2);
+
+
+        $wherecond = array('id' => $blog_id);
+
+        $data['blog_data'] = $model->get_single_data('blogs', $wherecond);
+
+        // echo "<pre>";print_r($data['blog_data']);exit();
+        return view('Blog/historyofkathak',$data);
     }
+
+
 
   
 }

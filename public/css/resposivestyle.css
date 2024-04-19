@@ -1,4 +1,37 @@
 /* refunt guarantee section start*/
+.connectwusbtn a {
+  text-align: center !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 2 !important;
+  padding: 12px 25px !important;
+}
+.connectwusbtn {
+  text-align: center;
+  padding: 5% 0% 0% 0%;
+}
+.connectwusbtns a {
+  text-align: center !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 2 !important;
+  padding: 12px 25px !important;
+}
+.connectwusbtns {
+  text-align: center;
+  padding: 3% 0% 3% 0%;
+}
+.connectwusbtnb a {
+  text-align: center !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 2 !important;
+  padding: 12px 25px !important;
+}
+.connectwusbtnb {
+  text-align: center;
+  padding: 2% 0% 0% 0%;
+}
 .copage {
   padding: 40px 10px !important;
 }
@@ -428,6 +461,18 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  .connectwusbtns {
+    padding: 3% 0% 20% 0% !important;
+  }
+  .connectwusbtn a {
+    font-size: 13px !important;
+  }
+  .connectwusbtnb a {
+    font-size: 13px !important;
+  }
+  .connectwusbtns a {
+    font-size: 13px !important;
+  }
   .faq-sectionforhome {
     margin-bottom: 50px;
     padding: 0px 10px 42px 10px !important;
