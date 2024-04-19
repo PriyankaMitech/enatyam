@@ -46,6 +46,8 @@ $routes->post('contact', 'RegisterController::contact');
 $routes->get('offlineAddress', 'RegisterController::offlineAddress');
 $routes->post('offlineAddress', 'RegisterController::offlineAddress');
 $routes->get('HistoryofKathak', 'Home::HistoryofKathak');
+$routes->get('HistoryofKathak/(:any)', 'Home::HistoryofKathak/$1');
+
 
 
 

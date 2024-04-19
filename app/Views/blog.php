@@ -1,4 +1,9 @@
 <?php include('header.php'); ?>
+<style>
+    .text-black{
+        color:#000 !important;
+    }
+    </style>
 
 
 <section class="contactus">
@@ -43,61 +48,26 @@
       <div class="col-lg-4 col-md-6 col-12">
    <!-- First Row of Buttons -->
    <div class="row pdblog1">
-      <div class="col-lg-4 col-md-4 col-4 btnblocks ">
-         <button class="btn btn-primary btn-block active">Kathak </button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks ">
-         <button class="btn btn-primary btn-block">Odds</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Bollywood</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Odds</button>
-      </div>
+    <?php if(!empty($courses_data)){
+         ?>
+        <?php foreach($courses_data as $data){ 
+              $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
 
-   <!-- Second Row of Buttons -->
+              $wherecond = array('course' => $data->id);
+              
+              
+              $blog_data = $adminModel->getalldata('blogs', $wherecond);
+              
+            ?>
+              <?php if(!empty($blog_data)){ ?>
+            
+            <div class="col-lg-6 col-md-6 col-6 btnblocks p-2">
+                <a href="#blog_<?=$data->id;?>" class="btn btn-primary btn-block active"><?=$data->courses_name;?></a>
+            </div>
+        <?php } ?>
+      <?php } ?>
+      <?php } ?>
 
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Kathakali</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Satriya</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Hip Hop</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Salsa</button>
-      </div>
-
-   <!-- Third Row of Buttons -->
-
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Button</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Button</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Button</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Button</button>
-      </div>
-
-   <!-- Fourth Row of Buttons -->
-
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Button</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Button</button>
-      </div>
-      <div class="col-lg-4 col-md-4 col-4 btnblocks">
-         <button class="btn btn-primary btn-block">Button</button>
-      </div>
-   
   
 </div>
 
@@ -108,780 +78,55 @@
 
     <div class="row" style="margin-top: 30px;">
         <div class="MusicSec">
+        <?php if(!empty($courses_data)){ ?>
+            <?php $counter = 0; ?>
+        <?php foreach($courses_data as $data){ 
+          
+            $adminModel = new \App\Models\AdminModel(); // Adjust the namespace and model name accordingly
+
+              $wherecond = array('course' => $data->id);
               
+              
+              $blog_data = $adminModel->getalldata('blogs', $wherecond);
+            ?>
+            <?php $counter++; ?>
+
+           
                 <!-- 1st -->
-                <div class="row text-lg-start">
-                    <div class="col-lg-3 col-md-4 col-6 ">
-                        <h5 class="text-white" style="text-align: center;">Kathak </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.webp"
-                                    alt="" >
-                            </a>
+                <div class="row <?= $counter % 2 == 0 ? 'text-lg-start1' : 'text-lg-start'; ?>" id="blog_<?=$data->id;?>" id="#blog_<?=$data->id;?>">
+                <?php if(!empty($blog_data)){ ?>
+                <h3 class=" <?= $counter % 2 == 0 ? 'text-black' : 'text-white'; ?>" style="padding-top: 1% !important; padding-bottom: 1% !important; text-align:center"><?=$data->courses_name;?>
+                        <span class="line linessf"></span> </h3>
+                       
+                            <?php foreach($blog_data as $blog_datas){?>
+                              
+
+                        <div class="col-lg-3 col-md-4 col-6 ">
+                        <h5 class="text-white " id="blog_<?=$data->id;?>" style="text-align: center;"><?=$blog_datas->title;?></h5>
+                            <div class="ThumbnailImg mb-4" style="text-align: center;">
+                                <a href="<?=base_url(); ?>HistoryofKathak/<?=$blog_datas->id?>" target="_blank" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/uploads/blog_img/<?=$blog_datas->image;?>"
+                                        alt="<?=$blog_datas->image;?>" >
+                                </a>
+                            </div>
+                            
                         </div>
                         
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/5.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-
+                        <?php } ?>
                        
-                    </div>
+                   
+                        <?php } ?>
 
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                      
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Western Dance </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
+                    
                 </div>
+                            
+
+                <?php } ?>
+      <?php } ?>
                 
-                <!-- 2nd  -->
-                <div class="row text-lg-start1">
-                    <div class="col-lg-3 col-md-4 col-6 ">
-                        <h5 class="text-white" style="text-align: center;">Kathak </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>HistoryofKathak" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail blogimg" src="<?php base_url(); ?>public/images/blog/historyofkathak.webp"
-                                    alt="" >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;"> Kathak</h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail blogimg"
-                                    src="<?php echo base_url(); ?>public/images/blog/footwork.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail blogimg"
-                                    src="<?php echo base_url(); ?>public/images/blog/mudra.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Western Dance </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-                </div>
+        
                 
-                <!-- 3nd  -->
-                <div class="row text-lg-start">
-                    <div class="col-lg-3 col-md-4 col-6 ">
-                        <h5 class="text-white" style="text-align: center;">Kathak </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.webp"
-                                    alt="" >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/5.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-
-                      
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Western Dance </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-                </div>
-                
-                 <!-- 4nd  -->
-                <div class="row text-lg-start1">
-                    <div class="col-lg-3 col-md-4 col-6 ">
-                        <h5 class="text-white" style="text-align: center;">Kathak </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.webp"
-                                    alt="" >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/5.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Western Dance </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
-                 <!-- 5st -->
-                 <div class="row text-lg-start">
-                    <div class="col-lg-3 col-md-4 col-6 ">
-                        <h5 class="text-white" style="text-align: center;">Kathak </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.webp"
-                                    alt="" >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/5.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Western Dance </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- 6nd  -->
-                <div class="row text-lg-start1">
-                    <div class="col-lg-3 col-md-4 col-6 ">
-                        <h5 class="text-white" style="text-align: center;">Kathak </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.webp"
-                                    alt="" >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/5.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                       
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Western Dance </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- 7nd  -->
-                <div class="row text-lg-start">
-                    <div class="col-lg-3 col-md-4 col-6 ">
-                        <h5 class="text-white" style="text-align: center;">Kathak </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.webp"
-                                    alt="" >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/5.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-
-                       
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Western Dance </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                 <!-- 8nd  -->
-                <div class="row text-lg-start1">
-                    <div class="col-lg-3 col-md-4 col-6 ">
-                        <h5 class="text-white" style="text-align: center;">Kathak </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/images/Home/4.webp"
-                                    alt="" >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/5.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Western Dance </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>Dance" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/1.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Carnatic Vocal </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Bollywood Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h5 class="text-white" style="text-align: center;">Playback Singing </h5>
-                        <div class="ThumbnailImg mb-4" style="text-align: center;">
-                            <a href="<?= base_url(); ?>music" target="_blank" class="d-block h-100">
-                                <img class="img-fluid img-thumbnail"
-                                    src="<?php echo base_url(); ?>public/images/Home/11.webp" alt=""
-                                    >
-                            </a>
-                        </div>
-                        
-                    </div>
+               
                 </div>
                 </div>
 

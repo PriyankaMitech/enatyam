@@ -1,55 +1,62 @@
-<?php echo view('StudentSidebar/Studentsidebar'); ?>
+<?php include('header.php'); ?>
 
+<body>
+    <?php if (session()->getFlashdata('success')) : ?>
+        <div class="alert alert-success">
+            <?= $_SESSION;
+            session()->getFlashdata('success') ?>
+        </div>
+    <?php endif; ?>
+    <section class="contactus">
 
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <div class="container-fluid">
-            <div class="row mb-2">
-              <div class="col-sm-6">
-                <h1>Checkout</h1>
-              </div>
-              <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Checkout</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-          <!-- /.container-fluid -->
-        </section>
-
-        <!-- Main content -->
-        <section class="content">
-          <div class="container-fluid">
+        <div class="container cont-width">
             <div class="row">
-              <!-- left column -->
-              <div class="col-md-12">
-                <!-- general form elements -->
-                <div class="card card-primary">
-                  <div class="card-header">
-                    <h3 class="card-title">Checkout</h3>
-                  </div>
-                  <!-- /.card-header -->
-                  <!-- form start -->
-                  <form action="<?php echo base_url(); ?>BillingInformation" method="post"  id="checkoutForm">
-                    <div class="card-body row">
-                      <div class="form-group col-md-4">
-                        <label for="Fname">First Name</label>
-                        
-                        <input type="text" name="Fname" class="form-control" id="Fname" value="<?php echo $_SESSION['user_name'] ?>" />
+                <div class="col-lg-12 bip">
+                    <h1>Checkout</h1>
+                </div>
+            </div>
+        </div>
 
-                      </div>
-                      <div class="form-group col-md-4">
-                        <label for="Lname">Last Name</label>
-                        <input type="text" name="Lname" class="form-control" id="Lname" />
+    </section>
+    <section class="cont-main-section">
+        <div class="container cont-width">
+            <div class="row">
+                <div class="col-lg-12 bip">
 
-                      </div>
-                      <div class="form-group col-md-4">
-                        <label>Country/Region <sup>*</sup></label>
-                        <select class="form-select form-control required" name="country" aria-label="Default select example" id="country" >
+                    <ul class="breadcrumb-ul">
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            Checkout
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container cont-width BillingInformation">
+        <div class="row">
+            <div class="col-lg-12  ">
+                <form class="check-form" action="<?php echo base_url(); ?>BillingInformation" method="post" id="checkoutForm">
+                    <div class="row">
+                        <div class="col-lg-6 bip">
+                            <h5>BILLING DETAILS</h5>
+                            <div class="row">
+                                <div class="col-lg-6 bip">
+                                    <label>First name <sup>*</sup></label>
+                                    <input type="text" name="Fname" class="form-control" id="Fname" value="<?php echo $_SESSION['user_name'] ?>" />
+                                </div>
+                                <div class="col-lg-6 bip">
+                                    <label>Last name <sup>*</sup></label>
+                                    <input type="text" name="Lname" class="form-control" id="Lname" />
+                                </div>
+                                <div class="col-lg-12 bip">
+                                    <label>Country/Region <sup>*</sup></label>
+                                    <select class="form-select form-control required" name="country" aria-label="Default select example" id="country" >
 
                                         <option value="">Open this select menu</option>
                                         <option <?php echo $_SESSION['country'] == 'Afghanistan' ? 'selected' : '' ?> value="Afghanistan">Afghanistan</option>
@@ -296,64 +303,102 @@
                                         <option <?php echo $_SESSION['country'] == 'Zambia' ? 'selected' : '' ?> value="Zambia">Zambia</option>
                                         <option <?php echo $_SESSION['country'] == 'Zimbabwe' ? 'selected' : '' ?> value="Zimbabwe">Zimbabwe</option>
 
-                        </select>
-                      </div>
-                      <div class="form-group col-md-4">
-                        <label>Street address <sup>*</sup></label>
-                        <input type="text" name="address" placeholder="House number and street name" id="address" class="form-control">
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-12 bip">
+                                    <label>Street address <sup>*</sup></label>
+                                    <input type="text" name="address" placeholder="House number and street name" id="address" class="form-control">
+                                </div>
+                                <div class="col-lg-12 bip">
+                                    <label>Town / City <sup>*</sup></label>
+                                    <input type="text" name="city" placeholder="House number and street name" id="city" class="form-control">
+                                </div>
+
+                                <div class="col-lg-12 bip">
+                                    <label>Postcode/ZIP <sup>*</sup></label>
+                                    <input type="text" name="pincode" placeholder="Pincode number and Zip" id="pincode" class="form-control">
+                                </div>
+                                <div class="col-lg-12 bip">
+                                    <label>Mobile Number<sup>*</sup></label>
+                                    <input type="text" name="phone" placeholder="Enter Your Mobile number" id="phone" class="form-control" value="<?php echo $_SESSION['mobile_no'] ?>" readonly  pattern="[0-9]{10}">
+                                </div>
+                                <div class="col-lg-12 bip">
+                                    <label>Email<sup>*</sup></label>
+                                    <input type="email" name="email" placeholder="Enter Your Email " id="Email" class="form-control" value="<?php echo $_SESSION['email'] ?>" readonly>
+                                </div>
+                                <div class="col-lg-12 bip">
+                                    <label>Coupon Code</label>
+                                    <input type="text" name="coupon_code" placeholder="Enter Your Coupon Code " id="coupon_code" class="form-control" >
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group col-md-4">
-                            <label>Town / City <sup>*</sup></label>
-                            <input type="text" name="city" placeholder="House number and street name" id="city" class="form-control">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label>Postcode/ZIP <sup>*</sup></label>
-                            <input type="text" name="pincode" placeholder="Pincode number and Zip" id="pincode" class="form-control">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label>Mobile Number<sup>*</sup></label>
-                            <input type="text" name="phone" placeholder="Enter Your Mobile number" id="phone" class="form-control" value="<?php echo $_SESSION['mobile_no'] ?>" readonly  pattern="[0-9]{10}">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label>Email<sup>*</sup></label>
-                            <input type="email" name="email" placeholder="Enter Your Email " id="Email" class="form-control" value="<?php echo $_SESSION['email'] ?>" readonly>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label>Coupon Code</label>
-                            <input type="text" name="coupon_code" placeholder="Enter Your Coupon Code " id="coupon_code" class="form-control" >
-                        </div>
-                        <div class="col-lg-4 bip">
-                            <h5><b>ADDITIONAL DETAILS</b></h5>
+
+                        <div class="col-lg-6 bip">
+                            <h5>ADDITIONAL DETAILS</h5>
                             <label>Order notes (optional)
                             </label>
                             <textarea class="form-control " name="notes" placeholder="Notes about your order, e.g. special notes for delivery.">
                            </textarea>
                         </div>
+
+                        <div class=" mt-3 text-center">
+                            <button class="btn shop-now-btn" type="submit" id="checkoutButton">Submit</button>
+                        </div>
                     </div>
-                    
-                    <!-- /.card-body -->
-
-                    <div class="card-footer">
-                      <button type="submit" class="btn btn-primary"id="checkoutButton">
-                        Submit
-                      </button>
-
-                    </div>
-                  </form>
-                </div>
-                <!-- /.card -->
-
-      
-              </div>
-     
+                </form>
             </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
-      </div>
-      <!-- /.content-wrapper -->
+        </div>
+    </div>
 
-      <?php echo view('StudentSidebar/StudentFooter.php');?>
-     
+
+
+
+
+    <!-- <div class="container cont-width mt-4">
+        <div class="row">
+            <div class="col-lg-12 mt-3">
+                <nav class="navbar bg-body-tertiary1 p-3">
+                    <div class="container-fluid justify-content-start">
+
+                        <a class="navbar-brand" href="#">
+                            <h6>Credit Card/Debit Card/NetBanking </h6>
+                        </a>
+                        <span>
+                            <div class="payment-logo">
+                                <img src="public\images\payment.svg ">
+                        </span>
+                    </div>
+            </div>
+                                         <div class="col-lg-12 bip">
+
+                <div class="pay-method ">
+                    <p>Pay securely by Credit or Debit card or Internet Banking through Razorpay.</p>
+                </div>
+            </div>
+            <div class="pay-method-1">
+                <p>Your personal data will be used to process your order, support your experience throughout this
+                    website, and for other purposes described in our<a href="<?php echo base_url('privacypolicy'); ?>">privacy policy</a> </p>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label f-label" for="flexCheckDefault">
+                    I have read and agree to the website <a href="<?php echo base_url('privacypolicy'); ?>"> terms
+                        and conditions *</a>
+                </label>
+            </div>
+
+            <div class="place-btn d-block w-100 ">
+                <button class="button-content  " type="submit" role="button">
+
+                    <span class="button-text">PLACE ORDER</a> </span>
+
+                </button>
+            </div>
+
+        </nav>
+        </form>
+        </div>
+    </div> -->
+
+    <?php include('footer.php'); ?>

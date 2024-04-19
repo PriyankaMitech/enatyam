@@ -2,7 +2,7 @@
     <div class="container cont-width">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-12 footer-div flid">
-                <img src="public/images/logos.png" />
+                <img src="<?=base_url(); ?>public/images/logos.png" />
                 <p class="mt-2 tx">At Enatyam, we are providing you with professional training of dance forms originating
                     from the Indian subcontinent. Our talented mentors have been trained to provide you with an amazing
                     dancing experience.</p>
@@ -94,14 +94,14 @@
                 <div class="social-div ">
                    
 
-                    <a href="https://wa.me/919272122001 " class="insta-div"><img src="public/images/whatsapp.png" /></a>
+                    <a href="https://wa.me/919272122001 " class="insta-div"><img src="<?=base_url(); ?>public/images/whatsapp.png" /></a>
 
-                    <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><img src="public/images/instagram.png" /></a>
+                    <a href="https://www.instagram.com/enatyam.india/" class="insta-div"><img src="<?=base_url(); ?>public/images/instagram.png" /></a>
                     
-                    <a href="https://www.linkedin.com/company/enatyam/" class="twitter-div"><img src="public/images/linkedin.png" /></a>
+                    <a href="https://www.linkedin.com/company/enatyam/" class="twitter-div"><img src="<?=base_url(); ?>public/images/linkedin.png" /></a>
                     
-                    <a href="https://www.facebook.com/profile.php?id=100049347683143&mibextid=rS40aB7S9Ucbxw6v" class="facebook-div"><img src="public/images/facebook.png" /></a>
-                    <a href="https://youtube.com/@enatyamindia?si=WO5gb1OdOEyWgBj8" class="youtube-div"><img src="public/images/network.png" /></a>
+                    <a href="https://www.facebook.com/profile.php?id=100049347683143&mibextid=rS40aB7S9Ucbxw6v" class="facebook-div"><img src="<?=base_url(); ?>public/images/facebook.png" /></a>
+                    <a href="https://youtube.com/@enatyamindia?si=WO5gb1OdOEyWgBj8" class="youtube-div"><img src="<?=base_url(); ?>public/images/network.png" /></a>
                 </div>
             </div>
 
@@ -151,11 +151,11 @@
                 </div>
 
                 <div class="social-div text-center pt-5 crd">
-                    <img class="crdn" src="public/images/Home/maestro.svg" />
-                    <!-- <img src="public/images/Home/payU.svg" /> -->
-                    <img class="crdn" src="public/images/Home/visa.svg" />
-                    <img class="crdn" src="public/images/Home/mastercard.svg" />
-                    <img class="crdn" src="public/images/Home/Rupay.svg" /> 
+                    <img class="crdn" src="<?=base_url(); ?>public/images/Home/maestro.svg" />
+                    <!-- <img src="<?=base_url(); ?>public/images/Home/payU.svg" /> -->
+                    <img class="crdn" src="<?=base_url(); ?>public/images/Home/visa.svg" />
+                    <img class="crdn" src="<?=base_url(); ?>public/images/Home/mastercard.svg" />
+                    <img class="crdn" src="<?=base_url(); ?>public/images/Home/Rupay.svg" /> 
                 </div>
                 <div class="copyright-p ">
                     <p>  2024 © All Rights are reserved |  <a href="https://www.marketingintelligence.tech"> Enatyam India Pvt. Ltd. </a> 
@@ -2591,7 +2591,7 @@ $(function() {
         });
     </script>
 
-<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'refundpolicy'|| $page == 'blog'|| $page == 'invester' || $page == 'HistoryofKathak'){ ?>
+<?php }else if ($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'refundpolicy'|| $page == 'blog'|| $page == 'invester' ){ ?>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
@@ -2599,6 +2599,16 @@ $(function() {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
     <?php } ?>
+
+    <?php if ($detail_pageblog == 'HistoryofKathak'){ ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+</script>
+<?php } ?>
+
 
    
 <script src="<?php echo base_url() ?>public/js/jquery.validate.min.js"></script>
