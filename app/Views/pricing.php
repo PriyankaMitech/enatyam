@@ -1,3 +1,4 @@
+
 <?php
 $description        = "Product Description";
 $txnid              = date("YmdHis");
@@ -11,7 +12,8 @@ $email              = 'coexistech@gmail.com';
 $phone              = '9158876092';
 $name               = "RazorPay Infovistar";
 ?>
-<section class="pricing-section " id="pricing">
+
+<section class="pricing-section pricingsfor" id="pricing">
     <div class="container ">
         <div class="row heading-div m-0">
             <div class="col-lg-12 text-center op" id="pricing-section">
@@ -135,12 +137,19 @@ $name               = "RazorPay Infovistar";
 
 
                                                 <div>
-                                                    <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Explore Pricing">
-                                                    <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Explore Pricing</a>
+                                                <?php
+if (session()->has('sessiondata')) {
+    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+        if ($role == 'Student') {
+        ?>
+            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Explore Pricing</a>
 
-                                                    <?php endif; ?>
+    <?php
+        } ?>
+<?php  } else { ?>
+        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+<?php  }
+?>
                                                 </div>
 
                                             </div>
@@ -236,11 +245,19 @@ $name               = "RazorPay Infovistar";
 
                                                 </ul>
                                                 <div>
-                                                    <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-                                                    <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Explore Pricing</a>
-                                                    <?php endif; ?>
+                                                <?php
+if (session()->has('sessiondata')) {
+    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+        if ($role == 'Student') {
+        ?>
+            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Explore Pricing</a>
+
+    <?php
+        } ?>
+<?php  } else { ?>
+        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+<?php  }
+?>
                                                 </div>
                                             </div>
 
@@ -336,11 +353,19 @@ $name               = "RazorPay Infovistar";
                                                 </ul>
 
                                                 <div>
-                                                    <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-                                                    <?php else : ?>
-                                                        <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Explore Pricing</a>
-                                                    <?php endif; ?>
+                                                <?php
+if (session()->has('sessiondata')) {
+    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+        if ($role == 'Student') {
+        ?>
+            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Explore Pricing</a>
+
+    <?php
+        } ?>
+<?php  } else { ?>
+        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+<?php  }
+?>
                                                 </div>
                                             </div>
 
@@ -386,8 +411,8 @@ $name               = "RazorPay Infovistar";
 
                                                             </span>
                                                             <span>
-                                                                
                                                             Group Live Class- upto 10 students.
+
                                                             </span>
                                                         </li>
                                                         <li>
@@ -454,12 +479,19 @@ $name               = "RazorPay Infovistar";
 
 
                                                     <div>
-                                                        <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-                                                        <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Explore Pricing</a>
+                                                    <?php
+                                                        if (session()->has('sessiondata')) {
+                                                            $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+                                                                if ($role == 'Student') {
+                                                                ?>
+                                                                    <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Explore Pricing</a>
 
-                                                        <?php endif; ?>
+                                                            <?php
+                                                                } ?>
+                                                        <?php  } else { ?>
+                                                                <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                        <?php  }
+                                                        ?>
                                                     </div>
 
 
@@ -545,11 +577,19 @@ $name               = "RazorPay Infovistar";
                                                     </ul>
                                                     <div>
 
-                                                        <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-                                                        <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Explore Pricing</a>
-                                                        <?php endif; ?>
+                                                    <?php
+if (session()->has('sessiondata')) {
+    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+        if ($role == 'Student') {
+        ?>
+            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Explore Pricing</a>
+
+    <?php
+        } ?>
+<?php  } else { ?>
+        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+<?php  }
+?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -632,11 +672,20 @@ $name               = "RazorPay Infovistar";
                                                     </ul>
 
                                                     <div>
-                                                        <?php if (!(session()->get('sessiondata'))) : ?>
-                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-                                                        <?php else : ?>
-                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Explore Pricing</a>
-                                                        <?php endif; ?>
+                                                    <?php
+if (session()->has('sessiondata')) {
+    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+        if ($role == 'Student') {
+        ?>
+            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Explore Pricing</a>
+
+    <?php
+        } ?>
+<?php  } else { ?>
+        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+<?php  }
+?>
+
                                                     </div>
                                                 </div>
                                             </div>

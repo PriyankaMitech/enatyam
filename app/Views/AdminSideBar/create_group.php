@@ -86,10 +86,22 @@
                     <label>Faculty</label>
                     <input type="hidden" id="selected_faculty_id_g" value="<?php if (isset($single_data)) { echo ($single_data->faculty_id_g); } ?>">
 
-                    <select class="form-control" name="faculty_id_g" id="faculty_id_g" style="width: 100%;">
+                    <!-- <select class="form-control" name="faculty_id_g" id="faculty_id_g" style="width: 100%;">
                     <option value="">Please select faculty</option>
 
-                    </select>
+                    </select> -->
+                    <select name="faculty_id_g" class="form-control" id="faculty_id_g" required>
+                                                <option value="" selected>Select Faculty</option>
+                                                
+                                                <?php
+                                                if(!empty($Faculty_data)){
+                                                foreach ($Faculty_data as $facultyItem) : ?>
+                                                <option value="<?= $facultyItem->id ?>"
+                                                    <?php if(!empty($single_data)) { if ($single_data->faculty_id_g == $facultyItem->id) echo "selected";} ?>>
+                                                    <?= $facultyItem->full_name ?>
+                                                </option>
+                                                <?php endforeach;} ?>
+                                   </select>
                     </div>
                 </div>
 

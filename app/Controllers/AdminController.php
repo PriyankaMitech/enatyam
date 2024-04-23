@@ -85,6 +85,8 @@ class AdminController extends BaseController
                     'register.is_deleted' => 'N',
                 ];
                 $data['Faculty'] = $model->joinfourtables($select1, 'register ',  'carrier', 'tbl_courses ', 'tbl_sub_courses ',  $joinCond4, $joinCond5, $joinCond6, $wherecond, 'DESC');
+                // $data['Faculty_data'] = $model->joinfourtables('register',$wherecond);
+
                 // echo '<pre>';
                 // print_r($data['Faculty']);
                 // die;
@@ -711,8 +713,17 @@ public function AssignTecherForDemo()
 
 
         $data['courses_data'] = $model->getalldata('tbl_courses', $wherecond);
-        $data['faculty_data'] = $model->getalldata('faculty', $wherecond);
-        // echo'<pre>';print_r($data['faculty_data']);die;
+        // $data['faculty_data'] = $model->getalldata('faculty', $wherecond);
+
+        $wherecond = [
+            'register.role' => 'Faculty',
+            'register.is_deleted' => 'N',
+            // 'register.SessionType' => 'GroupSession',
+
+        ];
+        $data['Faculty_data'] = $model->getalldata('register',$wherecond);
+
+        // echo'<pre>';print_r($data['Faculty_data']);die;
 
         return view('AdminSideBar/create_group', $data);
     }else{

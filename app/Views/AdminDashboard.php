@@ -765,12 +765,12 @@ th {
                                             <select name="faculty_name" required>
                                                 <option value="" selected>Select Faculty</option>
                                                 <?php foreach ($Faculty as $facultyItem) : ?>
-                                                <?php if ($facultyItem->course == $data->course && $facultyItem->sub_course == $data->sub_course) : ?>
+                                                <?php //if ($facultyItem->course == $data->course && $facultyItem->sub_course == $data->sub_course) : ?>
                                                 <option value="<?= $facultyItem->id ?>"
                                                     <?php if ($data->Assign_Techer_id == $facultyItem->id) echo "selected"; ?>>
                                                     <?= $facultyItem->full_name ?>
                                                 </option>
-                                                <?php endif; ?>
+                                                <?php //endif; ?>
                                                 <?php endforeach; ?>
                                             </select>
                                             <?php } elseif ($data->SessionType == "GroupSession") { ?>
