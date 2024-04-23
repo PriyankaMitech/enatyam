@@ -92,6 +92,7 @@
                             <?php
                                                         // Suppose $studentCountryCode contains the student's country code, e.g., "vn"
                                                         // echo'<pre>';print_r($country_data);die;
+                                                        $studentCountryCode = '';
                                                         if(!empty($country_data)){
                                                         $studentCountryCode = $country_data->code; 
                                                         }// This would be dynamically fetched in a real-world scenario
