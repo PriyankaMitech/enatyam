@@ -573,6 +573,7 @@ th {
                                                 </td>
 
                                                 <td>
+
     <?php if (!empty($facult->faculty_name)) : ?>
         <?= $facult->faculty_name ?>
     <?php else : ?>
@@ -588,6 +589,7 @@ th {
         </select>
     <?php endif; ?>
 </td>
+
                                                 <td><?= $facult->courses_name ?></td>
                                                 <td><?= $facult->sub_courses_name ?></td>
                                                 <td>
