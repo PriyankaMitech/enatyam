@@ -101,6 +101,7 @@ class AdminController extends BaseController
 
 public function AssignTecherForDemo()
 {
+    // print_r($_POST);die;
     $model = new AdminModel();
     $postData = $this->request->getPost();  
     $facultyId = $this->request->getVar('faculty_id');
@@ -108,7 +109,7 @@ public function AssignTecherForDemo()
     
     // Get the Book_Date_Time from the request
     $bookDateTime = $this->request->getVar('Book_Date_Time');
-    
+    $Book_Date = $this->request->getVar('Book_Date');
     // Convert Book_Date_Time to timestamp
     $bookTimestamp = strtotime($bookDateTime);
     
@@ -120,6 +121,7 @@ public function AssignTecherForDemo()
         'AssignTecher_id' => $facultyId,
         'meetlink' => $this->request->getVar('meetlink'),
         'Book_Date_Time' => $bookDateTime, // Use the original Book_Date_Time
+         'Book_Date' =>$Book_Date,
         'buffertime' => date('H:i:s', $reminderTimestamp) // Extract only the time component
     ];
 
