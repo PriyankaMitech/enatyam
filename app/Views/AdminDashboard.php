@@ -569,13 +569,13 @@ th {
                                                     <select name="faculty_id">
                                                         <option value="" selected>Select Faculty</option>
                                                         <?php foreach ($Faculty as $facultyItems) : ?>
-                                                        <?php if ($facultyItems->course == $facult->course && $facultyItems->sub_course == $facult->sub_course) : ?>
+                                                        <?php //if ($facultyItems->course == $facult->course && $facultyItems->sub_course == $facult->sub_course) : ?>
                                                         <option value="<?= $facultyItems->id ?>" <?php if ($facult->AssignTecher_id == $facultyItems->id) {
                                                                                                     echo "selected";
                                                                                                 } ?>>
                                                             <?= $facultyItems->full_name ?>
                                                         </option>
-                                                        <?php endif; ?>
+                                                        <?php //endif; ?>
                                                         <?php endforeach; ?>
                                                     </select>
                                                 </td>
