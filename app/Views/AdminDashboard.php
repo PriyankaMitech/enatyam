@@ -339,7 +339,7 @@ th {
                                             ?>
                                         <?php foreach ($alldemolist
                                                 as $status) : ?>
-                                                
+
                                         <tr>
                                             <td><?= $status->name ?></td>
                                             <td><?= $status->courses_name ?></td>
@@ -371,15 +371,16 @@ th {
                                                 <?php endif; ?>
                                             </td>
                                             <td>
-                                            <select class="form-control"  name="remark" onchange="updateRemark(this, <?=$status->D_id; ?>)" >
-                                                <option value="" selected>Select remark</option>
-                                                <option value="Interested" <?php if ($status->remark == 'Interested') {
+                                                <select class="form-control" name="remark"
+                                                    onchange="updateRemark(this, <?=$status->D_id; ?>)">
+                                                    <option value="" selected>Select remark</option>
+                                                    <option value="Interested" <?php if ($status->remark == 'Interested') {
                                                 echo "selected";
                                             } ?>>Interested</option>
-                                                <option value="Not Interested" <?php if ($status->remark == 'Not Interested') {
+                                                    <option value="Not Interested" <?php if ($status->remark == 'Not Interested') {
                                                 echo "Not selected";
                                             } ?>>Not Interested</option>
-                                            </select>
+                                                </select>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
@@ -511,8 +512,9 @@ th {
                                             <tr>
                                                 <th>Name</th>
                                                 <th>Email</th>
+                                                <th>Contact</th>
                                                 <th>Booking Date</th>
-
+                                                <!-- <th>New date For Demo</th> -->
                                                 <th>Demo Time</th>
                                                 <th>Reschedule Date</th>
                                                 <th>Faculty</th>
@@ -524,18 +526,23 @@ th {
                                             </tr>
                                         </thead>
                                         <?php usort($PendingDemo, function ($a, $b) {
-                                return strtotime($b->Book_Date) - strtotime($a->Book_Date);
-                            }); ?>
+                                                return strtotime($b->Book_Date) - strtotime($a->Book_Date);
+                                            }); ?>
                                         <?php
-                            if (!empty($PendingDemo)) { ?>
+                                            if (!empty($PendingDemo)) { ?>
                                         <?php foreach ($PendingDemo as $facult) : ?>
                                         <tr>
                                             <form action="<?php echo base_url(); ?>AssignTecherForDemo" method="POST">
                                                 <input type="hidden" name="studentid" value="<?= $facult->D_id ?>">
                                                 <td><?= $facult->name ?></td>
                                                 <td><?= $facult->email ?></td>
-                                                <td><?= date('j F Y', strtotime($facult->Book_Date)); ?></td>
-
+                                                <td><?= $facult->phone ?></td>
+                                                <!-- <td><?= date('j F Y', strtotime($facult->Book_Date)); ?></td> -->
+                                                <td>
+                                                    <input type="date" name="Book_Date"
+                                                        value="<?= !empty($facult->Book_Date) ? date('Y-m-d', strtotime($facult->Book_Date)) : '' ?>"
+                                                        required>
+                                                </td>
                                                 <!-- <td>
                                                     <?php if (($facult->Book_Date_Time)) : ?>
                                                     <input type="time" name="Book_Date_Time"
@@ -566,19 +573,23 @@ th {
                                                 </td>
 
                                                 <td>
-                                                    <select name="faculty_id">
-                                                        <option value="" selected>Select Faculty</option>
-                                                        <?php foreach ($Faculty as $facultyItems) : ?>
-                                                        <?php //if ($facultyItems->course == $facult->course && $facultyItems->sub_course == $facult->sub_course) : ?>
-                                                        <option value="<?= $facultyItems->id ?>" <?php if ($facult->AssignTecher_id == $facultyItems->id) {
-                                                                                                    echo "selected";
-                                                                                                } ?>>
-                                                            <?= $facultyItems->full_name ?>
-                                                        </option>
-                                                        <?php //endif; ?>
-                                                        <?php endforeach; ?>
-                                                    </select>
-                                                </td>
+
+    <?php if (!empty($facult->faculty_name)) : ?>
+        <?= $facult->faculty_name ?>
+    <?php else : ?>
+        <select name="faculty_id">
+            <option value="" selected>Select Faculty</option>
+            <?php foreach ($Faculty as $facultyItems) : ?>
+                <option value="<?= $facultyItems->id ?>" <?php if ($facult->AssignTecher_id == $facultyItems->id) {
+                                                                echo "selected";
+                                                            } ?>>
+                    <?= $facultyItems->full_name ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    <?php endif; ?>
+</td>
+
                                                 <td><?= $facult->courses_name ?></td>
                                                 <td><?= $facult->sub_courses_name ?></td>
                                                 <td>
@@ -588,13 +599,22 @@ th {
                                                     <p>Not Assign</p>
                                                     <?php endif; ?>
                                                 </td>
-                                                <td>
+                                                <!-- <td>
                                                     <?php if (!empty($facult->meetlink)) : ?>
                                                     <a href="<?php echo htmlspecialchars($facult->meetlink); ?>"
                                                         target="_blank"><?php echo htmlspecialchars($facult->meetlink); ?></a>
                                                     <?php else : ?>
                                                     <input type="text" name="meetlink" placeholder="Enter Meeting Link"
                                                         require>
+                                                    <?php endif; ?>
+                                                </td> -->
+                                                <td>
+                                                    <?php if (!empty($facult->meetlink)) : ?>
+                                                    <input type="text" name="meetlink"
+                                                        value="<?= htmlspecialchars($facult->meetlink); ?>">
+                                                    <?php else : ?>
+                                                    <input type="text" name="meetlink" placeholder="Enter Meeting Link"
+                                                        required>
                                                     <?php endif; ?>
                                                 </td>
                                                 <td>
@@ -651,7 +671,7 @@ th {
                                         <th>Stetus</th>
                                     </tr>
 
-                                    
+
                                     <?php if(!empty($PendingDemo)){?>
                                     <?php foreach ($PendingDemo as $facult) : ?>
 
@@ -663,7 +683,7 @@ th {
                                             <input type="hidden" name="studentid" value="<?= $facult->D_id ?>">
                                             <td><?= $facult->name ?></td>
                                             <td><?= $facult->email ?></td>
-                                            <td><?= $facult->Dates ?></td>  
+                                            <td><?= $facult->Dates ?></td>
 
                                             <td>
                                                 <select name="faculty_name">
@@ -674,7 +694,7 @@ th {
                                                         <?= $faculty->full_name ?>
                                                     </option>
                                                     <?php endforeach; ?>
-                                                  
+
                                                 </select>
                                             </td>
                                             <td>
@@ -813,10 +833,12 @@ th {
                                                 style="font-size: 13px;">Assign</button>
                                             <?php } ?>
                                             <!-- Add delete button -->
-                        <!-- <a href="<?= base_url(); ?>DeleteStudent/<?= $data->id ?>" class="btn btn-danger"
+                                            <!-- <a href="<?= base_url(); ?>DeleteStudent/<?= $data->id ?>" class="btn btn-danger"
                             onclick="return confirm('Are you sure you want to delete this student?')">Delete</a> -->
 
-                            <a href="<?= base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/register" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a>
+                                            <a href="<?= base_url(); ?>delete/<?php echo base64_encode($data->id); ?>/register"
+                                                onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i
+                                                    class="far fa-trash-alt me-2"></i></a>
                                         </td>
                                     </form>
                                 </tr>
@@ -858,7 +880,9 @@ th {
                                     <td><?= $faculty->courses_name; ?></td>
                                     <td><?= $faculty->sub_courses_name; ?></td>
                                     <td><?= $faculty->phone ?></td>
-                                    <td> <a href="<?= base_url(); ?>delete/<?php echo base64_encode($faculty->id); ?>/register" onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i class="far fa-trash-alt me-2"></i></a></td>
+                                    <td> <a href="<?= base_url(); ?>delete/<?php echo base64_encode($faculty->id); ?>/register"
+                                            onclick="return confirm('Are You Sure You Want To Delete This Record?')"><i
+                                                class="far fa-trash-alt me-2"></i></a></td>
                                     <!-- <td><button onclick="showStudentTable(this)" class="btn btn-info">Assign -->
                                     <!-- Students</button></td> -->
 
@@ -914,14 +938,17 @@ th {
 <?php echo view("AdminSideBar/AdminFooter.php"); ?>
 <script>
 function updateRemark(selectElement, id) {
-    var selectedValue =  selectElement.value;
+    var selectedValue = selectElement.value;
     var id = id;
 
     // Make AJAX request
     $.ajax({
         type: "POST",
         url: "<?=base_url(); ?>update_remark", // URL to your server-side script
-        data: { id: id, selectedValue: selectedValue },
+        data: {
+            id: id,
+            selectedValue: selectedValue
+        },
         success: function(response) {
             // Handle success response
             console.log("Remark updated successfully");
