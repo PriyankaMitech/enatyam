@@ -61,7 +61,7 @@ class PaymentController extends BaseController
             $currency_code = 'INR';
             
             $amount = $this->request->getPost('total_amount');
-
+       
             $success = false;
             $error = '';
             try {
@@ -91,6 +91,29 @@ class PaymentController extends BaseController
                         whatsapp($number, $templates, $msg1);
 
                         whatsappadmin($templates, $msg);
+
+
+                        $receiverMsg = view('StudentSidebar/invoiceemail', [
+                            'fullname' => session('sessiondata')['user_name'],
+                            'session' => session('sessiondata')['SessionType'],
+                            'amount1' => $amount1,
+                            'mobile' => session('sessiondata')['mobile_no'],
+                            'merchant_order_id'=> $merchant_order_id,
+                            'SessionType'=>session('sessiondata')['SessionType'],
+                            'SessionsCount' =>session('sessiondata')['SessionsCount'],
+                            
+                        ]);
+                        //  print_r($receiverMsg);exit();
+                        // Send email
+                        $useremail = session('sessiondata')['email'];
+                        $ccEmails = ['siddheshkadge214@gmail.com'];
+                       
+                       
+                        $receiverSubject = "Dear " . session('sessiondata')['user_name'] . ",Thank You and Congratulations on completing enrollment ";
+
+                        $senderSubject = 'Payment Resived From ' . session('sessiondata')['user_name'] ;
+                        
+                        sendinvoice($useremail, $ccEmails, $receiverSubject, $receiverMsg, $senderSubject);
 
 
                     } else {

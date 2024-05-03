@@ -71,7 +71,9 @@ defined('DECADE') || define('DECADE', 315_360_000);
 //  test key razorpay
  define('RAZOR_KEY_ID', 'rzp_test_QdPDZO6x3F9kBz'); // test key --> rzp_test_QdPDZO6x3F9kBz  live key -->rzp_live_L1OeaJe1DsAXHJ
  define('RAZOR_KEY_SECRET', '4J842nFYEGsvOnoQx3Bpfl6b'); //test secret --> 4J842nFYEGsvOnoQx3Bpfl6b live secret -->b6s5n0VfFqvsePY7kwai6T6U
- define('APPLICATION_NAME', 'XXXXXXXXXX');
+// define('RAZOR_KEY_ID', 'rzp_live_L1OeaJe1DsAXHJ'); // test key --> rzp_test_QdPDZO6x3F9kBz  live key -->rzp_live_L1OeaJe1DsAXHJ
+//  define('RAZOR_KEY_SECRET', 'b6s5n0VfFqvsePY7kwai6T6U'); //test secret --> 4J842nFYEGsvOnoQx3Bpfl6b live secret -->b6s5n0VfFqvsePY7kwai6T6U 
+define('APPLICATION_NAME', 'XXXXXXXXXX');
 
 //  zoom api keys
  define('ZOOM_CLIENT_ID', 'dFiuoJEvQKyweBxJ6Qetyg');

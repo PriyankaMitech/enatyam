@@ -51,7 +51,7 @@
                                                     <i class="far fa-trash-alt me-2 text-danger btn-delete" data-id="<?php echo $blog->id; ?>"></i>
                                                 </td>
                                             </tr>
-                                        <?php $i++; endforeach; ?>
+                                        <?php  endforeach; ?>
                                         <?php } ?>
                                     </tbody>
                                 </table>

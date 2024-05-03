@@ -56,6 +56,10 @@ $routes->get('chechk_menu_name_id', ' AdminController::chechk_menu_name_id');
 $routes->post('chechk_menu_name_id', 'AdminController::chechk_menu_name_id');
 
 
+$routes->get('add_Offilinstudio', 'AdminController::add_Offilinstudio');
+$routes->post('addoffstudio', 'AdminController::addoffstudio');
+$routes->get('list_Offilinstudio', 'AdminController::list_Offilinstudio');
+$routes->post('deletoffline', 'AdminController::deletoffline');
 
 
 $routes->get('check_group_name', ' AdminController::check_group_name');
@@ -326,6 +330,7 @@ $routes->post('submitAttendance', 'FacultyController::submitAttendance');
 $routes->get('StudentAttendancerecord', 'StudentController::StudentAttendancerecord');
 $routes->post('newpassword', 'StudentController::newpassword');
 $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule');
+$routes->get('invoiceemail', 'StudentController::invoiceemail');
 
 $routes->get('AdminList', 'AdminController::AdminList');
 $routes->get('FacultyAttendance', 'AdminController::FacultyAttendance');
@@ -393,6 +398,8 @@ $routes->get('fetchTofacultyShuduleSidebar', 'FacultyController::fetchTofacultyS
 //Routes for Student
 $routes->get('StudentDashboard', 'Home::StudentDashboard');
 $routes->get('profilemanagment', 'StudentController::profilemanagment');
+$routes->get('Renewal', 'StudentController::Renewal');
+
 $routes->post('profilemanagment', 'StudentController::profilemanagment');
 $routes->post('changeCountry', 'StudentController::changeCountry');
 $routes->post('Studentpasswordupdate', 'StudentController::Studentpasswordupdate');

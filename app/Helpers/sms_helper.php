@@ -48,7 +48,55 @@ require_once 'src/SMTP.php';
         curl_close($ch);
         return true;
     }
+    function sendinvoice($email, $ccEmails = [], $receiverSubject=null, $receiverMsg=null, $senderSubject=null, $senderMsg=null, $otp=null, $password=null, $sameValues=null)
+{
+//   echo $senderSubject;die;
+    try {
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // Replace 'mail.vedikastrologer.com' with your webmail SMTP host
+        $mail->SMTPAuth = true;
+        $mail->Username = 'siddheshkadgemitech@gmail.com'; // Replace with your webmail username
+        $mail->Password = 'lxnpuyvyefpbcukr'; // Replace with your webmail password
+        $mail->SMTPSecure = 'tls'; // or 'ssl' if your provider supports SSL encryption
+        $mail->Port = 587; // or the port provided by your webmail provider
 
+        $mail->setFrom('siddheshkadgemitech@gmail.com', 'Enatyam'); // Replace with your webmail email address and sender name
+        $mail->addAddress($email, 'Recipient Name');
+
+        // Add CC emails
+        if ($ccEmails) {
+            foreach ($ccEmails as $ccEmail) {
+                $mail->addCC($ccEmail);
+            }
+        }
+
+        // Add CC emails with same values
+        if ($sameValues) {
+            foreach ($ccEmails as $ccEmail) {
+                $mail->addCC($ccEmail, 'Recipient Name');
+            }
+        }
+
+        $mail->isHTML(true);
+
+        // Receiver's email
+        $mail->Subject = $receiverSubject;
+        $mail->Body = $receiverMsg;
+        $mail->send();
+
+        // Sender's email
+        $mail->clearAddresses();
+        $mail->addAddress('sender@example.com', 'Sender Name'); // Replace with sender's email and name
+        $mail->Subject = $senderSubject;
+        $mail->Body = $senderMsg;
+        $mail->send();
+      
+    } catch (Exception $e) {
+        echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        return false;
+    }
+}
     function sendConfirmationEmail($email, $ccEmails = [], $Subject=null, $msg=null, $otp=null, $password=null)
     {
         try {
@@ -123,7 +171,7 @@ function whatsapp($phoneNumber, $templates = null, $msg = null)
     ));
 
     $response = curl_exec($curl);
-  //print_r($response);die;
+//   print_r($response);die;
     if ($response === false) {
         $error = curl_error($curl);
         return false;

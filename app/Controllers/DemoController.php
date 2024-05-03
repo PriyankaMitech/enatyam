@@ -71,7 +71,7 @@ if($this->request->getPost('register_id') == ''){
             'course' => $this->request->getPost('courses_id_d'),
             'sub_course' => $this->request->getPost('sub_courses_id_d'),
             'Age' => $this->request->getPost('Age1'),
-            'exprience' => $this->request->getPost('exprience'),
+            // 'exprience' => $this->request->getPost('exprience'),
             'Country' => $this->request->getPost('Country'),
             'city' => $this->request->getPost('city'),
             'mobileWithCode'=>$this->request->getPost('telephone_country_code').$this->request->getPost('mobile_number'),
@@ -301,7 +301,7 @@ if($this->request->getPost('register_id') == ''){
                  $templates = "408169718530084";
          //        $name=$getdata['full_name'];
                  $msg = $whatsotp;
-               
+            //    print_r($msg);die;
                  whatsapp($phoneNumber,$templates,$msg);
                 //  $savestud = $loginModel->setStudentName($getdata);
                  $sms = 'Dear customer, your OTP for registration is ' . $whatsotp . '. do not share to anyone. Thank you OTPIMS';

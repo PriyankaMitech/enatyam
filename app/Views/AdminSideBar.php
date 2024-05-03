@@ -1021,6 +1021,19 @@ $page = $uri->getSegment(count($pages));
                                                 <p>Blog List</p>
                                             </a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a href="<?php echo base_url(); ?>add_Offilinstudio" class="nav-link <?php if($page == 'add_Offilinstudio') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Offilinstudio</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="<?php echo base_url(); ?>list_Offilinstudio" class="nav-link <?php if($page == 'list_Offilinstudio') { echo "active-nav-link";  }?>">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Offilinstudio List</p>
+                                            </a>
+                                        </li>
+                                        
                                         
                                         <!-- Add other Menu menu items with access level checks here -->
                                     </ul>
