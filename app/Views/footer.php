@@ -1149,7 +1149,9 @@ $(document).ready(function(){
                     $('#verifyPhoneNumberBtn').text('Submit');
                 } else if (response.mobile.status === '201') {
                     // Hide the verifyPhoneNumberBtn
-                    $('.changec').removeClass('d-none');
+
+                    $('.changec').removeAttr('disabled').removeClass('d-none');
+
                     $('#otpErrordemo').text('');
 
 
@@ -3618,9 +3620,12 @@ function hideLoader() {
                         $('#verifyPhoneNumberBtn').prop('disabled', false);
 
 
+
+
                     } else if (response === 'true') {
                         $('#demoMobileNoError').text('This mobile number is already available.');
                         $('.submitButton').prop('disabled', true);
+
                         $('#verifyPhoneNumberBtn').prop('disabled', true);
 
                     }
