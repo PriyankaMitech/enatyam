@@ -494,7 +494,7 @@ padding: 5px;
                                         your time.We won't be crashing into your dreamland adventures with our calls
                                     </div>
                                     <div class="float-right">
-                                        <button type="submit" class="btn btn-success changec d-none">Confirm Booking</button>
+                                        <button type="submit" class="btn btn-success changec " disabled>Confirm Booking</button>
                                     </div>
                                 </div>
                        
@@ -506,7 +506,7 @@ padding: 5px;
                                         your time.We won't be crashing into your dreamland adventures with our calls
                                 </div>
                                 <div class="float-right">
-                                    <button type="submit" class="btn btn-success changec d-none" id="signupbtndemo" value="Confirm Booking">Confirm Booking</button>
+                                    <button type="submit" class="btn btn-success changec" id="signupbtndemo" value="Confirm Booking" disabled>Confirm Booking</button>
                                 </div>
                             </div>
                                                                                 </div>
