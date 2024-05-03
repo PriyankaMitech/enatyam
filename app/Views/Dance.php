@@ -3075,78 +3075,54 @@
                                
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aiden C ( London -Uk )<span></p>
-                                            <p>Enatyam's yoga courses are a total game-changer for me.<br> The instructors keep it real, making every pose feel achievable. <br>It's like having a personal yoga guide right in my living room.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/1h.webp" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sweta ( Australia )</span></p>
-                                            <p>I'm new to yoga, and Enatyam is the perfect starting point.<br> The classes are not intimidating, and  <br>the instructors break down each pose in a way that's easy to understand.<br> Feeling more zen already!</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/2h.webp" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sneha ( Canada )</span></p>
-                                            <p>Enatyam's yoga classes are like a breath of fresh air. <br> The instructors create a friendly atmosphere, making the sessions enjoyable. <br> It's become a daily ritual that I genuinely look forward to."</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/3h.webp" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kavita ( Pune )</span></p>
-                                            <p>I've tried a few online yoga platforms, but Enatyam stands out.<br> The variety of classes keeps things interesting, and <br>the instructors feel like friends guiding you through a mindful journey. <br> Highly recommend!"</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/4h.webp" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Ayesha ( Singapore )</span></p>
-                                            <p>Enatyam's yoga is a perfect fit for a busy mom like me. <br> The quick
-                                                sessions are manageable, and <br>the instructors make it feel like a mini wellness retreat. <br>
-                                                Grateful for this accessible and effective platform!
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Smita Sebastian (UK) <span></p>
+                                            <p>For the past year and a half, I've been learning Kathak from Priti Singh,<br>  and I'm incredibly
+                                            grateful.  Priti's graceful teaching style and deep knowledge of the subject <br> make each session
+                                            interesting and well-rounded. Her online lessons, <br>coupled with flexible scheduling, have
+                                            made my learning journey both convenient and enriching
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/6h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Dance/1.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Oorja Sinha ( Pune)</span></p>
+                                            <p>I made significant improvement in my dancing under the guidance of <br>
+                                            Priti mam, I excelled in Kathak, completing my first-year exam. <br>Once just a dream, now a
+                                            reality thanks to her dedication.<br> Her patient teaching and E-natyam platform make learning
+                                            accessible and enriching.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/2.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Reshma ( Pune )</span></p>
+                                            <p>Enatyam's Kathak online course has been a lifeline for me amidst my<br>
+                                            extremely busy schedule. The moments spent learning and immersing myself in Kathak dance<br>
+                                            have provided a much-needed escape from the pressures of daily life
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/3.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3156,16 +3132,16 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Rajiv ( Lucknow )</span></p>
-                                            <p>The variety of yoga classes on Enatyam is impressive. Whether I need a <br>
-                                                gentle stretch or an energizing flow, <br> there's something for every mood.  The instructors
-                                                make <br> it easy for anyone to enjoy the benefits of yoga.
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Tejashvi (Pune) </span></p>
+                                            <p>I never thought I'd get back into dancing after so many years, but<br>
+                                            Enatyam's Kathak online course made it possible. The structured lessons and supportive<br>
+                                            instructors gently guided me back to my long-forgotten hobby, and I couldn't be happier.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/7h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Dance/4.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3175,16 +3151,16 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vikram ( Delhi )</span></p>
-                                            <p>Enatyam's yoga classes have made me realize that yoga is for everyone. <br>
-                                                The inclusive approach of the instructors and <br>the straightforward guidance make it a
-                                                comfortable and enjoyable practice."
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Swapna ( USA)</span></p>
+                                            <p>Enatyam's Kathak online course has been a delightful journey of
+                                            rediscovery for me. <br>After putting my passion for dance on hold for years, the accessibility of<br>
+                                            online learning allowed me to reconnect with Kathak and reclaim it as a cherished hobby
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/8h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Dance/5.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3194,16 +3170,16 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vishal ( Chandigarh )</span></p>
-                                            <p>I've always struggled to stick with a workout routine, <br> but
-                                                Enatyam's yoga has been a consistent part of my day. <br>The short sessions fit into my
-                                                schedule, and the instructors'<br> encouragement keeps me motivated."
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vaanya’father ( Australia)</span></p>
+                                            <p>Enatyam's Kathak online course has exceeded our expectations
+                                                in every way. <br>The convenience of learning from home has made it easy for my child to fit<br>
+                                                dance practice into their schedule, and the joy it brings them is truly priceless
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/10h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Dance/6.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3213,16 +3189,16 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kajal ( Delhi )</span></p>
-                                            <p>I appreciate how Enatyam's yoga classes cater to various levels.<br> Whether
-                                                you're a beginner or an experienced yogi, there's always  <br>room for growth. The instructors
-                                                make sure everyone feels welcome."
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kavya (USA)</span></p>
+                                            <p>As a busy parent, I couldn't be happier with Enatyam's Bharatanatyam online<br>
+                                            course. It allows my child to pursue their passion for dance without <br>the constraints of rigid
+                                            schedules, and the progress they've made is truly remarkable
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/11h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Dance/7.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3232,16 +3208,17 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Scarlett family ( Germany )</span></p>
-                                            <p>Yoga is a daily dose of positivity for me . The instructors <br>
-                                                radiate good vibes, and the classes have become <br>my source of calm in the midst of a
-                                                busy schedule.<br> A fantastic platform for holistic well-being!"
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Isabella (USA) </span></p>
+                                            <p>Being an English speaker, my fondness for Krishna led me to Kathak with<br>
+                                            Enatyam. Their platform made my Kathak journey incredibly easy to follow.<br> It seamlessly
+                                            blends tradition with accessibility, it's like<br> diving into the exciting world of Kathak without any
+                                            hassle.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/12h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Dance/8.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3251,16 +3228,15 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Emma ( UK )</span></p>
-                                            <p>Yoga is my daily escape from the hustle. The instructors make it easy to<br>
-                                                disconnect and focus on the present moment.It's a simple yet powerful  <br>practice that has
-                                                become a non-negotiable in my routine.
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Pradanya ( Singapore)</span></p>
+                                            <p>Enatyam's Kathak course is a must-try <br>for anyone passionate about
+                                            Indian classical dance.  <br>The curriculum is well-structured, catering to students of all levels
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/14h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Dance/9.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3270,19 +3246,292 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Michael (Mike) ( USA)</span></p>
-                                            <p>Enatyam's yoga is like a personal wellness retreat at home. <br>The
-                                                instructors create a serene atmosphere,<br> and the classes feel like a journey into both 
-                                                physical <br> and mental well-being. Truly transformative
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Dr Riddhi Ketan Shukla ( Ahmedabad ) </span></p>
+                                            <p>Thanks to Enatyam's Kathak online course, I've
+                                                found a way to cut through the noise of my busy schedule and <br>reconnect with myself through
+                                                dance. The graceful movements and <br> intricate footwork provide a sense of calm and clarity
+                                                that I desperately needed
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/15h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Dance/10.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Pearllan ( UK) : </span></p>
+                                            <p>I never imagined I could learn Kathak Dance online <br>with such ease and
+                                            depth. Enatyam's course structure is comprehensive, <br>and the instructors are incredibly
+                                            supportive
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/11.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Roohi’Mom ( Delhi )</span></p>
+                                            <p>Roohi's journey from beginner to performing on renowned stages in<br>
+                                            just two years with Enatyam fills me with immense pride and happiness. Seeing her passion<br>
+                                            for dance blossom is truly rewarding. Thank you, Enatyam, for making her dreams a reality
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/12.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Tia’mom ( Canada)</span></p>
+                                            <p>My daughter Antara has been learning Kathak from Enatyam for
+                                                almost 3 years now. <br>Our overall experience has been extremely satisfactory. The class timings
+                                                are adjusted as per our convenience since we are overseas. <br>The pace of teaching both theory
+                                                and practical is based as per the student's needs. I would recommend it for any parent who<br>
+                                                wants to enroll their kids for any of the various art forms that they offer
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/13.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Meera (canada)</span></p>
+                                            <p>
+                                                Discovering Enatyam E-Learning Kathak during the pandemic was a boon for my daughter<br>
+                                                Meera. In 3+ years, she's made remarkable progress, finding comfort in online learning.<br>
+                                                Detailed theoretical explanations enhance her expression. Grateful for accommodating time<br>
+                                                zones and confident in Meera's Kathak journey.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/14.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Raamya ( Singapore)</span></p>
+                                            <p>Enatyam's Bharatanatyam course is a gem! The instructors break
+                                            down<br> complex movements into manageable steps, making it accessible for beginners like me
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/15.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aarushi ( USA)</span></p>
+                                            <p>The smiles on my daughter’s faces during Enatyam's Bharatanatyam<br>
+                                            dance classes are priceless. The instructors have a gift for making dance accessible and <br>
+                                            enjoyable. It's like they've sprinkled a bit of magic in every session, <br>turning learning into a
+                                            delightful experience
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/16.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Angela’s Father</span></p>
+                                            <p>As a father, I am immensely grateful to Enatyam for the positive impact<br>
+                                            on my daughter Angela. The Bollywood dance classes have become a bonding experience for<br>
+                                            us. The instructors not only teach dance but also create memories that we'll cherish for a<br>
+                                            lifetime. It's a beautiful journey we're on together
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/17.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Amelia ( UK): </span></p>
+                                            <p>The smiles on my kids' faces during Enatyam's Bharatanatyam dance classes<br>
+                                            are priceless. The instructors have a gift for making dance accessible and enjoyable. It's like<br>
+                                            they've sprinkled a bit of magic in every session, turning learning into a delightful experience
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/18.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aahana ( Canada)</span></p>
+                                            <p>Enrolling my 7-year-old daughter in Enatyam's online Kathak class has<br>
+                                            been truly transformative. With passionate instructors and clear instruction, complex<br>
+                                            movements are made manageable, fostering connection and community in virtual learning.<br>
+                                            Highly recommended for cultural exploration.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/19.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Lavanya (Dubai)</span></p>
+                                            <p>Initially I was bit hesitant to go for online kathak classes.But Enatyam has<br>
+                                            been an incredible online platform which transformed my journey into the world of kathak.<br>
+                                            The instructor is not only highly skilled but also deeply passionate about sharing the art form.<br>
+                                            The online platform Enatyam is seamless, offering convenient scheduling and high-quality<br>
+                                            instruction. I highly recommend Enatyam to anyone looking to embark on a transformative
+                                            dance journey.
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/20.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Madhavi( USA)</span></p>
+                                            <p>I've always wanted to dance like they do in Bollywood movies, and<br>
+                                                Enatyam's classes make it possible. The instructors have this infectious enthusiasm, and the<br>
+                                                classes are like a dance celebration. It's not about <br>perfection; it's about enjoying the dance
+                                                journey
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/21.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kiran ( Sweden )</span></p>
+                                            <p>As a father, seeing my kids enjoy Enatyam's Bollywood dance classes is <br>
+                                            heartwarming. The instructors create an environment where learning feels like play. <br>It's like
+                                            they've turned our living room into a dance party, <br>making every move a step closer to
+                                            happiness
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/22.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Lavanya (Dubai)</span></p>
+                                            <p>.Samrat ( Pune ):The transformation I've witnessed in my kids since they started Enatyam's <br>
+                                            Bollywood dance classes is remarkable. The instructors bring infectious energy, and it's like <br>
+                                            they've sparked a newfound passion for dance in my children. <br>The classes have become a
+                                            daily dose of happiness
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Dance/23.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
                             <!-- Add more carousel items as needed -->
                         </div>
 

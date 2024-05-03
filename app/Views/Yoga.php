@@ -3594,13 +3594,16 @@
                                
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aiden C ( London -Uk )<span></p>
-                                            <p>Enatyam's yoga courses are a total game-changer for me.<br> The instructors keep it real, making every pose feel achievable. <br>It's like having a personal yoga guide right in my living room.</p>
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>  Aiden C ( London -Uk)<span></p>
+                                            <p>Enatyam's yoga courses are a total game-changer for me. The <br>
+                                            instructors keep it real, <br>making every pose feel achievable. It's like having a personal <br> yoga
+                                            guide right in my living room.
+                                            </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/1h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/1.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3609,13 +3612,16 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sweta ( Australia )</span></p>
-                                            <p>I'm new to yoga, and Enatyam is the perfect starting point.<br> The classes are not intimidating, and  <br>the instructors break down each pose in a way that's easy to understand.<br> Feeling more zen already!</p>
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sweta ( Australia)</span></p>
+                                            <p>I'm new to yoga, and Enatyam is the perfect starting point. The<br>
+                                            classes are not intimidating, and the instructors <br>break down each pose in a way that's
+                                            easy to understand. Feeling more zen already!
+                                            </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/2h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/2.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3624,13 +3630,16 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sneha ( Canada )</span></p>
-                                            <p>Enatyam's yoga classes are like a breath of fresh air. <br> The instructors create a friendly atmosphere, making the sessions enjoyable. <br> It's become a daily ritual that I genuinely look forward to."</p>
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sneha (Canada )</span></p>
+                                            <p>Enatyam's yoga classes are like a breath of fresh air. The instructors <br>
+                                                create a friendly atmosphere, making the sessions enjoyable.  <br>It's become a daily ritual
+                                                that I genuinely look forward to.
+                                            </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/3h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/3.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3640,13 +3649,35 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kavita ( Pune )</span></p>
-                                            <p>I've tried a few online yoga platforms, but Enatyam stands out.<br> The variety of classes keeps things interesting, and <br>the instructors feel like friends guiding you through a mindful journey. <br> Highly recommend!"</p>
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kavita ( Pune) </span></p>
+                                            <p>I've tried a few online yoga platforms, but Enatyam stands out. The <br>
+                                                variety of classes keeps things interesting, <br> and the instructors feel like friends guiding
+                                                you through a mindful journey. Highly recommend!"
+                                            </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/4h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/4.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Unnikrishnan (Dubai)</span></p>
+                                            <p>Enatyam's yoga courses are my go-to for stress relief. The calming <br>
+                                                voice of the instructors and the simplicity of the poses<br> make it a perfect escape from the
+                                                chaos of daily life.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Yoga/5.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3657,15 +3688,15 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
                                             <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Ayesha ( Singapore )</span></p>
-                                            <p>Enatyam's yoga is a perfect fit for a busy mom like me. <br> The quick
-                                                sessions are manageable, and <br>the instructors make it feel like a mini wellness retreat. <br>
-                                                Grateful for this accessible and effective platform!
+                                            <p> Enatyam's yoga is a perfect fit for a busy mom like me. The quick <br>
+                                                sessions are manageable, <br>and the instructors make it feel like a mini wellness retreat.<br>
+                                                Grateful for this accessible and effective platform!"
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/6h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/6.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3675,16 +3706,16 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Rajiv ( Lucknow )</span></p>
-                                            <p>The variety of yoga classes on Enatyam is impressive. Whether I need a <br>
-                                                gentle stretch or an energizing flow, <br> there's something for every mood.  The instructors
-                                                make <br> it easy for anyone to enjoy the benefits of yoga.
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Emma ( UK ) </span></p>
+                                            <p> yoga is my daily escape from the hustle. The instructors make it easy to <br>
+                                                disconnect and focus on the present moment.  <br>It's a simple yet powerful practice that has
+                                                become a non-negotiable in my routine.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/7h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/7.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3694,16 +3725,35 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vikram ( Delhi )</span></p>
-                                            <p>Enatyam's yoga classes have made me realize that yoga is for everyone. <br>
-                                                The inclusive approach of the instructors and <br>the straightforward guidance make it a
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Rajiv ( Lucknow ) </span></p>
+                                            <p>The variety of yoga classes on Enatyam is impressive. Whether I need a<br>
+                                                gentle stretch or an energizing flow, there's something for every mood. <br>The instructors
+                                                make it easy for anyone to enjoy the benefits of yoga."
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Yoga/8.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vikram ( Delhi ) </span></p>
+                                            <p> Enatyam's yoga classes have made me realize that yoga is for everyone.<br>
+                                                The inclusive approach of the instructors and the straightforward guidance make it a<br>
                                                 comfortable and enjoyable practice."
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/8h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/9.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3713,16 +3763,55 @@
                                 
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vishal ( Chandigarh )</span></p>
-                                            <p>I've always struggled to stick with a workout routine, <br> but
-                                                Enatyam's yoga has been a consistent part of my day. <br>The short sessions fit into my
-                                                schedule, and the instructors'<br> encouragement keeps me motivated."
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Suresh T ( Chennai )</span></p>
+                                            <p>Enatyam is changing the game with its approachable yoga courses.<br>
+                                                The instructors not only focus on the physical aspect but also<br> emphasize the mental
+                                                well-being that comes with a regular yoga practice.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/10h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/10.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Paul Robbie ( Australia )</span></p>
+                                            <p>yoga classes are a gem for beginners like me on enatyam<br>
+                                                platform . The instructors guide with patience, and the step-by-step instructions <br>make it
+                                                easy to follow. It's like having a supportive yoga buddy at home.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Yoga/11.png" class="haimg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item motd">
+                                <div class="row">
+                                
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="carousel-caption">
+                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vaishali ( Chandigarh )</span></p>
+                                            <p> I've always struggled to stick with a workout routine, but <br>
+                                                Enatyam's yoga has been a consistent part of my day. <br>The short sessions fit into my
+                                                schedule, and the instructors'<br> encouragement keeps me motivated."
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 himg">
+                                        <img src="public/images/happyfaces/Yoga/12.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3733,18 +3822,21 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
                                             <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kajal ( Delhi )</span></p>
-                                            <p>I appreciate how Enatyam's yoga classes cater to various levels.<br> Whether
-                                                you're a beginner or an experienced yogi, there's always  <br>room for growth. The instructors
+                                            <p>I appreciate how Enatyam's yoga classes cater to various levels. Whether
+                                                you're a beginner or an experienced yogi, there's always room for growth. The instructors
                                                 make sure everyone feels welcome."
+
+
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/11h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/13.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
+
 
                             <div class="carousel-item motd">
                                 <div class="row">
@@ -3752,37 +3844,20 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
                                             <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Scarlett family ( Germany )</span></p>
-                                            <p>Yoga is a daily dose of positivity for me . The instructors <br>
-                                                radiate good vibes, and the classes have become <br>my source of calm in the midst of a
-                                                busy schedule.<br> A fantastic platform for holistic well-being!"
+                                            <p>Yoga is a daily dose of positivity for us . The instructors<br>
+                                                radiate good vibes, and the classes have<br> become our source of calmness in the midst of a
+                                                daily hustle and bustle . <br>A fantastic platform for holistic well-being
+
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/12h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/14.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Emma ( UK )</span></p>
-                                            <p>Yoga is my daily escape from the hustle. The instructors make it easy to<br>
-                                                disconnect and focus on the present moment.It's a simple yet powerful  <br>practice that has
-                                                become a non-negotiable in my routine.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/14h.webp" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="carousel-item motd">
                                 <div class="row">
@@ -3790,18 +3865,20 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="carousel-caption">
                                             <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Michael (Mike) ( USA)</span></p>
-                                            <p>Enatyam's yoga is like a personal wellness retreat at home. <br>The
-                                                instructors create a serene atmosphere,<br> and the classes feel like a journey into both 
-                                                physical <br> and mental well-being. Truly transformative
+                                            <p>Enatyam's yoga is like a personal wellness retreat at home. The<br>
+                                                instructors create a serene atmosphere, <br>and the classes feel like a journey into both
+                                                physical and mental well-being. Truly transformative
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/15h.webp" class="haimg">
+                                        <img src="public/images/happyfaces/Yoga/15.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
+
+                            
                             <!-- Add more carousel items as needed -->
                         </div>
 
