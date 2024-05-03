@@ -88,7 +88,9 @@
             </div>
           
         </div>
-
+        <a href="https://wa.me/919272122001" class="whatsapp-button">
+  <img src="<?=base_url(); ?>public/images/whatsapp.png" alt="WhatsApp" />
+</a>
         <div class="row">
             <div class="col-md-1 col-12 icn">
                 <div class="social-div ">
@@ -937,7 +939,21 @@
     </script>
 
 <?php } else if ($page == 'demobooking') { ?>
+    <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
 
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

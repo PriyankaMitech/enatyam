@@ -124,9 +124,38 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
         </style>
 
     <?php } else if ($page == 'Dance') { ?>
+
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
       
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
@@ -153,7 +182,21 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
        
 
     <?php } else if ($page == 'music') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
 
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url() ?>public/css/headerStyle.css">
@@ -193,6 +236,21 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
 
     <?php } else if ($page == 'Yoga') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
         <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
@@ -219,6 +277,21 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             }
         </style>
     <?php } else if ($page == 'Instruments') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
@@ -259,7 +332,21 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             }
         </style>
     <?php } else if ($page == 'Career' ||$page == 'Offilinstudio') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
 
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/demo1.css">
@@ -328,6 +415,21 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
 
     ?>
+      <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
 
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/footer.css">
@@ -359,7 +461,21 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
         <?php }else if($page == 'termsandconditions' || $page == 'PrivacyPolicy' || $page == 'blog' || $page == 'refundpolicy'||  $page == 'invester'){
     ?>
+  <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
 
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
     <link rel="stylesheet" href="public/css/footer.css">
 
     <link rel="stylesheet" href="public/css/TermsandConditions.css">

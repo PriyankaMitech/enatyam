@@ -147,7 +147,9 @@ padding: 5px;
     }
 
 </style>
-
+<a href="https://wa.me/919272122001" class="whatsapp-button">
+  <img src="<?=base_url(); ?>public/images/whatsapp.png" alt="WhatsApp" />
+</a>
 <section class="btnSection1 bookdemos">
     <div class="container container_bookdemo">
         <div class="typesOfYoga-tab">
@@ -353,7 +355,7 @@ padding: 5px;
                                     </div>
                                     <div class="col-lg-8 " >
                                     <input type='hidden' name="register_id" id="register_id" >
-                                        <input type="text" name="otpdemo" id="otpdemo" class="form-control d-none" placeholder="Enter otp">
+                                        <input type="text" name="otpdemo" id="otpdemo" class="form-control" placeholder="Enter otp">
                                         <span class="error" id="otpErrordemo" class="error"></span>
                                     </div>
                                     <div class="col-lg-8" >
@@ -376,14 +378,14 @@ padding: 5px;
                                     <input type="hidden" id="ageInput" name="Age1">
                                 </div>
 
-                                <div class="row tpm">
+                                <!-- <div class="row tpm">
                                     <span class="col-lg-4 col-md-12 col-12 text-white fmname">Have you learned any Classes*:</span>
                                     <span class="col-lg-8 col-md-12 col-12 BookingSecondPage_formInput__n8MhF seletbook">
                                         <button type="button" class="btn btn-primary ptage classd active">Yes</button>
                                         <button type="button" class="btn btn-primary ptage classd">No</button>
                                     </span>
                                     <input type="hidden" id="statusc" name="exprience">
-                                </div>
+                                </div> -->
                             
                             <div class="Step_step__mxxn1 tpm">Step
                                 <!-- -->2

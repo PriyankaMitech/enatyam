@@ -3052,4 +3052,45 @@ public function sendrenewalremainder()
         }
     }
 }
+public function add_Offilinstudio()
+{
+    echo view('AdminSideBar/add_Offilinstudio');
+}
+public function addoffstudio()
+{
+    // print_r($_POST);die;
+    $pincode = $this->request->getPost('pincode');
+    $address = $this->request->getPost('address'); 
+    $data = [
+        'pincode' => $pincode,
+        'address' => $address
+    ];
+    $db = \Config\Database::connect();   
+    $builder = $db->table('tbl_offlinestudio');
+    $builder->insert($data);
+    
+    return redirect()->to('add_Offilinstudio');
+}
+public function list_Offilinstudio()
+{
+    $model = new AdminModel();
+      $wherecond = array('is_deleted' => 'N');
+        $data['offlineStudios'] = $model->getalldata('tbl_offlinestudio', $wherecond);
+        // print_r($data['listOffilinstudio']);die;
+    echo view('AdminSideBar/list_Offilinstudio',$data);
+}
+public function deletoffline()
+{
+    // print_r($_POST);die;
+    $id = $this->request->getPost('id');
+    $db = \Config\Database::connect();   
+    $builder = $db->table('tbl_offlinestudio');
+    
+    // Assuming you want to update the 'is_deleted' column to mark the entry as deleted.
+    $data = ['is_deleted' => 'Y']; // Assuming 'is_deleted' is a boolean column
+    
+    $builder->where('id', $id)->update($data);
+    
+    return redirect()->to('list_Offilinstudio');
+}
 }

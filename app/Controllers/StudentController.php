@@ -973,5 +973,14 @@ class StudentController extends BaseController
       //  print_r($data['Coupan_code']);die;
         return view('StudentSidebar/Coupon_Codes',$data);
     }
+    public function invoiceemail()
+    {
+        return view('StudentSidebar/invoiceemail');
+    }
+    public function Renewal()
+    {
+        $model = new AdminModel();
+        return view('StudentSidebar/Renewal');
+    }
     }
   

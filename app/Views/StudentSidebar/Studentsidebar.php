@@ -595,7 +595,14 @@ if (!empty($counter_data)) {
                   <!-- Add other Student menu items with access level checks here -->
                 </ul>
               </li>
-
+              <li class="nav-item">
+                <a href="<?php echo base_url() ?>Renewal" class="nav-link <?php if($page == 'Renewal') { echo "active-nav-link";  }?>">
+                  <i class="nav-icon 	fa fa-child"></i>
+                  <p>
+                    Renewal
+                  </p>
+                </a>
+              </li>
 
               <!-- <li class="nav-item">
 
