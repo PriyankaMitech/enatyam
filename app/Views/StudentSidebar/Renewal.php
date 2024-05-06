@@ -19,16 +19,16 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Remaining Sessions</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>You have 2 sessions remaining. Renew your sessions now!</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Remaining Sessions</h3>
+        </div>
+        <div class="card-body">
+            <p>You have <?php echo $sessions; ?> sessions remaining. Renew After  <?php echo $sessions; ?> sessions now!</p>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </section>

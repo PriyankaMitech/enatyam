@@ -969,7 +969,7 @@ class StudentController extends BaseController
     public function Coupon_Codes()
     {
         $model = new AdminModel();
-        $data['Coupan_code'] =$model->getallCoupan_code();
+        $data['coupan_code'] =$model->getallCoupan_code();
       //  print_r($data['Coupan_code']);die;
         return view('StudentSidebar/Coupon_Codes',$data);
     }
@@ -979,8 +979,17 @@ class StudentController extends BaseController
     }
     public function Renewal()
     {
-        $model = new AdminModel();
-        return view('StudentSidebar/Renewal');
+       
+        $adminModel = model('AdminModel');
+        $session = session();
+        $user_id = $session->get('id');
+        $expiresessions = $adminModel->getSessionno($user_id);
+        $sessioncont = $expiresessions->Session_no ?? null;
+         $paymentsessions = $adminModel->getpaymentsession($user_id);
+         $sessioncont = $expiresessions->Session_no ?? null;
+        $data['sessions'] =$paymentsessions-$sessioncont;
+ 
+        return view('StudentSidebar/Renewal',$data);
     }
     }
   
