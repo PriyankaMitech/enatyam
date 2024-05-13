@@ -12,7 +12,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Offilinstudio</li>
+                        <li class="breadcrumb-item active"><a href="<?=base_url(); ?>list_Offilinstudio">Offilinstudio List</a></li>
                     </ol>
                 </div>
             </div>
@@ -29,7 +29,19 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <form action="addoffstudio" method="post">
+                <form action="addoffstudio" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_no">Contact Number</label>
+                        <input type="text" class="form-control" id="contact_no" name="contact_no" placeholder="Enter Contact Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Image</label>
+                        <input type="file" class="form-control-file" id="img" name="img">
+                    </div>
                     <div class="form-group">
                         <label for="pincode">Pincode</label>
                         <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Enter Pincode" required>
@@ -37,6 +49,10 @@
                     <div class="form-group">
                         <label for="address">Address</label>
                         <textarea class="form-control" id="address" rows="3" name="address" placeholder="Enter Address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="google_location">Google Location</label>
+                        <input type="text" class="form-control" id="google_location" name="google_location" placeholder="Enter Google Location" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

@@ -90,7 +90,7 @@ class StudentController extends BaseController
         if ($assignTeacherId === null) {
 
             // Display an error message
-            $this->session->setFlashdata('errormessage', 'You cannot upload a video because you do not have a faculty assigned.');
+            // $this->session->setFlashdata('errormessage', 'You cannot upload a video because you do not have a faculty assigned.');
 
             // Redirect with the error message
             return redirect()->to('UplodeVideo');
@@ -211,20 +211,18 @@ class StudentController extends BaseController
 
                 // Configure SMTP settings
                 $mail->isSMTP();
-                $mail->Host       = 'smtp.gmail.com';
-                $mail->SMTPAuth   = true;
-                $mail->Username   = 'siddheshkadgemitech@gmail.com';
-                $mail->Password   = 'lxnpuyvyefpbcukr';
+                $mail->Host     ='vps.enatyam.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'hello@enatyam.com';
+                $mail->Password = 'g$@JH3y9c';
                 $mail->SMTPSecure = 'tls';
-                $mail->Port       = 587;
-
-                // Set email details
-                $mail->setFrom('siddheshkadgemitech@gmail.com', 'Open Time Verification Code');
+                $mail->Port     = 587;
+                $mail->setFrom('hello@enatyam.com', 'Enatyam');
                 $mail->addAddress($email, 'Recipient Name');
                 $mail->isHTML(true);
                 $mail->Subject = 'Email Verification Code';
-                $mail->Body = "Your OTP is: $verification_code <br>";
-
+                // $mail->Body = "Your OTP is: $verification_code <br>";
+                $mail->Body = "You recently requested to reset your password for your account. Please use the following OTP ($verification_code) to reset your password:";
                 // Send the email
                 $mail->send();
 
@@ -969,8 +967,8 @@ class StudentController extends BaseController
     public function Coupon_Codes()
     {
         $model = new AdminModel();
-        $data['coupan_code'] =$model->getallCoupan_code();
-      //  print_r($data['Coupan_code']);die;
+        $data['Coupan_code'] =$model->getallCoupan_code();
+    //    print_r($data['Coupan_code']);die;
         return view('StudentSidebar/Coupon_Codes',$data);
     }
     public function invoiceemail()

@@ -54,15 +54,14 @@ require_once 'src/SMTP.php';
     try {
         $mail = new PHPMailer(true);
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Replace 'mail.vedikastrologer.com' with your webmail SMTP host
-        $mail->SMTPAuth = true;
-        $mail->Username = 'siddheshkadgemitech@gmail.com'; // Replace with your webmail username
-        $mail->Password = 'lxnpuyvyefpbcukr'; // Replace with your webmail password
-        $mail->SMTPSecure = 'tls'; // or 'ssl' if your provider supports SSL encryption
-        $mail->Port = 587; // or the port provided by your webmail provider
-
-        $mail->setFrom('siddheshkadgemitech@gmail.com', 'Enatyam'); // Replace with your webmail email address and sender name
-        $mail->addAddress($email, 'Recipient Name');
+        $mail->Host     ='vps.enatyam.com';
+              $mail->SMTPAuth = true;
+              $mail->Username = 'hello@enatyam.com';
+              $mail->Password = 'g$@JH3y9c';
+              $mail->SMTPSecure = 'tls';
+              $mail->Port     = 587;
+              $mail->setFrom('hello@enatyam.com', 'Enatyam');
+              $mail->addAddress($email, 'Recipient Name');
 
         // Add CC emails
         if ($ccEmails) {
@@ -103,13 +102,21 @@ require_once 'src/SMTP.php';
           //  print_r($msg);die;
             $mail = new PHPMailer(true);
             $mail->isSMTP();
-            $mail->Host     = 'smtp.gmail.com';
+            // $mail->Host     = 'smtp.gmail.com';
+            // $mail->SMTPAuth = true;
+            // $mail->Username = 'siddheshkadgemitech@gmail.com';
+            // $mail->Password = 'lxnpuyvyefpbcukr';
+            // $mail->SMTPSecure = 'tls';
+            // $mail->Port     = 587;
+            // $mail->setFrom('siddheshkadgemitech@gmail.com', 'Enatyam');
+            // $mail->addAddress($email, 'Recipient Name');
+            $mail->Host     ='vps.enatyam.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'siddheshkadgemitech@gmail.com';
-            $mail->Password = 'lxnpuyvyefpbcukr';
+            $mail->Username = 'hello@enatyam.com';
+            $mail->Password = 'g$@JH3y9c';
             $mail->SMTPSecure = 'tls';
             $mail->Port     = 587;
-            $mail->setFrom('siddheshkadgemitech@gmail.com', 'Enatyam');
+            $mail->setFrom('hello@enatyam.com', 'Enatyam');
             $mail->addAddress($email, 'Recipient Name');
             // print_r($ccEmails);die;
             if ($ccEmails) {
@@ -258,3 +265,67 @@ function whatsappadmin($templates = null, $msg = null)
     // die;
 
  }
+
+
+//  function sendtest($email, $ccEmails = [], $Subject=null, $msg, $otp=null, $password=null)
+//     {
+//         try {
+//         //    print_r($msg);die;
+//             $mail = new PHPMailer(true);
+//             $mail->isSMTP();
+//             $mail->Host     ='vps.enatyam.com';
+//               $mail->SMTPAuth = true;
+//               $mail->Username = 'hello@enatyam.com';
+//               $mail->Password = 'g$@JH3y9c';
+//               $mail->SMTPSecure = 'tls';
+//               $mail->Port     = 587;
+//               $mail->setFrom('hello@enatyam.com', 'Enatyam');
+//               $mail->addAddress($email, 'Recipient Name');
+//             // print_r($ccEmails);die;
+//             if ($ccEmails) {
+//                 foreach ($ccEmails as $ccEmail) {
+//                     $mail->addCC($ccEmail);
+//                 }
+//             }
+            
+//             $mail->isHTML(true);
+//             $mail->Subject = $Subject;
+//             $mail->Body = $msg;
+//           //  print_r($mail);die;
+//              $mail->send();
+//         } catch (Exception $e) {
+//             echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
+//             return false;
+//         }
+        
+//     }
+
+// function sendtests($email,$ccEmails =[],$Subject,$msg)
+    // {
+    //     // print_r($email);die;
+    //     try {
+    //         //  print_r($msg);die;
+    //           $mail = new PHPMailer(true);
+    //           $mail->isSMTP();
+    //           $mail->Host     ='vps.enatyam.com';
+    //           $mail->SMTPAuth = true;
+    //           $mail->Username = 'hello@enatyam.com';
+    //           $mail->Password = 'g$@JH3y9c';
+    //           $mail->SMTPSecure = 'tls';
+    //           $mail->Port     = 587;
+    //           $mail->setFrom('hello@enatyam.com', 'Enatyam');
+    //           $mail->addAddress($email, 'Recipient Name');
+             
+    //           $mail->isHTML(true);
+    //           $mail->Subject = $Subject;
+    //           $mail->Body = $msg;
+    //         //  print_r($mail);die;
+    //            $mail->send();
+    //       } catch (Exception $e) {
+    //           echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    //           return false;
+    //       }
+        
+    // }
+
+  

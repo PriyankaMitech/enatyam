@@ -145,7 +145,7 @@ class LoginController extends BaseController
                  $sms = 'Dear customer, your OTP for registration is ' . $otp . '. do not share to anyone. Thank you OTPIMS';
                
                  $output = sendSMS($_POST['mobile_number'], $sms);
-                // $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
+                $sendmail = sendConfirmationEmail($_POST['email'], '', 'OTP for registration', 'Please use this otp for registraion -> '.$emailotp.' !', $emailotp);
                 $result['status'] = '200';
                 $result = array(
                     'mobile' => $_POST['mobile_number'],
@@ -236,9 +236,9 @@ class LoginController extends BaseController
     } else {
            
         }
-        $msg = 'Your registration is done';
+        $msg = 'We are delighted to inform you that your registration with Enatyam has been successfully completed! Welcome aboard!';
         $Subject = 'Registration Confirmation';
-        $ccEmails = ['cc1@example.com', 'cc2@example.com'];
+        $ccEmails = ['hello@enatyam.com'];
         $tital = 'Congratulations! You Are Registration Confirmation';
         sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
     

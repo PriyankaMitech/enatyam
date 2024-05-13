@@ -34,6 +34,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('Contactus', 'Home::Contactus');
 $routes->get('pricing', 'Home::pricing');
+$routes->get('corporateyoga', 'Home::CorporateYoga');
 
 $routes->get('refundpolicy', 'Home::RefundPolicy');
 $routes->get('invester', 'Home::invester');
@@ -366,6 +367,7 @@ $routes->get('StudentUploadedImages', 'FacultyController::studentUploadedImages'
 $routes->get('StudentUploadedPDFs', 'FacultyController::studentUploadedPDFs');
 
 
+$routes->post('sendtestemail', 'AdminController::sendtestemail');
 
 
 $routes->get('save_schedule', 'FacultyController::save_schedule');

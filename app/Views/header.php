@@ -233,6 +233,30 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
             }
         </style>
+   <?php } else if ($page == 'corporateyoga') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+     </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+      
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+       
+
+      
+
 
 
     <?php } else if ($page == 'Yoga') { ?>
@@ -331,7 +355,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
             }
         </style>
-    <?php } else if ($page == 'Career' ||$page == 'Offilinstudio') { ?>
+    <?php } else if ($page == 'Career' ||$page == 'Offilinstudio' ||$page == 'corporateyoga') { ?>
         <style>
             .whatsapp-button {
   position: fixed;
@@ -2062,6 +2086,9 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             <li class="nav-item">
                 <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link px-2" href="<?php echo base_url('corporateyoga'); ?>">Corporate Yoga</a>
+            </li>
         </ul>
         <?php if (!(session()->get('sessiondata'))) : ?>
             <div class="loginmenu">
@@ -2114,6 +2141,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 <a class="nav-link px-2" href="<?php echo base_url('Career'); ?>">Career</a>
                 <a class="nav-link px-2" href="<?php echo base_url('pricing'); ?>">Pricing</a>
                 <a class="nav-link px-2" href="<?php echo base_url('Offilinstudio'); ?>">Offline Studio</a>
+                <a class="nav-link px-2" href="<?php echo base_url('corporateyoga'); ?>">Corporate-Yoga</a>
                 <?php if (!(session()->get('sessiondata'))) : ?>
 
                 <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>

@@ -3058,18 +3058,47 @@ public function add_Offilinstudio()
 }
 public function addoffstudio()
 {
-    // print_r($_POST);die;
+    // Retrieve form data
+    $name = $this->request->getPost('name');
+    $contact_no = $this->request->getPost('contact_no');
     $pincode = $this->request->getPost('pincode');
-    $address = $this->request->getPost('address'); 
-    $data = [
-        'pincode' => $pincode,
-        'address' => $address
-    ];
-    $db = \Config\Database::connect();   
-    $builder = $db->table('tbl_offlinestudio');
-    $builder->insert($data);
-    
-    return redirect()->to('add_Offilinstudio');
+    $address = $this->request->getPost('address');
+    $google_location = $this->request->getPost('google_location');
+
+    // Handle file upload
+    $img = $this->request->getFile('img');
+
+    // Check if file was uploaded successfully
+    if ($img->isValid()) {
+        // Generate a unique file name to avoid conflicts
+        $newName = $img->getRandomName();
+
+        // Move the uploaded file to the desired directory
+        $img->move('public/Offilinstudio', $newName);
+
+        // Prepare data for insertion
+        $data = [
+            'name' => $name,
+            'contact_no' => $contact_no,
+            'img' => $newName, // Store filename in database
+            'pincode' => $pincode,
+            'address' => $address,
+            'google_location' => $google_location
+        ];
+
+        // Insert data into the database
+        $db = \Config\Database::connect();
+        $builder = $db->table('tbl_offlinestudio');
+        $builder->insert($data);
+
+        // Redirect to a success page or return a success message
+        return redirect()->to('add_Offilinstudio');
+    } else {
+        // Handle file upload failure
+        // You can return an error message or redirect back to the form with an error
+        // For example:
+        return redirect()->back()->with('error', 'Failed to upload image.');
+    }
 }
 public function list_Offilinstudio()
 {
@@ -3093,4 +3122,5 @@ public function deletoffline()
     
     return redirect()->to('list_Offilinstudio');
 }
+
 }
