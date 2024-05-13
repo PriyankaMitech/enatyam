@@ -972,4 +972,6 @@ public function Payment_msg()
   return redirect()->to('payment_request');
 }
  // print_r($msg);die;
+
+ 
 }

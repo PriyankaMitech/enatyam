@@ -120,6 +120,11 @@ class Home extends BaseController
 
         return view('Dance');
     }
+    public function CorporateYoga()
+    {
+
+        return view('Corporate-Yoga');
+    }
     public function Home()
     {
         $model = new AdminModel();

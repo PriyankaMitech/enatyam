@@ -51,6 +51,11 @@ class PaymentController extends BaseController
         // echo "<pre>";print_r($_POST);exit();
         $adminmodel = new AdminModel();
         $amount1 = $this->request->getPost('total_amount')/100;
+        $merchant_trans_id = $this->request->getPost('merchant_trans_id');
+        $no_of_session = $this->request->getPost('no_of_session');
+        $description = $this->request->getPost('description');
+        $per_session_price = $this->request->getPost('per_session_price');
+        // echo "<pre>";print_r($amount1);exit();
         if (!empty($this->request->getPost('razorpay_payment_id')) && !empty($this->request->getPost('merchant_order_id'))) {
 
             $razorpay_payment_id     = $this->request->getPost('razorpay_payment_id');
@@ -93,29 +98,6 @@ class PaymentController extends BaseController
                         whatsappadmin($templates, $msg);
 
 
-                        $receiverMsg = view('StudentSidebar/invoiceemail', [
-                            'fullname' => session('sessiondata')['user_name'],
-                            'session' => session('sessiondata')['SessionType'],
-                            'amount1' => $amount1,
-                            'mobile' => session('sessiondata')['mobile_no'],
-                            'merchant_order_id'=> $merchant_order_id,
-                            'SessionType'=>session('sessiondata')['SessionType'],
-                            'SessionsCount' =>session('sessiondata')['SessionsCount'],
-                            
-                        ]);
-                        //  print_r($receiverMsg);exit();
-                        // Send email
-                        $useremail = session('sessiondata')['email'];
-                        $ccEmails = ['siddheshkadge214@gmail.com'];
-                       
-                       
-                        $receiverSubject = "Dear " . session('sessiondata')['user_name'] . ",Thank You and Congratulations on completing enrollment ";
-
-                        $senderSubject = 'Payment Resived From ' . session('sessiondata')['user_name'] ;
-                        
-                        sendinvoice($useremail, $ccEmails, $receiverSubject, $receiverMsg, $senderSubject);
-
-
                     } else {
                         $success = false;
                         if (!empty($response_array['error']['code'])) {
@@ -140,11 +122,36 @@ class PaymentController extends BaseController
                     $email = $this->session->get('email');
                     $msg = 'Dear '.$this->session->get('user_name').',
                     <br><br>
-                    This is to confirm that we have received your payment for invoice '.$_POST['merchant_trans_id'].'. The total amount received is '.$_POST['total_amount'].'. <br> Thank you for your timely payment. We looking forward to seeing you in the future. <br><br> Thank you, <br>Enatyam'; 
+                    This is to confirm that we have received your payment for invoice '.$_POST['merchant_trans_id'].'. The total amount received is '.$amount1.'. <br> Thank you for your timely payment. We looking forward to seeing you in the future. <br><br> Thank you, <br>Enatyam'; 
                     $Subject ='Payment Confirmation';
-                    $ccEmails = ['admin@gmail.com', 'cc2@example.com'];
+                    $ccEmails = ['hello@enatyam.com'];
                     sendConfirmationEmail($email,$ccEmails, $Subject, $msg);
+
+                    $receiverMsg = view('StudentSidebar/invoiceemail', [
+                        'fullname' => session('sessiondata')['user_name'],
+                        'session' => session('sessiondata')['SessionType'],
+                        'amount1' => $amount1,
+                        'mobile' => session('sessiondata')['mobile_no'],
+                        'merchant_order_id'=> $merchant_order_id,
+                        'SessionType'=>session('sessiondata')['SessionType'],
+                        'SessionsCount' =>$no_of_session,
+                        'merchant_trans_id' =>$merchant_trans_id,
+                        'description' =>$description,
+                        'razorpay_payment_id' => $razorpay_payment_id,
+                        'per_session_price'=>$per_session_price,
+                        
+                    ]);
+                    //  print_r($receiverMsg);exit();
+                    // Send email
+                    $useremail = session('sessiondata')['email'];
+                    $ccEmails = ['hello@enatyam.com'];
+                   
+                   
+                    $receiverSubject = "Dear " . session('sessiondata')['user_name'] . ",Thank You and Congratulations on completing enrollment ";
+
+                    $senderSubject = 'Payment Resived From ' . session('sessiondata')['user_name'] ;
                     
+                    sendinvoice($useremail, $ccEmails, $receiverSubject, $receiverMsg, $senderSubject);
                     $paydetails = $adminmodel->insert_payment($finaloutput);
                     $_POST['total_amount'] = $_POST['total_amount']/100;
                     $_POST['status'] = 'Y';
