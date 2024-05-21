@@ -45,6 +45,7 @@
     /* margin-top: 50px; */
     background-color: black;
     font-family: "Roboto Slab", Sans-serif;
+    padding-bottom: 54px;
 }
 
 .hedesings h1 {
@@ -149,6 +150,7 @@
     margin-top: 50px;
     background-color: black;
     font-family: "Roboto Slab", Sans-serif;
+    padding-bottom: 54px;
 }
 
 .benifitsyoga button {
@@ -187,7 +189,9 @@
     padding: 8px 12px 14px 0px;
     font-family: "Roboto Slab", Sans-serif;
 }
-
+.alarming{
+    background: linear-gradient(98deg, rgba(129, 235, 249, 1) 0%, rgba(194, 227, 184, 1) 35%, rgba(237, 222, 142, 1) 100%);
+}
 .alarmings {
     max-width: 66%;
     border: none;
@@ -196,6 +200,8 @@
     margin-left: 17%;
     margin-top: 16px;
     font-family: "Roboto Slab", Sans-serif;
+    padding-bottom: 54px;
+    
 }
 
 /* .alarmingcircle {
@@ -607,7 +613,7 @@
 
 
 </section>
-<section class="Yogamodi pb-2">
+<section class="Yogamodi ">
     <div class="content container-fluid px-4">
         <div class=" hedesings">
             <h1 class="text-center"><b>Fit India Movement</b></h1>
@@ -649,7 +655,7 @@
 </section>
 <section class="activeempl ">
     <div class="content">
-        <div class="mt-5 hedesings">
+        <div class="hedesings">
             <h1 class="text-center"><b>Fit India Movement</b></h1>
         </div>
         <div class="row exer">
@@ -697,7 +703,7 @@
 </section>
 <section class="benifitsyoga">
     <div class="content">
-        <div class="mt-5 hedesings">
+        <div class="hedesings">
             <h1 class="text-center"><b>Benefits of Yoga and Mindfulness for Employees</b></h1>
         </div>
         <p>Investing in employee well-being is an investment in the success of your business. Yoga and
@@ -790,7 +796,7 @@
 </section>
 <section class="alarming">
     <div class="content">
-        <div class="mt-5 hedesings">
+        <div class="hedesings">
             <h1 class="text-center"><b>Alarming Situation</b></h1>
         </div>
         <div class="container">
@@ -844,7 +850,7 @@
 </section>
 <section class="Platform">
     <div class="content">
-        <div class="mt-5 hedesings">
+        <div class="hedesings">
             <h1 class="text-center"><b>Platform features</b></h1>
         </div>
         <div class="container">
