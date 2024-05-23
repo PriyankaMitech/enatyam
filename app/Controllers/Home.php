@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\LoginModel;
 use App\Libraries\Google;
 use App\Models\AdminModel;
+use App\Models\StudentModel;
 
 
 
@@ -393,7 +394,79 @@ class Home extends BaseController
         return redirect()->to(base_url());
     }
 }
+// public function StudentDashboard()
+// {
+//     $adminModel = model('AdminModel');
+//     $session = session();
+//     $user_id = $session->get('id');
+//     $expiresessions = $adminModel->getSessionno($user_id);
+//     $sessioncont = $expiresessions->Session_no ?? null;
+//      $paymentsessions = $adminModel->getpaymentsession($user_id);
+//      $sessioncont = $expiresessions->Session_no ?? null;
 
+//     if (isset($_SESSION['sessiondata'])) {
+//         $sessionData = $_SESSION['sessiondata'];
+//         $email = $sessionData['email'] ?? null;
+//         $password = $sessionData['password'] ?? null;
+//         if ($email !== null && $password !== null) {
+          
+
+//             // If Payment_status is 'Y' and SessionsCount matches expiration session
+//             if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
+//                 $user_id = $session->get('id');
+//             //    print_r($sessioncont);
+//             //                 print_r($paymentsessions);die;
+//                 if ($sessioncont == $paymentsessions) {
+//                     $status = 'N';
+//                     $renewal = 'Y';
+//                     $adminModel->updadteattandance($user_id, $renewal);
+//                     $adminModel->updatePaymentStatus($user_id, $status);
+//                     $session = session();
+//                     $session->destroy();
+//                     return redirect()->to('/');
+                    
+//                 }
+
+//                 $login_model = new LoginModel();
+//                 $data['user_data'] = $login_model->get_user_data($user_id);
+//                 $notifications = $adminModel->getUser($user_id);
+                
+//                 $StudentModel = new StudentModel();
+//                 $registerId = $session->get('id');
+//                 $Sheduledatafromfaculty =  $StudentModel->fetchid($registerId);
+//                 $assignTeacherId = $Sheduledatafromfaculty->Assign_Techer_id;
+//                 $wherecond = array('faculty_registerid' => $assignTeacherId);
+//                 $wherecond2 = array('faculty_id' => $assignTeacherId);
+//                 $data['slot_data'] = $adminModel->getalldata('tbl_student_shedule', $wherecond2);
+
+//                 // echo "<pre>";print_r($data['slot_data']);exit();
+    
+
+//                 $count = 0;
+
+//                     if ($notifications) {
+//                         $count = count($notifications);
+//                     } else {
+//                         $count = 0;
+//                     }
+
+//                 return view('StudentDashboard', [
+//                     'data' => $data,
+//                     'notifications' => $notifications,
+//                     'notificationCount' => $count,
+//                     'slot_data' =>$data['slot_data'],
+//                 ]);
+//             } else {         
+                  
+//                 return redirect()->to('ModelForLogin');
+//             }
+//         } else {
+//             return redirect()->to(base_url());
+//         }
+//     } else {
+//         return redirect()->to(base_url());
+//     }
+// }
     public function chechk_username_id()
     {
         $loginModel = new LoginModel();
