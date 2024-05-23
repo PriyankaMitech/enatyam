@@ -44,13 +44,13 @@ class EmailController extends BaseController
 		$mail->isSMTP();
 		$mail->Host       = 'smtp.gmail.com';
 		$mail->SMTPAuth   = true;
-		$mail->Username   = 'siddheshkadgemitech@gmail.com';
-		$mail->Password   = 'lxnpuyvyefpbcukr';
+		$mail->Host     ='vps.enatyam.com';
+		$mail->SMTPAuth = true;
+		$mail->Username = 'hello@enatyam.com';
+		$mail->Password = 'g$@JH3y9c';
 		$mail->SMTPSecure = 'tls';
-		$mail->Port       = 587;
-	
-		// Set email details
-		$mail->setFrom('siddheshkadgemitech@gmail.com', 'Open Time Verification Code');
+		$mail->Port     = 587;
+		$mail->setFrom('hello@enatyam.com', 'Enatyam');
 		$mail->addAddress($email, 'Recipient Name');
 		$mail->isHTML(true);
 		$mail->Subject = 'Email Verification Code';

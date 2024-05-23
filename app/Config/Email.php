@@ -28,17 +28,17 @@ class Email extends BaseConfig
     /**
      * SMTP Server Address
      */
-    public string $SMTPHost = 'smtp.gmail.com';
+    public string $SMTPHost = 'vps.enatyam.com';
 
     /**
      * SMTP Username
      */
-    public string $SMTPUser = 'siddheshkadgemitech@gmail.com';
+    public string $SMTPUser = 'hello@enatyam.com';
 
     /**
      * SMTP Password
      */
-    public string $SMTPPass = 'lxnpuyvyefpbcukr';
+    public string $SMTPPass = 'g$@JH3y9c';
 
     /**
      * SMTP Port
