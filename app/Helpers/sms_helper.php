@@ -86,7 +86,7 @@ require_once 'src/SMTP.php';
 
         // Sender's email
         $mail->clearAddresses();
-        $mail->addAddress('sender@example.com', 'Sender Name'); // Replace with sender's email and name
+        $mail->addAddress('hello@enatyam.com', 'Enatyam'); // Replace with sender's email and name
         $mail->Subject = $senderSubject;
         $mail->Body = $senderMsg;
         $mail->send();
