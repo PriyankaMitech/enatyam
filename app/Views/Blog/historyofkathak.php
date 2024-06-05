@@ -1,6 +1,20 @@
 <?php include APPPATH . 'Views/header.php'; ?>
 
+<style>
+            .whatsapp-button {
+position: fixed;
+bottom: 20px; /* Adjust as needed */
+right: 20px; /* Adjust as needed */
+z-index: 999; /* Ensure it's above other content */
+}
 
+/* Additional styling if needed */
+.whatsapp-button img {
+width: 50px; /* Adjust as needed */
+height: auto;
+border: none;
+}
+        </style>
 <section class="contactus">
         <div class="container cont-width">
             <div class="row">
