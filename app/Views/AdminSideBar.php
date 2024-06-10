@@ -43,7 +43,9 @@
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>plugins/bs-stepper/css/bs-stepper.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.css">
+    <!-- <link rel="stylesheet" href="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
 
     <link rel="stylesheet" href="<?= base_url(); ?>dist/css/adminlte.min.css">
     <link href="<?php echo base_url() ?>image_sprite/ip2location-image-sprite.css" rel="stylesheet">
@@ -1258,12 +1260,12 @@ $page = $uri->getSegment(count($pages));
                                                 <p>Student Payments</p>
                                             </a>
                                         </li>
-                                        <!-- <li class="nav-item">
+                                        <li class="nav-item">
                                             <a href="<?php echo base_url() ?>Coupan_code" class="nav-link <?php if($page == 'Coupan_code') { echo "active-nav-link";  }?>">
                                                 <i class="nav-icon fas fa-book"></i>
                                                 <p>Coupan code</p>
                                             </a>
-                                        </li> -->
+                                        </li>
 
                                         <!-- Add other Finance menu items with access level checks here -->
                                     </ul>

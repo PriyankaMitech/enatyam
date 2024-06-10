@@ -107,7 +107,7 @@
                             src="<?=base_url(); ?>public/images/linkedin.png" /></a>
 
                     <a href="https://www.facebook.com/profile.php?id=100049347683143&mibextid=rS40aB7S9Ucbxw6v"
-                        class="facebook-div"><img src="<?=base_url(); ?>public/images/facebook.png" /></a>
+                        class="facebook-div"><img src="<?=base_url(); ?>public/images/facebook.webp" /></a>
                     <a href="https://youtube.com/@enatyamindia?si=WO5gb1OdOEyWgBj8" class="youtube-div"><img
                             src="<?=base_url(); ?>public/images/network.png" /></a>
                 </div>

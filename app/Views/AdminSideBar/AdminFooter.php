@@ -73,8 +73,11 @@ assignButton.addEventListener('click', function() {
 <script src="<?= base_url(); ?>plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <!-- BS-Stepper -->
 <script src="<?= base_url(); ?>plugins/bs-stepper/js/bs-stepper.min.js"></script>
-<!-- dropzonejs -->
-<script src="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.min.js"></script>
+
+
 
 
 <script>
