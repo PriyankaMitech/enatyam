@@ -192,7 +192,9 @@
 <!-- owl carousel js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
-<script src="<?php echo base_url();?>public/assets/libs/select2/js/select2.min.js"></script>
+<!-- <script src="<?php echo base_url();?>public/assets/libs/select2/js/select2.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
 <script>
 // function showModal(name, designation, img) {
 
@@ -328,45 +330,45 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
 
 
+$(document).ready(function() {
+    var reviewContainers = $(".happyFaces-div1");
 
-document.addEventListener("DOMContentLoaded", function() {
-    var reviewContainers = document.querySelectorAll(".happyFaces-div1");
+    reviewContainers.each(function() {
+        var $container = $(this);
+        var $content = $container.find(".hft p");
+        var readMoreText = $("<span>", {
+            class: "read-more-text",
+            text: "Read More"
+        });
 
-    reviewContainers.forEach(function(container) {
-        // var content = container.querySelector(".hft p");
-        // var readMoreText = document.createElement("span");
-        // readMoreText.className = "read-more-text"; // Apply CSS class to style it like a hyperlink
-        // readMoreText.innerText = "Read More";
-
-        // Set the maximum length of content to show before hiding
         var maxLength = 100; // Adjust this value as needed
-
-        var fullContent = content.innerHTML; // Store the full content
+        var fullContent = $content.html(); // Store the full content
 
         // Check if content length exceeds maximum length
-        if (content.innerText.length > maxLength) {
+        if ($content.text().length > maxLength) {
             // Hide overflowing content initially
-            content.innerHTML = fullContent.substring(0, maxLength) + "...";
+            $content.html(fullContent.substring(0, maxLength) + "...");
 
             // Append the "Read More" text
-            content.insertAdjacentElement("afterend", readMoreText);
+            $content.after(readMoreText);
 
             // Event listener for the "Read More" text
-            readMoreText.addEventListener("click", function() {
+            readMoreText.on("click", function() {
                 // Toggle between showing/hiding the full content
-                if (content.classList.contains("expanded")) {
-                    content.innerHTML = fullContent.substring(0, maxLength) + "...";
-                    readMoreText.innerText = "Read More";
-                    content.classList.remove("expanded");
+                if ($content.hasClass("expanded")) {
+                    $content.html(fullContent.substring(0, maxLength) + "...");
+                    readMoreText.text("Read More");
+                    $content.removeClass("expanded");
                 } else {
-                    content.innerHTML = fullContent;
-                    readMoreText.innerText = "Read Less";
-                    content.classList.add("expanded");
+                    $content.html(fullContent);
+                    readMoreText.text("Read Less");
+                    $content.addClass("expanded");
                 }
             });
         }
     });
 });
+
 </script>
 
 <?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga'|| $page == 'corporateyoga') { ?>
@@ -1102,30 +1104,39 @@ $(document).ready(function() {
 });
 
 
-window.addEventListener("DOMContentLoaded", (event) => {
+$(window).on("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
-    // let details = JSON.parse(countyCode)
-    let demodropDown = document.getElementById("telephoneCountryCode")
-    for (let i = 0; i < details.length; i++) {
-        //let txtOption = '<option value="' + details[i]['code'] + '"' + ' name="' + details[i]['data-phoneLength'] + '">' + details[i]['label'] + '</option>';
-        let txtOption = '<option value="' + details[i]['phone'] + '"' + ' data-phonelength="' + details[i][
-            'data-phoneLength'
-        ] + '">' + details[i]['label'] + '</option>';
-        console.log(txtOption)
-        // let txtOption = '<option value="' + details[i]['code'] + '">' + details[i]['label'] + '</option>';
-        demodropDown.innerHTML = demodropDown.innerHTML + txtOption
-        console.log(demodropDown.innerHTML)
-    }
+
+    // Assuming details is already defined and contains country details
+
+    let $demoDropDown = $("#telephoneCountryCode");
+
+    // Populate dropdown options
+    details.forEach(function(country) {
+        let txtOption = '<option value="' + country.phone + '" data-phonelength="' + country['data-phoneLength'] + '">' + country.label + '</option>';
+        $demoDropDown.append(txtOption);
+    });
 
     // Find index of India in the details array
     let defaultIndex = details.findIndex(country => country.code === "IN");
 
     // Set default selected country to India
-    demoDropDown.selectedIndex = defaultIndex;
+    $demoDropDown.prop("selectedIndex", defaultIndex);
     // Trigger change event to apply mobile number length validation for India
-    demoDropDown.dispatchEvent(new Event('change'));
-
+    $demoDropDown.trigger('change');
 });
+
+$(document).ready(function() {
+    let $demoDropDown = $("#telephoneCountryCode");
+    let $demoMobileNo = $("#Code_MobileNo");
+
+    $demoDropDown.on('change', function(event) {
+        let selectedOption = $(this).find('option:selected');
+        $demoMobileNo.attr("maxlength", selectedOption.data("phonelength"));
+        $demoMobileNo.attr("placeholder", "limit: " + selectedOption.data("phonelength") + " characters");
+    });
+});
+
 
 $(document).ready(function() {
     $('#verifyPhoneNumberBtn').click(function() {
@@ -1181,53 +1192,79 @@ $(document).ready(function() {
 });
 </script>
 <script>
-let demoDropDown = document.getElementById("telephoneCountryCode")
-let demoMobileNo = document.getElementById("Code_MobileNo")
-// Find index of India in the details array
-let defaultIndex = details.findIndex(country => country.code === "IN");
+$(document).ready(function() {
+    let $demoDropDown = $("#telephoneCountryCode");
+    let $demoMobileNo = $("#Code_MobileNo");
 
-// Set default selected country to India
-demoDropDown.selectedIndex = defaultIndex;
-// Trigger change event to apply mobile number length validation for India
-demoDropDown.dispatchEvent(new Event('change'));
+    // Find index of India in the details array
+    let defaultIndex = details.findIndex(country => country.code === "IN");
 
+    // Set default selected country to India
+    $demoDropDown.prop("selectedIndex", defaultIndex);
+    // Trigger change event to apply mobile number length validation for India
+    $demoDropDown.trigger('change');
 
-demoDropDown.addEventListener('change', function() {
-    demoMobileNo.maxLength = event.target.options[event.target.selectedIndex].dataset.phonelength
-    demoMobileNo.placeholder = "limit: " + event.target.options[event.target.selectedIndex].dataset
-        .phonelength + " characters"
-})
+    $demoDropDown.on('change', function(event) {
+        let selectedOption = $(this).find('option:selected');
+        $demoMobileNo.attr("maxlength", selectedOption.data("phonelength"));
+        $demoMobileNo.attr("placeholder", "limit: " + selectedOption.data("phonelength") + " characters");
+    });
+});
+
 </script>
 <script>
 // Restricts input for the given textbox to the given inputFilter.
-function setInputFilter(textbox, inputFilter, errMsg) {
-    ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop", "focusout"].forEach(function(
-        event) {
-        textbox.addEventListener(event, function(e) {
-            if (inputFilter(this.value)) {
+function setInputFilter($textbox, inputFilter, errMsg) {
+    if (!$textbox || !$textbox.length) {
+        // console.error("Textbox is null or not found");
+        return;
+    }
+
+    ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop", "focusout"].forEach(function(event) {
+        $textbox.on(event, function(e) {
+            var $this = $(this);
+            if (inputFilter($this.val())) {
                 // Accepted value.
                 if (["keydown", "mousedown", "focusout"].indexOf(e.type) >= 0) {
-                    this.classList.remove("input-error");
-                    this.setCustomValidity("");
+                    $this.removeClass("input-error");
+                    $this[0].setCustomValidity("");
                 }
 
-                this.oldValue = this.value;
-                this.oldSelectionStart = this.selectionStart;
-                this.oldSelectionEnd = this.selectionEnd;
-            } else if (this.hasOwnProperty("oldValue")) {
+                $this.data("oldValue", $this.val());
+                $this.data("oldSelectionStart", $this[0].selectionStart);
+                $this.data("oldSelectionEnd", $this[0].selectionEnd);
+            } else if ($this.data("oldValue") !== undefined) {
                 // Rejected value: restore the previous one.
-                this.classList.add("input-error");
-                this.setCustomValidity(errMsg);
-                this.reportValidity();
-                this.value = this.oldValue;
-                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                $this.addClass("input-error");
+                $this[0].setCustomValidity(errMsg);
+                $this[0].reportValidity();
+                $this.val($this.data("oldValue"));
+                $this[0].setSelectionRange($this.data("oldSelectionStart"), $this.data("oldSelectionEnd"));
             } else {
                 // Rejected value: nothing to restore.
-                this.value = "";
+                $this.val("");
             }
         });
     });
 }
+
+$(document).ready(function() {
+    // Wait for the document to be ready before selecting the input elements
+    var $input = $(".input-filter");
+    
+    // Check if any elements are found
+    if ($input.length === 0) {
+        // console.error("No elements found with class 'input-filter'");
+        return;
+    }
+
+    setInputFilter($input, function(value) {
+        // Define your input filter logic here.
+        return /^\d*\.?\d*$/.test(value); // Example: Allow only numbers and decimal points.
+    }, "Only digits and '.' are allowed.");
+});
+
+
 </script>
 <script>
 setInputFilter(document.getElementById("Code_MobileNo"), function(value) {
@@ -1940,9 +1977,9 @@ $(document).ready(function() {
     }
 });
 </script>
-
+<!-- 
 <script src="<?= base_url(); ?>public/js/custom.js">
-</script>
+</script> -->
 <script>
 function showcarier() {
     $('#carier').toggle();
@@ -2435,76 +2472,53 @@ $("#inputState").change(function() {
 
 });
 
-window.addEventListener("DOMContentLoaded", (event) => {
+$(document).ready(function() {
     console.log("DOM fully loaded and parsed");
-    let dropDown = document.getElementById("phoneCountryCode")
+    let dropDown = $("#phoneCountryCode");
+    
     for (let i = 0; i < details.length; i++) {
-        //let txtOption = '<option value="' + details[i]['code'] + '"' + ' name="' + details[i]['data-phoneLength'] + '">' + details[i]['label'] + '</option>';
-        let txtOption = '<option value="' + details[i]['phone'] + '"' + ' data-phonelength="' + details[i][
-            'data-phoneLength'
-        ] + '">' + details[i]['label'] + '</option>';
-        console.log(txtOption)
-        // let txtOption = '<option value="' + details[i]['code'] + '">' + details[i]['label'] + '</option>';
-        dropDown.innerHTML = dropDown.innerHTML + txtOption
-        console.log(dropDown.innerHTML)
+        let txtOption = '<option value="' + details[i]['phone'] + '" data-phonelength="' + details[i]['data-phoneLength'] + '">' + details[i]['label'] + '</option>';
+        console.log(txtOption);
+        dropDown.append(txtOption);
+        console.log(dropDown.html());
     }
 
     // Find index of India in the details array
     let defaultIndex = details.findIndex(country => country.code === "IN");
 
     // Set default selected country to India
-    dropDown.selectedIndex = defaultIndex;
-    // Trigger change event to apply mobile number length validation for India
-    dropDown.dispatchEvent(new Event('change'));
+    dropDown.prop('selectedIndex', defaultIndex);
 
+    // Trigger change event to apply mobile number length validation for India
+    dropDown.trigger('change');
 });
+
 
 let careerDropDown = document.getElementById("phoneCountryCode")
 let careerMobileNo = document.getElementById("code_mobileNo")
 
-
-careerDropDown.addEventListener('change', function(event) {
-    let selectedOption = event.target.options[event.target.selectedIndex];
-    careerMobileNo.minLength = selectedOption.dataset.phonelength;
-    careerMobileNo.maxLength = selectedOption.dataset.phonelength;
-    careerMobileNo.placeholder = "limit: " + selectedOption.dataset.phonelength + " characters";
+$(document).ready(function() {
+    $('#phoneCountryCode').on('change', function() {
+        let selectedOption = $(this).find('option:selected');
+        $('#code_mobileNo').attr('minlength', selectedOption.data('phonelength'));
+        $('#code_mobileNo').attr('maxlength', selectedOption.data('phonelength'));
+        $('#code_mobileNo').attr('placeholder', 'limit: ' + selectedOption.data('phonelength') + ' characters');
+    });
 });
 
 
-// Restricts input for the given textbox to the given inputFilter.
-function setInputFilter(textbox, inputFilter, errMsg) {
-    ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop", "focusout"].forEach(function(
-        event) {
-        textbox.addEventListener(event, function(e) {
-            if (inputFilter(this.value)) {
-                // Accepted value.
-                if (["keydown", "mousedown", "focusout"].indexOf(e.type) >= 0) {
-                    this.classList.remove("input-error");
-                    this.setCustomValidity("");
-                }
+$(document).ready(function() {
+    var $codeMobileNo = $("#code_mobileNo");
 
-                this.oldValue = this.value;
-                this.oldSelectionStart = this.selectionStart;
-                this.oldSelectionEnd = this.selectionEnd;
-            } else if (this.hasOwnProperty("oldValue")) {
-                // Rejected value: restore the previous one.
-                this.classList.add("input-error");
-                this.setCustomValidity(errMsg);
-                this.reportValidity();
-                this.value = this.oldValue;
-                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-            } else {
-                // Rejected value: nothing to restore.
-                this.value = "";
-            }
-        });
-    });
-}
+    if ($codeMobileNo.length === 0) {
+        // console.error("Element with ID 'code_mobileNo' not found.");
+        return;
+    }
 
-
-setInputFilter(document.getElementById("code_mobileNo"), function(value) {
-    return /^\d*$/.test(value);
-}, "Must be a number");
+    setInputFilter($codeMobileNo, function(value) {
+        return /^\d*$/.test(value);
+    }, "Must be a number");
+});
 </script>
 
 <!-- <script>
@@ -2650,31 +2664,29 @@ $(document).ready(function() {
 <script src="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/js/bootstrap-select-country.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script src="<?php echo base_url() ?>public/js/custom.js"></script>
+<!-- <script src="<?php echo base_url() ?>public/js/custom.js"></script> -->
 
 <script>
-window.addEventListener("DOMContentLoaded", (event) => {
+$(document).ready(function() {
     console.log("DOM fully loaded and parsed");
     // let details = JSON.parse(countyCode)
-    let dropDown = document.getElementById("lenValidate")
+    let dropDown = $("#lenValidate");
+    
     for (let i = 0; i < details.length; i++) {
-        //let txtOption = '<option value="' + details[i]['code'] + '"' + ' name="' + details[i]['data-phoneLength'] + '">' + details[i]['label'] + '</option>';
-        let txtOption = '<option value="' + details[i]['phone'] + '"' + ' data-phonelength="' + details[i][
-            'data-phoneLength'
-        ] + '">' + details[i]['label'] + '</option>';
-        console.log(txtOption)
-        // let txtOption = '<option value="' + details[i]['code'] + '">' + details[i]['label'] + '</option>';
-        dropDown.innerHTML = dropDown.innerHTML + txtOption
-        console.log(dropDown.innerHTML)
+        let txtOption = '<option value="' + details[i]['phone'] + '" data-phonelength="' + details[i]['data-phoneLength'] + '">' + details[i]['label'] + '</option>';
+        console.log(txtOption);
+        dropDown.append(txtOption);
+        console.log(dropDown.html());
     }
+
     // Find index of India in the details array
     let defaultIndex = details.findIndex(country => country.code === "IN");
 
     // Set default selected country to India
-    dropDown.selectedIndex = defaultIndex;
+    dropDown.prop('selectedIndex', defaultIndex);
 
     // Trigger change event to apply mobile number length validation for India
-    dropDown.dispatchEvent(new Event('change'));
+    dropDown.trigger('change');
 });
 
 
@@ -2692,31 +2704,28 @@ dpDown.addEventListener('change', function() {
 
 // Restricts input for the given textbox to the given inputFilter.
 function setInputFilter(textbox, inputFilter, errMsg) {
-    ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop", "focusout"].forEach(function(
-        event) {
-        textbox.addEventListener(event, function(e) {
-            if (inputFilter(this.value)) {
-                // Accepted value.
-                if (["keydown", "mousedown", "focusout"].indexOf(e.type) >= 0) {
-                    this.classList.remove("input-error");
-                    this.setCustomValidity("");
-                }
-
-                this.oldValue = this.value;
-                this.oldSelectionStart = this.selectionStart;
-                this.oldSelectionEnd = this.selectionEnd;
-            } else if (this.hasOwnProperty("oldValue")) {
-                // Rejected value: restore the previous one.
-                this.classList.add("input-error");
-                this.setCustomValidity(errMsg);
-                this.reportValidity();
-                this.value = this.oldValue;
-                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-            } else {
-                // Rejected value: nothing to restore.
-                this.value = "";
+    $(textbox).on("input keydown keyup mousedown mouseup select contextmenu drop focusout", function(e) {
+        if (inputFilter(this.value)) {
+            // Accepted value.
+            if (["keydown", "mousedown", "focusout"].indexOf(e.type) >= 0) {
+                $(this).removeClass("input-error");
+                this.setCustomValidity("");
             }
-        });
+
+            this.oldValue = this.value;
+            this.oldSelectionStart = this.selectionStart;
+            this.oldSelectionEnd = this.selectionEnd;
+        } else if (this.hasOwnProperty("oldValue")) {
+            // Rejected value: restore the previous one.
+            $(this).addClass("input-error");
+            this.setCustomValidity(errMsg);
+            this.reportValidity();
+            this.value = this.oldValue;
+            this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+        } else {
+            // Rejected value: nothing to restore.
+            this.value = "";
+        }
     });
 }
 
@@ -2906,26 +2915,27 @@ function showprivacypolicyModal() {
 
 
 
+$(document).ready(function() {
+    var $startTimeInput = $("#start-time");
+    var $endTimeInput = $("#end-time");
 
-// JavaScript to handle time input validation
-var startTimeInput = document.getElementById("start-time");
-var endTimeInput = document.getElementById("end-time");
+    $startTimeInput.on("change", validateTimeInput);
+    $endTimeInput.on("change", validateTimeInput);
 
-startTimeInput.addEventListener("change", validateTimeInput);
-endTimeInput.addEventListener("change", validateTimeInput);
+    function validateTimeInput() {
+        var startTime = $startTimeInput.val();
+        var endTime = $endTimeInput.val();
 
-function validateTimeInput() {
-    var startTime = startTimeInput.value;
-    var endTime = endTimeInput.value;
-
-    if (startTime > endTime) {
-        document.getElementById("demo_class-timespanid").textContent = "Start time must be before end time.";
-        // You can disable the form submission or take other actions as needed.
-    } else {
-        document.getElementById("demo_class-timespanid").textContent = "";
-        // The times are valid; you can proceed with form submission.
+        if (startTime > endTime) {
+            $("#demo_class-timespanid").text("Start time must be before end time.");
+            // You can disable the form submission or take other actions as needed.
+        } else {
+            $("#demo_class-timespanid").text("");
+            // The times are valid; you can proceed with form submission.
+        }
     }
-}
+});
+
 
 
 function validateTimeInput() {
