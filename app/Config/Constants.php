@@ -67,12 +67,16 @@ defined('DECADE') || define('DECADE', 315_360_000);
  |       http://tldp.org/LDP/abs/html/exitcodes.html
  |
  */
+// by siddhesh new API KEY LIVE  
+// define('RAZOR_KEY_ID', 'rzp_live_pjTvVRVNxQpMPD');
+// define('RAZOR_KEY_SECRET', 'YJvwatTbtFSbUPgC13gh4AJn');
 
+// 
 //  test key razorpay
 //  define('RAZOR_KEY_ID', 'rzp_test_QdPDZO6x3F9kBz'); // test key --> rzp_test_QdPDZO6x3F9kBz  live key -->rzp_live_L1OeaJe1DsAXHJ
 //  define('RAZOR_KEY_SECRET', '4J842nFYEGsvOnoQx3Bpfl6b'); //test secret --> 4J842nFYEGsvOnoQx3Bpfl6b live secret -->b6s5n0VfFqvsePY7kwai6T6U
-define('RAZOR_KEY_ID', 'rzp_live_L1OeaJe1DsAXHJ'); // test key --> rzp_test_QdPDZO6x3F9kBz  live key -->rzp_live_L1OeaJe1DsAXHJ
- define('RAZOR_KEY_SECRET', 'b6s5n0VfFqvsePY7kwai6T6U'); //test secret --> 4J842nFYEGsvOnoQx3Bpfl6b live secret -->b6s5n0VfFqvsePY7kwai6T6U 
+define('RAZOR_KEY_ID', 'rzp_test_QdPDZO6x3F9kBz'); // test key --> rzp_test_QdPDZO6x3F9kBz  live key -->rzp_live_L1OeaJe1DsAXHJ
+ define('RAZOR_KEY_SECRET', '4J842nFYEGsvOnoQx3Bpfl6b'); //test secret --> 4J842nFYEGsvOnoQx3Bpfl6b live secret -->b6s5n0VfFqvsePY7kwai6T6U 
 define('APPLICATION_NAME', 'XXXXXXXXXX');
 
 //  zoom api keys

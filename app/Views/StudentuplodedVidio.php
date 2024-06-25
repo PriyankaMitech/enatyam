@@ -35,7 +35,7 @@
                                         <small class="badge badge-danger videoBadge">Videos and Images will be deleted after 7 days. Kindly download if required.</small>
                                     </div>
                                     <div>
-                                        <a href="<?php echo base_url() ?>uploaded_video" class="btn btn-primary">Back</a>
+                                        <a href="<?php echo base_url() ?>FacultyDashboard" class="btn btn-primary">Back</a>
                                     </div>
                                 </div>
                             </div>

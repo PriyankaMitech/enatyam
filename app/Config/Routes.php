@@ -73,6 +73,8 @@ $routes->post('check_group_name', 'AdminController::check_group_name');
 $routes->get('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
 $routes->post('chechk_mobile_no_id', 'Home::chechk_mobile_no_id');
 
+$routes->post('corporateyogaconnect', 'AdminController::corporateyogaconnect');
+$routes->post('Yogaconnect', 'AdminController::Yogaconnect');
 
 
 $routes->get('Carrier', 'Home::Carrier');

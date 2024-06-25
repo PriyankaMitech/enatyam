@@ -366,9 +366,10 @@ class Home extends BaseController
 
                 $login_model = new LoginModel();
                 $data['user_data'] = $login_model->get_user_data($user_id);
+                $meeting = $login_model->getmeetinglink($user_id);
                 $notifications = $adminModel->getUser($user_id);
                 
-            
+            // print_r($meeting);die;
 
                 $count = 0;
 
@@ -380,6 +381,7 @@ class Home extends BaseController
 
                 return view('StudentDashboard', [
                     'data' => $data,
+                    'meeting'=>$meeting,
                     'notifications' => $notifications,
                     'notificationCount' => $count,
                 ]);
