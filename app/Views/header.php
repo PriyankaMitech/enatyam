@@ -139,7 +139,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 }
         </style>
 
-    <?php } else if ($page == 'Dance') { ?>
+    <?php } else if ($page == 'Dance' || $page == 'Kathak' || $page == 'Bharatnatyam' || $page == 'Odissi' || $page == 'Bollywood' || $page == 'Western' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'Folk' || $page == 'HindustaniVocal' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'WesternSinging' || $page == 'PlaybackSinging' ) { ?>
 
         <style>
             .whatsapp-button {

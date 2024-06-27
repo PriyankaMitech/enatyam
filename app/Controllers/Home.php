@@ -121,6 +121,52 @@ class Home extends BaseController
 
         return view('Dance');
     }
+    public function Kathak()
+    {
+
+        return view('Kathak');
+    }
+    public function Bharatnatyam()
+    {
+
+        return view('Bharatnatyam');
+    }
+
+    public function Odissi()
+    {
+
+        return view('Odissi');
+    }
+
+    public function Bollywood()
+    {
+
+        return view('Bollywood');
+    }
+
+    public function Western()
+    {
+
+        return view('Western');
+    }
+
+    public function Semiclassical()
+    {
+
+        return view('Semiclassical');
+    }
+
+    public function Bhangra()
+    {
+
+        return view('Bhangra');
+    }
+
+    public function Folk()
+    {
+
+        return view('Folk');
+    }
     public function CorporateYoga()
     {
 
@@ -164,6 +210,35 @@ class Home extends BaseController
 
         return view('music');
     }
+
+    public function HindustaniVocal()
+    {
+
+        return view('HindustaniVocal');
+    }
+
+    public function WesternSinging()
+    {
+
+        return view('WesternSinging');
+    }
+
+    public function CarnaticVocal()
+    {
+
+        return view('CarnaticVocal');
+    }
+    public function SemiClassicals()
+    {
+
+        return view('SemiClassicals');
+    }
+    public function PlaybackSinging()
+    {
+
+        return view('PlaybackSinging');
+    }
+   
     public function Instruments()
     {
 

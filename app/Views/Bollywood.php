@@ -35,7 +35,7 @@
 
             <!-- Kathak -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link active" id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
+                <a class="nav-link " id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
             </li>
 
             <!-- Bharatnatyam -->
@@ -50,7 +50,7 @@
 
             <!-- Bollywood -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Bollywood-tab" href="<?=base_url(); ?>Bollywood" target="_blank" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</a>
+                <a class="nav-link active" id="pills-Bollywood-tab" href="<?=base_url(); ?>Bollywood" target="_blank" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</a>
             </li>
 
             <!-- Western -->
@@ -78,7 +78,7 @@
         </ul>
             <div class="tab-content" id="pills-tabContent">
                 <!-- Kathak -->
-                <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
+                <div class="tab-pane fade " id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
@@ -1263,7 +1263,7 @@
                 </div>
 
                 <!-- Bollywood -->
-                <div class="tab-pane fade" id="pills-Bollywood" role="tabpanel" aria-labelledby="pills-Bollywood-tab">
+                <div class="tab-pane fade show active" id="pills-Bollywood" role="tabpanel" aria-labelledby="pills-Bollywood-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/bollywood-dance.webp" class="danceimg">

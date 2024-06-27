@@ -35,7 +35,7 @@
 
             <!-- Kathak -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link active" id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
+                <a class="nav-link " id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
             </li>
 
             <!-- Bharatnatyam -->
@@ -45,7 +45,7 @@
 
             <!-- Odissi -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Odissi-tab" href="<?=base_url(); ?>Odissi" target="_blank" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</a>
+                <a class="nav-link active" id="pills-Odissi-tab" href="<?=base_url(); ?>Odissi" target="_blank" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</a>
             </li>
 
             <!-- Bollywood -->
@@ -78,7 +78,7 @@
         </ul>
             <div class="tab-content" id="pills-tabContent">
                 <!-- Kathak -->
-                <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
+                <div class="tab-pane fade " id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
@@ -926,7 +926,7 @@
                 </div>
 
                 <!-- Odissi -->
-                <div class="tab-pane fade" id="pills-Odissi" role="tabpanel" aria-labelledby="pills-Odissi-tab">
+                <div class="tab-pane fade show active" id="pills-Odissi" role="tabpanel" aria-labelledby="pills-Odissi-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/odissi.webp" class="danceimg">
