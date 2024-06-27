@@ -2885,6 +2885,13 @@ function showRegistrationModal() {
 }
 
 
+function showConnectModel() {
+    // Hide the login modal
+    $('#loginformpopup').modal('hide');
+    // Show the registration modal
+    $('#Connectformpopup').modal('show');
+}
+
 function showLoginModal() {
     // Hide the registration modal
     $('#registerformpopup').modal('hide');
