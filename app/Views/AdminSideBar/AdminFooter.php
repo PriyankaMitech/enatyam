@@ -1525,7 +1525,7 @@ assignButton.addEventListener('click', function() {
             //             $('#faculty_id_g').val(selectedFacultyId);
             //         }
             //     });
-            }
+            // }
 
             // Use setTimeout to ensure that the document is fully loaded before trying to load student and faculty data
             setTimeout(function() {
