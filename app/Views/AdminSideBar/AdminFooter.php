@@ -1505,37 +1505,37 @@ $(document).ready(function() {
                 });
             }
 
-            // Function to load faculty data
-            // function loadFacultyData() {
-            //     var subcoursesID = $('#sub_courses_id_g').val();
-            //     var courses_id_g = $('#courses_id_g').val();
+            // // Function to load faculty data
+            // // function loadFacultyData() {
+            // //     var subcoursesID = $('#sub_courses_id_g').val();
+            // //     var courses_id_g = $('#courses_id_g').val();
 
 
 
-            //     $.ajax({
-            //         url: '<?= base_url(); ?>get_faculty_data',
-            //         type: 'POST',
-            //         data: {
-            //             sub_courses_id_g: subcoursesID,
-            //             courses_id_g: courses_id_g,
-            //         },
-            //         dataType: 'json',
+            // //     $.ajax({
+            // //         url: '<?= base_url(); ?>get_faculty_data',
+            // //         type: 'POST',
+            // //         data: {
+            // //             sub_courses_id_g: subcoursesID,
+            // //             courses_id_g: courses_id_g,
+            // //         },
+            // //         dataType: 'json',
 
-            //         success: function(data) {
-            //             $('#faculty_id_g').empty();
-            //             $('#faculty_id_g').append('<option value="">Please select faculty</option>');
-            //             $.each(data, function(key, value) {
-            //                 $('#faculty_id_g').append('<option value="' + value.faculty_id + '">' + value.name + '</option>');
-            //             });
+            // //         success: function(data) {
+            // //             $('#faculty_id_g').empty();
+            // //             $('#faculty_id_g').append('<option value="">Please select faculty</option>');
+            // //             $.each(data, function(key, value) {
+            // //                 $('#faculty_id_g').append('<option value="' + value.faculty_id + '">' + value.name + '</option>');
+            // //             });
 
-            //             // Retrieve the selected faculty ID from the hidden input field
-            //             var selectedFacultyId = $('#selected_faculty_id').val();
+            // //             // Retrieve the selected faculty ID from the hidden input field
+            // //             var selectedFacultyId = $('#selected_faculty_id').val();
 
-            //             // Select the faculty in the dropdown
-            //             $('#faculty_id_g').val(selectedFacultyId);
-            //         }
-            //     });
-            }
+            // //             // Select the faculty in the dropdown
+            // //             $('#faculty_id_g').val(selectedFacultyId);
+            // //         }
+            // //     });
+            // }
 
             // Use setTimeout to ensure that the document is fully loaded before trying to load student and faculty data
             setTimeout(function() {
