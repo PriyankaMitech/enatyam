@@ -48,14 +48,18 @@
 <script src="<?= base_url(); ?>plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="<?= base_url(); ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
-<script>const assignButton = document.getElementById('assignButton');
-const loaderContainer = document.getElementById('loaderContainer');
+<script>
+$(document).ready(function() {
+    const assignButton = $('#assignButton');
+    const loaderContainer = $('#loaderContainer');
 
-// Add click event listener to the button
-assignButton.addEventListener('click', function() {
-  // Show the loader container when the button is clicked
-  loaderContainer.style.display = 'block';
-});</script>
+    // Add click event listener to the button
+    assignButton.on('click', function() {
+        // Show the loader container when the button is clicked
+        loaderContainer.css('display', 'block');
+    });
+});
+</script>
 <!-- AdminLTE App -->
 <script src="<?= base_url(); ?>dist/js/adminlte.min.js"></script>
 
@@ -73,8 +77,13 @@ assignButton.addEventListener('click', function() {
 <script src="<?= base_url(); ?>plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <!-- BS-Stepper -->
 <script src="<?= base_url(); ?>plugins/bs-stepper/js/bs-stepper.min.js"></script>
-<!-- dropzonejs -->
-<script src="<?= base_url(); ?>plugins/dropzone/min/dropzone.min.js"></script>
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
+
+
 
 
 <script>
@@ -165,14 +174,14 @@ assignButton.addEventListener('click', function() {
         window.stepper = new Stepper(document.querySelector('.bs-stepper'))
     })
 
-    // DropzoneJS Demo Code Start
-    Dropzone.autoDiscover = false
+    $(document).ready(function() {
+    Dropzone.autoDiscover = false;
 
-    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
-    var previewNode = document.querySelector("#template")
-    previewNode.id = ""
-    var previewTemplate = previewNode.parentNode.innerHTML
-    previewNode.parentNode.removeChild(previewNode)
+    // Get the template HTML and remove it from the document
+    var previewNode = $("#template").get(0);
+    previewNode.id = "";
+    var previewTemplate = previewNode.parentNode.innerHTML;
+    $(previewNode).remove();
 
     var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
         url: "/target-url", // Set the url
@@ -183,7 +192,8 @@ assignButton.addEventListener('click', function() {
         autoQueue: false, // Make sure the files aren't queued until manually added
         previewsContainer: "#previews", // Define the container to display the previews
         clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-    })
+    });
+});
 
     myDropzone.on("addedfile", function(file) {
         // Hookup the start button
@@ -1495,6 +1505,7 @@ assignButton.addEventListener('click', function() {
                 });
             }
 
+
             // Function to load faculty data
             // function loadFacultyData() {
             //     var subcoursesID = $('#sub_courses_id_g').val();
@@ -1525,6 +1536,8 @@ assignButton.addEventListener('click', function() {
             //             $('#faculty_id_g').val(selectedFacultyId);
             //         }
             //     });
+
+         
             // }
 
             // Use setTimeout to ensure that the document is fully loaded before trying to load student and faculty data

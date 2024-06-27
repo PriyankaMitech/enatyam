@@ -23,7 +23,6 @@
 </style>
 
 <script id="toolbar_js">
-    <?//= file_get_contents(__DIR__ . '/toolbar.js') ?>
 </script>
 <div id="debug-icon" class="debug-bar-ndisplay" style="display:none !important">
     <a id="debug-icon-link" href="javascript:void(0)">

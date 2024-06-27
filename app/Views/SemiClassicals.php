@@ -22,11 +22,7 @@
                     </video>                
                 </div>
             </div>
-            <!-- <div class="col-lg-4 col-md-4 bsimg">
-            <div class="banneris">
-                <img src="<?=base_url(); ?>public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
-                </div>
-            </div> -->
+           
         </div>
     </div>
 </section>
@@ -41,7 +37,7 @@
 
     <!-- Hindustani Vocal -->
     <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-        <a class="nav-link active" id="pills-HindustaniVocal-tab" href="<?=base_url(); ?>HindustaniVocal" target="_blank" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="true">Hindustani Vocal</a>
+        <a class="nav-link " id="pills-HindustaniVocal-tab" href="<?=base_url(); ?>HindustaniVocal" target="_blank" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="true">Hindustani Vocal</a>
     </li>
     
     <!-- Carnatic Vocal -->
@@ -51,7 +47,7 @@
     
     <!-- Semi Classical -->
     <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-        <a class="nav-link" id="pills-SemiClassical-tab" href="<?=base_url(); ?>SemiClassicals" target="_blank" role="tab" aria-controls="pills-SemiClassical" aria-selected="false">Semi Classical</a>
+        <a class="nav-link active" id="pills-SemiClassical-tab" href="<?=base_url(); ?>SemiClassicals" target="_blank" role="tab" aria-controls="pills-SemiClassical" aria-selected="false">Semi Classical</a>
     </li>
     
     <!-- Western Singing -->
@@ -68,7 +64,7 @@
 </ul>
             <div class="tab-content" id="pills-tabContent">
                 <!-- Hindustani Vocal -->
-                <div class="tab-pane fade show active" id="pills-HindustaniVocal" role="tabpanel" aria-labelledby="pills-HindustaniVocal-tab">
+                <div class="tab-pane fade " id="pills-HindustaniVocal" role="tabpanel" aria-labelledby="pills-HindustaniVocal-tab">
                     <!-- 1st section : image and description -->
                     <section class="dancedesc musicdancedesc">
                         <div class="container">
@@ -867,7 +863,7 @@
                 </div>
 
                 <!-- SemiClassical -->
-                <div class="tab-pane fade" id="pills-SemiClassical" role="tabpanel" aria-labelledby="pills-SemiClassical-tab">
+                <div class="tab-pane fade show active" id="pills-SemiClassical" role="tabpanel" aria-labelledby="pills-SemiClassical-tab">
                     <section class="dancedesc">
                         <div class="container">
                             <div class="row">

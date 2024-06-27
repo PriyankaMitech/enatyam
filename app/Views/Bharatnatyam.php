@@ -35,12 +35,12 @@
 
             <!-- Kathak -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link active" id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
+                <a class="nav-link " id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
             </li>
 
             <!-- Bharatnatyam -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Bharatnatyam-tab" href="<?=base_url(); ?>Bharatnatyam" target="_blank" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</a>
+                <a class="nav-link active" id="pills-Bharatnatyam-tab" href="<?=base_url(); ?>Bharatnatyam" target="_blank" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</a>
             </li>
 
             <!-- Odissi -->
@@ -78,7 +78,7 @@
         </ul>
             <div class="tab-content" id="pills-tabContent">
                 <!-- Kathak -->
-                <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
+                <div class="tab-pane fade  " id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
@@ -502,7 +502,7 @@
                 </div>
 
                 <!-- Bharatnatyam -->
-                <div class="tab-pane fade" id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
+                <div class="tab-pane fade show active" id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/Bharatnatyam.svg" class="danceimg">
