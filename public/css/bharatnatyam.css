@@ -1,4 +1,10 @@
-.rating-text {
+.s_header-section .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure the link takes the full height of its parent */
+}
+.s_header-section .rating-text {
     text-align: center;
     padding-bottom: 1.7rem;
     font-size: 1.6rem;
@@ -8,39 +14,44 @@
     justify-content: center;
 }
 
-.stars {
+.s_header-section .stars {
     color: gold; /* Set the star color to gold */
     display: inline-flex;
     margin-right: 0.5rem; /* Space between stars and text */
 }
 
-.golden-star {
+.s_header-section .golden-star {
     font-size: 1.6rem; /* Set the star font size */
 }
 
-p{
+.s_header-section p{
     text-align: center; 
     padding-bottom: 1.7rem; 
     font-size: 1.4rem; 
     color: #fff;
 }
 
-h2{
+.s_header-section h2{
    text-align: center; padding-bottom: 1.7rem; color: #fff;
 }
 
-.input-group{
+.s_header-section .input-group{
     justify-content: center;
     height:3.8rem;
     margin-right: 2rem;
 
 }
 
-.temp{
+.s_header-section .temp{
     display: flex;
 }
 
-.singleline{
+.s_header-section .singleline{
     margin-left: 4rem;
     display: flex;
+}
+.s_header-section .rightimg{
+    margin-top: 2rem;
+    height: 33rem;
+    width: auto;
 }
