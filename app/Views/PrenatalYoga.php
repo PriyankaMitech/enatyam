@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;}
+
 </style>
 
 <section class="s_header-section">
@@ -26,7 +27,6 @@
 <section class="btnSection1 yogapagebtn MusicSec ">
     <div class="container dancepagec">
         <div class="typesOfYoga-tab">
-
 
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <!-- Prenatal Yoga -->

@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;}
+
 </style>
 
 <section class="s_header-section">
@@ -27,13 +28,12 @@
     <div class="container dancepagec">
         <div class="typesOfYoga-tab">
 
-
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <!-- Prenatal Yoga -->
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
+                    <a class="nav-link" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
                 </li>
                 <!-- Stress Reduction Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -75,24 +75,25 @@
 
                 <!-- Nutrition Counselling  -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-NutritionCounselling-tab" href="<?=base_url(); ?>NutritionCounselling" data-url="<?=base_url(); ?>NutritionCounselling" role="tab" aria-controls="pills-NutritionCounselling" aria-selected="false">Nutrition Counselling</a>
+                    <a class="nav-link active" id="pills-NutritionCounselling-tab" href="<?=base_url(); ?>NutritionCounselling" data-url="<?=base_url(); ?>NutritionCounselling" role="tab" aria-controls="pills-NutritionCounselling" aria-selected="false">Nutrition Counselling</a>
                 </li>
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
             </ul>
 
             <div class="tab-content " id="pills-tabContent">
-                <!-- Prenatal Yoga   -->
+                <!-- Yoga for Chronic   -->
                 <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel" aria-labelledby="pills-PrenatalYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Yoga/prenatalYoga.svg" class="danceimg">
+                            <img src="public/images/Yoga/NutritionCounsellingImg.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left text-col">
-                            <h3 class="heading"> Prenatal Yoga</h3>
+                            <h3 class="heading"> Nutrition Counselling</h3>
 
                             <p class="yogapagecotent">
-                                The course focuses on making life healthier and building core stength by practicing Yoga in scientific way . Online prenatal yoga classes provide expectant mothers with a convenient and accessible way to stay active and healthy throughout their pregnancy. These classes are designed to help pregnant women reduce stress, alleviate common pregnancy-related discomforts, and prepare for childbirth. Online classes offer flexibility for busy schedules and can be accessed from the comfort of one’s own home. In addition to physical benefits, prenatal yoga classes can also provide emotional support and a sense of community for expectant mothers. With the rise of virtual platforms, there has never been a better time to take advantage of the many benefits of online prenatal yoga classes.ogical well-being, and overall health.
+                                Nutritionist will provide personalized recommendations and support to help you achieve your health goals, whether it’s weight loss, managing chronic conditions, or improving athletic performance. Online counseling provides a ﬂexible option for people to receive nutrition advice and support from the comfort of their own homes, at a time that works for them.
+                                Additionally, online counseling often uses digital tools and resources to help clients track their progress and stay motivated. Joining an online nutritional counseling program can be a great way to receive personalized support, improve your diet and lifestyle habits, and achieve optimal health. </p>
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>

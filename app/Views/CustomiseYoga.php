@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;}
+
 </style>
 
 <section class="s_header-section">
@@ -27,13 +28,12 @@
     <div class="container dancepagec">
         <div class="typesOfYoga-tab">
 
-
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <!-- Prenatal Yoga -->
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
+                    <a class="nav-link" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
                 </li>
                 <!-- Stress Reduction Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -70,7 +70,7 @@
                 </li>
                 <!-- Customise your Yoga Plan -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-CustomiseYoga-tab" href="<?=base_url(); ?>CustomiseYoga" data-url="<?=base_url(); ?>CustomiseYoga" role="tab" aria-controls="pills-CustomiseYoga" aria-selected="false">Customise Your Yoga Plan</a>
+                    <a class="nav-link active" id="pills-CustomiseYoga-tab" href="<?=base_url(); ?>CustomiseYoga" data-url="<?=base_url(); ?>CustomiseYoga" role="tab" aria-controls="pills-CustomiseYoga" aria-selected="false">Customise Your Yoga Plan</a>
                 </li>
 
                 <!-- Nutrition Counselling  -->
@@ -82,17 +82,19 @@
             </ul>
 
             <div class="tab-content " id="pills-tabContent">
-                <!-- Prenatal Yoga   -->
+                <!-- Yoga for Chronic   -->
                 <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel" aria-labelledby="pills-PrenatalYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Yoga/prenatalYoga.svg" class="danceimg">
+                            <img src="public/images/Yoga/CustomizeYogaImg.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left text-col">
-                            <h3 class="heading"> Prenatal Yoga</h3>
+                            <h3 class="heading"> Customise your Yoga Plan</h3>
 
                             <p class="yogapagecotent">
-                                The course focuses on making life healthier and building core stength by practicing Yoga in scientific way . Online prenatal yoga classes provide expectant mothers with a convenient and accessible way to stay active and healthy throughout their pregnancy. These classes are designed to help pregnant women reduce stress, alleviate common pregnancy-related discomforts, and prepare for childbirth. Online classes offer flexibility for busy schedules and can be accessed from the comfort of one’s own home. In addition to physical benefits, prenatal yoga classes can also provide emotional support and a sense of community for expectant mothers. With the rise of virtual platforms, there has never been a better time to take advantage of the many benefits of online prenatal yoga classes.ogical well-being, and overall health.
+                            Online customized yoga sessions offer a personalized and effective way to practice yoga according to your individual needs and goals. A customized yoga practice can help individuals to address speciﬁc concerns, such as chronic pain, injuries, or stress-related issues. Online customized sessions provide a ﬂexible option for people to practice yoga from the comfort of their own homes, with guidance from experienced teachers who can tailor the practice to their individual needs.
+
+                            Additionally, online customized sessions often offer one-on-one consultations, personalized sequences, and modiﬁcations for poses, making it accessible for people with different physical abilities. Joining an online customized yoga session can be a great way to address speciﬁc concerns, improve overall physical and mental wellbeing, and make yoga a truly personalized practice.
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>

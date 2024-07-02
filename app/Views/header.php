@@ -164,6 +164,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
@@ -286,6 +287,428 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 font-weight: 400 !important;
             }
         </style>
+
+<?php } else if ($page == 'PrenatalYoga') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+<?php } else if ($page == 'StressReduction') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+<?php } else if ($page == 'Flexibility') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+<?php } else if ($page == 'WeightLossYoga') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+<?php } else if ($page == 'EverydayYoga') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+<?php } else if ($page == 'YogaforChronic') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+<?php } else if ($page == 'YogaforKids') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+<?php } else if ($page == 'Meditation') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+<?php } else if ($page == 'CustomiseYoga') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+<?php } else if ($page == 'NutritionCounselling') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .tab-pane.fade.show .textPara1 {
+                font-size: 15px !important;
+                font-weight: 400 !important;
+            }
+        </style>
+
+
     <?php } else if ($page == 'Instruments') { ?>
         <style>
             .whatsapp-button {
@@ -341,6 +764,510 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
             }
         </style>
+         <?php } else if ($page == 'Guitar') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
+
+            body {
+                background-color: #fad32c;
+            }
+
+            #danceVideo {
+
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
+
+            }
+        </style>
+          <?php } else if ($page == 'Flute') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
+
+            body {
+                background-color: #fad32c;
+            }
+
+            #danceVideo {
+
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
+
+            }
+        </style>
+
+<?php } else if ($page == 'Tabla') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
+
+            body {
+                background-color: #fad32c;
+            }
+
+            #danceVideo {
+
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
+
+            }
+        </style>
+
+<?php } else if ($page == 'Sitar') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
+
+            body {
+                background-color: #fad32c;
+            }
+
+            #danceVideo {
+
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
+
+            }
+        </style>
+
+<?php } else if ($page == 'Veena') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
+
+            body {
+                background-color: #fad32c;
+            }
+
+            #danceVideo {
+
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
+
+            }
+        </style>
+
+<?php } else if ($page == 'Piano') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
+
+            body {
+                background-color: #fad32c;
+            }
+
+            #danceVideo {
+
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
+
+            }
+        </style>
+
+<?php } else if ($page == 'Violin') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
+
+            body {
+                background-color: #fad32c;
+            }
+
+            #danceVideo {
+
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
+
+            }
+        </style>
+
+<?php } else if ($page == 'Keyboard') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
+
+            body {
+                background-color: #fad32c;
+            }
+
+            #danceVideo {
+
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
+
+            }
+        </style>
+
+<?php } else if ($page == 'Harmonium') { ?>
+        <style>
+            .whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Additional styling if needed */
+.whatsapp-button img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  border: none;
+}
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <style>
+            .month-row .month-list .dancetypes .monthbtn {
+                width: 109px !important;
+                height: 60px;
+            }
+
+            body {
+                background-color: #fad32c;
+            }
+
+            #danceVideo {
+
+                width: 100%;
+
+                object-fit: cover;
+                z-index: -100;
+
+            }
+        </style>
+
+
     <?php } else if ($page == 'Career' ||$page == 'Offilinstudio' ) { ?>
         <style>
             .whatsapp-button {

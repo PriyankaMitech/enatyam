@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
-    }
+}
 </style>
 
 <section class="s_header-section ">
@@ -51,12 +51,12 @@
                 </li>
                 <!-- Guitar -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-Guitar-tab" href="<?=base_url(); ?>Guitar" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</a>
+                    <a class="nav-link" id="pills-Guitar-tab" href="<?=base_url(); ?>Guitar" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</a>
                 </li>
 
                 <!-- Flute -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Flute-tab" href="<?=base_url(); ?>Flute" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="false">Flute</a>
+                    <a class="nav-link active" id="pills-Flute-tab" href="<?=base_url(); ?>Flute" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="false">Flute</a>
                 </li>
                 <!-- Tabla -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -106,19 +106,12 @@
                 <div class="tab-pane fade show active" id="pills-Guitar" role="tabpanel" aria-labelledby="pills-Guitar-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/instrument/g-1.svg" class="danceimg">
+                            <img src="public/images/instrument/fluteImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> Guitar</h3>
+                            <h3 class="heading"> Flute</h3>
                             <p class="">
-                            Looking to master the guitar from the comfort of your own home? Our comprehensive online
-                            guitar course is designed to take you from a beginner to a confident player in no time. With
-                            expert instruction and step-by-step lessons, you'll learn essential techniques, chord
-                            progressions, scales, and music theory. Our interactive platform offers practice exercises,
-                            video tutorials, and personalized feedback to ensure your progress. Whether you're into rock,
-                            blues, or acoustic styles, our course covers a wide range of genres and helps you develop
-                            your own unique sound. Join our online guitar course today and unleash your musical
-                            potential with convenience and flexibility.
+                            Discover the enchanting world of ﬂute playing with our online ﬂute course. Designed for beginners and intermediate players, this comprehensive program will guide you through the fundamentals of ﬂute technique, note reading, and music theory. Over the course of 12 months, you’ll learn to produce beautiful melodies and explore a variety of musical genres. Our expert instructors will provide step-by-step video lessons, personalized feedback, and practice materials to enhance your progress. Whether you’re passionate about classical, jazz, or world music, our online ﬂute course offers convenience and ﬂexibility, empowering you to become a skilled ﬂutist from the comfort of your home. Enroll now and let the music take ﬂight!
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>

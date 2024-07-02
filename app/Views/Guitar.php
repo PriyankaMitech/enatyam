@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
-    }
+}
 </style>
 
 <section class="s_header-section ">

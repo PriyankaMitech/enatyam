@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;}
+
 </style>
 
 <section class="s_header-section">
@@ -27,13 +28,12 @@
     <div class="container dancepagec">
         <div class="typesOfYoga-tab">
 
-
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <!-- Prenatal Yoga -->
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
+                    <a class="nav-link" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
                 </li>
                 <!-- Stress Reduction Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -62,7 +62,7 @@
                 </li>
                 <!-- Yoga for Kids -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-YogaforKids-tab" href="<?=base_url(); ?>YogaforKids" data-url="<?=base_url(); ?>YogaforKids" role="tab" aria-controls="pills-YogaforKids" aria-selected="false">Yoga for Kids</a>                    
+                    <a class="nav-link active" id="pills-YogaforKids-tab" href="<?=base_url(); ?>YogaforKids" data-url="<?=base_url(); ?>YogaforKids" role="tab" aria-controls="pills-YogaforKids" aria-selected="false">Yoga for Kids</a>                    
                 </li>
                 <!-- Meditation -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -82,17 +82,19 @@
             </ul>
 
             <div class="tab-content " id="pills-tabContent">
-                <!-- Prenatal Yoga   -->
+                <!-- Yoga for Chronic   -->
                 <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel" aria-labelledby="pills-PrenatalYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Yoga/prenatalYoga.svg" class="danceimg">
+                            <img src="public/images/Yoga/YogaForKids.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left text-col">
-                            <h3 class="heading"> Prenatal Yoga</h3>
+                            <h3 class="heading"> Yoga for Kids</h3>
 
                             <p class="yogapagecotent">
-                                The course focuses on making life healthier and building core stength by practicing Yoga in scientific way . Online prenatal yoga classes provide expectant mothers with a convenient and accessible way to stay active and healthy throughout their pregnancy. These classes are designed to help pregnant women reduce stress, alleviate common pregnancy-related discomforts, and prepare for childbirth. Online classes offer flexibility for busy schedules and can be accessed from the comfort of one’s own home. In addition to physical benefits, prenatal yoga classes can also provide emotional support and a sense of community for expectant mothers. With the rise of virtual platforms, there has never been a better time to take advantage of the many benefits of online prenatal yoga classes.ogical well-being, and overall health.
+                            Online yoga classes for kids offer a fun and engaging way to promote physical activity and mindfulness in children. Yoga can help children to develop strength, ﬂexibility, balance, and focus, while also reducing stress and anxiety. Online classes provide a convenient and accessible option for parents to introduce yoga to their children at home.
+
+                            Additionally, online classes often incorporate games, storytelling, and music to make yoga more engaging for kids. Joining an online yoga for kids class can be a great way to promote a healthy lifestyle and encourage children to develop a lifelong appreciation for exercise and mindfulness.
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>

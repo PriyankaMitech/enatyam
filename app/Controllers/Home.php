@@ -244,11 +244,109 @@ class Home extends BaseController
 
         return view('Instruments');
     }
+    public function Guitar()
+    {
+
+        return view('Guitar');
+    }
+    public function Flute()
+    {
+
+        return view('Flute');
+    }
+    public function Tabla()
+    {
+
+        return view('Tabla');
+    }
+    public function Sitar()
+    {
+
+        return view('Sitar');
+    }
+    public function Veena()
+    {
+
+        return view('Veena');
+    }
+    public function Piano()
+    {
+
+        return view('Piano');
+    }
+    public function Violin()
+    {
+
+        return view('Violin');
+    }
+    public function Keyboard()
+    {
+
+        return view('Keyboard');
+    }
+    public function Harmonium()
+    {
+
+        return view('Harmonium');
+    }
+
     public function Yoga()
     {
 
         return view('Yoga');
     }
+    public function PrenatalYoga()
+    {
+
+        return view('PrenatalYoga');
+    }
+    public function StressReduction()
+    {
+
+        return view('StressReduction');
+    }
+    public function Flexibility()
+    {
+
+        return view('Flexibility');
+    }
+    public function WeightLossYoga()
+    {
+
+        return view('WeightLossYoga');
+    }
+    public function EverydayYoga()
+    {
+
+        return view('EverydayYoga');
+    }
+    public function YogaforChronic()
+    {
+
+        return view('YogaforChronic');
+    }
+    public function YogaforKids()
+    {
+
+        return view('YogaforKids');
+    }
+    public function Meditation()
+    {
+
+        return view('Meditation');
+    }
+    public function CustomiseYoga()
+    {
+
+        return view('CustomiseYoga');
+    }
+    public function NutritionCounselling()
+    {
+
+        return view('NutritionCounselling');
+    }
+
+
     public function Profile()
     {
 

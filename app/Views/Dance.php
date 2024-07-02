@@ -63,7 +63,7 @@
 
             <!-- Semi-classical -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link big" id="pills-Semiclassical-tab" href="<?=base_url(); ?>Semiclassical" target="_blank" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semiiiii Classical</a>
+                <a class="nav-link big" id="pills-Semiclassical-tab" href="<?=base_url(); ?>Semiclassical" target="_blank" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</a>
             </li>
 
             <!-- Bhangra -->

@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;}
+
 </style>
 
 <section class="s_header-section">
@@ -27,17 +28,16 @@
     <div class="container dancepagec">
         <div class="typesOfYoga-tab">
 
-
             <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <!-- Prenatal Yoga -->
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
+                    <a class="nav-link" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
                 </li>
                 <!-- Stress Reduction Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-StressReduction-tab" href="<?=base_url(); ?>StressReduction" data-url="<?=base_url(); ?>StressReduction" role="tab" aria-controls="pills-StressReduction" aria-selected="false">Stress Reduction Yoga</a>
+                    <a class="nav-link active" id="pills-StressReduction-tab" href="<?=base_url(); ?>StressReduction" data-url="<?=base_url(); ?>StressReduction" role="tab" aria-controls="pills-StressReduction" aria-selected="false">Stress Reduction Yoga</a>
                 </li>
                 <!-- Flexibility Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -86,13 +86,15 @@
                 <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel" aria-labelledby="pills-PrenatalYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Yoga/prenatalYoga.svg" class="danceimg">
+                            <img src="public/images/Yoga/StressReductionImg.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left text-col">
-                            <h3 class="heading"> Prenatal Yoga</h3>
+                            <h3 class="heading"> Stress Reduction Yoga</h3>
 
                             <p class="yogapagecotent">
-                                The course focuses on making life healthier and building core stength by practicing Yoga in scientific way . Online prenatal yoga classes provide expectant mothers with a convenient and accessible way to stay active and healthy throughout their pregnancy. These classes are designed to help pregnant women reduce stress, alleviate common pregnancy-related discomforts, and prepare for childbirth. Online classes offer flexibility for busy schedules and can be accessed from the comfort of one’s own home. In addition to physical benefits, prenatal yoga classes can also provide emotional support and a sense of community for expectant mothers. With the rise of virtual platforms, there has never been a better time to take advantage of the many benefits of online prenatal yoga classes.ogical well-being, and overall health.
+                            Online stress reduction yoga is becoming increasingly popular as people look for ways to manage their stress levels in a busy and demanding world. Stress reduction yoga combines physical poses, breathing exercises, and mindfulness techniques to help reduce stress and anxiety, improve focus and concentration, and promote relaxation. Online classes offer the convenience of practicing from home and at any time of the day.
+
+                            Moreover, many online stress reduction yoga classes cater to different skill levels, making it accessible to everyone. Practicing yoga regularly can also have numerous physical beneﬁts, such as reducing inﬂammation, improving sleep quality, and boosting the immune system. If you’re looking for an effective way to reduce stress and enhance your overall well-being, online stress reduction yoga could be the perfect solution.
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
