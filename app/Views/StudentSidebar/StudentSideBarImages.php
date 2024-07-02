@@ -1,5 +1,10 @@
-<?php echo view('StudentSidebar/Studentsidebar'); ?>
-<style>
+<?php
+$file = __DIR__ . "/Studentsidebar.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";}
+?><style>
     .video-card:hover {
         transform: scale(1.05);
         transition: transform 0.3s ease;
@@ -249,4 +254,10 @@ function formatDateTime($dateTimeString)
 
 
 </div>
-<?php echo view('StudentSidebar/StudentFooter.php'); ?>
+<?php
+$file = __DIR__ . "/StudentFooter.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";}
+?>
