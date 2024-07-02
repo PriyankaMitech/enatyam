@@ -6,7 +6,7 @@
     <div class="content">
 
         <p>At Enatyam, we recognize the challenges posed by today's fast-paced work environments.
-           <br> Our <b>Employee Wellness Program (EWP)</b> is meticulously crafted to address your<br>
+            <br> Our <b>Employee Wellness Program (EWP)</b> is meticulously crafted to address your<br>
             organization's needs in promoting employee well-being and welfare. Stress and burnout<br>
             have become prevalent issues for leaders, prompting us to design a course that<br>
             underscores the significance of yoga and meditation. Our <b>EWP</b> is tailored to meet the<br>
@@ -14,7 +14,8 @@
             nurture well-being, and amplify performance. With our online programs, we offer<br>
             convenience for busy professionals, facilitating both physical and mental health benefits.<br>
             Choose Enatyam to equip your team with wellness resources, fostering a happier and<br>
-            more productive workforce.</p>
+            more productive workforce.
+        </p>
 
 
         <p>Join us on a journey of self-discovery and growth to unlock your full leadership potential</p>
@@ -24,7 +25,7 @@
         <ul class="nav nav-pills row">
             <li class="nav-item col-md-6 col-lg-6 col-6">
                 <button class="Yoga-btn">
-                Yoga Program for Corporates
+                    Yoga Program for Corporates
                 </button>
             </li>
             <li class="nav-item col-md-6 col-lg-6 col-6">
@@ -42,22 +43,23 @@
 <section class="Yogamodi">
     <div class="content container-fluid px-4">
 
-    <div class="hedesings">
-    <h1 class="gradient-text">
-        <svg  viewBox="0 0 100 20" preserveAspectRatio="xMidYMid meet">
-            <defs>
-            <linearGradient id="gradient" gradientTransform="rotate(10)">
-                        <stop offset="0%" stop-color="#7028EE"></stop>
-                        <stop offset="50%" stop-color="#366CE3"></stop>
-                        <stop offset="100%" stop-color="#0CADD1"></stop>
-                    </linearGradient>
-            </defs>
-            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="fantasy" font-weight="100" font-size="8">
-                Fit India Movement
-            </text>
-        </svg>
-    </h1>
-</div>
+        <div class="hedesings">
+            <h1 class="gradient-text">
+                <svg viewBox="0 0 100 20" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="gradient" gradientTransform="rotate(10)">
+                            <stop offset="0%" stop-color="#7028EE"></stop>
+                            <stop offset="50%" stop-color="#366CE3"></stop>
+                            <stop offset="100%" stop-color="#0CADD1"></stop>
+                        </linearGradient>
+                    </defs>
+                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)"
+                        font-family="fantasy" font-weight="100" font-size="8">
+                        Fit India Movement
+                    </text>
+                </svg>
+            </h1>
+        </div>
 
 
         <div class="row p-3">
@@ -99,15 +101,16 @@
     <div class="content">
         <div class="hedesings">
             <h1 class="gradient-text">
-                <svg  viewBox="0 0 100 20" preserveAspectRatio="xMidYMid meet">
+                <svg viewBox="0 0 100 20" preserveAspectRatio="xMidYMid meet">
                     <defs>
-                    <linearGradient id="gradient" gradientTransform="rotate(10)">
-                                <stop offset="0%" stop-color="#7028EE"></stop>
-                                <stop offset="50%" stop-color="#366CE3"></stop>
-                                <stop offset="100%" stop-color="#0CADD1"></stop>
-                            </linearGradient>
+                        <linearGradient id="gradient" gradientTransform="rotate(10)">
+                            <stop offset="0%" stop-color="#7028EE"></stop>
+                            <stop offset="50%" stop-color="#366CE3"></stop>
+                            <stop offset="100%" stop-color="#0CADD1"></stop>
+                        </linearGradient>
                     </defs>
-                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="fantasy" font-weight="100" font-size="8">
+                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)"
+                        font-family="fantasy" font-weight="100" font-size="8">
                         Fit India Movement
                     </text>
                 </svg>
@@ -116,35 +119,40 @@
 
         <div class="row exer justify-content-center align-items-center">
             <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
-                <img src="<?=base_url(); ?>public/images/corporateyoga/human-footprint.png" alt="Image 1" class="img-fluid smaller-image">
+                <img src="<?=base_url(); ?>public/images/corporateyoga/human-footprint.png" alt="Image 1"
+                    class="img-fluid smaller-image">
                 <span class="image-text">Activity</span>
             </div>
             <div class="col-md-auto d-flex justify-content-center align-items-center">
                 <span class="symbol">+</span>
             </div>
             <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
-                <img src="<?=base_url(); ?>public/images/corporateyoga/apples.png" alt="Image 2" class="img-fluid smaller-image">
+                <img src="<?=base_url(); ?>public/images/corporateyoga/apples.png" alt="Image 2"
+                    class="img-fluid smaller-image">
                 <span class="image-text">Nutrition</span>
             </div>
             <div class="col-md-auto d-flex justify-content-center align-items-center">
                 <span class="symbol">+</span>
             </div>
             <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
-                <img src="<?=base_url(); ?>public/images/corporateyoga/stretching.png" alt="Image 3" class="img-fluid smaller-image">
+                <img src="<?=base_url(); ?>public/images/corporateyoga/stretching.png" alt="Image 3"
+                    class="img-fluid smaller-image">
                 <span class="image-text">Exercise</span>
             </div>
             <div class="col-md-auto d-flex justify-content-center align-items-center">
                 <span class="symbol">+</span>
             </div>
             <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
-                <img src="<?=base_url(); ?>public/images/corporateyoga/lotus.png" alt="Image 4" class="img-fluid smaller-image">
+                <img src="<?=base_url(); ?>public/images/corporateyoga/lotus.png" alt="Image 4"
+                    class="img-fluid smaller-image">
                 <span class="image-text">Mindfulness</span>
             </div>
             <div class="col-md-auto d-flex justify-content-center align-items-center">
                 <span class="symbol">=</span>
             </div>
             <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
-                <img src="<?=base_url(); ?>public/images/corporateyoga/wellbeing.png" alt="Image 5" class="img-fluid smaller-image">
+                <img src="<?=base_url(); ?>public/images/corporateyoga/wellbeing.png" alt="Image 5"
+                    class="img-fluid smaller-image">
                 <span class="image-text">Total Wellbeing</span>
             </div>
         </div>
@@ -154,7 +162,8 @@
                 <div class="circle circle1">Active <br>Employees</div>
             </div>
             <div class="col-md-2 col-4 d-flex justify-content-center align-items-center">
-                <img src="<?=base_url(); ?>public/images/corporateyoga/equal.png" alt="Separator Image" class="separator-image">
+                <img src="<?=base_url(); ?>public/images/corporateyoga/equal.png" alt="Separator Image"
+                    class="separator-image">
             </div>
             <div class="col-md-5 col-4 d-flex justify-content-center">
                 <div class="circle circle2">Productive<br> Workplace</div>
@@ -163,28 +172,73 @@
 
 
         <div class="connect d-flex justify-content-center align-items-center">
-            <button>
-               Connect with us !
+
+            <button href="" data-bs-toggle="modal" data-bs-target="#Connectformpopup">
+                Connect with us !
+
             </button>
+            <div class="modal fade" id="Connectformpopup" tabindex="-1" aria-labelledby="ModalFormLabel"
+                aria-hidden="true">
+
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <div class="modal-content"
+                        style="border-radius: 30px;background: linear-gradient(135deg, #bcc9f6, #38331e);">
+
+                        <div class="modal-body" style="width: 470px">
+                            <form action="<?=base_url(); ?>corporateyogaconnect" method="post" id="contactForm">
+                                <div class="form-group">
+                                    <label for="name"><b>Name:</b></label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="email"><b>Email:</b></label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="whatsapp"><b>WhatsApp Number(Enter country Code):</b></label>
+                                    <input type="tel" class="form-control" id="whatsapp" name="whatsapp" required>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="details"><b>Details:</b></label>
+                                    <textarea class="form-control" rows="3" id="details" name="details"
+                                        required></textarea>
+                                </div>
+                                <button type="submit"
+                                    style="width: 109px;height: 40px;padding: 0px 0px 0px 0px;margin-left: 151px;margin-top: 20px;"
+                                    class="btn btn-info">Submit</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
         </div>
+
     </div>
 
 </section>
 <section class="benifitsyoga">
     <div class="content">
-       
+
         <div class="hedesings">
             <h1 class="gradient-text">
-                <svg  viewBox="0 0 100 20" preserveAspectRatio="xMidYMid meet">
+                <svg viewBox="0 0 100 20" preserveAspectRatio="xMidYMid meet">
                     <defs>
-                    <linearGradient id="gradient" gradientTransform="rotate(10)">
-                                <stop offset="0%" stop-color="#7028EE"></stop>
-                                <stop offset="50%" stop-color="#366CE3"></stop>
-                                <stop offset="100%" stop-color="#0CADD1"></stop>
-                            </linearGradient>
+                        <linearGradient id="gradient" gradientTransform="rotate(10)">
+                            <stop offset="0%" stop-color="#7028EE"></stop>
+                            <stop offset="50%" stop-color="#366CE3"></stop>
+                            <stop offset="100%" stop-color="#0CADD1"></stop>
+                        </linearGradient>
                     </defs>
-                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="fantasy" font-weight="100" font-size="8">
-                    Benefits of Yoga and Mindfulness for Employees
+                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)"
+                        font-family="fantasy" font-weight="100" font-size="8">
+                        Benefits of Yoga and Mindfulness for Employees
                     </text>
                 </svg>
             </h1>
@@ -198,25 +252,50 @@
             professional lives through the power of yoga and mindfulness.</p>
 
 
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <ul class="row custom-list">
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Reduced stress and anxiety levels</p></li>
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Improved focus and concentration</p></li>
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Better sleep quality and overall well-being</p></li>
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Enhanced emotional regulation and resilience</p></li>
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Increased productivity and creativity</p></li>
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Strengthened immune system</p></li>
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Greater job satisfaction and engagement</p></li>
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Enhanced work-life balance</p></li>
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Improved decision-making abilities</p></li>
-                         <li class="col-md-6"><p class="rectangle"><i class="fa fa-circle"></i> Increased self-awareness & personal growth</p></li>
-                    </ul>
-                </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <ul class="row custom-list">
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Reduced stress and anxiety levels</p>
+                    </li>
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Improved focus and concentration</p>
+                    </li>
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Better sleep quality and overall well-being
+                        </p>
+                    </li>
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Enhanced emotional regulation and resilience
+                        </p>
+                    </li>
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Increased productivity and creativity</p>
+                    </li>
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Strengthened immune system</p>
+                    </li>
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Greater job satisfaction and engagement</p>
+                    </li>
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Enhanced work-life balance</p>
+                    </li>
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Improved decision-making abilities</p>
+                    </li>
+                    <li class="col-md-6">
+                        <p class="rectangle"><i class="fa fa-circle"></i> Increased self-awareness & personal growth</p>
+                    </li>
+                </ul>
             </div>
+        </div>
 
         <div class="connect d-flex justify-content-center align-items-center mt-4">
-            <button>
+            <!-- <button>
+                Get Quote
+            </button> -->
+            <button href="" data-bs-toggle="modal" data-bs-target="#Connectformpopup">
                 Get Quote
             </button>
         </div>
@@ -235,13 +314,15 @@
                             <div class="circles">
                                 <img src="<?=base_url(); ?>public/images/corporateyoga/heart.png" alt="Icon">
                             </div>
-                            <p class="alarmingrectangle">National Institutes of Health (NIH), 13.9 percent of employees suffer from <br>high blood pressure.</p>
+                            <p class="alarmingrectangle">National Institutes of Health (NIH), 13.9 percent of employees
+                                suffer from <br>high blood pressure.</p>
                         </li>
                         <li>
                             <div class="circles">
                                 <img src="<?=base_url(); ?>public/images/corporateyoga/mind_man.png" alt="Icon">
                             </div>
-                            <p class="alarmingrectangle">64% of employees reported struggling with mental or behavioral health <br>issues, and 91% said they're less productive as a result.</p>
+                            <p class="alarmingrectangle">64% of employees reported struggling with mental or behavioral
+                                health <br>issues, and 91% said they're less productive as a result.</p>
                         </li>
                         <li>
                             <div class="circles">
@@ -253,20 +334,24 @@
                             <div class="circles">
                                 <img src="<?=base_url(); ?>public/images/corporateyoga/ball.png" alt="Icon">
                             </div>
-                            <p class="alarmingrectangle">According to the National Institutes of Health (NIH), 28% of employed individuals are suffering from obesity.</p>
+                            <p class="alarmingrectangle">According to the National Institutes of Health (NIH), 28% of
+                                employed individuals are suffering from obesity.</p>
                         </li>
                         <li>
                             <div class="circles">
                                 <img src="<?=base_url(); ?>public/images/corporateyoga/sky.png" alt="Icon">
                             </div>
-                            <p class="alarmingrectangle">80% of workers feel job stress, with nearly half needing help managing it, and 42% say their coworkers need assistance too.</p>
+                            <p class="alarmingrectangle">80% of workers feel job stress, with nearly half needing help
+                                managing it, and 42% say their coworkers need assistance too.</p>
                         </li>
-                     
-                    </ul> 
+
+                    </ul>
                 </div>
                 <div class="col-md-4">
-                    <img src="<?=base_url(); ?>public/images/corporateyoga/images1.jpeg" class="alarmings home" alt="Modi Image">
-                    <img src="<?=base_url(); ?>public/images/corporateyoga/images2.jpeg" class="alarmings home" alt="Modi Image">
+                    <img src="<?=base_url(); ?>public/images/corporateyoga/images1.jpeg" class="alarmings home"
+                        alt="Modi Image">
+                    <img src="<?=base_url(); ?>public/images/corporateyoga/images2.jpeg" class="alarmings home"
+                        alt="Modi Image">
                 </div>
             </div>
         </div>
@@ -277,19 +362,20 @@
 
 <section class="Platform">
     <div class="content">
-      
+
         <div class="hedesings">
             <h1 class="gradient-text">
-                <svg  viewBox="0 0 100 20" preserveAspectRatio="xMidYMid meet">
+                <svg viewBox="0 0 100 20" preserveAspectRatio="xMidYMid meet">
                     <defs>
-                    <linearGradient id="gradient" gradientTransform="rotate(10)">
-                                <stop offset="0%" stop-color="#7028EE"></stop>
-                                <stop offset="50%" stop-color="#366CE3"></stop>
-                                <stop offset="100%" stop-color="#0CADD1"></stop>
-                            </linearGradient>
+                        <linearGradient id="gradient" gradientTransform="rotate(10)">
+                            <stop offset="0%" stop-color="#7028EE"></stop>
+                            <stop offset="50%" stop-color="#366CE3"></stop>
+                            <stop offset="100%" stop-color="#0CADD1"></stop>
+                        </linearGradient>
                     </defs>
-                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="fantasy" font-weight="100" font-size="8">
-                    Platform features
+                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)"
+                        font-family="fantasy" font-weight="100" font-size="8">
+                        Platform features
                     </text>
                 </svg>
             </h1>
@@ -297,32 +383,58 @@
         <div class="">
             <div class="row">
                 <div class="col-md-7">
-                <ul class="custom-list">
-                    <li ><p class="rectangle"><i class="fa fa-circle"></i> <b>Flexible Scheduling: </b> sessions at your convenience, fitting wellness
-                            practices seamlessly into your busy schedule</p></li>
-                    <li ><p class="features"><i class="fa fa-circle"></i> <b>Tailored Plans:</b> Customize your wellness journey with personalized plans
-                            designed to meet your specific needs and goals.</p></li>
-                    <li ><p class="rectangle"><i class="fa fa-circle"></i> <b>User-Friendly Dashboard:</b> Access content and track progress easily through
-                            our intuitive platform, ensuring a seamless experience</p></li>
-                    <li ><p class="features"><i class="fa fa-circle"></i> <b>Expert Guidance: </b> from expert-led sessions and personalized
-                            support to maximize the effectiveness of your wellness journey</p></li>
-                    <li ><p class="rectangle"><i class="fa fa-circle"></i> <b>Customized Nutrition Plans:</b> Receive personalized guidance on nutrition
-                            and diet, complementing your wellness journey for comprehensive support</p></li>
-                    <li ><p class="features"><i class="fa fa-circle"></i> <b>Holistic Approach:</b> Experience a holistic approach to well-being, addressing
-                            physical, mental, and emotional aspects for optimal results</p></li>
-                    <li ><p class="rectangle"><i class="fa fa-circle"></i> <b>Community Support:</b> Connect with like-minded individuals and receive
-                            support from a supportive community of wellness enthusiasts</p></li>
-                   
-                </ul>
-       
-               
-                   
+                    <ul class="custom-list">
+                        <li>
+                            <p class="rectangle"><i class="fa fa-circle"></i> <b>Flexible Scheduling: </b> sessions at
+                                your convenience, fitting wellness
+                                practices seamlessly into your busy schedule</p>
+                        </li>
+                        <li>
+                            <p class="features"><i class="fa fa-circle"></i> <b>Tailored Plans:</b> Customize your
+                                wellness journey with personalized plans
+                                designed to meet your specific needs and goals.</p>
+                        </li>
+                        <li>
+                            <p class="rectangle"><i class="fa fa-circle"></i> <b>User-Friendly Dashboard:</b> Access
+                                content and track progress easily through
+                                our intuitive platform, ensuring a seamless experience</p>
+                        </li>
+                        <li>
+                            <p class="features"><i class="fa fa-circle"></i> <b>Expert Guidance: </b> from expert-led
+                                sessions and personalized
+                                support to maximize the effectiveness of your wellness journey</p>
+                        </li>
+                        <li>
+                            <p class="rectangle"><i class="fa fa-circle"></i> <b>Customized Nutrition Plans:</b> Receive
+                                personalized guidance on nutrition
+                                and diet, complementing your wellness journey for comprehensive support</p>
+                        </li>
+                        <li>
+                            <p class="features"><i class="fa fa-circle"></i> <b>Holistic Approach:</b> Experience a
+                                holistic approach to well-being, addressing
+                                physical, mental, and emotional aspects for optimal results</p>
+                        </li>
+                        <li>
+                            <p class="rectangle"><i class="fa fa-circle"></i> <b>Community Support:</b> Connect with
+                                like-minded individuals and receive
+                                support from a supportive community of wellness enthusiasts</p>
+                        </li>
+
+                    </ul>
+
+
+
                 </div>
                 <div class="col-md-5">
                     <div class="hex-div">
-                        <img src="<?=base_url(); ?>public/images/corporateyoga/hexgon1.png" class="hexgon1" >
+                        <img src="<?=base_url(); ?>public/images/corporateyoga/hexgon1.png" class="hexgon1">
                         <div class="hex-div-buuton">
-                            <a class="btn quote-btn" href="">Get Quote</a>
+                            <!-- <a class="btn quote-btn" href="">Get Quote</a> -->
+
+                            <button href="" class="btn quote-btn" data-bs-toggle="modal"
+                                data-bs-target="#Connectformpopup">
+                                Get Quote
+                            </button>
                         </div>
                     </div>
 
@@ -477,7 +589,7 @@
             </div>
         </div>
 
-        
+
 
         <div class="row">
             <div class="col-lg-12 table-responsive">
@@ -590,41 +702,41 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/google.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/per.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/tcs.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/godrej.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/ola.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/google.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/per.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/tcs.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/godrej.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/ola.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
         </div>
 
 
         <div class="row mt-4">
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/tata.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/mahindra.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/mercedes.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/hdfc.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/itc.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/tata.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/mahindra.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/mercedes.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/hdfc.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/itc.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
         </div>
 
         <div class="row mt-4">
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/adani.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/asainpaint.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/zomato.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/lupin.png" class="company_logo" alt="Image 4"
-                    class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/adani.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/asainpaint.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/zomato.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/lupin.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div>
 
         </div>
     </div>
@@ -637,7 +749,8 @@
                 <h1>We move with you, going wherever you go</h1>
                 <p style="font-size:18px;" class="mt-3">Experience the flexibility of streaming classes on your mobile
                     device ,Laptop or TV at your<br>
-                    convenience, anytime and anywhere, with our user-friendly platform available for Android, iPhone,<br>
+                    convenience, anytime and anywhere, with our user-friendly platform available for Android,
+                    iPhone,<br>
                     iPad, laptop, or TV.</p>
 
             </div>
@@ -723,12 +836,12 @@
 
             <div class="col-lg-6 my-auto">
 
-                <form>
-                    <input type="text" class="form-control" placeholder="Name :" />
-                    <input type="text" class="form-control" placeholder="Company :" />
-                    <input type="email" class="form-control" placeholder="Official Email :" />
-                    <input type="text" class="form-control" placeholder="Mobile :" />
-                    <input type="text" class="form-control" placeholder="Sector :" />
+                <form action="<?=base_url(); ?>Yogaconnect" method="post">
+                    <input type="text" name="Name" class="form-control" placeholder="Name :" />
+                    <input type="text"  name="Company" class="form-control" placeholder="Company :" />
+                    <input type="email" name="Email" class="form-control" placeholder="Official Email :" />
+                    <input type="text" name="Mobile" class="form-control" placeholder="Mobile (With Country Code) :" />
+                    <input type="text" name="Sector" class="form-control" placeholder="Sector :" />
 
                     <div class="text-center mt-0">
                         <!-- <button class="btn quote-btn">Get Quote</button> -->

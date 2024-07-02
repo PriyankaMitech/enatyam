@@ -3122,5 +3122,36 @@ public function deletoffline()
     
     return redirect()->to('list_Offilinstudio');
 }
+public function corporateyogaconnect()
+{
+    // print_r($_POST);die;
+    $name = $this->request->getPost('name');
+    $email = $this->request->getPost('email');
+    $whatsapp = $this->request->getPost('whatsapp');
+    $details = $this->request->getPost('details');
+    $phoneNumber =$whatsapp;
+    $templates = "930840461869403";
+    $msg = "Thank you for your valuable feedback! We greatly appreciate your input as it helps us enhance our services for you and others.Our team will carefully review your feedback. If necessary, we will reach out to you for further clarification or to discuss your suggestions in more detail. Once again, thank you for taking the time to share your thoughts with us";
+    whatsapp($phoneNumber, $templates, $msg);
+    $msg = "New feedback from $name they want to know about $details and email of the user $email ";
+    whatsappadmin($templates, $msg);
+    return redirect()->to('corporateyoga');
 
+}
+public function Yogaconnect()
+{
+    // print_r($_POST);die;
+    $Name = $this->request->getPost('Name');
+    $Company = $this->request->getPost('Company');
+    $Email = $this->request->getPost('Email');
+    $Mobile = $this->request->getPost('Mobile');
+    $Sector = $this->request->getPost('Sector');
+    $phoneNumber =$Mobile;
+    $templates = "930840461869403";
+    $msg = "We greatly appreciate your input as it helps us enhance our services for you and others. If necessary, we will reach out to you for further clarification or to discuss your suggestions in more detail";
+    whatsapp($phoneNumber, $templates, $msg);
+    $msg = "New User Wants To connect  $Name His compony name  $Company and email of the user $Email they belogs from  $Sector  this sector";
+    whatsappadmin($templates, $msg);
+    return redirect()->to('corporateyoga');
+}
 }
