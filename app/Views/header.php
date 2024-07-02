@@ -164,7 +164,6 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
