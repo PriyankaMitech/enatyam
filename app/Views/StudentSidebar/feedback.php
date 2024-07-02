@@ -1,6 +1,11 @@
-<?php include(APPPATH . 'Views/StudentSidebar/Studentsidebar.php');
-//  echo "<pre>";print_r($alldata);exit();
 
+
+<?php
+$file = __DIR__ . "/Studentsidebar.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";}
 ?>
 
 <div class="content-wrapper" style="min-height: 1172.56px;">
@@ -69,4 +74,11 @@
   </a>
 </div>
 
-<?php echo view('StudentSidebar/StudentFooter.php'); ?>
+
+<?php
+$file = __DIR__ . "/StudentFooter.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";}
+?>

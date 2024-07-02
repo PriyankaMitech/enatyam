@@ -340,7 +340,14 @@
                             </div>
                         </div>
                     </div>
+
+                 
                 </div>
+                <div class="text-center mt-2">
+                                <a href="" class="btn shop-now-btn">Doubts?? Clarify
+here
+</a>
+                            </div>
             </div>
 </section>
 

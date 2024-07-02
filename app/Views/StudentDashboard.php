@@ -1,4 +1,11 @@
-<?php echo view('StudentSidebar/Studentsidebar'); ?>
+
+<?php 
+$file = __DIR__ . "/StudentSidebar/Studentsidebar.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";}
+ ?>
 <style>
     .notification-dropdown {
         max-height: 300px; /* Adjust the maximum height as needed */
@@ -82,4 +89,12 @@
     </div>
   </section>
 </div>
-<?php echo view('StudentSidebar/StudentFooter.php'); ?>
+
+
+<?php 
+$file = __DIR__ . "/StudentSidebar/StudentFooter.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";}
+ ?>
