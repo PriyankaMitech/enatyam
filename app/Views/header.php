@@ -139,7 +139,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 }
         </style>
 
-    <?php } else if ($page == 'Dance') { ?>
+    <?php } else if ($page == 'Dance' || $page == 'Kathak' || $page == 'Bharatnatyam' || $page == 'Odissi' || $page == 'Bollywood' || $page == 'Western' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'Folk' || $page == 'HindustaniVocal' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'WesternSinging' || $page == 'PlaybackSinging' ) { ?>
 
         <style>
             .whatsapp-button {
@@ -390,10 +390,14 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <?php }else if($page == 'demobooking'){ ?>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery Easing plugin after jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/demobooking.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 

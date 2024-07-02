@@ -35,7 +35,7 @@
 
             <!-- Kathak -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link active" id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
+                <a class="nav-link " id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
             </li>
 
             <!-- Bharatnatyam -->
@@ -55,7 +55,7 @@
 
             <!-- Western -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Western-tab" href="<?=base_url(); ?>Western" target="_blank" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</a>
+                <a class="nav-link active" id="pills-Western-tab" href="<?=base_url(); ?>Western" target="_blank" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</a>
             </li>
 
             <li class="col-lg-1 col-md-1 dancebthide"></li>
@@ -78,7 +78,7 @@
         </ul>
             <div class="tab-content" id="pills-tabContent">
                 <!-- Kathak -->
-                <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
+                <div class="tab-pane fade " id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
@@ -1579,7 +1579,7 @@
 
 
                 <!-- Western -->
-                <div class="tab-pane fade" id="pills-Western" role="tabpanel" aria-labelledby="pills-Western-tab">
+                <div class="tab-pane fade show active" id="pills-Western" role="tabpanel" aria-labelledby="pills-Western-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/western-dance.webp" class="danceimg">

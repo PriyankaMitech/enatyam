@@ -321,18 +321,18 @@ body {
 
         <div class="row workSections text-center m-0">
             <div class="col-md-4 col-4 howWorkBlock howWorkBlock1">
-                <img src="<?=base_url(); ?>public/images/hew1.webp" class="lazyImage" width="14" height="14" alt="" />
+                <img src="<?=base_url(); ?>public/images/hew1.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">1</span> <span>Book a Demo</span></p>
                 <p class="hwDesc">Book a Free Demo Class with a Tutor.</p>
             </div>
             <div class="col-md-4 col-4 howWorkBlock">
-                <img src="<?=base_url(); ?>public/images/hew2.webp" class="lazyImage" width="14" height="14" alt="" />
+                <img src="<?=base_url(); ?>public/images/hew2.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">2</span> <span>Join LIVE Demo Class</span></p>
                 <p class="hwDesc">Attend the Demo class as scheduled.</p>
             </div>
 
             <div class="col-md-4 col-4 howWorkBlock howWorkBlock3">
-                <img src="<?=base_url(); ?>public/images/hew3.webp" class="lazyImage" width="14" height="14" alt="" />
+                <img src="<?=base_url(); ?>public/images/hew3.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">3</span> <span>Pay and Start</span></p>
                 <p class="hwDesc">Use enatyam SecurePay to pay and start your Classes.</p>
             </div>
@@ -1994,7 +1994,7 @@ body {
 <section class="comming-section" style="display:none">
     <div class="container cont-width">
         <div class="row">
-            <div class="col-lg-12 text-center coming-soon-img "><img src="<?=base_url(); ?>public/images/logo3.webp" width="15%"
+            <div class="col-lg-12 text-center coming-soon-img "><img src="<?=base_url(); ?>public/images/logo3.png" width="15%"
                     class="commingsoonimg" /></div>
             <div class="col-lg-12" style="padding-left:opx">
                 <div class="accordion-item">

@@ -159,7 +159,13 @@
 
 
 
-<?php echo view('AdminSideBar/AdminFooter.php');?>  
+<?php echo view('AdminSideBar/AdminFooter.php');
+
+
+?>  
+
+
+
 
 
 

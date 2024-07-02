@@ -90,8 +90,8 @@
 
             </div>
         </div>
-        <div class="my-3  hedesingsbot">
-            <h1 class="text-center mb-4 mt-3"><b>Join us and let's make India stronger, happier and healthier
+        <div class="mt-3 hedesingsbot">
+            <h1 class="mt-3"><b>Join us and let's make India stronger, happier and healthier
                     together</b>
             </h1>
         </div>
@@ -172,8 +172,10 @@
 
 
         <div class="connect d-flex justify-content-center align-items-center">
+
             <button href="" data-bs-toggle="modal" data-bs-target="#Connectformpopup">
                 Connect with us !
+
             </button>
             <div class="modal fade" id="Connectformpopup" tabindex="-1" aria-labelledby="ModalFormLabel"
                 aria-hidden="true">

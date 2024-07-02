@@ -84,8 +84,30 @@ $routes->get('PrivacyPolicy', 'Home::PrivacyPolicy');
 $routes->get('termsandconditions', 'Home::termsandconditions');
 
 $routes->get('Dance', 'Home::Dance');
+$routes->get('Kathak', 'Home::Kathak');
+$routes->get('Bharatnatyam', 'Home::Bharatnatyam');
+
+$routes->get('Odissi', 'Home::Odissi');
+$routes->get('Bollywood', 'Home::Bollywood');
+$routes->get('Western', 'Home::Western');
+$routes->get('Semiclassical', 'Home::Semiclassical');
+$routes->get('Bhangra', 'Home::Bhangra');
+$routes->get('Folk', 'Home::Folk');
+
+
+
+
+
 $routes->get('Home', 'Home::home');
 $routes->get('music', 'Home::music');
+
+$routes->get('HindustaniVocal', 'Home::HindustaniVocal');
+$routes->get('CarnaticVocal', 'Home::CarnaticVocal');
+$routes->get('SemiClassicals', 'Home::SemiClassicals');
+$routes->get('WesternSinging', 'Home::WesternSinging');
+$routes->get('PlaybackSinging', 'Home::PlaybackSinging');
+
+
 $routes->get('Instruments', 'Home::Instruments');
 $routes->get('Yoga', 'Home::Yoga');
 $routes->get('profile', 'Home::Profile');

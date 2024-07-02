@@ -35,7 +35,7 @@
 
             <!-- Kathak -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link active" id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
+                <a class="nav-link " id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
             </li>
 
             <!-- Bharatnatyam -->
@@ -73,12 +73,12 @@
 
             <!-- Folk -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link big" id="pills-Folk-tab" href="<?=base_url(); ?>Folk" target="_blank" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</a>
+                <a class="nav-link big active" id="pills-Folk-tab" href="<?=base_url(); ?>Folk" target="_blank" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</a>
             </li>
         </ul>
             <div class="tab-content" id="pills-tabContent">
                 <!-- Kathak -->
-                <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
+                <div class="tab-pane fade " id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
@@ -2667,7 +2667,7 @@
                 </div>
 
                 <!-- Folk -->
-                <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
+                <div class="tab-pane fade show active" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/folk-dance.webp" class="danceimg">
