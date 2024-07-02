@@ -371,7 +371,7 @@ $(document).ready(function() {
 
 </script>
 
-<?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga'|| $page == 'corporateyoga' || $page == 'Kathak' || $page == 'Bharatnatyam' || $page == 'Odissi' || $page == 'Bollywood' || $page == 'Western' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'Folk' || $page == 'HindustaniVocal' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'WesternSinging' || $page == 'PlaybackSinging') { ?>
+<?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga'|| $page == 'corporateyoga' || $page == 'Kathak' || $page == 'Bharatnatyam' || $page == 'Odissi' || $page == 'Bollywood' || $page == 'Western' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'Folk' || $page == 'HindustaniVocal' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'WesternSinging' || $page == 'PlaybackSinging' || $page == 'PrenatalYoga' || $page == 'StressReduction' || $page == 'Flexibility' || $page == 'WeightLossYoga' || $page == 'EverydayYoga' || $page == 'YogaforChronic' || $page == 'YogaforKids' || $page == 'Meditation' || $page == 'CustomiseYoga' || $page == 'NutritionCounselling') { ?>
 
 
 
@@ -480,6 +480,410 @@ $(document).ready(function() {
 
 });
 </script>
+<?php } else if ($page == 'Guitar') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+<?php } else if ($page == 'Flute') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+
+<?php } else if ($page == 'Tabla') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+
+<?php } else if ($page == 'Sitar') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+
+<?php } else if ($page == 'Veena') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+
+<?php } else if ($page == 'Piano') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+
+<?php } else if ($page == 'Violin') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+
+<?php } else if ($page == 'Keyboard') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+
+<?php } else if ($page == 'Harmonium') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+
 
 <?php } else if ($page == 'Carrier') { ?>
 

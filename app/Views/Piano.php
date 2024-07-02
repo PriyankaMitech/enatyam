@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
-    }
+}
 </style>
 
 <section class="s_header-section ">
@@ -51,7 +51,7 @@
                 </li>
                 <!-- Guitar -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-Guitar-tab" href="<?=base_url(); ?>Guitar" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</a>
+                    <a class="nav-link" id="pills-Guitar-tab" href="<?=base_url(); ?>Guitar" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</a>
                 </li>
 
                 <!-- Flute -->
@@ -77,7 +77,7 @@
 
                 <!-- Piano -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Piano-tab" href="<?=base_url(); ?>Piano" data-url="<?=base_url(); ?>Piano" role="tab" aria-controls="pills-Piano" aria-selected="false">Piano</a>
+                    <a class="nav-link active" id="pills-Piano-tab" href="<?=base_url(); ?>Piano" data-url="<?=base_url(); ?>Piano" role="tab" aria-controls="pills-Piano" aria-selected="false">Piano</a>
                 </li>
                 <!-- Violin -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -106,19 +106,13 @@
                 <div class="tab-pane fade show active" id="pills-Guitar" role="tabpanel" aria-labelledby="pills-Guitar-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/instrument/g-1.svg" class="danceimg">
+                            <img src="public/images/instrument/pianoImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> Guitar</h3>
+                            <h3 class="heading"> Piano</h3>
                             <p class="">
-                            Looking to master the guitar from the comfort of your own home? Our comprehensive online
-                            guitar course is designed to take you from a beginner to a confident player in no time. With
-                            expert instruction and step-by-step lessons, you'll learn essential techniques, chord
-                            progressions, scales, and music theory. Our interactive platform offers practice exercises,
-                            video tutorials, and personalized feedback to ensure your progress. Whether you're into rock,
-                            blues, or acoustic styles, our course covers a wide range of genres and helps you develop
-                            your own unique sound. Join our online guitar course today and unleash your musical
-                            potential with convenience and flexibility.
+                            Unlock your musical potential with our online piano course. Whether you’re a beginner or intermediate player, our comprehensive program is designed to help you master the piano from the comfort of your own home. Over the course of 12 months, you’ll progress through step-by-step lessons covering piano technique, music theory, and repertoire. Our experienced instructors will guide you through engaging video lessons, provide personalized feedback, and offer practice resources to ensure steady improvement. Whether you dream of playing classical masterpieces or popular tunes, our online piano course offers convenience, ﬂexibility, and expert guidance to help you become a conﬁdent pianist.
+                                Enroll today and let the music ﬂow!
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>

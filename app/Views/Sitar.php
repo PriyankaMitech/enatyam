@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
-    }
+}
 </style>
 
 <section class="s_header-section ">
@@ -51,7 +51,7 @@
                 </li>
                 <!-- Guitar -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-Guitar-tab" href="<?=base_url(); ?>Guitar" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</a>
+                    <a class="nav-link" id="pills-Guitar-tab" href="<?=base_url(); ?>Guitar" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</a>
                 </li>
 
                 <!-- Flute -->
@@ -64,7 +64,7 @@
                 </li>
                 <!-- Sitar -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Sitar-tab" href="<?=base_url(); ?>Sitar" data-url="<?=base_url(); ?>Sitar" role="tab" aria-controls="pills-Sitar" aria-selected="false">Sitar</a>
+                    <a class="nav-link active" id="pills-Sitar-tab" href="<?=base_url(); ?>Sitar" data-url="<?=base_url(); ?>Sitar" role="tab" aria-controls="pills-Sitar" aria-selected="false">Sitar</a>
                 </li>
                 <!-- Veena -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -106,20 +106,13 @@
                 <div class="tab-pane fade show active" id="pills-Guitar" role="tabpanel" aria-labelledby="pills-Guitar-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/instrument/g-1.svg" class="danceimg">
+                            <img src="public/images/instrument/sitarImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> Guitar</h3>
+                            <h3 class="heading"> Sitar</h3>
                             <p class="">
-                            Looking to master the guitar from the comfort of your own home? Our comprehensive online
-                            guitar course is designed to take you from a beginner to a confident player in no time. With
-                            expert instruction and step-by-step lessons, you'll learn essential techniques, chord
-                            progressions, scales, and music theory. Our interactive platform offers practice exercises,
-                            video tutorials, and personalized feedback to ensure your progress. Whether you're into rock,
-                            blues, or acoustic styles, our course covers a wide range of genres and helps you develop
-                            your own unique sound. Join our online guitar course today and unleash your musical
-                            potential with convenience and flexibility.
-                            </p>
+                            Embark on a soul-stirring musical journey with our online sitar course. Whether you’re a beginner or have some experience, our comprehensive program will guide you through the intricacies of this iconic Indian string instrument. Over 12 months, you’ll learn sitar techniques, melodic improvisation, and the rich traditions of Indian classical music. With expert instructors and interactive video lessons, you’ll receive personalized guidance and feedback to enhance your skills. From mesmerizing ragas to captivating performances, our online sitar course offers convenience and ﬂexibility for you to delve into the enchanting world of sitar music.
+                            Unleash your inner musician and join us today!                            </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
                                         <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">

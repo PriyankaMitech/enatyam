@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
-    }
+}
 </style>
 
 <section class="s_header-section ">
@@ -51,7 +51,7 @@
                 </li>
                 <!-- Guitar -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-Guitar-tab" href="<?=base_url(); ?>Guitar" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</a>
+                    <a class="nav-link" id="pills-Guitar-tab" href="<?=base_url(); ?>Guitar" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</a>
                 </li>
 
                 <!-- Flute -->
@@ -60,7 +60,7 @@
                 </li>
                 <!-- Tabla -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Tabla-tab" href="<?=base_url(); ?>Tabla" data-url="<?=base_url(); ?>Tabla" role="tab" aria-controls="pills-Tabla" aria-selected="false">Tabla</a>
+                    <a class="nav-link active" id="pills-Tabla-tab" href="<?=base_url(); ?>Tabla" data-url="<?=base_url(); ?>Tabla" role="tab" aria-controls="pills-Tabla" aria-selected="false">Tabla</a>
                 </li>
                 <!-- Sitar -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -106,19 +106,12 @@
                 <div class="tab-pane fade show active" id="pills-Guitar" role="tabpanel" aria-labelledby="pills-Guitar-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/instrument/g-1.svg" class="danceimg">
+                            <img src="public/images/instrument/tablaImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
-                            <h3 class="heading"> Guitar</h3>
+                            <h3 class="heading"> Tabla</h3>
                             <p class="">
-                            Looking to master the guitar from the comfort of your own home? Our comprehensive online
-                            guitar course is designed to take you from a beginner to a confident player in no time. With
-                            expert instruction and step-by-step lessons, you'll learn essential techniques, chord
-                            progressions, scales, and music theory. Our interactive platform offers practice exercises,
-                            video tutorials, and personalized feedback to ensure your progress. Whether you're into rock,
-                            blues, or acoustic styles, our course covers a wide range of genres and helps you develop
-                            your own unique sound. Join our online guitar course today and unleash your musical
-                            potential with convenience and flexibility.
+                            Embark on a rhythmic journey with our online tabla course. Perfect for beginners and intermediate players, this comprehensive program delves into the art of playing the tabla, a versatile Indian percussion instrument. Over 12 months, you’ll master the intricacies of tabla strokes, bols (syllables), and the rhythmic patterns of Indian classical music. Our experienced instructors will provide engaging video lessons, personalized feedback, and practice materials to enhance your skills. Whether you aspire to perform solo or accompany other musicians, our online tabla course offers convenience and ﬂexibility, allowing you to learn and excel at your own pace. Join us today and explore the captivating world of tabla rhythms!
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>

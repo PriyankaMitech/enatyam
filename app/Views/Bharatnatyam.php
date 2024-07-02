@@ -12,19 +12,126 @@
 
 <section class="s_header-section">
     <div class="container-fluid mt-2">
-        <div class="row ">
-            <div class="col-lg-12 col-md-12 col-12 p-5">
-                <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted  >  
-                        <source src="<?=base_url(); ?>public/images/Dance/Dance-page-video-2.mp4" type="video/mp4">
-                    </video>                
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12 p-5" style="background-color: black;">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
+                        <h2 class="heading">Online Stress Reduction Yoga Classes<br>1-on-1 Live by Top Trainer</h2>
+                        <p>
+                            Embark on a transformative journey with our <br>online stress reduction yoga classes. Guided by <br>skilled instructors, and five star rated by learners. <br>Immerse yourself in soothing practices that <br>promote inner peace and resilience. Join us
+                        </p>
+                        <div class="singleline">
+                            <div class="stars">
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                            </div>
+                            <p>4.9 out of 5.0 from 3796 ratings</p>
+
+                        </div>
+                    
+                        <div class="temp">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">+91</span>
+                                <input type="text" class="form-control" placeholder="Whatsapp Number" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>   
+                            <input type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book a free trial" style="border-radius: 5px; height: 4rem; width: 13rem; color: white; background-color: #ff1561">                            
+                        </div>
+                        <div class="text-end mt-4">
+                            <!-- <?php if (!(session()->get('sessiondata'))) : ?>
+                                <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now"> -->
+                            <?php else : ?>
+                                <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
+                        <img src="public/images/Dance/Bharatnatyam.webp" class="rightimg" alt="Yoga Class" style="width:100%;">
+                    </div>
                 </div>
             </div>
-         
         </div>
     </div>
 </section>
+
 <section class="mt-4 dancepage MusicSec">
+    <div class="container dancepagec">
+
+        <!-- pills -->
+        <div class="typesOfDance-tab">
+
+        <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="col-lg-1 col-md-1 dancebthide"></li>
+
+            <!-- Kathak -->
+            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                <a class="nav-link " id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
+            </li>
+
+            <!-- Bharatnatyam -->
+            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                <a class="nav-link active" id="pills-Bharatnatyam-tab" href="<?=base_url(); ?>Bharatnatyam" target="_blank" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</a>
+            </li>
+
+            <!-- Odissi -->
+            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                <a class="nav-link" id="pills-Odissi-tab" href="<?=base_url(); ?>Odissi" target="_blank" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</a>
+            </li>
+
+            <!-- Bollywood -->
+            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                <a class="nav-link" id="pills-Bollywood-tab" href="<?=base_url(); ?>Bollywood" target="_blank" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</a>
+            </li>
+
+            <!-- Western -->
+            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                <a class="nav-link" id="pills-Western-tab" href="<?=base_url(); ?>Western" target="_blank" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</a>
+            </li>
+
+            <li class="col-lg-1 col-md-1 dancebthide"></li>
+            <li class="col-lg-1 col-md-1 dancebthide"></li>
+
+            <!-- Semi-classical -->
+            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                <a class="nav-link big" id="pills-Semiclassical-tab" href="<?=base_url(); ?>Semiclassical" target="_blank" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</a>
+            </li>
+
+            <!-- Bhangra -->
+            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                <a class="nav-link big" id="pills-Bhangra-tab" href="<?=base_url(); ?>Bhangra" target="_blank" role="tab" aria-controls="pills-Bhangra" aria-selected="false">Bhangra</a>
+            </li>
+
+            <!-- Folk -->
+            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                <a class="nav-link big" id="pills-Folk-tab" href="<?=base_url(); ?>Folk" target="_blank" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</a>
+            </li>
+        </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <!-- Kathak -->
+                <div class="tab-pane fade  " id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
+                    <div class="row pddyd">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
+                            <h3 class="heading"> Kathak</h3>
+                            <p>
+                                Looking for the best online Kathak classes with a comprehensive syllabus? Look no further than our platform! Our online Kathak classes are designed to provide you with an immersive learning experience that will help you master this beautiful dance form. Our syllabus covers everything from the basics of footwork and hand gestures to complex choreography and improvisation techniques. With our experienced instructors and state-of-the-art technology, you can learn Kathak from the comfort of your own home and at your own pace. Join us today and discover the joy of Kathak dancing!
+                            </p>
+                            <div class="text-end mt-4">
+                                <?php if (!(session()->get('sessiondata'))) : ?>
+                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                <?php else : ?>
+                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <section class="mt-4 dancepage MusicSec">
     <div class="container dancepagec">
 
         <!-- pills -->

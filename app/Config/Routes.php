@@ -513,10 +513,28 @@ $routes->get('getNewStudentNotifications', 'AdminController::getNewStudentNotifi
 
 $routes->get('updateNotifications', 'AdminController::updateNotifications');
 
+// Instruments individual pages 
+$routes->get('Guitar', 'Home::Guitar');
+$routes->get('Flute', 'Home::Flute');
+$routes->get('Tabla', 'Home::Tabla');
+$routes->get('Sitar', 'Home::Sitar');
+$routes->get('Veena', 'Home::Veena');
+$routes->get('Piano', 'Home::Piano');
+$routes->get('Violin', 'Home::Violin');
+$routes->get('Keyboard', 'Home::Keyboard');
+$routes->get('Harmonium', 'Home::Harmonium');
 
-
-
-
+// Yoga individual pages 
+$routes->get('PrenatalYoga','Home::PrenatalYoga');
+$routes->get('StressReduction','Home::StressReduction');
+$routes->get('Flexibility','Home::Flexibility');
+$routes->get('WeightLossYoga', 'Home::WeightLossYoga');
+$routes->get('EverydayYoga', 'Home::EverydayYoga');
+$routes->get('YogaforChronic', 'Home::YogaforChronic');
+$routes->get('YogaforKids', 'Home::YogaforKids');
+$routes->get('Meditation', 'Home::Meditation');
+$routes->get('CustomiseYoga', 'Home::CustomiseYoga');
+$routes->get('NutritionCounselling', 'Home::NutritionCounselling');
 
 
 
