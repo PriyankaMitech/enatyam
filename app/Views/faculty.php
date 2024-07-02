@@ -240,7 +240,7 @@ div.dataTables_wrapper div.dataTables_filter input {
                                 <th>Student Name</th>
                                 <th>Start Time</th>
                                
-                                <th>Action</th>
+                                <th>Join Link</th>
                                 
                             </tr>
                         </thead>
@@ -251,7 +251,7 @@ div.dataTables_wrapper div.dataTables_filter input {
                                 <td><?= $session->shedules_time; ?></td>
                                
                                 <td>
-                                <a href="<?=base_url(); ?>fetchTofacultyShuduleSidebar">Join</a>
+                                <a href="<?= $session->meetlink; ?>" target="_blank">Join the session</a>
                                 </td>
                                
                             </tr>
