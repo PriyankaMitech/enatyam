@@ -318,11 +318,21 @@ class LoginModel extends Model
 
         return $result;
     }
-    public function getmeetinglink($id)
+    public function getmeetinglink($user_id)
     {
         $result = $this->db
             ->table('tbl_student_shedule')
-            ->where(["student_id" => $id])
+            ->where(["student_id" => $user_id])
+            ->get()
+            ->getRow();
+
+        return $result;
+    }
+    public function getmeetinglinktecher($teacherId)
+    {
+        $result = $this->db
+            ->table('tbl_student_shedule')
+            ->where(["faculty_id" => $teacherId])
             ->get()
             ->getRow();
 
