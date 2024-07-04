@@ -1,6 +1,4 @@
 <?php include('Studentsidebar.php'); ?>
-
-
 <link rel="stylesheet" href="public/calendar/fullcalendar/lib/main.min.css">
 <script src="public/calendar/js/jquery-3.6.0.min.js"></script>
 <script src="public/calendar/fullcalendar/lib/main.min.js"></script>
@@ -8,7 +6,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">
-            <div class="container py-5" id="page-container">
+            <div class="container py-5" id="page-container"> 
                 <div class="row">
                     <div class="col-md-9">
                         <div id="calendar"></div>

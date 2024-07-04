@@ -1,4 +1,10 @@
-<?php echo view('StudentSidebar/Studentsidebar'); ?>
+<?php
+$file = __DIR__ . "/Studentsidebar.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";}
+?>
 <div class="content-wrapper">
 
     <section class="content-header">
@@ -34,4 +40,12 @@
     </section>
 </div>
 
-<?php echo view('StudentSidebar/StudentFooter.php'); ?>
+<?php
+$file = __DIR__ . "/StudentFooter.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";}
+?>
+
+

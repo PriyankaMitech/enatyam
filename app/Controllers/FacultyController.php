@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\facultymodel;
 use App\Models\AdminModel;
 use App\Models\StudentModel;
+use App\Models\LoginModel;
+
 use CodeIgniter\Controller;
 
 class FacultyController extends BaseController
@@ -54,7 +56,7 @@ class FacultyController extends BaseController
         $teacherId = $this->session->get('id');
         $facultymodel = new Facultymodel();
         $adminModel = model('AdminModel');
-
+        $login_model = new LoginModel();
         $todaysession = $facultymodel->gettodayssessiontofaculty($teacherId);
         
         // print_r($todaysession);die;
@@ -76,15 +78,18 @@ class FacultyController extends BaseController
         $todayDate = date('Y-m-d H:i:s');
         $displayedNotificationCount = 0;
         $conductedClasses= $facultymodel->conductedClasses($teacherId);
+        $meeting = $login_model->getmeetinglinktecher($teacherId);
+        // echo "<pre>";print_r($todaysession);exit();
         return view('faculty', [
           'data' => $data,
           'todaysession' => $todaysession,
           'conductedClasses'=>$conductedClasses,
+          'meeting'=>$meeting,
           'group_data' => $group_data,
           'notificationCount' => $displayedNotificationCount,
         ]);
 
-        // echo "<pre>";print_r($group_data);exit();
+     
 
       }
     }
@@ -392,9 +397,8 @@ class FacultyController extends BaseController
       if ($result) {
           $phoneNumber = (!empty($studentMobileNumber)) ? $studentMobileNumber->mobileWithCode : '';
           $templates = "930840461869403";
-          $msg = "Dear $studentname, Well done!! You have completed your $sessionno Session Your teacher has kindly requested you to punch your attendance on the Enatyam website. Don't forget to mark your";
-
-     //     $msg = "Your attendance has been recorded successfully. You $stetus in session no .$sessionno";
+          // $msg = "Dear $studentname, Well done!! You have completed your $sessionno Session Your teacher has kindly requested you to punch your attendance on the Enatyam website. Don't forget to mark your";  
+          $msg =  " Dear $studentname,In session number $sessionno, your status is $stetus. Your teacher has kindly requested you to mark your attendance on the Enatyam website. Please remember to log in and punch your attendance.";
           whatsapp($phoneNumber, $templates, $msg);
           $templates = "930840461869403";
 

@@ -3,20 +3,23 @@ $uri = new \CodeIgniter\HTTP\URI(current_url(true));
 $pages = $uri->getSegments();
 $page = $uri->getSegment(count($pages));
 ?>
-<?php //echo view('FacultySidebar2.php');
-?>
+
 <?php
 if (isset($_SESSION['sessiondata'])) {
     $role = $_SESSION['sessiondata']['role'];
     if ($role == 'Faculty') {
-        echo view('FacultySidebar2.php');
+        include __DIR__ . '/FacultySidebar2.php';
+
     } elseif ($role == 'Student') {
-        echo view('StudentSidebar/Studentsidebar');
+        include __DIR__ . '/StudentSidebar/Studentsidebar.php';
+
     } else {
-        include __DIR__ . '/AdminSideBar.php';
+        include __DIR__ . '/AdminSideBar/AdminSideBar.php';
     }
 }
 ?>
+
+
 <style>
     .direct-chat-messages,
     .direct-chat-contacts {
@@ -711,14 +714,22 @@ if (isset($_SESSION['sessiondata'])) {
 if (isset($_SESSION['sessiondata'])) {
     $role = $_SESSION['sessiondata']['role'];
     if ($role == 'Faculty' || $role == 'Admin' || $role == 'student') {
-        echo view('FacultysideBar/FacultyFooter');
+
+        include __DIR__ . '/FacultysideBar/FacultyFooter.php';
+
     } elseif ($role == 'Student') {
-        echo view('StudentSidebar/StudentFooter');
+
+        include __DIR__ . '/StudentSidebar/StudentFooter.php';
+
     } else {
-        include('AdminSideBar/AdminFooter');
+
+        include __DIR__ . '/AdminSideBar/AdminFooter.php';
+
     }
 }
 ?>
+
+
 
 
 
