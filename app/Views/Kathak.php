@@ -16,42 +16,75 @@
 .custom-h2 {
     font-size: 16px;
     }
+
 </style>
+
 
 <section class="s_header-section">
     <div class="container-fluid mt-2">
-        <div class="row ">
-            <div class="col-lg-12 col-md-12 col-12 p-5">
-                <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted  >  
-                        <source src="<?=base_url(); ?>public/images/Dance/Dance-page-video-2.mp4" type="video/mp4">
-                    </video>                
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12 p-5" style="background-color: black;">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
+                        <h2 class="heading text-white">Online Stress Reduction Yoga Classes<br>1-on-1 Live by Top Trainer</h2>
+                        <p class="text-white">
+                            Embark on a transformative journey with our <br>online stress reduction yoga classes. Guided by <br>skilled instructors, and five star rated by learners. <br>Immerse yourself in soothing practices that <br>promote inner peace and resilience. Join us
+                        </p>
+                        <div class="singleline">
+                            <div class="stars">
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star" style="  margin-right: 0.5rem !important; "></i>
+                            </div>
+                            <p class="text-white">4.9 out of 5.0 from 3796 ratings</p>
+
+                        </div>
+                    
+                        <div class="temp">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">+91</span>
+                                <input type="text" class="form-control" placeholder="Whatsapp Number" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>   
+                            <input type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book a free trial" style="border-radius: 5px; height: 4rem; width: 13rem; color: white; background-color: #ff1561">                            
+                        </div>
+                        <div class="text-end mt-4">
+                            <!-- <?php if (!(session()->get('sessiondata'))) : ?>
+                                <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now"> -->
+                            <?php else : ?>
+                                <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
+                        <img src="public/images/Dance/Bharatnatyam.webp" class="rightimg" alt="Yoga Class" style="width:100%;">
+                    </div>
                 </div>
             </div>
-         
         </div>
     </div>
 </section>
 
-<section class="mb-5">
+<section class="mb-5 " >
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
-            <div class="MusicSec copage">
+            <div class=" copage">
                 <div class="">
 
 
 
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 coh">
-                        <h3 class="text-white" style="text-align:center">Courses Offering
+                        <h3 class="" >Courses Offering
                         <span class="line linessf"></span> </h3>
                     </div>
 
   
 
                         <div class="col-lg-3 col-md-4 col-6 ">
-                             <h5 class="cocolor" style="text-align: center;">Kathak </h5>
+                             <h5 class="" style="text-align: center;">Kathak </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Kathak" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -59,39 +92,11 @@
                                 </a>
                             </div>
 
-                            <div class="cimgb cimgbr"  >
-                                <ul class="list-inline thumbnailList"> 
-                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i>
-                                            <?php if(!empty($katakr)){ ?>
-                                                <?php  $totalValue = 3569 + $katakr;
-                                                echo $totalValue; ?>
-                                            <?php }else{ ?>
-                                                3569
-                                            <?php } ?>
-                                    </li>
-                            
-                             
-
-
-                                    <li class="list-inline-item thumbnailListItem">  <?php
-                                        if (!empty($katakc)) { 
-                                            $average_rating = number_format($katakc['average_rating'], 2);
-                                            if($average_rating != 0.00){
-                                            echo $average_rating; ?>
-                                            <?php 
-                                        } else { 
-                                            echo "4.99"; // Default value if the data is not available
-                                        } 
-                                    }
-                                        ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
-
-                                    
-                            </div>
+                    
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="cocolor" style="text-align: center;">Bharatanatyam </h5>
+                             <h5 class="" style="text-align: center;">Bharatanatyam </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bharatnatyam" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -100,36 +105,11 @@
                                 </a>
                             </div>
 
-                            <div class="float-left cimgb cimgbr"  >
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i>
-                                            <?php if(!empty($bharatanatyamr)){ ?>
-                                                <?php  $totalValue = 2698 + $bharatanatyamr;
-                                                echo $totalValue; ?>
-                                            <?php }else{ ?>
-                                                2698
-                                            <?php } ?>
-                                            
-                                    </li>
-                                    <li class="list-inline-item thumbnailListItem"> <?php
-                                        if (!empty($bharatanatyam)) { 
-                                            $average_rating = number_format($bharatanatyam['average_rating'], 2);
-                                            if($average_rating != 0.00){
-                                                echo $average_rating; ?>
-                                                <?php 
-                                            } else { 
-                                                echo "4.9"; // Default value if the data is not available
-                                            } 
-                                        }
-                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li>
-
-                                    
-                            </div>
+                           
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="cocolor" style="text-align: center;">Odissi </h5>
+                             <h5 class="" style="text-align: center;">Odissi </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Odissi" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -137,34 +117,11 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb cimgbr"  >
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i>
-                                            <?php if(!empty($bollywoodr)){ ?>
-                                                <?php  $totalValue = 1525 + $bollywoodr;
-                                                echo $totalValue; ?>
-                                            <?php }else{ ?>
-                                                1525
-                                            <?php } ?>
-                                            </li>                        
-                                    <li class="list-inline-item thumbnailListItem"><?php
-                                        if (!empty($bollywood)) { 
-                                            $average_rating = number_format($bollywood['average_rating'], 2);
-                                            if($average_rating != 0.00){
-                                                echo $average_rating; ?>
-                                                <?php 
-                                            } else { 
-                                                echo "4.8"; // Default value if the data is not available
-                                            } 
-                                        }
-                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
-
-                            </div>
+                         
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="cocolor" style="text-align: center;">
+                             <h5 class="" style="text-align: center;">
                                 Bollywood Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bollywood" target="" class="d-block h-100">
@@ -173,35 +130,11 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb cimgbr"  >
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i>
-                                            <?php if(!empty($westerndncer)){ ?>
-                                                <?php  $totalValue = 354 + $westerndncer;
-                                                echo $totalValue; ?>
-                                            <?php }else{ ?>
-                                                354
-                                            <?php } ?>
-                                            </li>                                   
-                                    <li class="list-inline-item thumbnailListItem"><?php
-                                        if (!empty($westerndnce)) { 
-                                            $average_rating = number_format($westerndnce['average_rating'], 2);
-                                            if($average_rating != 0.00){
-                                                echo $average_rating; ?>
-                                                <?php 
-                                            } else { 
-                                                echo "4.78"; // Default value if the data is not available
-                                            } 
-                                        }
-                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
-
-                                    
-                            </div>
+                       
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="cocolor" style="text-align: center;">Western Dance </h5>
+                             <h5 class="" style="text-align: center;">Western Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -209,34 +142,10 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb cimgbr"  >
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i>
-                                            <?php if(!empty($hindustanivocalr)){ ?>
-                                                <?php  $totalValue = 2969 + $hindustanivocalr;
-                                                echo $totalValue; ?>
-                                            <?php }else{ ?>
-                                                2969
-                                            <?php } ?>
-                                    </li>
-                                    <li class="list-inline-item thumbnailListItem"><?php
-                                        if (!empty($hindustanivocal)) { 
-                                            $average_rating = number_format($hindustanivocal['average_rating'], 2);
-                                            if($average_rating != 0.00){
-                                                echo $average_rating; ?>
-                                                <?php 
-                                            } else { 
-                                                echo "4.9"; // Default value if the data is not available
-                                            } 
-                                        }
-                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
-
-                                   
-                            </div>
+                           
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="cocolor" style="text-align: center;">Semi Classical</h5>
+                             <h5 class="" style="text-align: center;">Semi Classical</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -244,34 +153,10 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb cimgbr"  >
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i>
-                                            <?php if(!empty($carnaticvocalr)){ ?>
-                                                <?php  $totalValue = 1896 + $carnaticvocalr;
-                                                echo $totalValue; ?>
-                                            <?php }else{ ?>
-                                                1896
-                                            <?php } ?>
-                                    </li>
-                                    <li class="list-inline-item thumbnailListItem"><?php
-                                        if (!empty($carnaticvocal)) { 
-                                            $average_rating = number_format($carnaticvocal['average_rating'], 2);
-                                            if($average_rating != 0.00){
-                                                echo $average_rating; ?>
-                                                <?php 
-                                            } else { 
-                                                echo "4.9"; // Default value if the data is not available
-                                            } 
-                                        }
-                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
-
-                                  
-                            </div>
+                       
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="cocolor" style="text-align: center;">
+                             <h5 class="" style="text-align: center;">
                                 Bhangra</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
@@ -280,35 +165,10 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb cimgbr"  >
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true">
-                                            </i>
-                                            <?php if(!empty($bollywoodsingingr)){ ?>
-                                                <?php  $totalValue = 1525 + $bollywoodsingingr;
-                                                echo $totalValue; ?>
-                                            <?php }else{ ?>
-                                                1525
-                                            <?php } ?>
-                                        </li>
-                                    <li class="list-inline-item thumbnailListItem"><?php
-                                        if (!empty($bollywoodsinging)) { 
-                                            $average_rating = number_format($bollywoodsinging['average_rating'], 2);
-                                            if($average_rating != 0.00){
-                                                echo $average_rating; ?>
-                                                <?php 
-                                            } else { 
-                                                echo "4.8"; // Default value if the data is not available
-                                            } 
-                                        }
-                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
-
-                            
-                            </div>
+                      
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="cocolor" style="text-align: center;">
+                             <h5 class="" style="text-align: center;">
                             Folk Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
@@ -317,31 +177,7 @@
                                        >
                                 </a>
                             </div>
-                            <div class="float-left cimgb cimgbr"  >
-                                <ul class="list-inline thumbnailList">
-                                    <li class="list-inline-item thumbnailListItem"> <i class="fa fa-users text-white mt-2"
-                                            aria-hidden="true"></i>
-                                            <?php if(!empty($playbacksingingr)){ ?>
-                                                <?php  $totalValue = 505 + $playbacksingingr;
-                                                echo $totalValue; ?>
-                                            <?php }else{ ?>
-                                                505
-                                            <?php } ?>
-                                            </li>                                 
-                                    <li class="list-inline-item thumbnailListItem"><?php
-                                        if (!empty($playbacksinging)) { 
-                                            $average_rating = number_format($playbacksinging['average_rating'], 2);
-                                            if($average_rating != 0.00){
-                                                echo $average_rating; ?>
-                                                <?php 
-                                            } else { 
-                                                echo "4.65"; // Default value if the data is not available
-                                            } 
-                                        }
-                                            ?> <i class="fa fa-star" style="color:#fad32c"></i></li></li>
-
-                                    
-                            </div>
+                         
                         </div>
             
                       
@@ -353,22 +189,21 @@
 </section>
 
 
-<section class="mt-4 dancepage ">
-    <div class="container dancepagec" style="padding-right: var(--bs-gutter-x, .0rem) ! important; 
-    padding-left: var(--bs-gutter-x, .0rem) ! important;">
+<section class="mt-4 dancepage MusicSec">
+    <div class="container dancepagec">
 
         <!-- pills -->
         <div class="typesOfDance-tab">
-
-        <!-- <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
+<!-- 
+        <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="col-lg-1 col-md-1 dancebthide"></li>
 
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link active" id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
+                <a class="nav-link " id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
             </li>
 
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Bharatnatyam-tab" href="<?=base_url(); ?>Bharatnatyam" target="_blank" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</a>
+                <a class="nav-link active" id="pills-Bharatnatyam-tab" href="<?=base_url(); ?>Bharatnatyam" target="_blank" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</a>
             </li>
 
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -420,7 +255,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn MusicSec p-3">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -476,7 +311,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec MusicSec" id="lear">
+                    <section class="learningsec yellowb" id="lear">
                         <div class="container">
                             <div class="row ">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -824,7 +659,7 @@
                 </div>
 
                 <!-- Bharatnatyam -->
-                <div class="tab-pane fade" id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
+                <div class="tab-pane fade " id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/Bharatnatyam.svg" class="danceimg">
@@ -844,7 +679,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn MusicSec">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -899,7 +734,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec MusicSec" id="learnbharatnatyam">
+                    <section class="learningsec yellowb" id="learnbharatnatyam">
                         <div class="container">
                             <div class="row ">
                             <div  class="col-lg-12 col-md-12 col-12">
@@ -1268,7 +1103,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn MusicSec">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1323,7 +1158,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec MusicSec" id="learnodissi">
+                    <section class="learningsec yellowb" id="learnodissi">
                         <div class="container">
                             <div class="row">
                             <div  class="col-lg-12 col-md-12 col-12">
@@ -1605,7 +1440,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn MusicSec">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1660,7 +1495,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="learningsec MusicSec" id="learnBollywood">
+                    <section class="learningsec yellowb" id="learnBollywood">
                         <div class="container">
                             <div class="row">
                             <div  class="col-lg-12 col-md-12 col-12">
@@ -1921,7 +1756,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn MusicSec">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -1977,7 +1812,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec MusicSec" id="learnWestern">
+                    <section class="learningsec yellowb" id="learnWestern">
                         <div class="container">
                             <div class="row">
                             <div class="col-lg-12 col-md-12 col-12">
@@ -2350,7 +2185,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn MusicSec">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2406,7 +2241,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec MusicSec" id="learnSemiclassical">
+                    <section class="learningsec yellowb" id="learnSemiclassical">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -2647,7 +2482,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn MusicSec">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -2701,7 +2536,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec MusicSec" id="learnBhangra">
+                    <section class="learningsec yellowb" id="learnBhangra">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -3011,7 +2846,7 @@
                         </div>
                     </div>
 
-                    <section class="learningBtn MusicSec">
+                    <section class="learningBtn yellowb">
                         <div class="container">
                             <ul class="list-inline row ">
                                 <li class="col-lg-1 ">
@@ -3065,7 +2900,7 @@
                         </div>
                     </section>
 
-                    <section class="learningsec MusicSec" id="learnFolk">
+                    <section class="learningsec yellowb" id="learnFolk">
                         <div class="container">
                             <div class="row">
                                  <div  class="col-lg-12 col-md-12 col-12">
@@ -3392,7 +3227,7 @@
     </div>
 </section>
 <!-- </section> -->
-<section class="how_Started-section pb-3 MusicSec">
+<section class="how_Started-section pb-3 ">
     <div class="container">
         <div class="row m-0">
             <div class="heading_new text-center">
@@ -3461,6 +3296,18 @@
 
 <!-- Happy faces -->
 <!-- superstar slide -->
+
+
+
+
+    </div>
+    </div>
+    </div>
+</section>
+
+<?php include('InstruInstructer.php'); ?>
+
+
 <section class="faculty-section faculty-sectiononhome p-3 ">
     <div class="container cont-width mt-5 ">
         <div class="row heading-div m-0">
@@ -3814,21 +3661,54 @@
 
 
 
+<?php include('pricingforhome.php'); ?>
+
+<section class="form-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mt-0 mb-0">
+                <h1>We're Just a Click Away: Connect Now</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="<?=base_url(); ?>public/images/icon/form-img.png" alt="Image 4" class="img-fluid mx-auto "
+                    width="100%" />
+
+            </div>
+
+            <div class="col-lg-6 my-auto">
+
+                <form action="<?=base_url(); ?>Yogaconnect" method="post">
+                    <input type="text" name="Name" class="form-control" placeholder="Name :" />
+                    <input type="text"  name="Company" class="form-control" placeholder="Company :" />
+                    <input type="email" name="Email" class="form-control" placeholder="Official Email :" />
+                    <input type="text" name="Mobile" class="form-control" placeholder="Mobile (With Country Code) :" />
+                    <input type="text" name="Sector" class="form-control" placeholder="Sector :" />
+
+                    <div class="text-center mt-0">
+                        <!-- <button class="btn quote-btn">Get Quote</button> -->
+                        <button type="submit" class="btn quote-btn mt-4">Get Quote</button>
+                    </div>
+
+
+                </form>
+
+
+
+            </div>
+
+        </div>
+
     </div>
-    </div>
-    </div>
+
 </section>
-
-<?php include('InstruInstructer.php'); ?>
-
-
-
-<?php include('pricing.php'); ?>
-
-
 
 
 <?php include('Dancefaq.php'); ?>
+
+
 
 <?php include('bookdemocallb.php'); ?>
 
@@ -3906,5 +3786,8 @@
         </div>
     </div>
 </section>
+
+
+
 
 <?php include('footer.php'); ?>

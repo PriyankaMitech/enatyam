@@ -372,6 +372,8 @@ body {
                     <div class="col-lg-12 col-md-12 col-12 coh">
                         <h3 class="text-white" style="text-align:center">Courses Offering
                         <span class="line linessf"></span> </h3>
+
+                        
                     </div>
 
   

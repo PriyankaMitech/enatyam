@@ -751,7 +751,7 @@ svg {
   height: 50px;
   margin-bottom: 15px;
 }
-.content p {
+.corporateyoga .content p {
   padding: 20px 39px;
   font-size: 24px;
 }
@@ -780,4 +780,10 @@ svg {
 }
 .company_logo {
   width: 100% !important;
+}
+.coh h3 {
+  font-size: 33px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
 }
