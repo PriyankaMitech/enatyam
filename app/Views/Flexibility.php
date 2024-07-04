@@ -54,30 +54,174 @@
         </div>
     </div>
 </section>
+
+<section class="mb-5" >
+    <div class="">
+        <!-- pills -->
+        <div class="typesOfDance-tab">
+            <div class=" copage">
+                <div class="">
+
+
+
+                    <div class="row text-lg-start">
+                    <div class="col-lg-12 col-md-12 col-12 coh">
+                        <h3 class="" style="text-align:center">Courses Offering
+                        <span class="line linessf"></span> </h3>
+                    </div>
+
+  
+
+                        <div class="col-lg-3 col-md-4 col-6 ">
+                             <h5 class="" style="text-align: center;">Prenatal Yoga </h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>PrenatalYoga" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
+                                </a>
+                            </div>
+
+                    
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-6">
+                             <h5 class="" style="text-align: center;">Stress Reduction Yoga</h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>StressReduction" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt=""
+                                       >
+                                </a>
+                            </div>
+
+                           
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-6">
+                             <h5 class="" style="text-align: center;">Flexibility Yoga </h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>Flexibility" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/3-rbg.webp" alt=""
+                                       >
+                                </a>
+                            </div>
+                         
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-6">
+                             <h5 class="" style="text-align: center;">
+                             WeightLoss Yoga </h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>WeightLossYoga" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/4-rbg.webp" alt=""
+                                       >
+                                </a>
+                            </div>
+                       
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-6">
+                             <h5 class="" style="text-align: center;">Everyday Yoga </h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>EverydayYoga" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/5-rbg.webp" alt=""
+                                       >
+                                </a>
+                            </div>
+                           
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                             <h5 class="" style="text-align: center;">Yoga for Chronic Disease</h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>YogaforChronic" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/6-rbg.webp" alt=""
+                                       >
+                                </a>
+                            </div>
+                       
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                             <h5 class="" style="text-align: center;">
+                             Yoga for Kids</h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>YogaforKids" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.webp" alt=""
+                                       >
+                                </a>
+                            </div>
+                      
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                             <h5 class="" style="text-align: center;">
+                             Meditation </h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>Meditation" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.webp" alt=""
+                                       >
+                                </a>
+                            </div>
+                         
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-6">
+                             <h5 class="" style="text-align: center;">
+                             Customise Your Yoga Plan</h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>CustomiseYoga" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.webp" alt=""
+                                       >
+                                </a>
+                            </div>
+                      
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                             <h5 class="" style="text-align: center;">
+                             Nutrition Counselling</h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>NutritionCounselling" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.webp" alt=""
+                                       >
+                                </a>
+                            </div>
+                         
+                        </div>
+            
+            
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="btnSection1 yogapagebtn MusicSec ">
     <div class="container dancepagec">
         <div class="typesOfYoga-tab">
 
-            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <!-- Prenatal Yoga -->
+            <!-- <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
                 </li>
-                <!-- Stress Reduction Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link" id="pills-StressReduction-tab" href="<?=base_url(); ?>StressReduction" data-url="<?=base_url(); ?>StressReduction" role="tab" aria-controls="pills-StressReduction" aria-selected="false">Stress Reduction Yoga</a>
                 </li>
-                <!-- Flexibility Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link active" id="pills-Flexibility-tab" href="<?=base_url(); ?>Flexibility" data-url="<?=base_url(); ?>Flexibility" role="tab" aria-controls="pills-Flexibility" aria-selected="false">Flexibility Yoga</a>
                 </li>
-                <!-- Weight Loss Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link" id="pills-WeightLossYoga-tab" href="<?=base_url(); ?>WeightLossYoga" data-url="<?=base_url(); ?>WeightLossYoga" role="tab" aria-controls="pills-WeightLossYoga" aria-selected="false">WeightLoss Yoga</a>
                 </li>
-                <!-- Everyday Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link" id="pills-EverydayYoga-tab" href="<?=base_url(); ?>EverydayYoga" data-url="<?=base_url(); ?>EverydayYoga" role="tab" aria-controls="pills-EverydayYoga" aria-selected="false">Everyday Yoga</a>
                 </li>
@@ -86,30 +230,25 @@
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
 
-                <!-- Yoga for chronic Disease -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link" id="pills-YogaforChronic-tab" href="<?=base_url(); ?>YogaforChronic" data-url="<?=base_url(); ?>YogaforChronic" role="tab" aria-controls="pills-YogaforChronic" aria-selected="false">Yoga for Chronic Disease</a>
                 </li>
-                <!-- Yoga for Kids -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link" id="pills-YogaforKids-tab" href="<?=base_url(); ?>YogaforKids" data-url="<?=base_url(); ?>YogaforKids" role="tab" aria-controls="pills-YogaforKids" aria-selected="false">Yoga for Kids</a>                    
                 </li>
-                <!-- Meditation -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link" id="pills-Meditation-tab" href="<?=base_url(); ?>Meditation" data-url="<?=base_url(); ?>Meditation" role="tab" aria-controls="pills-Meditation" aria-selected="false">Meditation</a>
                 </li>
-                <!-- Customise your Yoga Plan -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link" id="pills-CustomiseYoga-tab" href="<?=base_url(); ?>CustomiseYoga" data-url="<?=base_url(); ?>CustomiseYoga" role="tab" aria-controls="pills-CustomiseYoga" aria-selected="false">Customise Your Yoga Plan</a>
                 </li>
 
-                <!-- Nutrition Counselling  -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
                     <a class="nav-link" id="pills-NutritionCounselling-tab" href="<?=base_url(); ?>NutritionCounselling" data-url="<?=base_url(); ?>NutritionCounselling" role="tab" aria-controls="pills-NutritionCounselling" aria-selected="false">Nutrition Counselling</a>
                 </li>
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
-            </ul>
+            </ul> -->
 
             <div class="tab-content " id="pills-tabContent">
                 <!-- Prenatal Yoga   -->
@@ -3616,326 +3755,486 @@
 </section>
 
 
-<section class="testimonials dancet ft" id="testimonials">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 col-12 text-center testimonialsdiv">
-                <h3 class="title_4 ">Testimonials
+<section class="how_Started-section pb-3 ">
+    <div class="container">
+        <div class="row m-0">
+            <div class="heading_new text-center">
+                <b>
+                    <h3 class="title_4 "> Course Highlights
+                        <span class="line"></span></h3>
+                </b>
+            </div>
+        </div>
+
+        <div class="row justify-content-center htgs">
+
+            <div class="col  text-center mb-4 mb-lg-0">
+                <div class="d-flex justify-content-center">
+                    <img src="<?php echo base_url(); ?>public/images/ch1.png" alt="Icon 1" class="rounded-circle custom-img">
+                </div>
+                <div class="sc-heading">
+                    <h2 class="heading__primary text-white custom-h2">World Class top Trainers </h2>
+                </div>
+            </div>
+
+            <div class="col  text-center mb-4 mb-lg-0">
+                <div class="d-flex justify-content-center">
+                    <img src="<?php echo base_url(); ?>public/images/ch2.png" alt="Icon 2" class="rounded-circle custom-img">
+                </div>
+                <div class="sc-heading">
+                    <h2 class="heading__primary text-white custom-h2">1 on 1 Private live class with flexible timing </h2>
+                </div>
+            </div>
+
+            <div class="col  text-center mb-4 mb-lg-0">
+                <div class="d-flex justify-content-center">
+                    <img src="<?php echo base_url(); ?>public/images/ch3.png" alt="Icon 3" class="rounded-circle custom-img">
+                </div>
+                <div class="sc-heading">
+                    <h2 class="heading__primary text-white custom-h2">Comprehensive Curriculum </h2>
+                </div>
+            </div>
+
+            <div class="col  text-center mb-4 mb-lg-0">
+                <div class="d-flex justify-content-center">
+                    <img src="<?php echo base_url(); ?>public/images/ch4.png" alt="Icon 4" class="rounded-circle custom-img">
+                </div>
+                <div class="sc-heading">
+                    <h2 class="heading__primary text-white custom-h2">Five Star Rated Platform</h2>
+                </div>
+            </div>
+
+            <div class="col  text-center mb-4 mb-lg-0">
+                <div class="d-flex justify-content-center">
+                    <img src="<?php echo base_url(); ?>public/images/ch5.png" alt="Icon 5" class="rounded-circle custom-img">
+                </div>
+                <div class="sc-heading">
+                    <h2 class="heading__primary text-white custom-h2">Lifetime Access to Resources and 24 x 7 support</h2>
+                </div> 
+            </div>
+
+
+           
+        </div>
+    </div>
+</section>
+
+<?php include('InstruInstructer.php'); ?>
+<section class="faculty-section faculty-sectiononhome p-3 ">
+    <div class="container cont-width mt-5 ">
+        <div class="row heading-div m-0">
+            <div class="col-lg-12 col-12 text-center">
+                <h3 class="title_4 ">Happy Faces
                 </h3>
                 <span class="line"></span>
             </div>
-            <!-- Main Carousel -->
-            <div class="col-lg-12 col-md-12 col-12 testimonialsp">
-                <div id="combinedCarousel" class="carousel slide" data-ride="carousel"> 
-                        <div class="carousel-inner">
-                            <div class="carousel-item motd active">
-                                <div class="row">
-                               
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>  Aiden C ( London -Uk)<span></p>
-                                            <p>Enatyam's yoga courses are a total game-changer for me. The <br>
-                                            instructors keep it real, <br>making every pose feel achievable. It's like having a personal <br> yoga
-                                            guide right in my living room.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/1.png" class="haimg">
+        </div>
+        <div class="row homapageview">
+            <div class="col-lg-12 hpb">
+                <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.webp" class="centered-image" />
+                                            <div class="hft">
+                                                <h5>Aiden C ( London -Uk)</h5>
+                                                <p>Enatyam's yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It's like having a personal yoga guide right in my living room.
+                                                </p>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sweta ( Australia)</span></p>
-                                            <p>I'm new to yoga, and Enatyam is the perfect starting point. The<br>
-                                            classes are not intimidating, and the instructors <br>break down each pose in a way that's
-                                            easy to understand. Feeling more zen already!
-                                            </p>
+                            <div class="item in" >
+                                    <div class="happyFaces-div">
+                                        <div class="happyFaces-div1 mb-5">
+                                            <img src="<?=base_url(); ?>public/images/happyfaces/2h.webp" class="centered-image"  />
+                                            <div class="hft">
+                                                <h5>Sweta ( Australia)</h5>
+                                                <p>I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that's easy to understand. Feeling more zen already!</p>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/2.png" class="haimg">
+                            </div>
+                        </div>
+                        <div class="item">
+                        <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/3h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Sneha (Canada )</h5>
+                                        <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual that I genuinely look forward to.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Sneha (Canada )</span></p>
-                                            <p>Enatyam's yoga classes are like a breath of fresh air. The instructors <br>
-                                                create a friendly atmosphere, making the sessions enjoyable.  <br>It's become a daily ritual
-                                                that I genuinely look forward to.
-                                            </p>
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 ">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/4h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Kavita ( Pune)</h5>
+                                            <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
                                         </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/3.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kavita ( Pune) </span></p>
-                                            <p>I've tried a few online yoga platforms, but Enatyam stands out. The <br>
-                                                variety of classes keeps things interesting, <br> and the instructors feel like friends guiding
-                                                you through a mindful journey. Highly recommend!"
-                                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Ayesha ( Singapore )</h5>
+                                            <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
                                         </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/4.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Unnikrishnan (Dubai)</span></p>
-                                            <p>Enatyam's yoga courses are my go-to for stress relief. The calming <br>
-                                                voice of the instructors and the simplicity of the poses<br> make it a perfect escape from the
-                                                chaos of daily life.
-                                            </p>
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 ">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/7h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Rajiv ( Lucknow )</h5>
+                                            <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.</p>
                                         </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/5.png" class="haimg">
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Ayesha ( Singapore )</span></p>
-                                            <p> Enatyam's yoga is a perfect fit for a busy mom like me. The quick <br>
-                                                sessions are manageable, <br>and the instructors make it feel like a mini wellness retreat.<br>
-                                                Grateful for this accessible and effective platform!"
-                                            </p>
+                        </div>
+                
+                        <div class="item"> 
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/8h.webp" class="centered-image" />
+                                        
+                                        <div class="hft">
+                                        <h5>Vikram ( Delhi )</h5>
+                                        <p class="reviewName">Enatyam's yoga classes have made me realize that yoga is for everyone. The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.</p>
                                         </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/6.png" class="haimg">
+                                    </div>    
+                                </div>
+                            </div>
+                    
+                            <div class="item in">
+                            <!-- Your content here -->
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 ">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Vishal ( Chandigarh )</h5>
+                                            <p class="reviewName">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors' encouragement keeps me motivated.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Emma ( UK ) </span></p>
-                                            <p> yoga is my daily escape from the hustle. The instructors make it easy to <br>
-                                                disconnect and focus on the present moment.  <br>It's a simple yet powerful practice that has
-                                                become a non-negotiable in my routine.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/7.png" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Rajiv ( Lucknow ) </span></p>
-                                            <p>The variety of yoga classes on Enatyam is impressive. Whether I need a<br>
-                                                gentle stretch or an energizing flow, there's something for every mood. <br>The instructors
-                                                make it easy for anyone to enjoy the benefits of yoga."
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/8.png" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vikram ( Delhi ) </span></p>
-                                            <p> Enatyam's yoga classes have made me realize that yoga is for everyone.<br>
-                                                The inclusive approach of the instructors and the straightforward guidance make it a<br>
-                                                comfortable and enjoyable practice."
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/9.png" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Suresh T ( Chennai )</span></p>
-                                            <p>Enatyam is changing the game with its approachable yoga courses.<br>
-                                                The instructors not only focus on the physical aspect but also<br> emphasize the mental
-                                                well-being that comes with a regular yoga practice.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/10.png" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Paul Robbie ( Australia )</span></p>
-                                            <p>yoga classes are a gem for beginners like me on enatyam<br>
-                                                platform . The instructors guide with patience, and the step-by-step instructions <br>make it
-                                                easy to follow. It's like having a supportive yoga buddy at home.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/11.png" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vaishali ( Chandigarh )</span></p>
-                                            <p> I've always struggled to stick with a workout routine, but <br>
-                                                Enatyam's yoga has been a consistent part of my day. <br>The short sessions fit into my
-                                                schedule, and the instructors'<br> encouragement keeps me motivated."
-
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/12.png" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kajal ( Delhi )</span></p>
-                                            <p>I appreciate how Enatyam's yoga classes cater to various levels. Whether
-                                                you're a beginner or an experienced yogi, there's always room for growth. The instructors
-                                                make sure everyone feels welcome."
-
-
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/13.png" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Scarlett family ( Germany )</span></p>
-                                            <p>Yoga is a daily dose of positivity for us . The instructors<br>
-                                                radiate good vibes, and the classes have<br> become our source of calmness in the midst of a
-                                                daily hustle and bustle . <br>A fantastic platform for holistic well-being
-
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/14.png" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Michael (Mike) ( USA)</span></p>
-                                            <p>Enatyam's yoga is like a personal wellness retreat at home. The<br>
-                                                instructors create a serene atmosphere, <br>and the classes feel like a journey into both
-                                                physical and mental well-being. Truly transformative
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="public/images/happyfaces/Yoga/15.png" class="haimg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-                            <!-- Add more carousel items as needed -->
                         </div>
 
-                        <a class="carousel-control-prev" href="#combinedCarousel" role="button" data-slide="prev">
-                            <span aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#combinedCarousel" role="button" data-slide="next">
-                            <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                    <div class="item"> 
+                        <div class="item in" >
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mb-5">
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Kajal ( Delhi )</h5>
+                                        <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    
+                        <div class="item in" >
+                        <!-- Your content here -->
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 ">
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Scarlett family ( Germany )</h5>
+                                        <p class="reviewName">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item"> 
+                        <div class="item in" >
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/14h.webp" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Emma ( UK )</h5>
+                                        <p class="reviewName">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    
+                        <div class="item in" >
+                        <!-- Your content here -->
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 ">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/15h.webp" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Michael (Mike) ( USA)</h5>
+                                        <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mobilepageview">
+            <div class="col-lg-12 hpb">
+                <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.webp" class="centered-image" />
+                                            <div class="hft">
+                                                <h5>Aiden C ( London -Uk)</h5>
+                                                <p>Enatyam's yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It's like having a personal yoga guide right in my living room.
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="item">
+                            <div class="item in" >
+                                    <div class="happyFaces-div">
+                                        <div class="happyFaces-div1 mb-5">
+                                            <img src="<?=base_url(); ?>public/images/happyfaces/2h.webp" class="centered-image" />
+                                            <div class="hft">
+                                                <h5>Sweta ( Australia)</h5>
+                                                <p>I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that\'s easy to understand. Feeling more zen already!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                        <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/3h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Sneha (Canada )</h5>
+                                        <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual that I genuinely look forward to.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="item">
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 ">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/4h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Kavita ( Pune)</h5>
+                                            <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Ayesha ( Singapore )</h5>
+                                            <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+
+                        <div class="item">
+                            <div class="item in" >
+                                    <div class="happyFaces-div">
+                                        <div class="happyFaces-div1 ">
+                                            <img src="<?=base_url(); ?>public/images/happyfaces/7h.webp" class="centered-image" />
+                                            <div class="hft">
+                                                <h5>Rajiv ( Lucknow )</h5>
+                                                <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.'</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                   
+                        <div class="item"> 
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/8h.webp" class="centered-image" />
+                                        <div class="hft">
+                                        <h5>Vikram ( Delhi )</h5>
+                                        <p class="reviewName">Enatyam's yoga classes have made me realize that yoga is for everyone. The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.</p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>    
+                        </div>
+
+                        <div class="item">
+                            <div class="item in" >
+                            <!-- Your content here -->
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 ">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Vishal ( Chandigarh )</h5>
+                                            <p class="reviewName">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors encouragement keeps me motivated.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="item"> 
+                        <div class="item in" >
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mb-5">
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Kajal ( Delhi )</h5>
+                                        <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="item">
+                        <div class="item in" >
+                        <!-- Your content here -->
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 ">
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Scarlett family ( Germany )</h5>
+                                        <p class="reviewName">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item"> 
+                        <div class="item in" >
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/14h.webp" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Emma ( UK )</h5>
+                                        <p class="reviewName">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="item">
+                        <div class="item in" >
+                            <!-- Your content here -->
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 ">
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/15h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Michael (Mike) ( USA)</h5>
+                                            <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+
+
+ 
+</section>
+
+
+
+<?php include('pricingforhome.php'); ?>
+<section class="mb-5">
+    <div class="">
+        <!-- pills -->
+        <div class="typesOfDance-tab">
+            <div class=" copage">
+                <div class="">
+                    <div class="row text-lg-start">
+                        <div class="col-lg-12 col-md-12 col-12 coh">
+                            <h3  style="text-align:center"> Other Popular Courses
+                                <span class="line linessf"></span>
+                            </h3>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <h5 style="text-align: center;">Everyday Yoga </h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center mt-2">
+                                <a href="<?= base_url(); ?>Western" class="btn shop-now-btn">Explore More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <h5 class="" style="text-align: center;">Yoga for Chronic Desiese </h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center mt-2">
+                                <a href="<?= base_url(); ?>Semiclassical" class="btn shop-now-btn">Explore More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <h5 class="" style="text-align: center;">Yoga for Kids</h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center mt-2">
+                                <a href="<?= base_url(); ?>Bhangra" class="btn shop-now-btn">Explore More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <h5 class="" style="text-align: center;">Meditation </h5>
+                            <div class="ThumbnailImg " style="text-align: center;">
+                                <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="">
+                                </a>
+                            </div>
+                            <div class="text-center mt-2">
+                                <a href="<?= base_url(); ?>Folk" class="btn shop-now-btn">Explore More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<?php include('InstruInstructer.php'); ?>
-<?php include('pricing.php'); ?>
-<?php include('Dancefaq.php'); ?>
+</section><?php include('Dancefaq.php'); ?>
 <?php include('bookdemocallb.php'); ?>
 <?php include('footer.php'); ?>

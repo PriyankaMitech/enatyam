@@ -8,14 +8,7 @@
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
 }
-.custom-img {
-    width: 100%;
-    height: auto;
-}
 
-.custom-h2 {
-    font-size: 16px;
-    }
 
 </style>
 
