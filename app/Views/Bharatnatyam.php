@@ -29,7 +29,7 @@
                                 <i class="fas fa-star golden-star"></i>
                                 <i class="fas fa-star golden-star" style="  margin-right: 0.5rem !important; "></i>
                             </div>
-                            <p class="text-white">4.9 out of 5.0 from 3796 ratings</p>
+                            <p class="text-white mt-2">4.9 out of 5.0 from 3796 ratings</p>
 
                         </div>
                     

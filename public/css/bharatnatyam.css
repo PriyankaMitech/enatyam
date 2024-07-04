@@ -28,7 +28,7 @@
   padding-bottom: 1.7rem;
   font-size: 1.4rem;
   color: #fff;
-
+}
 
 .s_header-section h2{
    text-align: center; 
@@ -70,13 +70,13 @@
   display: flex;
 
 }
-
 .s_header-section .singleline {
   margin-left: 4rem;
   display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
 .s_header-section .rightimg {
   margin-top: 2rem;
   height: 33rem;
-  width: auto;
 }
