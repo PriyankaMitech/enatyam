@@ -164,11 +164,13 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/corporateyoga.css">   
 
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/s_header.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
