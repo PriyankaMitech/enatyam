@@ -52,7 +52,6 @@
 .s_header-section .temp {
   display: flex;
   margin-left: 1.7rem;
-
   margin-top: 10px !important;
 }
 
@@ -79,7 +78,10 @@
 }
 .s_header-section .rightimg {
   margin-top: 2rem;
-  height: 33rem;
+  margin-left: 5rem;
+  height: auto;
+  width: 30rem !important;
+  border-radius: 50px;
 }
 .custom-img {
   width: 100%;
