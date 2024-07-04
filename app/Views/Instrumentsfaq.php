@@ -1,4 +1,4 @@
-<section class="faq-section mfaq MusicSec">
+<section class="mfaq MusicSec pb-5">
     <div class="container cont-width">
         <!-- <div class="row">
             <div class="col-lg-1 col-md-1 col-12 faqd"><img src="public/images/logo2.png" class="dancefimg" /></div>
