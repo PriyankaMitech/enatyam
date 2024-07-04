@@ -164,7 +164,11 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/corporateyoga.css">   
+
 
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
@@ -314,6 +318,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -356,9 +362,10 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- owl carousel css -->
@@ -397,6 +404,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -440,6 +449,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -481,6 +492,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -524,6 +537,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -565,6 +580,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -608,6 +625,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -650,6 +669,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -691,6 +712,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -791,6 +814,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -845,6 +870,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -902,6 +929,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -957,6 +986,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -1014,6 +1045,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -1069,6 +1102,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -1126,6 +1161,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -1182,6 +1219,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
 
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
@@ -1237,6 +1276,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
         <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+        <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">

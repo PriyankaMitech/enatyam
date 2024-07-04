@@ -24,21 +24,45 @@
 <section class="s_header-section ">
     <div class="container-fluid mt-2">
         <div class="row ">
-            <div class="col-lg-12 col-md-12 col-12 p-5">
-                <div class="bannervs">
+        <div class="col-lg-12 col-md-12 col-12 p-5 mt-5" style="background-color: black;">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
+                        <h2 class="heading text-white">Online Stress Reduction Yoga Classes<br>1-on-1 Live by Top Trainer</h2>
+                        <p class="text-white">
+                            Embark on a transformative journey with our <br>online stress reduction yoga classes. Guided by <br>skilled instructors, and five star rated by learners. <br>Immerse yourself in soothing practices that <br>promote inner peace and resilience. Join us
+                        </p>
+                        <div class="singleline">
+                            <div class="stars">
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                                <i class="fas fa-star golden-star"></i>
+                            </div>
+                            <p class="text-white">4.9 out of 5.0 from 3796 ratings</p>
 
-                    <video class="video-dance bannerv" autoplay loop muted >                    
-                        <!-- <video class="video-dance bannerv" autoplay loop muted > -->
-
-                        <source src="<?=base_url(); ?>public/images/instrument/singing-and-Intruments-video.mp4" type="video/mp4">
-                    </video>                
+                        </div>
+                    
+                        <div class="temp">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">+91</span>
+                                <input type="text" class="form-control" placeholder="Whatsapp Number" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>   
+                            <input type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Book a free trial" style="border-radius: 5px; height: 4rem; width: 13rem; color: white; background-color: #ff1561">                            
+                        </div>
+                        <div class="text-end mt-4">
+                            <!-- <?php if (!(session()->get('sessiondata'))) : ?>
+                                <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now"> -->
+                            <?php else : ?>
+                                <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12  textPara-col kathakp" >
+                        <img src="public/images/Instrument/keyboardImg1.svg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                    </div>
                 </div>
             </div>
-            <!-- <div class="col-lg-4 col-md-4 bsimg">
-            <div class="banneris">
-                <img src="<?=base_url(); ?>public/images/Home/ball.png" class="img-fluid mt-5" alt="Image 4">
-                </div>
-            </div> -->
         </div>
     </div>
 </section>
