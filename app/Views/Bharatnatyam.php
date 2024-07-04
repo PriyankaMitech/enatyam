@@ -1,6 +1,5 @@
 <?php include('header.php'); ?>
 
-<link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
 
 <style>
 .nav-link {
