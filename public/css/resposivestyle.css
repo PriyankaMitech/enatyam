@@ -1641,6 +1641,9 @@
   #playlist .row {
     display: contents;
   }
+  .modulesdiv {
+    padding-bottom: 30px !important;
+  }
 }
 
 /* For Tablet Screen max-width: 991 min-width: 768*/
@@ -1661,8 +1664,8 @@
     margin-bottom: 0rem !important;
     padding: 10px !important;
   }
+
   .s_header-section .rightimg {
-    margin-top: 2rem;
     margin-left: 0rem;
     width: 100% !important;
   }

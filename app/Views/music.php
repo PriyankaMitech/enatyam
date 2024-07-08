@@ -1,9 +1,8 @@
 <?php include('header.php'); ?>
 
 <style>
-.nav-link {
-    display: flex;
-    align-items: center;
+.nav-pills .nav-link {
+    display: flex;    align-items: center;
     justify-content: center;
     height: 100%;
     text-align: center;
