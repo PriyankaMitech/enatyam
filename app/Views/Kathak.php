@@ -63,12 +63,15 @@
                         <img src="public/images/Dance/kathakImg2.webp" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
+               
             </div>
         </div>
     </div>
+    
 </section>
 
-<section class="mb-5 " >
+
+<section class="MusicSec" >
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
@@ -78,19 +81,23 @@
 
 
                     <div class="row text-lg-start">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
                     <div class="col-lg-12 col-md-12 col-12 coh">
-                        <h3 class="" >Courses Offering
+                  
+                        <h3 class="text-white" >Courses Offering
                         <span class="line linessf"></span> </h3>
                     </div>
 
   
 
                         <div class="col-lg-3 col-md-4 col-6 ">
-                             <h5 class="" style="text-align: center;">Kathak </h5>
+                             <h5 class="text-white" style="text-align: center;">Kathak </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Kathak" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
+                                        src="<?php echo  base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
                                 </a>
                             </div>
 
@@ -98,7 +105,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Bharatanatyam </h5>
+                             <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bharatnatyam" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -111,7 +118,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Odissi </h5>
+                             <h5 class="text-white" style="text-align: center;">Odissi </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Odissi" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -123,7 +130,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">
+                             <h5 class="text-white" style="text-align: center;">
                                 Bollywood Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bollywood" target="" class="d-block h-100">
@@ -136,7 +143,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Western Dance </h5>
+                             <h5 class="text-white" style="text-align: center;">Western Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -147,7 +154,7 @@
                            
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Semi Classical</h5>
+                             <h5 class="text-white" style="text-align: center;">Semi Classical</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -158,7 +165,7 @@
                        
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">
+                             <h5 class="text-white" style="text-align: center;">
                                 Bhangra</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
@@ -170,7 +177,7 @@
                       
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">
+                             <h5 class="text-white" style="text-align: center;">
                             Folk Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
@@ -191,7 +198,7 @@
 </section>
 
 
-<section class="mt-4 dancepage MusicSec">
+<section class="dancepage MusicSec">
     <div class="container dancepagec">
 
         <!-- pills -->
@@ -239,6 +246,9 @@
                 <!-- Kathak -->
                 <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
                         </div>
@@ -3229,9 +3239,12 @@
     </div>
 </section>
 <!-- </section> -->
-<section class="how_Started-section pb-3 ">
+<section class="how_Started-section pb-3 MusicSec">
     <div class="container">
         <div class="row m-0">
+        <div class="col-lg-12 col-md-12 col-12 imgs text-center pt-5">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
             <div class="heading_new text-center">
                 <b>
                     <h3 class="title_4 "> Course Highlights
@@ -3288,6 +3301,10 @@
             </div>
 
 
+
+       
+
+
            
         </div>
     </div>
@@ -3313,6 +3330,7 @@
 <section class="faculty-section faculty-sectiononhome p-3 ">
     <div class="container cont-width mt-5 ">
         <div class="row heading-div m-0">
+
             <div class="col-lg-12 col-12 text-center">
                 <h3 class="title_4 ">Happy Faces
                 </h3>
@@ -3763,47 +3781,6 @@
 
 <?php include('pricingforhome.php'); ?>
 
-<section class="form-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center mt-0 mb-0">
-                <h1>We're Just a Click Away: Connect Now</h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-6">
-                <img src="<?=base_url(); ?>public/images/icon/form-img.png" alt="Image 4" class="img-fluid mx-auto "
-                    width="100%" />
-
-            </div>
-
-            <div class="col-lg-6 my-auto">
-
-                <form action="<?=base_url(); ?>Yogaconnect" method="post">
-                    <input type="text" name="Name" class="form-control" placeholder="Name :" />
-                    <input type="text"  name="Company" class="form-control" placeholder="Company :" />
-                    <input type="email" name="Email" class="form-control" placeholder="Official Email :" />
-                    <input type="text" name="Mobile" class="form-control" placeholder="Mobile (With Country Code) :" />
-                    <input type="text" name="Sector" class="form-control" placeholder="Sector :" />
-
-                    <div class="text-center mt-0">
-                        <!-- <button class="btn quote-btn">Get Quote</button> -->
-                        <button type="submit" class="btn quote-btn mt-4">Get Quote</button>
-                    </div>
-
-
-                </form>
-
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 
 <?php include('Dancefaq.php'); ?>

@@ -1,6 +1,17 @@
-<?php include('header.php'); ?>
+<?php 
+
+$file = __DIR__ . "/header.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";
+}
+?>
+
 
 <style>
+
+    
     /* 
     
 ░░░░░░░░░░░░░░░░░░░▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄░░
@@ -383,7 +394,7 @@ body {
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Dance" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
+                                        src="<?php echo  base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
                                 </a>
                             </div>
 
@@ -1690,17 +1701,7 @@ body {
                             </div>
                         </div>
                         <div class="item">
-                            <div class="item in" >
-                                <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" />
-                                        <div class="hft">
-                                            <h5>Ayesha ( Singapore )</h5>
-                                            <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
@@ -1708,6 +1709,17 @@ body {
                                         <div class="hft">
                                             <h5>Rajiv ( Lucknow )</h5>
                                             <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item in" >
+                                <div class="happyFaces-div">
+                                    <div class="happyFaces-div1 mb-5">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" />
+                                        <div class="hft">
+                                            <h5>Ayesha ( Singapore )</h5>
+                                            <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -2381,7 +2393,15 @@ body {
     </div>
 </div>
 
-<?php include('footer.php'); ?>
+<?php 
+$file = __DIR__ . "/footer.php";
+if (file_exists($file)) {
+    include $file;
+} else {
+    echo "File not found: $file";
+}
+?>
+
 
 <script>
     $(document).ready(function() {
