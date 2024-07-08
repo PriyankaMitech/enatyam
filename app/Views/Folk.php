@@ -8,6 +8,18 @@
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
 }
+.happyFaces-div1 .limited-height {
+    max-height: 5rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.happyFaces-div1:hover .limited-height {
+    max-height: none;
+}
+.img-fluid{
+    max-height: 11rem;
+}
 </style>
 
 
@@ -17,10 +29,9 @@
             <div class="col-lg-12 col-md-12 col-12 p-5" style="background-color: black;">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <h2 class="heading text-white">Online Stress Reduction Yoga Classes<br>1-on-1 Live by Top Trainer</h2>
+                        <h2 class="heading text-white">Folk Dance - Celebrating Diversity Through Movement</h2>
                         <p class="text-white">
-                            Embark on a transformative journey with our <br>online stress reduction yoga classes. Guided by <br>skilled instructors, and five star rated by learners. <br>Immerse yourself in soothing practices that <br>promote inner peace and resilience. Join us
-                        </p>
+                        Folk dance encompasses a rich tapestry of traditional dances from cultures around the world, each reflecting the unique heritage, rituals, and social practices of its community. These dances are passed down through generations and often accompany ceremonies, festivals, and everyday life, preserving cultural identities and fostering community cohesion                        </p>
                         <div class="singleline">
                             <div class="stars">
                                 <i class="fas fa-star golden-star"></i>
@@ -49,7 +60,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="public/images/Dance/folk-dance.webp" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="public/images/Dance/folk.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -104,7 +115,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Odissi" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/3-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Dance/odissi.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -117,7 +128,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bollywood" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/4-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Dance/bollywood-dance.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -129,7 +140,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/5-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Dance/western.jpeg" alt=""
                                        >
                                 </a>
                             </div>
@@ -140,7 +151,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/6-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Dance/kathakImg1.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -152,7 +163,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Dance/bhangra.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -164,7 +175,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Dance/folk-dance.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -3308,10 +3319,13 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="centered-image" />
                                             <div class="hft">
-                                                <h5>Aiden C ( London -Uk)</h5>
-                                                <p>Enatyam's yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It's like having a personal yoga guide right in my living room.
+                                                <h5>Smita Sebastian (UK)</h5>
+                                                <p class="limited-height">For the past year and a half, I've been learning Kathak from Priti Singh,
+                                                    and I'm incredibly grateful. Priti's graceful teaching style and deep knowledge of the subject
+                                                    make each session interesting and well-rounded. Her online lessons,
+                                                    coupled with flexible scheduling, have made my learning journey both convenient and enriching
                                                 </p>
                                             </div>
                                     </div>
@@ -3320,10 +3334,13 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 mb-5">
-                                            <img src="<?=base_url(); ?>public/images/happyfaces/2h.webp" class="centered-image"  />
+                                            <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="centered-image"  />
                                             <div class="hft">
-                                                <h5>Sweta ( Australia)</h5>
-                                                <p>I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that's easy to understand. Feeling more zen already!</p>
+                                                <h5>Oorja Sinha ( Pune)</h5>
+                                                <p class="limited-height">I made significant improvement in my dancing under the guidance of
+                                                    Priti mam, I excelled in Kathak, completing my first-year exam.
+                                                    Once just a dream, now a reality thanks to her dedication.
+                                                    Her patient teaching and E-natyam platform make learning accessible and enriching.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3333,10 +3350,12 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/3h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="centered-image" />
                                         <div class="hft">
-                                            <h5>Sneha (Canada )</h5>
-                                        <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual that I genuinely look forward to.</p>
+                                            <h5>Reshma ( Pune )</h5>
+                                        <p class="limited-height">Enatyam's Kathak online course has been a lifeline for me amidst my
+                                            extremely busy schedule. The moments spent learning and immersing myself in Kathak dance
+                                            have provided a much-needed escape from the pressures of daily life</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3344,10 +3363,12 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/4h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="centered-image" />
                                         <div class="hft">
-                                            <h5>Kavita ( Pune)</h5>
-                                            <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
+                                            <h5>Tejashvi (Pune)</h5>
+                                            <p class="limited-height">I never thought I'd get back into dancing after so many years, but
+                                            Enatyam's Kathak online course made it possible. The structured lessons and supportive
+                                            instructors gently guided me back to my long-forgotten hobby, and I couldn't be happier.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3357,10 +3378,12 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="centered-image" />
                                         <div class="hft">
-                                            <h5>Ayesha ( Singapore )</h5>
-                                            <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
+                                            <h5>Swapna ( USA)</h5>
+                                            <p class="limited-height">Enatyam's Kathak online course has been a delightful journey of rediscovery for me.
+                                            After putting my passion for dance on hold for years, the accessibility of
+                                            online learning allowed me to reconnect with Kathak and reclaim it as a cherished hobby</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3368,10 +3391,12 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/7h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" />
                                         <div class="hft">
-                                            <h5>Rajiv ( Lucknow )</h5>
-                                            <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.</p>
+                                            <h5>Vaanya’father ( Australia)</h5>
+                                            <p class="limited-height">Enatyam's Kathak online course has exceeded our expectations in every way.
+                                            The convenience of learning from home has made it easy for my child to fit
+                                            dance practice into their schedule, and the joy it brings them is truly priceless</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3382,11 +3407,13 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/8h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" />
                                         
                                         <div class="hft">
-                                        <h5>Vikram ( Delhi )</h5>
-                                        <p class="reviewName">Enatyam's yoga classes have made me realize that yoga is for everyone. The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.</p>
+                                        <h5>Kavya (USA)</h5>
+                                        <p class="limited-height">As a busy parent, I couldn't be happier with Enatyam's Bharatanatyam online
+                                            course. It allows my child to pursue their passion for dance without
+                                            the constraints of rigid schedules, and the progress they've made is truly remarkable</p>
                                         </div>
                                     </div>    
                                 </div>
@@ -3396,10 +3423,13 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" />
                                         <div class="hft">
-                                            <h5>Vishal ( Chandigarh )</h5>
-                                            <p class="reviewName">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors' encouragement keeps me motivated.</p>
+                                            <h5>Isabella (USA)</h5>
+                                            <p class="limited-height">Being an English speaker, my fondness for Krishna led me to Kathak with
+                                                Enatyam. Their platform made my Kathak journey incredibly easy to follow.
+                                                It seamlessly blends tradition with accessibility, it's like
+                                                diving into the exciting world of Kathak without any hassle.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3410,10 +3440,12 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" />
                                     <div class="hft">
-                                        <h5>Kajal ( Delhi )</h5>
-                                        <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
+                                        <h5>Pradanya ( Singapore)</h5>
+                                        <p class="limited-height">Enatyam's Kathak course is a must-try
+                                            for anyone passionate about Indian classical dance.
+                                            The curriculum is well-structured, catering to students of all levels</p>
                                     </div>
                                 </div>    
                             </div>
@@ -3423,10 +3455,12 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" />
                                     <div class="hft">
-                                        <h5>Scarlett family ( Germany )</h5>
-                                        <p class="reviewName">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
+                                        <h5>Dr Riddhi Ketan Shukla ( Ahmedabad )</h5>
+                                        <p class="limited-height">Thanks to Enatyam's Kathak online course, I've found a way to cut through the noise of my busy schedule and
+                                            reconnect with myself through dance. The graceful movements and
+                                            intricate footwork provide a sense of calm and clarity that I desperately needed</p>
                                     </div>
                                 </div>
                             </div>
@@ -3437,10 +3471,12 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/14h.webp" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" />
                                     <div class="hft">
-                                        <h5>Emma ( UK )</h5>
-                                        <p class="reviewName">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
+                                        <h5>Pearllan ( UK)</h5>
+                                        <p class="limited-height">I never imagined I could learn Kathak Dance online
+                                            with such ease and depth. Enatyam's course structure is comprehensive,
+                                            and the instructors are incredibly supportive</p>
                                     </div>
                                 </div>    
                             </div>
@@ -3450,15 +3486,84 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/15h.webp" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image" />
                                     <div class="hft">
-                                        <h5>Michael (Mike) ( USA)</h5>
-                                        <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
+                                        <h5>Roohi’Mom ( Delhi )</h5>
+                                        <p class="limited-height">Roohi's journey from beginner to performing on renowned stages in
+                                        just two years with Enatyam fills me with immense pride and happiness. Seeing her passion
+                                        for dance blossom is truly rewarding. Thank you, Enatyam, for making her dreams a reality
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
+                    
+                    <div class="item"> 
+                        <div class="item in" >
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Tia’mom ( Canada)</h5>
+                                        <p class="limited-height">My daughter Antara has been learning Kathak from Enatyam for almost 3 years now.
+                                            Our overall experience has been extremely satisfactory. The class timings are adjusted as per our convenience since we are overseas.
+                                            The pace of teaching both theory and practical is based as per the student's needs. I would recommend it for any parent who
+                                            wants to enroll their kids for any of the various art forms that they offer</p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    
+                        <div class="item in" >
+                        <!-- Your content here -->
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 ">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Meera (canada)</h5>
+                                        <p class="limited-height">Discovering Enatyam E-Learning Kathak during the pandemic was a boon for my daughter
+                                            Meera. In 3+ years, she's made remarkable progress, finding comfort in online learning.
+                                            Detailed theoretical explanations enhance her expression. Grateful for accommodating time
+                                            zones and confident in Meera's Kathak journey.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item"> 
+                        <div class="item in" >
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 mb-5">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Raamya ( Singapore)</h5>
+                                        <p class="limited-height">Enatyam's Bharatanatyam course is a gem! The instructors break down <br>complex movements into manageable steps, making it accessible for beginners like me
+                                        </p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    
+                        <div class="item in" >
+                        <!-- Your content here -->
+                            <div class="happyFaces-div">
+                                <div class="happyFaces-div1 ">
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" />
+                                    <div class="hft">
+                                        <h5>Aarushi ( USA)</h5>
+                                        <p class="limited-height">The smiles on my daughter’s faces during Enatyam's Bharatanatyam
+                                            dance classes are priceless. The instructors have a gift for making dance accessible and
+                                            enjoyable. It's like they've sprinkled a bit of magic in every session,
+                                            turning learning into a delightful experience
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -3471,10 +3576,13 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/17.png" class="centered-image" />
                                             <div class="hft">
-                                                <h5>Aiden C ( London -Uk)</h5>
-                                                <p>Enatyam's yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It's like having a personal yoga guide right in my living room.
+                                                <h5>Angela’s Father</h5>
+                                                <p class="limited-height">As a father, I am immensely grateful to Enatyam for the positive impact
+                                                    on my daughter Angela. The Bollywood dance classes have become a bonding experience for
+                                                    us. The instructors not only teach dance but also create memories that we'll cherish for a
+                                                    lifetime. It's a beautiful journey we're on together
                                                 </p>
                                             </div>
                                     </div>
@@ -3489,7 +3597,7 @@
                                             <img src="<?=base_url(); ?>public/images/happyfaces/2h.webp" class="centered-image" />
                                             <div class="hft">
                                                 <h5>Sweta ( Australia)</h5>
-                                                <p>I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that\'s easy to understand. Feeling more zen already!</p>
+                                                <p class="limited-height">I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that\'s easy to understand. Feeling more zen already!</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3499,11 +3607,12 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/3h.webp" class="centered-image" />
-                                        <div class="hft">
-                                            <h5>Sneha (Canada )</h5>
-                                        <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual that I genuinely look forward to.</p>
-                                        </div>
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" />
+                                            <div class="hft">
+                                                <h5>Raamya ( Singapore)</h5>
+                                                <p class="limited-height">Enatyam's Bharatanatyam course is a gem! The instructors break down <br>complex movements into manageable steps, making it accessible for beginners like me
+                                                </p>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -3516,7 +3625,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/4h.webp" class="centered-image" />
                                         <div class="hft">
                                             <h5>Kavita ( Pune)</h5>
-                                            <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
+                                            <p class="limited-height">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3529,7 +3638,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" />
                                         <div class="hft">
                                             <h5>Ayesha ( Singapore )</h5>
-                                            <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
+                                            <p class="limited-height">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3543,7 +3652,7 @@
                                             <img src="<?=base_url(); ?>public/images/happyfaces/7h.webp" class="centered-image" />
                                             <div class="hft">
                                                 <h5>Rajiv ( Lucknow )</h5>
-                                                <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.'</p>
+                                                <p class="limited-height">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.'</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3557,7 +3666,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/8h.webp" class="centered-image" />
                                         <div class="hft">
                                         <h5>Vikram ( Delhi )</h5>
-                                        <p class="reviewName">Enatyam's yoga classes have made me realize that yoga is for everyone. The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.</p>
+                                        <p class="limited-height">Enatyam's yoga classes have made me realize that yoga is for everyone. The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.</p>
                                         </div>
                                     </div>    
                                 </div>
@@ -3572,7 +3681,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" />
                                         <div class="hft">
                                             <h5>Vishal ( Chandigarh )</h5>
-                                            <p class="reviewName">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors encouragement keeps me motivated.</p>
+                                            <p class="limited-height">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors encouragement keeps me motivated.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3586,7 +3695,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" />
                                     <div class="hft">
                                         <h5>Kajal ( Delhi )</h5>
-                                        <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
+                                        <p class="limited-height">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
                                     </div>
                                 </div>    
                             </div>
@@ -3600,7 +3709,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" class="centered-image" />
                                     <div class="hft">
                                         <h5>Scarlett family ( Germany )</h5>
-                                        <p class="reviewName">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
+                                        <p class="limited-height">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
                                     </div>
                                 </div>
                             </div>
@@ -3614,7 +3723,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/14h.webp" class="centered-image" />
                                     <div class="hft">
                                         <h5>Emma ( UK )</h5>
-                                        <p class="reviewName">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
+                                        <p class="limited-height">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
                                     </div>
                                 </div>    
                             </div>
@@ -3628,7 +3737,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/15h.webp" class="centered-image" />
                                         <div class="hft">
                                             <h5>Michael (Mike) ( USA)</h5>
-                                            <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
+                                            <p class="limited-height">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
                                         </div>
                                     </div>
                                 </div>

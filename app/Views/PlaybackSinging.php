@@ -49,13 +49,14 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="public/images/music/musicImg1.svg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="public/images/courseoffering/PlaybackSinging.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <section class="mb-5" >
     <div class="">
         <!-- pills -->
@@ -78,7 +79,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>HindustaniVocal" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
+                                        src="<?php base_url(); ?>public/images/courseoffering/5-rbg.webp" alt="">
                                 </a>
                             </div>
 
@@ -90,7 +91,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>CarnaticVocal" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/6-rbg.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -103,7 +104,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>SemiClassicals" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/3-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -116,7 +117,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>WesternSinging" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/4-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -128,7 +129,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>PlaybackSinging" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/5-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Music/musicImg1.svg" alt=""
                                        >
                                 </a>
                             </div>

@@ -27,10 +27,9 @@
         <div class="col-lg-12 col-md-12 col-12 p-5 mt-5" style="background-color: black;">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <h2 class="heading text-white">Online Stress Reduction Yoga Classes<br>1-on-1 Live by Top Trainer</h2>
+                        <h2 class="heading text-white">Dive into the Timeless Beauty of the Sitar</h2>
                         <p class="text-white">
-                            Embark on a transformative journey with our <br>online stress reduction yoga classes. Guided by <br>skilled instructors, and five star rated by learners. <br>Immerse yourself in soothing practices that <br>promote inner peace and resilience. Join us
-                        </p>
+                        Explore the rich sounds and intricate techniques of the sitar, a classical Indian instrument known for its captivating melodies and deep cultural roots. Whether you’re a beginner or a seasoned musician, the sitar offers a unique and rewarding musical experience.                        </p>
                         <div class="singleline">
                             <div class="stars">
                                 <i class="fas fa-star golden-star"></i>
@@ -59,7 +58,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12  textPara-col kathakp" >
-                        <img src="public/images/Instrument/sitarImg1.svg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="public/images/Instrument/Sitar.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -89,7 +88,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Guitar" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
+                                        src="<?php base_url(); ?>public/images/Instrument/g-1.svg" alt="">
                                 </a>
                             </div>
 
@@ -101,7 +100,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Flute" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/fluteImg1.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -114,7 +113,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Tabla" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/3-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/tablaImg1.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -127,7 +126,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Sitar" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/4-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/sitarImg1.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -139,7 +138,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Veena" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/5-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/VeenaImg1.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -150,7 +149,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Piano" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/6-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/pianoImg1.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -162,7 +161,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Violin" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/vio.jpeg" alt=""
                                        >
                                 </a>
                             </div>
@@ -174,7 +173,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Keyboard" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/keyboardImg1.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -187,7 +186,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Harmonium" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/Harmonium.jpeg" alt=""
                                        >
                                 </a>
                             </div>
