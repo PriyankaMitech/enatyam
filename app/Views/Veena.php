@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12  textPara-col kathakp" >
-                        <img src="public/images/Instrument/Veena.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="<?php echo  base_url(); ?>public/images/instrument/Veena.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Guitar" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/Instrument/g-1.svg" alt="">
+                                        src="<?php echo  base_url(); ?>public/images/instrument/g-1.svg" alt="">
                                 </a>
                             </div>
 
