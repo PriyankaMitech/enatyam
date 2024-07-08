@@ -15,10 +15,9 @@
         <div class="col-lg-12 col-md-12 col-12 p-5" style="background-color: black;">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <h2 class="heading text-white">Online Stress Reduction Yoga Classes<br>1-on-1 Live by Top Trainer</h2>
+                        <h2 class="heading text-white">Nurture Your Mind and Spirit with Daily Meditation.</h2>
                         <p class="text-white">
-                            Embark on a transformative journey with our <br>online stress reduction yoga classes. Guided by <br>skilled instructors, and five star rated by learners. <br>Immerse yourself in soothing practices that <br>promote inner peace and resilience. Join us
-                        </p>
+                        Embark on a journey to tranquility and self-discovery with our comprehensive Meditation course. Perfect for beginners and experienced practitioners alike, this course offers a blend of techniques to help you achieve mental clarity, emotional balance, and a profound sense of peace.                        </p>
                         <div class="singleline">
                             <div class="stars">
                                 <i class="fas fa-star golden-star"></i>
@@ -47,7 +46,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="public/images/Yoga/MeditationImg.svg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="public/images/Yoga/Meditation.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -76,7 +75,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>PrenatalYoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
+                                        src="<?php base_url(); ?>public/images/Yoga/prenatalYoga.svg" alt="">
                                 </a>
                             </div>
 
@@ -88,7 +87,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>StressReduction" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Yoga/StressReductionImg.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -101,7 +100,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Flexibility" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/3-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Yoga/FlexibilityYogaImg.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -114,7 +113,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>WeightLossYoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/4-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Yoga/WeightLossYogaImg.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -126,7 +125,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>EverydayYoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/5-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Yoga/EverydayYoga.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -137,7 +136,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>YogaforChronic" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/6-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Yoga/chronicYoga.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -149,7 +148,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>YogaforKids" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Yoga/YogaforKids.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -161,7 +160,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Meditation" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Yoga/MeditationImg.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -174,7 +173,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>CustomiseYoga" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Yoga/CustomizeYogaImg.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -186,7 +185,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>NutritionCounselling" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Yoga/NutritionCounsellingImg.svg" alt=""
                                        >
                                 </a>
                             </div>
@@ -3834,7 +3833,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/1.png" class="centered-image" />
                                             <div class="hft">
                                                 <h5>Aiden C ( London -Uk)</h5>
                                                 <p>Enatyam's yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It's like having a personal yoga guide right in my living room.
@@ -3846,7 +3845,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 mb-5">
-                                            <img src="<?=base_url(); ?>public/images/happyfaces/2h.webp" class="centered-image"  />
+                                            <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/2.png" class="centered-image"  />
                                             <div class="hft">
                                                 <h5>Sweta ( Australia)</h5>
                                                 <p>I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that's easy to understand. Feeling more zen already!</p>
@@ -3859,7 +3858,7 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/3h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/3.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Sneha (Canada )</h5>
                                         <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual that I genuinely look forward to.</p>
@@ -3870,7 +3869,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/4h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/4.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Kavita ( Pune)</h5>
                                             <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
@@ -3883,7 +3882,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/6.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Ayesha ( Singapore )</h5>
                                             <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
@@ -3894,7 +3893,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/7h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/8.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Rajiv ( Lucknow )</h5>
                                             <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.</p>
@@ -3908,7 +3907,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/8h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/9.png" class="centered-image" />
                                         
                                         <div class="hft">
                                         <h5>Vikram ( Delhi )</h5>
@@ -3922,10 +3921,10 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/5.png" class="centered-image" />
                                         <div class="hft">
-                                            <h5>Vishal ( Chandigarh )</h5>
-                                            <p class="reviewName">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors' encouragement keeps me motivated.</p>
+                                            <h5>Unnikrishnan (Dubai)</h5>
+                                            <p class="reviewName">Enatyam's yoga courses are my go-to for stress relief. The calming voice of the instructors and the simplicity of the poses make it a perfect escape from the chaos of daily life.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3936,7 +3935,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/13.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Kajal ( Delhi )</h5>
                                         <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
@@ -3949,7 +3948,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/14.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Scarlett family ( Germany )</h5>
                                         <p class="reviewName">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
@@ -3963,7 +3962,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/14h.webp" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/7.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Emma ( UK )</h5>
                                         <p class="reviewName">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
@@ -3976,7 +3975,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/15h.webp" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/11.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Michael (Mike) ( USA)</h5>
                                         <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
@@ -4097,8 +4096,8 @@
                                     <div class="happyFaces-div1 ">
                                         <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" />
                                         <div class="hft">
-                                            <h5>Vishal ( Chandigarh )</h5>
-                                            <p class="reviewName">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors encouragement keeps me motivated.</p>
+                                            <h5>Unnikrishnan (Dubai)</h5>
+                                            <p class="reviewName">Enatyam's yoga courses are my go-to for stress relief. The calming voice of the instructors and the simplicity of the poses make it a perfect escape from the chaos of daily life.</p>
                                         </div>
                                     </div>
                                 </div>

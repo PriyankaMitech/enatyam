@@ -17,10 +17,9 @@
         <div class="col-lg-12 col-md-12 col-12 p-5 mt-5" style="background-color: black;">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <h2 class="heading text-white">Online Stress Reduction Yoga Classes<br>1-on-1 Live by Top Trainer</h2>
+                        <h2 class="heading text-white">Explore the Fusion of Styles with Our Semi-Classical Vocal Course!</h2>
                         <p class="text-white">
-                            Embark on a transformative journey with our <br>online stress reduction yoga classes. Guided by <br>skilled instructors, and five star rated by learners. <br>Immerse yourself in soothing practices that <br>promote inner peace and resilience. Join us
-                        </p>
+                        Semi-classical vocal music beautifully bridges the gap between classical and popular music genres, incorporating elements from both to create melodious and accessible compositions. Rooted in traditional Indian classical music, semi-classical styles such as Thumri, Dadra, Kajri, and Bhajan are known for their expressive lyrics and emotive delivery.                        </p>
                         <div class="singleline">
                             <div class="stars">
                                 <i class="fas fa-star golden-star"></i>
@@ -49,7 +48,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="public/images/courseoffering/7-rbg.webp" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="public/images/courseoffering/SEMICLASICAL.jpg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -78,7 +77,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>HindustaniVocal" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
+                                        src="<?php base_url(); ?>public/images/courseoffering/5-rbg.webp" alt="">
                                 </a>
                             </div>
 
@@ -90,7 +89,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>CarnaticVocal" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/6-rbg.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -103,7 +102,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>SemiClassicals" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/3-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/7-rbg.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -116,7 +115,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>WesternSinging" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/4-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.webp" alt=""
                                        >
                                 </a>
                             </div>
@@ -128,7 +127,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>PlaybackSinging" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/5-rbg.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Music/musicImg1.svg" alt=""
                                        >
                                 </a>
                             </div>
