@@ -35,27 +35,27 @@
 
             <!-- Kathak -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link active" id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" target="_blank" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
+                <a class="nav-link active" id="pills-Kathak-tab" href="<?=base_url(); ?>Kathak" data-url="<?=base_url(); ?>Kathak" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
             </li>
 
             <!-- Bharatnatyam -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Bharatnatyam-tab" href="<?=base_url(); ?>Bharatnatyam" target="_blank" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</a>
+                <a class="nav-link" id="pills-Bharatnatyam-tab" href="<?=base_url(); ?>Bharatnatyam" data-url="<?=base_url(); ?>Bharatnatyam" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</a>
             </li>
 
             <!-- Odissi -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Odissi-tab" href="<?=base_url(); ?>Odissi" target="_blank" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</a>
+                <a class="nav-link" id="pills-Odissi-tab" href="<?=base_url(); ?>Odissi" data-url="<?=base_url(); ?>Odissi" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</a>
             </li>
 
             <!-- Bollywood -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Bollywood-tab" href="<?=base_url(); ?>Bollywood" target="_blank" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</a>
+                <a class="nav-link" id="pills-Bollywood-tab" href="<?=base_url(); ?>Bollywood" data-url="<?=base_url(); ?>Bollywood" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</a>
             </li>
 
             <!-- Western -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Western-tab" href="<?=base_url(); ?>Western" target="_blank" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</a>
+                <a class="nav-link" id="pills-Western-tab" href="<?=base_url(); ?>Western" data-url="<?=base_url(); ?>Western" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</a>
             </li>
 
             <li class="col-lg-1 col-md-1 dancebthide"></li>
@@ -63,17 +63,17 @@
 
             <!-- Semi-classical -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link big" id="pills-Semiclassical-tab" href="<?=base_url(); ?>Semiclassical" target="_blank" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</a>
+                <a class="nav-link big" id="pills-Semiclassical-tab" href="<?=base_url(); ?>Semiclassical" data-url="<?=base_url(); ?>Semiclassical" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</a>
             </li>
 
             <!-- Bhangra -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link big" id="pills-Bhangra-tab" href="<?=base_url(); ?>Bhangra" target="_blank" role="tab" aria-controls="pills-Bhangra" aria-selected="false">Bhangra</a>
+                <a class="nav-link big" id="pills-Bhangra-tab" href="<?=base_url(); ?>Bhangra" data-url="<?=base_url(); ?>Bhangra" role="tab" aria-controls="pills-Bhangra" aria-selected="false">Bhangra</a>
             </li>
 
             <!-- Folk -->
             <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link big" id="pills-Folk-tab" href="<?=base_url(); ?>Folk" target="_blank" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</a>
+                <a class="nav-link big" id="pills-Folk-tab" href="<?=base_url(); ?>Folk" data-url="<?=base_url(); ?>Folk" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</a>
             </li>
         </ul>
             <div class="tab-content" id="pills-tabContent">
