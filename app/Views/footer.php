@@ -330,44 +330,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
 
 
-$(document).ready(function() {
-    var reviewContainers = $(".happyFaces-div1");
 
-    reviewContainers.each(function() {
-        var $container = $(this);
-        var $content = $container.find(".hft p");
-        var readMoreText = $("<span>", {
-            class: "read-more-text",
-            text: "Read More"
-        });
-
-        var maxLength = 100; // Adjust this value as needed
-        var fullContent = $content.html(); // Store the full content
-
-        // Check if content length exceeds maximum length
-        if ($content.text().length > maxLength) {
-            // Hide overflowing content initially
-            $content.html(fullContent.substring(0, maxLength) + "...");
-
-            // Append the "Read More" text
-            $content.after(readMoreText);
-
-            // Event listener for the "Read More" text
-            readMoreText.on("click", function() {
-                // Toggle between showing/hiding the full content
-                if ($content.hasClass("expanded")) {
-                    $content.html(fullContent.substring(0, maxLength) + "...");
-                    readMoreText.text("Read More");
-                    $content.removeClass("expanded");
-                } else {
-                    $content.html(fullContent);
-                    readMoreText.text("Read Less");
-                    $content.addClass("expanded");
-                }
-            });
-        }
-    });
-});
 
 </script>
 
@@ -4070,7 +4033,16 @@ $(document).ready(function() {
         });
     });
 });
+
+
+
+
 </script>
+
+
+
+
+
 
 
 </body>

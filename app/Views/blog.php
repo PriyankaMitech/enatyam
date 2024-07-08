@@ -105,7 +105,7 @@
                         <h5 class="text-white " id="blog_<?=$data->id;?>" style="text-align: center;"><?=$blog_datas->title;?></h5>
                             <div class="ThumbnailImg mb-4" style="text-align: center;">
                                 <a href="<?=base_url(); ?>HistoryofKathak/<?=$blog_datas->id?>" target="_blank" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php base_url(); ?>public/uploads/blog_img/<?=$blog_datas->image;?>"
+                                    <img class="img-fluid img-thumbnail" src="<?php echo  base_url(); ?>public/uploads/blog_img/<?=$blog_datas->image;?>"
                                         alt="<?=$blog_datas->image;?>" >
                                 </a>
                             </div>

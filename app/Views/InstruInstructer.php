@@ -14,10 +14,16 @@
     <div class="cont-width">
 
         <div class="row testimonialsdiv">
+
+     <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
         <h3 class="text-white pb-5 " style="text-align:center">Superstar Faculty
         <span class="line linessf"></span> 
 
         </h3>
+
+
       
                 
             <div class="col-lg-12">

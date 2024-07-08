@@ -90,7 +90,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Kathak" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
+                                        src="<?php echo  base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
                                 </a>
                             </div>
 
