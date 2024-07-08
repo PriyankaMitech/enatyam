@@ -461,6 +461,35 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  .s_header-section .rightimg {
+    display: none;
+  }
+  .s_header-section p {
+    font-size: 15px;
+  }
+  .s_header-section h2 {
+    padding-top: 60px;
+  }
+  .s_header-section .singleline {
+    margin-left: 0rem;
+
+    width: 100%;
+  }
+  .s_header-section .golden-star {
+    font-size: 18px;
+  }
+
+  .s_header-section .temp {
+    display: flex;
+    margin-left: 0px;
+    margin-top: 0px !important;
+  }
+
+  .s_header-section .input-group {
+    justify-content: center;
+    height: 3.8rem;
+    margin-right: 6px;
+  }
   .connectwusbtns {
     padding: 3% 0% 20% 0% !important;
   }
@@ -1617,6 +1646,50 @@
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  .how_Started-section {
+    margin-bottom: 0rem !important;
+    margin-top: 0rem !important;
+  }
+  .menub {
+    padding-right: 10px !important;
+  }
+  .heading_new .title_4 {
+    padding-top: 48px !important;
+  }
+
+  .modulesec {
+    margin-bottom: 0rem !important;
+    padding: 10px !important;
+  }
+  .s_header-section .rightimg {
+    margin-top: 2rem;
+    margin-left: 0rem;
+    width: 100% !important;
+  }
+  .s_header-section .p-5 {
+    padding: 10px 21px !important;
+  }
+  .s_header-section .singleline {
+    margin-left: 0rem;
+
+    width: 100%;
+  }
+  .s_header-section .golden-star {
+    font-size: 20px;
+  }
+  .s_header-section p {
+    font-size: 13px;
+  }
+  .s_header-section h2 {
+    padding-bottom: 15px;
+  }
+  .s_header-section .temp {
+    margin-left: 0px;
+    margin-top: 0px !important;
+  }
+  .s_header-section .input-group {
+    margin-right: 10px;
+  }
   .faculty-sectiononhome {
     height: 510px;
   }

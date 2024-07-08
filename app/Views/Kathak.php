@@ -59,7 +59,7 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
+                    <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp text-center">
                         <img src="public/images/Dance/kathakImg2.webp" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
