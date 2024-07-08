@@ -1,9 +1,12 @@
 <section class="dancefaq MusicSec pb-5">
     <div class="container cont-width">
         <div class="row">
-        <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+
+            <!-- <div class="col-lg-1 col-md-1 col-12 faqd"><img src="public/images/logo2.png" class="dancefimg" /></div> -->
+            <div class="col-lg-12 col-md-12 col-12 imgs text-center">
                     <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
-                    </div>            <div class="row testimonialsdiv ">
+                    </div>
+            <div class="row testimonialsdiv ">
             <h3 class="text-white p-3 " style="text-align:center"> FAQ<br>
         <span class="line"></span> 
                 </h3>
@@ -12,19 +15,18 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> What types of yoga classes do you offer online?</span>
+                            <span class="question-text"> What types of dance classes do you offer online?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    We offer a variety of yoga classes online, including vinyasa, hatha, restorative, yin,
-                                    and more..</div>
+                                We offer a variety of dance classes online, including kathak, bharatnatyam, odissi, bollywood dance, western dance, and more...</div>
                             </div>
                         </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> Do I need to have any prior experience with yoga to join your online classes? </span>
+                            <span class="question-text"> Do I need to have any prior experience with dance to join your online classes? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -35,12 +37,11 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text">  What equipment do I need for online yoga classes? </span>
+                            <span class="question-text">  What equipment do I need for online dance classes? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    You will need a yoga mat and any additional props that your instructor recommends, such
-                                    as blocks, straps, or blankets.
+                                    You’ll need a device with internet access, a comfortable space to move, appropriate dancewear, and possibly a yoga mat for stretching.
                                 </div>
                             </div>
                         </div>
@@ -48,12 +49,11 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text">  How do I join an online yoga class?</span>
+                            <span class="question-text">  How do I join an online dance class?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    Simply sign up for a class on our website and we will provide you with a link to join
-                                    the class online. </div>
+                                    After enrolling, you’ll receive a link to join the class via email. Simply click the link at the scheduled time to join.</div>
                             </div>
                         </div>
                     <!-- </div> -->
@@ -75,14 +75,14 @@
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
                                     We also offer on-demand classes that you can access at any time, so you can
-                                    practice yoga on your own schedule.</div>
+                                    practice dance on your own schedule.</div>
                             </div>
                         </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> Is there any special software or technology required to join an online yoga class? </span>
+                            <span class="question-text"> Is there any special software or technology required to join an online dance class? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -94,7 +94,7 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> How long are your online yoga classes?</span>
+                            <span class="question-text"> How long are your online dance classes?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -118,12 +118,12 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> What is online yoga?</span>
+                            <span class="question-text"> What is online dance?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    Online yoga is the practice of yoga that is done through a virtual platform
-                                    like Zoom, Skype, or YouTube. It allows you to practice yoga from the
+                                    Online dance is the practice of dance that is done through a virtual platform
+                                    like Zoom, Skype, or YouTube. It allows you to practice dance from the
                                     comfort of your own home.
                                 </div>
                             </div>
@@ -132,13 +132,11 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> What equipment do I need for online yoga?</span>
+                            <span class="question-text"> What equipment do I need for online dance?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    All you need is a yoga mat, comfortable clothing, and a stable internet
-                                    connection. Some classes may also require additional props like blocks,
-                                    straps, and blankets.
+                                    As mentioned, you need a device with internet access, a clear space to dance, appropriate dancewear, and possibly a yoga mat.
                                 </div>
                             </div>
                         </div>
@@ -146,12 +144,12 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> How do I choose the right online yoga class for me?</span>
+                            <span class="question-text"> How do I choose the right online dance class for me?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    Consider your experience level, the type of yoga you prefer, and your
-                                    goals when choosing an online yoga class. Look for classes that are
+                                    Consider your experience level, the type of dance you prefer, and your
+                                    goals when choosing an online dance class. Look for classes that are
                                     tailored to your needs and interests.
                                 </div>
                             </div>
@@ -160,11 +158,11 @@
                     <!-- <div class="accordion"> -->
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> Can I ask questions during an online yoga class?</span>
+                            <span class="question-text"> Can I ask questions during an online dance class?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    Yes, most online yoga classes offer the opportunity to ask questions and
+                                    Yes, most online dance classes offer the opportunity to ask questions and
                                     receive feedback. You can use the chat feature or unmute yourself to ask
                                     questions during the class. </div>
                             </div>
@@ -179,13 +177,13 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> Is online yoga as effective as in-person yoga?</span>
+                            <span class="question-text"> Is online dance as effective as in-person dance?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    Online yoga can be just as effective as in-person yoga, as long as you
+                                    Online dance can be just as effective as in-person dance, as long as you
                                     have a good internet connection and a dedicated space to practice. Many
-                                    online yoga classes offer personalized instruction and modiﬁcations to
+                                    online dance classes offer personalized instruction and modiﬁcations to
                                     help you get the most out of your practice. </div>
                             </div>
                         </div>
@@ -193,39 +191,35 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> Can I practice online yoga if I am a beginner?</span> </div>
+                            <span class="question-text"> Can I practice online dance if I am a beginner?</span> </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    Yes, online yoga is suitable for beginners. Many online yoga classes
-                                    offer modiﬁed poses and variations to accommodate different experience
-                                    levels. </div>
+                                Absolutely, we have beginner classes designed to introduce you to dance in a supportive and accessible way. </div>
                             </div>
                         </div>
                     </div>
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> How often should I practice online yoga? </span>
+                            <span class="question-text"> How often should I practice online dance? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    The frequency of your online yoga practice depends on your goals and
-                                    schedule. It's generally recommended to practice yoga at least 2-3 times
-                                    a week for maximum beneﬁts. </div>
+                                    The frequency of your online dance practice depends on your goals and
+                                    schedule. It's generally recommended to practice dance at least 2-3 times
+                                    a day for maximum beneﬁts. </div>
                             </div>
                         </div>
                     </div>
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> What are the beneﬁts of practicing online yoga? </span>
+                            <span class="question-text"> What are the beneﬁts of practicing online dance? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    The beneﬁts of practicing online yoga are similar to those of in-person
-                                    yoga, including improved ﬂexibility, strength, balance, and stress
-                                    relief. Additionally, practicing yoga from home can save you time and
-                                    money on commuting to a studio.
+                                    Benefits include flexibility, convenience, a wide variety of classes, and the ability 
+                                    to practice in a comfortable environment.
                                 </div>
                             </div>
                         </div>

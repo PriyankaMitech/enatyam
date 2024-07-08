@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Ensure the link takes the full height of its parent */
+    height: 100%;
 }
 </style>
 
