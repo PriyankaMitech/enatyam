@@ -9,47 +9,49 @@
                     <div class="card">
                         <div class="card-header">
                             <ul class="nav nav-pills">
-                                <li class="nav-item"><a class="nav-link active" href="#RenewalYes" data-toggle="tab">Old Attendance </a></li>
-                                <li class="nav-item"><a class="nav-link" href="#RenewalNull" data-toggle="tab"> Current Attendance </a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#RenewalYes" data-toggle="tab">Old
+                                        Attendance </a></li>
+                                <li class="nav-item"><a class="nav-link" href="#RenewalNull" data-toggle="tab"> Current
+                                        Attendance </a></li>
                             </ul>
                         </div>
                         <!-- /.card-header -->
 
-                        <div class="card-body">
+                        <div class="card-body table-responsive">
                             <div class="tab-content">
-                            <div class="tab-pane active" id="RenewalYes">
-                            <?php if (!empty($renewalYes)): ?>
-    <table class="table table-hover text-nowrap">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Student Name</th>
-                <th>Session Start Date</th>
-                <?php
-                // Extract session information directly from the first student's data
-                $maxSessions = 0;
-                foreach ($renewalYes as $student) {
-                    $maxSessions = max($maxSessions, $student->no_of_session);
-                }
+                                <div class="tab-pane active" id="RenewalYes">
+                                    <?php if (!empty($renewalYes)): ?>
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Student Name</th>
+                                                <th>Session Start Date</th>
+                                                <?php
+                                            // Extract session information directly from the first student's data
+                                            $maxSessions = 0;
+                                            foreach ($renewalYes as $student) {
+                                                $maxSessions = max($maxSessions, $student->no_of_session);
+                                            }
 
-                // Create columns based on no_of_session value
-                for ($session = 1; $session <= $maxSessions; $session++) {
-                    echo '<th>Session ' . $session . '</th>';
-                }
-                ?>
-            </tr>
-        </thead>
-        <tbody>
-            <?php $uniquePayments = []; ?>
-            <?php foreach ($renewalYes as $student): ?>
-                <?php if (!in_array($student->payment_id, $uniquePayments)): ?>
-                    <?php $uniquePayments[] = $student->payment_id; ?>
-                    <tr class="payment-row">
-                        <td><?= count($uniquePayments); ?></td>
-                        <td><?= $student->student_name; ?></td>
-                        <td><?= $student->date; ?></td>
+                                            // Create columns based on no_of_session value
+                                            for ($session = 1; $session <= $maxSessions; $session++) {
+                                                echo '<th>Session ' . $session . '</th>';
+                                            }
+                                            ?>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $uniquePayments = []; ?>
+                                            <?php foreach ($renewalYes as $student): ?>
+                                            <?php if (!in_array($student->payment_id, $uniquePayments)): ?>
+                                            <?php $uniquePayments[] = $student->payment_id; ?>
+                                            <tr class="payment-row">
+                                                <td><?= count($uniquePayments); ?></td>
+                                                <td><?= $student->student_name; ?></td>
+                                                <td><?= $student->date; ?></td>
 
-                        <?php
+                                                <?php
                         // Display Attendance_status for each session based on Session_no
                         for ($session = 1; $session <= $maxSessions; $session++) {
                             echo '<td>';
@@ -68,50 +70,50 @@
                             echo '</td>';
                         }
                         ?>
-                    </tr>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-<?php else: ?>
-    <p>No attendance data found for Renewal Yes.</p>
-<?php endif; ?>
+                                            </tr>
+                                            <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                    <?php else: ?>
+                                    <p>No attendance data found for Renewal Yes.</p>
+                                    <?php endif; ?>
 
-</div>
+                                </div>
 
-<div class="tab-pane" id="RenewalNull">
-    <?php if (!empty($renewalNull)): ?>
-        <table class="table table-hover text-nowrap">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Student Name</th>
-                    <th>Session Start Date</th>
-                    <?php
-                    // Extract session information directly from the first student's data
-                    $maxSessions = 0;
-                    foreach ($renewalNull as $student) {
-                        $maxSessions = max($maxSessions, $student->no_of_session);
-                    }
+                                <div class="tab-pane" id="RenewalNull">
+                                    <?php if (!empty($renewalNull)): ?>
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Student Name</th>
+                                                <th>Session Start Date</th>
+                                                <?php
+                                                // Extract session information directly from the first student's data
+                                                $maxSessions = 0;
+                                                foreach ($renewalNull as $student) {
+                                                    $maxSessions = max($maxSessions, $student->no_of_session);
+                                                }
 
-                    // Create columns based on no_of_session value
-                    for ($session = 1; $session <= $maxSessions; $session++) {
-                        echo '<th>Session ' . $session . '</th>';
-                    }
-                    ?>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $uniqueStudentsRenewalNull = []; ?>
-                <?php foreach ($renewalNull as $student): ?>
-                    <?php if (!in_array($student->student_registerid, $uniqueStudentsRenewalNull)): ?>
-                        <?php $uniqueStudentsRenewalNull[] = $student->student_registerid; ?>
-                        <tr class="student-row">
-                            <td><?= count($uniqueStudentsRenewalNull); ?></td>
-                            <td><?= $student->student_name; ?></td>
-                            <td><?= $student->date; ?></td>
+                                                // Create columns based on no_of_session value
+                                                for ($session = 1; $session <= $maxSessions; $session++) {
+                                                    echo '<th>Session ' . $session . '</th>';
+                                                }
+                                                ?>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $uniqueStudentsRenewalNull = []; ?>
+                                            <?php foreach ($renewalNull as $student): ?>
+                                            <?php if (!in_array($student->student_registerid, $uniqueStudentsRenewalNull)): ?>
+                                            <?php $uniqueStudentsRenewalNull[] = $student->student_registerid; ?>
+                                            <tr class="student-row">
+                                                <td><?= count($uniqueStudentsRenewalNull); ?></td>
+                                                <td><?= $student->student_name; ?></td>
+                                                <td><?= $student->date; ?></td>
 
-                            <?php
+                                                <?php
                             // Display Attendance_status for each session based on Session_no
                             for ($session = 1; $session <= $maxSessions; $session++) {
                                 echo '<td>';
@@ -129,15 +131,15 @@
                                 echo '</td>';
                             }
                             ?>
-                        </tr>
-                    <?php endif; ?>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php else: ?>
-        <p>No attendance data found for Renewal Null.</p>
-    <?php endif; ?>
-</div>
+                                            </tr>
+                                            <?php endif; ?>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                    <?php else: ?>
+                                    <p>No attendance data found for Renewal Null.</p>
+                                    <?php endif; ?>
+                                </div>
 
                             </div>
                         </div>

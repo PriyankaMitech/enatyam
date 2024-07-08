@@ -617,7 +617,7 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
         }
     });
 </script>
-<script>
+<!-- <script>
     function submitAttendance(studentId) {
         $('#loader').show();
         var isPresentChecked = $('input[name="attendance[' + studentId + '][present]"]').is(':checked');
@@ -682,7 +682,105 @@ if ($page == 'FacultysidebarShedule' || $page == 'fetchTofacultyShuduleSidebar')
             }
         });
     }
+</script> -->
+<script>
+    // Function to handle individual attendance submission
+    function submitAttendance(studentId) {
+        $('#loader').show();
+
+        // Check which checkbox is selected
+        var isPresentChecked = $(`input[name="attendance[${studentId}][present]"]`).is(':checked');
+        var isAbsentChecked = $(`input[name="attendance[${studentId}][absent]"]`).is(':checked');
+        var attendanceValue = isPresentChecked ? 'p' : (isAbsentChecked ? 'a' : '');
+
+        if (!attendanceValue) {
+            alert('Please mark attendance as Present or Absent.');
+            $('#loader').hide();
+            return;
+        }
+
+        var formData = {
+            'studentId': studentId,
+            'attendance': attendanceValue,
+            'session': $(`select[name="session[${studentId}]"]`).val() || '',
+            'payment_id': $(`input[name="payment_id[${studentId}]"]`).val() || ''
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: 'submitAttendance',
+            data: formData,
+            success: function (response) {
+                $('#loader').hide();
+                if (response.success) {
+                    alert(response.message);
+                    location.reload(true);
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function (error) {
+                console.log(error);
+                location.reload();
+            }
+        });
+    }
+
+    // Function to handle group attendance submission
+    function submitGroupAttendance(groupName) {
+        var formData = $(`#attendanceForm_${groupName}`).serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: 'submitAttendance',
+            data: formData,
+            success: function (response) {
+                $('#loader').hide();
+                if (response.success) {
+                    alert(response.message);
+                    location.reload(true);
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function (error) {
+                console.log(error);
+                location.reload();
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        // Ensure only one checkbox is checked per student
+        $('input[type="checkbox"]').on('change', function () {
+            var name = $(this).attr('name');
+            var group = name.match(/\[([^\]]+)\]/)[1];
+
+            if ($(this).is(':checked')) {
+                $(`input[name="attendance[${group}][present]"]`).not(this).prop('checked', false);
+                $(`input[name="attendance[${group}][absent]"]`).not(this).prop('checked', false);
+            }
+        });
+
+        // Prevent form submission if neither checkbox is selected
+        $('form').on('submit', function (e) {
+            let valid = true;
+            $(this).find('tbody tr').each(function () {
+                let presentChecked = $(this).find('input[name*="[present]"]').is(':checked');
+                let absentChecked = $(this).find('input[name*="[absent]"]').is(':checked');
+                if (!presentChecked && !absentChecked) {
+                    valid = false;
+                }
+            });
+
+            if (!valid) {
+                alert('Please ensure all students have their attendance marked.');
+                e.preventDefault();
+            }
+        });
+    });
 </script>
+
 </body>
 
 </html>

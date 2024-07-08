@@ -96,9 +96,7 @@
 
 <div class="content-wrapper">
     <div class="content-header">
-
         <div class="container-fluid">
-
             <div class="row">
                 <div class="col-12 col-sm-12">
                     <div class="card card-primary card-tabs">
@@ -116,14 +114,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <div id="loader"  style="display: none;" class="loader-container">
+                        <div id="loader" style="display: none;" class="loader-container">
                             <div class="loader"></div>
                         </div>
                         <div class="card-body">
                             <div class="tab-content" id="custom-tabs-two-tabContent">
+                                <!-- Individual Tab -->
                                 <div class="tab-pane fade active show" id="custom-tabs-two-profile" role="tabpanel"
                                     aria-labelledby="custom-tabs-two-profile-tab">
-                                    <!--  -->
                                     <div class="card-body">
                                         <form id="attendanceForm" action="#" method="post">
                                             <table id="example1" class="table table-bordered table-striped">
@@ -138,37 +136,35 @@
                                                 <tbody>
                                                     <?php foreach ($studentList as $student): ?>
                                                     <?php $attendanceVerified = false; ?>
-                                                    <?php if(!empty($varifyattandance)){foreach ($varifyattandance as $attendance): ?>
-                                                    <?php if ($attendance->student_registerid == $student->id && $attendance->renewal === null && $attendance->verify_by_student === null): ?>
-                                                    <?php $attendanceVerified = true; ?>
-                                                    <?php break; ?>
-                                                    <?php endif; ?>
-                                                    <?php endforeach;} ?>
+                                                    <?php if(!empty($varifyattandance)){
+                                                        foreach ($varifyattandance as $attendance):
+                                                            if ($attendance->student_registerid == $student->id && $attendance->renewal === null && $attendance->verify_by_student === null):
+                                                                $attendanceVerified = true;
+                                                                break;
+                                                            endif;
+                                                        endforeach;
+                                                    } ?>
                                                     <tr>
                                                         <td><?= $student->full_name ?></td>
                                                         <td>
                                                             <div class="form-check">
                                                                 <input class="form-check-input" type="checkbox"
                                                                     name="attendance[<?= $student->id ?>][present]"
-                                                                    id="present<?= $student->id ?>" value="p" required>
-                                                                <label class="form-check-label"
-                                                                    style="margin-right:54px;"
-                                                                    for="present<?= $student->id ?>">Present</label>
+                                                                    id="present<?= $student->id ?>" value="p">
+                                                                <label class="form-check-label" style="margin-right: 30px;" for="present<?= $student->id ?>">Present</label>
+                                                                
                                                                 <input class="form-check-input" type="checkbox"
                                                                     name="attendance[<?= $student->id ?>][absent]"
-                                                                    id="absent<?= $student->id ?>" value="a" required>
-                                                                <label class="form-check-label"
-                                                                    for="absent<?= $student->id ?>">Absent</label>
+                                                                    id="absent<?= $student->id ?>" value="a">
+                                                                <label class="form-check-label" style="margin-left: 11px" for="absent<?= $student->id ?>">Absent</label>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <select class="form-control"
                                                                 name="session[<?= $student->id ?>]">
                                                                 <?php 
-                                                                // Convert Session_nos string to an array
                                                                 $excludedSessions = explode(',', $student->Session_nos);
-                                                                for ($i = 1; $i <= $student->no_of_session; $i++): 
-                                                                    // Check if the current session number is not in the excludedSessions array
+                                                                for ($i = 1; $i <= $student->no_of_session; $i++):
                                                                     if (!in_array($i, $excludedSessions)): ?>
                                                                 <option value="<?= $i ?>">Session <?= $i ?></option>
                                                                 <?php endif; ?>
@@ -176,49 +172,32 @@
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <!-- Add a hidden input for payment_id -->
-                                                            <input type="hidden" name="payment_id[<?= $student->id ?>]"
-                                                                value="<?= $student->payment_id ?>">
+                                                            <input type="hidden" name="payment_id[<?= $student->id ?>]" value="<?= $student->payment_id ?>">
                                                             <?php if ($attendanceVerified): ?>
-                                                            <span class="text-danger"> Last session Attendance not
-                                                                verified by student</span>
+                                                            <span class="text-danger">Last session attendance not verified by student</span>
                                                             <?php else: ?>
-                                                            <button type="button" class="btn btn-primary"
-                                                                onclick="submitAttendance(<?= $student->id ?>)">Submit
-                                                                Attendance</button>
+                                                            <button type="button" class="btn btn-primary" onclick="submitAttendance(<?= $student->id ?>)">Submit Attendance</button>
                                                             <?php endif; ?>
                                                         </td>
                                                     </tr>
                                                     <?php endforeach; ?>
                                                 </tbody>
-
                                             </table>
                                         </form>
                                     </div>
-
                                 </div>
-                                <div class="tab-pane " id="custom-tabs-two-messages" role="tabpanel"
-                                    aria-labelledby="custom-tabs-two-messages-tab">
-                                    <!--  -->
+
+                                <!-- Group Tab -->
+                                <div class="tab-pane" id="custom-tabs-two-messages" role="tabpanel" aria-labelledby="custom-tabs-two-messages-tab">
                                     <div class="card-body">
-                                        <?php
-                                    $currentGroup = null;
-
-                                    // echo "<pre>";print_r($GroupList);exit();
-                                    foreach ($GroupList as $student):
-
-                                        $adminModel = new \App\Models\AdminModel(); //
-                                        $wherecon = array('user_id' => $student->id);
-                                        $orderby = array('created_at' => 'DESC');
-                                        $pament_details = $adminModel->getsingleroworderby('payment', $wherecon, $orderby);
-
-                                    // echo "<pre>";print_r($pament_details);exit();
-   
-                                        if ($currentGroup !== $student->groupName):
-                                            // Close previous card and start a new card for a different group
-                                            if ($currentGroup !== null):
-                                    ?>
-
+                                        <?php $currentGroup = null; foreach ($GroupList as $student):
+                                            $adminModel = new \App\Models\AdminModel();
+                                            $wherecon = array('user_id' => $student->id);
+                                            $orderby = array('created_at' => 'DESC');
+                                            $pament_details = $adminModel->getsingleroworderby('payment', $wherecon, $orderby);
+                                            
+                                            if ($currentGroup !== $student->groupName): 
+                                                if ($currentGroup !== null): ?>
                                         </tbody>
                                         </table>
                                         </form>
@@ -246,62 +225,46 @@
                                                         <td><?= $student->full_name ?></td>
                                                         <td>
                                                             <div class="form-check">
-                                                                <input type="hidden"
-                                                                    name="payment_id[<?= $student->id ?>]"
-                                                                    value="<?php if(!empty($pament_details)){ echo $pament_details->id; } ?>">
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    name="attendance[<?= $student->id ?>][present]"
-                                                                    id="present<?= $student->id ?>" value="p">
-                                                                <label class="form-check-label"
-                                                                    style="margin-right:54px;"
-                                                                    for="present<?= $student->id ?>">Present</label>
-                                                                <input class="form-check-input" type="checkbox"
-                                                                    name="attendance[<?= $student->id ?>][absent]"
-                                                                    id="absent<?= $student->id ?>" value="a">
-                                                                <label class="form-check-label"
-                                                                    for="absent<?= $student->id ?>">Absent</label>
+                                                                <input type="hidden" name="payment_id[<?= $student->id ?>]" value="<?= $pament_details->id ?>">
+                                                                
+                                                                <input class="form-check-input" type="checkbox" name="attendance[<?= $student->id ?>][present]" id="present<?= $student->id ?>" value="p">
+                                                                <label class="form-check-label" style="margin-right: 30px;" for="present<?= $student->id ?>">Present</label>
+                                                                
+                                                                <input class="form-check-input" type="checkbox" name="attendance[<?= $student->id ?>][absent]" id="absent<?= $student->id ?>" value="a">
+                                                                <label class="form-check-label" style="margin-left: 11px" for="absent<?= $student->id ?>">Absent</label>
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <select class="form-control"
-                                                                name="session[<?= $student->id ?>]">
+                                                            <select class="form-control" name="session[<?= $student->id ?>]">
                                                                 <option value="">Select</option>
                                                                 <?php 
-    // Convert Session_nos string to an array
-    $excludedSessions = explode(',', $student->Session_nos);
-    for ($i = 1; $i <= $student->no_of_session; $i++): 
-        // Check if the current session number is not in the excludedSessions array
-        if (!in_array($i, $excludedSessions)): ?>
+                                                                $excludedSessions = explode(',', $student->Session_nos);
+                                                                for ($i = 1; $i <= $student->no_of_session; $i++): 
+                                                                    if (!in_array($i, $excludedSessions)): ?>
                                                                 <option value="<?= $i ?>">Session <?= $i ?></option>
                                                                 <?php endif; ?>
                                                                 <?php endfor; ?>
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <button type="button" class="btn btn-primary"
-                                                                onclick="submitAttendance(<?= $student->id ?>)">Submit
-                                                                Attendance</button>
+                                                            <button type="button" class="btn btn-primary" onclick="submitAttendance(<?= $student->id ?>)">Submit Attendance</button>
                                                         </td>
                                                     </tr>
-                                                    <?php
-                                        $currentGroup = $student->groupName;
-                                        endforeach;
-                                        ?>
+                                                    <?php $currentGroup = $student->groupName; endforeach; ?>
                                                 </tbody>
                                             </table>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <!-- /.card -->
             </div>
         </div>
     </div>
 </div>
+
 
 </div>
 </div>
