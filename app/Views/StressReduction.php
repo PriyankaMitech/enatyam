@@ -54,7 +54,7 @@
     </div>
 </section>
 
-<section class="mb-5" >
+<section class="mb-5 MusicSec" >
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
@@ -64,6 +64,9 @@
 
 
                     <div class="row text-lg-start">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
                     <div class="col-lg-12 col-md-12 col-12 coh">
                         <h3 class="" style="text-align:center">Courses Offering
                         <span class="line linessf"></span> </h3>
