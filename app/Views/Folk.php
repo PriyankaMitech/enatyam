@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="public/images/Dance/folk.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="public/images/Dance/folk.jpg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/western.jpeg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Dance/western.jpg" alt=""
                                        >
                                 </a>
                             </div>
@@ -3789,7 +3789,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Yoga for Chronic Desiese </h5>
+                            <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="">

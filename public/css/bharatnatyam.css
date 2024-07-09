@@ -32,7 +32,7 @@
 
 .s_header-section h2 {
   text-align: center;
-  padding-bottom: 1.7rem;
+  padding-bottom: 1.7rem !important;
   color: #fff;
 }
 
