@@ -7,8 +7,8 @@
                     <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
                     </div>
             <div class="row testimonialsdiv ">
-            <h3 class="text-white p-3 " style="text-align:center"> FAQ<br>
-        <span class="line"></span> 
+                <h3 class="text-white p-3 " style="text-align:center"> FAQ<br>
+                    <span class="line"></span> 
                 </h3>
                 <div class="col-lg-6 col-md-6 col-12 faqdance">
 
@@ -339,10 +339,10 @@
                  
                 </div>
                 <div class="text-center mt-2">
-                                <a href="" class="btn shop-now-btn">Doubts?? Clarify
-here
-</a>
-                            </div>
+                    <a href="" class="btn shop-now-btn">Doubts?? Clarify
+                    here
+                    </a>
+                </div>
             </div>
 </section>
 

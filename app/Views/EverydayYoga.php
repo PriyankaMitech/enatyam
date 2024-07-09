@@ -4244,6 +4244,6 @@
             </div>
         </div>
     </div>
-</section><?php include('Dancefaq.php'); ?>
+</section><?php include('yogafaq.php'); ?>
 <?php include('bookdemocallb.php'); ?>
 <?php include('footer.php'); ?>
