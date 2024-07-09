@@ -4243,6 +4243,6 @@
         </div>
     </div>
 </section>
-<?php include('Dancefaq.php'); ?>
+<?php include('yogafaq.php'); ?>
 <?php include('bookdemocallb.php'); ?>
 <?php include('footer.php'); ?>
