@@ -1379,7 +1379,7 @@
                     <section class="dancedesc">
                         <div class="container">
                             <div class="row">
-                            <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                            <div class="col-lg-12 col-md-12 col-12 imgs text-center p-5">
                             <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
                             </div>
                                 <div class="col-lg-6 col-md-6 col-12">
