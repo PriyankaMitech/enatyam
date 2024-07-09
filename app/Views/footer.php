@@ -158,7 +158,7 @@
                     <a>Dubai</a>
                 </div>
 
-                <div class="social-div text-center pt-5 crd">
+                <div class="social-div text-center pt-5 pb-1 crd">
                     <img class="crdn" src="<?=base_url(); ?>public/images/Home/maestro.svg" />
                     <!-- <img src="<?=base_url(); ?>public/images/Home/payU.svg" /> -->
                     <img class="crdn" src="<?=base_url(); ?>public/images/Home/visa.svg" />

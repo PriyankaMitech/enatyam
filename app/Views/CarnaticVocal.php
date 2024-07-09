@@ -10,7 +10,7 @@
 </style>
 
 
-<section class="s_header-section ">
+<section class="s_header-section  MusicSec">
     <div class="container-fluid mt-2">
         <div class="row ">
         <div class="col-lg-12 col-md-12 col-12 p-5 mt-5" style="background-color: black;">
