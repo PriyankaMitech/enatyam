@@ -3772,7 +3772,7 @@
 
         <div class="row justify-content-center htgs g-3">
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch1.png" alt="Icon 1" class="rounded-circle custom-img">
                 </div>
@@ -3781,7 +3781,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch2.png" alt="Icon 2" class="rounded-circle custom-img">
                 </div>
@@ -3790,7 +3790,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch3.png" alt="Icon 3" class="rounded-circle custom-img">
                 </div>
@@ -3799,7 +3799,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch4.png" alt="Icon 4" class="rounded-circle custom-img">
                 </div>
@@ -3808,7 +3808,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch5.png" alt="Icon 5" class="rounded-circle custom-img">
                 </div>

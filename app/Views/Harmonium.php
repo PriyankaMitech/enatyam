@@ -20,10 +20,10 @@
 }
 </style>
 
-<section class="s_header-section ">
+<section class="s_header-section MusicSec ">
     <div class="container-fluid mt-2">
         <div class="row ">
-        <div class="col-lg-12 col-md-12 col-12 p-5 mt-5" style="background-color: black;">
+        <div class="col-lg-12 col-md-12 col-12 p-5 mt-5">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
                         <h2 class="heading text-white">The Harmonium: A Gateway to Melodious Traditions</h2>
@@ -4651,7 +4651,9 @@
 <section class="how_Started-section pb-3 MusicSec">
     <div class="container">
         <div class="row m-0">
-        <div class="col-lg-12 col-md-12 col-12 imgs text-center p-5">
+
+        <div class="col-lg-12 col-md-12 col-12 imgs text-center pt-5 pb-5">
+
                     <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
                     </div>
             <div class="heading_new text-center">
@@ -4664,7 +4666,7 @@
 
         <div class="row justify-content-center htgs g-3">
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch1.png" alt="Icon 1" class="rounded-circle custom-img">
                 </div>
@@ -4673,7 +4675,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch2.png" alt="Icon 2" class="rounded-circle custom-img">
                 </div>
@@ -4682,7 +4684,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch3.png" alt="Icon 3" class="rounded-circle custom-img">
                 </div>
@@ -4691,7 +4693,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch4.png" alt="Icon 4" class="rounded-circle custom-img">
                 </div>
@@ -4700,7 +4702,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-6 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch5.png" alt="Icon 5" class="rounded-circle custom-img">
                 </div>
