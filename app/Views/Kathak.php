@@ -8,7 +8,7 @@
     height: 100%; 
 }
 .happyFaces-div1 .limited-height {
-    max-height: 5rem;
+    max-height: 4.8rem;
     overflow: hidden;
     transition: max-height 0.3s ease;
 }
