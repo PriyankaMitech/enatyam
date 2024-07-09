@@ -3766,7 +3766,7 @@
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
-            <div class="MusicSec copage">
+            <div class="MusicSec copage opc">
                 <div class="">
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center">

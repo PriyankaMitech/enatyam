@@ -461,6 +461,12 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  #facultyModal {
+    padding: 20px;
+
+    top: 38% !important;
+  }
+
   .s_header-section .rightimg {
     display: none;
   }
@@ -577,11 +583,6 @@
   #facultyModal .close {
     top: 201px;
     right: 14px;
-  }
-  #facultyModal {
-    padding: 20px;
-
-    top: 38% !important;
   }
 
   .semicolone {
@@ -1644,11 +1645,37 @@
   .modulesdiv {
     padding-bottom: 30px !important;
   }
+  .copage {
+    padding: 0px 10px !important;
+  }
+  #facultyModal {
+    padding: 20px !important;
+    top: 51% !important;
+  }
+  .pddyd {
+    padding: 65px 10px;
+  }
+  .how_Started-section .imgs {
+    margin-bottom: -41px !important;
+  }
+  .ThumbnailImg {
+    padding: 2% 18% 18% 18%;
+  }
+  .copage .shop-now-btn {
+    padding: 8px 8px !important;
+  }
+  .opc .ThumbnailImg {
+    padding: 0% 10% 10% 10% !important;
+  }
 }
 
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  #facultyModal {
+    top: 51% !important;
+  }
+
   .how_Started-section {
     margin-bottom: 0rem !important;
     margin-top: 0rem !important;
@@ -2424,9 +2451,7 @@
   #registerformpopup {
     top: 28% !important;
   }
-  #facultyModal {
-    top: 43% !important;
-  }
+
   #facultyModal .modal-content {
     top: 16%;
     padding: 0px 0px;
