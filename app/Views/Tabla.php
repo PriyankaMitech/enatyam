@@ -179,7 +179,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Harmonium" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/Harmonium.jpeg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/Harmonium.jpg" alt=""
                                        >
                                 </a>
                             </div>
@@ -5090,7 +5090,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="text-white" style="text-align: center;">Yoga for Chronic Desiese </h5>
+                            <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="">

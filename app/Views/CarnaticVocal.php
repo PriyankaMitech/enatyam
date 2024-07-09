@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="public/images/courseoffering/Carnatic.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="public/images/courseoffering/Carnatic.jpg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
