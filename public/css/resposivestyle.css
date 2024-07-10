@@ -1677,6 +1677,42 @@
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  .hft h5 {
+    font-size: 13px;
+  }
+  .hft p {
+    font-size: 10px;
+  }
+  .dancefaq {
+    padding: 0px 10px 44px 10px !important;
+  }
+  .pricing-card-section {
+    margin-top: 0px !important;
+  }
+  .pricingforhome {
+    padding: 37px 10px 10px 11px !important;
+  }
+  .how_Started-section {
+    padding-top: 0px !important;
+  }
+  .opc h5 {
+    font-size: 10px;
+  }
+  .opc h3 {
+    margin-bottom: 0px !important;
+  }
+  .custom-h2 {
+    font-size: 10px;
+  }
+  .faculty-section {
+    padding: 0px 10px 20px 10px !important;
+  }
+
+  .opc .shop-now-btn {
+    padding: 8px 8px !important;
+    margin-top: 0px;
+    font-size: 10px !important;
+  }
   #facultyModal {
     top: 51% !important;
   }
@@ -2178,7 +2214,7 @@
     padding: 0px 0px 0px 41px;
   }
   .modulesec {
-    margin-top: 5rem;
+    margin-top: 1rem;
     margin-bottom: 5rem;
   }
   .month-row {

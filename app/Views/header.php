@@ -3136,8 +3136,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                     <div class="register_form">
                         <h4 class="titel pt-3">Sign Up a new account</h4>
                         <div id="loader" class="loader-container">
-  <div class="loader"></div>
-</div>
+                            <div class="loader"></div>
+                            </div>
 
                         <form name="registrationForm" method="post" action="<?php echo base_url(); ?>register" id="registerform">
 
