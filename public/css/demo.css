@@ -52,12 +52,12 @@
 #progress::-webkit-progress-bar {
   background-color: #b1b1b1;
 }
-.card {
+/* .card {
   background-color: #fad32c !important;
 }
 .demo_page {
   background-color: #fad32c;
-}
+} */
 
 #progress::-webkit-progress-value {
   background-color: #ff0067;

@@ -136,6 +136,11 @@ $routes->post('sessions/store', 'SessionsController::store');
 $routes->get('demojoininglink', 'LoginController::demojoininglink');
 $routes->get('referandearn', 'LoginController::referandearn');
 $routes->get('bookdemo2', 'LoginController::bookdemo2');
+$routes->post('validateotp', 'LoginController::validateotp');
+
+$routes->post('validateotp_data', 'LoginController::validateotp_data');
+
+
 
 $routes->get('register', 'LoginController::register');
 $routes->post('register', 'LoginController::register');
@@ -465,6 +470,8 @@ $routes->post('set_student_shedule', 'StudentController::set_student_shedule');
 // $routes->post('register', 'LoginController::register');
 $routes->get('login', 'LoginController::checkLoginDetails');
 $routes->post('login', 'LoginController::checkLoginDetails');
+$routes->post('loginwithotp', 'LoginController::loginwithotp');
+
 $routes->get('my_account', 'Home::my_account');
 $routes->get('Profile2', 'Home::Profile2');
 $routes->get('dashboard', 'DashboardController::index');

@@ -196,6 +196,56 @@ class LoginController extends BaseController
         } else
             return false;
     }
+    // public function saveuserdata()
+    // {
+    //     $email = $this->request->getPost('email');
+    //     $course = $this->request->getPost('courses_id_g');
+    //     $sub_course = $this->request->getPost('sub_courses_id_g');
+    //     $age = $this->request->getPost('age');
+    //     // $experience = $this->request->getPost('experience');
+    //     $SessionType = $this->request->getPost('SessionType');
+    //     $country = $this->request->getPost('country');
+    //     $experienceInput = $this->request->getPost('experienceInput');
+    //     $loginModel = new LoginModel();
+    //     $data = [
+    //         'course' => $course,
+    //         'sub_course' => $sub_course,
+    //         'age' => $age,
+    //         'is_register_done' => 'Y',
+    //         'country' => $country,
+    //         // 'experience' => $experience,
+    //         'experienceInput' => $experienceInput,
+    //         'SessionType' => $SessionType,
+    //     ]; 
+    //     $affectedRows = $loginModel->updateUserByEmail($email, $data);
+    //     $updatedUserData = $loginModel->getUserByEmail($email);
+      
+    // if (isset($updatedUserData['mobile_no'])) {
+    //     // Send WhatsApp message to user
+    //     $phoneNumber = $updatedUserData['mobileWithCode'];
+    //     $templates = "930840461869403";
+    //     $msg = "We're thrilled to inform you that your registration was successful! You're now officially part of Enatyam learning community. Should you have any questions or need assistance, feel free to reach out to us. We're here to support you every step of the way. Welcome aboard, and let the learning adventure begin! Best Regards,";
+    //     whatsapp($phoneNumber, $templates, $msg);
+
+    //   //  $adminNumber = "918010041115";
+    //     $templates = "930840461869403";
+    //   //  $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
+    //   $msg = "New student registered: " . $updatedUserData['full_name'] . " Email: " . $updatedUserData['email'];
+
+    //   whatsappadmin($templates, $msg);
+    // } else {
+           
+    //     }
+    //     $msg = 'We are delighted to inform you that your registration with Enatyam has been successfully completed! Welcome aboard!';
+    //     $Subject = 'Registration Confirmation';
+    //     $ccEmails = ['hello@enatyam.com'];
+    //     $tital = 'Congratulations! You Are Registration Confirmation';
+    //     sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
+    
+    //     session()->setFlashdata('success', 'Registration successful.');
+    // // return view('home');
+    //     return redirect()->to('Home');
+    // }
     public function saveuserdata()
     {
         $email = $this->request->getPost('email');
@@ -219,7 +269,7 @@ class LoginController extends BaseController
         ]; 
         $affectedRows = $loginModel->updateUserByEmail($email, $data);
         $updatedUserData = $loginModel->getUserByEmail($email);
-      
+    //   print_r($updatedUserData);die;
     if (isset($updatedUserData['mobile_no'])) {
         // Send WhatsApp message to user
         $phoneNumber = $updatedUserData['mobileWithCode'];
@@ -230,8 +280,8 @@ class LoginController extends BaseController
       //  $adminNumber = "918010041115";
         $templates = "930840461869403";
       //  $msg = "New student registered: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'];
-      $msg = "New student registered: " . $updatedUserData['full_name'] . " Email: " . $updatedUserData['email'];
-
+    //   $msg = "New student registered: " . $updatedUserData['full_name'] . " Email: " . $updatedUserData['email'];
+   $msg ="Notification: A new student has been successfully registered. Name: " . $updatedUserData['full_name'] . ", Email: " . $updatedUserData['email'] . ". Please review and update records accordingly.";
       whatsappadmin($templates, $msg);
     } else {
            
@@ -243,13 +293,44 @@ class LoginController extends BaseController
         sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
     
         session()->setFlashdata('success', 'Registration successful.');
-    // return view('home');
+   
+        $session = \Config\Services::session();
+        $session->set('sessiondata', $updatedUserData);
+
+        $loginModel = new LoginModel();
+        $username = $updatedUserData['email'];
+        $password = $updatedUserData['password'];
+        if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
+            $result = $loginModel->getUserByEmailAndPassword($username, $password);
+        } else {
+            $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
+        }
+
+   if (!empty($result)) {
+    switch ($result['role']) {
+        case 'Admin':
+        case 'sub_admin':
+            return redirect()->to('Admindashboard');
+        case 'Faculty':
+            $session->set($result);
+            return redirect()->to('FacultyDashboard');
+        case 'Student':
+            $session->set($result);
+            return redirect()->to('StudentDashboard');
+        default:
+            $session->setFlashdata('errormessage', 'Invalid role.');
+            return redirect()->to('Home');
+    }
+    } else {
+        $session->setFlashdata('errormessage', 'Password is wrong.');  
+        
         return redirect()->to('Home');
+    }
     }
     public function checkLoginDetails()
     {
         $request = \CodeIgniter\Config\Services::request();
-    $session = \CodeIgniter\Config\Services::session();
+       $session = \CodeIgniter\Config\Services::session();
         $loginModel = new LoginModel();
         $username = $request->getPost('username');
         $password = $request->getPost('password');
@@ -286,7 +367,7 @@ class LoginController extends BaseController
 
     public function ModelForLogin()
     {
-       
+    //    print_r($_SESSION['sessiondata']);
         if (isset($_SESSION['sessiondata'])) {
         return view('ModelForLogin');
         }else{
@@ -400,5 +481,120 @@ class LoginController extends BaseController
 
     }
 
+    public function loginwithotp()
+    {
+        $db = \Config\Database::connect(); // Connect to the database
+        $mobilenumber = $this->request->getPost('mobilenumber');
     
-}
+        if ($mobilenumber) {
+            $otp = rand(1000, 9999); // Generate a 4-digit OTP
+            $phoneNumber = $mobilenumber;
+            $templates = "930840461869403";
+            $msg = "Dear customer, your OTP for login is '$otp'. Please do not share this with anyone. Thank you!";
+    
+            // Call the WhatsApp function to send the OTP
+            whatsapp($phoneNumber, $templates, $msg);
+    
+            // Update the OTP in the database
+            $builder = $db->table('register');
+            $builder->set('loginotp', $otp);
+            $builder->where('mobileWithCode', $phoneNumber);
+            $res = $builder->update();
+    
+            if ($res) {
+                // Respond with success to trigger OTP input display on frontend
+                return $this->response->setJSON(['success' => true, 'message' => 'OTP sent successfully.']);
+            } else {
+                return $this->response->setJSON(['success' => false, 'message' => 'Failed to update OTP in the database.']);
+            }
+        } else {
+            return $this->response->setJSON(['success' => false, 'message' => 'Mobile number is required.']);
+        }
+    }
+    // public function validateotp()
+    // {
+    //     $session = \Config\Services::session();
+    //     $mobilenumber = $this->request->getPost('mobilenumber');
+    //     $otp = $this->request->getPost('otp');
+        
+    //     $model = new AdminModel();
+    //     $wherecond = array('mobileWithCode'=> $mobilenumber, 'loginotp' => $otp);
+    //     $result = $model->getUserByMobileNoAndPassword('register', $wherecond);
+    
+    //     if (!empty($result)) {
+    //         session()->set('id', $result['id']);
+    //         $session->set('sessiondata', $result);
+            
+    //         switch ($result['role']) {
+    //             case 'Admin':
+    //             case 'sub_admin':
+    //                 return redirect()->to('Admindashboard');
+    //             case 'Faculty':
+    //                 return redirect()->to('FacultyDashboard');
+    //             case 'Student':
+    //                 return redirect()->to('StudentDashboard');
+    //             default:
+    //                 $session->setFlashdata('errormessage', 'Invalid role.');
+    //                 return redirect()->to('Home');
+    //         }
+    //     } else {
+    //         // OTP validation failed
+    //         $session->setFlashdata('errormessage', 'Invalid OTP or mobile number.');
+    //         return redirect()->to('Home');
+    //     }
+    // }
+
+   
+    public function validateotp()
+    {
+        // echo "<pre>";print_r($_POST);
+        $request = \Config\Services::request();
+        $session = \Config\Services::session();
+      
+        $loginModel = new LoginModel();
+        $username = $request->getPost('mobilenumber');
+        $otp = $request->getPost('insertotp');
+        $password = $request->getPost('password');
+
+        if ((filter_var($username, FILTER_VALIDATE_EMAIL)) && isset($password)) {
+            $result = $loginModel->getUserByEmailAndPassword($username, $password);
+                    // echo "<pre>";print_r($result);exit();
+
+           
+        } else  if (!empty($otp)) {
+            $result = $loginModel->getuserbymobileotp($username, $otp);
+            // echo "<pre>";print_r($result);exit();
+
+          
+       
+        }else{
+                $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
+                // echo "<pre>";print_r($result);exit();
+  
+           
+            }
+         
+    
+        if (!empty($result)) {
+            $session->set($result);
+    
+            switch ($result['role']) {
+                case 'Admin':
+                case 'sub_admin':
+                    return redirect()->to(base_url('Admindashboard'));
+                case 'Faculty':
+                    return redirect()->to(base_url('FacultyDashboard'));
+                case 'Student':
+                    return redirect()->to(base_url('StudentDashboard'));
+                default:
+                    $session->setFlashdata('errormessage', 'Invalid role.');
+                    return redirect()->to(base_url('Home'));
+            }
+        } else {
+            $session->setFlashdata('errormessage', 'Password is wrong.');
+            return redirect()->to(base_url('Home'));
+        }
+    }
+    
+    
+}    

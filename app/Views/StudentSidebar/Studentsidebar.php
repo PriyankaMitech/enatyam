@@ -230,7 +230,7 @@ $scounter_data = $adminModel->getsinglerow('tbl_student_shedule',$wherecond2);
   $session = \Config\Services::session();
   $adminModel = new \App\Models\AdminModel();
   $student_id = $session->get('id');
-  $userType = 'student';
+  $userType = 'Student';
   $notifications = $adminModel->getUserRole($student_id, $userType);
   $wherecon = array('id' => $student_id);
   $alldata = $adminModel->getsinglerow('register',  $wherecon);

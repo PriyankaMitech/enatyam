@@ -3249,7 +3249,12 @@ function showLostPasswordModal() {
     // Show the "Lost Password" modal
     $('#lostpasswordmodal').modal('show');
 }
-
+function showloginotp() {
+    // Hide the login modal
+    $('#loginformpopup').modal('hide');
+    // Show the "Lost Password" modal
+    $('#loginwithotp').modal('show');
+}
 $(document).ready(function() {
     $('#lostpasswordform').submit(function(e) {
         e.preventDefault(); // Prevent the default form submission
@@ -4072,7 +4077,80 @@ $(document).ready(function() {
 });
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const otpOption = document.getElementById('otpOption');
+    const passwordOption = document.getElementById('passwordOption');
+    const otpSection = document.getElementById('otpSection');
+    const passwordSection = document.getElementById('passwordSection');
+    const otpButton = document.getElementById('otpButton');
+    const continueButton = document.getElementById('continueButton');
+    const loginForm = document.getElementById('loginForm');
 
+    otpOption.addEventListener('change', function () {
+        if (otpOption.checked) {
+            otpSection.style.display = 'block';
+            passwordSection.style.display = 'none';
+            otpButton.textContent = 'OTP';
+            otpButton.type = 'button';
+            otpButton.style.display = 'inline-block';
+            continueButton.style.display = 'none';
+        }
+    });
+
+    passwordOption.addEventListener('change', function () {
+        if (passwordOption.checked) {
+            otpSection.style.display = 'none';
+            passwordSection.style.display = 'block';
+            otpButton.textContent = 'Continue';
+            otpButton.type = 'submit';
+            otpButton.style.display = 'inline-block';
+            continueButton.style.display = 'none';
+        }
+    });
+
+    otpButton.addEventListener('click', function () {
+        if (otpOption.checked) {
+            const mobileNumber = document.getElementById('mobilenumber').value;
+            fetch('<?php echo base_url(); ?>loginwithotp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `mobilenumber=${encodeURIComponent(mobileNumber)}`,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    otpSection.style.display = 'block';
+                    passwordSection.style.display = 'none';
+                    otpButton.style.display = 'none';
+                    continueButton.style.display = 'inline-block';
+                    alert(data.message);
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        } else {
+            loginForm.submit();
+        }
+    });
+
+    continueButton.addEventListener('click', function (event) {
+        if (otpOption.checked) {
+            event.preventDefault();
+            loginForm.submit();
+        }
+    });
+
+    // Trigger change event on page load to set initial visibility
+    passwordOption.dispatchEvent(new Event('change'));
+});
+
+</script>
 </body>
 
 </html>

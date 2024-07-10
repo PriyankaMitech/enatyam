@@ -192,7 +192,8 @@ public function AssignTecherForDemo()
                 whatsapp($phoneNumber, $templates, $msg);
                 $phoneNumber=$studentphoneNumber;
                 $templates = "930840461869403";
-                $msg = "Hello $studentname You have assign faculty $facultyname";
+                // $msg = "Hello $studentname You have assign faculty $facultyname";
+                $msg =  "Hello, $studentname, we're excited to inform you that you've been paired with $facultyname!";
                 whatsapp($phoneNumber, $templates, $msg);
               //  $adminNumber ="917588525387";
                 $templates = "930840461869403";
@@ -562,7 +563,7 @@ public function AssignTecherForDemo()
     }
     public function ResheduleByadmin()
     {
-        print_r($_POST);die;
+        // print_r($_POST);die;
         $mobileWithCode =$this->request->getPost('mobileWithCode');
         $email = $this->request->getPost('email');
         $AssignTecher_id = $this->request->getPost('AssignTecher_id');
