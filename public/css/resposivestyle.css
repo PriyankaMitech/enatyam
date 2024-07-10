@@ -348,10 +348,9 @@
   margin-bottom: 0px !important;
 } */
 
-
 /* start of the changes by rushikesh */
 img.img-fluid {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 .container .pt-5 {
   padding-top: 1rem !important;
@@ -359,7 +358,7 @@ img.img-fluid {
 .coh {
   padding-bottom: 19px !important;
 }
-.text-center .img-fluid{
+.text-center .img-fluid {
   max-height: 3rem;
 }
 /* End of the changes by rushikesh */
@@ -1704,6 +1703,16 @@ img.img-fluid {
   }
   .dancefaq .MusicSec h3 {
     margin-top: 0px !important;
+  }
+  .opc .shop-now-btn {
+    color: #fff !important;
+    background-color: #ff1561 !important;
+    padding: 6px 11px !important;
+    border-radius: 40px !important;
+    margin-top: 0px;
+    margin-bottom: 22px;
+    font-size: 11px !important;
+    transition: 0.5s;
   }
 }
 
