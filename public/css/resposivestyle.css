@@ -348,9 +348,6 @@
   margin-bottom: 0px !important;
 } */
 
-img.img-fluid {
-    padding-top: 2rem;
-}
 .semicolone {
   text-align: center;
 }
@@ -1671,16 +1668,45 @@ img.img-fluid {
   .opc .ThumbnailImg {
     padding: 0% 10% 10% 10% !important;
   }
-  .dancefaq .text-center {
-    /* margin-bottom: 45px; */
-    margin-bottom: 35px;
-    margin-top: -17px;
+
+  .typesOfDance-tab .imgs {
+    padding-bottom: 1rem !important;
+  }
+  .pddyd {
+    padding: 20px 10px;
+  }
+  .ch .imgs {
+    padding: 30px 30px;
+  }
+  .opc .imgs {
+    padding-bottom: 2rem !important;
+  }
+  .dancefaq .imgs {
+    padding: 2rem 0rem !important;
+  }
+  .dancefaq .MusicSec h3 {
+    margin-top: 0px !important;
   }
 }
 
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  .dancefaq .imgs {
+    padding: 30px 0px;
+  }
+  .ch .imgs {
+    padding: 30px 0px;
+  }
+  #mod-bharatnatyam .danceimg5 {
+    padding-top: 38px;
+  }
+  #pills-Bharatnatyam .imgs {
+    padding: 26px 0px;
+  }
+  .s_header-section .p-5 {
+    padding: 29px 21px !important;
+  }
   .hft h5 {
     font-size: 13px;
   }
@@ -1741,9 +1767,7 @@ img.img-fluid {
     margin-left: 0rem;
     width: 100% !important;
   }
-  .s_header-section .p-5 {
-    padding: 10px 21px !important;
-  }
+
   .s_header-section .singleline {
     margin-left: 0rem;
 
