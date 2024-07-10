@@ -92,7 +92,7 @@
   text-align: left;
 }
 .modal-content {
-  padding: 20px 42px;
-  border-radius: 5px;
+  padding: 20px 42px !important;
+  border-radius: 14px;
   align-items: center;
 }
