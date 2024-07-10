@@ -209,7 +209,8 @@
 .form-group {
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 27px;
+  /* margin-left: 27px; */
+  margin-left: -1px;
 }
 .form-control {
   border: 1px solid var(--thim-border-color, #eee);

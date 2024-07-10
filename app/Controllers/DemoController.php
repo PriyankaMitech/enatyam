@@ -93,10 +93,10 @@ if($this->request->getPost('register_id') == ''){
         demoBook($phoneNumber,$templates);
        // $phoneNumber = "917588525387";
         $templates = "930840461869403";
-         $msg = "New Demo Booked Sucessfully";
+         $msg = "🎉 Congratulations 🎉New Demo Booked Sucessfully";
          whatsappadmin($templates,$msg,);
          $email =$data['email'];
-         $msg = " 'We're thrilled to confirm that your demo session has been successfully booked with Enatyam ! We can't wait to showcase our offerings to you.'";
+         $msg = " '🎉 Thank You for Booking! 🎉 We're thrilled to confirm that your demo session has been successfully booked with Enatyam ! We can't wait to showcase our offerings to you.'";
          $Subject = 'Demo Booked Confirmation';
          $ccEmails = ['hello@enatyam.com'];
          $tital = 'Congratulations! Demo Booked Confirmation';

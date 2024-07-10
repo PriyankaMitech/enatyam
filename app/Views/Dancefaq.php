@@ -3,7 +3,7 @@
         <div class="row">
 
             <!-- <div class="col-lg-1 col-md-1 col-12 faqd"><img src="public/images/logo2.png" class="dancefimg" /></div> -->
-            <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+            <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
                     <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
                     </div>
             <div class="row testimonialsdiv ">
