@@ -9,7 +9,7 @@ class LoginModel extends Model
 
     protected $table = 'register';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['full_name', 'email', 'mobile_no', 'role', 'password', 'confirm_pass', 'otp', 'emailotp', 'is_register_done', 'course', 'sub_course', 'age', 'experience', 'experienceInput','Phone_countryCode','mobileWithCode'];
+    protected $allowedFields = ['full_name', 'email', 'mobile_no', 'role', 'password', 'confirm_pass', 'otp', 'emailotp', 'is_register_done', 'course', 'sub_course', 'age', 'experience', 'experienceInput','Phone_countryCode','loginotp','mobileWithCode'];
 
     public function insertTable1Data($registerData)
     {
@@ -19,7 +19,7 @@ class LoginModel extends Model
 
         return $this->db->table('register')->where('id', $insertedID)->get()->getRowArray();
     }
-
+   
     public function setFacultyName($data)
     {
         $faculty_name = array('faculty_name' => $data['full_name'], 'email' => $data['email']);
@@ -284,7 +284,142 @@ class LoginModel extends Model
             return null; // Indicates user not found
         }
     }
+    public function getUserMobileNoAndPassword($mobile_no, $password)
+    {
+        $session = session();
+        $result = $this->db
+            ->table('register')
+            ->where(["mobile_no" => $mobile_no, "password" => $password])
+            ->get()
+            ->getRow();
 
+        if ($result) {
+            $sessiondata = [
+                'id'                 => $result->id,
+                'role'               => $result->role,
+                'email'              => $result->email,
+                'password'           => $result->password,
+                'cpassword'          => $result->confirm_pass,
+                'user_name'          => $result->full_name,
+                'mobile_no'          => $result->mobile_no,
+                'country'            => $result->country,
+                'Assign_Techer_id'   => $result->Assign_Techer_id,
+                'SessionType'        => $result->SessionType,
+                'Payment_status'     => $result->Payment_status,
+                'access_level'       => $result->access_level,
+                'SessionsCount'      =>$result->SessionsCount,
+                'is_logged_in'       => 'Y',
+            ];
+
+
+            $session->set('sessiondata', $sessiondata);
+            return $sessiondata;
+        } else {
+            return null; // Indicates user not found
+        }
+    }
+    public function getUsermobiles($username, $password)
+    {
+        $session = session();
+        $result = $this->db
+            ->table('register')
+            ->where(["mobile_no" => $username, "password" => $password])
+            ->get()
+            ->getRow();
+
+        if ($result) {
+            $sessiondata = [
+                'id'                 => $result->id,
+                'role'               => $result->role,
+                'email'              => $result->email,
+                'password'           => $result->password,
+                'cpassword'          => $result->confirm_pass,
+                'user_name'          => $result->full_name,
+                'mobile_no'          => $result->mobile_no,
+                'country'            => $result->country,
+                'Assign_Techer_id'   => $result->Assign_Techer_id,
+                'SessionType'        => $result->SessionType,
+                'Payment_status'     => $result->Payment_status,
+                'access_level'       => $result->access_level,
+                'SessionsCount'      =>$result->SessionsCount,
+                'is_logged_in'       => 'Y',
+            ];
+
+
+            $session->set('sessiondata', $sessiondata);
+            return $sessiondata;
+        } else {
+            return null; // Indicates user not found
+        }
+    }
+    public function getUserPassword($username, $password)
+    {
+        $session = session();
+        $result = $this->db
+            ->table('register')
+            ->where(["email" => $username, "password" => $password])
+            ->get()
+            ->getRow();
+
+        if ($result) {
+            $sessiondata = [
+                'id'                 => $result->id,
+                'role'               => $result->role,
+                'email'              => $result->email,
+                'password'           => $result->password,
+                'cpassword'          => $result->confirm_pass,
+                'user_name'          => $result->full_name,
+                'mobile_no'          => $result->mobile_no,
+                'country'            => $result->country,
+                'Assign_Techer_id'   => $result->Assign_Techer_id,
+                'SessionType'        => $result->SessionType,
+                'Payment_status'     => $result->Payment_status,
+                'access_level'       => $result->access_level,
+                'SessionsCount'      =>$result->SessionsCount,
+                'is_logged_in'       => 'Y',
+            ];
+
+
+            $session->set('sessiondata', $sessiondata);
+            return $sessiondata;
+        } else {
+            return null; // Indicates user not found
+        }
+    }
+    public function getuserbymobileotp($username, $otp)
+    {
+        $session = session();
+        $result = $this->db
+            ->table('register')
+            ->where(["mobileWithCode" => $username, "loginotp" => $otp])
+            ->get()
+            ->getRow();
+
+        if ($result) {
+            $sessiondata = [
+                'id'                 => $result->id,
+                'role'               => $result->role,
+                'email'              => $result->email,
+                'password'           => $result->password,
+                'cpassword'          => $result->confirm_pass,
+                'user_name'          => $result->full_name,
+                'mobile_no'          => $result->mobile_no,
+                'country'            => $result->country,
+                'Assign_Techer_id'   => $result->Assign_Techer_id,
+                'SessionType'        => $result->SessionType,
+                'Payment_status'     => $result->Payment_status,
+                'access_level'       => $result->access_level,
+                'SessionsCount'      =>$result->SessionsCount,
+                'is_logged_in'       => 'Y',
+            ];
+
+
+            $session->set('sessiondata', $sessiondata);
+            return $sessiondata;
+        } else {
+            return null; // Indicates user not found
+        }
+    }
     public function getStudentList()
     {
         $session = session();

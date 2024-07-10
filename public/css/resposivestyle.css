@@ -347,6 +347,10 @@
 /* .testimonialsdiv {
   margin-bottom: 0px !important;
 } */
+
+img.img-fluid {
+    padding-top: 2rem;
+}
 .semicolone {
   text-align: center;
 }

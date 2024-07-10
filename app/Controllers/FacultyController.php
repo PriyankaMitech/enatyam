@@ -403,7 +403,8 @@ class FacultyController extends BaseController
           $templates = "930840461869403";
 
          // $phoneNumber = "917588525387";
-          $msg = "Attendance has been taken by $facultyname.student name $studentname Status of session is $stetus and session no is $sessionno";
+          // $msg = "Attendance has been taken by $facultyname.student name $studentname Status of session is $stetus and session no is $sessionno";
+         $msg ="Attendance has been diligently recorded by $facultyname for $studentname. The session's status is $stetus, and it's session number $sessionno!";
           whatsappadmin($templates, $msg);
           $response = ['success' => true, 'message' => 'Attendance added successfully.'];
       } else {
