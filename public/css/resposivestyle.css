@@ -348,9 +348,20 @@
   margin-bottom: 0px !important;
 } */
 
+/* start of the changes by rushikesh */
 img.img-fluid {
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
+.container .pt-5 {
+  padding-top: 1rem !important;
+}
+.coh {
+  padding-bottom: 19px !important;
+}
+.text-center .img-fluid{
+  max-height: 3rem;
+}
+/* End of the changes by rushikesh */
 .semicolone {
   text-align: center;
 }
@@ -470,7 +481,9 @@ img.img-fluid {
 
     top: 38% !important;
   }
-
+  .img-fluid {
+    padding-top: 3px;
+  }
   .s_header-section .rightimg {
     display: none;
   }
@@ -1869,7 +1882,7 @@ img.img-fluid {
     font-weight: 800;
   }
   .card {
-    margin-bottom: 65px;
+    margin-bottom: 13px;
   }
   .cards {
     margin-bottom: 0px;
