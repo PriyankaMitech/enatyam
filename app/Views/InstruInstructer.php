@@ -15,7 +15,7 @@
 
         <div class="row testimonialsdiv">
 
-     <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+     <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
                     <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
                     </div>
         <h3 class="text-white pb-5 " style="text-align:center">Superstar Faculty
