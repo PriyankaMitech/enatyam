@@ -167,9 +167,8 @@ if (file_exists($file)) {
     </section>
 </div>
 
-
 <?php
-$file = __DIR__ . "/    StudentFooter.php";
+$file = __DIR__ . "/StudentFooter.php";
 if (file_exists($file)) {
     include $file;
 } else {
