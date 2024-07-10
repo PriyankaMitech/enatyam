@@ -349,18 +349,14 @@
 } */
 
 /* start of the changes by rushikesh */
-img.img-fluid {
-  padding-top: 1rem;
-}
+
 .container .pt-5 {
   padding-top: 1rem !important;
 }
 .coh {
   padding-bottom: 19px !important;
 }
-.text-center .img-fluid {
-  max-height: 3rem;
-}
+
 /* End of the changes by rushikesh */
 
 .semicolone {
@@ -880,7 +876,7 @@ img.img-fluid {
     margin-top: 21px;
   }
   .faculty-section {
-    padding: 1rem !important;
+    padding: 0rem !important;
   }
 
   .MusicSec1 {
@@ -1302,7 +1298,7 @@ img.img-fluid {
     width: 100% !important;
   }
   .mtfyogm {
-    margin-top: 18%;
+    margin-top: 3%;
   }
   .tyoga {
     margin-bottom: 10%;
@@ -1537,9 +1533,8 @@ img.img-fluid {
   .testimonialsdiv h3 {
     font-size: 30px !important;
   }
-
   #pricing .heading-div h3 {
-    margin-top: 67px !important;
+    margin-top: 32px !important;
   }
 
   .bookdemoclub .content {
@@ -1714,6 +1709,22 @@ img.img-fluid {
     font-size: 11px !important;
     transition: 0.5s;
   }
+  .how_Started-section {
+    padding-top: 0px !important;
+  }
+  .kathakp {
+    margin-top: 0%;
+  }
+
+  .typesOfDance-tab .imgs {
+    padding-top: 0rem;
+  }
+  .dancefaq h3 {
+    margin-top: 0px !important;
+  }
+  .heading-div h3 {
+    margin-top: 0px !important;
+  }
 }
 
 /* For Tablet Screen max-width: 991 min-width: 768*/
@@ -1817,7 +1828,7 @@ img.img-fluid {
     margin-right: 10px;
   }
   .faculty-sectiononhome {
-    height: 510px;
+    height: 435px;
   }
   #playlist button {
     margin: 0px;
