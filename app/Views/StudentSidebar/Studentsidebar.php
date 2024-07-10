@@ -677,12 +677,12 @@ if (!empty($counter_data)) {
                     </a>
                   </li>
 
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a href="<?php echo base_url() ?>Coupon_Codes" class="nav-link <?php if($page == 'Coupon_Codes') { echo "active-nav-link";  }?>">
                     <i class=" nav-icon fa fa-gift"></i>
                       <p>Coupon Codes</p>
                     </a>
-                  </li>
+                  </li> -->
 
 
                   <li class="nav-item">

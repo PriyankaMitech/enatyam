@@ -1,9 +1,8 @@
 <?php include('header.php'); ?>
 
 <style>
-     .nav-link {
-    display: flex;
-    align-items: center;
+     .nav-pills .nav-link {
+    display: flex;    align-items: center;
     justify-content: center;
     height: 100%;}
 </style>
@@ -3904,6 +3903,6 @@
 </section>
 <?php include('InstruInstructer.php'); ?>
 <?php include('pricing.php'); ?>
-<?php include('Dancefaq.php'); ?>
+<?php include('yogafaq.php'); ?>
 <?php include('bookdemocallb.php'); ?>
 <?php include('footer.php'); ?>

@@ -461,6 +461,41 @@
 
 /* For Mobile Screen max-width: 767*/
 @media only screen and (max-width: 767px) {
+  #facultyModal {
+    padding: 20px;
+
+    top: 38% !important;
+  }
+
+  .s_header-section .rightimg {
+    display: none;
+  }
+  .s_header-section p {
+    font-size: 15px;
+  }
+  .s_header-section h2 {
+    padding-top: 60px;
+  }
+  .s_header-section .singleline {
+    margin-left: 0rem;
+
+    width: 100%;
+  }
+  .s_header-section .golden-star {
+    font-size: 18px;
+  }
+
+  .s_header-section .temp {
+    display: flex;
+    margin-left: 0px;
+    margin-top: 0px !important;
+  }
+
+  .s_header-section .input-group {
+    justify-content: center;
+    height: 3.8rem;
+    margin-right: 6px;
+  }
   .connectwusbtns {
     padding: 3% 0% 20% 0% !important;
   }
@@ -548,11 +583,6 @@
   #facultyModal .close {
     top: 201px;
     right: 14px;
-  }
-  #facultyModal {
-    padding: 20px;
-
-    top: 38% !important;
   }
 
   .semicolone {
@@ -1612,11 +1642,89 @@
   #playlist .row {
     display: contents;
   }
+  .modulesdiv {
+    padding-bottom: 30px !important;
+  }
+  .copage {
+    padding: 0px 10px !important;
+  }
+  #facultyModal {
+    padding: 20px !important;
+    top: 51% !important;
+  }
+  .pddyd {
+    padding: 65px 10px;
+  }
+  .how_Started-section .imgs {
+    margin-bottom: -41px !important;
+  }
+  .ThumbnailImg {
+    padding: 2% 18% 18% 18%;
+  }
+  .copage .shop-now-btn {
+    padding: 8px 8px !important;
+  }
+  .opc .ThumbnailImg {
+    padding: 0% 10% 10% 10% !important;
+  }
+  .dancefaq .text-center {
+    /* margin-bottom: 45px; */
+    margin-bottom: 35px;
+    margin-top: -17px;
+  }
 }
 
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  #facultyModal {
+    top: 51% !important;
+  }
+
+  .how_Started-section {
+    margin-bottom: 0rem !important;
+    margin-top: 0rem !important;
+  }
+  .menub {
+    padding-right: 10px !important;
+  }
+  .heading_new .title_4 {
+    padding-top: 48px !important;
+  }
+
+  .modulesec {
+    margin-bottom: 0rem !important;
+    padding: 10px !important;
+  }
+
+  .s_header-section .rightimg {
+    margin-left: 0rem;
+    width: 100% !important;
+  }
+  .s_header-section .p-5 {
+    padding: 10px 21px !important;
+  }
+  .s_header-section .singleline {
+    margin-left: 0rem;
+
+    width: 100%;
+  }
+  .s_header-section .golden-star {
+    font-size: 20px;
+  }
+  .s_header-section p {
+    font-size: 13px;
+  }
+  .s_header-section h2 {
+    padding-bottom: 15px;
+  }
+  .s_header-section .temp {
+    margin-left: 0px;
+    margin-top: 0px !important;
+  }
+  .s_header-section .input-group {
+    margin-right: 10px;
+  }
   .faculty-sectiononhome {
     height: 510px;
   }
@@ -2348,9 +2456,7 @@
   #registerformpopup {
     top: 28% !important;
   }
-  #facultyModal {
-    top: 43% !important;
-  }
+
   #facultyModal .modal-content {
     top: 16%;
     padding: 0px 0px;

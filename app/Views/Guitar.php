@@ -4,18 +4,17 @@
     .pricing-section {
     padding-top: 8%;
     }
-    .nav-link {
-    display: flex;
-    align-items: center;
+    .nav-pills .nav-link {
+    display: flex;    align-items: center;
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
 }
 </style>
 
-<section class="s_header-section ">
+<section class="s_header-section MusicSec ">
     <div class="container-fluid mt-2">
         <div class="row ">
-        <div class="col-lg-12 col-md-12 col-12 p-5 mt-5" style="background-color: black;">
+        <div class="col-lg-12 col-md-12 col-12 p-5 mt-5">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
                         <h2 class="heading text-white">Discover the Magic of Playing the Guitar</h2>
@@ -49,14 +48,14 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="public/images/Instrument/Guitar.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="<?php echo  base_url(); ?>public/images/instrument/Guitar.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="mb-5" >
+<section class="MusicSec" >
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
@@ -66,6 +65,9 @@
 
 
                     <div class="row text-lg-start">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
                     <div class="col-lg-12 col-md-12 col-12 coh">
                         <h3 class="" style="text-align:center">Courses Offering
                         <span class="line linessf"></span> </h3>
@@ -74,11 +76,11 @@
   
 
                         <div class="col-lg-3 col-md-4 col-6 ">
-                             <h5 class="" style="text-align: center;">Guitar </h5>
+                             <h5 class="text-white" style="text-align: center;">Guitar </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Guitar" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/Instrument/g-1.svg" alt="">
+                                        src="<?php echo  base_url(); ?>public/images/instrument/g-1.svg" alt="">
                                 </a>
                             </div>
 
@@ -86,7 +88,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Flute</h5>
+                             <h5 class="text-white" style="text-align: center;">Flute</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Flute" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -99,7 +101,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Tabla</h5>
+                             <h5 class="text-white" style="text-align: center;">Tabla</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Tabla" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -111,7 +113,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">
+                             <h5 class="text-white" style="text-align: center;">
                              Sitar </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Sitar" target="" class="d-block h-100">
@@ -124,7 +126,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Veena</h5>
+                             <h5 class="text-white" style="text-align: center;">Veena</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Veena" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -135,7 +137,7 @@
                            
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Piano</h5>
+                             <h5 class="text-white" style="text-align: center;">Piano</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Piano" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -146,7 +148,7 @@
                        
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">
+                             <h5 class="text-white" style="text-align: center;">
                              Violin</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Violin" target="" class="d-block h-100">
@@ -158,7 +160,7 @@
                       
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">
+                             <h5 class="text-white" style="text-align: center;">
                              Keyboard</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Keyboard" target="" class="d-block h-100">
@@ -171,19 +173,17 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">
+                             <h5 class="text-white" style="text-align: center;">
                              Harmonium</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Harmonium" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/Harmonium.jpeg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/Harmonium.jpg" alt=""
                                        >
                                 </a>
                             </div>
                       
                         </div>
-                    
-            
                       
                     </div>
                 </div>
@@ -242,6 +242,9 @@
                 <!-- Guitar   -->
                 <div class="tab-pane fade show active" id="pills-Guitar" role="tabpanel" aria-labelledby="pills-Guitar-tab">
                     <div class="row pddyd">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="public/images/instrument/g-1.svg" class="danceimg">
                         </div>
@@ -4645,9 +4648,14 @@
 </section>
 
 
-<section class="how_Started-section pb-3 ">
+<section class="how_Started-section pb-3 MusicSec">
     <div class="container">
         <div class="row m-0">
+
+        <div class="col-lg-12 col-md-12 col-12 imgs text-center pt-5 pb-5">
+
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
             <div class="heading_new text-center">
                 <b>
                     <h3 class="title_4 "> Course Highlights
@@ -4656,9 +4664,9 @@
             </div>
         </div>
 
-        <div class="row justify-content-center htgs">
+        <div class="row justify-content-center htgs g-3">
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch1.png" alt="Icon 1" class="rounded-circle custom-img">
                 </div>
@@ -4667,7 +4675,7 @@
                 </div>
             </div>
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch2.png" alt="Icon 2" class="rounded-circle custom-img">
                 </div>
@@ -4676,7 +4684,7 @@
                 </div>
             </div>
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch3.png" alt="Icon 3" class="rounded-circle custom-img">
                 </div>
@@ -4685,7 +4693,7 @@
                 </div>
             </div>
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch4.png" alt="Icon 4" class="rounded-circle custom-img">
                 </div>
@@ -4694,7 +4702,7 @@
                 </div>
             </div>
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch5.png" alt="Icon 5" class="rounded-circle custom-img">
                 </div>
@@ -4702,10 +4710,8 @@
                     <h2 class="heading__primary text-white custom-h2">Lifetime Access to Resources and 24 x 7 support</h2>
                 </div> 
             </div>
-
-
-           
         </div>
+
     </div>
 </section>
 <?php include('InstruInstructer.php'); ?>
@@ -5063,20 +5069,23 @@
 
 
 <?php include('pricingforhome.php'); ?>
-<section class="mb-5">
+<section class="MusicSec">
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
-            <div class=" copage">
+            <div class=" copage opc">
                 <div class="">
                     <div class="row text-lg-start">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
                         <div class="col-lg-12 col-md-12 col-12 coh">
                             <h3  style="text-align:center"> Other Popular Courses
                                 <span class="line linessf"></span>
                             </h3>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 style="text-align: center;">Everyday Yoga </h5>
+                            <h5 class="text-white" style="text-align: center;">Everyday Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="">
@@ -5087,7 +5096,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="" style="text-align: center;">Yoga for Chronic Desiese </h5>
+                            <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="">
@@ -5098,7 +5107,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="" style="text-align: center;">Yoga for Kids</h5>
+                            <h5 class="text-white" style="text-align: center;">Yoga for Kids</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="">
@@ -5109,7 +5118,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="" style="text-align: center;">Meditation </h5>
+                            <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="">

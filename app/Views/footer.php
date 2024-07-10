@@ -158,7 +158,7 @@
                     <a>Dubai</a>
                 </div>
 
-                <div class="social-div text-center pt-5 crd">
+                <div class="social-div text-center pt-5 pb-1 crd">
                     <img class="crdn" src="<?=base_url(); ?>public/images/Home/maestro.svg" />
                     <!-- <img src="<?=base_url(); ?>public/images/Home/payU.svg" /> -->
                     <img class="crdn" src="<?=base_url(); ?>public/images/Home/visa.svg" />
@@ -330,44 +330,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
 
 
-$(document).ready(function() {
-    var reviewContainers = $(".happyFaces-div1");
 
-    reviewContainers.each(function() {
-        var $container = $(this);
-        var $content = $container.find(".hft p");
-        var readMoreText = $("<span>", {
-            class: "read-more-text",
-            text: "Read More"
-        });
-
-        var maxLength = 100; // Adjust this value as needed
-        var fullContent = $content.html(); // Store the full content
-
-        // Check if content length exceeds maximum length
-        if ($content.text().length > maxLength) {
-            // Hide overflowing content initially
-            $content.html(fullContent.substring(0, maxLength) + "...");
-
-            // Append the "Read More" text
-            $content.after(readMoreText);
-
-            // Event listener for the "Read More" text
-            readMoreText.on("click", function() {
-                // Toggle between showing/hiding the full content
-                if ($content.hasClass("expanded")) {
-                    $content.html(fullContent.substring(0, maxLength) + "...");
-                    readMoreText.text("Read More");
-                    $content.removeClass("expanded");
-                } else {
-                    $content.html(fullContent);
-                    readMoreText.text("Read Less");
-                    $content.addClass("expanded");
-                }
-            });
-        }
-    });
-});
 
 </script>
 
@@ -2923,16 +2886,47 @@ $(document).ready(function() {
         return /^\d*$/.test(value);
     }, "Must be a number");
 });
+
+$(document).ready(function() {
+    $('#courses').on('change', function() {
+        var countryId = $(this).val();
+        console.log(countryId)
+        if (countryId) {
+            $.ajax({
+                url: '<?= base_url(); ?>get_sub_courses_data',
+                type: 'POST',
+                data: {
+                    courses_id_g: countryId
+                },
+                dataType: 'json',
+                success: function(data) {
+                    $('#sub_courses').empty();
+                    $('#sub_courses').append(
+                        '<option value="">Please select sub Courses</option>');
+                    $.each(data, function(key, value) {
+                        $('#sub_courses').append('<option value="' + value.id +
+                            '">' + value.sub_courses_name + '</option>');
+                    });
+
+                    // Retrieve the selected state ID from the hidden input field
+                    var selectedStateId = $('#selected_sub_courses').val();
+
+                    // Select the state in the dropdown
+                    $('#sub_courses').val(selectedStateId);
+                }
+            });
+        } else {
+            $('#sub_courses').empty();
+            $('#sub_courses').append('<option value="">Please Select State</option>');
+        }
+    });
+
+    // Trigger change event on #courses_id_g
+    $('#courses_id_g').trigger('change');
+});
 </script>
 
-<!-- <script>
-$(function() {
-    $('#course').change(function() {
-        $('.selectCourse').hide();
-        $('#' + $(this).val()).show();
-    });
-});
-</script> -->
+
 
 
 
@@ -4075,6 +4069,10 @@ $(document).ready(function() {
         });
     });
 });
+
+
+
+
 </script>
 
 <script>
@@ -4151,6 +4149,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
+
 </body>
 
 </html>

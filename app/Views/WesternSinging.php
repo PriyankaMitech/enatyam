@@ -1,22 +1,21 @@
 <?php include('header.php'); ?>
 
 <style>
-.nav-link {
-    display: flex;
-    align-items: center;
+.nav-pills .nav-link {
+    display: flex;    align-items: center;
     justify-content: center;
     height: 100%;
     text-align: center;
 }
 </style>
 
-<section class="s_header-section ">
+<section class="s_header-section MusicSec ">
     <div class="container-fluid mt-2">
         <div class="row ">
-        <div class="col-lg-12 col-md-12 col-12 p-5 mt-5" style="background-color: black;">
+        <div class="col-lg-12 col-md-12 col-12 p-5 mt-5">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <h2 class="heading text-white">Start Your Western Singing Journey Today and Make Your Musical Dreams a Reality!</h2>
+                        <h2 class="heading text-white pt-0">Start Your Western Singing Journey Today and Make Your Musical Dreams a Reality!</h2>
                         <p class="text-white">
                         Western singing encompasses a diverse range of genres, from pop and rock to jazz and classical. This vibrant field offers opportunities to explore various vocal techniques, performance styles, and musical expressions.Students will engage with popular songs, develop their unique voice, and learn to interpret music from different genres.                        </p>
                         <div class="singleline">
@@ -55,7 +54,7 @@
     </div>
 </section>
 
-<section class="mb-5" >
+<section class="MusicSec mb-5" >
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
@@ -65,6 +64,9 @@
 
 
                     <div class="row text-lg-start">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
                     <div class="col-lg-12 col-md-12 col-12 coh">
                         <h3 class="" style="text-align:center">Courses Offering
                         <span class="line linessf"></span> </h3>
@@ -73,11 +75,11 @@
   
 
                         <div class="col-lg-3 col-md-4 col-6 ">
-                             <h5 class="" style="text-align: center;">Hindustani Vocal </h5>
+                             <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>HindustaniVocal" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php base_url(); ?>public/images/courseoffering/5-rbg.webp" alt="">
+                                        src="<?php echo  base_url(); ?>public/images/courseoffering/5-rbg.webp" alt="">
                                 </a>
                             </div>
 
@@ -85,7 +87,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Carnatic Vocal</h5>
+                             <h5 class="text-white" style="text-align: center;">Carnatic Vocal</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>CarnaticVocal" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -98,7 +100,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Semi Classical</h5>
+                             <h5 class="text-white" style="text-align: center;">Semi Classical</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>SemiClassicals" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -110,7 +112,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">
+                             <h5 class="text-white" style="text-align: center;">
                              Western Singing </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>WesternSinging" target="" class="d-block h-100">
@@ -123,7 +125,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-6">
-                             <h5 class="" style="text-align: center;">Playback Singing</h5>
+                             <h5 class="text-white" style="text-align: center;">Playback Singing</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>PlaybackSinging" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
@@ -1377,6 +1379,9 @@
                     <section class="dancedesc">
                         <div class="container">
                             <div class="row">
+                            <div class="col-lg-12 col-md-12 col-12 imgs text-center p-5">
+                            <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                            </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                 <img src="public/images/courseoffering/8-rbg.webp" class="danceimg wsized" >
                                 </div>
@@ -2189,9 +2194,14 @@
 
 <!-- Testimonials -->
 
-<section class="how_Started-section pb-3 ">
+<section class="how_Started-section pb-3 MusicSec">
     <div class="container">
         <div class="row m-0">
+
+        <div class="col-lg-12 col-md-12 col-12 imgs text-center pt-5 pb-5">
+
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
             <div class="heading_new text-center">
                 <b>
                     <h3 class="title_4 "> Course Highlights
@@ -2200,9 +2210,9 @@
             </div>
         </div>
 
-        <div class="row justify-content-center htgs">
+        <div class="row justify-content-center htgs g-3">
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch1.png" alt="Icon 1" class="rounded-circle custom-img">
                 </div>
@@ -2211,7 +2221,7 @@
                 </div>
             </div>
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch2.png" alt="Icon 2" class="rounded-circle custom-img">
                 </div>
@@ -2220,7 +2230,7 @@
                 </div>
             </div>
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch3.png" alt="Icon 3" class="rounded-circle custom-img">
                 </div>
@@ -2229,7 +2239,7 @@
                 </div>
             </div>
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch4.png" alt="Icon 4" class="rounded-circle custom-img">
                 </div>
@@ -2238,7 +2248,7 @@
                 </div>
             </div>
 
-            <div class="col  text-center mb-4 mb-lg-0">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
                     <img src="<?php echo base_url(); ?>public/images/ch5.png" alt="Icon 5" class="rounded-circle custom-img">
                 </div>
@@ -2246,10 +2256,8 @@
                     <h2 class="heading__primary text-white custom-h2">Lifetime Access to Resources and 24 x 7 support</h2>
                 </div> 
             </div>
-
-
-           
         </div>
+
     </div>
 </section>
 
@@ -2608,20 +2616,23 @@
 
 
 <?php include('pricingforhome.php'); ?>
-<section class="mb-5">
+<section class="MusicSec">
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
-            <div class=" copage">
+            <div class=" copage opc">
                 <div class="">
                     <div class="row text-lg-start">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
                         <div class="col-lg-12 col-md-12 col-12 coh">
                             <h3  style="text-align:center"> Other Popular Courses
                                 <span class="line linessf"></span>
                             </h3>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 style="text-align: center;">Everyday Yoga </h5>
+                            <h5 class="text-white" style="text-align: center;">Everyday Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="">
@@ -2632,7 +2643,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="" style="text-align: center;">Yoga for Chronic Desiese </h5>
+                            <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="">
@@ -2643,7 +2654,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="" style="text-align: center;">Yoga for Kids</h5>
+                            <h5 class="text-white" style="text-align: center;">Yoga for Kids</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="">
@@ -2654,7 +2665,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
-                            <h5 class="" style="text-align: center;">Meditation </h5>
+                            <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="">

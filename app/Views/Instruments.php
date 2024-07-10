@@ -13,9 +13,8 @@
     .pricing-section {
     padding-top: 8%;
     }
-    .nav-link {
-    display: flex;
-    align-items: center;
+    .nav-pills .nav-link {
+    display: flex;    align-items: center;
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
     }

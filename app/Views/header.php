@@ -80,6 +80,9 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         .lmwotp  .form-group input {
             margin-left: 2px;
         }
+        .month-row {
+    margin-bottom: 0px !important;
+}
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
     <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'pricing' ) {

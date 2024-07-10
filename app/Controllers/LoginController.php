@@ -369,7 +369,12 @@ class LoginController extends BaseController
     {
     //    print_r($_SESSION['sessiondata']);
         if (isset($_SESSION['sessiondata'])) {
+            $model = new AdminModel();
+            $wherecond = array('is_deleted' => 'N');
+            $session_pricing =$model->getalldata('sessions_pricing', $wherecond); 
+            echo'<pre>';print_r($session_pricing);die; 
         return view('ModelForLogin');
+
         }else{
             return redirect()->to(base_url());
 

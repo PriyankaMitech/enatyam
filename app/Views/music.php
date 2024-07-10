@@ -1,9 +1,8 @@
 <?php include('header.php'); ?>
 
 <style>
-.nav-link {
-    display: flex;
-    align-items: center;
+.nav-pills .nav-link {
+    display: flex;    align-items: center;
     justify-content: center;
     height: 100%;
     text-align: center;
@@ -41,27 +40,27 @@
 
     <!-- Hindustani Vocal -->
     <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-        <a class="nav-link active" id="pills-HindustaniVocal-tab" href="<?=base_url(); ?>HindustaniVocal" target="_blank" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="true">Hindustani Vocal</a>
+        <a class="nav-link active" id="pills-HindustaniVocal-tab" href="<?=base_url(); ?>HindustaniVocal" data-url="<?=base_url(); ?>HindustaniVocal" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="true">Hindustani Vocal</a>
     </li>
     
     <!-- Carnatic Vocal -->
     <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-        <a class="nav-link" id="pills-CarnaticVocal-tab" href="<?=base_url(); ?>CarnaticVocal" target="_blank" role="tab" aria-controls="pills-CarnaticVocal" aria-selected="false">Carnatic Vocal</a>
+        <a class="nav-link" id="pills-CarnaticVocal-tab" href="<?=base_url(); ?>CarnaticVocal" data-url="<?=base_url(); ?>CarnaticVocal" role="tab" aria-controls="pills-CarnaticVocal" aria-selected="false">Carnatic Vocal</a>
     </li>
     
     <!-- Semi Classical -->
     <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-        <a class="nav-link" id="pills-SemiClassical-tab" href="<?=base_url(); ?>SemiClassicals" target="_blank" role="tab" aria-controls="pills-SemiClassical" aria-selected="false">Semi Classical</a>
+        <a class="nav-link" id="pills-SemiClassical-tab" href="<?=base_url(); ?>SemiClassicals" data-url="<?=base_url(); ?>SemiClassicals" role="tab" aria-controls="pills-SemiClassical" aria-selected="false">Semi Classical</a>
     </li>
     
     <!-- Western Singing -->
     <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-        <a class="nav-link" id="pills-WesternSinging-tab" href="<?=base_url(); ?>WesternSinging" target="_blank" role="tab" aria-controls="pills-WesternSinging" aria-selected="false">Western Singing</a>
+        <a class="nav-link" id="pills-WesternSinging-tab" href="<?=base_url(); ?>WesternSinging" data-url="<?=base_url(); ?>WesternSinging" role="tab" aria-controls="pills-WesternSinging" aria-selected="false">Western Singing</a>
     </li>
     
     <!-- Playback Singing -->
     <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-        <a class="nav-link" id="pills-PlaybackSinging-tab" href="<?=base_url(); ?>PlaybackSinging" target="_blank" role="tab" aria-controls="pills-PlaybackSinging" aria-selected="false">Playback Singing</a>
+        <a class="nav-link" id="pills-PlaybackSinging-tab" href="<?=base_url(); ?>PlaybackSinging" data-url="<?=base_url(); ?>PlaybackSinging" role="tab" aria-controls="pills-PlaybackSinging" aria-selected="false">Playback Singing</a>
     </li>
 
     <li class="col-lg-1 col-md-1"></li>
