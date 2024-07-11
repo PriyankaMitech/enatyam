@@ -4176,18 +4176,19 @@
 
 
 <?php include('pricingforhome.php'); ?>
-<section class="MusicSec">
+<section class="">
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
-            <div class="copage opc">
+            <div class="MusicSec opc">
                 <div class="">
                     <div class="row text-lg-start">
-                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
                     <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
                     </div>
+
                         <div class="col-lg-12 col-md-12 col-12 coh">
-                            <h3  style="text-align:center"> Other Popular Courses
+                            <h3 class="text-white" style="text-align:center"> Other Popular Courses
                                 <span class="line linessf"></span>
                             </h3>
                         </div>
