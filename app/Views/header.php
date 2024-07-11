@@ -3443,7 +3443,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 <div class="loginmenu">
                     <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh btntft"
                         style="width: auto;">Book Demo</a>
-                    <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
+                    <!-- <a class="Register" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a> -->
                     <a class="login" href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
                 </div>
                 <?php else : ?>
@@ -3496,7 +3496,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 <a class="nav-link px-2" href="<?php echo base_url('corporateyoga'); ?>">Corporate-Yoga</a>
                 <?php if (!(session()->get('sessiondata'))) : ?>
 
-                <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
+                <!-- <a class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a> -->
                 <a class="nav-link px-2" href="" data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a>
                 <a href="<?php echo base_url('demobooking'); ?>" class="btn btndemoh mt-2">BOOK DEMO</a>
 
@@ -3771,7 +3771,13 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                         <button type="submit" id="continueButton" class="btn btn-primary"
                             style="display: none;">Continue</button>
                     </form>
-                   
+                    <p>Not a member yet ?
+                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
+                    </p>
+                    <div class="forgetmenot login-remember float-center ">
+
+<a class="lost-pass-link m-2" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password ?</a>
+</div>
                 </div>
             </div>
              <img src="public/images/boarder1.webp" class="border_img" alt="Descriptive Alt Text">
