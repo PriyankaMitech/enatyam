@@ -877,10 +877,6 @@ class FacultyController extends BaseController
       // Show the page even if session data is not set
       return view('StudentuplodedVidio', ['dataFound' => false]);
   }
-  
-  
-   
-
 
   public function fshedule()
   {

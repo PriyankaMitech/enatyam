@@ -286,19 +286,25 @@ class LoginController extends BaseController
 
     public function ModelForLogin()
     {
-       
         if (isset($_SESSION['sessiondata'])) {
             $model = new AdminModel();
             $wherecond = array('is_deleted' => 'N');
-            $session_pricing =$model->getalldata('sessions_pricing', $wherecond); 
-            echo'<pre>';print_r($session_pricing);die; 
-        return view('ModelForLogin');
-
-        }else{
+            $session_pricing = $model->getalldata('sessions_pricing', $wherecond);
+    
+            // Check if data is retrieved successfully
+            if (!empty($session_pricing)) {
+                $data['session_pricing'] = $session_pricing; // Ensure the data is wrapped in an array
+            } else {
+                $data['session_pricing'] = [];
+            }
+            // echo'<pre>';print_r($data);die;
+            return view('ModelForLogin', $data); // Pass the data array to the view
+    
+        } else {
             return redirect()->to(base_url());
-
         }
     }
+    
 
 
 

@@ -140,7 +140,7 @@ ul li{
           <div class="container-fluid">
             
 
-            <div class="row">
+        <div class="row">
           <div class="col-12 col-sm-12">
             <div class="card card-primary card-tabs">
               <div class="card-header p-0 pt-1">
@@ -168,102 +168,67 @@ ul li{
                                                 <span class="line"></span>
                                             </div>
                                             <div class="price-card-body">
-                                                <h2>8 Sessions
-                                                </h2>
-                                                <h4>₹ 1200 /- session</h4>
-                                                <h4>Total Price: ₹ 9600 /- <br><span class="del-price"><del> ₹ 10105 /- </del></span></h4>
+                                                    <h2>
+                                                        <?php echo $session_pricing[0]->No_of_Sessions; ?>    
+                                                    </h2>
+                                                    <h4><?php echo '₹ ' . $session_pricing[0]->Per_Session_Price . '/-session'; ?> </h4>
+                                                    <h4>
+                                                        <?php echo 'Total Price: ₹ ' . $session_pricing[0]->Total_Price . '/-'; ?>    
+                                                        <br><span class="del-price"><del> ₹ 10525 /- </del></span>
+                                                    </h4>
 
-                                                <!-- <img src="<?=base_url();?>/public/images/price-coupn.png" /> -->
-                                                <p style="">Duration : 60 Days</p>
+                                                    <!-- <img src="<?= base_url(); ?>/public/images/price-coupn.png" /> -->
+                                                    <p style="">
+                                                        <?php echo 'Duration: ' . $session_pricing[0]->Duration; ?>     
+                                                    </p>
 
-                                                <ul style="padding-left:0px!important">
+                                                    <ul style="padding-left: 0px !important">
+                                                        <?php
+                                                        $descriptions = explode("\n", $session_pricing[0]->Description); // Split by newline
+                                                        foreach ($descriptions as $desc):
+                                                            $desc = preg_replace('/^\d+\)\s*/', '', trim($desc)); // Remove leading numbers and whitespace
+                                                            if (!empty($desc)):
+                                                        ?>
+                                                                <li>
+                                                                    <span>
+                                                                        <i class="fa fa-check-circle-o"></i>
+                                                                    </span>
+                                                                    <span>
+                                                                        <?php echo $desc; ?>
+                                                                    </span>
+                                                                </li>
+                                                        <?php 
+                                                            endif;
+                                                        endforeach;
+                                                        ?>
 
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            One on One Private Live Class.
-
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Practice Video- weekly 2 Video.
-
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Time Slot preference.
-
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Weekly -quiz.
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Learn Any 1 subject.
-
-                                                        </span>
-                                                    </li>
-
-                                                    <li>
+                                                        <li>
                                                         <span>
                                                             <i class="fa fa-times-circle-o"></i>
-
                                                         </span>
                                                         <span>
                                                             Learn at your own Pace - customisation.
-
                                                         </span>
                                                     </li>
                                                     <li>
                                                         <span>
                                                             <i class="fa fa-times-circle-o"></i>
-
                                                         </span>
                                                         <span>
                                                             24 X 7 unlimited support for content & doubt clearing.
-
                                                         </span>
                                                     </li>
                                                 </ul>
 
-
                                                 <div class="button-container">
                                                     <?php if (!(session()->get('sessiondata'))) : ?>
-                                                        <input class="btn shop-now-btn bt" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Buy Now">
+                                                        <input class="btn shop-now-btn bt" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Buy Now">
                                                     <?php else : ?>
                                                         <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Buy Now</a>
-
                                                     <?php endif; ?>
-
                                                 </div>
-
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
                                         <div class="card text-center card-1">
@@ -273,82 +238,40 @@ ul li{
                                             </div>
 
                                             <div class="price-card-body">
-                                                <h2>21 Sessions
+                                                <h2> <?php echo $session_pricing[1]->No_of_Sessions;?>
                                                 </h2>
-                                                <h4>₹ 1090 /- session</h4>
-                                                <h4>Total Price: ₹ 22890 /- <br> <span class="del-price"><del> ₹ 24880 /- </del></span></h4>
+                                                <h4><?php echo '₹ '.$session_pricing[1]->Per_Session_Price .'/-session';?></h4>
+                                                <h4>  <?php echo 'Total Price: ₹ '.$session_pricing[1]->Total_Price .'/-';?>  <br> <span class="del-price"><del> ₹ 25999 /- </del></span></h4>
 
                                                 <!-- <img src="<?=base_url();?>/public/images/pro.png" /> -->
-                                                <p >Duration : 120 Days</p>
+                                                <p > <?php echo 'Duration :'.$session_pricing[1]->Duration  ;?> </p>
 
-                                                <ul class="" style="padding-left:0px!important">
-
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            One on One Private Live Class.
-
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Practice Video- Unlimited.
-
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Time Slot preference.
-
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Weekly -quiz.
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Learn as many subject as you want.
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Learn at your own Pace - customisation.
-                                                        </span>
-                                                    </li>
+                                                <ul style="padding-left: 0px !important">
+                                                        <?php
+                                                        $descriptions = explode("\n", $session_pricing[1]->Description); // Split by newline
+                                                        foreach ($descriptions as $desc):
+                                                            $desc = preg_replace('/^\d+\)\s*/', '', trim($desc)); // Remove leading numbers and whitespace
+                                                            if (!empty($desc)):
+                                                        ?>
+                                                                <li>
+                                                                    <span>
+                                                                        <i class="fa fa-check-circle-o"></i>
+                                                                    </span>
+                                                                    <span>
+                                                                        <?php echo $desc; ?>
+                                                                    </span>
+                                                                </li>
+                                                        <?php 
+                                                            endif;
+                                                        endforeach;
+                                                        ?>
 
                                                     <li>
                                                         <span>
                                                             <i class="fa fa-times-circle-o"></i>
-
                                                         </span>
                                                         <span>
                                                             24 X 7 unlimited support for content & doubt clearing.
-
                                                         </span>
                                                     </li>
 
@@ -373,83 +296,32 @@ ul li{
                                             </div>
 
                                             <div class="price-card-body">
-                                                <h2>51 Sessions</h2>
-                                                <h4>₹ 975 /- session</h4>
-                                                <h4>Total Price: ₹ 49725 /- <br><span class="del-price"><del> ₹ 59910 /- </del></span></h4>
+                                                <h2> <?php echo $session_pricing[2]->No_of_Sessions;?></h2>
+                                                <h4><?php echo '₹ '.$session_pricing[2]->Per_Session_Price .'/-session';?></h4>
+                                                <h4>  <?php echo 'Total Price: ₹ '.$session_pricing[2]->Total_Price .'/-';?>  <br><span class="del-price"><del> ₹ 59999 /- </del></span></h4>
 
                                                 <!-- <img src="<?=base_url();?>/public/images/Elite.webp" /> -->
-                                                <p >Duration : 360 Days</p>
+                                                <p > <?php echo 'Duration :'.$session_pricing[2]->Duration  ;?> </p>
 
-                                                <ul style="padding-left:0px!important">
-
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            One on One Private Live Class.
-
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Practice Video- Unlimited.
-
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Time Slot preference.
-
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Weekly -quiz.
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Learn as many subject as you want.
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            Learn at your own Pace - customisation.
-                                                        </span>
-                                                    </li>
-
-                                                    <li>
-                                                        <span>
-                                                            <i class="fa fa-check-circle-o"></i>
-
-                                                        </span>
-                                                        <span>
-                                                            24 X 7 unlimited support for content & doubt clearing.
-
-                                                        </span>
-                                                    </li>
+                                                <ul style="padding-left: 0px !important">
+                                                        <?php
+                                                        $descriptions = explode("\n", $session_pricing[2]->Description); // Split by newline
+                                                        foreach ($descriptions as $desc):
+                                                            $desc = preg_replace('/^\d+\)\s*/', '', trim($desc)); // Remove leading numbers and whitespace
+                                                            if (!empty($desc)):
+                                                        ?>
+                                                                <li>
+                                                                    <span>
+                                                                        <i class="fa fa-check-circle-o"></i>
+                                                                    </span>
+                                                                    <span>
+                                                                        <?php echo $desc; ?>
+                                                                    </span>
+                                                                </li>
+                                                        <?php 
+                                                            endif;
+                                                        endforeach;
+                                                        ?>
 
                                                 </ul>
 
@@ -475,8 +347,8 @@ ul li{
                         </div>
                    
                   </div>
-                  <div class="tab-pane fade <?php if ($_SESSION['SessionType'] == 'GroupSession') { ?>  show active <?php } ?>" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
-                  <div class="row">
+                <div class="tab-pane fade <?php if ($_SESSION['SessionType'] == 'GroupSession') { ?>  show active <?php } ?>" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                    <div class="row">
                             <div class="col-lg-10 col-md-12 col-12">
                                 <form name="razorpay-form" id="razorpay-form" action="<?php echo base_url() ?>payment" method="POST">
                                     <div class="row pricing-card-section">
@@ -488,83 +360,47 @@ ul li{
                                                 </div>
 
                                                 <div class="price-card-body">
-                                                    <h2>21 Sessions
+                                                    <h2> <?php echo $session_pricing[3]->No_of_Sessions;?>
                                                     </h2>
-                                                    <h4>₹ 475 /- session</h4>
-                                                    <h4>Total Price: ₹ 9975/- <br><span class="del-price"><del> ₹ 10500 /- </del></span></h4>
+                                                    <h4><?php echo '₹ '.$session_pricing[3]->Per_Session_Price .'/-session';?></h4>
+                                                    <h4>  <?php echo 'Total Price: ₹ '.$session_pricing[3]->Total_Price .'/-';?>  <br><span class="del-price"><del> ₹ 10500 /- </del></span></h4>
 
                                                     <!-- <img src="<?=base_url();?>/public/images/price-coupn.png" /> -->
-                                                    <p >Duration : 120 Days</p>
-
-                                                    <ul style="padding-left:0px!important">
-
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-
-                                                            </span>
-                                                            <span>          
-                                                                Group Live Class- upto 10 students.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Practice Video- weekly 2 Video.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Time : IST 5 Pm to 7 PM.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Weekly -quiz.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Learn Any 1 subject.
-
-                                                            </span>
-                                                        </li>
+                                                    <p > <?php echo 'Duration :'.$session_pricing[3]->Duration  ;?> </p>
+                                                    <ul style="padding-left: 0px !important">
+                                                        <?php
+                                                        $descriptions = explode("\n", $session_pricing[3]->Description); // Split by newline
+                                                        foreach ($descriptions as $desc):
+                                                            $desc = preg_replace('/^\d+\)\s*/', '', trim($desc)); // Remove leading numbers and whitespace
+                                                            if (!empty($desc)):
+                                                        ?>
+                                                                <li>
+                                                                    <span>
+                                                                        <i class="fa fa-check-circle-o"></i>
+                                                                    </span>
+                                                                    <span>
+                                                                        <?php echo $desc; ?>
+                                                                    </span>
+                                                                </li>
+                                                        <?php 
+                                                            endif;
+                                                        endforeach;
+                                                        ?>
 
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-times-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 Learn at your own Pace - customisation.
-
                                                             </span>
                                                         </li>
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-times-circle-o"></i>
-
                                                             </span>
                                                             <span>
                                                                 24 X 7 unlimited support for content & doubt clearing.
-
                                                             </span>
                                                         </li>
                                                     </ul>
@@ -579,7 +415,6 @@ ul li{
                                                         <?php endif; ?>
                                                     </div>
 
-
                                                 </div>
 
                                             </div>
@@ -593,56 +428,32 @@ ul li{
                                                 </div>
 
                                                 <div class="price-card-body">
-                                                    <h2>51 Sessions
+                                                    <h2> <?php echo $session_pricing[4]->No_of_Sessions;?>
                                                     </h2>
-                                                    <h4>₹ 450 /- session</h4>
-                                                    <h4>Total Price: ₹ 22950 /- <br><span class="del-price"><del>₹ 24950 /- </del></span></h4>
+                                                    <h4><?php echo '₹ '.$session_pricing[4]->Per_Session_Price .'/-session';?></h4>
+                                                    <h4>  <?php echo 'Total Price: ₹ '.$session_pricing[4]->Total_Price .'/-';?>  <br><span class="del-price"><del>₹ 24950 /- </del></span></h4>
                                                     <!-- <img src="<?=base_url();?>/public/images/pro.png" /> -->
-                                                    <p >Duration : 200 Days</p>
+                                                    <p > <?php echo 'Duration :'.$session_pricing[4]->Duration  ;?> </p>
 
-                                                    <ul class="" style="padding-left:0px!important">
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-                                                            </span>
-                                                            <span>
-                                                                Group Live Class- upto 10 students.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-                                                            </span>
-                                                            <span>
-                                                                Practice Video- Unlimited.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-                                                            </span>
-                                                            <span>
-                                                                Time : IST 5 Pm to 7 PM.
-
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-                                                            </span>
-                                                            <span>
-                                                                Weekly -quiz.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-                                                            </span>
-                                                            <span>
-                                                                Learn Any 1 subject.
-                                                            </span>
-                                                        </li>
+                                                    <ul style="padding-left: 0px !important">
+                                                        <?php
+                                                        $descriptions = explode("\n", $session_pricing[4]->Description); // Split by newline
+                                                        foreach ($descriptions as $desc):
+                                                            $desc = preg_replace('/^\d+\)\s*/', '', trim($desc)); // Remove leading numbers and whitespace
+                                                            if (!empty($desc)):
+                                                        ?>
+                                                                <li>
+                                                                    <span>
+                                                                        <i class="fa fa-check-circle-o"></i>
+                                                                    </span>
+                                                                    <span>
+                                                                        <?php echo $desc; ?>
+                                                                    </span>
+                                                                </li>
+                                                        <?php 
+                                                            endif;
+                                                        endforeach;
+                                                        ?>
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-times-circle-o"></i>
@@ -680,56 +491,32 @@ ul li{
                                                 </div>
 
                                                 <div class="price-card-body">
-                                                    <h2>101 Sessions</h2>
-                                                    <h4>₹ 423 /- session</h4>
-                                                    <h4>Total Price: ₹ 42723 /- <br> <span class="del-price"><del>₹ 51777 /- </del></span></h4>
+                                                    <h2> <?php echo $session_pricing[5]->No_of_Sessions;?></h2>
+                                                    <h4><?php echo '₹ '.$session_pricing[5]->Per_Session_Price .'/-session';?></h4>
+                                                    <h4>  <?php echo 'Total Price: ₹ '.$session_pricing[5]->Total_Price .'/-';?>  <br> <span class="del-price"><del>₹ 51777 /- </del></span></h4>
 
                                                     <!-- <img src="<?=base_url();?>/public/images/Elite.webp" /> -->
-                                                    <p >Duration : 360 Days</p>
+                                                    <p > <?php echo 'Duration :'.$session_pricing[5]->Duration  ;?> </p>
 
-                                                    <ul style="padding-left:0px!important">
-
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-                                                            </span>
-                                                            <span>
-                                                                Group Live Class- upto 10 students.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-                                                            </span>
-                                                            <span>
-                                                                Practice Video- Unlimited.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-                                                            </span>
-                                                            <span>
-                                                                Time : IST 5 Pm to 7 PM.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-                                                            </span>
-                                                            <span>
-                                                                Weekly -quiz.
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span>
-                                                                <i class="fa fa-check-circle-o"></i>
-
-                                                            </span>
-                                                            <span>
-                                                                Learn as many subject as you want.
-                                                            </span>
-                                                        </li>
+                                                    <ul style="padding-left: 0px !important">
+                                                        <?php
+                                                        $descriptions = explode("\n", $session_pricing[5]->Description); // Split by newline
+                                                        foreach ($descriptions as $desc):
+                                                            $desc = preg_replace('/^\d+\)\s*/', '', trim($desc)); // Remove leading numbers and whitespace
+                                                            if (!empty($desc)):
+                                                        ?>
+                                                                <li>
+                                                                    <span>
+                                                                        <i class="fa fa-check-circle-o"></i>
+                                                                    </span>
+                                                                    <span>
+                                                                        <?php echo $desc; ?>
+                                                                    </span>
+                                                                </li>
+                                                        <?php 
+                                                            endif;
+                                                        endforeach;
+                                                        ?>
                                                         <li>
                                                             <span>
                                                                 <i class="fa fa-times-circle-o"></i>
@@ -758,19 +545,15 @@ ul li{
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </form>
                             </div>
 
                             <div class="col-lg-2 pddn">
                                 <img src="<?=base_url();?>/public/images/price1.png" class="opman" width="100%" />
-
                             </div>
-
-                        </div>                  </div>
-                
+                    </div>                  
+                </div>
                 </div>
               </div>
               <!-- /.card -->
