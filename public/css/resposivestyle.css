@@ -1121,9 +1121,10 @@
     padding: 5% 0px;
   }
   .modulesec {
-    margin-top: 13%;
+    margin-top: 0%;
     padding: 10px;
   }
+
   .testmonialsm {
     padding: 10px;
   }
@@ -1724,6 +1725,9 @@
   }
   .heading-div h3 {
     margin-top: 0px !important;
+  }
+  .opc .MusicSec h3 {
+    margin-top: 32px !important;
   }
 }
 
