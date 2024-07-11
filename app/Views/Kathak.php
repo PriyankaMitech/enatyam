@@ -3867,21 +3867,17 @@
 
 <?php include('pricingforhome.php'); ?>
 
-
-
-<?php include('Dancefaq.php'); ?>
-
-
-
-<?php include('bookdemocallb.php'); ?>
-
-<section class="mb-5 opc">
+<section class="">
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
-            <div class="MusicSec copage">
+            <div class="MusicSec opc">
                 <div class="">
                     <div class="row text-lg-start">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    </div>
+
                         <div class="col-lg-12 col-md-12 col-12 coh">
                             <h3 class="text-white" style="text-align:center"> Other Popular Courses
                                 <span class="line linessf"></span>
@@ -3938,17 +3934,15 @@
     </div>
 </section>
 
+<?php include('Dancefaq.php'); ?>
 
 
 
-<section class="tstmwy">
-    <div class="container ">
-        <div class="row">
-            <h1 class="studioText text-center ">The Studio That Moves With You</h1>
-            <img src="<?php echo base_url(); ?>public/images/Home/GoesWhereverGo!.webp" /> 
-        </div>
-    </div>
-</section>
+<?php include('bookdemocallb.php'); ?>
+
+
+
+
 
 
 

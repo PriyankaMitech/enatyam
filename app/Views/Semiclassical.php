@@ -3853,6 +3853,7 @@
 
 
 
+
 <section class="">
     <div class="">
         <!-- pills -->
@@ -3869,7 +3870,7 @@
                                 <span class="line linessf"></span>
                             </h3>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-3 col-6">
                             <h5 class="text-white" style="text-align: center;">Everyday Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
@@ -3880,7 +3881,7 @@
                                 <a href="<?= base_url(); ?>Western" class="btn shop-now-btn">Explore More</a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-3 col-6">
                             <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
@@ -3891,7 +3892,7 @@
                                 <a href="<?= base_url(); ?>Semiclassical" class="btn shop-now-btn">Explore More</a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-3 col-6">
                             <h5 class="text-white" style="text-align: center;">Yoga for Kids</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
@@ -3902,7 +3903,7 @@
                                 <a href="<?= base_url(); ?>Bhangra" class="btn shop-now-btn">Explore More</a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-3 col-6">
                             <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
