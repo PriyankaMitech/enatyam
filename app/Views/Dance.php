@@ -2669,7 +2669,7 @@
                 <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/folk-dance.webp" class="danceimg">
+                            <img src="public/images/Dance/folk-dance.jpg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Folk</h3>
@@ -2832,7 +2832,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/folk-dance.webp" class="danceimg danceimg5">
+                                        <img src="public/images/Dance/folk-dance.jpg" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
