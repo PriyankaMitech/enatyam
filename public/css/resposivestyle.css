@@ -1,4 +1,8 @@
 /* refunt guarantee section start*/
+.lmwotp .border_img {
+  width: 100%;
+  margin-top: 16px;
+}
 .connectwusbtn a {
   text-align: center !important;
   font-size: 16px !important;
@@ -480,7 +484,6 @@
   }
   .img-fluid {
     padding-top: 3px;
-    
   }
   .s_header-section .rightimg {
     display: none;
@@ -1730,11 +1733,40 @@
   .opc .MusicSec h3 {
     margin-top: 32px !important;
   }
+
+  .lmwotp .left-side img {
+    display: none;
+  }
+  .lmwotp .modal-content {
+    padding: 1px 0px !important;
+  }
+  .lmwotp .modal-dialog {
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 24px;
+  }
 }
 
 /* For Tablet Screen max-width: 991 min-width: 768*/
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
+  .lmwotp .border_img {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .lmwotp .modal-dialog {
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+    margin-left: 0px;
+    margin-top: 134px;
+  }
+  .lmwotp .modal-content {
+    padding: 1px 0px !important;
+  }
   .dancefaq .imgs {
     padding: 30px 0px;
   }

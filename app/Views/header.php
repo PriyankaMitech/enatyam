@@ -3729,12 +3729,12 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
         <div class="row no-gutters w-100">
-    <div class="col-4">
+    <div class="col-12 col-md-4 col-lg-4 ">
         <div class="left-side">
             <img src="public/images/dance1.jpg" alt="Descriptive Alt Text">
         </div>
     </div>
-    <div class="col-8">
+    <div class="col-12  col-md-8 col-lg-8">
         <div class="right-side">
             <div class="card" style="background-color: #F8F8F8;">
                 <div class="card-body">
@@ -3774,8 +3774,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                    
                 </div>
             </div>
-             <img src="public/images/boarder1.webp" style="width: 567px;
-    margin-top: 16px;" alt="Descriptive Alt Text">
+             <img src="public/images/boarder1.webp" class="border_img" alt="Descriptive Alt Text">
         </div>
     </div>
 </div>
