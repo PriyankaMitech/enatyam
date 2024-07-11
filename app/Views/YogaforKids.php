@@ -4180,10 +4180,10 @@
     <div class="">
         <!-- pills -->
         <div class="typesOfDance-tab">
-            <div class=" copage opc">
+            <div class=" opc">
                 <div class="">
                     <div class="row text-lg-start">
-                    <div class="col-lg-12 col-md-12 col-12 imgs text-center">
+                    <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
                         <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
                     </div>
                         <div class="col-lg-12 col-md-12 col-12 coh">
