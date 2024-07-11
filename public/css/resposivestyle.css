@@ -480,6 +480,7 @@
   }
   .img-fluid {
     padding-top: 3px;
+    
   }
   .s_header-section .rightimg {
     display: none;
@@ -488,7 +489,7 @@
     font-size: 15px;
   }
   .s_header-section h2 {
-    padding-top: 60px;
+    padding-top: 10px !important;
   }
   .s_header-section .singleline {
     margin-left: 0rem;
@@ -1570,7 +1571,7 @@
     margin-top: 5%;
   }
   .minstument {
-    margin-top: 11% !important;
+    margin-top: 0% !important;
   }
   .instumentestimonials {
     margin-top: 61px;

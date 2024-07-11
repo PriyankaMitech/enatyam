@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12  textPara-col kathakp" >
-                        <img src="<?php echo  base_url(); ?>public/images/instrument/Harmonium.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="<?php echo  base_url(); ?>public/images/instrument/Harmonium.jpg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
