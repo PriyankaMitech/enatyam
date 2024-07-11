@@ -7,7 +7,7 @@
     justify-content: center;
     height: 100%; /* Ensure the link takes the full height of its parent */
 }
-.happyFaces-div1 .limited-height {
+/* .happyFaces-div1 .limited-height {
     max-height: 5rem;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -15,7 +15,7 @@
 
 .happyFaces-div1:hover .limited-height {
     max-height: none;
-}
+} */
 .img-fluid{
     max-height: 11rem;
 }
@@ -178,7 +178,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/folk-dance.webp" alt=""
+                                        src="<?php echo base_url(); ?>public/images/Dance/folk-dance.jpg" alt=""
                                        >
                                 </a>
                             </div>
@@ -2833,7 +2833,7 @@
                 <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/folk-dance.webp" class="danceimg">
+                            <img src="public/images/Dance/folk-dance.jpg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Folk</h3>
@@ -2996,7 +2996,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/folk-dance.webp" class="danceimg danceimg5">
+                                        <img src="public/images/Dance/folk-dance.jpg" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -3315,6 +3315,7 @@
 <section class="faculty-section faculty-sectiononhome p-3 ">
     <div class="container cont-width mt-5 ">
         <div class="row heading-div m-0">
+
             <div class="col-lg-12 col-12 text-center">
                 <h3 class="title_4 ">Happy Faces
                 </h3>
@@ -3331,10 +3332,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="centered-image" />
                                             <div class="hft">
                                                 <h5>Smita Sebastian (UK)</h5>
-                                                <p class="limited-height">For the past year and a half, I've been learning Kathak from Priti Singh,
-                                                    and I'm incredibly grateful. Priti's graceful teaching style and deep knowledge of the subject
-                                                    make each session interesting and well-rounded. Her online lessons,
-                                                    coupled with flexible scheduling, have made my learning journey both convenient and enriching
+                                                <p class="limited-height">In the past year and a half, Priti Singh’s graceful teaching and deep knowledge have made each Kathak session both interesting and enriching.
                                                 </p>
                                             </div>
                                     </div>
@@ -3346,10 +3344,7 @@
                                             <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="centered-image"  />
                                             <div class="hft">
                                                 <h5>Oorja Sinha ( Pune)</h5>
-                                                <p class="limited-height">I made significant improvement in my dancing under the guidance of
-                                                    Priti mam, I excelled in Kathak, completing my first-year exam.
-                                                    Once just a dream, now a reality thanks to her dedication.
-                                                    Her patient teaching and E-natyam platform make learning accessible and enriching.</p>
+                                                <p class="limited-height">With Priti mam’s guidance, I excelled in Kathak and completed my first-year exam. Her patient teaching and E-natyam platform made learning accessible and enriching.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3362,9 +3357,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Reshma ( Pune )</h5>
-                                        <p class="limited-height">Enatyam's Kathak online course has been a lifeline for me amidst my
-                                            extremely busy schedule. The moments spent learning and immersing myself in Kathak dance
-                                            have provided a much-needed escape from the pressures of daily life</p>
+                                        <p class="limited-height">Enatyam's Kathak online course has been a great escape from my busy schedule, allowing me to immerse myself in Kathak dance and relieve daily stress.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3375,9 +3368,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Tejashvi (Pune)</h5>
-                                            <p class="limited-height">I never thought I'd get back into dancing after so many years, but
-                                            Enatyam's Kathak online course made it possible. The structured lessons and supportive
-                                            instructors gently guided me back to my long-forgotten hobby, and I couldn't be happier.</p>
+                                            <p class="limited-height">I thought I’d never dance again, but Enatyam's Kathak course helped me reconnect with my long-lost hobby through structured lessons and supportive instructors.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3390,9 +3381,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Swapna ( USA)</h5>
-                                            <p class="limited-height">Enatyam's Kathak online course has been a delightful journey of rediscovery for me.
-                                            After putting my passion for dance on hold for years, the accessibility of
-                                            online learning allowed me to reconnect with Kathak and reclaim it as a cherished hobby</p>
+                                            <p class="limited-height">Enatyam's Kathak online course helped me reconnect with my passion for dance after years, thanks to its accessible online platform.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3403,9 +3392,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Vaanya’father ( Australia)</h5>
-                                            <p class="limited-height">Enatyam's Kathak online course has exceeded our expectations in every way.
-                                            The convenience of learning from home has made it easy for my child to fit
-                                            dance practice into their schedule, and the joy it brings them is truly priceless</p>
+                                            <p class="limited-height">Enatyam's Kathak online course exceeded our expectations with convenient home learning for my child and brought true joy.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3417,12 +3404,9 @@
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" />
-                                        
                                         <div class="hft">
                                         <h5>Kavya (USA)</h5>
-                                        <p class="limited-height">As a busy parent, I couldn't be happier with Enatyam's Bharatanatyam online
-                                            course. It allows my child to pursue their passion for dance without
-                                            the constraints of rigid schedules, and the progress they've made is truly remarkable</p>
+                                        <p class="limited-height">Enatyam's Bharatanatyam online course fits my child’s dance passion into our busy schedule, and the progress made is remarkable.</p>
                                         </div>
                                     </div>    
                                 </div>
@@ -3435,10 +3419,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Isabella (USA)</h5>
-                                            <p class="limited-height">Being an English speaker, my fondness for Krishna led me to Kathak with
-                                                Enatyam. Their platform made my Kathak journey incredibly easy to follow.
-                                                It seamlessly blends tradition with accessibility, it's like
-                                                diving into the exciting world of Kathak without any hassle.</p>
+                                            <p class="limited-height">Enatyam’s platform made my Kathak journey easy and accessible, blending tradition with a user-friendly experience.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3452,9 +3433,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Pradanya ( Singapore)</h5>
-                                        <p class="limited-height">Enatyam's Kathak course is a must-try
-                                            for anyone passionate about Indian classical dance.
-                                            The curriculum is well-structured, catering to students of all levels</p>
+                                        <p class="limited-height">Enatyam's Kathak course is a must-try for anyone passionate about Indian classical dance with a well-structured curriculum for all levels.</p>
                                     </div>
                                 </div>    
                             </div>
@@ -3467,9 +3446,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Dr Riddhi Ketan Shukla ( Ahmedabad )</h5>
-                                        <p class="limited-height">Thanks to Enatyam's Kathak online course, I've found a way to cut through the noise of my busy schedule and
-                                            reconnect with myself through dance. The graceful movements and
-                                            intricate footwork provide a sense of calm and clarity that I desperately needed</p>
+                                        <p class="limited-height">Enatyam's Kathak online course helped me find calm and clarity amidst my busy schedule with its graceful movements and intricate footwork.</p>
                                     </div>
                                 </div>
                             </div>
@@ -3483,9 +3460,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Pearllan ( UK)</h5>
-                                        <p class="limited-height">I never imagined I could learn Kathak Dance online
-                                            with such ease and depth. Enatyam's course structure is comprehensive,
-                                            and the instructors are incredibly supportive</p>
+                                        <p class="limited-height">I never thought I could learn Kathak Dance online, but Enatyam’s comprehensive course structure and supportive instructors made it possible.</p>
                                     </div>
                                 </div>    
                             </div>
@@ -3498,9 +3473,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Roohi’Mom ( Delhi )</h5>
-                                        <p class="limited-height">Roohi's journey from beginner to performing on renowned stages in
-                                        just two years with Enatyam fills me with immense pride and happiness. Seeing her passion
-                                        for dance blossom is truly rewarding. Thank you, Enatyam, for making her dreams a reality
+                                        <p class="limited-height">Roohi’s progress from beginner to performing on renowned stages in just two years with Enatyam fills me with pride and happiness. Thank you for making her dreams a reality.
                                         </p>
                                     </div>
                                 </div>
@@ -3515,10 +3488,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Tia’mom ( Canada)</h5>
-                                        <p class="limited-height">My daughter Antara has been learning Kathak from Enatyam for almost 3 years now.
-                                            Our overall experience has been extremely satisfactory. The class timings are adjusted as per our convenience since we are overseas.
-                                            The pace of teaching both theory and practical is based as per the student's needs. I would recommend it for any parent who
-                                            wants to enroll their kids for any of the various art forms that they offer</p>
+                                        <p class="limited-height">My daughter Antara’s 3-year Kathak journey with Enatyam has been highly satisfactory, with flexible class timings and a pace that suits her needs.</p>
                                     </div>
                                 </div>    
                             </div>
@@ -3531,10 +3501,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Meera (canada)</h5>
-                                        <p class="limited-height">Discovering Enatyam E-Learning Kathak during the pandemic was a boon for my daughter
-                                            Meera. In 3+ years, she's made remarkable progress, finding comfort in online learning.
-                                            Detailed theoretical explanations enhance her expression. Grateful for accommodating time
-                                            zones and confident in Meera's Kathak journey.
+                                        <p class="limited-height">Enatyam’s E-Learning Kathak was a boon for my daughter Meera during the pandemic. The progress made in 3+ years and the detailed explanations are truly appreciated.
                                         </p>
                                     </div>
                                 </div>
@@ -3549,7 +3516,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Raamya ( Singapore)</h5>
-                                        <p class="limited-height">Enatyam's Bharatanatyam course is a gem! The instructors break down <br>complex movements into manageable steps, making it accessible for beginners like me
+                                        <p class="limited-height">Enatyam’s Bharatanatyam course is a gem! Instructors break down complex movements into manageable steps, making it perfect for beginners like me.
                                         </p>
                                     </div>
                                 </div>    
@@ -3563,10 +3530,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Aarushi ( USA)</h5>
-                                        <p class="limited-height">The smiles on my daughter’s faces during Enatyam's Bharatanatyam
-                                            dance classes are priceless. The instructors have a gift for making dance accessible and
-                                            enjoyable. It's like they've sprinkled a bit of magic in every session,
-                                            turning learning into a delightful experience
+                                        <p class="limited-height">The smiles on my daughter’s face during Enatyam's Bharatanatyam classes are priceless. The instructors make dance accessible and enjoyable, turning learning into a magical experience.
                                         </p>
                                     </div>
                                 </div>
@@ -3588,10 +3552,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="centered-image" />
                                             <div class="hft">
                                                 <h5>Smita Sebastian (UK)</h5>
-                                                <p class="limited-height">For the past year and a half, I've been learning Kathak from Priti Singh,
-                                                    and I'm incredibly grateful. Priti's graceful teaching style and deep knowledge of the subject
-                                                    make each session interesting and well-rounded. Her online lessons,
-                                                    coupled with flexible scheduling, have made my learning journey both convenient and enriching
+                                                <p class="limited-height">In the past year and a half, Priti Singh’s graceful teaching and deep knowledge have made each Kathak session both interesting and enriching.
                                                 </p>
                                             </div>
                                     </div>
@@ -3606,10 +3567,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="centered-image"  />
                                             <div class="hft">
                                                 <h5>Oorja Sinha ( Pune)</h5>
-                                                <p class="limited-height">I made significant improvement in my dancing under the guidance of
-                                                    Priti mam, I excelled in Kathak, completing my first-year exam.
-                                                    Once just a dream, now a reality thanks to her dedication.
-                                                    Her patient teaching and E-natyam platform make learning accessible and enriching.</p>
+                                                <p class="limited-height">With Priti mam’s guidance, I excelled in Kathak and completed my first-year exam. Her patient teaching and E-natyam platform made learning accessible and enriching.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3622,9 +3580,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Reshma ( Pune )</h5>
-                                        <p class="limited-height">Enatyam's Kathak online course has been a lifeline for me amidst my
-                                            extremely busy schedule. The moments spent learning and immersing myself in Kathak dance
-                                            have provided a much-needed escape from the pressures of daily life</p>
+                                        <p class="limited-height">Enatyam's Kathak online course has been a great escape from my busy schedule, allowing me to immerse myself in Kathak dance and relieve daily stress.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3638,9 +3594,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Tejashvi (Pune)</h5>
-                                            <p class="limited-height">I never thought I'd get back into dancing after so many years, but
-                                            Enatyam's Kathak online course made it possible. The structured lessons and supportive
-                                            instructors gently guided me back to my long-forgotten hobby, and I couldn't be happier.</p>
+                                            <p class="limited-height">I thought I’d never dance again, but Enatyam's Kathak course helped me reconnect with my long-lost hobby through structured lessons and supportive instructors.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3653,9 +3607,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Swapna ( USA)</h5>
-                                            <p class="limited-height">Enatyam's Kathak online course has been a delightful journey of rediscovery for me.
-                                            After putting my passion for dance on hold for years, the accessibility of
-                                            online learning allowed me to reconnect with Kathak and reclaim it as a cherished hobby</p>
+                                            <p class="limited-height">Enatyam's Kathak online course helped me reconnect with my passion for dance after years, thanks to its accessible online platform.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3669,9 +3621,7 @@
                                         <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Vaanya’father ( Australia)</h5>
-                                            <p class="limited-height">Enatyam's Kathak online course has exceeded our expectations in every way.
-                                            The convenience of learning from home has made it easy for my child to fit
-                                            dance practice into their schedule, and the joy it brings them is truly priceless</p>
+                                            <p class="limited-height">Enatyam's Kathak online course exceeded our expectations with convenient home learning for my child and brought true joy.</p>
                                         </div>
                                         </div>
                                     </div>
@@ -3685,9 +3635,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" />
                                         <div class="hft">
                                         <h5>Kavya (USA)</h5>
-                                        <p class="limited-height">As a busy parent, I couldn't be happier with Enatyam's Bharatanatyam online
-                                            course. It allows my child to pursue their passion for dance without
-                                            the constraints of rigid schedules, and the progress they've made is truly remarkable</p>
+                                        <p class="limited-height">Enatyam's Bharatanatyam online course fits my child’s dance passion into our busy schedule, and the progress made is remarkable.</p>
                                         </div>
                                     </div>    
                                 </div>
@@ -3702,10 +3650,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" />
                                         <div class="hft">
                                             <h5>Isabella (USA)</h5>
-                                            <p class="limited-height">Being an English speaker, my fondness for Krishna led me to Kathak with
-                                                Enatyam. Their platform made my Kathak journey incredibly easy to follow.
-                                                It seamlessly blends tradition with accessibility, it's like
-                                                diving into the exciting world of Kathak without any hassle.</p>
+                                            <p class="limited-height">Enatyam’s platform made my Kathak journey easy and accessible, blending tradition with a user-friendly experience.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3719,9 +3664,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Pradanya ( Singapore)</h5>
-                                        <p class="limited-height">Enatyam's Kathak course is a must-try
-                                            for anyone passionate about Indian classical dance.
-                                            The curriculum is well-structured, catering to students of all levels</p>
+                                        <p class="limited-height">Enatyam's Kathak course is a must-try for anyone passionate about Indian classical dance with a well-structured curriculum for all levels.</p>
                                     </div>
                                 </div>    
                             </div>
@@ -3735,9 +3678,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Dr Riddhi Ketan Shukla ( Ahmedabad )</h5>
-                                        <p class="limited-height">Thanks to Enatyam's Kathak online course, I've found a way to cut through the noise of my busy schedule and
-                                            reconnect with myself through dance. The graceful movements and
-                                            intricate footwork provide a sense of calm and clarity that I desperately needed</p>
+                                        <p class="limited-height">Enatyam's Kathak online course helped me find calm and clarity amidst my busy schedule with its graceful movements and intricate footwork.</p>
                                     </div>
                                 </div>
                             </div>
@@ -3751,9 +3692,7 @@
                                 <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Pearllan ( UK)</h5>
-                                        <p class="limited-height">I never imagined I could learn Kathak Dance online
-                                            with such ease and depth. Enatyam's course structure is comprehensive,
-                                            and the instructors are incredibly supportive</p>
+                                        <p class="limited-height">I never thought I could learn Kathak Dance online, but Enatyam’s comprehensive course structure and supportive instructors made it possible.</p>
                                     </div>
                                 </div>    
                             </div>
@@ -3767,9 +3706,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Roohi’Mom ( Delhi )</h5>
-                                        <p class="limited-height">Roohi's journey from beginner to performing on renowned stages in
-                                        just two years with Enatyam fills me with immense pride and happiness. Seeing her passion
-                                        for dance blossom is truly rewarding. Thank you, Enatyam, for making her dreams a reality
+                                        <p class="limited-height">Roohi’s progress from beginner to performing on renowned stages in just two years with Enatyam fills me with pride and happiness. Thank you for making her dreams a reality.
                                         </p>
                                     </div>
                                     </div>
@@ -3784,10 +3721,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Tia’mom ( Canada)</h5>
-                                        <p class="limited-height">My daughter Antara has been learning Kathak from Enatyam for almost 3 years now.
-                                            Our overall experience has been extremely satisfactory. The class timings are adjusted as per our convenience since we are overseas.
-                                            The pace of teaching both theory and practical is based as per the student's needs. I would recommend it for any parent who
-                                            wants to enroll their kids for any of the various art forms that they offer</p>
+                                        <p class="limited-height">My daughter Antara’s 3-year Kathak journey with Enatyam has been highly satisfactory, with flexible class timings and a pace that suits her needs.</p>
                                     </div>
                                     </div>
                                 </div>
@@ -3801,10 +3735,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Meera (canada)</h5>
-                                        <p class="limited-height">Discovering Enatyam E-Learning Kathak during the pandemic was a boon for my daughter
-                                            Meera. In 3+ years, she's made remarkable progress, finding comfort in online learning.
-                                            Detailed theoretical explanations enhance her expression. Grateful for accommodating time
-                                            zones and confident in Meera's Kathak journey.
+                                        <p class="limited-height">Enatyam’s E-Learning Kathak was a boon for my daughter Meera during the pandemic. The progress made in 3+ years and the detailed explanations are truly appreciated.
                                         </p>
                                     </div>
                                     </div>
@@ -3819,7 +3750,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Raamya ( Singapore)</h5>
-                                        <p class="limited-height">Enatyam's Bharatanatyam course is a gem! The instructors break down <br>complex movements into manageable steps, making it accessible for beginners like me
+                                        <p class="limited-height">Enatyam’s Bharatanatyam course is a gem! Instructors break down complex movements into manageable steps, making it perfect for beginners like me.
                                         </p>
                                     </div>
                                     </div>
@@ -3834,10 +3765,7 @@
                                     <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" />
                                     <div class="hft">
                                         <h5>Aarushi ( USA)</h5>
-                                        <p class="limited-height">The smiles on my daughter’s faces during Enatyam's Bharatanatyam
-                                            dance classes are priceless. The instructors have a gift for making dance accessible and
-                                            enjoyable. It's like they've sprinkled a bit of magic in every session,
-                                            turning learning into a delightful experience
+                                        <p class="limited-height">The smiles on my daughter’s face during Enatyam's Bharatanatyam classes are priceless. The instructors make dance accessible and enjoyable, turning learning into a magical experience.
                                         </p>
                                     </div>
                                     </div>
