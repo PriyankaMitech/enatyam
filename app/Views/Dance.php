@@ -231,7 +231,7 @@
                    
                             <div class="month-row">
                                 <div class="row">
-                                    <div class="col-lg-12 col-12 text-center modulesdiv">
+                                    <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -1083,7 +1083,7 @@
                            
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -1419,7 +1419,7 @@
                           
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -1735,7 +1735,7 @@
                            
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -2135,7 +2135,7 @@
                         
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -2424,7 +2424,7 @@
                      
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
@@ -2825,7 +2825,7 @@
                          
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
