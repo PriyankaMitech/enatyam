@@ -506,27 +506,26 @@ class Home extends BaseController
 
     public function StudentDashboard()
 {
-    $adminModel = model('AdminModel');
-    $session = session();
-    $user_id = $session->get('id');
-    $expiresessions = $adminModel->getSessionno($user_id);
-    $sessioncont = $expiresessions->Session_no ?? null;
-     $paymentsessions = $adminModel->getpaymentsession($user_id);
-     $sessioncont = $expiresessions->Session_no ?? null;
+    // print_r($_SESSION['sessiondata']);die;
+            $adminModel = model('AdminModel');
+            $session = session();
+            $user_id = $session->get('id');
+            $expiresessions = $adminModel->getSessionno($user_id);
+            $sessioncont = $expiresessions->Session_no ?? null;
+            $paymentsessions = $adminModel->getpaymentsession($user_id);
+            $sessioncont = $expiresessions->Session_no ?? null;
 
-    if (isset($_SESSION['sessiondata'])) {
-        $sessionData = $_SESSION['sessiondata'];
-        $email = $sessionData['email'] ?? null;
-        $password = $sessionData['password'] ?? null;
-        if ($email !== null && $password !== null) {
+        if (isset($_SESSION['sessiondata'])) {
+            $sessionData = $_SESSION['sessiondata'];
+            // echo '<pre>';print_r($sessionData);die;
+            $email = $sessionData['email'] ?? null;
+            $password = $sessionData['password'] ?? null;
+            if ($email !== null && $password !== null) {
+
           
-
-            // If Payment_status is 'Y' and SessionsCount matches expiration session
             if ($session->has('id') && $sessionData['Payment_status'] == 'Y') {
                 $user_id = $session->get('id');
-            //    print_r($sessioncont);
-            //                 print_r($paymentsessions);die;
-                if ($sessioncont == $paymentsessions) {
+                  if ($sessioncont == $paymentsessions) {
                     $status = 'N';
                     $renewal = 'Y';
                     $adminModel->updadteattandance($user_id, $renewal);
@@ -541,25 +540,20 @@ class Home extends BaseController
                 $data['user_data'] = $login_model->get_user_data($user_id);
                 $meeting = $login_model->getmeetinglink($user_id);
                 $notifications = $adminModel->getUser($user_id);
-                
-            // print_r($meeting);die;
-
                 $count = 0;
-
                     if ($notifications) {
                         $count = count($notifications);
                     } else {
                         $count = 0;
                     }
-
-                return view('StudentDashboard', [
+                return view('StudentDashboard', 
+                [
                     'data' => $data,
                     'meeting'=>$meeting,
                     'notifications' => $notifications,
                     'notificationCount' => $count,
                 ]);
             } else {         
-                  
                 return redirect()->to('ModelForLogin');
             }
         } else {

@@ -616,7 +616,37 @@ class AdminModel extends Model
         }
     }
     
-    
+    public function getUserByMobileNoAndPassword($table, $wherecond)
+    {
+        $session = session();
+        $result = $this->db->table($table)->where($wherecond)->get()->getRow();
+
+        if ($result) {
+            $sessiondata = [
+                'id'                 => $result->id,
+                'role'               => $result->role,
+                'email'              => $result->email,
+                'password'           => $result->password,
+                'cpassword'          => $result->confirm_pass,
+                'user_name'          => $result->full_name,
+                'mobile_no'          => $result->mobile_no,
+                'country'            => $result->country,
+                'Assign_Techer_id'   => $result->Assign_Techer_id,
+                'SessionType'        => $result->SessionType,
+                'Payment_status'     => $result->Payment_status,
+                'access_level'       => $result->access_level,
+                'SessionsCount'      =>$result->SessionsCount,
+                'is_logged_in'       => 'Y',
+            ];
+
+
+            $session->set('sessiondata', $sessiondata);
+            return $sessiondata;
+        } else {
+            return null; // Indicates user not found
+        }
+    }
+
     
     public function getsinglerow1($table, $wherecond)
     {
