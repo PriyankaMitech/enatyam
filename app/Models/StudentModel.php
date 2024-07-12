@@ -302,10 +302,33 @@ class StudentModel extends Model
 public function insertfeedback($data) {
     $this->db->table('feedback')->insert($data);
 }
+// public function insertvarify($varify) {
+//     $this->db->table('attendeance_table')
+//              ->where('student_registerid', $varify['student_id'])
+//              ->where('Session_no', $varify['Session_no'])
+//              ->update(['verify_by_student' => $varify['verify_by_student']]);
+// }
 public function insertvarify($varify) {
-    $this->db->table('attendeance_table')
-             ->where('student_registerid', $varify['student_id'])
-             ->where('Session_no', $varify['Session_no'])
-             ->update(['verify_by_student' => $varify['verify_by_student']]);
+    if ($varify['verify_by_student'] === 'N') {
+        // Find the last inserted record for the given student_id and Session_no
+        $lastRecord = $this->db->table('attendeance_table')
+                               ->where('student_registerid', $varify['student_id'])
+                               ->where('Session_no', $varify['Session_no'])
+                               ->orderBy('id', 'DESC')
+                               ->get()
+                               ->getRowArray();
+        if ($lastRecord) {
+            $this->db->table('attendeance_table')
+                     ->where('id', $lastRecord['id'])
+                     ->delete();
+        }
+    } else {
+        $this->db->table('attendeance_table')
+                 ->where('student_registerid', $varify['student_id'])
+                 ->where('Session_no', $varify['Session_no'])
+                 ->update(['verify_by_student' => $varify['verify_by_student']]);
+    }
+
 }
+
 }

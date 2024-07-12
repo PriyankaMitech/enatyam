@@ -171,7 +171,7 @@ if (file_exists($file)) {
     <form id="verifyForm" method="post" action="submit_review">
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="verify_by_student" id="verifyRadio" value="Y" required>
-            <label class="form-check-label" for="verifyRadio">Verify</label>
+            <label class="form-check-label" for="verifyRadio">Approve</label>
         </div>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="verify_by_student" id="declineRadio" value="N" required>
