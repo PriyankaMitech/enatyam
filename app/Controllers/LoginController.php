@@ -559,7 +559,7 @@ class LoginController extends BaseController
    
     public function validateotp()
     {
-        // echo "<pre>";print_r($_POST);
+        // echo "<pre>";print_r($_POST);exit();
         $request = \Config\Services::request();
         $session = \Config\Services::session();
       
@@ -567,26 +567,21 @@ class LoginController extends BaseController
         $username = $request->getPost('mobilenumber');
         $otp = $request->getPost('insertotp');
         $password = $request->getPost('password');
-
+        $combinedMobile = $request->getPost('combinedMobile');
+    
+        // Use the combinedMobile if the loginOption is otp
+        if ($request->getPost('loginOption') === 'otp' && !empty($combinedMobile)) {
+            $username = $combinedMobile;
+        }
+    
         if ((filter_var($username, FILTER_VALIDATE_EMAIL)) && isset($password)) {
             $result = $loginModel->getUserByEmailAndPassword($username, $password);
-                    // echo "<pre>";print_r($result);exit();
-
-           
-        } else  if (!empty($otp)) {
+        } else if (!empty($otp)) {
             $result = $loginModel->getuserbymobileotp($username, $otp);
-            // echo "<pre>";print_r($result);exit();
-
-          
-       
-        }else{
-                $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
-                // echo "<pre>";print_r($result);exit();
-  
-           
-            }
+        } else {
+            $result = $loginModel->getUserByMobileNoAndPassword($username, $password);
+        }
          
-    
         if (!empty($result)) {
             $session->set($result);
     
@@ -607,6 +602,4 @@ class LoginController extends BaseController
             return redirect()->to(base_url('Home'));
         }
     }
-    
-    
 }    
