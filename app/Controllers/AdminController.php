@@ -580,15 +580,15 @@ public function AssignTecherForDemo()
             $ccEmails = [$firstRecord->email];
             $result = $model->BackToprndinglistofdemo($D_id, $result, $date, $time,$meetlink,$AssignTecher_id);
             $Subject = 'Your Demo Rescheduled';
-            $msg = "Your Demo Has Been Rescheduled - Date: $date, Time: $time";
+            $msg = "Your demo has been rescheduled. New Date: $date, New Time: $time.";
             $phoneNumber = $mobileWithCode;
             $templates = "930840461869403";
-            $msg ="your Demo will be Rescheduled succesfully Join on this $meetlink link for Demo - Date: $date, Time: $time";
+            $msg = "Your demo has been successfully rescheduled. Please join using this link: $meetlink. New Date: $date, New Time: $time.";
             whatsapp($phoneNumber, $templates, $msg);
             $facultymono = $model->Facultycontact($AssignTecher_id);
             $phoneNumber = $facultymono;
             $templates = "930840461869403";
-            $msg ="your Have asign for Demo  Join on this $meetlink link for Demo - Date: $date, Time: $time";
+            $msg = "You have been assigned for a demo. Please join using this link: $meetlink. Demo Date: $date, Demo Time: $time.";
             whatsapp($phoneNumber, $templates, $msg);
             if ($result == 1) {
                 sendConfirmationEmail($email, $ccEmails, $Subject, $msg);
