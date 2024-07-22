@@ -2229,7 +2229,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             "code": "DE",
             "label": "Germany",
             "phone": "49",
-            "data-phoneLength": 10
+            "data-phoneLength": 12
         },
         {
             "code": "DJ",
