@@ -611,7 +611,7 @@ class FacultyController extends BaseController
           //   print_r($faculty_data);die;
       if($faculty_data){
               $phoneNumber = (!empty($faculty_data)) ? $faculty_data->mobileWithCode : '';
-              $msg = "This session " . $link . " link send from student succefully.";
+              $msg = "This session link " . $link . " was successfully sent from the faculty and is valid for all sessions.";
               $templates = "930840461869403";
               whatsapp($phoneNumber,$templates,$msg);
       

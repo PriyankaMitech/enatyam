@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="<?= base_url() ?>plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>public/css/fontawesome-stars.css">
   <link rel="stylesheet" href="<?= base_url() ?>public/css/custom.css">
   <link rel="stylesheet" href="<?= base_url(); ?>public/css/admindashboard_style.css">

@@ -3560,7 +3560,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <div class="form-group m-2">
                                 <div class="row">
                                     <div class="col-md-4 col-4 countrie_code">
-                                        <select name="countrie_code" class="form-control countrycode" id="lenValidate"
+                                        <select name="countrie_code" class="form-control countrycode lenValidate" id="lenValidate"
                                             required></select>
                                     </div>
                                     <div class="col-md-8 col-8">
@@ -3734,55 +3734,60 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
             <img src="public/images/dance1.jpg" alt="Descriptive Alt Text">
         </div>
     </div>
-    <div class="col-12  col-md-8 col-lg-8">
-        <div class="right-side">
-            <div class="card" style="background-color: #F8F8F8;">
-                <div class="card-body">
-                    <h4 class="card-title">Login</h4>
-                    <form id="loginForm" method="post" action="<?php echo base_url(); ?>validateotp">
+    <div class="col-12 col-md-8 col-lg-8">
+    <div class="right-side">
+        <div class="card" style="background-color: #F8F8F8;">
+            <div class="card-body">
+                <h4 class="card-title">Login</h4>
+                <form id="loginForm" class="row" method="post" action="<?php echo base_url(); ?>validateotp">
+                    <div class="countrie_code form-group col-lg-4 col-md-4 col-4" id="countrieCodeSection">
+                        <select name="countrie_code" class="form-control countrycode lenValidate" id="lenValidate" required></select>
+                    </div>
+                    <div class="form-group col-lg-8 col-md-8 col-8" id="mobileNumberSection">
+                        <input type="text" name="mobilenumber" id="mobilenumber" class="form-control" placeholder="Enter Email or Phone Number" required>
+                    </div>
+                    <div class="toggle col-lg-12 col-md-12 col-12">
+                        <input type="radio" name="loginOption" id="otpOption" value="otp">
+                        <label for="otpOption">OTP</label>
+                        <input type="radio" name="loginOption" id="passwordOption" value="password" checked>
+                        <label for="passwordOption">Password</label>
+                    </div>
+                    <!-- OTP Input -->
+                    <div id="otpSection" class="otp-input col-lg-12 col-md-12 col-12" style="display: none;">
                         <div class="form-group">
-                       
-                            <input type="text" name="mobilenumber" id="mobilenumber" class="form-control"
-                                placeholder="Enter Email or Phone Number" required>
-                                <small class="smallnotedemo">(Enter Mobile number with Country code)</small>
+                            <input type="text" name="insertotp" id="insertotp" class="form-control" placeholder="Enter OTP" required>
                         </div>
-                        <div class="toggle">
-                            <input type="radio" name="loginOption" id="otpOption" value="otp">
-                            <label for="otpOption">OTP</label>
-                            <input type="radio" name="loginOption" id="passwordOption" value="password"
-                                checked>
-                            <label for="passwordOption">Password</label>
+                    </div>
+                    <!-- Password Input -->
+                    <div id="passwordSection" class="password-input col-lg-12 col-md-12 col-12">
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
                         </div>
-                        <!-- OTP Input -->
-                        <div id="otpSection" class="otp-input" style="display: none;">
-                            <div class="form-group">
-                                <input type="text" name="insertotp" id="insertotp" class="form-control"
-                                    placeholder="Enter OTP" required>
-                            </div>
-                        </div>
-                        <!-- Password Input -->
-                        <div id="passwordSection" class="password-input">
-                            <div class="form-group">
-                                <input type="password" name="password" class="form-control"
-                                    placeholder="Enter Password" required>
-                            </div>
-                        </div>
-                        <button type="button" id="otpButton" class="btn btn-primary">OTP</button>
-                        <button type="submit" id="continueButton" class="btn btn-primary"
-                            style="display: none;">Continue</button>
-                    </form>
-                    <p>Not a member yet ?
-                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
-                    </p>
-                    <div class="forgetmenot login-remember float-center ">
+                    </div>
+                    <div  class="col-lg-12 col-md-12 col-12">
 
-<a class="lost-pass-link m-2" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password ?</a>
-</div>
+                        <input type="hidden" name="combinedMobile" id="combinedMobile">
+                        <button type="button" id="otpButton" class="btn btn-primary">OTP</button>
+                        <button type="submit" id="continueButton" class="btn btn-primary" style="display: none;">Continue</button>
+                    </div>
+                </form>
+                <p>Not a member yet?
+                    <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
+                </p>
+                <div class="forgetmenot login-remember float-center">
+                    <a class="lost-pass-link m-2" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password?</a>
                 </div>
             </div>
-             <img src="public/images/boarder1.webp" class="border_img" alt="Descriptive Alt Text">
         </div>
+        <img src="public/images/boarder1.webp" class="border_img" alt="Descriptive Alt Text">
     </div>
+</div>
+
+
+
+
+
+
 </div>
 </div>
 </div>

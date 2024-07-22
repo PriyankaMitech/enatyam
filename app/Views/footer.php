@@ -3068,7 +3068,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     console.log("DOM fully loaded and parsed");
     // let details = JSON.parse(countyCode)
-    let dropDown = $("#lenValidate");
+    let dropDown = $(".lenValidate");
     
     for (let i = 0; i < details.length; i++) {
         let txtOption = '<option value="' + details[i]['phone'] + '" data-phonelength="' + details[i]['data-phoneLength'] + '">' + details[i]['label'] + '</option>';
@@ -4084,38 +4084,70 @@ document.addEventListener('DOMContentLoaded', function () {
     const otpButton = document.getElementById('otpButton');
     const continueButton = document.getElementById('continueButton');
     const loginForm = document.getElementById('loginForm');
+    const combinedMobile = document.getElementById('combinedMobile');
+    const countrieCodeSection = document.getElementById('countrieCodeSection');
+    const mobileNumberSection = document.getElementById('mobileNumberSection');
+    const mobileNumberInput = document.getElementById('mobilenumber');
+    const smallNoteDemo = document.querySelector('.smallnotedemo');
 
-    otpOption.addEventListener('change', function () {
-        if (otpOption.checked) {
-            otpSection.style.display = 'block';
-            passwordSection.style.display = 'none';
-            otpButton.textContent = 'OTP';
-            otpButton.type = 'button';
-            otpButton.style.display = 'inline-block';
-            continueButton.style.display = 'none';
-        }
-    });
+    // Fetch country codes dynamically
+    fetch('<?php echo base_url(); ?>getCountryCodes')
+        .then(response => response.json())
+        .then(data => {
+            const lenValidate = document.getElementById('lenValidate');
+            data.countryCodes.forEach(code => {
+                const option = document.createElement('option');
+                option.value = code;
+                option.text = code;
+                lenValidate.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Error fetching country codes:', error));
 
-    passwordOption.addEventListener('change', function () {
-        if (passwordOption.checked) {
-            otpSection.style.display = 'none';
-            passwordSection.style.display = 'block';
-            otpButton.textContent = 'Continue';
-            otpButton.type = 'submit';
-            otpButton.style.display = 'inline-block';
-            continueButton.style.display = 'none';
-        }
-    });
+        otpOption.addEventListener('change', function () {
+    if (otpOption.checked) {
+        otpSection.style.display = 'block';
+        passwordSection.style.display = 'none';
+        otpButton.textContent = 'OTP';
+        otpButton.type = 'button';
+        otpButton.style.display = 'inline-block';
+        continueButton.style.display = 'none';
+        countrieCodeSection.style.display = 'block';
+        mobileNumberSection.classList.remove('col-lg-12', 'col-md-12', 'col-12');
+        mobileNumberSection.classList.add('col-lg-8', 'col-md-8', 'col-8');
+        mobileNumberInput.placeholder = 'Enter Mobile Number';
+        smallNoteDemo.style.display = 'none';
+    }
+});
+
+passwordOption.addEventListener('change', function () {
+    if (passwordOption.checked) {
+        otpSection.style.display = 'none';
+        passwordSection.style.display = 'block';
+        otpButton.textContent = 'Continue';
+        otpButton.type = 'submit';
+        otpButton.style.display = 'inline-block';
+        continueButton.style.display = 'none';
+        countrieCodeSection.style.display = 'none';
+        mobileNumberSection.classList.remove('col-lg-8', 'col-md-8', 'col-8');
+        mobileNumberSection.classList.add('col-lg-12', 'col-md-12', 'col-12');
+        mobileNumberInput.placeholder = 'Enter Email or Phone Number';
+        smallNoteDemo.style.display = 'block';
+    }
+});
+
 
     otpButton.addEventListener('click', function () {
         if (otpOption.checked) {
             const mobileNumber = document.getElementById('mobilenumber').value;
+            const countryCode = document.getElementById('lenValidate').value;
+            combinedMobile.value = `${countryCode}${mobileNumber}`;
             fetch('<?php echo base_url(); ?>loginwithotp', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: `mobilenumber=${encodeURIComponent(mobileNumber)}`,
+                body: `mobilenumber=${encodeURIComponent(combinedMobile.value)}`,
             })
             .then(response => response.json())
             .then(data => {
@@ -4129,9 +4161,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     alert(data.message);
                 }
             })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
+            .catch(error => console.error('Error:', error));
         } else {
             loginForm.submit();
         }
@@ -4148,8 +4178,8 @@ document.addEventListener('DOMContentLoaded', function () {
     passwordOption.dispatchEvent(new Event('change'));
 });
 
-</script>
 
+</script>
 </body>
 
 </html>
