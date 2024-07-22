@@ -39,8 +39,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         display: grid !important;
     }
     </style>
-      <style>
-      .lmwotp .modal-dialog {
+    <style>
+    .lmwotp .modal-dialog {
         text-align: center;
         max-width: 78%;
         margin: 0;
@@ -49,46 +49,67 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
 
     .modal-content {
-            height: 100vh;
-            display: flex;
-        }
-        .lmwotp .left-side img {
+        height: 100vh;
+        display: flex;
+    }
+
+    .lmwotp .left-side img {
+        width: 100%;
+        height: auto;
+        border-radius: 28px;
+        padding: 13px;
+        background-color: #F8F8F8;
+    }
+
+    .lmwotp .right-side {
+        padding: 20px;
+        /* border-left: 2px solid #ddd; Apply border */
+    }
+
+    .lmwotp .toggle {
+        margin-bottom: 15px;
+    }
+
+    .lmwotp .otp-input {
+        display: none;
+    }
+
+    input[type="radio"]+label {
+        margin-right: 17px;
+    }
+
+    .lmwotp .btn-primary {
+        background-color: #FF1561;
+        border-color: #FF1561;
+        width: 95px;
+    }
+
+    .lmwotp .form-group input {
+        margin-left: 2px;
+    }
+
+    .month-row {
+        margin-bottom: 0px !important;
+    }
+    .phonenumber input{
             width: 100%;
-            height: auto;
-            border-radius: 28px;
-            padding: 13px;
-    background-color: #F8F8F8;
         }
-        .lmwotp .right-side {
-            padding: 20px;
-            /* border-left: 2px solid #ddd; Apply border */
+        .phonenumber span{
+            
+    display: block;
         }
-        .lmwotp .toggle {
-            margin-bottom: 15px;
-        }
-        .lmwotp .otp-input {
-            display: none;
-        }
-        input[type="radio"] + label {
-            margin-right: 17px;
-        }
-        .lmwotp .btn-primary {
-            background-color: #FF1561;
-            border-color: #FF1561;
-            width: 95px;
-        }
-        .lmwotp  .form-group input {
-            margin-left: 2px;
-        }
-        .month-row {
-    margin-bottom: 0px !important;
-}
     </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    </script>
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/resposivestyle.css">
+
+   
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
     <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'pricing' ) {
 
     ?>
-
+    <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/intl.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
@@ -118,9 +139,11 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+
 
     <style>
+
+      
     .cart-a sup {
         background: #FF0067;
         border-radius: 50%;
@@ -340,6 +363,21 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/corporateyoga.css">
+
+    <style>
+        #registerformpopup .modal-content {
+  padding: 25px 33px !important;
+}
+
+#registerformpopup .iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
+  width: 181% !important;
+  padding-left: 47% !important;
+}
+
+#registerformpopup .iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+  left: -1px !important;
+}
+    </style>
 
 
 
@@ -1872,7 +1910,6 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/footer.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/hederresponsive.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/resposivestyle.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/contactus.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/s_header.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/courseOffering.css">
@@ -1887,7 +1924,6 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/Login.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/Register.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/hederresponsive.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/resposivestyle.css">
     <script>
     const details = [{
             "code": "N.A.",
@@ -3388,7 +3424,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
 </head>
 
-<body class="overlap">
+<body class="overlap" >
     <!-- Flash message container -->
     <div id="flash-message-container">
         <?php if (session()->has('errormessage')) : ?>
@@ -3531,92 +3567,108 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                         <div id="loader" class="loader-container">
                             <div class="loader"></div>
 
-                            </div>
+                        </div>
 
+                    </div>
+
+
+                    <form name="registrationForm" method="post" action="<?php echo base_url(); ?>register"
+                        id="registerform">
+
+                        <div class="form-group m-2">
+                            <input type="text" name="full_name" id="full_name" class="form-control" aria-required="true"
+                                placeholder="Username">
+                            <span id="nameError" class="d-none" class="error"></span>
+                        </div>
+                        <div class="form-group m-2">
+                            <input type="email" name="email" id="email" class="form-control" aria-required="true"
+                                placeholder="Email">
+                            <span id="emailError" class="error"></span>
                         </div>
 
 
-                        <form name="registrationForm" method="post" action="<?php echo base_url(); ?>register"
-                            id="registerform">
-
-                            <div class="form-group m-2">
-                                <input type="text" name="full_name" id="full_name" class="form-control"
-                                    aria-required="true" placeholder="Username">
-                                <span id="nameError" class="d-none" class="error"></span>
-                            </div>
-                            <div class="form-group m-2">
-                                <input type="email" name="email" id="email" class="form-control" aria-required="true"
-                                    placeholder="Email">
-                                <span id="emailError" class="error"></span>
-                            </div>
-
-
-                            <!-- <div class="form-group m-2">
+                        <!-- <div class="form-group m-2">
 
                                 <input type="text" name="mobile_no" id="mobile_no" class="form-control" aria-required="true" placeholder="Enter your whatsapp number">
 
                                 <span id="mobile_noError" class="error"></span>
                             </div> -->
-                            <div class="form-group m-2">
-                                <div class="row">
-                                    <div class="col-md-4 col-4 countrie_code">
-                                        <select name="countrie_code" class="form-control countrycode lenValidate" id="lenValidate"
-                                            required></select>
-                                    </div>
-                                    <div class="col-md-8 col-8">
-                                        <input required type="text" autocomplete="off" class="form-control"
-                                            value="<?php echo set_value("mobile_number");?>" name="mobile_number"
-                                            id="txtMobileNo" placeholder="Enter your whatsapp number"
-                                            onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
-                                        <span id="mobile_noError" class="error"></span>
-                                    </div>
+                        <!-- <div class="form-group m-2">
+                            <div class="row">
+                                <div class="col-md-4 col-4 countrie_code">
+                                    <select name="countrie_code" class="form-control countrycode lenValidate"
+                                        id="lenValidate" required></select>
+                                </div>
+                                <div class="col-md-8 col-8">
+                                    <input required type="text" autocomplete="off" class="form-control"
+                                        value="<?php echo set_value("mobile_number");?>" name="mobile_number"
+                                        id="txtMobileNo" placeholder="Enter your whatsapp number"
+                                        onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
+                                    <span id="mobile_noError" class="error"></span>
                                 </div>
                             </div>
-                            <div class="form-group m-2">
-
-                                <input type="text" name="emailotp" id="emailotp" class="form-control d-none"
-                                    placeholder="Enter otp sent to your whats app">
-                                <span class="error" id="otpError" class="error" style="color:red"></span>
+                        </div> -->
+                        <div class="form-group m-2">
+                            <div class="row">
+                                <div class="col-md-12 col-12 phonenumber">
+                                    <input  required type="text" autocomplete="off"
+                                        class="form-control" value="<?php echo set_value('mobile_number');?>"
+                                        name="mobile_number" id="txtMobileNo" placeholder="Enter your WhatsApp number"
+                                        onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
+                                    <input type="hidden" name="countrie_code" id="countrie_code">
+                                    <input type="hidden" name="mobileWithCode" id="mobileWithCode">
+                                    <span id="mobile_noError" class="error"></span>
+                                </div>
                             </div>
+                        </div>
 
 
-                            <div class="form-group m-2">
-
-                                <input type="text" name="otp" id="otp" class="form-control d-none"
-                                    placeholder="Enter otp">
-                                <span class="error" id="otpError" class="error"></span>
-                            </div>
-
-                            <div class="form-group m-2">
-                                <input type="password" name="password" id="password" class="form-control"
-                                    aria-required="true" placeholder="Password">
-                                <span id="passwordError" class="error"></span>
-                                <small class="smallnotedemo">(8 characters -1 uppercase, 1 lowercase, 1 numeric, 1
-                                    special character)</small>
-
-                            </div>
 
 
-                            <div class="form-group m-2">
-                                <input type="password" name="confirm_pass" id="confirm_pass" class="form-control"
-                                    aria-required="true" placeholder="Repeat password">
-                                <span id="confirmpasswordError" class="error"></span>
-                            </div>
+                        <div class="form-group m-2">
 
-                            <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
-                            <p>Are you a member ? <a class="Login" href="javascript:void(0);" onclick="showLoginModal()"
-                                    data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
+                            <input type="text" name="emailotp" id="emailotp" class="form-control d-none"
+                                placeholder="Enter otp sent to your whats app">
+                            <span class="error" id="otpError" class="error" style="color:red"></span>
+                        </div>
 
-                            <!-- <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a> -->
 
-                        </form>
-                    </div>
+                        <div class="form-group m-2">
 
+                            <input type="text" name="otp" id="otp" class="form-control d-none" placeholder="Enter otp">
+                            <span class="error" id="otpError" class="error"></span>
+                        </div>
+
+                        <div class="form-group m-2">
+                            <input type="password" name="password" id="password" class="form-control"
+                                aria-required="true" placeholder="Password">
+                            <span id="passwordError" class="error"></span>
+                            <small class="smallnotedemo">(8 characters -1 uppercase, 1 lowercase, 1 numeric, 1
+                                special character)</small>
+
+                        </div>
+
+
+                        <div class="form-group m-2">
+                            <input type="password" name="confirm_pass" id="confirm_pass" class="form-control"
+                                aria-required="true" placeholder="Repeat password">
+                            <span id="confirmpasswordError" class="error"></span>
+                        </div>
+
+                        <input type="submit" id="signupbtn" value="Sign Up" class="btn btn-light mt-3">
+                        <p>Are you a member ? <a class="Login" href="javascript:void(0);" onclick="showLoginModal()"
+                                data-bs-toggle="modal" data-bs-target="#loginformpopup">Login</a></p>
+
+                        <!-- <a href="googlelogin"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" />Login with google</a> -->
+
+                    </form>
                 </div>
 
             </div>
 
         </div>
+
+    </div>
 
     </div>
 
@@ -3634,6 +3686,10 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                 </div>
                 <div class="modal-body">
+                <div id="userformmodalloader" class="loader-container">
+                            <div class="loader"></div>
+
+                        </div>
                     <!-- Your User Form goes here -->
                     <form action="saveuserdata" method="post">
                         <input type="hidden" name="email" id="hiddenEmail">
@@ -3690,18 +3746,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <input type="number" name="age" id="age" class="form-control" aria-required="true"
                                 placeholder="Enter Your Age">
                         </div>
-                        <!-- <div class="form-group">
-                            <label style="font-size: 14px;">Are you practicing this art (any experience in this
-                                sector)?</label><br>
-                            <label style="margin-left: 100px;font-size: 14px;" for="yes">Yes</label>
-                            <input type="radio" name="experience" id="yes" value="yes" class="experience-radio">
-                            <label style="margin-left: 100px;font-size: 14px;" for="no">No</label>
-                            <input type="radio" name="experience" id="no" value="no" class="experience-radio">
-                        </div> -->
-                        <!-- <div class="form-group" id="experienceDetails" style="display: none;">
-                            <label for="experienceInput">Please provide details of your experience:</label>
-                            <input type="text" name="experienceInput" id="experienceInput" class="form-control">
-                        </div> -->
+                       
                         <div class="form-group">
                             <label style="font-size: 14px;">Select Class Types</label><br>
                             <label style="margin-top: 15px;margin-left: 13px;font-size: 14px;">GroupSession</label>
@@ -3713,8 +3758,8 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <input type="checkbox" id="termsCheckbox"> I agree to the <a href="#" id="termsLinhfgk"
                                 data-bs-toggle="modal" data-bs-target="#staticBackdrop">terms and conditions</a>
                         </label>
-                        <input type="submit" id="btncheck" disabled class="btn btn-light mt-3">
-                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Sign Up</a>
+                        <input type="submit" onclick="get_data()" id="btncheck" disabled class="btn btn-light mt-3">
+                        <a class="Register" href="javascript:void(0);" id="backToRegister" >Back to Sign Up</a>
                     </form>
                     <!-- End of User Form -->
                 </div>
@@ -3727,70 +3772,81 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     <div class="modal fade login-modal lmwotp" id="loginformpopup" tabindex="-1" aria-labelledby="ModalFormLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-        <div class="row no-gutters w-100">
-    <div class="col-12 col-md-4 col-lg-4 ">
-        <div class="left-side">
-            <img src="public/images/dance1.jpg" alt="Descriptive Alt Text">
-        </div>
-    </div>
-    <div class="col-12 col-md-8 col-lg-8">
-    <div class="right-side">
-        <div class="card" style="background-color: #F8F8F8;">
-            <div class="card-body">
-                <h4 class="card-title">Login</h4>
-                <form id="loginForm" class="row" method="post" action="<?php echo base_url(); ?>validateotp">
-                    <div class="countrie_code form-group col-lg-4 col-md-4 col-4" id="countrieCodeSection">
-                        <select name="countrie_code" class="form-control countrycode lenValidate" id="lenValidate" required></select>
-                    </div>
-                    <div class="form-group col-lg-8 col-md-8 col-8" id="mobileNumberSection">
-                        <input type="text" name="mobilenumber" id="mobilenumber" class="form-control" placeholder="Enter Email or Phone Number" required>
-                    </div>
-                    <div class="toggle col-lg-12 col-md-12 col-12">
-                        <input type="radio" name="loginOption" id="otpOption" value="otp">
-                        <label for="otpOption">OTP</label>
-                        <input type="radio" name="loginOption" id="passwordOption" value="password" checked>
-                        <label for="passwordOption">Password</label>
-                    </div>
-                    <!-- OTP Input -->
-                    <div id="otpSection" class="otp-input col-lg-12 col-md-12 col-12" style="display: none;">
-                        <div class="form-group">
-                            <input type="text" name="insertotp" id="insertotp" class="form-control" placeholder="Enter OTP" required>
+            <div class="modal-content">
+                <div class="row no-gutters w-100">
+                    <div class="col-12 col-md-4 col-lg-4 ">
+                        <div class="left-side">
+                            <img src="public/images/dance1.jpg" alt="Descriptive Alt Text">
                         </div>
                     </div>
-                    <!-- Password Input -->
-                    <div id="passwordSection" class="password-input col-lg-12 col-md-12 col-12">
-                        <div class="form-group">
-                            <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
-                        </div>
-                    </div>
-                    <div  class="col-lg-12 col-md-12 col-12">
+                    <div class="col-12 col-md-8 col-lg-8">
+                        <div class="right-side">
+                            <div class="card" style="background-color: #F8F8F8;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Login</h4>
+                                    <form id="loginForm" class="row" method="post"
+                                        action="<?php echo base_url(); ?>validateotp">
+                                        <div class="countrie_code form-group col-lg-4 col-md-4 col-4"
+                                            id="countrieCodeSection">
+                                            <select name="countrie_code" class="form-control countrycode lenValidate"
+                                                id="lenValidate" required></select>
+                                        </div>
+                                        <div class="form-group col-lg-8 col-md-8 col-8" id="mobileNumberSection">
+                                            <input type="text" name="mobilenumber" id="mobilenumber"
+                                                class="form-control" placeholder="Enter Email or Phone Number" required>
+                                        </div>
+                                        <div class="toggle col-lg-12 col-md-12 col-12">
+                                            <input type="radio" name="loginOption" id="otpOption" value="otp">
+                                            <label for="otpOption">OTP</label>
+                                            <input type="radio" name="loginOption" id="passwordOption" value="password"
+                                                checked>
+                                            <label for="passwordOption">Password</label>
+                                        </div>
+                                        <!-- OTP Input -->
+                                        <div id="otpSection" class="otp-input col-lg-12 col-md-12 col-12"
+                                            style="display: none;">
+                                            <div class="form-group">
+                                                <input type="text" name="insertotp" id="insertotp" class="form-control"
+                                                    placeholder="Enter OTP" required>
+                                            </div>
+                                        </div>
+                                        <!-- Password Input -->
+                                        <div id="passwordSection" class="password-input col-lg-12 col-md-12 col-12">
+                                            <div class="form-group">
+                                                <input type="password" name="password" class="form-control"
+                                                    placeholder="Enter Password" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-12">
 
-                        <input type="hidden" name="combinedMobile" id="combinedMobile">
-                        <button type="button" id="otpButton" class="btn btn-primary">OTP</button>
-                        <button type="submit" id="continueButton" class="btn btn-primary" style="display: none;">Continue</button>
+                                            <input type="hidden" name="combinedMobile" id="combinedMobile">
+                                            <button type="button" id="otpButton" class="btn btn-primary">OTP</button>
+                                            <button type="submit" id="continueButton" class="btn btn-primary"
+                                                style="display: none;">Continue</button>
+                                        </div>
+                                    </form>
+                                    <p>Not a member yet?
+                                        <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()"
+                                            data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
+                                    </p>
+                                    <div class="forgetmenot login-remember float-center">
+                                        <a class="lost-pass-link m-2" href="javascript:void(0);" title="Lost Password"
+                                            onclick="showLostPasswordModal()">Lost your password?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="public/images/boarder1.webp" class="border_img" alt="Descriptive Alt Text">
+                        </div>
                     </div>
-                </form>
-                <p>Not a member yet?
-                    <a class="Register" href="javascript:void(0);" onclick="showRegistrationModal()" data-bs-toggle="modal" data-bs-target="#registerformpopup">Sign Up</a>
-                </p>
-                <div class="forgetmenot login-remember float-center">
-                    <a class="lost-pass-link m-2" href="javascript:void(0);" title="Lost Password" onclick="showLostPasswordModal()">Lost your password?</a>
+
+
+
+
+
+
                 </div>
             </div>
         </div>
-        <img src="public/images/boarder1.webp" class="border_img" alt="Descriptive Alt Text">
-    </div>
-</div>
-
-
-
-
-
-
-</div>
-</div>
-</div>
 
 
 
