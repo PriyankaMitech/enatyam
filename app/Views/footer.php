@@ -3773,7 +3773,56 @@ $(document).ready(function() {
     });
 });
 </script>
+<script>
+    // Initialize intl-tel-input
+    const input = document.querySelector("#txtMobileNo");
+    const countryCodeInput = document.querySelector("#countrie_code");
+    const mobileWithCodeInput = document.querySelector("#mobileWithCode");
+    const errorMsg = document.querySelector("#mobile_noError");
 
+    const iti = window.intlTelInput(input, {
+        initialCountry: "IN",
+        separateDialCode: true,
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    });
+
+    // Function to set the country code and combined mobile number with code
+    const setCountryCodeAndMobile = () => {
+        const countryData = iti.getSelectedCountryData();
+        countryCodeInput.value = countryData.dialCode;
+        mobileWithCodeInput.value = `+${countryData.dialCode}${input.value.replace(/\s/g, '')}`;
+    };
+
+    // Populate hidden input with the selected country code
+    input.addEventListener('countrychange', setCountryCodeAndMobile);
+    input.addEventListener('blur', setCountryCodeAndMobile);
+
+    // Validate the phone number on blur event
+    input.addEventListener('blur', function() {
+        if (input.value.trim()) {
+            if (iti.isValidNumber()) {
+                input.classList.remove("is-invalid");
+                errorMsg.textContent = "";
+            } else {
+                input.classList.add("is-invalid");
+                errorMsg.textContent = "Please enter a valid mobile number.";
+            }
+        }
+    });
+
+    // Validate the phone number on form submission
+    document.querySelector("form").addEventListener("submit", function(event) {
+        setCountryCodeAndMobile();
+        if (!iti.isValidNumber()) {
+            event.preventDefault();
+            input.classList.add("is-invalid");
+            errorMsg.textContent = "Please enter a valid mobile number.";
+        }
+    });
+
+    // Set the initial country code and combined mobile number when the page loads
+    document.addEventListener('DOMContentLoaded', setCountryCodeAndMobile);
+</script>
 
 <script>
 $(document).ready(function() {
@@ -4179,6 +4228,12 @@ passwordOption.addEventListener('change', function () {
 });
 
 
+</script>
+<script>
+    function get_data(){
+        // alert("Hiii");
+        $('#userformmodalloader').show(); // Show the loader
+    }
 </script>
 </body>
 
