@@ -11,27 +11,9 @@
         margin:10px;
         
     }
-    .loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid blue;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999; /* Ensure it's on top of everything else */
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 </style>
 
-<div id="loader" class="loader" style="display:none;"></div>
+
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -77,9 +59,9 @@
             $billing_id = $lastinsert_id;
             $merchant_order_id = $id;
             $card_holder_name = 'TechArise Team';
-            $email = $billingdetails['email'];
-            $phone = $billingdetails['phone'];
-            $name = $billingdetails['Fname'];
+            $email = 'info@techarise.com';
+            $phone = '9000000001';
+            $name = APPLICATION_NAME;
 
             $return_url = site_url().'PaymentController/payment';
             ?>
@@ -385,42 +367,42 @@
 
 
     var razorpay_options = {
-    key: "<?php echo $key_id; ?>",
-    amount: "<?php echo $amount; ?>", 
-    name: "<?php echo $name; ?>",
-    description: "Order # <?php echo $merchant_order_id; ?>",
-    netbanking: true,
-    currency: "<?php echo $currency_code; ?>",
-    prefill: {
-        name: "<?php echo $card_holder_name; ?>",
-        email: "<?php echo $email; ?>",
-        contact: "<?php echo $phone; ?>"
-    },
-    notes: {
-        soolegal_order_id: "<?php echo $merchant_order_id; ?>",
-    },
-    handler: function(transaction) {
-        document.getElementById('razorpay_payment_id').value = transaction.razorpay_payment_id;
-        document.getElementById('razorpay-form').submit();
-    },
-    modal: {
-        ondismiss: function() {
-            // Hide loader when the modal is dismissed
-            document.getElementById('loader').style.display = 'none';
-            location.reload();
+        key: "<?php echo $key_id; ?>",
+        amount: "",
+        amount: <?php echo $amount; ?>, //
+        name: "<?php echo $name; ?>",
+        description: "Order # <?php echo $merchant_order_id; ?>",
+        netbanking: true,
+        currency: "<?php echo $currency_code; ?>",
+        prefill: {
+            name: "<?php echo $card_holder_name; ?>",
+            email: "<?php echo $email; ?>",
+            contact: "<?php echo $phone; ?>"
+        },
+        notes: {
+            soolegal_order_id: "<?php echo $merchant_order_id; ?>",
+        },
+        handler: function(transaction) {
+            document.getElementById('razorpay_payment_id').value = transaction.razorpay_payment_id;
+            document.getElementById('razorpay-form').submit();
+        },
+        "modal": {
+            "ondismiss": function() {
+                location.reload()
+            }
         }
-    }
-};
+    };
+    var razorpay_submit_btn, razorpay_instance;
 
-var razorpay_submit_btn, razorpay_instance;
 
-function razorpaySubmit(el) {
+    function razorpaySubmit(el) {
+       
     var checkbox = document.getElementById('flexCheckDefault');
     
     if (checkbox.checked) {
         if (typeof Razorpay == 'undefined') {
-            console.log("Loading Razorpay...");
-            setTimeout(function() { razorpaySubmit(el); }, 200);
+             console.log("hhhh");
+            setTimeout(razorpaySubmit, 200);
             if (!razorpay_submit_btn && el) {
                 razorpay_submit_btn = el;
                 el.disabled = true;
@@ -428,7 +410,7 @@ function razorpaySubmit(el) {
             }
         } else {
             if (!razorpay_instance) {
-                console.log("Initializing Razorpay...");
+                console.log("YYYY");
 
                 razorpay_instance = new Razorpay(razorpay_options);
                 if (razorpay_submit_btn) {
@@ -436,11 +418,10 @@ function razorpaySubmit(el) {
                     razorpay_submit_btn.value = "Pay Now";
                 }
             }
-            // Show loader when payment starts
-            document.getElementById('loader').style.display = 'block';
             razorpay_instance.open();
         }
     } else {
+        // Display an alert or any other indication that the checkbox is not checked.
         alert("Please read and agree to the terms and conditions.");
     }
 }
