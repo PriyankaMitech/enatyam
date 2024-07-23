@@ -162,7 +162,7 @@ $routes->get('demoprofile', 'Home::demoprofile');
 $routes->get('demoprofile2', 'Home::demoprofile2');
 $routes->get('demo1', 'Home::demo1');
 $routes->get('demo', 'Home::demo');
-$routes->get('demobooking', 'Home::blog');
+$routes->get('demobooking', 'Home::demobooking');
 
 $routes->post('set_data_demo_booking', 'DemoController::set_data_demo_booking');
 
