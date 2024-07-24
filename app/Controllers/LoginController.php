@@ -497,8 +497,10 @@ class LoginController extends BaseController
     {
         $db = \Config\Database::connect(); // Connect to the database
         $mobilenumber = $this->request->getPost('mobilenumber');
-    
+    // print_r($mobilenumber);die;
         if ($mobilenumber) {
+            $mobilenumbers = str_replace('+', '', $mobilenumber);
+          
             $otp = rand(1000, 9999); // Generate a 4-digit OTP
             $phoneNumber = $mobilenumber;
             $templates = "930840461869403";
@@ -506,11 +508,11 @@ class LoginController extends BaseController
     
             // Call the WhatsApp function to send the OTP
             whatsapp($phoneNumber, $templates, $msg);
-    
+            // print_r($otp);die;
             // Update the OTP in the database
             $builder = $db->table('register');
             $builder->set('loginotp', $otp);
-            $builder->where('mobileWithCode', $phoneNumber);
+            $builder->where('mobileWithCode', $mobilenumbers);
             $res = $builder->update();
     
             if ($res) {
@@ -568,10 +570,10 @@ class LoginController extends BaseController
         $otp = $request->getPost('insertotp');
         $password = $request->getPost('password');
         $combinedMobile = $request->getPost('combinedMobile');
-    
+        $mobilenumber = str_replace('+', '', $combinedMobile);
         // Use the combinedMobile if the loginOption is otp
-        if ($request->getPost('loginOption') === 'otp' && !empty($combinedMobile)) {
-            $username = $combinedMobile;
+        if ($request->getPost('loginOption') === 'otp' && !empty($mobilenumber)) {
+            $username = $mobilenumber;
         }
     
         if ((filter_var($username, FILTER_VALIDATE_EMAIL)) && isset($password)) {
