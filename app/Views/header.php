@@ -92,9 +92,9 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         margin-bottom: 0px !important;
     }
 
-    .phonenumber input {
+    /* .phonenumber input {
         width: 100%;
-    }
+    } */
 
     .phonenumber span {
 
