@@ -20,6 +20,7 @@ class AdminModel extends Model
         //   print_r($email);die;
         $this->db->table('register')->insert($data);
     }
+  
     public function findname($AssignTecher_id)
     {
         return $this->db->table('register')->where('id', $AssignTecher_id)->get()->getResult();

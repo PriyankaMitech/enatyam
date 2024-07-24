@@ -143,23 +143,39 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="no-schedule-modal" tabindex="-1" role="dialog" aria-labelledby="noScheduleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="noScheduleModalLabel">Notice</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                       <p style="color: red;" >Please select the timings, keeping in mind that all the timings for class scheduling are in IST (Indian Standard Time, GMT +5)</p> 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
     </section>
 </div>
 
 <?php
-
 $sched_res = [];
-// echo "<pre>";print_r($schedule_data);exit();
+$isScheduleEmpty = true; // Initialize the flag as true
 
-if(!empty($schedule_data)){
-
-
-foreach($schedule_data as $data){
-    $sdate = date("F d, Y h:i A",strtotime($data->start_date));
-    $edate = date("F d, Y h:i A",strtotime($data->end_date));
-    $sched_res[$data->id] = $data;
-}
-
+if (!empty($schedule_data)) {
+    foreach ($schedule_data as $data) {
+        $sdate = date("F d, Y h:i A", strtotime($data->start_date));
+        $edate = date("F d, Y h:i A", strtotime($data->end_date));
+        $sched_res[$data->id] = $data;
+    }
+    $isScheduleEmpty = false; // Set the flag to false if data is present
 }
 ?>
 
@@ -171,28 +187,25 @@ var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
 <script>
 $(document).ready(function() {
+    if (<?= json_encode($isScheduleEmpty) ?>) {
+        $('#no-schedule-modal').modal('show');
+    }
+    // The rest of your JavaScript/jQuery code
     var selectedDays = [];
-var addedTimeSlots = [];
+    var addedTimeSlots = [];
 
+    $('input[name="days[]"]').on('change', function() {
+        // Clear the selectedDays array
+        selectedDays = [];
 
-$('input[name="days[]"]').on('change', function() {
+        // Loop through all checked checkboxes and add their values to selectedDays
+        $('input[name="days[]"]:checked').each(function() {
+            selectedDays.push($(this).val());
+        });
 
-    // Clear the selectedDays array
-    selectedDays = [];
-
-    // Loop through all checked checkboxes and add their values to selectedDays
-    $('input[name="days[]"]:checked').each(function() {
-        selectedDays.push($(this).val());
+        // Now you have an array of the values of the selected days (selectedDays)
+        fetchData(selectedDays);
     });
-
-    // var_dump(selectedDays); // Output variable information for debugging
-    // alert(selectedDays);
-
-    // Now you have an array of the values of the selected days (selectedDays)
-    fetchData(selectedDays);
-
-
-});
 
 
     function resetDropdownAndFetchData() {
