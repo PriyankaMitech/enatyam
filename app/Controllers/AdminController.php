@@ -551,7 +551,7 @@ public function AssignTecherForDemo()
             $phoneNumber = $studentMobileNumber->mobileWithCode;
             $templates = "930840461869403";
          //   $msg = "Your Application Approved Your account  Password is $password";
-         $msg = "Hello $facultyname, Great news! Your profile has been approved by our backend team. You can now log in using your login ID: $email Password: $password  We're excited to have you on board and look forward to your valuable contributions.";
+         $msg = "Hello $facultyname, Great news! Your profile has been approved by our backend team. You can now log in using your Email & Password: $password  We're excited to have you on board and look forward to your valuable contributions.";
 
             whatsapp($phoneNumber, $templates, $msg);
             sendConfirmationEmail($email, $password, $msg, $Subject, $tital);

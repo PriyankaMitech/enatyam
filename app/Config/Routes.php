@@ -361,6 +361,8 @@ $routes->get('StudentAttendancerecord', 'StudentController::StudentAttendancerec
 $routes->post('newpassword', 'StudentController::newpassword');
 $routes->post('selectStudentSchedule', 'StudentController::selectStudentSchedule');
 $routes->get('invoiceemail', 'StudentController::invoiceemail');
+$routes->get('StudentController/sendattendanceremaindertostudent', 'StudentController::sendattendanceremaindertostudent');
+$routes->get('sendattendanceremaindertostudent', 'StudentController::sendattendanceremaindertostudent');
 
 $routes->get('AdminList', 'AdminController::AdminList');
 $routes->get('FacultyAttendance', 'AdminController::FacultyAttendance');

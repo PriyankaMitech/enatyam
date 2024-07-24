@@ -456,7 +456,7 @@ class StudentController extends BaseController
 
             $data['slot_data'] =  $model->getalldata('tbl_student_shedule', $wherecond2);
 
-            // echo "<pre>";print_r($data['slot_data']);exit();
+            // echo "<pre>";print_r($data['schedule_data']);exit();
 
         }
         return view('StudentSidebar/StudentSelectClassDates', $data);
@@ -927,6 +927,32 @@ class StudentController extends BaseController
         // Load the view and pass the $attendance data to it
         return view('StudentSidebar/studentAttenadnace', $attendance);
     }
+
+    public function sendattendanceremaindertostudent()
+    {
+        $adminModel = new AdminModel();
+        $wherecond1 = array('verify_by_student' => null);
+    
+        $remainderData = $adminModel->getalldata('attendeance_table', $wherecond1);
+    
+        foreach ($remainderData as $attendance) {
+            $studentId = $attendance->student_registerid;
+            $wherecond2 = array('id' => $studentId);
+    
+            $studentData = $adminModel->getalldata('register', $wherecond2);
+    
+            if (!empty($studentData)) {
+                // Get the first student record
+                $student = $studentData[0];
+                $phoneNumber = $student->mobileWithCode;
+                $studentname = $student->full_name;
+                $templates = "930840461869403";
+                $msg = "Hello $studentname, We kindly request just 2 minutes of your time to mark your attendance for the last session. Your swift response would be deeply valued!";
+                whatsapp($phoneNumber, $templates, $msg);
+            }
+        }
+    }
+    
     public function submit_review() {
       //  print_r($_POST);die;
       $result = session();
