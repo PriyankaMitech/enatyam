@@ -479,12 +479,27 @@
     width: 152% !important;
     padding-left: 0% !important;
 }
+#loginForm.iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
+  width: 150% !important;
+  /* padding-left: 0% !important; */
+}
 #registerformpopup .iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
   left: -87px !important;
 }
 #registerformpopup .modal-content {
   padding: 25px 33px !important;
 }
+#loginForm .iti--allow-dropdown .iti__flag-container{
+  right: auto !important;
+  left: -3px !important;
+}
+#loginForm .iti--allow-dropdown input[type=tel]{
+  width: 103% !important;
+  padding-left: 16% !important;
+  padding-right: 95px !important;
+}
+#loginformpopup .modal-content {
+  width: 58%;}
 /* 
 #registerformpopup .iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
   width: 181% !important;

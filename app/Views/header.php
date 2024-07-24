@@ -91,18 +91,20 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     .month-row {
         margin-bottom: 0px !important;
     }
-    .phonenumber input{
-            width: 100%;
-        }
-        .phonenumber span{
-            
-    display: block;
-        }
-    </style>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 
- 
-   
+    .phonenumber input {
+        width: 100%;
+    }
+
+    .phonenumber span {
+
+        display: block;
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
 
     <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'pricing' ) {
@@ -141,8 +143,6 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
 
     <style>
-
-      
     .cart-a sup {
         background: #FF0067;
         border-radius: 50%;
@@ -364,18 +364,24 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/corporateyoga.css">
 
     <style>
-        #registerformpopup .modal-content {
-  padding: 25px 33px !important;
-}
+    #registerformpopup .modal-content {
+        padding: 25px 33px !important;
+    }
 
-#registerformpopup .iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
-  width: 181% !important;
-  padding-left: 47% !important;
-}
+    #registerformpopup .iti--allow-dropdown input,
+    .iti--allow-dropdown input[type=text],
+    .iti--allow-dropdown input[type=tel],
+    .iti--separate-dial-code input,
+    .iti--separate-dial-code input[type=text],
+    .iti--separate-dial-code input[type=tel] {
+        width: 181% !important;
+        padding-left: 47% !important;
+    }
 
-#registerformpopup .iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
-  left: -1px !important;
-}
+    #registerformpopup .iti--allow-dropdown .iti__flag-container,
+    .iti--separate-dial-code .iti__flag-container {
+        left: -1px !important;
+    }
     </style>
 
 
@@ -1926,12 +1932,12 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
 
 
-<link rel="stylesheet" href="<?= base_url(); ?>public/css/resposivestyle.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/resposivestyle.css">
 
 
 </head>
 
-<body class="overlap" >
+<body class="overlap">
     <!-- Flash message container -->
     <div id="flash-message-container">
         <?php if (session()->has('errormessage')) : ?>
@@ -2118,9 +2124,9 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                         <div class="form-group m-2">
                             <div class="row">
                                 <div class="col-md-12 col-12 phonenumber">
-                                    <input  required type="text" autocomplete="off"
-                                        class="form-control" value="<?php echo set_value('mobile_number');?>"
-                                        name="mobile_number" id="txtMobileNo" placeholder="Enter your WhatsApp number"
+                                    <input required type="text" autocomplete="off" class="form-control"
+                                        value="<?php echo set_value('mobile_number');?>" name="mobile_number"
+                                        id="txtMobileNo" placeholder="Enter your WhatsApp number"
                                         onkeypress="$(this).val($(this).val().replace(/[^\d]/ig, ''))">
                                     <input type="hidden" name="countrie_code" id="countrie_code">
                                     <input type="hidden" name="mobileWithCode" id="mobileWithCode">
@@ -2193,10 +2199,10 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
                 </div>
                 <div class="modal-body">
-                <div id="userformmodalloader" class="loader-container">
-                            <div class="loader"></div>
+                    <div id="userformmodalloader" class="loader-container">
+                        <div class="loader"></div>
 
-                        </div>
+                    </div>
                     <!-- Your User Form goes here -->
                     <form action="saveuserdata" method="post">
                         <input type="hidden" name="email" id="hiddenEmail">
@@ -2253,7 +2259,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <input type="number" name="age" id="age" class="form-control" aria-required="true"
                                 placeholder="Enter Your Age">
                         </div>
-                       
+
                         <div class="form-group">
                             <label style="font-size: 14px;">Select Class Types</label><br>
                             <label style="margin-top: 15px;margin-left: 13px;font-size: 14px;">GroupSession</label>
@@ -2266,7 +2272,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                 data-bs-toggle="modal" data-bs-target="#staticBackdrop">terms and conditions</a>
                         </label>
                         <input type="submit" onclick="get_data()" id="btncheck" disabled class="btn btn-light mt-3">
-                        <a class="Register" href="javascript:void(0);" id="backToRegister" >Back to Sign Up</a>
+                        <a class="Register" href="javascript:void(0);" id="backToRegister">Back to Sign Up</a>
                     </form>
                     <!-- End of User Form -->
                 </div>
@@ -2281,9 +2287,9 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="row no-gutters w-100">
-                    <div class="col-12 col-md-4 col-lg-4 ">
+                    <div class="col-12 col-md-2 col-lg-2">
                         <div class="left-side">
-                            <img src="public/images/dance1.jpg" alt="Descriptive Alt Text">
+                            <!-- <img src="public/images/dance1.jpg" alt="Descriptive Alt Text"> -->
                         </div>
                     </div>
                     <div class="col-12 col-md-8 col-lg-8">
@@ -2293,13 +2299,15 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                     <h4 class="card-title">Login</h4>
                                     <form id="loginForm" class="row" method="post"
                                         action="<?php echo base_url(); ?>validateotp">
-                                        <div class="countrie_code form-group col-lg-4 col-md-4 col-4"
-                                            id="countrieCodeSection">
-                                            <select name="countrie_code" class="form-control countrycode lenValidate"
-                                                id="lenValidate" required></select>
+                                        <!-- Mobile Number Input for OTP -->
+                                        <div class="form-group col-lg-12 col-md-12 col-12" id="mobileNumberSection"
+                                            style="display: none;">
+                                            <input type="tel" name="mobilenumber" id="mobileNumberInput"
+                                                class="form-control" placeholder="Enter Mobile Number" required>
                                         </div>
-                                        <div class="form-group col-lg-8 col-md-8 col-8" id="mobileNumberSection">
-                                            <input type="text" name="mobilenumber" id="mobilenumber"
+                                        <!-- Email or Phone Number Input for Password -->
+                                        <div class="form-group col-lg-12 col-md-12 col-12" id="mobileEmailSection">
+                                            <input type="text" name="mobilenumber" id="mobileEmailInput"
                                                 class="form-control" placeholder="Enter Email or Phone Number" required>
                                         </div>
                                         <div class="toggle col-lg-12 col-md-12 col-12">
@@ -2325,7 +2333,6 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-12">
-
                                             <input type="hidden" name="combinedMobile" id="combinedMobile">
                                             <button type="button" id="otpButton" class="btn btn-primary">OTP</button>
                                             <button type="submit" id="continueButton" class="btn btn-primary"
@@ -2345,6 +2352,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                             <img src="public/images/boarder1.webp" class="border_img" alt="Descriptive Alt Text">
                         </div>
                     </div>
+
 
 
 
