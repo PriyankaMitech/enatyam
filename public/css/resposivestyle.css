@@ -476,8 +476,9 @@
 }
 
 #registerformpopup .iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
-    width: 152% !important;
-    padding-left: 0% !important;
+  width: 108% !important;
+  padding-left: 0% !important;
+  margin-left: 1.9rem;
 }
 #loginForm.iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
   width: 150% !important;
@@ -493,10 +494,15 @@
   right: auto !important;
   left: -3px !important;
 }
-#loginForm .iti--allow-dropdown input[type=tel]{
-  width: 103% !important;
-  padding-left: 16% !important;
-  padding-right: 95px !important;
+#loginForm .iti--allow-dropdown input[type=tel] {
+  max-width: 100% !important;
+  padding-left: 20% !important;
+  padding-right: 1px !important;
+  margin-left: 0.1rem;
+  margin-right: 5rem;
+}
+.form-control {
+  font-size: 13px;
 }
 #loginformpopup .modal-content {
   width: 58%;}
@@ -522,9 +528,12 @@
   left: -54px !important;
 }
 
-#registerformpopup .iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
-  width: 133% !important;
-  padding-left: 21% !important;
+#loginForm .iti--allow-dropdown input[type=tel] {
+    max-width: 101% !important;
+    padding-left: 20% !important;
+    padding-right: 1px !important;
+    margin-left: 0rem;
+    margin-right: 5.6rem;
 }
 
   #facultyModal {
@@ -881,6 +890,9 @@
   }
   .modal-content {
     padding: 22px 6px;
+  }
+  #loginformpopup .modal-content {
+    width: 93%;
   }
   /* .modal {
     top: 0%;
@@ -1797,6 +1809,13 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 24px;
+  }
+  .iti--separate-dial-code .iti__selected-dial-code {
+      margin-left: 6px;
+      font-size: 13px;
+  }
+  .iti__flag-container {
+      margin-left: 8px;
   }
 }
 
