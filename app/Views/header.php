@@ -232,7 +232,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Dance' || $page == 'Kathak' || $page == 'Bharatnatyam' || $page == 'Odissi' || $page == 'Bollywood' || $page == 'Western' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'Folk' || $page == 'HindustaniVocal' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'WesternSinging' || $page == 'PlaybackSinging' ) { ?>
+    <?php } else if ($page == 'Dance' || $page == 'online-kathak-classes' || $page == 'online-bharatanatyam-classes' || $page == 'online-odissi-dance-classes' || $page == 'bollywood-dance-classes' || $page == 'online-western-dance-classes' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'online-folk-dance-classes' || $page == 'hindustani-music-classes' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'online-western-singing-classes' || $page == 'PlaybackSinging' ) { ?>
 
     <style>
     .whatsapp-button {
@@ -449,7 +449,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'PrenatalYoga') { ?>
+    <?php } else if ($page == 'online-prenatal-yoga-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -505,7 +505,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'StressReduction') { ?>
+    <?php } else if ($page == 'online-stress-reduction-yoga-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -561,7 +561,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Flexibility') { ?>
+    <?php } else if ($page == 'online-flexibility-yoga-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -617,7 +617,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'WeightLossYoga') { ?>
+    <?php } else if ($page == 'online-weightloss-yoga-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -673,7 +673,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'EverydayYoga') { ?>
+    <?php } else if ($page == 'online-everyday-yoga-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -729,7 +729,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'YogaforChronic') { ?>
+    <?php } else if ($page == 'online-yoga-for-disease-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -785,7 +785,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'YogaforKids') { ?>
+    <?php } else if ($page == 'online-yoga-classes-for-kids') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -841,7 +841,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Meditation') { ?>
+    <?php } else if ($page == 'online-meditation-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -953,7 +953,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'NutritionCounselling') { ?>
+    <?php } else if ($page == 'online-nutrition-counselling-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -1356,7 +1356,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Veena') { ?>
+    <?php } else if ($page == 'online-veena-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -1566,7 +1566,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Keyboard') { ?>
+    <?php } else if ($page == 'online-keyboard-classes') { ?>
     <style>
     .whatsapp-button {
         position: fixed;

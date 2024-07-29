@@ -138,7 +138,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                              <h5 class="text-white" style="text-align: center;">Veena</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Veena" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-veena-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/instrument/VeenaImg1.svg" alt=""
                                        >
@@ -173,7 +173,7 @@
                              <h5 class="text-white" style="text-align: center;">
                              Keyboard</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Keyboard" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-keyboard-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/instrument/keyboardImg1.svg" alt=""
                                        >

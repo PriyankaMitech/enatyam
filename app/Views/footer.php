@@ -1832,7 +1832,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
 </script>
 
-<?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga'|| $page == 'corporateyoga' || $page == 'Kathak' || $page == 'Bharatnatyam' || $page == 'Odissi' || $page == 'Bollywood' || $page == 'Western' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'Folk' || $page == 'HindustaniVocal' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'WesternSinging' || $page == 'PlaybackSinging' || $page == 'PrenatalYoga' || $page == 'StressReduction' || $page == 'Flexibility' || $page == 'WeightLossYoga' || $page == 'EverydayYoga' || $page == 'YogaforChronic' || $page == 'YogaforKids' || $page == 'Meditation' || $page == 'CustomiseYoga' || $page == 'NutritionCounselling') { ?>
+<?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga'|| $page == 'corporateyoga' || $page == 'online-kathak-classes' || $page == 'online-bharatanatyam-classes' || $page == 'online-odissi-dance-classes' || $page == 'bollywood-dance-classes' || $page == 'online-western-dance-classes' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'online-folk-dance-classes' || $page == 'hindustani-music-classes' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'online-western-singing-classes' || $page == 'PlaybackSinging' || $page == 'online-prenatal-yoga-classes' || $page == 'online-stress-reduction-yoga-classes' || $page == 'online-flexibility-yoga-classes' || $page == 'online-weightloss-yoga-classes' || $page == 'online-everyday-yoga-classes' || $page == 'online-yoga-for-disease-classes' || $page == 'online-yoga-classes-for-kids' || $page == 'online-meditation-classes' || $page == 'CustomiseYoga' || $page == 'online-nutrition-counselling-classes') { ?>
 
 
 
@@ -2120,7 +2120,7 @@ $(document).ready(function() {
 });
 </script>
 
-<?php } else if ($page == 'Veena') { ?>
+<?php } else if ($page == 'online-veena-classes') { ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
@@ -2255,7 +2255,7 @@ $(document).ready(function() {
 });
 </script>
 
-<?php } else if ($page == 'Keyboard') { ?>
+<?php } else if ($page == 'online-keyboard-classes') { ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">

@@ -79,7 +79,7 @@
                         <div class="col-lg-3 col-md-4 col-6 ">
                              <h5 class="text-white" style="text-align: center;">Hindustani Vocal </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>HindustaniVocal" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>hindustani-music-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo  base_url(); ?>public/images/courseoffering/5-rbg.webp" alt="">
                                 </a>
@@ -117,7 +117,7 @@
                              <h5 class="text-white" style="text-align: center;">
                              Western Singing </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>WesternSinging" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-western-singing-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/courseoffering/8-rbg.webp" alt=""
                                        >

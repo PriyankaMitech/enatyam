@@ -32,23 +32,23 @@
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>PrenatalYoga" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
+                    <a class="nav-link active" id="pills-PrenatalYoga-tab" href="<?=base_url(); ?>online-prenatal-yoga-classes" data-url="<?=base_url(); ?>PrenatalYoga" role="tab" aria-controls="pills-PrenatalYoga" aria-selected="true">Prenatal Yoga</a>
                 </li>
                 <!-- Stress Reduction Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-StressReduction-tab" href="<?=base_url(); ?>StressReduction" data-url="<?=base_url(); ?>StressReduction" role="tab" aria-controls="pills-StressReduction" aria-selected="false">Stress Reduction Yoga</a>
+                    <a class="nav-link" id="pills-StressReduction-tab" href="<?=base_url(); ?>online-stress-reduction-yoga-classes" data-url="<?=base_url(); ?>StressReduction" role="tab" aria-controls="pills-StressReduction" aria-selected="false">Stress Reduction Yoga</a>
                 </li>
                 <!-- Flexibility Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Flexibility-tab" href="<?=base_url(); ?>Flexibility" data-url="<?=base_url(); ?>Flexibility" role="tab" aria-controls="pills-Flexibility" aria-selected="false">Flexibility Yoga</a>
+                    <a class="nav-link" id="pills-Flexibility-tab" href="<?=base_url(); ?>online-flexibility-yoga-classes" data-url="<?=base_url(); ?>Flexibility" role="tab" aria-controls="pills-Flexibility" aria-selected="false">Flexibility Yoga</a>
                 </li>
                 <!-- Weight Loss Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-WeightLossYoga-tab" href="<?=base_url(); ?>WeightLossYoga" data-url="<?=base_url(); ?>WeightLossYoga" role="tab" aria-controls="pills-WeightLossYoga" aria-selected="false">WeightLoss Yoga</a>
+                    <a class="nav-link" id="pills-WeightLossYoga-tab" href="<?=base_url(); ?>online-weightloss-yoga-classes" data-url="<?=base_url(); ?>WeightLossYoga" role="tab" aria-controls="pills-WeightLossYoga" aria-selected="false">WeightLoss Yoga</a>
                 </li>
                 <!-- Everyday Yoga -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-EverydayYoga-tab" href="<?=base_url(); ?>EverydayYoga" data-url="<?=base_url(); ?>EverydayYoga" role="tab" aria-controls="pills-EverydayYoga" aria-selected="false">Everyday Yoga</a>
+                    <a class="nav-link" id="pills-EverydayYoga-tab" href="<?=base_url(); ?>online-everyday-yoga-classes" data-url="<?=base_url(); ?>EverydayYoga" role="tab" aria-controls="pills-EverydayYoga" aria-selected="false">Everyday Yoga</a>
                 </li>
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
@@ -57,15 +57,15 @@
 
                 <!-- Yoga for chronic Disease -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-YogaforChronic-tab" href="<?=base_url(); ?>YogaforChronic" data-url="<?=base_url(); ?>YogaforChronic" role="tab" aria-controls="pills-YogaforChronic" aria-selected="false">Yoga for Chronic Disease</a>
+                    <a class="nav-link" id="pills-YogaforChronic-tab" href="<?=base_url(); ?>online-yoga-for-disease-classes" data-url="<?=base_url(); ?>YogaforChronic" role="tab" aria-controls="pills-YogaforChronic" aria-selected="false">Yoga for Chronic Disease</a>
                 </li>
                 <!-- Yoga for Kids -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-YogaforKids-tab" href="<?=base_url(); ?>YogaforKids" data-url="<?=base_url(); ?>YogaforKids" role="tab" aria-controls="pills-YogaforKids" aria-selected="false">Yoga for Kids</a>                    
+                    <a class="nav-link" id="pills-YogaforKids-tab" href="<?=base_url(); ?>online-yoga-classes-for-kids" data-url="<?=base_url(); ?>YogaforKids" role="tab" aria-controls="pills-YogaforKids" aria-selected="false">Yoga for Kids</a>                    
                 </li>
                 <!-- Meditation -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Meditation-tab" href="<?=base_url(); ?>Meditation" data-url="<?=base_url(); ?>Meditation" role="tab" aria-controls="pills-Meditation" aria-selected="false">Meditation</a>
+                    <a class="nav-link" id="pills-Meditation-tab" href="<?=base_url(); ?>online-meditation-classes" data-url="<?=base_url(); ?>Meditation" role="tab" aria-controls="pills-Meditation" aria-selected="false">Meditation</a>
                 </li>
                 <!-- Customise your Yoga Plan -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
@@ -74,7 +74,7 @@
 
                 <!-- Nutrition Counselling  -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-NutritionCounselling-tab" href="<?=base_url(); ?>NutritionCounselling" data-url="<?=base_url(); ?>NutritionCounselling" role="tab" aria-controls="pills-NutritionCounselling" aria-selected="false">Nutrition Counselling</a>
+                    <a class="nav-link" id="pills-NutritionCounselling-tab" href="<?=base_url(); ?>online-nutrition-counselling-classes" data-url="<?=base_url(); ?>NutritionCounselling" role="tab" aria-controls="pills-NutritionCounselling" aria-selected="false">Nutrition Counselling</a>
                 </li>
                 <li class="col-lg-1 col-md-1 hidey">
                 </li>
