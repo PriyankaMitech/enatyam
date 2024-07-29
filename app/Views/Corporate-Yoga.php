@@ -54,7 +54,7 @@
                         </linearGradient>
                     </defs>
                     <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)"
-                        font-family="fantasy" font-weight="100" font-size="8">
+                        font-family="fantasy" font-weight="100" font-size="8" class="fitIndiaText">
                         Fit India Movement
                     </text>
                 </svg>
@@ -110,7 +110,7 @@
                         </linearGradient>
                     </defs>
                     <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)"
-                        font-family="fantasy" font-weight="100" font-size="8">
+                        font-family="fantasy" font-weight="100" font-size="8" class="fitIndiaText">
                         Fit India Movement
                     </text>
                 </svg>
@@ -237,7 +237,7 @@
                         </linearGradient>
                     </defs>
                     <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)"
-                        font-family="fantasy" font-weight="100" font-size="8">
+                        font-family="fantasy" font-weight="100" font-size="8" id="benefitsOfYoga">
                         Benefits of Yoga and Mindfulness for Employees
                     </text>
                 </svg>
@@ -374,7 +374,7 @@
                         </linearGradient>
                     </defs>
                     <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)"
-                        font-family="fantasy" font-weight="100" font-size="8">
+                        font-family="fantasy" font-weight="100" font-size="8" id="platformFeatureText">
                         Platform features
                     </text>
                 </svg>
@@ -524,7 +524,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 ewpText">
                 <div class="card ena-card2">
                     <div class="ena-img">
                         <img src="<?=base_url(); ?>public/images/icon/img-2.png" alt="Image 4"
@@ -550,7 +550,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 ewpText">
 
                 <div class="card ena-card3">
                     <div class="ena-img">
@@ -710,14 +710,16 @@
                     alt="Image 4" class="img-fluid mx-auto " /></div>
             <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/godrej.png" class="company_logo"
                     alt="Image 4" class="img-fluid mx-auto " /></div>
-            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/ola.png" class="company_logo"
-                    alt="Image 4" class="img-fluid mx-auto " /></div>
+
         </div>
 
 
         <div class="row mt-4">
+           
             <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/tata.png" class="company_logo"
                     alt="Image 4" class="img-fluid mx-auto " /></div>
+            <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/ola.png" class="company_logo"
+                    alt="Image 4" class="img-fluid mx-auto " /></div> 
             <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/mahindra.png" class="company_logo"
                     alt="Image 4" class="img-fluid mx-auto " /></div>
             <div class="col-lg-2"><img src="<?=base_url(); ?>public/images/icon/mercedes.png" class="company_logo"
