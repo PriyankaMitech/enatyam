@@ -75,7 +75,7 @@
                         <div class="col-lg-3 col-md-4 col-6 ">
                              <h5 class="text-white" style="text-align: center;">Prenatal Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>PrenatalYoga" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-prenatal-yoga-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo  base_url(); ?>public/images/Yoga/prenatalYoga.svg" alt="">
                                 </a>
@@ -87,7 +87,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                              <h5 class="text-white" style="text-align: center;">Stress Reduction Yoga</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>StressReduction" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-stress-reduction-yoga-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/StressReductionImg.svg" alt=""
                                        >
@@ -100,7 +100,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                              <h5 class="text-white" style="text-align: center;">Flexibility Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Flexibility" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-flexibility-yoga-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/FlexibilityYogaImg.svg" alt=""
                                        >
@@ -113,7 +113,7 @@
                              <h5 class="text-white" style="text-align: center;">
                              WeightLoss Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>WeightLossYoga" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-weightloss-yoga-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/WeightLossYogaImg.svg" alt=""
                                        >
@@ -125,7 +125,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                              <h5 class="text-white" style="text-align: center;">Everyday Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>EverydayYoga" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-everyday-yoga-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/EverydayYoga.svg" alt=""
                                        >
@@ -136,7 +136,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                              <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>YogaforChronic" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-yoga-for-disease-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/chronicYoga.svg" alt=""
                                        >
@@ -148,7 +148,7 @@
                              <h5 class="text-white" style="text-align: center;">
                              Yoga for Kids</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>YogaforKids" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-yoga-classes-for-kids" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/YogaforKids.svg" alt=""
                                        >
@@ -160,7 +160,7 @@
                              <h5 class="text-white" style="text-align: center;">
                              Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Meditation" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-meditation-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/MeditationImg.svg" alt=""
                                        >
@@ -185,7 +185,8 @@
                              <h5 class="text-white" style="text-align: center;">
                              Nutrition Counselling</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>NutritionCounselling" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-nutrition-counselling-classes
+" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Yoga/NutritionCounsellingImg.svg" alt=""
                                        >

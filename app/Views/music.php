@@ -40,7 +40,7 @@
 
     <!-- Hindustani Vocal -->
     <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-        <a class="nav-link active" id="pills-HindustaniVocal-tab" href="<?=base_url(); ?>HindustaniVocal" data-url="<?=base_url(); ?>HindustaniVocal" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="true">Hindustani Vocal</a>
+        <a class="nav-link active" id="pills-HindustaniVocal-tab" href="<?=base_url(); ?>hindustani-music-classes" data-url="<?=base_url(); ?>HindustaniVocal" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="true">Hindustani Vocal</a>
     </li>
     
     <!-- Carnatic Vocal -->
@@ -55,7 +55,7 @@
     
     <!-- Western Singing -->
     <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-        <a class="nav-link" id="pills-WesternSinging-tab" href="<?=base_url(); ?>WesternSinging" data-url="<?=base_url(); ?>WesternSinging" role="tab" aria-controls="pills-WesternSinging" aria-selected="false">Western Singing</a>
+        <a class="nav-link" id="pills-WesternSinging-tab" href="<?=base_url(); ?>online-western-singing-classes" data-url="<?=base_url(); ?>WesternSinging" role="tab" aria-controls="pills-WesternSinging" aria-selected="false">Western Singing</a>
     </li>
     
     <!-- Playback Singing -->

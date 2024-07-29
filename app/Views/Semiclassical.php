@@ -91,7 +91,7 @@
                         <div class="col-lg-3 col-md-4 col-6 ">
                              <h5 class="text-white" style="text-align: center;">Kathak </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Kathak" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-kathak-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo  base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="">
                                 </a>
@@ -103,7 +103,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                              <h5 class="text-white" style="text-align: center;">Bharatanatyam </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Bharatnatyam" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-bharatanatyam-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt=""
                                        >
@@ -116,7 +116,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                              <h5 class="text-white" style="text-align: center;">Odissi </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Odissi" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-odissi-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Dance/odissi.webp" alt=""
                                        >
@@ -129,7 +129,7 @@
                              <h5 class="text-white" style="text-align: center;">
                                 Bollywood Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Bollywood" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>bollywood-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Dance/bollywood-dance.webp" alt=""
                                        >
@@ -141,7 +141,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                              <h5 class="text-white" style="text-align: center;">Western Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-western-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Dance/western.jpg" alt=""
                                        >
@@ -176,7 +176,7 @@
                              <h5 class="text-white" style="text-align: center;">
                             Folk Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-folk-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Dance/folk-dance.jpg" alt=""
                                        >

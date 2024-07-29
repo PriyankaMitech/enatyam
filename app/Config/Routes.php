@@ -84,15 +84,15 @@ $routes->get('PrivacyPolicy', 'Home::PrivacyPolicy');
 $routes->get('termsandconditions', 'Home::termsandconditions');
 
 $routes->get('Dance', 'Home::Dance');
-$routes->get('Kathak', 'Home::Kathak');
-$routes->get('Bharatnatyam', 'Home::Bharatnatyam');
+$routes->get('online-kathak-classes', 'Home::Kathak');
+$routes->get('online-bharatanatyam-classes', 'Home::Bharatnatyam');
 
-$routes->get('Odissi', 'Home::Odissi');
-$routes->get('Bollywood', 'Home::Bollywood');
-$routes->get('Western', 'Home::Western');
+$routes->get('online-odissi-dance-classes', 'Home::Odissi');
+$routes->get('bollywood-dance-classes', 'Home::Bollywood');
+$routes->get('online-western-dance-classes', 'Home::Western');
 $routes->get('Semiclassical', 'Home::Semiclassical');
 $routes->get('Bhangra', 'Home::Bhangra');
-$routes->get('Folk', 'Home::Folk');
+$routes->get('online-folk-dance-classes', 'Home::Folk');
 
 
 
@@ -101,10 +101,10 @@ $routes->get('Folk', 'Home::Folk');
 $routes->get('Home', 'Home::home');
 $routes->get('music', 'Home::music');
 
-$routes->get('HindustaniVocal', 'Home::HindustaniVocal');
+$routes->get('hindustani-music-classes', 'Home::HindustaniVocal');
 $routes->get('CarnaticVocal', 'Home::CarnaticVocal');
 $routes->get('SemiClassicals', 'Home::SemiClassicals');
-$routes->get('WesternSinging', 'Home::WesternSinging');
+$routes->get('online-western-singing-classes', 'Home::WesternSinging');
 $routes->get('PlaybackSinging', 'Home::PlaybackSinging');
 
 
@@ -527,23 +527,23 @@ $routes->get('Guitar', 'Home::Guitar');
 $routes->get('Flute', 'Home::Flute');
 $routes->get('Tabla', 'Home::Tabla');
 $routes->get('Sitar', 'Home::Sitar');
-$routes->get('Veena', 'Home::Veena');
+$routes->get('online-veena-classes', 'Home::Veena');
 $routes->get('Piano', 'Home::Piano');
 $routes->get('Violin', 'Home::Violin');
-$routes->get('Keyboard', 'Home::Keyboard');
+$routes->get('online-keyboard-classes', 'Home::Keyboard');
 $routes->get('Harmonium', 'Home::Harmonium');
 
 // Yoga individual pages 
-$routes->get('PrenatalYoga','Home::PrenatalYoga');
-$routes->get('StressReduction','Home::StressReduction');
-$routes->get('Flexibility','Home::Flexibility');
-$routes->get('WeightLossYoga', 'Home::WeightLossYoga');
-$routes->get('EverydayYoga', 'Home::EverydayYoga');
-$routes->get('YogaforChronic', 'Home::YogaforChronic');
-$routes->get('YogaforKids', 'Home::YogaforKids');
-$routes->get('Meditation', 'Home::Meditation');
+$routes->get('online-prenatal-yoga-classes','Home::PrenatalYoga');
+$routes->get('online-stress-reduction-yoga-classes','Home::StressReduction');
+$routes->get('online-flexibility-yoga-classes','Home::Flexibility');
+$routes->get('online-weightloss-yoga-classes', 'Home::WeightLossYoga');
+$routes->get('online-everyday-yoga-classes', 'Home::EverydayYoga');
+$routes->get('online-yoga-for-disease-classes', 'Home::YogaforChronic');
+$routes->get('online-yoga-classes-for-kids', 'Home::YogaforKids');
+$routes->get('online-meditation-classes', 'Home::Meditation');
 $routes->get('CustomiseYoga', 'Home::CustomiseYoga');
-$routes->get('NutritionCounselling', 'Home::NutritionCounselling');
+$routes->get('online-nutrition-counselling-classes', 'Home::NutritionCounselling');
 
 
 

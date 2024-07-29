@@ -67,7 +67,7 @@
                 </li>
                 <!-- Veena -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Veena-tab" href="<?=base_url(); ?>Veena" data-url="<?=base_url(); ?>Veena" role="tab" aria-controls="pills-Veena" aria-selected="false">Veena</a>
+                    <a class="nav-link" id="pills-Veena-tab" href="<?=base_url(); ?>online-veena-classes" data-url="<?=base_url(); ?>Veena" role="tab" aria-controls="pills-Veena" aria-selected="false">Veena</a>
                 </li>
                 <li class="col-lg-1 col-md-1 hidefi">
                 </li>
@@ -88,7 +88,7 @@
                 </li> -->
                 <!-- Keyboard -->
                 <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Keyboard-tab" href="<?=base_url(); ?>Keyboard" data-url="<?=base_url(); ?>Keyboard" role="tab" aria-controls="pills-Keyboard" aria-selected="false">Keyboard</a>
+                    <a class="nav-link" id="pills-Keyboard-tab" href="<?=base_url(); ?>online-keyboard-classes" data-url="<?=base_url(); ?>Keyboard" role="tab" aria-controls="pills-Keyboard" aria-selected="false">Keyboard</a>
                 </li>
 
                 <!-- Harmonium  -->
