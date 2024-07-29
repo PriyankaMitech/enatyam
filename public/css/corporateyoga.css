@@ -766,8 +766,8 @@ svg {
   padding-left: 14%;
 }
 .customizebtn {
-  margin-top: -18px;
-  margin-left: 147px;
+  margin-top: 62px;
+  margin-left: 24px;
   padding: 14px 22px;
   border-radius: 7px;
 }
@@ -779,11 +779,246 @@ svg {
   color: #cecece !important;
 }
 .company_logo {
-  width: 100% !important;
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
 }
 .coh h3 {
   font-size: 33px !important;
   font-weight: 600 !important;
   text-align: center !important;
   margin-bottom: 20px !important;
+}
+
+/* For Mobile Screen max-width: 767*/
+@media only screen and (max-width: 767px){
+  .corporateyoga .content p {
+    padding: 1px 0px;
+    font-size: 15px;
+  }
+  .Yoga-btn {
+    padding-top: 18px;
+    font-size: 17px;
+  }
+  .corporateyoga {
+    padding-bottom: 22px;
+  }
+  .hedeyog .h3 {
+    font-size: 15px;
+    padding-top: 15px;
+  }
+  .hedeyog p {
+    font-size: 15px !important;
+  }
+  .mt-3 {
+    margin-top: -1rem !important;
+  }
+  .exer {
+    padding: 0px 67px 21px 72px;
+    MARGIN-TOP: -17px;
+  }
+  .circle {
+    height: 164px;
+    font-size: 16px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .connect {
+    height: 14vh;
+  }
+
+  svg {
+    margin-top: 6px;
+    height: 42px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  } 
+  .benifitsyoga p {
+    font-size: 15px;
+    padding: 7px 24px 10px 28px;
+  }
+  .custom-list li p {
+    font-size: 13px;
+  }
+  .custom-list li {
+    padding: 0px 17px;
+  }
+  .benifitsyoga button {
+    padding: 7px;
+    font-size: 19px;
+    width: 183px;
+  }
+  .mt-4 {
+    margin-bottom: 0px;
+  }
+  .alarming {
+    padding: 37px 5px;
+  }
+  .alarming .circles {
+    padding: 10px;
+    width: 62px;
+    height: 62px;
+  }
+  .alarming .custom-list li {
+    padding: 0px;
+    padding-left: 2px;
+  }
+  .alarming .custom-list li p {
+    padding-left: 79px !important;
+    height: 89px;
+  }
+  .alarmings {
+    max-width: 66%;
+    height: auto;
+    margin-left: 17%;
+    margin-top: 1px;
+    padding-bottom: 31px;
+  }
+  .hex-div {
+    padding-top: 0%;
+  }
+  .hex-div-buuton {
+    padding-left: 9%;
+  }
+  .quote-btn {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 4px 104px;
+    font-size: 18px;
+  }
+  .why-enatyam h1 {
+    font-size: 28px;
+    margin-bottom: 108px !important;
+  }
+  .ena-img {
+    top: -91px !important;
+    width: 44%;
+  }
+  .move-section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .move-section {
+    padding: 19px 30px;
+  }
+  .accordion-item-header {
+    padding: 1px 9px 16px 0px;
+    padding-left: 42px;
+    font-size: 13px;
+    font-weight: 100;
+  }
+  .dancefaq {
+    margin-bottom: 0px !important;
+    padding: 20px 6px 2px 7px !important;
+  }
+  .form-section {
+    padding: 27px 30px;
+  }
+  .form-section h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .form-section input {
+    height: 34px;
+    margin-bottom: 10px;
+  }
+  .image-section h1 {
+    font-size: 24px;
+  }
+  .image-section {
+    padding: 35px 30px;
+  }
+  .image-section img {
+    width: 120px;
+    height: 29px;
+    margin-top: 14px;
+  }
+  .e-table-section h1 {
+    font-size: 43px;
+    font-weight: 700;
+  }
+  .e-table-section {
+    padding: 27px 9px;
+    background: #323232;
+  }
+  .mt-5 {
+    margin-top: 0rem !important;
+  }
+  .table > :not(caption) > * > * {
+    padding: 0px !important;
+  }
+  .image-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image-section .col-lg-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: center;
+  }
+  .fitIndiaText{
+    font-size: 15px;
+  }
+  #platformFeatureText{
+    font-size: 15px;
+  }
+  .ewpText{
+    margin-top: 102px;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px){
+  .alarming {
+    padding: 43px 5px;
+  }
+  .alarmings {
+    max-width: 96%;
+    margin-left: 3%;
+}
+.alarming .custom-list li {
+    padding: 26px;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .alarming .custom-list li p {
+    padding-left: 119px !important;
+    width: 100%;
+    height: 114px;
+  }
+  .quote-btn {
+    margin-top: 48px;
+    /* margin-right: 20px; */
+  }
+  .hex-div {
+    padding-top: 105%;
+  }
+  .hex-div-buuton {
+    padding-left: 0%;
+  }
+  .ena-img {
+    top: -189px !important;
+    width: 46%;
+  }
+  .why-enatyam h1 {
+    margin-bottom: 25px !important;
+  }
+  .why-enatyam .col-lg-4 {
+    margin-top: 213px;
+  }
+  #benefitsOfYoga{
+    font-size:5.4px ;
+  }
+  p {
+    font-size: 19px !important;
+  }
+  .modiimg {
+    height: 50%;
+    max-width: 100%;
+    margin-top: 153px;
+  }
 }
