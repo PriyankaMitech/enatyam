@@ -356,63 +356,42 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     </style>
     <?php } else if ($page == 'corporateyoga') { ?>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+<link rel="stylesheet" href="<?= base_url(); ?>public/css/corporateyoga.css">
+
+<style>
+#registerformpopup .modal-content {
+    padding: 25px 33px !important;
+}
+
+#registerformpopup .iti--allow-dropdown input,
+.iti--allow-dropdown input[type=text],
+.iti--allow-dropdown input[type=tel],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=text],
+.iti--separate-dial-code input[type=tel] {
+    width: 181% !important;
+    padding-left: 47% !important;
+}
+
+#registerformpopup .iti--allow-dropdown .iti__flag-container,
+.iti--separate-dial-code .iti__flag-container {
+    left: -1px !important;
+}
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/corporateyoga.css">
-  <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/intl.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="<?= base_url(); ?>public/css/dancepage.css"> -->
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Yogapage.css">
 
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
-
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Dancefaq.css">
     <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/faq.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/footer.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/s_header.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/headerStyle.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/courseOffering.css">
-
-    <link rel="stylesheet"
-        href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
-    <link rel="stylesheet"
-        href="//g.tutorialjinni.com/mojoaxel/bootstrap-select-country/dist/css/bootstrap-select-country.min.css" />
-
-
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-    #registerformpopup .modal-content {
-        padding: 25px 33px !important;
-    }
-
-    #registerformpopup .iti--allow-dropdown input,
-    .iti--allow-dropdown input[type=text],
-    .iti--allow-dropdown input[type=tel],
-    .iti--separate-dial-code input,
-    .iti--separate-dial-code input[type=text],
-    .iti--separate-dial-code input[type=tel] {
-        width: 181% !important;
-        padding-left: 47% !important;
-    }
-
-    #registerformpopup .iti--allow-dropdown .iti__flag-container,
-    .iti--separate-dial-code .iti__flag-container {
-        left: -1px !important;
-    }
-    </style>
 
 
 
