@@ -766,10 +766,11 @@ svg {
   padding-left: 14%;
 }
 .customizebtn {
-  margin-top: 62px;
-  margin-left: 24px;
-  padding: 14px 22px;
-  border-radius: 7px;
+  margin-top: 62px !important;
+  margin-left: 24px !important;
+  padding: 14px 22px !important;
+  border-radius: 7px !important;
+  background-color: #fad32c !important;
 }
 .wrong-icon,
 .right-icon {
@@ -878,13 +879,17 @@ svg {
     padding-top: 0%;
   }
   .hex-div-buuton {
-    padding-left: 9%;
+    padding-left: 11%;
   }
   .quote-btn {
-    margin-top: 22px;
-    margin-bottom: 22px;
-    padding: 4px 104px;
+    background: #fad32c !important;
+    color: #000;
+    margin-top: 22px !important;
+    margin-bottom: 22px !important;
+    padding: 4px 104px !important;
     font-size: 18px;
+    font-weight: 600;
+    border-radius: 16px;
   }
   .why-enatyam h1 {
     font-size: 28px;
@@ -964,10 +969,19 @@ svg {
     font-size: 15px;
   }
   .ewpText{
-    margin-top: 102px;
+    margin-top: 102px !important;
   }
+  .customizebtn {
+    margin-top: 62px !important;
+    margin-right: 24px !important;
+    padding: 14px 22px !important;
+    border-radius: 7px !important;
+    background-color: #fad32c !important;
+  }
+
 }
 
+/* screen for tab */
 @media only screen and (max-width: 991px) and (min-width: 768px){
   .alarming {
     padding: 43px 5px;
