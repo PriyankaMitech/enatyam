@@ -366,7 +366,7 @@
                         </a>
                         <span>
                             <div class="payment-logo">
-                                <img src="public\images\payment.svg ">
+                                <img src="<?=base_url(); ?>public\images\payment.svg ">
                         </span>
                     </div>
             </div>

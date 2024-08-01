@@ -39,7 +39,7 @@
                      <form action="<?php echo base_url(); ?>insertProfile" method="post">
                         <div class="card-body box-profile">
                            <div class="text-center">
-                              <img class="profile-user-img img-fluid img-circle" src="public/images/priyanka.jpeg" alt="User profile picture">
+                              <img class="profile-user-img img-fluid img-circle" src="<?=base_url(); ?>public/images/priyanka.jpeg" alt="User profile picture">
                            </div>
                            <h3 class="profile-username text-center"></h3>
                            <p class="text-muted text-center">Kathak Dancer</p>
@@ -111,15 +111,15 @@
 
    <!-- jQuery -->
    <!-- jQuery -->
-   <script src="public/plugins/jquery/jquery.min.js"></script>
+   <script src="<?=base_url(); ?>public/plugins/jquery/jquery.min.js"></script>
    <!-- Bootstrap 4 -->
-   <script src="public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="<?=base_url(); ?>public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
    <!-- overlayScrollbars -->
-   <script src="public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+   <script src="<?=base_url(); ?>public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
    <!-- AdminLTE App -->
-   <script src="public/dist/js/adminlte.min.js"></script>
+   <script src="<?=base_url(); ?>public/dist/js/adminlte.min.js"></script>
    <!-- AdminLTE for demo purposes -->
-   <script src="public/dist/js/demo.js"></script>
+   <script src="<?=base_url(); ?>public/dist/js/demo.js"></script>
    <!-- js added for editable filelds priya  -->
    <script>
       jQuery(document).ready(function() {

@@ -28,7 +28,7 @@ if (file_exists($file)) {
                     <div class="card card-primary card-outline">
                         <div class="card-body box-profileData">
                             <div class="text-center">
-                                <img class="profileData-user-img img-fluid img-circle" src="public/AdmoinLogo.png" alt="User profileData picture">
+                                <img class="profileData-user-img img-fluid img-circle" src="<?=base_url(); ?>public/AdmoinLogo.png" alt="User profileData picture">
                             </div>
                             <?php if (!empty($profileData)) { ?>
                                 <h3 class="profileData-username text-center"><?= $profileData->full_name ?></h3>

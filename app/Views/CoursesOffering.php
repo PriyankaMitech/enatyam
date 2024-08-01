@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <div class="col-6 ">
-                <img src="public/images/homeb.svg" class="danceimg" width="400px">
+                <img src="<?=base_url(); ?>public/images/homeb.svg" class="danceimg" width="400px">
 
             </div>
             <div class="col-6 text-center text-col">
@@ -93,7 +93,7 @@
                 <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row">
                         <div class="col-6">
-                            <img src="public/images/Home/kathak.svg" class="danceimg home">
+                            <img src="<?=base_url(); ?>public/images/Home/kathak.svg" class="danceimg home">
                         </div>
                         <div class="col-6 text-center text-col">
                             <p class="textP">
@@ -111,7 +111,7 @@
                 <div class="tab-pane fade show" id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
                     <div class="row">
                         <div class="col-6">
-                            <img src="public/images/Home/bharatnatyam.svg" class="danceimg home">
+                            <img src="<?=base_url(); ?>public/images/Home/bharatnatyam.svg" class="danceimg home">
                         </div>
                         <div class="col-6 text-center text-col">
                             <p class="textP">
@@ -126,7 +126,7 @@
                 <div class="tab-pane fade show" id="pills-BollywoodDance" role="tabpanel" aria-labelledby="pills-BollywoodDance-tab">
                     <div class="row">
                         <div class="col-6">
-                            <img src="public/images/Home/bollywood-dance.png" class="danceimg home">
+                            <img src="<?=base_url(); ?>public/images/Home/bollywood-dance.png" class="danceimg home">
                         </div>
                         <div class="col-6 text-center text-col">
                             <p class="textP">
@@ -141,7 +141,7 @@
                 <div class="tab-pane fade show" id="pills-HindustaniVocal" role="tabpanel" aria-labelledby="pills-HindustaniVocal-tab">
                     <div class="row">
                         <div class="col-6">
-                            <img src="public/images/Home/hindustani-vocal.png" class="danceimg home">
+                            <img src="<?=base_url(); ?>public/images/Home/hindustani-vocal.png" class="danceimg home">
                         </div>
                         <div class="col-6 text-center text-col">
                             <p class="textP">
@@ -156,7 +156,7 @@
                 <div class="tab-pane fade show" id="pills-CarnaticVocal" role="tabpanel" aria-labelledby="pills-CarnaticVocal-tab">
                     <div class="row">
                         <div class="col-6">
-                            <img src="public/images/Home/carnatic-vocal.svg" class="danceimg home">
+                            <img src="<?=base_url(); ?>public/images/Home/carnatic-vocal.svg" class="danceimg home">
                         </div>
                         <div class="col-6 text-center text-col">
                             <p class="textP">
@@ -171,7 +171,7 @@
                 <div class="tab-pane fade show" id="pills-WesternSinging" role="tabpanel" aria-labelledby="pills-WesternSinging-tab">
                     <div class="row">
                         <div class="col-6">
-                            <img src="public/images/Home/western.png" class="danceimg home">
+                            <img src="<?=base_url(); ?>public/images/Home/western.png" class="danceimg home">
                         </div>
                         <div class="col-6 text-center text-col">
                             <p class="textP">
@@ -187,7 +187,7 @@
                 <div class="tab-pane fade show" id="pills-Guitar" role="tabpanel" aria-labelledby="pills-Guitar-tab">
                     <div class="row">
                         <div class="col-6">
-                            <img src="public/images/Home/guitar.svg" class="danceimg home">
+                            <img src="<?=base_url(); ?>public/images/Home/guitar.svg" class="danceimg home">
                         </div>
                         <div class="col-6 text-center text-col">
                             <p class="textP">
@@ -202,7 +202,7 @@
                 <div class="tab-pane fade show" id="pills-Keyboard" role="tabpanel" aria-labelledby="pills-Keyboard-tab">
                     <div class="row">
                         <div class="col-6">
-                            <img src="public/images/Home/keyboard.svg" class="danceimg home">
+                            <img src="<?=base_url(); ?>public/images/Home/keyboard.svg" class="danceimg home">
                         </div>
                         <div class="col-6 text-center text-col">
                             <p class="textP">
@@ -218,7 +218,7 @@
                 <div class="tab-pane fade show" id="pills-Yoga" role="tabpanel" aria-labelledby="pills-Yoga-tab">
                     <div class="row">
                         <div class="col-6">
-                            <img src="public/images/Home/yoga.svg" class="danceimg home">
+                            <img src="<?=base_url(); ?>public/images/Home/yoga.svg" class="danceimg home">
                         </div>
                         <div class="col-6 text-center text-col">
                             <p class="textP">

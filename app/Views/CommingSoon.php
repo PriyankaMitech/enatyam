@@ -16,7 +16,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/veera.jpg" />
+                        <img src="<?=base_url(); ?>public/images/veera.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Veera</div>
@@ -29,7 +29,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/priti.jpg" />
+                        <img src="<?=base_url(); ?>public/images/priti.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Priti</div>
@@ -42,7 +42,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/neha.jpg" />
+                        <img src="<?=base_url(); ?>public/images/neha.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Neha</div>
@@ -55,7 +55,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/priyanka.jpeg" />
+                        <img src="<?=base_url(); ?>public/images/priyanka.jpeg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Priyanka</div>
@@ -68,7 +68,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/priya.jpg" />
+                        <img src="<?=base_url(); ?>public/images/priya.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Priya</div>
@@ -81,7 +81,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/sweta.jpg" />
+                        <img src="<?=base_url(); ?>public/images/sweta.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">sweta</div>
@@ -94,7 +94,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/jaya.png" />
+                        <img src="<?=base_url(); ?>public/images/jaya.png" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Jaya</div>
@@ -107,7 +107,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/ketki.jpg" />
+                        <img src="<?=base_url(); ?>public/images/ketki.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">ketki</div>
@@ -120,7 +120,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/Koyali.png" />
+                        <img src="<?=base_url(); ?>public/images/Koyali.png" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Koyali</div>
@@ -133,7 +133,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/krutika.jpg" />
+                        <img src="<?=base_url(); ?>public/images/krutika.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">krutika</div>
@@ -146,7 +146,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/Anila.jpeg" />
+                        <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Anila</div>
@@ -159,7 +159,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/Anika.jpg" />
+                        <img src="<?=base_url(); ?>public/images/Anika.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Anika</div>
@@ -172,7 +172,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/Ila.jpg" />
+                        <img src="<?=base_url(); ?>public/images/Ila.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Ila</div>
@@ -185,7 +185,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/Samira.jpg" />
+                        <img src="<?=base_url(); ?>public/images/Samira.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Samira</div>
@@ -198,7 +198,7 @@
                <div class="item">
                   <div class="faculty-div">
                      <div class="faculty-div1">
-                        <img src="public/images/sanjay.jpg" />
+                        <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
                      </div>
                      <div class="faculty-content mt-lg-4">
                         <div class="faculty-content-team__member-name">Sanjay</div>
@@ -225,7 +225,7 @@
 <section class="comming-section">
    <div class="container cont-width">
       <div class="row">
-         <div class="col-lg-12 mt-3 text-center coming-soon-img "><img src="public/images/logo3.png" width="15%" /></div>
+         <div class="col-lg-12 mt-3 text-center coming-soon-img "><img src="<?=base_url(); ?>public/images/logo3.png" width="15%" /></div>
          <div class="col-lg-12" style="padding-left:opx">
             <div class="accordion-item">
             </div>

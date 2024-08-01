@@ -106,7 +106,7 @@
 
                                 <div class="col-lg-4">
                                     <div class="card">
-                                        <img src="public\images\Dance\Lehanga\kathak-lehnga2.jpeg" type="file"   name="image_name"
+                                        <img src="<?=base_url(); ?>public\images\Dance\Lehanga\kathak-lehnga2.jpeg" type="file"   name="image_name"
                                             class="card-img-top" alt="...">
                                         <div class="card-body">
                                             <!-- <h5 class="card-title" name="product_name">Kathak Lehanga</h5> -->
@@ -198,7 +198,7 @@
 
 
                             <div class="d-flex justify-content-between mb-2">
-                                <img src="public\images\kathaklogo.jpeg " style="height:85px">
+                                <img src="<?=base_url(); ?>public\images\kathaklogo.jpeg " style="height:85px">
                                 <span>
                                     <h5 class="img-titale" style="font-size:15px">Kathak Lehanga</h5>
                                     <div class="img-price cart-section d-flex justify-content-between">
@@ -226,7 +226,7 @@
                         </div>
                         <div class="d-flex justify-content-between mb-2 mt-5">
                             <div class="sale-image">
-                                <img src="public\images\sale.jpg " style="height:180px">
+                                <img src="<?=base_url(); ?>public\images\sale.jpg " style="height:180px">
                             </div>
 
 

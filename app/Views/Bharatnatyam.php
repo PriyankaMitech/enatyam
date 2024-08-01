@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="public/images/Dance/-2.jpg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="<?=base_url(); ?>public/images/Dance/-2.jpg" class="rightimg" alt="Yoga Class" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                              <h5 class="text-white" style="text-align: center;">
                                 Bollywood Dance </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>bollywood-dance-classes" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-bollywood-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Dance/bollywood-dance.webp" alt=""
                                        >
@@ -142,7 +142,7 @@
                         <div class="col-lg-3 col-md-4 col-6">
                              <h5 class="text-white" style="text-align: center;">Semi Classical</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-semiclassical-dance-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Dance/kathakImg1.svg" alt=""
                                        >
@@ -154,7 +154,7 @@
                              <h5 class="text-white" style="text-align: center;">
                                 Bhangra</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-bhangra-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
                                         src="<?php echo base_url(); ?>public/images/Dance/bhangra.webp" alt=""
                                        >
@@ -231,7 +231,7 @@
                 <div class="tab-pane fade " id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
                             <h3 class="heading"> Kathak</h3>
@@ -371,7 +371,7 @@
 
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="public/images/Dance/kathakImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg">
                                 </div>
                             </div>
                         </div>
@@ -389,7 +389,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center imgmodule">
-                                        <img src="public/images/Dance/kathakImg3.svg" class="danceimg danceimg5">
+                                        <img src="<?=base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 kathakp">
@@ -447,15 +447,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -659,7 +659,7 @@
                     </div>
 
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/Bharatnatyam.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Dance/Bharatnatyam.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bharatnatyam</h3>
@@ -791,7 +791,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="public/images/Dance/2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Dance/2.svg" class="danceimg">
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
                                     <!-- Folk -->
@@ -817,7 +817,7 @@
                                         <span class="line"></span>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/bharatnatyam-3.svg" class="danceimg danceimg5">
+                                        <img src="<?=base_url(); ?>public/images/Dance/bharatnatyam-3.svg" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -877,15 +877,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1083,7 +1083,7 @@
                 <div class="tab-pane fade" id="pills-Odissi" role="tabpanel" aria-labelledby="pills-Odissi-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/odissi.webp" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Dance/odissi.webp" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Odissi</h3>
@@ -1217,7 +1217,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Odissi -->
                                     <div class="folkImg">
-                                    <img src="public/images/Dance/odissi-3.webp" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Dance/odissi-3.webp" class="danceimg">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -1245,7 +1245,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/odissi-4.webp" class="danceimg danceimg5">
+                                        <img src="<?=base_url(); ?>public/images/Dance/odissi-4.webp" class="danceimg danceimg5">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1279,15 +1279,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1420,7 +1420,7 @@
                 <div class="tab-pane fade" id="pills-Bollywood" role="tabpanel" aria-labelledby="pills-Bollywood-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/bollywood-dance.webp" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Dance/bollywood-dance.webp" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bollywood</h3>
@@ -1553,7 +1553,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Bollywood -->
                                     <div class="folkImg">
-                                        <img src="public/images/Dance/bollywood-21.webp" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/Dance/bollywood-21.webp" class="danceimg">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -1581,7 +1581,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/bollywood-3.webp" class="danceimg danceimg5">
+                                        <img src="<?=base_url(); ?>public/images/Dance/bollywood-3.webp" class="danceimg danceimg5">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1614,15 +1614,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1736,7 +1736,7 @@
                 <div class="tab-pane fade" id="pills-Western" role="tabpanel" aria-labelledby="pills-Western-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/western-dance.webp" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Dance/western-dance.webp" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Western</h3>
@@ -1871,7 +1871,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Western -->
                                     <div class="folkImg">
-                                        <img src="public/images/Dance/western-3.webp" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/Dance/western-3.webp" class="danceimg">
                                     </div>   
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -1897,7 +1897,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/western-dance-2.webp" class="danceimg danceimg5">
+                                        <img src="<?=base_url(); ?>public/images/Dance/western-dance-2.webp" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -1957,15 +1957,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2164,7 +2164,7 @@
                 <div class="tab-pane fade" id="pills-Semiclassical" role="tabpanel" aria-labelledby="pills-Semiclassical-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Semi-classical</h3>
@@ -2278,7 +2278,7 @@
 
                                     <!-- Semi-classical  -->
 
-                                    <img src="public/images/Dance/kathakImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg">
 
                                 </div>
                             </div>
@@ -2297,7 +2297,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/kathakImg3.svg" class="danceimg danceimg5">
+                                        <img src="<?=base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 mftm">
@@ -2333,15 +2333,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2461,7 +2461,7 @@
                 <div class="tab-pane fade" id="pills-Bhangra" role="tabpanel" aria-labelledby="pills-Bhangra-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/bhangra.webp" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Dance/bhangra.webp" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bhangra</h3>
@@ -2568,7 +2568,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Bhangra -->
-                                    <img src="public/images/Dance/bhangra-2.webp" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Dance/bhangra-2.webp" class="danceimg">
                                 </div>
                             </div>
                         </div>
@@ -2586,7 +2586,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/bhangra-2-1.webp" class="danceimg danceimg5">
+                                        <img src="<?=base_url(); ?>public/images/Dance/bhangra-2-1.webp" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2646,15 +2646,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2824,7 +2824,7 @@
                 <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="public/images/Dance/folk-dance.jpg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Folk</h3>
@@ -2958,7 +2958,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Folk -->
                                     <div class="folkImg">
-                                    <img src="public/images/Dance/folk-dance-2.webp" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Dance/folk-dance-2.webp" class="danceimg">
                                     </div>
                                 </div>
 
@@ -2987,7 +2987,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="public/images/Dance/folk-dance.jpg" class="danceimg danceimg5">
+                                        <img src="<?=base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg danceimg5">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -3047,15 +3047,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">

@@ -96,7 +96,7 @@
                 <div class="row">
                     <?php foreach ($Coupan_code as $code): ?>
                         <div class="coupon-card">
-                            <img src="public/images/logoss.png" class="logo">
+                            <img src="<?=base_url(); ?>public/images/logoss.png" class="logo">
                             <h3><?php echo $code->percentage; ?>% flat off</h3>
                             <div class="coupon-row">
                                 <span id="cpnCode"><?php echo $code->Coupan_code; ?></span>

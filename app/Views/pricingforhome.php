@@ -56,7 +56,7 @@ $name               = "RazorPay Infovistar";
                                                 <!-- <h4>₹ 1200 per session</h4>
                                                 <h4>Total Price: 9600 <span class="del-price"><del>10105 </del></span></h4> -->
 
-                                                <!-- <img src="public/images/price-coupn.png" /> -->
+                                                <!-- <img src="<?=base_url(); ?>public/images/price-coupn.png" /> -->
                                                 <p style="">Duration : 60 Days</p>
 
                                                 <ul style="padding-left:0px!important">
@@ -163,7 +163,7 @@ if (session()->has('sessiondata')) {
                                                 <!-- <h4>₹ 1090 per session</h4>
                                                 <h4>Total Price: 22890 <span class="del-price"><del>24880 </del></span></h4>
 
-                                                <img src="public/images/pro.png" /> -->
+                                                <img src="<?=base_url(); ?>public/images/pro.png" /> -->
                                                 <p >Duration : 120 Days</p>
 
                                                 <ul class="" style="padding-left:0px!important">
@@ -259,7 +259,7 @@ if (session()->has('sessiondata')) {
                                                 <!-- <h4>₹ 975 per session</h4>
                                                 <h4>Total Price: 49725 <span class="del-price"><del>59910 </del></span></h4>
 
-                                                <img src="public/images/Elite.png" /> -->
+                                                <img src="<?=base_url(); ?>public/images/Elite.png" /> -->
                                                 <p >Duration : 360 Days</p>
 
                                                 <ul style="padding-left:0px!important">
@@ -359,7 +359,7 @@ if (session()->has('sessiondata')) {
                                 </form>
                             </div>
                             <div class="col-lg-2  pddn">
-                                <img src="public/images/price1.png" width="100%" class="opman" />
+                                <img src="<?=base_url(); ?>public/images/price1.png" width="100%" class="opman" />
 
                             </div>
                         </div>
@@ -383,7 +383,7 @@ if (session()->has('sessiondata')) {
                                                     <!-- <h4>₹ 475 per session</h4>
                                                     <h4>Total Price: 9990<span class="del-price"><del>10500 </del></span></h4>
 
-                                                    <img src="public/images/price-coupn.png" /> -->
+                                                    <img src="<?=base_url(); ?>public/images/price-coupn.png" /> -->
                                                     <p >Duration : 120 Days</p>
 
                                                     <ul style="padding-left:0px!important">
@@ -495,7 +495,7 @@ if (session()->has('sessiondata')) {
                                                     </h2>
                                                     <!-- <h4>₹ 450 per session</h4>
                                                     <h4>Total Price: 22950 <span class="del-price"><del>24950 </del></span></h4>
-                                                    <img src="public/images/pro.png" /> -->
+                                                    <img src="<?=base_url(); ?>public/images/pro.png" /> -->
                                                     <p >Duration : 200 Days</p>
 
                                                     <ul class="" style="padding-left:0px!important">
@@ -590,7 +590,7 @@ if (session()->has('sessiondata')) {
                                                     <!-- <h4>₹ 423 per session</h4>
                                                     <h4>Total Price: 429777 <span class="del-price"><del>51777 </del></span></h4>
 
-                                                    <img src="public/images/Elite.png" /> -->
+                                                    <img src="<?=base_url(); ?>public/images/Elite.png" /> -->
                                                     <p >Duration : 360 Days</p>
 
                                                     <ul style="padding-left:0px!important">
@@ -679,7 +679,7 @@ if (session()->has('sessiondata')) {
                             </div>
 
                             <div class="col-lg-2 pddn">
-                                <img src="public/images/price1.png" class="opman" width="100%" />
+                                <img src="<?=base_url(); ?>public/images/price1.png" class="opman" width="100%" />
 
                             </div>
 

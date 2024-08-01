@@ -33,7 +33,16 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enatyam</title>
+    <?php 
+    $file = __DIR__ . "/seo.php";
+    if (file_exists($file)) {
+        include $file;
+    } else {
+        echo "File not found: $file";
+    }
+    
+    ?>
+    
     <style>
     div:where(.swal2-container) {
         display: grid !important;
@@ -232,7 +241,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Dance' || $page == 'online-kathak-classes' || $page == 'online-bharatanatyam-classes' || $page == 'online-odissi-dance-classes' || $page == 'bollywood-dance-classes' || $page == 'online-western-dance-classes' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'online-folk-dance-classes' || $page == 'hindustani-music-classes' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'online-western-singing-classes' || $page == 'PlaybackSinging' ) { ?>
+    <?php } else if ($page == 'Dance' || $page == 'online-kathak-classes' || $page == 'online-bharatanatyam-classes' || $page == 'online-odissi-dance-classes' || $page == 'online-bollywood-dance-classes' || $page == 'online-western-dance-classes' || $page == 'online-semiclassical-dance-lessons' || $page == 'online-bhangra-lessons' || $page == 'online-folk-dance-classes' || $page == 'online-hindustani-music-classes' || $page == 'online-carnatic-music-lessons' || $page == 'online-semiclassical-music-lessons' || $page == 'online-western-singing-classes' || $page == 'online-playback-singing-classes' ) { ?>
 
     <style>
     .whatsapp-button {
@@ -897,7 +906,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'CustomiseYoga') { ?>
+    <?php } else if ($page == 'online-customise-your-plan') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -1077,7 +1086,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
     }
     </style>
-    <?php } else if ($page == 'Guitar') { ?>
+    <?php } else if ($page == 'online-guitar-lessons') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -1146,77 +1155,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
     }
     </style>
-    <?php } else if ($page == 'Flute') { ?>
-    <style>
-    .whatsapp-button {
-        position: fixed;
-        bottom: 20px;
-        /* Adjust as needed */
-        right: 20px;
-        /* Adjust as needed */
-        z-index: 999;
-        /* Ensure it's above other content */
-    }
-
-    /* Additional styling if needed */
-    .whatsapp-button img {
-        width: 50px;
-        /* Adjust as needed */
-        height: auto;
-        border: none;
-    }
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
-
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
-
-    <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- owl carousel css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <style>
-    .month-row .month-list .dancetypes .monthbtn {
-        width: 109px !important;
-        height: 60px;
-    }
-
-    body {
-        background-color: #fad32c;
-    }
-
-    #danceVideo {
-
-        width: 100%;
-
-        object-fit: cover;
-        z-index: -100;
-
-    }
-    </style>
-
-    <?php } else if ($page == 'Tabla') { ?>
+    <?php } else if ($page == 'online-flute-lessons') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -1286,7 +1225,77 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Sitar') { ?>
+    <?php } else if ($page == 'online-tabla-lessons') { ?>
+    <style>
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        /* Adjust as needed */
+        right: 20px;
+        /* Adjust as needed */
+        z-index: 999;
+        /* Ensure it's above other content */
+    }
+
+    /* Additional styling if needed */
+    .whatsapp-button img {
+        width: 50px;
+        /* Adjust as needed */
+        height: auto;
+        border: none;
+    }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instruments.css">
+
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentsfaq.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/Instrumentpage.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/commingsoon.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/home.css">
+
+    <link rel="stylesheet" href="<?= base_url(); ?>public/css/bharatnatyam.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        integrity="sha512-Mo79lrQ4UecW8OCcRUZzf0ntfMNgpOFR46Acj2ZtWO8vKhBvD79VCp3VOKSzk6TovLg5evL3Xi3u475Q/jMu4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+    .month-row .month-list .dancetypes .monthbtn {
+        width: 109px !important;
+        height: 60px;
+    }
+
+    body {
+        background-color: #fad32c;
+    }
+
+    #danceVideo {
+
+        width: 100%;
+
+        object-fit: cover;
+        z-index: -100;
+
+    }
+    </style>
+
+    <?php } else if ($page == 'online-sitar-lessons') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -1426,7 +1435,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Piano') { ?>
+    <?php } else if ($page == 'online-piano-lessons') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -1496,7 +1505,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Violin') { ?>
+    <?php } else if ($page == 'online-violin-lessons') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -1636,7 +1645,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
     }
     </style>
 
-    <?php } else if ($page == 'Harmonium') { ?>
+    <?php } else if ($page == 'online-harmonium-lessons') { ?>
     <style>
     .whatsapp-button {
         position: fixed;
@@ -2298,7 +2307,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 <div class="row no-gutters w-100">
                     <div class="col-12 col-md-2 col-lg-2">
                         <div class="left-side">
-                            <!-- <img src="public/images/dance1.jpg" alt="Descriptive Alt Text"> -->
+                            <!-- <img src="<?=base_url(); ?>public/images/dance1.jpg" alt="Descriptive Alt Text"> -->
                         </div>
                     </div>
                     <div class="col-12 col-md-8 col-lg-8">
@@ -2358,7 +2367,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                                     </div>
                                 </div>
                             </div>
-                            <img src="public/images/boarder1.webp" class="border_img" alt="Descriptive Alt Text">
+                            <img src="<?=base_url(); ?>public/images/boarder1.webp" class="border_img" alt="Descriptive Alt Text">
                         </div>
                     </div>
 
