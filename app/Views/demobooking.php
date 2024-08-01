@@ -278,19 +278,19 @@ padding: 5px;
                                 </div>
                                 <div class="row fetures text-white topfeatures">
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
-                                        <img class="fatures" src="public/images/instructors-svg.svg">
+                                        <img class="fatures" src="<?=base_url(); ?>public/images/instructors-svg.svg">
                                         <span>Top Instructors</span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
-                                        <img class="fatures text-white" src="public/images/live.svg">
+                                        <img class="fatures text-white" src="<?=base_url(); ?>public/images/live.svg">
                                         <span>2 Live Classes Per Week</span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
-                                        <img class="fatures text-white" src="public/images/materials-svg.svg">
+                                        <img class="fatures text-white" src="<?=base_url(); ?>public/images/materials-svg.svg">
                                         <span>Revision Material</span>
                                     </div>
                                     <div class="col-lg-3 col-md-6 col-6 bfdf">
-                                        <img class="fatures text-white" src="public/images/certification-svg.svg">
+                                        <img class="fatures text-white" src="<?=base_url(); ?>public/images/certification-svg.svg">
                                         <span>Performance & Certificate</span>
                                     </div>
                                 </div>

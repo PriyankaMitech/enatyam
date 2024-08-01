@@ -1,7 +1,7 @@
 <?php include('Studentsidebar.php'); ?>
 <link rel="stylesheet" href="public/calendar/fullcalendar/lib/main.min.css">
-<script src="public/calendar/js/jquery-3.6.0.min.js"></script>
-<script src="public/calendar/fullcalendar/lib/main.min.js"></script>
+<script src="<?=base_url(); ?>public/calendar/js/jquery-3.6.0.min.js"></script>
+<script src="<?=base_url(); ?>public/calendar/fullcalendar/lib/main.min.js"></script>
 
 <div class="content-wrapper">
     <section class="content-header">
@@ -179,7 +179,7 @@ if (!empty($schedule_data)) {
 }
 ?>
 
-<script src="public/calendar/js/script.js"></script>
+<script src="<?=base_url(); ?>public/calendar/js/script.js"></script>
 
 <?php include('StudentFooter.php') ; ?>
 <script>

@@ -88,10 +88,10 @@ $routes->get('online-kathak-classes', 'Home::Kathak');
 $routes->get('online-bharatanatyam-classes', 'Home::Bharatnatyam');
 
 $routes->get('online-odissi-dance-classes', 'Home::Odissi');
-$routes->get('bollywood-dance-classes', 'Home::Bollywood');
+$routes->get('online-bollywood-dance-classes', 'Home::Bollywood');
 $routes->get('online-western-dance-classes', 'Home::Western');
-$routes->get('Semiclassical', 'Home::Semiclassical');
-$routes->get('Bhangra', 'Home::Bhangra');
+$routes->get('online-semiclassical-dance-lessons', 'Home::Semiclassical');
+$routes->get('online-bhangra-lessons', 'Home::Bhangra');
 $routes->get('online-folk-dance-classes', 'Home::Folk');
 
 
@@ -101,11 +101,11 @@ $routes->get('online-folk-dance-classes', 'Home::Folk');
 $routes->get('Home', 'Home::home');
 $routes->get('music', 'Home::music');
 
-$routes->get('hindustani-music-classes', 'Home::HindustaniVocal');
-$routes->get('CarnaticVocal', 'Home::CarnaticVocal');
-$routes->get('SemiClassicals', 'Home::SemiClassicals');
+$routes->get('online-hindustani-music-classes', 'Home::HindustaniVocal');
+$routes->get('online-carnatic-music-lessons', 'Home::CarnaticVocal');
+$routes->get('online-semiclassical-music-lessons', 'Home::SemiClassicals');
 $routes->get('online-western-singing-classes', 'Home::WesternSinging');
-$routes->get('PlaybackSinging', 'Home::PlaybackSinging');
+$routes->get('online-playback-singing-classes', 'Home::PlaybackSinging');
 
 
 $routes->get('Instruments', 'Home::Instruments');
@@ -523,15 +523,15 @@ $routes->get('getNewStudentNotifications', 'AdminController::getNewStudentNotifi
 $routes->get('updateNotifications', 'AdminController::updateNotifications');
 
 // Instruments individual pages 
-$routes->get('Guitar', 'Home::Guitar');
-$routes->get('Flute', 'Home::Flute');
-$routes->get('Tabla', 'Home::Tabla');
-$routes->get('Sitar', 'Home::Sitar');
+$routes->get('online-guitar-lessons', 'Home::Guitar');
+$routes->get('online-flute-lessons', 'Home::Flute');
+$routes->get('online-tabla-lessons', 'Home::Tabla');
+$routes->get('online-sitar-lessons', 'Home::Sitar');
 $routes->get('online-veena-classes', 'Home::Veena');
-$routes->get('Piano', 'Home::Piano');
-$routes->get('Violin', 'Home::Violin');
+$routes->get('online-piano-lessons', 'Home::Piano');
+$routes->get('online-violin-lessons', 'Home::Violin');
 $routes->get('online-keyboard-classes', 'Home::Keyboard');
-$routes->get('Harmonium', 'Home::Harmonium');
+$routes->get('online-harmonium-lessons', 'Home::Harmonium');
 
 // Yoga individual pages 
 $routes->get('online-prenatal-yoga-classes','Home::PrenatalYoga');
@@ -542,7 +542,7 @@ $routes->get('online-everyday-yoga-classes', 'Home::EverydayYoga');
 $routes->get('online-yoga-for-disease-classes', 'Home::YogaforChronic');
 $routes->get('online-yoga-classes-for-kids', 'Home::YogaforKids');
 $routes->get('online-meditation-classes', 'Home::Meditation');
-$routes->get('CustomiseYoga', 'Home::CustomiseYoga');
+$routes->get('online-customise-your-plan', 'Home::CustomiseYoga');
 $routes->get('online-nutrition-counselling-classes', 'Home::NutritionCounselling');
 
 

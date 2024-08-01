@@ -76,7 +76,7 @@
 
                     </div>
                     <div class="col-6">
-                        <img src="public/images/Dance/kathakImg1.svg" class="danceimg">
+                        <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg">
                     </div>
 
                 </div>

@@ -20,7 +20,7 @@
                     <div class="item">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Yoga/Veera.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Yoga/Veera.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name">Veera</div>
@@ -33,7 +33,7 @@
                     <div class="item">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Yoga/Anika.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Yoga/Anika.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name">Anika</div>
@@ -46,7 +46,7 @@
                     <div class="item">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Yoga/priya.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Yoga/priya.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name">Priya</div>
@@ -59,7 +59,7 @@
                     <div class="item">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Yoga/Samira.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Yoga/Samira.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name">Samira</div>
@@ -72,7 +72,7 @@
                     <div class="item">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/Yoga/Sanjay.jpg" />
+                                <img src="<?=base_url(); ?>public/images/Yoga/Sanjay.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name">Sanjay</div>

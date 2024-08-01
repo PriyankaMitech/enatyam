@@ -1,7 +1,7 @@
 <?php echo view('FacultySidebar2.php'); ?>
 <link rel="stylesheet" href="public/calendar/fullcalendar/lib/main.min.css">
-<script src="public/calendar/js/jquery-3.6.0.min.js"></script>
-<script src="public/calendar/fullcalendar/lib/main.min.js"></script>
+<script src="<?=base_url(); ?>public/calendar/js/jquery-3.6.0.min.js"></script>
+<script src="<?=base_url(); ?>public/calendar/fullcalendar/lib/main.min.js"></script>
 
 <div class="content-wrapper">
     <section class="content-header">
@@ -180,7 +180,7 @@ foreach($schedule_data as $data){
 }
 ?>
 
-<script src="public/calendar/js/script.js"></script>
+<script src="<?=base_url(); ?>public/calendar/js/script.js"></script>
 <?php echo view('FacultysideBar/FacultyFooter.php'); ?>
 
 

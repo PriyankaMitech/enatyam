@@ -1832,7 +1832,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
 </script>
 
-<?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga'|| $page == 'corporateyoga' || $page == 'online-kathak-classes' || $page == 'online-bharatanatyam-classes' || $page == 'online-odissi-dance-classes' || $page == 'bollywood-dance-classes' || $page == 'online-western-dance-classes' || $page == 'Semiclassical' || $page == 'Bhangra' || $page == 'online-folk-dance-classes' || $page == 'hindustani-music-classes' || $page == 'CarnaticVocal' || $page == 'SemiClassicals' || $page == 'online-western-singing-classes' || $page == 'PlaybackSinging' || $page == 'online-prenatal-yoga-classes' || $page == 'online-stress-reduction-yoga-classes' || $page == 'online-flexibility-yoga-classes' || $page == 'online-weightloss-yoga-classes' || $page == 'online-everyday-yoga-classes' || $page == 'online-yoga-for-disease-classes' || $page == 'online-yoga-classes-for-kids' || $page == 'online-meditation-classes' || $page == 'CustomiseYoga' || $page == 'online-nutrition-counselling-classes') { ?>
+<?php } else if ($page == 'Dance' || $page == 'music' || $page == 'Yoga'|| $page == 'corporateyoga' || $page == 'online-kathak-classes' || $page == 'online-bharatanatyam-classes' || $page == 'online-odissi-dance-classes' || $page == 'online-bollywood-dance-classes' || $page == 'online-western-dance-classes' || $page == 'online-semiclassical-dance-lessons' || $page == 'online-bhangra-lessons' || $page == 'online-folk-dance-classes' || $page == 'online-hindustani-music-classes' || $page == 'online-carnatic-music-lessons' || $page == 'online-semiclassical-music-lessons' || $page == 'online-western-singing-classes' || $page == 'online-playback-singing-classes' || $page == 'online-prenatal-yoga-classes' || $page == 'online-stress-reduction-yoga-classes' || $page == 'online-flexibility-yoga-classes' || $page == 'online-weightloss-yoga-classes' || $page == 'online-everyday-yoga-classes' || $page == 'online-yoga-for-disease-classes' || $page == 'online-yoga-classes-for-kids' || $page == 'online-meditation-classes' || $page == 'online-customise-your-plan' || $page == 'online-nutrition-counselling-classes') { ?>
 
 
 
@@ -1941,7 +1941,7 @@ $(document).ready(function() {
 
 });
 </script>
-<?php } else if ($page == 'Guitar') { ?>
+<?php } else if ($page == 'online-guitar-lessons') { ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
@@ -1985,52 +1985,7 @@ $(document).ready(function() {
 
 });
 </script>
-<?php } else if ($page == 'Flute') { ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
-
-<script>
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: false,
-    dots: true,
-    autoplay: true,
-    slideTransition: 'linear',
-    autoplaySpeed: 3000,
-    slideSpeed: 3000,
-    paginationSpeed: 3000,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 3
-        },
-        1000: {
-            items: 4
-        }
-    }
-})
-
-$(document).ready(function() {
-
-    jQuery(".owl-prev").append("<i ></i>");
-    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
-    jQuery(".owl-next").append("<i ></i>");
-    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
-
-
-});
-</script>
-
-<?php } else if ($page == 'Tabla') { ?>
+<?php } else if ($page == 'online-flute-lessons') { ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
@@ -2075,7 +2030,52 @@ $(document).ready(function() {
 });
 </script>
 
-<?php } else if ($page == 'Sitar') { ?>
+<?php } else if ($page == 'online-tabla-lessons') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplaySpeed: 3000,
+    slideSpeed: 3000,
+    paginationSpeed: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$(document).ready(function() {
+
+    jQuery(".owl-prev").append("<i ></i>");
+    jQuery(".owl-prev i").attr("class", "fa fa-arrow-left");
+    jQuery(".owl-next").append("<i ></i>");
+    jQuery(".owl-next i").attr("class", "fa fa-arrow-right");
+
+
+});
+</script>
+
+<?php } else if ($page == 'online-sitar-lessons') { ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
@@ -2165,7 +2165,7 @@ $(document).ready(function() {
 });
 </script>
 
-<?php } else if ($page == 'Piano') { ?>
+<?php } else if ($page == 'online-piano-lessons') { ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
@@ -2210,7 +2210,7 @@ $(document).ready(function() {
 });
 </script>
 
-<?php } else if ($page == 'Violin') { ?>
+<?php } else if ($page == 'online-violin-lessons') { ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
@@ -2300,7 +2300,7 @@ $(document).ready(function() {
 });
 </script>
 
-<?php } else if ($page == 'Harmonium') { ?>
+<?php } else if ($page == 'online-harmonium-lessons') { ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">

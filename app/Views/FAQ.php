@@ -3,7 +3,7 @@
 <section class="faq-section">
 <div class="container cont-width">
     <div class="row">
-        <div class="col-lg-1 " style="padding-left:0px"><img src="public/images/logo2.png"  width="100%"/></div>
+        <div class="col-lg-1 " style="padding-left:0px"><img src="<?=base_url(); ?>public/images/logo2.png"  width="100%"/></div>
         <div class="col-lg-12"style="padding-left:100px">
         <div class="accordion-item">
        <div class="accordion-item-header">

@@ -20,7 +20,7 @@
                     <div class="item">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/music/Ila.jpg" />
+                                <img src="<?=base_url(); ?>public/images/music/Ila.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name">Ila</div>
@@ -33,7 +33,7 @@
                     <div class="item">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/music/Ketki.jpg" />
+                                <img src="<?=base_url(); ?>public/images/music/Ketki.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name">ketki</div>
@@ -46,7 +46,7 @@
                     <div class="item">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/music/Swetha.jpg" />
+                                <img src="<?=base_url(); ?>public/images/music/Swetha.jpg" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name">Swetha</div>
@@ -59,7 +59,7 @@
                     <div class="item">
                         <div class="faculty-div">
                             <div class="faculty-div1">
-                                <img src="public/images/music/Koyali.png" />
+                                <img src="<?=base_url(); ?>public/images/music/Koyali.png" />
                             </div>
                             <div class="faculty-content mt-lg-4">
                                 <div class="faculty-content-team__member-name">Swetha</div>

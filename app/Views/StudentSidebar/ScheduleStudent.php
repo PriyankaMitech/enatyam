@@ -1,7 +1,7 @@
 <?php  echo view('StudentSidebar/Studentsidebar'); ?>
 <link rel="stylesheet" href="public/calendar/fullcalendar/lib/main.min.css">
-<script src="public/calendar/js/jquery-3.6.0.min.js"></script>
-<script src="public/calendar/fullcalendar/lib/main.min.js"></script>
+<script src="<?=base_url(); ?>public/calendar/js/jquery-3.6.0.min.js"></script>
+<script src="<?=base_url(); ?>public/calendar/fullcalendar/lib/main.min.js"></script>
 
 <div class="content-wrapper">
     <section class="content-header">
@@ -64,7 +64,7 @@ foreach($schedule_data as $data){
 <script>
 var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
 </script>
-<script src="public/calendar/js/slots.js"></script>
+<script src="<?=base_url(); ?>public/calendar/js/slots.js"></script>
 <?php echo view('StudentSidebar/StudentFooter.php'); ?>
 
 

@@ -122,7 +122,7 @@
                         <!-- <td> <button class="btn btn-danger" onclick="removeProduct(<?= $row['cart_id']; ?>)">×</button>
                         </td> -->
                         <td> <button class="btn btn-danger" onclick="removeProduct(<?= $row['cart_id']; ?>)">×</button></td>
-                        <td><img src="public\images\kathaklogo.jpeg " style="height: 85px;" alt="Thumbnail"
+                        <td><img src="<?=base_url(); ?>public\images\kathaklogo.jpeg " style="height: 85px;" alt="Thumbnail"
                                 class="img-fluid"></td>
                         <td><?= $row['product_name']; ?></td>
                         <!-- <td >  <input type="text" id="price" readonly value= class="form-control "/></td>

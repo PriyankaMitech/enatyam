@@ -5,7 +5,7 @@
         <div class="row">
 
             <div class="col-lg-12 img"  style="padding-left:0px">
-                <img src="public/images/image1.png" width="100%" />
+                <img src="<?=base_url(); ?>public/images/image1.png" width="100%" />
                 <div class="row">
 
 
@@ -20,7 +20,7 @@
                 <!-- pc image      -->
                 <!-- <div class="col-log-8 col-sm-12 sc_heading text-center">
                         <p class="title-pc">Your time @ Your Place .</p>
-                        <img decoding="async" width="150" height="100" src="public/image/pc-img.svg"
+                        <img decoding="async" width="150" height="100" src="<?=base_url(); ?>public/image/pc-img.svg"
                             class="attachment-full size-full wp-image-17039" alt loading="lazy" />
                     </div> -->
 
@@ -62,17 +62,17 @@
 
         <div class="workSections text-center">
             <div class="howWorkBlock">
-                <img src="public/images/hew1.png" class="lazyImage" width="14" height="14" alt="" />
+                <img src="<?=base_url(); ?>public/images/hew1.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">1</span> <span>Book a Demo</span></p>
                 <p class="hwDesc">Book a Free Demo Class with a Tutor.</p>
             </div>
             <div class="howWorkBlock">
-                <img src="public/images/hew2.png" class="lazyImage" width="14" height="14" alt="" />
+                <img src="<?=base_url(); ?>public/images/hew2.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">2</span> <span>Join LIVE Demo Class</span></p>
                 <p class="hwDesc">Attend the Demo class as scheduled.</p>
             </div>
             <div class="howWorkBlock">
-                <img src="public/images/hew3.png" class="lazyImage" width="14" height="14" alt="" />
+                <img src="<?=base_url(); ?>public/images/hew3.png" class="lazyImage" width="14" height="14" alt="" />
                 <p class="hwTitle"><span class="mobStepNum">3</span> <span>Pay and Start</span></p>
                 <p class="hwDesc">Use enatyam SecurePay to pay and start your Classes.</p>
             </div>

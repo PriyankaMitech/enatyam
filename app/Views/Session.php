@@ -104,7 +104,7 @@
                         <div class="item">
                             <div class="faculty-div">
                                 <div class="faculty-div1">
-                                    <img src="public/images/Session.jpg" />
+                                    <img src="<?=base_url(); ?>public/images/Session.jpg" />
                                 </div>
                                 <div class="faculty-content mt-lg-4">
                                     <div class="faculty-content-team__member-name">
@@ -119,7 +119,7 @@
                         <div class="item">
                             <div class="faculty-div">
                                 <div class="faculty-div1">
-                                    <img src="public/images/Session.jpg" />
+                                    <img src="<?=base_url(); ?>public/images/Session.jpg" />
                                 </div>
                                 <div class="faculty-content mt-lg-4">
                                     <div class="faculty-content-team__member-name">
@@ -135,7 +135,7 @@
                         <div class="item">
                             <div class="faculty-div">
                                 <div class="faculty-div1">
-                                    <img src="public/images/Session.jpg" />
+                                    <img src="<?=base_url(); ?>public/images/Session.jpg" />
                                 </div>
                                 <div class="faculty-content mt-lg-4">
                                     <div class="faculty-content-team__member-name">
@@ -151,7 +151,7 @@
                         <div class="item">
                             <div class="faculty-div">
                                 <div class="faculty-div1">
-                                    <img src="public/images/Session.jpg" />
+                                    <img src="<?=base_url(); ?>public/images/Session.jpg" />
                                 </div>
                                 <div class="faculty-content mt-lg-4">
                                     <div class="faculty-content-team__member-name">
@@ -167,7 +167,7 @@
                         <div class="item">
                             <div class="faculty-div">
                                 <div class="faculty-div1">
-                                    <img src="public/images/Session.jpg" />
+                                    <img src="<?=base_url(); ?>public/images/Session.jpg" />
                                 </div>
                                 <div class="faculty-content mt-lg-4">
                                     <div class="faculty-content-team__member-name">
@@ -183,7 +183,7 @@
                         <div class="item">
                             <div class="faculty-div">
                                 <div class="faculty-div1">
-                                    <img src="public/images/Session.jpg" />
+                                    <img src="<?=base_url(); ?>public/images/Session.jpg" />
                                 </div>
                                 <div class="faculty-content mt-lg-4">
                                     <div class="faculty-content-team__member-name">
