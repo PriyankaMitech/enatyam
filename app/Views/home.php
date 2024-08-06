@@ -1114,25 +1114,7 @@ body {
                              </div>
                         </div>
                     </div>
-                    <!-- <div class="item" onclick="showModal('Neha', 'Semi Classical Dance' ,'public/images/neha.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/neha.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Neha</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Semi Classical Dance
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Neha</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div> -->
+                  
                     <div class="item" onclick="showModal('Priyanka B', 'Kathak Dance Faculty', 'public/images/priyanka.jpeg','M.A. in Performing Arts(Kathak)','','5 Years +','Kathak, Semi classical and Choreography, Worked with many Bollywood choreographer and performed at many national level renowed stages')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
@@ -1254,25 +1236,7 @@ body {
                         </div>
                     </div>
                     
-                    <!-- <div class="item" onclick="showModal('Jaya', 'Bharatanatyam Dance' ,'public/images/jaya.webp')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/jaya.webp" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Jaya</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Bharatanatyam Dance
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Jaya</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div> -->
+                  
                     <div class="item" onclick="showModal('Ketki M', 'Hindustani Music Faculty', 'public/images/ketki.jpg','MA in Hindustani Vocal','Doordarshan Grade Artist','6 Years +','Hindustani Vocal, Bollywood Singing, Plyback Singing, Expert in Vocal Cords, Ragas and Sur')">
                         <div class="faculty-div">
                             <div class="faculty-div1">
@@ -1330,140 +1294,7 @@ body {
                              </div>
                         </div>
                     </div>
-                    <!-- <div class="item" onclick="showModal('Anika S', 'MA in Hindustani Vocal Faculty' ,'public/images/user.webp','Hindustani Vocal','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/user.webp" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Anika S</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                Hindustani Vocal
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Anika S</h4>
-                                <p>Hindustani Vocal</p>
-                                <p>Doordarshan Grade Artist</p>
-                                <p><b>Read more...</b></p>    
-                             </div>
-                        </div>
-                    </div>
-
-                    <div class="item" onclick="showModal('Malvika', 'MA in Bharatnatyam Faculty' ,'public/images/user.webp','Bharatnatyam','Doordarshan Grade Artist','10 Years +','Hindustani Vocal, Bollywood Singing, Playback Singing, Raga')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/user.webp" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Malvika</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                Bharatnatyam
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Anika S</h4>
-                                <p>Hindustani Dance</p>
-                                <p>MA in Bharatnatyam</p>
-                        <p><b>Read more...</b></p>                                    
-                             </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="item" onclick="showModal('Anila', 'Bollywood Dance' ,'public/images/Anila.jpeg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Anila.jpeg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Anila</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Bollywood Dance
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Anila</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="item" onclick="showModal('Anika', 'Yoga' ,'public/images/Anika.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Anika.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Anika</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Anika</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="item" onclick="showModal('Ila', 'Bollywood Singing', 'public/images/Ila.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Ila.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Ila</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Bollywood Singing
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Ila</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="item" onclick="showModal('Samira', 'Yoga', 'public/images/Samira.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/Samira.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Samira</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Samira</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="item" onclick="showModal('Sanjay', 'Yoga', 'public/images/sanjay.jpg')">
-                        <div class="faculty-div">
-                            <div class="faculty-div1">
-                                <img src="<?=base_url(); ?>public/images/sanjay.jpg" />
-                            </div>
-                            <div class="faculty-content mt-lg-4">
-                                <div class="faculty-content-team__member-name text-white">Sanjay</div>
-                                <div class="faculty-content-team__member-position text-white">
-                                    Yoga
-                                </div>
-                            </div>
-                            <div class="overlay-text">
-                                <h4 class="hedingfsf">Sanjay</h4>
-                                    <p>What is Lorem Ipsum?
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
-                                    <p>
-                             </div>
-                        </div>
-                    </div> -->
+                   
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-12 connectwusbtnb">

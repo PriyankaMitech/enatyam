@@ -45,7 +45,9 @@
                         <a href="<?=base_url(); ?>shopping">Shopping</a>
                     </li> -->
                         <li>
-                            <a href="<?=base_url(); ?>blog">Blog</a>
+                            <!-- <a href="<?=base_url(); ?>blog">Blog</a> -->
+                            <a href="http://blog.enatyam.com/">Blog</a>
+
                         </li>
                         <li>
                             <a href="<?=base_url(); ?>Career">Become a Teacher</a>
@@ -4664,30 +4666,29 @@ $(".accordion-item-header").click(function() {
 
 
 
-function showModal(name, designation, img, qualifications, certifications, experience, FacultyDetails) {
-    $("#facultyName").html("<strong>Name:</strong> " + name);
-    $("#facultyDesignation").html("<strong>Designation:</strong> " + designation);
-    $("#imgf").attr("src", img);
-    $("#facultyQualifications").html("<strong>Qualification:</strong> " + qualifications);
-    $("#facultyCertifications").html("<strong>Certification:</strong> " + certifications);
-    $("#facultyExperience").html("<strong>Experience:</strong> " + experience);
-    $("#FacultyDetails").html("<strong>Techniques:</strong> " + FacultyDetails);
+  // Show modal function
+  function showModal(name, designation, img, qualifications, certifications, experience, FacultyDetails) {
+            $("#facultyName").html("<strong>Name:</strong> " + name);
+            $("#facultyDesignation").html("<strong>Designation:</strong> " + designation);
+            $("#imgf").attr("src", img);
+            $("#facultyQualifications").html("<strong>Qualification:</strong> " + qualifications);
+            $("#facultyCertifications").html("<strong>Certification:</strong> " + certifications);
+            $("#facultyExperience").html("<strong>Experience:</strong> " + experience);
+            $("#FacultyDetails").html("<strong>Techniques:</strong> " + FacultyDetails);
 
-    // Show modal
-    $("#facultyModal").show();
-    $("body").addClass("modal-open");
-}
+            // Show modal
+            $("#facultyModal").show();
+            $("body").addClass("modal-open");
+        }
 
-// Close modal function
-window.closeModal = function() {
-    $("#facultyModal").hide();
-};
-window.closeModal = function() {
-    $("#facultyModal").hide();
+        // Close modal function
+        function closeModal() {
+            $("#facultyModal").hide();
+            $("body").removeClass("modal-open");
+        }
 
-    // Remove class from body to enable scrolling
-    $("body").removeClass("modal-open");
-};
+        // Make sure closeModal is available globally
+        window.closeModal = closeModal;
 </script>
 <script>
 $(document).ready(function() {

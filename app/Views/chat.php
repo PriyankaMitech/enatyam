@@ -29,7 +29,7 @@
         //   echo "<pre>";print_r( $row);exit();
       }
           ?>
-          <img src="<?=base_url(); ?>/dist/img/avatar5.png" alt="">
+          <img src="<?=base_url(); ?>/dist/img/avatar5.png" alt="img358">
           <div class="details">
             <span><?php echo $row['full_name']. " " . $row['full_name'] ?></span>
             <p>Active</p>
