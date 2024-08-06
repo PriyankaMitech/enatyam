@@ -33,6 +33,19 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="8dUBvhYJTHwhlmHhaUNp9r6KWwXKr-fzGUKBAgeXXAA" />
+        <link rel="shortcut icon" type="image/png" href="<?= base_url(); ?>public/images/favicon.ico">
+
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K1JHG4HMNN"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-K1JHG4HMNN');
+</script>
     <?php 
     $file = __DIR__ . "/seo.php";
     if (file_exists($file)) {
@@ -116,6 +129,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.0/sweetalert2.css" rel="stylesheet">
 
+    
     <?php if ($page == 'enatyam' || $page == 'Home' || $page == 'pricing' ) {
 
     ?>
@@ -1982,7 +1996,7 @@ $courses_data = $adminModel->getalldata('tbl_courses', $wherecond);
                 </a>
                 <ul class="navbar-nav main-menu ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link px-2" href="<?php echo base_url('Home'); ?>">Home</a>
+                        <a class="nav-link px-2" href="<?php echo base_url('/'); ?>">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-2" href="<?php echo base_url('Dance'); ?>">Dance</a>

@@ -111,7 +111,7 @@ if (isset($_SESSION['sessiondata'])) {
                                                     <span class="direct-chat-timestamp float-right"><?= $date;
                                                                                                     echo $time; ?></span>
                                                 </div>
-                                                <img class="direct-chat-img" src="<?php echo base_url() ?>public/images/user.png" alt="Message User Image">
+                                                <img class="direct-chat-img" src="<?php echo base_url() ?>public/images/user.png" alt="img359">
                                                 <div class="direct-chat-text">
                                                     <?php echo $chat['message'] ?>
                                                 </div>
@@ -123,7 +123,7 @@ if (isset($_SESSION['sessiondata'])) {
                                                     <span class="direct-chat-timestamp float-left"><?= $date;
                                                                                                     echo $time ?></span>
                                                 </div>
-                                                <img class="direct-chat-img" src="<?php echo base_url() ?>public/images/user.png" alt="Message User Image">
+                                                <img class="direct-chat-img" src="<?php echo base_url() ?>public/images/user.png"  alt="img360">
                                                 <div class="direct-chat-text">
                                                     <?php echo $chat['message'] ?>
                                                 </div>
@@ -303,7 +303,7 @@ if (isset($_SESSION['sessiondata'])) {
                                         ?>
                                                 <li onclick="seen_chat(<?php echo $id; ?>)">
                                                     <a href="<?= base_url() ?>chatuser/<?= $id ?>">
-                                                        <img class="contacts-list-img" src="<?php echo base_url() ?>public/images/user.png" alt="User">
+                                                        <img class="contacts-list-img" src="<?php echo base_url() ?>public/images/user.png" alt="img361">
 
                                                         <div class="contacts-list-info contacts-list-info1">
                                                             <span class="contacts-list-name">
@@ -571,7 +571,7 @@ if (isset($_SESSION['sessiondata'])) {
                                     ?>
                                             <li onclick="seen_chat(<?php echo $id; ?>)">
                                                 <a href="<?= base_url() ?>chatuser/<?= $id ?>">
-                                                    <img class="contacts-list-img" src="<?php echo base_url() ?>public/images/user.png" alt="User">
+                                                    <img class="contacts-list-img" src="<?php echo base_url() ?>public/images/user.png" alt="img362">
 
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">

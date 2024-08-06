@@ -1,21 +1,23 @@
 <?php
 
-
-if($page == 'home')
+if($page == '')
 {
 	?>
-     <title>Looking For Top IGCSE Schools in Pune? BVRTSE Best IGCSE school In Baner, BVRTSE</title>
-     <meta name="description" content="One of the best IGCSE schools in Baner, Pune BVRTSE. Get admission to pre-primary, primary, and secondary in Top IGCSE Schools in Pune." />
-	 <meta name="keywords" content="Best IGCSE Schools in baner Pune, Top IGCSE Schools in aundh Pune, Best Schools in Baner, Best international Schools in Balewadi, best IGCSE Schools in Pune " />
+     <title>Online Classes for Dance & Music | Learn Online From Experts</title>
+     <meta name="description" content="Online Classes for Dance & Music in India. Learn online dance,music,instruments from experts with your convenienc" />
+	 <meta name="keywords" content="Online Classes 10k-100k, lear Online 100-1k " />
 	 <link rel="canonical" href="https://enatyam.com/" />
 	<?php
 }
+
+
+
 if($page == 'Dance')
 {
 	?>
-     <title>About BVRTSE: Cambridge International Schools in Balewadi, Pune</title>
-     <meta name="description" content="As a busy mom, I found Enatyam’s Best Online Dance Classes perfect for my 5-year-old daughter who loves to dance. Convenient, engaging, and flexible!" />
-	 <meta name="keywords" content="Online Dance class, Best online dance classes" />
+     <title>Best Online Dance Classes - Enatyam</title>
+     <meta name="description" content="Discover the best online dance classes for adults at Enatyam. Learn from professional instructors and join our vibrant dance community today!" />
+	 <meta name="keywords" content="online dance classes, online dance classes for adults, best online dance classes" />
 	 <link rel="canonical" href="https://enatyam.com/Dance" />
 	<?php
 }
@@ -95,9 +97,9 @@ if($page == 'online-folk-dance-classes')
 if($page == 'music')
 {
 	?>
-     <title>Contact us - Bharati Vidyapeeth Rabindranath Tagore School of Excellence</title>
-     <meta name="description" content="Contact for any query related to admission in Bharati Vidyapeeth Ravindranath Tagore School of Excellence, Pune India." />
-	 <meta name="keywords" content="Bharati Vidyapeeth Rabindranath Tagore School of Excellence" />
+     <title>Online Singing Classes for All Levels - Enatyam</title>
+     <meta name="description" content="Join our online singing classes designed for all levels. From beginners to pros, our courses will help you achieve your vocal goals." />
+	 <meta name="keywords" content="online singing classes, online singing lessons, online vocal lessons" />
 	 <link rel="canonical" href="https://enatyam.com/music" />
 	<?php
 }
@@ -149,9 +151,9 @@ if($page == 'online-playback-singing-classes')
 if($page == 'Instruments')
 {
 	?>
-     <title>Frequently Ask Questions|Best IGCSE Schools Near Me</title>
-     <meta name="description" content="We would be happy to answer question about best IGCSE schools near me and Curriculum / Board the School follows, assessment and grading work, choice of the board for affiliation, and boarding facilities etc." />
-	 <meta name="keywords" content="best IGCSE schools near me" />
+     <title>Learn Musical Instruments Online - Enatyam</title>
+     <meta name="description" content="Join our online instrument classes and learn from expert musicians. Flexible schedules & personalized lessons available. Start your musical journey today!" />
+	 <meta name="keywords" content="online violin lessons, best online piano lessons, best guitar online lessons" />
 	 <link rel="canonical" href="https://enatyam.com/Instruments" />
 	<?php
 }
@@ -239,9 +241,9 @@ if($page == 'online-harmonium-lessons')
 if($page == 'Yoga')
 {
 	?>
-     <title>Vision & Mission - Bharati Vidyapeeth Rabindranath Tagore School of Excellence</title>
-     <meta name="description" content="Bharati Vidyapeeth Rabindranath Tagore School of Excellence aims to provide world class education opportunities to children to identify their self-worth, strengths, skills & intelligence with which they can solve problems effortlessly" />
-	 <meta name="keywords" content="international schools in balewadi" />
+     <title>Best Online Yoga Classes for All Levels - Enatyam</title>
+     <meta name="description" content="Discover the best online yoga classes to suit all levels. Join us for yoga online and enhance your practice with expert instructors." />
+	 <meta name="keywords" content="online yoga classes, yoga online, best online yoga classes" />
 	 <link rel="canonical" href="https://enatyam.com/Yoga" />
 	<?php
 }
@@ -338,99 +340,99 @@ if($page == 'online-nutrition-counselling-classes')
 if($page == 'pricing')
 {
 	?>
-     <title>Principal Message - Top International Schools In Pune</title>
-     <meta name="description" content="Know about the Principal of Bharati Vidyapeeth Rabindranath Tagore School of Excellence in Pune, Maharashtra, India.Top international schools in pune" />
-	 <meta name="keywords" content="top international schools in pune" />
+     <title>Affordable Online Course Pricing</title>
+     <meta name="description" content="Discover competitive pricing for online courses. Explore our affordable course fees and Teachable pricing options for quality education." />
+	 <meta name="keywords" content="course pricing, teachable pricing, course fees" />
 	 <link rel="canonical" href="https://enatyam.com/pricing" />
 	<?php
 }
 if($page == 'Offilinstudio')
 {
 	?>
-     <title>School Admission Open for 2021-2022 - BVRTSE School, Baner, Pune</title>
+     <!-- <title>School Admission Open for 2021-2022 - BVRTSE School, Baner, Pune</title>
      <meta name="description" content="School Admission Open for 2021-2022 - Admission procedure for BVRTSE Pune - fee structure, registration, and documentation details." />
 	 <meta name="keywords" content="School Admission Open for 2021-2022" />
-	 <link rel="canonical" href="https://enatyam.com/Offilinstudio" />
+	 <link rel="canonical" href="https://enatyam.com/Offilinstudio" /> -->
 	<?php
 }
 if($page == 'corporateyoga')
 {
 	?>
-     <title>Scheduled a Schools visit - BVRTSE Pune top international schools in pune</title>
-     <meta name="description" content="Visit BVRTSE online and schedule a school visit to know about our admission process." />
-	 <meta name="keywords" content="BVRTSE School, top international schools in pune" />
+     <title>Bring Yoga to Your Office with Corporate Yoga Programs</title>
+     <meta name="description" content="Corporate yoga sessions to keep your team relaxed and productive. Perfect for integrating wellness into the office." />
+	 <meta name="keywords" content="corporate yoga, corporate yoga sessions, office yoga" />
 	 <link rel="canonical" href="https://enatyam.com/corporateyoga" />
 	<?php
 }
 if($page == 'demobooking')
 {
 	?>
-     <title>About us - Bharati Vidyapeeth Pune |  International Boards schools in Pune</title>
-     <meta name="description" content="Know about the India's Best & trusted Educational Institution - Bharati Vidyapeeth Pune, India.International Boards schools in Pune" />
-	 <meta name="keywords" content=" International Boards schools in Pune" />
+     <title>Book Your Free Demo Class Today - Enatyam</title>
+     <meta name="description" content="Discover the benefits of our services by scheduling a demo class. Book now to see how enatyam can help you achieve your goals." />
+	 <meta name="keywords" content="book demo, booked demo" />
 	 <link rel="canonical" href="https://enatyam.com/demobooking" />
 	<?php
 }
 if($page == 'blog')
 {
 	?>
-     <title>Schools of Bharati Vidyapeeth-  Top IGCSE Schools in Pune, India</title>
+     <!-- <title>Schools of Bharati Vidyapeeth-  Top IGCSE Schools in Pune, India</title>
      <meta name="description" content="Schools of Bharati Vidyapeeth - Top IGCSE Schools in Pune, India" />
 	 <meta name="keywords" content="schools of Bharati Vidyapeeth" />
-	 <link rel="canonical" href="https://enatyam.com/blog" />
+	 <link rel="canonical" href="https://enatyam.com/blog" /> -->
 	<?php
 }
 if($page == 'Career')
 {
 	?>
-     <title>How to apply | BVRTSE  Best IGCSE Schools in Pune</title>
-     <meta name="description" content="Know about the admissions criteria, discover programme and clear your all doubts" />
-	 <meta name="keywords" content="best IGCSE Schools in Pune" />
+     <title>How to Become a Teacher: Essential Steps to Get Started</title>
+     <meta name="description" content="Discover the key steps to becoming a teacher. Learn about qualifications, certification, and the skills needed to start your teaching career today." />
+	 <meta name="keywords" content="how to become a teacher, become a teacher, how to be a teacher" />
 	 <link rel="canonical" href="https://enatyam.com/Career" />
 	<?php
 }
 if($page == 'Contactus')
 {
 	?>
-     <title>Founder's Message - Bharati Vidyapeeth Rabindranath Tagore School of Excellence</title>
-     <meta name="description" content="Founder's Message - BVRTSE Pune, India." />
-	 <meta name="keywords" content="Bharati Vidyapeeth Rabindranath Tagore School of Excellence" />
+     <title>Contact Us | Get in Touch with Our Team</title>
+     <meta name="description" content="Have questions or need assistance? Visit our Contact Us page to reach our support team directly. We're here to help with any inquiries." />
+	 <meta name="keywords" content="contact us, contact website, contact us pages" />
 	 <link rel="canonical" href="https://enatyam.com/Contactus" />
 	<?php
 }
 if($page == 'invester')
 {
 	?>
-     <title>Primary School Admissions Open For 2021- BVRTSE Baner, Pune</title>
+     <!-- <title>Primary School Admissions Open For 2021- BVRTSE Baner, Pune</title>
      <meta name="description" content="Primary School Admissions Open For 2021- BVRTSE Baner, Pune" />
 	 <meta name="keywords" content="Pre-Primary School Admissions Open For 2021" />
-	 <link rel="canonical" href="https://enatyam.com/invester" />
+	 <link rel="canonical" href="https://enatyam.com/invester" /> -->
 	<?php
 }
 if($page == 'PrivacyPolicy')
 {
 	?>
-     <title>Secondary school admissions 2021</title>
-     <meta name="description" content="We are ranked amongst the best and most prestigious primary and higher secondary schools in Pune, India." />
-	 <meta name="keywords" content="Primary School Admissions Open For 2021" />
+     <title>Privacy Policy | Protecting Your Data Online</title>
+     <meta name="description" content="Discover our comprehensive privacy policy outlining how we safeguard your personal information and data while using our website." />
+	 <meta name="keywords" content="privacy policy, privacy policy generator,  privacy policy for website" />
 	 <link rel="canonical" href="https://enatyam.com/PrivacyPolicy" />
 	<?php
 }
 if($page == 'termsandconditions')
 {
 	?>
-     <title>Pedagogy - Best Schools in Balewadi BVRTSE</title>
-     <meta name="description" content="Pedagogy - Bharati Vidyapeeth Rabindranath Tagore School of Excellence,Best Schools in Balewadi, Baner, Pune." />
-	 <meta name="keywords" content="best schools in balewadi" />
+     <title>Terms & Conditions - Enatyam</title>
+     <meta name="description" content="Explore the terms and conditions for accessing and using our site. Ensure you are informed about our policies and user guidelines." />
+	 <meta name="keywords" content="terms & conditions, terms and conditions generator" />
 	 <link rel="canonical" href="https://enatyam.com/termsandconditions" />
 	<?php
 }
 if($page == 'refundpolicy')
 {
 	?>
-     <title>Best IGCSE School in Pune | Students Activities | Fun Time</title>
-     <meta name="description" content="Best IGCSE School in Pune. Learning with fun, kids activities photo." />
-	 <meta name="keywords" content="Best IGCSE School in pune" />
+     <title>Cancellation & Refund Policy | Your Guide to Policies</title>
+     <meta name="description" content="Discover our comprehensive cancellation & refund policy. Learn how to manage cancellations and request refunds effectively with our easy-to-follow guide." />
+	 <meta name="keywords" content="cancellation & refund policy" />
 	 <link rel="canonical" href="https://enatyam.com/refundpolicy" />
 	<?php
 }
