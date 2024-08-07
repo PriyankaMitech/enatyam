@@ -137,6 +137,7 @@ $routes->get('demojoininglink', 'LoginController::demojoininglink');
 $routes->get('referandearn', 'LoginController::referandearn');
 $routes->get('bookdemo2', 'LoginController::bookdemo2');
 $routes->post('validateotp', 'LoginController::validateotp');
+$routes->get('LoginController/deleteuser', 'LoginController::deleteuser');
 
 $routes->post('validateotp_data', 'LoginController::validateotp_data');
 
