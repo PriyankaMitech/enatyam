@@ -1,6 +1,6 @@
 <?php
 
-if($page == '')
+if($page == '' || $page == 'Home')
 {
 	?>
      <title>Online Classes for Dance & Music | Learn Online From Experts</title>
@@ -349,8 +349,8 @@ if($page == 'pricing')
 if($page == 'Offilinstudio')
 {
 	?>
-     <!-- <title>School Admission Open for 2021-2022 - BVRTSE School, Baner, Pune</title>
-     <meta name="description" content="School Admission Open for 2021-2022 - Admission procedure for BVRTSE Pune - fee structure, registration, and documentation details." />
+     <title>Offilinstudio </title>
+     <!-- <meta name="description" content="School Admission Open for 2021-2022 - Admission procedure for BVRTSE Pune - fee structure, registration, and documentation details." />
 	 <meta name="keywords" content="School Admission Open for 2021-2022" />
 	 <link rel="canonical" href="https://enatyam.com/Offilinstudio" /> -->
 	<?php
@@ -364,7 +364,7 @@ if($page == 'corporateyoga')
 	 <link rel="canonical" href="https://enatyam.com/corporateyoga" />
 	<?php
 }
-if($page == 'demobooking')
+if($page == 'demobooking' || $page == 'demo')
 {
 	?>
      <title>Book Your Free Demo Class Today - Enatyam</title>
@@ -376,8 +376,8 @@ if($page == 'demobooking')
 if($page == 'blog')
 {
 	?>
-     <!-- <title>Schools of Bharati Vidyapeeth-  Top IGCSE Schools in Pune, India</title>
-     <meta name="description" content="Schools of Bharati Vidyapeeth - Top IGCSE Schools in Pune, India" />
+     <title>Blog</title>
+     <!-- <meta name="description" content="Schools of Bharati Vidyapeeth - Top IGCSE Schools in Pune, India" />
 	 <meta name="keywords" content="schools of Bharati Vidyapeeth" />
 	 <link rel="canonical" href="https://enatyam.com/blog" /> -->
 	<?php
@@ -403,8 +403,8 @@ if($page == 'Contactus')
 if($page == 'invester')
 {
 	?>
-     <!-- <title>Primary School Admissions Open For 2021- BVRTSE Baner, Pune</title>
-     <meta name="description" content="Primary School Admissions Open For 2021- BVRTSE Baner, Pune" />
+     <title>invester</title>
+     <!-- <meta name="description" content="Primary School Admissions Open For 2021- BVRTSE Baner, Pune" />
 	 <meta name="keywords" content="Pre-Primary School Admissions Open For 2021" />
 	 <link rel="canonical" href="https://enatyam.com/invester" /> -->
 	<?php

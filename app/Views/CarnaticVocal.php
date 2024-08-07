@@ -148,31 +148,7 @@
         <!-- pills -->
         <div class="typesOfDance-tab">
 
-        <!-- <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="col-lg-1 col-md-1"></li>
-
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link " id="pills-HindustaniVocal-tab" href="<?=base_url(); ?>HindustaniVocal" target="_blank" role="tab" aria-controls="pills-HindustaniVocal" aria-selected="true">Hindustani Vocal</a>
-            </li>
-            
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link active" id="pills-CarnaticVocal-tab" href="<?=base_url(); ?>CarnaticVocal" target="_blank" role="tab" aria-controls="pills-CarnaticVocal" aria-selected="false">Carnatic Vocal</a>
-            </li>
-            
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-SemiClassical-tab" href="<?=base_url(); ?>SemiClassicals" target="_blank" role="tab" aria-controls="pills-SemiClassical" aria-selected="false">Semi Classical</a>
-            </li>
-            
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-WesternSinging-tab" href="<?=base_url(); ?>WesternSinging" target="_blank" role="tab" aria-controls="pills-WesternSinging" aria-selected="false">Western Singing</a>
-            </li>
-            
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-PlaybackSinging-tab" href="<?=base_url(); ?>PlaybackSinging" target="_blank" role="tab" aria-controls="pills-PlaybackSinging" aria-selected="false">Playback Singing</a>
-            </li>
-
-            <li class="col-lg-1 col-md-1"></li>
-        </ul> -->
+  
             <div class="tab-content" id="pills-tabContent">
                 <!-- Hindustani Vocal -->
                 <div class="tab-pane fade " id="pills-HindustaniVocal" role="tabpanel" aria-labelledby="pills-HindustaniVocal-tab">
@@ -2633,45 +2609,47 @@
                         <div class="col-lg-3 col-md-3 col-6">
                             <h5 class="text-white" style="text-align: center;">Everyday Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-stress-reduction-yoga-classes" target="" class="d-block h-100">
+
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="img355">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
-                                <a href="<?= base_url(); ?>Western" class="btn shop-now-btn">Explore More</a>
+                                <a href="<?= base_url(); ?>online-stress-reduction-yoga-classes" class="btn shop-now-btn">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-6">
                             <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-semiclassical-music-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="img355">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
-                                <a href="<?= base_url(); ?>Semiclassical" class="btn shop-now-btn">Explore More</a>
+                                <a href="<?= base_url(); ?>online-semiclassical-music-lessons" class="btn shop-now-btn">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-6">
                             <h5 class="text-white" style="text-align: center;">Yoga for Kids</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
+                               <a href="<?= base_url(); ?>online-bhangra-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="img356">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
-                                <a href="<?= base_url(); ?>Bhangra" class="btn shop-now-btn">Explore More</a>
+                                <a href="<?= base_url(); ?>online-bhangra-lessons" class="btn shop-now-btn">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-6">
                             <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-folk-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="img357">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
-                                <a href="<?= base_url(); ?>Folk" class="btn shop-now-btn">Explore More</a>
+                                <a href="<?= base_url(); ?>online-folk-dance-classes" class="btn shop-now-btn">Explore More</a>
+
                             </div>
                         </div>
                     </div>

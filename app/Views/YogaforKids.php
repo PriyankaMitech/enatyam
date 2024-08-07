@@ -260,7 +260,7 @@
                     <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
                     </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/YogaForKids.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/YogaforKids.svg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left text-col">
                             <h3 class="heading"> Yoga for Kids</h3>
@@ -4195,45 +4195,47 @@
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Everyday Yoga </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Western" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-stress-reduction-yoga-classes" target="" class="d-block h-100">
+
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
-                                <a href="<?= base_url(); ?>Western" class="btn shop-now-btn">Explore More</a>
+                                <a href="<?= base_url(); ?>online-stress-reduction-yoga-classes" class="btn shop-now-btn">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Yoga for Chronic Desiese </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Semiclassical" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-semiclassical-music-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
-                                <a href="<?= base_url(); ?>Semiclassical" class="btn shop-now-btn">Explore More</a>
+                                <a href="<?= base_url(); ?>online-semiclassical-music-lessons" class="btn shop-now-btn">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Yoga for Kids</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Bhangra" target="" class="d-block h-100">
+                               <a href="<?= base_url(); ?>online-bhangra-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
-                                <a href="<?= base_url(); ?>Bhangra" class="btn shop-now-btn">Explore More</a>
+                                <a href="<?= base_url(); ?>online-bhangra-lessons" class="btn shop-now-btn">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-6">
                             <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
-                                <a href="<?= base_url(); ?>Folk" target="" class="d-block h-100">
+                                <a href="<?= base_url(); ?>online-folk-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
-                                <a href="<?= base_url(); ?>Folk" class="btn shop-now-btn">Explore More</a>
+                                <a href="<?= base_url(); ?>online-folk-dance-classes" class="btn shop-now-btn">Explore More</a>
+
                             </div>
                         </div>
                     </div>
