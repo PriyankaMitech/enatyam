@@ -85,7 +85,7 @@
                 <div class="tab-pane fade show active" id="pills-PrenatalYoga" role="tabpanel" aria-labelledby="pills-PrenatalYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/prenatalYoga.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/prenatalYoga.svg" alt="prenatalYoga" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left text-col">
                             <h3 class="heading"> Prenatal Yoga</h3>
@@ -185,7 +185,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="YogaImg1" class="danceimg">
 
                                 </div>
                             </div>
@@ -204,7 +204,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="YogaImg3" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -264,15 +264,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons8">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons9">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="icons10">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -507,7 +507,7 @@
                 <div class="tab-pane fade" id="pills-StressReduction" role="tabpanel" aria-labelledby="pills-StressReduction-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/StressReductionImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/StressReductionImg.svg" alt="StressReduction" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Stress Reduction Yoga</h3>
@@ -602,7 +602,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="YogaImg4" class="danceimg">
 
                                 </div>
                             </div>
@@ -621,7 +621,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="YogaImg5" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -681,15 +681,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons11">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons12">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="icons13">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -916,7 +916,7 @@
                 <div class="tab-pane fade show" id="pills-Flexibility" role="tabpanel" aria-labelledby="pills-Flexibility-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/FlexibilityYogaImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/FlexibilityYogaImg.svg" alt="FlexibilityYoga" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Flexibility Yoga</h3>
@@ -1017,7 +1017,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="YogaImg11" class="danceimg">
 
                                 </div>
                             </div>
@@ -1034,7 +1034,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="YogaImg12" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -1094,15 +1094,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons14">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons15">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="icons16">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -1304,7 +1304,7 @@
                 <div class="tab-pane fade show" id="pills-WeightLossYoga" role="tabpanel" aria-labelledby="pills-WeightLossYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/WeightLossYogaImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/WeightLossYogaImg.svg" alt="WeightLoss" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Weight Loss Yoga</h3>
@@ -1396,7 +1396,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="YogaImg15" class="danceimg">
                                 </div>
                             </div>
                         </div>
@@ -1411,7 +1411,7 @@
                                         <span class="line"></span>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="YogaImg16" class="danceimgy">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1468,15 +1468,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons16">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons17">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="icons18">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -1675,7 +1675,7 @@
                 <div class="tab-pane fade show" id="pills-EverydayYoga" role="tabpanel" aria-labelledby="pills-EverydayYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/EverydayYoga.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/EverydayYoga.svg" alt="Everyday" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Everyday Yoga</h3>
@@ -1776,7 +1776,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="YogaImg19" class="danceimg">
 
                                 </div>
                             </div>
@@ -1793,7 +1793,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="YogaImg21" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -1853,15 +1853,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons21">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons22" >
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="icons23">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2094,7 +2094,7 @@
                 <div class="tab-pane fade show" id="pills-YogaforChronic" role="tabpanel" aria-labelledby="pills-YogaforChronic-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/chronicYoga.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/chronicYoga.svg" alt="chronicYoga" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Yoga for Chronic Disease</h3>
@@ -2195,7 +2195,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="YogaImg24" class="danceimg">
 
                                 </div>
                             </div>
@@ -2212,7 +2212,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="YogaImg25" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2272,15 +2272,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons24">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons25" >
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="icons26">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2513,7 +2513,7 @@
                 <div class="tab-pane fade show" id="pills-YogaforKids" role="tabpanel" aria-labelledby="pills-YogaforKids-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/YogaforKids.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/YogaforKids.svg" alt="YogaforKids" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Yoga for Kids</h3>
@@ -2614,7 +2614,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="YogaImg27" class="danceimg">
 
                                 </div>
                             </div>
@@ -2631,7 +2631,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="YogaImg28" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2691,15 +2691,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons25">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons26">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="icons27">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2931,7 +2931,7 @@
                 <div class="tab-pane fade show" id="pills-Meditation" role="tabpanel" aria-labelledby="pills-Meditation-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/MeditationImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/MeditationImg.svg"  alt="MeditationImg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Meditation</h3>
@@ -3032,7 +3032,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="YogaImg29" class="danceimg">
 
                                 </div>
                             </div>
@@ -3046,7 +3046,7 @@
                 <div class="tab-pane fade show" id="pills-CustomiseYoga" role="tabpanel" aria-labelledby="pills-CustomiseYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/CustomizeYogaImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/CustomizeYogaImg.svg"  alt="CustomizeYogaImg" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Customise your Yoga Plan</h3>
@@ -3149,7 +3149,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg"  alt="YogaImg30" class="danceimg">
 
                                 </div>
                             </div>
@@ -3163,7 +3163,7 @@
                 <div class="tab-pane fade show" id="pills-NutritionCounselling" role="tabpanel" aria-labelledby="pills-NutritionCounselling-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/NutritionCounsellingImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/NutritionCounsellingImg.svg"  alt="NutritionCounselling" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Nutrition Counselling</h3>
@@ -3262,7 +3262,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg"  alt="YogaImg31" class="danceimg">
 
                                 </div>
                             </div>
@@ -3279,7 +3279,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="YogaImg32" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -3339,15 +3339,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp"  alt="icons28">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="icons29">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="icons30">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -3609,7 +3609,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/1.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/1.png" class="haimg" alt="happyfacesyoga">
                                     </div>
                                 </div>
                             </div>
@@ -3627,7 +3627,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/2.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/2.png" alt="happyfacesyoga1" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3645,7 +3645,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/3.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/3.png" alt="happyfacesyoga2" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3664,7 +3664,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/4.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/4.png" alt="happyfacesyoga3" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3683,7 +3683,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/5.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/5.png" alt="happyfacesyoga4" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3702,7 +3702,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/6.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/6.png"  alt="happyfacesyoga4" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3721,7 +3721,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/7.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/7.png"  alt="happyfacesyoga5" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3740,7 +3740,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/8.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/8.png" alt="happyfacesyoga6" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3759,7 +3759,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/9.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/9.png" alt="happyfacesyoga7" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3778,7 +3778,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/10.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/10.png" alt="happyfacesyoga8" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3797,7 +3797,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/11.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/11.png" alt="happyfacesyoga9" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3817,7 +3817,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/12.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/12.png" alt="happyfacesyoga10"  class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3838,7 +3838,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/13.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/13.png" alt="happyfacesyoga11" class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3859,7 +3859,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/14.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/14.png" alt="happyfacesyoga12"  class="haimg">
                                     </div>
                                 </div>
                             </div>
@@ -3879,7 +3879,7 @@
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/15.png" class="haimg">
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/15.png" alt="happyfacesyoga13" class="haimg">
                                     </div>
                                 </div>
                             </div>

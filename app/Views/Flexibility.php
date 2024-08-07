@@ -260,7 +260,7 @@
                     <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
                     </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/FlexibilityYogaImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/FlexibilityYogaImg.svg" alt="flexibility1" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left text-col">
                             <h3 class="heading"> Flexibility Yoga</h3>
@@ -362,7 +362,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility2" class="danceimg">
 
                                 </div>
                             </div>
@@ -381,7 +381,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="flexibility3" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -441,15 +441,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility4">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility5">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="flexibility6">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -684,7 +684,7 @@
                 <div class="tab-pane fade" id="pills-StressReduction" role="tabpanel" aria-labelledby="pills-StressReduction-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/StressReductionImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/StressReductionImg.svg" alt="StressReduction" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Stress Reduction Yoga</h3>
@@ -779,7 +779,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility11" class="danceimg">
 
                                 </div>
                             </div>
@@ -798,7 +798,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="flexibility12" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -858,15 +858,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility13">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp"alt="flexibility14">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp"alt="flexibility15">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1093,7 +1093,7 @@
                 <div class="tab-pane fade show" id="pills-Flexibility" role="tabpanel" aria-labelledby="pills-Flexibility-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/FlexibilityYogaImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/FlexibilityYogaImg.svg" alt="flexibility16" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Flexibility Yoga</h3>
@@ -1194,7 +1194,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility17" class="danceimg">
 
                                 </div>
                             </div>
@@ -1211,7 +1211,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="flexibility18" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -1271,15 +1271,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility19">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility20">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="flexibility21">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -1481,7 +1481,7 @@
                 <div class="tab-pane fade show" id="pills-WeightLossYoga" role="tabpanel" aria-labelledby="pills-WeightLossYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/WeightLossYogaImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/WeightLossYogaImg.svg" alt="flexibility22" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Weight Loss Yoga</h3>
@@ -1573,7 +1573,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility23" class="danceimg">
                                 </div>
                             </div>
                         </div>
@@ -1588,7 +1588,7 @@
                                         <span class="line"></span>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="flexibility24" class="danceimgy">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1645,15 +1645,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility25">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility26">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="flexibility27">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -1852,7 +1852,7 @@
                 <div class="tab-pane fade show" id="pills-EverydayYoga" role="tabpanel" aria-labelledby="pills-EverydayYoga-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/EverydayYoga.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/EverydayYoga.svg" alt="flexibility28" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Everyday Yoga</h3>
@@ -1953,7 +1953,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility29" class="danceimg">
 
                                 </div>
                             </div>
@@ -1970,7 +1970,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="flexibility30" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2030,15 +2030,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility31">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility32">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="flexibility33">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2271,7 +2271,7 @@
                 <div class="tab-pane fade show" id="pills-YogaforChronic" role="tabpanel" aria-labelledby="pills-YogaforChronic-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/chronicYoga.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/chronicYoga.svg" alt="flexibility34" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Yoga for Chronic Disease</h3>
@@ -2372,7 +2372,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility35" class="danceimg">
 
                                 </div>
                             </div>
@@ -2389,7 +2389,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="flexibility36" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2449,15 +2449,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility37">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility38">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="flexibility39">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2690,7 +2690,7 @@
                 <div class="tab-pane fade show" id="pills-YogaforKids" role="tabpanel" aria-labelledby="pills-YogaforKids-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/YogaforKids.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/YogaforKids.svg" alt="flexibility40" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Yoga for Kids</h3>
@@ -2791,7 +2791,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility41" class="danceimg">
 
                                 </div>
                             </div>
@@ -2808,7 +2808,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="flexibility42" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2868,15 +2868,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility43">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility44">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp"alt="flexibility45">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -3108,7 +3108,7 @@
                 <div class="tab-pane fade show" id="pills-Meditation" role="tabpanel" aria-labelledby="pills-Meditation-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/MeditationImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/MeditationImg.svg" alt="flexibility46" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Meditation</h3>
@@ -3209,7 +3209,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility47" class="danceimg">
 
                                 </div>
                             </div>
@@ -3326,7 +3326,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility48" class="danceimg">
 
                                 </div>
                             </div>
@@ -3340,7 +3340,7 @@
                 <div class="tab-pane fade show" id="pills-NutritionCounselling" role="tabpanel" aria-labelledby="pills-NutritionCounselling-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Yoga/NutritionCounsellingImg.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Yoga/NutritionCounsellingImg.svg" alt="flexibility49" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <h3 class="heading"> Nutrition Counselling</h3>
@@ -3439,7 +3439,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- <div class="chgimg" > -->
 
-                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" class="danceimg">
+                                    <img src="<?=base_url(); ?>public/images/Yoga/YogaImg2.svg" alt="flexibility5" class="danceimg">
 
                                 </div>
                             </div>
@@ -3456,7 +3456,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center muduleimg">
-                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" class="danceimgy">
+                                        <img src="<?=base_url(); ?>public/images/Yoga/YogaImg3.svg" alt="flexibility51" class="danceimgy">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -3516,15 +3516,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility52">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="flexibility53">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp"alt="flexibility54">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -3844,7 +3844,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/1.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/1.png" alt="flexibility55" class="centered-image" />
                                             <div class="hft">
                                                 <h5>Aiden C ( London -Uk)</h5>
                                                 <p>Enatyam's yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It's like having a personal yoga guide right in my living room.
@@ -3856,7 +3856,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 mb-5">
-                                            <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/2.png" class="centered-image"  />
+                                            <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/2.png" alt="flexibility56" class="centered-image"  />
                                             <div class="hft">
                                                 <h5>Sweta ( Australia)</h5>
                                                 <p>I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that's easy to understand. Feeling more zen already!</p>
@@ -3869,7 +3869,7 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/3.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/3.png" alt="flexibility57" class="centered-image" />
                                         <div class="hft">
                                             <h5>Sneha (Canada )</h5>
                                         <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual that I genuinely look forward to.</p>
@@ -3880,7 +3880,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/4.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/4.png" alt="flexibility58" class="centered-image" />
                                         <div class="hft">
                                             <h5>Kavita ( Pune)</h5>
                                             <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
@@ -3893,7 +3893,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/6.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/6.png" alt="flexibility59" class="centered-image" />
                                         <div class="hft">
                                             <h5>Ayesha ( Singapore )</h5>
                                             <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
@@ -3904,7 +3904,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/8.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/8.png" alt="flexibility60" class="centered-image" />
                                         <div class="hft">
                                             <h5>Rajiv ( Lucknow )</h5>
                                             <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.</p>
@@ -3918,7 +3918,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/9.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/9.png" alt="flexibility61" class="centered-image" />
                                         
                                         <div class="hft">
                                         <h5>Vikram ( Delhi )</h5>
@@ -3932,7 +3932,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/5.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/5.png" alt="flexibility62" class="centered-image" />
                                         <div class="hft">
                                             <h5>Unnikrishnan (Dubai)</h5>
                                             <p class="reviewName">Enatyam's yoga courses are my go-to for stress relief. The calming voice of the instructors and the simplicity of the poses make it a perfect escape from the chaos of daily life.</p>
@@ -3946,7 +3946,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/13.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/13.png"  alt="flexibility63" class="centered-image" />
                                     <div class="hft">
                                         <h5>Kajal ( Delhi )</h5>
                                         <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
@@ -3959,7 +3959,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/14.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/14.png" alt="flexibility64" class="centered-image" />
                                     <div class="hft">
                                         <h5>Scarlett family ( Germany )</h5>
                                         <p class="reviewName">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
@@ -3973,7 +3973,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/7.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/7.png" alt="flexibility65" class="centered-image" />
                                     <div class="hft">
                                         <h5>Emma ( UK )</h5>
                                         <p class="reviewName">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
@@ -3986,7 +3986,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/11.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/11.png" alt="flexibility66" class="centered-image" />
                                     <div class="hft">
                                         <h5>Michael (Mike) ( USA)</h5>
                                         <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
@@ -4007,7 +4007,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/1.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/1.png" alt="flexibility67" class="centered-image" />
                                             <div class="hft">
                                                 <h5>Aiden C ( London -Uk)</h5>
                                                 <p>Enatyam's yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It's like having a personal yoga guide right in my living room.
@@ -4022,7 +4022,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/2.png" class="centered-image"  />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/2.png" alt="flexibility68" class="centered-image"  />
                                             <div class="hft">
                                                 <h5>Sweta ( Australia)</h5>
                                                 <p>I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that's easy to understand. Feeling more zen already!</p>
@@ -4035,7 +4035,7 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                     <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/3.png" class="centered-image" />
+                                     <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/3.png" alt="flexibility69" class="centered-image" />
                                         <div class="hft">
                                             <h5>Sneha (Canada )</h5>
                                         <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual that I genuinely look forward to.</p>
@@ -4049,7 +4049,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/4.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/4.png" alt="flexibility70" class="centered-image" />
                                         <div class="hft">
                                             <h5>Kavita ( Pune)</h5>
                                             <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
@@ -4062,7 +4062,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/6.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/6.png" alt="flexibility71"  class="centered-image" />
                                         <div class="hft">
                                             <h5>Ayesha ( Singapore )</h5>
                                             <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
@@ -4076,7 +4076,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/8.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/8.png"  alt="flexibility72" class="centered-image" />
                                         <div class="hft">
                                             <h5>Rajiv ( Lucknow )</h5>
                                             <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.</p>
@@ -4090,7 +4090,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/9.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/9.png" alt="flexibility73"  class="centered-image" />
                                         <div class="hft">
                                         <h5>Vikram ( Delhi )</h5>
                                         <p class="reviewName">Enatyam's yoga classes have made me realize that yoga is for everyone. The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.</p>
@@ -4105,7 +4105,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/5.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/5.png" alt="flexibility74"  class="centered-image" />
                                         <div class="hft">
                                             <h5>Unnikrishnan (Dubai)</h5>
                                             <p class="reviewName">Enatyam's yoga courses are my go-to for stress relief. The calming voice of the instructors and the simplicity of the poses make it a perfect escape from the chaos of daily life.</p>
@@ -4119,7 +4119,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" alt="flexibility75"  class="centered-image" />
                                     <div class="hft">
                                         <h5>Kajal ( Delhi )</h5>
                                         <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
@@ -4133,7 +4133,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/14.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/14.png" alt="flexibility76"  class="centered-image" />
                                     <div class="hft">
                                         <h5>Scarlett family ( Germany )</h5>
                                         <p class="reviewName">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
@@ -4147,7 +4147,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/7.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/7.png" alt="flexibility77"  class="centered-image" />
                                     <div class="hft">
                                         <h5>Emma ( UK )</h5>
                                         <p class="reviewName">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
@@ -4161,7 +4161,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/11.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Yoga/11.png" alt="flexibility78"  class="centered-image" />
                                     <div class="hft">
                                         <h5>Michael (Mike) ( USA)</h5>
                                         <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
