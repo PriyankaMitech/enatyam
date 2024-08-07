@@ -220,7 +220,7 @@ class LoginModel extends Model
         $session = session();
         $result = $this->db
             ->table('register')
-            ->where(["email" => $email, "password" => $password])
+            ->where(["email" => $email, "password" => $password ,"is_email_verify" => 'Y'])
             ->get()
             ->getRow();
 
@@ -255,7 +255,7 @@ class LoginModel extends Model
         $session = session();
         $result = $this->db
             ->table('register')
-            ->where(["mobile_no" => $mobile_no, "password" => $password])
+            ->where(["mobile_no" => $mobile_no, "password" => $password ,"is_email_verify" => 'Y'])
             ->get()
             ->getRow();
 
@@ -391,7 +391,7 @@ class LoginModel extends Model
         $session = session();
         $result = $this->db
             ->table('register')
-            ->where(["mobileWithCode" => $username, "loginotp" => $otp])
+            ->where(["mobileWithCode" => $username, "loginotp" => $otp ,"is_email_verify" => 'Y'])
             ->get()
             ->getRow();
 
