@@ -605,33 +605,41 @@ class LoginController extends BaseController
         }
     }
     public function deleteuser()
-{
-    $db = \Config\Database::connect();
-    $threeMinutesAgo = date('Y-m-d H:i:s', strtotime('-3 minutes'));
-    $wherecond = [
-        'created_on >' => $threeMinutesAgo,
-        'is_email_verify' => null,
-        'role' => 'Student'
-    ];
-    $builder = $db->table('register');
-    $builder->where($wherecond);
-    $query = $builder->get();
-    $users = $query->getResult();
-    $usersToDelete = [];
-    foreach ($users as $user) {
-        $usersToDelete[] = $user->id; 
+    {
+       
+        date_default_timezone_set('Asia/Kolkata');
+      
+        $db = \Config\Database::connect();
+      
+        $threeMinutesAgo = date('Y-m-d H:i:s', strtotime('-3 minutes'));
+      
+        $wherecond = [
+            'created_on <' => $threeMinutesAgo, // Use '<' to get records created more than 3 minutes ago
+            'is_email_verify' => null,
+            'role' => 'Student'
+        ];
+        $builder = $db->table('register');
+        $builder->where($wherecond);
+        $query = $builder->get();
+        $users = $query->getResult();
+        $usersToDelete = [];
+        foreach ($users as $user) {
+            $usersToDelete[] = $user->id; 
+        }
+       
+        if (!empty($usersToDelete)) {
+            $studentBuilder = $db->table('student');
+            $studentBuilder->whereIn('register_id', $usersToDelete);
+            $studentBuilder->delete();
+            $builder->whereIn('id', $usersToDelete);
+            $deleteResult = $builder->delete();   
+            
+        } else {
+            echo 'No users found for deletion';
+        }
+        
+        // Redirect to a page after processing
+        return redirect()->to('/'); // Adjust redirection as needed
     }
-    if (!empty($usersToDelete)) {
-        $studentBuilder = $db->table('student');
-        $studentBuilder->whereIn('register_id', $usersToDelete);
-        $studentBuilder->delete();
-        $builder->whereIn('id', $usersToDelete);
-        $deleteResult = $builder->delete();   
-    } else {
-        echo 'No users found for deletion';
-    }
-    return redirect()->to('/'); 
-}
-
     
 }    
