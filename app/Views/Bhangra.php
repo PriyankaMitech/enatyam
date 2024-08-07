@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="<?=base_url(); ?>public/images/Dance/bhangra.webp" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="<?=base_url(); ?>public/images/Dance/bhangra.webp" class="rightimg" alt="bhangra1" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
 
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="bhangra2" class="img-fluid">
                     </div>
                     <div class="col-lg-12 col-md-12 col-12 coh">
                   
@@ -93,7 +93,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-kathak-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo  base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="courseoffering">
+                                        src="<?php echo  base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="bhangra3">
                                 </a>
                             </div>
 
@@ -105,7 +105,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-bharatanatyam-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt="2-rbg"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt="bhangra4"
                                        >
                                 </a>
                             </div>
@@ -118,7 +118,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-odissi-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/odissi.webp" alt="odissi.webp"
+                                        src="<?php echo base_url(); ?>public/images/Dance/odissi.webp" alt="bhangra5"
                                        >
                                 </a>
                             </div>
@@ -131,7 +131,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-bollywood-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/bollywood-dance.webp" alt="bollywood-dance"
+                                        src="<?php echo base_url(); ?>public/images/Dance/bollywood-dance.webp" alt="bhangra6"
                                        >
                                 </a>
                             </div>
@@ -143,7 +143,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-western-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/western.jpg" alt="western"
+                                        src="<?php echo base_url(); ?>public/images/Dance/western.jpg" alt="bhangra7"
                                        >
                                 </a>
                             </div>
@@ -154,7 +154,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-semiclassical-dance-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/kathakImg1.svg" alt="kathakImg1"
+                                        src="<?php echo base_url(); ?>public/images/Dance/kathakImg1.svg" alt="bhangra8"
                                        >
                                 </a>
                             </div>
@@ -166,7 +166,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-bhangra-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/bhangra.webp" alt="bhangra"
+                                        src="<?php echo base_url(); ?>public/images/Dance/bhangra.webp" alt="bhangra9"
                                        >
                                 </a>
                             </div>
@@ -178,7 +178,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-folk-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/folk-dance.jpg" alt="folk-dance"
+                                        src="<?php echo base_url(); ?>public/images/Dance/folk-dance.jpg" alt="bhangra10"
                                        >
                                 </a>
                             </div>
@@ -204,7 +204,7 @@
                 <div class="tab-pane fade " id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="kathakImg1">
+                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="bhangra11">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
                             <h3 class="heading"> Kathak</h3>
@@ -344,7 +344,7 @@
 
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="kathakImg2">
+                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="bhangra12">
                                 </div>
                             </div>
                         </div>
@@ -2430,7 +2430,7 @@
                 <div class="tab-pane fade show active" id="pills-Bhangra" role="tabpanel" aria-labelledby="pills-Bhangra-tab">
                     <div class="row pddyd">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid"  alt="img27">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp"  class="img-fluid"  alt="img27">
                     </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <img src="<?=base_url(); ?>public/images/Dance/bhangra.webp" class="danceimg" alt="img28">

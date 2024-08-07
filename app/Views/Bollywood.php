@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="<?=base_url(); ?>public/images/Dance/bollywood.jpg" class="rightimg" alt="img184" style="width:100%;">
+                        <img src="<?=base_url(); ?>public/images/Dance/bollywood.jpg" class="rightimg" alt="bollywood184" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
 
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="img185" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="bollywood185" class="img-fluid">
                     </div>
                     <div class="col-lg-12 col-md-12 col-12 coh">
                   
@@ -92,7 +92,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-kathak-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo  base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="img186">
+                                        src="<?php echo  base_url(); ?>public/images/courseoffering/1-rbg.webp" alt="bollywood186">
                                 </a>
                             </div>
 
@@ -104,7 +104,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-bharatanatyam-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt="img187"
+                                        src="<?php echo base_url(); ?>public/images/courseoffering/2-rbg.webp" alt="bollywood187"
                                        >
                                 </a>
                             </div>
@@ -117,7 +117,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-odissi-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/odissi.webp" alt="img188"
+                                        src="<?php echo base_url(); ?>public/images/Dance/odissi.webp" alt="bollywood188"
                                        >
                                 </a>
                             </div>
@@ -130,7 +130,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-bollywood-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/bollywood-dance.webp" alt="img189"
+                                        src="<?php echo base_url(); ?>public/images/Dance/bollywood-dance.webp" alt="bollywood189"
                                        >
                                 </a>
                             </div>
@@ -142,7 +142,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-western-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/western.jpg" alt="img190"
+                                        src="<?php echo base_url(); ?>public/images/Dance/western.jpg" alt="bollywood190"
                                        >
                                 </a>
                             </div>
@@ -153,7 +153,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-semiclassical-dance-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/kathakImg1.svg" alt="img191"
+                                        src="<?php echo base_url(); ?>public/images/Dance/kathakImg1.svg" alt="bollywood191"
                                        >
                                 </a>
                             </div>
@@ -165,7 +165,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-bhangra-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/bhangra.webp" alt="img192"
+                                        src="<?php echo base_url(); ?>public/images/Dance/bhangra.webp" alt="bollywood192"
                                        >
                                 </a>
                             </div>
@@ -177,7 +177,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-folk-dance-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/Dance/folk-dance.jpg" alt="img193"
+                                        src="<?php echo base_url(); ?>public/images/Dance/folk-dance.jpg" alt="bollywood193"
                                        >
                                 </a>
                             </div>
@@ -203,7 +203,7 @@
                 <div class="tab-pane fade " id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="img194">
+                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="bollywood194">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
                             <h3 class="heading"> Kathak</h3>
@@ -343,7 +343,7 @@
 
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="img195">
+                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="bollywood195">
                                 </div>
                             </div>
                         </div>
@@ -361,7 +361,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center imgmodule">
-                                        <img src="<?=base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5" alt="img196">
+                                        <img src="<?=base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5" alt="bollywood196">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 kathakp">
@@ -419,15 +419,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img197">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood197">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img198">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood198">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="img199">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="bollywood199">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -627,7 +627,7 @@
                 <div class="tab-pane fade" id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/Bharatnatyam.svg" class="danceimg" alt="img200">
+                            <img src="<?=base_url(); ?>public/images/Dance/Bharatnatyam.svg" class="danceimg" alt="bollywood200">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bharatnatyam</h3>
@@ -785,7 +785,7 @@
                                         <span class="line"></span>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/bharatnatyam-3.svg" class="danceimg danceimg5" alt="img201">
+                                        <img src="<?=base_url(); ?>public/images/Dance/bharatnatyam-3.svg" class="danceimg danceimg5" alt="bollywood201">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -845,15 +845,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img202">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood202">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img203">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood203">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="img204">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="bollywood204">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1051,7 +1051,7 @@
                 <div class="tab-pane fade" id="pills-Odissi" role="tabpanel" aria-labelledby="pills-Odissi-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/odissi.webp" class="danceimg" alt="img205">
+                            <img src="<?=base_url(); ?>public/images/Dance/odissi.webp" class="danceimg" alt="bollywood205">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Odissi</h3>
@@ -1185,7 +1185,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Odissi -->
                                     <div class="folkImg">
-                                    <img src="<?=base_url(); ?>public/images/Dance/odissi-3.webp" class="danceimg" alt="img206">
+                                    <img src="<?=base_url(); ?>public/images/Dance/odissi-3.webp" class="danceimg" alt="bollywood206">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -1213,7 +1213,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/odissi-4.webp" class="danceimg danceimg5" alt="img207">
+                                        <img src="<?=base_url(); ?>public/images/Dance/odissi-4.webp" class="danceimg danceimg5" alt="bollywood207">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1247,15 +1247,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img208">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood208">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img209">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood209">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="img210">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="bollywood210">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1388,10 +1388,10 @@
                 <div class="tab-pane fade show active" id="pills-Bollywood" role="tabpanel" aria-labelledby="pills-Bollywood-tab">
                     <div class="row pddyd">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="img211" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="bollywood211" class="img-fluid">
                     </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/bollywood-dance.webp" alt="img212" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/Dance/bollywood-dance.webp" alt="bollywood212" class="danceimg">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bollywood</h3>
@@ -1524,7 +1524,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Bollywood -->
                                     <div class="folkImg">
-                                        <img src="<?=base_url(); ?>public/images/Dance/bollywood-21.webp" alt="img213" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/Dance/bollywood-21.webp" alt="bollywood213" class="danceimg">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -1552,7 +1552,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/bollywood-3.webp" alt="img214" class="danceimg danceimg5">
+                                        <img src="<?=base_url(); ?>public/images/Dance/bollywood-3.webp" alt="bollywood214" class="danceimg danceimg5">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1585,15 +1585,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img215">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood215">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img216">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood216">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="img217">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="bollywood217">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1707,7 +1707,7 @@
                 <div class="tab-pane fade" id="pills-Western" role="tabpanel" aria-labelledby="pills-Western-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/western-dance.webp" class="danceimg" alt="img218">
+                            <img src="<?=base_url(); ?>public/images/Dance/western-dance.webp" class="danceimg" alt="bollywood218">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Western</h3>
@@ -1842,7 +1842,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Western -->
                                     <div class="folkImg">
-                                        <img src="<?=base_url(); ?>public/images/Dance/western-3.webp" class="danceimg" alt="img219">
+                                        <img src="<?=base_url(); ?>public/images/Dance/western-3.webp" class="danceimg" alt="bollywood219">
                                     </div>   
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -1868,7 +1868,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/western-dance-2.webp" class="danceimg danceimg5" alt="img220">
+                                        <img src="<?=base_url(); ?>public/images/Dance/western-dance-2.webp" class="danceimg danceimg5" alt="bollywood220">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -1928,15 +1928,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img221">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood221">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img222">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood222">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="img223">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="bollywood223">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2135,7 +2135,7 @@
                 <div class="tab-pane fade" id="pills-Semiclassical" role="tabpanel" aria-labelledby="pills-Semiclassical-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="img224">
+                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="bollywood224">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Semi-classical</h3>
@@ -2249,7 +2249,7 @@
 
                                     <!-- Semi-classical  -->
 
-                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="img225">
+                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="bollywood225">
 
                                 </div>
                             </div>
@@ -2268,7 +2268,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5" alt="img226">
+                                        <img src="<?=base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5" alt="bollywood226">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 mftm">
@@ -2304,15 +2304,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img227">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood227">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img228">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood228">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="img229">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="bollywood229">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2432,7 +2432,7 @@
                 <div class="tab-pane fade" id="pills-Bhangra" role="tabpanel" aria-labelledby="pills-Bhangra-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/bhangra.webp" class="danceimg" alt="img230">
+                            <img src="<?=base_url(); ?>public/images/Dance/bhangra.webp" class="danceimg" alt="bollywood230">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bhangra</h3>
@@ -2539,7 +2539,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Bhangra -->
-                                    <img src="<?=base_url(); ?>public/images/Dance/bhangra-2.webp" class="danceimg" alt="img231">
+                                    <img src="<?=base_url(); ?>public/images/Dance/bhangra-2.webp" class="danceimg" alt="bollywood231">
                                 </div>
                             </div>
                         </div>
@@ -2557,7 +2557,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/bhangra-2-1.webp" class="danceimg danceimg5" alt="img232">
+                                        <img src="<?=base_url(); ?>public/images/Dance/bhangra-2-1.webp" class="danceimg danceimg5" alt="bollywood232">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2617,15 +2617,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img233">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood233">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img234">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood234">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="img235">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="bollywood235">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2795,7 +2795,7 @@
                 <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg" alt="img236">
+                            <img src="<?=base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg" alt="bollywood236">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Folk</h3>
@@ -2929,7 +2929,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Folk -->
                                     <div class="folkImg">
-                                    <img src="<?=base_url(); ?>public/images/Dance/folk-dance-2.webp" class="danceimg" alt="img237">
+                                    <img src="<?=base_url(); ?>public/images/Dance/folk-dance-2.webp" class="danceimg" alt="bollywood237">
                                     </div>
                                 </div>
 
@@ -2958,7 +2958,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg danceimg5" alt="img238">
+                                        <img src="<?=base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg danceimg5" alt="bollywood238">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -3018,15 +3018,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img239">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood239">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="img240">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="bollywood240">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="img241">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="bollywood241">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -3201,7 +3201,7 @@
 
         <div class="col-lg-12 col-md-12 col-12 pb-5 imgs text-center">
 
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="img241" class="img-fluid" >
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="bollywood241" class="img-fluid" >
                     </div>
             <div class="heading_new text-center">
                 <b>
@@ -3215,7 +3215,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch1.png" alt="img242" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch1.png" alt="bollywood242" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">World Class top Trainers </h2>
@@ -3224,7 +3224,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch2.png" alt="img243" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch2.png" alt="bollywood243" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">1 on 1 Private live class with flexible timing </h2>
@@ -3233,7 +3233,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch3.png" alt="img244" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch3.png" alt="bollywood244" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">Comprehensive Curriculum </h2>
@@ -3242,7 +3242,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch4.png" alt="img245" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch4.png" alt="bollywood245" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">Five Star Rated Platform</h2>
@@ -3251,7 +3251,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch5.png" alt="img246" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch5.png" alt="bollywood246" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">Lifetime Access to Resources and 24 x 7 support</h2>
@@ -3288,7 +3288,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="centered-image" alt="img247" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="centered-image" alt="bollywood247" />
                                             <div class="hft">
                                                 <h5>Smita Sebastian (UK)</h5>
                                                 <p class="limited-height">In the past year and a half, Priti Singh’s graceful teaching and deep knowledge have made each Kathak session both interesting and enriching.
@@ -3300,7 +3300,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 mb-5">
-                                            <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="centered-image" alt="img248"  />
+                                            <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="centered-image" alt="bollywood248"  />
                                             <div class="hft">
                                                 <h5>Oorja Sinha ( Pune)</h5>
                                                 <p class="limited-height">With Priti mam’s guidance, I excelled in Kathak and completed my first-year exam. Her patient teaching and E-natyam platform made learning accessible and enriching.</p>
@@ -3313,7 +3313,7 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="centered-image" alt="img249" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="centered-image" alt="bollywood249" />
                                         <div class="hft">
                                             <h5>Reshma ( Pune )</h5>
                                         <p class="limited-height">Enatyam's Kathak online course has been a great escape from my busy schedule, allowing me to immerse myself in Kathak dance and relieve daily stress.</p>
@@ -3324,7 +3324,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="centered-image" alt="img250" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="centered-image" alt="bollywood250" />
                                         <div class="hft">
                                             <h5>Tejashvi (Pune)</h5>
                                             <p class="limited-height">I thought I’d never dance again, but Enatyam's Kathak course helped me reconnect with my long-lost hobby through structured lessons and supportive instructors.</p>
@@ -3337,7 +3337,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="centered-image" alt="img251" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="centered-image" alt="bollywood251" />
                                         <div class="hft">
                                             <h5>Swapna ( USA)</h5>
                                             <p class="limited-height">Enatyam's Kathak online course helped me reconnect with my passion for dance after years, thanks to its accessible online platform.</p>
@@ -3348,7 +3348,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" alt="img252" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" alt="bollywood252" />
                                         <div class="hft">
                                             <h5>Vaanya’father ( Australia)</h5>
                                             <p class="limited-height">Enatyam's Kathak online course exceeded our expectations with convenient home learning for my child and brought true joy.</p>
@@ -3362,7 +3362,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" alt="img253" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" alt="bollywood253" />
                                         <div class="hft">
                                         <h5>Kavya (USA)</h5>
                                         <p class="limited-height">Enatyam's Bharatanatyam online course fits my child’s dance passion into our busy schedule, and the progress made is remarkable.</p>
@@ -3375,7 +3375,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" alt="img254" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" alt="bollywood254" />
                                         <div class="hft">
                                             <h5>Isabella (USA)</h5>
                                             <p class="limited-height">Enatyam’s platform made my Kathak journey easy and accessible, blending tradition with a user-friendly experience.</p>
@@ -3389,7 +3389,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5"> 
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" alt="img255" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" alt="bollywood255" />
                                     <div class="hft">
                                         <h5>Pradanya ( Singapore)</h5>
                                         <p class="limited-height">Enatyam's Kathak course is a must-try for anyone passionate about Indian classical dance with a well-structured curriculum for all levels.</p>
@@ -3402,7 +3402,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" alt="img256" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" alt="bollywood256" />
                                     <div class="hft">
                                         <h5>Dr Riddhi Ketan Shukla ( Ahmedabad )</h5>
                                         <p class="limited-height">Enatyam's Kathak online course helped me find calm and clarity amidst my busy schedule with its graceful movements and intricate footwork.</p>
@@ -3416,7 +3416,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" alt="img257" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" alt="bollywood257" />
                                     <div class="hft">
                                         <h5>Pearllan ( UK)</h5>
                                         <p class="limited-height">I never thought I could learn Kathak Dance online, but Enatyam’s comprehensive course structure and supportive instructors made it possible.</p>
@@ -3429,7 +3429,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image"  alt="img258" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image"  alt="bollywood258" />
                                     <div class="hft">
                                         <h5>Roohi’Mom ( Delhi )</h5>
                                         <p class="limited-height">Roohi’s progress from beginner to performing on renowned stages in just two years with Enatyam fills me with pride and happiness. Thank you for making her dreams a reality.
@@ -3444,7 +3444,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" alt="img259" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" alt="bollywood259" />
                                     <div class="hft">
                                         <h5>Tia’mom ( Canada)</h5>
                                         <p class="limited-height">My daughter Antara’s 3-year Kathak journey with Enatyam has been highly satisfactory, with flexible class timings and a pace that suits her needs.</p>
@@ -3457,7 +3457,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" alt="img260" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" alt="bollywood260" />
                                     <div class="hft">
                                         <h5>Meera (canada)</h5>
                                         <p class="limited-height">Enatyam’s E-Learning Kathak was a boon for my daughter Meera during the pandemic. The progress made in 3+ years and the detailed explanations are truly appreciated.
@@ -3472,7 +3472,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" alt="img261" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" alt="bollywood261" />
                                     <div class="hft">
                                         <h5>Raamya ( Singapore)</h5>
                                         <p class="limited-height">Enatyam’s Bharatanatyam course is a gem! Instructors break down complex movements into manageable steps, making it perfect for beginners like me.
@@ -3486,7 +3486,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" alt="img262" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" alt="bollywood262" />
                                     <div class="hft">
                                         <h5>Aarushi ( USA)</h5>
                                         <p class="limited-height">The smiles on my daughter’s face during Enatyam's Bharatanatyam classes are priceless. The instructors make dance accessible and enjoyable, turning learning into a magical experience.
@@ -3508,7 +3508,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="centered-image" alt="img263" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="centered-image" alt="bollywood263" />
                                             <div class="hft">
                                                 <h5>Smita Sebastian (UK)</h5>
                                                 <p class="limited-height">In the past year and a half, Priti Singh’s graceful teaching and deep knowledge have made each Kathak session both interesting and enriching.
@@ -3523,7 +3523,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="centered-image" alt="img264"  />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="centered-image" alt="bollywood264"  />
                                             <div class="hft">
                                                 <h5>Oorja Sinha ( Pune)</h5>
                                                 <p class="limited-height">With Priti mam’s guidance, I excelled in Kathak and completed my first-year exam. Her patient teaching and E-natyam platform made learning accessible and enriching.</p>
@@ -3536,7 +3536,7 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="centered-image" alt="img265" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="centered-image" alt="bollywood265" />
                                         <div class="hft">
                                             <h5>Reshma ( Pune )</h5>
                                         <p class="limited-height">Enatyam's Kathak online course has been a great escape from my busy schedule, allowing me to immerse myself in Kathak dance and relieve daily stress.</p>
@@ -3550,7 +3550,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="centered-image" alt="img266" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="centered-image" alt="bollywood266" />
                                         <div class="hft">
                                             <h5>Tejashvi (Pune)</h5>
                                             <p class="limited-height">I thought I’d never dance again, but Enatyam's Kathak course helped me reconnect with my long-lost hobby through structured lessons and supportive instructors.</p>
@@ -3563,7 +3563,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="centered-image" alt="img267" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="centered-image" alt="bollywood267" />
                                         <div class="hft">
                                             <h5>Swapna ( USA)</h5>
                                             <p class="limited-height">Enatyam's Kathak online course helped me reconnect with my passion for dance after years, thanks to its accessible online platform.</p>
@@ -3577,7 +3577,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" alt="img268" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" alt="bollywood268" />
                                         <div class="hft">
                                             <h5>Vaanya’father ( Australia)</h5>
                                             <p class="limited-height">Enatyam's Kathak online course exceeded our expectations with convenient home learning for my child and brought true joy.</p>
@@ -3591,7 +3591,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" alt="img269" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" alt="bollywood269" />
                                         <div class="hft">
                                         <h5>Kavya (USA)</h5>
                                         <p class="limited-height">Enatyam's Bharatanatyam online course fits my child’s dance passion into our busy schedule, and the progress made is remarkable.</p>
@@ -3606,7 +3606,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" alt="img270" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" alt="bollywood270" />
                                         <div class="hft">
                                             <h5>Isabella (USA)</h5>
                                             <p class="limited-height">Enatyam’s platform made my Kathak journey easy and accessible, blending tradition with a user-friendly experience.</p>
@@ -3620,7 +3620,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" alt="img271"/>
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" alt="bollywood271"/>
                                     <div class="hft">
                                         <h5>Pradanya ( Singapore)</h5>
                                         <p class="limited-height">Enatyam's Kathak course is a must-try for anyone passionate about Indian classical dance with a well-structured curriculum for all levels.</p>
@@ -3634,7 +3634,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" alt="img272" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" alt="bollywood272" />
                                     <div class="hft">
                                         <h5>Dr Riddhi Ketan Shukla ( Ahmedabad )</h5>
                                         <p class="limited-height">Enatyam's Kathak online course helped me find calm and clarity amidst my busy schedule with its graceful movements and intricate footwork.</p>
@@ -3648,7 +3648,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" alt="img273" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" alt="bollywood273" />
                                     <div class="hft">
                                         <h5>Pearllan ( UK)</h5>
                                         <p class="limited-height">I never thought I could learn Kathak Dance online, but Enatyam’s comprehensive course structure and supportive instructors made it possible.</p>
@@ -3662,7 +3662,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image" alt="img274" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image" alt="bollywood274" />
                                     <div class="hft">
                                         <h5>Roohi’Mom ( Delhi )</h5>
                                         <p class="limited-height">Roohi’s progress from beginner to performing on renowned stages in just two years with Enatyam fills me with pride and happiness. Thank you for making her dreams a reality.
@@ -3677,7 +3677,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" alt="img275" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" alt="bollywood275" />
                                     <div class="hft">
                                         <h5>Tia’mom ( Canada)</h5>
                                         <p class="limited-height">My daughter Antara’s 3-year Kathak journey with Enatyam has been highly satisfactory, with flexible class timings and a pace that suits her needs.</p>
@@ -3691,7 +3691,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" alt="img276" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" alt="bollywood276" />
                                     <div class="hft">
                                         <h5>Meera (canada)</h5>
                                         <p class="limited-height">Enatyam’s E-Learning Kathak was a boon for my daughter Meera during the pandemic. The progress made in 3+ years and the detailed explanations are truly appreciated.
@@ -3706,7 +3706,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" alt="img277" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" alt="bollywood277" />
                                     <div class="hft">
                                         <h5>Raamya ( Singapore)</h5>
                                         <p class="limited-height">Enatyam’s Bharatanatyam course is a gem! Instructors break down complex movements into manageable steps, making it perfect for beginners like me.
@@ -3721,7 +3721,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" alt="img278" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" alt="bollywood278" />
                                     <div class="hft">
                                         <h5>Aarushi ( USA)</h5>
                                         <p class="limited-height">The smiles on my daughter’s face during Enatyam's Bharatanatyam classes are priceless. The instructors make dance accessible and enjoyable, turning learning into a magical experience.
@@ -3753,7 +3753,7 @@
                 <div class="">
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="img279" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="bollywood279" class="img-fluid">
                     </div>
 
                         <div class="col-lg-12 col-md-12 col-12 coh">
@@ -3766,7 +3766,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-stress-reduction-yoga-classes" target="" class="d-block h-100">
 
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="img280">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="bollywood280">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
@@ -3777,7 +3777,7 @@
                             <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-semiclassical-music-lessons" target="" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="img281">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="bollywood281">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
@@ -3788,7 +3788,7 @@
                             <h5 class="text-white" style="text-align: center;">Yoga for Kids</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                <a href="<?= base_url(); ?>online-bhangra-lessons" target="" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="img282">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="bollywood282">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
@@ -3799,7 +3799,7 @@
                             <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-folk-dance-classes" target="" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="img283">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="bollywood283">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
