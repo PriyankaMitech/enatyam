@@ -85,7 +85,7 @@
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                         <div class="ms-2 me-auto">
                             <div class="fw-bold">How to Request a Refund:</div>
-                            To initiate a refund, please send an email to <a href=" hello@enatyam.com"> hello@enatyam.com</a>
+                            To initiate a refund, please send an email to <a href="mailTo:hello@enatyam.com"> hello@enatyam.com</a>
                             with your name, the course
                             or service you are requesting a refund for, and the reason for your request. Our customer
                             support team will process your refund promptly.
@@ -116,7 +116,7 @@
                         <div class="ms-2 me-auto">
                             <div class="fw-bold">Contact Information:</div>
                             If you have any questions or concerns regarding our refund policy, please contact our
-                            customer support team at<a href=" hello@enatyam.com"> hello@enatyam.com</a>
+                            customer support team at<a href="mailTo:hello@enatyam.com"> hello@enatyam.com</a>
 
                         </div>
                     </li>
