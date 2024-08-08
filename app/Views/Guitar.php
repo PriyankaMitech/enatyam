@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
-                        <img src="<?php echo  base_url(); ?>public/images/instrument/Guitar.jpeg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="<?php echo  base_url(); ?>public/images/instrument/Guitar.jpeg" class="rightimg" alt="guitar1" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
 
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="guitar2" class="img-fluid">
                     </div>
                     <div class="col-lg-12 col-md-12 col-12 coh">
                         <h3 class="" style="text-align:center">Courses Offering
@@ -80,7 +80,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-guitar-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo  base_url(); ?>public/images/instrument/g-1.svg" alt="">
+                                        src="<?php echo  base_url(); ?>public/images/instrument/g-1.svg" alt="guitar3">
                                 </a>
                             </div>
 
@@ -92,7 +92,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-flute-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/fluteImg1.svg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/fluteImg1.svg" alt="guitar4"
                                        >
                                 </a>
                             </div>
@@ -105,7 +105,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-tabla-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/tablaImg1.svg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/tablaImg1.svg" alt="guitar5"
                                        >
                                 </a>
                             </div>
@@ -118,7 +118,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-sitar-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/sitarImg1.svg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/sitarImg1.svg" alt="guitar6"
                                        >
                                 </a>
                             </div>
@@ -130,7 +130,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-veena-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/VeenaImg1.svg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/VeenaImg1.svg" alt="guitar7"
                                        >
                                 </a>
                             </div>
@@ -141,7 +141,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-piano-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/pianoImg1.svg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/pianoImg1.svg" alt="guitar8"
                                        >
                                 </a>
                             </div>
@@ -153,7 +153,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-violin-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/vio.jpeg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/vio.jpeg" alt="guitar9"
                                        >
                                 </a>
                             </div>
@@ -165,7 +165,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-keyboard-classes" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/keyboardImg1.svg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/keyboardImg1.svg" alt="guitar10"
                                        >
                                 </a>
                             </div>
@@ -178,7 +178,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-harmonium-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
-                                        src="<?php echo base_url(); ?>public/images/instrument/Harmonium.jpg" alt=""
+                                        src="<?php echo base_url(); ?>public/images/instrument/Harmonium.jpg" alt="guitar11"
                                        >
                                 </a>
                             </div>
@@ -195,58 +195,17 @@
 <section class="btnSection btnSectionI MusicSec instumentpage">
     <div class="container dancepagec">
         <div class="typesOfYoga-tab">
-            <!-- <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="col-lg-1 col-md-1 hidefi">
-                </li>
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-Guitar-tab" href="<?=base_url(); ?>Guitar" data-url="<?=base_url(); ?>Guitar" role="tab" aria-controls="pills-Guitar" aria-selected="true">Guitar</a>
-                </li>
-
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Flute-tab" href="<?=base_url(); ?>Flute" data-url="<?=base_url(); ?>Flute" role="tab" aria-controls="pills-Guitar" aria-selected="false">Flute</a>
-                </li>
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Tabla-tab" href="<?=base_url(); ?>Tabla" data-url="<?=base_url(); ?>Tabla" role="tab" aria-controls="pills-Tabla" aria-selected="false">Tabla</a>
-                </li>
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Sitar-tab" href="<?=base_url(); ?>Sitar" data-url="<?=base_url(); ?>Sitar" role="tab" aria-controls="pills-Sitar" aria-selected="false">Sitar</a>
-                </li>
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Veena-tab" href="<?=base_url(); ?>Veena" data-url="<?=base_url(); ?>Veena" role="tab" aria-controls="pills-Veena" aria-selected="false">Veena</a>
-                </li>
-                <li class="col-lg-1 col-md-1 hidefi">
-                </li>
-                <li class="col-lg-1 col-md-1 hidefi">
-                </li>
-
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Piano-tab" href="<?=base_url(); ?>Piano" data-url="<?=base_url(); ?>Piano" role="tab" aria-controls="pills-Piano" aria-selected="false">Piano</a>
-                </li>
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Violin-tab" href="<?=base_url(); ?>Violin" data-url="<?=base_url(); ?>Violin" role="tab" aria-controls="pills-Violin" aria-selected="false">Violin</a>
-                </li>
-          
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Keyboard-tab" href="<?=base_url(); ?>Keyboard" data-url="<?=base_url(); ?>Keyboard" role="tab" aria-controls="pills-Keyboard" aria-selected="false">Keyboard</a>
-                </li>
-
-                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Harmonium-tab" href="<?=base_url(); ?>Harmonium" data-url="<?=base_url(); ?>Harmonium" role="tab" aria-controls="pills-Harmonium" aria-selected="false">Harmonium</a>
-                </li>
-
-                <li class="col-lg-1 col-md-1 hidefi">
-                </li>
-            </ul> -->
+           
 
             <div class="tab-content" id="pills-tabContent">
                 <!-- Guitar   -->
                 <div class="tab-pane fade show active" id="pills-Guitar" role="tabpanel" aria-labelledby="pills-Guitar-tab">
                     <div class="row pddyd">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="guitar12" class="img-fluid">
                     </div>
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/g-1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/g-1.svg" class="danceimg" alt="guitar13">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Guitar</h3>
@@ -400,7 +359,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar14">
                                     </div>
                                 </div>
                             </div>
@@ -418,7 +377,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar15">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -478,15 +437,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar16">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar17">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar18">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -716,7 +675,7 @@
                 <div class="tab-pane fade" id="pills-Flute" role="tabpanel" aria-labelledby="pills-Flute-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/fluteImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/fluteImg1.svg" class="danceimg" alt="guitar19">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Flute</h3>
@@ -867,7 +826,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar20">
                                     </div>
                                 </div>
                             </div>
@@ -886,7 +845,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar21">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -946,15 +905,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar22">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar23">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar24">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1187,7 +1146,7 @@
                 <div class="tab-pane fade show" id="pills-Tabla" role="tabpanel" aria-labelledby="pills-Tabla-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/tablaImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/tablaImg1.svg" class="danceimg" alt="guitar25">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Tabla</h3>
@@ -1335,7 +1294,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar26">
                                     </div>
                                 </div>
                             </div>
@@ -1354,7 +1313,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar27">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -1414,15 +1373,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar28">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar29">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar30">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -1636,7 +1595,7 @@
                 <div class="tab-pane fade show" id="pills-Sitar" role="tabpanel" aria-labelledby="pills-Sitar-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/sitarImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/sitarImg1.svg" class="danceimg" alt="guitar31">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Sitar</h3>
@@ -1779,7 +1738,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar32">
                                     </div>
                                 </div>
                             </div>
@@ -1797,7 +1756,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar33">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -1857,15 +1816,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar34">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar35">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar36">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2069,7 +2028,7 @@
                 <div class="tab-pane fade show" id="pills-Veena" role="tabpanel" aria-labelledby="pills-Veena-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/VeenaImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/VeenaImg1.svg" class="danceimg" alt="guitar37">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Veena</h3>
@@ -2217,7 +2176,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar38">
                                     </div>
                                 </div>
                             </div>
@@ -2235,7 +2194,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar39">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2295,15 +2254,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar40">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar41">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar42">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2498,7 +2457,7 @@
                 <div class="tab-pane fade show" id="pills-Piano" role="tabpanel" aria-labelledby="pills-Piano-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/pianoImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/pianoImg1.svg" class="danceimg" alt="guitar43">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Piano</h3>
@@ -2646,7 +2605,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar44">
                                     </div>
                                 </div>
                             </div>
@@ -2664,7 +2623,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar45">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2724,15 +2683,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar46">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar47">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar48">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -2926,7 +2885,7 @@
                 <div class="tab-pane fade show" id="pills-Violin" role="tabpanel" aria-labelledby="pills-Violin-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/VeenaImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/VeenaImg1.svg" class="danceimg" alt="guitar49">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Violin</h3>
@@ -3075,7 +3034,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar50">
                                     </div>
                                 </div>
                             </div>
@@ -3093,7 +3052,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar51">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -3153,15 +3112,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar52">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar53">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar54">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -3355,7 +3314,7 @@
                 <div class="tab-pane fade show" id="pills-Drum" role="tabpanel" aria-labelledby="pills-Drum-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/drumImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/drumImg1.svg" class="danceimg" alt="guitar55">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Drum</h3>
@@ -3503,7 +3462,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar56">
                                     </div>
                                 </div>
                             </div>
@@ -3521,7 +3480,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar57">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -3581,15 +3540,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar58">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar59">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar60">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -3785,7 +3744,7 @@
                 <div class="tab-pane fade show" id="pills-Keyboard" role="tabpanel" aria-labelledby="pills-Keyboard-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/keyboardImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/keyboardImg1.svg" class="danceimg" alt="guitar61">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Keyboard</h3>
@@ -3932,7 +3891,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar62">
                                     </div>
                                 </div>
                             </div>
@@ -3950,7 +3909,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar63">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -4010,15 +3969,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar64">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar65">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar66">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -4214,7 +4173,7 @@
                 <div class="tab-pane fade show" id="pills-Harmonium" role="tabpanel" aria-labelledby="pills-Harmonium-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/instrument/VeenaImg1.svg" class="danceimg">
+                            <img src="<?=base_url(); ?>public/images/instrument/VeenaImg1.svg" class="danceimg" alt="guitar67">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-left ptfi">
                             <h3 class="heading"> Harmonium</h3>
@@ -4360,7 +4319,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="learnInstrumentImg" >
-                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg">
+                                        <img src="<?=base_url(); ?>public/images/instrument/c-2.svg" class="danceimg" alt="guitar68">
                                     </div>
                                 </div>
                             </div>
@@ -4380,7 +4339,7 @@
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 miic">
-                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1">
+                                        <img src="<?=base_url(); ?>public/images/instrument/s-3.svg" class="danceimg mimg1" alt="guitar69">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -4440,15 +4399,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar70">
                                                     Live Private class -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="guitar71">
                                                     Practice video -2
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp">
+                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="guitar72">
                                                     Reading content/Quiz - 2
                                                 </div>
 
@@ -4654,7 +4613,7 @@
 
         <div class="col-lg-12 col-md-12 col-12 pb-5 imgs text-center">
 
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="guitar73" class="img-fluid">
                     </div>
             <div class="heading_new text-center">
                 <b>
@@ -4668,7 +4627,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch1.png" alt="Icon 1" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch1.png" alt="guitar74" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">World Class top Trainers </h2>
@@ -4677,7 +4636,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch2.png" alt="Icon 2" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch2.png" alt="guitar75" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">1 on 1 Private live class with flexible timing </h2>
@@ -4686,7 +4645,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch3.png" alt="Icon 3" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch3.png" alt="guitar76" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">Comprehensive Curriculum </h2>
@@ -4695,7 +4654,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch4.png" alt="Icon 4" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch4.png" alt="guitar77" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">Five Star Rated Platform</h2>
@@ -4704,7 +4663,7 @@
 
             <div class="col-6 col-md-2 col-lg-4 col-xl-2 text-center mb-4 mb-lg-0">
                 <div class="d-flex justify-content-center">
-                    <img src="<?php echo base_url(); ?>public/images/ch5.png" alt="Icon 5" class="rounded-circle custom-img">
+                    <img src="<?php echo base_url(); ?>public/images/ch5.png" alt="guitar78" class="rounded-circle custom-img">
                 </div>
                 <div class="sc-heading">
                     <h2 class="heading__primary text-white custom-h2">Lifetime Access to Resources and 24 x 7 support</h2>
@@ -4731,7 +4690,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.webp" class="centered-image" alt="guitar79" />
                                             <div class="hft">
                                                 <h5>Aiden C ( London -Uk)</h5>
                                                 <p>Enatyam's yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It's like having a personal yoga guide right in my living room.
@@ -4743,7 +4702,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 mb-5">
-                                            <img src="<?=base_url(); ?>public/images/happyfaces/2h.webp" class="centered-image"  />
+                                            <img src="<?=base_url(); ?>public/images/happyfaces/2h.webp" class="centered-image" alt="guitar80"  />
                                             <div class="hft">
                                                 <h5>Sweta ( Australia)</h5>
                                                 <p>I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that's easy to understand. Feeling more zen already!</p>
@@ -4756,7 +4715,7 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/3h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/3h.webp" class="centered-image" alt="guitar81" />
                                         <div class="hft">
                                             <h5>Sneha (Canada )</h5>
                                         <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual that I genuinely look forward to.</p>
@@ -4767,7 +4726,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/4h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/4h.webp" class="centered-image" alt="guitar82" />
                                         <div class="hft">
                                             <h5>Kavita ( Pune)</h5>
                                             <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
@@ -4780,7 +4739,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" alt="guitar83" />
                                         <div class="hft">
                                             <h5>Ayesha ( Singapore )</h5>
                                             <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
@@ -4791,7 +4750,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/7h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/7h.webp" class="centered-image" alt="guitar84" />
                                         <div class="hft">
                                             <h5>Rajiv ( Lucknow )</h5>
                                             <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.</p>
@@ -4805,7 +4764,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/8h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/8h.webp" class="centered-image" alt="guitar85" />
                                         
                                         <div class="hft">
                                         <h5>Vikram ( Delhi )</h5>
@@ -4819,7 +4778,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" alt="guitar86" />
                                         <div class="hft">
                                             <h5>Vishal ( Chandigarh )</h5>
                                             <p class="reviewName">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors' encouragement keeps me motivated.</p>
@@ -4833,7 +4792,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" alt="guitar87" />
                                     <div class="hft">
                                         <h5>Kajal ( Delhi )</h5>
                                         <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
@@ -4846,7 +4805,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" class="centered-image" alt="guitar88" />
                                     <div class="hft">
                                         <h5>Scarlett family ( Germany )</h5>
                                         <p class="reviewName">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
@@ -4860,7 +4819,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/14h.webp" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/14h.webp" class="centered-image" alt="guitar89" />
                                     <div class="hft">
                                         <h5>Emma ( UK )</h5>
                                         <p class="reviewName">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
@@ -4873,7 +4832,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/15h.webp" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/15h.webp" class="centered-image" alt="guitar90" />
                                     <div class="hft">
                                         <h5>Michael (Mike) ( USA)</h5>
                                         <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
@@ -4894,7 +4853,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/1h.webp" class="centered-image" alt="guitar91" />
                                             <div class="hft">
                                                 <h5>Aiden C ( London -Uk)</h5>
                                                 <p>Enatyam's yoga courses are a total game-changer for me. The instructors keep it real, making every pose feel achievable. It's like having a personal yoga guide right in my living room.
@@ -4909,7 +4868,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/2h.webp" class="centered-image"  />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/2h.webp" class="centered-image" alt="guitar92"  />
                                             <div class="hft">
                                                 <h5>Sweta ( Australia)</h5>
                                                 <p>I'm new to yoga, and Enatyam is the perfect starting point. The classes are not intimidating, and the instructors break down each pose in a way that's easy to understand. Feeling more zen already!</p>
@@ -4922,7 +4881,7 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/3h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/3h.webp" class="centered-image" alt="guitar93" />
                                         <div class="hft">
                                             <h5>Sneha (Canada )</h5>
                                         <p class="reviewName">Enatyam's yoga classes are like a breath of fresh air. The instructors create a friendly atmosphere, making the sessions enjoyable. It's become a daily ritual that I genuinely look forward to.</p>
@@ -4936,7 +4895,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/4h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/4h.webp" class="centered-image" alt="guitar94" />
                                         <div class="hft">
                                             <h5>Kavita ( Pune)</h5>
                                             <p class="reviewName">I've tried a few online yoga platforms, but Enatyam stands out. The variety of classes keeps things interesting, and the instructors feel like friends guiding you through a mindful journey. Highly recommend!</p>
@@ -4949,7 +4908,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/6h.webp" class="centered-image" alt="guitar95" />
                                         <div class="hft">
                                             <h5>Ayesha ( Singapore )</h5>
                                             <p class="reviewName">Enatyam's yoga is a perfect fit for a busy mom like me. The quick sessions are manageable, and the instructors make it feel like a mini wellness retreat. Grateful for this accessible and effective platform!</p>
@@ -4963,7 +4922,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/7h.webp" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/7h.webp" class="centered-image" alt="guitar96" />
                                         <div class="hft">
                                             <h5>Rajiv ( Lucknow )</h5>
                                             <p class="reviewName">The variety of yoga classes on Enatyam is impressive. Whether I need a gentle stretch or an energizing flow, there's something for every mood. The instructors make it easy for anyone to enjoy the benefits of yoga.</p>
@@ -4977,7 +4936,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/8h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/8h.webp" class="centered-image" alt="guitar97" />
                                         <div class="hft">
                                         <h5>Vikram ( Delhi )</h5>
                                         <p class="reviewName">Enatyam's yoga classes have made me realize that yoga is for everyone. The inclusive approach of the instructors and the straightforward guidance make it a comfortable and enjoyable practice.</p>
@@ -4992,7 +4951,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/10h.webp" class="centered-image" alt="guitar98" />
                                         <div class="hft">
                                             <h5>Vishal ( Chandigarh )</h5>
                                             <p class="reviewName">I've always struggled to stick with a workout routine, but Enatyam's yoga has been a consistent part of my day. The short sessions fit into my schedule, and the instructors' encouragement keeps me motivated.</p>
@@ -5006,7 +4965,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/11h.webp" class="centered-image" alt="guitar99" />
                                     <div class="hft">
                                         <h5>Kajal ( Delhi )</h5>
                                         <p class="reviewName">I appreciate how Enatyam's yoga classes cater to various levels. Whether you're a beginner or an experienced yogi, there's always room for growth. The instructors make sure everyone feels welcome. </p>
@@ -5020,7 +4979,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/12h.webp" class="centered-image" alt="guitar100" />
                                     <div class="hft">
                                         <h5>Scarlett family ( Germany )</h5>
                                         <p class="reviewName">Yoga is a daily dose of positivity for me . The instructors radiate good vibes, and the classes have become my source of calm in the midst of a busy schedule. A fantastic platform for holistic well-being!</p>
@@ -5034,7 +4993,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/14h.webp" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/14h.webp" class="centered-image" alt="guitar101" />
                                     <div class="hft">
                                         <h5>Emma ( UK )</h5>
                                         <p class="reviewName">Yoga is my daily escape from the hustle. The instructors make it easy to disconnect and focus on the present moment. It's a simple yet powerful practice that has become a non-negotiable in my routine.</p>
@@ -5048,7 +5007,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/15h.webp" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/15h.webp" class="centered-image" alt="guitar102" />
                                     <div class="hft">
                                         <h5>Michael (Mike) ( USA)</h5>
                                         <p class="reviewName">Enatyam's yoga is like a personal wellness retreat at home. The instructors create a serene atmosphere, and the classes feel like a journey into both physical and mental well-being. Truly transformative</p>
@@ -5077,7 +5036,7 @@
                 <div class="">
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="guitar103" class="img-fluid">
                     </div>
 
                         <div class="col-lg-12 col-md-12 col-12 coh">
@@ -5090,7 +5049,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-stress-reduction-yoga-classes" target="" class="d-block h-100">
 
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="guitar104">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
@@ -5101,7 +5060,7 @@
                             <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-semiclassical-music-lessons" target="" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="guitar105">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
@@ -5112,7 +5071,7 @@
                             <h5 class="text-white" style="text-align: center;">Yoga for Kids</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                <a href="<?= base_url(); ?>online-bhangra-lessons" target="" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="guitar106">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
@@ -5123,7 +5082,7 @@
                             <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-folk-dance-classes" target="" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="guitar107">
                                 </a>
                             </div>
                             <div class="text-center mt-2">

@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
 
-                        <img src="<?php echo  base_url(); ?>public/images/instrument/fluteImg1.svg" class="rightimg" alt="Yoga Class" style="width:100%;">
+                        <img src="<?php echo  base_url(); ?>public/images/instrument/fluteImg1.svg" class="rightimg" alt="flute1" style="width:100%;">
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
 
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="flute2" class="img-fluid">
                     </div>
                     <div class="col-lg-12 col-md-12 col-12 coh">
                         <h3 class="" style="text-align:center">Courses Offering
@@ -78,7 +78,7 @@
                                 <a href="<?= base_url(); ?>online-guitar-lessons" target="" class="d-block h-100">
                                     <img class="img-fluid img-thumbnail"
 
-                                        src="<?php echo  base_url(); ?>public/images/instrument/g-1.svg" alt="">
+                                        src="<?php echo  base_url(); ?>public/images/instrument/g-1.svg" alt="flute3">
                                 </a>
                             </div>
 
