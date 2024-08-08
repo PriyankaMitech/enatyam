@@ -3355,7 +3355,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" alt="folk71"  />
                                         <div class="hft">
                                             <h5>Vaanya’father ( Australia)</h5>
                                             <p class="limited-height">Enatyam's Kathak online course exceeded our expectations with convenient home learning for my child and brought true joy.</p>
@@ -3369,7 +3369,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" alt="folk72" />
                                         <div class="hft">
                                         <h5>Kavya (USA)</h5>
                                         <p class="limited-height">Enatyam's Bharatanatyam online course fits my child’s dance passion into our busy schedule, and the progress made is remarkable.</p>
@@ -3382,7 +3382,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" alt="folk73" />
                                         <div class="hft">
                                             <h5>Isabella (USA)</h5>
                                             <p class="limited-height">Enatyam’s platform made my Kathak journey easy and accessible, blending tradition with a user-friendly experience.</p>
@@ -3396,7 +3396,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" alt="folk74" />
                                     <div class="hft">
                                         <h5>Pradanya ( Singapore)</h5>
                                         <p class="limited-height">Enatyam's Kathak course is a must-try for anyone passionate about Indian classical dance with a well-structured curriculum for all levels.</p>
@@ -3409,7 +3409,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" alt="folk75" />
                                     <div class="hft">
                                         <h5>Dr Riddhi Ketan Shukla ( Ahmedabad )</h5>
                                         <p class="limited-height">Enatyam's Kathak online course helped me find calm and clarity amidst my busy schedule with its graceful movements and intricate footwork.</p>
@@ -3423,7 +3423,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" alt="folk76" />
                                     <div class="hft">
                                         <h5>Pearllan ( UK)</h5>
                                         <p class="limited-height">I never thought I could learn Kathak Dance online, but Enatyam’s comprehensive course structure and supportive instructors made it possible.</p>
@@ -3436,7 +3436,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image" alt="folk77" />
                                     <div class="hft">
                                         <h5>Roohi’Mom ( Delhi )</h5>
                                         <p class="limited-height">Roohi’s progress from beginner to performing on renowned stages in just two years with Enatyam fills me with pride and happiness. Thank you for making her dreams a reality.
@@ -3451,7 +3451,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" alt="folk78" />
                                     <div class="hft">
                                         <h5>Tia’mom ( Canada)</h5>
                                         <p class="limited-height">My daughter Antara’s 3-year Kathak journey with Enatyam has been highly satisfactory, with flexible class timings and a pace that suits her needs.</p>
@@ -3464,7 +3464,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" alt="folk79" />
                                     <div class="hft">
                                         <h5>Meera (canada)</h5>
                                         <p class="limited-height">Enatyam’s E-Learning Kathak was a boon for my daughter Meera during the pandemic. The progress made in 3+ years and the detailed explanations are truly appreciated.
@@ -3479,7 +3479,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" alt="folk80" />
                                     <div class="hft">
                                         <h5>Raamya ( Singapore)</h5>
                                         <p class="limited-height">Enatyam’s Bharatanatyam course is a gem! Instructors break down complex movements into manageable steps, making it perfect for beginners like me.
@@ -3493,7 +3493,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" alt="folk81" />
                                     <div class="hft">
                                         <h5>Aarushi ( USA)</h5>
                                         <p class="limited-height">The smiles on my daughter’s face during Enatyam's Bharatanatyam classes are priceless. The instructors make dance accessible and enjoyable, turning learning into a magical experience.
@@ -3515,7 +3515,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="centered-image" alt="folk82" />
                                             <div class="hft">
                                                 <h5>Smita Sebastian (UK)</h5>
                                                 <p class="limited-height">In the past year and a half, Priti Singh’s graceful teaching and deep knowledge have made each Kathak session both interesting and enriching.
@@ -3530,7 +3530,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 mb-5">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="centered-image"  />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="centered-image" alt="folk83"  />
                                             <div class="hft">
                                                 <h5>Oorja Sinha ( Pune)</h5>
                                                 <p class="limited-height">With Priti mam’s guidance, I excelled in Kathak and completed my first-year exam. Her patient teaching and E-natyam platform made learning accessible and enriching.</p>
@@ -3543,7 +3543,7 @@
                         <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="centered-image" alt="folk84" />
                                         <div class="hft">
                                             <h5>Reshma ( Pune )</h5>
                                         <p class="limited-height">Enatyam's Kathak online course has been a great escape from my busy schedule, allowing me to immerse myself in Kathak dance and relieve daily stress.</p>
@@ -3557,7 +3557,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="centered-image" alt="folk85" />
                                         <div class="hft">
                                             <h5>Tejashvi (Pune)</h5>
                                             <p class="limited-height">I thought I’d never dance again, but Enatyam's Kathak course helped me reconnect with my long-lost hobby through structured lessons and supportive instructors.</p>
@@ -3570,7 +3570,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="centered-image" alt="folk86" />
                                         <div class="hft">
                                             <h5>Swapna ( USA)</h5>
                                             <p class="limited-height">Enatyam's Kathak online course helped me reconnect with my passion for dance after years, thanks to its accessible online platform.</p>
@@ -3584,7 +3584,7 @@
                             <div class="item in" >
                                     <div class="happyFaces-div">
                                         <div class="happyFaces-div1 ">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" />
+                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="centered-image" alt="folk87" />
                                         <div class="hft">
                                             <h5>Vaanya’father ( Australia)</h5>
                                             <p class="limited-height">Enatyam's Kathak online course exceeded our expectations with convenient home learning for my child and brought true joy.</p>
@@ -3598,7 +3598,7 @@
                             <div class="item in" >
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 mb-5">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="centered-image" alt="folk88" />
                                         <div class="hft">
                                         <h5>Kavya (USA)</h5>
                                         <p class="limited-height">Enatyam's Bharatanatyam online course fits my child’s dance passion into our busy schedule, and the progress made is remarkable.</p>
@@ -3613,7 +3613,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="centered-image" alt="folk89" />
                                         <div class="hft">
                                             <h5>Isabella (USA)</h5>
                                             <p class="limited-height">Enatyam’s platform made my Kathak journey easy and accessible, blending tradition with a user-friendly experience.</p>
@@ -3627,7 +3627,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="centered-image" alt="folk90" />
                                     <div class="hft">
                                         <h5>Pradanya ( Singapore)</h5>
                                         <p class="limited-height">Enatyam's Kathak course is a must-try for anyone passionate about Indian classical dance with a well-structured curriculum for all levels.</p>
@@ -3641,7 +3641,7 @@
                         <!-- Your content here -->
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 ">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="centered-image" alt="folk91" />
                                     <div class="hft">
                                         <h5>Dr Riddhi Ketan Shukla ( Ahmedabad )</h5>
                                         <p class="limited-height">Enatyam's Kathak online course helped me find calm and clarity amidst my busy schedule with its graceful movements and intricate footwork.</p>
@@ -3655,7 +3655,7 @@
                         <div class="item in" >
                             <div class="happyFaces-div">
                                 <div class="happyFaces-div1 mb-5">
-                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" />
+                                <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="centered-image" alt="folk92" />
                                     <div class="hft">
                                         <h5>Pearllan ( UK)</h5>
                                         <p class="limited-height">I never thought I could learn Kathak Dance online, but Enatyam’s comprehensive course structure and supportive instructors made it possible.</p>
@@ -3669,7 +3669,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="centered-image" alt="folk93" />
                                     <div class="hft">
                                         <h5>Roohi’Mom ( Delhi )</h5>
                                         <p class="limited-height">Roohi’s progress from beginner to performing on renowned stages in just two years with Enatyam fills me with pride and happiness. Thank you for making her dreams a reality.
@@ -3684,7 +3684,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="centered-image" alt="folk94" />
                                     <div class="hft">
                                         <h5>Tia’mom ( Canada)</h5>
                                         <p class="limited-height">My daughter Antara’s 3-year Kathak journey with Enatyam has been highly satisfactory, with flexible class timings and a pace that suits her needs.</p>
@@ -3698,7 +3698,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="centered-image" alt="folk95" />
                                     <div class="hft">
                                         <h5>Meera (canada)</h5>
                                         <p class="limited-height">Enatyam’s E-Learning Kathak was a boon for my daughter Meera during the pandemic. The progress made in 3+ years and the detailed explanations are truly appreciated.
@@ -3712,8 +3712,8 @@
                         <div class="item in" >
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
-                                    <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" />
+                                    <div class="happyFaces-div1 "> 
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="centered-image" alt="folk96" />
                                     <div class="hft">
                                         <h5>Raamya ( Singapore)</h5>
                                         <p class="limited-height">Enatyam’s Bharatanatyam course is a gem! Instructors break down complex movements into manageable steps, making it perfect for beginners like me.
@@ -3728,7 +3728,7 @@
                             <!-- Your content here -->
                                 <div class="happyFaces-div">
                                     <div class="happyFaces-div1 ">
-                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" />
+                                    <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="centered-image" alt="folk97" />
                                     <div class="hft">
                                         <h5>Aarushi ( USA)</h5>
                                         <p class="limited-height">The smiles on my daughter’s face during Enatyam's Bharatanatyam classes are priceless. The instructors make dance accessible and enjoyable, turning learning into a magical experience.
@@ -3759,7 +3759,7 @@
                 <div class="">
                     <div class="row text-lg-start">
                     <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="folk98" class="img-fluid">
                     </div>
 
                         <div class="col-lg-12 col-md-12 col-12 coh">
@@ -3772,7 +3772,7 @@
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-stress-reduction-yoga-classes" target="" class="d-block h-100">
 
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc1.png" alt="folk99">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
@@ -3783,7 +3783,7 @@
                             <h5 class="text-white" style="text-align: center;">Yoga for Chronic Disease </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-semiclassical-music-lessons" target="" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc2.png" alt="folk100">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
@@ -3794,7 +3794,7 @@
                             <h5 class="text-white" style="text-align: center;">Yoga for Kids</h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                <a href="<?= base_url(); ?>online-bhangra-lessons" target="" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc3.png" alt="folk101">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
@@ -3805,7 +3805,7 @@
                             <h5 class="text-white" style="text-align: center;">Meditation </h5>
                             <div class="ThumbnailImg " style="text-align: center;">
                                 <a href="<?= base_url(); ?>online-folk-dance-classes" target="" class="d-block h-100">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url(); ?>public/images/courseoffering/opc4.png" alt="folk102">
                                 </a>
                             </div>
                             <div class="text-center mt-2">
