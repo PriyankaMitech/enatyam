@@ -1,4 +1,3 @@
-
 <?php
 $description        = "Product Description";
 $txnid              = date("YmdHis");
@@ -17,8 +16,7 @@ $name               = "RazorPay Infovistar";
     <div class="container ">
         <div class="row heading-div m-0">
             <div class="col-lg-12 text-center op" id="pricing-section">
-                <h3 >Our Pricing
-                </h3>
+                <h3> Our Pricing </h3>
                 <span class="line"></span>
 
             </div>
@@ -49,7 +47,7 @@ $name               = "RazorPay Infovistar";
                                     <div class="col-lg-4 col-md-4 col-12 pfp ppsb">
                                         <div class="card text-center card-1">
                                             <div class="price-card-head">
-                                                <h3 >Basic</h3>
+                                                <h3>Basic</h3>
                                                 <span class="line"></span>
                                             </div>
                                             <div class="price-card-body">
@@ -58,7 +56,7 @@ $name               = "RazorPay Infovistar";
                                                 <!-- <h4>₹ 1200 per session</h4>
                                                 <h4>Total Price: 9600 <span class="del-price"><del>10105 </del></span></h4> -->
 
-                                                <!-- <img src="<?=base_url(); ?>public/images/price-coupn.png" /> -->
+                                                <!-- <img src="<?= base_url(); ?>public/images/price-coupn.png" alt="online classes fee" /> -->
                                                 <p style="">Duration : 60 Days</p>
 
                                                 <ul style="padding-left:0px!important">
@@ -137,19 +135,19 @@ $name               = "RazorPay Infovistar";
 
 
                                                 <div>
-                                                <?php
-if (session()->has('sessiondata')) {
-    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
-        if ($role == 'Student') {
-        ?>
-            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Explore Pricing</a>
+                                                    <?php
+                                                    if (session()->has('sessiondata')) {
+                                                        $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+                                                        if ($role == 'Student') {
+                                                    ?>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=1" type="button">Explore Pricing</a>
 
-    <?php
-        } ?>
-<?php  } else { ?>
-        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-<?php  }
-?>
+                                                        <?php
+                                                        } ?>
+                                                    <?php  } else { ?>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                    <?php  }
+                                                    ?>
                                                 </div>
 
                                             </div>
@@ -169,8 +167,8 @@ if (session()->has('sessiondata')) {
                                                 <!-- <h4>₹ 1090 per session</h4>
                                                 <h4>Total Price: 22890 <span class="del-price"><del>24880 </del></span></h4>
 
-                                                <img src="<?=base_url(); ?>public/images/pro.png" /> -->
-                                                <p >Duration : 120 Days</p>
+                                                <img src="<?= base_url(); ?>public/images/pro.png" alt="online classes fee" /> -->
+                                                <p>Duration : 120 Days</p>
 
                                                 <ul class="" style="padding-left:0px!important">
 
@@ -245,19 +243,19 @@ if (session()->has('sessiondata')) {
 
                                                 </ul>
                                                 <div>
-                                                <?php
-if (session()->has('sessiondata')) {
-    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
-        if ($role == 'Student') {
-        ?>
-            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Explore Pricing</a>
+                                                    <?php
+                                                    if (session()->has('sessiondata')) {
+                                                        $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+                                                        if ($role == 'Student') {
+                                                    ?>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=2" type="button">Explore Pricing</a>
 
-    <?php
-        } ?>
-<?php  } else { ?>
-        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-<?php  }
-?>
+                                                        <?php
+                                                        } ?>
+                                                    <?php  } else { ?>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                    <?php  }
+                                                    ?>
                                                 </div>
                                             </div>
 
@@ -276,8 +274,8 @@ if (session()->has('sessiondata')) {
                                                 <!-- <h4>₹ 975 per session</h4>
                                                 <h4>Total Price: 49725 <span class="del-price"><del>59910 </del></span></h4>
 
-                                                <img src="<?=base_url(); ?>public/images/Elite.png" /> -->
-                                                <p >Duration : 360 Days</p>
+                                                <img src="<?= base_url(); ?>public/images/Elite.png" alt="online classes fee" /> -->
+                                                <p>Duration : 360 Days</p>
 
                                                 <ul style="padding-left:0px!important">
 
@@ -353,19 +351,19 @@ if (session()->has('sessiondata')) {
                                                 </ul>
 
                                                 <div>
-                                                <?php
-if (session()->has('sessiondata')) {
-    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
-        if ($role == 'Student') {
-        ?>
-            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Explore Pricing</a>
+                                                    <?php
+                                                    if (session()->has('sessiondata')) {
+                                                        $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+                                                        if ($role == 'Student') {
+                                                    ?>
+                                                            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=3" type="button">Explore Pricing</a>
 
-    <?php
-        } ?>
-<?php  } else { ?>
-        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-<?php  }
-?>
+                                                        <?php
+                                                        } ?>
+                                                    <?php  } else { ?>
+                                                        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                    <?php  }
+                                                    ?>
                                                 </div>
                                             </div>
 
@@ -376,8 +374,7 @@ if (session()->has('sessiondata')) {
                                 </form>
                             </div>
                             <div class="col-lg-2  pddn">
-                                <img src="<?=base_url(); ?>public/images/price1.png" width="100%" class="opman" />
-
+                                <img src="<?= base_url(); ?>public/images/price1.png" alt="online classes fee" width="100%" class="opman" />
                             </div>
                         </div>
                     </div>
@@ -400,8 +397,8 @@ if (session()->has('sessiondata')) {
                                                     <!-- <h4>₹ 475 per session</h4>
                                                     <h4>Total Price: 9990<span class="del-price"><del>10500 </del></span></h4>
 
-                                                    <img src="<?=base_url(); ?>public/images/price-coupn.png" /> -->
-                                                    <p >Duration : 120 Days</p>
+                                                    <img src="<?= base_url(); ?>public/images/price-coupn.png" alt="online classes fee" /> -->
+                                                    <p>Duration : 120 Days</p>
 
                                                     <ul style="padding-left:0px!important">
 
@@ -411,7 +408,7 @@ if (session()->has('sessiondata')) {
 
                                                             </span>
                                                             <span>
-                                                            Group Live Class- upto 10 students.
+                                                                Group Live Class- upto 10 students.
 
                                                             </span>
                                                         </li>
@@ -479,17 +476,17 @@ if (session()->has('sessiondata')) {
 
 
                                                     <div>
-                                                    <?php
+                                                        <?php
                                                         if (session()->has('sessiondata')) {
                                                             $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
-                                                                if ($role == 'Student') {
-                                                                ?>
-                                                                    <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Explore Pricing</a>
+                                                            if ($role == 'Student') {
+                                                        ?>
+                                                                <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=4" type="button">Explore Pricing</a>
 
                                                             <?php
-                                                                } ?>
+                                                            } ?>
                                                         <?php  } else { ?>
-                                                                <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
                                                         <?php  }
                                                         ?>
                                                     </div>
@@ -512,8 +509,8 @@ if (session()->has('sessiondata')) {
                                                     </h2>
                                                     <!-- <h4>₹ 450 per session</h4>
                                                     <h4>Total Price: 22950 <span class="del-price"><del>24950 </del></span></h4>
-                                                    <img src="<?=base_url(); ?>public/images/pro.png" /> -->
-                                                    <p >Duration : 200 Days</p>
+                                                    <img src="<?= base_url(); ?>public/images/pro.png" alt="online classes fee" /> -->
+                                                    <p>Duration : 200 Days</p>
 
                                                     <ul class="" style="padding-left:0px!important">
                                                         <li>
@@ -577,19 +574,19 @@ if (session()->has('sessiondata')) {
                                                     </ul>
                                                     <div>
 
-                                                    <?php
-if (session()->has('sessiondata')) {
-    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
-        if ($role == 'Student') {
-        ?>
-            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Explore Pricing</a>
+                                                        <?php
+                                                        if (session()->has('sessiondata')) {
+                                                            $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+                                                            if ($role == 'Student') {
+                                                        ?>
+                                                                <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=5" type="button">Explore Pricing</a>
 
-    <?php
-        } ?>
-<?php  } else { ?>
-        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-<?php  }
-?>
+                                                            <?php
+                                                            } ?>
+                                                        <?php  } else { ?>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                        <?php  }
+                                                        ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -607,8 +604,8 @@ if (session()->has('sessiondata')) {
                                                     <!-- <h4>₹ 423 per session</h4>
                                                     <h4>Total Price: 429777 <span class="del-price"><del>51777 </del></span></h4>
 
-                                                    <img src="<?=base_url(); ?>public/images/Elite.png" /> -->
-                                                    <p >Duration : 360 Days</p>
+                                                    <img src="<?= base_url(); ?>public/images/Elite.png" alt="online classes fee" /> -->
+                                                    <p>Duration : 360 Days</p>
 
                                                     <ul style="padding-left:0px!important">
 
@@ -672,43 +669,35 @@ if (session()->has('sessiondata')) {
                                                     </ul>
 
                                                     <div>
-                                                    <?php
-if (session()->has('sessiondata')) {
-    $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
-        if ($role == 'Student') {
-        ?>
-            <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Explore Pricing</a>
+                                                        <?php
+                                                        if (session()->has('sessiondata')) {
+                                                            $role = session()->get('sessiondata')['role'] ?? null; // Use null coalescing operator to handle the case when 'role' is not set
+                                                            if ($role == 'Student') {
+                                                        ?>
+                                                                <a class="btn shop-now-btn" href="<?php echo base_url('Checkout'); ?>?id=6" type="button">Explore Pricing</a>
 
-    <?php
-        } ?>
-<?php  } else { ?>
-        <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
-<?php  }
-?>
+                                                            <?php
+                                                            } ?>
+                                                        <?php  } else { ?>
+                                                            <a class="btn shop-now-btn" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup">Explore Pricing</a>
+                                                        <?php  }
+                                                        ?>
 
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </form>
                             </div>
 
                             <div class="col-lg-2 pddn">
-                                <img src="<?=base_url(); ?>public/images/price1.png" class="opman" width="100%" />
-
+                                <img src="<?= base_url(); ?>public/images/price1.png" alt="online classes fee" class="opman" width="100%" />
                             </div>
-
                         </div>
-
-
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 </section>
