@@ -2,11 +2,12 @@
 
 
 <style>
-.nav-pills .nav-link {
-    display: flex;    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
+    .nav-pills .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
 </style>
 
 <section class="s_header-section">
@@ -14,73 +15,70 @@
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-12 p-5">
                 <div class="bannervs">
-                    <video class="video-dance bannerv" autoplay loop muted  >  
-                        <source src="<?=base_url(); ?>public/images/Dance/Dance-page-video-2.mp4" type="video/mp4">
-                    </video>                
+                    <video class="video-dance bannerv" autoplay loop muted>
+                        <source src="<?= base_url(); ?>public/images/Dance/Dance-page-video-2.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
-         
         </div>
     </div>
 </section>
 <section class="mt-4 dancepage MusicSec">
     <div class="container dancepagec">
-
         <!-- pills -->
         <div class="typesOfDance-tab">
+            <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="col-lg-1 col-md-1 dancebthide"></li>
 
-        <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="col-lg-1 col-md-1 dancebthide"></li>
+                <!-- Kathak -->
+                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-Kathak-tab" href="<?= base_url(); ?>online-kathak-classes" data-url="<?= base_url(); ?>Kathak" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
+                </li>
 
-            <!-- Kathak -->
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link active" id="pills-Kathak-tab" href="<?=base_url(); ?>online-kathak-classes" data-url="<?=base_url(); ?>Kathak" role="tab" aria-controls="pills-Kathak" aria-selected="true">Kathak</a>
-            </li>
+                <!-- Bharatnatyam -->
+                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                    <a class="nav-link" id="pills-Bharatnatyam-tab" href="<?= base_url(); ?>online-bharatanatyam-classes" data-url="<?= base_url(); ?>Bharatnatyam" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</a>
+                </li>
 
-            <!-- Bharatnatyam -->
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Bharatnatyam-tab" href="<?=base_url(); ?>online-bharatanatyam-classes" data-url="<?=base_url(); ?>Bharatnatyam" role="tab" aria-controls="pills-Bharatnatyam" aria-selected="false">Bharatnatyam</a>
-            </li>
+                <!-- Odissi -->
+                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                    <a class="nav-link" id="pills-Odissi-tab" href="<?= base_url(); ?>online-odissi-dance-classes" data-url="<?= base_url(); ?>Odissi" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</a>
+                </li>
 
-            <!-- Odissi -->
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Odissi-tab" href="<?=base_url(); ?>online-odissi-dance-classes" data-url="<?=base_url(); ?>Odissi" role="tab" aria-controls="pills-Odissi" aria-selected="false">Odissi</a>
-            </li>
+                <!-- Bollywood -->
+                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                    <a class="nav-link" id="pills-Bollywood-tab" href="<?= base_url(); ?>online-bollywood-dance-classes" data-url="<?= base_url(); ?>Bollywood" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</a>
+                </li>
 
-            <!-- Bollywood -->
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Bollywood-tab" href="<?=base_url(); ?>online-bollywood-dance-classes" data-url="<?=base_url(); ?>Bollywood" role="tab" aria-controls="pills-Bollywood" aria-selected="false">Bollywood Dance</a>
-            </li>
+                <!-- Western -->
+                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                    <a class="nav-link" id="pills-Western-tab" href="<?= base_url(); ?>online-western-dance-classes" data-url="<?= base_url(); ?>Western" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</a>
+                </li>
 
-            <!-- Western -->
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link" id="pills-Western-tab" href="<?=base_url(); ?>online-western-dance-classes" data-url="<?=base_url(); ?>Western" role="tab" aria-controls="pills-Western" aria-selected="false">Western Dance</a>
-            </li>
+                <li class="col-lg-1 col-md-1 dancebthide"></li>
+                <li class="col-lg-1 col-md-1 dancebthide"></li>
 
-            <li class="col-lg-1 col-md-1 dancebthide"></li>
-            <li class="col-lg-1 col-md-1 dancebthide"></li>
+                <!-- Semi-classical -->
+                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                    <a class="nav-link big" id="pills-Semiclassical-tab" href="<?= base_url(); ?>online-semiclassical-dance-lessons" data-url="<?= base_url(); ?>Semiclassical" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</a>
+                </li>
 
-            <!-- Semi-classical -->
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link big" id="pills-Semiclassical-tab" href="<?=base_url(); ?>online-semiclassical-dance-lessons" data-url="<?=base_url(); ?>Semiclassical" role="tab" aria-controls="pills-Semiclassical" aria-selected="false">Semi Classical</a>
-            </li>
+                <!-- Bhangra -->
+                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                    <a class="nav-link big" id="pills-Bhangra-tab" href="<?= base_url(); ?>online-bhangra-lessons" data-url="<?= base_url(); ?>Bhangra" role="tab" aria-controls="pills-Bhangra" aria-selected="false">Bhangra</a>
+                </li>
 
-            <!-- Bhangra -->
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link big" id="pills-Bhangra-tab" href="<?=base_url(); ?>online-bhangra-lessons" data-url="<?=base_url(); ?>Bhangra" role="tab" aria-controls="pills-Bhangra" aria-selected="false">Bhangra</a>
-            </li>
-
-            <!-- Folk -->
-            <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
-                <a class="nav-link big" id="pills-Folk-tab" href="<?=base_url(); ?>online-folk-dance-classes" data-url="<?=base_url(); ?>Folk" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</a>
-            </li>
-        </ul>
+                <!-- Folk -->
+                <li class="col-lg-2 col-md-2 col-6 nav-item" role="presentation">
+                    <a class="nav-link big" id="pills-Folk-tab" href="<?= base_url(); ?>online-folk-dance-classes" data-url="<?= base_url(); ?>Folk" role="tab" aria-controls="pills-Folk" aria-selected="false">Folk Dance</a>
+                </li>
+            </ul>
             <div class="tab-content" id="pills-tabContent">
                 <!-- Kathak -->
                 <div class="tab-pane fade show active" id="pills-Kathak" role="tabpanel" aria-labelledby="pills-Kathak-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="dance1" >
+                            <img src="<?= base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="kathak dance classes online">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col kathakp">
                             <h3 class="heading"> Kathak</h3>
@@ -89,9 +87,9 @@
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
-                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                    <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
                                 <?php else : ?>
-                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                    <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -103,7 +101,6 @@
                                 <li class="col-lg-1 ">
 
                                 </li>
-
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6">
                                     <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
                                     <a href="#learnKathak" class="btn btndemo step active" role="button">
@@ -127,7 +124,6 @@
                                             <span class="elementor-button-text">Testimonials</span>
                                         </span>
                                     </a>
-
                                 </li>
                                 <li class="list-inline-item col-lg-2 col-md-2 col-6">
                                     <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
@@ -148,7 +144,6 @@
                                 <li class="col-lg-1 ">
 
                                 </li>
-
                             </ul>
                         </div>
                     </section>
@@ -159,9 +154,9 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3>What you will learn</h3>
                                     <p class="">
-                                    The Kathak syllabus consists of a progressive series of steps and techniques that build
-                        upon each other to create a complete dance form. Here is a brief overview of the Kathak
-                        syllabus:
+                                        The Kathak syllabus consists of a progressive series of steps and techniques that build
+                                        upon each other to create a complete dance form. Here is a brief overview of the Kathak
+                                        syllabus:
                                     </p>
                                     <ul class="list-group">
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -181,46 +176,44 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                             Gat Bhava - Combination of Footwork and Expressions</span>
+                                                Gat Bhava - Combination of Footwork and Expressions</span>
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                             Paran - Complex Footwork Patterns</span>
+                                                Paran - Complex Footwork Patterns</span>
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                         Ladi - Group of Footwork Phrases</span>
+                                                Ladi - Group of Footwork Phrases</span>
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                         Thaat - Posture and Basic Hand Gestures</span>
+                                                Thaat - Posture and Basic Hand Gestures</span>
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                             Parhant - Reciting the Rhythmic Cycles</span>
+                                                Parhant - Reciting the Rhythmic Cycles</span>
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                             Abhinaya - Expression through Face and Body</span>
+                                                Abhinaya - Expression through Face and Body</span>
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                             Raas - Combination of Expressions and Rhythm</span>
+                                                Raas - Combination of Expressions and Rhythm</span>
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                             Tarana - Combination of Rhythm and Melody</span>
+                                                Tarana - Combination of Rhythm and Melody</span>
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                             Padhant - Reciting the Syllables and Rhythmic Patterns</span>
+                                                Padhant - Reciting the Syllables and Rhythmic Patterns</span>
                                         </li>
                                     </ul>
-
-
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="dance2">
+                                    <img src="<?= base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="kathak dance classes online">
                                 </div>
                             </div>
                         </div>
@@ -228,18 +221,15 @@
 
                     <section class="modulesec mft" id="mod-kathak">
                         <div class="container">
-                   
                             <div class="month-row">
                                 <div class="row">
                                     <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
-
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center imgmodule">
-                                        <img src="<?=base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5" alt="dance3">
-
+                                        <img src="<?= base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5" alt="kathak dance classes online">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 kathakp">
                                         <!-- trying new tab  -->
@@ -296,19 +286,18 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance4">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="Live Private class">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance5">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="Practice video">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance6">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8-literature.webp" alt="Reading content and Quiz">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
-
                                                     <div class="tab-content" id="pills-tabContent">
                                                         <!-- Month 1 -->
                                                         <div class="tab-pane fade show active" id="pills-KathakMonth1" role="tabpanel" aria-labelledby="pills-KathakMonth1-tab">
@@ -335,7 +324,6 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Simple Hand and Feet Coordination.</li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Basic Kathak postures.</li>
                                                                 </ul>
-
                                                             </div>
                                                         </div>
 
@@ -504,7 +492,7 @@
                 <div class="tab-pane fade" id="pills-Bharatnatyam" role="tabpanel" aria-labelledby="pills-Bharatnatyam-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/Bharatnatyam.svg" class="danceimg" alt="dance7">
+                            <img src="<?= base_url(); ?>public/images/Dance/Bharatnatyam.svg" class="danceimg" alt="online bharatanatyam classes">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bharatnatyam</h3>
@@ -513,9 +501,9 @@
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
-                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                    <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
                                 <?php else : ?>
-                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                    <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -527,7 +515,6 @@
                                 <li class="col-lg-1 ">
 
                                 </li>
-
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6 ">
                                     <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
                                     <a href="#learnbharatnatyam" class="btn btndemo step active" role="button">
@@ -551,7 +538,6 @@
                                             <span class="elementor-button-text">Testimonials</span>
                                         </span>
                                     </a>
-
                                 </li>
                                 <li class="list-inline-item col-lg-2 col-md-2 col-6">
                                     <!-- <button type="button" class="btn btndemo step">Instructors</button> -->
@@ -572,23 +558,21 @@
                                 <li class="col-lg-1 ">
 
                                 </li>
-
                             </ul>
                         </div>
                     </section>
                     <section class="learningsec yellowb" id="learnbharatnatyam">
                         <div class="container">
                             <div class="row ">
-                            <div  class="col-lg-12 col-md-12 col-12">
-                                 <h3 class="">What you will learn</h3>
-                                 <p>
-                                    The Bharatanatyam syllabus consists of a progressive series of steps and techniques that
-                                    build upon each other to create a complete dance form. Here is a brief overview of the
-                                    Bharatanatyam syllabus:
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <h3 class="">What you will learn</h3>
+                                    <p>
+                                        The Bharatanatyam syllabus consists of a progressive series of steps and techniques that
+                                        build upon each other to create a complete dance form. Here is a brief overview of the
+                                        Bharatanatyam syllabus:
                                     </p>
-                                 </div>
+                                </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                   
                                     <ul class="list-group">
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Adavus - Basic Steps</span>
@@ -610,7 +594,7 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                             Varnam - A Combination of Adavus, Hasta Mudras, Expressions, and Narration</span>
+                                                Varnam - A Combination of Adavus, Hasta Mudras, Expressions, and Narration</span>
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text"> Padam - An Expressive Dance with Lyrics</span>
@@ -636,15 +620,15 @@
                                     </ul>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="<?=base_url(); ?>public/images/Dance/2.svg" class="danceimg" alt="dance8">
+                                    <img src="<?= base_url(); ?>public/images/Dance/2.svg" class="danceimg" alt="online bharatanatyam classes">
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
                                     <!-- Folk -->
                                     <p class="mt-3">
-                                    Our expert instructors provide personalized guidance and support to help you master each
-                                    level and progress to the next. With our convenient online platform, you can learn
-                                    Bharatanatyam from anywhere in the world, at your own pace. Join us today and let's start
-                                    dancing!
+                                        Our expert instructors provide personalized guidance and support to help you master each
+                                        level and progress to the next. With our convenient online platform, you can learn
+                                        Bharatanatyam from anywhere in the world, at your own pace. Join us today and let's start
+                                        dancing!
                                     </p>
                                 </div>
                             </div>
@@ -653,21 +637,17 @@
 
                     <section class="modulesec mft" id="mod-bharatnatyam">
                         <div class="container">
-        
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv">
+                                    <div class="col-lg-12 col-12 text-center modulesdiv">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/bharatnatyam-3.svg" class="danceimg danceimg5" alt="dance9">
-
+                                        <img src="<?= base_url(); ?>public/images/Dance/bharatnatyam-3.svg" class="danceimg danceimg5" alt="online bharatanatyam classes">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
-
-
                                         <!-- trying new tab  -->
                                         <ul class="row nav nav-pills mb-3" id="pills-tab" role="tablist">
                                             <!-- Month 1 -->
@@ -722,19 +702,18 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance10">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="Live Private class">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance11">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="Practice video">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance12">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8-literature.webp" alt="Reading content and Quiz">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
-
                                                     <div class="tab-content" id="pills-tabContent">
                                                         <!-- Month 1 -->
                                                         <div class="tab-pane fade show active" id="pills-BharatnatyamMonth1" role="tabpanel" aria-labelledby="pills-BharatnatyamMonth1-tab">
@@ -761,16 +740,12 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i>
                                                                         Basic adavus (steps) in different rhythms (tala). </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to Jathis (rhythmic patterns).</li>
-
                                                                 </ul>
-
-
                                                             </div>
                                                         </div>
 
                                                         <!-- Month 3 -->
                                                         <div class="tab-pane fade" id="pills-BharatnatyamMonth3" role="tabpanel" aria-labelledby="pills-BharatnatyamMonth3-tab">
-
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 3 :</h5>
                                                                 <ul class="icon-list-items">
@@ -928,7 +903,7 @@
                 <div class="tab-pane fade" id="pills-Odissi" role="tabpanel" aria-labelledby="pills-Odissi-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/odissi.webp" class="danceimg" alt="dance13">
+                            <img src="<?= base_url(); ?>public/images/Dance/odissi.webp" class="danceimg" alt="dance13">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Odissi</h3>
@@ -937,9 +912,9 @@
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
-                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                    <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
                                 <?php else : ?>
-                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                    <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -951,7 +926,6 @@
                                 <li class="col-lg-1 ">
 
                                 </li>
-
                                 <li class="list-inline-item col-lg-2 col-md-3 col-6 ">
                                     <!-- <button type="button" class="btn btndemo step">What you will learn</button> -->
                                     <a href="#learnodissi" class="btn btndemo step active" role="button">
@@ -1003,15 +977,15 @@
                     <section class="learningsec yellowb" id="learnodissi">
                         <div class="container">
                             <div class="row">
-                            <div  class="col-lg-12 col-md-12 col-12">
-                                 <h3 class="">What you will learn</h3>
-                                 <p>
-                                    Our online folk dance classes offer a vibrant syllabus that showcases the diverse and rich
-                                    cultural heritage of various regions around the world. Here is an overview of our syllabus:   
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <h3 class="">What you will learn</h3>
+                                    <p>
+                                        Our online folk dance classes offer a vibrant syllabus that showcases the diverse and rich
+                                        cultural heritage of various regions around the world. Here is an overview of our syllabus:
                                     </p>
-                                 </div>
+                                </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    
+
                                     <ul class="list-group">
                                         <h6>Level 1 :</h6>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1038,7 +1012,7 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                            Pallavi - A Pure Dance Form</span>
+                                                Pallavi - A Pure Dance Form</span>
                                         </li>
                                         <h6>Level 3 :</h6>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1052,26 +1026,26 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                            Guru Vandana - Offering Gratitude to the Guru</span>
+                                                Guru Vandana - Offering Gratitude to the Guru</span>
                                         </li>
                                     </ul>
                                     <p class="mt-3">
-                                 
+
                                     </p>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Odissi -->
                                     <div class="folkImg">
-                                    <img src="<?=base_url(); ?>public/images/Dance/odissi-3.webp" class="danceimg" alt="dance14">
+                                        <img src="<?= base_url(); ?>public/images/Dance/odissi-3.webp" class="danceimg" alt="dance14">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
                                     <!-- Folk -->
                                     <p class="mt-3">
-                                    Our expert instructors provide personalized guidance and support to help you master each
-                                    level and progress to the next. With our convenient online platform, you can learn Odissi
-                                    dance from anywhere in the world, at your own pace. Join us today and let's start dancing to
-                                    the rhythms of Odissi!
+                                        Our expert instructors provide personalized guidance and support to help you master each
+                                        level and progress to the next. With our convenient online platform, you can learn Odissi
+                                        dance from anywhere in the world, at your own pace. Join us today and let's start dancing to
+                                        the rhythms of Odissi!
                                     </p>
                                 </div>
                             </div>
@@ -1080,17 +1054,17 @@
 
                     <section class="modulesec mft" id="mod-odissi">
                         <div class="container">
-                           
+
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
+                                    <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/odissi-4.webp" class="danceimg danceimg5" alt="dance15">
+                                        <img src="<?= base_url(); ?>public/images/Dance/odissi-4.webp" class="danceimg danceimg5" alt="dance15">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1124,15 +1098,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance16">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="Live Private class">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance17">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="Practice video">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance18">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8-literature.webp" alt="Reading content and Quiz">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1265,7 +1239,7 @@
                 <div class="tab-pane fade" id="pills-Bollywood" role="tabpanel" aria-labelledby="pills-Bollywood-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/bollywood-dance.webp" class="danceimg" alt="dance19">
+                            <img src="<?= base_url(); ?>public/images/Dance/bollywood-dance.webp" class="danceimg" alt="online bollywood dance classes">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bollywood</h3>
@@ -1274,9 +1248,9 @@
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
-                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                    <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
                                 <?php else : ?>
-                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                    <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -1340,15 +1314,15 @@
                     <section class="learningsec yellowb" id="learnBollywood">
                         <div class="container">
                             <div class="row">
-                            <div  class="col-lg-12 col-md-12 col-12">
-                                 <h3 class="">What you will learn</h3>
-                                 <p>
-                                    Our online folk dance classes offer a vibrant syllabus that showcases the diverse and rich
-                                    cultural heritage of various regions around the world. Here is an overview of our syllabus:   
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <h3 class="">What you will learn</h3>
+                                    <p>
+                                        Our online folk dance classes offer a vibrant syllabus that showcases the diverse and rich
+                                        cultural heritage of various regions around the world. Here is an overview of our syllabus:
                                     </p>
-                                 </div>
+                                </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    
+
                                     <ul class="list-group">
                                         <h6>Level 1 :</h6>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1375,7 +1349,7 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                            Introduction to Bollywood Fusion Styles</span>
+                                                Introduction to Bollywood Fusion Styles</span>
                                         </li>
                                         <h6>Level 3 :</h6>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1389,25 +1363,25 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                            Bollywood Fusion Styles</span>
+                                                Bollywood Fusion Styles</span>
                                         </li>
                                     </ul>
-                                  
+
                                 </div>
 
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Bollywood -->
-                                    <div class="folkImg"> 
-                                        <img src="<?=base_url(); ?>public/images/Dance/bollywood-21.webp" class="danceimg" alt="dance20">
+                                    <div class="folkImg">
+                                        <img src="<?= base_url(); ?>public/images/Dance/bollywood-21.webp" class="danceimg" alt="online bollywood dance classes">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
-                                    <!-- Folk -->
+                                    <!-- Bollywood -->
                                     <p class="mt-3">
-                                    Our expert instructors provide personalized guidance and support to help you master each
-                                    level and progress to the next. With our convenient online platform, you can learn Bollywood
-                                    dance from anywhere in the world, at your own pace. Join us today and let's start dancing to
-                                    the beats of Bollywood! 
+                                        Our expert instructors provide personalized guidance and support to help you master each
+                                        level and progress to the next. With our convenient online platform, you can learn Bollywood
+                                        dance from anywhere in the world, at your own pace. Join us today and let's start dancing to
+                                        the beats of Bollywood!
                                     </p>
                                 </div>
                             </div>
@@ -1416,17 +1390,17 @@
 
                     <section class="modulesec mft" id="mod-Bollywood">
                         <div class="container">
-                          
+
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
+                                    <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/bollywood-3.webp" class="danceimg danceimg5" alt="dance21">
+                                        <img src="<?= base_url(); ?>public/images/Dance/bollywood-3.webp" class="danceimg danceimg5" alt="online bollywood dance classes">
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <!-- trying new tab  -->
@@ -1459,15 +1433,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance21">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="Live Private class">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance22">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="Practice video">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance23">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8-literature.webp" alt="Reading content and Quiz">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -1581,7 +1555,7 @@
                 <div class="tab-pane fade" id="pills-Western" role="tabpanel" aria-labelledby="pills-Western-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/western-dance.webp" class="danceimg" alt="dance24">
+                            <img src="<?= base_url(); ?>public/images/Dance/western-dance.webp" class="danceimg" alt="dance24">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Western</h3>
@@ -1590,9 +1564,9 @@
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
-                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                    <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
                                 <?php else : ?>
-                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                    <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -1657,17 +1631,17 @@
                     <section class="learningsec yellowb" id="learnWestern">
                         <div class="container">
                             <div class="row">
-                            <div class="col-lg-12 col-md-12 col-12">
+                                <div class="col-lg-12 col-md-12 col-12">
                                     <!-- Folk -->
                                     <p class="mt-3">
-                                    Our expert instructors provide personalized guidance and support to help you master each
-                                    level and progress to the next. With our convenient online platform, you can learn Folk dance
-                                    from anywhere in the world, at your own pace. Join us today and let's explore the beauty and
-                                    diversity of Folk dance together!
+                                        Our expert instructors provide personalized guidance and support to help you master each
+                                        level and progress to the next. With our convenient online platform, you can learn Folk dance
+                                        from anywhere in the world, at your own pace. Join us today and let's explore the beauty and
+                                        diversity of Folk dance together!
                                     </p>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                   
+
                                     <ul class="list-group">
                                         <h6>Level 1 :</h6>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1694,7 +1668,7 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                            Expressive Interpretation of Dance</span>
+                                                Expressive Interpretation of Dance</span>
                                         </li>
                                         <h6>Level 3 :</h6>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -1708,23 +1682,23 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                            Choreography for Advanced Hip Hop Dance Combinations</span>
+                                                Choreography for Advanced Hip Hop Dance Combinations</span>
                                         </li>
                                     </ul>
-                                
+
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Western -->
                                     <div class="folkImg">
-                                        <img src="<?=base_url(); ?>public/images/Dance/western-3.webp" class="danceimg" alt="dance25">
-                                    </div>   
+                                        <img src="<?= base_url(); ?>public/images/Dance/western-3.webp" class="danceimg" alt="dance25">
+                                    </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
                                     <p class="mt-3">
-                                    Our expert instructors provide personalized guidance and support to help you master each
-                                    level and progress to the next. With our convenient online platform, you can learn Western
-                                    dance from anywhere in the world, at your own pace. Join us today and let's start dancing to
-                                    the beats of Western dance!
+                                        Our expert instructors provide personalized guidance and support to help you master each
+                                        level and progress to the next. With our convenient online platform, you can learn Western
+                                        dance from anywhere in the world, at your own pace. Join us today and let's start dancing to
+                                        the beats of Western dance!
                                     </p>
                                 </div>
                             </div>
@@ -1732,17 +1706,17 @@
                     </section>
                     <section class="modulesec mft" id="mod-Western">
                         <div class="container">
-                           
+
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
+                                    <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/western-dance-2.webp" class="danceimg danceimg5" alt="dance26">
+                                        <img src="<?= base_url(); ?>public/images/Dance/western-dance-2.webp" class="danceimg danceimg5" alt="dance26">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -1802,15 +1776,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance27">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="dance27">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance28">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="dance28">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance29">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance29">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2009,7 +1983,7 @@
                 <div class="tab-pane fade" id="pills-Semiclassical" role="tabpanel" aria-labelledby="pills-Semiclassical-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="dance30">
+                            <img src="<?= base_url(); ?>public/images/Dance/kathakImg1.svg" class="danceimg" alt="dance30">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Semi-classical</h3>
@@ -2019,9 +1993,9 @@
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
-                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                    <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
                                 <?php else : ?>
-                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                    <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -2089,7 +2063,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="mt-4">What you will learn</h3>
                                     <p>
-                                         
+
                                     </p>
                                     <ul class="list-group">
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2123,7 +2097,7 @@
 
                                     <!-- Semi-classical  -->
 
-                                    <img src="<?=base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="dance31">
+                                    <img src="<?= base_url(); ?>public/images/Dance/kathakImg2.svg" class="danceimg" alt="dance31">
 
                                 </div>
                             </div>
@@ -2132,17 +2106,17 @@
 
                     <section class="modulesec mft" id="mod-Semiclassical">
                         <div class="container">
-                        
+
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
+                                    <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5" alt="dance32">
+                                        <img src="<?= base_url(); ?>public/images/Dance/kathakImg3.svg" class="danceimg danceimg5" alt="dance32">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 mftm">
@@ -2178,15 +2152,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance33">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="dance33">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance34">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="dance34">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance35">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance35">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2265,7 +2239,7 @@
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Intermediate Abhinaya (expressions) in different compositions </li>
                                                                     <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to the basic repertoire of semi-classical dance</li>
 
-                                                                    
+
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -2306,7 +2280,7 @@
                 <div class="tab-pane fade" id="pills-Bhangra" role="tabpanel" aria-labelledby="pills-Bhangra-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/bhangra.webp" class="danceimg" alt="dance36">
+                            <img src="<?= base_url(); ?>public/images/Dance/bhangra.webp" class="danceimg" alt="dance36">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Bhangra</h3>
@@ -2316,9 +2290,9 @@
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
-                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                    <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
                                 <?php else : ?>
-                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                    <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -2384,7 +2358,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <h3 class="">What you will learn</h3>
                                     <p>
-                                         
+
                                     </p>
                                     <ul class="list-group">
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2413,7 +2387,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Bhangra -->
-                                    <img src="<?=base_url(); ?>public/images/Dance/bhangra-2.webp" class="danceimg" alt="dance37">
+                                    <img src="<?= base_url(); ?>public/images/Dance/bhangra-2.webp" class="danceimg" alt="dance37">
                                 </div>
                             </div>
                         </div>
@@ -2421,17 +2395,17 @@
 
                     <section class="modulesec mft" id="mod-Bhangra">
                         <div class="container">
-                     
+
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
+                                    <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/bhangra-2-1.webp" class="danceimg danceimg5" alt="dance38">
+                                        <img src="<?= base_url(); ?>public/images/Dance/bhangra-2-1.webp" class="danceimg danceimg5" alt="dance38">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2491,15 +2465,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance39">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="dance39">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance40">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="dance40">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance41">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance41">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2669,7 +2643,7 @@
                 <div class="tab-pane fade" id="pills-Folk" role="tabpanel" aria-labelledby="pills-Folk-tab">
                     <div class="row pddyd">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <img src="<?=base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg" alt="dance42">
+                            <img src="<?= base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg" alt="dance42">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 textPara-col">
                             <h3 class="heading"> Folk</h3>
@@ -2680,9 +2654,9 @@
                             </p>
                             <div class="text-end mt-4">
                                 <?php if (!(session()->get('sessiondata'))) : ?>
-                                        <input class="btn btndemoh" type="button"  href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
+                                    <input class="btn btndemoh" type="button" href="" data-bs-toggle="modal" data-bs-target="#registerformpopup" value="Enroll Now">
                                 <?php else : ?>
-                                        <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
+                                    <a class="btn btndemoh" href="<?php echo base_url('ModelForLogin'); ?>" type="button">Explore Pricing</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -2745,16 +2719,16 @@
                     <section class="learningsec yellowb" id="learnFolk">
                         <div class="container">
                             <div class="row">
-                                 <div  class="col-lg-12 col-md-12 col-12">
-                                 <h3 class="">What you will learn</h3>
-                                 <p>
-                                    Our online folk dance classes offer a vibrant syllabus that showcases the diverse and rich
-                                    cultural heritage of various regions around the world. Here is an overview of our syllabus:   
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <h3 class="">What you will learn</h3>
+                                    <p>
+                                        Our online folk dance classes offer a vibrant syllabus that showcases the diverse and rich
+                                        cultural heritage of various regions around the world. Here is an overview of our syllabus:
                                     </p>
-                                 </div>
+                                </div>
                                 <div class="col-lg-6 col-md-6 col-12">
-                                    
-                                    
+
+
                                     <ul class="list-group">
                                         <h6>Level 1 :</h6>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2781,7 +2755,7 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                            Expressive Interpretation of Folk Dance</span>
+                                                Expressive Interpretation of Folk Dance</span>
                                         </li>
                                         <h6>Level 3 :</h6>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -2795,7 +2769,7 @@
                                         </li>
                                         <li class=""><span class="list-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                                             <span class="list-text">
-                                            Presentation Techniques for Folk Dance Performances</span>
+                                                Presentation Techniques for Folk Dance Performances</span>
                                         </li>
                                     </ul>
 
@@ -2803,17 +2777,17 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <!-- Folk -->
                                     <div class="folkImg">
-                                    <img src="<?=base_url(); ?>public/images/Dance/folk-dance-2.webp" class="danceimg" alt="dance43">
+                                        <img src="<?= base_url(); ?>public/images/Dance/folk-dance-2.webp" class="danceimg" alt="dance43">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12 col-12">
                                     <!-- Folk -->
                                     <p class="mt-3">
-                                    Our expert instructors provide personalized guidance and support to help you master each
-                                    level and progress to the next. With our convenient online platform, you can learn Folk dance
-                                    from anywhere in the world, at your own pace. Join us today and let's explore the beauty and
-                                    diversity of Folk dance together!
+                                        Our expert instructors provide personalized guidance and support to help you master each
+                                        level and progress to the next. With our convenient online platform, you can learn Folk dance
+                                        from anywhere in the world, at your own pace. Join us today and let's explore the beauty and
+                                        diversity of Folk dance together!
                                     </p>
                                 </div>
                             </div>
@@ -2822,17 +2796,17 @@
 
                     <section class="modulesec mft" id="mod-Folk">
                         <div class="container">
-                         
+
                             <div class="month-row">
                                 <div class="row">
-                                <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
+                                    <div class="col-lg-12 col-12 text-center modulesdiv pb-5">
                                         <h3>Modules
                                         </h3>
                                         <span class="line"></span>
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12 text-center">
-                                        <img src="<?=base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg danceimg5" alt="dance44">
+                                        <img src="<?= base_url(); ?>public/images/Dance/folk-dance.jpg" class="danceimg danceimg5" alt="dance44">
 
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -2892,15 +2866,15 @@
                                         <div class="contentSec">
                                             <div class="">
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance45">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="dance45">
                                                     Live Private class -8
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8.webp" alt="dance46">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8.webp" alt="dance46">
                                                     Practice video -6
                                                 </div>
                                                 <div class="content">
-                                                    <img src="<?=base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance47">
+                                                    <img src="<?= base_url(); ?>public/images/Dance/icons8-literature.webp" alt="dance47">
                                                     Reading content/Quiz - 2
                                                 </div>
                                                 <div class="module-text">
@@ -2982,11 +2956,11 @@
                                                         <div class="tab-pane fade" id="pills-FolkMonth7" role="tabpanel" aria-labelledby="pills-FolkMonth7-tab">
                                                             <div class="month-text">
                                                                 <h5 class="MonthHeading">Month 7 : Choreography and Performance </h5>
-                                                                    <ul class="icon-list-items">
-                                                                        <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn and rehearse a full Folk dance performance. </li>
-                                                                        <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on stage presence and audience engagement. </li>
-                                                                        <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to stage design and lighting.</li>
-                                                                    </ul>
+                                                                <ul class="icon-list-items">
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Learn and rehearse a full Folk dance performance. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Focus on stage presence and audience engagement. </li>
+                                                                    <li class="icon-list-item"><i class="fas fa-angle-double-right" aria-hidden="true"></i> Introduction to stage design and lighting.</li>
+                                                                </ul>
                                                             </div>
                                                         </div>
 
@@ -3073,487 +3047,485 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-12 text-center testimonialsdiv">
-                <h3 class="title_4 ">Testimonials
-                </h3>
+                <h3 class="title_4 "> Testimonials </h3>
                 <span class="line"></span>
             </div>
             <!-- Main Carousel -->
             <div class="col-lg-12 col-md-12 col-12 testimonialsp">
-                <div id="combinedCarousel" class="carousel slide" data-ride="carousel"> 
-                        <div class="carousel-inner">
-                            <div class="carousel-item motd active">
-                                <div class="row">
-                               
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Smita Sebastian (UK) <span></p>
-                                            <p>For the past year and a half, I've been learning Kathak from Priti Singh,<br>  and I'm incredibly
-                                            grateful.  Priti's graceful teaching style and deep knowledge of the subject <br> make each session
+                <div id="combinedCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item motd active">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Smita Sebastian ( UK ) <span></p>
+                                        <p>For the past year and a half, I've been learning Kathak from Priti Singh,<br> and I'm incredibly
+                                            grateful. Priti's graceful teaching style and deep knowledge of the subject <br> make each session
                                             interesting and well-rounded. Her online lessons, <br>coupled with flexible scheduling, have
                                             made my learning journey both convenient and enriching
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/1.png" class="haimg" alt="dance48">
+                                        </p>
                                     </div>
                                 </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/1.png" class="haimg" alt="Smita Sebastian ( UK )">
+                                </div>
                             </div>
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Oorja Sinha ( Pune)</span></p>
-                                            <p>I made significant improvement in my dancing under the guidance of <br>
+                        </div>
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Oorja Sinha ( Pune )</span></p>
+                                        <p>I made significant improvement in my dancing under the guidance of <br>
                                             Priti mam, I excelled in Kathak, completing my first-year exam. <br>Once just a dream, now a
                                             reality thanks to her dedication.<br> Her patient teaching and E-natyam platform make learning
                                             accessible and enriching.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/2.png" class="haimg" alt="dance49">
+                                        </p>
                                     </div>
                                 </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/2.png" class="haimg" alt="Oorja Sinha ( Pune )">
+                                </div>
                             </div>
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Reshma ( Pune )</span></p>
-                                            <p>Enatyam's Kathak online course has been a lifeline for me amidst my<br>
+                        </div>
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Reshma ( Pune )</span></p>
+                                        <p>Enatyam's Kathak online course has been a lifeline for me amidst my<br>
                                             extremely busy schedule. The moments spent learning and immersing myself in Kathak dance<br>
                                             have provided a much-needed escape from the pressures of daily life
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/3.png" class="haimg" alt="dance50">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Tejashvi (Pune) </span></p>
-                                            <p>I never thought I'd get back into dancing after so many years, but<br>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/3.png" class="haimg" alt="Reshma ( Pune )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Tejashvi ( Pune ) </span></p>
+                                        <p>I never thought I'd get back into dancing after so many years, but<br>
                                             Enatyam's Kathak online course made it possible. The structured lessons and supportive<br>
                                             instructors gently guided me back to my long-forgotten hobby, and I couldn't be happier.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/4.png" class="haimg" alt="dance51">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Swapna ( USA)</span></p>
-                                            <p>Enatyam's Kathak online course has been a delightful journey of
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/4.png" class="haimg" alt="Tejashvi ( Pune )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Swapna ( USA )</span></p>
+                                        <p>Enatyam's Kathak online course has been a delightful journey of
                                             rediscovery for me. <br>After putting my passion for dance on hold for years, the accessibility of<br>
                                             online learning allowed me to reconnect with Kathak and reclaim it as a cherished hobby
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/5.png" class="haimg" alt="dance52">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vaanya’father ( Australia)</span></p>
-                                            <p>Enatyam's Kathak online course has exceeded our expectations
-                                                in every way. <br>The convenience of learning from home has made it easy for my child to fit<br>
-                                                dance practice into their schedule, and the joy it brings them is truly priceless
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/6.png" class="haimg" alt="dance53">
-                                    </div>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/5.png" class="haimg" alt="Swapna ( USA )">
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kavya (USA)</span></p>
-                                            <p>As a busy parent, I couldn't be happier with Enatyam's Bharatanatyam online<br>
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Vaanya’father ( Australia )</span></p>
+                                        <p>Enatyam's Kathak online course has exceeded our expectations
+                                            in every way. <br>The convenience of learning from home has made it easy for my child to fit<br>
+                                            dance practice into their schedule, and the joy it brings them is truly priceless
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/6.png" class="haimg" alt="Vaanya’father ( Australia )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kavya ( USA )</span></p>
+                                        <p>As a busy parent, I couldn't be happier with Enatyam's Bharatanatyam online<br>
                                             course. It allows my child to pursue their passion for dance without <br>the constraints of rigid
                                             schedules, and the progress they've made is truly remarkable
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/7.png" class="haimg" alt="dance54">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Isabella (USA) </span></p>
-                                            <p>Being an English speaker, my fondness for Krishna led me to Kathak with<br>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/7.png" class="haimg" alt="Kavya ( USA )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Isabella ( USA ) </span></p>
+                                        <p>Being an English speaker, my fondness for Krishna led me to Kathak with<br>
                                             Enatyam. Their platform made my Kathak journey incredibly easy to follow.<br> It seamlessly
                                             blends tradition with accessibility, it's like<br> diving into the exciting world of Kathak without any
                                             hassle.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/8.png" class="haimg" alt="dance55">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Pradanya ( Singapore)</span></p>
-                                            <p>Enatyam's Kathak course is a must-try <br>for anyone passionate about
-                                            Indian classical dance.  <br>The curriculum is well-structured, catering to students of all levels
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/9.png" class="haimg" alt="dance56">
-                                    </div>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/8.png" class="haimg" alt="Isabella ( USA )">
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Dr Riddhi Ketan Shukla ( Ahmedabad ) </span></p>
-                                            <p>Thanks to Enatyam's Kathak online course, I've
-                                                found a way to cut through the noise of my busy schedule and <br>reconnect with myself through
-                                                dance. The graceful movements and <br> intricate footwork provide a sense of calm and clarity
-                                                that I desperately needed
-                                            </p>
-                                        </div>
-                                    </div>
+                        <div class="carousel-item motd">
+                            <div class="row">
 
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/10.png" class="haimg" alt="dance57">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Pradanya ( Singapore )</span></p>
+                                        <p>Enatyam's Kathak course is a must-try <br>for anyone passionate about
+                                            Indian classical dance. <br>The curriculum is well-structured, catering to students of all levels
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Pearllan ( UK) : </span></p>
-                                            <p>I never imagined I could learn Kathak Dance online <br>with such ease and
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/9.png" class="haimg" alt="Pradanya ( Singapore )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Dr Riddhi Ketan Shukla ( Ahmedabad ) </span></p>
+                                        <p>Thanks to Enatyam's Kathak online course, I've
+                                            found a way to cut through the noise of my busy schedule and <br>reconnect with myself through
+                                            dance. The graceful movements and <br> intricate footwork provide a sense of calm and clarity
+                                            that I desperately needed
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/10.png" class="haimg" alt="Dr Riddhi Ketan Shukla ( Ahmedabad )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Pearllan ( UK ) </span></p>
+                                        <p>I never imagined I could learn Kathak Dance online <br>with such ease and
                                             depth. Enatyam's course structure is comprehensive, <br>and the instructors are incredibly
                                             supportive
-
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/11.png" class="haimg" alt="dance58">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Roohi’Mom ( Delhi )</span></p>
-                                            <p>Roohi's journey from beginner to performing on renowned stages in<br>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/11.png" class="haimg" alt="Pearllan ( UK )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Roohi’Mom ( Delhi )</span></p>
+                                        <p>Roohi's journey from beginner to performing on renowned stages in<br>
                                             just two years with Enatyam fills me with immense pride and happiness. Seeing her passion<br>
                                             for dance blossom is truly rewarding. Thank you, Enatyam, for making her dreams a reality
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/12.png" class="haimg" alt="dance59">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Tia’mom ( Canada)</span></p>
-                                            <p>My daughter Antara has been learning Kathak from Enatyam for
-                                                almost 3 years now. <br>Our overall experience has been extremely satisfactory. The class timings
-                                                are adjusted as per our convenience since we are overseas. <br>The pace of teaching both theory
-                                                and practical is based as per the student's needs. I would recommend it for any parent who<br>
-                                                wants to enroll their kids for any of the various art forms that they offer
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/13.png" class="haimg" alt="dance60">
-                                    </div>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/12.png" class="haimg" alt="Roohi’Mom ( Delhi )">
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Meera (canada)</span></p>
-                                            <p>
-                                                Discovering Enatyam E-Learning Kathak during the pandemic was a boon for my daughter<br>
-                                                Meera. In 3+ years, she's made remarkable progress, finding comfort in online learning.<br>
-                                                Detailed theoretical explanations enhance her expression. Grateful for accommodating time<br>
-                                                zones and confident in Meera's Kathak journey.
-                                            </p>
-                                        </div>
-                                    </div>
+                        <div class="carousel-item motd">
+                            <div class="row">
 
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/14.png" class="haimg" alt="dance61">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Tia’mom ( Canada )</span></p>
+                                        <p>My daughter Antara has been learning Kathak from Enatyam for
+                                            almost 3 years now. <br>Our overall experience has been extremely satisfactory. The class timings
+                                            are adjusted as per our convenience since we are overseas. <br>The pace of teaching both theory
+                                            and practical is based as per the student's needs. I would recommend it for any parent who<br>
+                                            wants to enroll their kids for any of the various art forms that they offer
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Raamya ( Singapore)</span></p>
-                                            <p>Enatyam's Bharatanatyam course is a gem! The instructors break
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/13.png" class="haimg" alt="Tia’mom ( Canada )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Meera ( Canada )</span></p>
+                                        <p>
+                                            Discovering Enatyam E-Learning Kathak during the pandemic was a boon for my daughter<br>
+                                            Meera. In 3+ years, she's made remarkable progress, finding comfort in online learning.<br>
+                                            Detailed theoretical explanations enhance her expression. Grateful for accommodating time<br>
+                                            zones and confident in Meera's Kathak journey.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/14.png" class="haimg" alt="Meera ( Canada )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Raamya ( Singapore )</span></p>
+                                        <p>Enatyam's Bharatanatyam course is a gem! The instructors break
                                             down<br> complex movements into manageable steps, making it accessible for beginners like me
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/15.png" class="haimg" alt="dance62">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aarushi ( USA)</span></p>
-                                            <p>The smiles on my daughter’s faces during Enatyam's Bharatanatyam<br>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/15.png" class="haimg" alt="Raamya ( Singapore )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aarushi ( USA )</span></p>
+                                        <p>The smiles on my daughter’s faces during Enatyam's Bharatanatyam<br>
                                             dance classes are priceless. The instructors have a gift for making dance accessible and <br>
                                             enjoyable. It's like they've sprinkled a bit of magic in every session, <br>turning learning into a
                                             delightful experience
 
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/16.png" class="haimg" alt="dance63">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Angela’s Father</span></p>
-                                            <p>As a father, I am immensely grateful to Enatyam for the positive impact<br>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/16.png" class="haimg" alt="Aarushi ( USA )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Angela’s Father</span></p>
+                                        <p>As a father, I am immensely grateful to Enatyam for the positive impact<br>
                                             on my daughter Angela. The Bollywood dance classes have become a bonding experience for<br>
                                             us. The instructors not only teach dance but also create memories that we'll cherish for a<br>
                                             lifetime. It's a beautiful journey we're on together
 
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/17.png" class="haimg" alt="dance64">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Amelia ( UK): </span></p>
-                                            <p>The smiles on my kids' faces during Enatyam's Bharatanatyam dance classes<br>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/17.png" class="haimg" alt="Angela’s Father">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Amelia ( UK ) </span></p>
+                                        <p>The smiles on my kids' faces during Enatyam's Bharatanatyam dance classes<br>
                                             are priceless. The instructors have a gift for making dance accessible and enjoyable. It's like<br>
                                             they've sprinkled a bit of magic in every session, turning learning into a delightful experience
 
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/18.png" class="haimg" alt="dance65">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aahana ( Canada)</span></p>
-                                            <p>Enrolling my 7-year-old daughter in Enatyam's online Kathak class has<br>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/18.png" class="haimg" alt="Amelia ( UK )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Aahana ( Canada )</span></p>
+                                        <p>Enrolling my 7-year-old daughter in Enatyam's online Kathak class has<br>
                                             been truly transformative. With passionate instructors and clear instruction, complex<br>
                                             movements are made manageable, fostering connection and community in virtual learning.<br>
                                             Highly recommended for cultural exploration.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/19.png" class="haimg" alt="dance66">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Lavanya (Dubai)</span></p>
-                                            <p>Initially I was bit hesitant to go for online kathak classes.But Enatyam has<br>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/19.png" class="haimg" alt="Aahana ( Canada )">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Lavanya ( Dubai )</span></p>
+                                        <p>Initially I was bit hesitant to go for online kathak classes.But Enatyam has<br>
                                             been an incredible online platform which transformed my journey into the world of kathak.<br>
                                             The instructor is not only highly skilled but also deeply passionate about sharing the art form.<br>
                                             The online platform Enatyam is seamless, offering convenient scheduling and high-quality<br>
                                             instruction. I highly recommend Enatyam to anyone looking to embark on a transformative
                                             dance journey.
 
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/20.png" class="haimg" alt="dance67">
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Madhavi( USA)</span></p>
-                                            <p>I've always wanted to dance like they do in Bollywood movies, and<br>
-                                                Enatyam's classes make it possible. The instructors have this infectious enthusiasm, and the<br>
-                                                classes are like a dance celebration. It's not about <br>perfection; it's about enjoying the dance
-                                                journey
-
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/21.png" class="haimg" alt="dance68">
-                                    </div>
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/20.png" class="haimg" alt="Lavanya ( Dubai )">
                                 </div>
                             </div>
+                        </div>
 
-                            
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kiran ( Sweden )</span></p>
-                                            <p>As a father, seeing my kids enjoy Enatyam's Bollywood dance classes is <br>
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Madhavi( USA )</span></p>
+                                        <p>I've always wanted to dance like they do in Bollywood movies, and<br>
+                                            Enatyam's classes make it possible. The instructors have this infectious enthusiasm, and the<br>
+                                            classes are like a dance celebration. It's not about <br>perfection; it's about enjoying the dance
+                                            journey
+
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/21.png" class="haimg" alt="Madhavi( USA )">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Kiran ( Sweden )</span></p>
+                                        <p>As a father, seeing my kids enjoy Enatyam's Bollywood dance classes is <br>
                                             heartwarming. The instructors create an environment where learning feels like play. <br>It's like
                                             they've turned our living room into a dance party, <br>making every move a step closer to
                                             happiness
 
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/22.png" class="haimg" alt="dance69">
+                                        </p>
                                     </div>
                                 </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/22.png" class="haimg" alt="Kiran ( Sweden )">
+                                </div>
                             </div>
+                        </div>
 
 
-                            <div class="carousel-item motd">
-                                <div class="row">
-                                
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="carousel-caption">
-                                            <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Lavanya (Dubai)</span></p>
-                                            <p>.Samrat ( Pune ):The transformation I've witnessed in my kids since they started Enatyam's <br>
+                        <div class="carousel-item motd">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="carousel-caption">
+                                        <p class="semicolone"><i aria-hidden="true" class="fas fa-quote-left"></i><span>Lavanya ( Dubai )</span></p>
+                                        <p>.Samrat ( Pune ):The transformation I've witnessed in my kids since they started Enatyam's <br>
                                             Bollywood dance classes is remarkable. The instructors bring infectious energy, and it's like <br>
                                             they've sparked a newfound passion for dance in my children. <br>The classes have become a
                                             daily dose of happiness
 
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12 himg">
-                                        <img src="<?=base_url(); ?>public/images/happyfaces/Dance/23.png" class="haimg" alt="dance70">
+                                        </p>
                                     </div>
                                 </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 himg">
+                                    <img src="<?= base_url(); ?>public/images/happyfaces/Dance/23.png" class="haimg" alt="Lavanya ( Dubai )">
+                                </div>
                             </div>
-                            
-                            
-                            <!-- Add more carousel items as needed -->
                         </div>
 
-                        <a class="carousel-control-prev" href="#combinedCarousel" role="button" data-slide="prev">
-                            <span aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#combinedCarousel" role="button" data-slide="next">
-                            <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+
+                        <!-- Add more carousel items as needed -->
+                    </div>
+
+                    <a class="carousel-control-prev" href="#combinedCarousel" role="button" data-slide="prev">
+                        <span aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#combinedCarousel" role="button" data-slide="next">
+                        <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -3562,9 +3534,9 @@
 
 
 
-    </div>
-    </div>
-    </div>
+</div>
+</div>
+</div>
 </section>
 
 <?php include('InstruInstructer.php'); ?>

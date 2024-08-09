@@ -2,174 +2,176 @@
     <div class="container cont-width">
         <div class="row">
 
-            <!-- <div class="col-lg-1 col-md-1 col-12 faqd"><img src="<?=base_url(); ?>public/images/logo2.png" class="dancefimg" /></div> -->
+            <!-- <div class="col-lg-1 col-md-1 col-12 faqd"><img src="<?= base_url(); ?>public/images/logo2.png" class="dancefimg" /></div> -->
             <div class="col-lg-12 col-md-12 col-12 imgs text-center pb-5">
-                    <img src="<?=base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
-                    </div>
+                <img src="<?= base_url(); ?>public/images/boarder1.webp" alt="Image Description" class="img-fluid">
+            </div>
             <div class="row testimonialsdiv ">
                 <h3 class="text-white p-3 " style="text-align:center"> FAQ<br>
-                    <span class="line"></span> 
+                    <span class="line"></span>
                 </h3>
                 <div class="col-lg-6 col-md-6 col-12 faqdance">
 
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
                             <span class="question-text"> What types of dance classes do you offer online?</span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
                                 We offer a variety of dance classes online, including kathak, bharatnatyam, odissi, bollywood dance, western dance, and more...</div>
-                            </div>
                         </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
                             <span class="question-text"> Do I need to have any prior experience with dance to join your online classes? </span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    No, our online classes are suitable for all levels, from beginner to advanced.</div>
-                            </div>
                         </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                No, our online classes are suitable for all levels, from beginner to advanced.</div>
+                        </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
-                            <span class="question-text">  What equipment do I need for online dance classes? </span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    You’ll need a device with internet access, a comfortable space to move, appropriate dancewear, and possibly a yoga mat for stretching.
-                                </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            <span class="question-text"> What equipment do I need for online dance classes? </span>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                You’ll need a device with internet access, a comfortable space to move, appropriate dancewear, and possibly a yoga mat for stretching.
                             </div>
                         </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
-                            <span class="question-text">  How do I join an online dance class?</span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    After enrolling, you’ll receive a link to join the class via email. Simply click the link at the scheduled time to join.</div>
-                            </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            <span class="question-text"> How do I join an online dance class?</span>
                         </div>
-                    <!-- </div> -->
-                    <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
-                            <span class="question-text"> Can I join a class at any time, or do I need to join at a speciﬁc time?</span> </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    Our online classes are offered at speciﬁc times, so you will need to join the class
-                                    at the designated time. </div>
-                            </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                After enrolling, you’ll receive a link to join the class via email. Simply click the link at the scheduled time to join.</div>
                         </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
-                            <span class="question-text"> What if I can't make it to a live online class? </span></div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    We also offer on-demand classes that you can access at any time, so you can
-                                    practice dance on your own schedule.</div>
-                            </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            <span class="question-text"> Can I join a class at any time, or do I need to join at a speciﬁc time?</span>
                         </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Our online classes are offered at speciﬁc times, so you will need to join the class
+                                at the designated time. </div>
+                        </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            <span class="question-text"> What if I can't make it to a live online class? </span>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                We also offer on-demand classes that you can access at any time, so you can
+                                practice dance on your own schedule.</div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="accordion"> -->
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
                             <span class="question-text"> Is there any special software or technology required to join an online dance class? </span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    You will need a device (such as a computer, tablet, or smartphone) with internet
-                                    access and a webcam in order to join our online classes. </div>
-                            </div>
                         </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                You will need a device (such as a computer, tablet, or smartphone) with internet
+                                access and a webcam in order to join our online classes. </div>
+                        </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
                             <span class="question-text"> How long are your online dance classes?</span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    Our classes typically run for 60-90 minutes, depending on the type of class.
-                                </div>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Our classes typically run for 60-90 minutes, depending on the type of class.
                             </div>
                         </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
                             <span class="question-text"> Can I interact with the instructor during an online class?</span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    Yes, our online classes include interactive elements such as Q&A sessions
-                                    and feedback from the instructor. </div>
-                            </div>
                         </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Yes, our online classes include interactive elements such as Q&A sessions
+                                and feedback from the instructor. </div>
+                        </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
                             <span class="question-text"> What is online dance?</span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    Online dance is the practice of dance that is done through a virtual platform
-                                    like Zoom, Skype, or YouTube. It allows you to practice dance from the
-                                    comfort of your own home.
-                                </div>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Online dance is the practice of dance that is done through a virtual platform
+                                like Zoom, Skype, or YouTube. It allows you to practice dance from the
+                                comfort of your own home.
                             </div>
                         </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
                             <span class="question-text"> What equipment do I need for online dance?</span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    As mentioned, you need a device with internet access, a clear space to dance, appropriate dancewear, and possibly a yoga mat.
-                                </div>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                As mentioned, you need a device with internet access, a clear space to dance, appropriate dancewear, and possibly a yoga mat.
                             </div>
                         </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
                             <span class="question-text"> How do I choose the right online dance class for me?</span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    Consider your experience level, the type of dance you prefer, and your
-                                    goals when choosing an online dance class. Look for classes that are
-                                    tailored to your needs and interests.
-                                </div>
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Consider your experience level, the type of dance you prefer, and your
+                                goals when choosing an online dance class. Look for classes that are
+                                tailored to your needs and interests.
                             </div>
                         </div>
+                    </div>
                     <!-- </div> -->
                     <!-- <div class="accordion"> -->
-                        <div class="accordion-item">
-                            <div class="accordion-item-header">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
                             <span class="question-text"> Can I ask questions during an online dance class?</span>
-                            </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    Yes, most online dance classes offer the opportunity to ask questions and
-                                    receive feedback. You can use the chat feature or unmute yourself to ask
-                                    questions during the class. </div>
-                            </div>
                         </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Yes, most online dance classes offer the opportunity to ask questions and
+                                receive feedback. You can use the chat feature or unmute yourself to ask
+                                questions during the class. </div>
+                        </div>
+                    </div>
                     <!-- </div> -->
-                  
-                      
+
+
                     <!-- </div> -->
                 </div>
 
@@ -177,7 +179,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> Is online dance as effective as in-person dance?</span>
+                                <span class="question-text"> Is online dance as effective as in-person dance?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -191,17 +193,18 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> Can I practice online dance if I am a beginner?</span> </div>
+                                <span class="question-text"> Can I practice online dance if I am a beginner?</span>
+                            </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                Absolutely, we have beginner classes designed to introduce you to dance in a supportive and accessible way. </div>
+                                    Absolutely, we have beginner classes designed to introduce you to dance in a supportive and accessible way. </div>
                             </div>
                         </div>
                     </div>
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> How often should I practice online dance? </span>
+                                <span class="question-text"> How often should I practice online dance? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -214,11 +217,11 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> What are the beneﬁts of practicing online dance? </span>
+                                <span class="question-text"> What are the beneﬁts of practicing online dance? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    Benefits include flexibility, convenience, a wide variety of classes, and the ability 
+                                    Benefits include flexibility, convenience, a wide variety of classes, and the ability
                                     to practice in a comfortable environment.
                                 </div>
                             </div>
@@ -227,7 +230,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text">  What would be my batch timing ? </span>
+                                <span class="question-text"> What would be my batch timing ? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -245,7 +248,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> How many students will be accommodated in a single batch?</span>
+                                <span class="question-text"> How many students will be accommodated in a single batch?</span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -257,7 +260,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> Will the course provide a certificate? </span>
+                                <span class="question-text"> Will the course provide a certificate? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -269,7 +272,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> How to cover up if I missed a session? </span>
+                                <span class="question-text"> How to cover up if I missed a session? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -281,7 +284,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> What are the policies for refund if i am not comfortable with the class? </span>
+                                <span class="question-text"> What are the policies for refund if i am not comfortable with the class? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -293,7 +296,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> What are the minimum qualifications and prerequisites to attend the classes? </span>
+                                <span class="question-text"> What are the minimum qualifications and prerequisites to attend the classes? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -305,7 +308,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> How can I arrange a doubt clearing session? </span>
+                                <span class="question-text"> How can I arrange a doubt clearing session? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -316,7 +319,7 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> How do I contact the team in case of any doubts and queries? </span>
+                                <span class="question-text"> How do I contact the team in case of any doubts and queries? </span>
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
@@ -328,7 +331,8 @@
                     <div class="accordion">
                         <div class="accordion-item">
                             <div class="accordion-item-header">
-                            <span class="question-text"> I’ve done the payment but haven’t received the access to my classes yet? </span> </div>
+                                <span class="question-text"> I’ve done the payment but haven’t received the access to my classes yet? </span>
+                            </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
                                     You can drop a mail at contact@www.enatyam.org and our team will get in touch with you within 24-48 hours. </div>
@@ -336,11 +340,11 @@
                         </div>
                     </div>
 
-                 
+
                 </div>
                 <div class="text-center mt-2">
                     <a href="" class="btn shop-now-btn">Doubts?? Clarify
-                    here
+                        here
                     </a>
                 </div>
             </div>
